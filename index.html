@@ -103,49 +103,121 @@
         </div>
       </section>
 
-      <!-- SLIDE 2: Heritage & History -->
+      <!-- SLIDE 2: Authentic Renner History & Milestones (louis-renner.de) -->
       <section class="slide" data-slide="2">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="cat_intro">Teil 1: Einführung & Historie</div>
-            <h2 class="slide-title">140+ Jahre Perfektion: Gegründet 1882</h2>
-            <div class="slide-subtitle">Von Louis Renner in Stuttgart zum Weltstandard für Klaviermechaniken</div>
+            <div class="slide-category" data-i18n="cat_intro">Teil 1: Einführung & Historie • Unsere Geschichte</div>
+            <h2 class="slide-title" id="history-main-title">140+ Jahre Tradition & Perfektion (1882 – Heute)</h2>
+            <div class="slide-subtitle" id="history-main-subtitle">Vom Stuttgarter Handwerksbetrieb zum Weltmaßstab für Klaviermechaniken & Hammerköpfe</div>
+          </div>
+          <!-- Era navigation controls / pill badges -->
+          <div class="history-era-nav" id="history-era-nav">
+            <button class="history-era-btn active" data-era="0" title="1882–1902: Gründung & Werkstatt">
+              <span class="era-year">1882–1902</span>
+              <span class="era-label">Gründung</span>
+            </button>
+            <button class="history-era-btn" data-era="1" title="1906–1928: Hammerköpfe & Technisierung">
+              <span class="era-year">1906–1928</span>
+              <span class="era-label">Hammerköpfe</span>
+            </button>
+            <button class="history-era-btn" data-era="2" title="1944–1977: Brandnacht & Wiederaufbau">
+              <span class="era-year">1944–1977</span>
+              <span class="era-label">Wiederaufbau</span>
+            </button>
+            <button class="history-era-btn" data-era="3" title="2001–Heute: Moderne & Steinway">
+              <span class="era-year">2001–Heute</span>
+              <span class="era-label">Moderne</span>
+            </button>
           </div>
         </div>
-        <div class="slide-body split-layout">
-          <div class="slide-text-col">
-            <ul class="bullet-list">
+        <div class="slide-body split-wide-media" id="history-slide-body">
+          <!-- Left Text Column: changes dynamically per era or by buttons -->
+          <div class="slide-text-col history-text-container" id="history-text-col">
+            <div class="history-era-badge" id="history-era-badge">
+              <span class="badge-dot"></span>
+              <span id="history-era-badge-text">Epoche 1: 1882 – 1902 • Der Beginn in Stuttgart</span>
+            </div>
+
+            <h3 class="history-era-heading" id="history-era-heading">Die Vision von Louis Renner in der Heusteigstraße</h3>
+
+            <p class="history-era-p" id="history-era-p">
+              Im Oktober 1882 eröffnete Louis Renner nach reiflicher Überlegung in der Stuttgarter Heusteigstraße seine erste Werkstatt. Angetrieben von dem Grundsatz, nur beste Qualität zu akzeptieren und zu liefern, begründete er den Weltruf der Renner-Klaviermechaniken.
+            </p>
+
+            <ul class="bullet-list history-bullets" id="history-bullets">
               <li class="bullet-item">
                 <span class="bullet-dot"></span>
                 <div>
-                  <strong class="bullet-highlight">1882 – Die Vision von Louis Renner:</strong> Erkannte, dass der wachsende Anspruch der Musikwelt nach feinfühligerer und langlebigerer Mechanik eine spezialisierte, handwerkliche Spitzenfertigung verlangt.
+                  <strong class="bullet-highlight">Mitte Oktober 1882:</strong> Beginn der handwerklichen Herstellung von Klaviermechaniken in Stuttgart. Höchste Präzision und kompromisslose Materialauslese als Fundament.
                 </div>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot"></span>
                 <div>
-                  <strong class="bullet-highlight">1906 – Eigene Hammerkopffertigung:</strong> Aufbau einer spezialisierten Produktionslinie für Hammerköpfe – heute das klangbestimmende Herzstück der Klaviere weltweit.
-                </div>
-              </li>
-              <li class="bullet-item">
-                <span class="bullet-dot"></span>
-                <div>
-                  <strong class="bullet-highlight">Pioniergeist & Kontinuität:</strong> Technisierung durch Oscar Renner, Einführung modernster Fertigungsmethoden bei unverändertem Bekenntnis zu 100% "Made in Germany".
+                  <strong class="bullet-highlight">1902 – Neuer Fabrikbau & Generationenwechsel:</strong> Wegen rascher Expansion Neubau an der Fritz-Reuter-Straße (35 Mitarbeiter). Louis Renner übergibt die Leitung an Oscar Renner (Technik) & Wilhelm Megenhardt (Kaufmännisch).
                 </div>
               </li>
             </ul>
-            <div class="renner-quote-banner">
-              <p class="renner-quote-text">
-                „Das Bindeglied zwischen den Pianisten und dem Instrument ist das Kunstwerk der Mechanik. Die Renner-Klaviermechanik begleitet Sie ein ganzes Leben.“
+
+            <div class="renner-quote-banner history-quote-box" id="history-quote-box">
+              <p class="renner-quote-text" id="history-quote-text">
+                „Bescheiden waren die Anfänge, groß die Erfindungsgabe und kühn die Bestrebungen des Gründers und seiner Nachfahren, beispiellos und umfassend der Welterfolg des Unternehmens.“
               </p>
-              <span class="renner-quote-author">Louis Renner Manufaktur • Tradition seit 1882</span>
+              <span class="renner-quote-author" id="history-quote-author">Louis Renner Chronik • Heusteigstraße Stuttgart 1882</span>
+            </div>
+
+            <!-- Quick era pagination buttons -->
+            <div class="history-step-controls">
+              <button class="history-prev-step-btn" id="history-prev-btn" disabled>
+                ← Vorherige Epoche
+              </button>
+              <span class="history-step-indicator" id="history-step-indicator">1 / 4 Epochen</span>
+              <button class="history-next-step-btn" id="history-next-btn">
+                Nächste Epoche →
+              </button>
             </div>
           </div>
-          <div class="media-container">
-            <img src="Visuell/Bilder/01_Geschichte/01_historische_renner_werkstatt_1882.png" alt="Historische Renner Werkstatt 1882">
-            <div class="media-caption">
-              <span>Historische Werkstatt Louis Renner, Stuttgart</span>
-              <span class="media-tag">Seit 1882</span>
+
+          <!-- Right Column: Featured Image + Authentic Historical Filmstrip Thumbnails -->
+          <div class="history-media-col">
+            <div class="media-container history-featured-media">
+              <img id="history-featured-img" src="Visuell/web_assets/werkstatt-renner.png" alt="Historische Werkstatt Renner">
+              <div class="media-caption">
+                <span id="history-media-caption">Historische Werkstatt Louis Renner, Heusteigstraße Stuttgart (1882)</span>
+                <span class="media-tag" id="history-media-tag">1882 Gründung</span>
+              </div>
+            </div>
+
+            <!-- Authentic Historical Filmstrip (from louis-renner.de) -->
+            <div class="history-filmstrip-wrapper">
+              <div class="filmstrip-label" data-i18n="filmstrip_title">Historische Original-Dokumente & Werksaufnahmen (louis-renner.de):</div>
+              <div class="history-filmstrip" id="history-filmstrip">
+                <button class="filmstrip-thumb-btn active" data-src="Visuell/web_assets/werkstatt-renner.png" data-caption="Historische Werkstatt Louis Renner, Heusteigstraße Stuttgart (1882)" data-tag="1882 Gründung" title="1882 Werkstatt Renner">
+                  <img src="Visuell/web_assets/werkstatt-renner.png" alt="1882 Werkstatt">
+                  <span>1882 Werkstatt</span>
+                </button>
+                <button class="filmstrip-thumb-btn" data-src="Visuell/web_assets/arbeitsumgebung-renner.png" data-caption="Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)" data-tag="1911 Technisierung" title="1911 Maschinenpark">
+                  <img src="Visuell/web_assets/arbeitsumgebung-renner.png" alt="1911 Maschinenpark">
+                  <span>1911 Antriebe</span>
+                </button>
+                <button class="filmstrip-thumb-btn" data-src="Visuell/web_assets/hammerkopf-fertigun.png" data-caption="Aufnahme der eigenen Hammerkopffertigung ab 1906 mit Spezialmaschinen" data-tag="ab 1906 Hammerköpfe" title="1906 Hammerkopffertigung">
+                  <img src="Visuell/web_assets/hammerkopf-fertigun.png" alt="1906 Hammerköpfe">
+                  <span>1906 Hammer</span>
+                </button>
+                <button class="filmstrip-thumb-btn" data-src="Visuell/web_assets/auto-renner-werk.png" data-caption="Historisches Renner Firmenfahrzeug vor dem wiederaufgebauten Stuttgarter Fabrikgebäude" data-tag="Wiederaufbau" title="Auto Renner Werk">
+                  <img src="Visuell/web_assets/auto-renner-werk.png" alt="Auto Renner Werk">
+                  <span>Stuttgart Werk</span>
+                </button>
+                <button class="filmstrip-thumb-btn" data-src="Visuell/web_assets/herstellung-renermechanik.png" data-caption="Handwerkliche Meisterfertigung und Feinmontage von Klaviermechaniken" data-tag="Meisterfertigung" title="Herstellung Renermechanik">
+                  <img src="Visuell/web_assets/herstellung-renermechanik.png" alt="Herstellung Mechanik">
+                  <span>Meisterhandwerk</span>
+                </button>
+                <button class="filmstrip-thumb-btn" data-src="Visuell/web_assets/renner-ga-okt-2018-scaled.jpg" data-caption="Standort Gärtringen vor der Bündelung aller Fertigungsbereiche am neuen Hauptsitz Meuselwitz" data-tag="Steinway & Meuselwitz" title="Werk Gärtringen">
+                  <img src="Visuell/web_assets/renner-ga-okt-2018-scaled.jpg" alt="Werk Gärtringen">
+                  <span>Werk Gärtringen</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -228,9 +300,9 @@
             </div>
             <div class="renner-quote-banner" style="margin-top: 8px;">
               <p class="renner-quote-text">
-                „Wenn Sie über ein meisterhaftes Klavier sprechen, werden Sie an der Renner Mechanik nicht vorbeikommen.“
+                „Wir freuen uns sehr, dass die Firma Renner jetzt zu unserer Firmengruppe gehört. Ebenso wie wir verfügt das Unternehmen über eine sehr lange Tradition, ist führend in seinem Segment und beliefert Kunden weltweit mit hervorragender Qualität. Uns verbinden gleiche Werte.“
               </p>
-              <span class="renner-quote-author">Renner – Der Maßstab des guten Tons</span>
+              <span class="renner-quote-author">Guido Zimmermann • President Steinway & Sons Hamburg (2019) • louis-renner.de</span>
             </div>
           </div>
         </div>
@@ -1520,6 +1592,7 @@
   <script src="js/translations.js"></script>
   <script src="js/audio-synth.js"></script>
   <script src="js/timelapse.js"></script>
+  <script src="js/history-journey.js"></script>
   <script src="js/presentation.js"></script>
 </body>
 </html>

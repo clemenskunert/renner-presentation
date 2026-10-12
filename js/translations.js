@@ -21,7 +21,7 @@ const translations = {
     next_slide: "Weiter (→ / Leertaste)",
     
     // Slide categories
-    cat_intro: "Teil 1: Einführung & Historie",
+    cat_intro: "Teil 1: Einführung & Historie • Unsere Geschichte",
     cat_meuselwitz: "Teil 1: Der Neue Hauptsitz Meuselwitz",
     cat_felt: "Teil 2: Die Kunst der Filzfertigung",
     cat_production: "Teil 2: Hochpräzise Hammerkopffertigung",
@@ -30,6 +30,7 @@ const translations = {
     cat_yamaha: "Teil 3: Das Renner Yamaha-Kit",
     cat_voicing: "Teil 4: Die Hohe Kunst des Intonierens",
     cat_conclusion: "Abschluss & Kontakt",
+    filmstrip_title: "Historische Original-Dokumente & Werksaufnahmen (louis-renner.de):",
     
     // Interactive tools & Terminology
     strike_point: "Scheitel / Anschlagspunkt (12:00)",
@@ -85,7 +86,7 @@ const translations = {
     next_slide: "Next (→ / Space)",
     
     // Slide categories
-    cat_intro: "Part 1: Introduction & Heritage",
+    cat_intro: "Part 1: Introduction & Heritage • Our History",
     cat_meuselwitz: "Part 1: The New Meuselwitz Headquarters",
     cat_felt: "Part 2: The Art of Felt Processing",
     cat_production: "Part 2: Precision Hammerhead Manufacturing",
@@ -94,6 +95,7 @@ const translations = {
     cat_yamaha: "Part 3: The Renner Yamaha Kit",
     cat_voicing: "Part 4: The Master Art of Voicing",
     cat_conclusion: "Conclusion & Contact",
+    filmstrip_title: "Authentic Historical Documents & Factory Photos (louis-renner.de):",
     
     // Interactive tools & Terminology
     strike_point: "Strike Point / Crown (12:00)",
@@ -149,7 +151,7 @@ const translations = {
     next_slide: "次へ (→ / スペース)",
     
     // Slide categories
-    cat_intro: "第1部: レンナーの歴史と伝統",
+    cat_intro: "第1部: レンナーの歴史と伝統 • 創業史",
     cat_meuselwitz: "第1部: モイゼルヴィッツ新本社拠点",
     cat_felt: "第2部: 極上フェルト製造の秘密",
     cat_production: "第2部: 精密ハンマーヘッド製造工程",
@@ -158,6 +160,7 @@ const translations = {
     cat_yamaha: "第3部: 革新のレンナー・ヤマハキット",
     cat_voicing: "第4部: ヴォイシング（整音）の極意",
     cat_conclusion: "総括＆お問い合わせ",
+    filmstrip_title: "公式サイト所蔵の歴史的記録写真＆工場アーカイブ (louis-renner.de):",
     
     // Interactive tools & Terminology
     strike_point: "打弦点（クラウン 12:00）",
@@ -213,7 +216,7 @@ const translations = {
     next_slide: "下一页 (→ / 空格)",
     
     // Slide categories
-    cat_intro: "第一部分: 德国雷诺历史与品牌荣耀",
+    cat_intro: "第一部分: 德国雷诺历史与品牌荣耀 • 发展历程",
     cat_meuselwitz: "第一部分: 莫伊瑟尔维茨新总部与工厂合并",
     cat_felt: "第二部分: 顶级纯羊毛毡制造工艺",
     cat_production: "第二部分: 现代高精度弦槌制造工艺",
@@ -222,6 +225,7 @@ const translations = {
     cat_yamaha: "第三部分: 全新雷诺雅马哈套件（即装即用）",
     cat_voicing: "第四部分: 钢琴整音（整调）大师秘籍",
     cat_conclusion: "总结与全球技术联络",
+    filmstrip_title: "雷诺德国原厂珍贵历史档案与车间记录 (louis-renner.de):",
     
     // Interactive tools & Terminology
     strike_point: "击弦点（槌顶 12:00）",

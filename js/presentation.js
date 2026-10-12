@@ -307,12 +307,18 @@ class PresentationController {
   }
 
   nextSlide() {
+    if (this.currentSlideIndex === 1 && window.rennerHistory && window.rennerHistory.nextEra()) {
+      return;
+    }
     if (this.currentSlideIndex < this.totalSlides - 1) {
       this.goToSlide(this.currentSlideIndex + 1);
     }
   }
 
   prevSlide() {
+    if (this.currentSlideIndex === 1 && window.rennerHistory && window.rennerHistory.prevEra()) {
+      return;
+    }
     if (this.currentSlideIndex > 0) {
       this.goToSlide(this.currentSlideIndex - 1);
     }
@@ -392,6 +398,10 @@ class PresentationController {
 
     if (window.meuselwitzTimelapse) {
       window.meuselwitzTimelapse.setLanguage(lang);
+    }
+
+    if (window.rennerHistory) {
+      window.rennerHistory.setLanguage(lang);
     }
 
     this.updateHUD();
@@ -475,13 +485,25 @@ class PresentationController {
 
   setupNotesData() {
     // Detailed speaker notes for Clemens Kunert in 4 languages (DE, EN, JA, ZH)
-    // Citing Renner Academy 2025 Masterclass Technical Principles
+    // Citing Renner Academy 2025 Masterclass Technical Principles & louis-renner.de History
     this.notesData = {
       0: {
         de: "Begrüßung des Publikums in Tokio / Shanghai. Vorstellung von Clemens Kunert und der Louis Renner GmbH. Betonen Sie: 2025/2026 ist ein historischer Meilenstein durch die Konsolidierung aller Fertigungsschritte am hochmodernen Hauptsitz in Meuselwitz.",
         en: "Welcome the audience in Tokyo / Shanghai. Introduction of Clemens Kunert and Louis Renner GmbH. Emphasize that 2025/2026 marks a historic milestone with the consolidated modern headquarters in Meuselwitz.",
         ja: "東京・上海カンファレンスの皆様にご挨拶。クレメンス・クーネルトとルイス・レンナー社の紹介。モイゼルヴィッツ新本社への全工程統合という歴史的変革を強調。",
         zh: "欢迎各位东京与上海钢琴业界的贵宾。主讲人克莱门斯·库内特介绍德国雷诺公司。强调2025/2026年雷诺新总部在莫伊瑟尔维茨全面整合的划时代意义。"
+      },
+      1: {
+        de: "140+ Jahre Historie (louis-renner.de): Heusteigstraße 1882 (schlaflose Nächte Louis Renners), Oscar Renner & Wilhelm Megenhardt 1902, 1906 Beginn der Hammerkopffertigung, 1911 Pioniertat mit Hunderten Einzel-Elektromotoren. Brandnacht 24./25. Juli 1944 und heroischer Wiederaufbau, Zweigwerk Östringen 1960, Rudolf Genger und der weltberühmte Renner-Katalog 1977, Gärtringen 2001, Meuselwitz 2011 und 2019 Steinway & Sons. Sie können mit den Epochentasten oder weiterklicken, um die 4 Epochen nacheinander vorzustellen.",
+        en: "140+ Years of History (louis-renner.de): Heusteigstrasse 1882, Oscar Renner & Wilhelm Megenhardt 1902, in-house hammerhead production 1906, pioneer electrification with individual motors 1911. Bombing night July 1944 and heroic reconstruction, Östringen 1960, Rudolf Genger and the acclaimed Renner Catalog 1977, Gärtringen 2001, Meuselwitz 2011, and Steinway & Sons in 2019. Advance through the 4 epochs seamlessly via clicker or tabs.",
+        ja: "創業140余年の歴史（louis-renner.de公式記録）：1882年ホイシュタイグ通りでの創業、1902年オスカー・レンナーへの継承、1906年ハンマーヘッド自社生産開始、1911年個別モーターによる電化革命。1944年7月の戦災全焼と不屈の復興、1960年エストリンゲン工場、1977年ルドルフ・ゲンガーによる世界標準パーツカタログ発刊、ゲルトリンゲン移転、2011年モイゼルヴィッツ、そして2019年スタインウェイ参入。4つの時代を順に解説。",
+        zh: "雷诺140余年辉煌征程（官网权威档案）：1882年霍伊施泰希街创业，1902年奥斯卡·雷诺与威廉·梅根哈特接棒，1906年开启弦槌自主制造，1911年引入数百台独立电机单驱开创工业先河。1944年7月斯图加特大火浩劫与艰苦重建，1960年厄斯特林根分厂，1977年鲁道夫·根格尔创立全球配件中心与雷诺图册，2001年盖特林根，2011年莫伊瑟尔维茨核心基地，2019年加入施坦威。通过4个历史纪元娓娓道来。"
+      },
+      2: {
+        de: "Der Weltstandard: Über 90% der weltweiten Konzertflügel vertrauen auf Renner (Steinway, Bösendorfer, Fazioli, Schimmel, Bechstein, Blüthner, Steingraeber). Zitat Guido Zimmermann (Steinway Hamburg): Renner bleibt 100% unabhängig und beliefert alle führenden Pianomanufakturen der Welt mit höchster Präzision.",
+        en: "Global Benchmark: Over 90% of concert grands worldwide feature Renner (Steinway, Bösendorfer, Fazioli, Schimmel, Bechstein, Blüthner, Steingraeber). Quote Guido Zimmermann (Steinway Hamburg): Renner remains 100% independent and serves all premier piano manufacturers globally.",
+        ja: "世界のコンサートホールの標準：世界の名門グランドピアノの90％以上がレンナーを採用（スタインウェイ、ベーゼンドルファー、ファツィオリ、シンメル、ベヒシュタイン等）。スタインウェイ社長ギド・ツィンマーマンの言葉通り、完全独立の最高峰サプライヤーとして全世界へ供給。",
+        zh: "全球音乐厅黄金基准：全球超90%的殿堂级音乐会三角琴均搭载雷诺击弦机与弦槌（施坦威、贝森朵夫、法齐奥里、舒密尔、贝希斯坦、博兰斯勒等）。正如施坦威汉堡总裁吉多·齐默尔曼所言，雷诺保持完全独立，向全球所有顶级名琴提供无可替代的核心部件。"
       },
       3: {
         de: "Zusammenlegung Gärtringen & Meuselwitz: Bisher Holzbearbeitung in Gärtringen und Montage in Meuselwitz. Nun ist alles unter einem voll klimatisierten Dach vereint. Bessere Qualitätskontrolle, schnellere Durchlaufzeiten.",
