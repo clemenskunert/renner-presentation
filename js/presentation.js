@@ -44,7 +44,14 @@ class PresentationController {
     if (canvas && window.rennerAudio) {
       window.rennerAudio.init(canvas);
     }
+
+    // Initialize Meuselwitz Construction Timelapse Player
+    if (window.meuselwitzTimelapse) {
+      window.meuselwitzTimelapse.init();
+      window.meuselwitzTimelapse.setLanguage(this.currentLang);
+    }
   }
+
 
   setupEventListeners() {
     // Navigation buttons
@@ -252,7 +259,13 @@ class PresentationController {
       const videos = previousSlide.querySelectorAll('video');
       videos.forEach(v => v.pause());
       previousSlide.classList.remove('active');
+
+      // Pause timelapse if leaving slide 5
+      if (this.currentSlideIndex === 4 && window.meuselwitzTimelapse) {
+        window.meuselwitzTimelapse.pause();
+      }
     }
+
 
     this.currentSlideIndex = index;
     const currentSlide = this.slides[this.currentSlideIndex];
@@ -338,9 +351,14 @@ class PresentationController {
       el.style.display = elLang === lang ? '' : 'none';
     });
 
+    if (window.meuselwitzTimelapse) {
+      window.meuselwitzTimelapse.setLanguage(lang);
+    }
+
     this.updateHUD();
     this.updateNotes();
   }
+
 
   setupSlideGrid() {
     const gridContainer = document.getElementById('slides-grid-view');

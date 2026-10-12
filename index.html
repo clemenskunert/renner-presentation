@@ -215,48 +215,168 @@
         </div>
       </section>
 
-      <!-- SLIDE 5: Interactive Meuselwitz Gallery -->
+      <!-- SLIDE 5: Interactive Animated Construction Timelapse (09.2025 - 10.2026) -->
       <section class="slide" data-slide="5">
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="cat_meuselwitz">Teil 1: Der Neue Hauptsitz Meuselwitz</div>
-            <h2 class="slide-title">Der Umbau & Umzug in Bildern (2026)</h2>
-            <div class="slide-subtitle">Exklusive Einblicke in den Neuaufbau, Schwertransport & Inbetriebnahme</div>
+            <h2 class="slide-title">Umbau & Transformation Meuselwitz (09.2025 – Heute)</h2>
+            <div class="slide-subtitle">Vollständige Baudokumentation & chronologische Animation aller Meilensteine</div>
           </div>
         </div>
-        <div class="slide-body" style="padding: 16px 36px;">
-          <div class="gallery-viewer">
-            <div class="gallery-main-frame">
-              <img id="gallery-main-img" src="Visuell/Bilder/02_Meuselwitz_Umbau/23_meuselwitz_praezisionsfertigung_in_betrieb.jpg" alt="Meuselwitz Umbau Hauptbild">
-              <div class="media-caption">
-                <span id="gallery-caption-title">Präzisionsfertigung & Montagebereich im neuen Werk Meuselwitz</span>
-                <span class="media-tag" id="gallery-caption-phase">In Betrieb • Oktober 2026</span>
+        <div class="slide-body" style="padding: 10px 36px 16px 36px;">
+          <div class="timelapse-container">
+            
+            <!-- Controls Bar -->
+            <div class="timelapse-control-panel">
+              <div class="timelapse-btn-group">
+                <button class="timelapse-play-btn" id="timelapse-play-btn">
+                  ▶ <span data-i18n="play_animation">Animation starten (09.2025 → Heute)</span>
+                </button>
+                <button class="timelapse-sec-btn active" id="timelapse-kb-btn" data-i18n="cinematic_zoom">
+                  🎬 Kino-Zoom
+                </button>
+              </div>
+
+              <!-- Timeline Scrubber -->
+              <div class="timelapse-scrubber-wrapper">
+                <input type="range" class="timelapse-scrubber" id="timelapse-scrubber" min="0" max="25" value="0" step="1">
+                <div class="timelapse-milestone-ticks">
+                  <button class="milestone-tick-btn active" data-index="0">09.2025 Start</button>
+                  <button class="milestone-tick-btn" data-index="2">12.2025 Fundament</button>
+                  <button class="milestone-tick-btn" data-index="3">02.2026 Klima</button>
+                  <button class="milestone-tick-btn" data-index="4">04.2026 Logistik</button>
+                  <button class="milestone-tick-btn" data-index="6">06.2026 Einbringung</button>
+                  <button class="milestone-tick-btn" data-index="9">08.2026 Justierung</button>
+                  <button class="milestone-tick-btn" data-index="18">09.2026 Gesamtlinie</button>
+                  <button class="milestone-tick-btn" data-index="25">10.2026 Heute</button>
+                </div>
+              </div>
+
+              <!-- Speed Selector -->
+              <div class="timelapse-btn-group">
+                <button class="timelapse-sec-btn timelapse-speed-btn" data-speed="0.5">0.5x</button>
+                <button class="timelapse-sec-btn timelapse-speed-btn active" data-speed="1.0">1x</button>
+                <button class="timelapse-sec-btn timelapse-speed-btn" data-speed="2.0">2x</button>
+                <button class="timelapse-sec-btn timelapse-speed-btn" data-speed="4.0">4x</button>
               </div>
             </div>
-            <!-- Thumbnails Strip -->
-            <div class="gallery-thumbnails-strip">
-              <div class="gallery-thumb" data-full="Visuell/Bilder/02_Meuselwitz_Umbau/01_meuselwitz_werkshalle_vorbereitung.jpg" data-title="Vorbereitung der großen Fertigungshalle" data-phase="Phase 1: Hallenumbau">
-                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/01_meuselwitz_werkshalle_vorbereitung.jpg" alt="Vorbereitung">
+
+            <!-- Main Stage Viewer -->
+            <div class="timelapse-stage-viewer">
+              <img id="timelapse-main-img" class="timelapse-image-layer ken-burns" src="Visuell/Bilder/02_Meuselwitz_Umbau/00_meuselwitz_bauvorhaben_start_2025.jpg" alt="Meuselwitz Umbau Chronologie">
+              
+              <!-- Floating HUD Badge -->
+              <div class="timelapse-hud-overlay">
+                <div class="timelapse-date-badge" id="timelapse-date-badge">
+                  📅 <span>09.2025</span>
+                </div>
+                <div class="timelapse-phase-badge" id="timelapse-phase-badge">
+                  Phase 1: Start Bauvorhaben
+                </div>
               </div>
-              <div class="gallery-thumb" data-full="Visuell/Bilder/02_Meuselwitz_Umbau/04_meuselwitz_transport_schwertransport.jpg" data-title="Schwertransport der Präzisionsmaschinen aus Gärtringen" data-phase="Phase 2: Maschinentransport">
-                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/04_meuselwitz_transport_schwertransport.jpg" alt="Transport">
+
+              <!-- Floating Bottom Caption -->
+              <div class="timelapse-caption-box">
+                <div>
+                  <div class="timelapse-title-text" id="timelapse-title-text">
+                    Start des Bauvorhabens & Bestandsaufnahme
+                  </div>
+                  <div class="timelapse-desc-text" id="timelapse-desc-text">
+                    Erste Begehung und Übergabe des Hallenkomplexes in Meuselwitz für die Zusammenlegung.
+                  </div>
+                </div>
+                <div class="timelapse-counter-tag" id="timelapse-counter-tag">
+                  1 / 26
+                </div>
               </div>
-              <div class="gallery-thumb" data-full="Visuell/Bilder/02_Meuselwitz_Umbau/08_meuselwitz_montage_praezisionsanlagen.jpg" data-title="Aufstellung und millimetergenaue Ausrichtung der Spezialanlagen" data-phase="Phase 3: Montage">
-                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/08_meuselwitz_montage_praezisionsanlagen.jpg" alt="Montage">
+            </div>
+
+            <!-- Thumbnail Strip Below -->
+            <div class="gallery-thumbnails-strip" style="height: 56px;">
+              <div class="gallery-thumb active" onclick="window.meuselwitzTimelapse.goToIndex(0)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/00_meuselwitz_bauvorhaben_start_2025.jpg" alt="09.2025">
               </div>
-              <div class="gallery-thumb" data-full="Visuell/Bilder/02_Meuselwitz_Umbau/12_meuselwitz_hammerkopf_pressen_bereich.jpg" data-title="Aufbau der klimatisierten Hammerkopf-Pressen" data-phase="Phase 4: Hammerkopffertigung">
-                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/12_meuselwitz_hammerkopf_pressen_bereich.jpg" alt="Pressenbereich">
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(1)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/01_meuselwitz_werkshalle_vorbereitung.jpg" alt="11.2025">
               </div>
-              <div class="gallery-thumb" data-full="Visuell/Bilder/02_Meuselwitz_Umbau/15_meuselwitz_qualitaetspruefplatz.jpg" data-title="Neuer optoelektronischer Qualitätsprüfplatz" data-phase="Phase 5: Qualitätskontrolle">
-                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/15_meuselwitz_qualitaetspruefplatz.jpg" alt="Prüfplatz">
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(2)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/02_meuselwitz_bodenarbeiten_fundament.jpg" alt="12.2025">
               </div>
-              <div class="gallery-thumb active" data-full="Visuell/Bilder/02_Meuselwitz_Umbau/23_meuselwitz_praezisionsfertigung_in_betrieb.jpg" data-title="Präzisionsfertigung & Montagebereich im neuen Werk Meuselwitz" data-phase="Phase 6: Voller Betrieb">
-                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/23_meuselwitz_praezisionsfertigung_in_betrieb.jpg" alt="Betrieb">
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(3)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/03_meuselwitz_infrastruktur_elektrik_klima.jpg" alt="02.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(4)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/04_meuselwitz_transport_schwertransport.jpg" alt="04.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(5)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/05_meuselwitz_anlieferung_maschinen.jpg" alt="06.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(6)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/06_meuselwitz_einbringung_halle.jpg" alt="06.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(7)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/07_meuselwitz_maschinenaufstellung_start.jpg" alt="07.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(8)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/08_meuselwitz_montage_praezisionsanlagen.jpg" alt="07.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(9)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/09_meuselwitz_maschinen_justierung.jpg" alt="08.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(10)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/10_meuselwitz_montagebereich_mechanik.jpg" alt="08.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(11)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/11_meuselwitz_holzverarbeitung_anlagen.jpg" alt="08.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(12)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/12_meuselwitz_hammerkopf_pressen_bereich.jpg" alt="08.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(13)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/13_meuselwitz_klimatisierte_lagerraeume.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(14)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/14_meuselwitz_cnc_fertigungsbereich.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(15)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/15_meuselwitz_qualitaetspruefplatz.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(16)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/16_meuselwitz_montagetische_einrichtung.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(17)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/17_meuselwitz_neue_beleuchtung_absaugung.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(18)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/18_meuselwitz_produktionslinie_aufbau.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(19)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/19_meuselwitz_testlaeufe_maschinen.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(20)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/20_meuselwitz_fertigungshalle_gesamtansicht.jpg" alt="09.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(21)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/21_meuselwitz_fertige_mechanikmontage.jpg" alt="10.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(22)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/22_meuselwitz_neuer_hauptsitz_team_arbeit.jpg" alt="10.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(23)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/23_meuselwitz_praezisionsfertigung_in_betrieb.jpg" alt="10.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(24)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/24_meuselwitz_moderner_hauptsitz_aussen_innen.jpg" alt="10.2026">
+              </div>
+              <div class="gallery-thumb" onclick="window.meuselwitzTimelapse.goToIndex(25)">
+                <img src="Visuell/Bilder/02_Meuselwitz_Umbau/25_meuselwitz_zukunft_renner_meuselwitz.jpg" alt="10.2026">
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       <!-- SLIDE 6: Part 2 - FFW Wurzen Felt Processing -->
       <section class="slide" data-slide="6">
@@ -1184,6 +1304,8 @@
   <!-- Scripts -->
   <script src="js/translations.js"></script>
   <script src="js/audio-synth.js"></script>
+  <script src="js/timelapse.js"></script>
   <script src="js/presentation.js"></script>
 </body>
 </html>
+

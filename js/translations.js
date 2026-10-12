@@ -37,8 +37,13 @@ const translations = {
     yamaha_kit_approach: "Renner Yamaha-Kit (Plug & Play)",
     time_spent: "Zeitaufwand",
     prevoicing_needed: "Vorintonation",
-    accuracy: "Präzision"
+    accuracy: "Präzision",
+    play_animation: "Animation starten (09.2025 → Heute)",
+    pause_animation: "Animation anhalten",
+    cinematic_zoom: "Kino-Zoom",
+    construction_start: "Start 09.2025"
   },
+
   
   en: {
     brand_sub: "Actions & Hammerheads since 1882",
@@ -73,7 +78,11 @@ const translations = {
     yamaha_kit_approach: "Renner Yamaha Kit (Plug & Play)",
     time_spent: "Time Required",
     prevoicing_needed: "Pre-voicing",
-    accuracy: "Precision"
+    accuracy: "Precision",
+    play_animation: "Start Animation (09.2025 → Today)",
+    pause_animation: "Pause Animation",
+    cinematic_zoom: "Cinema Zoom",
+    construction_start: "Start 09.2025"
   },
   
   ja: {
@@ -109,7 +118,11 @@ const translations = {
     yamaha_kit_approach: "レンナー・ヤマハキット（プラグ＆プレイ）",
     time_spent: "所要時間",
     prevoicing_needed: "事前整音（予備整音）",
-    accuracy: "取付精度"
+    accuracy: "取付精度",
+    play_animation: "建設タイムラプス再生（2025.09 → 現在）",
+    pause_animation: "アニメーション停止",
+    cinematic_zoom: "シネマズーム",
+    construction_start: "2025.09着工"
   },
   
   zh: {
@@ -145,6 +158,11 @@ const translations = {
     yamaha_kit_approach: "雷诺雅马哈专用套件（免预整音）",
     time_spent: "耗费工时",
     prevoicing_needed: "预先整音需求",
-    accuracy: "装配几何精度"
+    accuracy: "装配几何精度",
+    play_animation: "播放建设演变全景（2025.09 → 至今）",
+    pause_animation: "暂停演播",
+    cinematic_zoom: "电影级运镜",
+    construction_start: "2025.09启航"
   }
+
 };
