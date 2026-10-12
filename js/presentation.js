@@ -341,7 +341,7 @@ class PresentationController {
     // Update breadcrumb
     const currentSlide = this.slides[this.currentSlideIndex];
     if (currentSlide) {
-      const titleEl = currentSlide.querySelector('.slide-title');
+      const titleEl = currentSlide.querySelector('.slide-title') || currentSlide.querySelector('.hero-main-title');
       const breadcrumbEl = document.getElementById('slide-name-breadcrumb');
       if (breadcrumbEl && titleEl) {
         breadcrumbEl.textContent = titleEl.textContent;
@@ -415,10 +415,10 @@ class PresentationController {
 
     gridContainer.innerHTML = '';
     this.slides.forEach((slide, idx) => {
-      const titleEl = slide.querySelector('.slide-title');
+      const titleEl = slide.querySelector('.slide-title') || slide.querySelector('.hero-main-title');
       const categoryEl = slide.querySelector('.slide-category');
       const title = titleEl ? titleEl.textContent : `Slide ${idx + 1}`;
-      const category = categoryEl ? categoryEl.textContent : '';
+      const category = categoryEl ? categoryEl.textContent : (idx === 0 ? 'Titelfolie' : '');
 
       const thumb = document.createElement('div');
       thumb.className = `slide-grid-thumb ${idx === this.currentSlideIndex ? 'active' : ''}`;
