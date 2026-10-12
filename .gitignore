@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large presentation binaries (raw 700MB archive - keep local only)
+*.pptx
+*.key
+
+# Temporary files & logs
+scratch*/
+*.tmp
+*.log
+__pycache__/
+*.pyc
+
+# Local IDE configuration
+.idea/
+.vscode/
