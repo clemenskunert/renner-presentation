@@ -2,12 +2,13 @@
 """
 Louis Renner Conference Presentation Server
 Supports HTTP 206 Partial Content (Range requests) for smooth MP4 streaming.
+Multithreaded with ThreadingHTTPServer for fast concurrent media delivery.
 Serves on http://localhost:8080
 """
 import os
 import sys
 import mimetypes
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 PORT = 8080
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
@@ -23,14 +24,22 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         # Default route to index.html if root requested
-        if self.path == '/' or self.path == '':
+        if self.path in ('/', ''):
             self.path = '/index.html'
+        elif self.path == '/favicon.ico':
+            self.path = '/Visuell/web_assets/renner_logo_weiss_schatten.png'
         return super().do_GET()
+
+    def copyfile(self, source, outputfile):
+        """Silently ignore broken pipes when client skips or pauses videos."""
+        try:
+            super().copyfile(source, outputfile)
+        except (BrokenPipeError, ConnectionResetError):
+            pass
 
     def send_head(self):
         path = self.translate_path(self.path)
         if os.path.isdir(path):
-            parts = [p for p in self.path.split('/') if p]
             if not self.path.endswith('/'):
                 self.send_response(301)
                 self.send_header('Location', self.path + '/')
@@ -110,11 +119,13 @@ def run():
     mimetypes.add_type('image/jpeg', '.jpg')
     mimetypes.add_type('image/jpeg', '.jpeg')
     mimetypes.add_type('image/png', '.png')
+    mimetypes.add_type('image/svg+xml', '.svg')
     mimetypes.add_type('text/javascript', '.js')
     mimetypes.add_type('text/css', '.css')
 
     server_address = ('', PORT)
-    httpd = HTTPServer(server_address, RangeRequestHandler)
+    ThreadingHTTPServer.allow_reuse_address = True
+    httpd = ThreadingHTTPServer(server_address, RangeRequestHandler)
     print(f"🎵 Louis Renner Presentation Server active at http://localhost:{PORT}")
     try:
         httpd.serve_forever()
