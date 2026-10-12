@@ -43,6 +43,16 @@ class PresentationController {
     this.goToSlide(0);
     this.updateLanguage(this.currentLang);
 
+    // Ensure every content slide has the official Renner corner watermark logo at bottom right
+    this.slides.forEach((slide, idx) => {
+      if (!slide.querySelector('.slide-corner-watermark') && idx !== 0 && idx !== this.totalSlides - 1) {
+        const wm = document.createElement('div');
+        wm.className = 'slide-corner-watermark';
+        wm.innerHTML = '<img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">';
+        slide.appendChild(wm);
+      }
+    });
+
     // Initialize audio canvas if present
     const canvas = document.getElementById('sound-spectrum-canvas');
     if (canvas && window.rennerAudio) {
