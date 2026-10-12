@@ -6,10 +6,11 @@
 
 const translations = {
   de: {
-    brand_sub: "Mechaniken & Hammerköpfe seit 1882",
+    brand_sub: "Töne höchsten Maßstabs • Seit 1882",
     conf_badge: "Konferenz 2025 • Tokio & Shanghai",
     speaker_notes_title: "Referenten-Notizen",
     slides_overview: "Folien-Übersicht",
+    conclusion_title: "Vielen Dank für Ihre Aufmerksamkeit",
     keyboard_shortcuts: "Tastaturkürzel",
     laser_mode: "Laserpointer (L)",
     notes_mode: "Notizen (N)",
@@ -69,10 +70,11 @@ const translations = {
   },
 
   en: {
-    brand_sub: "Actions & Hammerheads since 1882",
+    brand_sub: "The Standard of Fine Tone • Since 1882",
     conf_badge: "Conference 2025 • Tokyo & Shanghai",
     speaker_notes_title: "Speaker Notes",
     slides_overview: "Slides Overview",
+    conclusion_title: "Thank You for Your Attention",
     keyboard_shortcuts: "Keyboard Shortcuts",
     laser_mode: "Laser Pointer (L)",
     notes_mode: "Notes (N)",
@@ -132,10 +134,11 @@ const translations = {
   },
   
   ja: {
-    brand_sub: "1882年創業 • アクション＆ハンマーヘッド",
+    brand_sub: "至高の音色を創る世界標準 • 1882年創業",
     conf_badge: "2025年 カンファレンス • 東京＆上海",
     speaker_notes_title: "講演者メモ",
     slides_overview: "スライド一覧",
+    conclusion_title: "ご清聴ありがとうございました",
     keyboard_shortcuts: "キーボードショートカット",
     laser_mode: "レーザーポインター (L)",
     notes_mode: "ノート表示 (N)",
@@ -195,10 +198,11 @@ const translations = {
   },
   
   zh: {
-    brand_sub: "始于1882年的顶级击弦机与弦槌",
+    brand_sub: "卓越音色的至臻基准 • 始于1882年",
     conf_badge: "2025年研讨峰会 • 东京与上海",
     speaker_notes_title: "讲演者备忘录",
     slides_overview: "幻灯片总览",
+    conclusion_title: "感谢各位大师的聆听与关注",
     keyboard_shortcuts: "快捷键指南",
     laser_mode: "激光笔模式 (L)",
     notes_mode: "演讲笔记 (N)",

@@ -20,6 +20,9 @@ class PresentationController {
 
     // Speaker notes registry
     this.notesData = {};
+
+    // Country color theme ('de', 'ja', 'zh', 'en')
+    this.currentTheme = 'de';
   }
 
   init() {
@@ -35,7 +38,8 @@ class PresentationController {
     this.setupVoicingWidget();
     this.setupSlideGrid();
     
-    // Set initial slide
+    // Set initial slide and country theme
+    this.setCountryTheme(this.currentTheme);
     this.goToSlide(0);
     this.updateLanguage(this.currentLang);
 
@@ -63,8 +67,16 @@ class PresentationController {
     // Language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const lang = e.target.getAttribute('data-lang');
+        const lang = e.currentTarget.getAttribute('data-lang');
         if (lang) this.setLanguage(lang);
+      });
+    });
+
+    // Country Theme buttons
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const theme = e.currentTarget.getAttribute('data-theme');
+        if (theme) this.setCountryTheme(theme);
       });
     });
 
@@ -326,11 +338,28 @@ class PresentationController {
     });
   }
 
-  setLanguage(lang) {
+  setCountryTheme(theme) {
+    this.currentTheme = theme;
+    document.documentElement.setAttribute('data-country-theme', theme);
+    document.body.setAttribute('data-country-theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-theme') === theme);
+    });
+  }
+
+  setLanguage(lang, syncTheme = true) {
     this.currentLang = lang;
+    document.documentElement.lang = lang;
+    document.body.lang = lang;
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    // Automatically synchronize country color theme unless overridden
+    if (syncTheme) {
+      this.setCountryTheme(lang);
+    }
+
     this.updateLanguage(lang);
   }
 

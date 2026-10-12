@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
   
-  <!-- Google Fonts for Luxury & German Engineering Aesthetic -->
+  <!-- Google Fonts matching louis-renner.de Aesthetic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- Presentation Styles -->
   <link rel="stylesheet" href="css/presentation.css">
 </head>
-<body>
+<body data-country-theme="de">
 
   <!-- ==========================================================================
        Top Header HUD
        ========================================================================== -->
   <header class="header-hud">
     <div class="brand-section">
-      <img src="Visuell/Bilder/Layout_Vorlagen/renner_logo_weiss_schatten.png" alt="Louis Renner Logo" class="brand-logo">
+      <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner Logo" class="brand-logo">
       <div class="brand-title-group">
         <span class="brand-name">LOUIS RENNER</span>
-        <span class="brand-subtitle" data-i18n="brand_sub">Mechaniken & Hammerköpfe seit 1882</span>
+        <span class="brand-subtitle" data-i18n="brand_sub">Töne höchsten Maßstabs • Seit 1882</span>
       </div>
     </div>
 
@@ -33,6 +33,14 @@
     </div>
 
     <div class="hud-actions">
+      <!-- Country Color Theme Selector -->
+      <div class="theme-selector" id="theme-selector" title="Farbschema nach Land (DE / JA / ZH / EN)">
+        <button class="theme-btn active" data-theme="de" title="Deutschland: Renner Klassik (Grün & Gold)">🇩🇪 DE</button>
+        <button class="theme-btn" data-theme="ja" title="Japan: 漆 Urushi & 蒔絵 Maki-e (Gold & Matcha)">🇯🇵 JA</button>
+        <button class="theme-btn" data-theme="zh" title="China: 故宫朱红与琉璃金 (Imperial Red & Gold)">🇨🇳 ZH</button>
+        <button class="theme-btn" data-theme="en" title="International: Concert Grand Stage">🌐 Global</button>
+      </div>
+
       <!-- Language Selector Switcher -->
       <div class="lang-selector">
         <button class="lang-btn active" data-lang="de">DE</button>
@@ -126,6 +134,12 @@
                 </div>
               </li>
             </ul>
+            <div class="renner-quote-banner">
+              <p class="renner-quote-text">
+                „Das Bindeglied zwischen den Pianisten und dem Instrument ist das Kunstwerk der Mechanik. Die Renner-Klaviermechanik begleitet Sie ein ganzes Leben.“
+              </p>
+              <span class="renner-quote-author">Louis Renner Manufaktur • Tradition seit 1882</span>
+            </div>
           </div>
           <div class="media-container">
             <img src="Visuell/Bilder/01_Geschichte/01_historische_renner_werkstatt_1882.png" alt="Historische Renner Werkstatt 1882">
@@ -168,6 +182,55 @@
               <p class="card-desc">
                 Ausgewählte Weißbuche (Hornbeam), Tonholz-Nussbaum, Merinowolle von zertifizierten Schafzüchtern und naturbelassene Rohstoffe – frei von aggressiven synthetischen Härtungsmitteln.
               </p>
+            </div>
+          </div>
+
+          <!-- Official Partner Brand Logos from louis-renner.de -->
+          <div class="partner-showcase-container">
+            <div class="partner-showcase-title">Weltklasse-Pianomanufakturen mit Renner Mechanik & Hammerköpfen</div>
+            <div class="partner-logo-grid">
+              <div class="partner-logo-item" title="Steinway & Sons">
+                <img src="Visuell/web_assets/steinway_and_sons_logo.svg" alt="Steinway & Sons" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Bösendorfer Klavierfabrik">
+                <img src="Visuell/web_assets/bosendorfer.svg" alt="Bösendorfer" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Fazioli Pianoforti">
+                <img src="Visuell/web_assets/fazioli_logo.svg" alt="Fazioli" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Wilhelm Schimmel Pianofortefabrik">
+                <img src="Visuell/web_assets/wilhelm_schimmel_pianofortefabrik_logo.svg" alt="Schimmel" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="C. Bechstein">
+                <img src="Visuell/web_assets/c-bechstein-sw-320x95.png" alt="C. Bechstein" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Julius Blüthner Pianofortefabrik">
+                <img src="Visuell/web_assets/julius_bluthner_pianofortefabrik_logo.svg" alt="Blüthner" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Steingraeber & Söhne Bayreuth">
+                <img src="Visuell/web_assets/logo_steingraeber.svg" alt="Steingraeber" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Petrof Pianos">
+                <img src="Visuell/web_assets/petrof_black_b_rgb.svg" alt="Petrof" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Grotrian-Steinweg">
+                <img src="Visuell/web_assets/grotrian-steinweg_logo.svg" alt="Grotrian-Steinweg" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Estonia Piano">
+                <img src="Visuell/web_assets/estonia_logo_estonia-klaverivabrik.svg" alt="Estonia" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="August Förster">
+                <img src="Visuell/web_assets/bfl_marke_augustforster.svg" alt="August Förster" class="partner-logo-img">
+              </div>
+              <div class="partner-logo-item" title="Sauter Pianos">
+                <img src="Visuell/web_assets/sauter_logo-320x133.jpg" alt="Sauter" class="partner-logo-img">
+              </div>
+            </div>
+            <div class="renner-quote-banner" style="margin-top: 8px;">
+              <p class="renner-quote-text">
+                „Wenn Sie über ein meisterhaftes Klavier sprechen, werden Sie an der Renner Mechanik nicht vorbeikommen.“
+              </p>
+              <span class="renner-quote-author">Renner – Der Maßstab des guten Tons</span>
             </div>
           </div>
         </div>
@@ -839,6 +902,15 @@
               </p>
             </div>
           </div>
+
+          <!-- Key Technological Advantages (Hammerkopf Japan 2025) -->
+          <div class="benefit-pills-row" style="justify-content: center; margin-top: 18px;">
+            <div class="benefit-pill highlight">✨ Tailor-Made Einzel- bis Großserie</div>
+            <div class="benefit-pill highlight">⚡ Ready for Final Voicing (Keine Vorintonation nötig)</div>
+            <div class="benefit-pill">🎯 Höchste Fertigungspräzision & Robotik</div>
+            <div class="benefit-pill">💎 Reiche Klangfarben & Stabilität</div>
+            <div class="benefit-pill">🔩 Gebohrt, genietet, verrundete Kanten</div>
+          </div>
         </div>
       </section>
 
@@ -1350,17 +1422,26 @@
 
       <!-- SLIDE 25: Conclusion & Contact -->
       <section class="slide hero-slide" data-slide="25">
-        <img src="Visuell/Bilder/Layout_Vorlagen/renner_logo_weiss_schatten.png" alt="Renner Logo" class="hero-logo">
-        <h2 class="hero-main-title" style="font-size: 2.4rem;">Vielen Dank für Ihre Aufmerksamkeit</h2>
-        <p class="hero-main-subtitle" style="font-size: 1.1rem; max-width: 680px;">
-          Wir freuen uns auf den fachlichen Austausch und Ihre Fragen zu unseren neuen Hammerköpfen und dem Yamaha-Kit!
+        <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Renner Logo" class="hero-logo">
+        <h2 class="hero-main-title" style="font-size: 2.3rem;" data-i18n="conclusion_title">Vielen Dank für Ihre Aufmerksamkeit</h2>
+        <p class="hero-main-subtitle" data-lang-content="de" style="font-size: 1.05rem; max-width: 720px;">
+          »Renner – Der Maßstab des guten Tons.« Wir freuen uns auf den fachlichen Dialog und Ihre Fragen zu unseren neuen Hammerköpfen und dem Yamaha-Kit!
         </p>
-        <div class="hero-meta-bar" style="margin-top: 10px;">
+        <p class="hero-main-subtitle" data-lang-content="en" style="font-size: 1.05rem; max-width: 720px; display: none;">
+          »Renner – The Standard of Fine Tone.« We look forward to our technical exchange and your inquiries regarding our new hammerheads and the Yamaha Kit!
+        </p>
+        <p class="hero-main-subtitle" data-lang-content="ja" style="font-size: 1.05rem; max-width: 720px; display: none;">
+          「レンナー — 至高の音色を創る世界標準」新世代ハンマーヘッドおよびヤマハキットに関する技術的対話を心より楽しみにしております。
+        </p>
+        <p class="hero-main-subtitle" data-lang-content="zh" style="font-size: 1.05rem; max-width: 720px; display: none;">
+          “雷诺 — 卓越音色的全球基准” 期待与各位钢琴制造大师及音乐会技师深入交流，共探全新弦槌工艺与雅马哈专用套件！
+        </p>
+        <div class="hero-meta-bar" style="margin-top: 12px;">
           <div class="hero-meta-item">
-            <span>Ansprechpartner:</span> <strong>Clemens Kunert</strong>
+            <span>Speaker:</span> <strong>Clemens Kunert</strong>
           </div>
           <div class="hero-meta-item">
-            <span>Standort:</span> <strong>Louis Renner GmbH • Meuselwitz</strong>
+            <span>Hauptsitz:</span> <strong>Louis Renner GmbH • Meuselwitz & Gärtringen</strong>
           </div>
           <div class="hero-meta-item">
             <span>Web:</span> <strong>www.louis-renner.de</strong>

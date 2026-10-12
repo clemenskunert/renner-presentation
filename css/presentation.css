@@ -1,38 +1,163 @@
 /* ==========================================================================
    Louis Renner GmbH - Premium Conference Presentation System
    Aesthetic: Polished Concert Grand Black, Renner Forest Green, Brass Gold
+   Typography: Roboto Slab (Headings) & Roboto (Body) following louis-renner.de
    ========================================================================== */
 
-:root {
-  --bg-primary: #0a0c10;
-  --bg-secondary: #12161f;
-  --bg-card: rgba(22, 28, 38, 0.75);
-  --bg-card-hover: rgba(30, 38, 52, 0.9);
+:root,
+[data-country-theme="de"] {
+  --bg-primary: #080b0f;
+  --bg-secondary: #0f151e;
+  --bg-card: rgba(18, 25, 36, 0.8);
+  --bg-card-hover: rgba(26, 36, 52, 0.94);
   
   --renner-green: #145943;
   --renner-green-bright: #1fa47c;
   --renner-green-glow: rgba(31, 164, 124, 0.35);
+  --accent-primary: #145943;
+  --accent-bright: #1fa47c;
+  --accent-glow: rgba(31, 164, 124, 0.35);
   
   --gold-accent: #c8a356;
   --gold-light: #e4c885;
   --gold-glow: rgba(200, 163, 86, 0.25);
   
-  --text-primary: #f5f6f8;
-  --text-secondary: #a0a8b8;
-  --text-muted: #647085;
+  --text-primary: #f8fafc;
+  --text-secondary: #a3adc0;
+  --text-muted: #64748b;
   
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-gold: rgba(200, 163, 86, 0.3);
+  --border-gold: rgba(200, 163, 86, 0.35);
   --border-green: rgba(31, 164, 124, 0.4);
+  --border-accent: rgba(31, 164, 124, 0.4);
   
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Roboto Slab', Georgia, serif;
+  --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 25px var(--renner-green-glow);
+  --shadow-glow: 0 0 25px var(--accent-glow);
+  
+  --bg-radial-1: rgba(20, 89, 67, 0.18);
+  --bg-radial-2: rgba(200, 163, 86, 0.09);
+  --theme-kicker-color: var(--gold-light);
+}
+
+/* --------------------------------------------------------------------------
+   Country-Optimized Color Theme: JAPAN (Urushi 漆 & Maki-e 蒔絵 Gold)
+   Deep Indigo Lacquer, Refined Maki-e Pure Gold, Zen Matcha Green
+   -------------------------------------------------------------------------- */
+[data-country-theme="ja"] {
+  --bg-primary: #07090f;
+  --bg-secondary: #0d121c;
+  --bg-card: rgba(15, 20, 32, 0.85);
+  --bg-card-hover: rgba(24, 32, 50, 0.95);
+  
+  --renner-green: #23573c;
+  --renner-green-bright: #3ea073;
+  --renner-green-glow: rgba(45, 138, 99, 0.35);
+  --accent-primary: #d4af37;
+  --accent-bright: #f5df93;
+  --accent-glow: rgba(212, 175, 55, 0.4);
+  
+  --gold-accent: #d4af37;
+  --gold-light: #fbeba8;
+  --gold-glow: rgba(212, 175, 55, 0.32);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --border-subtle: rgba(203, 213, 225, 0.12);
+  --border-gold: rgba(212, 175, 55, 0.45);
+  --border-green: rgba(45, 138, 99, 0.45);
+  --border-accent: rgba(212, 175, 55, 0.45);
+  
+  --bg-radial-1: rgba(212, 175, 55, 0.14);
+  --bg-radial-2: rgba(35, 87, 60, 0.18);
+  --theme-kicker-color: #f5df93;
+}
+
+/* --------------------------------------------------------------------------
+   Country-Optimized Color Theme: CHINA (Forbidden City Cinnabar 朱砂 & Imperial Gold 琉璃金)
+   Imperial Obsidian Lacquer, Cinnabar Red/Crimson, Imperial Gold, Jade Touches
+   -------------------------------------------------------------------------- */
+[data-country-theme="zh"] {
+  --bg-primary: #0d0608;
+  --bg-secondary: #1a0a10;
+  --bg-card: rgba(28, 12, 18, 0.85);
+  --bg-card-hover: rgba(42, 18, 26, 0.95);
+  
+  --renner-green: #0d9488;
+  --renner-green-bright: #14b8a6;
+  --renner-green-glow: rgba(13, 148, 136, 0.35);
+  --accent-primary: #dc2626;
+  --accent-bright: #ef4444;
+  --accent-glow: rgba(239, 68, 68, 0.45);
+  
+  --gold-accent: #f59e0b;
+  --gold-light: #fde047;
+  --gold-glow: rgba(245, 158, 11, 0.35);
+  
+  --text-primary: #fff1f2;
+  --text-secondary: #e2a8b2;
+  --text-muted: #9f7178;
+  
+  --border-subtle: rgba(239, 68, 68, 0.16);
+  --border-gold: rgba(245, 158, 11, 0.45);
+  --border-green: rgba(13, 148, 136, 0.45);
+  --border-accent: rgba(239, 68, 68, 0.5);
+  
+  --bg-radial-1: rgba(220, 38, 38, 0.18);
+  --bg-radial-2: rgba(245, 158, 11, 0.12);
+  --theme-kicker-color: #fde047;
+}
+
+/* --------------------------------------------------------------------------
+   Country-Optimized Color Theme: INTERNATIONAL / EN (Concert Grand Hall)
+   Deep Onyx, Studio Platinum Gold, Signature Forest Green
+   -------------------------------------------------------------------------- */
+[data-country-theme="en"] {
+  --bg-primary: #090c14;
+  --bg-secondary: #101624;
+  --bg-card: rgba(18, 26, 40, 0.82);
+  --bg-card-hover: rgba(28, 38, 58, 0.94);
+  
+  --renner-green: #165c3b;
+  --renner-green-bright: #249764;
+  --renner-green-glow: rgba(36, 151, 100, 0.35);
+  --accent-primary: #165c3b;
+  --accent-bright: #249764;
+  --accent-glow: rgba(36, 151, 100, 0.35);
+  
+  --gold-accent: #d8ba7a;
+  --gold-light: #f0dc9e;
+  --gold-glow: rgba(216, 186, 122, 0.28);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(216, 186, 122, 0.35);
+  --border-green: rgba(36, 151, 100, 0.4);
+  --border-accent: rgba(36, 151, 100, 0.4);
+  
+  --bg-radial-1: rgba(22, 92, 59, 0.18);
+  --bg-radial-2: rgba(216, 186, 122, 0.1);
+  --theme-kicker-color: #f0dc9e;
+}
+
+/* CJK Font Smoothing & Fallbacks */
+html[lang="ja"], body[lang="ja"] {
+  --font-sans: 'Roboto', 'Noto Sans JP', sans-serif;
+  --font-serif: 'Roboto Slab', 'Noto Sans JP', Georgia, serif;
+}
+html[lang="zh"], body[lang="zh"] {
+  --font-sans: 'Roboto', 'Noto Sans SC', sans-serif;
+  --font-serif: 'Roboto Slab', 'Noto Sans SC', Georgia, serif;
 }
 
 * {
@@ -51,9 +176,10 @@ body {
   height: 100vh;
   position: relative;
   user-select: none;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
-/* Background Atmospheric Gradient */
+/* Dynamic Background Atmospheric Gradient based on Country Theme */
 body::before {
   content: '';
   position: absolute;
@@ -61,11 +187,12 @@ body::before {
   left: -10%;
   width: 140%;
   height: 140%;
-  background: radial-gradient(circle at 15% 20%, rgba(20, 89, 67, 0.15) 0%, transparent 45%),
-              radial-gradient(circle at 85% 80%, rgba(200, 163, 86, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 50% 50%, rgba(10, 12, 16, 1) 0%, #06070a 100%);
+  background: radial-gradient(circle at 15% 20%, var(--bg-radial-1, rgba(20, 89, 67, 0.18)) 0%, transparent 50%),
+              radial-gradient(circle at 85% 80%, var(--bg-radial-2, rgba(200, 163, 86, 0.1)) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, var(--bg-primary) 0%, #030406 100%);
   z-index: 0;
   pointer-events: none;
+  transition: background var(--transition-smooth);
 }
 
 /* ==========================================================================
@@ -173,9 +300,181 @@ body::before {
 }
 
 .lang-btn.active {
-  background: var(--renner-green);
+  background: var(--accent-primary);
   color: #fff;
-  box-shadow: 0 2px 8px var(--renner-green-glow);
+  box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+/* Country Theme Selector Pills */
+.theme-selector {
+  display: flex;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition-fast);
+}
+
+.theme-btn:hover {
+  color: var(--gold-light);
+}
+
+.theme-btn.active {
+  background: var(--accent-primary);
+  color: #fff;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+/* Brand Quote Banner (Website Renner Claim) */
+.renner-quote-banner {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--gold-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 18px;
+  margin-top: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.renner-quote-text {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.renner-quote-author {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+/* Partner Brand Logo Showcase Grid (Slide 3 & Website Trust Elements) */
+.partner-showcase-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.partner-showcase-title {
+  font-size: 0.76rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.partner-showcase-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-gold) 0%, transparent 100%);
+}
+
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.partner-logo-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  transition: var(--transition-fast);
+}
+
+.partner-logo-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.partner-logo-img {
+  max-width: 100%;
+  max-height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(0.92) drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+  opacity: 0.85;
+  transition: var(--transition-fast);
+}
+
+.partner-logo-item:hover .partner-logo-img {
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px var(--accent-glow));
+}
+
+/* Value Props Pills & Badges (Hammerkopf Japan 2025 Deck) */
+.benefit-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.benefit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.benefit-pill.highlight {
+  background: rgba(31, 164, 124, 0.15);
+  border-color: var(--accent-bright);
+  color: #fff;
+  font-weight: 600;
+}
+
+[data-country-theme="ja"] .benefit-pill.highlight {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: var(--gold-accent);
+  color: var(--gold-light);
+}
+
+[data-country-theme="zh"] .benefit-pill.highlight {
+  background: rgba(220, 38, 38, 0.2);
+  border-color: var(--accent-bright);
+  color: #fff;
 }
 
 /* Icon Buttons */
