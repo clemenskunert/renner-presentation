@@ -1316,3 +1316,224 @@ body::before {
   flex-shrink: 0;
 }
 
+/* ==========================================================================
+   Renner Academy Technical Enhancements (Formulas, Tables, Wedges)
+   ========================================================================== */
+.formula-card {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.12) 0%, rgba(13, 20, 16, 0.75) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.formula-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.formula-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.formula-math {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border-left: 3px solid var(--gold-accent);
+  line-height: 1.5;
+  margin: 6px 0;
+}
+
+.formula-math span.operator {
+  color: var(--gold-accent);
+  margin: 0 4px;
+}
+
+.formula-math span.variable {
+  color: #a7f3d0;
+}
+
+.formula-note {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  margin-top: 6px;
+}
+
+/* Technical Specification Table */
+.spec-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: rgba(18, 22, 28, 0.65);
+  font-size: 0.82rem;
+  margin: 10px 0;
+}
+
+.spec-table th {
+  background: rgba(200, 163, 86, 0.15);
+  color: var(--gold-light);
+  font-weight: 700;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.76rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.spec-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.spec-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.spec-table td strong {
+  color: #fff;
+}
+
+.spec-table td .mono-val {
+  font-family: var(--font-mono);
+  color: var(--gold-accent);
+  font-weight: 600;
+}
+
+/* Tool Item Badge */
+.tool-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Dynamic Voicing Wedges Pills */
+.wedge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.wedge-tag.red {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.wedge-tag.purple {
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid #a855f7;
+  color: #d8b4fe;
+}
+
+.wedge-tag.orange {
+  background: rgba(249, 115, 22, 0.2);
+  border: 1px solid #f97316;
+  color: #fdba74;
+}
+
+.wedge-tag.green {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #6ee7b7;
+}
+
+.wedge-tag.blue {
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid #3b82f6;
+  color: #93c5fd;
+}
+
+/* Kruse Axiom Quote Callout */
+.axiom-callout {
+  background: linear-gradient(135deg, rgba(23, 74, 52, 0.35) 0%, rgba(12, 17, 24, 0.8) 100%);
+  border-left: 4px solid var(--renner-green);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin: 12px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.axiom-quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.96rem;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.axiom-author {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Multi-image Dual Layout */
+.dual-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.dual-media-grid .media-container {
+  height: auto;
+  min-height: 220px;
+}
+
+.quad-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.quad-media-grid .media-container {
+  height: auto;
+  min-height: 140px;
+}
+
+
