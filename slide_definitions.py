@@ -72,7 +72,7 @@ def get_all_slides_html():
               <div class="bento-step-watermark">01</div>
               <span class="bento-badge gold">MODUL 1</span>
               <div class="bento-card-title">Historie & Hauptsitz</div>
-              <div class="bento-card-desc">140+ Jahre Meilensteine, Zusammenlegung der Werke Gärtringen und Meuselwitz & der neue weltweite Hauptsitz (Bau 09.2023–2025).</div>
+              <div class="bento-card-desc">140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).</div>
             </div>
             <div class="bento-card">
               <div class="bento-step-watermark">02</div>
@@ -164,16 +164,16 @@ def get_all_slides_html():
               <span class="bento-badge gold">STANDORT-STRATEGIE</span>
               <div class="bento-card-title">Bündelung aller Kompetenzen am modernen Welt-Hauptsitz</div>
               <div class="bento-card-desc">
-                Um den wachsenden internationalen Qualitätsanforderungen gerecht zu werden und Synergien optimal zu nutzen, hat Louis Renner die Werke Gärtringen und Meuselwitz an einem zukunftsweisenden Standort vereint.
+                Um den wachsenden internationalen Qualitätsanforderungen gerecht zu werden und Synergien optimal zu nutzen, hat Louis Renner die beiden bisherigen Werke (Gärtringen und Meuselwitz) an einem hochmodernen Standort zusammengeführt.
               </div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span><strong>Bauvorhaben ab 09.2023 / 2024:</strong> Umfassende Revitalisierung und Modernisierung der Hallenflächen in Meuselwitz (Thüringen).</span>
+                  <span><strong>Bauvorhaben ab 09.2023 / 2024:</strong> Umfassende Revitalisierung und Erweiterung der Hallenflächen in Meuselwitz (Thüringen).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span><strong>Konzentration:</strong> Vollständige Zusammenführung von Mechanik- und Hammerkopf-Kompetenz an einer zentralen Stätte.</span>
+                  <span><strong>Schließung Standort Gärtringen:</strong> Konzentration der gesamten Mechanik- und Hammerkopf-Kompetenz an einer zentralen Stätte.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -186,7 +186,7 @@ def get_all_slides_html():
               <div class="bento-media-overlay">
                 <span class="bento-badge green">MEUSELWITZ 2025</span>
                 <div class="bento-media-caption">Der neue vereinte Renner Hauptsitz</div>
-                <div class="bento-media-subcaption">Zukunftssicherung & Kapazität für weltweite Konzert- und Serienkunden</div>
+                <div class="bento-media-subcaption">Zukunftssicherung: Ausbau von Ausbildungsplätzen und Kapazitäten für weltweite Konzert- und Serienkunden</div>
               </div>
             </div>
           </div>
@@ -539,16 +539,16 @@ def get_all_slides_html():
               </div>
               <div class="bento-card-title">Maximale natürliche Walkhärte</div>
               <div class="bento-card-desc">
-                Filzplatten werden beim Wurzener Walkverfahren so lange verdichtet, bis sich die Fasern rein mechanisch nicht weiter zusammenschieben lassen – ganz ohne synthetische Harze oder Weichmacher.
+                Filzplatten werden beim Walken so lange verdichtet, bis sich die Fasern auf rein mechanischem Wege nicht weiter zusammenschieben lassen. Dies entspricht der maximalen natürlichen Walkhärte von ca. 0.56 Shore.
               </div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span><strong>100% reine Faserelastizität:</strong> Reiche Obertonstruktur und blitzschnelle Rückfederung von der Saite („Let-off“ des Hammers).</span>
+                  <span><strong>Keine künstliche Versteifung:</strong> Härtere Filze anderer Hersteller werden oft durch Leime oder chemische Zusätze erzwungen – Weickert/Renner setzt auf 100% reine Faserelastizität!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span><strong>Kein Eigengeräusch:</strong> Weicher Anschlagskontakt, dynamischer Reichtum und singender Klangcharakter.</span>
+                  <span><strong>Akustisches Resultat:</strong> Reiche Obertonstruktur, schnelle Rückfederung von der Saite („Let-off“ des Hammers) und minimales Eigengeräusch.</span>
                 </div>
               </div>
             </div>
@@ -556,8 +556,8 @@ def get_all_slides_html():
               <img src="Visuell/basis_media/image7.jpeg" alt="Filzplatten bei FFW">
               <div class="bento-media-overlay">
                 <span class="bento-badge green">FFW WURZEN</span>
-                <div class="bento-media-caption">Original Weickert-Filzplatten</div>
-                <div class="bento-media-subcaption">0.56 Shore natürliche Federkraft nach der Hammerwalke</div>
+                <div class="bento-media-caption">Filzplatten bei FFW</div>
+                <div class="bento-media-subcaption">Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore</div>
               </div>
             </div>
           </div>
@@ -908,7 +908,7 @@ def get_all_slides_html():
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">800–860 kg/m³</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.1rem;">Weißbuche (Hornbeam)</div>
-                <div class="bento-card-desc">Maximaler Punch, kraftvoller Attack, extrem formstabil für moderne Konzertflügel.</div>
+                <div class="bento-card-desc">Maximaler Punch, kraftvoller Attack, extrem formstabil</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
@@ -916,7 +916,7 @@ def get_all_slides_html():
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">530–790 kg/m³</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.1rem;">Bergahorn (Maple)</div>
-                <div class="bento-card-desc">Brillant, transparent, differenzierter obertonreicher Ton für filigranes Spiel.</div>
+                <div class="bento-card-desc">Brillant, transparent, differenzierter obertonreicher Ton</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
@@ -924,22 +924,22 @@ def get_all_slides_html():
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">590–680 kg/m³</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.1rem;">Nussbaum (Walnut)</div>
-                <div class="bento-card-desc">Warmer, samtiger Grundton mit vollem, tragfähigem Bassfundament.</div>
+                <div class="bento-card-desc">Warmer, samtiger Grundton, volles Bassfundament</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge green">LEICHT / AGIL</span>
+                  <span class="bento-badge green">MITTELFEST / LEICHT</span>
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">490–750 kg/m³</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.1rem;">Mahagoni (Kotibé)</div>
-                <div class="bento-card-desc">Geringe Trägheit, singender Diskant und extrem sensible Ansprache.</div>
+                <div class="bento-card-desc">Geringe Trägheit, singender Diskant, leichte Ansprache</div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HK/page_12_2_Image217.jpg" alt="Kernholz-Arten Renner">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold">WERKSTOFF-SELEKTION</span>
-                <div class="bento-media-caption">Original Renner Kernhölzer</div>
+                <span class="bento-badge gold">KERNHÖLZER</span>
+                <div class="bento-media-caption">Original Kernhölzer</div>
                 <div class="bento-media-subcaption">Weißbuche, Bergahorn, Nussbaum & Mahagoni (Kotibé)</div>
               </div>
             </div>
@@ -1385,7 +1385,7 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 35: Auswahlkriterium: Die 16 Kapseltypen (Sander Bento KPI Hero)
+    # SLIDE 35: Auswahlkriterium: Die 16 Kapseltypen (Bento KPI + Typenliste)
     slides.append(f'''      <!-- SLIDE 35: Die 16 Kapseltypen -->
       <section class="slide" data-slide="35">
         <div class="slide-header">
@@ -1401,33 +1401,26 @@ def get_all_slides_html():
               <span class="bento-badge gold">MUSTERTEILEKOFFER</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">16</span>
-                <span class="bento-metric-unit">Kapseltypen</span>
+                <span class="bento-metric-unit">Kapselvarianten</span>
               </div>
-              <div class="bento-card-title">Exakte Passform für jeden Flügel weltweit</div>
-              <div class="bento-card-desc">
-                Das Renner MTK-System differenziert 16 Kapselvarianten nach Röllchenabstand (17,0 mm vs. 15,5 mm), Kapsellänge, Bohrungsdurchmesser und Kröpfung.
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span><strong>17,0 mm Standard-Röllchen:</strong> Renner Standard, Steinway & Sons, Bösendorfer.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span><strong>15,5 mm Kompakt-Röllchen:</strong> Für spezifische asiatische und historische Klaviaturen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span><strong>Kapsellängen:</strong> Präzise Abstimmung für optimale Geometrie und Hebelverhältnisse.</span>
-                </div>
+              <div class="bento-card-list" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;">
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Renner Standard</strong> – Europäische Norm</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Renner mit Tellerfedern</strong> – Sicherer Halt</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Renner ungebohrt</strong> – Für Sonderbohrung</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Modifizierte Drop-Schraube</strong> – Versetzt</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Versetzte Schraubenbohrung</strong> – Sonderabstand</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Mason & Hamlin (M&H)</strong> – Langloch + Scheiben</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Kawai Kapsel</strong> – Japanische Passung</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Yamaha neu / alt</strong> – C- / CFX-Serie</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Baldwin neu / alt</strong> – US-Standard</span></div>
+                <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Pratt-Read / Flemming</strong> – Klassische Flügel</span></div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HSt/page_10_2_Image203.jpg" alt="16 Kapseltypen Renner">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">MTK BAZAR</span>
-                <div class="bento-media-caption">16 Kapselvarianten im Vergleich</div>
-                <div class="bento-media-subcaption">Vollständige Abdeckung aller internationalen Flügelfabrikate</div>
+                <span class="bento-badge green">KAPSELÜBERSICHT</span>
+                <div class="bento-media-caption">16 herstellerspezifische Kapsel-Geometrien</div>
               </div>
             </div>
           </div>
@@ -1455,7 +1448,7 @@ def get_all_slides_html():
                   <span class="bento-metric-unit">mm</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1rem;">Stieldurchmesser</div>
-                <div class="bento-card-desc">Maximale Biegesteifigkeit für hohe Stoßkräfte.</div>
+                
               </div>
               <div class="bento-card metric-card">
                 <span class="bento-badge green">MITTE</span>
@@ -1464,7 +1457,7 @@ def get_all_slides_html():
                   <span class="bento-metric-unit">mm</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1rem;">Stieldurchmesser</div>
-                <div class="bento-card-desc">Harmonische Balance aus Elastizität & Tragfähigkeit.</div>
+                
               </div>
               <div class="bento-card metric-card">
                 <span class="bento-badge gold">DISKANT</span>
@@ -1473,15 +1466,18 @@ def get_all_slides_html():
                   <span class="bento-metric-unit">mm</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1rem;">Stieldurchmesser</div>
-                <div class="bento-card-desc">Geringste Masse für blitzschnelle Repetition.</div>
+                
               </div>
               <div class="bento-card col-span-3">
                 <div class="bento-card-header">
-                  <span class="bento-badge green">RÖLLCHEN & HOLZART</span>
-                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700;">17 mm & 15,5 mm</span>
+                  <span class="bento-badge green">WEITERE AUSWAHLKRITERIEN</span>
                 </div>
-                <div class="bento-card-desc">
-                  Röllchenabstand 17 mm (Renner-Norm) oder 15,5 mm (Steinway); Holzarten: Weißbuche (steif) oder Bergahorn (elastisch); Röllchen-ø 10 mm (Standard) oder 9 mm.
+                <div class="bento-card-list">
+                  <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Kapseltyp:</strong> 16 verschiedene Kapseltypen für Reparaturen lieferbar.</span></div>
+                  <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Holzart:</strong> Weißbuche (hohe Steifigkeit) oder Bergahorn (elastisch-transparent).</span></div>
+                  <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Röllchenabstand:</strong> 17 mm (Renner Standard) oder 15,5 mm (z. B. Steinway-Geometrie).</span></div>
+                  <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Röllchendurchmesser:</strong> 10 mm Standard oder 9 mm Spezialdurchmesser (Breite 11,7 mm) sowie 10 mm (Breite 11,2 mm).</span></div>
+                  <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Satz-Aufteilung:</strong> 70 Bass/20 Diskant oder 60|10|20, 50|20|20, 75|25, 90, 100 Stück.</span></div>
                 </div>
               </div>
             </div>
@@ -1489,8 +1485,8 @@ def get_all_slides_html():
               <img src="Visuell/basis_media/HSt/page_11_2_Image207.jpg" alt="Röllchen und Stieldimensionen">
               <div class="bento-media-overlay">
                 <span class="bento-badge green">STIELGEOMETRIE</span>
-                <div class="bento-media-caption">Röllchenpositionen & Stieldurchmesser</div>
-                <div class="bento-media-subcaption">Abstimmung nach Register und Flügelfabrikat</div>
+                <div class="bento-media-caption">Röllchenpositionen und Stieldurchmesser</div>
+                <div class="bento-media-subcaption">nach Renner-Spezifikation</div>
               </div>
             </div>
           </div>
@@ -1613,11 +1609,11 @@ def get_all_slides_html():
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 12px;">
-              <div class="bento-card col-span-2 hero-card">
+            <div class="bento-grid bento-grid-3" style="gap: 12px;">
+              <div class="bento-card col-span-3 hero-card">
                 <span class="bento-badge gold">RENNER FAUSTFORMEL</span>
                 <div class="bento-card-title" style="font-size: 1.4rem; color: var(--gold-light);">Länge = Gesamtlänge - 24 mm</div>
-                <div class="bento-card-desc">Garantiert die exakte Einstecktiefe des Stiels und optimale Masseverteilung des Hammerkopfs.</div>
+                <div class="bento-card-desc">Exakte Einstecktiefe des Stiels.</div>
               </div>
               <div class="bento-card">
                 <span class="bento-badge green">BOHRUNG</span>
@@ -1625,7 +1621,15 @@ def get_all_slides_html():
                   <span class="bento-metric-num" style="font-size: 2.2rem;">5,4</span>
                   <span class="bento-metric-unit">mm ø</span>
                 </div>
-                <div class="bento-card-desc">Standardbohrung für konische Renner Hammerstiele.</div>
+                <div class="bento-card-desc">Passend für Renner Konusstiele.</div>
+              </div>
+              <div class="bento-card">
+                <span class="bento-badge green">HAMMER-ZU-STIEL</span>
+                <div class="bento-metric-top">
+                  <span class="bento-metric-num" style="font-size: 2.2rem;">90°</span>
+                  <span class="bento-metric-unit">Winkel</span>
+                </div>
+                <div class="bento-card-desc">Rechtwinkligkeit zur Saitenebene.</div>
               </div>
               <div class="bento-card">
                 <span class="bento-badge green">RAKE-WINKEL</span>
@@ -1633,7 +1637,7 @@ def get_all_slides_html():
                   <span class="bento-metric-num" style="font-size: 2.2rem;">91°</span>
                   <span class="bento-metric-unit">Lehre</span>
                 </div>
-                <div class="bento-card-desc">Leichte Vorneigung beim Einleimen für optimalen Anschlag.</div>
+                <div class="bento-card-desc">Leichte Vorneigung beim Einleimen.</div>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -1641,7 +1645,7 @@ def get_all_slides_html():
               <div class="bento-media-overlay">
                 <span class="bento-badge gold">GEOMETRIE-NORM</span>
                 <div class="bento-media-caption">Standardmaße der Flügelhammerkopf-Bohrung</div>
-                <div class="bento-media-subcaption">Renner Werksnorm für Flügelhammerköpfe</div>
+                <div class="bento-media-subcaption">nach Renner-Norm</div>
               </div>
             </div>
           </div>
@@ -1669,7 +1673,7 @@ def get_all_slides_html():
               </div>
               <div class="bento-card-title">Zehntelgrad-genaue Teilung ohne Bruchminuten</div>
               <div class="bento-card-desc">
-                Gon ermöglicht präziseste Bohrwinkelabstufungen über alle 88 Tasten hinweg:
+                Gon ermöglicht feinere, zehntelgrad-genaue Teilungen ohne Bruchminuten. Normalwerte:
               </div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
@@ -1690,8 +1694,8 @@ def get_all_slides_html():
               <img src="Visuell/basis_media/HK/page_28_2_Image291.jpg" alt="Bohrwinkel in Gon">
               <div class="bento-media-overlay">
                 <span class="bento-badge green">BOHRWINKEL-TABELLE</span>
-                <div class="bento-media-caption">Bohrwinkeltabelle nach Registern</div>
-                <div class="bento-media-subcaption">Exakte Abstufung zur Vermeidung von Torsionskräften</div>
+                <div class="bento-media-caption">Bohrwinkeltabelle in Gon</div>
+                <div class="bento-media-subcaption">über die verschiedenen Register</div>
               </div>
             </div>
           </div>
@@ -1722,14 +1726,14 @@ def get_all_slides_html():
                 </div>
                 <div>
                   <div class="bento-metric-top">
-                    <span class="bento-metric-num">3.0</span>
+                    <span class="bento-metric-num">ca. 3</span>
                     <span class="bento-metric-unit">mm</span>
                   </div>
-                  <div class="bento-card-title" style="font-size: 1.1rem;">Hinterer Überhang</div>
+                  <div class="bento-card-title" style="font-size: 1.1rem;">Stielüberhang</div>
                 </div>
               </div>
               <div class="bento-card-desc">
-                Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Durch den 3 mm Stielüberhang wird die kinetische Stoßenergie gezielt in Richtung Steg abgeleitet!
+                Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Der Stiel muss ca. 3 mm Überhang haben. Durch die Massenträgheit wird die kinetische Energie gezielt in Richtung Steg geleitet!
               </div>
               <div class="bento-card-list" style="margin-top: 14px;">
                 <div class="bento-card-list-item">
@@ -1743,7 +1747,7 @@ def get_all_slides_html():
               <div class="bento-media-overlay">
                 <span class="bento-badge gold">KRAFTVEKTOR</span>
                 <div class="bento-media-caption">Geometrie des Hammerstielwinkels</div>
-                <div class="bento-media-subcaption">Exakte Kraftableitung in Richtung Steg</div>
+                <div class="bento-media-subcaption">und Kraftvektor zum Steg</div>
               </div>
             </div>
           </div>
@@ -2300,7 +2304,7 @@ def get_all_slides_html():
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <span class="bento-badge gold">GRUNDGESETZ DES KLAVIERBAUS</span>
+              <span class="bento-badge gold">JENS-SÖREN KRUSE</span>
               <div class="bento-card-title">Der unabdingbare Kreislauf</div>
               <div class="bento-card-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--gold-light); font-style: italic; margin-top: 8px;">
                 „Ohne gute Regulierung keine saubere Stimmung,<br>
@@ -2318,9 +2322,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image11.jpeg" alt="Regulierung und Feineinstellung">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">JENS-SÖREN KRUSE</span>
-                <div class="bento-media-caption">Mechanikregulierung als Fundament</div>
-                <div class="bento-media-subcaption">Auslösung, Steighöhe und Fänger müssen auf 0,1 mm stimmen</div>
+                <span class="bento-badge green">REGULIERUNG</span>
+                <div class="bento-media-caption">Präzisionsregulierung der Flügelmechanik</div>
+                <div class="bento-media-subcaption">vor Beginn der Intonierarbeiten</div>
               </div>
             </div>
           </div>
@@ -2344,50 +2348,49 @@ def get_all_slides_html():
               <div class="bento-card" style="border-left: 4px solid #3b82f6;">
                 <div class="bento-card-header">
                   <span class="bento-badge" style="background: rgba(59,130,246,0.2); color: #93c5fd; border-color: rgba(59,130,246,0.4);">FORTISSIMO (ff)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">9–10 & 2–3 Uhr</span>
+                  <span class="mono-val" style="font-size: 0.85rem;">9:00–10:00 & 2:00–3:00</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.05rem;">Blauer Keil</div>
-                <div class="bento-card-desc">Tiefe Nadelstiche zur Entspannung der werkseitigen Grundspannung.</div>
+                <div class="bento-card-desc">Tiefe Nadelstiche zur Entspannung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #22c55e;">
                 <div class="bento-card-header">
                   <span class="bento-badge" style="background: rgba(34,197,94,0.2); color: #86efac; border-color: rgba(34,197,94,0.4);">FORTE (f)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">10–11 & 1–2 Uhr</span>
+                  <span class="mono-val" style="font-size: 0.85rem;">10:00–11:00 & 1:00–2:00</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.05rem;">Grüner Keil</div>
-                <div class="bento-card-desc">Raumklang, Brillanz, Glanz und dynamische Entfaltung.</div>
+                <div class="bento-card-desc">Raumklang, Glanz und dynamische Entfaltung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #f97316;">
                 <div class="bento-card-header">
                   <span class="bento-badge" style="background: rgba(249,115,22,0.2); color: #fdba74; border-color: rgba(249,115,22,0.4);">PIANO (p)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">11–11:30 & 12:30–1</span>
+                  <span class="mono-val" style="font-size: 0.85rem;">11:00–11:30 & 12:30–1:00</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.05rem;">Orangener Keil</div>
-                <div class="bento-card-desc">Lyrischer Gesangston, feine Nuancen und weiche Ansprache.</div>
+                <div class="bento-card-desc">Lyrischer Gesangston, feine Abstimmung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #a855f7;">
                 <div class="bento-card-header">
                   <span class="bento-badge" style="background: rgba(168,85,247,0.2); color: #d8b4fe; border-color: rgba(168,85,247,0.4);">PIANISSIMO (pp)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">11:30–12 & 12–12:30</span>
+                  <span class="mono-val" style="font-size: 0.85rem;">11:30–12:00 & 12:00–12:30</span>
                 </div>
                 <div class="bento-card-title" style="font-size: 1.05rem;">Violetter Keil</div>
-                <div class="bento-card-desc">Flüsterleise Ansprache im sensibelsten Anschlagbereich.</div>
+                <div class="bento-card-desc">Flüsterleise Ansprache</div>
               </div>
               <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
                 <div class="bento-card-header">
-                  <span class="bento-badge red">KRONENSPITZE</span>
-                  <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR SCHEITEL</span>
+                  <span class="bento-badge red">ROTE ZONE (SCHEITEL)</span>
+                  <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
                 </div>
                 <div class="bento-card-title" style="color: #fca5a5; font-size: 1.05rem;">DO NOT TOUCH! – Niemals tief einstechen!</div>
-                <div class="bento-card-desc" style="color: #fecaca; font-size: 0.84rem;">Die Schlaglinie an der Kronenspitze darf niemals mit tiefen Nadeln perforiert werden, da sonst die Tonstabilität und der Aufschlagskontakt unwiederbringlich zerstört werden!</div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/Intonation/page_11_2_Image210.jpg" alt="Das Uhren-Modell der Intonation">
               <div class="bento-media-overlay">
                 <span class="bento-badge gold">JENS-SÖREN KRUSE</span>
-                <div class="bento-media-caption">Renner Uhrenmodell & Dynamische Keile</div>
-                <div class="bento-media-subcaption">Wissenschaftliche Zonenaufteilung der Hammerkopf-Intonation</div>
+                <div class="bento-media-caption">Original Renner Uhrenmodell</div>
+                <div class="bento-media-subcaption">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
               </div>
             </div>
           </div>
@@ -2601,7 +2604,7 @@ def get_all_slides_html():
                 <span class="bento-badge green">UNA CORDA PRAXIS</span>
                 <div class="bento-card-title">Verschiebungsintonation</div>
                 <div class="bento-card-desc">
-                  Chromatisches Spiel mit getretenem Pedal; nur die tatsächlich getroffenen Saitenbereiche vorsichtig nachnadeln.
+                  Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.
                 </div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
@@ -2612,7 +2615,7 @@ def get_all_slides_html():
               </div>
               <div class="bento-card hero-card">
                 <span class="bento-badge gold">RENNER ACADEMY</span>
-                <div class="bento-card-title">Ihr Partner für meisterlichen Klang</div>
+                <div class="bento-card-title">Renner Academy & Technischer Dialog</div>
                 <div class="bento-card-desc">
                   Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.
                 </div>
@@ -2622,8 +2625,8 @@ def get_all_slides_html():
               <img src="Visuell/basis_media/image31.png" alt="Renner Abschluss">
               <div class="bento-media-overlay">
                 <span class="bento-badge gold">LOUIS RENNER GMBH</span>
-                <div class="bento-media-caption">140+ Jahre Tradition & Perfektion</div>
-                <div class="bento-media-subcaption">Meuselwitz, Deutschland • Weltmaßstab für Klaviermechaniken & Hammerköpfe</div>
+                <div class="bento-media-caption">Louis Renner GmbH</div>
+                <div class="bento-media-subcaption">Ihr Partner für meisterlichen Klang weltweit</div>
               </div>
             </div>
           </div>
