@@ -7,11 +7,42 @@ Serves on http://localhost:8080
 """
 import os
 import sys
+import json
+import time
+import threading
 import mimetypes
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 PORT = 8080
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
+LAST_TRANSLATION_UPDATE = time.time()
+
+def watch_translations():
+    """Background watcher that automatically compiles translations when slides_content.json changes."""
+    global LAST_TRANSLATION_UPDATE
+    slides_json = os.path.join(DIRECTORY, "translations", "slides_content.json")
+    last_mtime = 0
+    if os.path.exists(slides_json):
+        last_mtime = os.path.getmtime(slides_json)
+
+    while True:
+        time.sleep(0.8)
+        try:
+            if os.path.exists(slides_json):
+                current_mtime = os.path.getmtime(slides_json)
+                if current_mtime > last_mtime:
+                    last_mtime = current_mtime
+                    print("\n[LIVE-SYNC] translations/slides_content.json geändert -> Automatische Kompilierung...")
+                    # Run manage_translations.cmd_apply
+                    trans_dir = os.path.join(DIRECTORY, "translations")
+                    if trans_dir not in sys.path:
+                        sys.path.insert(0, trans_dir)
+                    import manage_translations
+                    manage_translations.cmd_apply()
+                    LAST_TRANSLATION_UPDATE = time.time()
+                    print(f"[LIVE-SYNC] ✓ Synchronisation abgeschlossen ({time.strftime('%H:%M:%S')})\n")
+        except Exception as e:
+            print(f"[LIVE-SYNC-HINWEIS] {e}")
 
 class RangeRequestHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -19,7 +50,12 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
 
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Cache-Control', 'no-cache, must-revalidate')
+        if self.path.endswith('.json') or self.path.endswith('.js') or self.path.endswith('.html'):
+            self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+            self.send_header('Pragma', 'no-cache')
+            self.send_header('Expires', '0')
+        else:
+            self.send_header('Cache-Control', 'no-cache, must-revalidate')
         super().end_headers()
 
     def do_GET(self):
@@ -28,6 +64,15 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
             self.path = '/index.html'
         elif self.path == '/favicon.ico':
             self.path = '/Visuell/web_assets/renner_logo_weiss_schatten.png'
+        elif self.path.startswith('/api/translation-version'):
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+            self.end_headers()
+            data = json.dumps({"version": LAST_TRANSLATION_UPDATE})
+            self.wfile.write(data.encode('utf-8'))
+            return
         return super().do_GET()
 
     def copyfile(self, source, outputfile):
@@ -127,6 +172,11 @@ def run():
     ThreadingHTTPServer.allow_reuse_address = True
     httpd = ThreadingHTTPServer(server_address, RangeRequestHandler)
     print(f"🎵 Louis Renner Presentation Server active at http://localhost:{PORT}")
+    
+    # Start live translation watcher thread
+    watcher_thread = threading.Thread(target=watch_translations, daemon=True)
+    watcher_thread.start()
+    print("🔄 Live-Sync aktiv: Änderungen in translations/slides_content.json werden sofort automatisch übernommen.")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

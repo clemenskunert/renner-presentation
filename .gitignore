@@ -16,3 +16,8 @@ __pycache__/
 # Local IDE configuration
 .idea/
 .vscode/
+
+# Adobe Premiere Pro temp & autosave
+**/Adobe Premiere Pro Auto-Save/
+*.prproj~*
+

@@ -48,7 +48,7 @@ class PresentationController {
       if (!slide.querySelector('.slide-corner-watermark')) {
         const wm = document.createElement('div');
         wm.className = 'slide-corner-watermark';
-        wm.innerHTML = '<img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">';
+        wm.innerHTML = '<div class="brand-logo-container corner-variant"><img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo"><div class="brand-logo-light-sheen" aria-hidden="true"></div></div>';
         slide.appendChild(wm);
       }
     });
@@ -64,6 +64,94 @@ class PresentationController {
       window.meuselwitzTimelapse.init();
       window.meuselwitzTimelapse.setLanguage(this.currentLang);
     }
+
+    // Initialize instant live translation sync (dynamically reloads slides_content.json on edit/focus/heartbeat)
+    this.initLiveTranslationSync();
+  }
+
+  initLiveTranslationSync() {
+    this.lastTranslationVersion = 0;
+
+    // Helper: merge fresh JSON from slides_content.json directly into translations
+    this.applySlideContentData = (data) => {
+      if (!data) return;
+      if (data._meta && data._meta.title) {
+        document.title = data._meta.title;
+      }
+      if (!data.slides) return;
+      
+      const flat = { de: {}, en: {}, ja: {}, zh: {} };
+      
+      for (const [sKey, s] of Object.entries(data.slides)) {
+        const num = s.slide_number;
+        for (const lang of ['de', 'en', 'ja', 'zh']) {
+          if (s.category && s.category[lang]) flat[lang][`s${num}_category`] = s.category[lang];
+          if (s.title && s.title[lang]) flat[lang][`s${num}_title`] = s.title[lang];
+          if (s.subtitle && s.subtitle[lang]) flat[lang][`s${num}_subtitle`] = s.subtitle[lang];
+          if (s.kicker && s.kicker[lang]) flat[lang][`s${num}_kicker`] = s.kicker[lang];
+          if (s.notes && s.notes[lang]) flat[lang][`s${num}_notes`] = s.notes[lang];
+          if (s.elements) {
+            for (const [elKey, elDict] of Object.entries(s.elements)) {
+              if (elDict && elDict[lang]) flat[lang][elKey] = elDict[lang];
+            }
+          }
+        }
+      }
+
+      if (data.ui) {
+        for (const [uiKey, uiDict] of Object.entries(data.ui)) {
+          for (const lang of ['de', 'en', 'ja', 'zh']) {
+            if (uiDict && uiDict[lang]) flat[lang][uiKey] = uiDict[lang];
+          }
+        }
+      }
+
+      for (const lang of ['de', 'en', 'ja', 'zh']) {
+        if (typeof translations !== 'undefined') {
+          translations[lang] = translations[lang] || {};
+          Object.assign(translations[lang], flat[lang]);
+        }
+      }
+
+      this.updateLanguage(this.currentLang);
+    };
+
+    // Live fetcher
+    this.refreshTranslationsLive = async () => {
+      try {
+        const res = await fetch(`/translations/slides_content.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (res.ok) {
+          const data = await res.json();
+          this.applySlideContentData(data);
+        }
+      } catch (e) {
+        // Offline / file protocol fallback
+      }
+    };
+
+    // 1. Initial live fetch
+    this.refreshTranslationsLive();
+
+    // 2. Window focus trigger: whenever user switches back to browser tab from editor
+    window.addEventListener('focus', () => {
+      this.refreshTranslationsLive();
+    });
+
+    // 3. Heartbeat check every 1.5 seconds for instant hot-reload
+    setInterval(async () => {
+      try {
+        const res = await fetch(`/api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.version && json.version !== this.lastTranslationVersion) {
+            this.lastTranslationVersion = json.version;
+            await this.refreshTranslationsLive();
+          }
+        }
+      } catch (e) {
+        // quiet fallback
+      }
+    }, 1500);
   }
 
 
@@ -73,6 +161,42 @@ class PresentationController {
     const nextBtn = document.getElementById('next-slide-btn');
     if (prevBtn) prevBtn.addEventListener('click', () => this.prevSlide());
     if (nextBtn) nextBtn.addEventListener('click', () => this.nextSlide());
+
+    // Jump to Slide 2 (Modules / Agenda) buttons
+    const headerJumpSlide2Btn = document.getElementById('header-jump-slide2-btn');
+    if (headerJumpSlide2Btn) {
+      headerJumpSlide2Btn.addEventListener('click', () => this.goToSlide(1));
+    }
+    const hudJumpSlide2Btn = document.getElementById('hud-jump-slide2-btn');
+    if (hudJumpSlide2Btn) {
+      hudJumpSlide2Btn.addEventListener('click', () => this.goToSlide(1));
+    }
+
+    // Delegated click handler for any element with data-target-slide="X"
+    document.addEventListener('click', (e) => {
+      const targetEl = e.target.closest('[data-target-slide]');
+      if (targetEl) {
+        const targetSlide = parseInt(targetEl.getAttribute('data-target-slide'), 10);
+        if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
+          e.preventDefault();
+          this.goToSlide(targetSlide - 1);
+        }
+      }
+    });
+
+    // Delegated Enter/Space keyboard accessibility for [data-target-slide]
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const targetEl = document.activeElement && document.activeElement.closest('[data-target-slide]');
+        if (targetEl && !['INPUT', 'TEXTAREA', 'SELECT'].includes(targetEl.tagName)) {
+          const targetSlide = parseInt(targetEl.getAttribute('data-target-slide'), 10);
+          if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
+            e.preventDefault();
+            this.goToSlide(targetSlide - 1);
+          }
+        }
+      }
+    });
 
     // Language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -90,21 +214,73 @@ class PresentationController {
       });
     });
 
+    // Header Menu Toggle Button & Dropdown
+    const menuBtn = document.getElementById('header-menu-btn');
+    const menuDropdown = document.getElementById('header-menu-dropdown');
+    const menuCloseBtn = document.getElementById('header-menu-close-btn');
+
+    this.toggleMenu = (force) => {
+      if (!menuDropdown || !menuBtn) return;
+      const isOpen = force !== undefined ? force : !menuDropdown.classList.contains('is-open');
+      menuDropdown.classList.toggle('is-open', isOpen);
+      menuBtn.classList.toggle('active', isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuDropdown.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    };
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleMenu();
+      });
+    }
+
+    if (menuCloseBtn) {
+      menuCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleMenu(false);
+      });
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (menuDropdown && menuDropdown.classList.contains('is-open')) {
+        if (!menuDropdown.contains(e.target) && !menuBtn.contains(e.target)) {
+          this.toggleMenu(false);
+        }
+      }
+    });
+
     // Header action buttons
     const gridBtn = document.getElementById('toggle-grid-btn');
-    if (gridBtn) gridBtn.addEventListener('click', () => this.toggleGridModal());
+    if (gridBtn) gridBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.toggleGridModal();
+    });
 
     const notesBtn = document.getElementById('toggle-notes-btn');
-    if (notesBtn) notesBtn.addEventListener('click', () => this.toggleNotes());
+    if (notesBtn) notesBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.toggleNotes();
+    });
 
     const laserBtn = document.getElementById('toggle-laser-btn');
-    if (laserBtn) laserBtn.addEventListener('click', () => this.toggleLaserPointer());
+    if (laserBtn) laserBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.toggleLaserPointer();
+    });
 
     const soundBtn = document.getElementById('toggle-sound-btn');
-    if (soundBtn) soundBtn.addEventListener('click', () => this.toggleSoundModal());
+    if (soundBtn) soundBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.toggleSoundModal();
+    });
 
     const fullscreenBtn = document.getElementById('toggle-fullscreen-btn');
-    if (fullscreenBtn) fullscreenBtn.addEventListener('click', () => this.toggleFullscreen());
+    if (fullscreenBtn) fullscreenBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.toggleFullscreen();
+    });
 
     // Close buttons for modals
     document.querySelectorAll('.modal-close-btn').forEach(btn => {
@@ -146,6 +322,13 @@ class PresentationController {
           this.goToSlide(0);
           break;
 
+        case '2':
+        case 'a':
+        case 'A':
+          e.preventDefault();
+          this.goToSlide(1); // Jump to Slide 2 (Agenda / Modules)
+          break;
+
         case 'End':
           e.preventDefault();
           this.goToSlide(this.totalSlides - 1);
@@ -183,9 +366,16 @@ class PresentationController {
           this.toggleSoundModal();
           break;
 
+        case 'm':
+        case 'M':
+          e.preventDefault();
+          if (this.toggleMenu) this.toggleMenu();
+          break;
+
         case 'Escape':
           document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('open'));
           if (this.isNotesOpen) this.toggleNotes();
+          if (this.toggleMenu) this.toggleMenu(false);
           break;
       }
     });
@@ -289,14 +479,47 @@ class PresentationController {
     }
 
 
+    const fromIndex = this.currentSlideIndex;
     this.currentSlideIndex = index;
     const currentSlide = this.slides[this.currentSlideIndex];
     if (currentSlide) {
       currentSlide.classList.add('active');
 
+      // Synchronize history timeline if entering slide 3
+      if (currentSlide.querySelector('#history-slide-body') && window.rennerHistory) {
+        if (fromIndex > index) {
+          // Navigating backwards into history slide: position at final milestone
+          window.rennerHistory.isStarted = true;
+          window.rennerHistory.goToMilestone(window.rennerHistory.totalMilestones - 1);
+        } else if (fromIndex < index) {
+          // Navigating forwards into history slide: start completely dark!
+          window.rennerHistory.resetToDarkState();
+        }
+      }
+
+      // Synchronize Meuselwitz transformation journey if entering Umbau slide
+      if (currentSlide.querySelector('#build-slide-body') && window.meuselwitzJourney) {
+        if (fromIndex > index) {
+          // Navigating backwards into transformation slide: position at final milestone
+          window.meuselwitzJourney.isStarted = true;
+          window.meuselwitzJourney.goToMilestone(window.meuselwitzJourney.totalMilestones - 1);
+        } else if (fromIndex < index) {
+          // Navigating forwards: fließender Übergang direkt zum ersten Meilenstein des Umbaus
+          window.meuselwitzJourney.resetToDarkState();
+          setTimeout(() => {
+            if (this.currentSlideIndex === index && window.meuselwitzJourney && !window.meuselwitzJourney.isStarted) {
+              window.meuselwitzJourney.startJourney();
+            }
+          }, 350);
+        }
+      }
+
       // Autoplay or prepare video if on slide
       const activeVideos = currentSlide.querySelectorAll('video');
       activeVideos.forEach(v => {
+        const milestonePanel = v.closest('.tree-milestone-panel');
+        if (milestonePanel && !milestonePanel.classList.contains('active')) return;
+        if (v.classList.contains('hero-slideshow-video') && !v.classList.contains('active')) return;
         v.currentTime = 0;
         v.play().catch(() => {}); // Allow autoplay or user gesture
       });
@@ -307,8 +530,24 @@ class PresentationController {
   }
 
   nextSlide() {
-    if (this.currentSlideIndex === 1 && window.rennerHistory && window.rennerHistory.nextEra()) {
-      return;
+    const activeSlide = this.slides[this.currentSlideIndex];
+    if (activeSlide && activeSlide.querySelector('#history-slide-body') && window.rennerHistory) {
+      if (!window.rennerHistory.isStarted) {
+        window.rennerHistory.startJourney();
+        return;
+      }
+      if (window.rennerHistory.nextEra()) {
+        return;
+      }
+    }
+    if (activeSlide && activeSlide.querySelector('#build-slide-body') && window.meuselwitzJourney) {
+      if (!window.meuselwitzJourney.isStarted) {
+        window.meuselwitzJourney.startJourney();
+        return;
+      }
+      if (window.meuselwitzJourney.nextEra()) {
+        return;
+      }
     }
     if (this.currentSlideIndex < this.totalSlides - 1) {
       this.goToSlide(this.currentSlideIndex + 1);
@@ -316,8 +555,24 @@ class PresentationController {
   }
 
   prevSlide() {
-    if (this.currentSlideIndex === 1 && window.rennerHistory && window.rennerHistory.prevEra()) {
-      return;
+    const activeSlide = this.slides[this.currentSlideIndex];
+    if (activeSlide && activeSlide.querySelector('#history-slide-body') && window.rennerHistory) {
+      if (window.rennerHistory.isStarted && window.rennerHistory.currentMilestone === 0) {
+        window.rennerHistory.resetToDarkState();
+        return;
+      }
+      if (window.rennerHistory.prevEra()) {
+        return;
+      }
+    }
+    if (activeSlide && activeSlide.querySelector('#build-slide-body') && window.meuselwitzJourney) {
+      if (window.meuselwitzJourney.isStarted && window.meuselwitzJourney.currentMilestone === 0) {
+        window.meuselwitzJourney.resetToDarkState();
+        return;
+      }
+      if (window.meuselwitzJourney.prevEra()) {
+        return;
+      }
     }
     if (this.currentSlideIndex > 0) {
       this.goToSlide(this.currentSlideIndex - 1);
@@ -352,6 +607,13 @@ class PresentationController {
     document.querySelectorAll('.slide-grid-thumb').forEach((thumb, idx) => {
       thumb.classList.toggle('active', idx === this.currentSlideIndex);
     });
+
+    // Highlight Slide 2 buttons if on Slide 2
+    const isSlide2 = this.currentSlideIndex === 1;
+    const headerModulesBtn = document.getElementById('header-jump-slide2-btn');
+    if (headerModulesBtn) headerModulesBtn.classList.toggle('is-active-slide', isSlide2);
+    const hudModulesBtn = document.getElementById('hud-jump-slide2-btn');
+    if (hudModulesBtn) hudModulesBtn.classList.toggle('is-active-slide', isSlide2);
   }
 
   setCountryTheme(theme) {
@@ -385,8 +647,12 @@ class PresentationController {
     // Update elements with data-i18n attributes
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (dict[key]) {
-        el.textContent = dict[key];
+      if (dict && dict[key]) {
+        if (typeof dict[key] === 'string' && dict[key].includes('<') && dict[key].includes('>')) {
+          el.innerHTML = dict[key];
+        } else {
+          el.textContent = dict[key];
+        }
       }
     });
 
@@ -404,8 +670,13 @@ class PresentationController {
       window.rennerHistory.setLanguage(lang);
     }
 
+    if (window.meuselwitzJourney) {
+      window.meuselwitzJourney.setLanguage(lang);
+    }
+
     this.updateHUD();
     this.updateNotes();
+    this.setupSlideGrid();
   }
 
 
@@ -494,22 +765,22 @@ class PresentationController {
         zh: "欢迎各位东京与上海钢琴业界的贵宾。主讲人克莱门斯·库内特介绍德国雷诺公司。强调2025/2026年雷诺新总部在莫伊瑟尔维茨全面整合的划时代意义。"
       },
       1: {
+        de: "Überblick über die 6 Kernmodule der Renner Masterclass 2025 geben: 1. Historie & Hauptsitz Meuselwitz, 2. Filzherstellung (FFW Wurzen seit 1783), 3. Hammerkopf-Fertigung & Roboterzuschnitt, 4. Musterteilekoffer & Stiele, 5. Maßblätter & Geometrie (Bohrwinkel in Gon), 6. Hohe Schule der Intonation (Uhrenmodell & 4 Keile).",
+        en: "Provide an overview of the 6 core modules of the Renner Masterclass 2025: 1. History & Meuselwitz Headquarters, 2. Felt Manufacturing (FFW Wurzen since 1783), 3. Hammerhead Manufacturing & Robot Cutting, 4. Sample Parts Case & Shanks, 5. Measurement Sheets & Geometry (Drill Angles in Gon), 6. High Art of Voicing (Clock Model & 4 Wedges).",
+        ja: "レンナー・マスタークラス2025の6つの主要モジュールの概要を説明：1. 歴史とモイゼルヴィッツ本社、2. フェルト製造（1783年創業FFWヴルツェン）、3. ハンマーヘッド製造とロボット切断、4. サンプルパーツケースとシャンク、5. 寸法図面と幾何学（グラード/Gon角度）、6. 整音の極意（時計文字盤モデルと4つのウェッジ）。",
+        zh: "简要介绍2025年雷诺大师课的6大核心培训模块：1. 历史与莫伊瑟尔维茨新总部、2. 羊毛毡制造（源自1783年FFW乌尔岑）、3. 弦槌生产与机器人裁切、4. 样件箱与弦槌柄、5. 测量图纸与几何尺寸（Gon角度分度法）、6. 整音高等艺术（时钟模型与4大楔形区域）。"
+      },
+      2: {
         de: "140+ Jahre Historie (louis-renner.de): Heusteigstraße 1882 (schlaflose Nächte Louis Renners), Oscar Renner & Wilhelm Megenhardt 1902, 1906 Beginn der Hammerkopffertigung, 1911 Pioniertat mit Hunderten Einzel-Elektromotoren. Brandnacht 24./25. Juli 1944 und heroischer Wiederaufbau, Zweigwerk Östringen 1960, Rudolf Genger und der weltberühmte Renner-Katalog 1977, Gärtringen 2001, Meuselwitz 2011 und 2019 Steinway & Sons. Sie können mit den Epochentasten oder weiterklicken, um die 4 Epochen nacheinander vorzustellen.",
         en: "140+ Years of History (louis-renner.de): Heusteigstrasse 1882, Oscar Renner & Wilhelm Megenhardt 1902, in-house hammerhead production 1906, pioneer electrification with individual motors 1911. Bombing night July 1944 and heroic reconstruction, Östringen 1960, Rudolf Genger and the acclaimed Renner Catalog 1977, Gärtringen 2001, Meuselwitz 2011, and Steinway & Sons in 2019. Advance through the 4 epochs seamlessly via clicker or tabs.",
         ja: "創業140余年の歴史（louis-renner.de公式記録）：1882年ホイシュタイグ通りでの創業、1902年オスカー・レンナーへの継承、1906年ハンマーヘッド自社生産開始、1911年個別モーターによる電化革命。1944年7月の戦災全焼と不屈の復興、1960年エストリンゲン工場、1977年ルドルフ・ゲンガーによる世界標準パーツカタログ発刊、ゲルトリンゲン移転、2011年モイゼルヴィッツ、そして2019年スタインウェイ参入。4つの時代を順に解説。",
         zh: "雷诺140余年辉煌征程（官网权威档案）：1882年霍伊施泰希街创业，1902年奥斯卡·雷诺与威廉·梅根哈特接棒，1906年开启弦槌自主制造，1911年引入数百台独立电机单驱开创工业先河。1944年7月斯图加特大火浩劫与艰苦重建，1960年厄斯特林根分厂，1977年鲁道夫·根格尔创立全球配件中心与雷诺图册，2001年盖特林根，2011年莫伊瑟尔维茨核心基地，2019年加入施坦威。通过4个历史纪元娓娓道来。"
       },
-      2: {
-        de: "Der Weltstandard: Über 90% der weltweiten Konzertflügel vertrauen auf Renner (Steinway, Bösendorfer, Fazioli, Schimmel, Bechstein, Blüthner, Steingraeber). Zitat Guido Zimmermann (Steinway Hamburg): Renner bleibt 100% unabhängig und beliefert alle führenden Pianomanufakturen der Welt mit höchster Präzision.",
-        en: "Global Benchmark: Over 90% of concert grands worldwide feature Renner (Steinway, Bösendorfer, Fazioli, Schimmel, Bechstein, Blüthner, Steingraeber). Quote Guido Zimmermann (Steinway Hamburg): Renner remains 100% independent and serves all premier piano manufacturers globally.",
-        ja: "世界のコンサートホールの標準：世界の名門グランドピアノの90％以上がレンナーを採用（スタインウェイ、ベーゼンドルファー、ファツィオリ、シンメル、ベヒシュタイン等）。スタインウェイ社長ギド・ツィンマーマンの言葉通り、完全独立の最高峰サプライヤーとして全世界へ供給。",
-        zh: "全球音乐厅黄金基准：全球超90%的殿堂级音乐会三角琴均搭载雷诺击弦机与弦槌（施坦威、贝森朵夫、法齐奥里、舒密尔、贝希斯坦、博兰斯勒等）。正如施坦威汉堡总裁吉多·齐默尔曼所言，雷诺保持完全独立，向全球所有顶级名琴提供无可替代的核心部件。"
-      },
       3: {
-        de: "Zusammenlegung Gärtringen & Meuselwitz: Bisher Holzbearbeitung in Gärtringen und Montage in Meuselwitz. Nun ist alles unter einem voll klimatisierten Dach vereint. Bessere Qualitätskontrolle, schnellere Durchlaufzeiten.",
-        en: "Consolidation Gärtringen & Meuselwitz: Previously woodworking in Gärtringen and assembly in Meuselwitz. Now unified under one state-of-the-art climate-controlled roof.",
-        ja: "ゲルトリンゲンとモイゼルヴィッツの拠点統合：木工加工と組み立てを完全気候制御された新拠点に統合。品質管理とリードタイムの大幅な向上。",
-        zh: "盖特林根与莫伊瑟尔维茨两厂合并：以往木工粗加工与总装分离，现统一在全恒温恒湿新总部，实现最高质控标准与更快交付周期。"
+        de: "Zusammenlegung Gärtringen & Meuselwitz: Bisher Holzbearbeitung in Gärtringen und Montage in Meuselwitz. Nun ist alles unter einem voll klimatisierten Dach vereint. Bessere Qualitätskontrolle, schnellere Durchlaufzeiten und Ausbau der weltweiten Kapazitäten.",
+        en: "Consolidation Gärtringen & Meuselwitz: Previously woodworking in Gärtringen and assembly in Meuselwitz. Now unified under one state-of-the-art climate-controlled roof. Optimized quality control and enhanced global capacity.",
+        ja: "ゲルトリンゲンとモイゼルヴィッツの拠点統合：木工加工と組み立てを完全気候制御された新拠点に統合。品質管理とリードタイムの大幅な向上、世界供給能力の拡大。",
+        zh: "盖特林根与莫伊瑟尔维茨两厂合并：以往木工粗加工与总装分离，现统一在全恒温恒湿新总部，实现最高质控标准、极速交付周期与全球产能扩充。"
       },
       5: {
         de: "Weickert-Filz & FFW Wurzen (Slide 6): 1783 von J.D. Weickert in Leipzig gegründet, 1847 erster Hammerkopffilz in Wurzen. Ausschließlich 100% Merinowolle ohne Säurekarbonisierung. Im Werk Meuselwitz ruhen alle Filzplatten im klimatisierten Feuchtelager.",
@@ -584,19 +855,33 @@ class PresentationController {
     const notesContent = document.getElementById('speaker-notes-content');
     if (!notesContent) return;
 
-    const slideNotes = this.notesData[this.currentSlideIndex];
+    const currentSlide = this.slides[this.currentSlideIndex];
+    const slideNum = currentSlide ? currentSlide.getAttribute('data-slide') : (this.currentSlideIndex + 1);
+    const dict = (typeof translations !== 'undefined' && translations[this.currentLang]) ? translations[this.currentLang] : (translations ? translations.de : {});
+
+    // 1. Check translations dictionary: `s${slideNum}_notes`
+    const noteKey = `s${slideNum}_notes`;
+    if (dict && dict[noteKey]) {
+      notesContent.innerHTML = `<p>${dict[noteKey]}</p>`;
+      return;
+    }
+
+    // 2. Check legacy slide notes
+    const slideNotes = this.notesData ? this.notesData[this.currentSlideIndex] : null;
     if (slideNotes) {
       const text = slideNotes[this.currentLang] || slideNotes.de;
       notesContent.innerHTML = `<p>${text}</p>`;
-    } else {
-      const defaultText = {
-        de: `Folie ${this.currentSlideIndex + 1}: Präsentieren Sie die Inhalte und betonen Sie die deutsche Präzisionsfertigung von Louis Renner.`,
-        en: `Slide ${this.currentSlideIndex + 1}: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.`,
-        ja: `スライド ${this.currentSlideIndex + 1}: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。`,
-        zh: `第 ${this.currentSlideIndex + 1} 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。`
-      };
-      notesContent.innerHTML = `<p>${defaultText[this.currentLang] || defaultText.de}</p>`;
+      return;
     }
+
+    // 3. Fallback default
+    const defaultText = {
+      de: `Folie ${slideNum}: Präsentieren Sie die Inhalte und betonen Sie die deutsche Präzisionsfertigung von Louis Renner.`,
+      en: `Slide ${slideNum}: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.`,
+      ja: `スライド ${slideNum}: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。`,
+      zh: `第 ${slideNum} 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。`
+    };
+    notesContent.innerHTML = `<p>${defaultText[this.currentLang] || defaultText.de}</p>`;
   }
 }
 

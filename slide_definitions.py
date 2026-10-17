@@ -11,11 +11,15 @@ Strictly based on the 5 technical masterclass documents in "Präsentation - Basi
 plus the official louis-renner.de history and Google Photos Meuselwitz transformation album.
 """
 
-TOTAL_SLIDES = 68
+TOTAL_SLIDES = 67
+import re
 
 def get_watermark():
     return '''        <div class="slide-corner-watermark">
-          <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
         </div>'''
 
 def get_all_slides_html():
@@ -28,20 +32,9 @@ def get_all_slides_html():
     # SLIDE 1: Hero / Title Slide
     slides.append(f'''      <!-- SLIDE 1: Hero / Title Slide -->
       <section class="slide active hero-slide" data-slide="1">
-        <span class="hero-kicker">Renner Masterclass & Konferenz 2025 • Tokyo & Shanghai</span>
-        <h1 class="hero-main-title">LOUIS RENNER</h1>
-        <p class="hero-main-subtitle" data-lang-content="de">
-          Das Herzstück des Klaviers: 140 Jahre Tradition, die neue Fertigung in Meuselwitz & die hohe Kunst des Hammerkopfs
-        </p>
-        <p class="hero-main-subtitle" data-lang-content="en" style="display:none;">
-          The Heart of the Piano: 140 Years of Tradition, Modern Manufacturing in Meuselwitz & The Art of Hammerhead Engineering
-        </p>
-        <p class="hero-main-subtitle" data-lang-content="ja" style="display:none;">
-          ピアノの心臓部：140年の伝統、モイゼルヴィッツ新拠点、そして至高のハンマーヘッド製造技術
-        </p>
-        <p class="hero-main-subtitle" data-lang-content="zh" style="display:none;">
-          钢琴的心脏：雷诺140年极致工艺传承、莫伊瑟尔维茨新总部启航与弦槌声学生产大师课
-        </p>
+        <span class="hero-kicker" data-i18n="s1_kicker">Renner Masterclass & Konferenz 2025 • Tokyo & Shanghai</span>
+        <h1 class="hero-main-title" data-i18n="s1_title">LOUIS RENNER</h1>
+        <p class="hero-main-subtitle" data-i18n="s1_subtitle">Das Herzstück des Klaviers: 140 Jahre Tradition, die neue Fertigung in Meuselwitz & die hohe Kunst des Hammerkopfs</p>
         <div class="hero-meta-bar">
           <div class="hero-meta-item">
             <span>Speaker:</span> <strong>Clemens Kunert</strong>
@@ -61,173 +54,662 @@ def get_all_slides_html():
       <section class="slide" data-slide="2">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Übersicht • Struktur der Masterclass</div>
-            <h2 class="slide-title">Die 6 Kernmodule der Renner Masterclass</h2>
-            <div class="slide-subtitle">Vollständiges Schulungs- & Fachprogramm auf Basis der originalen Renner Academy Unterlagen</div>
+            <div class="slide-category" data-i18n="s2_category">Übersicht • Struktur der Masterclass</div>
+            <h2 class=\"slide-title\" data-i18n=\"s2_title\">Die 6 Kernmodule der Renner Masterclass</h2>
+            <div class="slide-subtitle" data-i18n="s2_subtitle">Vollständiges Schulungs- & Fachprogramm auf Basis der originalen Renner Academy Unterlagen</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-3">
-            <div class="bento-card">
+            <div class="bento-card" data-target-slide="3" role="button" tabindex="0">
+              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
               <div class="bento-step-watermark">01</div>
-              <span class="bento-badge gold">MODUL 1</span>
-              <div class="bento-card-title">Historie & Hauptsitz</div>
-              <div class="bento-card-desc">140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).</div>
+              <span class="bento-badge gold" data-i18n="s2_b1_badge">MODUL 1</span>
+              <div class="bento-card-title" data-i18n="s2_c1_title">Geschichte & Hauptsitz</div>
+              <div class="bento-card-desc" data-i18n="s2_c1_desc">140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).</div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card" data-target-slide="7" role="button" tabindex="0">
+              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
               <div class="bento-step-watermark">02</div>
-              <span class="bento-badge green">MODUL 2</span>
-              <div class="bento-card-title">Filzherstellung (FFW Wurzen)</div>
-              <div class="bento-card-desc">Weickert-Tradition seit 1783, Rohwoll-Selektion, Kardieren, Walken (Shore 0.56) und exklusiver „Weickert Special“-Filz.</div>
+              <span class="bento-badge green" data-i18n="s2_b2_badge">MODUL 2</span>
+              <div class="bento-card-title" data-i18n="s2_c2_title">Filz Herstellung</div>
+              <div class="bento-card-desc" data-i18n="s2_c2_desc">Weickert-Tradition seit 1783, Rohwoll-Selektion, Kardieren, Walken (Shore 0.56) und exklusiver „Weickert Special“-Filz.</div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card" data-target-slide="18" role="button" tabindex="0">
+              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
               <div class="bento-step-watermark">03</div>
-              <span class="bento-badge gold">MODUL 3</span>
-              <div class="bento-card-title">Hammerkopf-Fertigung</div>
-              <div class="bento-card-desc">Roboter-Filzzuschnitt, Unterfilzfräsen, Kernhölzer (Dichten 490–860 kg/m³), Presskräfte, CNC-Bearbeitung und T-Vernietung.</div>
+              <span class="bento-badge gold" data-i18n="s2_b3_badge">MODUL 3</span>
+              <div class="bento-card-title" data-i18n="s2_c3_title">Hammerkopf Fertigung</div>
+              <div class="bento-card-desc" data-i18n="s2_c3_desc">Roboter-Filzzuschnitt, Unterfilzfräsen, Kernhölzer (Dichten 490–860 kg/m³), Presskräfte, CNC-Bearbeitung und T-Vernietung.</div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card" data-target-slide="30" role="button" tabindex="0">
+              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
               <div class="bento-step-watermark">04</div>
-              <span class="bento-badge green">MODUL 4</span>
-              <div class="bento-card-title">Musterteilekoffer & Stiele</div>
-              <div class="bento-card-desc">15 Hebeglieder, 16 Kapselvarianten, Röllchen (17 / 15,5 mm), Stieldurchmesser (6,0 / 5,3 / 4,8 mm) und 5-Tage-Ruhelagerung.</div>
+              <span class="bento-badge green" data-i18n="s2_b4_badge">MODUL 4</span>
+              <div class="bento-card-title" data-i18n="s2_c4_title">Yamaha KIT</div>
+              <div class="bento-card-desc" data-i18n="s2_c4_desc">Vorjustiertes Drop-In Kit für Yamaha Flügel: Vorgeleimt, 91°-Winkel kalibriert, FFW-Filz, 45 Min. Einbau ohne Vorintonation.</div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card" data-target-slide="38" role="button" tabindex="0">
+              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
               <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold">MODUL 5</span>
-              <div class="bento-card-title">Maßblätter & Geometrie</div>
-              <div class="bento-card-desc">Standard-Bohrungslänge (Gesamtlänge - 24 mm), Bohrwinkel in Gon (100er-Teilung), 90°-Stielwinkel und 3 mm Überhang.</div>
+              <span class="bento-badge gold" data-i18n="s2_b5_badge">MODUL 5</span>
+              <div class="bento-card-title" data-i18n="s2_c5_title">Maßblätter Geometrie</div>
+              <div class="bento-card-desc" data-i18n="s2_c5_desc">Standard-Bohrungslänge (Gesamtlänge - 24 mm), Bohrwinkel in Gon (100er-Teilung), 90°-Stielwinkel und 3 mm Überhang.</div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card" data-target-slide="51" role="button" tabindex="0">
+              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
               <div class="bento-step-watermark">06</div>
-              <span class="bento-badge green">MODUL 6</span>
-              <div class="bento-card-title">Hohe Schule der Intonation</div>
-              <div class="bento-card-desc">Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.</div>
+              <span class="bento-badge green" data-i18n="s2_b6_badge">MODUL 6</span>
+              <div class="bento-card-title" data-i18n="s2_c6_title">Intonation</div>
+              <div class="bento-card-desc" data-i18n="s2_c6_desc">Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.</div>
             </div>
           </div>
         </div>
 {get_watermark()}
       </section>''')
 
-    # SLIDE 3: 140+ Jahre Tradition & Meilensteine
-    slides.append(f'''      <!-- SLIDE 3: 140+ Jahre Tradition & Meilensteine -->
+    # SLIDE 3: 140+ Jahre Tradition & Meilensteine (Central Timeline with Vertical Tree Branches)
+    history_milestones_data = [
+      {
+        'id': '1882',
+        'year': '1882',
+        'tag': 'Gründung',
+        'branch': 'up',
+        'arrow': '▲',
+        'badge': '1882 • Gründung',
+        'heading': '1882: Gründung in Stuttgart – Die Reise beginnt mit der Klaviermechanik',
+        'sentence': 'Im Jahre 1882 hatte sich nach reiflicher Überlegung, vielem Nachdenken und so mancher schlaflosen Nacht für Louis Renner die Erkenntnis aufgetan, dass die Technik im Bau von Musikinstrumenten, in diesem Fall besonders von Klavieren, eine erfolgreiche Zukunft vor sich haben könnte. So richtete er ohne viele Worte in der Stuttgarter Heusteigstraße eine Werkstatt ein und begann an einem Herbsttag Mitte Oktober ganz bewusst mit der handwerklichen Herstellung von Klaviermechaniken – dem sensiblen Herzstück des Instruments.',
+        'bullets': [
+          '<strong>Beginn mit Klaviermechaniken (1882):</strong> Louis Renner startete seine unternehmerische Reise ganz gezielt mit der Konstruktion und Fertigung hochpräziser Klaviermechaniken in der Heusteigstraße, um dem aufstrebenden Klavierbau neue dynamische Maßstäbe zu verleihen.',
+          '<strong>Historische Parallele zu Carl Rönisch:</strong> Während sächsische Pioniere wie Carl Rönisch (gegr. 1845 in Dresden) mit der Erfindung der Voll-Panzerplatte (1866) die klangliche Stabilität revolutionierten, schuf Louis Renner in Stuttgart den maßgebenden mechanischen Präzisionsstandard.',
+          '<strong>Entscheidende Wegekreuzung & Wurzel von Meuselwitz:</strong> 1990 sollten sich beide Traditionslinien schicksalhaft vereinen: Nach der Wiedervereinigung übernahm Renner die renommierte Mechanik-Produktion der aus Rönisch hervorgegangenen Piano Union – der Ursprung und die Wurzel unseres heutigen Hauptsitzes in Meuselwitz!'
+        ],
+        'fact': '✦ Beginn mit Klaviermechaniken 1882 • Historische Wurzel von Meuselwitz',
+        'quote': '„Von der Stuttgarter Werkstatt 1882 bis zur Übernahme der Mechanik-Fertigung der Piano Union 1990: Unsere Meuselwitzer Wurzeln vereinen die großen Meilensteine deutscher Klavierbautradition.“',
+        'quote_author': 'Louis Renner Chronik & Ursprung Meuselwitz',
+        'images': [
+          'Visuell/Bilder/01_Geschichte/1882_renner.jpg',
+          'Visuell/Bilder/01_Geschichte/rohlfing_klaviermechanik_vintage_bw.webp',
+          'Visuell/Bilder/01_Geschichte/01_historische_renner_werkstatt_1882.png'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/1882_renner.jpg',
+        'image_caption': 'Gründer: Louis Renner 1882',
+        'image_captions': [
+          'Gründer: Louis Renner 1882',
+          'Historische Klaviermechanik – Beginn der Reise',
+          'Erste Werkstatt in der Heusteigstraße Stuttgart 1882'
+        ],
+        'image_tag': '1882 Gründung',
+        'slide_interval': 4000
+      },
+      {
+        'id': '1906',
+        'year': '1906',
+        'tag': 'Hammer',
+        'branch': 'down',
+        'arrow': '▼',
+        'badge': '1906 • Eigene Hammerköpfe',
+        'heading': 'Aufnahme der anspruchsvollen Hammerkopffertigung',
+        'sentence': 'Mit eigens entwickelten Pressen übernimmt Renner die vollkommene Kontrolle über das akustische Herzstück des Klaviers.',
+        'fact': '✦ Der Ursprung des Renner-Klangs',
+        'quote': '„Volle Kontrolle über Filz, Kernholz und Saite.“',
+        'quote_author': 'Unternehmenschronik • louis-renner.de',
+        'image': 'Visuell/web_assets/hammerkopf-fertigun.png',
+        'image_caption': 'Aufnahme der eigenen Spezialfabrikation von Hammerköpfen (ab 1906)',
+        'image_tag': '1906 Hammer'
+      },
+      {
+        'id': '1911',
+        'year': '1911',
+        'tag': 'Antriebe',
+        'branch': 'up',
+        'arrow': '▲',
+        'badge': '1911 • Technisierung',
+        'heading': 'Oscar Renners Pioniertat: Einzelantriebe & Flügelprogramm',
+        'sentence': 'Hunderte vibrationsfreie Elektromotoren revolutionieren die Präzision, ergänzt durch die Fertigung von Flügelmechaniken.',
+        'fact': '✦ Hunderte Einzelmotoren & Flügelbau',
+        'quote': '„Alle Zweige der Mechanikherstellung in einer Hand.“',
+        'quote_author': 'Oscar Renner 1911',
+        'image': 'Visuell/web_assets/arbeitsumgebung-renner.png',
+        'image_caption': 'Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)',
+        'image_tag': '1911 Antriebe'
+      },
+      {
+        'id': '1944',
+        'year': '1944',
+        'tag': 'Brandnacht',
+        'branch': 'down',
+        'arrow': '▼',
+        'badge': '1944 • Brandnacht',
+        'heading': 'Brand der Fabrikanlagen & Unbändiger Wille zum Wiederaufbau',
+        'sentence': 'Wilhelm Megenhardt steuerte das Unternehmen mit sicherer Hand durch Weltwirtschaftskrise und Kriegswirren, ehe die Stuttgarter Brandnacht das Werk traf:',
+        'bullets': [
+          '<strong>Verheerender Großangriff (24./25. Juli 1944):</strong> Über 600 RAF-Bomber warfen Hunderttausende Stabbrand- und Phosphorbomben ab – ein gigantischer Feuersturm erfasste Stuttgart.',
+          '<strong>Totalverlust aller Gebäude:</strong> Das städtische Löschwassernetz brach zusammen; alle Renner-Gebäude brannten lichterloh nieder, nichts schien gerettet werden zu können.',
+          '<strong>Wiederaufbau noch in den Ruinen:</strong> Trotz totaler Zerstörung und unendlicher Hindernisse beschloss Megenhardt sofort den Wiederaufbau in schwierigster Kleinarbeit.'
+        ],
+        'fact': '✦ Bombennacht 24./25.07.1944 & Wiederaufbau',
+        'quote': '„Trotz Zerstörung, trotz unendlicher Hindernisse: Renner wird wieder aufgebaut!“',
+        'quote_author': 'Wilhelm Megenhardt • Chronik 1944',
+        'images': [
+          'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F_45857.jpg',
+          'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F45739.jpg',
+          'Visuell/Bilder/01_Geschichte/Stuttgart,_Royal_Air_Force_Bomber_Command,_1942-1945._CL3437.jpg'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F_45857.jpg',
+        'image_caption': 'Historische Dokumente: Stuttgarter Bombennacht & Zerstörung 1944 vor dem Wiederaufbau',
+        'image_tag': '1944 Brandnacht'
+      },
+      {
+        'id': '1951',
+        'year': '1951/1952',
+        'tag': 'Manfred Renner',
+        'branch': 'up',
+        'arrow': '▲',
+        'badge': '1951/1952 • Manfred Renner',
+        'heading': 'Dr. Manfred Renner & Einzug in das Hauptgebäude nach Wiederaufbau',
+        'sentence': 'Inmitten von Hochkonjunktur und nötiger Werkerweiterung trat 1951 die 3. Generation an die Spitze und vollendete den Wiederaufbau:',
+        'bullets': [
+          '<strong>Einstieg der 3. Generation (1951):</strong> Dr. Manfred Renner, Enkel des Gründers und Sohn von Oscar Renner, tritt nach Studium und praktischer Ausbildung in die Firma ein.',
+          '<strong>Technische Leitung (Sommer 1952):</strong> Als geschäftsführender Gesellschafter übernimmt er die Leitung und forciert tatkräftig die betriebliche Modernisierung.',
+          '<strong>Einzug in das Hauptgebäude (Herbst 1955):</strong> Mit jugendlichem Eifer vollendet er den Wiederaufbau auf ursprüngliche Größe; das Stuttgarter Stammwerk in der Fritz-Reuter-Straße wird bezogen.'
+        ],
+        'fact': '✦ 1951/1952 • Manfred Renner & Wiederbezug 1955',
+        'quote': '„Mit jugendlichem Eifer nahm er die Zügel in die Hand und ließ den Wiederaufbau bis zur ursprünglichen Ausdehnung durchführen.“',
+        'quote_author': 'Renner Chronik • 1951/1952',
+        'image': 'Visuell/web_assets/herstellung-renermechanik.png',
+        'image_caption': 'Vollendung des Wiederaufbaus und Wiedereinzug in das Stuttgarter Hauptgebäude (1955)',
+        'image_tag': '1951/1952 Wiederaufbau'
+      },
+      {
+        'id': '1990',
+        'year': '1990',
+        'tag': 'Zeitenwende',
+        'branch': 'down',
+        'arrow': '▼',
+        'badge': '1990 • Zeitenwende & Existenzsicherung',
+        'heading': '1990: Mauerfall, Zeitenwende & Rettung des Fortbestands',
+        'sentence': 'Der Fall der Berliner Mauer und die deutsche Wiedervereinigung 1990 brachten für Louis Renner die entscheidende historische Wende: Die Übernahme der Mechanik-Fertigung der Piano Union in Zeitz vereinte nicht nur zwei stolze Klavierbautraditionen, sondern sicherte in einer existenziellen Krise den Fortbestand des gesamten Unternehmens.',
+        'bullets': [
+          '<strong>Mauerfall & Hohe Klavierbautradition in Mitteldeutschland:</strong> Mit der Öffnung der Grenzen 1989/1990 erschloss sich für Renner das historische Herzland des deutschen Klavierbaus. In Zeitz und Leipzig lebte in der Piano Union – hervorgegangen aus Weltmarken wie Carl Rönisch – ein unschätzbares Erbe an handwerklicher Präzision und Fachwissen.',
+          '<strong>Existenzfrage im Wettbewerb mit tschechischen Herstellern:</strong> Der Schritt war für Renner eine reine Überlebensfrage: Gegen die aufstrebenden tschechischen Mechanik-Hersteller drohte Renner im internationalen Kosten- und Kapazitätswettbewerb zu unterliegen.',
+          '<strong>Rettung des Großkunden Schimmel (>40 Klaviere/Tag):</strong> Ohne die neuen Fertigungskapazitäten in Zeitz hätte Renner seinen wichtigsten Großkunden verloren: die Firma Schimmel, die damals über 40 Klaviere pro Tag fertigte. Die Übernahme der Piano-Union-Mechanik sicherte Schimmel, rettete Renners Marktführerschaft und legte die Wurzel für den späteren Welt-Hauptsitz Meuselwitz.'
+        ],
+        'fact': '✦ 1990 • Wende, Schimmel-Partnerschaft & Zeitz',
+        'quote': '„Die Übernahme der Mechanik-Fertigung in Zeitz war für Renner eine Frage des nackten Fortbestands – sie sicherte unseren größten Kunden Schimmel und schuf das Fundament unserer Zukunft.“',
+        'quote_author': 'Louis Renner Chronik • Das Wendejahr 1990',
+        'images': [
+          'Visuell/Bilder/01_Geschichte/1989_mauerfall_brandenburger_tor.jpg',
+          'Visuell/Bilder/01_Geschichte/ZeitzGeschichte.webp'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/1989_mauerfall_brandenburger_tor.jpg',
+        'image_caption': 'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
+        'image_captions': [
+          'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
+          'Historische Mechanik-Fertigung in Zeitz (Piano Union / Rönisch) – Die Rettung von Renners Zukunft'
+        ],
+        'image_tag': '1990 Wende & Zeitz',
+        'slide_interval': 4000
+      },
+      {
+        'id': '2001',
+        'year': '2001',
+        'tag': 'Gärtringen',
+        'branch': 'up',
+        'arrow': '▲',
+        'badge': '2001 • Gärtringen',
+        'heading': 'Umzug nach Gärtringen & Produktionszentrum Meuselwitz',
+        'sentence': 'Umzug der Holzbearbeitung nach Gärtringen und Ausbau des 6.000 m² Werks Meuselwitz für Montage und Hammerköpfe.',
+        'fact': '✦ Über 3 Millionen Klaviermechaniken',
+        'quote': '„Über 8.800 Präzisionsteile bilden eine Mechanik.“',
+        'quote_author': 'louis-renner.de • Klaviermechanik',
+        'image': 'Visuell/web_assets/renner-ga-okt-2018-scaled.jpg',
+        'image_caption': 'Standort Gärtringen vor der Bündelung aller Fertigungsbereiche am neuen Hauptsitz Meuselwitz',
+        'image_tag': '2001 Gärtringen'
+      },
+      {
+        'id': '2019',
+        'year': '2019',
+        'tag': 'Steinway',
+        'branch': 'down',
+        'arrow': '▼',
+        'badge': '2019 • Neuer Eigentümer',
+        'heading': 'Neuer Firmeneigentümer: Steinway & Sons übernimmt Renner',
+        'sentence': '2019 stellte Inhaber Clemens von Arnim die Weichen für die Zukunft: Trotz höherer Kaufangebote anderer Bieter entschied er sich mit großer Weitsicht für Steinway & Sons – zum Schutz der Belegschaft und für die langfristige Eigenständigkeit von Renner.',
+        'bullets': [
+          '<strong>Historische Partnerschaft & 100% Unabhängigkeit:</strong> Steinway & Sons (Hamburg & New York) garantiert Renner vollständige operative Eigenständigkeit; Renner beliefert unverändert alle führenden Klavierbauer weltweit.',
+          '<strong>Verantwortung vor Profit – Clemens von Arnim:</strong> Es gab Bieter, die mehr geboten hatten – doch er entschloss sich aus tiefer Verbundenheit für Louis Renner und die Belegschaft für Steinway, denn dadurch waren die Arbeitsplätze und die Zukunft gesichert.',
+          '<strong>In ehrendem Gedenken († 23.04.2024):</strong> Unser tiefster Dank gilt Clemens von Arnim für seine Weitsicht und Führung. Tragischerweise verstarb er viel zu früh am 23. April 2024, ohne seinen wohlverdienten Ruhestand voll auskosten zu können.'
+        ],
+        'fact': '✦ 2019 • Steinway & In ehrendem Gedenken an Clemens von Arnim († 2024)',
+        'quote': '„Ebenso wie wir verfügt Renner über eine sehr lange Tradition, ist führend in seinem Segment und beliefert Kunden weltweit mit hervorragender Qualität. Uns verbinden gleiche Werte – und es ist wichtig, dass Renner weiterhin unabhängig arbeiten wird.“',
+        'quote_author': 'Guido Zimmermann • President Steinway & Sons Hamburg',
+        'images': [
+          'Visuell/Video/steinwayshort.mp4',
+          'Visuell/Bilder/01_Geschichte/ClemensVonArnimProduktion.jpg'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/ClemensVonArnimProduktion.jpg',
+        'image_caption': 'Historische Partnerschaft mit Steinway & Sons und Inhaber Clemens von Arnim in der Produktion († 23.04.2024)',
+        'image_tag': '2019 Steinway'
+      },
+      {
+        'id': 'heute',
+        'year': 'Heute',
+        'tag': 'Meuselwitz',
+        'branch': 'up',
+        'arrow': '▲',
+        'badge': '2025+ • Welt-Hauptsitz',
+        'heading': 'Tradition bewahren. Zukunft gestalten: Von 1882 bis heute',
+        'sentence': 'Aus der kleinen Werkstätte von 1882 ist in über 140 Jahren ein Weltmarktführer entstanden. Unser Leitgedanke ist damals wie heute derselbe: Renner-Mechaniken in denkbar bester Qualität zu liefern und durch neueste praktische sowie musikwissenschaftliche Erkenntnisse stetig zu perfektionieren.',
+        'bullets': [
+          '<strong>Wegweisende Standortbündelung:</strong> Um dieser Mission und unserer Geschichte auch in Zukunft gerecht zu werden, haben wir eine wegweisende Entscheidung getroffen: Die Bündelung unserer gesamten Kompetenz an einem zentralen Standort. Mit der Verlagerung von Gärtringen nach Meuselwitz schreiben wir die Renner-Erfolgsgeschichte konzentriert fort.',
+          '<strong>Dank an das Team Gärtringen:</strong> Unser besonderer Dank gilt dabei unseren treuen Mitarbeiterinnen und Mitarbeitern in Gärtringen für ihren herausragenden Einsatz bis zum letzten Tag.',
+          '<strong>Meilenstein vollendet:</strong> Nach dem Projektstart im Oktober 2025 ist dieser Meilenstein heute erreicht: Alle Prozesse wurden erfolgreich nach Meuselwitz überführt.'
+        ],
+        'fact': '✦ Tradition bewahren • Zukunft gestalten',
+        'quote': '„Erfahrung ist die Basis – Perfektion das Ziel.“',
+        'quote_author': 'Clemens Kunert • Louis Renner Meuselwitz',
+        'image': 'Visuell/Bilder/02_Meuselwitz_Umbau/24_meuselwitz_moderner_hauptsitz_aussen_innen.jpg',
+        'image_caption': 'Der neue vereinte Louis Renner Welt-Hauptsitz in Meuselwitz (Thüringen)',
+        'image_tag': 'Meuselwitz 2025'
+      }
+    ]
+
+    panels_html = []
+    for idx, m in enumerate(history_milestones_data):
+        active_cls = 'active' if idx == 0 else ''
+        prev_dis = 'disabled' if idx == 0 else ''
+        next_dis = ''
+        next_title = 'Zur Baudokumentation' if idx == (len(history_milestones_data) - 1) else 'Weiter'
+
+        bullets_html = ""
+        if 'bullets' in m and m['bullets']:
+            items = "".join([f'<li class="hero-bullet-item"><span class="hero-bullet-dot"></span><span>{b}</span></li>' for b in m['bullets']])
+            bullets_html = f'<ul class="hero-bullet-list">{items}</ul>'
+
+        if 'images' in m and m['images']:
+            img_tags = []
+            captions = m.get('image_captions', [])
+            slide_interval = m.get('slide_interval', 5000)
+            for img_idx, img_src in enumerate(m['images']):
+                act = ' active' if img_idx == 0 else ''
+                is_vid = img_src.lower().endswith(('.mp4', '.webm', '.ogg', '.mov'))
+                cap_attr = f' data-caption="{captions[img_idx]}"' if img_idx < len(captions) else ''
+                fit_cls = ' fit-contain' if ('1882_renner' in img_src.lower() or 'rohlfing' in img_src.lower()) else ''
+                if is_vid:
+                    img_tags.append(f'<video class="hero-image hero-slideshow-img hero-slideshow-video{act}" data-slide-index="{img_idx}" src="{img_src}" playsinline muted style="object-fit:contain; width:100%; height:100%; background:#000; pointer-events:none;"{cap_attr}></video>')
+                else:
+                    img_tags.append(f'<img class="hero-image hero-slideshow-img{act}{fit_cls}" data-slide-index="{img_idx}" src="{img_src}" alt="{m["heading"]} - Archivfoto {img_idx+1}"{cap_attr}>')
+            dots = "".join([f'<span class="slideshow-dot{" active" if i==0 else ""}" data-target-index="{i}"></span>' for i in range(len(m['images']))])
+            media_html = f'''<div class="hero-image-slideshow" data-slide-interval="{slide_interval}">
+                  {"".join(img_tags)}
+                  <div class="hero-slideshow-dots">
+                    {dots}
+                  </div>
+                </div>'''
+        else:
+            media_html = f'<img class="hero-image" src="{m["image"]}" alt="{m["heading"]}">'
+
+        card_html = f'''            <div class="tree-hero-card">
+              <div class="hero-image-wrapper">
+                {media_html}
+                <div class="hero-corner-bracket top-left"></div>
+                <div class="hero-corner-bracket top-right"></div>
+                <div class="hero-corner-bracket bottom-left"></div>
+                <div class="hero-corner-bracket bottom-right"></div>
+                <div class="hero-image-badge">{m['image_tag']}</div>
+                <div class="hero-image-caption">{m['image_caption']}</div>
+              </div>
+
+              <div class="hero-meta-wrapper">
+                <div class="hero-meta-top">
+                  <div class="hero-year-pill">{m['year']}</div>
+                  <span class="hero-step-tag">Meilenstein {idx + 1} von {len(history_milestones_data)}</span>
+                </div>
+
+                <h3 class="hero-title">{m['heading']}</h3>
+                <p class="hero-sentence">{m['sentence']}</p>
+                {bullets_html}
+
+                <div class="hero-meta-bottom">
+                  <div class="hero-fact-tag">{m['fact']}</div>
+                  <div class="hero-quick-nav">
+                    <button class="hero-nav-arrow prev" data-dir="prev" {prev_dis} title="Zurück">←</button>
+                    <button class="hero-nav-arrow next" data-dir="next" {next_dis} title="{next_title}">→</button>
+                  </div>
+                </div>
+              </div>
+            </div>'''
+
+        counter_pill_html = f'''            <div class="tree-counter-pill">
+              <span class="tree-counter-text">{m['quote']}</span>
+              <span class="tree-counter-author">• {m['quote_author']}</span>
+            </div>'''
+
+        if m['branch'] == 'up':
+            top_content = f'''{card_html}'''
+            bottom_content = f'''{counter_pill_html}'''
+        else:
+            top_content = f'''{counter_pill_html}'''
+            bottom_content = f'''{card_html}'''
+
+        panels_html.append(f'''          <!-- MILESTONE {idx}: {m['year']} (Branch {m['branch'].upper()}) -->
+          <div class="tree-milestone-panel {active_cls} branch-{m['branch']}" data-milestone="{idx}" id="tree-milestone-{idx}">
+            <div class="tree-watermark-year">{m['year']}</div>
+
+            <!-- Top Slot (Above Central Flight Path) -->
+            <div class="tree-slot top-slot">
+              {top_content}
+            </div>
+
+            <!-- Center Spine Spacer (Zero background lines, completely dark) -->
+            <div class="tree-slot spine-slot"></div>
+
+            <!-- Bottom Slot (Below Central Flight Path) -->
+            <div class="tree-slot bottom-slot">
+              {bottom_content}
+            </div>
+          </div>''')
+
+    panels_str = chr(10).join(panels_html)
+
+    slides.append(f'''      <!-- SLIDE 3: 140+ Jahre Tradition & Meilensteine (Flying Light Point & Branching Ray) -->
       <section class="slide" data-slide="3">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 1: Einführung & Historie • Unsere Geschichte</div>
-            <h2 class="slide-title">140+ Jahre Tradition & Perfektion (1882 – Heute)</h2>
-            <div class="slide-subtitle">Vom Stuttgarter Handwerksbetrieb zum Weltmaßstab für Klaviermechaniken & Hammerköpfe</div>
+            <div class="slide-category" data-i18n="s3_category">Teil 1: Einführung & Historie • Unsere Geschichte</div>
+            <h2 class="slide-title" id="history-main-title">140+ Jahre Tradition & Perfektion (1882 – Heute)</h2>
+            <div class="slide-subtitle" id="history-main-subtitle">Vom Stuttgarter Handwerksbetrieb zum Weltmaßstab für Klaviermechaniken & Hammerköpfe</div>
           </div>
-        </div>
-        <div class="slide-body split-wide-media">
-          <div class="slide-text-col">
-            <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title" style="color: var(--gold-accent);">1882 – Gründung durch Louis Renner</div>
-              <div class="card-desc">Gründung in Stuttgart als handwerkliche Werkstatt für Flügel- und Klaviermechaniken. Stetiges Wachstum durch kompromisslose Präzision.</div>
-            </div>
-            <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title" style="color: var(--gold-accent);">1906 – Eigene Hammerkopf-Fertigung</div>
-              <div class="card-desc">Aufnahme der eigenen Hammerkopf-Produktion zur vollständigen Kontrolle über das akustische Zusammenspiel von Mechanik und Saite.</div>
-            </div>
-            <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title" style="color: var(--gold-accent);">1944 / 1952 – Zerstörung & Neubeginn Gärtringen</div>
-              <div class="card-desc">Nach völliger Zerstörung im Krieg Wiederaufbau und 1952 Bezug des neuen Werksstandorts in Gärtringen bei Stuttgart.</div>
-            </div>
-            <div class="feature-card">
-              <div class="card-title" style="color: var(--gold-accent);">1991 / 2019 / 2025 – Meuselwitz & Moderne Ära</div>
-              <div class="card-desc">Gründung Werk Meuselwitz 1991; 2019 Eingliederung in Steinway & Sons; 2025 Bündelung aller Kräfte am neuen Welt-Hauptsitz Meuselwitz.</div>
-            </div>
-          </div>
-          <div class="slide-media-col">
-            <div class="media-container" style="min-height: 420px;">
-              <img src="Visuell/Bilder/01_Geschichte/01_historische_renner_werkstatt_1882.png" alt="Historische Renner Werkstatt 1882">
-              <div class="media-caption">Historische Renner Manufaktur: Traditionelle Handarbeit seit 1882</div>
+
+          <!-- Timeline Controls -->
+          <div class="vox-timeline-header-controls">
+            <!-- Autoplay Video Mode Button -->
+            <button class="vox-play-btn" id="vox-play-btn" title="Zeitreise als Video / Film abspielen">
+              <span class="vox-play-icon" id="vox-play-icon">▶</span>
+              <span class="vox-play-label" id="vox-play-label" data-i18n="vox_play">Zeitreise abspielen</span>
+              <div class="vox-play-progress" id="vox-play-progress"></div>
+            </button>
+
+            <!-- Stepping Controls -->
+            <div class="vox-nav-group">
+              <button class="vox-step-btn" id="vox-prev-btn" disabled title="Nach links in die Vergangenheit">
+                ← <span data-i18n="vox_past">Vergangenheit</span>
+              </button>
+              <span class="vox-step-counter" id="vox-step-counter">✦ Zeitreise starten</span>
+              <button class="vox-step-btn highlight" id="vox-next-btn" title="Nach rechts in die Zukunft">
+                <span id="vox-next-label" data-i18n="vox_future">In die Zukunft</span> →
+              </button>
             </div>
           </div>
         </div>
+
+        <!-- Central Timeline Container with Flying Light Sphere -->
+        <div class="tree-timeline-container is-dark-start" id="tree-timeline-container">
+          
+          <!-- Full-Frame Canvas for Real Curved Comet Tail & Stardust Particles -->
+          <canvas class="comet-trail-canvas" id="comet-trail-canvas"></canvas>
+
+          <!-- Flying Light Sphere Traveler ("Licht-Kugel mit harmonischer Welle") -->
+          <div class="flying-comet-traveler" id="flying-comet-traveler">
+            <!-- Vertical Branching Ray (Der verzweigte Strahl vom Punkt zur Epoche) -->
+            <div class="comet-branch-ray" id="comet-branch-ray">
+              <div class="ray-light-shaft"></div>
+              <div class="ray-blooming-flare"></div>
+            </div>
+
+            <!-- Radiant Harmonic Light Sphere Head (Die Kugel) -->
+            <div class="comet-head-point" id="comet-head-point" data-luminosity="0">
+              <div class="point-core-white"></div>
+              <div class="point-corona-ring"></div>
+              <div class="point-starburst-flare"></div>
+              <div class="point-birth-burst" id="point-birth-burst"></div>
+            </div>
+          </div>
+
+          <!-- Horizontal Tracking Viewport (Temporal Window: Only Current Section Seen) -->
+          <div class="tree-viewport" id="tree-viewport">
+            <!-- Sliding Panorama Track along the Organic Energy Stream -->
+            <div class="tree-pan-track" id="tree-pan-track">
+{panels_str}
+            </div>
+          </div>
+
+        </div>
+        <!-- Backward-compat hidden anchor for slide navigation hooks -->
+        <div id="history-slide-body" style="display:none;"></div>
 {get_watermark()}
       </section>''')
 
-    # SLIDE 4: Transformation Meuselwitz (Sander Bento Mosaic)
-    slides.append(f'''      <!-- SLIDE 4: Transformation Meuselwitz -->
+    # SLIDE 4: Interaktive Baudokumentation Meuselwitz (Harmonic Flying Light Point & Photo-Focus Timeline)
+    transformation_milestones_data = [
+        {
+            'id': '2025-11',
+            'monthYear': '11.2025',
+            'branch': 'up',
+            'phase': 'Phase 1: Hallenvorbereitung',
+            'title': 'Start Bauvorhaben & Entkernung',
+            'caption': 'Erste Begehung und Entkernung: Freilegung der tragenden Strukturen für das neue industrielle Produktionslayout.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg'
+        },
+        {
+            'id': '2025-12',
+            'monthYear': '12.2025',
+            'branch': 'down',
+            'phase': 'Phase 2: Fundamentierung',
+            'title': 'Schwerlastböden & Schwingungsentkopplung',
+            'caption': 'Gießen der schwingungsentkoppelten Schwerlast-Betonböden für tonnenschwere Hammerkopf-Pressen und CNC-Fräsen.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/14_20251201_135805.jpg'
+        },
+        {
+            'id': '2026-01',
+            'monthYear': '01.2026',
+            'branch': 'up',
+            'phase': 'Phase 3: Hallenstruktur & Dämmung',
+            'title': 'Hallenisolierung & Struktur-Modernisierung',
+            'caption': 'Installation hochisolierter Wandpaneele und Vorbereitung des Reinraum-Deckenbereichs für gleichbleibendes Raumklima.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/18_20260106_135356.jpg'
+        },
+        {
+            'id': '2026-02',
+            'monthYear': '02.2026',
+            'branch': 'down',
+            'phase': 'Phase 4: Präzisions-Klimatechnik',
+            'title': 'Computergestützte Klimaregelung (45–50% r.F.)',
+            'caption': 'Einbau der zentralen Klimatisierung: Strikte 45–50 % Luftfeuchte schützen sensible Filze und Hölzer vor Verzug.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/23_20260227_074933.jpg'
+        },
+        {
+            'id': '2026-03',
+            'monthYear': '03.2026',
+            'branch': 'up',
+            'phase': 'Phase 5: Energie & Infrastruktur',
+            'title': 'Stromschienen, Druckluft & Absaugtrassen',
+            'caption': 'Flächendeckende Decken-Trassen für Industriestrom, Druckluft und Feinstaubabsaugung über allen Maschinenpositionen.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/25_20260320_090128.jpg'
+        },
+        {
+            'id': '2026-04',
+            'monthYear': '04.2026',
+            'branch': 'down',
+            'phase': 'Phase 6: Schwertransport-Logistik',
+            'title': 'Überführung der Gärtringer Spezialanlagen',
+            'caption': 'Präzise getaktete Spezialtransporte über 450 km zur schadensfreien Überführung des Maschinenparks nach Meuselwitz.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/27_20260428_083959.jpg'
+        },
+        {
+            'id': '2026-05',
+            'monthYear': '05.2026',
+            'branch': 'up',
+            'phase': 'Phase 7: Maschinenankunft',
+            'title': 'Ankunft der Präzisionspressen & Sondermaschinen',
+            'caption': 'Entladung der tonnenschweren Maschinenkörper und Baugruppen am Haupttor des modernisierten Werksgeländes.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/34_20260521_144701.jpg'
+        },
+        {
+            'id': '2026-06',
+            'monthYear': '06.2026',
+            'branch': 'down',
+            'phase': 'Phase 8: Halleneinbringung',
+            'title': 'Schwerlast-Positionierung per Panzerrollen',
+            'caption': 'Mit Spezialkränen und Panzerrollen werden die Anlagen zentimetergenau auf ihre vorbereiteten Fundamente gesetzt.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/36_20260610_075535.jpg'
+        },
+        {
+            'id': '2026-07',
+            'monthYear': '07.2026',
+            'branch': 'up',
+            'phase': 'Phase 9: Laser-Nivellierung',
+            'title': 'Lasergestützte Verankerung & Justierung',
+            'caption': 'Optische Laservermessung stellt vollkommen verzugsfreie Maschinenbetten für kompromisslose Serienpräzision sicher.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/38_20260708_120853.jpg'
+        },
+        {
+            'id': '2026-09',
+            'monthYear': '09.2026',
+            'branch': 'down',
+            'phase': 'Phase 10: Meisterarbeitsplätze',
+            'title': 'Einrichtung der Feinmontage & Absaugsysteme',
+            'caption': 'Modernste Prüfvorrichtungen, ergonomische Werkbänke und Tageslichtbeleuchtung für ermüdungsfreie Montage.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/42_20260909_094559.jpg'
+        },
+        {
+            'id': '2026-10',
+            'monthYear': '10.2026',
+            'branch': 'up',
+            'phase': 'Phase 11: Vollbetrieb & Welt-Hauptsitz',
+            'title': 'Erfolgreiche Inbetriebnahme & Vollbetrieb',
+            'caption': 'Vollständige Produktionsaufnahme: Renner fertigt Konzertmechaniken und Hammerköpfe am neuen globalen Hauptsitz Meuselwitz.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/48_20261009_081342.jpg'
+        }
+    ]
+
+    build_panels_html = []
+    for idx, m in enumerate(transformation_milestones_data):
+        active_cls = 'active' if idx == 0 else ''
+        prev_dis = 'disabled' if idx == 0 else ''
+        next_dis = ''
+        next_title = 'Nächste Folie' if idx == 10 else 'Weiter'
+
+        card_html = f'''            <div class="tree-hero-card photo-focus-card">
+              <div class="photo-card-img-wrapper">
+                <img class="photo-card-img" src="{m['image']}" alt="{m['title']}">
+                <div class="hero-corner-bracket top-left"></div>
+                <div class="hero-corner-bracket top-right"></div>
+                <div class="hero-corner-bracket bottom-left"></div>
+                <div class="hero-corner-bracket bottom-right"></div>
+                <div class="photo-card-month-badge">{m['monthYear']}</div>
+                <div class="photo-card-step-badge">Bauphase {idx + 1} von 11</div>
+              </div>
+              <div class="photo-caption-bar">
+                <div class="photo-caption-dot"></div>
+                <div class="photo-caption-title">{m['title']}</div>
+                <span class="photo-caption-separator">•</span>
+                <div class="photo-caption-text">{m['caption']}</div>
+                <div class="photo-caption-nav">
+                  <button class="photo-nav-btn prev" data-dir="prev" {prev_dis} title="Zurück">←</button>
+                  <button class="photo-nav-btn next" data-dir="next" {next_dis} title="{next_title}">→</button>
+                </div>
+              </div>
+            </div>'''
+
+        counter_pill_html = f'''            <div class="tree-counter-pill">
+              <span class="tree-counter-text">{m['phase']}</span>
+              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
+            </div>'''
+
+        if m['branch'] == 'up':
+            top_content = f'''{card_html}'''
+            bottom_content = f'''{counter_pill_html}'''
+        else:
+            top_content = f'''{counter_pill_html}'''
+            bottom_content = f'''{card_html}'''
+
+        build_panels_html.append(f'''          <!-- BUILD MILESTONE {idx}: {m['monthYear']} (Branch {m['branch'].upper()}) -->
+          <div class="tree-milestone-panel build-milestone-panel {active_cls} branch-{m['branch']}" data-milestone="{idx}" id="build-milestone-{idx}">
+            <div class="tree-watermark-year tree-watermark-month-year">{m['monthYear']}</div>
+
+            <!-- Top Slot -->
+            <div class="tree-slot top-slot">
+              {top_content}
+            </div>
+
+            <!-- Center Spine Spacer -->
+            <div class="tree-slot spine-slot"></div>
+
+            <!-- Bottom Slot -->
+            <div class="tree-slot bottom-slot">
+              {bottom_content}
+            </div>
+          </div>''')
+
+    build_panels_str = chr(10).join(build_panels_html)
+
+    slides.append(f'''      <!-- SLIDE 4: Interaktive Baudokumentation Meuselwitz (Harmonic Flying Light Point & Photo-Focus Timeline) -->
       <section class="slide" data-slide="4">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 1: Einführung & Historie • Standort Meuselwitz</div>
-            <h2 class="slide-title">Zusammenlegung & Ausbau zum globalen Hauptsitz</h2>
-            <div class="slide-subtitle">Bündelung aller Kompetenzen am modernen Produktionsstandort Meuselwitz</div>
+            <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung & Historie • Meuselwitz Transformation</div>
+            <h2 class="slide-title" id="build-main-title">Baudokumentation: Die Entstehung des neuen Werks</h2>
+            <div class="slide-subtitle" id="build-main-subtitle">Fotodokumentation der Meilensteine des Umbaus in Meuselwitz (11.2025 – 10.2026)</div>
           </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold">STANDORT-STRATEGIE</span>
-              <div class="bento-card-title">Bündelung aller Kompetenzen am modernen Welt-Hauptsitz</div>
-              <div class="bento-card-desc">
-                Um den wachsenden internationalen Qualitätsanforderungen gerecht zu werden und Synergien optimal zu nutzen, hat Louis Renner die beiden bisherigen Werke (Gärtringen und Meuselwitz) an einem hochmodernen Standort zusammengeführt.
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span><strong>Bauvorhaben ab 09.2023 / 2024:</strong> Umfassende Revitalisierung und Erweiterung der Hallenflächen in Meuselwitz (Thüringen).</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span><strong>Schließung Standort Gärtringen:</strong> Konzentration der gesamten Mechanik- und Hammerkopf-Kompetenz an einer zentralen Stätte.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span><strong>Wertstromorientiertes Layout:</strong> Kürzeste Wege vom Holzzuschnitt über die Filzlagerung bis zur Endmontage und Baugruppenruhe.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/02_Meuselwitz_Umbau/24_meuselwitz_moderner_hauptsitz_aussen_innen.jpg" alt="Neuer Renner Hauptsitz Meuselwitz">
-              <div class="bento-media-overlay">
-                <span class="bento-badge green">MEUSELWITZ 2025</span>
-                <div class="bento-media-caption">Der neue vereinte Renner Hauptsitz</div>
-                <div class="bento-media-subcaption">Zukunftssicherung: Ausbau von Ausbildungsplätzen und Kapazitäten für weltweite Konzert- und Serienkunden</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
 
-    # SLIDE 5: Interaktive Baudokumentation Meuselwitz
-    slides.append(f'''      <!-- SLIDE 5: Interaktive Baudokumentation Meuselwitz -->
-      <section class="slide" data-slide="5">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category">Teil 1: Einführung & Historie • Baudokumentation</div>
-            <h2 class="slide-title">Baudokumentation: Die Entstehung des neuen Werks</h2>
-            <div class="slide-subtitle">Fotodokumentation der Meilensteine des Umbaus in Meuselwitz (09.2023 – 2025)</div>
-          </div>
-        </div>
-        <div class="slide-body split-wide-media">
-          <div class="slide-text-col">
-            <div class="feature-card" style="margin-bottom: 16px;">
-              <div class="card-title">Der Umbau in 5 Phasen</div>
-              <ul class="bullet-list" style="margin-top: 10px;">
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Phase 1:</strong> Entkernung, Bodensanierung und Hallenisolierung</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Phase 2:</strong> Installation modernster Klimatechnik und Absauganlagen</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Phase 3:</strong> Umzug der Spezialmaschinen und Präzisionspressen</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Phase 4:</strong> Aufbau der robotergestützten Zuschnittlinien</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Phase 5:</strong> Inbetriebnahme des klimatisierten Filz- und Baugruppenlagers</span></li>
-              </ul>
-            </div>
-            <div class="media-container" style="height: 180px; min-height: 180px;">
-              <img src="Visuell/Bilder/02_Meuselwitz_Umbau/16_meuselwitz_montagetische_einrichtung.jpg" alt="Montagetische Meuselwitz">
-              <div class="media-caption">Neue Montagetische und ergonomische Arbeitsplätze</div>
-            </div>
-          </div>
-          <div class="slide-media-col">
-            <div class="media-container" style="min-height: 440px;">
-              <img id="timelapse-stage-image" src="Visuell/Bilder/02_Meuselwitz_Umbau/00_meuselwitz_bauvorhaben_start_2025.jpg" alt="Baufortschritt Meuselwitz">
-              <div class="media-caption" id="timelapse-stage-caption">Start des Bauvorhabens: Rohbau und Hallenstruktur</div>
+          <!-- Timeline Controls -->
+          <div class="vox-timeline-header-controls">
+            <!-- Autoplay Video Mode Button -->
+            <button class="vox-play-btn" id="build-play-btn" title="Fotoreise als Video / Film abspielen">
+              <span class="vox-play-icon" id="build-play-icon">▶</span>
+              <span class="vox-play-label" id="build-play-label" data-i18n="build_play">Fotoreise abspielen</span>
+              <div class="vox-play-progress" id="build-play-progress"></div>
+            </button>
+
+            <!-- Stepping Controls -->
+            <div class="vox-nav-group">
+              <button class="vox-step-btn" id="build-prev-btn" disabled title="Nach links in die Vergangenheit">
+                ← <span data-i18n="vox_past">Vergangenheit</span>
+              </button>
+              <span class="vox-step-counter" id="build-step-counter">✦ Fotoreise starten</span>
+              <button class="vox-step-btn highlight" id="build-next-btn" title="Nach rechts in die Zukunft">
+                <span id="build-next-label" data-i18n="vox_future">In die Zukunft</span> →
+              </button>
             </div>
           </div>
         </div>
+
+        <!-- Central Timeline Container with Flying Light Sphere -->
+        <div class="tree-timeline-container is-dark-start" id="build-timeline-container">
+          
+          <!-- Full-Frame Canvas for Real Curved Comet Tail & Stardust Particles -->
+          <canvas class="comet-trail-canvas" id="build-trail-canvas"></canvas>
+
+          <!-- Flying Light Sphere Traveler ("Licht-Kugel mit harmonischer Welle") -->
+          <div class="flying-comet-traveler" id="build-comet-traveler">
+            <!-- Vertical Branching Ray -->
+            <div class="comet-branch-ray" id="build-branch-ray">
+              <div class="ray-light-shaft"></div>
+              <div class="ray-blooming-flare"></div>
+            </div>
+
+            <!-- Radiant Harmonic Light Sphere Head -->
+            <div class="comet-head-point" id="build-head-point" data-luminosity="0">
+              <div class="point-core-white"></div>
+              <div class="point-corona-ring"></div>
+              <div class="point-starburst-flare"></div>
+              <div class="point-birth-burst" id="build-birth-burst"></div>
+            </div>
+          </div>
+
+          <!-- Horizontal Tracking Viewport -->
+          <div class="tree-viewport" id="build-viewport">
+            <!-- Sliding Panorama Track -->
+            <div class="tree-pan-track" id="build-pan-track">
+{build_panels_str}
+            </div>
+          </div>
+
+        </div>
+        <!-- Backward-compat hidden anchor for slide navigation hooks -->
+        <div id="build-slide-body" style="display:none;"></div>
 {get_watermark()}
       </section>''')
 
@@ -236,32 +718,32 @@ def get_all_slides_html():
       <section class="slide" data-slide="6">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 1: Einführung & Historie • Meuselwitz Infrastruktur</div>
-            <h2 class="slide-title">Klimakontrolle & Präzisionslogistik</h2>
-            <div class="slide-subtitle">Gleichbleibende Materialfeuchte als Voraussetzung für Mikrometer-Präzision</div>
+            <div class="slide-category" data-i18n="s6_category">Teil 1: Einführung & Historie • Meuselwitz Infrastruktur</div>
+            <h2 class=\"slide-title\" data-i18n=\"s6_title\">Klimakontrolle & Präzisionslogistik</h2>
+            <div class="slide-subtitle" data-i18n="s6_subtitle">Gleichbleibende Materialfeuchte als Voraussetzung für Mikrometer-Präzision</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="card-grid" style="grid-template-columns: 1fr; gap: 14px;">
               <div class="feature-card">
-                <div class="card-title">Konstantes Mikroklima (45–50% r.F.)</div>
-                <div class="card-desc">Sowohl Holzkörper als auch Filze reagieren sensibel auf Luftfeuchtigkeitsschwankungen. In Meuselwitz wird das Raumklima rund um die Uhr computergesteuert überwacht.</div>
+                <div class="card-title" data-i18n="s6_c1_title">Konstantes Mikroklima (45–50% r.F.)</div>
+                <div class="card-desc" data-i18n="s6_c1_desc">Sowohl Holzkörper als auch Filze reagieren sensibel auf Luftfeuchtigkeitsschwankungen. In Meuselwitz wird das Raumklima rund um die Uhr computergesteuert überwacht.</div>
               </div>
               <div class="feature-card">
-                <div class="card-title">Mottenschutz & Reifekammern</div>
-                <div class="card-desc">Speziell isolierte Woll- und Filzlager mit pheromonbasiertem Monitoring und konstanter Luftumwälzung garantieren makellose Rohstoffqualität.</div>
+                <div class="card-title" data-i18n="s6_c2_title">Mottenschutz & Reifekammern</div>
+                <div class="card-desc" data-i18n="s6_c2_desc">Speziell isolierte Woll- und Filzlager mit pheromonbasiertem Monitoring und konstanter Luftumwälzung garantieren makellose Rohstoffqualität.</div>
               </div>
               <div class="feature-card">
-                <div class="card-title">Absaugung & Reinraum-Standards</div>
-                <div class="card-desc">Moderne Absauganlagen an allen Fräs- und Schleifstationen verhindern Feinstaubablagerungen auf den sensiblen Filz- und Tuchbaugruppen.</div>
+                <div class="card-title" data-i18n="s6_c3_title">Absaugung & Reinraum-Standards</div>
+                <div class="card-desc" data-i18n="s6_c3_desc">Moderne Absauganlagen an allen Fräs- und Schleifstationen verhindern Feinstaubablagerungen auf den sensiblen Filz- und Tuchbaugruppen.</div>
               </div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/Bilder/02_Meuselwitz_Umbau/13_meuselwitz_klimatisierte_lagerraeume.jpg" alt="Klimatisierte Lagerräume Meuselwitz">
-              <div class="media-caption">Klimatisierte Baugruppen- und Materiallager in Meuselwitz</div>
+              <div class="media-caption" data-i18n="s6_caption_1">Klimatisierte Baugruppen- und Materiallager in Meuselwitz</div>
             </div>
           </div>
         </div>
@@ -277,9 +759,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="7">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Historie & Tradition</div>
-            <h2 class="slide-title">J.D. Weickert & Die Wiege des Hammerkopffilzes</h2>
-            <div class="slide-subtitle">1783 in Leipzig gegründet – 1847 Eröffnung der Spezialfabrik in Wurzen</div>
+            <div class="slide-category" data-i18n="s7_category">Teil 2: Filzherstellung • Historie & Tradition</div>
+            <h2 class=\"slide-title\" data-i18n=\"s7_title\">J.D. Weickert & Die Wiege des Hammerkopffilzes</h2>
+            <div class="slide-subtitle" data-i18n="s7_subtitle">1783 in Leipzig gegründet – 1847 Eröffnung der Spezialfabrik in Wurzen</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -287,26 +769,26 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Gründung 1783:</strong> Gegründet von Johann David Weickert in Leipzig (Sachsen). Ursprünglich Tuch- und Filzherstellung.</span>
+                <span data-i18n="s7_bullet_1"><strong>Gründung 1783:</strong> Gegründet von Johann David Weickert in Leipzig (Sachsen). Ursprünglich Tuch- und Filzherstellung.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Pionierleistung 1847:</strong> In der neu errichteten Fabrik in Wurzen gelang es erstmals, speziellen Hammerkopffilz in gleichbleibender Spitzenqualität zu fertigen, wie er bis heute genutzt wird.</span>
+                <span data-i18n="s7_bullet_2"><strong>Pionierleistung 1847:</strong> In der neu errichteten Fabrik in Wurzen gelang es erstmals, speziellen Hammerkopffilz in gleichbleibender Spitzenqualität zu fertigen, wie er bis heute genutzt wird.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Weltweiter Hoflieferant:</strong> Bereits im 19. Jahrhundert belieferte Weickert die renommiertesten Pianoforte-Fabrikanten Europas und Amerikas.</span>
+                <span data-i18n="s7_bullet_3"><strong>Weltweiter Hoflieferant:</strong> Bereits im 19. Jahrhundert belieferte Weickert die renommiertesten Pianoforte-Fabrikanten Europas und Amerikas.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Klangliche Identität:</strong> Weickert-Filz gilt weltweit als der Inbegriff des warmen, tragfähigen und farbenreichen europäischen Klaviertons.</span>
+                <span data-i18n="s7_bullet_4"><strong>Klangliche Identität:</strong> Weickert-Filz gilt weltweit als der Inbegriff des warmen, tragfähigen und farbenreichen europäischen Klaviertons.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_3_2_Image161.jpg" alt="Geschichte Weickert Filz">
-              <div class="media-caption">Original Weickert-Manufaktur in Wurzen (Sachsen)</div>
+              <div class="media-caption" data-i18n="s7_caption_1">Original Weickert-Manufaktur in Wurzen (Sachsen)</div>
             </div>
           </div>
         </div>
@@ -318,9 +800,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="8">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • FFW Wurzen heute</div>
-            <h2 class="slide-title">FFW Wurzen – Weickert-Filz in der Gegenwart</h2>
-            <div class="slide-subtitle">Traditionelles Handwerkswissen vereint mit modernsten Produktionsstandards</div>
+            <div class="slide-category" data-i18n="s8_category">Teil 2: Filzherstellung • FFW Wurzen heute</div>
+            <h2 class=\"slide-title\" data-i18n=\"s8_title\">FFW Wurzen – Weickert-Filz in der Gegenwart</h2>
+            <div class="slide-subtitle" data-i18n="s8_subtitle">Traditionelles Handwerkswissen vereint mit modernsten Produktionsstandards</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -331,22 +813,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Exklusive Renner-Partnerschaft:</strong> Renner bezieht seinen gesamten Premium-Deckfilz exklusiv aus der modernisierten Wurzener Manufaktur.</span>
+                <span data-i18n="s8_bullet_1"><strong>Exklusive Renner-Partnerschaft:</strong> Renner bezieht seinen gesamten Premium-Deckfilz exklusiv aus der modernisierten Wurzener Manufaktur.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Traditionsmeister:</strong> Das tiefe Wissen erfahrener Altmeister über Wollfeuchte, Walkzeiten und Faserrezepturen wird sorgfältig weitergegeben.</span>
+                <span data-i18n="s8_bullet_2"><strong>Traditionsmeister:</strong> Das tiefe Wissen erfahrener Altmeister über Wollfeuchte, Walkzeiten und Faserrezepturen wird sorgfältig weitergegeben.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Modernisierte Anlagen:</strong> Präzise Temperatur- und Drucküberwachung für unerreichte Chargenkonstanz.</span>
+                <span data-i18n="s8_bullet_3"><strong>Modernisierte Anlagen:</strong> Präzise Temperatur- und Drucküberwachung für unerreichte Chargenkonstanz.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/image6.jpeg" alt="Filzfabrik Wurzen modern">
-              <div class="media-caption">Filzfabrik Wurzen (FFW): Traditionelle Fertigung auf modernem Niveau</div>
+              <div class="media-caption" data-i18n="s8_caption_1">Filzfabrik Wurzen (FFW): Traditionelle Fertigung auf modernem Niveau</div>
             </div>
           </div>
         </div>
@@ -358,9 +840,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="9">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Rohstoff & Wolle</div>
-            <h2 class="slide-title">Reine Schurwolle: Schonung der Faserstruktur</h2>
-            <div class="slide-subtitle">Nur unverpresste Rohwolle garantiert die maximale natürliche Elastizität</div>
+            <div class="slide-category" data-i18n="s9_category">Teil 2: Filzherstellung • Rohstoff & Wolle</div>
+            <h2 class=\"slide-title\" data-i18n=\"s9_title\">Reine Schurwolle: Schonung der Faserstruktur</h2>
+            <div class="slide-subtitle" data-i18n="s9_subtitle">Nur unverpresste Rohwolle garantiert die maximale natürliche Elastizität</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -368,26 +850,26 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen.</span>
+                <span data-i18n="s9_bullet_1"><strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Höhere Logistikkosten für Spitzenqualität:</strong> Dieser schonende Transport erhöht das Transportvolumen, sichert jedoch die unversehrte Faserelastizität.</span>
+                <span data-i18n="s9_bullet_2"><strong>Höhere Logistikkosten für Spitzenqualität:</strong> Dieser schonende Transport erhöht das Transportvolumen, sichert jedoch die unversehrte Faserelastizität.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Starke Faserkräuselung:</strong> Nur hochgradig gekräuselte Merinowollfasern bieten beim späteren Walkprozess den optimalen Verhakungseffekt.</span>
+                <span data-i18n="s9_bullet_3"><strong>Starke Faserkräuselung:</strong> Nur hochgradig gekräuselte Merinowollfasern bieten beim späteren Walkprozess den optimalen Verhakungseffekt.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Schonende Carbonisierung:</strong> Chemisch sanftes Reinigungsverfahren entfernt Pflanzenteilchen, ohne die Proteinstruktur des Keratins anzugreifen.</span>
+                <span data-i18n="s9_bullet_4"><strong>Schonende Carbonisierung:</strong> Chemisch sanftes Reinigungsverfahren entfernt Pflanzenteilchen, ohne die Proteinstruktur des Keratins anzugreifen.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_5_2_Image181.jpg" alt="Rohwolle in Ballen">
-              <div class="media-caption">Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW</div>
+              <div class="media-caption" data-i18n="s9_caption_1">Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW</div>
             </div>
           </div>
         </div>
@@ -399,9 +881,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="10">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Wollmischung</div>
-            <h2 class="slide-title">Die geheime Rezeptur der Wollmischung</h2>
-            <div class="slide-subtitle">Auflockerung und Mischung verschiedener Wollpartien für maßgeschneiderte Dichten</div>
+            <div class="slide-category" data-i18n="s10_category">Teil 2: Filzherstellung • Wollmischung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s10_title\">Die geheime Rezeptur der Wollmischung</h2>
+            <div class="slide-subtitle" data-i18n="s10_subtitle">Auflockerung und Mischung verschiedener Wollpartien für maßgeschneiderte Dichten</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -412,22 +894,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Blend-Verfahren:</strong> Mischen unterschiedlicher Faserlängen und -stärken, um spezifische Federsteifigkeiten zu erzielen.</span>
+                <span data-i18n="s10_bullet_1"><strong>Blend-Verfahren:</strong> Mischen unterschiedlicher Faserlängen und -stärken, um spezifische Federsteifigkeiten zu erzielen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Faserauflockerung:</strong> Mehrstufiges maschinelles Zupfen und Belüften trennt Faserknäuel sanft in Einzelfasern.</span>
+                <span data-i18n="s10_bullet_2"><strong>Faserauflockerung:</strong> Mehrstufiges maschinelles Zupfen und Belüften trennt Faserknäuel sanft in Einzelfasern.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme vor dem Kardieren verhindert elektrostatische Aufladung und Faserbruch.</span>
+                <span data-i18n="s10_bullet_3"><strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme vor dem Kardieren verhindert elektrostatische Aufladung und Faserbruch.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_6_2_Image187.jpg" alt="Mischen der Wollfasern">
-              <div class="media-caption">Auflockerungs- und Mischprozess der Faserchargen bei FFW Wurzen</div>
+              <div class="media-caption" data-i18n="s10_caption_1">Auflockerungs- und Mischprozess der Faserchargen bei FFW Wurzen</div>
             </div>
           </div>
         </div>
@@ -439,9 +921,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="11">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Vlies & Faserrichtung</div>
-            <h2 class="slide-title">Krempeln: Parallele Ausrichtung zu weichen Vliesen</h2>
-            <div class="slide-subtitle">Die definierte Faserorientierung als Fundament für Schwingung und Saitenansprache</div>
+            <div class="slide-category" data-i18n="s11_category">Teil 2: Filzherstellung • Vlies & Faserrichtung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s11_title\">Krempeln: Parallele Ausrichtung zu weichen Vliesen</h2>
+            <div class="slide-subtitle" data-i18n="s11_subtitle">Die definierte Faserorientierung als Fundament für Schwingung und Saitenansprache</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -449,26 +931,26 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Kardieren (Carding):</strong> Die aufgelockerten Fasern werden über feine Nadelwalzen gekämmt, entwirrt und parallel zueinander angeordnet.</span>
+                <span data-i18n="s11_bullet_1"><strong>Kardieren (Carding):</strong> Die aufgelockerten Fasern werden über feine Nadelwalzen gekämmt, entwirrt und parallel zueinander angeordnet.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Definierte Faserrichtung:</strong> Das so entstehende hauchdünne, weiche Vlies besitzt eine exakt vorgegebene Vorzugsrichtung der Fasern.</span>
+                <span data-i18n="s11_bullet_2"><strong>Definierte Faserrichtung:</strong> Das so entstehende hauchdünne, weiche Vlies besitzt eine exakt vorgegebene Vorzugsrichtung der Fasern.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Schichtung:</strong> Mehrere Vlieslagen werden im Kreuz- und Längsverbund übereinandergelegt, um die gewünschte Plattendicke und Dichteverteilung aufzubauen.</span>
+                <span data-i18n="s11_bullet_3"><strong>Schichtung:</strong> Mehrere Vlieslagen werden im Kreuz- und Längsverbund übereinandergelegt, um die gewünschte Plattendicke und Dichteverteilung aufzubauen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Voraussetzung für die Intonation:</strong> Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche.</span>
+                <span data-i18n="s11_bullet_4"><strong>Voraussetzung für die Intonation:</strong> Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_7_2_Image190.jpg" alt="Krempeln zu Vlies">
-              <div class="media-caption">Auskämmen der Wolle zu seidig fließenden Vliesen mit definierter Faserrichtung</div>
+              <div class="media-caption" data-i18n="s11_caption_1">Auskämmen der Wolle zu seidig fließenden Vliesen mit definierter Faserrichtung</div>
             </div>
           </div>
         </div>
@@ -480,9 +962,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="12">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Walkprozess</div>
-            <h2 class="slide-title">Die 4 Säulen des Walkens: Dampf, Druck, Bewegung & Wissen</h2>
-            <div class="slide-subtitle">Verschlingung der Fasern durch natürliche physikalisch-thermische Reize</div>
+            <div class="slide-category" data-i18n="s12_category">Teil 2: Filzherstellung • Walkprozess</div>
+            <h2 class=\"slide-title\" data-i18n=\"s12_title\">Die 4 Säulen des Walkens: Dampf, Druck, Bewegung & Wissen</h2>
+            <div class="slide-subtitle" data-i18n="s12_subtitle">Verschlingung der Fasern durch natürliche physikalisch-thermische Reize</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -492,27 +974,27 @@ def get_all_slides_html():
             </p>
             <div class="card-grid" style="grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px;">
               <div class="feature-card">
-                <div class="card-title">1. Heißdampf</div>
-                <div class="card-desc">Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.</div>
+                <div class="card-title" data-i18n="s12_c1_title">1. Heißdampf</div>
+                <div class="card-desc" data-i18n="s12_c1_desc">Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.</div>
               </div>
               <div class="feature-card">
-                <div class="card-title">2. Mechanischer Druck</div>
-                <div class="card-desc">Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.</div>
+                <div class="card-title" data-i18n="s12_c2_title">2. Mechanischer Druck</div>
+                <div class="card-desc" data-i18n="s12_c2_desc">Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.</div>
               </div>
               <div class="feature-card">
-                <div class="card-title">3. Oszillierende Bewegung</div>
-                <div class="card-desc">Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.</div>
+                <div class="card-title" data-i18n="s12_c3_title">3. Oszillierende Bewegung</div>
+                <div class="card-desc" data-i18n="s12_c3_desc">Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.</div>
               </div>
               <div class="feature-card">
-                <div class="card-title">4. Handwerkliches Know-how</div>
-                <div class="card-desc">Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.</div>
+                <div class="card-title" data-i18n="s12_c4_title">4. Handwerkliches Know-how</div>
+                <div class="card-desc" data-i18n="s12_c4_desc">Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.</div>
               </div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_8_2_Image194.jpg" alt="Der Walkprozess">
-              <div class="media-caption">Zusammenführen und Walken der Vlieslagen zur homogenen Filzplatte</div>
+              <div class="media-caption" data-i18n="s12_caption_1">Zusammenführen und Walken der Vlieslagen zur homogenen Filzplatte</div>
             </div>
           </div>
         </div>
@@ -524,21 +1006,21 @@ def get_all_slides_html():
       <section class="slide" data-slide="13">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Elastizität</div>
-            <h2 class="slide-title">0.56 Shore: Die Grenze der natürlichen Walkhärte</h2>
-            <div class="slide-subtitle">Maximale Eigenelastizität durch Verzicht auf chemische oder thermische Überhärtung</div>
+            <div class="slide-category" data-i18n="s13_category">Teil 2: Filzherstellung • Elastizität</div>
+            <h2 class=\"slide-title\" data-i18n=\"s13_title\">0.56 Shore: Die Grenze der natürlichen Walkhärte</h2>
+            <div class="slide-subtitle" data-i18n="s13_subtitle">Maximale Eigenelastizität durch Verzicht auf chemische oder thermische Überhärtung</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <span class="bento-badge gold">PHYSIKALISCHE GRENZE</span>
+              <span class="bento-badge gold" data-i18n="s13_b1_badge">>PHYSIKALISCHE GRENZE</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">0.56</span>
                 <span class="bento-metric-unit">Shore</span>
               </div>
-              <div class="bento-card-title">Maximale natürliche Walkhärte</div>
-              <div class="bento-card-desc">
+              <div class="bento-card-title" data-i18n="s13_c1_title">Maximale natürliche Walkhärte</div>
+              <div class="bento-card-desc" data-i18n="s13_c1_desc">
                 Filzplatten werden beim Walken so lange verdichtet, bis sich die Fasern auf rein mechanischem Wege nicht weiter zusammenschieben lassen. Dies entspricht der maximalen natürlichen Walkhärte von ca. 0.56 Shore.
               </div>
               <div class="bento-card-list">
@@ -555,9 +1037,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image7.jpeg" alt="Filzplatten bei FFW">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">FFW WURZEN</span>
-                <div class="bento-media-caption">Filzplatten bei FFW</div>
-                <div class="bento-media-subcaption">Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore</div>
+                <span class="bento-badge green" data-i18n="s13_b2_badge">>FFW WURZEN</span>
+                <div class="bento-media-caption" data-i18n="s13_caption_1">Filzplatten bei FFW</div>
+                <div class="bento-media-subcaption" data-i18n="s13_caption_2">Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore</div>
               </div>
             </div>
           </div>
@@ -570,9 +1052,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="14">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Nachverdichtung</div>
-            <h2 class="slide-title">Verdichten mit Filzhämmern & Filzsteinen</h2>
-            <div class="slide-subtitle">Formgebung auf Endmaß ohne Schleifen – Bewahrung der seidigen Faserhaut</div>
+            <div class="slide-category" data-i18n="s14_category">Teil 2: Filzherstellung • Nachverdichtung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s14_title\">Verdichten mit Filzhämmern & Filzsteinen</h2>
+            <div class="slide-subtitle" data-i18n="s14_subtitle">Formgebung auf Endmaß ohne Schleifen – Bewahrung der seidigen Faserhaut</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -583,22 +1065,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße.</span>
+                <span data-i18n="s14_bullet_1"><strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen.</span>
+                <span data-i18n="s14_bullet_2"><strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.</span>
+                <span data-i18n="s14_bullet_3"><strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_9_2_Image198.jpg" alt="Verdichten mit Filzhämmern">
-              <div class="media-caption">Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen</div>
+              <div class="media-caption" data-i18n="s14_caption_1">Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen</div>
             </div>
           </div>
         </div>
@@ -610,9 +1092,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="15">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Filzlager Meuselwitz</div>
-            <h2 class="slide-title">Über 30 Plattensorten im klimatisierten Lager</h2>
-            <div class="slide-subtitle">Konische Plattengeometrie und permanente Reifekontrolle im Werk Meuselwitz</div>
+            <div class="slide-category" data-i18n="s15_category">Teil 2: Filzherstellung • Filzlager Meuselwitz</div>
+            <h2 class=\"slide-title\" data-i18n=\"s15_title\">Über 30 Plattensorten im klimatisierten Lager</h2>
+            <div class="slide-subtitle" data-i18n="s15_subtitle">Konische Plattengeometrie und permanente Reifekontrolle im Werk Meuselwitz</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -620,26 +1102,26 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Konische Plattenform:</strong> Die Filzplatten sind werkseitig keilförmig aufgebaut – dicker und schwerer im Bass, stetig dünner und dichter werdend zum Diskant hin.</span>
+                <span data-i18n="s15_bullet_1"><strong>Konische Plattenform:</strong> Die Filzplatten sind werkseitig keilförmig aufgebaut – dicker und schwerer im Bass, stetig dünner und dichter werdend zum Diskant hin.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Über 30 Rezepturen auf Lager:</strong> Renner hält permanent weit über 30 verschiedene Filzplattensorten von FFW Wurzen vorrätig – mehr als jeder andere Hersteller weltweit.</span>
+                <span data-i18n="s15_bullet_2"><strong>Über 30 Rezepturen auf Lager:</strong> Renner hält permanent weit über 30 verschiedene Filzplattensorten von FFW Wurzen vorrätig – mehr als jeder andere Hersteller weltweit.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Klimakontrolle & Mottenschutz:</strong> Kontrollierte Luftfeuchte und Pheromonfallen schützen das Naturmaterial dauerhaft.</span>
+                <span data-i18n="s15_bullet_3"><strong>Klimakontrolle & Mottenschutz:</strong> Kontrollierte Luftfeuchte und Pheromonfallen schützen das Naturmaterial dauerhaft.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Spannungsfreies Reifen:</strong> Mindestlagerdauer vor dem Zuschnitt baut innere Restspannungen vollständig ab.</span>
+                <span data-i18n="s15_bullet_4"><strong>Spannungsfreies Reifen:</strong> Mindestlagerdauer vor dem Zuschnitt baut innere Restspannungen vollständig ab.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_10_2_Image202.jpg" alt="Filzlager Meuselwitz">
-              <div class="media-caption">Filzplattenlager im Werk Meuselwitz: Über 30 Plattensorten permanent verfügbar</div>
+              <div class="media-caption" data-i18n="s15_caption_1">Filzplattenlager im Werk Meuselwitz: Über 30 Plattensorten permanent verfügbar</div>
             </div>
           </div>
         </div>
@@ -651,9 +1133,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="16">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Filz-Identifikation</div>
-            <h2 class="slide-title">Die „Seele“: Das Markenzeichen der Wurzener Filze</h2>
-            <div class="slide-subtitle">1 oder 2 farbige Schichten am Bass-Beginn als traditioneller Herkunftsnachweis</div>
+            <div class="slide-category" data-i18n="s16_category">Teil 2: Filzherstellung • Filz-Identifikation</div>
+            <h2 class=\"slide-title\" data-i18n=\"s16_title\">Die „Seele“: Das Markenzeichen der Wurzener Filze</h2>
+            <div class="slide-subtitle" data-i18n="s16_subtitle">1 oder 2 farbige Schichten am Bass-Beginn als traditioneller Herkunftsnachweis</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -664,22 +1146,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Was ist die „Seele“?</strong> Eine dünne, andersfarbige Filzschicht, die bei der Plattenherstellung am Bassanfang eingearbeitet wird.</span>
+                <span data-i18n="s16_bullet_1"><strong>Was ist die „Seele“?</strong> Eine dünne, andersfarbige Filzschicht, die bei der Plattenherstellung am Bassanfang eingearbeitet wird.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Traditioneller Herkunftsnachweis:</strong> Ein historisches Echtheitsmerkmal der Filzfabrik Wurzen für Klavierbauer weltweit.</span>
+                <span data-i18n="s16_bullet_2"><strong>Traditioneller Herkunftsnachweis:</strong> Ein historisches Echtheitsmerkmal der Filzfabrik Wurzen für Klavierbauer weltweit.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Kein Qualitätsunterschied:</strong> Platten mit 1 oder 2 Seelen besitzen identische Fasereigenschaften – sie dienen der Chargenkennzeichnung und optischen Authentizität.</span>
+                <span data-i18n="s16_bullet_3"><strong>Kein Qualitätsunterschied:</strong> Platten mit 1 oder 2 Seelen besitzen identische Fasereigenschaften – sie dienen der Chargenkennzeichnung und optischen Authentizität.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_11_2_Image206.jpg" alt="Filzstreifen mit Seele">
-              <div class="media-caption">Filzstreifen mit sichtbarer „Seele“ (farbige Kennzeichnungsschicht am Bassanfang)</div>
+              <div class="media-caption" data-i18n="s16_caption_1">Filzstreifen mit sichtbarer „Seele“ (farbige Kennzeichnungsschicht am Bassanfang)</div>
             </div>
           </div>
         </div>
@@ -691,28 +1173,28 @@ def get_all_slides_html():
       <section class="slide" data-slide="17">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 2: Filzherstellung • Weickert Special</div>
-            <h2 class="slide-title">„Weickert Special“: Nur für Louis Renner</h2>
-            <div class="slide-subtitle">Höchster Lanolingehalt für unübertroffene Intonationsstabilität und Tonansprache</div>
+            <div class="slide-category" data-i18n="s17_category">Teil 2: Filzherstellung • Weickert Special</div>
+            <h2 class=\"slide-title\" data-i18n=\"s17_title\">„Weickert Special“: Nur für Louis Renner</h2>
+            <div class="slide-subtitle" data-i18n="s17_subtitle">Höchster Lanolingehalt für unübertroffene Intonationsstabilität und Tonansprache</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 12px; border-color: var(--border-gold);">
-              <div class="card-title" style="color: var(--gold-accent);">Was macht „Weickert Special“ so einzigartig?</div>
+              <div class="card-title" style="color: var(--gold-accent);" data-i18n="s17_c1_title">Was macht „Weickert Special“ so einzigartig?</div>
               <ul class="bullet-list" style="margin-top: 8px;">
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Exklusivrezeptur:</strong> Wird von der Filzfabrik Wurzen ausschließlich für Renner gefertigt.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Höherer Wollfettgehalt (Lanolin):</strong> Spezieller Waschprozess belässt mehr natürliches Lanolin in der Faser.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Reduziertes Quellverhalten:</strong> Deutlich unempfindlicher gegenüber jahreszeitlichen Luftfeuchteschwankungen.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Verbesserte Traktionskräfte:</strong> Außergewöhnliche Adhäsion und Eigenspannung am Holzkern.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Dauerhafte Intonationshaltung:</strong> Der einmal intonierte Klangcharakter bleibt über Jahre stabil.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s17_bullet_1"><strong>Exklusivrezeptur:</strong> Wird von der Filzfabrik Wurzen ausschließlich für Renner gefertigt.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s17_bullet_2"><strong>Höherer Wollfettgehalt (Lanolin):</strong> Spezieller Waschprozess belässt mehr natürliches Lanolin in der Faser.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s17_bullet_3"><strong>Reduziertes Quellverhalten:</strong> Deutlich unempfindlicher gegenüber jahreszeitlichen Luftfeuchteschwankungen.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s17_bullet_4"><strong>Verbesserte Traktionskräfte:</strong> Außergewöhnliche Adhäsion und Eigenspannung am Holzkern.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s17_bullet_5"><strong>Dauerhafte Intonationshaltung:</strong> Der einmal intonierte Klangcharakter bleibt über Jahre stabil.</span></li>
               </ul>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_11_3_Image207.jpg" alt="Weickert Special Filz">
-              <div class="media-caption">Weickert Special: Feinste Wollfaserqualität mit maximaler Standzeit</div>
+              <div class="media-caption" data-i18n="s17_caption_1">Weickert Special: Feinste Wollfaserqualität mit maximaler Standzeit</div>
             </div>
           </div>
         </div>
@@ -728,9 +1210,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="18">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Roboter-Zuschnitt</div>
-            <h2 class="slide-title">Robotischer Filzzuschnitt: Höchste Schnittpräzision</h2>
-            <div class="slide-subtitle">Automatisiertes Trennen der Filzplatten in exakt proportionierte Deckfilzstreifen</div>
+            <div class="slide-category" data-i18n="s18_category">Teil 3: Hammerkopf-Produktion • Roboter-Zuschnitt</div>
+            <h2 class=\"slide-title\" data-i18n=\"s18_title\">Robotischer Filzzuschnitt: Höchste Schnittpräzision</h2>
+            <div class="slide-subtitle" data-i18n="s18_subtitle">Automatisiertes Trennen der Filzplatten in exakt proportionierte Deckfilzstreifen</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -738,19 +1220,19 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Präzisions-Robotik:</strong> 6-Achs-Roboter führt das Spezial-Schneidmesser mit gleichbleibender Geschwindigkeit und Schnittdruck.</span>
+                <span data-i18n="s18_bullet_1"><strong>Präzisions-Robotik:</strong> 6-Achs-Roboter führt das Spezial-Schneidmesser mit gleichbleibender Geschwindigkeit und Schnittdruck.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Gleichmäßige Streifen:</strong> Exakt parallele Kanten ohne Quetschungen oder thermische Faserverglasung.</span>
+                <span data-i18n="s18_bullet_2"><strong>Gleichmäßige Streifen:</strong> Exakt parallele Kanten ohne Quetschungen oder thermische Faserverglasung.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Automatische Signierung:</strong> Jeder geschnittene Streifen wird sofort mit internen Fertigungs- und Chargendaten codiert.</span>
+                <span data-i18n="s18_bullet_3"><strong>Automatische Signierung:</strong> Jeder geschnittene Streifen wird sofort mit internen Fertigungs- und Chargendaten codiert.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Industrie 4.0 im Klavierbau:</strong> Digitale Rückverfolgbarkeit vom Wollballen bis zum fertigen Konzertflügel.</span>
+                <span data-i18n="s18_bullet_4"><strong>Industrie 4.0 im Klavierbau:</strong> Digitale Rückverfolgbarkeit vom Wollballen bis zum fertigen Konzertflügel.</span>
               </li>
             </ul>
           </div>
@@ -759,7 +1241,7 @@ def get_all_slides_html():
               <video controls style="width: 100%; height: 100%; object-fit: cover;" poster="Visuell/basis_media/image15.png">
                 <source src="Visuell/Videos/01_roboter_filzzuschnitt.mp4" type="video/mp4">
               </video>
-              <div class="media-caption">Werk Meuselwitz: Robotischer Filzzuschnitt der Deckfilzstreifen</div>
+              <div class="media-caption" data-i18n="s18_caption_1">Werk Meuselwitz: Robotischer Filzzuschnitt der Deckfilzstreifen</div>
             </div>
           </div>
         </div>
@@ -771,9 +1253,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="19">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Deckfilz-Qualität</div>
-            <h2 class="slide-title">Kantenqualität & Faserintegrität des Deckfilzes</h2>
-            <div class="slide-subtitle">Makellose Schnittflächen als Voraussetzung für spannungsfreies Umschlingen des Kerns</div>
+            <div class="slide-category" data-i18n="s19_category">Teil 3: Hammerkopf-Produktion • Deckfilz-Qualität</div>
+            <h2 class=\"slide-title\" data-i18n=\"s19_title\">Kantenqualität & Faserintegrität des Deckfilzes</h2>
+            <div class="slide-subtitle" data-i18n="s19_subtitle">Makellose Schnittflächen als Voraussetzung für spannungsfreies Umschlingen des Kerns</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -784,22 +1266,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Konische Geometrie:</strong> Gleichmäßige Keilform von Note 1 bis Note 88 ohne Maßabweichungen.</span>
+                <span data-i18n="s19_bullet_1"><strong>Konische Geometrie:</strong> Gleichmäßige Keilform von Note 1 bis Note 88 ohne Maßabweichungen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Saubere Schnittkanten:</strong> Keine abstehenden Faserbündel, keine Fransen – glatte Seitenwände für den Leimauftrag.</span>
+                <span data-i18n="s19_bullet_2"><strong>Saubere Schnittkanten:</strong> Keine abstehenden Faserbündel, keine Fransen – glatte Seitenwände für den Leimauftrag.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Vermeidung von Schiefzug:</strong> Nur exakt rechtwinklig geschnittene Streifen legen sich beim Pressen absolut symmetrisch um das Kernholz.</span>
+                <span data-i18n="s19_bullet_3"><strong>Vermeidung von Schiefzug:</strong> Nur exakt rechtwinklig geschnittene Streifen legen sich beim Pressen absolut symmetrisch um das Kernholz.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/image16.jpeg" alt="Qualität Deckfilzstreifen">
-              <div class="media-caption">Geprüfter Deckfilzstreifen: Konischer Verlauf und homogene Faserstruktur</div>
+              <div class="media-caption" data-i18n="s19_caption_1">Geprüfter Deckfilzstreifen: Konischer Verlauf und homogene Faserstruktur</div>
             </div>
           </div>
         </div>
@@ -811,9 +1293,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="20">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Unterfilz</div>
-            <h2 class="slide-title">Unterfilz-Profilierung: Geometrie vor dem Verpressen</h2>
-            <div class="slide-subtitle">Formfräsen des Unterfilzes für die optimale Dämpfungs- und Kraftübertragungszone</div>
+            <div class="slide-category" data-i18n="s20_category">Teil 3: Hammerkopf-Produktion • Unterfilz</div>
+            <h2 class=\"slide-title\" data-i18n=\"s20_title\">Unterfilz-Profilierung: Geometrie vor dem Verpressen</h2>
+            <div class="slide-subtitle" data-i18n="s20_subtitle">Formfräsen des Unterfilzes für die optimale Dämpfungs- und Kraftübertragungszone</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -821,15 +1303,15 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Funktion des Unterfilzes:</strong> Der Unterfilz dient als elastischer Puffer zwischen dem harten Holzkern und dem weicheren Deckfilz.</span>
+                <span data-i18n="s20_bullet_1"><strong>Funktion des Unterfilzes:</strong> Der Unterfilz dient als elastischer Puffer zwischen dem harten Holzkern und dem weicheren Deckfilz.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Präzisions-Profilierung:</strong> In Meuselwitz wird der Unterfilzstreifen vor dem Verleimen auf Spezial-Fräsmaschinen exakt profiliert.</span>
+                <span data-i18n="s20_bullet_2"><strong>Präzisions-Profilierung:</strong> In Meuselwitz wird der Unterfilzstreifen vor dem Verleimen auf Spezial-Fräsmaschinen exakt profiliert.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Gleichmäßiger Druckverlauf:</strong> Die profilierte Kontur garantiert, dass der Pressdruck beim Schließen der Pressbacken gleichmäßig in die Flanken geleitet wird.</span>
+                <span data-i18n="s20_bullet_3"><strong>Gleichmäßiger Druckverlauf:</strong> Die profilierte Kontur garantiert, dass der Pressdruck beim Schließen der Pressbacken gleichmäßig in die Flanken geleitet wird.</span>
               </li>
             </ul>
           </div>
@@ -838,7 +1320,7 @@ def get_all_slides_html():
               <video controls style="width: 100%; height: 100%; object-fit: cover;" poster="Visuell/basis_media/image17.png">
                 <source src="Visuell/Videos/02_unterfilz_profilieren.mp4" type="video/mp4">
               </video>
-              <div class="media-caption">Profilieren des Unterfilzstreifens auf der Renner Spezialfräse</div>
+              <div class="media-caption" data-i18n="s20_caption_1">Profilieren des Unterfilzstreifens auf der Renner Spezialfräse</div>
             </div>
           </div>
         </div>
@@ -850,9 +1332,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="21">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Farbprogramm</div>
-            <h2 class="slide-title">Das Renner Unterfilz-Farbsortiment</h2>
-            <div class="slide-subtitle">Traditionsfarben für jeden Klavierhersteller und individuelle Sonderwünsche</div>
+            <div class="slide-category" data-i18n="s21_category">Teil 3: Hammerkopf-Produktion • Farbprogramm</div>
+            <h2 class=\"slide-title\" data-i18n=\"s21_title\">Das Renner Unterfilz-Farbsortiment</h2>
+            <div class="slide-subtitle" data-i18n="s21_subtitle">Traditionsfarben für jeden Klavierhersteller und individuelle Sonderwünsche</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -862,27 +1344,27 @@ def get_all_slides_html():
             </p>
             <div class="card-grid" style="grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px;">
               <div class="feature-card" style="border-left: 4px solid #cc2222;">
-                <div class="card-title">Rot / Weinrot</div>
-                <div class="card-desc">Der weltbekannte Renner-Klassiker; Standard bei vielen europäischen Spitzenmarken.</div>
+                <div class="card-title" data-i18n="s21_c1_title">Rot / Weinrot</div>
+                <div class="card-desc" data-i18n="s21_c1_desc">Der weltbekannte Renner-Klassiker; Standard bei vielen europäischen Spitzenmarken.</div>
               </div>
               <div class="feature-card" style="border-left: 4px solid #ff9900;">
-                <div class="card-title">Orange</div>
-                <div class="card-desc">Traditionelle Kennfarbe klassischer Konzertinstrumente und historischer Reparaturen.</div>
+                <div class="card-title" data-i18n="s21_c2_title">Orange</div>
+                <div class="card-desc" data-i18n="s21_c2_desc">Traditionelle Kennfarbe klassischer Konzertinstrumente und historischer Reparaturen.</div>
               </div>
               <div class="feature-card" style="border-left: 4px solid #ddbb00;">
-                <div class="card-title">Gelb</div>
-                <div class="card-desc">Charakteristischer Unterfilz für renommierte sächsische und Wiener Klaviere.</div>
+                <div class="card-title" data-i18n="s21_c3_title">Gelb</div>
+                <div class="card-desc" data-i18n="s21_c3_desc">Charakteristischer Unterfilz für renommierte sächsische und Wiener Klaviere.</div>
               </div>
               <div class="feature-card" style="border-left: 4px solid #2255cc;">
-                <div class="card-title">Blau / Schwarz</div>
-                <div class="card-desc">Klassisches Blau für C. Bechstein sowie edles Schwarz für moderne Designer-Flügel.</div>
+                <div class="card-title" data-i18n="s21_c4_title">Blau / Schwarz</div>
+                <div class="card-desc" data-i18n="s21_c4_desc">Klassisches Blau für C. Bechstein sowie edles Schwarz für moderne Designer-Flügel.</div>
               </div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_14_2_Image226.jpg" alt="Unterfilz Farbpalette">
-              <div class="media-caption">Renner Unterfilz-Sortiment: Rot, Weinrot, Orange, Gelb, Blau, Schwarz</div>
+              <div class="media-caption" data-i18n="s21_caption_1">Renner Unterfilz-Sortiment: Rot, Weinrot, Orange, Gelb, Blau, Schwarz</div>
             </div>
           </div>
         </div>
@@ -894,9 +1376,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="22">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Kernholz-Arten</div>
-            <h2 class="slide-title">Kernholz-Arten & Spezifische Gewichte</h2>
-            <div class="slide-subtitle">Die Masse und Elastizität des Kernholzes bestimmen Anschlagsträgheit und Tonfarbe</div>
+            <div class="slide-category" data-i18n="s22_category">Teil 3: Hammerkopf-Produktion • Kernholz-Arten</div>
+            <h2 class=\"slide-title\" data-i18n=\"s22_title\">Kernholz-Arten & Spezifische Gewichte</h2>
+            <div class="slide-subtitle" data-i18n="s22_subtitle">Die Masse und Elastizität des Kernholzes bestimmen Anschlagsträgheit und Tonfarbe</div>
           </div>
         </div>
         <div class="slide-body">
@@ -904,43 +1386,43 @@ def get_all_slides_html():
             <div class="bento-grid bento-grid-2" style="gap: 12px;">
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge green">HARTHOLZ</span>
+                  <span class="bento-badge green" data-i18n="s22_b1_badge">>HARTHOLZ</span>
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">800–860 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;">Weißbuche (Hornbeam)</div>
-                <div class="bento-card-desc">Maximaler Punch, kraftvoller Attack, extrem formstabil</div>
+                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s22_c1_title">Weißbuche (Hornbeam)</div>
+                <div class="bento-card-desc" data-i18n="s22_c1_desc">Maximaler Punch, kraftvoller Attack, extrem formstabil</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold">MITTELFEST</span>
+                  <span class="bento-badge gold" data-i18n="s22_b2_badge">>MITTELFEST</span>
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">530–790 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;">Bergahorn (Maple)</div>
-                <div class="bento-card-desc">Brillant, transparent, differenzierter obertonreicher Ton</div>
+                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s22_c2_title">Bergahorn (Maple)</div>
+                <div class="bento-card-desc" data-i18n="s22_c2_desc">Brillant, transparent, differenzierter obertonreicher Ton</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold">MITTELFEST</span>
+                  <span class="bento-badge gold" data-i18n="s22_b3_badge">>MITTELFEST</span>
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">590–680 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;">Nussbaum (Walnut)</div>
-                <div class="bento-card-desc">Warmer, samtiger Grundton, volles Bassfundament</div>
+                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s22_c3_title">Nussbaum (Walnut)</div>
+                <div class="bento-card-desc" data-i18n="s22_c3_desc">Warmer, samtiger Grundton, volles Bassfundament</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge green">MITTELFEST / LEICHT</span>
+                  <span class="bento-badge green" data-i18n="s22_b4_badge">>MITTELFEST / LEICHT</span>
                   <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">490–750 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;">Mahagoni (Kotibé)</div>
-                <div class="bento-card-desc">Geringe Trägheit, singender Diskant, leichte Ansprache</div>
+                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s22_c4_title">Mahagoni (Kotibé)</div>
+                <div class="bento-card-desc" data-i18n="s22_c4_desc">Geringe Trägheit, singender Diskant, leichte Ansprache</div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HK/page_12_2_Image217.jpg" alt="Kernholz-Arten Renner">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold">KERNHÖLZER</span>
-                <div class="bento-media-caption">Original Kernhölzer</div>
-                <div class="bento-media-subcaption">Weißbuche, Bergahorn, Nussbaum & Mahagoni (Kotibé)</div>
+                <span class="bento-badge gold" data-i18n="s22_b5_badge">>KERNHÖLZER</span>
+                <div class="bento-media-caption" data-i18n="s22_caption_1">Original Kernhölzer</div>
+                <div class="bento-media-subcaption" data-i18n="s22_caption_2">Weißbuche, Bergahorn, Nussbaum & Mahagoni (Kotibé)</div>
               </div>
             </div>
           </div>
@@ -953,26 +1435,26 @@ def get_all_slides_html():
       <section class="slide" data-slide="23">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Kern-Geometrie</div>
-            <h2 class="slide-title">Kernholz-Formen: Symmetrisch & Asymmetrisch</h2>
-            <div class="slide-subtitle">Historische und moderne Fräsprofile für über 20 Flügel- und Klaviermarken</div>
+            <div class="slide-category" data-i18n="s23_category">Teil 3: Hammerkopf-Produktion • Kern-Geometrie</div>
+            <h2 class=\"slide-title\" data-i18n=\"s23_title\">Kernholz-Formen: Symmetrisch & Asymmetrisch</h2>
+            <div class="slide-subtitle" data-i18n="s23_subtitle">Historische und moderne Fräsprofile für über 20 Flügel- und Klaviermarken</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 14px;">
-              <div class="card-title">Symmetrische Standardformen</div>
-              <div class="card-desc">Für Steinway & Sons (historisch und modern), Bösendorfer, Schimmel, C. Bechstein, Yamaha, Kawai, Grotrian-Steinweg, Petrof, August Förster, Sauter, Blüthner und Renner USA.</div>
+              <div class="card-title" data-i18n="s23_c1_title">Symmetrische Standardformen</div>
+              <div class="card-desc" data-i18n="s23_c1_desc">Für Steinway & Sons (historisch und modern), Bösendorfer, Schimmel, C. Bechstein, Yamaha, Kawai, Grotrian-Steinweg, Petrof, August Förster, Sauter, Blüthner und Renner USA.</div>
             </div>
             <div class="feature-card">
-              <div class="card-title">Asymmetrische Sonderformen</div>
-              <div class="card-desc">Alt-Bechstein Konstruktionen, Flügel mit extrem schlankem Diskantverlauf sowie Spezialprofile zur Anpassung des Trägheitsmoments an steile Saitenwinkel.</div>
+              <div class="card-title" data-i18n="s23_c2_title">Asymmetrische Sonderformen</div>
+              <div class="card-desc" data-i18n="s23_c2_desc">Alt-Bechstein Konstruktionen, Flügel mit extrem schlankem Diskantverlauf sowie Spezialprofile zur Anpassung des Trägheitsmoments an steile Saitenwinkel.</div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_13_2_Image220.jpg" alt="Kernholz Profilformen">
-              <div class="media-caption">Moulding Types: Vielfalt der Kernholz-Profile im Renner Sortiment</div>
+              <div class="media-caption" data-i18n="s23_caption_1">Moulding Types: Vielfalt der Kernholz-Profile im Renner Sortiment</div>
             </div>
           </div>
         </div>
@@ -984,9 +1466,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="24">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Vorformung</div>
-            <h2 class="slide-title">Vorformung des Bassfilzes & Biegekurven</h2>
-            <div class="slide-subtitle">Ausbildung der charakteristischen Spannungsbögen vor dem Schließen der Presse</div>
+            <div class="slide-category" data-i18n="s24_category">Teil 3: Hammerkopf-Produktion • Vorformung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s24_title\">Vorformung des Bassfilzes & Biegekurven</h2>
+            <div class="slide-subtitle" data-i18n="s24_subtitle">Ausbildung der charakteristischen Spannungsbögen vor dem Schließen der Presse</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -994,22 +1476,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Elastische Vorbiegung:</strong> Das dicke Bass-Ende des Filzstreifens wird vor dem Einbringen in die Pressform vorkonditioniert.</span>
+                <span data-i18n="s24_bullet_1"><strong>Elastische Vorbiegung:</strong> Das dicke Bass-Ende des Filzstreifens wird vor dem Einbringen in die Pressform vorkonditioniert.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Charakteristische Kurven:</strong> Entlang des Streifens bilden sich harmonische Wellen, die den späteren Druckfluss abbilden.</span>
+                <span data-i18n="s24_bullet_2"><strong>Charakteristische Kurven:</strong> Entlang des Streifens bilden sich harmonische Wellen, die den späteren Druckfluss abbilden.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Gleichmäßige Dehnung:</strong> Verhindert das Reißen äußerer Faserlagen beim engen Umschließen der Kernholzspitze.</span>
+                <span data-i18n="s24_bullet_3"><strong>Gleichmäßige Dehnung:</strong> Verhindert das Reißen äußerer Faserlagen beim engen Umschließen der Kernholzspitze.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_15_2_Image229.jpg" alt="Vorformung Bassfilz">
-              <div class="media-caption">Bass-Ende des Filzstreifens mit charakteristischen Biegekurven vor dem Pressen</div>
+              <div class="media-caption" data-i18n="s24_caption_1">Bass-Ende des Filzstreifens mit charakteristischen Biegekurven vor dem Pressen</div>
             </div>
           </div>
         </div>
@@ -1021,9 +1503,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="25">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Pressprozess</div>
-            <h2 class="slide-title">Pressen & Verleimen: Zug- und Druckkräfte im Filz</h2>
-            <div class="slide-subtitle">Nachspannen des Kernholzes zur Erzeugung maximaler elastischer Außenspannung</div>
+            <div class="slide-category" data-i18n="s25_category">Teil 3: Hammerkopf-Produktion • Pressprozess</div>
+            <h2 class=\"slide-title\" data-i18n=\"s25_title\">Pressen & Verleimen: Zug- und Druckkräfte im Filz</h2>
+            <div class="slide-subtitle" data-i18n="s25_subtitle">Nachspannen des Kernholzes zur Erzeugung maximaler elastischer Außenspannung</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -1031,19 +1513,19 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Schließen der Seitenbacken:</strong> Die temperierten Pressbacken umschließen den Filz seitlich und führen ihn um das beleimte Kernholz.</span>
+                <span data-i18n="s25_bullet_1"><strong>Schließen der Seitenbacken:</strong> Die temperierten Pressbacken umschließen den Filz seitlich und führen ihn um das beleimte Kernholz.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Kernholz nachspannen:</strong> Nachdem die Seitenbacken geschlossen sind, wird das Kernholz nochmals mit Hochdruck nachgespannt.</span>
+                <span data-i18n="s25_bullet_2"><strong>Kernholz nachspannen:</strong> Nachdem die Seitenbacken geschlossen sind, wird das Kernholz nochmals mit Hochdruck nachgespannt.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Zugspannung in den Außenlagen:</strong> Durch diesen Renner-spezifischen Schritt erhalten die äußeren Filzlagen eine unerreichte Vorspannung.</span>
+                <span data-i18n="s25_bullet_3"><strong>Zugspannung in den Außenlagen:</strong> Durch diesen Renner-spezifischen Schritt erhalten die äußeren Filzlagen eine unerreichte Vorspannung.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Basis für die spätere Intonation:</strong> Diese elastische Eigenspannung erlaubt späteres Intonieren mit unvergleichlicher Dynamikspreizung.</span>
+                <span data-i18n="s25_bullet_4"><strong>Basis für die spätere Intonation:</strong> Diese elastische Eigenspannung erlaubt späteres Intonieren mit unvergleichlicher Dynamikspreizung.</span>
               </li>
             </ul>
           </div>
@@ -1052,7 +1534,7 @@ def get_all_slides_html():
               <video controls style="width: 100%; height: 100%; object-fit: cover;" poster="Visuell/basis_media/image21.jpg">
                 <source src="Visuell/Videos/04_hammerkopf_pressen_leimen.mp4" type="video/mp4">
               </video>
-              <div class="media-caption">Press- und Verleimvorgang des Hammerkopfs unter Hochdruck</div>
+              <div class="media-caption" data-i18n="s25_caption_1">Press- und Verleimvorgang des Hammerkopfs unter Hochdruck</div>
             </div>
           </div>
         </div>
@@ -1064,9 +1546,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="26">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Hammerkopf-Riegel</div>
-            <h2 class="slide-title">Der Hammerkopf-Riegel im Rohzustand</h2>
-            <div class="slide-subtitle">Entformung des monolithischen 88er-Riegels nach dem Aushärten des Leims</div>
+            <div class="slide-category" data-i18n="s26_category">Teil 3: Hammerkopf-Produktion • Hammerkopf-Riegel</div>
+            <h2 class=\"slide-title\" data-i18n=\"s26_title\">Der Hammerkopf-Riegel im Rohzustand</h2>
+            <div class="slide-subtitle" data-i18n="s26_subtitle">Entformung des monolithischen 88er-Riegels nach dem Aushärten des Leims</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -1077,22 +1559,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Perfekte Leimfuge:</strong> Vollflächige Verbindung zwischen Holz, Unterfilz und Deckfilz ohne Lufteinschlüsse.</span>
+                <span data-i18n="s26_bullet_1"><strong>Perfekte Leimfuge:</strong> Vollflächige Verbindung zwischen Holz, Unterfilz und Deckfilz ohne Lufteinschlüsse.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Harmonischer Übergang:</strong> Die Kernform zeichnet sich präzise unter dem komprimierten Filz ab.</span>
+                <span data-i18n="s26_bullet_2"><strong>Harmonischer Übergang:</strong> Die Kernform zeichnet sich präzise unter dem komprimierten Filz ab.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Betriebsgeheimnis der Formgebung:</strong> Bestimmte nachgelagerte Warmformschritte unterliegen dem strengen Renner-Verfahrensschutz.</span>
+                <span data-i18n="s26_bullet_3"><strong>Betriebsgeheimnis der Formgebung:</strong> Bestimmte nachgelagerte Warmformschritte unterliegen dem strengen Renner-Verfahrensschutz.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/image24.jpeg" alt="Hammerkopf-Riegel roh">
-              <div class="media-caption">Der verleimte Hammerkopf-Riegel direkt nach dem Entformen</div>
+              <div class="media-caption" data-i18n="s26_caption_1">Der verleimte Hammerkopf-Riegel direkt nach dem Entformen</div>
             </div>
           </div>
         </div>
@@ -1104,9 +1586,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="27">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • CNC-Bearbeitung</div>
-            <h2 class="slide-title">CNC-Bearbeitung & Abrichten des Riegels</h2>
-            <div class="slide-subtitle">Mehrachsiges Fräsen der Flanken und Trennen in 88 Einzelexemplare</div>
+            <div class="slide-category" data-i18n="s27_category">Teil 3: Hammerkopf-Produktion • CNC-Bearbeitung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s27_title\">CNC-Bearbeitung & Abrichten des Riegels</h2>
+            <div class="slide-subtitle" data-i18n="s27_subtitle">Mehrachsiges Fräsen der Flanken und Trennen in 88 Einzelexemplare</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -1114,22 +1596,22 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>CNC-Abrichten der Leisten:</strong> Beseitigung von Leimaustritten und exaktes Ausfräsen der Außenradien.</span>
+                <span data-i18n="s27_bullet_1"><strong>CNC-Abrichten der Leisten:</strong> Beseitigung von Leimaustritten und exaktes Ausfräsen der Außenradien.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Hochgeschwindigkeits-Fräsen:</strong> Spezialwerkzeuge schneiden den dichten Wollfilz mit rasiermesserscharfen Kanten ohne Faserausriss.</span>
+                <span data-i18n="s27_bullet_2"><strong>Hochgeschwindigkeits-Fräsen:</strong> Spezialwerkzeuge schneiden den dichten Wollfilz mit rasiermesserscharfen Kanten ohne Faserausriss.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Präzises Auftrennen:</strong> Trennen des Riegels in exakt abgestimmte Breiten (Bass ca. 11,5 mm bis Diskant ca. 9,5–10 mm).</span>
+                <span data-i18n="s27_bullet_3"><strong>Präzises Auftrennen:</strong> Trennen des Riegels in exakt abgestimmte Breiten (Bass ca. 11,5 mm bis Diskant ca. 9,5–10 mm).</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/image25.jpg" alt="CNC Bearbeitung Hammerkopf">
-              <div class="media-caption">CNC-Präzisionsfräszentrum in Meuselwitz bei der Leistenbearbeitung</div>
+              <div class="media-caption" data-i18n="s27_caption_1">CNC-Präzisionsfräszentrum in Meuselwitz bei der Leistenbearbeitung</div>
             </div>
           </div>
         </div>
@@ -1141,9 +1623,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="28">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Bohren & Vernieten</div>
-            <h2 class="slide-title">Bohrung, T-Vernietung & Veredelung</h2>
-            <div class="slide-subtitle">Präzise Stielbohrung im Raumwinkel und formschlüssige Messing-T-Niete</div>
+            <div class="slide-category" data-i18n="s28_category">Teil 3: Hammerkopf-Produktion • Bohren & Vernieten</div>
+            <h2 class=\"slide-title\" data-i18n=\"s28_title\">Bohrung, T-Vernietung & Veredelung</h2>
+            <div class="slide-subtitle" data-i18n="s28_subtitle">Präzise Stielbohrung im Raumwinkel und formschlüssige Messing-T-Niete</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -1151,15 +1633,15 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Automatisierte Stielbohrung:</strong> Bohren im exakten Raumwinkel (Bohrungslänge, Durchmesser ø 5,4 mm, Neigungswinkel in Gon).</span>
+                <span data-i18n="s28_bullet_1"><strong>Automatisierte Stielbohrung:</strong> Bohren im exakten Raumwinkel (Bohrungslänge, Durchmesser ø 5,4 mm, Neigungswinkel in Gon).</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>T-Vernietung (Riveting):</strong> Hochfeste Messing-T-Nieten sichern die Filzschenkel dauerhaft gegen Aufplatzen bei stärksten Konzertanschlägen.</span>
+                <span data-i18n="s28_bullet_2"><strong>T-Vernietung (Riveting):</strong> Hochfeste Messing-T-Nieten sichern die Filzschenkel dauerhaft gegen Aufplatzen bei stärksten Konzertanschlägen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Verrundung der Hammerschwänze:</strong> Speziell geformte Radien am Schwanz erleichtern später das Einpassen in den Fänger.</span>
+                <span data-i18n="s28_bullet_3"><strong>Verrundung der Hammerschwänze:</strong> Speziell geformte Radien am Schwanz erleichtern später das Einpassen in den Fänger.</span>
               </li>
             </ul>
           </div>
@@ -1168,7 +1650,7 @@ def get_all_slides_html():
               <video controls style="width: 100%; height: 100%; object-fit: cover;" poster="Visuell/basis_media/image29.png">
                 <source src="Visuell/Videos/05_hammerkopf_bohren_nieten.mp4" type="video/mp4">
               </video>
-              <div class="media-caption">Bohren und Einbringen der T-Nieten in Meuselwitz</div>
+              <div class="media-caption" data-i18n="s28_caption_1">Bohren und Einbringen der T-Nieten in Meuselwitz</div>
             </div>
           </div>
         </div>
@@ -1180,42 +1662,42 @@ def get_all_slides_html():
       <section class="slide" data-slide="29">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 3: Hammerkopf-Produktion • Qualität & Nutzen</div>
-            <h2 class="slide-title">Die 6 Kernvorteile der neuen Renner-Hammerköpfe</h2>
-            <div class="slide-subtitle">Zusammenfassung der Innovationskraft aus dem Vortrag von Clemens Kunert</div>
+            <div class="slide-category" data-i18n="s29_category">Teil 3: Hammerkopf-Produktion • Qualität & Nutzen</div>
+            <h2 class=\"slide-title\" data-i18n=\"s29_title\">Die 6 Kernvorteile der neuen Renner-Hammerköpfe</h2>
+            <div class="slide-subtitle" data-i18n="s29_subtitle">Zusammenfassung der Innovationskraft aus dem Vortrag von Clemens Kunert</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="card-grid" style="grid-template-columns: repeat(3, 1fr); gap: 16px;">
             <div class="feature-card">
               <div class="card-icon">🎯</div>
-              <div class="card-title">1. Maßgeschneiderte Fertigung</div>
-              <div class="card-desc">Individuelle Sonderanfertigung von Einzelstücken für historische Schätze bis hin zu großen Konzert-Serien.</div>
+              <div class="card-title" data-i18n="s29_c1_title">1. Maßgeschneiderte Fertigung</div>
+              <div class="card-desc" data-i18n="s29_c1_desc">Individuelle Sonderanfertigung von Einzelstücken für historische Schätze bis hin zu großen Konzert-Serien.</div>
             </div>
             <div class="feature-card">
               <div class="card-icon">⚡</div>
-              <div class="card-title">2. Direkt fertig zur Endintonation</div>
-              <div class="card-desc">Keine zeitraubende Vorintonation am Instrument mehr nötig! Der Satz ist ab Werk klanglich vorbereitet.</div>
+              <div class="card-title" data-i18n="s29_c2_title">2. Direkt fertig zur Endintonation</div>
+              <div class="card-desc" data-i18n="s29_c2_desc">Keine zeitraubende Vorintonation am Instrument mehr nötig! Der Satz ist ab Werk klanglich vorbereitet.</div>
             </div>
             <div class="feature-card">
               <div class="card-icon">🔬</div>
-              <div class="card-title">3. Höchste Fertigungspräzision</div>
-              <div class="card-desc">Kombination aus traditionellem FFW-Filzhandwerk und mikrometergenauer Roboter- und CNC-Bearbeitung.</div>
+              <div class="card-title" data-i18n="s29_c3_title">3. Höchste Fertigungspräzision</div>
+              <div class="card-desc" data-i18n="s29_c3_desc">Kombination aus traditionellem FFW-Filzhandwerk und mikrometergenauer Roboter- und CNC-Bearbeitung.</div>
             </div>
             <div class="feature-card">
               <div class="card-icon">🏆</div>
-              <div class="card-title">4. Überragende Klangstabilität</div>
-              <div class="card-desc">Durch die Eigenspannung des Weickert-Special-Filzes bleibt das Klangbild über viele Jahre hinweg stabil.</div>
+              <div class="card-title" data-i18n="s29_c4_title">4. Überragende Klangstabilität</div>
+              <div class="card-desc" data-i18n="s29_c4_desc">Durch die Eigenspannung des Weickert-Special-Filzes bleibt das Klangbild über viele Jahre hinweg stabil.</div>
             </div>
             <div class="feature-card">
               <div class="card-icon">🎶</div>
-              <div class="card-title">5. Reiches Obertonspektrum</div>
-              <div class="card-desc">Breiteste Dynamikspreizung vom zartesten Pianissimo bis zum tragfähigen Fortissimo im großen Konzertsaal.</div>
+              <div class="card-title" data-i18n="s29_c5_title">5. Reiches Obertonspektrum</div>
+              <div class="card-desc" data-i18n="s29_c5_desc">Breiteste Dynamikspreizung vom zartesten Pianissimo bis zum tragfähigen Fortissimo im großen Konzertsaal.</div>
             </div>
             <div class="feature-card">
               <div class="card-icon">🛠️</div>
-              <div class="card-title">6. Einbaufertig veredelt</div>
-              <div class="card-desc">Präzise gebohrt, formschlüssig vernietet, mit verrundeten Schwanzenden und veredelter Scheitelkontur.</div>
+              <div class="card-title" data-i18n="s29_c6_title">6. Einbaufertig veredelt</div>
+              <div class="card-desc" data-i18n="s29_c6_desc">Präzise gebohrt, formschlüssig vernietet, mit verrundeten Schwanzenden und veredelter Scheitelkontur.</div>
             </div>
           </div>
         </div>
@@ -1231,9 +1713,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="30">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Systemübersicht</div>
-            <h2 class="slide-title">Der Renner Musterteilekoffer (MTK)</h2>
-            <div class="slide-subtitle">Das unverzichtbare Diagnose- und Auswahlinstrument für die Reparaturwerkstatt</div>
+            <div class="slide-category" data-i18n="s30_category">Teil 4: Musterteilekoffer • Systemübersicht</div>
+            <h2 class=\"slide-title\" data-i18n=\"s30_title\">Der Renner Musterteilekoffer (MTK)</h2>
+            <div class="slide-subtitle" data-i18n="s30_subtitle">Das unverzichtbare Diagnose- und Auswahlinstrument für die Reparaturwerkstatt</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
@@ -1242,15 +1724,15 @@ def get_all_slides_html():
               Bei der Reparatur historischer oder moderner Flügel und Klaviere stehen Klavierbauer oft vor unbekannten Mechanikgeometrien. Der Renner Musterteilekoffer liefert für jede Aufgabenstellung das exakt passende Original-Musterteil.
             </p>
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Direkte Passprüfung:</strong> Musterteile können direkt im Kundeninstrument eingehängt und getestet werden.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Umfassendes Fachhandbuch:</strong> Ausführliche Tabellen mit Hebellängen, Winkeln und Kapselabständen.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Vermeidung von Fehlbestellungen:</strong> Eindeutige Renner-Artikelnummern für reibungslose Nachbestellung.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s30_bullet_1"><strong>Direkte Passprüfung:</strong> Musterteile können direkt im Kundeninstrument eingehängt und getestet werden.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s30_bullet_2"><strong>Umfassendes Fachhandbuch:</strong> Ausführliche Tabellen mit Hebellängen, Winkeln und Kapselabständen.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s30_bullet_3"><strong>Vermeidung von Fehlbestellungen:</strong> Eindeutige Renner-Artikelnummern für reibungslose Nachbestellung.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HSt/page_4_2_Image171.jpg" alt="Renner Musterteilekoffer">
-              <div class="media-caption">Der Renner Musterteilekoffer mit beiliegendem technischem Fachhandbuch</div>
+              <div class="media-caption" data-i18n="s30_caption_1">Der Renner Musterteilekoffer mit beiliegendem technischem Fachhandbuch</div>
             </div>
           </div>
         </div>
@@ -1262,9 +1744,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="31">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Flügel-Hebeglieder</div>
-            <h2 class="slide-title">15 Flügel-Hebeglieder & 12 Wechselsättel</h2>
-            <div class="slide-subtitle">Lückenlose Abdeckung aller Hebelverhältnisse für Flügel aller Epochen</div>
+            <div class="slide-category" data-i18n="s31_category">Teil 4: Musterteilekoffer • Flügel-Hebeglieder</div>
+            <h2 class=\"slide-title\" data-i18n=\"s31_title\">15 Flügel-Hebeglieder & 12 Wechselsättel</h2>
+            <div class="slide-subtitle" data-i18n="s31_subtitle">Lückenlose Abdeckung aller Hebelverhältnisse für Flügel aller Epochen</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -1272,26 +1754,26 @@ def get_all_slides_html():
             <ul class="bullet-list">
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>15 verschiedene Hebeglied-Varianten:</strong> Jeweils 2 Stück pro Modell als Testmuster im Koffer enthalten.</span>
+                <span data-i18n="s31_bullet_1"><strong>15 verschiedene Hebeglied-Varianten:</strong> Jeweils 2 Stück pro Modell als Testmuster im Koffer enthalten.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>2 Modelle ohne Sattel:</strong> Ermöglichen individuelle Anpassungen bei historischen Sonderkonstruktionen.</span>
+                <span data-i18n="s31_bullet_2"><strong>2 Modelle ohne Sattel:</strong> Ermöglichen individuelle Anpassungen bei historischen Sonderkonstruktionen.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>12 kombinierbare Sättel:</strong> Unterschiedliche Sattelhöhen und Neigungen zur Feinabstimmung der Steighöhe.</span>
+                <span data-i18n="s31_bullet_3"><strong>12 kombinierbare Sättel:</strong> Unterschiedliche Sattelhöhen und Neigungen zur Feinabstimmung der Steighöhe.</span>
               </li>
               <li class="bullet-item">
                 <span class="bullet-dot green"></span>
-                <span><strong>Sofortige Lieferbarkeit:</strong> Alle 15 Hebeglied-Typen sind bei Renner ab Lager als kompletter Reparatursatz verfügbar.</span>
+                <span data-i18n="s31_bullet_4"><strong>Sofortige Lieferbarkeit:</strong> Alle 15 Hebeglied-Typen sind bei Renner ab Lager als kompletter Reparatursatz verfügbar.</span>
               </li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HSt/page_3_2_Image161.jpg" alt="Flügel Hebeglieder Muster">
-              <div class="media-caption">Auswahl der 15 Hebeglied-Modelle und Wechselsättel im Musterteilekoffer</div>
+              <div class="media-caption" data-i18n="s31_caption_1">Auswahl der 15 Hebeglied-Modelle und Wechselsättel im Musterteilekoffer</div>
             </div>
           </div>
         </div>
@@ -1303,24 +1785,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="32">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Mechanikteile</div>
-            <h2 class="slide-title">Mechanik-Kapseln, Dämpferarme & Leisten</h2>
-            <div class="slide-subtitle">Präzisionsteile für Flügel und Klaviere nach europäischer und US-Norm</div>
+            <div class="slide-category" data-i18n="s32_category">Teil 4: Musterteilekoffer • Mechanikteile</div>
+            <h2 class=\"slide-title\" data-i18n=\"s32_title\">Mechanik-Kapseln, Dämpferarme & Leisten</h2>
+            <div class="slide-subtitle" data-i18n="s32_subtitle">Präzisionsteile für Flügel und Klaviere nach europäischer und US-Norm</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>15 Flügel-Kapseln:</strong> Unterschiedlichste Befestigungsbohrungen, Drop-Schrauben-Positionen und Achshöhen.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>10 Klavier-Kapseln:</strong> Für Hebeglieder und Dämpferarme moderner und älterer Klaviere.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Dämpferarme (US & Renner):</strong> Spezifische Kröpfungen und Längen für beide Normwelten.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Klinken & Mechanikleisten:</strong> Musterprofile aller originalen Renner-Messing- und Aluminiumleisten.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s32_bullet_1"><strong>15 Flügel-Kapseln:</strong> Unterschiedlichste Befestigungsbohrungen, Drop-Schrauben-Positionen und Achshöhen.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s32_bullet_2"><strong>10 Klavier-Kapseln:</strong> Für Hebeglieder und Dämpferarme moderner und älterer Klaviere.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s32_bullet_3"><strong>Dämpferarme (US & Renner):</strong> Spezifische Kröpfungen und Längen für beide Normwelten.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s32_bullet_4"><strong>Klinken & Mechanikleisten:</strong> Musterprofile aller originalen Renner-Messing- und Aluminiumleisten.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HSt/page_6_2_Image184.jpg" alt="Mechanikteile Kapseln Dämpfer">
-              <div class="media-caption">Original Kapseln, Dämpferarme und Leistenmuster im MTK</div>
+              <div class="media-caption" data-i18n="s32_caption_1">Original Kapseln, Dämpferarme und Leistenmuster im MTK</div>
             </div>
           </div>
         </div>
@@ -1332,24 +1814,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="33">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Klavierteile</div>
-            <h2 class="slide-title">Klavier-Mechanikteile für AP- & APK-Systeme</h2>
-            <div class="slide-subtitle">Spezialteile für Hochklaviere, Verlängerungsabstrakten & Dämpferkörper</div>
+            <div class="slide-category" data-i18n="s33_category">Teil 4: Musterteilekoffer • Klavierteile</div>
+            <h2 class=\"slide-title\" data-i18n=\"s33_title\">Klavier-Mechanikteile für AP- & APK-Systeme</h2>
+            <div class="slide-subtitle" data-i18n="s33_subtitle">Spezialteile für Hochklaviere, Verlängerungsabstrakten & Dämpferkörper</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Bass- & Diskantdämpfer:</strong> Unterschiedliche Filzkeile und Einzelfilze für stehende Klaviere.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Dämpferarme für AP & APK:</strong> Passgenaue Geometrien für Renner Standard-Klaviermechaniken.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Hebeglieder mit Verlängerungsabstrakten:</strong> Für ältere Bauformen mit tiefer liegendem Klaviaturtisch.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Hammernüsse:</strong> Diverse Ausführungen mit Kapsel und Rückholfeder.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s33_bullet_1"><strong>Bass- & Diskantdämpfer:</strong> Unterschiedliche Filzkeile und Einzelfilze für stehende Klaviere.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s33_bullet_2"><strong>Dämpferarme für AP & APK:</strong> Passgenaue Geometrien für Renner Standard-Klaviermechaniken.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s33_bullet_3"><strong>Hebeglieder mit Verlängerungsabstrakten:</strong> Für ältere Bauformen mit tiefer liegendem Klaviaturtisch.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s33_bullet_4"><strong>Hammernüsse:</strong> Diverse Ausführungen mit Kapsel und Rückholfeder.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HSt/page_7_2_Image187.jpg" alt="Klavier-Mechanikteile">
-              <div class="media-caption">Klavier-Mechanikkomponenten (AP / APK) im Musterteilekoffer</div>
+              <div class="media-caption" data-i18n="s33_caption_1">Klavier-Mechanikkomponenten (AP / APK) im Musterteilekoffer</div>
             </div>
           </div>
         </div>
@@ -1361,24 +1843,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="34">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Hammerstiele</div>
-            <h2 class="slide-title">16 Flügel-Hammerstiele mit Kapseln</h2>
-            <div class="slide-subtitle">Vollständiges Reparatursortiment inklusive Spezial- und Patentstielen</div>
+            <div class="slide-category" data-i18n="s34_category">Teil 4: Musterteilekoffer • Hammerstiele</div>
+            <h2 class=\"slide-title\" data-i18n=\"s34_title\">16 Flügel-Hammerstiele mit Kapseln</h2>
+            <div class="slide-subtitle" data-i18n="s34_subtitle">Vollständiges Reparatursortiment inklusive Spezial- und Patentstielen</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>16 Standard-Hammerstiele mit Kapsel:</strong> Jeweils 2 Stück pro Modell als Testmuster im Koffer.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>3 Stiele ohne Kapsel:</strong> Für Selbstreparaturen und das Einsetzen in Originalkapseln.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Blüthner-Patentstiele:</strong> Originale Geometrien für historische Blüthner-Patentmechaniken.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Wiener Mechanik & Klemmschläuche:</strong> Spezialteile zur fachgerechten Restauration historischer Wiener Flügel.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s34_bullet_1"><strong>16 Standard-Hammerstiele mit Kapsel:</strong> Jeweils 2 Stück pro Modell als Testmuster im Koffer.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s34_bullet_2"><strong>3 Stiele ohne Kapsel:</strong> Für Selbstreparaturen und das Einsetzen in Originalkapseln.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s34_bullet_3"><strong>Blüthner-Patentstiele:</strong> Originale Geometrien für historische Blüthner-Patentmechaniken.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s34_bullet_4"><strong>Wiener Mechanik & Klemmschläuche:</strong> Spezialteile zur fachgerechten Restauration historischer Wiener Flügel.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HSt/page_8_2_Image190.jpg" alt="Flügel-Hammerstiele">
-              <div class="media-caption">16 originale Flügel-Hammerstiele mit montierten Kapseln im MTK</div>
+              <div class="media-caption" data-i18n="s34_caption_1">16 originale Flügel-Hammerstiele mit montierten Kapseln im MTK</div>
             </div>
           </div>
         </div>
@@ -1390,15 +1872,15 @@ def get_all_slides_html():
       <section class="slide" data-slide="35">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Kapsel-Selektion</div>
-            <h2 class="slide-title">Die 16 Kapselvarianten für alle Flügelmodelle</h2>
-            <div class="slide-subtitle">Exakte Zuordnung von Schraubenbohrung, Langloch und Abfallschraubenposition</div>
+            <div class="slide-category" data-i18n="s35_category">Teil 4: Musterteilekoffer • Kapsel-Selektion</div>
+            <h2 class=\"slide-title\" data-i18n=\"s35_title\">Die 16 Kapselvarianten für alle Flügelmodelle</h2>
+            <div class="slide-subtitle" data-i18n="s35_subtitle">Exakte Zuordnung von Schraubenbohrung, Langloch und Abfallschraubenposition</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <span class="bento-badge gold">MUSTERTEILEKOFFER</span>
+              <span class="bento-badge gold" data-i18n="s35_b1_badge">>MUSTERTEILEKOFFER</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">16</span>
                 <span class="bento-metric-unit">Kapselvarianten</span>
@@ -1419,8 +1901,8 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HSt/page_10_2_Image203.jpg" alt="16 Kapseltypen Renner">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">KAPSELÜBERSICHT</span>
-                <div class="bento-media-caption">16 herstellerspezifische Kapsel-Geometrien</div>
+                <span class="bento-badge green" data-i18n="s35_b2_badge">>KAPSELÜBERSICHT</span>
+                <div class="bento-media-caption" data-i18n="s35_caption_1">16 herstellerspezifische Kapsel-Geometrien</div>
               </div>
             </div>
           </div>
@@ -1433,44 +1915,44 @@ def get_all_slides_html():
       <section class="slide" data-slide="36">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Stiel-Parameter</div>
-            <h2 class="slide-title">Röllchenabstand, Stielstärke & Satz-Zusammenstellung</h2>
-            <div class="slide-subtitle">Die 7 entscheidenden Auswahlkriterien für den perfekten Hammerstiel</div>
+            <div class="slide-category" data-i18n="s36_category">Teil 4: Musterteilekoffer • Stiel-Parameter</div>
+            <h2 class=\"slide-title\" data-i18n=\"s36_title\">Röllchenabstand, Stielstärke & Satz-Zusammenstellung</h2>
+            <div class="slide-subtitle" data-i18n="s36_subtitle">Die 7 entscheidenden Auswahlkriterien für den perfekten Hammerstiel</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-hero-left">
             <div class="bento-grid bento-grid-3" style="gap: 12px;">
               <div class="bento-card metric-card">
-                <span class="bento-badge gold">BASS</span>
+                <span class="bento-badge gold" data-i18n="s36_b1_badge">>BASS</span>
                 <div class="bento-metric-top">
                   <span class="bento-metric-num">6,0</span>
                   <span class="bento-metric-unit">mm</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;">Stieldurchmesser</div>
+                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c1_title">Stieldurchmesser</div>
                 
               </div>
               <div class="bento-card metric-card">
-                <span class="bento-badge green">MITTE</span>
+                <span class="bento-badge green" data-i18n="s36_b2_badge">>MITTE</span>
                 <div class="bento-metric-top">
                   <span class="bento-metric-num">5,3</span>
                   <span class="bento-metric-unit">mm</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;">Stieldurchmesser</div>
+                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c2_title">Stieldurchmesser</div>
                 
               </div>
               <div class="bento-card metric-card">
-                <span class="bento-badge gold">DISKANT</span>
+                <span class="bento-badge gold" data-i18n="s36_b3_badge">>DISKANT</span>
                 <div class="bento-metric-top">
                   <span class="bento-metric-num">4,8</span>
                   <span class="bento-metric-unit">mm</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;">Stieldurchmesser</div>
+                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c3_title">Stieldurchmesser</div>
                 
               </div>
               <div class="bento-card col-span-3">
                 <div class="bento-card-header">
-                  <span class="bento-badge green">WEITERE AUSWAHLKRITERIEN</span>
+                  <span class="bento-badge green" data-i18n="s36_b4_badge">>WEITERE AUSWAHLKRITERIEN</span>
                 </div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item"><span class="bento-dot gold"></span><span><strong>Kapseltyp:</strong> 16 verschiedene Kapseltypen für Reparaturen lieferbar.</span></div>
@@ -1484,9 +1966,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HSt/page_11_2_Image207.jpg" alt="Röllchen und Stieldimensionen">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">STIELGEOMETRIE</span>
-                <div class="bento-media-caption">Röllchenpositionen und Stieldurchmesser</div>
-                <div class="bento-media-subcaption">nach Renner-Spezifikation</div>
+                <span class="bento-badge green" data-i18n="s36_b5_badge">>STIELGEOMETRIE</span>
+                <div class="bento-media-caption" data-i18n="s36_caption_1">Röllchenpositionen und Stieldurchmesser</div>
+                <div class="bento-media-subcaption" data-i18n="s36_caption_2">nach Renner-Spezifikation</div>
               </div>
             </div>
           </div>
@@ -1499,30 +1981,30 @@ def get_all_slides_html():
       <section class="slide" data-slide="37">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 4: Musterteilekoffer • Fertigungsprozess</div>
-            <h2 class="slide-title">Automatisierte Montage & 5 Tage Reifung</h2>
-            <div class="slide-subtitle">Strikter Qualitätsablauf: Vom Kamerasystem zur vorgeschriebenen Baugruppenruhe</div>
+            <div class="slide-category" data-i18n="s37_category">Teil 4: Musterteilekoffer • Fertigungsprozess</div>
+            <h2 class=\"slide-title\" data-i18n=\"s37_title\">Automatisierte Montage & 5 Tage Reifung</h2>
+            <div class="slide-subtitle" data-i18n="s37_subtitle">Strikter Qualitätsablauf: Vom Kamerasystem zur vorgeschriebenen Baugruppenruhe</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">Automatisierte Kapselmontage</div>
-              <div class="card-desc">Vollautomatische Montagestraße setzt Achsen, Kapseltuch und Schrauben mit digitaler Drehmomentüberwachung.</div>
+              <div class="card-title" data-i18n="s37_c1_title">Automatisierte Kapselmontage</div>
+              <div class="card-desc" data-i18n="s37_c1_desc">Vollautomatische Montagestraße setzt Achsen, Kapseltuch und Schrauben mit digitaler Drehmomentüberwachung.</div>
             </div>
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">Optisches Kamerasystem</div>
-              <div class="card-desc">Jedes Röllchen und jede Kapselachse wird optisch vermessen. Abweichungen im Zehntelmillimeter-Bereich werden sofort ausgeschleust.</div>
+              <div class="card-title" data-i18n="s37_c2_title">Optisches Kamerasystem</div>
+              <div class="card-desc" data-i18n="s37_c2_desc">Jedes Röllchen und jede Kapselachse wird optisch vermessen. Abweichungen im Zehntelmillimeter-Bereich werden sofort ausgeschleust.</div>
             </div>
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">5-tägige Ruhephase (Setzprozess)</div>
-              <div class="card-desc">Alle montierten Hammerstiele lagern zwingend 5 Tage im klimatisierten Baugruppenlager. Dieser Schritt ist fester Bestandteil des Wertstroms und darf nicht unterschritten werden!</div>
+              <div class="card-title" data-i18n="s37_c3_title">5-tägige Ruhephase (Setzprozess)</div>
+              <div class="card-desc" data-i18n="s37_c3_desc">Alle montierten Hammerstiele lagern zwingend 5 Tage im klimatisierten Baugruppenlager. Dieser Schritt ist fester Bestandteil des Wertstroms und darf nicht unterschritten werden!</div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HSt/page_18_2_Image235.jpg" alt="Baugruppenlager Meuselwitz">
-              <div class="media-caption">5 Tage Baugruppenruhe: Spannungsabbau vor der manuellen Endkontrolle</div>
+              <div class="media-caption" data-i18n="s37_caption_1">5 Tage Baugruppenruhe: Spannungsabbau vor der manuellen Endkontrolle</div>
             </div>
           </div>
         </div>
@@ -1538,23 +2020,23 @@ def get_all_slides_html():
       <section class="slide" data-slide="38">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Erfassungsbogen</div>
-            <h2 class="slide-title">Das Renner Hammerkopf-Maßblatt (Flügel & Klavier)</h2>
-            <div class="slide-subtitle">Vollständige Erfassung aller Geometriedaten für einbaufertige Hämmer</div>
+            <div class="slide-category" data-i18n="s38_category">Teil 5: Maßblätter & Geometrie • Erfassungsbogen</div>
+            <h2 class=\"slide-title\" data-i18n=\"s38_title\">Das Renner Hammerkopf-Maßblatt (Flügel & Klavier)</h2>
+            <div class="slide-subtitle" data-i18n="s38_subtitle">Vollständige Erfassung aller Geometriedaten für einbaufertige Hämmer</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Basisdaten des Instruments:</strong> Hersteller, Seriennummer, Modell, Baujahr (z. B. Steinway & Sons M 170 #535100 von 1996).</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Oft genügen Basisdaten:</strong> Bei renommierten Marken reichen diese Angaben bereits aus, damit Renner einen exakt passenden, gebohrten Satz liefert.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Präzise Einzelmaße:</strong> Bei unbekannten oder modifizierten Flügeln werden Gesamtlänge, Bohrungslänge, Stärke und Winkel erfasst.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s38_bullet_1"><strong>Basisdaten des Instruments:</strong> Hersteller, Seriennummer, Modell, Baujahr (z. B. Steinway & Sons M 170 #535100 von 1996).</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s38_bullet_2"><strong>Oft genügen Basisdaten:</strong> Bei renommierten Marken reichen diese Angaben bereits aus, damit Renner einen exakt passenden, gebohrten Satz liefert.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s38_bullet_3"><strong>Präzise Einzelmaße:</strong> Bei unbekannten oder modifizierten Flügeln werden Gesamtlänge, Bohrungslänge, Stärke und Winkel erfasst.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_23_2_Image265.png" alt="Renner Maßblatt">
-              <div class="media-caption">Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere</div>
+              <div class="media-caption" data-i18n="s38_caption_1">Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere</div>
             </div>
           </div>
         </div>
@@ -1566,9 +2048,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="39">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Datenbank</div>
-            <h2 class="slide-title">Werksspezifikationen für alle Weltmarken</h2>
-            <div class="slide-subtitle">Hunderte vorgebohrte Standard-Reparatursätze sofort lieferbar</div>
+            <div class="slide-category" data-i18n="s39_category">Teil 5: Maßblätter & Geometrie • Datenbank</div>
+            <h2 class=\"slide-title\" data-i18n=\"s39_title\">Werksspezifikationen für alle Weltmarken</h2>
+            <div class="slide-subtitle" data-i18n="s39_subtitle">Hunderte vorgebohrte Standard-Reparatursätze sofort lieferbar</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -1577,20 +2059,20 @@ def get_all_slides_html():
               Renner verfügt über das weltweit umfangreichste Archiv an Original-Bohrungsdaten für fast alle Qualitätsklaviere und -flügel:
             </p>
             <div class="card-grid" style="grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• Steinway & Sons</div><div class="card-desc">Alle Modelle & Epochen</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• C. Bechstein</div><div class="card-desc">Historisch & modern</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• Bösendorfer</div><div class="card-desc">Sämtliche Längen</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• Julius Blüthner</div><div class="card-desc">Patent & Standard</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• Wilhelm Schimmel</div><div class="card-desc">Flügel & Pianos</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• Steingraeber & Söhne</div><div class="card-desc">Konzertspezifikation</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• August Förster</div><div class="card-desc">Traditionsmaße</div></div>
-              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;">• Yamaha & Kawai</div><div class="card-desc">C- / RX- / GX-Serie</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c1_title">• Steinway & Sons</div><div class="card-desc" data-i18n="s39_c1_desc">Alle Modelle & Epochen</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c2_title">• C. Bechstein</div><div class="card-desc" data-i18n="s39_c2_desc">Historisch & modern</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c3_title">• Bösendorfer</div><div class="card-desc" data-i18n="s39_c3_desc">Sämtliche Längen</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c4_title">• Julius Blüthner</div><div class="card-desc" data-i18n="s39_c4_desc">Patent & Standard</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c5_title">• Wilhelm Schimmel</div><div class="card-desc" data-i18n="s39_c5_desc">Flügel & Pianos</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c6_title">• Steingraeber & Söhne</div><div class="card-desc" data-i18n="s39_c6_desc">Konzertspezifikation</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c7_title">• August Förster</div><div class="card-desc" data-i18n="s39_c7_desc">Traditionsmaße</div></div>
+              <div class="feature-card" style="padding: 10px;"><div class="card-title" style="font-size: 0.95rem;" data-i18n="s39_c8_title">• Yamaha & Kawai</div><div class="card-desc" data-i18n="s39_c8_desc">C- / RX- / GX-Serie</div></div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_24_2_Image269.png" alt="Renner Reparaturprogramm">
-              <div class="media-caption">Archivierte Renner Standard-Datensätze für weltweite Reparaturen</div>
+              <div class="media-caption" data-i18n="s39_caption_1">Archivierte Renner Standard-Datensätze für weltweite Reparaturen</div>
             </div>
           </div>
         </div>
@@ -1602,50 +2084,50 @@ def get_all_slides_html():
       <section class="slide" data-slide="40">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Standardparameter</div>
-            <h2 class="slide-title">Bohrungslänge = Gesamtlänge - 24 mm</h2>
-            <div class="slide-subtitle">Die universelle Faustformel für Flügelhammerköpfe im Renner-Standard</div>
+            <div class="slide-category" data-i18n="s40_category">Teil 5: Maßblätter & Geometrie • Standardparameter</div>
+            <h2 class=\"slide-title\" data-i18n=\"s40_title\">Bohrungslänge = Gesamtlänge - 24 mm</h2>
+            <div class="slide-subtitle" data-i18n="s40_subtitle">Die universelle Faustformel für Flügelhammerköpfe im Renner-Standard</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-hero-left">
             <div class="bento-grid bento-grid-3" style="gap: 12px;">
               <div class="bento-card col-span-3 hero-card">
-                <span class="bento-badge gold">RENNER FAUSTFORMEL</span>
-                <div class="bento-card-title" style="font-size: 1.4rem; color: var(--gold-light);">Länge = Gesamtlänge - 24 mm</div>
-                <div class="bento-card-desc">Exakte Einstecktiefe des Stiels.</div>
+                <span class="bento-badge gold" data-i18n="s40_b1_badge">>RENNER FAUSTFORMEL</span>
+                <div class="bento-card-title" style="font-size: 1.4rem; color: var(--gold-light);" data-i18n="s40_c1_title">Länge = Gesamtlänge - 24 mm</div>
+                <div class="bento-card-desc" data-i18n="s40_c1_desc">Exakte Einstecktiefe des Stiels.</div>
               </div>
               <div class="bento-card">
-                <span class="bento-badge green">BOHRUNG</span>
+                <span class="bento-badge green" data-i18n="s40_b2_badge">>BOHRUNG</span>
                 <div class="bento-metric-top">
                   <span class="bento-metric-num" style="font-size: 2.2rem;">5,4</span>
                   <span class="bento-metric-unit">mm ø</span>
                 </div>
-                <div class="bento-card-desc">Passend für Renner Konusstiele.</div>
+                <div class="bento-card-desc" data-i18n="s40_c2_desc">Passend für Renner Konusstiele.</div>
               </div>
               <div class="bento-card">
-                <span class="bento-badge green">HAMMER-ZU-STIEL</span>
+                <span class="bento-badge green" data-i18n="s40_b3_badge">>HAMMER-ZU-STIEL</span>
                 <div class="bento-metric-top">
                   <span class="bento-metric-num" style="font-size: 2.2rem;">90°</span>
                   <span class="bento-metric-unit">Winkel</span>
                 </div>
-                <div class="bento-card-desc">Rechtwinkligkeit zur Saitenebene.</div>
+                <div class="bento-card-desc" data-i18n="s40_c3_desc">Rechtwinkligkeit zur Saitenebene.</div>
               </div>
               <div class="bento-card">
-                <span class="bento-badge green">RAKE-WINKEL</span>
+                <span class="bento-badge green" data-i18n="s40_b4_badge">>RAKE-WINKEL</span>
                 <div class="bento-metric-top">
                   <span class="bento-metric-num" style="font-size: 2.2rem;">91°</span>
                   <span class="bento-metric-unit">Lehre</span>
                 </div>
-                <div class="bento-card-desc">Leichte Vorneigung beim Einleimen.</div>
+                <div class="bento-card-desc" data-i18n="s40_c4_desc">Leichte Vorneigung beim Einleimen.</div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HK/page_27_2_Image284.jpg" alt="Standardmaße Bohrung">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold">GEOMETRIE-NORM</span>
-                <div class="bento-media-caption">Standardmaße der Flügelhammerkopf-Bohrung</div>
-                <div class="bento-media-subcaption">nach Renner-Norm</div>
+                <span class="bento-badge gold" data-i18n="s40_b5_badge">>GEOMETRIE-NORM</span>
+                <div class="bento-media-caption" data-i18n="s40_caption_1">Standardmaße der Flügelhammerkopf-Bohrung</div>
+                <div class="bento-media-subcaption" data-i18n="s40_caption_2">nach Renner-Norm</div>
               </div>
             </div>
           </div>
@@ -1658,21 +2140,21 @@ def get_all_slides_html():
       <section class="slide" data-slide="41">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Gon-Winkel</div>
-            <h2 class="slide-title">Bohrwinkel in Gon (100er-Teilung des 90°-Winkels)</h2>
-            <div class="slide-subtitle">Warum Renner Bohrwinkel traditionell in Gon statt in Grad angibt</div>
+            <div class="slide-category" data-i18n="s41_category">Teil 5: Maßblätter & Geometrie • Gon-Winkel</div>
+            <h2 class=\"slide-title\" data-i18n=\"s41_title\">Bohrwinkel in Gon (100er-Teilung des 90°-Winkels)</h2>
+            <div class="slide-subtitle" data-i18n="s41_subtitle">Warum Renner Bohrwinkel traditionell in Gon statt in Grad angibt</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <span class="bento-badge gold">WINKELNORM</span>
+              <span class="bento-badge gold" data-i18n="s41_b1_badge">>WINKELNORM</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">100</span>
                 <span class="bento-metric-unit">Gon = 90°</span>
               </div>
-              <div class="bento-card-title">Zehntelgrad-genaue Teilung ohne Bruchminuten</div>
-              <div class="bento-card-desc">
+              <div class="bento-card-title" data-i18n="s41_c1_title">Zehntelgrad-genaue Teilung ohne Bruchminuten</div>
+              <div class="bento-card-desc" data-i18n="s41_c1_desc">
                 Gon ermöglicht feinere, zehntelgrad-genaue Teilungen ohne Bruchminuten. Normalwerte:
               </div>
               <div class="bento-card-list">
@@ -1693,9 +2175,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HK/page_28_2_Image291.jpg" alt="Bohrwinkel in Gon">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">BOHRWINKEL-TABELLE</span>
-                <div class="bento-media-caption">Bohrwinkeltabelle in Gon</div>
-                <div class="bento-media-subcaption">über die verschiedenen Register</div>
+                <span class="bento-badge green" data-i18n="s41_b2_badge">>BOHRWINKEL-TABELLE</span>
+                <div class="bento-media-caption" data-i18n="s41_caption_1">Bohrwinkeltabelle in Gon</div>
+                <div class="bento-media-subcaption" data-i18n="s41_caption_2">über die verschiedenen Register</div>
               </div>
             </div>
           </div>
@@ -1708,9 +2190,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="42">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Stielwinkel-Physik</div>
-            <h2 class="slide-title">90°-Stielwinkel & 3 mm Überhang: Physik des Tons</h2>
-            <div class="slide-subtitle">Warum übermäßige Abschliffe alter Hämmer den Saitenbruch provozieren</div>
+            <div class="slide-category" data-i18n="s42_category">Teil 5: Maßblätter & Geometrie • Stielwinkel-Physik</div>
+            <h2 class=\"slide-title\" data-i18n=\"s42_title\">90°-Stielwinkel & 3 mm Überhang: Physik des Tons</h2>
+            <div class="slide-subtitle" data-i18n="s42_subtitle">Warum übermäßige Abschliffe alter Hämmer den Saitenbruch provozieren</div>
           </div>
         </div>
         <div class="slide-body">
@@ -1722,17 +2204,17 @@ def get_all_slides_html():
                     <span class="bento-metric-num">90°</span>
                     <span class="bento-metric-unit">Winkel</span>
                   </div>
-                  <div class="bento-card-title" style="font-size: 1.1rem;">Rechtwinkliger Anschlag</div>
+                  <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s42_c1_title">Rechtwinkliger Anschlag</div>
                 </div>
                 <div>
                   <div class="bento-metric-top">
                     <span class="bento-metric-num">ca. 3</span>
                     <span class="bento-metric-unit">mm</span>
                   </div>
-                  <div class="bento-card-title" style="font-size: 1.1rem;">Stielüberhang</div>
+                  <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s42_c2_title">Stielüberhang</div>
                 </div>
               </div>
-              <div class="bento-card-desc">
+              <div class="bento-card-desc" data-i18n="s42_c1_desc">
                 Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Der Stiel muss ca. 3 mm Überhang haben. Durch die Massenträgheit wird die kinetische Energie gezielt in Richtung Steg geleitet!
               </div>
               <div class="bento-card-list" style="margin-top: 14px;">
@@ -1745,9 +2227,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/HK/page_31_1_Image169.png" alt="Prinzip Stielwinkel">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold">KRAFTVEKTOR</span>
-                <div class="bento-media-caption">Geometrie des Hammerstielwinkels</div>
-                <div class="bento-media-subcaption">und Kraftvektor zum Steg</div>
+                <span class="bento-badge gold" data-i18n="s42_b1_badge">>KRAFTVEKTOR</span>
+                <div class="bento-media-caption" data-i18n="s42_caption_1">Geometrie des Hammerstielwinkels</div>
+                <div class="bento-media-subcaption" data-i18n="s42_caption_2">und Kraftvektor zum Steg</div>
               </div>
             </div>
           </div>
@@ -1760,15 +2242,15 @@ def get_all_slides_html():
       <section class="slide" data-slide="43">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Längenberechnung</div>
-            <h2 class="slide-title">Berechnung der Bohrungslänge ohne Muster</h2>
-            <div class="slide-subtitle">Die bewährte 4-Schritte-Methode der Renner Academy</div>
+            <div class="slide-category" data-i18n="s43_category">Teil 5: Maßblätter & Geometrie • Längenberechnung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s43_title\">Berechnung der Bohrungslänge ohne Muster</h2>
+            <div class="slide-subtitle" data-i18n="s43_subtitle">Die bewährte 4-Schritte-Methode der Renner Academy</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 12px; border-color: var(--border-gold);">
-              <div class="card-title" style="color: var(--gold-accent);">Die 4-Schritte-Berechnungsformel:</div>
+              <div class="card-title" style="color: var(--gold-accent);" data-i18n="s43_c1_title">Die 4-Schritte-Berechnungsformel:</div>
               <ol style="margin-left: 20px; line-height: 1.8; color: var(--text-primary); margin-top: 8px;">
                 <li><strong>(1.)</strong> Abstand von der Saitenebene zum Klaviaturtisch messen.</li>
                 <li><strong>(2.)</strong> Abstand von der Hammerstielachse (Kapselmittelpunkt) zum Klaviaturtisch messen.</li>
@@ -1781,7 +2263,7 @@ def get_all_slides_html():
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_32_3_Image312.png" alt="Berechnung Bohrungslänge">
-              <div class="media-caption">Messschema zur Ermittlung der Bohrungslänge im Flügel</div>
+              <div class="media-caption" data-i18n="s43_caption_1">Messschema zur Ermittlung der Bohrungslänge im Flügel</div>
             </div>
           </div>
         </div>
@@ -1793,26 +2275,26 @@ def get_all_slides_html():
       <section class="slide" data-slide="44">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 5: Maßblätter & Geometrie • Dokumentation</div>
-            <h2 class="slide-title">Flügel- & Klavier-Maßblätter im Vergleich</h2>
-            <div class="slide-subtitle">Schritt-für-Schritt Ausfüllhilfe für Großreparaturen und Neubauten</div>
+            <div class="slide-category" data-i18n="s44_category">Teil 5: Maßblätter & Geometrie • Dokumentation</div>
+            <h2 class=\"slide-title\" data-i18n=\"s44_title\">Flügel- & Klavier-Maßblätter im Vergleich</h2>
+            <div class="slide-subtitle" data-i18n="s44_subtitle">Schritt-für-Schritt Ausfüllhilfe für Großreparaturen und Neubauten</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 14px;">
-              <div class="card-title">Grand Piano (GP) Formular</div>
-              <div class="card-desc">Fokus auf Gesamtlänge, Bohrungslänge, Stielachse, Steigungswinkel und Rake-Winkel (91° Lehre). Speziell für Flach- und Konzertflügel.</div>
+              <div class="card-title" data-i18n="s44_c1_title">Grand Piano (GP) Formular</div>
+              <div class="card-desc" data-i18n="s44_c1_desc">Fokus auf Gesamtlänge, Bohrungslänge, Stielachse, Steigungswinkel und Rake-Winkel (91° Lehre). Speziell für Flach- und Konzertflügel.</div>
             </div>
             <div class="feature-card">
-              <div class="card-title">Upright Piano (UP) Formular</div>
-              <div class="card-desc">Erfassung von Nussbohrung, Nusskapsel, Hammerlänge ab Achse und Steigungswinkel für Pianinos und Konzertklaviere.</div>
+              <div class="card-title" data-i18n="s44_c2_title">Upright Piano (UP) Formular</div>
+              <div class="card-desc" data-i18n="s44_c2_desc">Erfassung von Nussbohrung, Nusskapsel, Hammerlänge ab Achse und Steigungswinkel für Pianinos und Konzertklaviere.</div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/HK/page_33_2_Image316.jpg" alt="Flügel Maßblatt Formular">
-              <div class="media-caption">Ausfüllfertiges GP-Maßblatt der Renner Academy</div>
+              <div class="media-caption" data-i18n="s44_caption_1">Ausfüllfertiges GP-Maßblatt der Renner Academy</div>
             </div>
           </div>
         </div>
@@ -1828,24 +2310,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="45">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 1: Stielmontage</div>
-            <h2 class="slide-title">Vormontage der Hammerstiele & Spezialschrauben</h2>
-            <div class="slide-subtitle">Renner Kapselschrauben 4,5x22 mm mit Tellerfedern und Kapselabstandhalter</div>
+            <div class="slide-category" data-i18n="s45_category">Teil 6: Montage & Verleimen • Schritt 1: Stielmontage</div>
+            <h2 class=\"slide-title\" data-i18n=\"s45_title\">Vormontage der Hammerstiele & Spezialschrauben</h2>
+            <div class="slide-subtitle" data-i18n="s45_subtitle">Renner Kapselschrauben 4,5x22 mm mit Tellerfedern und Kapselabstandhalter</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Vormontage in Feldern:</strong> Stiele nach Registerverteilung aufstecken; 1–2 Positionen zwischen Feldern frei lassen.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Gewindegang finden:</strong> Bei gebrauchten Leisten Schraube zuerst leicht nach links drehen, bis sie spürbar in den alten Gewindegang einrastet.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Renner Flanschschraube (Art. 43-0008745):</strong> 4,5x22 mm mit Tellerfeder-Scheibe und kombiniertem Schlitz/Kreuzschlitz.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Werkzeuge:</strong> PZD 2 Ballengriff-Schraubendreher (Art. 43-0008316) und Kapselabstandhalter (Art. 43-0003286).</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s45_bullet_1"><strong>Vormontage in Feldern:</strong> Stiele nach Registerverteilung aufstecken; 1–2 Positionen zwischen Feldern frei lassen.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s45_bullet_2"><strong>Gewindegang finden:</strong> Bei gebrauchten Leisten Schraube zuerst leicht nach links drehen, bis sie spürbar in den alten Gewindegang einrastet.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s45_bullet_3"><strong>Renner Flanschschraube (Art. 43-0008745):</strong> 4,5x22 mm mit Tellerfeder-Scheibe und kombiniertem Schlitz/Kreuzschlitz.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s45_bullet_4"><strong>Werkzeuge:</strong> PZD 2 Ballengriff-Schraubendreher (Art. 43-0008316) und Kapselabstandhalter (Art. 43-0003286).</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_3_2_Image161.jpg" alt="Vormontage Hammerstiele">
-              <div class="media-caption">Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock</div>
+              <div class="media-caption" data-i18n="s45_caption_1">Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock</div>
             </div>
           </div>
         </div>
@@ -1857,9 +2339,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="46">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 2: Frequenzabgleich</div>
-            <h2 class="slide-title">Frequenzprüfung & Akustische Sortierung</h2>
-            <div class="slide-subtitle">Abklopfen der montierten Stiele: Tiefer Ton im Bass, hohe Resonanz im Diskant</div>
+            <div class="slide-category" data-i18n="s46_category">Teil 6: Montage & Verleimen • Schritt 2: Frequenzabgleich</div>
+            <h2 class=\"slide-title\" data-i18n=\"s46_title\">Frequenzprüfung & Akustische Sortierung</h2>
+            <div class="slide-subtitle" data-i18n="s46_subtitle">Abklopfen der montierten Stiele: Tiefer Ton im Bass, hohe Resonanz im Diskant</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -1868,15 +2350,15 @@ def get_all_slides_html():
               Bevor die Schrauben endgültig angezogen werden, erfolgt die akustische Frequenzkontrolle jedes einzelnen Hammerstiels:
             </p>
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Klangprobe durch Antippen:</strong> Jeder Stiel wird sanft angeklopft und seine Eigenresonanz belauscht.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Harmonischer Tonverlauf:</strong> Stiele mit tieferer Resonanzfrequenz gehören in den Bass, mittlere in die Mittellage, helle hohe Resonanzen in den Diskant.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Homogenes Spielgefühl:</strong> Diese akustische Sortierung verhindert Klangausreißer und ungleiche Energieübertragung.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s46_bullet_1"><strong>Klangprobe durch Antippen:</strong> Jeder Stiel wird sanft angeklopft und seine Eigenresonanz belauscht.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s46_bullet_2"><strong>Harmonischer Tonverlauf:</strong> Stiele mit tieferer Resonanzfrequenz gehören in den Bass, mittlere in die Mittellage, helle hohe Resonanzen in den Diskant.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s46_bullet_3"><strong>Homogenes Spielgefühl:</strong> Diese akustische Sortierung verhindert Klangausreißer und ungleiche Energieübertragung.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_4_2_Image173.jpg" alt="Frequenzprüfung Stiele">
-              <div class="media-caption">Frequenzprüfung der Stiele vor dem festen Verschrauben</div>
+              <div class="media-caption" data-i18n="s46_caption_1">Frequenzprüfung der Stiele vor dem festen Verschrauben</div>
             </div>
           </div>
         </div>
@@ -1888,24 +2370,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="47">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 3: Traveling</div>
-            <h2 class="slide-title">Traveling: Gerader Stiellauf mit blauem Papier</h2>
-            <div class="slide-subtitle">Blaues einseitig klebendes Traveling-Papier 0,2 mm und Winkelfilzmesser</div>
+            <div class="slide-category" data-i18n="s47_category">Teil 6: Montage & Verleimen • Schritt 3: Traveling</div>
+            <h2 class=\"slide-title\" data-i18n=\"s47_title\">Traveling: Gerader Stiellauf mit blauem Papier</h2>
+            <div class="slide-subtitle" data-i18n="s47_subtitle">Blaues einseitig klebendes Traveling-Papier 0,2 mm und Winkelfilzmesser</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>90°-Ausrichtung der Randstiele:</strong> Zuerst den ersten und letzten Stiel jedes Feldes rechtwinklig zur Leiste einrichten.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Traveling-Korrektur:</strong> Schief laufende Kapseln werden mit blauem, 0,2 mm dickem Klebepapier (Art. 43-0005975) unterfüttert.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Winkelfilzmesser (Art. 43-0003252):</strong> Ermöglicht das saubere Unterschieben und Schneiden der Papierstreifen unter der Kapselsohle.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Feldverschiebung:</strong> Ganze Felder können bei älteren Flügeln gezielt nach links oder rechts korrigiert werden.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s47_bullet_1"><strong>90°-Ausrichtung der Randstiele:</strong> Zuerst den ersten und letzten Stiel jedes Feldes rechtwinklig zur Leiste einrichten.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s47_bullet_2"><strong>Traveling-Korrektur:</strong> Schief laufende Kapseln werden mit blauem, 0,2 mm dickem Klebepapier (Art. 43-0005975) unterfüttert.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s47_bullet_3"><strong>Winkelfilzmesser (Art. 43-0003252):</strong> Ermöglicht das saubere Unterschieben und Schneiden der Papierstreifen unter der Kapselsohle.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s47_bullet_4"><strong>Feldverschiebung:</strong> Ganze Felder können bei älteren Flügeln gezielt nach links oder rechts korrigiert werden.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_5_2_Image179.jpg" alt="Traveling Hammerstiele">
-              <div class="media-caption">Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier</div>
+              <div class="media-caption" data-i18n="s47_caption_1">Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier</div>
             </div>
           </div>
         </div>
@@ -1917,9 +2399,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="48">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 4: Vorbereitung</div>
-            <h2 class="slide-title">Zwingende Neunummerierung vor dem Verleimen</h2>
-            <div class="slide-subtitle">Warum die Tastennummern vor Beginn mit Bleistift neu aufgetragen werden müssen</div>
+            <div class="slide-category" data-i18n="s48_category">Teil 6: Montage & Verleimen • Schritt 4: Vorbereitung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s48_title\">Zwingende Neunummerierung vor dem Verleimen</h2>
+            <div class="slide-subtitle" data-i18n="s48_subtitle">Warum die Tastennummern vor Beginn mit Bleistift neu aufgetragen werden müssen</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -1928,15 +2410,15 @@ def get_all_slides_html():
               Jeder Renner-Hammerkopfsatz wird im Werk exakt gezählt, sortiert und ab Werk signiert. Dennoch gilt ein eiserner Grundsatz:
             </p>
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Überzählige Hämmer aussortieren:</strong> Satz auf das Arbeitsbrett legen und Reservehämmer separieren.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Gefahr des Nummernverlusts:</strong> Durch das Verjüngen der Hammerkerne (schmaler als Schnittbreite) werden Werkssignaturen oft weggeschliffen!</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Neunummerierung mit Bleistift:</strong> Alle 88 Hammerköpfe müssen vor dem Verleimen auf der Unterseite mit ihrer Tastennummer beschriftet werden.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s48_bullet_1"><strong>Überzählige Hämmer aussortieren:</strong> Satz auf das Arbeitsbrett legen und Reservehämmer separieren.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s48_bullet_2"><strong>Gefahr des Nummernverlusts:</strong> Durch das Verjüngen der Hammerkerne (schmaler als Schnittbreite) werden Werkssignaturen oft weggeschliffen!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s48_bullet_3"><strong>Neunummerierung mit Bleistift:</strong> Alle 88 Hammerköpfe müssen vor dem Verleimen auf der Unterseite mit ihrer Tastennummer beschriftet werden.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_8_2_Image191.jpg" alt="Neunummerieren der Hammerköpfe">
-              <div class="media-caption">Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe</div>
+              <div class="media-caption" data-i18n="s48_caption_1">Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe</div>
             </div>
           </div>
         </div>
@@ -1948,24 +2430,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="49">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 5: Aufreiben</div>
-            <h2 class="slide-title">Musterhämmer & Handreibahle ø 5,0 mm (Konus 1:50)</h2>
-            <div class="slide-subtitle">Setzen der Referenzhämmer und Vorbereitung der konischen Bohrung</div>
+            <div class="slide-category" data-i18n="s49_category">Teil 6: Montage & Verleimen • Schritt 5: Aufreiben</div>
+            <h2 class=\"slide-title\" data-i18n=\"s49_title\">Musterhämmer & Handreibahle ø 5,0 mm (Konus 1:50)</h2>
+            <div class="slide-subtitle" data-i18n="s49_subtitle">Setzen der Referenzhämmer und Vorbereitung der konischen Bohrung</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Referenzhämmer setzen:</strong> Zuerst den ersten und letzten Hammer jedes Teilfeldes als Orientierungsmuster aufstecken.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Handreibahle (Art. 43-0003409):</strong> Reibahle ø 5,0 mm mit exaktem Konusmaß 1:50, Schneidrichtung stets im Uhrzeigersinn!</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Konisches Aufweiten:</strong> Die zylindrische Werksbohrung wird exakt auf die Konizität des Hammerstiels erweitert.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Spannung kontrollieren:</strong> Der Hammer muss sich ohne Klebstoff bereits fest und wackelfrei aufreiben lassen.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s49_bullet_1"><strong>Referenzhämmer setzen:</strong> Zuerst den ersten und letzten Hammer jedes Teilfeldes als Orientierungsmuster aufstecken.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s49_bullet_2"><strong>Handreibahle (Art. 43-0003409):</strong> Reibahle ø 5,0 mm mit exaktem Konusmaß 1:50, Schneidrichtung stets im Uhrzeigersinn!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s49_bullet_3"><strong>Konisches Aufweiten:</strong> Die zylindrische Werksbohrung wird exakt auf die Konizität des Hammerstiels erweitert.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s49_bullet_4"><strong>Spannung kontrollieren:</strong> Der Hammer muss sich ohne Klebstoff bereits fest und wackelfrei aufreiben lassen.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_10_2_Image200.jpg" alt="Handreibahle konisch">
-              <div class="media-caption">Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung</div>
+              <div class="media-caption" data-i18n="s49_caption_1">Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung</div>
             </div>
           </div>
         </div>
@@ -1977,26 +2459,26 @@ def get_all_slides_html():
       <section class="slide" data-slide="50">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 6: Konus-Prinzip</div>
-            <h2 class="slide-title">Konischer Stiel & Konische Bohrung: Die Physik</h2>
-            <div class="slide-subtitle">Warum zylindrische Bohrungen versagen und Konizität unzerstörbar hält</div>
+            <div class="slide-category" data-i18n="s50_category">Teil 6: Montage & Verleimen • Schritt 6: Konus-Prinzip</div>
+            <h2 class=\"slide-title\" data-i18n=\"s50_title\">Konischer Stiel & Konische Bohrung: Die Physik</h2>
+            <div class="slide-subtitle" data-i18n="s50_subtitle">Warum zylindrische Bohrungen versagen und Konizität unzerstörbar hält</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 12px; border-color: var(--border-gold);">
-              <div class="card-title" style="color: var(--gold-accent);">Der Konus-Vorteil:</div>
+              <div class="card-title" style="color: var(--gold-accent);" data-i18n="s50_c1_title">Der Konus-Vorteil:</div>
               <ul class="bullet-list" style="margin-top: 8px;">
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Kein Leimabstreifen:</strong> Bei zylindrischen Stielen wird der Leim beim Aufschieben nach außen geschoben – die Leimfuge verhungert.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Gleichmäßiger Leimfilm:</strong> Beim Konus berühren sich Holz und Bohrung erst auf den letzten Millimetern.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Holzquellung als Keilverschluss:</strong> Durch das Wasser im Leim quillt das Holz in der Bohrung auf und arretiert den Stiel unlösbar.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s50_bullet_1"><strong>Kein Leimabstreifen:</strong> Bei zylindrischen Stielen wird der Leim beim Aufschieben nach außen geschoben – die Leimfuge verhungert.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s50_bullet_2"><strong>Gleichmäßiger Leimfilm:</strong> Beim Konus berühren sich Holz und Bohrung erst auf den letzten Millimetern.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s50_bullet_3"><strong>Holzquellung als Keilverschluss:</strong> Durch das Wasser im Leim quillt das Holz in der Bohrung auf und arretiert den Stiel unlösbar.</span></li>
               </ul>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_12_2_Image210.png" alt="Konischer Stiel und Bohrung">
-              <div class="media-caption">Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung</div>
+              <div class="media-caption" data-i18n="s50_caption_1">Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung</div>
             </div>
           </div>
         </div>
@@ -2008,23 +2490,23 @@ def get_all_slides_html():
       <section class="slide" data-slide="51">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 7: Rake-Winkel</div>
-            <h2 class="slide-title">91°-Rake-Winkel mit der Winkellehre</h2>
-            <div class="slide-subtitle">Präzise Neigungsmessung während des Aufsteckens und Verleimens</div>
+            <div class="slide-category" data-i18n="s51_category">Teil 6: Montage & Verleimen • Schritt 7: Rake-Winkel</div>
+            <h2 class=\"slide-title\" data-i18n=\"s51_title\">91°-Rake-Winkel mit der Winkellehre</h2>
+            <div class="slide-subtitle" data-i18n="s51_subtitle">Präzise Neigungsmessung während des Aufsteckens und Verleimens</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Flügel-Hammerkopfwinkel-Lehre (Art. 43-0005650):</strong> Speziell kalibrierte 91°-Lehre für die Flügelmechanik.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Warum 91°?</strong> Die minimale 1°-Neigung gleicht die spätere Stieldurchbiegung unter Anschlagslast exakt aus.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Kontrolle der Referenzhämmer:</strong> Erster und letzter Hammer jedes Feldes werden auf die 91°-Lehre justiert.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s51_bullet_1"><strong>Flügel-Hammerkopfwinkel-Lehre (Art. 43-0005650):</strong> Speziell kalibrierte 91°-Lehre für die Flügelmechanik.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s51_bullet_2"><strong>Warum 91°?</strong> Die minimale 1°-Neigung gleicht die spätere Stieldurchbiegung unter Anschlagslast exakt aus.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s51_bullet_3"><strong>Kontrolle der Referenzhämmer:</strong> Erster und letzter Hammer jedes Feldes werden auf die 91°-Lehre justiert.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_13_2_Image214.jpg" alt="Rake-Winkellehre 91 Grad">
-              <div class="media-caption">Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°</div>
+              <div class="media-caption" data-i18n="s51_caption_1">Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°</div>
             </div>
           </div>
         </div>
@@ -2036,30 +2518,30 @@ def get_all_slides_html():
       <section class="slide" data-slide="52">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 8: Leimauswahl</div>
-            <h2 class="slide-title">Heißer Knochenleim vs. Hartholz-PVA-Leim</h2>
-            <div class="slide-subtitle">Warmleimbecken, Perlleim, Hasenleim oder moderner D3-Weißleim</div>
+            <div class="slide-category" data-i18n="s52_category">Teil 6: Montage & Verleimen • Schritt 8: Leimauswahl</div>
+            <h2 class=\"slide-title\" data-i18n=\"s52_title\">Heißer Knochenleim vs. Hartholz-PVA-Leim</h2>
+            <div class="slide-subtitle" data-i18n="s52_subtitle">Warmleimbecken, Perlleim, Hasenleim oder moderner D3-Weißleim</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">Heißleim (Traditionelle Wahl)</div>
-              <div class="card-desc">Elektrisches Warmleimbecken 0,2 l (Art. 43-0003248), Perlleim braun (Art. 43-0001162) oder Hasenleim-Granulat (Art. 43-0004644). Extrem glasartige, resonanzstarke Fuge; reversibel.</div>
+              <div class="card-title" data-i18n="s52_c1_title">Heißleim (Traditionelle Wahl)</div>
+              <div class="card-desc" data-i18n="s52_c1_desc">Elektrisches Warmleimbecken 0,2 l (Art. 43-0003248), Perlleim braun (Art. 43-0001162) oder Hasenleim-Granulat (Art. 43-0004644). Extrem glasartige, resonanzstarke Fuge; reversibel.</div>
             </div>
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">PVA-Kaltleim (Moderne Wahl)</div>
-              <div class="card-desc">Spezial-Weißleim für Hartholz (Art. 43-0007262). Längere offene Zeit, hochelastische Fuge.</div>
+              <div class="card-title" data-i18n="s52_c2_title">PVA-Kaltleim (Moderne Wahl)</div>
+              <div class="card-desc" data-i18n="s52_c2_desc">Spezial-Weißleim für Hartholz (Art. 43-0007262). Längere offene Zeit, hochelastische Fuge.</div>
             </div>
             <div class="feature-card">
-              <div class="card-title" style="color: var(--gold-accent);">Konsistenz-Regel:</div>
-              <div class="card-desc">Die Leimviskosität muss exakt der von flüssigem Bienenhonig entsprechen!</div>
+              <div class="card-title" style="color: var(--gold-accent);" data-i18n="s52_c3_title">Konsistenz-Regel:</div>
+              <div class="card-desc" data-i18n="s52_c3_desc">Die Leimviskosität muss exakt der von flüssigem Bienenhonig entsprechen!</div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_17_5_Image239.png" alt="Leimauswahl Werkstatt">
-              <div class="media-caption">Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz</div>
+              <div class="media-caption" data-i18n="s52_caption_1">Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz</div>
             </div>
           </div>
         </div>
@@ -2071,24 +2553,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="53">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 9: Verleimen</div>
-            <h2 class="slide-title">Drehverleimung für lückenlose Leimringe</h2>
-            <div class="slide-subtitle">Aufschieben mit Rotation und optische Fluchtkontrolle in 3er-Gruppen</div>
+            <div class="slide-category" data-i18n="s53_category">Teil 6: Montage & Verleimen • Schritt 9: Verleimen</div>
+            <h2 class=\"slide-title\" data-i18n=\"s53_title\">Drehverleimung für lückenlose Leimringe</h2>
+            <div class="slide-subtitle" data-i18n="s53_subtitle">Aufschieben mit Rotation und optische Fluchtkontrolle in 3er-Gruppen</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Doppelter Leimauftrag:</strong> Dünner Leimfilm auf den Stiel und tropffrei in die Bohrung.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Rotierende Bewegung:</strong> Beim Aufschieben wird der Hammerkopf um ca. 90° hin und her gedreht -> garantiert einen geschlossenen Leimring.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>3er-Gruppen-Prinzip:</strong> 3 Hämmer leimen und sofort den Durchgang des mittleren zur Referenzlinie peilen.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Fluchtkontrolle:</strong> Fluchtlinie von Vorderfilz, Rückfilz und Hammerschwänzen mit dem Auge kontrollieren.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s53_bullet_1"><strong>Doppelter Leimauftrag:</strong> Dünner Leimfilm auf den Stiel und tropffrei in die Bohrung.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s53_bullet_2"><strong>Rotierende Bewegung:</strong> Beim Aufschieben wird der Hammerkopf um ca. 90° hin und her gedreht -> garantiert einen geschlossenen Leimring.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s53_bullet_3"><strong>3er-Gruppen-Prinzip:</strong> 3 Hämmer leimen und sofort den Durchgang des mittleren zur Referenzlinie peilen.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s53_bullet_4"><strong>Fluchtkontrolle:</strong> Fluchtlinie von Vorderfilz, Rückfilz und Hammerschwänzen mit dem Auge kontrollieren.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_15_2_Image223.jpg" alt="Drehverleimung Hammerkopf">
-              <div class="media-caption">Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe</div>
+              <div class="media-caption" data-i18n="s53_caption_1">Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe</div>
             </div>
           </div>
         </div>
@@ -2100,23 +2582,23 @@ def get_all_slides_html():
       <section class="slide" data-slide="54">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 10: Leimringe</div>
-            <h2 class="slide-title">Leimfuge verputzen: Der Gummibärchen-Zustand</h2>
-            <div class="slide-subtitle">Warmwasserpinsel bei Heißleim – Sauberes Abstechen nach ca. 1 Stunde</div>
+            <div class="slide-category" data-i18n="s54_category">Teil 6: Montage & Verleimen • Schritt 10: Leimringe</div>
+            <h2 class=\"slide-title\" data-i18n=\"s54_title\">Leimfuge verputzen: Der Gummibärchen-Zustand</h2>
+            <div class="slide-subtitle" data-i18n="s54_subtitle">Warmwasserpinsel bei Heißleim – Sauberes Abstechen nach ca. 1 Stunde</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Heißwasserpinsel:</strong> Direkt nach dem Aufsetzen wird die Fuge mit heißem Wasser (oder verdünntem „Leimwasser“ bei PVA) geglättet.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>1 Stunde Reifezeit:</strong> Nach ca. 60 Minuten erreicht der austretende Leimring die Konsistenz von Weinflaschengummi („Gummibärchen“).</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Sauberes Abstechen:</strong> In diesem elastischen Zustand lässt sich der Ring mit einem scharfen Schnitzmesser rückstandslos abtrennen, ohne das Holz einzukerben.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s54_bullet_1"><strong>Heißwasserpinsel:</strong> Direkt nach dem Aufsetzen wird die Fuge mit heißem Wasser (oder verdünntem „Leimwasser“ bei PVA) geglättet.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s54_bullet_2"><strong>1 Stunde Reifezeit:</strong> Nach ca. 60 Minuten erreicht der austretende Leimring die Konsistenz von Weinflaschengummi („Gummibärchen“).</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s54_bullet_3"><strong>Sauberes Abstechen:</strong> In diesem elastischen Zustand lässt sich der Ring mit einem scharfen Schnitzmesser rückstandslos abtrennen, ohne das Holz einzukerben.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_20_2_Image259.jpg" alt="Leimfuge verputzen">
-              <div class="media-caption">Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit</div>
+              <div class="media-caption" data-i18n="s54_caption_1">Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit</div>
             </div>
           </div>
         </div>
@@ -2128,23 +2610,23 @@ def get_all_slides_html():
       <section class="slide" data-slide="55">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 11: Absägen</div>
-            <h2 class="slide-title">Klemmschere & Kappen mit der Japansäge</h2>
-            <div class="slide-subtitle">Absoluter Achsenschutz durch die Renner Spezialklemme (Art. 43-0003233)</div>
+            <div class="slide-category" data-i18n="s55_category">Teil 6: Montage & Verleimen • Schritt 11: Absägen</div>
+            <h2 class=\"slide-title\" data-i18n=\"s55_title\">Klemmschere & Kappen mit der Japansäge</h2>
+            <div class="slide-subtitle" data-i18n="s55_subtitle">Absoluter Achsenschutz durch die Renner Spezialklemme (Art. 43-0003233)</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Gefahr für die Kapselachse:</strong> Sägekräfte und Schleifdruck dürfen unter keinen Umständen auf die filigrane Kapselachse wirken!</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Klemmschere für Flügelstiele (Art. 43-0003233):</strong> Blockiert den Stiel direkt hinter dem Kopf und leitet alle Kräfte direkt in die Klemme ab.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Schnitt mit der Japansäge:</strong> Feinzahnige Japansäge trennt den überstehenden Stielzapfen bündig am Holzkern ab.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s55_bullet_1"><strong>Gefahr für die Kapselachse:</strong> Sägekräfte und Schleifdruck dürfen unter keinen Umständen auf die filigrane Kapselachse wirken!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s55_bullet_2"><strong>Klemmschere für Flügelstiele (Art. 43-0003233):</strong> Blockiert den Stiel direkt hinter dem Kopf und leitet alle Kräfte direkt in die Klemme ab.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s55_bullet_3"><strong>Schnitt mit der Japansäge:</strong> Feinzahnige Japansäge trennt den überstehenden Stielzapfen bündig am Holzkern ab.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_22_2_Image268.jpg" alt="Klemmschere und Japansäge">
-              <div class="media-caption">Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes</div>
+              <div class="media-caption" data-i18n="s55_caption_1">Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes</div>
             </div>
           </div>
         </div>
@@ -2156,30 +2638,30 @@ def get_all_slides_html():
       <section class="slide" data-slide="56">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 12: Schwanzform</div>
-            <h2 class="slide-title">Schwanzformung: Weder zu rund noch zu flach</h2>
-            <div class="slide-subtitle">Schleifklotz Körnung 40 für sicheres Fangen ohne Klemmen oder Aufspringen</div>
+            <div class="slide-category" data-i18n="s56_category">Teil 6: Montage & Verleimen • Schritt 12: Schwanzform</div>
+            <h2 class=\"slide-title\" data-i18n=\"s56_title\">Schwanzformung: Weder zu rund noch zu flach</h2>
+            <div class="slide-subtitle" data-i18n="s56_subtitle">Schleifklotz Körnung 40 für sicheres Fangen ohne Klemmen oder Aufspringen</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">Schritt 1: Überstand beischleifen</div>
-              <div class="card-desc">Mit Schleifklotz Körnung 40 wird der Sägegrat plan zur Schräge des Holzkerns geschliffen.</div>
+              <div class="card-title" data-i18n="s56_c1_title">Schritt 1: Überstand beischleifen</div>
+              <div class="card-desc" data-i18n="s56_c1_desc">Mit Schleifklotz Körnung 40 wird der Sägegrat plan zur Schräge des Holzkerns geschliffen.</div>
             </div>
             <div class="feature-card" style="margin-bottom: 12px;">
-              <div class="card-title">Schritt 2: Flanke gleichmäßig ausformen</div>
-              <div class="card-desc">Gleichmäßige Schwanzschräge formen. <strong>Wichtig:</strong> Zu rund geschliffen -> Hammer springt aus dem Fänger! Zu flach geschliffen -> Hammer hakt sich beim Auslösen ein!</div>
+              <div class="card-title" data-i18n="s56_c2_title">Schritt 2: Flanke gleichmäßig ausformen</div>
+              <div class="card-desc" data-i18n="s56_c2_desc">Gleichmäßige Schwanzschräge formen. <strong>Wichtig:</strong> Zu rund geschliffen -> Hammer springt aus dem Fänger! Zu flach geschliffen -> Hammer hakt sich beim Auslösen ein!</div>
             </div>
             <div class="feature-card">
-              <div class="card-title">Schritt 3: Griffige Fänger-Reibung</div>
-              <div class="card-desc">Die 40er-Körnung hinterlässt eine feine Holzstruktur, die optimal mit dem Fängerleder harmoniert.</div>
+              <div class="card-title" data-i18n="s56_c3_title">Schritt 3: Griffige Fänger-Reibung</div>
+              <div class="card-desc" data-i18n="s56_c3_desc">Die 40er-Körnung hinterlässt eine feine Holzstruktur, die optimal mit dem Fängerleder harmoniert.</div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_24_2_Image280.jpg" alt="Schwanzformung">
-              <div class="media-caption">Präzises Ausformen der Hammerschwänze für optimalen Fängerfang</div>
+              <div class="media-caption" data-i18n="s56_caption_1">Präzises Ausformen der Hammerschwänze für optimalen Fängerfang</div>
             </div>
           </div>
         </div>
@@ -2191,23 +2673,23 @@ def get_all_slides_html():
       <section class="slide" data-slide="57">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 6: Montage & Verleimen • Schritt 13: Endfinish</div>
-            <h2 class="slide-title">Kantenbrechen & Flammenkorrektur der Flucht</h2>
-            <div class="slide-subtitle">Feine Schleifpapierfeile, Entgraten und Ausrichten mit der Brennerlampe</div>
+            <div class="slide-category" data-i18n="s57_category">Teil 6: Montage & Verleimen • Schritt 13: Endfinish</div>
+            <h2 class=\"slide-title\" data-i18n=\"s57_title\">Kantenbrechen & Flammenkorrektur der Flucht</h2>
+            <div class="slide-subtitle" data-i18n="s57_subtitle">Feine Schleifpapierfeile, Entgraten und Ausrichten mit der Brennerlampe</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Kanten brechen:</strong> Scharfe Holzkanten an den Schwanzseiten werden mit feiner Schleiffeile sanft verbrochen.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Flammenkorrektur an der Brennerlampe:</strong> Kleinste Flucht- oder Neigungsfehler werden durch gezielte, sanfte Erwärmung des Stiels korrigiert.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Einbaufertiger Zustand:</strong> Der Satz ist nun mechanisch perfekt montiert, gefluchtet und bereit für die Regulierung im Instrument.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s57_bullet_1"><strong>Kanten brechen:</strong> Scharfe Holzkanten an den Schwanzseiten werden mit feiner Schleiffeile sanft verbrochen.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s57_bullet_2"><strong>Flammenkorrektur an der Brennerlampe:</strong> Kleinste Flucht- oder Neigungsfehler werden durch gezielte, sanfte Erwärmung des Stiels korrigiert.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s57_bullet_3"><strong>Einbaufertiger Zustand:</strong> Der Satz ist nun mechanisch perfekt montiert, gefluchtet und bereit für die Regulierung im Instrument.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/EN/page_26_2_Image293.jpg" alt="Kosmetik und Endfinish">
-              <div class="media-caption">Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe</div>
+              <div class="media-caption" data-i18n="s57_caption_1">Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe</div>
             </div>
           </div>
         </div>
@@ -2223,26 +2705,26 @@ def get_all_slides_html():
       <section class="slide" data-slide="58">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Klangphilosophie</div>
-            <h2 class="slide-title">Die Philosophie der Renner Intonation</h2>
-            <div class="slide-subtitle">Klangschönheit, größtmögliche Dynamik und das breiteste Teilspektrum</div>
+            <div class="slide-category" data-i18n="s58_category">Teil 7: Intonation • Klangphilosophie</div>
+            <h2 class=\"slide-title\" data-i18n=\"s58_title\">Die Philosophie der Renner Intonation</h2>
+            <div class="slide-subtitle" data-i18n="s58_subtitle">Klangschönheit, größtmögliche Dynamik und das breiteste Teilspektrum</div>
           </div>
         </div>
         <div class="slide-body split-layout">
           <div class="slide-text-col">
             <div class="feature-card" style="margin-bottom: 14px; border-color: var(--border-gold);">
-              <div class="card-title" style="color: var(--gold-accent);">Die 3 Kernziele wahrer Intonation:</div>
+              <div class="card-title" style="color: var(--gold-accent);" data-i18n="s58_c1_title">Die 3 Kernziele wahrer Intonation:</div>
               <ul class="bullet-list" style="margin-top: 8px;">
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff.</span></li>
-                <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s58_bullet_1"><strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s58_bullet_2"><strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff.</span></li>
+                <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s58_bullet_3"><strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum.</span></li>
               </ul>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_10_2_Image210.jpg" alt="Intonationsphilosophie">
-              <div class="media-caption">Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston</div>
+              <div class="media-caption" data-i18n="s58_caption_1">Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston</div>
             </div>
           </div>
         </div>
@@ -2254,29 +2736,29 @@ def get_all_slides_html():
       <section class="slide" data-slide="59">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Einflussgrößen</div>
-            <h2 class="slide-title">Herausforderungen: Unveränderlich vs. Beeinflussbar</h2>
-            <div class="slide-subtitle">Konstruktion und Raumakustik verstehen – Mechanik und Filz beherrschen</div>
+            <div class="slide-category" data-i18n="s59_category">Teil 7: Intonation • Einflussgrößen</div>
+            <h2 class=\"slide-title\" data-i18n=\"s59_title\">Herausforderungen: Unveränderlich vs. Beeinflussbar</h2>
+            <div class="slide-subtitle" data-i18n="s59_subtitle">Konstruktion und Raumakustik verstehen – Mechanik und Filz beherrschen</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <div class="card-grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
               <div class="feature-card">
-                <div class="card-title" style="color: var(--text-muted);">Unveränderliche Faktoren</div>
+                <div class="card-title" style="color: var(--text-muted);" data-i18n="s59_c1_title">Unveränderliche Faktoren</div>
                 <ul class="bullet-list" style="margin-top: 8px;">
-                  <li class="bullet-item"><span class="bullet-dot"></span><span><strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz</span></li>
-                  <li class="bullet-item"><span class="bullet-dot"></span><span><strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule</span></li>
-                  <li class="bullet-item"><span class="bullet-dot"></span><span><strong>Pianist:</strong> Individueller Anschlag und Geschmack</span></li>
+                  <li class="bullet-item"><span class="bullet-dot"></span><span data-i18n="s59_bullet_1"><strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz</span></li>
+                  <li class="bullet-item"><span class="bullet-dot"></span><span data-i18n="s59_bullet_2"><strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule</span></li>
+                  <li class="bullet-item"><span class="bullet-dot"></span><span data-i18n="s59_bullet_3"><strong>Pianist:</strong> Individueller Anschlag und Geschmack</span></li>
                 </ul>
               </div>
               <div class="feature-card" style="border-color: var(--border-green);">
-                <div class="card-title" style="color: var(--renner-green-bright);">Was wir beeinflussen können:</div>
+                <div class="card-title" style="color: var(--renner-green-bright);" data-i18n="s59_c2_title">Was wir beeinflussen können:</div>
                 <ul class="bullet-list" style="margin-top: 8px;">
-                  <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis</span></li>
-                  <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Renner Mechanikteile:</strong> Präzise Hebelwege</span></li>
-                  <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften</span></li>
-                  <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament</span></li>
+                  <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s59_bullet_4"><strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis</span></li>
+                  <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s59_bullet_5"><strong>Renner Mechanikteile:</strong> Präzise Hebelwege</span></li>
+                  <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s59_bullet_6"><strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften</span></li>
+                  <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s59_bullet_7"><strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament</span></li>
                 </ul>
               </div>
             </div>
@@ -2284,7 +2766,7 @@ def get_all_slides_html():
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/image8.jpeg" alt="Raum und Instrument">
-              <div class="media-caption">Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang</div>
+              <div class="media-caption" data-i18n="s59_caption_1">Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang</div>
             </div>
           </div>
         </div>
@@ -2296,17 +2778,17 @@ def get_all_slides_html():
       <section class="slide" data-slide="60">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Voraussetzungen</div>
-            <h2 class="slide-title">Keine Intonation ohne makellose Regulierung!</h2>
-            <div class="slide-subtitle">Der goldene Grundsatz von Jens-Sören Kruse (Klavierbaumeister)</div>
+            <div class="slide-category" data-i18n="s60_category">Teil 7: Intonation • Voraussetzungen</div>
+            <h2 class=\"slide-title\" data-i18n=\"s60_title\">Keine Intonation ohne makellose Regulierung!</h2>
+            <div class="slide-subtitle" data-i18n="s60_subtitle">Der goldene Grundsatz von Jens-Sören Kruse (Klavierbaumeister)</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <span class="bento-badge gold">JENS-SÖREN KRUSE</span>
-              <div class="bento-card-title">Der unabdingbare Kreislauf</div>
-              <div class="bento-card-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--gold-light); font-style: italic; margin-top: 8px;">
+              <span class="bento-badge gold" data-i18n="s60_b1_badge">>JENS-SÖREN KRUSE</span>
+              <div class="bento-card-title" data-i18n="s60_c1_title">Der unabdingbare Kreislauf</div>
+              <div class="bento-card-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--gold-light); font-style: italic; margin-top: 8px;" data-i18n="s60_c1_desc">
                 „Ohne gute Regulierung keine saubere Stimmung,<br>
                 und ohne gute Regulierung keine saubere Intonation,<br>
                 und ohne saubere Stimmung keine saubere Intonation.<br>
@@ -2322,9 +2804,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image11.jpeg" alt="Regulierung und Feineinstellung">
               <div class="bento-media-overlay">
-                <span class="bento-badge green">REGULIERUNG</span>
-                <div class="bento-media-caption">Präzisionsregulierung der Flügelmechanik</div>
-                <div class="bento-media-subcaption">vor Beginn der Intonierarbeiten</div>
+                <span class="bento-badge green" data-i18n="s60_b2_badge">>REGULIERUNG</span>
+                <div class="bento-media-caption" data-i18n="s60_caption_1">Präzisionsregulierung der Flügelmechanik</div>
+                <div class="bento-media-subcaption" data-i18n="s60_caption_2">vor Beginn der Intonierarbeiten</div>
               </div>
             </div>
           </div>
@@ -2337,9 +2819,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="61">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Geometrie & Keile</div>
-            <h2 class="slide-title">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
-            <div class="slide-subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
+            <div class="slide-category" data-i18n="s61_category">Teil 7: Intonation • Geometrie & Keile</div>
+            <h2 class=\"slide-title\" data-i18n=\"s61_title\">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
+            <div class="slide-subtitle" data-i18n="s61_subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2347,50 +2829,50 @@ def get_all_slides_html():
             <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 12px;">
               <div class="bento-card" style="border-left: 4px solid #3b82f6;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" style="background: rgba(59,130,246,0.2); color: #93c5fd; border-color: rgba(59,130,246,0.4);">FORTISSIMO (ff)</span>
+                  <span class="bento-badge" data-i18n="s61_b1_badge"> style="background: rgba(59,130,246,0.2); color: #93c5fd; border-color: rgba(59,130,246,0.4);">FORTISSIMO (ff)</span>
                   <span class="mono-val" style="font-size: 0.85rem;">9:00–10:00 & 2:00–3:00</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;">Blauer Keil</div>
-                <div class="bento-card-desc">Tiefe Nadelstiche zur Entspannung</div>
+                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s61_c1_title">Blauer Keil</div>
+                <div class="bento-card-desc" data-i18n="s61_c1_desc">Tiefe Nadelstiche zur Entspannung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #22c55e;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" style="background: rgba(34,197,94,0.2); color: #86efac; border-color: rgba(34,197,94,0.4);">FORTE (f)</span>
+                  <span class="bento-badge" data-i18n="s61_b2_badge"> style="background: rgba(34,197,94,0.2); color: #86efac; border-color: rgba(34,197,94,0.4);">FORTE (f)</span>
                   <span class="mono-val" style="font-size: 0.85rem;">10:00–11:00 & 1:00–2:00</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;">Grüner Keil</div>
-                <div class="bento-card-desc">Raumklang, Glanz und dynamische Entfaltung</div>
+                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s61_c2_title">Grüner Keil</div>
+                <div class="bento-card-desc" data-i18n="s61_c2_desc">Raumklang, Glanz und dynamische Entfaltung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #f97316;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" style="background: rgba(249,115,22,0.2); color: #fdba74; border-color: rgba(249,115,22,0.4);">PIANO (p)</span>
+                  <span class="bento-badge" data-i18n="s61_b3_badge"> style="background: rgba(249,115,22,0.2); color: #fdba74; border-color: rgba(249,115,22,0.4);">PIANO (p)</span>
                   <span class="mono-val" style="font-size: 0.85rem;">11:00–11:30 & 12:30–1:00</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;">Orangener Keil</div>
-                <div class="bento-card-desc">Lyrischer Gesangston, feine Abstimmung</div>
+                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s61_c3_title">Orangener Keil</div>
+                <div class="bento-card-desc" data-i18n="s61_c3_desc">Lyrischer Gesangston, feine Abstimmung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #a855f7;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" style="background: rgba(168,85,247,0.2); color: #d8b4fe; border-color: rgba(168,85,247,0.4);">PIANISSIMO (pp)</span>
+                  <span class="bento-badge" data-i18n="s61_b4_badge"> style="background: rgba(168,85,247,0.2); color: #d8b4fe; border-color: rgba(168,85,247,0.4);">PIANISSIMO (pp)</span>
                   <span class="mono-val" style="font-size: 0.85rem;">11:30–12:00 & 12:00–12:30</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;">Violetter Keil</div>
-                <div class="bento-card-desc">Flüsterleise Ansprache</div>
+                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s61_c4_title">Violetter Keil</div>
+                <div class="bento-card-desc" data-i18n="s61_c4_desc">Flüsterleise Ansprache</div>
               </div>
               <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
                 <div class="bento-card-header">
-                  <span class="bento-badge red">ROTE ZONE (SCHEITEL)</span>
+                  <span class="bento-badge red" data-i18n="s61_b5_badge">>ROTE ZONE (SCHEITEL)</span>
                   <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
                 </div>
-                <div class="bento-card-title" style="color: #fca5a5; font-size: 1.05rem;">DO NOT TOUCH! – Niemals tief einstechen!</div>
+                <div class="bento-card-title" style="color: #fca5a5; font-size: 1.05rem;" data-i18n="s61_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/Intonation/page_11_2_Image210.jpg" alt="Das Uhren-Modell der Intonation">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold">JENS-SÖREN KRUSE</span>
-                <div class="bento-media-caption">Original Renner Uhrenmodell</div>
-                <div class="bento-media-subcaption">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
+                <span class="bento-badge gold" data-i18n="s61_b6_badge">>JENS-SÖREN KRUSE</span>
+                <div class="bento-media-caption" data-i18n="s61_caption_1">Original Renner Uhrenmodell</div>
+                <div class="bento-media-subcaption" data-i18n="s61_caption_2">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
               </div>
             </div>
           </div>
@@ -2403,9 +2885,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="62">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Vorintonation</div>
-            <h2 class="slide-title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
-            <div class="slide-subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
+            <div class="slide-category" data-i18n="s62_category">Teil 7: Intonation • Vorintonation</div>
+            <h2 class=\"slide-title\" data-i18n=\"s62_title\">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
+            <div class="slide-subtitle" data-i18n="s62_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -2414,16 +2896,16 @@ def get_all_slides_html():
               Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:
             </p>
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s62_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s62_bullet_2"><strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s62_bullet_3"><strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s62_bullet_4"><strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_12_5_Image247.jpg" alt="Vorintonation Stiche">
-              <div class="media-caption">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
+              <div class="media-caption" data-i18n="s62_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
             </div>
           </div>
         </div>
@@ -2435,20 +2917,20 @@ def get_all_slides_html():
       <section class="slide" data-slide="63">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Werkzeug & Technik</div>
-            <h2 class="slide-title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
-            <div class="slide-subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
+            <div class="slide-category" data-i18n="s63_category">Teil 7: Intonation • Werkzeug & Technik</div>
+            <h2 class=\"slide-title\" data-i18n=\"s63_title\">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
+            <div class="slide-subtitle" data-i18n="s63_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Stichanzahlen Pre-Needling:</strong>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s63_bullet_1"><strong>Stichanzahlen Pre-Needling:</strong>
                 <br>• Bass: 7–10 Stiche horizontal
                 <br>• Mittellage: 5–10 Stiche horizontal
                 <br>• Diskant: 0–7 Stiche vertikal</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Original Renner Werkzeuge:</strong>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s63_bullet_2"><strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s63_bullet_3"><strong>Original Renner Werkzeuge:</strong>
                 <br>• Intonierapparat verstellbar (Art. 43-0005642)
                 <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270)
                 <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).</span></li>
@@ -2457,7 +2939,7 @@ def get_all_slides_html():
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_13_2_Image257.png" alt="Intonierwerkzeuge Renner">
-              <div class="media-caption">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
+              <div class="media-caption" data-i18n="s63_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
             </div>
           </div>
         </div>
@@ -2469,9 +2951,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="64">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Saitenlagerung</div>
-            <h2 class="slide-title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
-            <div class="slide-subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
+            <div class="slide-category" data-i18n="s64_category">Teil 7: Intonation • Saitenlagerung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s64_title\">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
+            <div class="slide-subtitle" data-i18n="s64_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -2485,7 +2967,7 @@ def get_all_slides_html():
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_16_2_Image274.jpg" alt="Saiten setzen Anhangstift">
-              <div class="media-caption">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
+              <div class="media-caption" data-i18n="s64_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
             </div>
           </div>
         </div>
@@ -2497,23 +2979,23 @@ def get_all_slides_html():
       <section class="slide" data-slide="65">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Ausrichtung</div>
-            <h2 class="slide-title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
-            <div class="slide-subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
+            <div class="slide-category" data-i18n="s65_category">Teil 7: Intonation • Ausrichtung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s65_title\">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
+            <div class="slide-subtitle" data-i18n="s65_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s65_bullet_1"><strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s65_bullet_2"><strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s65_bullet_3"><strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_20_2_Image291.jpg" alt="Anschlagspunkt und Geradheit">
-              <div class="media-caption">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
+              <div class="media-caption" data-i18n="s65_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
             </div>
           </div>
         </div>
@@ -2525,9 +3007,9 @@ def get_all_slides_html():
       <section class="slide" data-slide="66">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Kronenabzug</div>
-            <h2 class="slide-title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
-            <div class="slide-subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
+            <div class="slide-category" data-i18n="s66_category">Teil 7: Intonation • Kronenabzug</div>
+            <h2 class=\"slide-title\" data-i18n=\"s66_title\">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
+            <div class="slide-subtitle" data-i18n="s66_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
           </div>
         </div>
         <div class="slide-body split-layout">
@@ -2536,22 +3018,22 @@ def get_all_slides_html():
               Durch das Traveling und ungleichmäßige Saitenchöre muss die Oberfläche der Hammerkrone feinst abgezogen werden:
             </p>
             <div class="feature-card" style="margin-bottom: 10px;">
-              <div class="card-title">Hohlkehle (Hollow Crown)</div>
-              <div class="card-desc">Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.</div>
+              <div class="card-title" data-i18n="s66_c1_title">Hohlkehle (Hollow Crown)</div>
+              <div class="card-desc" data-i18n="s66_c1_desc">Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.</div>
             </div>
             <div class="feature-card" style="margin-bottom: 10px;">
-              <div class="card-title">Schiefe Krone (Crooked Crown)</div>
-              <div class="card-desc">Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.</div>
+              <div class="card-title" data-i18n="s66_c2_title">Schiefe Krone (Crooked Crown)</div>
+              <div class="card-desc" data-i18n="s66_c2_desc">Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.</div>
             </div>
             <div class="feature-card" style="border-color: var(--border-green);">
-              <div class="card-title" style="color: var(--renner-green-bright);">Plan & Symmetrisch (Crown OK)</div>
-              <div class="card-desc">Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.</div>
+              <div class="card-title" style="color: var(--renner-green-bright);" data-i18n="s66_c3_title">Plan & Symmetrisch (Crown OK)</div>
+              <div class="card-desc" data-i18n="s66_c3_desc">Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.</div>
             </div>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_21_2_Image294.jpg" alt="Hammerkrone abziehen">
-              <div class="media-caption">Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor</div>
+              <div class="media-caption" data-i18n="s66_caption_1">Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor</div>
             </div>
           </div>
         </div>
@@ -2563,24 +3045,24 @@ def get_all_slides_html():
       <section class="slide" data-slide="67">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Feinabstimmung</div>
-            <h2 class="slide-title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
-            <div class="slide-subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
+            <div class="slide-category" data-i18n="s67_category">Teil 7: Intonation • Feinabstimmung</div>
+            <h2 class=\"slide-title\" data-i18n=\"s67_title\">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
+            <div class="slide-subtitle" data-i18n="s67_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
           </div>
         </div>
         <div class="slide-body split-wide-media">
           <div class="slide-text-col">
             <ul class="bullet-list">
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).</span></li>
-              <li class="bullet-item"><span class="bullet-dot green"></span><span><strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s67_bullet_1"><strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s67_bullet_2"><strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s67_bullet_3"><strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).</span></li>
+              <li class="bullet-item"><span class="bullet-dot green"></span><span data-i18n="s67_bullet_4"><strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!</span></li>
             </ul>
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
               <img src="Visuell/basis_media/Intonation/page_22_2_Image298.jpg" alt="Feinintonation chromatisch">
-              <div class="media-caption">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
+              <div class="media-caption" data-i18n="s67_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
             </div>
           </div>
         </div>
@@ -2592,18 +3074,18 @@ def get_all_slides_html():
       <section class="slide" data-slide="68">
         <div class="slide-header">
           <div>
-            <div class="slide-category">Teil 7: Intonation • Una Corda & Dialog</div>
-            <h2 class="slide-title">Verschiebungsintonation & Die Renner Academy</h2>
-            <div class="slide-subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
+            <div class="slide-category" data-i18n="s68_category">Teil 7: Intonation • Una Corda & Dialog</div>
+            <h2 class=\"slide-title\" data-i18n=\"s68_title\">Verschiebungsintonation & Die Renner Academy</h2>
+            <div class="slide-subtitle" data-i18n="s68_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-grid" style="grid-template-columns: 1fr; gap: 12px;">
               <div class="bento-card">
-                <span class="bento-badge green">UNA CORDA PRAXIS</span>
-                <div class="bento-card-title">Verschiebungsintonation</div>
-                <div class="bento-card-desc">
+                <span class="bento-badge green" data-i18n="s68_b1_badge">>UNA CORDA PRAXIS</span>
+                <div class="bento-card-title" data-i18n="s68_c1_title">Verschiebungsintonation</div>
+                <div class="bento-card-desc" data-i18n="s68_c1_desc">
                   Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.
                 </div>
                 <div class="bento-card-list">
@@ -2614,9 +3096,9 @@ def get_all_slides_html():
                 </div>
               </div>
               <div class="bento-card hero-card">
-                <span class="bento-badge gold">RENNER ACADEMY</span>
-                <div class="bento-card-title">Renner Academy & Technischer Dialog</div>
-                <div class="bento-card-desc">
+                <span class="bento-badge gold" data-i18n="s68_b2_badge">>RENNER ACADEMY</span>
+                <div class="bento-card-title" data-i18n="s68_c2_title">Renner Academy & Technischer Dialog</div>
+                <div class="bento-card-desc" data-i18n="s68_c2_desc">
                   Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.
                 </div>
               </div>
@@ -2624,14 +3106,17 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image31.png" alt="Renner Abschluss">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold">LOUIS RENNER GMBH</span>
-                <div class="bento-media-caption">Louis Renner GmbH</div>
-                <div class="bento-media-subcaption">Ihr Partner für meisterlichen Klang weltweit</div>
+                <span class="bento-badge gold" data-i18n="s68_b3_badge">>LOUIS RENNER GMBH</span>
+                <div class="bento-media-caption" data-i18n="s68_caption_1">Louis Renner GmbH</div>
+                <div class="bento-media-subcaption" data-i18n="s68_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
               </div>
             </div>
           </div>
         </div>
 {get_watermark()}
       </section>''')
+
+    for i in range(len(slides)):
+        slides[i] = re.sub(r'data-slide="\d+"', f'data-slide="{i + 1}"', slides[i], count=1)
 
     return "\n".join(slides)

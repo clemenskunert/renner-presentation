@@ -9,6 +9,8 @@ const translations = {
     brand_sub: "Töne höchsten Maßstabs • Seit 1882",
     conf_badge: "Konferenz 2025 • Tokio & Shanghai",
     speaker_notes_title: "Referenten-Notizen",
+    header_modules_btn: "Module (Folie 2)",
+    btn_back_to_modules: "Folie 2 (Module)",
     slides_overview: "Folien-Übersicht",
     conclusion_title: "Vielen Dank für Ihre Aufmerksamkeit",
     keyboard_shortcuts: "Tastaturkürzel",
@@ -22,6 +24,8 @@ const translations = {
     
     // Slide categories
     cat_intro: "Teil 1: Einführung & Historie • Unsere Geschichte",
+    cat_build: "Teil 1: Einführung & Historie • Meuselwitz Transformation",
+    build_play: "Fotoreise abspielen",
     cat_meuselwitz: "Teil 1: Der Neue Hauptsitz Meuselwitz",
     cat_felt: "Teil 2: Die Kunst der Filzfertigung",
     cat_production: "Teil 2: Hochpräzise Hammerkopffertigung",
@@ -74,6 +78,8 @@ const translations = {
     brand_sub: "The Standard of Fine Tone • Since 1882",
     conf_badge: "Conference 2025 • Tokyo & Shanghai",
     speaker_notes_title: "Speaker Notes",
+    header_modules_btn: "Modules (Slide 2)",
+    btn_back_to_modules: "Slide 2 (Modules)",
     slides_overview: "Slides Overview",
     conclusion_title: "Thank You for Your Attention",
     keyboard_shortcuts: "Keyboard Shortcuts",
@@ -87,6 +93,8 @@ const translations = {
     
     // Slide categories
     cat_intro: "Part 1: Introduction & Heritage • Our History",
+    cat_build: "Part 1: Introduction & Heritage • Meuselwitz Transformation",
+    build_play: "Play Timelapse",
     cat_meuselwitz: "Part 1: The New Meuselwitz Headquarters",
     cat_felt: "Part 2: The Art of Felt Processing",
     cat_production: "Part 2: Precision Hammerhead Manufacturing",
@@ -139,6 +147,8 @@ const translations = {
     brand_sub: "至高の音色を創る世界標準 • 1882年創業",
     conf_badge: "2025年 カンファレンス • 東京＆上海",
     speaker_notes_title: "講演者メモ",
+    header_modules_btn: "モジュール (スライド2)",
+    btn_back_to_modules: "スライド2 (モジュール)",
     slides_overview: "スライド一覧",
     conclusion_title: "ご清聴ありがとうございました",
     keyboard_shortcuts: "キーボードショートカット",
@@ -152,6 +162,8 @@ const translations = {
     
     // Slide categories
     cat_intro: "第1部: レンナーの歴史と伝統 • 創業史",
+    cat_build: "第1部: レンナーの歴史と伝統 • モイゼルヴィッツ工場建設",
+    build_play: "タイムライン再生",
     cat_meuselwitz: "第1部: モイゼルヴィッツ新本社拠点",
     cat_felt: "第2部: 極上フェルト製造の秘密",
     cat_production: "第2部: 精密ハンマーヘッド製造工程",
@@ -204,6 +216,8 @@ const translations = {
     brand_sub: "卓越音色的至臻基准 • 始于1882年",
     conf_badge: "2025年研讨峰会 • 东京与上海",
     speaker_notes_title: "讲演者备忘录",
+    header_modules_btn: "核心模块 (第2页)",
+    btn_back_to_modules: "第2页 (模块)",
     slides_overview: "幻灯片总览",
     conclusion_title: "感谢各位大师的聆听与关注",
     keyboard_shortcuts: "快捷键指南",
@@ -217,6 +231,8 @@ const translations = {
     
     // Slide categories
     cat_intro: "第一部分: 德国雷诺历史与品牌荣耀 • 发展历程",
+    cat_build: "第一部分: 德国雷诺历史与品牌荣耀 • 莫伊瑟尔维茨新厂建设",
+    build_play: "播放纪录片",
     cat_meuselwitz: "第一部分: 莫伊瑟尔维茨新总部与工厂合并",
     cat_felt: "第二部分: 顶级纯羊毛毡制造工艺",
     cat_production: "第二部分: 现代高精度弦槌制造工艺",
