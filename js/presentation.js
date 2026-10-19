@@ -190,10 +190,17 @@ class PresentationController {
     document.addEventListener('click', (e) => {
       const targetEl = e.target.closest('[data-target-slide]');
       if (targetEl) {
-        const targetSlide = parseInt(targetEl.getAttribute('data-target-slide'), 10);
-        if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
+        const val = targetEl.getAttribute('data-target-slide');
+        const matchIdx = this.slides.findIndex(s => s.getAttribute('data-slide') === val);
+        if (matchIdx !== -1) {
           e.preventDefault();
-          this.goToSlide(targetSlide - 1);
+          this.goToSlide(matchIdx);
+        } else {
+          const targetSlide = parseInt(val, 10);
+          if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
+            e.preventDefault();
+            this.goToSlide(targetSlide - 1);
+          }
         }
       }
     });
@@ -203,10 +210,17 @@ class PresentationController {
       if (e.key === 'Enter' || e.key === ' ') {
         const targetEl = document.activeElement && document.activeElement.closest('[data-target-slide]');
         if (targetEl && !['INPUT', 'TEXTAREA', 'SELECT'].includes(targetEl.tagName)) {
-          const targetSlide = parseInt(targetEl.getAttribute('data-target-slide'), 10);
-          if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
+          const val = targetEl.getAttribute('data-target-slide');
+          const matchIdx = this.slides.findIndex(s => s.getAttribute('data-slide') === val);
+          if (matchIdx !== -1) {
             e.preventDefault();
-            this.goToSlide(targetSlide - 1);
+            this.goToSlide(matchIdx);
+          } else {
+            const targetSlide = parseInt(val, 10);
+            if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
+              e.preventDefault();
+              this.goToSlide(targetSlide - 1);
+            }
           }
         }
       }

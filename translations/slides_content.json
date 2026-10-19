@@ -8,7 +8,7 @@
       "ja": "日本語 (Japanese)",
       "zh": "中文 (Chinese)"
     },
-    "total_slides": 67,
+    "total_slides": 66,
     "description": "Zentrale Struktur zur Pflege aller Folientexte und mehrsprachigen Übersetzungen (DE, EN, JA, ZH)."
   },
   "ui": {
@@ -299,84 +299,6 @@
         "en": "Slide 4: Meuselwitz Construction Documentary (11.2025 – 10.2026). Authentic photographic record of the 14 transformation phases: Phase 1 (11.2025: Gutting and structural preparation of future administration areas), Phase 2 (12.2025: Foyer demolition and clearing of large-scale production spaces), Phase 3 (01.2026: Trenching and plumbing infrastructure without interrupting active manufacturing), Phase 4 (02.2026: Upright action assembly installation – wippen production in former storage areas), Phase 5 (03.2026: Automated vertical shuttle storage towers maximizing space efficiency), Phase 6 (04.2026: Relocation of the acoustic heart – dedicated hammerhead manufacturing to Meuselwitz), Phase 7 (05.2026: Reinforced concrete foundation for the 40-ton, 12-meter extraction filter system), Phase 8 (05.2026: Heavy-duty logistics with a 70-ton mobile crane – arrival and hoisting of filter modules), Phase 9 (05.2026: Millimeter-accurate crane assembly of the 12-meter-tall filter tower onto the steel superstructure), Phase 10 (06.2026: Assembly and completion of the central 120,000 m³/h dust collection and filtration plant), Phase 11 (07.2026: High-volume ductwork installation across all wood machining lines), Phase 12 (09.2026: Rooftop HVAC process air plant ensuring constant 45–50% relative humidity year-round), Phase 13 (09.2026: High-efficiency rooftop process air and climate control systems ensuring peak atmospheric stability for wood and felt) and Phase 14 (10.2026: Final relocation of the traditional molding/shaping department – full operational consolidation in Meuselwitz).",
         "ja": "スライド 4: モイゼルヴィッツ建設ドキュメント（2025年11月～2026年10月）。拠点統合と新本社建設の全14フェーズを記録した貴重な現地写真記録：第1段階（2025年11月：新管理棟エリアの解体・構造体露出）、第2段階（2025年12月：エントランスロビー解体と将来のフェルト製造フロア整地）、第3段階（2026年1月：現行生産を一切止めることなく実施された給排水・配管インフラ工事）、第4段階（2026年2月：旧倉庫エリアへのアップライト・ウィッペン（ヒッカケ）製造ライン新設）、第5段階（2026年3月：数万点におよぶ部品を高密度保管する最新型垂直自動倉庫シャトルタワー導入）、第6段階（2026年4月：音響の魂であるハンマーヘッド専用製造部門の新工場移転）、第7段階（2026年5月：総重量40トン・全高12メートルの超大型集塵フィルター設備専用の高耐荷重コンクリート基礎工事）、第8段階（2026年5月：70トン大型クレーンによる重量物物流・集塵モジュールの精密吊り上げ搬入）、第9段階（2026年5月：防振鋼構造フレーム上への高さ12メートル集塵タワー上部ユニットのクレーン据付組立）、第10段階（2026年6月：毎時120,000立方メートルの清浄空気を循環させる最新大型集塵プラントの完成）、第11段階（2026年7月：全木工加工機を結ぶ大口径集塵ダクト配管網の敷設）、第12段階（2026年9月：年間を通じて湿度45〜50%・一定温度を完全維持する屋上プロセス空調プラント完成）、第13段階（2026年9月：音響木材と精密フェルト加工に不可欠な極めて安定した温湿度環境を実現する屋上プロセス空調・精密空調システム）、第14段階（2026年10月：ゲルトリンゲンからの最終部門「伝統の溝彫り・木型成形（Kehlerei）」移転完了、全製造拠点のモイゼルヴィッツ集約・全面稼働達成）。",
         "zh": "第 4 页：莫伊瑟尔维茨新厂全景施工与整合纪实（2025年11月至2026年10月）。14个施工阶段的真实工程现场图文档案：第一阶段（2025年11月：未来行政与接待区域的结构性腾退拆除），第二阶段（2025年12月：主门厅拆除与开辟开阔的羊毛毡制造预留区），第三阶段（2026年1月：在原有生产完全不停歇的前提下进行的给排水与管网深基开挖），第四阶段（2026年2月：旧仓储空间重塑为立式钢琴联动杆高精自动化组装线），第五阶段（2026年3月：引入多座垂直自动化升降立体仓储塔，实现超高密度智能仓储），第六阶段（2026年4月：雷诺最具标志性的声学核心——弦槌制造工坊正式迁入恒温恒湿新车间），第七阶段（2026年5月：为重达40吨、高12米的超大型工业除尘过滤塔浇筑专属承重隔震地基），第八阶段（2026年5月：70吨全地面大型汽车起重机实施特种吊装，将大型除尘模块精准吊离平板车），第九阶段（2026年5月：将高达12米的室外除尘塔上部箱体结构精准平稳吊装至减振抗震钢结构承重底座之上），第十阶段（2026年6月：每小时循环风量达12万立方米的中央高效集尘与空气净化机组安装完毕），第十一阶段（2026年7月：全厂区大口径镀锌集尘管网全线贯通与木工产线精准对接），第十二阶段（2026年9月：屋顶大型工艺气调中央机房落成，实现全年45-50%恒定相对湿度的严苛声学保障），第十三阶段（2026年9月：屋顶中央工艺送风与恒温恒湿空调机组安装就位，全天候保障音木与毛毡绝无形变），第十四阶段（2026年10月：盖特林根原厂最后一支关键部门——传统精细开槽成型车间完成搬迁，莫伊瑟尔维茨全球唯一生产总装基地全面竣工投产）。"
-      }
-    },
-    "slide_06": {
-      "slide_number": 6,
-      "chapter": 1,
-      "chapter_name": {
-        "de": "Teil 1: Einführung & Meuselwitz",
-        "en": "Part 1: Introduction & Meuselwitz",
-        "ja": "第1部：序論とモイゼルヴィッツ新拠点",
-        "zh": "第一部分：引言与莫伊瑟尔维茨新总部"
-      },
-      "category": {
-        "de": "Teil 1: Einführung & Historie • Meuselwitz Infrastruktur",
-        "en": "Part 1: Einführung & Historie • Meuselwitz Infrastruktur",
-        "ja": "第1部：序論とモイゼルヴィッツ新拠点",
-        "zh": "第一部分：引言与莫伊瑟尔维茨新总部"
-      },
-      "title": {
-        "de": "Klimakontrolle & Präzisionslogistik",
-        "en": "Climate Control & Precision Logistics",
-        "ja": "温湿度管理と精密ロジスティクス",
-        "zh": "恒温恒湿环境控制与高精物料调配"
-      },
-      "subtitle": {
-        "de": "Gleichbleibende Materialfeuchte als Voraussetzung für Mikrometer-Präzision",
-        "en": "Constant material moisture as an indispensable requirement for micrometer precision",
-        "ja": "Gleichbleibende Materialfeuchte als Voraussetzung für Mikrometer-Präzision",
-        "zh": "Gleichbleibende Materialfeuchte als Voraussetzung für Mikrometer-Präzision"
-      },
-      "elements": {
-        "s6_c1_title": {
-          "de": "Konstantes Mikroklima (45–50% r.F.)",
-          "en": "Constant Microclimate (45–50% RH)",
-          "ja": "Konstantes Mikroklima (45–50% r.F.)",
-          "zh": "Konstantes Mikroklima (45–50% r.F.)"
-        },
-        "s6_c2_title": {
-          "de": "Mottenschutz & Reifekammern",
-          "en": "Moth Protection & Maturation Chambers",
-          "ja": "Mottenschutz & Reifekammern",
-          "zh": "Mottenschutz & Reifekammern"
-        },
-        "s6_c3_title": {
-          "de": "Absaugung & Reinraum-Standards",
-          "en": "Dust Extraction & Cleanroom Standards",
-          "ja": "Absaugung & Reinraum-Standards",
-          "zh": "Absaugung & Reinraum-Standards"
-        },
-        "s6_c1_desc": {
-          "de": "Sowohl Holzkörper als auch Filze reagieren sensibel auf Luftfeuchtigkeitsschwankungen. In Meuselwitz wird das Raumklima rund um die Uhr computergesteuert überwacht.",
-          "en": "Both wooden mouldings and felts react sensitively to fluctuations in ambient humidity. In Meuselwitz, room climate is monitored 24/7 by computerized environmental controls.",
-          "ja": "Sowohl Holzkörper als auch Filze reagieren sensibel auf Luftfeuchtigkeitsschwankungen. In Meuselwitz wird das Raumklima rund um die Uhr computergesteuert überwacht.",
-          "zh": "Sowohl Holzkörper als auch Filze reagieren sensibel auf Luftfeuchtigkeitsschwankungen. In Meuselwitz wird das Raumklima rund um die Uhr computergesteuert überwacht."
-        },
-        "s6_c2_desc": {
-          "de": "Speziell isolierte Woll- und Filzlager mit pheromonbasiertem Monitoring und konstanter Luftumwälzung garantieren makellose Rohstoffqualität.",
-          "en": "Specially insulated wool and felt storage with pheromone-based monitoring and constant air circulation guarantee pristine raw material quality.",
-          "ja": "Speziell isolierte Woll- und Filzlager mit pheromonbasiertem Monitoring und konstanter Luftumwälzung garantieren makellose Rohstoffqualität.",
-          "zh": "Speziell isolierte Woll- und Filzlager mit pheromonbasiertem Monitoring und konstanter Luftumwälzung garantieren makellose Rohstoffqualität."
-        },
-        "s6_c3_desc": {
-          "de": "Moderne Absauganlagen an allen Fräs- und Schleifstationen verhindern Feinstaubablagerungen auf den sensiblen Filz- und Tuchbaugruppen.",
-          "en": "State-of-the-art dust extraction at all milling and sanding stations prevents fine dust deposits on sensitive felt and cloth assemblies.",
-          "ja": "Moderne Absauganlagen an allen Fräs- und Schleifstationen verhindern Feinstaubablagerungen auf den sensiblen Filz- und Tuchbaugruppen.",
-          "zh": "Moderne Absauganlagen an allen Fräs- und Schleifstationen verhindern Feinstaubablagerungen auf den sensiblen Filz- und Tuchbaugruppen."
-        },
-        "s6_caption_1": {
-          "de": "Klimatisierte Baugruppen- und Materiallager in Meuselwitz",
-          "en": "Climate-controlled sub-assembly and material storage in Meuselwitz",
-          "ja": "Klimatisierte Baugruppen- und Materiallager in Meuselwitz",
-          "zh": "Klimatisierte Baugruppen- und Materiallager in Meuselwitz"
-        }
-      },
-      "notes": {
-        "de": "Folie 6: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 6: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 6: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 6 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_07": {

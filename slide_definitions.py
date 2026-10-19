@@ -11,7 +11,7 @@ Strictly based on the 5 technical masterclass documents in "Präsentation - Basi
 plus the official louis-renner.de history and Google Photos Meuselwitz transformation album.
 """
 
-TOTAL_SLIDES = 67
+TOTAL_SLIDES = 66
 import re
 
 def get_watermark():
@@ -915,42 +915,6 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 6: Moderne Produktionsinfrastruktur
-    slides.append(f'''      <!-- SLIDE 6: Moderne Produktionsinfrastruktur -->
-      <section class="slide" data-slide="6">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s6_category">Teil 1: Einführung & Historie • Meuselwitz Infrastruktur</div>
-            <h2 class=\"slide-title\" data-i18n=\"s6_title\">Klimakontrolle & Präzisionslogistik</h2>
-            <div class="slide-subtitle" data-i18n="s6_subtitle">Gleichbleibende Materialfeuchte als Voraussetzung für Mikrometer-Präzision</div>
-          </div>
-        </div>
-        <div class="slide-body split-layout">
-          <div class="slide-text-col">
-            <div class="card-grid" style="grid-template-columns: 1fr; gap: 14px;">
-              <div class="feature-card">
-                <div class="card-title" data-i18n="s6_c1_title">Konstantes Mikroklima (45–50% r.F.)</div>
-                <div class="card-desc" data-i18n="s6_c1_desc">Sowohl Holzkörper als auch Filze reagieren sensibel auf Luftfeuchtigkeitsschwankungen. In Meuselwitz wird das Raumklima rund um die Uhr computergesteuert überwacht.</div>
-              </div>
-              <div class="feature-card">
-                <div class="card-title" data-i18n="s6_c2_title">Mottenschutz & Reifekammern</div>
-                <div class="card-desc" data-i18n="s6_c2_desc">Speziell isolierte Woll- und Filzlager mit pheromonbasiertem Monitoring und konstanter Luftumwälzung garantieren makellose Rohstoffqualität.</div>
-              </div>
-              <div class="feature-card">
-                <div class="card-title" data-i18n="s6_c3_title">Absaugung & Reinraum-Standards</div>
-                <div class="card-desc" data-i18n="s6_c3_desc">Moderne Absauganlagen an allen Fräs- und Schleifstationen verhindern Feinstaubablagerungen auf den sensiblen Filz- und Tuchbaugruppen.</div>
-              </div>
-            </div>
-          </div>
-          <div class="slide-media-col">
-            <div class="media-container" style="min-height: 420px;">
-              <img src="Visuell/Bilder/02_Umbau_und_Umzug/13_20251201_135642.jpg" alt="Klimatisierte Lagerräume Meuselwitz">
-              <div class="media-caption" data-i18n="s6_caption_1">Klimatisierte Baugruppen- und Materiallager in Meuselwitz</div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
 
     # =========================================================================
     # KAPITEL 2: DIE FILZHERSTELLUNG BEI FFW WURZEN (FFW & WEICKERT) (7 - 17)
