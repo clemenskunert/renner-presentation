@@ -1,3 +1,4 @@
+<%@ Page Language="C#" AutoEventWireup="true" %>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261017b">
+  <link rel="stylesheet" href="css/presentation.css">
 </head>
 <body data-country-theme="de">
 
@@ -4050,6 +4051,27 @@
   <script src="js/history-journey.js"></script>
   <script src="js/transformation-journey.js"></script>
   <script src="js/presentation.js"></script>
+  <script>
+    // Fail-Safe Fallback: Warnt benutzerfreundlich, wenn die Datei einzeln ohne Ressourcen heruntergeladen wurde
+    setTimeout(function() {
+      if (!window.presentation) {
+        var banner = document.createElement('div');
+        banner.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,14,26,0.96);color:#fff;z-index:999999;display:flex;align-items:center;justify-content:center;padding:24px;font-family:sans-serif;text-align:center;';
+        banner.innerHTML = '<div style="max-width:620px;background:#1a2236;padding:36px;border-radius:12px;border:1px solid #c5a059;box-shadow:0 10px 40px rgba(0,0,0,0.8);">' +
+          '<h2 style="color:#c5a059;margin-top:0;">🎹 Louis Renner Masterclass Präsentation</h2>' +
+          '<p style="font-size:15px;line-height:1.6;color:#e0e0e0;">Die Skripte und Präsentationsinhalte wurden nicht geladen. Dies passiert, wenn eine Datei einzeln aus dem Web-SharePoint in den Download-Ordner heruntergeladen wurde.</p>' +
+          '<div style="text-align:left;background:#0d121f;padding:16px 20px;border-radius:8px;margin:20px 0;font-size:14px;line-height:1.6;">' +
+          '<strong>So starten Sie die Anwendung aus SharePoint:</strong><br><br>' +
+          '• <strong>Windows:</strong> Öffnen Sie den synchronisierten SharePoint-Ordner im Windows Explorer und doppelklicken Sie auf <code>Start_Windows.bat</code>.<br>' +
+          '• <strong>Mac:</strong> Doppelklicken Sie im Ordner auf <code>Start_Mac.app</code>.<br>' +
+          '• <strong>OneDrive-Synchronisation:</strong> Klicken Sie in SharePoint oben in der Menüleiste auf <em>„Synchronisieren“</em>, um den Ordner auf Ihren PC einzubinden.' +
+          '</div>' +
+          '<button onclick="this.parentElement.parentElement.remove()" style="background:#c5a059;color:#000;border:none;padding:10px 24px;border-radius:6px;font-weight:bold;cursor:pointer;">Schließen</button>' +
+          '</div>';
+        document.body.appendChild(banner);
+      }
+    }, 1800);
+  </script>
 </body>
 </html>
 
