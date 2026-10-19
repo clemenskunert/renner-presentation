@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Louis Renner • Medien- & Bildbeschreibungs-Manager</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-main: #0c0e12;
+      --bg-surface: #14171f;
+      --bg-surface-elevated: #1b202c;
+      --bg-surface-card: #161b24;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: #c5a059;
+      --border-highlight: rgba(197, 160, 89, 0.35);
+      
+      --gold-primary: #c5a059;
+      --gold-light: #e6cb8b;
+      --gold-dark: #8c6d32;
+      --gold-gradient: linear-gradient(135deg, #e6cb8b 0%, #c5a059 50%, #9a7837 100%);
+      
+      --accent-green: #2ecc71;
+      --accent-green-glow: rgba(46, 204, 113, 0.25);
+      --accent-blue: #3498db;
+      --accent-amber: #f39c12;
+      --accent-red: #e74c3c;
+      
+      --text-main: #f0f2f5;
+      --text-secondary: #9aa4b2;
+      --text-muted: #647082;
+      
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Cinzel', serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --shadow-elevated: 0 12px 36px rgba(0, 0, 0, 0.6);
+      --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(197, 160, 89, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
+    }
+
+    /* -------------------------------------------------------------
+       Top Header HUD
+       ------------------------------------------------------------- */
+    .header-hud {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(18, 21, 28, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      height: 38px;
+      width: auto;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Stats Badges */
+    .stats-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .stat-badge strong {
+      color: var(--gold-light);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .sync-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--accent-green);
+      background: rgba(46, 204, 113, 0.1);
+      border: 1px solid rgba(46, 204, 113, 0.25);
+      border-radius: 20px;
+      padding: 4px 10px;
+    }
+
+    .sync-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulseSync 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseSync {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* Header Actions */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-elevated);
+      border-color: var(--border-highlight);
+      color: var(--gold-light);
+    }
+
+    .btn-primary {
+      background: var(--gold-gradient);
+      color: #0c0e12;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(197, 160, 89, 0.25);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 4px 14px rgba(197, 160, 89, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* -------------------------------------------------------------
+       Controls Bar (Search, Filters, View Modes)
+       ------------------------------------------------------------- */
+    .controls-bar {
+      padding: 18px 28px;
+      background: rgba(16, 20, 26, 0.6);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .search-filter-wrap {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .search-input-box {
+      position: relative;
+      flex: 1;
+      max-width: 440px;
+      min-width: 240px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 14px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 12px 8px 36px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      transition: all var(--transition-fast);
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+      background: var(--bg-surface-elevated);
+    }
+
+    .clear-search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 14px;
+      display: none;
+    }
+
+    .filter-select {
+      padding: 8px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      font-family: inherit;
+    }
+
+    .filter-select:focus {
+      border-color: var(--gold-primary);
+    }
+
+    /* View Controls */
+    .view-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .view-mode-toggle {
+      display: inline-flex;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2px;
+    }
+
+    .view-mode-btn {
+      padding: 6px 12px;
+      background: transparent;
+      border: none;
+      border-radius: 4px;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all var(--transition-fast);
+    }
+
+    .view-mode-btn.active {
+      background: var(--bg-surface-elevated);
+      color: var(--gold-light);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+
+    .lang-mode-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .lang-mode-toggle input {
+      accent-color: var(--gold-primary);
+      cursor: pointer;
+    }
+
+    /* -------------------------------------------------------------
+       Main Content Container
+       ------------------------------------------------------------- */
+    .main-container {
+      max-width: 1720px;
+      margin: 0 auto;
+      padding: 24px 28px 80px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 70px 20px;
+      background: var(--bg-surface);
+      border: 1px dashed var(--border-subtle);
+      border-radius: var(--radius-lg);
+      margin-top: 30px;
+    }
+
+    .empty-state-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+      opacity: 0.6;
+    }
+
+    .empty-state-title {
+      font-size: 18px;
+      color: var(--text-main);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .empty-state-desc {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* -------------------------------------------------------------
+       GRID CARDS VIEW
+       ------------------------------------------------------------- */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 22px;
+    }
+
+    .media-card {
+      background: var(--bg-surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+      position: relative;
+    }
+
+    .media-card:hover {
+      border-color: rgba(197, 160, 89, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+    }
+
+    .media-card.unsaved {
+      border-color: var(--accent-amber);
+      box-shadow: 0 0 15px rgba(243, 156, 18, 0.2);
+    }
+
+    .media-card.unsaved::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-amber);
+      z-index: 5;
+    }
+
+    /* Card Header */
+    .card-top {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.015);
+      gap: 10px;
+    }
+
+    .card-slide-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold-light);
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.25);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+
+    .card-slide-pill:hover {
+      background: rgba(197, 160, 89, 0.25);
+      border-color: var(--gold-primary);
+      color: #fff;
+    }
+
+    .card-meta-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .media-tag-badge {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+    }
+
+    .media-tag-badge.video {
+      background: rgba(52, 152, 219, 0.2);
+      color: #70b8ff;
+    }
+
+    /* Thumbnail Box */
+    .thumbnail-box {
+      width: 100%;
+      height: 220px;
+      background: #08090c;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .thumbnail-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .thumbnail-box:hover .thumbnail-img {
+      transform: scale(1.03);
+    }
+
+    .thumbnail-video {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    .thumbnail-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(12, 14, 18, 0.6);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      transition: opacity var(--transition-fast);
+      backdrop-filter: blur(2px);
+    }
+
+    .thumbnail-box:hover .thumbnail-overlay {
+      opacity: 1;
+    }
+
+    .zoom-hint-btn {
+      padding: 6px 12px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .path-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 4px 10px;
+      background: rgba(8, 10, 14, 0.85);
+      backdrop-filter: blur(4px);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .copy-path-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 11px;
+      padding: 0 4px;
+    }
+
+    .copy-path-btn:hover {
+      color: var(--gold-light);
+    }
+
+    /* Card Body */
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .card-context-row {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .card-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-slide-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Form Fields */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form-label span.lang-code {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gold-light);
+      background: rgba(197, 160, 89, 0.1);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .field-input, .field-textarea {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      padding: 7px 10px;
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: all var(--transition-fast);
+    }
+
+    .field-textarea {
+      resize: vertical;
+      min-height: 64px;
+      line-height: 1.45;
+    }
+
+    .field-input:focus, .field-textarea:focus {
+      border-color: var(--gold-primary);
+      background: var(--bg-surface-elevated);
+      box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.15);
+    }
+
+    /* Multilingual Section */
+    .translations-accordion {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .translations-toggle {
+      width: 100%;
+      padding: 8px 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background var(--transition-fast);
+    }
+
+    .translations-toggle:hover {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--gold-light);
+    }
+
+    .translations-content {
+      padding: 12px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .translations-content.open {
+      display: flex;
+    }
+
+    /* Card Footer */
+    .card-footer {
+      padding: 12px 16px;
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .card-status-text {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all var(--transition-fast);
+    }
+
+    .card-status-text.saved {
+      color: var(--accent-green);
+    }
+
+    .card-status-text.saving {
+      color: var(--accent-blue);
+      font-weight: 500;
+      animation: pulseSaving 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseSaving {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.96); }
+    }
+
+    .card-status-text.unsaved {
+      color: var(--accent-amber);
+      font-weight: 500;
+    }
+
+    .field-saved-pulse {
+      animation: fieldSavedPulse 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes fieldSavedPulse {
+      0% { border-color: var(--accent-green) !important; box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.45) !important; }
+      100% { border-color: var(--border-subtle); box-shadow: none; }
+    }
+
+    .btn-save-item {
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-save-item:hover {
+      background: var(--gold-gradient);
+      color: #0c0e12;
+      border-color: transparent;
+      box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
+    }
+
+    .btn-save-item.saving {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    /* -------------------------------------------------------------
+       TABLE VIEW
+       ------------------------------------------------------------- */
+    .table-view-container {
+      display: none;
+      background: var(--bg-surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      box-shadow: var(--shadow-card);
+    }
+
+    .manager-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .manager-table th {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px 14px;
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    .manager-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: top;
+    }
+
+    .manager-table tr:hover td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .table-thumb-wrap {
+      width: 90px;
+      height: 60px;
+      background: #08090c;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .table-thumb-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    .table-input {
+      width: 100%;
+      min-width: 160px;
+      padding: 6px 9px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 12px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .table-textarea {
+      width: 100%;
+      min-width: 280px;
+      min-height: 52px;
+      padding: 6px 9px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 12px;
+      outline: none;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .table-input:focus, .table-textarea:focus {
+      border-color: var(--gold-primary);
+      background: var(--bg-surface-elevated);
+    }
+
+    /* -------------------------------------------------------------
+       Fullscreen Lightbox Modal
+       ------------------------------------------------------------- */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(8, 10, 14, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .lightbox-close-btn:hover {
+      background: var(--gold-primary);
+      color: #0c0e12;
+      transform: scale(1.1);
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      z-index: 10;
+    }
+
+    .lightbox-nav-btn:hover {
+      background: var(--gold-primary);
+      color: #0c0e12;
+    }
+
+    .lightbox-nav-btn.prev { left: 24px; }
+    .lightbox-nav-btn.next { right: 24px; }
+
+    .lightbox-media-container {
+      max-width: 90vw;
+      max-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .lightbox-media-img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .lightbox-media-video {
+      max-width: 100%;
+      max-height: 75vh;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-elevated);
+    }
+
+    .lightbox-info-bar {
+      margin-top: 18px;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .lightbox-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+
+    .lightbox-caption {
+      font-size: 14px;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .lightbox-meta {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+
+    /* -------------------------------------------------------------
+       Floating Unsaved Bar
+       ------------------------------------------------------------- */
+    .floating-save-bar {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(22, 27, 36, 0.95);
+      border: 1px solid var(--accent-amber);
+      border-radius: 40px;
+      padding: 10px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 200;
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-save-bar.active {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .floating-save-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-amber);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1100;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .toast {
+      padding: 12px 18px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 13px;
+      box-shadow: var(--shadow-elevated);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      pointer-events: auto;
+      animation: toastIn 0.25s ease-out;
+      transition: all 0.25s ease;
+    }
+
+    .toast.success {
+      border-color: var(--accent-green);
+      border-left-width: 4px;
+    }
+
+    .toast.error {
+      border-color: var(--accent-red);
+      border-left-width: 4px;
+    }
+
+    @keyframes toastIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .header-hud { padding: 12px 16px; }
+      .controls-bar { padding: 12px 16px; }
+      .main-container { padding: 16px; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header HUD -->
+  <header class="header-hud">
+    <a href="index.html" class="brand-group" title="Zur Louis Renner Masterclass Konferenz-Präsentation">
+      <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="brand-logo">
+      <div class="brand-title-wrap">
+        <div class="brand-title">LOUIS RENNER</div>
+        <div class="brand-subtitle">Medien- & Bildbeschreibungs-Manager</div>
+      </div>
+    </a>
+
+    <!-- Stats Badges -->
+    <div class="stats-row">
+      <div class="stat-badge">
+        <span>Bilder gesamt:</span>
+        <strong id="stat-total">--</strong>
+      </div>
+      <div class="stat-badge">
+        <span>Folien:</span>
+        <strong id="stat-slides">--</strong>
+      </div>
+      <div class="stat-badge" id="stat-filtered-wrap" style="display:none;">
+        <span>Gefiltert:</span>
+        <strong id="stat-filtered">0</strong>
+      </div>
+      <div class="sync-status" id="header-sync-status" title="Änderungen werden direkt und persistent in die Quell-Dateien und Folien gespeichert">
+        <span class="sync-pulse" id="header-sync-pulse"></span>
+        <span id="header-sync-text">⚡ Auto-Save aktiv (Sofort persistent)</span>
+      </div>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <a href="/api/export-csv" class="btn btn-secondary" title="Alle Bilder & Beschreibungen als CSV-Tabelle für Excel exportieren">
+        <span>📥</span>
+        <span>CSV Export</span>
+      </a>
+      <button class="btn btn-primary" id="btn-save-all" title="Alle geänderten Bildbeschreibungen gleichzeitig speichern (Cmd+S / Strg+S)">
+        <span>💾</span>
+        <span>Alle speichern</span>
+      </button>
+      <a href="index.html" class="btn btn-secondary" title="Zurück zur interaktiven Präsentation">
+        <span>Präsentation ↗</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Controls Bar -->
+  <section class="controls-bar">
+    <div class="search-filter-wrap">
+      <!-- Search Input -->
+      <div class="search-input-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Suchen nach Folie, Titel, Bildunterschrift, Dateipfad...">
+        <button id="clear-search-btn" class="clear-search-btn" title="Suche löschen">✕</button>
+      </div>
+
+      <!-- Chapter / Slide Filter -->
+      <select id="slide-filter" class="filter-select">
+        <option value="all">Alle Kapitel & Folien (87)</option>
+        <option value="s3">Folie 3: 140+ Jahre Tradition (9 Meilensteine)</option>
+        <option value="s4">Folie 4: Baudokumentation Meuselwitz (11 Fotos)</option>
+        <option value="part2">Teil 2: Geschichte, Standorte & Übernahme (Folie 5–15)</option>
+        <option value="part3">Teil 3: Klavier- & Flügelmechaniken (Folie 16–35)</option>
+        <option value="part4">Teil 4: Hammerkopffertigung & Filze (Folie 36–50)</option>
+        <option value="part5">Teil 5: Qualität, Service & Zukunft (Folie 51–67)</option>
+      </select>
+
+      <!-- Status Filter -->
+      <select id="status-filter" class="filter-select">
+        <option value="all">Alle Bildtypen</option>
+        <option value="unsaved">Nur ungespeicherte Änderungen</option>
+        <option value="with-i18n">Mit Mehrsprachigkeit (i18n)</option>
+        <option value="videos">Nur Videos</option>
+      </select>
+    </div>
+
+    <!-- View Controls -->
+    <div class="view-controls">
+      <label class="lang-mode-toggle" title="Automatisches persistentes Speichern beim Tippen & Verlassen des Feldes aktivieren/deaktivieren">
+        <input type="checkbox" id="toggle-autosave" checked>
+        <span>⚡ Sofort-Speichern</span>
+      </label>
+
+      <label class="lang-mode-toggle" title="Mehrsprachige Felder (Englisch, Japanisch, Chinesisch) in den Karten anzeigen">
+        <input type="checkbox" id="toggle-multilang">
+        <span>Sprachen (EN/JA/ZH)</span>
+      </label>
+
+      <div class="view-mode-toggle">
+        <button class="view-mode-btn active" id="view-grid-btn" title="Karten-Rasteransicht">
+          <span>⊞</span>
+          <span>Karten</span>
+        </button>
+        <button class="view-mode-btn" id="view-table-btn" title="Kompakte Tabellenansicht">
+          <span>☰</span>
+          <span>Tabelle</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <!-- Grid View -->
+    <div class="cards-grid" id="cards-grid">
+      <!-- Rendered dynamically via JavaScript -->
+    </div>
+
+    <!-- Table View -->
+    <div class="table-view-container" id="table-view-container">
+      <table class="manager-table">
+        <thead>
+          <tr>
+            <th style="width: 100px;">Folie</th>
+            <th style="width: 110px;">Vorschau</th>
+            <th style="width: 220px;">Bereich / Folie</th>
+            <th style="width: 220px;">Titel / Stichwort</th>
+            <th>Bildunterschrift (Deutsch)</th>
+            <th style="width: 100px; text-align: center;">Aktion</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Rendered dynamically via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="empty-state" style="display: none;">
+      <div class="empty-state-icon">🔍</div>
+      <div class="empty-state-title">Keine Bilder gefunden</div>
+      <div class="empty-state-desc">Probieren Sie einen anderen Suchbegriff oder setzen Sie die Filter zurück.</div>
+    </div>
+  </main>
+
+  <!-- Floating Save Bar (Visible when there are unsaved edits) -->
+  <div class="floating-save-bar" id="floating-save-bar">
+    <div class="floating-save-text">
+      <span>●</span>
+      <span id="unsaved-count-text">1 ungespeicherte Änderung</span>
+    </div>
+    <button class="btn btn-secondary" id="btn-discard-all" style="padding: 5px 12px; font-size: 12px;">Verwerfen</button>
+    <button class="btn btn-primary" id="btn-floating-save" style="padding: 6px 16px; font-size: 12px;">Änderungen speichern 💾</button>
+  </div>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true">
+    <button class="lightbox-close-btn" id="lightbox-close" title="Schließen (Esc)">✕</button>
+    <button class="lightbox-nav-btn prev" id="lightbox-prev" title="Vorheriges Bild (←)">‹</button>
+    <button class="lightbox-nav-btn next" id="lightbox-next" title="Nächstes Bild (→)">›</button>
+
+    <div class="lightbox-media-container" id="lightbox-media-container">
+      <!-- Image or Video dynamically injected -->
+    </div>
+
+    <div class="lightbox-info-bar">
+      <div class="lightbox-title" id="lightbox-title">--</div>
+      <div class="lightbox-caption" id="lightbox-caption">--</div>
+      <div class="lightbox-meta" id="lightbox-meta">--</div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Application Logic -->
+  <script>
+    // State
+    let catalog = [];
+    let originalCatalogMap = new Map();
+    let unsavedChanges = new Map(); // id -> item data
+    let currentLightboxIndex = -1;
+    let filteredIndices = [];
+    let currentViewMode = 'grid'; // 'grid' | 'table'
+    let showMultilang = false;
+    let autoSaveEnabled = true;
+    const autoSaveDebounceTimers = new Map();
+    const inFlightSaves = new Set();
+
+    // DOM Elements
+    const cardsGrid = document.getElementById('cards-grid');
+    const tableViewContainer = document.getElementById('table-view-container');
+    const tableBody = document.getElementById('table-body');
+    const emptyState = document.getElementById('empty-state');
+    const searchInput = document.getElementById('search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const slideFilter = document.getElementById('slide-filter');
+    const statusFilter = document.getElementById('status-filter');
+    const viewGridBtn = document.getElementById('view-grid-btn');
+    const viewTableBtn = document.getElementById('view-table-btn');
+    const toggleMultilang = document.getElementById('toggle-multilang');
+    const toggleAutosave = document.getElementById('toggle-autosave');
+    const headerSyncStatus = document.getElementById('header-sync-status');
+    const headerSyncText = document.getElementById('header-sync-text');
+    const statTotal = document.getElementById('stat-total');
+    const statSlides = document.getElementById('stat-slides');
+    const statFiltered = document.getElementById('stat-filtered');
+    const statFilteredWrap = document.getElementById('stat-filtered-wrap');
+    const floatingSaveBar = document.getElementById('floating-save-bar');
+    const unsavedCountText = document.getElementById('unsaved-count-text');
+    const btnSaveAll = document.getElementById('btn-save-all');
+    const btnFloatingSave = document.getElementById('btn-floating-save');
+    const btnDiscardAll = document.getElementById('btn-discard-all');
+
+    // Lightbox DOM
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxMediaContainer = document.getElementById('lightbox-media-container');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxMeta = document.getElementById('lightbox-meta');
+
+    // Initialize
+    async function init() {
+      try {
+        const res = await fetch('/api/images');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        catalog = await res.json();
+        
+        // Cache original values
+        catalog.forEach(item => {
+          originalCatalogMap.set(item.id, JSON.parse(JSON.stringify(item)));
+        });
+
+        // Compute overall stats
+        statTotal.textContent = catalog.length;
+        const uniqueSlides = new Set(catalog.map(i => i.slide));
+        statSlides.textContent = uniqueSlides.size;
+
+        render();
+      } catch (err) {
+        console.error('Failed to load images:', err);
+        showToast('Fehler beim Laden der Bilder: ' + err.message, 'error');
+      }
+    }
+
+    // Render dispatcher
+    function render() {
+      const q = searchInput.value.trim().toLowerCase();
+      const sFilter = slideFilter.value;
+      const stFilter = statusFilter.value;
+
+      filteredIndices = [];
+
+      catalog.forEach((item, idx) => {
+        // Search query matching
+        let matchesQuery = true;
+        if (q) {
+          const matchTarget = [
+            'folie ' + item.slide,
+            item.title || '',
+            item.caption_de || '',
+            item.caption_en || '',
+            item.caption_ja || '',
+            item.caption_zh || '',
+            item.src || '',
+            item.slide_title || '',
+            item.category || '',
+            item.group || ''
+          ].join(' ').toLowerCase();
+
+          matchesQuery = matchTarget.includes(q);
+        }
+
+        // Slide filter
+        let matchesSlide = true;
+        if (sFilter === 's3') matchesSlide = (item.slide === 3);
+        else if (sFilter === 's4') matchesSlide = (item.slide === 4);
+        else if (sFilter === 'part2') matchesSlide = (item.slide >= 5 && item.slide <= 15);
+        else if (sFilter === 'part3') matchesSlide = (item.slide >= 16 && item.slide <= 35);
+        else if (sFilter === 'part4') matchesSlide = (item.slide >= 36 && item.slide <= 50);
+        else if (sFilter === 'part5') matchesSlide = (item.slide >= 51 && item.slide <= 67);
+
+        // Status filter
+        let matchesStatus = true;
+        if (stFilter === 'unsaved') matchesStatus = unsavedChanges.has(item.id);
+        else if (stFilter === 'with-i18n') matchesStatus = Boolean(item.i18n_key);
+        else if (stFilter === 'videos') matchesStatus = (item.tag === 'video');
+
+        if (matchesQuery && matchesSlide && matchesStatus) {
+          filteredIndices.push(idx);
+        }
+      });
+
+      // Filter counter update
+      if (filteredIndices.length !== catalog.length) {
+        statFilteredWrap.style.display = 'inline-flex';
+        statFiltered.textContent = filteredIndices.length;
+      } else {
+        statFilteredWrap.style.display = 'none';
+      }
+
+      // Empty state
+      if (filteredIndices.length === 0) {
+        cardsGrid.style.display = 'none';
+        tableViewContainer.style.display = 'none';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+
+      if (currentViewMode === 'grid') {
+        cardsGrid.style.display = 'grid';
+        tableViewContainer.style.display = 'none';
+        renderGrid();
+      } else {
+        cardsGrid.style.display = 'none';
+        tableViewContainer.style.display = 'block';
+        renderTable();
+      }
+
+      updateFloatingSaveBar();
+    }
+
+    // Render Grid Cards
+    function renderGrid() {
+      cardsGrid.innerHTML = '';
+
+      filteredIndices.forEach(itemIdx => {
+        const item = catalog[itemIdx];
+        const isUnsaved = unsavedChanges.has(item.id);
+        const fileExt = item.src.split('.').pop().toUpperCase();
+
+        const card = document.createElement('div');
+        card.className = `media-card ${isUnsaved ? 'unsaved' : ''}`;
+        card.id = `card-${item.id}`;
+
+        const isVideo = item.tag === 'video' || item.src.toLowerCase().endsWith('.mp4');
+
+        card.innerHTML = `
+          <div class="card-top">
+            <a href="index.html#${item.slide}" target="_blank" class="card-slide-pill" title="Öffne Folie ${item.slide} in der Präsentation">
+              <span>Folie ${item.slide}</span>
+              <span>↗</span>
+            </a>
+            <div class="card-meta-right">
+              <span class="media-tag-badge ${isVideo ? 'video' : ''}">${isVideo ? 'VIDEO ' : ''}${fileExt}</span>
+            </div>
+          </div>
+
+          <div class="thumbnail-box" data-catalog-index="${itemIdx}">
+            ${isVideo 
+              ? `<video class="thumbnail-video" src="${item.src}#t=0.5" preload="metadata" muted playsinline></video>`
+              : `<img class="thumbnail-img" src="${item.src}" alt="${escapeHtml(item.title || '')}" loading="lazy">`
+            }
+            <div class="thumbnail-overlay">
+              <span class="zoom-hint-btn">🔍 Vollbild vergrößern</span>
+            </div>
+            <div class="path-bar" title="${escapeHtml(item.src)}">
+              <span>${escapeHtml(item.src.split('/').pop())}</span>
+              <button class="copy-path-btn" data-copy="${escapeHtml(item.src)}" title="Dateipfad kopieren">📋</button>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="card-context-row">
+              <div class="card-group-label">${escapeHtml(item.group || ('Folie ' + item.slide))}</div>
+              <div class="card-slide-title" title="${escapeHtml(item.slide_title || '')}">${escapeHtml(item.slide_title || '')}</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="title-${item.id}">
+                <span>Titel / Stichwort:</span>
+                <span class="lang-code">Alt-Text</span>
+              </label>
+              <input type="text" id="title-${item.id}" class="field-input input-title" 
+                     placeholder="Prägnanter Titel oder Stichwort..." 
+                     value="${escapeHtml(item.title || '')}" 
+                     data-id="${item.id}" data-field="title">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cap-de-${item.id}">
+                <span>Bildunterschrift (Deutsch):</span>
+                <span class="lang-code">DE • Haupttext</span>
+              </label>
+              <textarea id="cap-de-${item.id}" class="field-textarea input-caption-de" 
+                        placeholder="Ausführliche Bildunterschrift oder Beschreibung eingeben..." 
+                        data-id="${item.id}" data-field="caption_de">${escapeHtml(item.caption_de || '')}</textarea>
+            </div>
+
+            <!-- Translations Accordion -->
+            <div class="translations-accordion" style="${showMultilang ? '' : 'display:none;'}">
+              <button class="translations-toggle" type="button" data-toggle-acc="${item.id}">
+                <span>🌐 Übersetzungen (EN, JA, ZH) bearbeiten</span>
+                <span class="acc-arrow">▼</span>
+              </button>
+              <div class="translations-content" id="acc-${item.id}">
+                <div class="form-group">
+                  <label class="form-label"><span>Englisch (EN):</span></label>
+                  <textarea class="field-textarea" data-id="${item.id}" data-field="caption_en" placeholder="English description...">${escapeHtml(item.caption_en || '')}</textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label"><span>Japanisch (JA):</span></label>
+                  <textarea class="field-textarea" data-id="${item.id}" data-field="caption_ja" placeholder="日本語の説明...">${escapeHtml(item.caption_ja || '')}</textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label"><span>Chinesisch (ZH):</span></label>
+                  <textarea class="field-textarea" data-id="${item.id}" data-field="caption_zh" placeholder="中文说明...">${escapeHtml(item.caption_zh || '')}</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="card-status-text ${isUnsaved ? 'unsaved' : 'saved'}" id="status-${item.id}">
+              <span>${isUnsaved ? '● Ungespeichert' : '✓ Gespeichert'}</span>
+            </div>
+            <button class="btn-save-item" data-save-id="${item.id}" title="Nur dieses Bild speichern">
+              <span>💾</span>
+              <span>Speichern</span>
+            </button>
+          </div>
+        `;
+
+        cardsGrid.appendChild(card);
+      });
+
+      attachCardListeners();
+    }
+
+    // Render Table View
+    function renderTable() {
+      tableBody.innerHTML = '';
+
+      filteredIndices.forEach(itemIdx => {
+        const item = catalog[itemIdx];
+        const isUnsaved = unsavedChanges.has(item.id);
+        const isVideo = item.tag === 'video' || item.src.toLowerCase().endsWith('.mp4');
+
+        const tr = document.createElement('tr');
+        tr.id = `tr-${item.id}`;
+        if (isUnsaved) tr.style.backgroundColor = 'rgba(243, 156, 18, 0.05)';
+
+        tr.innerHTML = `
+          <td>
+            <a href="index.html#${item.slide}" target="_blank" class="card-slide-pill" style="white-space:nowrap;">
+              Folie ${item.slide} ↗
+            </a>
+          </td>
+          <td>
+            <div class="table-thumb-wrap" data-catalog-index="${itemIdx}" title="Klicken zum Vergrößern">
+              ${isVideo 
+                ? `<video class="table-thumb-img" src="${item.src}#t=0.5" muted preload="metadata"></video>`
+                : `<img class="table-thumb-img" src="${item.src}" alt="${escapeHtml(item.title || '')}" loading="lazy">`
+              }
+            </div>
+          </td>
+          <td>
+            <div style="font-weight:600; color:var(--gold-light); font-size:12px;">${escapeHtml(item.group || '')}</div>
+            <div style="color:var(--text-secondary); font-size:11px; margin-top:2px;">${escapeHtml(item.slide_title || '')}</div>
+            <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); margin-top:4px;">${escapeHtml(item.src.split('/').pop())}</div>
+          </td>
+          <td>
+            <input type="text" class="table-input" value="${escapeHtml(item.title || '')}" 
+                   placeholder="Titel..." data-id="${item.id}" data-field="title">
+          </td>
+          <td>
+            <textarea class="table-textarea" data-id="${item.id}" data-field="caption_de" 
+                      placeholder="Beschreibung...">${escapeHtml(item.caption_de || '')}</textarea>
+          </td>
+          <td style="text-align:center;">
+            <button class="btn-save-item" data-save-id="${item.id}" title="Speichern">
+              <span>💾</span>
+            </button>
+          </td>
+        `;
+
+        tableBody.appendChild(tr);
+      });
+
+      attachTableListeners();
+    }
+
+    // Attach Input Event Listeners
+    function attachCardListeners() {
+      // Inputs & Textareas
+      cardsGrid.querySelectorAll('[data-field]').forEach(el => {
+        el.addEventListener('input', handleFieldChange);
+        el.addEventListener('blur', handleFieldBlur);
+        el.addEventListener('change', handleFieldChangeOrBlur);
+      });
+
+      // Single Save Buttons
+      cardsGrid.querySelectorAll('[data-save-id]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const id = btn.getAttribute('data-save-id');
+          saveSingleImage(id, btn);
+        });
+      });
+
+      // Thumbnail Click -> Lightbox
+      cardsGrid.querySelectorAll('.thumbnail-box').forEach(box => {
+        box.addEventListener('click', (e) => {
+          if (e.target.closest('.copy-path-btn')) return;
+          const idx = parseInt(box.getAttribute('data-catalog-index'), 10);
+          openLightbox(idx);
+        });
+      });
+
+      // Copy Path Buttons
+      cardsGrid.querySelectorAll('.copy-path-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const path = btn.getAttribute('data-copy');
+          navigator.clipboard.writeText(path).then(() => {
+            showToast('Dateipfad kopiert!', 'success');
+          });
+        });
+      });
+
+      // Translations Accordion Toggle
+      cardsGrid.querySelectorAll('[data-toggle-acc]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-toggle-acc');
+          const panel = document.getElementById(`acc-${id}`);
+          if (panel) {
+            panel.classList.toggle('open');
+            const arrow = btn.querySelector('.acc-arrow');
+            if (arrow) arrow.textContent = panel.classList.contains('open') ? '▲' : '▼';
+          }
+        });
+      });
+    }
+
+    function attachTableListeners() {
+      tableBody.querySelectorAll('[data-field]').forEach(el => {
+        el.addEventListener('input', handleFieldChange);
+        el.addEventListener('blur', handleFieldBlur);
+        el.addEventListener('change', handleFieldChangeOrBlur);
+      });
+
+      tableBody.querySelectorAll('[data-save-id]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = btn.getAttribute('data-save-id');
+          saveSingleImage(id, btn);
+        });
+      });
+
+      tableBody.querySelectorAll('.table-thumb-wrap').forEach(box => {
+        box.addEventListener('click', () => {
+          const idx = parseInt(box.getAttribute('data-catalog-index'), 10);
+          openLightbox(idx);
+        });
+      });
+    }
+
+    // Field change handler
+    function handleFieldChange(e) {
+      const id = e.target.getAttribute('data-id');
+      const field = e.target.getAttribute('data-field');
+      const val = e.target.value;
+
+      const item = catalog.find(i => i.id === id);
+      if (!item) return;
+
+      item[field] = val;
+
+      const orig = originalCatalogMap.get(id);
+      const isModified = (
+        item.title !== orig.title ||
+        item.caption_de !== orig.caption_de ||
+        item.caption_en !== orig.caption_en ||
+        item.caption_ja !== orig.caption_ja ||
+        item.caption_zh !== orig.caption_zh
+      );
+
+      if (isModified) {
+        unsavedChanges.set(id, item);
+      } else {
+        unsavedChanges.delete(id);
+      }
+
+      // Update card visuals
+      const card = document.getElementById(`card-${id}`);
+      if (card) {
+        card.classList.toggle('unsaved', isModified);
+        const statusEl = document.getElementById(`status-${id}`);
+        if (statusEl) {
+          if (autoSaveEnabled && isModified) {
+            statusEl.className = 'card-status-text saving';
+            statusEl.innerHTML = '<span>⏳</span><span>Wird gespeichert...</span>';
+          } else {
+            statusEl.className = `card-status-text ${isModified ? 'unsaved' : 'saved'}`;
+            statusEl.innerHTML = isModified ? '<span>● Ungespeichert</span>' : '<span>✓ Gespeichert</span>';
+          }
+        }
+      }
+
+      // Update table row visuals
+      const tr = document.getElementById(`tr-${id}`);
+      if (tr) {
+        tr.style.backgroundColor = isModified ? 'rgba(243, 156, 18, 0.05)' : '';
+      }
+
+      // If Auto-Save is enabled, debounce saving while typing
+      if (autoSaveEnabled && isModified) {
+        if (autoSaveDebounceTimers.has(id)) {
+          clearTimeout(autoSaveDebounceTimers.get(id));
+        }
+        const timer = setTimeout(() => {
+          autoSaveDebounceTimers.delete(id);
+          autoSaveSingleImage(id, e.target);
+        }, 600);
+        autoSaveDebounceTimers.set(id, timer);
+      }
+
+      updateFloatingSaveBar();
+    }
+
+    function handleFieldBlur(e) {
+      const id = e.target.getAttribute('data-id');
+      if (!autoSaveEnabled || !id) return;
+
+      // If there's a pending debounce timer or unsaved changes for this card, save IMMEDIATELY upon leaving field
+      if (autoSaveDebounceTimers.has(id)) {
+        clearTimeout(autoSaveDebounceTimers.get(id));
+        autoSaveDebounceTimers.delete(id);
+        autoSaveSingleImage(id, e.target);
+      } else if (unsavedChanges.has(id)) {
+        autoSaveSingleImage(id, e.target);
+      }
+    }
+
+    function handleFieldChangeOrBlur(e) {
+      handleFieldBlur(e);
+    }
+
+    // Floating save bar update
+    function updateFloatingSaveBar() {
+      const count = unsavedChanges.size;
+      if (count > 0 && !autoSaveEnabled) {
+        floatingSaveBar.classList.add('active');
+        unsavedCountText.textContent = `${count} ungespeicherte Änderung${count > 1 ? 'en' : ''}`;
+      } else {
+        floatingSaveBar.classList.remove('active');
+      }
+    }
+
+    // Auto-Save Single Item (Persistent directly to disk and slides)
+    async function autoSaveSingleImage(id, triggeringEl) {
+      const item = catalog.find(i => i.id === id);
+      if (!item) return;
+
+      if (inFlightSaves.has(id)) return;
+      inFlightSaves.add(id);
+
+      const statusEl = document.getElementById(`status-${id}`);
+      if (statusEl) {
+        statusEl.className = 'card-status-text saving';
+        statusEl.innerHTML = '<span>⏳</span><span>Speichert persistent...</span>';
+      }
+
+      if (headerSyncText) {
+        headerSyncText.textContent = '⏳ Speichert persistent in Präsentation...';
+      }
+
+      try {
+        const res = await fetch('/api/save-image', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(item)
+        });
+
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Fehler beim Speichern');
+
+        // Update original cache
+        originalCatalogMap.set(id, JSON.parse(JSON.stringify(item)));
+        unsavedChanges.delete(id);
+
+        const savedAtTime = data.saved_at || new Date().toLocaleTimeString('de-DE');
+
+        // Update visual status
+        const card = document.getElementById(`card-${id}`);
+        if (card) {
+          card.classList.remove('unsaved');
+          if (statusEl) {
+            statusEl.className = 'card-status-text saved';
+            statusEl.innerHTML = `<span>✓</span><span>Gespeichert (${savedAtTime})</span>`;
+          }
+        }
+
+        const tr = document.getElementById(`tr-${id}`);
+        if (tr) tr.style.backgroundColor = '';
+
+        // Flash green border on triggering field
+        if (triggeringEl) {
+          triggeringEl.classList.add('field-saved-pulse');
+          setTimeout(() => triggeringEl.classList.remove('field-saved-pulse'), 900);
+        }
+
+        if (headerSyncText) {
+          headerSyncText.textContent = `⚡ Persistent gesichert (${savedAtTime})`;
+        }
+
+        updateFloatingSaveBar();
+      } catch (err) {
+        console.error('Auto-Save error:', err);
+        if (statusEl) {
+          statusEl.className = 'card-status-text unsaved';
+          statusEl.innerHTML = '<span>⚠️</span><span>Speichern fehlgeschlagen</span>';
+        }
+        showToast('Fehler beim persistenten Speichern: ' + err.message, 'error');
+      } finally {
+        inFlightSaves.delete(id);
+      }
+    }
+
+    // Save Single Item (Triggered manually by button)
+    async function saveSingleImage(id, triggerBtn) {
+      if (autoSaveDebounceTimers.has(id)) {
+        clearTimeout(autoSaveDebounceTimers.get(id));
+        autoSaveDebounceTimers.delete(id);
+      }
+      if (triggerBtn) {
+        triggerBtn.classList.add('saving');
+        triggerBtn.innerHTML = '<span>⏳</span><span>Speichern...</span>';
+      }
+      await autoSaveSingleImage(id, null);
+      if (triggerBtn) {
+        triggerBtn.classList.remove('saving');
+        triggerBtn.innerHTML = '<span>✓</span><span>Gespeichert</span>';
+        setTimeout(() => {
+          triggerBtn.innerHTML = '<span>💾</span><span>Speichern</span>';
+        }, 1500);
+      }
+    }
+
+    // Save All Modified Items
+    async function saveAllChanges() {
+      if (unsavedChanges.size === 0) {
+        showToast('Keine ungespeicherten Änderungen vorhanden.', 'success');
+        return;
+      }
+
+      const itemsToSave = Array.from(unsavedChanges.values());
+      const count = itemsToSave.length;
+
+      btnSaveAll.innerHTML = '<span>⏳</span><span>Speichern...</span>';
+      btnSaveAll.disabled = true;
+
+      try {
+        const res = await fetch('/api/save-all-images', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(itemsToSave)
+        });
+
+        const data = await res.json();
+        if (!data.success) throw new Error(data.error || 'Fehler beim Batch-Speichern');
+
+        // Sync original caches
+        itemsToSave.forEach(it => {
+          originalCatalogMap.set(it.id, JSON.parse(JSON.stringify(it)));
+        });
+        unsavedChanges.clear();
+
+        // Refresh DOM
+        render();
+
+        showToast(`🎉 ${count} Bildbeschreibungen erfolgreich gespeichert & synchronisiert!`, 'success');
+      } catch (err) {
+        console.error('Batch save error:', err);
+        showToast('Fehler beim Speichern: ' + err.message, 'error');
+      } finally {
+        btnSaveAll.innerHTML = '<span>💾</span><span>Alle speichern</span>';
+        btnSaveAll.disabled = false;
+      }
+    }
+
+    // Discard All Unsaved Changes
+    function discardAllChanges() {
+      if (unsavedChanges.size === 0) return;
+      if (!confirm('Möchten Sie wirklich alle ungespeicherten Änderungen verwerfen?')) return;
+
+      unsavedChanges.forEach((_, id) => {
+        const orig = originalCatalogMap.get(id);
+        const item = catalog.find(i => i.id === id);
+        if (item && orig) {
+          Object.assign(item, JSON.parse(JSON.stringify(orig)));
+        }
+      });
+
+      unsavedChanges.clear();
+      render();
+      showToast('Ungespeicherte Änderungen verworfen.', 'success');
+    }
+
+    // Lightbox Logic
+    function openLightbox(catalogIdx) {
+      currentLightboxIndex = catalogIdx;
+      updateLightboxContent();
+      lightboxModal.classList.add('active');
+      lightboxModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.remove('active');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      lightboxMediaContainer.innerHTML = '';
+    }
+
+    function updateLightboxContent() {
+      if (currentLightboxIndex < 0 || currentLightboxIndex >= catalog.length) return;
+      const item = catalog[currentLightboxIndex];
+      const isVideo = item.tag === 'video' || item.src.toLowerCase().endsWith('.mp4');
+
+      if (isVideo) {
+        lightboxMediaContainer.innerHTML = `<video class="lightbox-media-video" src="${item.src}" controls autoplay playsinline></video>`;
+      } else {
+        lightboxMediaContainer.innerHTML = `<img class="lightbox-media-img" src="${item.src}" alt="${escapeHtml(item.title || '')}">`;
+      }
+
+      lightboxTitle.textContent = `${item.title ? item.title + ' • ' : ''}Folie ${item.slide}: ${item.slide_title}`;
+      lightboxCaption.textContent = item.caption_de || 'Keine Bildunterschrift hinterlegt';
+      lightboxMeta.textContent = `${item.group} | ${item.src} | Bild ${currentLightboxIndex + 1} von ${catalog.length}`;
+    }
+
+    function lightboxNavigate(delta) {
+      if (filteredIndices.length === 0) return;
+      let currPos = filteredIndices.indexOf(currentLightboxIndex);
+      if (currPos === -1) currPos = 0;
+      let nextPos = currPos + delta;
+      if (nextPos < 0) nextPos = filteredIndices.length - 1;
+      if (nextPos >= filteredIndices.length) nextPos = 0;
+
+      currentLightboxIndex = filteredIndices[nextPos];
+      updateLightboxContent();
+    }
+
+    // Toast notifications
+    function showToast(msg, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.innerHTML = `<span>${type === 'success' ? '✓' : '⚠️'}</span><span>${escapeHtml(msg)}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Helper: Escape HTML
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', () => {
+      clearSearchBtn.style.display = searchInput.value ? 'block' : 'none';
+      render();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.style.display = 'none';
+      render();
+    });
+
+    slideFilter.addEventListener('change', render);
+    statusFilter.addEventListener('change', render);
+
+    toggleAutosave.addEventListener('change', () => {
+      autoSaveEnabled = toggleAutosave.checked;
+      if (headerSyncText) {
+        headerSyncText.textContent = autoSaveEnabled 
+          ? '⚡ Auto-Save aktiv (Sofort persistent)' 
+          : 'Manuelles Speichern';
+      }
+      const syncPulse = document.getElementById('header-sync-pulse');
+      if (syncPulse) {
+        syncPulse.style.backgroundColor = autoSaveEnabled ? 'var(--accent-green)' : 'var(--text-muted)';
+      }
+      showToast(autoSaveEnabled ? '⚡ Auto-Save aktiviert: Änderungen werden direkt persistent gespeichert' : 'Auto-Save pausiert (Manuell speichern)', 'success');
+    });
+
+    // Guaranteed persistence on page leave / tab close
+    window.addEventListener('beforeunload', () => {
+      autoSaveDebounceTimers.forEach((timer, id) => {
+        clearTimeout(timer);
+        const item = catalog.find(i => i.id === id);
+        if (item && navigator.sendBeacon) {
+          navigator.sendBeacon('/api/save-image', JSON.stringify(item));
+        }
+      });
+    });
+
+    toggleMultilang.addEventListener('change', () => {
+      showMultilang = toggleMultilang.checked;
+      document.querySelectorAll('.translations-accordion').forEach(el => {
+        el.style.display = showMultilang ? 'block' : 'none';
+      });
+    });
+
+    viewGridBtn.addEventListener('click', () => {
+      currentViewMode = 'grid';
+      viewGridBtn.classList.add('active');
+      viewTableBtn.classList.remove('active');
+      render();
+    });
+
+    viewTableBtn.addEventListener('click', () => {
+      currentViewMode = 'table';
+      viewTableBtn.classList.add('active');
+      viewGridBtn.classList.remove('active');
+      render();
+    });
+
+    btnSaveAll.addEventListener('click', saveAllChanges);
+    btnFloatingSave.addEventListener('click', saveAllChanges);
+    btnDiscardAll.addEventListener('click', discardAllChanges);
+
+    // Lightbox Controls
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => lightboxNavigate(-1));
+    lightboxNext.addEventListener('click', () => lightboxNavigate(1));
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      // Cmd+S or Ctrl+S
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        saveAllChanges();
+      }
+      // Lightbox navigation
+      if (lightboxModal.classList.contains('active')) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') lightboxNavigate(-1);
+        else if (e.key === 'ArrowRight') lightboxNavigate(1);
+      }
+    });
+
+    // Run on startup
+    init();
+  </script>
+</body>
+</html>

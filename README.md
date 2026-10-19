@@ -75,36 +75,55 @@ Anschließend im Browser öffnen:
 ## 📁 Projekt- & Ordnerstruktur
 
 ```text
-├── index.html                   # Haupt-Präsentationsanwendung
-├── server.py                    # Lokaler Webserver (HTTP 206 Partial Content für Video-Streaming)
-├── README.md                    # Dokumentation
-├── .gitignore                   # Ausschluss großer Binärdateien (>100MB)
+├── index.html                   # 67-Folien Masterclass Präsentation (kompiliert)
+├── server.py                    # Lokaler Webserver (HTTP 206 Partial Content + REST-API)
+├── build_full_presentation.py   # Rebuild-Skript für index.html aus slide_definitions.py
+├── slide_definitions.py         # Maßgebliche Python-Folien- und Komponenten-Definitionen
+├── image-manager.html           # Visuelles Redaktionswerkzeug für Bildtitel & Übersetzungen
+├── image_manager_backend.py     # Backend-Service für Bildkatalogisierung & Synchronisation
+├── AGENTS.md                    # Verbindliche Entwickler- & KI-Richtlinien
+├── README.md                    # Projektdokumentation & Bedienungsanleitung
+├── .gitignore                   # Ausschluss von OS-Junk & lokalen Binärdateien
 ├── css/
 │   └── presentation.css         # Styling (Concert Grand Dark/Gold/Renner-Grün, Responsive HUD)
 ├── js/
-│   ├── presentation.js          # Präsentations-Engine, Slider, Widgets, Gesten
-│   ├── translations.js          # Mehrsprachiges Wörterbuch (DE, EN, JA, ZH)
-│   └── audio-synth.js           # Web Audio API Obertongenerator mit Canvas-Oszilloskop
+│   ├── presentation.js          # Haupt-Engine (Tastatur-Navigation, Zoom, Gesten, Laser)
+│   ├── history-journey.js       # Interaktive Baum-Zeitleiste (1882 – Heute) für Folie 3
+│   ├── transformation-journey.js# Baudokumentation & Meilensteine (2025–2026) für Folie 4
+│   ├── audio-synth.js           # Web Audio API Obertongenerator mit Canvas-Oszilloskop
+│   ├── translations.js          # Mehrsprachiges Umschalt- & Anzeigesystem
+│   └── translations-data.js     # Kompilierte Übersetzungsdatenbank (DE, EN, JA, ZH)
+├── translations/
+│   ├── manage_translations.py   # Zentrales Übersetzungs- & Synchronisations-Tool
+│   ├── slides_content.json      # Master-JSON aller Folientexte & Bildbeschreibungen
+│   ├── translations_export.csv  # CSV-Export für externe Übersetzer / Tabellenkalkulation
+│   └── locales/                 # Generierte Einzeldateien (de.json, en.json, ja.json, zh.json)
+├── Praesentation_Basis/         # Technische Original-Quellendokumente (PDFs & Transkripte)
+│   ├── 2012_Buch_Intonieren_Burkard_Olbrich.pdf
+│   ├── Hammerkopf_Japan_040325.pdf
+│   ├── HK_Prd_Auswahl_10_25.pdf
+│   ├── HSt_Kap_Auswahl_MTK_10_25.pdf
+│   ├── EN_GP_HK_Glueing_10_25.pdf
+│   ├── Intonation_10_25.pdf
+│   └── extracted_texts/         # Texttranskripte aller 6 Basisdokumente
 ├── Visuell/
 │   ├── Bilder/
-│   │   ├── 01_Geschichte/       # Historische Fotos (Werkstatt 1882, Werk Stuttgart, Mechaniken)
-│   │   ├── 02_Meuselwitz_Umbau/ # 25 kuratierte Fotos vom Umbau, Transport & Inbetriebnahme
-│   │   ├── 03_Fertigung_Filz_FFW/# FFW Wurzen Merinowolle, Vliesbildung, Filzlager, Roboter
-│   │   ├── 04_Fertigung_Holzkern_Pressung/# Unterfilz, Holzkernfräsen, Heißpressen, Spannungsverlauf
-│   │   ├── 05_CNC_Bohrung_Nietung/# Hammerkopfleisten, Diamantschnitt, T-Nieten, Winkelbohrung
-│   │   ├── 06_Hammerkopf_Spezifikation/# Makroaufnahmen, Bemaßung, Modellvielfalt
-│   │   ├── 07_Yamaha_Kit/       # High-End Fotos Yamaha-Kit Edelkassette & Einschraubmontage
-│   │   ├── 08_Intonation_Voicing/# 3-Nadel-Intonation, Abziehfeile & Scheitelschliff
-│   │   └── Layout_Vorlagen/     # Offizielle Renner Logos, Banner und Folienlayouts
-│   └── Videos/
-│       ├── 01_roboter_filzzuschnitt.mp4  # Video 1: Roboter-Filzzuschnitt
-│       ├── 02_unterfilz_profilieren.mp4  # Video 2: Unterfilzprofilierung
-│       ├── 03_holzkern_profil_fraesen.mp4# Video 3: Holzkernfräsen
-│       ├── 04_hammerkopf_pressen_leimen.mp4 # Video 4: Pressen & Heißleimen
-│       └── 05_hammerkopf_bohren_nieten.mp4  # Video 5: Bohren & T-Nieten
-└── Präsentation - Basis/
-    ├── Hammerkopf_Japan_040325.pdf      # Original Basis-Präsentation (PDF)
-    └── Hammerkopf_Japan_040325.pptx     # Original Großdatei (Lokal gesichert)
+│   │   ├── 01_Geschichte/       # Chronologisch benannte Archivfotos (01_YYYY_...)
+│   │   ├── 02_Umbau_und_Umzug/  # 48 Baudokumentationsfotos der Meuselwitz-Transformation
+│   │   ├── 03_Hammerkopf_Fertigung/ # Fertigungsschritte (Filz, Kern, Pressen, Fräsen)
+│   │   ├── 04_Hammerkopf_Spezifikation/ # Bemaßungen, Bohrungen & Gon-Winkel
+│   │   ├── 05_Yamaha_Kit/       # Fotodokumentation zum Yamaha Drop-In Kit
+│   │   ├── 06_Intonation/       # 34 kuratierte Fachfotos meisterlicher Intonationsschritte
+│   │   ├── Layout_Vorlagen/     # Renner Logos, Wasserzeichen & Master-Layouts
+│   │   └── Referenz_Olbrich_Buch/ # 26 REM-Aufnahmen & Abbildungen aus dem Olbrich-Buch
+│   ├── Video/
+│   │   ├── steinwayshort.mp4    # Aktives Video zur Steinway & Sons Partnerschaft
+│   │   ├── bfl_marke_steinwaysons.mp4 # Vollständiges Ausgangsvideo
+│   │   └── project_files/       # Premiere Pro Projektdateien & Sicherungen
+│   └── web_assets/              # Vektorlogos renommierter Klaviermarken & Renner
+├── docs/                        # Fachdokumentationen (Olbrich-Kompendium, Sander-Methodik)
+└── scripts/
+    └── archive/                 # Archivierte Migrations- & Generierungsskripte
 ```
 
 ---

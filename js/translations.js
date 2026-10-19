@@ -6,8 +6,8 @@
 
 const translations = {
   de: {
-    brand_sub: "Töne höchsten Maßstabs • Seit 1882",
-    conf_badge: "Konferenz 2025 • Tokio & Shanghai",
+    brand_sub: "Maßstab des guten Ton • Seit 1882",
+    conf_badge: "Konferenz 2025 • Beijing & Toyohashi",
     speaker_notes_title: "Referenten-Notizen",
     header_modules_btn: "Module (Folie 2)",
     btn_back_to_modules: "Folie 2 (Module)",
@@ -75,8 +75,8 @@ const translations = {
   },
 
   en: {
-    brand_sub: "The Standard of Fine Tone • Since 1882",
-    conf_badge: "Conference 2025 • Tokyo & Shanghai",
+    brand_sub: "The Beating Heart of Sound • Since 1882",
+    conf_badge: "Conference 2025 • Beijing & Toyohashi",
     speaker_notes_title: "Speaker Notes",
     header_modules_btn: "Modules (Slide 2)",
     btn_back_to_modules: "Slide 2 (Modules)",
@@ -144,8 +144,8 @@ const translations = {
   },
   
   ja: {
-    brand_sub: "至高の音色を創る世界標準 • 1882年創業",
-    conf_badge: "2025年 カンファレンス • 東京＆上海",
+    brand_sub: "The Beating Heart of Sound • Since 1882",
+    conf_badge: "2025年 カンファレンス • 北京＆豊橋",
     speaker_notes_title: "講演者メモ",
     header_modules_btn: "モジュール (スライド2)",
     btn_back_to_modules: "スライド2 (モジュール)",
@@ -213,8 +213,8 @@ const translations = {
   },
   
   zh: {
-    brand_sub: "卓越音色的至臻基准 • 始于1882年",
-    conf_badge: "2025年研讨峰会 • 东京与上海",
+    brand_sub: "The Beating Heart of Sound • Since 1882",
+    conf_badge: "2025年研讨峰会 • 北京与丰桥",
     speaker_notes_title: "讲演者备忘录",
     header_modules_btn: "核心模块 (第2页)",
     btn_back_to_modules: "第2页 (模块)",

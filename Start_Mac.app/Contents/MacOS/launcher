@@ -1,0 +1,45 @@
+#!/bin/bash
+# ==============================================================================
+# Louis Renner Präsentation - macOS App Launcher
+# ==============================================================================
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../.." && pwd )"
+cd "$DIR"
+
+PORT=8080
+URL="http://localhost:$PORT"
+
+# Check if port 8080 is already active
+if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null ; then
+    open "$URL"
+    exit 0
+fi
+
+# Find Python 3
+PYTHON_BIN=""
+if command -v python3 >/dev/null 2>&1; then
+    PYTHON_BIN="python3"
+elif [ -x "/usr/bin/python3" ]; then
+    PYTHON_BIN="/usr/bin/python3"
+elif [ -x "/usr/local/bin/python3" ]; then
+    PYTHON_BIN="/usr/local/bin/python3"
+elif [ -x "/opt/homebrew/bin/python3" ]; then
+    PYTHON_BIN="/opt/homebrew/bin/python3"
+fi
+
+if [ -n "$PYTHON_BIN" ] && [ -f "server.py" ]; then
+    "$PYTHON_BIN" server.py &
+    SERVER_PID=$!
+    
+    # Wait for server to respond
+    for i in {1..20}; do
+        if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null 2>&1; then
+            break
+        fi
+        sleep 0.2
+    done
+    
+    open "$URL"
+else
+    # Fallback to direct file execution
+    open "index.html"
+fi

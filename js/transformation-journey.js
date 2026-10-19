@@ -14,7 +14,7 @@ class RennerTransformationJourney {
   constructor() {
     this.currentMilestone = 0;
     this.currentLang = 'de';
-    this.totalMilestones = 11;
+    this.totalMilestones = 14;
     this.isAutoplay = false;
     this.autoplayDuration = 3000; // Zügigere Dokumentar-Taktung (3.0s pro Bauphase)
     this.autoplayStartTime = null;
@@ -28,22 +28,22 @@ class RennerTransformationJourney {
         monthYear: '11.2025',
         branch: 'up',
         phase: {
-          de: 'Phase 1: Hallenvorbereitung',
-          en: 'Phase 1: Hall Preparation',
-          ja: '第1フェーズ：工場棟整備',
-          zh: '第一阶段：主车间整备'
+          de: 'Phase 1: Hallenvorbereitung & Entkernung',
+          en: 'Phase 1: Hall Preparation & Gutting',
+          ja: '第1フェーズ：工場棟整備と解体',
+          zh: '第一阶段：车间整备与结构拆除'
         },
         title: {
-          de: 'Start Bauvorhaben & Entkernung',
-          en: 'Project Start & Site Handover',
-          ja: '建設開始と内部解体',
-          zh: '工程启动与车间整备'
+          de: 'Start Bauvorhaben: Entkernung',
+          en: 'Project Kickoff: Site Gutting',
+          ja: '建設開始：内部解体工事',
+          zh: '工程启动：内部腾退拆除'
         },
         caption: {
-          de: 'Erste Begehung und Entkernung: Freilegung der tragenden Strukturen für das neue industrielle Produktionslayout.',
-          en: 'Initial site handover and gutting: clearing of core structural lines for the new industrial production flow.',
-          ja: 'モイゼルヴィッツ工場棟の引き渡しと内部解体：新製造ラインに合わせた構造クリアランスの確保。',
-          zh: '新厂区交接与内部腾退，清理核心结构线，为高精生产线布局开辟开阔空间。'
+          de: 'Freilegung der tragenden Hallenstrukturen im Bereich des künftigen Verwaltungs- und Empfangstrakts.',
+          en: 'Gutting and structural preparation of core hall lines for the future administration and reception wing.',
+          ja: '新管理棟・レセプションエリアの将来レイアウトに合わせた工場躯体構造の露出と解体工事。',
+          zh: '拆除腾退未来行政与接待大厅区域，清理裸露厂房核心承重承力结构。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg'
       },
@@ -52,22 +52,22 @@ class RennerTransformationJourney {
         monthYear: '12.2025',
         branch: 'down',
         phase: {
-          de: 'Phase 2: Fundamentierung',
-          en: 'Phase 2: Foundations',
-          ja: '第2フェーズ：基礎工事',
-          zh: '第二阶段：重型地基浇筑'
+          de: 'Phase 2: Entkernung Foyer & Baufeld',
+          en: 'Phase 2: Foyer Demolition & Clearing',
+          ja: '第2フェーズ：エントランス解体と整地',
+          zh: '第二阶段：门厅拆除与施工面腾退'
         },
         title: {
-          de: 'Schwerlastböden & Schwingungsentkopplung',
-          en: 'Heavy-Duty Floors & Vibration Damping',
-          ja: '免震高強度床・基礎工事',
-          zh: '超重型隔震专用地坪施工'
+          de: 'Entkernung des Foyers & Eingangsbereichs',
+          en: 'Foyer & Entrance Area Demolition',
+          ja: 'エントランスロビーと玄関エリアの解体',
+          zh: '主门厅与迎宾大堂空间拆除'
         },
         caption: {
-          de: 'Gießen der schwingungsentkoppelten Schwerlast-Betonböden für tonnenschwere Hammerkopf-Pressen und CNC-Fräsen.',
-          en: 'Vibration-damped foundation slabs for metric-ton hammerhead hot-presses and high-speed CNC milling centers.',
-          ja: 'トンの圧力をかけるハンマー熱成形プレス機とCNC用の免震コンクリート基礎工事。',
-          zh: '为吨级热压成型机与数控铣床浇筑重型减震地基，确保微米级机械稳定性。'
+          de: 'Blick vom Foyer in Richtung Filzproduktion: Freigeräumte Großflächen für die neue Manufaktur-Infrastruktur.',
+          en: 'View from the foyer toward felt production: cleared large-scale areas for the new manufacturing infrastructure.',
+          ja: 'ロビーからフェルト製造エリアを望む：新製造インフラを迎えるために完全にクリアされた広大なフロア。',
+          zh: '由前厅眺望羊毛毡生产区：为全新精密工坊基础设施彻底腾退开阔作业空间。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/14_20251201_135805.jpg'
       },
@@ -76,22 +76,22 @@ class RennerTransformationJourney {
         monthYear: '01.2026',
         branch: 'up',
         phase: {
-          de: 'Phase 3: Hallenstruktur & Dämmung',
-          en: 'Phase 3: Building Shell',
-          ja: '第3フェーズ：外殻構造・断熱',
-          zh: '第三阶段：外壳与保温工程'
+          de: 'Phase 3: Tiefbau & Medienversorgung',
+          en: 'Phase 3: Utilities & Groundwork',
+          ja: '第3フェーズ：配管・インフラ土木工事',
+          zh: '第三阶段：深基管网与公用工程'
         },
         title: {
-          de: 'Hallenisolierung & Struktur-Modernisierung',
-          en: 'Thermal Insulation & Structural Upgrade',
-          ja: '高断熱パネルと構造改修',
-          zh: '厂房高等级保温与结构更新'
+          de: 'Medien- & Trinkwasserversorgung',
+          en: 'Utilities & Fresh Water Supply',
+          ja: '給排水・ユーティリティ配管網',
+          zh: '给排水与综合管网系统施工'
         },
         caption: {
-          de: 'Installation hochisolierter Wandpaneele und Vorbereitung des Reinraum-Deckenbereichs für gleichbleibendes Raumklima.',
-          en: 'Installation of high-grade insulated wall panels and clean-air ceiling preparation for stable indoor climate.',
-          ja: '高断熱壁面パネルの設置と、年間を通じた安定環境を保つクリーンシーリング構造の構築。',
-          zh: '安装高等级保温墙板并构建洁净顶面，为全天候恒定微气候奠定外围护结构。'
+          de: 'Präzise Schachtarbeiten für Frisch- und Brauchwasserleitungen – unterbrechungsfrei bei laufender Produktion.',
+          en: 'Precision trenching for fresh and industrial water lines – conducted seamlessly without disrupting ongoing production.',
+          ja: '稼働中ラインを一切停止することなく実施された、給排水・産業用水配管の高精度掘削工事。',
+          zh: '给水与工业用水管路高精度开槽施工——在原有正常生产不停歇前提下无缝实施。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/18_20260106_135356.jpg'
       },
@@ -100,22 +100,22 @@ class RennerTransformationJourney {
         monthYear: '02.2026',
         branch: 'down',
         phase: {
-          de: 'Phase 4: Präzisions-Klimatechnik',
-          en: 'Phase 4: Climate Control',
-          ja: '第4フェーズ：恒温恒湿空調',
-          zh: '第四阶段：精密恒温恒湿系统'
+          de: 'Phase 4: Klaviermechanik-Aufbau',
+          en: 'Phase 4: Action Assembly Line Setup',
+          ja: '第4フェーズ：ピアノアクション製造ライン構築',
+          zh: '第四阶段：立式击弦机总装线搭建'
         },
         title: {
-          de: 'Computergestützte Klimaregelung (45–50% r.F.)',
-          en: 'Digital Climate Control (45–50% RH)',
-          ja: 'コンピュータ制御45〜50%恒湿システム',
-          zh: '数字化恒温恒湿空调机组安装'
+          de: 'Aufbau der Klaviermechanik-Fertigung',
+          en: 'Upright Action Assembly Installation',
+          ja: 'アップライトアクション製造ラインの設置',
+          zh: '立式钢琴击弦机制造产线组装'
         },
         caption: {
-          de: 'Einbau der zentralen Klimatisierung: Strikte 45–50 % Luftfeuchte schützen sensible Filze und Hölzer vor Verzug.',
-          en: 'Central atmospheric HVAC installation: strict 45–50% relative humidity preserves acoustic felt and tonewood.',
-          ja: '高精度空調の導入：響木と羊毛フェルトの変形を防ぐ厳格な45〜50%湿度管理を24時間実現。',
-          zh: '中央环境控制机组进驻：严格维持45-50%相对湿度，杜绝音木与特选毛毡形变。'
+          de: 'Frühere Lagerflächen werden zur hochmodernen Fertigungsstraße für Klavier-Hebeglieder umgebaut.',
+          en: 'Former warehouse areas are transformed into a state-of-the-art production line for upright piano wippens.',
+          ja: '旧倉庫エリアを高精度なピアノアクション・ヒッカケ（ウィッペン）専用の最新製造ラインへ全面転換。',
+          zh: '原仓储空间全面重塑，打造为高精立式钢琴联动杆（Wippen）自动化组装产线。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/23_20260227_074933.jpg'
       },
@@ -124,22 +124,22 @@ class RennerTransformationJourney {
         monthYear: '03.2026',
         branch: 'up',
         phase: {
-          de: 'Phase 5: Energie & Infrastruktur',
-          en: 'Phase 5: Power & Utilities',
-          ja: '第5フェーズ：配管・電力インフラ',
-          zh: '第五阶段：高压管网与电力母线'
+          de: 'Phase 5: Moderne Lagerlogistik',
+          en: 'Phase 5: Modern Warehouse Logistics',
+          ja: '第5フェーズ：先進スマート倉庫物流',
+          zh: '第五阶段：现代智能立体仓储'
         },
         title: {
-          de: 'Stromschienen, Druckluft & Absaugtrassen',
-          en: 'Busbar Power Trusses & Pneumatics',
-          ja: '高圧電力母線と圧縮空気ネットワーク',
-          zh: '电力母线桥架与高压气电网络'
+          de: 'Intelligente Lagerlogistik & Lagerlifte',
+          en: 'Smart Storage Logistics & Vertical Lifts',
+          ja: 'インテリジェント自動倉庫タワー導入',
+          zh: '智能物流与垂直升降立体仓储塔'
         },
         caption: {
-          de: 'Flächendeckende Decken-Trassen für Industriestrom, Druckluft und Feinstaubabsaugung über allen Maschinenpositionen.',
-          en: 'Ceiling-mounted utility trusses providing high-amperage power, pneumatic loops, and clean dust extraction.',
-          ja: '全マシンスポットをカバーする天井配線・圧縮空気配管および局所集塵ダクト網の敷設。',
-          zh: '铺设全覆盖车间母线桥架、高压环形气动管路及粉尘负压集尘管道。'
+          de: 'Maximale Flächeneffizienz: Installation moderner vertikaler Shuttle-Lagerlifte für zehntausende Bauteile.',
+          en: 'Maximum space efficiency: installation of automated vertical shuttle towers storing tens of thousands of precision components.',
+          ja: '最大のフロア効率：数万点に及ぶ精密部品を立体保管する最新型垂直自動シャトルタワーの導入。',
+          zh: '极大化坪效利用：部署多座现代化垂直升降式穿梭料仓，高密度存取数万种精密部件。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/25_20260320_090128.jpg'
       },
@@ -148,70 +148,118 @@ class RennerTransformationJourney {
         monthYear: '04.2026',
         branch: 'down',
         phase: {
-          de: 'Phase 6: Schwertransport-Logistik',
-          en: 'Phase 6: Relocation Convoy',
-          ja: '第6フェーズ：精密重機移送',
-          zh: '第六阶段：特种重载转运'
+          de: 'Phase 6: Umzug Hammerkopffertigung',
+          en: 'Phase 6: Hammerhead Relocation',
+          ja: '第6フェーズ：ハンマーヘッド製造部門の移転',
+          zh: '第六阶段：弦槌制造核心工序搬迁'
         },
         title: {
-          de: 'Überführung der Gärtringer Spezialanlagen',
-          en: 'Heavy Machine Transport from Gärtringen',
-          ja: 'ゲルトリンゲンからの450km大型重機移送',
-          zh: '原厂450公里重型特种车队启运'
+          de: 'Umzug der Hammerkopf-Manufaktur',
+          en: 'Relocation of Hammerhead Workshop',
+          ja: 'ハンマーヘッド専門マニュファクチュールの移転',
+          zh: '核心弦槌制造工坊正式迁入'
         },
         caption: {
-          de: 'Präzise getaktete Spezialtransporte über 450 km zur schadensfreien Überführung des Maschinenparks nach Meuselwitz.',
-          en: 'Logistics coordination over 450 km: safeguarding irreplaceable proprietary presses and custom tooling.',
-          ja: '南西ドイツから中部ドイツへ450km：かけがえのない専用機械と工具群を安全に護送。',
-          zh: '跨越450公里严密护航：将雷诺无法替代的专用压机与高精工装安全转运至新厂。'
+          de: 'Das akustische Herzstück von Renner bezieht seinen neuen, klimastabilen Fertigungsbereich in Meuselwitz.',
+          en: 'The acoustic soul of Louis Renner settles into its new, climate-controlled manufacturing area in Meuselwitz.',
+          ja: 'ルイス・レンナーの音響の魂であるハンマーヘッド製造が、モイゼルヴィッツの恒温恒湿新フロアへと移転。',
+          zh: '雷诺钢琴声学的传奇灵魂——弦槌制造车间正式进驻莫伊瑟尔维茨全新恒温恒湿专属生产区。'
+        },
+        image: 'Visuell/Bilder/02_Umbau_und_Umzug/34_20260521_144701.jpg'
+      },
+      {
+        id: '2026-05-fundament',
+        monthYear: '05.2026',
+        branch: 'up',
+        phase: {
+          de: 'Phase 7: Fundamente Absauganlage',
+          en: 'Phase 7: Filtration System Foundation',
+          ja: '第7フェーズ：大型集塵設備専用基礎工事',
+          zh: '第七阶段：除尘过滤机组基坑工程'
+        },
+        title: {
+          de: 'Spezialfundament für die Filteranlage',
+          en: 'Reinforced Foundation for Filter System',
+          ja: '大型集塵プラント専用の高強度耐荷重基礎',
+          zh: '超大型除尘净化机组专属承重基础'
+        },
+        caption: {
+          de: 'Statische Hochpräzision: Fundamentierung für die 40 Tonnen schwere und 12 Meter hohe zentrale Absauganlage.',
+          en: 'Structural heavy-duty engineering: foundation concrete for the 40-ton, 12-meter-tall central filtration plant.',
+          ja: '静的精密設計：総重量40トン・高さ12メートルの超大型中央集塵プラントを支える専用高剛性基礎。',
+          zh: '结构高承重基础工程：为重达40吨、高12米的室外大型工业除尘过滤系统打造抗震隔振基坑。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/27_20260428_083959.jpg'
       },
       {
-        id: '2026-05',
+        id: '2026-05-kranhub',
+        monthYear: '05.2026',
+        branch: 'down',
+        phase: {
+          de: 'Phase 8: Kranhub der Filtermodule',
+          en: 'Phase 8: Crane Lift of Filter Modules',
+          ja: '第8フェーズ：集塵モジュールのクレーン吊り上げ',
+          zh: '第八阶段：除尘过滤模块起重机精准吊装'
+        },
+        title: {
+          de: 'Anlieferung & Kranhub der Filtermodule',
+          en: 'Delivery & Crane Lift of Filter Modules',
+          ja: '大型集塵モジュールの搬入とクレーン吊り上げ',
+          zh: '除尘模块重载运输与特种起重机吊装'
+        },
+        caption: {
+          de: 'Schwerlast-Logistik per 70-Tonnen-Autokran: Millimetergenaue Positionierung der tonnenschweren Filterkomponenten.',
+          en: 'Heavy-duty logistics with a 70-ton mobile crane: millimeter-accurate positioning of multi-ton filtration components.',
+          ja: '70トン大型クレーンによる重量物物流：数トンの大型フィルターコンポーネントをミリ単位で位置合わせ。',
+          zh: '70吨全地面起重机特种重载作业：将重达数吨的除尘过滤核心组件进行毫米级高精定位。'
+        },
+        image: 'Visuell/Bilder/02_Umbau_und_Umzug/31_20260512_113224.mp4'
+      },
+      {
+        id: '2026-05-kranmontage',
         monthYear: '05.2026',
         branch: 'up',
         phase: {
-          de: 'Phase 7: Maschinenankunft',
-          en: 'Phase 7: Machinery Delivery',
-          ja: '第7フェーズ：設備到着',
-          zh: '第七阶段：核心机械抵厂'
+          de: 'Phase 9: Kranmontage des Filterturms',
+          en: 'Phase 9: Crane Assembly of Filter Tower',
+          ja: '第9フェーズ：集塵タワーのクレーン据付組立',
+          zh: '第九阶段：除尘塔上部箱体高空精准拼装'
         },
         title: {
-          de: 'Ankunft der Präzisionspressen & Sondermaschinen',
-          en: 'Arrival of Precision Presses & Tooling',
-          ja: '専用熱プレス機と特殊工作機械の到着',
-          zh: '专用热压机与特种工装车队到厂'
+          de: 'Kranmontage des Filterturms',
+          en: 'Crane Assembly of Filter Tower',
+          ja: '集塵タワー上部ユニットのクレーン組立て',
+          zh: '除尘过滤塔箱体结构高空合拢'
         },
         caption: {
-          de: 'Entladung der tonnenschweren Maschinenkörper und Baugruppen am Haupttor des modernisierten Werksgeländes.',
-          en: 'Arrival and offloading of multi-ton press bodies, automated cutters, and sub-assemblies at factory gates.',
-          ja: 'モイゼルヴィッツ新工場ゲートでの超重量マシン本体および精密ユニットの慎重な荷降ろし。',
-          zh: '数吨重的核心热压机体与自动化切削模组陆续在新厂主大门卸车集结。'
+          de: 'Präzisionsmontage in luftiger Höhe: Das 12 Meter hohe Filterturm-Oberteil wird auf die schwingungsentkoppelte Stahlkonstruktion gesetzt.',
+          en: 'Precision assembly at height: The 12-meter-tall upper filter section is positioned onto the vibration-isolated steel frame.',
+          ja: '高所精密組立：防振鋼構造フレーム上に高さ12メートルの集塵タワー上部ユニットをミリ単位でドッキング。',
+          zh: '高空精准拼装：高达12米的室外除尘塔上部箱体结构，精准平稳吊装至减振抗震钢结构承重底座之上。'
         },
-        image: 'Visuell/Bilder/02_Umbau_und_Umzug/34_20260521_144701.jpg'
+        image: 'Visuell/Bilder/02_Umbau_und_Umzug/33_20260513_120405.jpg'
       },
       {
         id: '2026-06',
         monthYear: '06.2026',
         branch: 'down',
         phase: {
-          de: 'Phase 8: Halleneinbringung',
-          en: 'Phase 8: Machine Rigging',
-          ja: '第8フェーズ：館内精密搬入',
-          zh: '第八阶段：车间内部平移就位'
+          de: 'Phase 10: Montage der Großfilteranlage',
+          en: 'Phase 10: Industrial Filter Assembly',
+          ja: '第10フェーズ：大型集塵設備の据付組立',
+          zh: '第十阶段：大型集尘过滤总成安装'
         },
         title: {
-          de: 'Schwerlast-Positionierung per Panzerrollen',
-          en: 'Rigging & Air-Skate Placement',
-          ja: '装軌台車によるミリ単位の館内据付',
-          zh: '重型坦克轮与气垫微米平移'
+          de: 'Montage der Großfilter- & Absauganlage',
+          en: 'Assembly of 120,000 m³/h Filter Plant',
+          ja: '120,000 m³/h 大型集塵プラントの組み立て',
+          zh: '每小时12万立方米大型集尘净化塔吊装'
         },
         caption: {
-          de: 'Mit Spezialkränen und Panzerrollen werden die Anlagen zentimetergenau auf ihre vorbereiteten Fundamente gesetzt.',
-          en: 'Industrial rigging crews maneuver massive machinery onto calibrated vibration pads with extreme precision.',
-          ja: 'クレーンと専用ローラーを駆使し、ミリ単位で機械を事前に施工された基礎へと精密配置。',
-          zh: '专业吊装与坦克轮团队协同，将庞大设备严丝合缝平移就位至隔震地坪。'
+          de: 'Mit 120.000 m³/h Luftleistung garantiert die neu errichtete Filteranlage staubfreie, hochpräzise Fertigungsprozesse.',
+          en: 'With a 120,000 m³/h air capacity, the newly erected plant guarantees dust-free, micrometer-precise production.',
+          ja: '毎時12万m³の給排気循環能力を誇る新設大型フィルタープラントが、微粉塵を排除した最高精度の製造を実現。',
+          zh: '高达120,000 m³/h超强换气集尘能力，全天候保障车间无微尘干扰的微米级加工质量。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/36_20260610_075535.jpg'
       },
@@ -220,22 +268,22 @@ class RennerTransformationJourney {
         monthYear: '07.2026',
         branch: 'up',
         phase: {
-          de: 'Phase 9: Laser-Nivellierung',
-          en: 'Phase 9: Laser Alignment',
-          ja: '第9フェーズ：レーザー精密校正',
-          zh: '第九阶段：激光干涉全轴校准'
+          de: 'Phase 11: Hallenverrohrung & Trassenbau',
+          en: 'Phase 11: Ductwork & Overhead Trusses',
+          ja: '第11フェーズ：大口径配管ダクトと天井トラス',
+          zh: '第十一阶段：车间集尘管道与管廊架设'
         },
         title: {
-          de: 'Lasergestützte Verankerung & Justierung',
-          en: 'Laser Alignment & Zero-Torsion Anchoring',
-          ja: 'レーザー水平校正と高剛性アンカー固定',
-          zh: '激光干涉仪全轴水平与刚性地锚固化'
+          de: 'Absaugtrassen & Hallenverrohrung',
+          en: 'Extraction Trusses & Hall Ductwork',
+          ja: '天井集塵ダクト配管網とパイプライン敷設',
+          zh: '负压集尘管网全线贯通与管桥布设'
         },
         caption: {
-          de: 'Optische Laservermessung stellt vollkommen verzugsfreie Maschinenbetten für kompromisslose Serienpräzision sicher.',
-          en: 'Optical laser interferometry ensures zero torsion on all guide rails, guaranteeing micrometer tolerances.',
-          ja: 'レーザー光学測定による完全な水平出し：ミクロン単位の再現性を生み出す完璧な機械台座。',
-          zh: '激光干涉仪全程标定：确保导轨与机床底座零应变，奠定微米级加工一致性基石。'
+          de: 'Installation der großdimensionierten Rohrtrassen zur lückenlosen Absaugung aller Holzbearbeitungsmaschinen.',
+          en: 'Installation of large-diameter overhead ductwork for continuous dust extraction across all woodworking machines.',
+          ja: 'すべての木工加工機に直結する大口径スチールパイプラインの天井敷設により、確実な集塵経路を確立。',
+          zh: '安装全厂大口径集尘镀锌管道与高空管廊，实现全系列高精木材加工机床的闭环负压吸尘。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/38_20260708_120853.jpg'
       },
@@ -244,50 +292,76 @@ class RennerTransformationJourney {
         monthYear: '09.2026',
         branch: 'down',
         phase: {
-          de: 'Phase 10: Meisterarbeitsplätze',
-          en: 'Phase 10: Master Benches',
-          ja: '第10フェーズ：マイスター作業台',
-          zh: '第十阶段：大师装配工位设立'
+          de: 'Phase 12: Dachzentrale & Klimatechnik',
+          en: 'Phase 12: Rooftop HVAC & Climate Plant',
+          ja: '第12フェーズ：屋上空調プラント完成',
+          zh: '第十二阶段：屋顶大型工艺气调机房'
         },
         title: {
-          de: 'Einrichtung der Feinmontage & Absaugsysteme',
-          en: 'Master Workstations & Cleanroom Lighting',
-          ja: 'エルゴノミクス組立台と自然光LED照明',
-          zh: '人体工学总装台与防尘照明系统'
+          de: 'Dachzentrale: Prozessluft & Klimatechnik',
+          en: 'Rooftop Plant: Process Air & HVAC',
+          ja: '屋上プロセス空調・温湿度管理センター',
+          zh: '屋顶中央工艺送风与恒温恒湿机房'
         },
         caption: {
-          de: 'Modernste Prüfvorrichtungen, ergonomische Werkbänke und Tageslichtbeleuchtung für ermüdungsfreie Montage.',
-          en: 'High-CRI daylight LED illumination, ergonomic assembly benches, and automated inspection gauges installed.',
-          ja: '自然光に近いCRI98照明と人間工学に基づく精密組立デスク：88鍵アクションの最終調律環境。',
-          zh: '配备高显色自然光照与人体工学独立工位，为88键全套击弦机终检创造无疲劳作业空间。'
+          de: 'Perfekte Klimastabilität: Garantierte 45–50 % relative Luftfeuchte und konstante Temperaturen – sommers wie winters.',
+          en: 'Flawless climate stability: guaranteed 45–50% relative humidity and steady temperatures year-round, winter and summer.',
+          ja: '完璧な気候安定性：夏冬を問わず通年で湿度45〜50%・一定温度を完全保証する精密プロセス空調。',
+          zh: '极致环境控制：无论严冬酷暑，全天候恒定确保45-50%相对湿度与微差恒温，保障敏感音木与毛毡绝无形变。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/42_20260909_094559.jpg'
       },
       {
-        id: '2026-10',
-        monthYear: '10.2026',
+        id: '2026-09-klima',
+        monthYear: '09.2026',
         branch: 'up',
         phase: {
-          de: 'Phase 11: Vollbetrieb & Welt-Hauptsitz',
-          en: 'Phase 11: Production Launch',
-          ja: '第11フェーズ：新工場全面稼働',
-          zh: '第十一阶段：新总装生产线全面达产'
+          de: 'Phase 13: Prozessluft- & Klimaanlage',
+          en: 'Phase 13: Process Air & Air Conditioning',
+          ja: '第13フェーズ：プロセス空調・大型空調設備',
+          zh: '第十三阶段：工艺气调与恒温恒湿空调机组'
         },
         title: {
-          de: 'Erfolgreiche Inbetriebnahme & Vollbetrieb',
-          en: 'United Global Production in Full Swing',
-          ja: '統合された新グローバル本社工場の全面稼働',
-          zh: '全球整合新旗舰总部全面投产'
+          de: 'Prozessluft- und Klimaanlage',
+          en: 'Process Air & Air Conditioning System',
+          ja: 'プロセス給気・精密空調システム',
+          zh: '工艺送风与恒温恒湿空调系统'
         },
         caption: {
-          de: 'Vollständige Produktionsaufnahme: Renner fertigt Konzertmechaniken und Hammerköpfe am neuen globalen Hauptsitz Meuselwitz.',
-          en: 'Full-scale manufacturing active: crafting world-class piano actions and hammerheads under one unified roof.',
-          ja: 'フル生産開始：世界最高峰のコンサートグランド用アクションとハンマーヘッドが新拠点から世界へ。',
-          zh: '全面合龙量产：雷诺音乐会级击弦机与弦槌全工序在莫伊瑟尔维茨全新旗舰总部扬帆起航。'
+          de: 'Hocheffiziente Prozessluft- und Klimatechnik auf dem Werksdach: Höchste Klimastabilität für anspruchsvollste Holz- und Filzverarbeitung.',
+          en: 'High-efficiency rooftop process air and climate control systems: Ensuring peak atmospheric stability for demanding wood and felt fabrication.',
+          ja: '屋上に設置された高効率プロセス空調システム：音響木材と精密フェルト加工に不可欠な極めて安定した温湿度環境を実現。',
+          zh: '屋顶高能效中央工艺送风与恒温恒湿空调系统：为精细木料与核心羊毛毡加工提供全天候极致稳定的环境保障。'
+        },
+        image: 'Visuell/Bilder/02_Meuselwitz_Umbau/44_20260915_133800.jpg'
+      },
+      {
+        id: '2026-10',
+        monthYear: '10.2026',
+        branch: 'down',
+        phase: {
+          de: 'Phase 14: Kehlerei & Vollbetrieb Meuselwitz',
+          en: 'Phase 14: Molding Shop & Full Operation',
+          ja: '第14フェーズ：木型成形部門の統合と全面稼働',
+          zh: '第十四阶段：开槽成型车间搬迁与全面达产'
+        },
+        title: {
+          de: 'Montage der Kehlerei & Vollendung',
+          en: 'Molding Line Setup & Full Commissioning',
+          ja: '伝統の溝彫り・木型成形部門の据付と統合完了',
+          zh: '精细开槽车间安装就位与新总部全面达产'
+        },
+        caption: {
+          de: 'Letzte Abteilung erfolgreich verlagert: Die traditionsreiche Kehlerei und die gesamte Holzfertigung produzieren nun in Meuselwitz.',
+          en: 'Final department successfully relocated: the traditional molding shop and entire wood fabrication now operate in Meuselwitz.',
+          ja: 'ゲルトリンゲンからの最終部門が移転完了：伝統の木型成形（Kehlerei）と木工全工程が新本社で一体稼働。',
+          zh: '最后一支核心技术部门顺利迁入：历史悠久的木料成型开槽车间与全套木工制造产线在莫伊瑟尔维茨全面投产运营。'
         },
         image: 'Visuell/Bilder/02_Umbau_und_Umzug/48_20261009_081342.jpg'
       }
     ];
+
+    this.totalMilestones = this.milestonesData.length;
 
     this.trailPoints = [];
     this.stardustParticles = [];
@@ -569,6 +643,8 @@ class RennerTransformationJourney {
       if (pill) pill.classList.remove('is-revealed');
       const year = panel.querySelector('.tree-watermark-year');
       if (year) year.classList.remove('is-revealed');
+      const vids = panel.querySelectorAll('video');
+      vids.forEach(v => { try { v.pause(); v.currentTime = 0; } catch(e) {} });
     });
 
     const counterBadge = document.getElementById('build-step-counter');
@@ -769,6 +845,8 @@ class RennerTransformationJourney {
       if (prevPill) prevPill.classList.remove('is-revealed');
       const prevYear = prevPanel.querySelector('.tree-watermark-year');
       if (prevYear) prevYear.classList.remove('is-revealed');
+      const prevVideos = prevPanel.querySelectorAll('video');
+      prevVideos.forEach(v => { try { v.pause(); } catch(e) {} });
     }
 
     document.querySelectorAll('.build-milestone-panel').forEach((panel, idx) => {
@@ -823,6 +901,14 @@ class RennerTransformationJourney {
         if (pill) pill.classList.add('is-revealed');
         const year = currentPanel.querySelector('.tree-watermark-year');
         if (year) year.classList.add('is-revealed');
+        const currentVideos = currentPanel.querySelectorAll('video');
+        currentVideos.forEach(v => {
+          try {
+            v.currentTime = 0;
+            const p = v.play();
+            if (p) p.catch(() => {});
+          } catch(e) {}
+        });
       }
     }, 190));
 
@@ -974,6 +1060,9 @@ class RennerTransformationJourney {
                               this.currentLang === 'ja' ? 'タイムライン再生' : '播放纪录片';
     }
     if (progressEl) progressEl.style.width = '0%';
+    document.querySelectorAll('.build-milestone-panel video').forEach(v => {
+      try { v.pause(); } catch(e) {}
+    });
   }
 
   setLanguage(lang) {

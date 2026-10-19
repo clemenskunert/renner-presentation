@@ -30,37 +30,37 @@ class RennerHistoryJourney {
         arrow: '▲',
         tag: { de: 'Gründung', en: 'Founding', ja: '創業', zh: '工坊创立' },
         heading: {
-          de: '1882: Gründung in Stuttgart – Die Reise beginnt mit der Klaviermechanik',
+          de: '1882: Gründung in Stuttgart – Beginn mit der Klaviermechanik',
           en: '1882: Founded in Stuttgart – The Journey Begins with Piano Actions',
-          ja: '1882年：シュトゥットガルト創業 — ピアノアクションから始まった栄光の旅',
-          zh: '1882年：斯图加特匠心工坊创立 — 击弦机开启百年传奇之旅'
+          ja: '1882年：シュトゥットガルト創業 — ピアノアクションから始まった旅',
+          zh: '1882年：斯图加特匠心工坊创立 — 击弦机开启百年传奇'
         },
         sentence: {
-          de: 'Im Jahre 1882 hatte sich nach reiflicher Überlegung, vielem Nachdenken und so mancher schlaflosen Nacht für Louis Renner die Erkenntnis aufgetan, dass die Technik im Bau von Musikinstrumenten, in diesem Fall besonders von Klavieren, eine erfolgreiche Zukunft vor sich haben könnte. So richtete er ohne viele Worte in der Stuttgarter Heusteigstraße eine Werkstatt ein und begann an einem Herbsttag Mitte Oktober ganz bewusst mit der handwerklichen Herstellung von Klaviermechaniken – dem sensiblen Herzstück des Instruments.',
-          en: 'In 1882, after careful reflection, deep contemplation, and many a sleepless night, Louis Renner recognized that the engineering of musical instruments—especially pianos—held a promising future. Without unnecessary words, he established a workshop on Heusteigstrasse in Stuttgart and, on an autumn day in mid-October, deliberately began crafting upright piano actions: the delicate, beating heart of the instrument.',
-          ja: '1882年、熟慮と数多の苦悩の夜を経て、ルイス・レンナーは楽器製造、とりわけピアノの機構工学に豊かな未来があることを見出しました。言葉少なく、彼はシュトゥットガルトのホイシュタイグ通りに工房を構え、10月中旬の秋の日、ピアノの心臓部であるアクションの手工業製造からその偉大な旅を歩み始めました。',
-          zh: '1882年，在深思熟虑、反复求索并度过无数个不眠之夜后，路易·雷诺敏锐洞察到乐器制造工艺、尤其是钢琴工程技术的广阔前景。无需过多赘言，他在斯图加特霍伊施泰希街设立了第一间手工工坊，并在金秋10月中旬毅然以钢琴击弦机——这一乐器最精密的“传动心脏”为起点，开启了雷诺波澜壮阔的手工制造传奇。'
+          de: 'Im Oktober 1882 gründete Louis Renner seine Werkstatt in der Stuttgarter Heusteigstraße – mit dem Ziel, hochpräzise Klaviermechaniken als Herzstück des Instruments zu fertigen.',
+          en: 'In October 1882, Louis Renner established his workshop on Heusteigstrasse in Stuttgart to handcraft high-precision piano actions as the heart of the instrument.',
+          ja: '1882年10月、ルイス・レンナーはシュトゥットガルトに工房を開設し、ピアノの心臓部である高精度アクションの手作業製造を開始しました。',
+          zh: '1882年10月，路易·雷诺在斯图加特设立手工工坊，专注打造作为钢琴传动心脏的高精度击弦机。'
         },
         bullets: {
           de: [
-            '<strong>Beginn mit Klaviermechaniken (1882):</strong> Louis Renner startete seine unternehmerische Reise ganz gezielt mit der Konstruktion und Fertigung hochpräziser Klaviermechaniken in der Heusteigstraße, um dem aufstrebenden Klavierbau neue dynamische Maßstäbe zu verleihen.',
-            '<strong>Historische Parallele zu Carl Rönisch:</strong> Während sächsische Pioniere wie Carl Rönisch (gegr. 1845 in Dresden) mit der Erfindung der Voll-Panzerplatte (1866) die klangliche Stabilität revolutionierten, schuf Louis Renner in Stuttgart den maßgebenden mechanischen Präzisionsstandard.',
-            '<strong>Entscheidende Wegekreuzung & Wurzel von Meuselwitz:</strong> 1990 sollten sich beide Traditionslinien schicksalhaft vereinen: Nach der Wiedervereinigung übernahm Renner die renommierte Mechanik-Produktion der aus Rönisch hervorgegangenen Piano Union – der Ursprung und die Wurzel unseres heutigen Hauptsitzes in Meuselwitz!'
+            '<strong>Feinmechanik im Fokus:</strong> Beginn der Fertigung höchstpräziser Klaviermechaniken.',
+            '<strong>Historische Parallele:</strong> Zeitgleich zu Rönischs Panzerplatte setzt Renner den Präzisionsmaßstab.',
+            '<strong>Wurzel von Meuselwitz:</strong> Grundstein der Tradition, die 1990 in Thüringen zusammenfloss.'
           ],
           en: [
-            '<strong>The Journey Begins with Piano Actions (1882):</strong> Louis Renner deliberately embarked on his journey with the design and precision craft of upright piano actions on Heusteigstrasse, establishing a new benchmark of touch and response for the piano world.',
-            '<strong>Historical Parallel to Carl Rönisch:</strong> While Saxon pioneers like Carl Rönisch (founded 1845 in Dresden) revolutionized acoustic resonance with inventions like the full cast-iron plate (1866), Louis Renner set out in Stuttgart to establish the ultimate mechanical precision standard.',
-            '<strong>Decisive Crossroads & the Roots of Meuselwitz:</strong> In 1990, both historic lineages converged: Following German reunification, Renner acquired the renowned piano action production of Piano Union (which originated from Rönisch)—becoming the origin and true root of our today\'s headquarters in Meuselwitz!'
+            '<strong>Focus on Actions:</strong> Launch of high-precision upright piano actions.',
+            '<strong>Historical Parallel:</strong> Alongside Rönisch\'s iron plate, Renner sets the precision benchmark.',
+            '<strong>Root of Meuselwitz:</strong> Laying the foundation that united in Thuringia in 1990.'
           ],
           ja: [
-            '<strong>ピアノアクションからの幕開け（1882年）：</strong> ルイス・レンナーは、タッチと表現力を決定づける最高精度のアップライトピアノ・アクション製作を創業の原点に定め、世界のピアノ界に新たな機構基準を打ち立てました。',
-            '<strong>カール・レーニッシュとの歴史的呼応：</strong> ザクセンの先駆者カール・レーニッシュ（1845年ドレスデン創業）が総鉄骨フレーム（1866年）で音響構造の革新を成し遂げたのと呼応するように、レンナーはシュトゥットガルトで最高峰の機械精度基準を確立しました。',
-            '<strong>運命の交差点・モイゼルヴィッツの起源：</strong> 1990年の東西ドイツ再統一後、両者の系譜は劇的に結実します。レンナーはレーニッシュの流れを汲むピアノ・ユニオン（Piano Union）の伝統あるアクション製造部門を継承 — これこそが現在の統合世界本社モイゼルヴィッツの真のルーツとなりました。'
+            '<strong>精密アクションに特化：</strong> 最高精度のアップライト機構の製造を開始。',
+            '<strong>歴史的革新との呼応：</strong> レーニッシュの総鉄骨と並び、究極の精度基準を確立。',
+            '<strong>モイゼルヴィッツの起源：</strong> 1990年に統合される偉大な伝統の礎を構築。'
           ],
           zh: [
-            '<strong>以钢琴击弦机开启传奇之旅（1882年）：</strong> 路易·雷诺将高精度立式击弦机的设计与纯手工制作作为企业立业之本，为整架钢琴的触感灵敏度树立了全新的技术标杆。',
-            '<strong>与卡尔·罗尼施（Rönisch）的历史共鸣：</strong> 正如萨克森先驱卡尔·罗尼施（1845年创立于德累斯顿）以全铸铁铠装音板（1866年）颠覆声学稳定性一样，雷诺在斯图加特树立了无可企及的精密机械制造标杆。',
-            '<strong>命运的历史交汇与莫伊瑟尔维茨之源：</strong> 两大德国传统于1990年两德统一后迎来命运交汇：雷诺正式收购了由罗尼施发展而来的德国钢琴联盟（Piano Union）击弦机制造基地——这正是雷诺莫伊瑟尔维茨基地与今日全球总部的深厚根基！'
+            '<strong>专注精工击弦机：</strong> 开启立式钢琴超精密击弦核心制造。',
+            '<strong>百年历史呼应：</strong> 与罗尼施全铁板齐名，确立机械传动巅峰标准。',
+            '<strong>莫伊瑟尔维茨之源：</strong> 奠定1990年汇聚图林根的百年工艺基石。'
           ]
         },
         fact: {
@@ -82,11 +82,11 @@ class RennerHistoryJourney {
           zh: '路易·雷诺原厂档案 · 莫伊瑟尔维茨起源纪事'
         },
         images: [
-          'Visuell/Bilder/01_Geschichte/1882_renner.jpg',
-          'Visuell/Bilder/01_Geschichte/rohlfing_klaviermechanik_vintage_bw.webp',
-          'Visuell/Bilder/01_Geschichte/01_historische_renner_werkstatt_1882.png'
+          'Visuell/Bilder/01_Geschichte/01_1882_gruendung_stuttgart_renner_werkstatt.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1882_rohlfing_klaviermechanik_vintage.webp',
+          'Visuell/Bilder/01_Geschichte/01_1882_werkstatt_stuttgart_illustration.png'
         ],
-        image: 'Visuell/Bilder/01_Geschichte/1882_renner.jpg',
+        image: 'Visuell/Bilder/01_Geschichte/01_1882_gruendung_stuttgart_renner_werkstatt.jpg',
         imageTag: { de: '1882 Gründung', en: '1882 Founding', ja: '1882年創業', zh: '1882年创立' },
         imageCaption: {
           de: 'Gründer: Louis Renner 1882',
@@ -115,7 +115,8 @@ class RennerHistoryJourney {
             '历史经典立式钢琴击弦机 — 传奇之旅的起点',
             '斯图加特霍伊施泰希街的第一代手工工坊（1882年）'
           ]
-        }
+        },
+        slide_interval: 3500
       },
 
       1: {
@@ -125,43 +126,98 @@ class RennerHistoryJourney {
         arrow: '▼',
         tag: { de: 'Hammer', en: 'Hammerheads', ja: '自社ハンマー', zh: '弦槌制造' },
         heading: {
-          de: 'Aufnahme der anspruchsvollen Hammerkopffertigung',
-          en: 'Inception of Dedicated Hammerhead Manufacturing',
-          ja: 'ピアノの魂「ハンマーヘッド」の自社製造開始',
-          zh: '开启声学核心部件“弦槌”自主生产'
+          de: '1906: Aufnahme der anspruchsvollen Hammerkopffertigung',
+          en: '1906: Launch of Dedicated Hammerhead Manufacturing',
+          ja: '1906年：音色の魂「ハンマーヘッド」の自社製造開始',
+          zh: '1906年：开启声学核心部件“弦槌”自主制造'
         },
         sentence: {
-          de: 'Mit eigens entwickelten Pressen übernimmt Renner die vollkommene Kontrolle über das akustische Herzstück des Klaviers.',
-          en: 'With proprietary custom presses, Renner takes full control of the acoustic soul and singing tone of the piano.',
-          ja: '独自開発の専用プレスにより、ピアノの音響の魂であるハンマーヘッドの完全自社製造を確立。',
-          zh: '凭借自主研发的专用压力模具，雷诺全面掌控决定钢琴音色灵魂的声学核心。'
+          de: 'Von Cristoforis erstem Hammerkopf (1700) zu Renners eigener Fertigung ab 1906: Der entscheidende Schritt, der später den unverwechselbaren Klang jedes Steinway-Flügels definierte.',
+          en: 'From Cristofori’s first hammer in 1700 to Renner’s in-house production in 1906: The milestone that came to define the sound of every Steinway grand.',
+          ja: '1700年のクリストフォリによる打弦機構から1906年のレンナー自社製造へ。後にすべてのスタインウェイの響きを決定づける歴史的一歩となりました。',
+          zh: '从1700年克里斯托弗里首创弦槌到1906年雷诺自产：这一决定性一步，日后定义了每一架施坦威三角钢琴的传奇音色。'
+        },
+        bullets: {
+          de: [
+            '<strong>Cristoforis Impuls:</strong> Vom Ur-Hammerkopf (1700) zur ersten industriellen Perfektion.',
+            '<strong>Eigene Spezialpressen:</strong> Entwicklung eigener Hochdruckpressen für maximale Dynamik.',
+            '<strong>Globaler Klangstandard:</strong> Maßstab für Steinway und führende Flügelbauer weltweit.'
+          ],
+          en: [
+            '<strong>Cristofori’s Legacy:</strong> From the early 1700 hammer to industrial perfection.',
+            '<strong>Proprietary Presses:</strong> Custom high-pressure presses for unmatched acoustic dynamics.',
+            '<strong>Global Tone Standard:</strong> Defining the sound of Steinway and premier pianos worldwide.'
+          ],
+          ja: [
+            '<strong>クリストフォリの継承：</strong> 1700年の初頭ハンマーから工業的完成形へ。',
+            '<strong>自社開発の高圧プレス：</strong> 圧倒的な打弦レスポンスを生む専用プレス機を開発。',
+            '<strong>世界的トーン基準：</strong> スタインウェイをはじめ世界の銘器の響きを決定づける。'
+          ],
+          zh: [
+            '<strong>传承克里斯托弗里：</strong> 从1700年原始弦槌跃升至工业级完美巅峰。',
+            '<strong>自研高压成型机：</strong> 自主研发专用高压模具，赋予无与伦比的动态声学。',
+            '<strong>全球顶级音色标准：</strong> 定义施坦威及全球名琴的标志性音色基准。'
+          ]
         },
         fact: {
-          de: '✦ Der Ursprung des Renner-Klangs',
-          en: '✦ Origin of the Renner Sound',
-          ja: '✦ 響き渡るレンナー・トーンの起源',
-          zh: '✦ 雷诺之声的诞生基石'
+          de: '✦ Von Cristoforis Papierröllchen 1700 • Zum weltweiten Renner-Klangstandard ab 1906',
+          en: '✦ From Cristofori’s Paper Roll in 1700 • To Renner’s Global Tone Standard from 1906',
+          ja: '✦ 1700年クリストフォリの紙ロールから • 1906年以降の世界基準レンナートーンへ',
+          zh: '✦ 从1700年克里斯托弗里的纸卷弦槌 • 到1906年雷诺开启的全球声学标准'
         },
         quote: {
-          de: '„Volle Kontrolle über Filz, Kernholz und Saite.“',
-          en: '“Complete harmonic mastery over felt, wooden core, and string.”',
-          ja: '「フェルト、木芯、弦の織りなす音響の完全掌握。」',
-          zh: '“全面掌控羊毛毡、木芯与琴弦之间的声学共振。”'
+          de: '„Vom lederbezogenen Papierröllchen Cristoforis zur perfekten Spannungsbalance: Der Hammerkopf ist die Seele des Klavierklangs.“',
+          en: '“From Cristofori’s leather-covered paper roll to the perfect balance of tension: the hammerhead is the soul of the piano’s sound.”',
+          ja: '「クリストフォリの革巻き紙ロールから完璧な張力バランスへ：ハンマーヘッドこそがピアノの魂である。」',
+          zh: '“从克里斯托弗里皮革包裹的纸卷，到张力平衡的极致化境：弦槌正是钢琴音色的灵魂所在。”'
         },
         quoteAuthor: {
-          de: 'Unternehmenschronik • louis-renner.de',
-          en: 'Company Chronicle • louis-renner.de',
-          ja: '公式年代記（louis-renner.de）',
-          zh: '雷诺官方历史档案'
+          de: 'Louis Renner Manufaktur • Klangtradition seit 1906',
+          en: 'Louis Renner Manufacture • Acoustic Heritage since 1906',
+          ja: 'ルイス・レンナー製造所 • 1906年以来の音響の伝統',
+          zh: '路易·雷诺制造工坊 • 自1906年传承至今的声学传奇'
         },
-        image: 'Visuell/web_assets/hammerkopf-fertigun.png',
+        images: [
+          'Visuell/Bilder/01_Geschichte/01_1700_bartolomeo_cristofori_portrait.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1700_christofori_hammermechanik.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1906_mechanikfertigung_historisch.png',
+          'Visuell/Bilder/01_Geschichte/01_1906_hammerkopf_pressen_fertigung.png'
+        ],
+        image: 'Visuell/Bilder/01_Geschichte/01_1700_bartolomeo_cristofori_portrait.jpg',
         imageTag: { de: '1906 Hammer', en: '1906 Hammer', ja: '1906年ハンマー', zh: '1906年弦槌制造' },
         imageCaption: {
-          de: 'Aufnahme der eigenen Spezialfabrikation von Hammerköpfen (ab 1906)',
-          en: 'Dedicated specialized manufacturing of piano hammerheads (from 1906)',
-          ja: '独自の専用プレス設備によるハンマーヘッド専門製造の開始（1906年）',
-          zh: '雷诺自1906年开启的高难度弦槌专用成型加工历史图景'
-        }
+          de: 'Bartolomeo Cristofori (1655–1731) – Erfinder der Klaviermechanik (1700)',
+          en: 'Bartolomeo Cristofori (1655–1731) – Inventor of the Piano Action (1700)',
+          ja: 'バルトロメオ・クリストフォリ（1655–1731）— ピアノアクションの発明者（1700年）',
+          zh: '巴尔托洛梅奥·克里斯托弗里（1655–1731）— 钢琴击弦机发明先驱（1700年）'
+        },
+        imageCaptions: {
+          de: [
+            'Bartolomeo Cristofori (1655–1731) – Erfinder der Klaviermechanik (1700)',
+            '1700: Erste Hammer-Mechanik von Bartolomeo Cristofori – Der Ursprung des Hammerkopfs',
+            '1906: Beginn der eigenen Hammerkopffertigung mit eigens entwickelten Pressen',
+            'Hammerkopfnieten im Halbautomaten'
+          ],
+          en: [
+            'Bartolomeo Cristofori (1655–1731) – Inventor of the Piano Action (1700)',
+            '1700: First Hammer Action by Bartolomeo Cristofori – Origin of the Hammerhead',
+            'Historical Action Manufacturing: Handcrafted Precision at Louis Renner',
+            '1906: Launch of Dedicated Hammerhead Manufacturing with Custom Presses'
+          ],
+          ja: [
+            'バルトロメオ・クリストフォリ（1655–1731）— ピアノアクションの発明者（1700年）',
+            '1700年：クリストフォリによる初のアクション機構 — ハンマーヘッドの起源',
+            '歴史的アクション製造工程：ルイス・レンナーの手工業的精密工学',
+            '1906年：独自開発の専用プレスによる自社ハンマーヘッド製造の開始'
+          ],
+          zh: [
+            '巴尔托洛梅奥·克里斯托弗里（1655–1731）— 钢琴击弦机发明先驱（1700年）',
+            '1700年：克里斯托弗里首创击弦机结构 — 现代弦槌与击弦机械之源',
+            '雷诺早期手工击弦机精密制造车间：德国工艺精神的薪火相传',
+            '1906年：自主研发专用冷压成型机开启自产弦槌新纪元'
+          ]
+        },
+        slide_interval: 3500
       },
 
       2: {
@@ -171,43 +227,93 @@ class RennerHistoryJourney {
         arrow: '▲',
         tag: { de: 'Antriebe', en: 'Electrification', ja: '電化革命', zh: '单驱电化' },
         heading: {
-          de: 'Oscar Renners Pioniertat: Einzelantriebe & Flügelprogramm',
-          en: 'Pioneering Electrification & Grand Piano Actions',
-          ja: '個別モーターによる電化革命とグランド機構',
-          zh: '工业独立单驱电化革命与三角击弦机'
+          de: '1911: Oscar Renners Pioniertat – Einzelantriebe & Flügelprogramm',
+          en: '1911: Oscar Renner’s Milestone – Individual Drives & Grand Actions',
+          ja: '1911年：個別モーターによる電化革命とグランド機構',
+          zh: '1911年：工业单驱电化革命与首批三角击弦机'
         },
         sentence: {
-          de: 'Hunderte vibrationsfreie Elektromotoren revolutionieren die Präzision, ergänzt durch die Fertigung von Flügelmechaniken.',
-          en: 'Hundreds of individual electric drives revolutionize precision, complemented by complete grand piano action production.',
-          ja: '数百基の独立電動モーターが加工精度を革新し、グランドピアノ用アクションの本格生産を開始。',
-          zh: '数百台独立电机单驱革新了加工精度，三角钢琴击弦机的全谱系生产同步开启。'
+          de: '1911 erweiterte Oscar Renner das Programm um vollständige Konzert-Flügelmechaniken und trieb die Modernisierung mit hunderten elektrischen Einzelantrieben voran.',
+          en: 'In 1911, Oscar Renner expanded production to complete concert grand actions and modernized the factory with hundreds of electric individual drives.',
+          ja: '1911年、オスカー・レンナーはコンサート・グランド用アクションの自社製造を開始し、工場全体に数百基の独立電動モーターを導入しました。',
+          zh: '1911年，奥斯卡·雷诺全面投产音乐会三角钢琴击弦机，并以数百台独立电动机实现工坊电气化升级。'
+        },
+        bullets: {
+          de: [
+            '<strong>Érard-Repetition:</strong> Doppelte Auslösung als Fundament moderner Flügelmechaniken.',
+            '<strong>Konzertprogramm komplett:</strong> Flügel- und Klaviermechaniken aus einer Meisterhand.',
+            '<strong>Hunderte Einzelmotoren:</strong> Wegweisende Umstellung von Transmissionen auf Elektro-Einzelantrieb.'
+          ],
+          en: [
+            '<strong>Érard Repetition:</strong> Double repetition action as the foundation of modern grand pianos.',
+            '<strong>Complete Concert Line:</strong> Grand and upright actions united under one master roof.',
+            '<strong>Hundreds of Electric Motors:</strong> Pioneering switch from central belts to individual drive units.'
+          ],
+          ja: [
+            '<strong>エラール機構の継承：</strong> 近代グランド演奏を支えるダブル・レペティションの完成。',
+            '<strong>コンサートライン完備：</strong> アップライトとグランドの最高峰機構を自社完結。',
+            '<strong>数百基の独立モーター：</strong> 駆動ベルトから振動のない個別電動モーターへ全館転換。'
+          ],
+          zh: [
+            '<strong>埃拉尔复奏结构：</strong> 以双重脱落结构奠定现代三角琴演奏基石。',
+            '<strong>音乐会全谱系齐备：</strong> 三角与立式击弦机完全实现自主研制闭环。',
+            '<strong>数百台独立电机驱动：</strong> 彻底淘汰传统总轴，实现现代独立电驱革命。'
+          ]
         },
         fact: {
-          de: '✦ Hunderte Einzelmotoren & Flügelbau',
-          en: '✦ Hundreds of Drives & Grand Actions',
-          ja: '✦ 独立モーター電化とグランド機構',
-          zh: '✦ 独立电驱与三角琴全系覆盖'
+          de: '✦ Érards Repetition als Fundament • 1911: Erste Renner-Flügelmechaniken & Hunderte Einzelmotoren',
+          en: '✦ Érard’s Repetition as Foundation • 1911: First Renner Grand Actions & Electric Modernization',
+          ja: '✦ エラールの機構を礎に • 1911年：初のレンナー・グランドアクションと電化革命',
+          zh: '✦ 传承埃拉尔复奏基石 • 1911年：首批雷诺三角击弦机与工业电化革新'
         },
         quote: {
-          de: '„Alle Zweige der Mechanikherstellung in einer Hand.“',
-          en: '“Uniting all branches of piano action manufacturing under one roof.”',
-          ja: '「ピアノアクション製造の全工程を自らの手に統合する。」',
-          zh: '“将钢琴机械制造的每一个细分门类凝聚于自主工序之中。”'
+          de: '„Um alle Zweige der Herstellung von Klaviermechaniken in einer Hand zu vereinigen und dem Fabrikationsprogramm eine gewisse Abrundung zu geben, wurde jetzt auch die Fertigung von Flügelmechaniken aufgenommen.“',
+          en: '“To unite all branches of piano action manufacturing under one roof and bring comprehensive rounded perfection to the manufacturing program, the production of grand piano actions was inaugurated.”',
+          ja: '「ピアノアクション製造の全工程を自らの手で統合し、製造プログラムを完結させるため、グランドピアノ用アクションの製造に着手した。」',
+          zh: '“为将钢琴机械制造的所有细分工艺凝聚于自主工序之中，并赋予产品谱系圆融的完整性，我们正式开启了三角钢琴击弦机的制造。”'
         },
         quoteAuthor: {
-          de: 'Oscar Renner 1911',
-          en: 'Oscar Renner 1911',
-          ja: 'オスカー・レンナー（1911年）',
-          zh: '奥斯卡·雷诺（1911年）'
+          de: 'Oscar Renner • Firmenchronik 1911',
+          en: 'Oscar Renner • Company Chronicle 1911',
+          ja: 'オスカー・レンナー • 社史（1911年）',
+          zh: '奥斯卡·雷诺 • 企业历史档案（1911年）'
         },
-        image: 'Visuell/web_assets/arbeitsumgebung-renner.png',
+        images: [
+          'Visuell/Bilder/01_Geschichte/01_1808_sebastien_erard_portrait.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1808_erard_repetitionsmechanik.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1911_renner_elektrifizierte_arbeitsumgebung.webp'
+        ],
+        image: 'Visuell/Bilder/01_Geschichte/01_1808_sebastien_erard_portrait.jpg',
         imageTag: { de: '1911 Antriebe', en: '1911 Drives', ja: '1911年電化', zh: '1911年单驱电化' },
         imageCaption: {
-          de: 'Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)',
-          en: 'Hundreds of electric individual drives: Modernization under Oscar Renner (1911)',
-          ja: '個別モーターによる振動なき高精度加工体制（1911年）',
-          zh: '奥斯卡·雷诺时期的数百台独立电机高精加工车间（1911）'
-        }
+          de: 'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik für Flügel',
+          en: 'Sébastien Érard (1752–1831) – Inventor of the double escapement grand piano action',
+          ja: 'セバスチャン・エラール（1752–1831）— グランドピアノ用ダブル・エスケープメント機構の発明者',
+          zh: '塞巴斯蒂安·埃拉尔（1752–1831）— 三角钢琴双击弦机复奏机构发明先驱'
+        },
+        imageCaptions: {
+          de: [
+            'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik für Flügel',
+            '1808 / 1821: Érard-Repetitionsmechanik – Das Fundament des modernen Flügelprogramms',
+            'Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)'
+          ],
+          en: [
+            'Sébastien Érard (1752–1831) – Inventor of the double escapement grand piano action',
+            '1808 / 1821: Érard repetition action – The foundation of modern grand piano actions',
+            'Hundreds of electric individual drives: Modernization under Oscar Renner (1911)'
+          ],
+          ja: [
+            'セバスチャン・エラール（1752–1831）— グランドピアノ用ダブル・エスケープメント機構の発明者',
+            '1808年/1821年：エラールによるダブル・レペティション機構 — 現代グランドピアノの礎',
+            '個別モーターによる振動なき高精度加工体制（1911年）'
+          ],
+          zh: [
+            '塞巴斯蒂安·埃拉尔（1752–1831）— 三角钢琴双击弦机复奏机构发明先驱',
+            '1808 / 1821年：埃拉尔复奏击弦机结构 — 现代三角钢琴全系制造的技术基石',
+            '奥斯卡·雷诺时期的数百台独立电机高精加工车间（1911）'
+          ]
+        },
+        slide_interval: 3500
       },
 
       3: {
@@ -217,37 +323,37 @@ class RennerHistoryJourney {
         arrow: '▼',
         tag: { de: 'Brandnacht', en: 'Destruction', ja: '戦禍の炎', zh: '浴火重生' },
         heading: {
-          de: 'Brand der Fabrikanlagen & Unbändiger Wille zum Wiederaufbau',
-          en: 'Total Plant Fire & The Indomitable Spirit to Rebuild',
-          ja: 'シュトゥットガルト空襲の惨禍と不屈の再建意志',
-          zh: '厂区遭遇空袭火灾与坚韧不拔的重建决心'
+          de: '1944: Zerstörung der Fabrikanlagen & Unbändiger Wille zum Wiederaufbau',
+          en: '1944: Factory Destruction & Indomitable Resolve to Rebuild',
+          ja: '1944年：工場の全焼と不屈の再建意志',
+          zh: '1944年：厂区遭遇空袭火灾与坚韧重建誓言'
         },
         sentence: {
-          de: 'Wilhelm Megenhardt steuerte das Unternehmen mit sicherer Hand durch Weltwirtschaftskrise und Kriegswirren, ehe die Stuttgarter Brandnacht das Werk traf:',
-          en: 'Wilhelm Megenhardt steered the company with a steady hand through the Great Depression and wartime turmoil before the firestorm struck:',
-          ja: 'ヴィルヘルム・メーゲンハルトは世界恐慌と大戦の荒波の中、確固たる手腕で会社を舵取りしましたが、1944年7月の爆撃が工場を襲いました。',
-          zh: '威廉·梅根哈特以沉稳坚毅的手腕带领雷诺度过大萧条与战时艰难岁月，直至1944年7月斯图加特大空袭降临：'
+          de: 'In der Stuttgarter Bombennacht vom 24./25. Juli 1944 brannten alle Renner-Gebäude nieder – doch der Wille zum sofortigen Wiederaufbau war ungebrochen.',
+          en: 'During the devastating Stuttgart air raid on July 24/25, 1944, all Renner buildings burned down – yet the resolve to rebuild remained unshaken.',
+          ja: '1944年7月24/25日のシュトゥットガルト空襲により全工場が全焼。しかし瓦礫の中から即座に再建への誓いが立ち上がりました。',
+          zh: '1944年7月24/25日斯图加特大空袭中，雷诺全部厂房化为火海灰烬——但在废墟瓦砾之中，重建誓言坚不可摧。'
         },
         bullets: {
           de: [
-            '<strong>Verheerender Großangriff (24./25. Juli 1944):</strong> Über 600 RAF-Bomber warfen Hunderttausende Stabbrand- und Phosphorbomben ab – ein gigantischer Feuersturm erfasste Stuttgart.',
-            '<strong>Totalverlust aller Gebäude:</strong> Das städtische Löschwassernetz brach zusammen; alle Renner-Gebäude brannten lichterloh nieder, nichts schien gerettet werden zu können.',
-            '<strong>Wiederaufbau noch in den Ruinen:</strong> Trotz totaler Zerstörung und unendlicher Hindernisse beschloss Megenhardt sofort den Wiederaufbau in schwierigster Kleinarbeit.'
+            '<strong>Totalverlust im Feuersturm:</strong> Zerstörung der Stuttgarter Werke am 24./25. Juli 1944.',
+            '<strong>Mut zur Zukunft:</strong> Sofortiger Entschluss zum Wiederaufbau noch in den Trümmern.',
+            '<strong>Geschlossene Belegschaft:</strong> Gemeinsamer Wiederbeginn unter schwersten Bedingungen.'
           ],
           en: [
-            '<strong>Major Raid (July 24/25, 1944):</strong> Over 600 heavy bombers dropped hundreds of thousands of incendiaries – igniting a firestorm across Stuttgart.',
-            '<strong>Total Loss of Premises:</strong> The city water supply collapsed entirely; all Renner buildings burned down and all seemed lost.',
-            '<strong>Rebuilding from Ruins:</strong> Undeterred by ruin, Megenhardt resolved on the spot to rebuild through tireless, meticulous effort.'
+            '<strong>Total Loss in Firestorm:</strong> Complete destruction of Stuttgart plants on July 24/25, 1944.',
+            '<strong>Courage to Rebuild:</strong> Immediate resolve to reconstruct directly amid the ruins.',
+            '<strong>United Workforce:</strong> Together laying the foundation for rebirth against all odds.'
           ],
           ja: [
-            '<strong>1944年7月24/25日の大空襲:</strong> 600機以上の大型爆撃機が数十万発の焼夷弾を投下、シュトゥットガルト市街は猛烈な火災旋風に包まれました。',
-            '<strong>工場の全焼と断水:</strong> 消火用水道網が完全に破壊され、レンナーの全工場建物が全焼。すべてが灰燼に帰したかに見えました。',
-            '<strong>焦土からの再起:</strong> 壊滅的な打撃にも屈せず、メーゲンハルトは瓦礫の山の中で直ちに地道で不屈の再建を開始しました。'
+            '<strong>戦火による全焼：</strong> 1944年7月24/25日の空襲によりシュトゥットガルト工場が全焼。',
+            '<strong>不屈の再建決意：</strong> 瓦礫の中で直ちに完全再建への不屈の決断を下す。',
+            '<strong>結束した社員力：</strong> 最も過酷な状況下で全員が立ち上がり新たな未来を拓く。'
           ],
           zh: [
-            '<strong>1944年7月24/25日大空袭:</strong> 600余架重型轰炸机倾泻数十万枚燃烧弹，烈焰风暴席卷斯图加特全城。',
-            '<strong>厂房全部化为灰烬:</strong> 城市供水管网彻底瘫痪，雷诺全部厂房陷入火海燃烧殆尽，一切看似化为乌有。',
-            '<strong>废墟上的钢铁誓言:</strong> 面对毁灭性浩劫，梅根哈特率领团队毅然在瓦砾堆中誓师，以顽强细致的韧劲开启全面重建。'
+            '<strong>战火烈焰浩劫：</strong> 1944年7月24/25日斯图加特工厂毁于轰炸。',
+            '<strong>废墟中浴火重生：</strong> 瓦砾未凉之际便毅然立下立即重建的坚定誓愿。',
+            '<strong>全员同心聚力：</strong> 克服重重天堑，携手奠定重铸辉煌的基石。'
           ]
         },
         fact: {
@@ -268,7 +374,7 @@ class RennerHistoryJourney {
           ja: 'ヴィルヘルム・メーゲンハルト（1944年社史）',
           zh: '威廉·梅根哈特 • 1944年厂史文献'
         },
-        image: 'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F_45857.jpg',
+        image: 'Visuell/Bilder/01_Geschichte/01_1944_stuttgart_brandnacht_zerstoerung_1.jpg',
         imageTag: { de: '1944 Brandnacht', en: '1944 Rebuild', ja: '1944年再建', zh: '1944年重建' },
         imageCaption: {
           de: 'Historische Dokumente: Stuttgarter Bombennacht & Zerstörung 1944 vor dem Wiederaufbau',
@@ -285,37 +391,37 @@ class RennerHistoryJourney {
         arrow: '▲',
         tag: { de: 'Manfred Renner', en: 'Manfred Renner', ja: 'マンフレート・レンナー', zh: '曼弗雷德·雷诺' },
         heading: {
-          de: 'Dr. Manfred Renner & Einzug in das Hauptgebäude nach Wiederaufbau',
-          en: 'Dr. Manfred Renner & Return to Rebuilt Headquarters',
-          ja: 'マンフレート・レンナー博士の参画と本社本館の復興・帰還',
-          zh: '曼弗雷德·雷诺博士加入与战后重建新总部乔迁'
+          de: '1951/1952: Dr. Manfred Renner & Vollendung des Wiederaufbaus',
+          en: '1951/1952: Dr. Manfred Renner & Rebuilding Completed',
+          ja: '1951/1952年：マンフレート・レンナー博士と本社の完全復興',
+          zh: '1951/1952年：曼弗雷德·雷诺博士掌舵与全面重建完成'
         },
         sentence: {
-          de: 'Inmitten von Hochkonjunktur und nötiger Werkerweiterung trat 1951 die 3. Generation an die Spitze und vollendete den Wiederaufbau:',
-          en: 'Amid soaring demand and required factory expansion, the 3rd generation took the helm in 1951 to complete the reconstruction:',
-          ja: '受注急増に伴う工場拡張の最中、1951年に創業家第3世代が経営陣に参画し、本社の完全復興を成し遂げました：',
-          zh: '在订单激增与急需扩产的关键时期，第三代传承人于1951年执掌技术大局，顺利完成全面重建：'
+          de: 'Mit Dr. Manfred Renner trat 1951 die 3. Generation an die Unternehmensspitze, vollendete den Wiederaufbau und führte Renner zu neuer internationaler Größe.',
+          en: 'In 1951, Dr. Manfred Renner took leadership as the 3rd generation, completed the reconstruction, and ushered in a golden era of global growth.',
+          ja: '1951年、創業家第3世代のマンフレート・レンナー博士が就任し、完全復興を成し遂げて世界基準の飛躍を牽引しました。',
+          zh: '1951年，第三代传承人曼弗雷德·雷诺博士执掌帅印，圆满完成全面重建并带领企业迈向全球辉煌。'
         },
         bullets: {
           de: [
-            '<strong>Einstieg der 3. Generation (1951):</strong> Dr. Manfred Renner, Enkel des Gründers und Sohn von Oscar Renner, tritt nach Studium und praktischer Ausbildung in die Firma ein.',
-            '<strong>Technische Leitung (Sommer 1952):</strong> Als geschäftsführender Gesellschafter übernimmt er die Leitung und forciert tatkräftig die betriebliche Modernisierung.',
-            '<strong>Einzug in das Hauptgebäude (Herbst 1955):</strong> Mit jugendlichem Eifer vollendet er den Wiederaufbau auf ursprüngliche Größe; das Stuttgarter Stammwerk in der Fritz-Reuter-Straße wird bezogen.'
+            '<strong>3. Generation am Ruder:</strong> Dr. Manfred Renner übernimmt die Unternehmensführung (1951).',
+            '<strong>Neues Stammwerk (1955):</strong> Feierlicher Wiedereinzug in das Stuttgarter Hauptgebäude.',
+            '<strong>Weltmarktführerschaft:</strong> Konsequente Qualitätsstandards festigen die Weltspitze.'
           ],
           en: [
-            '<strong>Entry of the 3rd Generation (1951):</strong> Dr. Manfred Renner, grandson of the founder and son of Oscar Renner, joins the company after studies and practical training.',
-            '<strong>Technical Leadership (Summer 1952):</strong> As managing partner, he assumes operational leadership and vigorously drives plant modernization.',
-            '<strong>Return to Headquarters (Autumn 1955):</strong> Restoring the plant to full original scale, the rebuilt main facility on Fritz-Reuter-Strasse is triumphantly reoccupied.'
+            '<strong>3rd Generation Leadership:</strong> Dr. Manfred Renner takes the helm in 1951.',
+            '<strong>New Headquarters (1955):</strong> Ceremonial return to the rebuilt Stuttgart main facility.',
+            '<strong>Global Leadership:</strong> Rigorous quality standards cement worldwide market leadership.'
           ],
           ja: [
-            '<strong>第3世代の参画（1951年）:</strong> 創業者の孫であり早逝したオスカー・レンナーの長男、マンフレート・レンナー博士が学業と実務修業を経て入社。',
-            '<strong>技術経営の指揮（1952年夏）:</strong> 共同代表役員として工場の技術統括に就任し、若き情熱をもって生産近代化を力強く推進。',
-            '<strong>本社本館への復帰（1955年秋）:</strong> 工場を戦前と同等の規模へ完全復興させ、フリッツ・ロイター通りの本社本館へ誇り高く帰還を果たしました。'
+            '<strong>第3世代の就任：</strong> 1951年、マンフレート・レンナー博士が新経営トップへ。',
+            '<strong>新社屋への復帰（1955年）：</strong> 完全再建されたシュトゥットガルト本拠地へ誇り高き帰還。',
+            '<strong>世界市場の頂点へ：</strong> 徹底した品質管理で世界のピアノ界を席巻。'
           ],
           zh: [
-            '<strong>第三代传承入局（1951年）:</strong> 创始人孙辈、英年早逝的奥斯卡·雷诺之子——曼弗雷德·雷诺博士学成并完成实操深造后正式加入企业。',
-            '<strong>统领技术大局（1952年夏）:</strong> 作为新任执行董事合伙人全面掌舵技术与运营，以青年企业家的魄力大刀阔斧推进现代化。',
-            '<strong>新总部大楼落成乔迁（1955年秋）:</strong> 全面恢复战前原有宏大规模，弗里茨-路透街斯图加特总部大楼圆满落成并正式重新入驻。'
+            '<strong>第三代领航人：</strong> 1951年曼弗雷德·雷诺博士掌舵企业全面现代化。',
+            '<strong>重返主厂区（1955年）：</strong> 隆重庆祝全新建成的斯图加特总部大楼启用。',
+            '<strong>巩固全球领袖地位：</strong> 严苛至极的品控标准确立全球不可动摇的霸主地位。'
           ]
         },
         fact: {
@@ -353,37 +459,37 @@ class RennerHistoryJourney {
         arrow: '▼',
         tag: { de: 'Zeitenwende', en: 'Turning Point', ja: '時代の転換点', zh: '时代转折' },
         heading: {
-          de: '1990: Mauerfall, Zeitenwende & Rettung des Fortbestands',
-          en: '1990: Fall of the Wall, Historic Crossroads & Securing the Future',
-          ja: '1990年：ベルリンの壁崩壊、歴史的転換点、そしてレンナー存続の危機',
-          zh: '1990年：柏林墙倒塌、世纪大转折与雷诺生死存亡之战'
+          de: '1990: Mauerfall, Zeitenwende & Sicherung des Fortbestands',
+          en: '1990: Fall of the Wall & Securing Renner’s Future',
+          ja: '1990年：ベルリンの壁崩壊と存亡を賭けたツァイツ工場継承',
+          zh: '1990年：柏林墙倒塌、时代转折与雷诺存续之战'
         },
         sentence: {
-          de: 'Der Fall der Berliner Mauer und die deutsche Wiedervereinigung 1990 brachten für Louis Renner die entscheidende historische Wende: Die Übernahme der Mechanik-Fertigung der Piano Union in Zeitz vereinte nicht nur zwei stolze Klavierbautraditionen, sondern sicherte in einer existenziellen Krise den Fortbestand des gesamten Unternehmens.',
-          en: 'The fall of the Berlin Wall and German Reunification in 1990 marked an epochal turning point for Louis Renner: acquiring the piano action manufacturing operations of Piano Union in Zeitz not only united two storied piano lineages, but secured the very survival of the company in a make-or-break crisis.',
-          ja: '1990年のベルリンの壁崩壊とドイツ再統一は、ルイス・レンナーにとって会社の存亡を賭けた最大の転換点となりました。ツァイツ（Zeitz）のピアノ・ユニオン（Piano Union）アクション製造部門の継承は、東西二大伝統の融合であると同時に、レンナーの倒産危機を救う決断でした。',
-          zh: '1990年柏林墙的倒塌与两德统一，成为路易·雷诺历史上关乎生死存亡的关键转折点：接管蔡茨（Zeitz）德国钢琴联盟（Piano Union）击弦机制造厂，不仅汇聚了两大百年名门传统，更在千钧一发之际拯救了雷诺的存续与未来。'
+          de: '1990 nutzte Renner die historische Chance der Wiedervereinigung: Die Übernahme der Mechanikfertigung in Zeitz sicherte die Existenz des Unternehmens und legte die Basis für Meuselwitz.',
+          en: 'In 1990, Renner seized the historic opportunity of reunification: Acquiring action manufacturing in Zeitz saved the company and laid the foundation for Meuselwitz.',
+          ja: '1990年、ドイツ再統一の歴史的転換点において、ツァイツのアクション製造部門を継承。倒産危機を回避し、モイゼルヴィッツ拠点の礎を築きました。',
+          zh: '1990年，雷诺抓住两德统一历史契机：收购蔡茨击弦机制造基地，化解生死危机并为莫伊瑟尔维茨奠定根基。'
         },
         bullets: {
           de: [
-            '<strong>Mauerfall & Hohe Klavierbautradition in Mitteldeutschland:</strong> Mit der Öffnung der Grenzen 1989/1990 erschloss sich für Renner das historische Herzland des deutschen Klavierbaus. In Zeitz und Leipzig lebte in der Piano Union – hervorgegangen aus Weltmarken wie Carl Rönisch – ein unschätzbares Erbe an handwerklicher Präzision und Fachwissen.',
-            '<strong>Existenzfrage im Wettbewerb mit tschechischen Herstellern:</strong> Der Schritt war für Renner eine reine Überlebensfrage: Gegen die aufstrebenden tschechischen Mechanik-Hersteller drohte Renner im internationalen Kosten- und Kapazitätswettbewerb zu unterliegen.',
-            '<strong>Rettung des Großkunden Schimmel (>40 Klaviere/Tag):</strong> Ohne die neuen Fertigungskapazitäten in Zeitz hätte Renner seinen wichtigsten Großkunden verloren: die Firma Schimmel, die damals über 40 Klaviere pro Tag fertigte. Die Übernahme der Piano-Union-Mechanik sicherte Schimmel, rettete Renners Marktführerschaft und legte die Wurzel für den späteren Welt-Hauptsitz Meuselwitz.'
+            '<strong>Chance der Einheit:</strong> Übernahme der Mechanik-Fertigung der Piano Union in Zeitz.',
+            '<strong>Großkunde Schimmel gerettet:</strong> Sicherung der Kapazitäten für über 40 Klaviere pro Tag.',
+            '<strong>Tor nach Meuselwitz:</strong> Entscheidende Weichenstellung für den heutigen Thüringer Hauptsitz.'
           ],
           en: [
-            '<strong>Fall of the Wall & Rich Piano Heritage:</strong> The opening of the borders in 1989/1990 reconnected Renner with the historic heartland of German piano-making. In Zeitz and Leipzig, Piano Union—rooted in historic brands like Carl Rönisch—preserved generations of master woodworking and action-crafting expertise.',
-            '<strong>Existential Pressure from Czech Manufacturers:</strong> For Renner, entering Zeitz was a matter of sheer survival: intense competition and cost pressure from emerging Czech action manufacturers threatened to undermine Renner\'s position in Europe.',
-            '<strong>Saving Major Client Schimmel (>40 Pianos/Day):</strong> Without Zeitz\'s expanded production capacity, Renner risked losing its largest customer: the Schimmel piano company, which built over 40 pianos daily. The Zeitz acquisition secured Schimmel, safeguarded Renner\'s global leadership, and established the deep root of today\'s Meuselwitz headquarters.'
+            '<strong>Historic Opportunity:</strong> Acquiring the Piano Union action facility in Zeitz in 1990.',
+            '<strong>Securing Customer Schimmel:</strong> Guaranteeing daily output for over 40 pianos.',
+            '<strong>Gateway to Meuselwitz:</strong> Strategic turning point leading directly to our current HQ.'
           ],
           ja: [
-            '<strong>壁の崩壊と中部ドイツ・ピアノ製造の至宝：</strong> 1989/90年の国境開放により、ドイツピアノ製造の発祥の地が再び結ばれました。名門カール・レーニッシュの流れを汲むツァイツとライプツィヒのピアノ・ユニオンには、世界最高峰の木工精度と職人技が息づいていました。',
-            '<strong>チェコ製アクション台頭による存亡の危機：</strong> 当時、台頭するチェコ製アクションメーカーとの激しい価格・供給力競争に晒され、レンナーは単独では太刀打ちできない危機的状況にありました。',
-            '<strong>最大顧客シンメル（1日40台以上生産）の維持：</strong> ツァイツの生産拠点を獲得しなければ、当時1日40台以上のピアノを生産していたレンナー最大の顧客・シンメル（Schimmel）を失う寸前でした。この買収がシンメルとの絆を守り、レンナーの世界一の座と将来のモイゼルヴィッツ本社への道を切り拓きました。'
+            '<strong>東西統一の好機：</strong> 1990年、ツァイツのピアノ・ユニオン機構製造部門を買収。',
+            '<strong>大口顧客シンメルを死守：</strong> 1日40台以上の生産キャパシティを確保し存亡の危機を打開。',
+            '<strong>モイゼルヴィッツへの道：</strong> 現在のチューリンゲン世界本社へと直結する歴史的転換点。'
           ],
           zh: [
-            '<strong>柏林墙倒塌与中德百年造琴底蕴：</strong> 1989/1990年边界开放，让雷诺得以重新拥抱德国钢琴制造业的历史摇篮。蔡茨厂区承袭自声名显赫的卡尔·罗尼施（Carl Rönisch）名门，积淀着极为深厚的精密木工与击弦机制造传统。',
-            '<strong>面临捷克击弦机厂商竞争的存亡危机：</strong> 当时捷克击弦机制造商迅速崛起，凭借巨大的成本和产能优势对雷诺形成巨大冲击，雷诺若不扩产降本将难以为继。',
-            '<strong>挽救第一大客户舒密尔（Schimmel，日产逾40架）：</strong> 若没有蔡茨的新产能支撑，雷诺将彻底失去其最大的核心客户——当时每日出厂超过40架钢琴的德国舒密尔。收购蔡茨击弦机业务成功稳固了舒密尔合作，捍卫了雷诺全球领先地位，并筑牢了日后莫伊瑟尔维茨全球总部的坚实根基。'
+            '<strong>两德统一历史机遇：</strong> 1990年闪电收购蔡茨击弦机制造核心基地。',
+            '<strong>力挽核心巨客户舒密尔：</strong> 确保日产逾40架钢琴的产能，打破生存困局。',
+            '<strong>通往莫伊瑟尔维茨之路：</strong> 奠定当今图林根全球总部的关键转折点。'
           ]
         },
         fact: {
@@ -405,10 +511,10 @@ class RennerHistoryJourney {
           zh: '路易·雷诺原厂档案 · 1990转折之年'
         },
         images: [
-          'Visuell/Bilder/01_Geschichte/1989_mauerfall_brandenburger_tor.jpg',
-          'Visuell/Bilder/01_Geschichte/ZeitzGeschichte.webp'
+          'Visuell/Bilder/01_Geschichte/01_1989_mauerfall_zeitenwende.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1990_piano_union_zeitz_mechanikfertigung.webp'
         ],
-        image: 'Visuell/Bilder/01_Geschichte/1989_mauerfall_brandenburger_tor.jpg',
+        image: 'Visuell/Bilder/01_Geschichte/01_1989_mauerfall_zeitenwende.jpg',
         imageTag: { de: '1990 Wende & Zeitz', en: '1990 Unity & Zeitz', ja: '1990年 再統一とツァイツ', zh: '1990 蔡茨与两德统一' },
         imageCaption: {
           de: 'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
@@ -438,49 +544,94 @@ class RennerHistoryJourney {
       },
 
       6: {
-        id: '2001',
-        year: '2001',
+        id: '2011',
+        year: '2011',
         branch: 'up',
         arrow: '▲',
-        tag: { de: 'Gärtringen', en: 'Modern Plants', ja: '近代2拠点', zh: '两厂协同' },
+        tag: { de: 'Zwei Standorte', en: 'Two Sites', ja: '2拠点体制', zh: '双基地格局' },
         heading: {
-          de: 'Umzug nach Gärtringen & Produktionszentrum Meuselwitz',
-          en: 'Relocation to Gärtringen & Meuselwitz Center',
-          ja: 'ゲルトリンゲン移転とモイゼルヴィッツ生産拠点',
-          zh: '盖特林根新厂落成与莫伊瑟尔维茨生产中心'
+          de: '2011: Zwei feste Standorte – Neubau Gärtringen & Kernfertigung Meuselwitz',
+          en: '2011: Two Core Sites – Gärtringen & Meuselwitz',
+          ja: '2011年：2大拠点体制 — ゲルトリンゲン新社屋とモイゼルヴィッツ中核工場',
+          zh: '2011年：双核心基地格局 — 盖特林根新厂与莫伊瑟尔维茨核心工厂'
         },
         sentence: {
-          de: 'Umzug der Holzbearbeitung nach Gärtringen und Ausbau des 6.000 m² Werks Meuselwitz für Montage und Hammerköpfe.',
-          en: 'Woodworking moves to Gärtringen alongside the expansion of the 6,000 m² Meuselwitz plant for assembly and hammerheads.',
-          ja: '木工拠点をゲルトリンゲンへ、組立とハンマー拠点を6,000㎡のモイゼルヴィッツへ展開。',
-          zh: '精密木工业务迁入盖特林根，同时将总装与弦槌生产拓展至6,000平米的莫伊瑟尔维茨基地。'
+          de: 'Im Jahr 2011 bündelte Renner seine dezentralen Werke an zwei modernen Standorten: Gärtringen und Meuselwitz.',
+          en: 'In 2011, Renner consolidated its dispersed production sites into two core centers of excellence: Gärtringen and Meuselwitz.',
+          ja: '2011年、それまで分散していた拠点をゲルトリンゲンとモイゼルヴィッツの2大近代拠点へと集約統合しました。',
+          zh: '2011年，雷诺将分散生产厂区正式合并归拢为两大现代化核心基地：盖特林根与莫伊瑟尔维茨。'
+        },
+        bullets: {
+          de: [
+            '<strong>Zwei feste Standorte:</strong> Umzug von Zeitz nach Meuselwitz und Neubau Gärtringen.',
+            '<strong>Kernwerk Meuselwitz:</strong> 6.800 m² Großfertigung für Mechaniken, Hammerköpfe und Bauteile.',
+            '<strong>Hauptsitz Gärtringen:</strong> Präzise Holzverarbeitung, Bohrwerkstätten und Verwaltung.'
+          ],
+          en: [
+            '<strong>Two Dedicated Sites:</strong> Relocating from Zeitz to Meuselwitz alongside new Gärtringen site.',
+            '<strong>Meuselwitz Core Facility:</strong> 6,800 m² for grand/upright actions, hammerheads, and parts.',
+            '<strong>Gärtringen Headquarters:</strong> Precision woodworking, drilling workshops, and management.'
+          ],
+          ja: [
+            '<strong>2拠点体制の確立：</strong> ツァイツからモイゼルヴィッツへの移転とゲルトリンゲン新社屋。',
+            '<strong>モイゼルヴィッツ中核工場：</strong> 6,800㎡の最新施設で機構・ハンマー・精密パーツを生産。',
+            '<strong>ゲルトリンゲン本社：</strong> 高度木工加工・CNC穴あけ・総合管理を統括。'
+          ],
+          zh: [
+            '<strong>确立双基地格局：</strong> 蔡茨基地迁入莫伊瑟尔维茨，盖特灵根新厂拔地而起。',
+            '<strong>莫伊瑟尔维茨核心工场：</strong> 6,800平米现代化超级车间专注击弦机、弦槌与核心部件。',
+            '<strong>盖特灵根管理总部：</strong> 统辖超精密木工、数控钻孔及全球运营体系。'
+          ]
         },
         fact: {
-          de: '✦ Über 3 Millionen Klaviermechaniken',
-          en: '✦ Over 3 Million Actions Produced',
-          ja: '✦ 累計300万台以上の納入実績',
-          zh: '✦ 累计生产超300万台精密机械'
+          de: '✦ 2011 • Zwei feste Standorte: Gärtringen & Meuselwitz (6.800 m²)',
+          en: '✦ 2011 • Two Core Sites: Gärtringen & Meuselwitz (6,800 m²)',
+          ja: '✦ 2011年 • 2大拠点体制：ゲルトリンゲン＆モイゼルヴィッツ（6,800㎡）',
+          zh: '✦ 2011年 • 双核心基地：盖特林根与莫伊瑟尔维茨（6,800平方米）'
         },
         quote: {
-          de: '„Über 8.800 Präzisionsteile bilden eine Mechanik.“',
-          en: '“Over 8,800 individual precision components form a single grand action.”',
-          ja: '「1台のメカニズムを構成する8,800点以上の超精密部品。」',
-          zh: '“一台高品质大钢琴击弦机由超过8,800个精密零件精密咬合而成。”'
+          de: '„Im Jahr 2011 wurden die zuvor verstreuten Werke an zwei Standorten zusammengelegt: Meuselwitz und Gärtringen.“',
+          en: '“In 2011, previously dispersed production facilities were consolidated into two core locations: Meuselwitz and Gärtringen.”',
+          ja: '「2011年、分散していた製造体制はモイゼルヴィッツとゲルトリンゲンの2大拠点へと統合された。」',
+          zh: '“2011年，此前分散的各个工厂正式整合为两大稳固基地：莫伊瑟尔维茨与盖特林根。”'
         },
         quoteAuthor: {
-          de: 'louis-renner.de • Klaviermechanik',
-          en: 'louis-renner.de • Piano Actions',
-          ja: '公式解説（louis-renner.de）',
-          zh: '雷诺官网技术白皮书'
+          de: 'Louis Renner Chronik • Zwei Standorte 2011',
+          en: 'Louis Renner Chronicle • Two Sites 2011',
+          ja: 'ルイス・レンナー社史 • 2011年の2拠点体制',
+          zh: '路易·雷诺官方厂史 • 2011双基地纪元'
         },
-        image: 'Visuell/web_assets/renner-ga-okt-2018-scaled.jpg',
-        imageTag: { de: '2001 Gärtringen', en: '2001 Gärtringen', ja: '2001年ゲルトリンゲン', zh: '2001年盖特林根' },
+        images: [
+          'Visuell/Bilder/01_Geschichte/01_2011_standort_gaertringen_neubau.webp',
+          'Visuell/Bilder/01_Geschichte/01_2011_standort_meuselwitz_vogelperspektive.jpg'
+        ],
+        image: 'Visuell/Bilder/01_Geschichte/01_2011_standort_gaertringen_neubau.webp',
+        imageTag: { de: '2011 Standorte', en: '2011 Two Sites', ja: '2011年 2拠点体制', zh: '2011年 双基地' },
         imageCaption: {
-          de: 'Standort Gärtringen vor der Bündelung aller Fertigungsbereiche am neuen Hauptsitz Meuselwitz',
-          en: 'The Gärtringen facility prior to the full consolidation at the new Meuselwitz headquarters',
-          ja: 'モイゼルヴィッツ新本社への全面統合を前に木工を担ったゲルトリンゲン事業所',
-          zh: '在全面整合迁往莫伊瑟尔维茨新总部前负责高精木工的盖特林根厂区'
-        }
+          de: 'Standort Gärtringen: Neubau für Holzbearbeitung, Bohrwerkstätten und Verwaltung',
+          en: 'Gärtringen site: New building for woodworking, drilling workshops, and administration',
+          ja: 'ゲルトリンゲン事業所：木工加工・穴あけ加工および総務管理の新社屋',
+          zh: '盖特林根厂区：承担高精木工、数控钻孔及全球综合管理的新总部大楼'
+        },
+        imageCaptions: {
+          de: [
+            'Standort Gärtringen: Neubau für Holzbearbeitung, Bohrwerkstätten und Verwaltung',
+            'Standort Meuselwitz aus der Vogelperspektive: Moderne Kernfertigung (6.800 m²) nach Umzug von Zeitz'
+          ],
+          en: [
+            'Gärtringen site: New building for woodworking, drilling workshops, and administration',
+            'Meuselwitz facility from above: Modern core manufacturing (6,800 m²) following relocation from Zeitz'
+          ],
+          ja: [
+            'ゲルトリンゲン事業所：木工加工・穴あけ加工および総務管理の新社屋',
+            '上空から見たモイゼルヴィッツ拠点：ツァイツ移転後の近代的コア製造工場（6,800㎡）'
+          ],
+          zh: [
+            '盖特林根厂区：承担高精木工、数控钻孔及全球综合管理的新总部大楼',
+            '鸟瞰莫伊瑟尔维茨生产基地：从蔡茨搬迁后的现代化核心制造基地（6,800平方米）'
+          ]
+        },
+        slide_interval: 3500
       },
 
       7: {
@@ -490,37 +641,37 @@ class RennerHistoryJourney {
         arrow: '▼',
         tag: { de: 'Steinway & Sons', en: 'Steinway & Sons', ja: 'スタインウェイ', zh: '施坦威大家庭' },
         heading: {
-          de: 'Neuer Firmeneigentümer: Steinway & Sons übernimmt Renner',
-          en: 'New Ownership: Steinway & Sons Acquires Renner',
-          ja: '新株主：スタインウェイ＆サンズによるレンナー買収と独立性の堅持',
-          zh: '新控股股东：施坦威钢琴（Steinway & Sons）收购雷诺并恪守独立运营'
+          de: '2019: Steinway & Sons übernimmt Renner – 100% Eigenständigkeit',
+          en: '2019: Steinway & Sons Acquires Renner – 100% Independence',
+          ja: '2019年：スタインウェイ傘下へ — 完全な独立性の堅持',
+          zh: '2019年：施坦威钢琴收购雷诺 — 恪守100%独立运营'
         },
         sentence: {
-          de: '2019 stellte Inhaber Clemens von Arnim die Weichen für die Zukunft: Trotz höherer Kaufangebote anderer Bieter entschied er sich mit großer Weitsicht für Steinway & Sons – zum Schutz der Belegschaft und für die langfristige Eigenständigkeit von Renner.',
-          en: 'In 2019, owner Clemens von Arnim set the course for Renner’s future: Despite higher competing bids, he chose Steinway & Sons with visionary leadership – prioritizing the workforce and long-term independence:',
-          ja: '2019年、オーナーのクレメンス・フォン・アルニム氏は未来を見据えた英断を下しました。他社からより高額な買収提示があったにもかかわらず、社員の雇用とレンナーの独立を守るためスタインウェイを選択：',
-          zh: '2019年，雷诺原控股股东克莱门斯·冯·阿尔尼姆（Clemens von Arnim）以非凡远见奠定百年基石：面对出价更高的竞争买家，他毅然选择施坦威——只为全力保障员工权益与雷诺品牌的独立未来：'
+          de: '2019 entschied sich Inhaber Clemens von Arnim mit großer Weitsicht für Steinway & Sons – zum Schutz der Belegschaft und für die volle Unabhängigkeit von Renner.',
+          en: 'In 2019, owner Clemens von Arnim chose Steinway & Sons with foresight – prioritizing the workforce and securing Renner’s full operational independence.',
+          ja: '2019年、オーナーのクレメンス・フォン・アルニム氏は社員の雇用と事業の完全な独立を守るため、スタインウェイ傘下への参入を決断しました。',
+          zh: '2019年，原控股股东克莱门斯·冯·阿尔尼姆以远见卓识选择施坦威——只为全方位保障员工权益与雷诺独立经营。'
         },
         bullets: {
           de: [
-            '<strong>Historische Partnerschaft & 100% Unabhängigkeit:</strong> Steinway & Sons (Hamburg & New York) garantiert Renner vollständige operative Eigenständigkeit; Renner beliefert unverändert alle führenden Klavierbauer weltweit.',
-            '<strong>Verantwortung vor Profit – Clemens von Arnim:</strong> Es gab Bieter, die mehr geboten hatten – doch er entschloss sich aus tiefer Verbundenheit für Louis Renner und die Belegschaft für Steinway, denn dadurch waren die Arbeitsplätze und die Zukunft gesichert.',
-            '<strong>In ehrendem Gedenken († 23.04.2024):</strong> Unser tiefster Dank gilt Clemens von Arnim für seine Weitsicht und Führung. Tragischerweise verstarb er viel zu früh am 23. April 2024, ohne seinen wohlverdienten Ruhestand voll auskosten zu können.'
+            '<strong>100% Eigenständigkeit:</strong> Steinway & Sons garantiert volle operative Unabhängigkeit.',
+            '<strong>Verantwortung vor Profit:</strong> Clemens von Arnim lehnte höhere Gebote zum Schutz der Belegschaft ab.',
+            '<strong>Ehrendes Gedenken († 2024):</strong> Tiefer Dank an Clemens von Arnim für seine visionäre Führung.'
           ],
           en: [
-            '<strong>Historic Partnership & 100% Independence:</strong> Steinway & Sons (Hamburg & New York) guarantees complete operational autonomy, ensuring Renner continues supplying premier piano makers worldwide.',
-            '<strong>Responsibility over Profit – Clemens von Arnim:</strong> Despite higher financial offers from other bidders, von Arnim consciously chose Steinway out of deep loyalty to secure jobs and the Renner legacy.',
-            '<strong>In Grateful Memory († April 23, 2024):</strong> Our profound gratitude goes to Clemens von Arnim for his foresight and devotion. Tragically, he passed away far too early on April 23, 2024, before he could enjoy his well-deserved retirement.'
+            '<strong>100% Autonomy:</strong> Steinway & Sons guarantees complete operational independence.',
+            '<strong>People over Profit:</strong> Clemens von Arnim rejected higher bids to safeguard all jobs.',
+            '<strong>In Memory († 2024):</strong> Profound gratitude to Clemens von Arnim for his visionary leadership.'
           ],
           ja: [
-            '<strong>歴史的協業と100%独立性の堅持:</strong> スタインウェイ（ハンブルク・NY）は完全な事業独立性を確約。世界中の名門ピアノメーカーへの最高品質供給をそのまま維持。',
-            '<strong>利益より社員の未来を優先（C. v. アルニム氏の英断）:</strong> 高額な競合入札を退け、従業員の生活とブランドの魂を守るため、スタインウェイ傘下への参入を決断。',
-            '<strong>深き感謝と追悼（2024年4月23日逝去）:</strong> その崇高な功績と先見性に心から感謝を捧げます。惜しむらくは、待望の余生を過ごす間もなく、2024年4月23日に若くして旅立たれました。'
+            '<strong>完全な事業独立性：</strong> スタインウェイが経営・製造の100%独立性を完全保証。',
+            '<strong>社員を最優先：</strong> 故アルニム氏は従業員の雇用を守るため高額な買収提示を拒絶。',
+            '<strong>心からの追悼（† 2024）：</strong> 崇高な先見性で未来を託した故人に深謝を捧ぐ。'
           ],
           zh: [
-            '<strong>世纪战略联姻与100%独立运营:</strong> 施坦威（汉堡/纽约）郑重承诺雷诺享有完全独立的经营自主权，一如既往向全球所有名琴厂商供应顶级击弦机与弦槌。',
-            '<strong>员工福祉重于一切（冯·阿尔尼姆先生的仁厚抉择）:</strong> 尽管有其他买方开出更高报价，他毅然为全体员工的稳定生计与雷诺匠心精神的长久延续选择了施坦威。',
-            '<strong>深切缅怀与由衷敬意（2024年4月23日逝世）:</strong> 我们由衷感谢冯·阿尔尼姆先生的远见卓识与卓越奉献。令人无比痛惜的是，他在步入应享的天伦退休生活前夕，于2024年4月23日英年早逝。'
+            '<strong>恪守100%自主运营：</strong> 施坦威郑重承诺雷诺享有完全独立的经营与制造主权。',
+            '<strong>责任重于利润：</strong> 冯·阿尔尼姆先生拒绝更高出价，只为全力守护全体员工生计。',
+            '<strong>深切缅怀（† 2024）：</strong> 由衷铭记冯·阿尔尼姆先生非凡的战略远见与奉献。'
           ]
         },
         fact: {
@@ -543,16 +694,35 @@ class RennerHistoryJourney {
         },
         images: [
           'Visuell/Video/steinwayshort.mp4',
-          'Visuell/Bilder/01_Geschichte/ClemensVonArnimProduktion.jpg'
+          'Visuell/Bilder/01_Geschichte/01_2019_clemens_von_arnim_produktion.jpg'
         ],
-        image: 'Visuell/Bilder/01_Geschichte/ClemensVonArnimProduktion.jpg',
+        image: 'Visuell/Bilder/01_Geschichte/01_2019_clemens_von_arnim_produktion.jpg',
         imageTag: { de: '2019 Steinway', en: '2019 Steinway', ja: '2019年スタインウェイ', zh: '2019年施坦威' },
         imageCaption: {
-          de: 'Historische Partnerschaft mit Steinway & Sons und Inhaber Clemens von Arnim in der Produktion († 23.04.2024)',
+          de: 'Historische Partnerschaft mit Steinway & Sons',
           en: 'Historic Partnership with Steinway & Sons and owner Clemens von Arnim in production († April 23, 2024)',
           ja: 'スタインウェイ＆サンズとの歴史的協業と製造現場の故クレメンス・フォン・アルニム氏（2024年4月23日逝去）',
           zh: '施坦威历史性携手与深入生产一线的原控股股东克莱门斯·冯·阿尔尼姆先生（2024年4月23日逝世）'
-        }
+        },
+        imageCaptions: {
+          de: [
+            'Historische Partnerschaft mit Steinway & Sons: 100% operative Eigenständigkeit',
+            'Clemens von Arnim in der Fertigung: Schutz der Belegschaft & Zukunftssicherung'
+          ],
+          en: [
+            'Historic Partnership with Steinway & Sons: 100% operational independence',
+            'Clemens von Arnim on the factory floor: Protecting staff & securing the future'
+          ],
+          ja: [
+            'スタインウェイ＆サンズとの歴史的協業：ルイス・レンナーの100%事業独立性を維持',
+            '製造現場の故クレメンス・フォン・アルニム氏：従業員の保護と伝統の未来継承'
+          ],
+          zh: [
+            '施坦威（Steinway & Sons）历史性携手：保障雷诺100%独立运营',
+            '克莱门斯·冯·阿尔尼姆在生产一线：守护全体员工与百年品牌未来'
+          ]
+        },
+        slide_interval: 4500
       },
 
       8: {
@@ -562,37 +732,37 @@ class RennerHistoryJourney {
         arrow: '▲',
         tag: { de: 'Meuselwitz', en: 'Global HQ', ja: '統合世界本社', zh: '全球新总部' },
         heading: {
-          de: 'Tradition bewahren. Zukunft gestalten: Von 1882 bis heute',
-          en: 'Preserving Tradition. Shaping the Future: From 1882 to Today',
-          ja: '伝統を守り、未来を創る：1882年から現在へ',
-          zh: '恪守传统 · 塑造未来：从1882年走向今日'
+          de: 'Heute: Tradition bewahren. Zukunft gestalten.',
+          en: 'Today: Preserving Tradition. Shaping the Future.',
+          ja: '現在：伝統を守り、未来を創る',
+          zh: '今日：恪守传统 · 塑造未来'
         },
         sentence: {
-          de: 'Aus der kleinen Werkstätte von 1882 ist in über 140 Jahren ein Weltmarktführer entstanden. Unser Leitgedanke ist damals wie heute derselbe: Renner-Mechaniken in denkbar bester Qualität zu liefern und durch neueste praktische sowie musikwissenschaftliche Erkenntnisse stetig zu perfektionieren.',
-          en: 'From a modest workshop founded in 1882, Louis Renner has grown over 140+ years into the global market leader. Our guiding principle remains unchanged: to deliver Renner actions of unsurpassed quality, continuously perfected through modern manufacturing and musicological insights.',
-          ja: '1882年の小さな工房から始まったルイス・レンナーは、140年以上の歳月を経て世界市場の頂点へと成長しました。創業から今日に至るまで変わらぬ信念は、最高峰品質のレンナー・アクションを届けるとともに、最新の製造技術と音楽音響学の知見により絶え間なく完成度を高め続けることです。',
-          zh: '从1882年创立的手工工坊，到历经140余载砥砺前行，雷诺已成长为全球钢琴击弦机市场的领航者。历久弥新的初心始终如一：打造无出其右的雷诺机械传动核心，并依托前沿工艺与乐器声学最新成果实现精益求精。'
+          de: 'Aus der kleinen Werkstatt von 1882 ist der globale Qualitätsmaßstab geworden. Heute bündelt Renner alle Kräfte am Welt-Hauptsitz Meuselwitz.',
+          en: 'From a modest 1882 workshop to the global quality benchmark. Today, Renner unites all operations at its world headquarters in Meuselwitz.',
+          ja: '1882年の小さな工房から世界的リーダーへ。今日、レンナーは全製造プロセスを統合世界本社モイゼルヴィッツへと集約しています。',
+          zh: '从1882年工坊到全球第一品质标杆。今天，雷诺将全部力量汇聚于全球新总部莫伊瑟尔维茨。'
         },
         bullets: {
           de: [
-            '<strong>Wegweisende Standortbündelung:</strong> Um dieser Mission und unserer Geschichte auch in Zukunft gerecht zu werden, haben wir eine wegweisende Entscheidung getroffen: Die Bündelung unserer gesamten Kompetenz an einem zentralen Standort. Mit der Verlagerung von Gärtringen nach Meuselwitz schreiben wir die Renner-Erfolgsgeschichte konzentriert fort.',
-            '<strong>Dank an das Team Gärtringen:</strong> Unser besonderer Dank gilt dabei unseren treuen Mitarbeiterinnen und Mitarbeitern in Gärtringen für ihren herausragenden Einsatz bis zum letzten Tag.',
-            '<strong>Meilenstein vollendet:</strong> Nach dem Projektstart im Oktober 2025 ist dieser Meilenstein heute erreicht: Alle Prozesse wurden erfolgreich nach Meuselwitz überführt.'
+            '<strong>Standortbündelung vollendet:</strong> Alle Fertigungsbereiche erfolgreich in Meuselwitz vereint.',
+            '<strong>Dank an Team Gärtringen:</strong> Tiefste Anerkennung für jahrzehntelangen herausragenden Einsatz.',
+            '<strong>Zukunft der Spitzenklasse:</strong> Konzentriertes Wissen sichert höchste Präzision für Generationen.'
           ],
           en: [
-            '<strong>Pioneering Consolidation:</strong> To honor our mission and heritage in the future, we made a landmark decision: consolidating our entire expertise at a single central facility. Relocating from Gärtringen to Meuselwitz enables us to write the next chapter of Renner\'s success story in concentrated form.',
-            '<strong>Gratitude to the Gärtringen Team:</strong> We extend our heartfelt gratitude to our loyal employees in Gärtringen for their extraordinary dedication and commitment up to the very last day.',
-            '<strong>Milestone Achieved:</strong> Following the project launch in October 2025, this milestone is accomplished today: all processes have been successfully transferred to Meuselwitz.'
+            '<strong>Consolidation Completed:</strong> All production branches successfully united in Meuselwitz.',
+            '<strong>Gratitude to Team Gärtringen:</strong> Profound appreciation for decades of excellence.',
+            '<strong>World-Class Future:</strong> Concentrated expertise securing highest precision for generations.'
           ],
           ja: [
-            '<strong>先駆的な拠点統合：</strong> この使命と歴史を未来へ受け継ぐため、全知見・技術を単一拠点に集約するという英断を下しました。ゲルトリンゲンからモイゼルヴィッツへの移転統合により、レンナーの成功の軌跡をさらに力強く前進させます。',
-            '<strong>ゲルトリンゲン社員への感謝：</strong> 最終日まで惜しみない情熱と卓越した技術で貢献してくださったゲルトリンゲンの全スタッフに、心より深甚なる感謝を捧げます。',
-            '<strong>マイルストーン達成：</strong> 2025年10月のプロジェクト始動を経て、本日この節目を達成：全製造プロセスがモイゼルヴィッツへ完全に移管・統合されました。'
+            '<strong>統合の完全達成：</strong> 全製造部門をモイゼルヴィッツ世界本社へ完全に集約。',
+            '<strong>ゲルトリンゲン社員へ感謝：</strong> 伝統を支え続けてくれた仲間たちに心からの敬意を。',
+            '<strong>最高峰の未来へ：</strong> 結集した知見と最新設備で、次世代の完璧な品質を約束。'
           ],
           zh: [
-            '<strong>开创性总部聚合：</strong> 为在未来持续践行使命与荣耀传承，我们做出了里程碑式的重大决策：将全部专业力量汇聚于同一现代化中心。随着盖特灵根厂区向莫伊瑟尔维茨总部的整体迁徙，雷诺传奇篇章得以更为集中地续写。',
-            '<strong>感恩盖特灵根团队：</strong> 我们向盖特灵根所有兢兢业业的忠实员工致以最由衷的感谢，深切铭记大家直至最后一刻的卓越奉献。',
-            '<strong>里程碑圆满达成：</strong> 历经2025年10月启动的项目攻坚，这一宏伟目标于今日圆满达成：全部生产体系与工艺流程均已顺利移交莫伊瑟尔维茨。'
+            '<strong>全面整合圆满达成：</strong> 全部制造板块完整集聚于莫伊瑟尔维茨全球总部。',
+            '<strong>致敬盖特灵根团队：</strong> 由衷铭记全体同仁数十年如一日的匠心奉献与付出。',
+            '<strong>铸就传世顶级未来：</strong> 汇聚尖端工艺与最强产能，为未来世代锻造传世精密之作。'
           ]
         },
         fact: {
@@ -613,13 +783,13 @@ class RennerHistoryJourney {
           ja: 'クレメンス・クーナート（ルイス・レンナー モイゼルヴィッツ）',
           zh: '克莱门斯·库纳特 • 雷诺莫伊瑟尔维茨总部'
         },
-        image: 'Visuell/Bilder/02_Meuselwitz_Umbau/24_meuselwitz_moderner_hauptsitz_aussen_innen.jpg',
-        imageTag: { de: 'Meuselwitz 2025', en: 'Meuselwitz 2025', ja: 'モイゼルヴィッツ 2025', zh: '莫伊瑟尔维茨 2025' },
+        image: 'Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png',
+        imageTag: { de: 'Meuselwitz 2026', en: 'Meuselwitz 2026', ja: 'モイゼルヴィッツ 2026', zh: '莫伊瑟尔维茨 2026' },
         imageCaption: {
-          de: 'Der neue vereinte Louis Renner Welt-Hauptsitz in Meuselwitz (Thüringen)',
-          en: 'The new consolidated Louis Renner World Headquarters in Meuselwitz (Thuringia)',
-          ja: 'テューリンゲン州モイゼルヴィッツに誕生したレンナー新世界統合本社',
-          zh: '位于图林根州莫伊瑟尔维茨的一体化雷诺全球新总部'
+          de: 'Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)',
+          en: 'World Headquarters Meuselwitz: Modernized production facility with central filtration & extraction system (2026)',
+          ja: 'モイゼルヴィッツ世界統合本社：最新の集中集塵・排気フィルター設備を備えた製造工場（2026年）',
+          zh: '莫伊瑟尔维茨全球总部：配备现代化中央过滤与环保吸附系统的核心生产基地（2026年）'
         }
       }
     };
@@ -708,11 +878,12 @@ class RennerHistoryJourney {
       if (mediaList.length <= 1) return;
 
       let currentIdx = 0;
-      const intervalMs = parseInt(slideshow.getAttribute('data-slide-interval') || '5000', 10);
+      const intervalMs = parseInt(slideshow.getAttribute('data-slide-interval') || '3500', 10);
       let timer = null;
 
       const stopTimer = () => {
         if (timer) {
+          clearTimeout(timer);
           clearInterval(timer);
           timer = null;
         }
@@ -720,33 +891,50 @@ class RennerHistoryJourney {
 
       const startTimer = () => {
         stopTimer();
-        timer = setInterval(() => {
-          const panel = slideshow.closest('.tree-milestone-panel');
-          const slide = slideshow.closest('.slide');
-          // Only cycle when slide 3 and the milestone panel are active
-          if (slide && !slide.classList.contains('active')) return;
-          if (panel && !panel.classList.contains('active')) return;
+        const currentMedia = mediaList[currentIdx];
+        if (currentMedia && currentMedia.tagName === 'VIDEO') {
+          // Videos must play uninterrupted to the end; do not set a timeout
+          return;
+        }
+        const panel = slideshow.closest('.tree-milestone-panel');
+        const slide = slideshow.closest('.slide');
+        // Only cycle when slide 3, milestone panel, and revealed card are all active
+        if (slide && !slide.classList.contains('active')) return;
+        if (panel && (!panel.classList.contains('active') || !panel.querySelector('.tree-hero-card.is-revealed'))) return;
 
-          updateSlide(currentIdx + 1);
+        timer = setTimeout(() => {
+          if (slide && !slide.classList.contains('active')) return;
+          if (panel && (!panel.classList.contains('active') || !panel.querySelector('.tree-hero-card.is-revealed'))) return;
+          updateSlide(currentIdx + 1, false, true);
         }, intervalMs);
       };
 
-      const updateSlide = (idx) => {
-        currentIdx = (idx + mediaList.length) % mediaList.length;
+      const updateSlide = (idx, instant = false, autoStart = true) => {
         stopTimer();
+        currentIdx = (idx + mediaList.length) % mediaList.length;
 
         mediaList.forEach((el, i) => {
           const isActive = i === currentIdx;
+          if (instant) {
+            el.style.transition = 'none';
+          }
           el.classList.toggle('active', isActive);
+          if (instant) {
+            void el.offsetWidth;
+            el.style.transition = '';
+          }
           if (el.tagName === 'VIDEO') {
             el.loop = false;
             el.removeAttribute('loop');
-            if (isActive) {
+            if (isActive && autoStart) {
               el.currentTime = 0;
               const playPromise = el.play();
               if (playPromise) playPromise.catch(() => {});
             } else {
               el.pause();
+              if (isActive && !autoStart) {
+                el.currentTime = 0;
+              }
             }
           }
         });
@@ -759,12 +947,20 @@ class RennerHistoryJourney {
         const captionEl = slideshow.closest('.hero-image-wrapper')?.querySelector('.hero-image-caption');
         if (captionEl && currentMedia) {
           const cap = currentMedia.getAttribute('data-caption');
-          if (cap && captionEl.textContent !== cap) {
-            captionEl.style.opacity = '0';
-            setTimeout(() => {
+          if (cap) {
+            if (instant) {
+              captionEl.style.transition = 'none';
               captionEl.textContent = cap;
               captionEl.style.opacity = '1';
-            }, 350);
+              void captionEl.offsetWidth;
+              captionEl.style.transition = '';
+            } else if (captionEl.textContent !== cap) {
+              captionEl.style.opacity = '0';
+              setTimeout(() => {
+                captionEl.textContent = cap;
+                captionEl.style.opacity = '1';
+              }, 250);
+            }
           }
         }
 
@@ -773,13 +969,13 @@ class RennerHistoryJourney {
             const panel = slideshow.closest('.tree-milestone-panel');
             const slide = slideshow.closest('.slide');
             if (slide && !slide.classList.contains('active')) return;
-            if (panel && !panel.classList.contains('active')) return;
-            updateSlide(currentIdx + 1);
+            if (panel && (!panel.classList.contains('active') || !panel.querySelector('.tree-hero-card.is-revealed'))) return;
+            updateSlide(currentIdx + 1, false, true);
           };
           currentMedia.onerror = () => {
-            updateSlide(currentIdx + 1);
+            updateSlide(currentIdx + 1, false, true);
           };
-        } else {
+        } else if (autoStart) {
           startTimer();
         }
       };
@@ -787,15 +983,43 @@ class RennerHistoryJourney {
       dots.forEach((dot, idx) => {
         dot.addEventListener('click', (e) => {
           e.stopPropagation();
-          updateSlide(idx);
+          updateSlide(idx, false, true);
         });
       });
 
-      slideshow._slideshowReset = () => {
-        updateSlide(0);
+      slideshow._slideshowReset = (instant = true, andStart = false) => {
+        stopTimer();
+        updateSlide(0, instant, andStart);
       };
 
-      updateSlide(0);
+      slideshow._slideshowStart = () => {
+        const currentMedia = mediaList[currentIdx];
+        if (currentMedia && currentMedia.tagName === 'VIDEO') {
+          currentMedia.currentTime = 0;
+          const playPromise = currentMedia.play();
+          if (playPromise) {
+            playPromise.catch(() => {
+              // Fallback if browser blocks video autoplay
+              startTimer();
+            });
+          }
+          return;
+        }
+        startTimer();
+      };
+
+      slideshow._slideshowStop = () => {
+        stopTimer();
+        mediaList.forEach(el => {
+          if (el.tagName === 'VIDEO') {
+            try { el.pause(); } catch(e) {}
+          }
+        });
+      };
+
+      // Initial state: reset to index 0 instantly, keep timer stopped until card is revealed
+      slideshow._slideshowReset(true, false);
+      stopTimer();
     });
   }
 
@@ -1271,6 +1495,17 @@ class RennerHistoryJourney {
       if (year) year.classList.remove('is-revealed');
     });
 
+    // Reset and stop all hero slideshows instantly
+    document.querySelectorAll('.hero-image-slideshow').forEach(ss => {
+      if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
+      if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
+    });
+
+    const m3 = document.getElementById('tree-milestone-3');
+    if (m3) m3.classList.remove('fire-ignited');
+    const m8 = document.getElementById('tree-milestone-8');
+    if (m8) m8.classList.remove('sheen-ignited');
+
     // Update Header Controls for Dark Start
     const counterBadge = document.getElementById('vox-step-counter');
     const prevBtn = document.getElementById('vox-prev-btn');
@@ -1301,6 +1536,17 @@ class RennerHistoryJourney {
     this.currentMilestone = 0;
     const data = this.milestonesData[0];
     if (!data) return;
+
+    // Reset and stop all hero slideshows instantly before start flight
+    document.querySelectorAll('.hero-image-slideshow').forEach(ss => {
+      if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
+      if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
+    });
+
+    const m3Start = document.getElementById('tree-milestone-3');
+    if (m3Start) m3Start.classList.remove('fire-ignited');
+    const m8Start = document.getElementById('tree-milestone-8');
+    if (m8Start) m8Start.classList.remove('sheen-ignited');
 
     const container = document.getElementById('tree-timeline-container');
     if (container) container.classList.remove('is-dark-start');
@@ -1400,6 +1646,12 @@ class RennerHistoryJourney {
               if (pill) pill.classList.add('is-revealed');
               const year = firstPanel.querySelector('.tree-watermark-year');
               if (year) year.classList.add('is-revealed');
+
+              const ss = firstPanel.querySelector('.hero-image-slideshow');
+              if (ss) {
+                if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
+                if (typeof ss._slideshowStart === 'function') ss._slideshowStart();
+              }
             }
           }, 380));
 
@@ -1469,7 +1721,28 @@ class RennerHistoryJourney {
       if (prevYear) prevYear.classList.remove('is-revealed');
       const prevVideos = prevPanel.querySelectorAll('video');
       prevVideos.forEach(v => { try { v.pause(); } catch(e){} });
+
+      const prevSs = prevPanel.querySelector('.hero-image-slideshow');
+      if (prevSs) {
+        if (typeof prevSs._slideshowStop === 'function') prevSs._slideshowStop();
+        if (typeof prevSs._slideshowReset === 'function') prevSs._slideshowReset(true, false);
+      }
     }
+
+    // Instantly stop and reset target panel slideshow to index 0 before flight begins
+    const targetPanel = document.getElementById(`tree-milestone-${index}`);
+    if (targetPanel) {
+      const targetSs = targetPanel.querySelector('.hero-image-slideshow');
+      if (targetSs) {
+        if (typeof targetSs._slideshowStop === 'function') targetSs._slideshowStop();
+        if (typeof targetSs._slideshowReset === 'function') targetSs._slideshowReset(true, false);
+      }
+    }
+
+    const m3Travel = document.getElementById('tree-milestone-3');
+    if (m3Travel) m3Travel.classList.remove('fire-ignited');
+    const m8Travel = document.getElementById('tree-milestone-8');
+    if (m8Travel) m8Travel.classList.remove('sheen-ignited');
 
     // 2. Aktive Epochen-Klasse setzen
     document.querySelectorAll('.tree-milestone-panel').forEach((panel, idx) => {
@@ -1631,6 +1904,20 @@ class RennerHistoryJourney {
             branchRay.classList.add('branch-' + data.branch, 'is-active');
           }
 
+          // Folie 3 Meilenstein 9 (Blatt 9: Heute / Meuselwitz 2026):
+          // Eleganter goldener Lichtschein genau 0,25s (250ms) BEVOR der Inhalt platziert wird!
+          // Da der Inhalt bei 360ms platziert wird: 360ms - 250ms = 110ms
+          if (index === 8) {
+            this.animationTimeouts.push(setTimeout(() => {
+              if (this.currentMilestone === 8) {
+                const currentPanel = document.getElementById('tree-milestone-8');
+                if (currentPanel && currentPanel.classList.contains('active')) {
+                  currentPanel.classList.add('sheen-ignited');
+                }
+              }
+            }, 110));
+          }
+
           // Karte der neuen Epoche öffnet sich
           this.animationTimeouts.push(setTimeout(() => {
             const currentPanel = document.getElementById(`tree-milestone-${index}`);
@@ -1643,8 +1930,23 @@ class RennerHistoryJourney {
               if (year) year.classList.add('is-revealed');
 
               const ss = currentPanel.querySelector('.hero-image-slideshow');
-              if (ss && typeof ss._slideshowReset === 'function') {
-                ss._slideshowReset();
+              if (ss) {
+                if (typeof ss._slideshowReset === 'function') {
+                  ss._slideshowReset(true, false);
+                }
+                if (typeof ss._slideshowStart === 'function') {
+                  ss._slideshowStart();
+                }
+              }
+
+              // Folie 3 Blatt 4 (Meilenstein 1944 Brandnacht):
+              // Flammen-Effekt erst mit 1 Sekunde Zeitversatz NACH Aufbau des Inhalts (550ms Reveal + 1000ms Versatz)
+              if (index === 3) {
+                this.animationTimeouts.push(setTimeout(() => {
+                  if (this.currentMilestone === 3 && currentPanel.classList.contains('active')) {
+                    currentPanel.classList.add('fire-ignited');
+                  }
+                }, 1550));
               }
             }
           }, 360));

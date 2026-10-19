@@ -3,7 +3,7 @@
 
 > [!NOTE]
 > Die 26 aus diesem Buch extrahierten Bildtafeln, REM-Aufnahmen und Stichschemata befinden sich im separaten Referenzordner [Visuell/Bilder/Referenz_Olbrich_Buch/](file:///Users/clemenskunert/Documents/Pr%C3%A4sentation%20-%20Renner/Visuell/Bilder/Referenz_Olbrich_Buch) und sind bewusst getrennt von den aktiven Präsentationsmedien (`01_` bis `06_`).
-> Das vollständige Texttranskript (74 Buchseiten) liegt unter [Präsentation - Basis/extracted_texts/2012_Buch_Intonieren_Burkard_Olbrich.txt](file:///Users/clemenskunert/Documents/Pr%C3%A4sentation%20-%20Renner/Pra%CC%88sentation%20-%20Basis/extracted_texts/2012_Buch_Intonieren_Burkard_Olbrich.txt).
+> Das vollständige Texttranskript (74 Buchseiten) liegt unter [Praesentation_Basis/extracted_texts/2012_Buch_Intonieren_Burkard_Olbrich.txt](file:///Users/clemenskunert/Documents/Pr%C3%A4sentation%20-%20Renner/Praesentation_Basis/extracted_texts/2012_Buch_Intonieren_Burkard_Olbrich.txt).
 
 ---
 

@@ -72,6 +72,17 @@ class PresentationController {
   initLiveTranslationSync() {
     this.lastTranslationVersion = 0;
 
+    // Standalone & Offline Support: Immediately apply pre-compiled translations from translations-data.js
+    if (typeof window !== 'undefined' && window.slideTranslations && typeof translations !== 'undefined') {
+      for (const lang of ['de', 'en', 'ja', 'zh']) {
+        if (window.slideTranslations[lang]) {
+          translations[lang] = translations[lang] || {};
+          Object.assign(translations[lang], window.slideTranslations[lang]);
+        }
+      }
+      this.updateLanguage(this.currentLang);
+    }
+
     // Helper: merge fresh JSON from slides_content.json directly into translations
     this.applySlideContentData = (data) => {
       if (!data) return;
@@ -116,10 +127,11 @@ class PresentationController {
       this.updateLanguage(this.currentLang);
     };
 
-    // Live fetcher
+    // Live fetcher (only active over HTTP/HTTPS to prevent CORS/file errors)
     this.refreshTranslationsLive = async () => {
+      if (!window.location.protocol.startsWith('http')) return;
       try {
-        const res = await fetch(`/translations/slides_content.json?t=${Date.now()}`, { cache: 'no-store' });
+        const res = await fetch(`translations/slides_content.json?t=${Date.now()}`, { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
           this.applySlideContentData(data);
@@ -129,7 +141,7 @@ class PresentationController {
       }
     };
 
-    // 1. Initial live fetch
+    // 1. Initial live fetch if served over HTTP
     this.refreshTranslationsLive();
 
     // 2. Window focus trigger: whenever user switches back to browser tab from editor
@@ -137,21 +149,23 @@ class PresentationController {
       this.refreshTranslationsLive();
     });
 
-    // 3. Heartbeat check every 1.5 seconds for instant hot-reload
-    setInterval(async () => {
-      try {
-        const res = await fetch(`/api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
-        if (res.ok) {
-          const json = await res.json();
-          if (json.version && json.version !== this.lastTranslationVersion) {
-            this.lastTranslationVersion = json.version;
-            await this.refreshTranslationsLive();
+    // 3. Heartbeat check every 1.5 seconds for instant hot-reload (HTTP/HTTPS only)
+    if (window.location.protocol.startsWith('http')) {
+      setInterval(async () => {
+        try {
+          const res = await fetch(`api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
+          if (res.ok) {
+            const json = await res.json();
+            if (json.version && json.version !== this.lastTranslationVersion) {
+              this.lastTranslationVersion = json.version;
+              await this.refreshTranslationsLive();
+            }
           }
+        } catch (e) {
+          // quiet fallback
         }
-      } catch (e) {
-        // quiet fallback
-      }
-    }, 1500);
+      }, 1500);
+    }
   }
 
 
@@ -476,6 +490,13 @@ class PresentationController {
       if (this.currentSlideIndex === 4 && window.meuselwitzTimelapse) {
         window.meuselwitzTimelapse.pause();
       }
+
+      // Stop slideshows if leaving history slide 3
+      if (previousSlide.querySelector('#history-slide-body')) {
+        previousSlide.querySelectorAll('.hero-image-slideshow').forEach(ss => {
+          if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
+        });
+      }
     }
 
 
@@ -759,10 +780,10 @@ class PresentationController {
     // Citing Renner Academy 2025 Masterclass Technical Principles & louis-renner.de History
     this.notesData = {
       0: {
-        de: "Begrüßung des Publikums in Tokio / Shanghai. Vorstellung von Clemens Kunert und der Louis Renner GmbH. Betonen Sie: 2025/2026 ist ein historischer Meilenstein durch die Konsolidierung aller Fertigungsschritte am hochmodernen Hauptsitz in Meuselwitz.",
-        en: "Welcome the audience in Tokyo / Shanghai. Introduction of Clemens Kunert and Louis Renner GmbH. Emphasize that 2025/2026 marks a historic milestone with the consolidated modern headquarters in Meuselwitz.",
-        ja: "東京・上海カンファレンスの皆様にご挨拶。クレメンス・クーネルトとルイス・レンナー社の紹介。モイゼルヴィッツ新本社への全工程統合という歴史的変革を強調。",
-        zh: "欢迎各位东京与上海钢琴业界的贵宾。主讲人克莱门斯·库内特介绍德国雷诺公司。强调2025/2026年雷诺新总部在莫伊瑟尔维茨全面整合的划时代意义。"
+        de: "Begrüßung des Publikums in Beijing / Toyohashi. Vorstellung von Clemens Kunert und der Louis Renner GmbH. Betonen Sie: 2025/2026 ist ein historischer Meilenstein durch die Konsolidierung aller Fertigungsschritte am hochmodernen Hauptsitz in Meuselwitz.",
+        en: "Welcome the audience in Beijing / Toyohashi. Introduction of Clemens Kunert and Louis Renner GmbH. Emphasize that 2025/2026 marks a historic milestone with the consolidated modern headquarters in Meuselwitz.",
+        ja: "北京・豊橋カンファレンスの皆様にご挨拶。クレメンス・クーネルトとルイス・レンナー社の紹介。モイゼルヴィッツ新本社への全工程統合という歴史的変革を強調。",
+        zh: "欢迎各位北京与丰桥钢琴业界的贵宾。主讲人克莱门斯·库内特介绍德国雷诺公司。强调2025/2026年雷诺新总部在莫伊瑟尔维茨全面整合的划时代意义。"
       },
       1: {
         de: "Überblick über die 6 Kernmodule der Renner Masterclass 2025 geben: 1. Historie & Hauptsitz Meuselwitz, 2. Filzherstellung (FFW Wurzen seit 1783), 3. Hammerkopf-Fertigung & Roboterzuschnitt, 4. Musterteilekoffer & Stiele, 5. Maßblätter & Geometrie (Bohrwinkel in Gon), 6. Hohe Schule der Intonation (Uhrenmodell & 4 Keile).",

@@ -916,42 +916,72 @@ body::before {
   transform: scale(0.96) translateX(40px);
 }
 
-/* Corner Watermark Logo (Bottom Right on every Slide) */
+/* Corner Watermark Logo (Prominent 56px in Bottom Left Corner on all Slides) */
 .slide-corner-watermark {
   position: absolute;
   bottom: 24px;
-  right: 28px;
+  left: 36px !important;
+  right: auto !important;
   z-index: 35;
   pointer-events: none;
   display: flex;
   align-items: center;
   gap: 8px;
-  opacity: 0.95;
+  opacity: 0.96;
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .slide-corner-logo {
-  height: 28px;
+  height: 56px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85));
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 14px rgba(200, 163, 86, 0.35));
   display: block;
 }
 
 .brand-logo-container.corner-variant .slide-corner-logo {
-  animation: rennerLogoAmbientGlow 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: rennerCornerLogoAmbientGlow 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-/* Slide 3: Prominent 2x Renner Logo in Bottom Left Corner */
-.slide[data-slide="3"] .slide-corner-watermark {
-  left: 36px;
-  right: auto;
-  bottom: 24px;
+.brand-logo-container.corner-variant .brand-logo-light-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-mask-image: url('../Visuell/web_assets/renner_logo_weiss_schatten.png');
+  mask-image: url('../Visuell/web_assets/renner_logo_weiss_schatten.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 26%,
+    rgba(255, 255, 255, 0.38) 38%,
+    rgba(255, 248, 220, 0.98) 50%,
+    rgba(255, 255, 255, 0.38) 62%,
+    transparent 74%,
+    transparent 100%
+  );
+  background-size: 260% 100%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: rennerLogoLightSweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-.slide[data-slide="3"] .slide-corner-logo {
-  height: 56px; /* Twice as large as default 28px */
-  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 14px rgba(200, 163, 86, 0.35));
+@keyframes rennerCornerLogoAmbientGlow {
+  0%, 38%, 100% {
+    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 14px rgba(200, 163, 86, 0.35));
+  }
+  16% {
+    filter: drop-shadow(0 4px 22px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 26px rgba(230, 200, 130, 0.75));
+  }
 }
 
 /* ==========================================================================
@@ -3119,7 +3149,7 @@ body::before {
 .tree-hero-card {
   width: calc(100% - 72px);
   max-width: 1380px;
-  height: clamp(480px, 68vh, 600px);
+  height: clamp(520px, 72vh, 660px);
   margin-right: 36px; /* Steht nah am rechten Bildschirmrand */
   background: rgba(13, 17, 26, 0.94);
   backdrop-filter: blur(18px);
@@ -3168,9 +3198,9 @@ body::before {
   }
 }
 
-/* Left Hero Picture Wrapper (54% Width) */
+/* Left Hero Picture Wrapper (46% Width) */
 .hero-image-wrapper {
-  flex: 0 0 54%;
+  flex: 0 0 46%;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -3212,7 +3242,7 @@ body::before {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.6s cubic-bezier(0.4, 0, 0.2, 1), transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1), transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
   transform: scale(1.035);
   pointer-events: none;
   z-index: 1;
@@ -3326,11 +3356,11 @@ body::before {
   position: absolute;
   top: 10px;
   left: 10px;
-  padding: 5px 14px;
+  padding: 6px 15px;
   background: rgba(9, 12, 18, 0.88);
   border: 1px solid rgba(200, 163, 86, 0.5);
   border-radius: 6px;
-  font-size: 0.76rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--gold-light);
   letter-spacing: 0.5px;
@@ -3345,7 +3375,7 @@ body::before {
   right: 0;
   padding: 12px 16px;
   background: linear-gradient(to top, rgba(9, 12, 18, 0.95), rgba(9, 12, 18, 0));
-  font-size: 0.74rem;
+  font-size: 0.84rem;
   color: rgba(255, 255, 255, 0.88);
   white-space: nowrap;
   overflow: hidden;
@@ -3354,10 +3384,10 @@ body::before {
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Right Meta Wrapper (Generous, 75% focus) */
+/* Right Meta Wrapper (54% Focus, Generous) */
 .hero-meta-wrapper {
-  flex: 1;
-  padding: 26px 32px;
+  flex: 0 0 54%;
+  padding: 26px 34px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3373,7 +3403,7 @@ body::before {
 
 .hero-year-pill {
   font-family: var(--font-serif);
-  font-size: 1.85rem;
+  font-size: 2.1rem;
   font-weight: 800;
   color: var(--gold-accent);
   text-shadow: 0 0 10px rgba(200, 163, 86, 0.6);
@@ -3411,7 +3441,7 @@ body::before {
 }
 
 .hero-step-tag {
-  font-size: 0.76rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.3px;
@@ -3419,47 +3449,57 @@ body::before {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.62rem;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.32;
-  margin: 8px 0 12px 0;
+  line-height: 1.28;
+  margin: 6px 0 10px 0;
 }
 
 .hero-sentence {
-  font-size: 1.02rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.55;
   margin: 0;
 }
 
-/* Bullet-Points für zusammengeführte Epochen-Inhalte (z. B. "Heute" & Meuselwitz-Strategie) */
+/* Bullet-Points für zusammengeführte Epochen-Inhalte (25% vergrößert & gleichmäßig verteilt) */
 .hero-bullet-list {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 16px 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: space-evenly;
+  gap: 14px;
 }
 
 .hero-bullet-item {
   display: flex;
-  align-items: baseline;
-  gap: 9px;
-  font-size: 0.86rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.38;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: clamp(1.25rem, 1.55vw, 1.45rem);
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.44;
+  padding: 2px 0;
+}
+
+.hero-bullet-item strong {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(1.28rem, 1.6vw, 1.48rem);
+  letter-spacing: 0.2px;
 }
 
 .hero-bullet-dot {
-  width: 6px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--gold-accent);
-  box-shadow: 0 0 8px rgba(200, 163, 86, 0.9);
+  box-shadow: 0 0 12px rgba(200, 163, 86, 0.95), 0 0 5px rgba(255, 255, 255, 0.7);
   flex-shrink: 0;
-  transform: translateY(-1px);
+  margin-top: 9px;
 }
 
 .hero-meta-bottom {
@@ -3474,12 +3514,12 @@ body::before {
 .hero-fact-tag {
   display: inline-flex;
   align-items: center;
-  padding: 5px 14px;
+  padding: 6px 16px;
   border-radius: 16px;
   background: rgba(200, 163, 86, 0.12);
   border: 1px solid rgba(200, 163, 86, 0.35);
   color: var(--gold-light);
-  font-size: 0.80rem;
+  font-size: 0.90rem;
   font-weight: 600;
 }
 
@@ -4077,5 +4117,401 @@ body::before {
 .slide.active .bento-card:nth-child(7) { animation-delay: 0.34s; }
 .slide.active .bento-card:nth-child(8) { animation-delay: 0.39s; }
 
+/* ==========================================================================
+   Folie 3 Blatt 4 (Meilenstein 1944 Brandnacht): Raging Firestorm Backdrop
+   Appears in the background behind the content container (.tree-hero-card)
+   ========================================================================== */
 
+/* Overall Fire Backdrop: spans the entire milestone panel behind content */
+.milestone-fire-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.3s;
+}
 
+#tree-milestone-3.fire-ignited .milestone-fire-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure the hero card and content sit clearly above the fire backdrop */
+.tree-hero-card {
+  z-index: 3;
+}
+
+/* 1. Deep Infernal Glow Core & Pulsing Warmth (Reaches across the slide) */
+.fire-inferno-glow {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 90% 70% at 50% 90%, rgba(255, 65, 0, 0.52) 0%, rgba(255, 115, 0, 0.36) 32%, rgba(180, 25, 0, 0.22) 58%, transparent 85%),
+    radial-gradient(ellipse 70% 55% at 20% 80%, rgba(255, 45, 0, 0.42) 0%, rgba(210, 65, 0, 0.24) 38%, transparent 72%),
+    radial-gradient(ellipse 75% 60% at 80% 80%, rgba(255, 75, 0, 0.44) 0%, rgba(225, 85, 0, 0.25) 40%, transparent 75%),
+    radial-gradient(circle at 50% 50%, rgba(230, 60, 0, 0.18) 0%, rgba(160, 25, 0, 0.1) 45%, transparent 75%);
+  filter: blur(52px);
+  opacity: 0.92;
+  animation: fireInfernoPulse 3.6s infinite alternate ease-in-out;
+  will-change: opacity, transform;
+}
+
+@keyframes fireInfernoPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  25% {
+    opacity: 0.98;
+    transform: scale(1.02);
+  }
+  48% {
+    opacity: 0.84;
+    transform: scale(0.99);
+  }
+  72% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0.88;
+    transform: scale(1);
+  }
+}
+
+/* 2. Smoke & Ash Convection Mist (Rising up through the slide) */
+.fire-smoke-drift {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 65% at 30% 70%, rgba(210, 45, 0, 0.2) 0%, rgba(45, 12, 6, 0.32) 50%, transparent 80%),
+    radial-gradient(ellipse 85% 70% at 72% 65%, rgba(230, 55, 0, 0.24) 0%, rgba(50, 15, 8, 0.34) 54%, transparent 82%),
+    linear-gradient(to top, rgba(180, 35, 0, 0.14) 0%, rgba(80, 15, 0, 0.08) 45%, transparent 85%);
+  filter: blur(42px);
+  mix-blend-mode: screen;
+  opacity: 0.78;
+  animation: fireSmokeBillow 7.5s infinite alternate ease-in-out;
+}
+
+@keyframes fireSmokeBillow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.68;
+  }
+  50% {
+    transform: translateY(-35px) scale(1.05);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.98);
+    opacity: 0.72;
+  }
+}
+
+/* 3. Ascending Fiery Embers & Sparks Field (Full Height: Rising all the way to the top) */
+.fire-embers-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fire-ember {
+  position: absolute;
+  left: var(--left, 50%);
+  bottom: 25px;
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 20%, #ffe166 50%, #ff5500 88%, transparent 100%);
+  box-shadow: 0 0 6px #ff7700, 0 0 14px #ff2200, 0 0 24px rgba(255, 80, 0, 0.65);
+  opacity: 0;
+  pointer-events: none;
+  animation: emberAscent var(--dur, 5s) infinite ease-out var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+@keyframes emberAscent {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(0.6);
+  }
+  12% {
+    opacity: 1;
+    transform: translateY(calc(var(--h, 750px) * -0.12)) translateX(calc(var(--drift, 18px) * 0.4)) scale(1.15);
+  }
+  45% {
+    opacity: 0.92;
+    transform: translateY(calc(var(--h, 750px) * -0.45)) translateX(calc(var(--drift, 18px) * -0.65)) scale(1);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(calc(var(--h, 750px) * -0.75)) translateX(calc(var(--drift, 18px) * 0.85)) scale(0.8);
+  }
+  90% {
+    opacity: 0.4;
+    transform: translateY(calc(var(--h, 750px) * -0.9)) translateX(calc(var(--drift, 18px) * -0.35)) scale(0.55);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(var(--h, 750px) * -1)) translateX(calc(var(--drift, 18px) * 0.55)) scale(0.2);
+  }
+}
+
+/* 4. Ambient Panel Glow & Background Red Illumination (Fades in with 1s delay on fire-ignited) */
+#tree-milestone-3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 95% 75% at 55% 85%, rgba(200, 40, 0, 0.28) 0%, rgba(130, 20, 0, 0.16) 45%, transparent 78%),
+    linear-gradient(to top, rgba(190, 35, 0, 0.22) 0%, rgba(110, 18, 0, 0.12) 40%, rgba(45, 6, 0, 0.05) 75%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+
+#tree-milestone-3.fire-ignited::before {
+  opacity: 1;
+}
+
+/* 5. Card Rim Lighting Reaction for Milestone 1944 Brandnacht (Activates with 1s delay on fire-ignited) */
+#tree-milestone-3.fire-ignited .tree-hero-card.is-revealed {
+  border-color: rgba(255, 120, 30, 0.85);
+  box-shadow: 
+    0 22px 56px rgba(0, 0, 0, 0.92),
+    0 0 45px rgba(255, 60, 0, 0.55),
+    0 0 95px rgba(255, 120, 0, 0.3),
+    inset 0 0 35px rgba(255, 60, 0, 0.15);
+  animation: cardFireRimPulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes cardFireRimPulse {
+  0% {
+    border-color: rgba(255, 100, 30, 0.72);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 35px rgba(255, 50, 0, 0.45),
+      0 0 75px rgba(255, 110, 0, 0.22),
+      inset 0 0 25px rgba(255, 50, 0, 0.12);
+  }
+  30% {
+    border-color: rgba(255, 140, 40, 0.92);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 55px rgba(255, 75, 0, 0.65),
+      0 0 115px rgba(255, 140, 0, 0.38),
+      inset 0 0 45px rgba(255, 70, 0, 0.22);
+  }
+  65% {
+    border-color: rgba(255, 110, 30, 0.76);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 40px rgba(255, 55, 0, 0.5),
+      0 0 88px rgba(255, 120, 0, 0.26),
+      inset 0 0 30px rgba(255, 55, 0, 0.15);
+  }
+  100% {
+    border-color: rgba(255, 150, 50, 0.96);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 65px rgba(255, 90, 0, 0.75),
+      0 0 135px rgba(255, 150, 0, 0.45),
+      inset 0 0 55px rgba(255, 80, 0, 0.28);
+  }
+}
+
+/* 6. Watermark "1944" Warm Reflection Reaction */
+#tree-milestone-3.fire-ignited .tree-watermark-year.is-revealed {
+  color: rgba(255, 120, 45, 0.28);
+  text-shadow: 0 0 35px rgba(255, 60, 0, 0.45), 0 0 75px rgba(255, 100, 0, 0.25);
+  transition: color 1.4s ease, text-shadow 1.4s ease;
+}
+
+/* Responsive Fire adjustments */
+@media (max-width: 1300px) {
+  .milestone-fire-backdrop {
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 900px) {
+  .milestone-fire-backdrop {
+    right: 7px;
+    width: calc(100% - 14px);
+  }
+}
+
+/* ==========================================================================
+   Folie 3 Meilenstein 9 (Blatt 9: Heute / Meuselwitz 2026):
+   Eleganter goldener Lichtschein hinter dem Inhalt (.tree-hero-card)
+   ========================================================================== */
+
+/* 1. Backdrop Container */
+.milestone-sheen-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 1.4s;
+}
+
+#tree-milestone-8.sheen-ignited .milestone-sheen-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 2. Soft Ambient Golden Glow (Fills behind the card with warm radiance) */
+.sheen-ambient-glow {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 84%;
+  max-width: 1420px;
+  height: clamp(540px, 74vh, 700px);
+  background: 
+    radial-gradient(ellipse 75% 65% at 62% 46%, rgba(200, 163, 86, 0.28) 0%, rgba(220, 185, 115, 0.16) 38%, rgba(180, 130, 45, 0.05) 66%, transparent 82%),
+    radial-gradient(circle at 45% 42%, rgba(255, 225, 155, 0.15) 0%, rgba(200, 163, 86, 0.05) 50%, transparent 75%);
+  filter: blur(50px);
+  opacity: 0.95;
+  animation: goldenSheenBreathe 8s infinite alternate ease-in-out;
+}
+
+/* 3. Concentrated Champagne Radial Flare directly behind card center */
+.sheen-radial-flare {
+  position: absolute;
+  top: 8%;
+  right: 6%;
+  width: 72%;
+  max-width: 1220px;
+  height: clamp(480px, 66vh, 620px);
+  background: 
+    radial-gradient(ellipse 55% 45% at 56% 45%, rgba(255, 240, 205, 0.32) 0%, rgba(212, 175, 55, 0.18) 32%, rgba(200, 163, 86, 0.06) 60%, transparent 76%),
+    radial-gradient(circle at 74% 38%, rgba(255, 220, 130, 0.16) 0%, transparent 55%);
+  filter: blur(36px);
+  opacity: 0.88;
+  animation: goldenFlareShift 10s infinite alternate ease-in-out;
+}
+
+/* 4. Soft Corona Ring creating atmospheric optical depth */
+.sheen-corona-ring {
+  position: absolute;
+  top: 2%;
+  right: 0%;
+  width: 88%;
+  max-width: 1480px;
+  height: clamp(560px, 76vh, 720px);
+  background: 
+    radial-gradient(ellipse 75% 55% at 60% 46%, transparent 40%, rgba(200, 163, 86, 0.15) 62%, rgba(220, 185, 115, 0.05) 78%, transparent 92%);
+  filter: blur(28px);
+  opacity: 0.75;
+  animation: goldenCoronaPulse 7s infinite alternate ease-in-out;
+}
+
+/* 5. Enhanced Card Elevation & Multi-Tier Aura on Meilenstein 9 Reveal */
+#tree-milestone-8.active .tree-hero-card.is-revealed {
+  box-shadow: 
+    0 24px 64px rgba(0, 0, 0, 0.88),
+    0 0 50px rgba(200, 163, 86, 0.38),
+    0 0 100px rgba(200, 163, 86, 0.18),
+    0 0 160px rgba(200, 163, 86, 0.08),
+    inset 0 0 25px rgba(200, 163, 86, 0.10);
+  border-color: rgba(200, 163, 86, 0.90);
+}
+
+@keyframes goldenSheenBreathe {
+  0% {
+    transform: scale(0.96) translateY(0);
+    opacity: 0.82;
+  }
+  100% {
+    transform: scale(1.04) translateY(-6px);
+    opacity: 1;
+  }
+}
+
+@keyframes goldenFlareShift {
+  0% {
+    transform: scale(0.98) translateX(0);
+    opacity: 0.78;
+  }
+  100% {
+    transform: scale(1.03) translateX(-12px);
+    opacity: 0.95;
+  }
+}
+
+@keyframes goldenCoronaPulse {
+  0% {
+    transform: scale(0.97);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scale(1.03);
+    opacity: 0.88;
+  }
+}
+
+/* Responsive adjustments for Meilenstein 9 Sheen */
+@media (max-width: 1300px) {
+  .milestone-sheen-backdrop {
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 900px) {
+  .milestone-sheen-backdrop {
+    right: 7px;
+    width: calc(100% - 14px);
+  }
+}
+
+/* ==========================================================================
+   Folie 2: Subtiler eleganter Lichtschein hinter den 6 Modul-Karten
+   ========================================================================== */
+.slide[data-slide="2"] .slide-body {
+  position: relative;
+}
+
+.slide[data-slide="2"] .slide-body::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 88%;
+  transform: translate(-50%, -50%);
+  background: 
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(200, 163, 86, 0.14) 0%, rgba(200, 163, 86, 0.05) 45%, transparent 72%),
+    radial-gradient(circle at 25% 35%, rgba(255, 220, 140, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 75% 65%, rgba(200, 163, 86, 0.08) 0%, transparent 55%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  animation: bentoSheenPulse 9s infinite alternate ease-in-out;
+}
+
+@keyframes bentoSheenPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.97);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.02);
+    opacity: 0.95;
+  }
+}

@@ -32,7 +32,7 @@ def get_all_slides_html():
     # SLIDE 1: Hero / Title Slide
     slides.append(f'''      <!-- SLIDE 1: Hero / Title Slide -->
       <section class="slide active hero-slide" data-slide="1">
-        <span class="hero-kicker" data-i18n="s1_kicker">Renner Masterclass & Konferenz 2025 • Tokyo & Shanghai</span>
+        <span class="hero-kicker" data-i18n="s1_kicker">Renner Masterclass & Konferenz 2025 • Beijing & Toyohashi</span>
         <h1 class="hero-main-title" data-i18n="s1_title">LOUIS RENNER</h1>
         <p class="hero-main-subtitle" data-i18n="s1_subtitle">Das Herzstück des Klaviers: 140 Jahre Tradition, die neue Fertigung in Meuselwitz & die hohe Kunst des Hammerkopfs</p>
         <div class="hero-meta-bar">
@@ -40,7 +40,7 @@ def get_all_slides_html():
             <span>Speaker:</span> <strong>Clemens Kunert</strong>
           </div>
           <div class="hero-meta-item">
-            <span>Location:</span> <strong>Tokyo & Shanghai Conference 2025</strong>
+            <span>Location:</span> <strong data-i18n="s1_location">Beijing & Toyohashi Conference 2025</strong>
           </div>
           <div class="hero-meta-item">
             <span>Headquarters:</span> <strong>Louis Renner GmbH • Meuselwitz, Germany</strong>
@@ -108,6 +108,107 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
+    def get_fire_backdrop_html():
+        embers_data = [
+            # (left%, size_px, dur_s, delay_s, drift_px, h_px)
+            # Tier 1: Main vibrant embers (left to right spread, climbing up to the top)
+            (2, 3.4, 4.8, 0.1, -18, 720),
+            (4, 2.2, 3.8, 1.4, 15, 620),
+            (6, 4.5, 5.8, 0.8, 25, 820),
+            (8, 1.8, 3.5, 2.2, -12, 540),
+            (10, 2.6, 4.1, 0.4, -22, 660),
+            (12, 3.8, 5.2, 1.9, 18, 770),
+            (14, 5.0, 6.1, 1.1, 28, 860),
+            (16, 2.0, 3.7, 2.7, -15, 570),
+            (18, 3.5, 4.6, 0.5, -20, 700),
+            (20, 4.2, 5.5, 1.7, 22, 790),
+            (22, 2.8, 4.9, 2.5, 24, 760),
+            (24, 1.6, 3.3, 0.3, -10, 520),
+            (26, 4.2, 5.9, 1.3, -28, 840),
+            (28, 3.0, 4.4, 2.9, 16, 680),
+            (30, 2.2, 3.8, 0.2, 14, 590),
+            (32, 4.8, 6.0, 1.8, -24, 850),
+            (34, 5.4, 6.3, 0.9, -26, 880),
+            (36, 2.4, 4.0, 2.4, 18, 640),
+            (38, 3.0, 4.5, 0.7, 20, 700),
+            (40, 4.0, 5.4, 1.5, -24, 790),
+            (42, 1.9, 3.6, 3.1, 12, 560),
+            (44, 4.6, 5.9, 0.6, 26, 830),
+            (46, 2.6, 4.2, 2.1, 15, 660),
+            (48, 3.3, 4.8, 1.0, -18, 740),
+            (50, 4.8, 6.1, 0.2, -22, 850),
+            (52, 2.1, 3.7, 2.6, 14, 580),
+            (54, 3.2, 4.7, 1.6, 26, 755),
+            (56, 4.4, 5.7, 0.8, -25, 820),
+            (58, 2.4, 3.9, 2.8, -14, 620),
+            (60, 3.6, 5.1, 1.2, 20, 780),
+            (62, 5.2, 6.2, 0.4, 25, 870),
+            (64, 1.7, 3.4, 2.3, -11, 535),
+            (66, 3.6, 5.0, 1.4, -20, 770),
+            (68, 4.5, 5.8, 3.0, 22, 830),
+            (70, 2.8, 4.3, 0.5, 18, 690),
+            (72, 3.9, 5.3, 1.7, -21, 795),
+            (74, 4.4, 5.7, 2.0, -27, 830),
+            (76, 2.0, 3.6, 0.7, 13, 570),
+            (78, 3.0, 4.5, 2.4, 21, 705),
+            (80, 4.7, 5.9, 1.1, -25, 840),
+            (82, 5.0, 6.2, 0.3, -23, 860),
+            (84, 2.3, 3.9, 2.7, 16, 625),
+            (86, 2.5, 4.1, 0.9, 15, 650),
+            (88, 4.1, 5.4, 1.9, -22, 805),
+            (90, 4.2, 5.5, 0.5, -24, 800),
+            (92, 1.8, 3.5, 2.5, 12, 550),
+            (94, 3.4, 4.9, 1.3, 20, 740),
+            (96, 4.6, 5.9, 2.8, -19, 830),
+            (98, 2.7, 4.2, 0.6, 14, 660),
+
+            # Tier 2: Additional convective sparks & glowing micro-embers (filling the space)
+            (3, 1.5, 3.2, 1.7, 9, 515),
+            (7, 3.1, 4.6, 2.3, -16, 715),
+            (11, 2.2, 3.7, 0.9, 13, 605),
+            (15, 4.3, 5.7, 3.2, -23, 820),
+            (19, 1.7, 3.3, 1.4, 10, 535),
+            (23, 3.5, 5.1, 0.1, -18, 750),
+            (27, 2.5, 4.0, 2.1, 16, 650),
+            (31, 4.0, 5.5, 1.6, -21, 810),
+            (35, 1.9, 3.6, 3.3, 12, 570),
+            (39, 3.7, 5.2, 0.8, -20, 775),
+            (43, 2.3, 3.8, 2.0, 14, 615),
+            (47, 4.7, 6.0, 1.2, -26, 845),
+            (51, 1.6, 3.2, 2.9, 9, 525),
+            (55, 3.8, 5.3, 0.4, 21, 785),
+            (59, 2.4, 3.9, 1.8, -14, 635),
+            (63, 4.5, 5.8, 3.1, 23, 835),
+            (67, 1.8, 3.4, 0.7, -11, 545),
+            (71, 3.4, 4.9, 2.2, 18, 740),
+            (75, 2.6, 4.1, 1.5, -17, 670),
+            (79, 4.9, 6.2, 0.3, 25, 860),
+            (83, 1.7, 3.3, 2.8, -10, 535),
+            (87, 3.6, 5.1, 1.1, 20, 765),
+            (91, 2.2, 3.7, 3.4, -13, 595),
+            (95, 4.4, 5.7, 0.5, 22, 820),
+
+            # Tier 3: Core intense floating flakes in central hotspot area
+            (21, 3.9, 5.4, 1.8, -21, 790),
+            (33, 4.6, 6.1, 2.6, 26, 850),
+            (45, 5.2, 6.4, 0.7, -25, 880),
+            (57, 4.1, 5.6, 2.3, 19, 800),
+            (69, 5.1, 6.3, 1.3, -24, 870),
+            (81, 3.8, 5.2, 2.7, 21, 775),
+            (89, 4.3, 5.6, 0.9, -18, 810),
+        ]
+        embers_html = "".join([
+            f'<span class="fire-ember" style="--left:{l}%;--size:{s}px;--dur:{dur}s;--delay:{delay}s;--drift:{drift}px;--h:{h}px;"></span>'
+            for l, s, dur, delay, drift, h in embers_data
+        ])
+        return f'''            <div class="milestone-fire-backdrop" aria-hidden="true">
+              <div class="fire-inferno-glow"></div>
+              <div class="fire-smoke-drift"></div>
+              <div class="fire-embers-field">
+                {embers_html}
+              </div>
+            </div>'''
+
     # SLIDE 3: 140+ Jahre Tradition & Meilensteine (Central Timeline with Vertical Tree Branches)
     history_milestones_data = [
       {
@@ -117,22 +218,22 @@ def get_all_slides_html():
         'branch': 'up',
         'arrow': '▲',
         'badge': '1882 • Gründung',
-        'heading': '1882: Gründung in Stuttgart – Die Reise beginnt mit der Klaviermechanik',
-        'sentence': 'Im Jahre 1882 hatte sich nach reiflicher Überlegung, vielem Nachdenken und so mancher schlaflosen Nacht für Louis Renner die Erkenntnis aufgetan, dass die Technik im Bau von Musikinstrumenten, in diesem Fall besonders von Klavieren, eine erfolgreiche Zukunft vor sich haben könnte. So richtete er ohne viele Worte in der Stuttgarter Heusteigstraße eine Werkstatt ein und begann an einem Herbsttag Mitte Oktober ganz bewusst mit der handwerklichen Herstellung von Klaviermechaniken – dem sensiblen Herzstück des Instruments.',
+        'heading': '1882: Gründung in Stuttgart – Beginn mit der Klaviermechanik',
+        'sentence': 'Im Oktober 1882 gründete Louis Renner seine Werkstatt in der Stuttgarter Heusteigstraße – mit dem Ziel, hochpräzise Klaviermechaniken als Herzstück des Instruments zu fertigen.',
         'bullets': [
-          '<strong>Beginn mit Klaviermechaniken (1882):</strong> Louis Renner startete seine unternehmerische Reise ganz gezielt mit der Konstruktion und Fertigung hochpräziser Klaviermechaniken in der Heusteigstraße, um dem aufstrebenden Klavierbau neue dynamische Maßstäbe zu verleihen.',
-          '<strong>Historische Parallele zu Carl Rönisch:</strong> Während sächsische Pioniere wie Carl Rönisch (gegr. 1845 in Dresden) mit der Erfindung der Voll-Panzerplatte (1866) die klangliche Stabilität revolutionierten, schuf Louis Renner in Stuttgart den maßgebenden mechanischen Präzisionsstandard.',
-          '<strong>Entscheidende Wegekreuzung & Wurzel von Meuselwitz:</strong> 1990 sollten sich beide Traditionslinien schicksalhaft vereinen: Nach der Wiedervereinigung übernahm Renner die renommierte Mechanik-Produktion der aus Rönisch hervorgegangenen Piano Union – der Ursprung und die Wurzel unseres heutigen Hauptsitzes in Meuselwitz!'
+          '<strong>Feinmechanik im Fokus:</strong> Beginn der Fertigung höchstpräziser Klaviermechaniken.',
+          '<strong>Historische Parallele:</strong> Zeitgleich zu Rönischs Panzerplatte setzt Renner den Präzisionsmaßstab.',
+          '<strong>Wurzel von Meuselwitz:</strong> Grundstein der Tradition, die 1990 in Thüringen zusammenfloss.'
         ],
         'fact': '✦ Beginn mit Klaviermechaniken 1882 • Historische Wurzel von Meuselwitz',
         'quote': '„Von der Stuttgarter Werkstatt 1882 bis zur Übernahme der Mechanik-Fertigung der Piano Union 1990: Unsere Meuselwitzer Wurzeln vereinen die großen Meilensteine deutscher Klavierbautradition.“',
         'quote_author': 'Louis Renner Chronik & Ursprung Meuselwitz',
         'images': [
-          'Visuell/Bilder/01_Geschichte/1882_renner.jpg',
-          'Visuell/Bilder/01_Geschichte/rohlfing_klaviermechanik_vintage_bw.webp',
-          'Visuell/Bilder/01_Geschichte/01_historische_renner_werkstatt_1882.png'
+          'Visuell/Bilder/01_Geschichte/01_1882_gruendung_stuttgart_renner_werkstatt.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1882_rohlfing_klaviermechanik_vintage.webp',
+          'Visuell/Bilder/01_Geschichte/01_1882_werkstatt_stuttgart_illustration.png'
         ],
-        'image': 'Visuell/Bilder/01_Geschichte/1882_renner.jpg',
+        'image': 'Visuell/Bilder/01_Geschichte/01_1882_gruendung_stuttgart_renner_werkstatt.jpg',
         'image_caption': 'Gründer: Louis Renner 1882',
         'image_captions': [
           'Gründer: Louis Renner 1882',
@@ -140,7 +241,7 @@ def get_all_slides_html():
           'Erste Werkstatt in der Heusteigstraße Stuttgart 1882'
         ],
         'image_tag': '1882 Gründung',
-        'slide_interval': 4000
+        'slide_interval': 3500
       },
       {
         'id': '1906',
@@ -149,14 +250,32 @@ def get_all_slides_html():
         'branch': 'down',
         'arrow': '▼',
         'badge': '1906 • Eigene Hammerköpfe',
-        'heading': 'Aufnahme der anspruchsvollen Hammerkopffertigung',
-        'sentence': 'Mit eigens entwickelten Pressen übernimmt Renner die vollkommene Kontrolle über das akustische Herzstück des Klaviers.',
-        'fact': '✦ Der Ursprung des Renner-Klangs',
-        'quote': '„Volle Kontrolle über Filz, Kernholz und Saite.“',
-        'quote_author': 'Unternehmenschronik • louis-renner.de',
-        'image': 'Visuell/web_assets/hammerkopf-fertigun.png',
-        'image_caption': 'Aufnahme der eigenen Spezialfabrikation von Hammerköpfen (ab 1906)',
-        'image_tag': '1906 Hammer'
+        'heading': '1906: Aufnahme der anspruchsvollen Hammerkopffertigung',
+        'sentence': 'Von Cristoforis erstem Hammerkopf (1700) zu Renners eigener Fertigung ab 1906: Der entscheidende Schritt, der später den unverwechselbaren Klang jedes Steinway-Flügels definierte.',
+        'bullets': [
+          '<strong>Cristoforis Impuls:</strong> Vom Ur-Hammerkopf (1700) zur ersten industriellen Perfektion.',
+          '<strong>Eigene Spezialpressen:</strong> Entwicklung eigener Hochdruckpressen für maximale Dynamik.',
+          '<strong>Globaler Klangstandard:</strong> Maßstab für Steinway und führende Flügelbauer weltweit.'
+        ],
+        'fact': '✦ Von Cristoforis Papierröllchen 1700 • Zum weltweiten Renner-Klangstandard ab 1906',
+        'quote': '„Vom lederbezogenen Papierröllchen Cristoforis zur perfekten Spannungsbalance: Der Hammerkopf ist die Seele des Klavierklangs.“',
+        'quote_author': 'Louis Renner Manufaktur • Klangtradition seit 1906',
+        'images': [
+          'Visuell/Bilder/01_Geschichte/01_1700_bartolomeo_cristofori_portrait.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1700_christofori_hammermechanik.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1906_mechanikfertigung_historisch.png',
+          'Visuell/Bilder/01_Geschichte/01_1906_hammerkopf_pressen_fertigung.png'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/01_1700_bartolomeo_cristofori_portrait.jpg',
+        'image_caption': 'Bartolomeo Cristofori (1655–1731) – Erfinder der Klaviermechanik (1700)',
+        'image_captions': [
+          'Bartolomeo Cristofori (1655–1731) – Erfinder der Klaviermechanik (1700)',
+          '1700: Erste Hammer-Mechanik von Bartolomeo Cristofori – Der Ursprung des Hammerkopfs',
+          '1906: Beginn der eigenen Hammerkopffertigung mit eigens entwickelten Pressen',
+          'Hammerkopfnieten im Halbautomaten'
+        ],
+        'image_tag': '1906 Hammer',
+        'slide_interval': 3500
       },
       {
         'id': '1911',
@@ -165,14 +284,30 @@ def get_all_slides_html():
         'branch': 'up',
         'arrow': '▲',
         'badge': '1911 • Technisierung',
-        'heading': 'Oscar Renners Pioniertat: Einzelantriebe & Flügelprogramm',
-        'sentence': 'Hunderte vibrationsfreie Elektromotoren revolutionieren die Präzision, ergänzt durch die Fertigung von Flügelmechaniken.',
-        'fact': '✦ Hunderte Einzelmotoren & Flügelbau',
-        'quote': '„Alle Zweige der Mechanikherstellung in einer Hand.“',
-        'quote_author': 'Oscar Renner 1911',
-        'image': 'Visuell/web_assets/arbeitsumgebung-renner.png',
-        'image_caption': 'Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)',
-        'image_tag': '1911 Antriebe'
+        'heading': '1911: Oscar Renners Pioniertat – Einzelantriebe & Flügelprogramm',
+        'sentence': '1911 erweiterte Oscar Renner das Programm um vollständige Konzert-Flügelmechaniken und trieb die Modernisierung mit hunderten elektrischen Einzelantrieben voran.',
+        'bullets': [
+          '<strong>Érard-Repetition:</strong> Doppelte Auslösung als Fundament moderner Flügelmechaniken.',
+          '<strong>Konzertprogramm komplett:</strong> Flügel- und Klaviermechaniken aus einer Meisterhand.',
+          '<strong>Hunderte Einzelmotoren:</strong> Wegweisende Umstellung von Transmissionen auf Elektro-Einzelantrieb.'
+        ],
+        'fact': '✦ Érards Repetition als Fundament • 1911: Erste Renner-Flügelmechaniken & Hunderte Einzelmotoren',
+        'quote': '„Um alle Zweige der Herstellung von Klaviermechaniken in einer Hand zu vereinigen und dem Fabrikationsprogramm eine gewisse Abrundung zu geben, wurde jetzt auch die Fertigung von Flügelmechaniken aufgenommen.“',
+        'quote_author': 'Oscar Renner • Firmenchronik 1911',
+        'images': [
+          'Visuell/Bilder/01_Geschichte/01_1808_sebastien_erard_portrait.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1808_erard_repetitionsmechanik.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1911_renner_elektrifizierte_arbeitsumgebung.webp'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/01_1808_sebastien_erard_portrait.jpg',
+        'image_caption': 'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik für Flügel',
+        'image_captions': [
+          'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik für Flügel',
+          '1808 / 1821: Érard-Repetitionsmechanik – Das Fundament des modernen Flügelprogramms',
+          'Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)'
+        ],
+        'image_tag': '1911 Antriebe',
+        'slide_interval': 3500
       },
       {
         'id': '1944',
@@ -181,22 +316,22 @@ def get_all_slides_html():
         'branch': 'down',
         'arrow': '▼',
         'badge': '1944 • Brandnacht',
-        'heading': 'Brand der Fabrikanlagen & Unbändiger Wille zum Wiederaufbau',
-        'sentence': 'Wilhelm Megenhardt steuerte das Unternehmen mit sicherer Hand durch Weltwirtschaftskrise und Kriegswirren, ehe die Stuttgarter Brandnacht das Werk traf:',
+        'heading': '1944: Zerstörung der Fabrikanlagen & Unbändiger Wille zum Wiederaufbau',
+        'sentence': 'In der Stuttgarter Bombennacht vom 24./25. Juli 1944 brannten alle Renner-Gebäude nieder – doch der Wille zum sofortigen Wiederaufbau war ungebrochen.',
         'bullets': [
-          '<strong>Verheerender Großangriff (24./25. Juli 1944):</strong> Über 600 RAF-Bomber warfen Hunderttausende Stabbrand- und Phosphorbomben ab – ein gigantischer Feuersturm erfasste Stuttgart.',
-          '<strong>Totalverlust aller Gebäude:</strong> Das städtische Löschwassernetz brach zusammen; alle Renner-Gebäude brannten lichterloh nieder, nichts schien gerettet werden zu können.',
-          '<strong>Wiederaufbau noch in den Ruinen:</strong> Trotz totaler Zerstörung und unendlicher Hindernisse beschloss Megenhardt sofort den Wiederaufbau in schwierigster Kleinarbeit.'
+          '<strong>Totalverlust im Feuersturm:</strong> Zerstörung der Stuttgarter Werke am 24./25. Juli 1944.',
+          '<strong>Mut zur Zukunft:</strong> Sofortiger Entschluss zum Wiederaufbau noch in den Trümmern.',
+          '<strong>Geschlossene Belegschaft:</strong> Gemeinsamer Wiederbeginn unter schwersten Bedingungen.'
         ],
         'fact': '✦ Bombennacht 24./25.07.1944 & Wiederaufbau',
         'quote': '„Trotz Zerstörung, trotz unendlicher Hindernisse: Renner wird wieder aufgebaut!“',
         'quote_author': 'Wilhelm Megenhardt • Chronik 1944',
         'images': [
-          'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F_45857.jpg',
-          'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F45739.jpg',
-          'Visuell/Bilder/01_Geschichte/Stuttgart,_Royal_Air_Force_Bomber_Command,_1942-1945._CL3437.jpg'
+          'Visuell/Bilder/01_Geschichte/01_1944_stuttgart_brandnacht_zerstoerung_1.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1944_stuttgart_brandnacht_zerstoerung_2.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1944_stuttgart_luftangriff_archiv.jpg'
         ],
-        'image': 'Visuell/Bilder/01_Geschichte/Stuttgart_destruction_-_codingdavinci_-_9200_F_45857.jpg',
+        'image': 'Visuell/Bilder/01_Geschichte/01_1944_stuttgart_brandnacht_zerstoerung_1.jpg',
         'image_caption': 'Historische Dokumente: Stuttgarter Bombennacht & Zerstörung 1944 vor dem Wiederaufbau',
         'image_tag': '1944 Brandnacht'
       },
@@ -207,12 +342,12 @@ def get_all_slides_html():
         'branch': 'up',
         'arrow': '▲',
         'badge': '1951/1952 • Manfred Renner',
-        'heading': 'Dr. Manfred Renner & Einzug in das Hauptgebäude nach Wiederaufbau',
-        'sentence': 'Inmitten von Hochkonjunktur und nötiger Werkerweiterung trat 1951 die 3. Generation an die Spitze und vollendete den Wiederaufbau:',
+        'heading': '1951/1952: Dr. Manfred Renner & Vollendung des Wiederaufbaus',
+        'sentence': 'Mit Dr. Manfred Renner trat 1951 die 3. Generation an die Unternehmensspitze, vollendete den Wiederaufbau und führte Renner zu neuer internationaler Größe.',
         'bullets': [
-          '<strong>Einstieg der 3. Generation (1951):</strong> Dr. Manfred Renner, Enkel des Gründers und Sohn von Oscar Renner, tritt nach Studium und praktischer Ausbildung in die Firma ein.',
-          '<strong>Technische Leitung (Sommer 1952):</strong> Als geschäftsführender Gesellschafter übernimmt er die Leitung und forciert tatkräftig die betriebliche Modernisierung.',
-          '<strong>Einzug in das Hauptgebäude (Herbst 1955):</strong> Mit jugendlichem Eifer vollendet er den Wiederaufbau auf ursprüngliche Größe; das Stuttgarter Stammwerk in der Fritz-Reuter-Straße wird bezogen.'
+          '<strong>3. Generation am Ruder:</strong> Dr. Manfred Renner übernimmt die Unternehmensführung (1951).',
+          '<strong>Neues Stammwerk (1955):</strong> Feierlicher Wiedereinzug in das Stuttgarter Hauptgebäude.',
+          '<strong>Weltmarktführerschaft:</strong> Konsequente Qualitätsstandards festigen die Weltspitze.'
         ],
         'fact': '✦ 1951/1952 • Manfred Renner & Wiederbezug 1955',
         'quote': '„Mit jugendlichem Eifer nahm er die Zügel in die Hand und ließ den Wiederaufbau bis zur ursprünglichen Ausdehnung durchführen.“',
@@ -228,44 +363,58 @@ def get_all_slides_html():
         'branch': 'down',
         'arrow': '▼',
         'badge': '1990 • Zeitenwende & Existenzsicherung',
-        'heading': '1990: Mauerfall, Zeitenwende & Rettung des Fortbestands',
-        'sentence': 'Der Fall der Berliner Mauer und die deutsche Wiedervereinigung 1990 brachten für Louis Renner die entscheidende historische Wende: Die Übernahme der Mechanik-Fertigung der Piano Union in Zeitz vereinte nicht nur zwei stolze Klavierbautraditionen, sondern sicherte in einer existenziellen Krise den Fortbestand des gesamten Unternehmens.',
+        'heading': '1990: Mauerfall, Zeitenwende & Sicherung des Fortbestands',
+        'sentence': '1990 nutzte Renner die historische Chance der Wiedervereinigung: Die Übernahme der Mechanikfertigung in Zeitz sicherte die Existenz des Unternehmens und legte die Basis für Meuselwitz.',
         'bullets': [
-          '<strong>Mauerfall & Hohe Klavierbautradition in Mitteldeutschland:</strong> Mit der Öffnung der Grenzen 1989/1990 erschloss sich für Renner das historische Herzland des deutschen Klavierbaus. In Zeitz und Leipzig lebte in der Piano Union – hervorgegangen aus Weltmarken wie Carl Rönisch – ein unschätzbares Erbe an handwerklicher Präzision und Fachwissen.',
-          '<strong>Existenzfrage im Wettbewerb mit tschechischen Herstellern:</strong> Der Schritt war für Renner eine reine Überlebensfrage: Gegen die aufstrebenden tschechischen Mechanik-Hersteller drohte Renner im internationalen Kosten- und Kapazitätswettbewerb zu unterliegen.',
-          '<strong>Rettung des Großkunden Schimmel (>40 Klaviere/Tag):</strong> Ohne die neuen Fertigungskapazitäten in Zeitz hätte Renner seinen wichtigsten Großkunden verloren: die Firma Schimmel, die damals über 40 Klaviere pro Tag fertigte. Die Übernahme der Piano-Union-Mechanik sicherte Schimmel, rettete Renners Marktführerschaft und legte die Wurzel für den späteren Welt-Hauptsitz Meuselwitz.'
+          '<strong>Chance der Einheit:</strong> Übernahme der Mechanik-Fertigung der Piano Union in Zeitz.',
+          '<strong>Großkunde Schimmel gerettet:</strong> Sicherung der Kapazitäten für über 40 Klaviere pro Tag.',
+          '<strong>Tor nach Meuselwitz:</strong> Entscheidende Weichenstellung für den heutigen Thüringer Hauptsitz.'
         ],
         'fact': '✦ 1990 • Wende, Schimmel-Partnerschaft & Zeitz',
         'quote': '„Die Übernahme der Mechanik-Fertigung in Zeitz war für Renner eine Frage des nackten Fortbestands – sie sicherte unseren größten Kunden Schimmel und schuf das Fundament unserer Zukunft.“',
         'quote_author': 'Louis Renner Chronik • Das Wendejahr 1990',
         'images': [
-          'Visuell/Bilder/01_Geschichte/1989_mauerfall_brandenburger_tor.jpg',
-          'Visuell/Bilder/01_Geschichte/ZeitzGeschichte.webp'
+          'Visuell/Bilder/01_Geschichte/01_1989_mauerfall_zeitenwende.jpg',
+          'Visuell/Bilder/01_Geschichte/01_1990_piano_union_zeitz_mechanikfertigung.webp'
         ],
-        'image': 'Visuell/Bilder/01_Geschichte/1989_mauerfall_brandenburger_tor.jpg',
+        'image': 'Visuell/Bilder/01_Geschichte/01_1989_mauerfall_zeitenwende.jpg',
         'image_caption': 'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
         'image_captions': [
           'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
           'Historische Mechanik-Fertigung in Zeitz (Piano Union / Rönisch) – Die Rettung von Renners Zukunft'
         ],
         'image_tag': '1990 Wende & Zeitz',
-        'slide_interval': 4000
+        'slide_interval': 3500
       },
       {
-        'id': '2001',
-        'year': '2001',
-        'tag': 'Gärtringen',
+        'id': '2011',
+        'year': '2011',
+        'tag': 'Standorte',
         'branch': 'up',
         'arrow': '▲',
-        'badge': '2001 • Gärtringen',
-        'heading': 'Umzug nach Gärtringen & Produktionszentrum Meuselwitz',
-        'sentence': 'Umzug der Holzbearbeitung nach Gärtringen und Ausbau des 6.000 m² Werks Meuselwitz für Montage und Hammerköpfe.',
-        'fact': '✦ Über 3 Millionen Klaviermechaniken',
-        'quote': '„Über 8.800 Präzisionsteile bilden eine Mechanik.“',
-        'quote_author': 'louis-renner.de • Klaviermechanik',
-        'image': 'Visuell/web_assets/renner-ga-okt-2018-scaled.jpg',
-        'image_caption': 'Standort Gärtringen vor der Bündelung aller Fertigungsbereiche am neuen Hauptsitz Meuselwitz',
-        'image_tag': '2001 Gärtringen'
+        'badge': '2011 • Zwei feste Standorte',
+        'heading': '2011: Zwei feste Standorte – Neubau Gärtringen & Kernfertigung Meuselwitz',
+        'sentence': 'Im Jahr 2011 bündelte Renner seine dezentralen Werke an zwei modernen Standorten: Gärtringen und Meuselwitz.',
+        'bullets': [
+          '<strong>Zwei feste Standorte:</strong> Umzug von Zeitz nach Meuselwitz und Neubau Gärtringen.',
+          '<strong>Kernwerk Meuselwitz:</strong> 6.800 m² Großfertigung für Mechaniken, Hammerköpfe und Bauteile.',
+          '<strong>Hauptsitz Gärtringen:</strong> Präzise Holzverarbeitung, Bohrwerkstätten und Verwaltung.'
+        ],
+        'fact': '✦ 2011 • Zwei feste Standorte: Gärtringen & Meuselwitz (6.800 m²)',
+        'quote': '„Im Jahr 2011 wurden die zuvor verstreuten Werke an zwei Standorten zusammengelegt: Meuselwitz und Gärtringen.“',
+        'quote_author': 'Louis Renner Chronik • Zwei Standorte 2011',
+        'images': [
+          'Visuell/Bilder/01_Geschichte/01_2011_standort_gaertringen_neubau.webp',
+          'Visuell/Bilder/01_Geschichte/01_2011_standort_meuselwitz_vogelperspektive.jpg'
+        ],
+        'image': 'Visuell/Bilder/01_Geschichte/01_2011_standort_gaertringen_neubau.webp',
+        'image_caption': 'Standort Gärtringen: Neubau für Holzbearbeitung, Bohrwerkstätten und Verwaltung',
+        'image_captions': [
+          'Standort Gärtringen: Neubau für Holzbearbeitung, Bohrwerkstätten und Verwaltung',
+          'Standort Meuselwitz aus der Vogelperspektive: Moderne Kernfertigung (6.800 m²) nach Umzug von Zeitz'
+        ],
+        'image_tag': '2011 Standorte',
+        'slide_interval': 3500
       },
       {
         'id': '2019',
@@ -274,23 +423,28 @@ def get_all_slides_html():
         'branch': 'down',
         'arrow': '▼',
         'badge': '2019 • Neuer Eigentümer',
-        'heading': 'Neuer Firmeneigentümer: Steinway & Sons übernimmt Renner',
-        'sentence': '2019 stellte Inhaber Clemens von Arnim die Weichen für die Zukunft: Trotz höherer Kaufangebote anderer Bieter entschied er sich mit großer Weitsicht für Steinway & Sons – zum Schutz der Belegschaft und für die langfristige Eigenständigkeit von Renner.',
+        'heading': '2019: Steinway & Sons übernimmt Renner – 100% Eigenständigkeit',
+        'sentence': '2019 entschied sich Inhaber Clemens von Arnim mit großer Weitsicht für Steinway & Sons – zum Schutz der Belegschaft und für die volle Unabhängigkeit von Renner.',
         'bullets': [
-          '<strong>Historische Partnerschaft & 100% Unabhängigkeit:</strong> Steinway & Sons (Hamburg & New York) garantiert Renner vollständige operative Eigenständigkeit; Renner beliefert unverändert alle führenden Klavierbauer weltweit.',
-          '<strong>Verantwortung vor Profit – Clemens von Arnim:</strong> Es gab Bieter, die mehr geboten hatten – doch er entschloss sich aus tiefer Verbundenheit für Louis Renner und die Belegschaft für Steinway, denn dadurch waren die Arbeitsplätze und die Zukunft gesichert.',
-          '<strong>In ehrendem Gedenken († 23.04.2024):</strong> Unser tiefster Dank gilt Clemens von Arnim für seine Weitsicht und Führung. Tragischerweise verstarb er viel zu früh am 23. April 2024, ohne seinen wohlverdienten Ruhestand voll auskosten zu können.'
+          '<strong>100% Eigenständigkeit:</strong> Steinway & Sons garantiert volle operative Unabhängigkeit.',
+          '<strong>Verantwortung vor Profit:</strong> Clemens von Arnim lehnte höhere Gebote zum Schutz der Belegschaft ab.',
+          '<strong>Ehrendes Gedenken († 2024):</strong> Tiefer Dank an Clemens von Arnim für seine visionäre Führung.'
         ],
         'fact': '✦ 2019 • Steinway & In ehrendem Gedenken an Clemens von Arnim († 2024)',
         'quote': '„Ebenso wie wir verfügt Renner über eine sehr lange Tradition, ist führend in seinem Segment und beliefert Kunden weltweit mit hervorragender Qualität. Uns verbinden gleiche Werte – und es ist wichtig, dass Renner weiterhin unabhängig arbeiten wird.“',
         'quote_author': 'Guido Zimmermann • President Steinway & Sons Hamburg',
         'images': [
           'Visuell/Video/steinwayshort.mp4',
-          'Visuell/Bilder/01_Geschichte/ClemensVonArnimProduktion.jpg'
+          'Visuell/Bilder/01_Geschichte/01_2019_clemens_von_arnim_produktion.jpg'
         ],
-        'image': 'Visuell/Bilder/01_Geschichte/ClemensVonArnimProduktion.jpg',
-        'image_caption': 'Historische Partnerschaft mit Steinway & Sons und Inhaber Clemens von Arnim in der Produktion († 23.04.2024)',
-        'image_tag': '2019 Steinway'
+        'image': 'Visuell/Bilder/01_Geschichte/01_2019_clemens_von_arnim_produktion.jpg',
+        'image_caption': 'Historische Partnerschaft mit Steinway & Sons',
+        'image_captions': [
+          'Historische Partnerschaft mit Steinway & Sons: 100% operative Eigenständigkeit',
+          'Clemens von Arnim in der Fertigung: Schutz der Belegschaft & Zukunftssicherung'
+        ],
+        'image_tag': '2019 Steinway',
+        'slide_interval': 4500
       },
       {
         'id': 'heute',
@@ -299,19 +453,19 @@ def get_all_slides_html():
         'branch': 'up',
         'arrow': '▲',
         'badge': '2025+ • Welt-Hauptsitz',
-        'heading': 'Tradition bewahren. Zukunft gestalten: Von 1882 bis heute',
-        'sentence': 'Aus der kleinen Werkstätte von 1882 ist in über 140 Jahren ein Weltmarktführer entstanden. Unser Leitgedanke ist damals wie heute derselbe: Renner-Mechaniken in denkbar bester Qualität zu liefern und durch neueste praktische sowie musikwissenschaftliche Erkenntnisse stetig zu perfektionieren.',
+        'heading': 'Heute: Tradition bewahren. Zukunft gestalten.',
+        'sentence': 'Aus der kleinen Werkstatt von 1882 ist der globale Qualitätsmaßstab geworden. Heute bündelt Renner alle Kräfte am Welt-Hauptsitz Meuselwitz.',
         'bullets': [
-          '<strong>Wegweisende Standortbündelung:</strong> Um dieser Mission und unserer Geschichte auch in Zukunft gerecht zu werden, haben wir eine wegweisende Entscheidung getroffen: Die Bündelung unserer gesamten Kompetenz an einem zentralen Standort. Mit der Verlagerung von Gärtringen nach Meuselwitz schreiben wir die Renner-Erfolgsgeschichte konzentriert fort.',
-          '<strong>Dank an das Team Gärtringen:</strong> Unser besonderer Dank gilt dabei unseren treuen Mitarbeiterinnen und Mitarbeitern in Gärtringen für ihren herausragenden Einsatz bis zum letzten Tag.',
-          '<strong>Meilenstein vollendet:</strong> Nach dem Projektstart im Oktober 2025 ist dieser Meilenstein heute erreicht: Alle Prozesse wurden erfolgreich nach Meuselwitz überführt.'
+          '<strong>Standortbündelung vollendet:</strong> Alle Fertigungsbereiche erfolgreich in Meuselwitz vereint.',
+          '<strong>Dank an Team Gärtringen:</strong> Tiefste Anerkennung für jahrzehntelangen herausragenden Einsatz.',
+          '<strong>Zukunft der Spitzenklasse:</strong> Konzentriertes Wissen sichert höchste Präzision für Generationen.'
         ],
         'fact': '✦ Tradition bewahren • Zukunft gestalten',
         'quote': '„Erfahrung ist die Basis – Perfektion das Ziel.“',
         'quote_author': 'Clemens Kunert • Louis Renner Meuselwitz',
-        'image': 'Visuell/Bilder/02_Meuselwitz_Umbau/24_meuselwitz_moderner_hauptsitz_aussen_innen.jpg',
-        'image_caption': 'Der neue vereinte Louis Renner Welt-Hauptsitz in Meuselwitz (Thüringen)',
-        'image_tag': 'Meuselwitz 2025'
+        'image': 'Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png',
+        'image_caption': 'Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)',
+        'image_tag': 'Meuselwitz 2026'
       }
     ]
 
@@ -330,12 +484,12 @@ def get_all_slides_html():
         if 'images' in m and m['images']:
             img_tags = []
             captions = m.get('image_captions', [])
-            slide_interval = m.get('slide_interval', 5000)
+            slide_interval = m.get('slide_interval', 3500)
             for img_idx, img_src in enumerate(m['images']):
                 act = ' active' if img_idx == 0 else ''
                 is_vid = img_src.lower().endswith(('.mp4', '.webm', '.ogg', '.mov'))
                 cap_attr = f' data-caption="{captions[img_idx]}"' if img_idx < len(captions) else ''
-                fit_cls = ' fit-contain' if ('1882_renner' in img_src.lower() or 'rohlfing' in img_src.lower()) else ''
+                fit_cls = ' fit-contain' if ('1882_renner' in img_src.lower() or 'rohlfing' in img_src.lower() or 'cristofori' in img_src.lower() or 'christofori' in img_src.lower() or 'érard' in img_src.lower() or 'erard' in img_src.lower()) else ''
                 if is_vid:
                     img_tags.append(f'<video class="hero-image hero-slideshow-img hero-slideshow-video{act}" data-slide-index="{img_idx}" src="{img_src}" playsinline muted style="object-fit:contain; width:100%; height:100%; background:#000; pointer-events:none;"{cap_attr}></video>')
                 else:
@@ -386,6 +540,18 @@ def get_all_slides_html():
               <span class="tree-counter-author">• {m['quote_author']}</span>
             </div>'''
 
+        fire_backdrop_html = ""
+        if m.get('id') == '1944':
+            fire_backdrop_html = get_fire_backdrop_html() + "\n"
+
+        sheen_backdrop_html = ""
+        if m.get('id') == 'heute':
+            sheen_backdrop_html = '''<div class="milestone-sheen-backdrop" aria-hidden="true">
+              <div class="sheen-ambient-glow"></div>
+              <div class="sheen-radial-flare"></div>
+              <div class="sheen-corona-ring"></div>
+            </div>\n'''
+
         if m['branch'] == 'up':
             top_content = f'''{card_html}'''
             bottom_content = f'''{counter_pill_html}'''
@@ -395,7 +561,7 @@ def get_all_slides_html():
 
         panels_html.append(f'''          <!-- MILESTONE {idx}: {m['year']} (Branch {m['branch'].upper()}) -->
           <div class="tree-milestone-panel {active_cls} branch-{m['branch']}" data-milestone="{idx}" id="tree-milestone-{idx}">
-            <div class="tree-watermark-year">{m['year']}</div>
+            {fire_backdrop_html}{sheen_backdrop_html}<div class="tree-watermark-year">{m['year']}</div>
 
             <!-- Top Slot (Above Central Flight Path) -->
             <div class="tree-slot top-slot">
@@ -487,119 +653,155 @@ def get_all_slides_html():
             'id': '2025-11',
             'monthYear': '11.2025',
             'branch': 'up',
-            'phase': 'Phase 1: Hallenvorbereitung',
-            'title': 'Start Bauvorhaben & Entkernung',
-            'caption': 'Erste Begehung und Entkernung: Freilegung der tragenden Strukturen für das neue industrielle Produktionslayout.',
+            'phase': 'Phase 1: Hallenvorbereitung & Entkernung',
+            'title': 'Start Bauvorhaben: Entkernung',
+            'caption': 'Freilegung der tragenden Hallenstrukturen im Bereich des künftigen Verwaltungs- und Empfangstrakts.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg'
         },
         {
             'id': '2025-12',
             'monthYear': '12.2025',
             'branch': 'down',
-            'phase': 'Phase 2: Fundamentierung',
-            'title': 'Schwerlastböden & Schwingungsentkopplung',
-            'caption': 'Gießen der schwingungsentkoppelten Schwerlast-Betonböden für tonnenschwere Hammerkopf-Pressen und CNC-Fräsen.',
+            'phase': 'Phase 2: Entkernung Foyer & Baufeld',
+            'title': 'Entkernung des Foyers & Eingangsbereichs',
+            'caption': 'Blick vom Foyer in Richtung Filzproduktion: Freigeräumte Großflächen für die neue Manufaktur-Infrastruktur.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/14_20251201_135805.jpg'
         },
         {
             'id': '2026-01',
             'monthYear': '01.2026',
             'branch': 'up',
-            'phase': 'Phase 3: Hallenstruktur & Dämmung',
-            'title': 'Hallenisolierung & Struktur-Modernisierung',
-            'caption': 'Installation hochisolierter Wandpaneele und Vorbereitung des Reinraum-Deckenbereichs für gleichbleibendes Raumklima.',
+            'phase': 'Phase 3: Tiefbau & Medienversorgung',
+            'title': 'Medien- & Trinkwasserversorgung',
+            'caption': 'Präzise Schachtarbeiten für Frisch- und Brauchwasserleitungen – unterbrechungsfrei bei laufender Produktion.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/18_20260106_135356.jpg'
         },
         {
             'id': '2026-02',
             'monthYear': '02.2026',
             'branch': 'down',
-            'phase': 'Phase 4: Präzisions-Klimatechnik',
-            'title': 'Computergestützte Klimaregelung (45–50% r.F.)',
-            'caption': 'Einbau der zentralen Klimatisierung: Strikte 45–50 % Luftfeuchte schützen sensible Filze und Hölzer vor Verzug.',
+            'phase': 'Phase 4: Klaviermechanik-Aufbau',
+            'title': 'Aufbau der Klaviermechanik-Fertigung',
+            'caption': 'Frühere Lagerflächen werden zur hochmodernen Fertigungsstraße für Klavier-Hebeglieder umgebaut.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/23_20260227_074933.jpg'
         },
         {
             'id': '2026-03',
             'monthYear': '03.2026',
             'branch': 'up',
-            'phase': 'Phase 5: Energie & Infrastruktur',
-            'title': 'Stromschienen, Druckluft & Absaugtrassen',
-            'caption': 'Flächendeckende Decken-Trassen für Industriestrom, Druckluft und Feinstaubabsaugung über allen Maschinenpositionen.',
+            'phase': 'Phase 5: Moderne Lagerlogistik',
+            'title': 'Intelligente Lagerlogistik & Lagerlifte',
+            'caption': 'Maximale Flächeneffizienz: Installation moderner vertikaler Shuttle-Lagerlifte für zehntausende Bauteile.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/25_20260320_090128.jpg'
         },
         {
             'id': '2026-04',
             'monthYear': '04.2026',
             'branch': 'down',
-            'phase': 'Phase 6: Schwertransport-Logistik',
-            'title': 'Überführung der Gärtringer Spezialanlagen',
-            'caption': 'Präzise getaktete Spezialtransporte über 450 km zur schadensfreien Überführung des Maschinenparks nach Meuselwitz.',
+            'phase': 'Phase 6: Umzug Hammerkopffertigung',
+            'title': 'Umzug der Hammerkopf-Manufaktur',
+            'caption': 'Das akustische Herzstück von Renner bezieht seinen neuen, klimastabilen Fertigungsbereich in Meuselwitz.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/34_20260521_144701.jpg'
+        },
+        {
+            'id': '2026-05-fundament',
+            'monthYear': '05.2026',
+            'branch': 'up',
+            'phase': 'Phase 7: Fundamente Absauganlage',
+            'title': 'Spezialfundament für die Filteranlage',
+            'caption': 'Statische Hochpräzision: Fundamentierung für die 40 Tonnen schwere und 12 Meter hohe zentrale Absauganlage.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/27_20260428_083959.jpg'
         },
         {
-            'id': '2026-05',
+            'id': '2026-05-kranhub',
+            'monthYear': '05.2026',
+            'branch': 'down',
+            'phase': 'Phase 8: Kranhub der Filtermodule',
+            'title': 'Anlieferung & Kranhub der Filtermodule',
+            'caption': 'Schwerlast-Logistik per 70-Tonnen-Autokran: Millimetergenaue Positionierung der tonnenschweren Filterkomponenten.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/31_20260512_113224.mp4'
+        },
+        {
+            'id': '2026-05-kranmontage',
             'monthYear': '05.2026',
             'branch': 'up',
-            'phase': 'Phase 7: Maschinenankunft',
-            'title': 'Ankunft der Präzisionspressen & Sondermaschinen',
-            'caption': 'Entladung der tonnenschweren Maschinenkörper und Baugruppen am Haupttor des modernisierten Werksgeländes.',
-            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/34_20260521_144701.jpg'
+            'phase': 'Phase 9: Kranmontage des Filterturms',
+            'title': 'Kranmontage des Filterturms',
+            'caption': 'Präzisionsmontage in luftiger Höhe: Das 12 Meter hohe Filterturm-Oberteil wird auf die schwingungsentkoppelte Stahlkonstruktion gesetzt.',
+            'image': 'Visuell/Bilder/02_Umbau_und_Umzug/33_20260513_120405.jpg'
         },
         {
             'id': '2026-06',
             'monthYear': '06.2026',
             'branch': 'down',
-            'phase': 'Phase 8: Halleneinbringung',
-            'title': 'Schwerlast-Positionierung per Panzerrollen',
-            'caption': 'Mit Spezialkränen und Panzerrollen werden die Anlagen zentimetergenau auf ihre vorbereiteten Fundamente gesetzt.',
+            'phase': 'Phase 10: Montage der Großfilteranlage',
+            'title': 'Montage der Großfilter- & Absauganlage',
+            'caption': 'Mit 120.000 m³/h Luftleistung garantiert die neu errichtete Filteranlage staubfreie, hochpräzise Fertigungsprozesse.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/36_20260610_075535.jpg'
         },
         {
             'id': '2026-07',
             'monthYear': '07.2026',
             'branch': 'up',
-            'phase': 'Phase 9: Laser-Nivellierung',
-            'title': 'Lasergestützte Verankerung & Justierung',
-            'caption': 'Optische Laservermessung stellt vollkommen verzugsfreie Maschinenbetten für kompromisslose Serienpräzision sicher.',
+            'phase': 'Phase 11: Hallenverrohrung & Trassenbau',
+            'title': 'Absaugtrassen & Hallenverrohrung',
+            'caption': 'Installation der großdimensionierten Rohrtrassen zur lückenlosen Absaugung aller Holzbearbeitungsmaschinen.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/38_20260708_120853.jpg'
         },
         {
             'id': '2026-09',
             'monthYear': '09.2026',
             'branch': 'down',
-            'phase': 'Phase 10: Meisterarbeitsplätze',
-            'title': 'Einrichtung der Feinmontage & Absaugsysteme',
-            'caption': 'Modernste Prüfvorrichtungen, ergonomische Werkbänke und Tageslichtbeleuchtung für ermüdungsfreie Montage.',
+            'phase': 'Phase 12: Dachzentrale & Klimatechnik',
+            'title': 'Dachzentrale: Prozessluft & Klimatechnik',
+            'caption': 'Perfekte Klimastabilität: Garantierte 45–50 % relative Luftfeuchte und konstante Temperaturen – sommers wie winters.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/42_20260909_094559.jpg'
+        },
+        {
+            'id': '2026-09-klima',
+            'monthYear': '09.2026',
+            'branch': 'up',
+            'phase': 'Phase 13: Prozessluft- & Klimaanlage',
+            'title': 'Prozessluft- und Klimaanlage',
+            'caption': 'Hocheffiziente Prozessluft- und Klimatechnik auf dem Werksdach: Höchste Klimastabilität für anspruchsvollste Holz- und Filzverarbeitung.',
+            'image': 'Visuell/Bilder/02_Meuselwitz_Umbau/44_20260915_133800.jpg'
         },
         {
             'id': '2026-10',
             'monthYear': '10.2026',
-            'branch': 'up',
-            'phase': 'Phase 11: Vollbetrieb & Welt-Hauptsitz',
-            'title': 'Erfolgreiche Inbetriebnahme & Vollbetrieb',
-            'caption': 'Vollständige Produktionsaufnahme: Renner fertigt Konzertmechaniken und Hammerköpfe am neuen globalen Hauptsitz Meuselwitz.',
+            'branch': 'down',
+            'phase': 'Phase 14: Kehlerei & Vollbetrieb Meuselwitz',
+            'title': 'Montage der Kehlerei & Vollendung',
+            'caption': 'Letzte Abteilung erfolgreich verlagert: Die traditionsreiche Kehlerei und die gesamte Holzfertigung produzieren nun in Meuselwitz.',
             'image': 'Visuell/Bilder/02_Umbau_und_Umzug/48_20261009_081342.jpg'
         }
     ]
 
     build_panels_html = []
+    total_phases = len(transformation_milestones_data)
     for idx, m in enumerate(transformation_milestones_data):
         active_cls = 'active' if idx == 0 else ''
         prev_dis = 'disabled' if idx == 0 else ''
         next_dis = ''
-        next_title = 'Nächste Folie' if idx == 10 else 'Weiter'
+        next_title = 'Nächste Folie' if idx == (total_phases - 1) else 'Weiter'
+
+        media_src = m['image']
+        media_title = m['title']
+        is_video = media_src.lower().endswith(('.mp4', '.webm', '.mov'))
+        if is_video:
+            media_html = f'<video class="photo-card-img" src="{media_src}" autoplay loop muted playsinline></video>'
+        else:
+            media_html = f'<img class="photo-card-img" src="{media_src}" alt="{media_title}">'
 
         card_html = f'''            <div class="tree-hero-card photo-focus-card">
               <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="{m['image']}" alt="{m['title']}">
+                {media_html}
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="photo-card-month-badge">{m['monthYear']}</div>
-                <div class="photo-card-step-badge">Bauphase {idx + 1} von 11</div>
+                <div class="photo-card-step-badge">Bauphase {idx + 1} von {total_phases}</div>
               </div>
               <div class="photo-caption-bar">
                 <div class="photo-caption-dot"></div>
@@ -742,7 +944,7 @@ def get_all_slides_html():
           </div>
           <div class="slide-media-col">
             <div class="media-container" style="min-height: 420px;">
-              <img src="Visuell/Bilder/02_Meuselwitz_Umbau/13_meuselwitz_klimatisierte_lagerraeume.jpg" alt="Klimatisierte Lagerräume Meuselwitz">
+              <img src="Visuell/Bilder/02_Umbau_und_Umzug/13_20251201_135642.jpg" alt="Klimatisierte Lagerräume Meuselwitz">
               <div class="media-caption" data-i18n="s6_caption_1">Klimatisierte Baugruppen- und Materiallager in Meuselwitz</div>
             </div>
           </div>

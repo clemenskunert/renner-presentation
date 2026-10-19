@@ -40,7 +40,13 @@ def main():
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(new_content)
 
-    print(f"Successfully updated {html_path} with {slide_definitions.TOTAL_SLIDES} slides!")
+    # Standalone SharePoint Support:
+    # SharePoint Online / On-Premise natively executes and displays .aspx files as web pages directly in the browser
+    for aspx_name in ("Start_SharePoint.aspx", "presentation.aspx"):
+        with open(aspx_name, "w", encoding="utf-8") as f:
+            f.write(new_content)
+
+    print(f"Successfully updated {html_path}, Start_SharePoint.aspx & presentation.aspx with {slide_definitions.TOTAL_SLIDES} slides!")
 
 if __name__ == "__main__":
     main()

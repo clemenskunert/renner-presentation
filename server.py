@@ -50,13 +50,20 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
 
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
-        if self.path.endswith('.json') or self.path.endswith('.js') or self.path.endswith('.html'):
+        if self.path.endswith('.json') or self.path.endswith('.js') or self.path.endswith('.html') or self.path.endswith('.css'):
             self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
             self.send_header('Pragma', 'no-cache')
             self.send_header('Expires', '0')
         else:
             self.send_header('Cache-Control', 'no-cache, must-revalidate')
         super().end_headers()
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.end_headers()
 
     def do_GET(self):
         # Default route to index.html if root requested
@@ -73,7 +80,85 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
             data = json.dumps({"version": LAST_TRANSLATION_UPDATE})
             self.wfile.write(data.encode('utf-8'))
             return
+        elif self.path.startswith('/api/images'):
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+            self.end_headers()
+            try:
+                import importlib, image_manager_backend
+                importlib.reload(image_manager_backend)
+                catalog = image_manager_backend.get_all_catalog_images()
+                data = json.dumps(catalog, ensure_ascii=False)
+                self.wfile.write(data.encode('utf-8'))
+            except Exception as e:
+                self.wfile.write(json.dumps({"error": str(e)}).encode('utf-8'))
+            return
+        elif self.path.startswith('/api/export-csv'):
+            try:
+                import importlib, image_manager_backend
+                importlib.reload(image_manager_backend)
+                csv_data = image_manager_backend.export_catalog_to_csv()
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/csv; charset=utf-8')
+                self.send_header('Content-Disposition', 'attachment; filename="Louis_Renner_Bilder_Katalog.csv"')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(csv_data.encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'text/plain; charset=utf-8')
+                self.end_headers()
+                self.wfile.write(str(e).encode('utf-8'))
+            return
         return super().do_GET()
+
+    def do_POST(self):
+        if self.path == '/api/save-image':
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_body = self.rfile.read(content_length)
+            try:
+                payload = json.loads(post_body.decode('utf-8'))
+                import importlib, image_manager_backend
+                importlib.reload(image_manager_backend)
+                result = image_manager_backend.update_single_image_caption(payload)
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps(result, ensure_ascii=False).encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": False, "error": str(e)}).encode('utf-8'))
+            return
+        elif self.path == '/api/save-all-images':
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_body = self.rfile.read(content_length)
+            try:
+                items_list = json.loads(post_body.decode('utf-8'))
+                import importlib, image_manager_backend
+                importlib.reload(image_manager_backend)
+                updated = 0
+                for item in items_list:
+                    image_manager_backend.update_single_image_caption(item)
+                    updated += 1
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": True, "updated": updated, "message": f"{updated} Bildunterschriften erfolgreich gespeichert!"}, ensure_ascii=False).encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": False, "error": str(e)}).encode('utf-8'))
+            return
+        self.send_error(404, "Endpoint not found")
 
     def copyfile(self, source, outputfile):
         """Silently ignore broken pipes when client skips or pauses videos."""
