@@ -358,6 +358,18 @@
           "en": "Original Weickert manufactory in Wurzen (Saxony)",
           "ja": "Original Weickert-Manufaktur in Wurzen (Sachsen)",
           "zh": "Original Weickert-Manufaktur in Wurzen (Sachsen)"
+        },
+        "s7_b1_badge": {
+          "de": "TRADITION 1783",
+          "en": "TRADITION 1783",
+          "ja": "伝統 1783",
+          "zh": "传统 1783"
+        },
+        "s7_b2_badge": {
+          "de": "WURZEN (SACHSEN)",
+          "en": "WURZEN (SAXONY)",
+          "ja": "ヴルツェン（ザクセン）",
+          "zh": "武尔岑（萨克森）"
         }
       },
       "notes": {
@@ -418,6 +430,18 @@
           "en": "Filzfabrik Wurzen (FFW): Traditional craftsmanship at modern production standards",
           "ja": "Filzfabrik Wurzen (FFW): Traditionelle Fertigung auf modernem Niveau",
           "zh": "Filzfabrik Wurzen (FFW): Traditionelle Fertigung auf modernem Niveau"
+        },
+        "s8_b1_badge": {
+          "de": "FFW WURZEN",
+          "en": "FFW WURZEN",
+          "ja": "FFW ヴルツェン",
+          "zh": "FFW 武尔岑"
+        },
+        "s8_b2_badge": {
+          "de": "EXKLUSIV-PARTNER",
+          "en": "EXCLUSIVE PARTNER",
+          "ja": "独占パートナー",
+          "zh": "独家合作伙伴"
         }
       },
       "notes": {
@@ -484,6 +508,18 @@
           "en": "Raw wool delivery: Gently stored wool bales at FFW",
           "ja": "Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW",
           "zh": "Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW"
+        },
+        "s9_b1_badge": {
+          "de": "ROHSTOFF-SELEKTION",
+          "en": "RAW MATERIAL SELECTION",
+          "ja": "原料選定",
+          "zh": "原料筛选"
+        },
+        "s9_b2_badge": {
+          "de": "UNVERPRESSTE BALLEN",
+          "en": "UNPRESSED BALES",
+          "ja": "非圧縮ベール",
+          "zh": "非压制原包"
         }
       },
       "notes": {
@@ -544,6 +580,18 @@
           "en": "Aeration and blending process of wool batches at FFW Wurzen",
           "ja": "Auflockerungs- und Mischprozess der Faserchargen bei FFW Wurzen",
           "zh": "Auflockerungs- und Mischprozess der Faserchargen bei FFW Wurzen"
+        },
+        "s10_b1_badge": {
+          "de": "MANUFAKTURGEHEIMNIS",
+          "en": "MANUFACTURING SECRET",
+          "ja": "秘伝の配合",
+          "zh": "工坊秘制配方"
+        },
+        "s10_b2_badge": {
+          "de": "FASERAUFBEREITUNG",
+          "en": "FIBER PREPARATION",
+          "ja": "繊維調合",
+          "zh": "纤维处理"
         }
       },
       "notes": {
@@ -610,6 +658,18 @@
           "en": "Carding wool into silky flowing webs with defined fiber orientation",
           "ja": "Auskämmen der Wolle zu seidig fließenden Vliesen mit definierter Faserrichtung",
           "zh": "Auskämmen der Wolle zu seidig fließenden Vliesen mit definierter Faserrichtung"
+        },
+        "s11_b1_badge": {
+          "de": "FASERORIENTIERUNG",
+          "en": "FIBER ORIENTATION",
+          "ja": "繊維配向",
+          "zh": "纤维走向"
+        },
+        "s11_b2_badge": {
+          "de": "KARDIEREN & VLIES",
+          "en": "CARDING & FLEECE",
+          "ja": "カーディング＆フリース",
+          "zh": "梳理与絮片"
         }
       },
       "notes": {
@@ -700,6 +760,36 @@
           "en": "Combining and fulling fleece layers into a homogeneous felt sheet",
           "ja": "Zusammenführen und Walken der Vlieslagen zur homogenen Filzplatte",
           "zh": "Zusammenführen und Walken der Vlieslagen zur homogenen Filzplatte"
+        },
+        "s12_b1_badge": {
+          "de": "HEISSDAMPF",
+          "en": "HOT STEAM",
+          "ja": "熱蒸気",
+          "zh": "高温蒸汽"
+        },
+        "s12_b2_badge": {
+          "de": "MECHANISCHER DRUCK",
+          "en": "MECHANICAL PRESSURE",
+          "ja": "機械圧力",
+          "zh": "机械压力"
+        },
+        "s12_b3_badge": {
+          "de": "OSZILLATION",
+          "en": "OSCILLATION",
+          "ja": "振動摩擦",
+          "zh": "往复振动"
+        },
+        "s12_b4_badge": {
+          "de": "HANDWERKSKUNST",
+          "en": "CRAFTSMANSHIP",
+          "ja": "熟練の技",
+          "zh": "匠人工艺"
+        },
+        "s12_b5_badge": {
+          "de": "HAMMERWALKE",
+          "en": "HAMMER MILL",
+          "ja": "ハンマー縮絨",
+          "zh": "槌击缩绒"
         }
       },
       "notes": {
@@ -832,6 +922,18 @@
           "en": "Post-processing: Densifying felt sheets using specialized hammers and stone polishers",
           "ja": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen",
           "zh": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen"
+        },
+        "s14_b1_badge": {
+          "de": "FORMGEBUNG OHNE SCHLEIFEN",
+          "en": "SHAPING WITHOUT GRINDING",
+          "ja": "研磨なし成形",
+          "zh": "无磨损成形"
+        },
+        "s14_b2_badge": {
+          "de": "HAMMER & STEIN",
+          "en": "HAMMER & STONE",
+          "ja": "ハンマー＆ストーン",
+          "zh": "毡槌与石滚"
         }
       },
       "notes": {
@@ -898,6 +1000,18 @@
           "en": "Felt sheet storage in Meuselwitz: Over 30 sheet varieties permanently available",
           "ja": "Filzplattenlager im Werk Meuselwitz: Über 30 Plattensorten permanent verfügbar",
           "zh": "Filzplattenlager im Werk Meuselwitz: Über 30 Plattensorten permanent verfügbar"
+        },
+        "s15_b1_badge": {
+          "de": "KLIMATISIERTES FILZLAGER",
+          "en": "CLIMATE-CONTROLLED STORAGE",
+          "ja": "定温定湿保管",
+          "zh": "恒温恒湿毛毡库"
+        },
+        "s15_b2_badge": {
+          "de": "MEUSELWITZ LAGER",
+          "en": "MEUSELWITZ STORAGE",
+          "ja": "モイゼルヴィッツ保管庫",
+          "zh": "梅瑟尔维茨仓储"
         }
       },
       "notes": {
@@ -958,6 +1072,18 @@
           "en": "Felt strip showing visible indicator layer ('soul') at the bass origin",
           "ja": "Filzstreifen mit sichtbarer „Seele“ (farbige Kennzeichnungsschicht am Bassanfang)",
           "zh": "Filzstreifen mit sichtbarer „Seele“ (farbige Kennzeichnungsschicht am Bassanfang)"
+        },
+        "s16_b1_badge": {
+          "de": "MARKENZEICHEN",
+          "en": "HALLMARK",
+          "ja": "特徴・商標",
+          "zh": "品牌精髓"
+        },
+        "s16_b2_badge": {
+          "de": "DICHTEGRADIENT",
+          "en": "DENSITY GRADIENT",
+          "ja": "密度勾配",
+          "zh": "密度梯度"
         }
       },
       "notes": {
@@ -1036,6 +1162,18 @@
           "en": "Weickert Special: Finest wool fiber quality engineered for maximum longevity",
           "ja": "Weickert Special: Feinste Wollfaserqualität mit maximaler Standzeit",
           "zh": "Weickert Special: Feinste Wollfaserqualität mit maximaler Standzeit"
+        },
+        "s17_b1_badge": {
+          "de": "EXKLUSIVITÄT",
+          "en": "EXCLUSIVITY",
+          "ja": "独占供給",
+          "zh": "独家专供"
+        },
+        "s17_b2_badge": {
+          "de": "WEICKERT SPECIAL",
+          "en": "WEICKERT SPECIAL",
+          "ja": "ヴァイケルト・スペシャル",
+          "zh": "魏克特特级毡"
         }
       },
       "notes": {
@@ -1102,6 +1240,18 @@
           "en": "Modern robotic felt cutting center at the Meuselwitz plant",
           "ja": "Werk Meuselwitz: Robotischer Filzzuschnitt der Deckfilzstreifen",
           "zh": "Werk Meuselwitz: Robotischer Filzzuschnitt der Deckfilzstreifen"
+        },
+        "s18_b1_badge": {
+          "de": "ROBOTERTECHNOLOGIE",
+          "en": "ROBOTICS",
+          "ja": "ロボット技術",
+          "zh": "机器人切割"
+        },
+        "s18_b2_badge": {
+          "de": "WERKSVIDEO MEUSELWITZ",
+          "en": "FACTORY VIDEO MEUSELWITZ",
+          "ja": "工場動画 モイゼルヴィッツ",
+          "zh": "梅瑟尔维茨车间视频"
         }
       },
       "notes": {
@@ -1162,6 +1312,18 @@
           "en": "Inspected top felt strip: Tapered profile and homogeneous fiber matrix",
           "ja": "Geprüfter Deckfilzstreifen: Konischer Verlauf und homogene Faserstruktur",
           "zh": "Geprüfter Deckfilzstreifen: Konischer Verlauf und homogene Faserstruktur"
+        },
+        "s19_b1_badge": {
+          "de": "QUALITÄTSKONTROLLE",
+          "en": "QUALITY CONTROL",
+          "ja": "品質管理",
+          "zh": "品质管控"
+        },
+        "s19_b2_badge": {
+          "de": "DECKFILZ-STREIFEN",
+          "en": "TOP FELT STRIPS",
+          "ja": "トップフェルト帯",
+          "zh": "外层毛毡条"
         }
       },
       "notes": {
@@ -1222,6 +1384,18 @@
           "en": "Profiling the underfelt strip on specialized Renner milling machinery",
           "ja": "Profilieren des Unterfilzstreifens auf der Renner Spezialfräse",
           "zh": "Profilieren des Unterfilzstreifens auf der Renner Spezialfräse"
+        },
+        "s20_b1_badge": {
+          "de": "UNTERFILZ-FRÄSEN",
+          "en": "UNDERFELT MILLING",
+          "ja": "アンダーフェルト切削",
+          "zh": "内层毡铣型"
+        },
+        "s20_b2_badge": {
+          "de": "WERKSVIDEO",
+          "en": "FACTORY VIDEO",
+          "ja": "工場動画",
+          "zh": "车间视频"
         }
       },
       "notes": {
@@ -1312,6 +1486,18 @@
           "en": "Renner underfelt range: Red, Wine Red, Orange, Yellow, Blue, Black",
           "ja": "Renner Unterfilz-Sortiment: Rot, Weinrot, Orange, Gelb, Blau, Schwarz",
           "zh": "Renner Unterfilz-Sortiment: Rot, Weinrot, Orange, Gelb, Blau, Schwarz"
+        },
+        "s21_b1_badge": {
+          "de": "KLASSIKER",
+          "en": "CLASSIC",
+          "ja": "定番カラー",
+          "zh": "经典配色"
+        },
+        "s21_b2_badge": {
+          "de": "14 FARBTÖNE",
+          "en": "14 COLOR SHADES",
+          "ja": "14色展開",
+          "zh": "14种定制色彩"
         }
       },
       "notes": {
@@ -1504,6 +1690,18 @@
           "en": "Moulding Types: Diversity of core wood profiles in the Renner catalogue",
           "ja": "Moulding Types: Vielfalt der Kernholz-Profile im Renner Sortiment",
           "zh": "Moulding Types: Vielfalt der Kernholz-Profile im Renner Sortiment"
+        },
+        "s23_b1_badge": {
+          "de": "SYMMETRISCH",
+          "en": "SYMMETRICAL",
+          "ja": "対称形状",
+          "zh": "对称截面"
+        },
+        "s23_b2_badge": {
+          "de": "ASYMMETRISCH",
+          "en": "ASYMMETRICAL",
+          "ja": "非対称形状",
+          "zh": "非对称截面"
         }
       },
       "notes": {
@@ -1564,6 +1762,18 @@
           "en": "Bass end of felt strip exhibiting characteristic pre-bending curves before pressing",
           "ja": "Bass-Ende des Filzstreifens mit charakteristischen Biegekurven vor dem Pressen",
           "zh": "Bass-Ende des Filzstreifens mit charakteristischen Biegekurven vor dem Pressen"
+        },
+        "s24_b1_badge": {
+          "de": "VORFORMUNG",
+          "en": "PRE-FORMING",
+          "ja": "予備成形",
+          "zh": "毛毡预成型"
+        },
+        "s24_b2_badge": {
+          "de": "BIEGEKRAFT",
+          "en": "BENDING FORCE",
+          "ja": "曲げ応力",
+          "zh": "弯曲成弧"
         }
       },
       "notes": {
@@ -1630,6 +1840,18 @@
           "en": "Hammerhead pressing and gluing process under high hydraulic pressure",
           "ja": "Press- und Verleimvorgang des Hammerkopfs unter Hochdruck",
           "zh": "Press- und Verleimvorgang des Hammerkopfs unter Hochdruck"
+        },
+        "s25_b1_badge": {
+          "de": "HOCHDRUCK-PRESSEN",
+          "en": "HIGH-PRESSURE PRESSING",
+          "ja": "高圧プレス",
+          "zh": "高压压制"
+        },
+        "s25_b2_badge": {
+          "de": "WERKSVIDEO",
+          "en": "FACTORY VIDEO",
+          "ja": "工場動画",
+          "zh": "车间视频"
         }
       },
       "notes": {
@@ -1690,6 +1912,18 @@
           "en": "The bonded hammerhead block immediately following de-moulding",
           "ja": "Der verleimte Hammerkopf-Riegel direkt nach dem Entformen",
           "zh": "Der verleimte Hammerkopf-Riegel direkt nach dem Entformen"
+        },
+        "s26_b1_badge": {
+          "de": "RIEGEL-FERTIGUNG",
+          "en": "MOULD PRODUCTION",
+          "ja": "モール製造",
+          "zh": "整体压制音槌排"
+        },
+        "s26_b2_badge": {
+          "de": "PRESS-RIEGEL",
+          "en": "PRESSED MOULD",
+          "ja": "プレスモール",
+          "zh": "连排音槌木"
         }
       },
       "notes": {
@@ -1750,6 +1984,18 @@
           "en": "CNC precision milling center in Meuselwitz machining hammerhead blocks",
           "ja": "CNC-Präzisionsfräszentrum in Meuselwitz bei der Leistenbearbeitung",
           "zh": "CNC-Präzisionsfräszentrum in Meuselwitz bei der Leistenbearbeitung"
+        },
+        "s27_b1_badge": {
+          "de": "CNC-ABRICHTEN",
+          "en": "CNC DRESSING",
+          "ja": "CNC切削仕上げ",
+          "zh": "CNC精加工"
+        },
+        "s27_b2_badge": {
+          "de": "CNC-FRÄSUNG",
+          "en": "CNC MILLING",
+          "ja": "CNCフライス加工",
+          "zh": "数控分切"
         }
       },
       "notes": {
@@ -1810,6 +2056,18 @@
           "en": "Boring and T-rivet insertion at the Meuselwitz facility",
           "ja": "Bohren und Einbringen der T-Nieten in Meuselwitz",
           "zh": "Bohren und Einbringen der T-Nieten in Meuselwitz"
+        },
+        "s28_b1_badge": {
+          "de": "VEREDELUNG & ENDBEARBEITUNG",
+          "en": "FINISHING & FINAL TOUCH",
+          "ja": "精密仕上げ加工",
+          "zh": "精磨与成型"
+        },
+        "s28_b2_badge": {
+          "de": "WERKSVIDEO",
+          "en": "FACTORY VIDEO",
+          "ja": "工場動画",
+          "zh": "车间视频"
         }
       },
       "notes": {
@@ -1918,6 +2176,42 @@
           "en": "Bored to spec, securely riveted, with radiused tail ends and hand-inspected crown contours.",
           "ja": "Präzise gebohrt, formschlüssig vernietet, mit verrundeten Schwanzenden und veredelter Scheitelkontur.",
           "zh": "Präzise gebohrt, formschlüssig vernietet, mit verrundeten Schwanzenden und veredelter Scheitelkontur."
+        },
+        "s29_b1_badge": {
+          "de": "MASSGESCHNEIDERT",
+          "en": "CUSTOM-MADE",
+          "ja": "カスタムメイド",
+          "zh": "专属定制"
+        },
+        "s29_b2_badge": {
+          "de": "EFFIZIENZ",
+          "en": "EFFICIENCY",
+          "ja": "効率性",
+          "zh": "免初整音"
+        },
+        "s29_b3_badge": {
+          "de": "PRÄZISION",
+          "en": "PRECISION",
+          "ja": "超高精度",
+          "zh": "微米精度"
+        },
+        "s29_b4_badge": {
+          "de": "STABILITÄT",
+          "en": "STABILITY",
+          "ja": "耐久性",
+          "zh": "音色持久"
+        },
+        "s29_b5_badge": {
+          "de": "OBERTONREICH",
+          "en": "RICH HARMONICS",
+          "ja": "倍音の豊かさ",
+          "zh": "泛音丰富"
+        },
+        "s29_b6_badge": {
+          "de": "EINBAUFERTIG",
+          "en": "READY TO INSTALL",
+          "ja": "取付即応",
+          "zh": "到手即装"
         }
       },
       "notes": {
@@ -1978,6 +2272,18 @@
           "en": "The Renner Sample Parts Case (MTK) with accompanying technical handbook",
           "ja": "Der Renner Musterteilekoffer mit beiliegendem technischem Fachhandbuch",
           "zh": "Der Renner Musterteilekoffer mit beiliegendem technischem Fachhandbuch"
+        },
+        "s30_b1_badge": {
+          "de": "WERKSTATT-STANDARD",
+          "en": "WORKSHOP STANDARD",
+          "ja": "工房の基準器",
+          "zh": "车间诊断标准"
+        },
+        "s30_b2_badge": {
+          "de": "MTK SYSTEM",
+          "en": "SAMPLE KIT SYSTEM",
+          "ja": "MTKシステム",
+          "zh": "MTK精准选配箱"
         }
       },
       "notes": {
@@ -2044,6 +2350,18 @@
           "en": "Selection of 15 whippen models and interchangeable flanges in the sample case",
           "ja": "Auswahl der 15 Hebeglied-Modelle und Wechselsättel im Musterteilekoffer",
           "zh": "Auswahl der 15 Hebeglied-Modelle und Wechselsättel im Musterteilekoffer"
+        },
+        "s31_b1_badge": {
+          "de": "HEBEL-GEOMETRIE",
+          "en": "LEVER GEOMETRY",
+          "ja": "レバー幾何学",
+          "zh": "杠杆几何"
+        },
+        "s31_b2_badge": {
+          "de": "WECHSELSÄTTEL",
+          "en": "EXCHANGEABLE HEELS",
+          "ja": "交換式ヒール",
+          "zh": "可替换顶柱托"
         }
       },
       "notes": {
@@ -2110,6 +2428,18 @@
           "en": "Original flanges, damper levers, and rail sample profiles in the MTK",
           "ja": "Original Kapseln, Dämpferarme und Leistenmuster im MTK",
           "zh": "Original Kapseln, Dämpferarme und Leistenmuster im MTK"
+        },
+        "s32_b1_badge": {
+          "de": "DÄMPFUNG & MECHANIK",
+          "en": "DAMPER & ACTION",
+          "ja": "ダンパー＆アクション",
+          "zh": "止音与击弦配件"
+        },
+        "s32_b2_badge": {
+          "de": "ORIGINALTEILE",
+          "en": "GENUINE PARTS",
+          "ja": "純正部品",
+          "zh": "原厂精密配件"
         }
       },
       "notes": {
@@ -2176,6 +2506,18 @@
           "en": "Upright action components (AP / APK) in the sample parts case",
           "ja": "Klavier-Mechanikkomponenten (AP / APK) im Musterteilekoffer",
           "zh": "Klavier-Mechanikkomponenten (AP / APK) im Musterteilekoffer"
+        },
+        "s33_b1_badge": {
+          "de": "KLAVIER & PIANINO",
+          "en": "UPRIGHT & PIANO",
+          "ja": "アップライトピアノ",
+          "zh": "立式钢琴机件"
+        },
+        "s33_b2_badge": {
+          "de": "AP-SERIEN",
+          "en": "AP SERIES",
+          "ja": "APシリーズ",
+          "zh": "AP立式系列"
         }
       },
       "notes": {
@@ -2242,6 +2584,18 @@
           "en": "16 authentic grand hammer shanks with pre-fitted flanges in the MTK",
           "ja": "16 originale Flügel-Hammerstiele mit montierten Kapseln im MTK",
           "zh": "16 originale Flügel-Hammerstiele mit montierten Kapseln im MTK"
+        },
+        "s34_b1_badge": {
+          "de": "STIEL-SORTIMENT",
+          "en": "SHANK ASSORTMENT",
+          "ja": "シャンクラインナップ",
+          "zh": "槌柄配置"
+        },
+        "s34_b2_badge": {
+          "de": "VORMONTIERT",
+          "en": "PRE-ASSEMBLED",
+          "ja": "事前組立済",
+          "zh": "预装微调总成"
         }
       },
       "notes": {
@@ -2470,6 +2824,18 @@
           "en": "5-day assembly seasoning: Stress relief before final manual inspection",
           "ja": "5 Tage Baugruppenruhe: Spannungsabbau vor der manuellen Endkontrolle",
           "zh": "5 Tage Baugruppenruhe: Spannungsabbau vor der manuellen Endkontrolle"
+        },
+        "s37_b1_badge": {
+          "de": "BAUGRUPPENRUHE",
+          "en": "ASSEMBLY SETTLING",
+          "ja": "アセンブリシーズニング",
+          "zh": "总成应力消除"
+        },
+        "s37_b2_badge": {
+          "de": "KLIMARAUM",
+          "en": "CLIMATE ROOM",
+          "ja": "定温定湿室",
+          "zh": "恒温平衡室"
         }
       },
       "notes": {
@@ -2530,6 +2896,18 @@
           "en": "Original Renner hammerhead specification sheet for grand and upright pianos",
           "ja": "Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere",
           "zh": "Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere"
+        },
+        "s38_b1_badge": {
+          "de": "BESTELLSYSTEMATIK",
+          "en": "ORDERING SYSTEM",
+          "ja": "発注システム",
+          "zh": "订制规范"
+        },
+        "s38_b2_badge": {
+          "de": "MASSBLATT GP/UP",
+          "en": "SPEC SHEET GP/UP",
+          "ja": "仕様書 GP/UP",
+          "zh": "三角/立式规格表"
         }
       },
       "notes": {
@@ -2668,6 +3046,18 @@
           "en": "Archived Renner standard datasets for worldwide restorations",
           "ja": "Archivierte Renner Standard-Datensätze für weltweite Reparaturen",
           "zh": "Archivierte Renner Standard-Datensätze für weltweite Reparaturen"
+        },
+        "s39_b1_badge": {
+          "de": "WERKSARCHIV",
+          "en": "FACTORY ARCHIVE",
+          "ja": "メーカーアーカイブ",
+          "zh": "百年数据档案"
+        },
+        "s39_b2_badge": {
+          "de": "GLOBALER STANDARD",
+          "en": "GLOBAL STANDARD",
+          "ja": "世界基準",
+          "zh": "世界名琴标准"
         }
       },
       "notes": {
@@ -2968,6 +3358,42 @@
           "en": "Measurement diagram for determining hammer boring depth in grands",
           "ja": "Messschema zur Ermittlung der Bohrungslänge im Flügel",
           "zh": "Messschema zur Ermittlung der Bohrungslänge im Flügel"
+        },
+        "s43_b1_badge": {
+          "de": "FORMEL-BERECHNUNG",
+          "en": "FORMULA CALCULATION",
+          "ja": "計算式算出",
+          "zh": "公式推导"
+        },
+        "s43_b2_badge": {
+          "de": "GEOMETRISCHE ACHSE",
+          "en": "GEOMETRIC AXIS",
+          "ja": "幾何学的基準軸",
+          "zh": "几何中心轴"
+        },
+        "s43_bullet_1": {
+          "de": "<strong>1. Steighöhe & Tastenweg:</strong> Mechanikhub (46–48 mm) und Spieltiefe (10–10,5 mm) exakt einmessen.",
+          "en": "<strong>1. Blow Distance & Key Dip:</strong> Measure action blow distance (46–48 mm) and key dip (10–10.5 mm) precisely.",
+          "ja": "<strong>1. 打弦距離とキーの深さ：</strong> アクションの打弦距離（46〜48 mm）とキーの深さ（10〜10.5 mm）を正確に測定。",
+          "zh": "<strong>1. 开门与下中深度：</strong> 精确测量击弦距离（46–48 mm）和琴键下沉深度（10–10.5 mm）。"
+        },
+        "s43_bullet_2": {
+          "de": "<strong>2. Schnabellinie bestimmen:</strong> Höhe der Kapselleiste zur Saitenunterkante als Referenzmaß nehmen.",
+          "en": "<strong>2. Flange Rail Reference:</strong> Use height of flange rail relative to string underside as datum plane.",
+          "ja": "<strong>2. フレンジレールの基準線：</strong> 弦下面に対するフレンジレールの高さを基準面として設定。",
+          "zh": "<strong>2. 弦总成基准线：</strong> 以微调总成轨道至琴弦下沿的高度作为基准基面。"
+        },
+        "s43_bullet_3": {
+          "de": "<strong>3. Faustformel anwenden:</strong> Bohrungslänge = Gesamtlänge - 24 mm für Standard-Flügelgeometrien.",
+          "en": "<strong>3. Apply Rule of Thumb:</strong> Boring length = overall length - 24 mm for standard grand piano geometries.",
+          "ja": "<strong>3. 基本公式の適用：</strong> 標準的なグランドピアノではボア長＝全長 - 24 mm。",
+          "zh": "<strong>3. 应用核心公式：</strong> 标准三角琴规格采用 钻孔长度 = 总长 - 24 mm。"
+        },
+        "s43_bullet_4": {
+          "de": "<strong>4. Mathematische Kontrolle:</strong> Stielüberstand von mindestens 3 mm für Festigkeit berücksichtigen.",
+          "en": "<strong>4. Mathematical Verification:</strong> Ensure a shank protrusion of at least 3 mm for structural integrity.",
+          "ja": "<strong>4. 数学的検証：</strong> 強度確保のためシャンク突出量が最低3 mmあることを確認。",
+          "zh": "<strong>4. 数学复核校验：</strong> 确保留出至少 3 mm 的柄头余量以保障抗剪强度。"
         }
       },
       "notes": {
@@ -3034,6 +3460,18 @@
           "en": "Ready-to-use GP dimension sheet from the Renner Academy",
           "ja": "Ausfüllfertiges GP-Maßblatt der Renner Academy",
           "zh": "Ausfüllfertiges GP-Maßblatt der Renner Academy"
+        },
+        "s44_b1_badge": {
+          "de": "FLÜGEL (GP)",
+          "en": "GRAND PIANO (GP)",
+          "ja": "グランドピアノ（GP）",
+          "zh": "三角琴（GP）"
+        },
+        "s44_b2_badge": {
+          "de": "KLAVIER (UP)",
+          "en": "UPRIGHT PIANO (UP)",
+          "ja": "アップライトピアノ（UP）",
+          "zh": "立式琴（UP）"
         }
       },
       "notes": {
@@ -3100,6 +3538,18 @@
           "en": "Pre-mounting hammer shanks on the action rail in scale sections",
           "ja": "Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock",
           "zh": "Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock"
+        },
+        "s45_b1_badge": {
+          "de": "MONTAGE-SCHRITT 01",
+          "en": "ASSEMBLY STEP 01",
+          "ja": "組立工程 01",
+          "zh": "装配步骤 01"
+        },
+        "s45_b2_badge": {
+          "de": "SPACING-KONTROLLE",
+          "en": "SPACING CHECK",
+          "ja": "間隔調整",
+          "zh": "均等间距校验"
         }
       },
       "notes": {
@@ -3160,6 +3610,18 @@
           "en": "Acoustic sorting and frequency pairing of hammer shanks",
           "ja": "Frequenzprüfung der Stiele vor dem festen Verschrauben",
           "zh": "Frequenzprüfung der Stiele vor dem festen Verschrauben"
+        },
+        "s46_b1_badge": {
+          "de": "AKUSTISCHE SELEKTION",
+          "en": "ACOUSTIC SELECTION",
+          "ja": "音響的選別",
+          "zh": "声学校正筛选"
+        },
+        "s46_b2_badge": {
+          "de": "KLANG-SELEKTION",
+          "en": "TONE MATCHING",
+          "ja": "トーンマッチング",
+          "zh": "频响共振配对"
         }
       },
       "notes": {
@@ -3226,6 +3688,18 @@
           "en": "Traveling hammer shanks with 0.2 mm blue gummed paper shims",
           "ja": "Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier",
           "zh": "Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier"
+        },
+        "s47_b1_badge": {
+          "de": "PRÄZISIONSAUSRICHTUNG",
+          "en": "PRECISION ALIGNMENT",
+          "ja": "精密垂直調整",
+          "zh": "垂直走行校正"
+        },
+        "s47_b2_badge": {
+          "de": "TRAVELING PAPER",
+          "en": "TRAVELING PAPER",
+          "ja": "トラベリングペーパー",
+          "zh": "走直校正衬纸"
         }
       },
       "notes": {
@@ -3286,6 +3760,18 @@
           "en": "Inspection, sorting, and manual re-numbering of hammerheads",
           "ja": "Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe",
           "zh": "Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe"
+        },
+        "s48_b1_badge": {
+          "de": "QUALITÄTSSICHERUNG",
+          "en": "QUALITY ASSURANCE",
+          "ja": "品質保証",
+          "zh": "品质保证"
+        },
+        "s48_b2_badge": {
+          "de": "SATZ-INTEGRITÄT",
+          "en": "SET INTEGRITY",
+          "ja": "セット順序管理",
+          "zh": "组序严格受控"
         }
       },
       "notes": {
@@ -3352,6 +3838,18 @@
           "en": "Hand reamer ø 5.0 mm (1:50) conically sizing the hammer bore",
           "ja": "Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung",
           "zh": "Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung"
+        },
+        "s49_b1_badge": {
+          "de": "REFERENZHÄMMER",
+          "en": "REFERENCE HAMMERS",
+          "ja": "基準ハンマー",
+          "zh": "基准定位槌"
+        },
+        "s49_b2_badge": {
+          "de": "KONISCHES REIBEN",
+          "en": "TAPER REAMING",
+          "ja": "テーパーリーミング",
+          "zh": "锥孔精准扩磨"
         }
       },
       "notes": {
@@ -3418,6 +3916,18 @@
           "en": "Cutaway diagram: Conical shank locked into conically reamed bore",
           "ja": "Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung",
           "zh": "Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung"
+        },
+        "s50_b1_badge": {
+          "de": "FORM- & KRAFTSCHLUSS",
+          "en": "POSITIVE FIT & LOCK",
+          "ja": "嵌合と締結",
+          "zh": "刚性形变自锁"
+        },
+        "s50_b2_badge": {
+          "de": "KEGELSITZ",
+          "en": "TAPER SEAT",
+          "ja": "テーパーシート",
+          "zh": "锥形紧密配合"
         }
       },
       "notes": {
@@ -3478,6 +3988,18 @@
           "en": "Measuring with the authentic Renner 91° Grand Hammer Angle Gauge",
           "ja": "Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°",
           "zh": "Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°"
+        },
+        "s51_b1_badge": {
+          "de": "WINKELKALIBRIERUNG",
+          "en": "ANGLE CALIBRATION",
+          "ja": "角度校正",
+          "zh": "角度校准"
+        },
+        "s51_b2_badge": {
+          "de": "ANSCHLAGSWINKEL",
+          "en": "STRIKE ANGLE",
+          "ja": "打弦角度",
+          "zh": "击弦倾角"
         }
       },
       "notes": {
@@ -3556,6 +4078,18 @@
           "en": "Electric glue pot, pearl glue, and specialized PVA for hardwoods",
           "ja": "Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz",
           "zh": "Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz"
+        },
+        "s52_b1_badge": {
+          "de": "HEISSLEIM (65°C)",
+          "en": "HOT GLUE (65°C)",
+          "ja": "膠接着（65℃）",
+          "zh": "传统皮胶（65℃）"
+        },
+        "s52_b2_badge": {
+          "de": "KALTLEIM (D3)",
+          "en": "COLD GLUE (D3)",
+          "ja": "白ボンド（D3）",
+          "zh": "白胶（D3）"
         }
       },
       "notes": {
@@ -3622,6 +4156,18 @@
           "en": "Twisting hammerhead onto shank to ensure uniform 360° glue bead",
           "ja": "Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe",
           "zh": "Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe"
+        },
+        "s53_b1_badge": {
+          "de": "HANDWERKSTECHNIK",
+          "en": "CRAFT TECHNIQUE",
+          "ja": "伝統技法",
+          "zh": "手工秘法"
+        },
+        "s53_b2_badge": {
+          "de": "DREHBEWEGUNG",
+          "en": "ROTATIONAL MOTION",
+          "ja": "回転塗布",
+          "zh": "旋转涂布均匀"
         }
       },
       "notes": {
@@ -3682,6 +4228,18 @@
           "en": "Cleanly trimming the glue ring after 1 hour curing time",
           "ja": "Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit",
           "zh": "Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit"
+        },
+        "s54_b1_badge": {
+          "de": "VERPUTZTECHNIK",
+          "en": "CLEANING TECHNIQUE",
+          "ja": "膠面仕上げ技法",
+          "zh": "胶缝清理技法"
+        },
+        "s54_b2_badge": {
+          "de": "SAUBERE FUGE",
+          "en": "CLEAN JOINT",
+          "ja": "クリーンジョイント",
+          "zh": "平顺无残留"
         }
       },
       "notes": {
@@ -3742,6 +4300,18 @@
           "en": "Using clamping pliers to protect center pins while trimming shank ends",
           "ja": "Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes",
           "zh": "Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes"
+        },
+        "s55_b1_badge": {
+          "de": "KAPPVERFAHREN",
+          "en": "TRIMMING METHOD",
+          "ja": "切断工法",
+          "zh": "切柄与修整"
+        },
+        "s55_b2_badge": {
+          "de": "DOZUKI SÄGE",
+          "en": "DOZUKI SAW",
+          "ja": "胴付鋸",
+          "zh": "道突精密手锯"
         }
       },
       "notes": {
@@ -3820,6 +4390,18 @@
           "en": "Precise tail shaping for optimum backcheck engagement",
           "ja": "Präzises Ausformen der Hammerschwänze für optimalen Fängerfang",
           "zh": "Präzises Ausformen der Hammerschwänze für optimalen Fängerfang"
+        },
+        "s56_b1_badge": {
+          "de": "SCHRITT 01",
+          "en": "STEP 01",
+          "ja": "工程 01",
+          "zh": "步骤 01"
+        },
+        "s56_b2_badge": {
+          "de": "SCHRITT 02",
+          "en": "STEP 02",
+          "ja": "工程 02",
+          "zh": "步骤 02"
         }
       },
       "notes": {
@@ -3880,6 +4462,18 @@
           "en": "Final finish: Breaking edges and verifying sight line over spirit lamp",
           "ja": "Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe",
           "zh": "Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe"
+        },
+        "s57_b1_badge": {
+          "de": "MEISTER-FINISH",
+          "en": "MASTER FINISH",
+          "ja": "マイスター仕上げ",
+          "zh": "大师级收尾"
+        },
+        "s57_b2_badge": {
+          "de": "VEREDELTE KANTEN",
+          "en": "REFINED EDGES",
+          "ja": "面取り仕上げ",
+          "zh": "倒角精细处理"
         }
       },
       "notes": {
@@ -3946,6 +4540,18 @@
           "en": "The goal of master voicing: Open dynamic tone and singing sustain",
           "ja": "Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston",
           "zh": "Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston"
+        },
+        "s58_b1_badge": {
+          "de": "KLANGPHILOSOPHIE",
+          "en": "SOUND PHILOSOPHY",
+          "ja": "整音の哲学",
+          "zh": "声音哲学"
+        },
+        "s58_b2_badge": {
+          "de": "DIE SEELE DES TONS",
+          "en": "SOUL OF SOUND",
+          "ja": "音の魂",
+          "zh": "钢琴音色之魂"
         }
       },
       "notes": {
@@ -4042,6 +4648,18 @@
           "en": "The concert grand on stage: Room acoustics and instrument in harmony",
           "ja": "Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang",
           "zh": "Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang"
+        },
+        "s59_b1_badge": {
+          "de": "AKUSTISCHE GRENZEN",
+          "en": "ACOUSTIC LIMITS",
+          "ja": "音響的制約",
+          "zh": "固有物理边界"
+        },
+        "s59_b2_badge": {
+          "de": "RESONANZBODEN & SAITEN",
+          "en": "SOUNDBOARD & STRINGS",
+          "ja": "響板と弦",
+          "zh": "音板与琴弦协同"
         }
       },
       "notes": {
@@ -4318,6 +4936,18 @@
           "en": "Pre-needling: Deep stitches in the fortissimo wedge (9:00 to 10:00 o'clock)",
           "ja": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "zh": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)"
+        },
+        "s62_b1_badge": {
+          "de": "PRE-NEEDLING",
+          "en": "PRE-NEEDLING",
+          "ja": "下整音（針刺し）",
+          "zh": "基础刺针整音"
+        },
+        "s62_b2_badge": {
+          "de": "GRUNDELASTIZITÄT",
+          "en": "BASIC ELASTICITY",
+          "ja": "基本弾力性",
+          "zh": "建立核心弹性"
         }
       },
       "notes": {
@@ -4378,6 +5008,18 @@
           "en": "Renner voicing tools, needle handles, and adjustable voicing instrument",
           "ja": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "zh": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat"
+        },
+        "s63_b1_badge": {
+          "de": "WERKZEUGKUNDE",
+          "en": "TOOL SET",
+          "ja": "専門工具",
+          "zh": "专业整音工具"
+        },
+        "s63_b2_badge": {
+          "de": "PRÄZISIONSNADELN",
+          "en": "PRECISION NEEDLES",
+          "ja": "精密針",
+          "zh": "进口精密排针"
         }
       },
       "notes": {
@@ -4420,6 +5062,36 @@
           "en": "Bedding strings firmly at the hitch pin using brass drift punch",
           "ja": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "zh": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag"
+        },
+        "s64_b1_badge": {
+          "de": "SAITEN-BETTUNG",
+          "en": "STRING BEDDING",
+          "ja": "弦合わせ工程",
+          "zh": "琴弦沉实就位"
+        },
+        "s64_b2_badge": {
+          "de": "CHORREINHEIT",
+          "en": "UNISON PURITY",
+          "ja": "同音同調の純度",
+          "zh": "三弦同音纯净"
+        },
+        "s64_bullet_1": {
+          "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.",
+          "en": "<strong>Setting Hitch Pins:</strong> Carefully seat strings from back to front at hitch pins using a brass drift punch and light hammer.",
+          "ja": "<strong>ヒッチピンの弦合わせ：</strong> 真鍮ポンチと軽量ハンマーで弦をヒッチピンに慎重に密着。",
+          "zh": "<strong>挂弦钉沉降：</strong> 用黄铜冲头和轻手锤将琴弦自后向前轻敲至挂弦钉根部沉实。"
+        },
+        "s64_bullet_2": {
+          "de": "<strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.",
+          "en": "<strong>Bridge Pin Alignment:</strong> Seat strings on the bridge with Renner bridge punch to eliminate false beats.",
+          "ja": "<strong>駒ピンの弦合わせ：</strong> 専用セッターで弦を駒に押し込み、不要なノイズや偽うなりを排除。",
+          "zh": "<strong>弦码钉就位：</strong> 使用专用敲合器使琴弦紧贴弦码，消除假杂音与拍音。"
+        },
+        "s64_bullet_3": {
+          "de": "<strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.",
+          "en": "<strong>Unison Purity:</strong> Before the first voicing needle, the unison must ring absolutely pure and free of unwanted friction.",
+          "ja": "<strong>同音の純度調整：</strong> 最初の針刺し前に、ユニゾンが完全に澄み切りノイズのない状態に調弦。",
+          "zh": "<strong>同音同轴纯净度：</strong> 首次刺针整音前，三根同音弦必须调校至完全纯净、绝无杂音。"
         }
       },
       "notes": {
@@ -4480,6 +5152,18 @@
           "en": "Verifying treble strike point and square alignment of hammerheads",
           "ja": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "zh": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer"
+        },
+        "s65_b1_badge": {
+          "de": "STRIKE POINT",
+          "en": "STRIKE POINT",
+          "ja": "打弦点探索",
+          "zh": "最佳击弦点"
+        },
+        "s65_b2_badge": {
+          "de": "DISKANTGLANZ",
+          "en": "TREBLE BRILLIANCE",
+          "ja": "高音域の輝き",
+          "zh": "高音晶莹通透"
         }
       },
       "notes": {
@@ -4558,6 +5242,18 @@
           "en": "Filing hammer crowns for perfect flush alignment to 3-string unisons",
           "ja": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "zh": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor"
+        },
+        "s66_b1_badge": {
+          "de": "HOHL VOR RUND",
+          "en": "HOLLOW BEFORE ROUND",
+          "ja": "削り技法",
+          "zh": "修磨技法"
+        },
+        "s66_b2_badge": {
+          "de": "KRONENSCHEITEL",
+          "en": "CROWN APEX",
+          "ja": "クラウン頂点",
+          "zh": "槌顶圆弧"
         }
       },
       "notes": {
@@ -4624,6 +5320,18 @@
           "en": "Chromatic listening and fine voicing with short single needle",
           "ja": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "zh": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel"
+        },
+        "s67_b1_badge": {
+          "de": "FEININTONATION",
+          "en": "FINE VOICING",
+          "ja": "仕上げ整音",
+          "zh": "精细色彩调配"
+        },
+        "s67_b2_badge": {
+          "de": "FARBPALETTE",
+          "en": "COLOR PALETTE",
+          "ja": "色彩パレット",
+          "zh": "全音域色彩平衡"
         }
       },
       "notes": {

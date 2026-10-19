@@ -265,7 +265,7 @@ if (typeof translations !== 'undefined') {
                 bu_cnt[0] += 1
                 prefix = bm.group(1)
                 return f'{prefix}<span data-i18n="s{num}_bullet_{bu_cnt[0]}">'
-            body = re.sub(r'(<li class="bullet-item"[^>]*>\s*<span class="bullet-dot[^"]*"></span>\s*)<span(?:\s+data-i18n="[^"]*")?>', bu_repl, body)
+            body = re.sub(r'((?:<li class="bullet-item"[^>]*>|<div class="bento-card-list-item"[^>]*>)\s*<span class="(?:bullet-dot|bento-dot)[^"]*"></span>\s*)<span(?:\s+data-i18n="[^"]*")?>', bu_repl, body)
 
             # Captions
             cap_cnt = [0]
