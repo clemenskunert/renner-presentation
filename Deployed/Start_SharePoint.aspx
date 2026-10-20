@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261020_1720">
+  <link rel="stylesheet" href="css/presentation.css?v=20261020_1905">
 </head>
 <body data-country-theme="de">
 

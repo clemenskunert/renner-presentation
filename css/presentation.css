@@ -4564,19 +4564,18 @@ body::before {
   position: relative;
   z-index: 1;
   flex: 1;
-  height: calc(100% - 215px);
-  max-height: calc(100% - 215px);
-  padding: 8px 36px 0 36px;
-  margin-bottom: 125px;
+  height: calc(100% - 185px);
+  max-height: calc(100% - 185px);
+  padding: 6px 36px 0 36px;
+  margin-bottom: 104px; /* ca. 10% nach unten vergrößert, Renner-Logo mit >24px Freiraum geschützt */
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* Main Two-Wing Grid Layout: Left wing enlarged for broader historical imagery */
 .ffw-history-layout {
   display: grid;
   grid-template-columns: 1.28fr 0.72fr;
-  gap: 20px;
+  gap: 16px;
   height: 100%;
   align-items: stretch;
 }
@@ -4585,7 +4584,7 @@ body::before {
 .ffw-history-main {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   height: 100%;
   min-height: 0;
 }
@@ -4695,13 +4694,14 @@ body::before {
 /* Epoch Tabs Navigation Bar */
 .ffw-epoch-tabs {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   overflow-x: auto;
-  padding: 4px;
+  padding: 3px 4px;
   background: rgba(14, 20, 32, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 10px;
   scrollbar-width: none;
+  flex-shrink: 0;
 }
 
 .ffw-epoch-tabs::-webkit-scrollbar {
@@ -4714,10 +4714,10 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8px 10px;
+  padding: 4px 6px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -4739,7 +4739,7 @@ body::before {
 }
 
 .ffw-tab-year {
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   font-weight: 800;
   color: var(--gold-accent);
   letter-spacing: 0.5px;
@@ -4751,10 +4751,10 @@ body::before {
 }
 
 .ffw-tab-tag {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 700;
   opacity: 0.9;
-  margin-top: 2px;
+  margin-top: 1px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
@@ -4776,14 +4776,14 @@ body::before {
   display: none;
   height: 100%;
   width: 100%;
-  padding: 16px 20px;
+  padding: 12px 16px;
   box-sizing: border-box;
 }
 
 .ffw-milestone-panel.active {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr; /* Media frame widened by >20% for superior image clarity */
-  gap: 18px;
+  gap: 14px;
   animation: ffwPanelFade 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -4802,7 +4802,7 @@ body::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8px;
+  gap: 4px;
   min-height: 0;
 }
 
@@ -4810,12 +4810,12 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
 }
 
 .ffw-panel-year {
   font-family: var(--font-serif);
-  font-size: 2.1rem;
+  font-size: 1.75rem;
   font-weight: 900;
   line-height: 1;
   color: var(--gold-accent);
@@ -4824,25 +4824,25 @@ body::before {
 
 .ffw-panel-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 1.55vw, 1.62rem); /* Matches Slide 3 .hero-title */
+  font-size: clamp(1.18rem, 1.3vw, 1.38rem);
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.25;
-  margin: 2px 0 6px 0;
+  line-height: 1.2;
+  margin: 1px 0 2px 0;
 }
 
 .ffw-panel-subtitle {
-  font-size: clamp(1.08rem, 1.18vw, 1.15rem); /* Matches Slide 3 .hero-sentence */
+  font-size: clamp(0.92rem, 1.0vw, 1.02rem);
   color: rgba(255, 255, 255, 0.94);
-  line-height: 1.48;
+  line-height: 1.32;
   font-weight: 400;
 }
 
 .ffw-panel-bullets {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin: 4px 0;
+  gap: 5px;
+  margin: 2px 0;
   flex: 1;
   justify-content: center;
 }
@@ -4850,24 +4850,24 @@ body::before {
 .ffw-bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  font-size: clamp(1.12rem, 1.25vw, 1.25rem); /* Matches Slide 3 .hero-bullet-item */
-  line-height: 1.44;
+  gap: 8px;
+  font-size: clamp(0.95rem, 1.04vw, 1.08rem);
+  line-height: 1.32;
   color: rgba(255, 255, 255, 0.94);
-  padding: 2px 0;
+  padding: 1px 0;
 }
 
 .ffw-bullet-item strong {
   color: #ffffff;
   font-weight: 700;
-  font-size: clamp(1.15rem, 1.28vw, 1.28rem);
-  letter-spacing: 0.2px;
+  font-size: clamp(0.98rem, 1.08vw, 1.12rem);
+  letter-spacing: 0.15px;
 }
 
 .ffw-bullet-item .bento-dot {
-  width: 10px;
-  height: 10px;
-  margin-top: 6px;
+  width: 7px;
+  height: 7px;
+  margin-top: 5px;
   flex-shrink: 0;
 }
 
@@ -4875,22 +4875,22 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 6px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .ffw-fact-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: 8px;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 6px;
   background: rgba(200, 163, 86, 0.16);
   border: 1px solid rgba(200, 163, 86, 0.4);
   color: var(--gold-light);
-  font-size: 0.88rem; /* Matches Slide 3 .hero-fact-tag */
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
 }
 
 /* Panel Media Frame */
@@ -4948,7 +4948,7 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 16px 20px;
+  padding: 12px 16px;
   border: 1px solid rgba(200, 163, 86, 0.35);
   background: linear-gradient(165deg, rgba(20, 27, 44, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
@@ -4975,16 +4975,16 @@ body::before {
 
 .ffw-felt-card-header .bento-card-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 1.5vw, 1.55rem); /* Matches Slide 3 aesthetic */
+  font-size: clamp(1.18rem, 1.3vw, 1.38rem);
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 6px 0;
-  line-height: 1.25;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
 }
 
 .ffw-felt-card-header .bento-card-desc {
-  font-size: clamp(1.05rem, 1.15vw, 1.12rem); /* Matches Slide 3 .hero-sentence */
-  line-height: 1.45;
+  font-size: clamp(0.92rem, 1.0vw, 1.02rem);
+  line-height: 1.32;
   color: rgba(255, 255, 255, 0.92);
   margin: 0;
 }
@@ -4992,13 +4992,13 @@ body::before {
 /* Felt Texture Viewer Box */
 .ffw-texture-viewer {
   position: relative;
-  height: 155px;
-  border-radius: 12px;
+  height: clamp(100px, 13vh, 125px);
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid rgba(200, 163, 86, 0.4);
   background: #090d16;
   cursor: zoom-in;
-  margin: 6px 0;
+  margin: 3px 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 35px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
@@ -5069,7 +5069,7 @@ body::before {
 .ffw-felt-highlights {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   position: relative;
   z-index: 1;
 }
@@ -5077,12 +5077,12 @@ body::before {
 .ffw-highlight-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  font-size: clamp(1.05rem, 1.15vw, 1.14rem); /* Matches Slide 3 text style */
-  line-height: 1.4;
+  gap: 8px;
+  font-size: clamp(0.9rem, 0.98vw, 1.02rem);
+  line-height: 1.3;
   color: rgba(255, 255, 255, 0.92);
-  padding: 6px 12px;
-  border-radius: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
   transition: background 0.2s ease, border-color 0.2s ease;
@@ -5094,28 +5094,28 @@ body::before {
 }
 
 .ffw-hl-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--gold-accent);
   box-shadow: 0 0 6px rgba(200, 163, 86, 0.6);
-  margin-top: 6px;
+  margin-top: 5px;
   flex-shrink: 0;
 }
 
 .ffw-highlight-item strong {
   color: #ffffff;
-  font-size: clamp(1.08rem, 1.18vw, 1.18rem);
+  font-size: clamp(0.94rem, 1.02vw, 1.05rem);
   font-weight: 700;
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 /* Responsive Scaling for smaller / tablet screens */
 @media (max-width: 1400px) {
   .ffw-history-layout {
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 16px;
+    gap: 14px;
   }
   .ffw-milestone-panel.active {
     grid-template-columns: 1fr;
@@ -5125,32 +5125,32 @@ body::before {
     height: 150px;
   }
   .ffw-texture-viewer {
-    height: 140px;
+    height: 120px;
   }
 }
 
 @media (max-height: 850px) {
   .slide[data-slide="5"] .slide-body {
-    height: calc(100% - 195px);
-    max-height: calc(100% - 195px);
-    margin-bottom: 110px;
-    padding-top: 4px;
+    height: calc(100% - 170px);
+    max-height: calc(100% - 170px);
+    margin-bottom: 96px;
+    padding-top: 2px;
   }
   .ffw-texture-viewer {
-    height: 130px;
-    margin: 4px 0;
+    height: 105px;
+    margin: 2px 0;
   }
   .ffw-felt-highlights {
-    gap: 5px;
+    gap: 3px;
   }
   .ffw-highlight-item {
-    padding: 5px 10px;
+    padding: 3px 6px;
   }
   .ffw-milestone-panel {
-    padding: 12px 16px;
+    padding: 8px 12px;
   }
   .ffw-panel-bullets {
-    gap: 5px;
+    gap: 3px;
   }
 }
 
