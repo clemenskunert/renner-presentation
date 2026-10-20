@@ -4976,7 +4976,7 @@ body::before {
 /* Felt Texture Viewer Box */
 .ffw-texture-viewer {
   position: relative;
-  height: 155px;
+  height: 190px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(200, 163, 86, 0.4);
@@ -5000,37 +5000,11 @@ body::before {
 }
 
 .ffw-texture-viewer.is-zoomed .ffw-texture-img {
-  transform: scale(2.4);
+  transform: scale(2.85);
 }
 
-/* Animated Fiber Laser Scanning Beam */
 .ffw-texture-scanner {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.9) 50%, transparent 100%);
-  box-shadow: 0 0 16px rgba(255, 215, 0, 0.8), 0 0 4px #fff;
-  animation: ffwScanRay 4.5s infinite ease-in-out;
-  pointer-events: none;
-  z-index: 3;
-}
-
-@keyframes ffwScanRay {
-  0% {
-    top: 5%;
-    opacity: 0;
-  }
-  15% {
-    opacity: 0.95;
-  }
-  85% {
-    opacity: 0.95;
-  }
-  100% {
-    top: 95%;
-    opacity: 0;
-  }
+  display: none !important;
 }
 
 .ffw-texture-overlay {

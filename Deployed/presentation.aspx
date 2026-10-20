@@ -1725,11 +1725,9 @@
                   </div>
                 </div>
 
-                <!-- Felt Texture Viewer Box with Animation & Zoom -->
-                <div class="ffw-texture-viewer" id="ffw-texture-viewer" title="Klicken für 2,5x Makro-Faser-Inspektion">
+                <!-- Felt Texture Viewer Box with Zoom -->
+                <div class="ffw-texture-viewer" id="ffw-texture-viewer" title="Klicken für Makro-Faser-Inspektion">
                   <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Gewalkte Merinowolle Kompression" class="ffw-texture-img" id="ffw-texture-img">
-                  <!-- Animated Fiber Laser Scanning Beam -->
-                  <div class="ffw-texture-scanner" aria-hidden="true"></div>
                   <div class="hero-corner-bracket top-left"></div>
                   <div class="hero-corner-bracket top-right"></div>
                   <div class="hero-corner-bracket bottom-left"></div>
