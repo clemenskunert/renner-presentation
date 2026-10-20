@@ -323,10 +323,10 @@
         "zh": "乌尔岑毛毡厂（FFW）– 顶级钢琴弦槌毛毡的诞生地"
       },
       "subtitle": {
-        "de": "Gegründet in Wurzen (1783) • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner",
-        "en": "Founded in Wurzen (1783) • From Germany's first piano felt in 1847 to the renaissance of “Weickert Spezial” for Renner",
-        "ja": "ヴルツェン創業（1783年）• 1847年ドイツ初のピアノフェルト開発からレンナー専用「ヴァイケルト・シュペツィアル」復刻まで",
-        "zh": "创立于乌尔岑（1783年）• 从1847年德国首创工业琴毡到专为雷诺重生的“魏克特特级”（Weickert Spezial）"
+        "de": "Wurzen 1783 • Vom ersten Pianofortefilz 1847 zur Weickert-Spezial-Partnerschaft mit Renner",
+        "en": "Wurzen 1783 • From the first piano felt in 1847 to the Weickert Spezial partnership with Renner",
+        "ja": "ヴルツェン創業（1783年）• 1847年初のピアノフェルトからレンナー専用「ヴァイケルト特級」提携まで",
+        "zh": "乌尔岑 1783 • 从1847年德国首创工业琴毡到雷诺专属“魏克特特级”深度合作"
       },
       "elements": {
         "s5_play_label": {
@@ -384,34 +384,34 @@
           "zh": "乌尔岑毛毡制造厂创立"
         },
         "s5_m1_subtitle": {
-          "de": "Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Wurzen",
-          "en": "The historic roots in Wurzen of the world's oldest industrial felt manufactory",
-          "ja": "ヴルツェンに始まる世界最古の工業フェルト製造所の歴史的ルーツ",
-          "zh": "全球历史最悠久的工业毛毡制造企业在乌尔岑的渊源基石"
+          "de": "Die älteste industrielle Filzmanufaktur der Welt – verwurzelt im sächsischen Muldental",
+          "en": "The world's oldest industrial felt manufactory – rooted in Saxony's Mulde valley",
+          "ja": "世界最古の工業フェルト製造所 — ザクセン州ムルデ渓谷に息づく伝統",
+          "zh": "全球历史最悠久的工业毛毡制造企业 — 扎根萨克森州穆尔德河谷"
         },
         "s5_m1_bullet_1": {
-          "de": "<strong>Traditionsstandort Wurzen:</strong> Seit der Gründung 1783 durch Johann Dankegott Weickert steht Wurzen im sächsischen Muldental für traditionsreiche Woll- und Filzherstellung.",
-          "en": "<strong>Historic Wurzen Facility:</strong> Founded in 1783 by Johann Dankegott Weickert, Wurzen in Saxony's Mulde valley stands as the world's cradle of felt manufacturing.",
-          "ja": "<strong>伝統の地ヴルツェン：</strong>1783年ヨハン・ダンケゴット・ヴァイケルトの創業以来、ザクセン州ムルデ渓谷のヴルツェンは極上フェルト製造の象徴。",
-          "zh": "<strong>历史名邑乌尔岑：</strong>自1783年由约翰·丹克戈特·魏克特创立以来，萨克森州穆尔德河畔的乌尔岑始终是全球顶级毛毡制造业的殿堂。"
+          "de": "<strong>Gründung 1783:</strong> Johann Dankegott Weickert begründet in Wurzen die sächsische Woll- und Filztradition.",
+          "en": "<strong>Founding in 1783:</strong> Johann Dankegott Weickert establishes the Saxon wool and felt tradition in Wurzen.",
+          "ja": "<strong>1783年創業：</strong>ヨハン・ダンケゴット・ヴァイケルトがヴルツェンにザクセンの羊毛・フェルト伝統を確立。",
+          "zh": "<strong>1783年创立：</strong>约翰·丹克戈特·魏克特在乌尔岑奠定萨克森羊毛与高级制毡工艺传统。"
         },
         "s5_m1_bullet_2": {
-          "de": "<strong>Wegbereiter der Feinfilz-Industrie:</strong> Aus der handwerklichen Manufaktur entwickelte sich in Wurzen ein florierendes Zentrum für hochwertige technische und edle Wollfilze.",
-          "en": "<strong>Pioneer of Fine Feltmaking:</strong> From these artisan roots, Wurzen evolved into a flourishing hub for supreme technical and acoustic virgin wool felts.",
-          "ja": "<strong>高級フェルトの先駆者：</strong>手工業から発展し、ヴルツェンは高精度技術フェルトと高級ウールフェルトの中心地へと成長。",
-          "zh": "<strong>精细制毡业先驱：</strong>从传统手工业工坊起步，乌尔岑迅速发展为享誉欧洲的精密技术用毡与高品级羊毛毡制造枢纽。"
+          "de": "<strong>Pionier der Feinfilze:</strong> Aus der Handwerksmanufaktur wächst ein führendes Zentrum für edle technische Wollfilze.",
+          "en": "<strong>Fine Felt Pioneer:</strong> The artisan shop grows into a leading center for premium technical virgin wool felts.",
+          "ja": "<strong>高級フェルトの開拓者：</strong>手工業工房から技術用・音響用高級ウールフェルトの主要拠点へと発展。",
+          "zh": "<strong>精细毛毡先驱：</strong>传统手工工坊迅速壮大为欧洲顶尖的高端工业技术与声学纯羊毛毡制造中心。"
         },
         "s5_m1_bullet_3": {
-          "de": "<strong>Klanganspruch des Klavierbaus:</strong> Mit der Blüte des Hammerflügels entstand in Wurzen das Streben nach dem perfekten, elastischen Anschlagmaterial für Klaviere.",
-          "en": "<strong>Acoustic Quest of Piano Making:</strong> As the pianoforte flourished, Wurzen craftsmen dedicated themselves to creating the perfect resilient striking material.",
-          "ja": "<strong>ピアノづくりの音響的探求：</strong>フォルテピアノの台頭とともに、ヴルツェンでは弦を打つ理想の弾性フェルトの追求が始動。",
-          "zh": "<strong>钢琴声学的极致追求：</strong>随着击弦古钢琴在欧洲的繁荣，乌尔岑的工匠大师们开启了探寻完美弦槌回弹介质的伟大征程。"
+          "de": "<strong>Fokus Klavierbau:</strong> Frühe Spezialisierung auf hochelastische Filze für den aufstrebenden Hammerflügelbau.",
+          "en": "<strong>Piano Focus:</strong> Early dedication to highly resilient felt for the emerging pianoforte industry.",
+          "ja": "<strong>ピアノ製造への特化：</strong>台頭するフォルテピアノのために高弾性打弦フェルトの開発へいち早く注力。",
+          "zh": "<strong>深耕钢琴声学：</strong>极早专注于为方兴未艾的现代钢琴研制高弹性专属击弦介质。"
         },
         "s5_m1_fact": {
-          "de": "🏛 Älteste industrielle Filzmanufaktur weltweit in Wurzen",
+          "de": "🏛 Älteste industrielle Filzmanufaktur der Welt in Wurzen",
           "en": "🏛 World's oldest industrial felt manufactory in Wurzen",
-          "ja": "🏛 ヴルツェンに根付く世界最古の工業フェルト製造所",
-          "zh": "🏛 位于乌尔岑的全球最古老工业羊毛毡制造企业"
+          "ja": "🏛 ヴルツェンに息づく世界最古の工業フェルト製造所",
+          "zh": "🏛 位于乌尔岑的全球历史最悠久工业羊毛毡制造企业"
         },
         "s5_m1_caption": {
           "de": "Vom handkardierten Rohwollvlies zum hochverdichteten Weickert-Filzblock",
@@ -432,34 +432,34 @@
           "zh": "德国首创高品质工业钢琴弦槌毛毡"
         },
         "s5_m2_subtitle": {
-          "de": "Patzschke & Weickert revolutionieren den Klavierbau in Wurzen",
-          "en": "Patzschke & Weickert revolutionize piano craftsmanship in Wurzen",
-          "ja": "ヴルツェンにてパチュケとヴァイケルトがピアノ製造に革命をもたらす",
-          "zh": "帕茨克与魏克特在乌尔岑颠覆传统钢琴击弦机工艺"
+          "de": "Patzschke & Weickert revolutionieren 1847 den europäischen Klavierbau",
+          "en": "Patzschke & Weickert revolutionize European piano craftsmanship in 1847",
+          "ja": "パチュケとヴァイケルトが1847年に欧州ピアノ製造の常識を刷新",
+          "zh": "帕茨克与魏克特于1847年颠覆欧洲传统钢琴击弦工艺"
         },
         "s5_m2_bullet_1": {
-          "de": "<strong>Revolution statt Leder:</strong> 1847 gelang es den Pionieren Patzschke und Weickert erstmals, den bisherigen ungleichmäßigen Lederbezug durch Spezialfilz zu ersetzen.",
-          "en": "<strong>Felt Replaces Leather:</strong> In 1847, felt pioneers Patzschke and Weickert succeeded in replacing uneven leather hammer coverings with specialized high-density felt.",
-          "ja": "<strong>革からフェルトへ：</strong>1847年、パチュケとヴァイケルトが従来の硬く不均一な革巻きに代わる専用フェルトの開発に初成功。",
-          "zh": "<strong>毛毡彻底取代皮革：</strong>1847年，制毡先驱帕茨克与魏克特首次研制成功可替代传统粗糙皮革包裹的击弦机专用高密度纯羊毛毡。"
+          "de": "<strong>Filz ersetzt Leder:</strong> 1847 gelingt es erstmals, harte Lederbezüge durch homogenen Hammerkopffilz abzulösen.",
+          "en": "<strong>Felt Replaces Leather:</strong> In 1847, uneven leather hammer coverings are successfully replaced by homogeneous felt.",
+          "ja": "<strong>革からフェルトへ：</strong>1847年、従来の硬い革巻きを均質な専用ハンマーフェルトに置き換えることに初成功。",
+          "zh": "<strong>毛毡取代皮革：</strong>1847年首次成功以均质高弹性纯羊毛毡彻底替代坚硬不均的传统皮革包裹。"
         },
         "s5_m2_bullet_2": {
-          "de": "<strong>Geburtsstunde des Pianofortefilzes:</strong> Die Verbindung von Weickerts Unternehmergeist und Patzschkes filztechnischer Meisterschaft begründete den weltweiten Siegeszug des Wurzener Hammerkopffilzes.",
-          "en": "<strong>Birth of Modern Piano Felt:</strong> Combining Weickert's enterprise and Patzschke's technical mastery founded the global triumph of Wurzen hammerhead felt.",
-          "ja": "<strong>ピアノフェルトの誕生：</strong>ヴァイケルトの企業力とパチュケの技術が融合し、ヴルツェン製ハンマーフェルトの世界進出がスタート。",
-          "zh": "<strong>专业钢琴琴毡诞生：</strong>魏克特的卓越远见与帕茨克精湛的制毡技艺强强结合，奠定了乌尔岑琴毡风靡全球的基石。"
+          "de": "<strong>Meisterliche Symbiose:</strong> Weickerts Unternehmergeist und Patzschkes Filz-Expertise begründen den Weltruf.",
+          "en": "<strong>Masterful Synergy:</strong> Weickert's enterprise and Patzschke's technical mastery forge worldwide acclaim.",
+          "ja": "<strong>職人技の相乗効果：</strong>ヴァイケルトの企業力とパチュケの技術が融合し、世界的な名声を確立。",
+          "zh": "<strong>大师级卓越协同：</strong>魏克特的远见卓识与帕茨克的精湛制毡技艺强强联合，铸就全球声誉。"
         },
         "s5_m2_bullet_3": {
-          "de": "<strong>Das Geheimnis des Wassers:</strong> Für reinsten weißen Pianofilz erwies sich das naturbelassene, kalkarme Wasser der Mulde in Wurzen als entscheidender Standortvorteil.",
-          "en": "<strong>The Secret of Soft Water:</strong> Natural, low-lime river water in Wurzen became the decisive locational advantage for producing pure white, resilient felt.",
-          "ja": "<strong>軟水の秘密：</strong>極めてミネラル分の少ないムルデ川の清流が、純白で高弾性なフェルトを育む決定的な地の利に。",
-          "zh": "<strong>天然纯净软水的秘境：</strong>乌尔岑穆尔德河低钙、极软的天然活水，成为制备毫无杂质、弹性充沛纯白琴毡的核心地理优势。"
+          "de": "<strong>Standortfaktor Mulde:</strong> Das kalkarme, weiche Wasser der Mulde sichert reinstes, elastisches Wollgewebe.",
+          "en": "<strong>Soft River Water:</strong> The naturally soft, low-mineral Mulde water ensures pristine, resilient wool fibers.",
+          "ja": "<strong>ムルデ川の地の利：</strong>ミネラル分の極めて少ない軟水が、極めて高純度で弾力に富むフェルトを育成。",
+          "zh": "<strong>穆尔德河天然水质：</strong>穆尔德河矿物质极低的天然纯净软水，确保羊毛纤维得到最温和的纯净处理。"
         },
         "s5_m2_fact": {
-          "de": "🎹 Meilenstein: Wurzener Filz löst Leder im Klavierbau ab",
-          "en": "🎹 Milestone: Wurzen felt permanently replaces leather",
-          "ja": "🎹 歴史的転換点：ヴルツェン製フェルトが革を置換",
-          "zh": "🎹 行业里程碑：乌尔岑特级琴毡终结皮革击弦时代"
+          "de": "🎹 Meilenstein: Wurzener Filz löst Lederbezüge im Klavierbau ab",
+          "en": "🎹 Milestone: Wurzen felt permanently replaces leather in pianos",
+          "ja": "🎹 歴史的節目：ヴルツェン製フェルトがピアノの革巻きを置換",
+          "zh": "🎹 行业里程碑：乌尔岑特级琴毡终结钢琴皮革击弦时代"
         },
         "s5_m2_caption": {
           "de": "Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde",
@@ -480,34 +480,34 @@
           "zh": "伦敦与巴黎世博会揽获世界金奖"
         },
         "s5_m3_subtitle": {
-          "de": "Internationale Triumphe, königliche Ehrungen und weltweite Anerkennung",
-          "en": "International triumphs, royal visits, and worldwide critical acclaim",
-          "ja": "国際的勝利、ザクセン国王の親訪、世界的な名声確立",
-          "zh": "赢得国际赞誉、萨克森国王亲临视察并获王室特许"
+          "de": "Internationale Triumphe und königliche Ehrungen für vollendete Filzgüte",
+          "en": "International triumphs and royal honors celebrating superlative felt quality",
+          "ja": "国際的勝利と王室の称賛が証明する至高のフェルト品質",
+          "zh": "享誉国际并获萨克森王室御赐殊荣的至高毛毡品质"
         },
         "s5_m3_bullet_1": {
-          "de": "<strong>Internationale Auszeichnungen:</strong> Medaillen auf der Industrieausstellung 1850 in Leipzig sowie den Weltausstellungen 1851 in London und 1867 in Paris begründeten den Weltruf.",
-          "en": "<strong>Prestigious Awards:</strong> Medals at the 1850 Leipzig Industrial Expo, the 1851 Great Exhibition in London, and the 1867 Paris World's Fair cemented global fame.",
-          "ja": "<strong>万国博覧会の栄誉：</strong>1850年ライプツィヒ産業博、1851年ロンドン万博、1867年パリ万博で最高栄誉メダルを獲得し世界に名を轟かす。",
-          "zh": "<strong>世博最高殊荣：</strong>相继斩获1850年莱比锡工业博览会、1851年伦敦首届世博会及1867年巴黎世博会顶级金奖，声名大噪。"
+          "de": "<strong>Weltausstellungs-Gold:</strong> Höchste Prämierungen in Leipzig (1850), London (1851) und Paris (1867) begründen den Weltruhm.",
+          "en": "<strong>World Expo Gold:</strong> Top honors in Leipzig (1850), London (1851), and Paris (1867) establish global acclaim.",
+          "ja": "<strong>万博での金賞：</strong>ライプツィヒ（1850）、ロンドン（1851）、パリ（1867）での最高賞が世界的名声を確立。",
+          "zh": "<strong>揽获世博金奖：</strong>接连斩获莱比锡（1850）、伦敦（1851）与巴黎（1867）最高世博金奖，名满天下。"
         },
         "s5_m3_bullet_2": {
-          "de": "<strong>Besuche sächsischer Könige:</strong> Die Könige von Sachsen besuchten die Manufaktur persönlich und würdigten die überragende Qualität des sächsischen Filzes.",
-          "en": "<strong>Royal Visits:</strong> The Kings of Saxony personally toured the manufacturing halls, honoring the outstanding quality of Saxon piano felt.",
-          "ja": "<strong>ザクセン国王の親訪：</strong>ザクセン国王が工場を公式訪問し、ザクセン産フェルトの卓越したクラフトマンシップを称賛。",
-          "zh": "<strong>国王亲临赐誉：</strong>萨克森王国历代国王多次亲临工厂考察，盛赞其无与伦比的毛毡韧性与弹性。"
+          "de": "<strong>Königliche Besuche:</strong> Sächsische Monarchen würdigen persönlich die überragende Qualität der Wurzener Manufaktur.",
+          "en": "<strong>Royal Visits:</strong> Saxon monarchs personally inspect and praise the superlative craftsmanship of the Wurzen mills.",
+          "ja": "<strong>国王親訪：</strong>ザクセン国王自らが工場を訪問し、ヴルツェン製フェルトの卓越した品質を親しく称賛。",
+          "zh": "<strong>国王亲临视察：</strong>萨克森王国历代君主亲临视察乌尔岑制造工场，盛赞其卓绝工艺。"
         },
         "s5_m3_bullet_3": {
-          "de": "<strong>Weltweiter Hoflieferant:</strong> Führende Klaviermacher in Wien, Paris und London bestellten fortan begeistert den geschmeidigen Weickert-Filz.",
-          "en": "<strong>Purveyor to Elite Makers:</strong> Master piano builders in Vienna, Paris, and London rapidly switched exclusively to resilient Weickert felt.",
-          "ja": "<strong>名門工房の指定品へ：</strong>ウィーン、パリ、ロンドンのトップピアノメーカーがこぞってヴァイケルト製フェルトを指定採用。",
-          "zh": "<strong>欧洲名厂竞相定制：</strong>维也纳、巴黎与伦敦的顶级钢琴制造大师纷纷摈弃传统进口原料，指定采用魏克特琴毡。"
+          "de": "<strong>Europas erste Wahl:</strong> Führende Klavierbauer in Wien, Paris und London stellen geschlossen auf Weickert-Filz um.",
+          "en": "<strong>Europe's Top Choice:</strong> Premier piano builders across Vienna, Paris, and London adopt Weickert felt exclusively.",
+          "ja": "<strong>欧州の第一選択：</strong>ウィーン、パリ、ロンドンの主要ピアノ工房がこぞってヴァイケルト製を採用。",
+          "zh": "<strong>欧洲名厂一致之选：</strong>维也纳、巴黎与伦敦的顶级钢琴制造大师全线指定采用魏克特毛毡。"
         },
         "s5_m3_fact": {
-          "de": "🏅 Medaillen London 1851, Paris 1867 & Leipzig",
-          "en": "🏅 Medals London 1851, Paris 1867 & Leipzig",
-          "ja": "🏅 ロンドン1851、パリ1867、ライプツィヒ金メダル",
-          "zh": "🏅 1851伦敦、1867巴黎及莱比锡世博金牌"
+          "de": "🏅 Goldmedaillen London 1851, Paris 1867 & Leipzig 1850",
+          "en": "🏅 Gold Medals London 1851, Paris 1867 & Leipzig 1850",
+          "ja": "🏅 ロンドン1851、パリ1867、ライプツィヒ1850 金メダル",
+          "zh": "🏅 1851伦敦、1867巴黎及1850莱比锡世博金牌"
         },
         "s5_m3_caption": {
           "de": "Historische Medaillen der Weltausstellungen für vollendete Filzgüte",
@@ -528,34 +528,34 @@
           "zh": "乌尔岑水渠沿岸工业化大规模扩产"
         },
         "s5_m4_subtitle": {
-          "de": "Dampfmaschinen, Mulde-Wasser und modernste Walkwerke in Wurzen",
-          "en": "Steam engines, Mulde river water, and advanced fulling mills in Wurzen",
-          "ja": "ヴルツェンに蒸気動力、ムルデ川の軟水、最新鋭縮絨機を結集",
-          "zh": "蒸汽动力驱动、穆尔德纯净软水与乌尔岑先进缩绒机群"
+          "de": "Dampfkraft, modernste Walkwerke und die Kraft der Vereinigten Mulde",
+          "en": "Steam power, modern fulling mills, and the clean waters of the Mulde river",
+          "ja": "蒸気機関、最新鋭縮絨機、ムルデ川の清流が生む最高水準",
+          "zh": "蒸汽动力、现代化高效缩绒机组与穆尔德纯净软水汇聚"
         },
         "s5_m4_bullet_1": {
-          "de": "<strong>Standort am Mühlgraben:</strong> 1861 entstanden in Wurzen großzügige Fabrikhallen direkt am Mühlgraben mit eigenem Kessel- und Dampfmaschinenhaus.",
-          "en": "<strong>Mühlgraben Expansion:</strong> In 1861, expansive factory halls were erected directly on Wurzen's Mühlgraben with dedicated steam boilers.",
-          "ja": "<strong>ミュールグラーベン工場：</strong>1861年、ヴルツェンの水路沿いに蒸気ボイラー棟を備えた広大な近代工場を建設。",
-          "zh": "<strong>水渠核心工场：</strong>1861年，在乌尔岑水渠沿线建起规模宏大的生产车间与自备蒸汽锅炉动力机房。"
+          "de": "<strong>Industrielle Großfertigung:</strong> 1861 entstehen moderne Hallen am Wurzener Mühlgraben mit eigener Dampfkraft.",
+          "en": "<strong>Industrial Scale:</strong> In 1861, modern facilities with proprietary steam power are erected at Wurzen's Mühlgraben.",
+          "ja": "<strong>大規模近代工場：</strong>1861年、ヴルツェンのミュールグラーベン水路沿いに自家蒸気動力の近代工場を建設。",
+          "zh": "<strong>规模化现代工厂：</strong>1861年在乌尔岑水渠旁落成自备蒸汽动力机房的现代化大跨度厂区。"
         },
         "s5_m4_bullet_2": {
-          "de": "<strong>Dampfbetriebene Walkmaschinen:</strong> Neu entwickelte Walk- und Filzmaschinen sicherten bisher unerreichte Dichte, Elastizität und Chargenkonstanz.",
-          "en": "<strong>Steam-Driven Fulling Mills:</strong> Custom-engineered fulling and felting machines achieved unprecedented elasticity, density, and batch consistency.",
-          "ja": "<strong>蒸気駆動の縮絨機：</strong>独自開発の蒸気式縮絨・フェルト加工機により、かつてない均一性と高弾性を実現。",
-          "zh": "<strong>蒸汽缩绒机械化：</strong>专门研发的蒸汽驱动重型缩绒与压毡机，赋予毛毡前所未有的批次一致性与天然高弹性。"
+          "de": "<strong>Präzisions-Walkmaschinen:</strong> Dampfgetriebene Spezialmaschinen garantieren unerreichte Dichte und Chargenkonstanz.",
+          "en": "<strong>Precision Fulling Mills:</strong> Steam-powered machinery guarantees unprecedented density and batch uniformity.",
+          "ja": "<strong>高精度縮絨機：</strong>蒸気駆動の専用機械により、比類のないフェルト密度と均一な品質再現性を達成。",
+          "zh": "<strong>高精缩绒机群：</strong>专属蒸汽动力大型缩绒设备确保毛毡具备绝佳的密度梯度与极其严苛的批次稳定性。"
         },
         "s5_m4_bullet_3": {
-          "de": "<strong>Das Geheimnis der Mulde:</strong> Das weiche, mineralarme Wasser der Mulde erwies sich als perfekter natürlicher Faktor für die schonende Wollwäsche.",
-          "en": "<strong>The Mulde River Secret:</strong> The soft, mineral-poor river water proved to be the ultimate natural asset for gentle, residue-free wool scouring.",
-          "ja": "<strong>ムルデ川の秘密：</strong>極めてミネラル分が少なく軟らかなムルデ川の水が、羊毛の優美な洗浄と繊維保護に理想的と実証。",
-          "zh": "<strong>穆尔德河的天然秘境：</strong>穆尔德河极其软滑、低矿物含量的天然活水，成为温和彻底洗脱羊毛杂质的绝佳天赋。"
+          "de": "<strong>Schonende Wollwäsche:</strong> Das mineralarme Mulde-Wasser schützt die natürliche Schuppenstruktur der Merinowolle.",
+          "en": "<strong>Gentle Wool Scouring:</strong> Mineral-poor river water preserves the natural cuticle scale structure of the Merino wool.",
+          "ja": "<strong>繊維を守る水質：</strong>ミネラル分の少ないムルデ川の清流がメリノウールの微細なキューティクルを完全保護。",
+          "zh": "<strong>温和洗毛保护：</strong>极软天然活水完美呵护美利奴初剪羊毛表面的天然微观角质鳞片。"
         },
         "s5_m4_fact": {
-          "de": "⚙️ Großfertigung am Wurzener Mühlgraben",
-          "en": "⚙️ Large-scale manufacturing at Wurzen Mühlgraben",
-          "ja": "⚙️ ヴルツェン・ミュールグラーベンでの大規模生産",
-          "zh": "⚙️ 乌尔岑水渠核心制造基地"
+          "de": "⚙️ Dampf-Walkerei & Flusswasser am Wurzener Mühlgraben",
+          "en": "⚙️ Steam fulling & natural river water at Wurzen Mühlgraben",
+          "ja": "⚙️ ヴルツェン・ミュールグラーベンでの蒸気縮絨と天然清流",
+          "zh": "⚙️ 乌尔岑水渠蒸汽动力缩绒与天然软水工场"
         },
         "s5_m4_caption": {
           "de": "Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben",
@@ -576,34 +576,34 @@
           "zh": "年供20万架钢琴用毡的世界行业领袖"
         },
         "s5_m5_subtitle": {
-          "de": "Direktor Carl Wilhelm Patzschke, seine Meister & 350 Facharbeiter in Wurzen",
-          "en": "Director Carl Wilhelm Patzschke, his felt masters & 350 craftsmen in Wurzen",
-          "ja": "カール・ヴィルヘルム・パチュケ社長、熟練技師団と350名の工匠",
-          "zh": "卡尔·威廉·帕茨克厂长、制毡大师团队与350名高级技工"
+          "de": "Direktor Patzschke, seine Meister & 350 Fachkräfte im Wurzener Werk (1906)",
+          "en": "Director Patzschke, his master craftsmen & 350 specialists at Wurzen (1906)",
+          "ja": "パチュケ社長、熟練マイスター陣と350名の工匠（1906年）",
+          "zh": "帕茨克厂长、制毡大师团队与350名高级技师（1906年）"
         },
         "s5_m5_bullet_1": {
-          "de": "<strong>Filz für 200.000 Instrumente:</strong> Zur Blütezeit um 1903–1906 lieferte Wurzen jährlich Hammerkopffilz für rund 200.000 Flügel und Klaviere weltweit.",
-          "en": "<strong>Felt for 200,000 Pianos:</strong> At its zenith around 1903–1906, Wurzen produced hammer felt for approximately 200,000 grand and upright pianos every year.",
-          "ja": "<strong>年間20万台分の供給：</strong>1903〜1906年の最盛期、世界中の約20万台のグランド＆アップライトピアノにフェルトを供給。",
-          "zh": "<strong>供应20万架钢琴：</strong>在1903–1906年前后的黄金盛世，乌尔岑每年为全球约20万架三角与立式钢琴提供高品质琴毡。"
+          "de": "<strong>Globaler Weltmarktführer:</strong> Wurzen stattet jährlich 200.000 Klaviere und Flügel weltweit mit Hammerkopffilz aus.",
+          "en": "<strong>Global Industry Leader:</strong> Wurzen equips 200,000 pianos and grand pianos worldwide with hammer felt each year.",
+          "ja": "<strong>世界シェア首位：</strong>毎年世界中のピアノ20万台分にヴルツェン製ハンマーフェルトを独占供給。",
+          "zh": "<strong>独霸全球市场：</strong>乌尔岑每年为全球20万架三角与立式钢琴独家供应高品质弦槌毛毡。"
         },
         "s5_m5_bullet_2": {
-          "de": "<strong>Export nach Übersee:</strong> Bedeutendster Kunde war Steinway & Sons New York, neben führenden Spitzenmarken in Frankreich, England, Russland und Italien.",
-          "en": "<strong>Global Export Giant:</strong> Foremost customer was Steinway & Sons New York, alongside premier makers in France, England, Russia, and Italy.",
-          "ja": "<strong>世界市場への輸出：</strong>筆頭顧客スタインウェイ・ニューヨークをはじめ、英仏露伊の主要メーカーへ大量供給。",
-          "zh": "<strong>出口欧美各大洲：</strong>最核心客户为施坦威纽约总厂，同时覆盖法国、英国、俄罗斯与意大利的所有顶级名牌。"
+          "de": "<strong>Weltweiter Standard:</strong> Steinway & Sons New York und Europas Spitzenmanufakturen setzen auf Wurzener Filz.",
+          "en": "<strong>Global Benchmark:</strong> Steinway & Sons New York and Europe's premier manufacturers rely on Wurzen felt.",
+          "ja": "<strong>世界基準の確立：</strong>スタインウェイ・ニューヨークをはじめ欧州最高峰の全ピアノ工房が採用。",
+          "zh": "<strong>全球统一标杆：</strong>施坦威纽约总厂及欧洲各大顶级音乐会制造大师一致指定乌尔岑琴毡。"
         },
         "s5_m5_bullet_3": {
-          "de": "<strong>Meister & Herr Patzschke:</strong> Historische Werkstattaufnahme vom September 1906: Direktor Carl Wilhelm Patzschke mit seinen Filzmachermeistern vor dem monumentalen Hammerkopffilz-Keil.",
-          "en": "<strong>Felt Masters & Mr. Patzschke:</strong> Historical photograph of September 1906: Director Carl Wilhelm Patzschke with his felt master craftsmen before the monumental hammer felt wedge.",
-          "ja": "<strong>技師団とパチュケ氏：</strong>1906年9月の貴重な歴史写真：カール・ヴィルヘルム・パチュケ社長と巨大なハンマーフェルト楔（ブロック）を囲む熟練マイスターたち。",
-          "zh": "<strong>制毡大师与帕茨克厂长：</strong>1906年9月珍贵历史档案照片：卡尔·威廉·帕茨克厂长与全体制毡大师在巨型击弦机阶梯毛毡整块前合影。"
+          "de": "<strong>Meister & Direktor Patzschke:</strong> Historisches Originalfoto (1906) am monumentalen, keilförmig gewalkten Filzblock.",
+          "en": "<strong>Masters & Director Patzschke:</strong> Historic 1906 photograph standing before the monumental tapered felt block.",
+          "ja": "<strong>熟練技師とパチュケ社長：</strong>1906年の貴重写真：巨大なテーパー形状の縮絨フェルトブロックを囲む記念撮影。",
+          "zh": "<strong>大师团队与帕茨克厂长：</strong>1906年历史原始档案照：与巨型梯级阶梯压制毛毡原板合影。"
         },
         "s5_m5_fact": {
-          "de": "🌎 Weltweiter Standard für Steinway & Sons",
-          "en": "🌎 Global benchmark for Steinway & Sons",
-          "ja": "🌎 スタインウェイをはじめ世界基準を確立",
-          "zh": "🌎 确立施坦威及全球名琴统一音质标准"
+          "de": "🌎 Weltweiter Referenzstandard für Steinway & Sons New York",
+          "en": "🌎 Global reference standard for Steinway & Sons New York",
+          "ja": "🌎 スタインウェイ・ニューヨーク御用達の世界基準",
+          "zh": "🌎 确立施坦威纽约总厂及全球名琴统一参考标准"
         },
         "s5_m5_badge_media": {
           "de": ">MEISTER & HERR PATZSCHKE (1906)",
@@ -630,34 +630,34 @@
           "zh": "“魏克特特级”（Weickert Spezial）重生与雷诺深度战略合作"
         },
         "s5_m6_subtitle": {
-          "de": "Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik Meuselwitz",
-          "en": "Historic Wurzen mill & close geographical proximity to Renner Meuselwitz",
+          "de": "Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik in Meuselwitz",
+          "en": "Historic Wurzen mill & direct geographical proximity to Renner's factory in Meuselwitz",
           "ja": "ヴルツェン伝統工場とレンナー・モイゼルヴィッツ本工場との緊密な隣接関係",
           "zh": "乌尔岑百年工场与雷诺迈泽尔维茨（Meuselwitz）总厂的黄金近邻优势"
         },
         "s5_m6_bullet_1": {
-          "de": "<strong>1991 Reprivatisierung:</strong> Die Familie Brand reaktivierte das Werk in Wurzen. 2010 schloss sich mit der Wiedergeburt von „Weickert Spezial“ der Kreis zum Weltspitzen-Niveau von 1903.",
-          "en": "<strong>1991 Reprivatization:</strong> The Brand family revitalized the Wurzen facility, re-establishing the legendary 1903 gold-standard formula in 2010.",
-          "ja": "<strong>1991年民営化と復刻：</strong>ブラント家がヴルツェン工場を再興し、2010年に伝説の特級配合を完全再現。",
-          "zh": "<strong>1991年重组与特级重生：</strong>布兰德家族再造乌尔岑百年工场，于2010年全面复刻重现1903年登峰造极的顶级配方。"
+          "de": "<strong>Wiedergeburt 2010:</strong> Familie Brand reaktiviert die legendäre Originalrezeptur von 1903 für absolute Weltklasse.",
+          "en": "<strong>Rebirth in 2010:</strong> The Brand family restores the legendary 1903 formula for absolute world-class acoustic response.",
+          "ja": "<strong>2010年伝統復刻：</strong>ブラント家が1903年の伝説的特級配合を完全再現し、世界最高峰の響きが復活。",
+          "zh": "<strong>2010特级重生：</strong>布兰德家族原汁原味再现1903年登峰造极的顶级配方，重回世界声学巅峰。"
         },
         "s5_m6_bullet_2": {
-          "de": "<strong>Räumliche Nähe Meuselwitz ↔ Wurzen:</strong> Nur rund 65 km trennen die Filzmanufaktur Wurzen vom Renner-Hauptwerk in Meuselwitz – im Herzen des mitteldeutschen Klavierbau-Clusters.",
-          "en": "<strong>Geographical Proximity Meuselwitz ↔ Wurzen:</strong> Only ~65 km separate the Wurzen felt mill from Renner's headquarters in Meuselwitz within Central Germany's piano cluster.",
-          "ja": "<strong>モイゼルヴィッツ ↔ ヴルツェンの至近距離：</strong>ヴルツェン工場とレンナー・モイゼルヴィッツ本社はわずか約65km。中部ドイツの伝統的ピアノクラスターの中心に位置。",
-          "zh": "<strong>迈泽尔维茨与乌尔岑的极近地缘：</strong>乌尔岑毛毡厂距离雷诺迈泽尔维茨总厂仅约65公里，同处于德国中部钢琴制造核心传统腹地。"
+          "de": "<strong>Räumliche Nähe (nur 65 km):</strong> Wurzen und das Renner-Werk Meuselwitz liegen im gemeinsamen mitteldeutschen Klavierbau-Cluster.",
+          "en": "<strong>Geographical Proximity (~65 km):</strong> Wurzen and Renner's Meuselwitz plant share Central Germany's piano craft cluster.",
+          "ja": "<strong>至近距離（わずか65km）：</strong>ヴルツェンとレンナー・モイゼルヴィッツ工場は中部ドイツ伝統クラスター内で隣接。",
+          "zh": "<strong>近邻优势（仅相距65公里）：</strong>乌尔岑与雷诺迈泽尔维茨同处德国中部深厚钢琴制造核心产业腹地。"
         },
         "s5_m6_bullet_3": {
-          "de": "<strong>Direkte Synergie & Meister-Austausch:</strong> Kurze Wege garantieren persönliche Abstimmung von Filzdichte und Elastizität zwischen den Wurzener Filzmachern und Renners Hammerkopfmeistern.",
-          "en": "<strong>Direct Synergies & Master Exchange:</strong> Short travel times enable face-to-face fine-tuning of felt elasticity and density between Wurzen felters and Renner hammer makers.",
-          "ja": "<strong>直接の相乗効果とマイスター交流：</strong>わずか1時間の距離が、ヴルツェンのフェルト職人とレンナーのハンマー技師による濃密な直接対話と精密調整を実現。",
-          "zh": "<strong>面对面直接协同与大师共创：</strong>极短路程让乌尔岑制毡大师与雷诺弦槌技师能够实时面对面深度测试调校，确保毛毡密度与弹性完全契合专属声学标准。"
+          "de": "<strong>Direkter Meister-Austausch:</strong> Kurze Wege ermöglichen die persönliche Abstimmung von Dichte und Elastizität vor Ort.",
+          "en": "<strong>Direct Master Collaboration:</strong> Short travel times enable face-to-face calibration of felt density and elasticity on-site.",
+          "ja": "<strong>職人同士の直接対話：</strong>わずか1時間の距離が、フェルト職人とハンマー技師の密接な現地共同調音を実現。",
+          "zh": "<strong>面对面大师协同：</strong>极短路程实现制毡大师与弦槌技师现场即时深度调校，精准定制最佳密度与弹性。"
         },
         "s5_m6_fact": {
           "de": "📍 Nur 65 km: Direkte Partnerschaft Wurzen ↔ Renner Meuselwitz",
           "en": "📍 Only 65 km: Direct partnership Wurzen ↔ Renner Meuselwitz",
           "ja": "📍 わずか65km：ヴルツェン ↔ レンナー・モイゼルヴィッツの直接提携",
-          "zh": "📍 仅相距65公里：乌尔岑 ↔ 雷诺迈泽尔维茨直接独家深度共创"
+          "zh": "📍 仅相距65公里：乌尔岑 ↔ 雷诺迈泽尔维茨直接深度共创"
         },
         "s5_m6_caption": {
           "de": "Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe",
@@ -678,10 +678,10 @@
           "zh": "魏克特顶级纯羊毛毡的声音秘密"
         },
         "s5_felt_subtitle": {
-          "de": "Rein mechanische Verfilzung ohne chemische Klebstoffe – die unersetzbare klangliche Seele des Konzertflügels",
-          "en": "Pure mechanical fulling without chemical binders – the irreplaceable acoustic soul of the concert grand",
-          "ja": "化学接着剤を一切使わない純粋な機械的縮絨 — コンサートグランドの響きの魂",
-          "zh": "绝无任何化学胶黏剂的纯机械缩绒工艺 — 音乐会三角钢琴无可替代的声音之魂"
+          "de": "Rein mechanische Verfilzung ohne chemische Zusätze – die klangliche Seele des Konzertflügels",
+          "en": "Pure mechanical fulling without chemical additives – the acoustic soul of the concert grand",
+          "ja": "化学添加物を一切使わない純粋な機械的縮絨 — コンサートグランドの響きの魂",
+          "zh": "绝无任何化学添加的纯机械物理缩绒 — 音乐会三角钢琴的声音之魂"
         },
         "s5_texture_tag": {
           "de": "Mikro-Textur: Walk-Kompression",
@@ -696,52 +696,52 @@
           "zh": "🔍 纤维微距"
         },
         "s5_hl1_title": {
-          "de": "100% Merinowolle & Schuppenstruktur:",
-          "en": "100% Merino Wool & Scale Structure:",
-          "ja": "100% メリノウールとキューティクル組織：",
-          "zh": "100% 顶级美利奴羊毛与鳞片结构："
+          "de": "100% Merino-Schuppenstruktur:",
+          "en": "100% Merino Scale Structure:",
+          "ja": "100% メリノウール鱗片組織：",
+          "zh": "100% 美利奴初剪羊毛鳞片："
         },
         "s5_hl1_desc": {
-          "de": "Reine Naturfasern mit natürlichen mikroskopischen Schuppen, die sich beim Walken dauerhaft ineinander verkrallen.",
-          "en": "Pure natural virgin fibers with microscopic scales that physically lock together during humid mechanical fulling.",
-          "ja": "縮絨によって微細なキューティクル（鱗片）が強固に絡み合う純天然の最高級繊維。",
-          "zh": "纯天然初剪纤维表面密布微观鳞片，在湿热与重压缩绒下紧密互锁，形成永久物理咬合。"
+          "de": "Mikroskopische Wollschuppen verkrallen sich beim Walken rein mechanisch zu einem unlösbaren Verbund.",
+          "en": "Microscopic wool scales mechanically interlock during fulling into a permanently resilient matrix.",
+          "ja": "微細なキューティクル組織が縮絨により純物理的に強固に絡み合い、永久的な弾性を形成。",
+          "zh": "微观毛鳞片在湿热重压物理缩绒下深度互锁，形成不可分离的致密高弹胎体。"
         },
         "s5_hl2_title": {
-          "de": "Reine Walkung ohne Kunstharze:",
-          "en": "Pure Fulling without Synthetic Binders:",
-          "ja": "合成樹脂を一切含まない純粋な縮絨：",
-          "zh": "纯物理缩绒，绝不添加人造树脂："
+          "de": "Reine Walkung ohne Harze:",
+          "en": "Pure Fulling without Resins:",
+          "ja": "合成樹脂不使用の純粋縮絨：",
+          "zh": "纯物理缩绒，无化学树脂："
         },
         "s5_hl2_desc": {
-          "de": "Verdichtung ausschließlich durch heißes Mulde-Wasser, Reibung und Druck – niemals durch synthetische Kleber gedämpft.",
-          "en": "Densified exclusively by hot river water, friction, and pressure – zero acoustic damping caused by hardened glues.",
-          "ja": "熱水、摩擦、圧力のみで圧縮。合成接着剤による硬直や響きの減衰を完全排除。",
-          "zh": "完全依赖穆尔德河温润活水、往复摩擦与精密压实成型，杜绝任何化学胶水导致的死板硬化与音色杂音。"
+          "de": "Verdichtung nur durch Mulde-Wasser, Hitze und Druck – frei von dämpfenden Kunstharzen oder Klebern.",
+          "en": "Densification solely through Mulde river water, heat, and pressure – zero dampening resins or glues.",
+          "ja": "ムルデ川の水・熱・圧力のみで圧縮。音色を濁らせる接着剤や化学樹脂は一切不使用。",
+          "zh": "仅依托穆尔德活水、温热与吨位重压，绝无阻碍振动、死板发硬的化学胶黏剂。"
         },
         "s5_hl3_title": {
-          "de": "Dauerelastische Rückfederung:",
-          "en": "Permanent Elastic Rebound & Springback:",
-          "ja": "永久的な高弾性リバウンド力：",
-          "zh": "永不衰减的高弹回弹力（Springback）："
+          "de": "Dauerelastisches Rückfedern:",
+          "en": "Permanent Elastic Springback:",
+          "ja": "永続的な超高速リバウンド：",
+          "zh": "毫秒级瞬时高弹回弹："
         },
         "s5_hl3_desc": {
-          "de": "Organische Spannkraft federt nach dem Saitenkontakt blitzschnell zurück – keine Dämpfung der Obertonschwingung.",
-          "en": "Organic keratin elasticity snaps back in milliseconds from the string, preventing energy loss and muting.",
-          "ja": "打弦後ミリ秒単位で瞬時に跳ね返り、弦の純粋な倍音振動を一切邪魔しない卓越の復元性。",
-          "zh": "天然角蛋白微螺旋弹簧结构在击弦瞬间以毫秒级极速回弹离弦，确保琴弦泛音自由共振绝无吃音。"
+          "de": "Natürliche Keratinfedern federn in Millisekunden ab – für freie Entfaltung des vollen Obertonspektrums.",
+          "en": "Natural keratin springs rebound in milliseconds – liberating the entire overtone harmonic spectrum.",
+          "ja": "天然ケラチンのスプリング構造がミリ秒で跳ね返り、弦の豊かな倍音振動を自在に解放。",
+          "zh": "天然角蛋白分子微弹簧结构击弦后毫秒级闪电反弹离弦，完美释放华丽纯净的泛音列。"
         },
         "s5_hl4_title": {
-          "de": "Räumliche Nähe Meuselwitz ↔ Wurzen (65 km):",
-          "en": "Geographical Proximity Meuselwitz ↔ Wurzen (65 km):",
-          "ja": "モイゼルヴィッツ ↔ ヴルツェンの至近距離（約65km）：",
-          "zh": "迈泽尔维茨与乌尔岑的黄金地缘（约65公里）："
+          "de": "Räumliche Nähe Meuselwitz (65 km):",
+          "en": "Proximity to Meuselwitz (65 km):",
+          "ja": "モイゼルヴィッツ至近（約65km）：",
+          "zh": "近邻迈泽尔维茨总厂（约65公里）："
         },
         "s5_hl4_desc": {
-          "de": "Nur ca. 65 km Distanz zwischen Filzmanufaktur Wurzen und Renner in Meuselwitz – für direkten Meister-Austausch, kurze Wege und perfekte Abstimmung.",
-          "en": "Just ~65 km between the Wurzen felt mill and Renner's factory in Meuselwitz ensures direct master craftsman dialogue, resilient supply chains, and optimal acoustic tuning.",
-          "ja": "ヴルツェン工場とレンナー・モイゼルヴィッツ工場はわずか約65km。職人同士の直接対話、最短の輸送経路、完璧な打弦レスポンスを実現。",
-          "zh": "乌尔岑毛毡厂与雷诺迈泽尔维茨生产基地仅相距约65公里，保障大师级技术无缝直接对话、零延时物流与极其严密的音色匹配。"
+          "de": "Nur ca. 65 km Distanz sichern direkten Austausch der Filz- und Hammerkopfmeister sowie sofortige Verfügbarkeit.",
+          "en": "Only ~65 km distance ensures direct exchange between felt and hammer masters and immediate availability.",
+          "ja": "わずか約65kmの距離が、フェルトとハンマーの熟練マイスターによる直接対話と即時供給を約束。",
+          "zh": "仅相距约65公里，保障制毡与弦槌顶级大师无缝当面调校，并实现零延时敏捷供应。"
         }
       },
       "notes": {
