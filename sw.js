@@ -1,5 +1,5 @@
 // Service Worker for Louis Renner Masterclass Presentation (Offline PWA)
-const CACHE_NAME = 'renner-presentation-v3';
+const CACHE_NAME = 'renner-presentation-v5';
 
 const STATIC_ASSETS = [
   './',
