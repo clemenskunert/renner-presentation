@@ -13,3 +13,17 @@ Bei **jeder** inhaltlichen oder strukturellen Änderung an der Louis Renner Prä
    - Dies aktualisiert [`js/translations-data.js`](file:///Users/clemenskunert/Documents/Pr%C3%A4sentation%20-%20Renner/js/translations-data.js), [`index.html`](file:///Users/clemenskunert/Documents/Pr%C3%A4sentation%20-%20Renner/index.html) und die Einzel-Locales in [`translations/locales/`](file:///Users/clemenskunert/Documents/Pr%C3%A4sentation%20-%20Renner/translations/locales).
 3. **Neue Text-Elemente mit `data-i18n` versehen:**
    - Neue Texte niemals hartcodiert ohne Attribut belassen. Immer ein semantisches `data-i18n="s{Foliennummer}_..."` vergeben.
+
+## ☁️ Pflicht zum automatischen Abgleich mit SharePoint & GitHub
+Bei **jedem** Arbeitsschritt bzw. vor dem Abschluss einer Aufgabe gilt:
+
+1. **Automatischen Gesamtabgleich ausführen:**
+   - Führen Sie nach den Änderungen immer das zentrale Sync-Skript aus:
+     ```bash
+     python3 scripts/sync_all.py -m "Aussagekräftige Commit-Nachricht"
+     ```
+   - Dies erledigt in einem Schritt:
+     - Übersetzungskompilierung (`python3 translations/manage_translations.py --apply`)
+     - Standalone-Deployment-Aktualisierung (`Deployed/` & Offline-Tablet)
+     - 1:1 Abgleich mit dem synchronisierten **Microsoft SharePoint** Ordner (`Louis Renner - Koordinationskreis Produktion MSW-Messen und Konferenzen - Dokumente/Präsentation - Renner`)
+     - Git-Commit & **GitHub-Push** (`git push origin main`)
