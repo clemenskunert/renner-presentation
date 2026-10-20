@@ -4564,7 +4564,7 @@ body::before {
   position: relative;
   z-index: 1;
   height: calc(100% - 90px);
-  padding-bottom: 8px;
+  padding: 12px 36px 104px 36px;
 }
 
 /* Main Two-Wing Grid Layout */
@@ -4580,7 +4580,7 @@ body::before {
 .ffw-history-main {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   height: 100%;
   min-height: 0;
 }
@@ -4771,14 +4771,14 @@ body::before {
   display: none;
   height: 100%;
   width: 100%;
-  padding: 20px 24px;
+  padding: 16px 20px;
   box-sizing: border-box;
 }
 
 .ffw-milestone-panel.active {
   display: grid;
   grid-template-columns: 1.18fr 0.82fr;
-  gap: 20px;
+  gap: 16px;
   animation: ffwPanelFade 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -4797,7 +4797,7 @@ body::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
   min-height: 0;
 }
 
@@ -4836,8 +4836,8 @@ body::before {
 .ffw-panel-bullets {
   display: flex;
   flex-direction: column;
-  gap: 11px;
-  margin: 8px 0;
+  gap: 8px;
+  margin: 4px 0;
   flex: 1;
   justify-content: center;
 }
@@ -4942,7 +4942,7 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 18px 22px;
+  padding: 16px 20px;
   border: 1px solid rgba(200, 163, 86, 0.35);
   background: linear-gradient(165deg, rgba(20, 27, 44, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
@@ -4986,13 +4986,13 @@ body::before {
 /* Felt Texture Viewer Box */
 .ffw-texture-viewer {
   position: relative;
-  height: 170px;
+  height: 155px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(200, 163, 86, 0.4);
   background: #090d16;
   cursor: zoom-in;
-  margin: 8px 0;
+  margin: 6px 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 35px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
@@ -5063,7 +5063,7 @@ body::before {
 .ffw-felt-highlights {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   position: relative;
   z-index: 1;
 }
@@ -5073,9 +5073,9 @@ body::before {
   align-items: flex-start;
   gap: 12px;
   font-size: clamp(1.05rem, 1.15vw, 1.14rem); /* Matches Slide 3 text style */
-  line-height: 1.42;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.92);
-  padding: 7px 12px;
+  padding: 6px 12px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -5120,6 +5120,29 @@ body::before {
   }
   .ffw-texture-viewer {
     height: 140px;
+  }
+}
+
+@media (max-height: 820px) {
+  .slide[data-slide="5"] .slide-body {
+    padding-top: 8px;
+    padding-bottom: 96px;
+  }
+  .ffw-texture-viewer {
+    height: 135px;
+    margin: 4px 0;
+  }
+  .ffw-felt-highlights {
+    gap: 5px;
+  }
+  .ffw-highlight-item {
+    padding: 5px 10px;
+  }
+  .ffw-milestone-panel {
+    padding: 14px 18px;
+  }
+  .ffw-panel-bullets {
+    gap: 6px;
   }
 }
 
