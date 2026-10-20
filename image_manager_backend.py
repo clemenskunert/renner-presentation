@@ -125,6 +125,7 @@ def get_all_catalog_images():
                             "milestone_index": m_idx,
                             "image_index": img_i,
                             "src": img_src,
+                            "old_src": img_src,
                             "tag": "video" if img_src.lower().endswith(('.mp4', '.webm', '.mov')) else "image",
                             "title": f"Epoche {year_val} • Bild {img_i+1}",
                             "caption_de": c_de,
@@ -187,6 +188,7 @@ def get_all_catalog_images():
                     "context_type": "slide_4_photodoc",
                     "doc_index": p_idx,
                     "src": img_src,
+                    "old_src": img_src,
                     "tag": "video" if img_src.lower().endswith(('.mp4', '.webm', '.mov')) else "image",
                     "title": title_str,
                     "caption_de": caption_str,
@@ -234,27 +236,53 @@ def get_all_catalog_images():
             alt_m = re.search(r'alt=[\"\']([^\"\']*)[\"\']', attrs)
             alt = alt_m.group(1) if alt_m else ""
 
-            # Check forward up to 600 chars for caption
-            after_span = content[mm.end():mm.end()+650]
+            # Check forward up to 700 chars for caption
+            after_span = content[mm.end():mm.end()+700]
             next_img_m = re.search(r'<(?:img|video)', after_span)
             if next_img_m:
                 after_span = after_span[:next_img_m.start()]
 
-            cap_m = re.search(r'<div[^>]*class=[\"\'][^\"\']*caption[^\"]*[\"\'](?:\s+data-i18n=[\"\']([^\"\']+)[\"\'])?[^>]*>(.*?)</div>', after_span, re.DOTALL)
+            cap_box_m = re.search(r'<(div|p|span)[^>]*class=[\"\'][^\"\']*(?:caption|texture-tag)[^\"\']*[\"\'][^>]*>(.*?)</\1>', after_span, re.DOTALL)
             
             i18n_key = ""
             caption_de = ""
-            if cap_m:
-                i18n_key = cap_m.group(1) or ""
-                caption_de = re.sub(r'<[^>]+>', '', cap_m.group(2)).strip()
+            if cap_box_m:
+                box_html = cap_box_m.group(0)
+                inner_html = cap_box_m.group(2)
+                inner_cap = re.search(r'<[^>]*class=[\"\'][^\"\']*(?:caption-text|media-caption)[^\"\']*[\"\'][^>]*data-i18n=[\"\']([^\"\']+)[\"\'][^>]*>(.*?)</', box_html, re.DOTALL)
+                if inner_cap:
+                    i18n_key = inner_cap.group(1)
+                    caption_de = re.sub(r'<[^>]+>', '', inner_cap.group(2)).strip()
+                else:
+                    all_i18n = re.findall(r'data-i18n=[\"\']([^\"\']+)[\"\']', box_html)
+                    cap_keys = [k for k in all_i18n if 'caption' in k or 'desc' in k or 'tag' in k]
+                    if cap_keys:
+                        i18n_key = cap_keys[0]
+                    elif all_i18n:
+                        i18n_key = all_i18n[0]
+                    clean_inner = re.sub(r'<span[^>]*class=[\"\'][^\"\']*badge[^\"\']*[\"\'][^>]*>.*?</span>', '', inner_html, flags=re.DOTALL)
+                    caption_de = re.sub(r'<[^>]+>', '', clean_inner).strip()
 
             # Preceding fallback if forward not found
             if not caption_de:
                 prev_span = content[max(0, mm.start()-500):mm.start()]
-                cap_prev_m = re.search(r'<div[^>]*class=[\"\'][^\"\']*caption[^\"]*[\"\'](?:\s+data-i18n=[\"\']([^\"\']+)[\"\'])?[^>]*>(.*?)</div>', prev_span, re.DOTALL)
+                cap_prev_m = re.search(r'<(div|p|span)[^>]*class=[\"\'][^\"\']*(?:caption|texture-tag)[^\"\']*[\"\'][^>]*>(.*?)</\1>', prev_span, re.DOTALL)
                 if cap_prev_m:
-                    i18n_key = cap_prev_m.group(1) or ""
-                    caption_de = re.sub(r'<[^>]+>', '', cap_prev_m.group(2)).strip()
+                    box_html = cap_prev_m.group(0)
+                    inner_html = cap_prev_m.group(2)
+                    inner_cap = re.search(r'<[^>]*class=[\"\'][^\"\']*(?:caption-text|media-caption)[^\"\']*[\"\'][^>]*data-i18n=[\"\']([^\"\']+)[\"\'][^>]*>(.*?)</', box_html, re.DOTALL)
+                    if inner_cap:
+                        i18n_key = inner_cap.group(1)
+                        caption_de = re.sub(r'<[^>]+>', '', inner_cap.group(2)).strip()
+                    else:
+                        all_i18n = re.findall(r'data-i18n=[\"\']([^\"\']+)[\"\']', box_html)
+                        cap_keys = [k for k in all_i18n if 'caption' in k or 'desc' in k or 'tag' in k]
+                        if cap_keys:
+                            i18n_key = cap_keys[0]
+                        elif all_i18n:
+                            i18n_key = all_i18n[0]
+                        clean_inner = re.sub(r'<span[^>]*class=[\"\'][^\"\']*badge[^\"\']*[\"\'][^>]*>.*?</span>', '', inner_html, flags=re.DOTALL)
+                        caption_de = re.sub(r'<[^>]+>', '', clean_inner).strip()
 
             # If i18n_key exists in slides_content.json, load all 4 languages!
             caption_en = ""
@@ -269,7 +297,6 @@ def get_all_catalog_images():
                     caption_zh = el_obj.get("zh", "")
 
             # If still no caption, check card title or alt
-            card_title = ""
             if not caption_de and alt:
                 caption_de = alt
 
@@ -283,8 +310,9 @@ def get_all_catalog_images():
                 "group": f"Folie {s_num} • Medieninhalt {m_idx+1}",
                 "context_type": "slide_i18n" if i18n_key else "slide_standard",
                 "src": src,
+                "old_src": src,
                 "tag": tag_type,
-                "title": alt if (alt and alt != caption_de) else "",
+                "title": alt,
                 "caption_de": caption_de,
                 "caption_en": caption_en,
                 "caption_ja": caption_ja,
@@ -295,9 +323,64 @@ def get_all_catalog_images():
     return items
 
 
-def update_single_image_caption(item_data):
+def _update_slide_files(i18n_key, new_de, old_src, new_src, new_title):
     """
-    Updates a single image's title and caption across the relevant source files.
+    Updates slide_definitions.py and index.html in place:
+    - Text inside data-i18n="{i18n_key}" is updated to new_de
+    - Image/video tag with old_src is updated to new_src and/or alt="{new_title}"
+    """
+    index_file = os.path.join(BASE_DIR, "index.html")
+    for fpath in (SLIDE_DEFS_FILE, index_file):
+        if not os.path.exists(fpath):
+            continue
+        with open(fpath, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        changed = False
+        # 1. Update text inside data-i18n element
+        if i18n_key and new_de:
+            pat_cap = rf'(<([a-zA-Z0-9_-]+)[^>]*data-i18n=[\"\']{re.escape(i18n_key)}[\"\'][^>]*>)(.*?)(</\2>)'
+            if re.search(pat_cap, content, flags=re.DOTALL):
+                content = re.sub(pat_cap, rf'\g<1>{new_de}\g<4>', content, flags=re.DOTALL)
+                changed = True
+
+        # 2. Update media tag (src and/or alt)
+        if old_src and (new_src or (new_title is not None and new_title != "")):
+            def _replace_img(m):
+                tag = m.group(0)
+                if new_src and new_src != old_src:
+                    tag = re.sub(rf'src=[\"\']{re.escape(old_src)}[\"\']', f'src="{new_src}"', tag)
+                if new_title is not None and new_title != "":
+                    if 'alt=' in tag:
+                        tag = re.sub(r'alt=[\"\'][^\"\']*[\"\']', f'alt="{new_title}"', tag)
+                    else:
+                        tag = re.sub(r'<(img|video)', rf'<\1 alt="{new_title}"', tag)
+                return tag
+
+            pat_img = rf'<(?:img|video)[^>]+src=[\"\']{re.escape(old_src)}[\"\'][^>]*>'
+            if re.search(pat_img, content):
+                content = re.sub(pat_img, _replace_img, content)
+                changed = True
+            elif new_src and new_src != old_src:
+                pat_img_new = rf'<(?:img|video)[^>]+src=[\"\']{re.escape(new_src)}[\"\'][^>]*>'
+                if re.search(pat_img_new, content):
+                    content = re.sub(pat_img_new, _replace_img, content)
+                    changed = True
+
+        if changed:
+            with open(fpath, "w", encoding="utf-8") as f:
+                f.write(content)
+
+
+def update_single_image_caption(item_data, compile_now=True):
+    """
+    Updates a single image's title, caption, and image path across the relevant source files:
+    - translations/slides_content.json (multilingual master store)
+    - slide_definitions.py (presentation source code)
+    - index.html (runtime HTML)
+    - js/history-journey.js (Slide 3 interactive timeline)
+    - js/transformation-journey.js (Slide 4 interactive timeline)
+    Triggers full compilation to ensure Deployed/ and all runtime locales are updated.
     """
     context_type = item_data.get("context_type")
     item_id = item_data.get("id")
@@ -307,36 +390,65 @@ def update_single_image_caption(item_data):
     new_ja = item_data.get("caption_ja", "").strip()
     new_zh = item_data.get("caption_zh", "").strip()
     new_title = item_data.get("title", "").strip()
-    i18n_key = item_data.get("i18n_key", "")
+    new_src = item_data.get("src", "").strip()
+    old_src = item_data.get("old_src", "").strip()
+    i18n_key = item_data.get("i18n_key", "").strip()
 
-    # CASE 1: Standard / i18n element in translations/slides_content.json
-    if i18n_key:
-        master_json = load_master_json()
-        slide_key = f"slide_{slide_num:02d}"
-        if slide_key in master_json.get("slides", {}):
-            elements = master_json["slides"][slide_key].setdefault("elements", {})
-            if i18n_key not in elements:
-                elements[i18n_key] = {}
-            elements[i18n_key]["de"] = new_de
-            if new_en: elements[i18n_key]["en"] = new_en
-            if new_ja: elements[i18n_key]["ja"] = new_ja
-            if new_zh: elements[i18n_key]["zh"] = new_zh
-            save_master_json(master_json)
+    # Look up catalog item if missing key info
+    catalog = get_all_catalog_images()
+    cat_item = next((x for x in catalog if x["id"] == item_id), None)
+    if cat_item:
+        if not old_src:
+            old_src = cat_item.get("src", "")
+        if not i18n_key:
+            i18n_key = cat_item.get("i18n_key", "")
+        if not context_type:
+            context_type = cat_item.get("context_type", "")
+        if not slide_num:
+            slide_num = int(cat_item.get("slide", 0))
 
-    # CASE 2: Slide 3 Milestone (History)
+    if not new_src and old_src:
+        new_src = old_src
+
+    # CASE 1: Slide 3 Milestone (History)
     if context_type == "slide_3_milestone":
         milestone_index = item_data.get("milestone_index", 0)
         image_index = item_data.get("image_index", 0)
-        # Update js/history-journey.js and slide_definitions.py
-        _update_slide3_milestone_caption(milestone_index, image_index, new_de, new_en, new_ja, new_zh)
+        _update_slide3_milestone_caption(milestone_index, image_index, new_de, new_en, new_ja, new_zh, old_src, new_src, new_title)
 
-    # CASE 3: Slide 4 Baudokumentation (Photodocs)
-    if context_type == "slide_4_photodoc":
+    # CASE 2: Slide 4 Baudokumentation (Photodocs)
+    elif context_type == "slide_4_photodoc":
         doc_index = item_data.get("doc_index", 0)
-        _update_slide4_photodoc(doc_index, new_title, new_de, new_en, new_ja, new_zh)
+        _update_slide4_photodoc(doc_index, new_title, new_de, new_en, new_ja, new_zh, old_src, new_src)
 
-    # Trigger compilation in background without blocking
-    schedule_compilation()
+    # CASE 3: Standard Slide (Slide 5..68 or any slide with i18n key / media)
+    else:
+        # Update master translations JSON
+        if i18n_key and slide_num:
+            master_json = load_master_json()
+            slide_key = f"slide_{slide_num:02d}"
+            if slide_key in master_json.get("slides", {}):
+                elements = master_json["slides"][slide_key].setdefault("elements", {})
+                if i18n_key not in elements:
+                    elements[i18n_key] = {}
+                if new_de:
+                    elements[i18n_key]["de"] = new_de
+                if new_en:
+                    elements[i18n_key]["en"] = new_en
+                if new_ja:
+                    elements[i18n_key]["ja"] = new_ja
+                if new_zh:
+                    elements[i18n_key]["zh"] = new_zh
+                save_master_json(master_json)
+
+        # Update slide_definitions.py and index.html
+        _update_slide_files(i18n_key, new_de, old_src, new_src, new_title)
+
+    # Trigger presentation compilation
+    if compile_now:
+        run_compilation(sync=True)
+    else:
+        schedule_compilation(0.35)
 
     import datetime
     saved_time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -347,8 +459,8 @@ def update_single_image_caption(item_data):
     }
 
 
-def _update_slide3_milestone_caption(m_idx, img_idx, de_val, en_val, ja_val, zh_val):
-    """Updates caption in slide_definitions.py and js/history-journey.js for milestone m_idx and image img_idx."""
+def _update_slide3_milestone_caption(m_idx, img_idx, de_val, en_val, ja_val, zh_val, old_src="", new_src="", new_title=""):
+    """Updates caption and src in slide_definitions.py and js/history-journey.js for milestone m_idx and image img_idx."""
     # 1. Update in slide_definitions.py
     if os.path.exists(SLIDE_DEFS_FILE):
         with open(SLIDE_DEFS_FILE, "r", encoding="utf-8") as f:
@@ -356,14 +468,15 @@ def _update_slide3_milestone_caption(m_idx, img_idx, de_val, en_val, ja_val, zh_
 
         m_block = re.search(r'(history_milestones_data\s*=\s*\[)(.*?)(\]\s*\n\s*panels_html)', code, re.DOTALL)
         if m_block:
-            prefix = m_block.group(1)
             raw_block = m_block.group(2)
-            suffix = m_block.group(3)
-
             dicts = list(re.finditer(r'\{[^{}]*\'id\':[^{}]*\}', raw_block, re.DOTALL))
             if m_idx < len(dicts):
                 target_dict = dicts[m_idx].group(0)
                 new_dict = target_dict
+
+                # Update src if changed
+                if old_src and new_src and new_src != old_src:
+                    new_dict = new_dict.replace(old_src, new_src)
 
                 # Check if image_captions list exists
                 caps_m = re.search(r"('image_captions':\s*\[)(.*?)(\])", target_dict, re.DOTALL)
@@ -395,6 +508,10 @@ def _update_slide3_milestone_caption(m_idx, img_idx, de_val, en_val, ja_val, zh_
             pre_m = m_match.group(1)
             b_txt = m_match.group(2)
             post_m = m_match.group(3)
+
+            # Update src if changed
+            if old_src and new_src and new_src != old_src:
+                b_txt = b_txt.replace(old_src, new_src)
 
             caps_match = re.search(r"(imageCaptions:\s*\{)(.*?)(\n\s*\})", b_txt, re.DOTALL)
             if caps_match:
@@ -431,15 +548,24 @@ def _update_slide3_milestone_caption(m_idx, img_idx, de_val, en_val, ja_val, zh_
             with open(HISTORY_JS_FILE, "w", encoding="utf-8") as f_out:
                 f_out.write(new_js)
 
+    # 3. Update index.html if src changed
+    index_file = os.path.join(BASE_DIR, "index.html")
+    if os.path.exists(index_file) and old_src and new_src and new_src != old_src:
+        with open(index_file, "r", encoding="utf-8") as f_idx:
+            idx_html = f_idx.read()
+        if old_src in idx_html:
+            idx_html = idx_html.replace(old_src, new_src)
+            with open(index_file, "w", encoding="utf-8") as f_idx:
+                f_idx.write(idx_html)
 
-def _update_slide4_photodoc(doc_idx, new_title, new_caption, new_en="", new_ja="", new_zh=""):
-    """Updates title and caption in transformation_milestones_data in slide_definitions.py and js/transformation-journey.js."""
+
+def _update_slide4_photodoc(doc_idx, new_title, new_caption, new_en="", new_ja="", new_zh="", old_src="", new_src=""):
+    """Updates title, caption, and src in transformation_milestones_data in slide_definitions.py and js/transformation-journey.js."""
     # 1. Update in slide_definitions.py
     if os.path.exists(SLIDE_DEFS_FILE):
         with open(SLIDE_DEFS_FILE, "r", encoding="utf-8") as f:
             code = f.read()
 
-        # Find transformation_milestones_data
         pattern = r"transformation_milestones_data\s*=\s*\[(.*?)\]\s*\n\s*build_panels_html"
         m = re.search(pattern, code, re.DOTALL)
         if m:
@@ -448,6 +574,8 @@ def _update_slide4_photodoc(doc_idx, new_title, new_caption, new_en="", new_ja="
             if doc_idx < len(dicts):
                 target_dict = dicts[doc_idx].group(0)
                 new_dict = target_dict
+                if old_src and new_src and new_src != old_src:
+                    new_dict = new_dict.replace(old_src, new_src)
                 if new_title:
                     new_dict = re.sub(r"'title':\s*['\"].*?['\"]", f"'title': '{_esc(new_title)}'", new_dict)
                 if new_caption:
@@ -470,6 +598,8 @@ def _update_slide4_photodoc(doc_idx, new_title, new_caption, new_en="", new_ja="
             if doc_idx < len(dicts):
                 target_dict = dicts[doc_idx].group(0)
                 new_dict = target_dict
+                if old_src and new_src and new_src != old_src:
+                    new_dict = new_dict.replace(old_src, new_src)
                 if new_title:
                     new_dict = re.sub(r"(title:\s*\{[^{}]*de:\s*')[^']*(')", rf"\g<1>{_esc_js(new_title)}\g<2>", new_dict)
                 if new_caption:
@@ -485,6 +615,16 @@ def _update_slide4_photodoc(doc_idx, new_title, new_caption, new_en="", new_ja="
                 new_js_code = js_code[:m_js.start(2)] + updated_block + js_code[m_js.end(2):]
                 with open(TRANSFORMATION_JS_FILE, "w", encoding="utf-8") as f_out:
                     f_out.write(new_js_code)
+
+    # 3. Update index.html if src changed
+    index_file = os.path.join(BASE_DIR, "index.html")
+    if os.path.exists(index_file) and old_src and new_src and new_src != old_src:
+        with open(index_file, "r", encoding="utf-8") as f_idx:
+            idx_html = f_idx.read()
+        if old_src in idx_html:
+            idx_html = idx_html.replace(old_src, new_src)
+            with open(index_file, "w", encoding="utf-8") as f_idx:
+                f_idx.write(idx_html)
 
 
 def _esc(s):

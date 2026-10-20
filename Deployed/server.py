@@ -122,7 +122,9 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                 payload = json.loads(post_body.decode('utf-8'))
                 import importlib, image_manager_backend
                 importlib.reload(image_manager_backend)
-                result = image_manager_backend.update_single_image_caption(payload)
+                result = image_manager_backend.update_single_image_caption(payload, compile_now=True)
+                global LAST_TRANSLATION_UPDATE
+                LAST_TRANSLATION_UPDATE = time.time()
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
                 self.send_header('Access-Control-Allow-Origin', '*')
@@ -144,8 +146,11 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                 importlib.reload(image_manager_backend)
                 updated = 0
                 for item in items_list:
-                    image_manager_backend.update_single_image_caption(item)
+                    image_manager_backend.update_single_image_caption(item, compile_now=False)
                     updated += 1
+                image_manager_backend.run_compilation(sync=True)
+                global LAST_TRANSLATION_UPDATE
+                LAST_TRANSLATION_UPDATE = time.time()
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
                 self.send_header('Access-Control-Allow-Origin', '*')

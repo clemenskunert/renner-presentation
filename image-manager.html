@@ -1462,6 +1462,20 @@
             </div>
 
             <div class="form-group">
+              <label class="form-label" for="src-${item.id}">
+                <span>Bilddatei / Pfad (src):</span>
+                <span class="lang-code">Dateipfad</span>
+              </label>
+              <div style="display:flex; gap:6px;">
+                <input type="text" id="src-${item.id}" class="field-input input-src" 
+                       placeholder="Visuell/Bilder/..." 
+                       value="${escapeHtml(item.src || '')}" 
+                       data-id="${item.id}" data-field="src" style="font-family:var(--font-mono); font-size:11px;">
+                <button type="button" class="btn btn-secondary copy-path-btn" data-copy="${escapeHtml(item.src)}" title="Pfad kopieren" style="padding:4px 8px; font-size:11px;">📋</button>
+              </div>
+            </div>
+
+            <div class="form-group">
               <label class="form-label" for="title-${item.id}">
                 <span>Titel / Stichwort:</span>
                 <span class="lang-code">Alt-Text</span>
@@ -1552,7 +1566,9 @@
           <td>
             <div style="font-weight:600; color:var(--gold-light); font-size:12px;">${escapeHtml(item.group || '')}</div>
             <div style="color:var(--text-secondary); font-size:11px; margin-top:2px;">${escapeHtml(item.slide_title || '')}</div>
-            <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); margin-top:4px;">${escapeHtml(item.src.split('/').pop())}</div>
+            <input type="text" class="table-input" value="${escapeHtml(item.src || '')}" 
+                   placeholder="Dateipfad..." data-id="${item.id}" data-field="src" 
+                   style="font-family:var(--font-mono); font-size:10px; margin-top:4px;">
           </td>
           <td>
             <input type="text" class="table-input" value="${escapeHtml(item.title || '')}" 
@@ -1666,8 +1682,20 @@
         item.caption_de !== orig.caption_de ||
         item.caption_en !== orig.caption_en ||
         item.caption_ja !== orig.caption_ja ||
-        item.caption_zh !== orig.caption_zh
+        item.caption_zh !== orig.caption_zh ||
+        item.src !== orig.src
       );
+
+      if (field === 'src') {
+        const cardThumb = document.querySelector(`#card-${id} .card-thumbnail`);
+        if (cardThumb && val) {
+          cardThumb.src = val;
+        }
+        const tblThumb = document.querySelector(`#tr-${id} .table-thumb-img`);
+        if (tblThumb && val) {
+          tblThumb.src = val;
+        }
+      }
 
       if (isModified) {
         unsavedChanges.set(id, item);
@@ -1760,10 +1788,12 @@
       }
 
       try {
+        const orig = originalCatalogMap.get(id);
+        const payload = { ...item, old_src: (orig ? orig.src : item.src) };
         const res = await fetch('/api/save-image', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(item)
+          body: JSON.stringify(payload)
         });
 
         const data = await res.json();
@@ -1838,7 +1868,10 @@
         return;
       }
 
-      const itemsToSave = Array.from(unsavedChanges.values());
+      const itemsToSave = Array.from(unsavedChanges.values()).map(it => {
+        const orig = originalCatalogMap.get(it.id);
+        return { ...it, old_src: (orig ? orig.src : it.src) };
+      });
       const count = itemsToSave.length;
 
       btnSaveAll.innerHTML = '<span>⏳</span><span>Speichern...</span>';
