@@ -2,7 +2,7 @@
 """
 slide_definitions.py
 Complete, authentic slide definitions for the 68 slides of the Renner Masterclass Deck.
-Strictly based on the 5 technical masterclass documents in "Präsentation - Basis":
+Strictly based on the 5 technical masterclass documents in "Praesentation_Basis":
 1. Hammerkopf_Japan_040325 (Clemens Kunert, Meuselwitz)
 2. HK_Prd_Auswahl_10_25 (Jens-Sören Kruse, Klavierbaumeister)
 3. HSt_Kap_Auswahl_MTK_10_25 (Jens-Sören Kruse, Klavierbaumeister)

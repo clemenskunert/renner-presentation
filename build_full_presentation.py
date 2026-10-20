@@ -3,7 +3,7 @@
 """
 build_full_presentation.py
 Rebuilds index.html with the complete, authentic 68-slide Renner Masterclass Presentation.
-All content is strictly based on the 5 technical masterclass documents in "Präsentation - Basis":
+All content is strictly based on the 5 technical masterclass documents in "Praesentation_Basis":
 1. Hammerkopf_Japan_040325 (Clemens Kunert, Meuselwitz)
 2. HK_Prd_Auswahl_10_25 (Jens-Sören Kruse, Klavierbaumeister)
 3. HSt_Kap_Auswahl_MTK_10_25 (Jens-Sören Kruse, Klavierbaumeister)
