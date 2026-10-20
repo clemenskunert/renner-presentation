@@ -1,0 +1,28 @@
+======================================================================
+  LOUIS RENNER MASTERCLASS 2025 - STANDALONE TABLET DEPLOYMENT
+======================================================================
+
+SO STARTEN SIE DIE PRAESENTATION AUF DEM IPAD / TABLET:
+
+1. Ordner "Deployed" auf das iPad kopieren (AirDrop, iCloud, USB-Stick).
+2. In der Apple "Dateien"-App oeffnen:
+   --> Doppeltipp auf "index_offline_tablet.html" (Empfohlen!)
+   oder
+   --> Doppeltipp auf "index.html"
+
+3. ALS VOLLBILD-APP AUF DEM HOME-BILDSCHIRM SPEICHERN:
+   In Safari auf "Teilen" (Viereck mit Pfeil) -> "Zum Home-Bildschirm".
+   Es erscheint ein App-Icon, das die Praesentation im Vollbild startet!
+
+SPRACHEN:
+   Oben rechts im Menue (Zahnrad) waehlbar:
+   - Deutsch
+   - English
+   - 日本語 (Japanisch)
+   - 中文 (Chinesisch)
+
+WEITERE SYSTEME:
+- SharePoint Online: Start_SharePoint.aspx oeffnen
+- Windows PC: Start_Windows.bat doppelklicken
+- Mac: Start_Mac.command doppelklicken
+======================================================================

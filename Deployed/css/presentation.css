@@ -1,0 +1,4539 @@
+/* ==========================================================================
+   Louis Renner GmbH - Premium Conference Presentation System
+   Aesthetic: Polished Concert Grand Black, Renner Forest Green, Brass Gold
+   Typography: Roboto Slab (Headings) & Roboto (Body) following louis-renner.de
+   ========================================================================== */
+
+:root,
+[data-country-theme="de"] {
+  --bg-primary: #080b0f;
+  --bg-secondary: #0f151e;
+  --bg-card: rgba(18, 25, 36, 0.8);
+  --bg-card-hover: rgba(26, 36, 52, 0.94);
+  
+  --renner-green: #145943;
+  --renner-green-bright: #1fa47c;
+  --renner-green-glow: rgba(31, 164, 124, 0.35);
+  --accent-primary: #145943;
+  --accent-bright: #1fa47c;
+  --accent-glow: rgba(31, 164, 124, 0.35);
+  
+  --gold-accent: #c8a356;
+  --gold-light: #e4c885;
+  --gold-glow: rgba(200, 163, 86, 0.25);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #a3adc0;
+  --text-muted: #64748b;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(200, 163, 86, 0.35);
+  --border-green: rgba(31, 164, 124, 0.4);
+  --border-accent: rgba(31, 164, 124, 0.4);
+  
+  --font-serif: 'Roboto Slab', Georgia, serif;
+  --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 25px var(--accent-glow);
+  
+  --bg-radial-1: rgba(20, 89, 67, 0.18);
+  --bg-radial-2: rgba(200, 163, 86, 0.09);
+  --theme-kicker-color: var(--gold-light);
+}
+
+/* --------------------------------------------------------------------------
+   Country-Optimized Color Theme: JAPAN (Urushi 漆 & Maki-e 蒔絵 Gold)
+   Deep Indigo Lacquer, Refined Maki-e Pure Gold, Zen Matcha Green
+   -------------------------------------------------------------------------- */
+[data-country-theme="ja"] {
+  --bg-primary: #07090f;
+  --bg-secondary: #0d121c;
+  --bg-card: rgba(15, 20, 32, 0.85);
+  --bg-card-hover: rgba(24, 32, 50, 0.95);
+  
+  --renner-green: #23573c;
+  --renner-green-bright: #3ea073;
+  --renner-green-glow: rgba(45, 138, 99, 0.35);
+  --accent-primary: #d4af37;
+  --accent-bright: #f5df93;
+  --accent-glow: rgba(212, 175, 55, 0.4);
+  
+  --gold-accent: #d4af37;
+  --gold-light: #fbeba8;
+  --gold-glow: rgba(212, 175, 55, 0.32);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --border-subtle: rgba(203, 213, 225, 0.12);
+  --border-gold: rgba(212, 175, 55, 0.45);
+  --border-green: rgba(45, 138, 99, 0.45);
+  --border-accent: rgba(212, 175, 55, 0.45);
+  
+  --bg-radial-1: rgba(212, 175, 55, 0.14);
+  --bg-radial-2: rgba(35, 87, 60, 0.18);
+  --theme-kicker-color: #f5df93;
+}
+
+/* --------------------------------------------------------------------------
+   Country-Optimized Color Theme: CHINA (Forbidden City Cinnabar 朱砂 & Imperial Gold 琉璃金)
+   Imperial Obsidian Lacquer, Cinnabar Red/Crimson, Imperial Gold, Jade Touches
+   -------------------------------------------------------------------------- */
+[data-country-theme="zh"] {
+  --bg-primary: #0d0608;
+  --bg-secondary: #1a0a10;
+  --bg-card: rgba(28, 12, 18, 0.85);
+  --bg-card-hover: rgba(42, 18, 26, 0.95);
+  
+  --renner-green: #0d9488;
+  --renner-green-bright: #14b8a6;
+  --renner-green-glow: rgba(13, 148, 136, 0.35);
+  --accent-primary: #dc2626;
+  --accent-bright: #ef4444;
+  --accent-glow: rgba(239, 68, 68, 0.45);
+  
+  --gold-accent: #f59e0b;
+  --gold-light: #fde047;
+  --gold-glow: rgba(245, 158, 11, 0.35);
+  
+  --text-primary: #fff1f2;
+  --text-secondary: #e2a8b2;
+  --text-muted: #9f7178;
+  
+  --border-subtle: rgba(239, 68, 68, 0.16);
+  --border-gold: rgba(245, 158, 11, 0.45);
+  --border-green: rgba(13, 148, 136, 0.45);
+  --border-accent: rgba(239, 68, 68, 0.5);
+  
+  --bg-radial-1: rgba(220, 38, 38, 0.18);
+  --bg-radial-2: rgba(245, 158, 11, 0.12);
+  --theme-kicker-color: #fde047;
+}
+
+/* --------------------------------------------------------------------------
+   Country-Optimized Color Theme: INTERNATIONAL / EN (Concert Grand Hall)
+   Deep Onyx, Studio Platinum Gold, Signature Forest Green
+   -------------------------------------------------------------------------- */
+[data-country-theme="en"] {
+  --bg-primary: #090c14;
+  --bg-secondary: #101624;
+  --bg-card: rgba(18, 26, 40, 0.82);
+  --bg-card-hover: rgba(28, 38, 58, 0.94);
+  
+  --renner-green: #165c3b;
+  --renner-green-bright: #249764;
+  --renner-green-glow: rgba(36, 151, 100, 0.35);
+  --accent-primary: #165c3b;
+  --accent-bright: #249764;
+  --accent-glow: rgba(36, 151, 100, 0.35);
+  
+  --gold-accent: #d8ba7a;
+  --gold-light: #f0dc9e;
+  --gold-glow: rgba(216, 186, 122, 0.28);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(216, 186, 122, 0.35);
+  --border-green: rgba(36, 151, 100, 0.4);
+  --border-accent: rgba(36, 151, 100, 0.4);
+  
+  --bg-radial-1: rgba(22, 92, 59, 0.18);
+  --bg-radial-2: rgba(216, 186, 122, 0.1);
+  --theme-kicker-color: #f0dc9e;
+}
+
+/* CJK Font Smoothing & Fallbacks */
+html[lang="ja"], body[lang="ja"] {
+  --font-sans: 'Roboto', 'Noto Sans JP', sans-serif;
+  --font-serif: 'Roboto Slab', 'Noto Sans JP', Georgia, serif;
+}
+html[lang="zh"], body[lang="zh"] {
+  --font-sans: 'Roboto', 'Noto Sans SC', sans-serif;
+  --font-serif: 'Roboto Slab', 'Noto Sans SC', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  user-select: none;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+/* Dynamic Background Atmospheric Gradient based on Country Theme */
+body::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at 15% 20%, var(--bg-radial-1, rgba(20, 89, 67, 0.18)) 0%, transparent 50%),
+              radial-gradient(circle at 85% 80%, var(--bg-radial-2, rgba(200, 163, 86, 0.1)) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, var(--bg-primary) 0%, #030406 100%);
+  z-index: 0;
+  pointer-events: none;
+  transition: background var(--transition-smooth);
+}
+
+/* ==========================================================================
+   Top Header HUD (Halbiert: 32px Höhe)
+   Linke Seite: Nur Logo & Slogan
+   Rechte Seite: Menü-Symbol (öffnet Menü-Dropdown)
+   ========================================================================== */
+.header-hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: rgba(10, 12, 16, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(200, 163, 86, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  z-index: 100;
+  transition: background var(--transition-fast);
+}
+
+/* Linke Seite: Nur Logo und Slogan */
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.brand-logo-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.brand-logo {
+  height: 20px;
+  width: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  flex-shrink: 0;
+  display: block;
+  animation: rennerLogoAmbientGlow 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Subtle, organic moving light sheen across the logo contours */
+.brand-logo-light-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-mask-image: url('../Visuell/web_assets/renner_logo_weiss_schatten.png');
+  mask-image: url('../Visuell/web_assets/renner_logo_weiss_schatten.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 28%,
+    rgba(255, 255, 255, 0.25) 40%,
+    rgba(255, 245, 215, 0.95) 50%,
+    rgba(255, 255, 255, 0.25) 60%,
+    transparent 72%,
+    transparent 100%
+  );
+  background-size: 260% 100%;
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  animation: rennerLogoLightSweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Very subtle sweep animation: moves smoothly across in ~3.2s, then rests peacefully for ~5.8s */
+@keyframes rennerLogoLightSweep {
+  0% {
+    background-position: 180% 0;
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.85;
+  }
+  32% {
+    background-position: -80% 0;
+    opacity: 0.85;
+  }
+  38%, 100% {
+    background-position: -80% 0;
+    opacity: 0;
+  }
+}
+
+/* Subtle, breathing ambient luminescence synchronized with the light beam crossing */
+@keyframes rennerLogoAmbientGlow {
+  0%, 38%, 100% {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 0px rgba(212, 175, 55, 0));
+  }
+  16% {
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 10px rgba(230, 200, 130, 0.45));
+  }
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.brand-divider {
+  color: rgba(200, 163, 86, 0.45);
+  font-size: 0.70rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.brand-subtitle {
+  font-size: 0.68rem;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+@media (max-width: 820px) {
+  .brand-subtitle,
+  .brand-divider {
+    display: none;
+  }
+}
+
+/* Rechte Seite: Menü-Symbol */
+.header-right-zone {
+  display: flex;
+  align-items: center;
+}
+
+.header-modules-btn {
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid rgba(200, 163, 86, 0.45);
+  border-radius: 12px;
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1;
+  outline: none;
+  margin-right: 8px;
+}
+
+.header-modules-btn:hover {
+  background: rgba(200, 163, 86, 0.25);
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(200, 163, 86, 0.4);
+  transform: translateY(-1px);
+}
+
+.header-modules-btn.is-active-slide {
+  background: var(--gold-accent);
+  color: #0b0e14;
+  border-color: #ffffff;
+  box-shadow: 0 0 14px rgba(255, 235, 160, 0.6);
+}
+
+.header-modules-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.header-menu-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  border-radius: 12px;
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1;
+  outline: none;
+}
+
+.header-menu-btn:hover {
+  background: rgba(200, 163, 86, 0.16);
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(200, 163, 86, 0.3);
+}
+
+.header-menu-btn.active {
+  background: var(--gold-accent);
+  border-color: #ffffff;
+  color: #0b0e14;
+  box-shadow: 0 0 16px rgba(255, 235, 160, 0.6);
+}
+
+.menu-hamburger-icon {
+  width: 14px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-hamburger-icon .bar {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.header-menu-btn.active .menu-hamburger-icon .bar-1 {
+  transform: translateY(4.25px) rotate(45deg);
+}
+
+.header-menu-btn.active .menu-hamburger-icon .bar-2 {
+  opacity: 0;
+}
+
+.header-menu-btn.active .menu-hamburger-icon .bar-3 {
+  transform: translateY(-4.25px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   Header Dropdown Menu (Einstellungen, Sprache, Themes & Werkzeuge)
+   ========================================================================== */
+.header-menu-dropdown {
+  position: fixed;
+  top: 36px;
+  right: 18px;
+  width: min(390px, calc(100vw - 32px));
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  background: rgba(12, 16, 24, 0.96);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(200, 163, 86, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.90), 0 0 35px rgba(200, 163, 86, 0.20);
+  padding: 16px 18px;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.22s ease-out, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-menu-dropdown.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.menu-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200, 163, 86, 0.2);
+}
+
+.menu-dropdown-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.5px;
+}
+
+.menu-dropdown-close {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 163, 86, 0.25);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.menu-dropdown-close:hover {
+  background: rgba(200, 163, 86, 0.25);
+  border-color: var(--gold-accent);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-section-label {
+  font-size: 0.70rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.menu-context-section {
+  background: rgba(200, 163, 86, 0.06);
+  border: 1px solid rgba(200, 163, 86, 0.22);
+  border-radius: 10px;
+  padding: 8px 12px;
+  gap: 4px;
+}
+
+.menu-context-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.menu-context-slide {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Language Selector Pills inside Dropdown */
+.lang-selector {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 3px;
+  gap: 3px;
+  width: 100%;
+}
+
+.lang-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 6px 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-align: center;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.lang-btn.active {
+  background: var(--accent-primary);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+/* Country Theme Selector Pills inside Dropdown */
+.theme-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 163, 86, 0.25);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+  width: 100%;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.theme-btn:hover {
+  color: var(--gold-light);
+  background: rgba(200, 163, 86, 0.08);
+}
+
+.theme-btn.active {
+  background: var(--accent-primary);
+  color: #fff;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+/* Presentation Tools Grid inside Dropdown */
+.menu-tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.menu-tool-btn.icon-btn {
+  width: 100%;
+  height: auto;
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+}
+
+.menu-tool-btn.icon-btn:hover {
+  background: rgba(200, 163, 86, 0.15);
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.menu-tool-btn.icon-btn.active {
+  background: rgba(200, 163, 86, 0.25);
+  border-color: var(--gold-accent);
+  color: var(--gold-light);
+}
+
+.menu-tool-btn .tool-icon {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.menu-tool-btn .tool-text {
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Brand Quote Banner (Website Renner Claim) */
+.renner-quote-banner {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--gold-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 18px;
+  margin-top: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.renner-quote-text {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.renner-quote-author {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+/* Partner Brand Logo Showcase Grid (Slide 3 & Website Trust Elements) */
+.partner-showcase-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.partner-showcase-title {
+  font-size: 0.76rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.partner-showcase-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-gold) 0%, transparent 100%);
+}
+
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.partner-logo-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  transition: var(--transition-fast);
+}
+
+.partner-logo-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.partner-logo-img {
+  max-width: 100%;
+  max-height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(0.92) drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+  opacity: 0.85;
+  transition: var(--transition-fast);
+}
+
+.partner-logo-item:hover .partner-logo-img {
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px var(--accent-glow));
+}
+
+/* Value Props Pills & Badges (Hammerkopf Japan 2025 Deck) */
+.benefit-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.benefit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.benefit-pill.highlight {
+  background: rgba(31, 164, 124, 0.15);
+  border-color: var(--accent-bright);
+  color: #fff;
+  font-weight: 600;
+}
+
+[data-country-theme="ja"] .benefit-pill.highlight {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: var(--gold-accent);
+  color: var(--gold-light);
+}
+
+[data-country-theme="zh"] .benefit-pill.highlight {
+  background: rgba(220, 38, 38, 0.2);
+  border-color: var(--accent-bright);
+  color: #fff;
+}
+
+/* Icon Buttons */
+.icon-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--gold-light);
+  border-color: var(--border-gold);
+}
+
+.icon-btn.active {
+  background: rgba(200, 163, 86, 0.2);
+  border-color: var(--gold-accent);
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   Main Slide Deck Viewport
+   Abstand zum Rand (14px) entspricht exakt dem Abstand zwischen Menüband (32px)
+   und Präsentationsfenster (Top: 32px + 14px = 46px).
+   ========================================================================== */
+.presentation-viewport {
+  position: absolute;
+  top: 32px;
+  bottom: 56px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.slide-deck {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.96) translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.5s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-elevated);
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  z-index: 20;
+}
+
+.slide.prev {
+  opacity: 0;
+  transform: scale(0.96) translateX(-40px);
+}
+
+.slide.next {
+  opacity: 0;
+  transform: scale(0.96) translateX(40px);
+}
+
+/* Corner Watermark Logo (Prominent 56px in Bottom Left Corner on all Slides) */
+.slide-corner-watermark {
+  position: absolute;
+  bottom: 24px;
+  left: 36px !important;
+  right: auto !important;
+  z-index: 35;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.96;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.slide-corner-logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 14px rgba(200, 163, 86, 0.35));
+  display: block;
+}
+
+.brand-logo-container.corner-variant .slide-corner-logo {
+  animation: rennerCornerLogoAmbientGlow 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.brand-logo-container.corner-variant .brand-logo-light-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-mask-image: url('../Visuell/web_assets/renner_logo_weiss_schatten.png');
+  mask-image: url('../Visuell/web_assets/renner_logo_weiss_schatten.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 26%,
+    rgba(255, 255, 255, 0.38) 38%,
+    rgba(255, 248, 220, 0.98) 50%,
+    rgba(255, 255, 255, 0.38) 62%,
+    transparent 74%,
+    transparent 100%
+  );
+  background-size: 260% 100%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: rennerLogoLightSweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes rennerCornerLogoAmbientGlow {
+  0%, 38%, 100% {
+    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 14px rgba(200, 163, 86, 0.35));
+  }
+  16% {
+    filter: drop-shadow(0 4px 22px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 26px rgba(230, 200, 130, 0.75));
+  }
+}
+
+/* ==========================================================================
+   Slide Content Layouts
+   ========================================================================== */
+.slide-header {
+  padding: 20px 36px 12px 36px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.slide-category {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--renner-green-bright);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.slide-title {
+  font-family: var(--font-serif);
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.slide-subtitle {
+  font-size: 0.88rem;
+  color: var(--gold-light);
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.slide-body {
+  flex: 1;
+  padding: 18px 36px 36px 36px; /* Extra bottom padding prevents bottom-left cutoff */
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  gap: 32px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 163, 86, 0.35) transparent;
+}
+
+.slide-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.slide-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slide-body::-webkit-scrollbar-thumb {
+  background: rgba(200, 163, 86, 0.3);
+  border-radius: 4px;
+}
+
+.slide-body::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent);
+}
+
+/* Layout Split: 50/50 - align-items: start prevents bottom-left clipping */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Layout Split: 60/40 - align-items: start */
+.split-wide-media {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Cards Grid Layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 22px;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-bright);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.feature-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 16px 36px -8px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Media Containers (Images & Videos) - Bento Media Frame */
+.media-container {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #000;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 16px 36px -10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.media-container:hover {
+  border-color: var(--border-accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 24px var(--accent-glow);
+}
+
+.media-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.media-container:hover img {
+  transform: scale(1.035);
+}
+
+.media-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.media-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 65%, transparent 100%);
+  padding: 16px 20px 14px;
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.media-tag {
+  background: var(--renner-green);
+  color: #fff;
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Bullet Points converted to Bento Micro-Cards */
+.bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-item {
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 13px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bullet-item:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: var(--border-accent);
+  transform: translateX(4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.bullet-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 8px var(--gold-glow);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.bullet-dot.green {
+  background: var(--renner-green-bright);
+  box-shadow: 0 0 8px var(--renner-green-glow);
+}
+
+.bullet-highlight {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ==========================================================================
+   Special Layouts: Hero / Title Slide
+   ========================================================================== */
+.hero-slide {
+  background: radial-gradient(circle at 50% 35%, rgba(20, 89, 67, 0.42) 0%, rgba(10, 12, 16, 0.98) 75%),
+              linear-gradient(135deg, rgba(20, 89, 67, 0.3) 0%, rgba(10, 12, 16, 0.96) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px;
+}
+
+.hero-logo {
+  height: 72px;
+  margin-bottom: 28px;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.8));
+}
+
+.hero-kicker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+}
+
+.hero-main-title {
+  font-family: var(--font-serif);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  max-width: 900px;
+}
+
+.hero-main-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+
+.hero-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: rgba(10, 12, 16, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  padding: 12px 28px;
+  border-radius: 30px;
+}
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.hero-meta-item strong {
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   Interactive Timeline & Gallery for Meuselwitz
+   ========================================================================== */
+.gallery-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-main-frame {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #050608;
+}
+
+.gallery-main-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-thumbnails-strip {
+  height: 72px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.gallery-thumb {
+  width: 96px;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: var(--transition-fast);
+}
+
+.gallery-thumb:hover {
+  opacity: 0.9;
+  border-color: var(--text-muted);
+}
+
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Interactive Comparison: Yamaha Kit vs Traditional
+   ========================================================================== */
+.comparison-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  width: 100%;
+  height: 100%;
+}
+
+.compare-column {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-column.highlight-kit {
+  background: linear-gradient(180deg, rgba(20, 89, 67, 0.25) 0%, rgba(10, 12, 16, 0.5) 100%);
+  border-color: var(--border-green);
+  box-shadow: 0 0 30px rgba(31, 164, 124, 0.15);
+  position: relative;
+}
+
+.compare-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.badge-traditional {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+}
+
+.badge-yamaha-kit {
+  background: var(--renner-green);
+  color: #fff;
+  box-shadow: 0 0 10px var(--renner-green-glow);
+}
+
+.compare-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.compare-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.compare-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.compare-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Interactive Voicing Zones Diagram
+   ========================================================================== */
+.voicing-zones-widget {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  height: 100%;
+}
+
+.hammerhead-interactive-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hammerhead-svg-container {
+  width: 100%;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7));
+}
+
+.voicing-zone-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-align: left;
+}
+
+.voicing-zone-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--gold-accent);
+}
+
+.voicing-zone-btn.active {
+  background: rgba(200, 163, 86, 0.15);
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 16px var(--gold-glow);
+}
+
+.zone-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.zone-name {
+  font-weight: 700;
+  color: var(--gold-light);
+  font-size: 0.95rem;
+}
+
+.zone-effect {
+  font-size: 0.75rem;
+  color: var(--renner-green-bright);
+  font-weight: 600;
+}
+
+.zone-detail {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Bottom Navigation HUD
+   ========================================================================== */
+.bottom-hud {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: rgba(8, 11, 15, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  z-index: 100;
+}
+
+.progress-container {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 4%;
+  background: linear-gradient(90deg, var(--renner-green) 0%, var(--gold-accent) 100%);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.slide-info-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.slide-counter {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.slide-brand-pill {
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-left: 1px solid var(--border-subtle);
+  padding-left: 14px;
+  font-weight: 500;
+}
+
+.slide-name-breadcrumb {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  max-width: 380px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bottom-hud-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-hud-brand-wrap {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--border-subtle);
+  padding-left: 16px;
+}
+
+.bottom-hud-renner-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.bottom-hud-renner-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 2px 10px var(--accent-glow));
+}
+
+.nav-arrow-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  width: 40px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.nav-arrow-btn:hover {
+  background: var(--renner-green);
+  border-color: var(--border-green);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.hud-jump-modules-btn {
+  background: rgba(200, 163, 86, 0.14);
+  border: 1px solid rgba(200, 163, 86, 0.45);
+  color: var(--gold-light);
+  padding: 0 14px;
+  height: 36px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.hud-jump-modules-btn:hover {
+  background: rgba(200, 163, 86, 0.28);
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(200, 163, 86, 0.4);
+  transform: translateY(-1px);
+}
+
+.hud-jump-modules-btn.is-active-slide {
+  background: var(--gold-accent);
+  color: #0b0e14;
+  border-color: #ffffff;
+  box-shadow: 0 0 14px rgba(255, 235, 160, 0.6);
+}
+
+.hud-jump-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   Modals & Overlays (Slide Grid, Notes, Audio Synth, Help)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(4, 6, 8, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1100px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.open .modal-content-card {
+  transform: scale(1);
+}
+
+.modal-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--gold-light);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: #fff;
+}
+
+.modal-body {
+  padding: 24px 28px;
+  overflow-y: auto;
+}
+
+/* Slide Grid in Modal */
+.slides-grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.slide-grid-thumb {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.slide-grid-thumb:hover {
+  border-color: var(--renner-green-bright);
+  background: rgba(31, 164, 124, 0.1);
+  transform: translateY(-2px);
+}
+
+.slide-grid-thumb.active {
+  border-color: var(--gold-accent);
+  background: rgba(200, 163, 86, 0.15);
+}
+
+.grid-thumb-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+
+.grid-thumb-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Speaker Notes Drawer */
+.notes-drawer {
+  position: fixed;
+  bottom: 60px;
+  right: 28px;
+  width: 440px;
+  max-height: 480px;
+  background: rgba(18, 22, 31, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-gold);
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  z-index: 150;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.notes-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.notes-header {
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notes-content {
+  padding: 18px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+.notes-content ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+/* Virtual Laser Pointer */
+.laser-pointer {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ff2a2a;
+  box-shadow: 0 0 12px #ff0000, 0 0 25px #ff2a2a;
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .split-layout, .split-wide-media {
+    grid-template-columns: 1fr;
+  }
+  .slide-title {
+    font-size: 1.6rem;
+  }
+  .hero-main-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ==========================================================================
+   Meuselwitz Animated Construction Timelapse (09.2025 - 10.2026)
+   ========================================================================== */
+.timelapse-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.timelapse-control-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(18, 22, 31, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 8px 16px;
+  gap: 16px;
+}
+
+.timelapse-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timelapse-play-btn {
+  background: var(--renner-green);
+  border: 1px solid var(--border-green);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+  box-shadow: 0 0 12px var(--renner-green-glow);
+}
+
+.timelapse-play-btn:hover {
+  background: var(--renner-green-bright);
+  transform: translateY(-1px);
+}
+
+.timelapse-sec-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.timelapse-sec-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.timelapse-sec-btn.active {
+  background: rgba(200, 163, 86, 0.2);
+  border-color: var(--gold-accent);
+  color: var(--gold-light);
+}
+
+/* Timeline scrubber track */
+.timelapse-scrubber-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timelapse-scrubber {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.timelapse-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px var(--gold-glow);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.timelapse-scrubber::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+
+.timelapse-milestone-ticks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.milestone-tick-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.milestone-tick-btn:hover, .milestone-tick-btn.active {
+  color: var(--gold-light);
+  background: rgba(200, 163, 86, 0.15);
+  font-weight: 700;
+}
+
+/* Visual Stage Viewer with Ken-Burns */
+.timelapse-stage-viewer {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: #040507;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timelapse-image-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.ken-burns {
+  animation: kenBurnsAnimation 7s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurnsAnimation {
+  0% {
+    transform: scale(1.0) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+}
+
+/* Floating Milestone HUD Overlay */
+.timelapse-hud-overlay {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.timelapse-date-badge {
+  background: rgba(10, 12, 16, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.timelapse-phase-badge {
+  background: rgba(20, 89, 67, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-green);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.timelapse-caption-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
+  padding: 20px 24px 14px;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.timelapse-title-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.timelapse-desc-text {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  max-width: 780px;
+}
+
+.timelapse-counter-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Renner Academy Technical Enhancements (Formulas, Tables, Wedges)
+   ========================================================================== */
+.formula-card {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.12) 0%, rgba(13, 20, 16, 0.75) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.formula-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.formula-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.formula-math {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border-left: 3px solid var(--gold-accent);
+  line-height: 1.5;
+  margin: 6px 0;
+}
+
+.formula-math span.operator {
+  color: var(--gold-accent);
+  margin: 0 4px;
+}
+
+.formula-math span.variable {
+  color: #a7f3d0;
+}
+
+.formula-note {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  margin-top: 6px;
+}
+
+/* Technical Specification Table */
+.spec-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: rgba(18, 22, 28, 0.65);
+  font-size: 0.82rem;
+  margin: 10px 0;
+}
+
+.spec-table th {
+  background: rgba(200, 163, 86, 0.15);
+  color: var(--gold-light);
+  font-weight: 700;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.76rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.spec-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.spec-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.spec-table td strong {
+  color: #fff;
+}
+
+.spec-table td .mono-val {
+  font-family: var(--font-mono);
+  color: var(--gold-accent);
+  font-weight: 600;
+}
+
+/* Tool Item Badge */
+.tool-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Dynamic Voicing Wedges Pills */
+.wedge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.wedge-tag.red {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.wedge-tag.purple {
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid #a855f7;
+  color: #d8b4fe;
+}
+
+.wedge-tag.orange {
+  background: rgba(249, 115, 22, 0.2);
+  border: 1px solid #f97316;
+  color: #fdba74;
+}
+
+.wedge-tag.green {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #6ee7b7;
+}
+
+.wedge-tag.blue {
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid #3b82f6;
+  color: #93c5fd;
+}
+
+/* Kruse Axiom Quote Callout */
+.axiom-callout {
+  background: linear-gradient(135deg, rgba(23, 74, 52, 0.35) 0%, rgba(12, 17, 24, 0.8) 100%);
+  border-left: 4px solid var(--renner-green);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin: 12px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.axiom-quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.96rem;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.axiom-author {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Multi-image Dual Layout */
+.dual-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.dual-media-grid .media-container {
+  height: auto;
+  min-height: 220px;
+}
+
+.quad-media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.quad-media-grid .media-container {
+  height: auto;
+  min-height: 140px;
+}
+
+/* ==========================================================================
+   Flat Pack FX / Vox Documentary Animated Timeline (louis-renner.de) - Slide 3
+   Inspired by Flat Pack FX "Stylized Timeline Animation - After Effects" (9AtjrBHF560)
+   Features:
+   - Camera Panning Panorama Track across 10 Milestones (1882 to Heute)
+   - After Effects Measurement Ruler with Tick Marks, Glowing Beam & Draggable Needle
+   - Cinematic Autoplay Video Mode with Real-Time Progress Indicator
+   - Giant Parallax Watermark Typography & Luxury Editorial Cards
+   ========================================================================== */
+
+/* Top Controls in Slide 3 Header */
+.vox-timeline-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Autoplay / Film Mode Button with Live Progress Bar */
+.vox-play-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.2), rgba(200, 163, 86, 0.08));
+  border: 1px solid rgba(200, 163, 86, 0.45);
+  color: var(--gold-light);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.vox-play-btn:hover {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.32), rgba(200, 163, 86, 0.16));
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(200, 163, 86, 0.55);
+  transform: translateY(-1px);
+}
+
+.vox-play-btn.is-playing {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(200, 163, 86, 0.15));
+  border-color: rgba(34, 197, 94, 0.6);
+  color: #ffffff;
+}
+
+.vox-play-icon {
+  font-size: 0.85rem;
+  color: var(--gold-accent);
+  transition: transform var(--transition-fast);
+}
+
+.vox-play-btn.is-playing .vox-play-icon {
+  color: #4ade80;
+}
+
+.vox-play-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-accent), #ffffff);
+  box-shadow: 0 0 8px rgba(200, 163, 86, 0.9);
+  transition: width 0.08s linear;
+}
+
+/* Stepping Controls */
+.vox-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 18, 27, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 3px 6px;
+}
+
+.vox-step-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.vox-step-btn:hover:not(:disabled) {
+  background: rgba(200, 163, 86, 0.18);
+  border-color: rgba(200, 163, 86, 0.4);
+  color: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.vox-step-btn.highlight {
+  background: rgba(200, 163, 86, 0.14);
+  border-color: rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+}
+
+.vox-step-btn.highlight:hover:not(:disabled) {
+  background: rgba(200, 163, 86, 0.3);
+  border-color: var(--gold-accent);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(200, 163, 86, 0.45);
+}
+
+.vox-step-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.vox-step-counter {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.4px;
+  padding: 0 6px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Central Timeline Spine & Tree-Branch Architecture (Slide 3)
+   Aesthetic:
+   - Horizontal Central Timeline Spine (Trunk) running across the screen center
+   - Vertical Tree Branches ("Äste") sprouting UP/DOWN to open each epoch
+   - Historical Picture as the primary visual hero in museum-grade framing
+   - Ultra-compact, punchy narrative (1 sentence + key fact tag)
+   - Draggable scrubber, autoplay documentary mode, and keyboard navigation
+   ========================================================================== */
+
+/* Main Timeline Container filling Slide 3 below header */
+.tree-timeline-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Flying Light Point with Tail & Branching Ray ("Lichtpunkt mit Schweif")
+   Aesthetic & Motion:
+   - At slide start: A light point is born at the left edge of the slide
+   - It flies horizontally with a luminous, organic comet tail (Schweif)
+   - When arriving at the epoch position: A radiant vertical ray branches out
+   - At the end of the ray, the epoch card (historical image + story) appears!
+   - Then the light point surges forward with its tail to the next section!
+   - Progressive luminosity: warm amber (1882) -> incandescent diamond-white (2025)
+   ========================================================================== */
+
+/* Dark Start State: when entering Slide 3 before the first press right */
+.tree-timeline-container.is-dark-start .tree-milestone-panel {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0.96) !important;
+  filter: blur(8px) !important;
+}
+
+.tree-timeline-container.is-dark-start .flying-comet-traveler {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ==========================================================================
+   Harmonic Celestial Comet Traveler ("Kugel mit echtem Kometen-Schweif auf Welle")
+   ========================================================================== */
+
+/* Full-Frame Canvas for Real Curved Comet Tail & Stardust Wake */
+.comet-trail-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 34;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.tree-timeline-container.is-dark-start .comet-trail-canvas {
+  opacity: 0 !important;
+}
+
+/* The Flying Light Sphere Traveler Container ("Kugel mit Schweif") */
+.flying-comet-traveler {
+  position: absolute;
+  left: 0;
+  top: 91.25%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 35;
+  transform: translate(-50%, -50%);
+  will-change: left, top, transform;
+  transition: opacity 0.4s ease;
+}
+
+/* Peaceful, majestic resting pulse when docked at center station */
+@keyframes cometRestingPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 0 16px rgba(255, 215, 120, 0.75));
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    filter: drop-shadow(0 0 28px rgba(255, 230, 145, 0.95));
+  }
+}
+
+.flying-comet-traveler.is-docked .comet-head-point {
+  animation: cometRestingPulse 3.5s infinite ease-in-out;
+}
+
+/* 1. Blazing Light Sphere Head (Die Kugel) */
+.comet-head-point {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  filter: drop-shadow(0 0 18px rgba(255, 215, 120, 0.85));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Incandescent white-hot center */
+.point-core-white {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 
+    0 0 12px #ffffff,
+    0 0 26px rgba(255, 235, 160, 1),
+    0 0 52px rgba(215, 170, 75, 0.95);
+  transition: all 0.4s ease;
+}
+
+/* Breathing solar corona halo */
+.point-corona-ring {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 240, 180, 0.7) 0%, rgba(225, 175, 70, 0.28) 50%, transparent 75%);
+  animation: cometCoronaBreathe 2.8s infinite ease-out;
+}
+
+@keyframes cometCoronaBreathe {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.32);
+    opacity: 0.45;
+  }
+}
+
+/* Four-pointed optical starburst flare - only radiates when docked at an epoch */
+.point-starburst-flare {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.flying-comet-traveler.is-docked .point-starburst-flare {
+  opacity: 1;
+}
+
+/* Energetisches Aufleuchten des Lichtpunkts bei Schub-Wechsel */
+.flying-comet-traveler.is-thrust-flash .comet-head-point {
+  transform: translate(-50%, -50%) scale(1.85);
+  filter: drop-shadow(0 0 28px #ffffff) drop-shadow(0 0 55px rgba(255, 220, 120, 1));
+  transition: transform 0.16s ease-out, filter 0.16s ease-out;
+}
+
+.flying-comet-traveler.is-thrust-flash .point-core-white {
+  box-shadow: 0 0 20px #ffffff, 0 0 45px rgba(255, 235, 160, 1), 0 0 80px rgba(215, 170, 75, 1);
+  transform: scale(1.35);
+}
+
+.flying-comet-traveler.is-thrust-flash .point-corona-ring {
+  transform: scale(2.2);
+  opacity: 1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 220, 120, 0.6) 40%, transparent 75%);
+}
+
+.flying-comet-traveler.is-thrust-flash .point-starburst-flare {
+  opacity: 1;
+  transform: scale(1.8) rotate(45deg);
+  transition: transform 0.22s ease-out, opacity 0.22s ease-out;
+}
+
+.point-starburst-flare::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 36px;
+  top: -2px;
+  left: 15px;
+  background: linear-gradient(to bottom, transparent, #ffffff 45%, #ffffff 55%, transparent);
+  box-shadow: 0 0 8px #ffffff;
+}
+
+.point-starburst-flare::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  left: -2px;
+  top: 15px;
+  background: linear-gradient(to right, transparent, #ffffff 45%, #ffffff 55%, transparent);
+  box-shadow: 0 0 8px #ffffff;
+}
+
+/* Birth burst animation (played on slide start) */
+.point-birth-burst {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 16px rgba(255, 240, 180, 1);
+  opacity: 0;
+  transform: scale(0.2);
+  pointer-events: none;
+}
+
+.flying-comet-traveler.is-igniting .point-birth-burst {
+  animation: cometBirthRing 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cometBirthRing {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+/* 3. Vertical Branching Ray (Der verzweigte Strahl) */
+.comet-branch-ray {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 15;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* Shaft of light shooting vertically across to the card */
+.ray-light-shaft {
+  position: absolute;
+  left: -2px;
+  width: 4px;
+  height: 80px;
+  border-radius: 2px;
+  transform: scaleY(0);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 16px rgba(245, 200, 85, 0.95), 0 0 32px rgba(255, 235, 160, 0.7);
+}
+
+/* Blooming flare at the tip of the ray where the card appears */
+.ray-blooming-flare {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, rgba(255, 235, 160, 0.95) 40%, rgba(200, 163, 86, 0.45) 70%, transparent 100%);
+  box-shadow: 0 0 20px #ffffff, 0 0 38px rgba(255, 230, 140, 1), 0 0 60px rgba(215, 170, 75, 0.85);
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.35s ease 0.28s, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.28s;
+}
+
+/* When branching UP (Ray shoots into top card) */
+.comet-branch-ray.branch-up .ray-light-shaft {
+  bottom: 0;
+  transform-origin: bottom center;
+  background: linear-gradient(to top, #ffffff 0%, #ffdf80 30%, var(--gold-accent) 65%, rgba(200, 163, 86, 0.4) 100%);
+}
+.comet-branch-ray.branch-up .ray-blooming-flare {
+  left: -14px;
+  top: -94px;
+}
+
+/* When branching DOWN (Ray shoots into bottom card) */
+.comet-branch-ray.branch-down .ray-light-shaft {
+  top: 0;
+  transform-origin: top center;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffdf80 30%, var(--gold-accent) 65%, rgba(200, 163, 86, 0.4) 100%);
+}
+.comet-branch-ray.branch-down .ray-blooming-flare {
+  left: -14px;
+  top: 68px;
+}
+
+/* Active Ray Expansion */
+.comet-branch-ray.is-active .ray-light-shaft {
+  transform: scaleY(1);
+}
+.comet-branch-ray.is-active .ray-blooming-flare {
+  opacity: 1;
+  transform: scale(1.35);
+}
+
+/* Progressive Luminosity of the Light Sphere & Tail across epochs */
+.comet-head-point[data-luminosity="0"] .point-core-white { box-shadow: 0 0 10px #ffffff, 0 0 20px #d4882c; }
+.comet-head-point[data-luminosity="1"] .point-core-white { box-shadow: 0 0 10px #ffffff, 0 0 22px #de9532; }
+.comet-head-point[data-luminosity="2"] .point-core-white { box-shadow: 0 0 11px #ffffff, 0 0 24px #e6a438; }
+.comet-head-point[data-luminosity="3"] .point-core-white { box-shadow: 0 0 11px #ffffff, 0 0 26px #eeb240; }
+.comet-head-point[data-luminosity="4"] .point-core-white { box-shadow: 0 0 12px #ffffff, 0 0 28px #f4bf48; }
+.comet-head-point[data-luminosity="5"] .point-core-white { box-shadow: 0 0 13px #ffffff, 0 0 30px #f9cc52; }
+.comet-head-point[data-luminosity="6"] .point-core-white { box-shadow: 0 0 14px #ffffff, 0 0 32px #fed85e; }
+.comet-head-point[data-luminosity="7"] .point-core-white { box-shadow: 0 0 16px #ffffff, 0 0 35px #ffe46d; }
+.comet-head-point[data-luminosity="8"] .point-core-white { box-shadow: 0 0 18px #ffffff, 0 0 40px #fff18e; }
+.comet-head-point[data-luminosity="9"] .point-core-white { 
+  box-shadow: 0 0 20px #ffffff, 0 0 45px rgba(255, 240, 180, 1), 0 0 65px rgba(255, 220, 120, 1);
+}
+
+/* ==========================================================================
+   Horizontal Tracking Viewport & Sliding Camera Track
+   ========================================================================== */
+.tree-viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 10;
+  mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.tree-pan-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.75s cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform;
+}
+
+.tree-viewport.is-dragging .tree-pan-track {
+  transition: none;
+}
+
+/* Individual Milestone Panel (1 of 10) */
+.tree-milestone-panel {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 8px 0;
+  transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.65s ease;
+}
+
+.tree-milestone-panel:not(.active) {
+  opacity: 0.16;
+  transform: scale(0.94);
+  filter: blur(2px) grayscale(30%);
+  pointer-events: none;
+}
+
+.tree-milestone-panel.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   Monumental Epoch Year (Immer rechts vom Inhalt/Bild, wechselnd oben/unten)
+   - Sitzt im rechten Korridor neben dem vergrößerten Inhalt
+   - Weiter zur Mitte versetzt (200px), sodass die Inhaltskarte näher am rechten Rand steht
+   - In einer Flucht mit dem Zentrum vom Effekt am rechten Rand
+   - Puls-Schleife (12 Sekunden Gesamtlänge):
+     * 2s ansteigen (0% -> 16.67%)
+     * 5s gehalten werden auf Maximum (16.67% -> 58.33%)
+     * 2s absteigen auf Minimum (58.33% -> 75%)
+     * 3s gehalten werden auf Minimum (75% -> 100%)
+   ========================================================================== */
+.tree-watermark-year {
+  position: absolute;
+  right: 200px; /* Weiter zur Mitte versetzt (sitzt weiter innen als die Inhaltskarte) */
+  left: auto;
+  text-align: right;
+  font-family: var(--font-serif);
+  font-size: clamp(4.4rem, 6.8vw, 7.2rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -2px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 5;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.55s ease-out, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* In einer Flucht mit dem Zentrum vom Effekt am unteren Rechten Rand (Branch UP) */
+.tree-milestone-panel.branch-up .tree-watermark-year {
+  top: 91.25%;
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* In einer Flucht mit dem Zentrum vom Effekt am oberen Rechten Rand (Branch DOWN) */
+.tree-milestone-panel.branch-down .tree-watermark-year {
+  top: 8.75%;
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Erscheint synchron mit der geöffneten Karte */
+.tree-milestone-panel.active .tree-watermark-year.is-revealed {
+  opacity: 1;
+  animation: watermarkYearPulse 12s infinite ease-in-out;
+}
+
+.tree-milestone-panel:not(.active) .tree-watermark-year {
+  opacity: 0;
+  animation: none;
+}
+
+@media (max-width: 1400px) {
+  .tree-watermark-year {
+    right: 160px;
+    font-size: clamp(3.8rem, 5.8vw, 5.8rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .tree-watermark-year {
+    right: 110px;
+    font-size: 3.4rem;
+  }
+}
+
+/* Spezial-Anpassung für Monat.Jahr (z. B. 11.2025 - 7 Zeichen) */
+.tree-watermark-year.tree-watermark-month-year {
+  font-size: clamp(3.2rem, 5.0vw, 5.4rem);
+  letter-spacing: -1.5px;
+}
+
+@media (max-width: 1400px) {
+  .tree-watermark-year.tree-watermark-month-year {
+    font-size: clamp(2.6rem, 4.2vw, 4.2rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .tree-watermark-year.tree-watermark-month-year {
+    font-size: 2.4rem;
+  }
+}
+
+/* 12s Glüh-Pulsation: 2s Anstieg, 5s Halten (oben), 2s Abstieg, 3s Halten (unten) */
+@keyframes watermarkYearPulse {
+  0% {
+    color: rgba(200, 163, 86, 0.35);
+    text-shadow: 0 0 14px rgba(200, 163, 86, 0.20);
+    transform: translateY(-50%) scale(1);
+  }
+  16.67% { /* 2.0s: Anstieg beendet, Maximum erreicht */
+    color: #ffffff;
+    text-shadow: 0 0 24px rgba(255, 235, 160, 0.95), 0 0 52px rgba(215, 170, 75, 0.70), 0 0 90px rgba(200, 163, 86, 0.35);
+    transform: translateY(-50%) scale(1.035);
+  }
+  58.33% { /* 7.0s: 5 Sekunden lang auf Maximum gehalten */
+    color: #ffffff;
+    text-shadow: 0 0 24px rgba(255, 235, 160, 0.95), 0 0 52px rgba(215, 170, 75, 0.70), 0 0 90px rgba(200, 163, 86, 0.35);
+    transform: translateY(-50%) scale(1.035);
+  }
+  75.00% { /* 9.0s: Nach 2 Sekunden Abstieg wieder auf Minimum */
+    color: rgba(200, 163, 86, 0.35);
+    text-shadow: 0 0 14px rgba(200, 163, 86, 0.20);
+    transform: translateY(-50%) scale(1);
+  }
+  100% { /* 12.0s: 3 Sekunden lang auf Minimum gehalten (75% -> 100%) */
+    color: rgba(200, 163, 86, 0.35);
+    text-shadow: 0 0 14px rgba(200, 163, 86, 0.20);
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+/* ==========================================================================
+   82.5% Content vs 17.5% Effect Vertical Architecture (Effekt um 30% reduziert)
+   - branch-up: top-slot has 82.5% (flex: 82.5), bottom-slot has 17.5% (flex: 17.5)
+   - branch-down: top-slot has 17.5% (flex: 17.5), bottom-slot has 82.5% (flex: 82.5)
+   ========================================================================== */
+.tree-slot {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.tree-milestone-panel.branch-up .tree-slot.top-slot {
+  flex: 82.5;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Vergrößerung wächst nach unten in Richtung Zeitstrahl-Punkt */
+  align-items: flex-end; /* Orientiert zur rechten Seite (nah am Bildschirmrand) */
+  padding: 2px 0 0 0;
+}
+
+.tree-milestone-panel.branch-up .tree-slot.spine-slot {
+  display: none;
+}
+
+.tree-milestone-panel.branch-up .tree-slot.bottom-slot {
+  flex: 17.5;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.tree-milestone-panel.branch-down .tree-slot.top-slot {
+  flex: 17.5;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.tree-milestone-panel.branch-down .tree-slot.spine-slot {
+  display: none;
+}
+
+.tree-milestone-panel.branch-down .tree-slot.bottom-slot {
+  flex: 82.5;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Vergrößerung wächst nach oben in Richtung Zeitstrahl-Punkt */
+  align-items: flex-end; /* Orientiert zur rechten Seite (nah am Bildschirmrand) */
+  padding: 0 0 2px 0;
+}
+
+/* ==========================================================================
+   Tree Branch Stems ("Äste vom Zeitstrahl")
+   Directly anchored into the central Living Branch Nexus
+   ========================================================================== */
+.tree-branch-stem {
+  position: absolute;
+  width: 3px;
+  height: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  box-shadow: 0 0 10px rgba(200, 163, 86, 0.5);
+  pointer-events: none;
+}
+
+/* Branch going UP from central nexus into top card */
+.tree-branch-stem.stem-up {
+  bottom: -26px;
+  background: linear-gradient(to top, var(--gold-accent), rgba(200, 163, 86, 0.45));
+}
+
+/* Branch going DOWN from central nexus into bottom card */
+.tree-branch-stem.stem-down {
+  top: -26px;
+  background: linear-gradient(to bottom, var(--gold-accent), rgba(200, 163, 86, 0.45));
+}
+
+/* Joint bead at branch junction */
+.tree-branch-stem::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--gold-accent);
+  box-shadow: 0 0 10px rgba(200, 163, 86, 1);
+}
+
+.tree-branch-stem.stem-up::before {
+  bottom: -2px;
+}
+
+.tree-branch-stem.stem-down::before {
+  top: -2px;
+}
+
+/* Animated pulse along active branch */
+.tree-branch-stem::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  width: 5px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #ffffff;
+  opacity: 0;
+}
+
+.tree-milestone-panel.active .tree-branch-stem::after {
+  opacity: 1;
+  animation: branchPulse 2.4s infinite ease-in-out;
+}
+
+@keyframes branchPulse {
+  0% { top: 0; opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { top: 38px; opacity: 0; }
+}
+
+/* Counter Stems (leading to subtle chronicle quote pill) */
+.tree-counter-stem {
+  position: absolute;
+  width: 2px;
+  height: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(200, 163, 86, 0.28);
+  z-index: 15;
+  pointer-events: none;
+}
+
+.tree-counter-stem.stem-up {
+  bottom: -26px;
+}
+
+.tree-counter-stem.stem-down {
+  top: -26px;
+}
+
+/* ==========================================================================
+   Hero Epoch Card (Vergrößerter Inhalt - Nah am rechten Bildschirmrand positioniert)
+   ========================================================================== */
+.tree-hero-card {
+  width: calc(100% - 72px);
+  max-width: 1380px;
+  height: clamp(520px, 72vh, 660px);
+  margin-right: 36px; /* Steht nah am rechten Bildschirmrand */
+  background: rgba(13, 17, 26, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(200, 163, 86, 0.45);
+  border-radius: 18px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.76), 0 0 30px rgba(200, 163, 86, 0.18);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.55s ease-out, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease, border-color 0.6s ease;
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+  pointer-events: none;
+}
+
+.tree-milestone-panel.branch-up .tree-hero-card {
+  margin-top: 30px; /* 30px näher an den Zeitstrahl-Punkt (unten) */
+}
+
+.tree-milestone-panel.branch-down .tree-hero-card {
+  margin-bottom: 30px; /* 30px näher an den Zeitstrahl-Punkt (oben) */
+  transform: translateY(-18px) scale(0.96);
+}
+
+/* Revealed at the end of the branching ray */
+.tree-milestone-panel.active .tree-hero-card.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.88), 0 0 40px rgba(200, 163, 86, 0.38);
+  border-color: rgba(200, 163, 86, 0.8);
+  pointer-events: auto;
+}
+
+@media (max-width: 1300px) {
+  .tree-hero-card {
+    margin-right: 24px;
+    width: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 900px) {
+  .tree-hero-card {
+    margin-right: 14px;
+    width: calc(100% - 28px);
+  }
+}
+
+/* Left Hero Picture Wrapper (46% Width) */
+.hero-image-wrapper {
+  flex: 0 0 46%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #080a0f;
+  border-right: 1px solid rgba(200, 163, 86, 0.3);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tree-hero-card:hover .hero-image {
+  transform: scale(1.04);
+}
+
+.hero-image.fit-contain {
+  object-fit: contain !important;
+  background: #080a0f;
+  transform: none !important;
+}
+
+/* Hero Image Slideshow (Milestone 1944 Archive Series) */
+.hero-image-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080a0f;
+}
+
+.hero-image-slideshow .hero-slideshow-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1), transform 5.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.035);
+  pointer-events: none;
+  z-index: 1;
+  will-change: opacity, transform;
+}
+
+.hero-image-slideshow .hero-slideshow-img.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.hero-image-slideshow video.hero-slideshow-img {
+  transform: none !important;
+  background: #000;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.hero-image-slideshow img.fit-contain {
+  object-fit: contain !important;
+  background: #080a0f;
+  transform: none !important;
+}
+
+.hero-image-slideshow video.hero-slideshow-img::-webkit-media-controls {
+  display: none !important;
+}
+
+.hero-image-caption {
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slideshow-dots {
+  position: absolute;
+  bottom: 38px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 7;
+  background: rgba(10, 14, 22, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(200, 163, 86, 0.4);
+}
+
+.slideshow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.slideshow-dot:hover {
+  background: rgba(200, 163, 86, 0.7);
+}
+
+.slideshow-dot.active {
+  width: 18px;
+  border-radius: 4px;
+  background: var(--gold-accent, #c8a356);
+  box-shadow: 0 0 10px rgba(200, 163, 86, 0.85);
+}
+
+/* Gold Corner Brackets */
+.hero-corner-bracket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--gold-accent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-corner-bracket.top-left {
+  top: 6px;
+  left: 6px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hero-corner-bracket.top-right {
+  top: 6px;
+  right: 6px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.hero-corner-bracket.bottom-left {
+  bottom: 6px;
+  left: 6px;
+  border-right: none;
+  border-top: none;
+}
+
+.hero-corner-bracket.bottom-right {
+  bottom: 6px;
+  right: 6px;
+  border-left: none;
+  border-top: none;
+}
+
+.hero-image-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 15px;
+  background: rgba(9, 12, 18, 0.88);
+  border: 1px solid rgba(200, 163, 86, 0.5);
+  border-radius: 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.5px;
+  z-index: 6;
+  backdrop-filter: blur(8px);
+}
+
+.hero-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(to top, rgba(9, 12, 18, 0.95), rgba(9, 12, 18, 0));
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 6;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Right Meta Wrapper (54% Focus, Generous) */
+.hero-meta-wrapper {
+  flex: 0 0 54%;
+  padding: 26px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.05), transparent);
+}
+
+.hero-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-year-pill {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--gold-accent);
+  text-shadow: 0 0 10px rgba(200, 163, 86, 0.6);
+  letter-spacing: 0.5px;
+  display: inline-block;
+  animation: heroYearPillPulse 12s infinite ease-in-out;
+}
+
+@keyframes heroYearPillPulse {
+  0% {
+    color: var(--gold-accent);
+    text-shadow: 0 0 10px rgba(200, 163, 86, 0.6);
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  16.67% { /* 2.0s */
+    color: #ffffff;
+    text-shadow: 0 0 16px rgba(255, 235, 160, 1), 0 0 28px rgba(215, 170, 75, 0.85);
+    filter: drop-shadow(0 0 6px rgba(255, 215, 120, 0.5));
+  }
+  58.33% { /* 7.0s (5s hold) */
+    color: #ffffff;
+    text-shadow: 0 0 16px rgba(255, 235, 160, 1), 0 0 28px rgba(215, 170, 75, 0.85);
+    filter: drop-shadow(0 0 6px rgba(255, 215, 120, 0.5));
+  }
+  75.00% { /* 9.0s (2s descent) */
+    color: var(--gold-accent);
+    text-shadow: 0 0 10px rgba(200, 163, 86, 0.6);
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  100% { /* 12.0s (3s hold) */
+    color: var(--gold-accent);
+    text-shadow: 0 0 10px rgba(200, 163, 86, 0.6);
+    filter: drop-shadow(0 0 0px transparent);
+  }
+}
+
+.hero-step-tag {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 1.62rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.28;
+  margin: 6px 0 10px 0;
+}
+
+.hero-sentence {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Bullet-Points für zusammengeführte Epochen-Inhalte (25% vergrößert & gleichmäßig verteilt) */
+.hero-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 14px;
+}
+
+.hero-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: clamp(1.25rem, 1.55vw, 1.45rem);
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.44;
+  padding: 2px 0;
+}
+
+.hero-bullet-item strong {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(1.28rem, 1.6vw, 1.48rem);
+  letter-spacing: 0.2px;
+}
+
+.hero-bullet-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 12px rgba(200, 163, 86, 0.95), 0 0 5px rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+.hero-meta-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-fact-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 16px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+  font-size: 0.90rem;
+  font-weight: 600;
+}
+
+.hero-quick-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.hero-nav-arrow {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(200, 163, 86, 0.25);
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.hero-nav-arrow:hover:not(:disabled) {
+  background: rgba(200, 163, 86, 0.25);
+  border-color: var(--gold-accent);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.hero-nav-arrow:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Photo Focus Card (Für Meuselwitz Transformation & Baudokumentation)
+   Fokus liegt vollständig auf dem Bild, ergänzt durch eine subtile Bildunterschrift
+   ========================================================================== */
+.tree-hero-card.photo-focus-card {
+  flex-direction: column;
+}
+
+.photo-card-img-wrapper {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  background: #06080e;
+  border-radius: 17px 17px 0 0;
+}
+
+.photo-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo-focus-card:hover .photo-card-img {
+  transform: scale(1.035);
+}
+
+/* Glassmorphism Month Badge */
+.photo-card-month-badge {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  padding: 6px 18px;
+  background: rgba(10, 14, 22, 0.88);
+  border: 1px solid var(--gold-accent);
+  border-radius: 20px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  letter-spacing: 0.5px;
+  z-index: 6;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Step Indicator Tag */
+.photo-card-step-badge {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  padding: 6px 16px;
+  background: rgba(10, 14, 22, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 6;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Subtle, Compact Bottom Caption Bar */
+.photo-caption-bar {
+  flex: 0 0 auto;
+  padding: 13px 26px;
+  background: rgba(10, 14, 22, 0.96);
+  border-top: 1px solid rgba(200, 163, 86, 0.35);
+  border-radius: 0 0 17px 17px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 6;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.photo-caption-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 10px rgba(200, 163, 86, 0.9);
+  flex-shrink: 0;
+}
+
+.photo-caption-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.0rem, 1.2vw, 1.18rem);
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.2px;
+}
+
+.photo-caption-separator {
+  color: rgba(200, 163, 86, 0.65);
+  font-weight: 300;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.photo-caption-text {
+  font-family: var(--font-sans);
+  font-size: clamp(0.84rem, 0.96vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-caption-nav {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.photo-nav-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  padding: 3px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.photo-nav-btn:hover:not(:disabled) {
+  background: rgba(200, 163, 86, 0.3);
+  border-color: var(--gold-accent);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.photo-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .photo-caption-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 16px;
+  }
+  .photo-caption-text {
+    white-space: normal;
+    width: 100%;
+  }
+  .photo-caption-separator {
+    display: none;
+  }
+}
+
+/* Counter-Quote Pill (Opposite Side of Branch) */
+.tree-counter-pill {
+  display: none;
+}
+
+.tree-milestone-panel.active .tree-counter-pill.is-revealed {
+  opacity: 0.9;
+  transform: translateY(0);
+}
+
+.tree-counter-text {
+  font-size: 0.74rem;
+  font-style: italic;
+  color: var(--gold-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tree-counter-author {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Backward compatibility aliases */
+.vox-timeline-container { display: none; }
+.vox-ruler-track-wrapper { display: none; }
+.timeline-track-wrapper { display: none; }
+.timeline-track-line-container { display: none; }
+
+
+/* ==========================================================================
+   @SlidesbySander Bento Grid Architecture & Modern Presentation System
+   Inspired by Sander van den Berg (SlideSkills / Microsoft MVP)
+   Principles: Bento Boxes, Number-First/KPI-Hero, Depth & Staggered Reveal
+   ========================================================================== */
+
+/* Bento Grid Containers */
+.bento-grid {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+}
+
+.bento-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bento-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bento-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bento-grid-hero-left {
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: stretch;
+}
+
+.bento-grid-hero-right {
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: stretch;
+}
+
+.bento-grid-mosaic {
+  grid-template-columns: 1.35fr 0.65fr;
+  grid-auto-rows: minmax(180px, auto);
+}
+
+.bento-grid-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Grid Spans */
+.col-span-2 { grid-column: span 2; }
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-7 { grid-column: span 7; }
+.col-span-8 { grid-column: span 8; }
+.col-span-9 { grid-column: span 9; }
+.col-span-12 { grid-column: span 12; }
+.row-span-2 { grid-row: span 2; }
+
+/* Bento Cards Base (Glassmorphism & Micro-Border) */
+.bento-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 24px var(--accent-glow);
+}
+
+.bento-card[data-target-slide] {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.bento-card[data-target-slide]:hover {
+  transform: translateY(-6px) scale(1.015);
+  border-color: var(--gold-accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 20px 40px -10px rgba(0, 0, 0, 0.75), 0 0 28px var(--gold-glow);
+}
+
+.bento-card[data-target-slide]:focus-visible {
+  outline: 2px solid var(--gold-accent);
+  outline-offset: 2px;
+}
+
+.bento-card-nav-hint {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.bento-card[data-target-slide]:hover .bento-card-nav-hint {
+  background: var(--gold-accent);
+  color: #0b0e14;
+  border-color: #ffffff;
+  transform: translate(2px, -2px) scale(1.12);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+}
+
+/* Bento Card Variants */
+.bento-card.hero-card {
+  background: radial-gradient(circle at top left, var(--bg-radial-1), var(--bg-card) 75%);
+  border-color: var(--border-green);
+}
+
+.bento-card.hero-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-accent), var(--accent-bright), transparent);
+}
+
+.bento-card.metric-card {
+  justify-content: center;
+  text-align: left;
+}
+
+.bento-card.gold-border {
+  border-color: var(--border-gold);
+}
+
+.bento-card.green-border {
+  border-color: var(--border-green);
+}
+
+.bento-card.media-framed {
+  padding: 0;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.bento-card.media-framed img,
+.bento-card.media-framed video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card.media-framed:hover img,
+.bento-card.media-framed:hover video {
+  transform: scale(1.04);
+}
+
+.bento-media-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bento-media-caption {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.bento-media-subcaption {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* Number First / Metric Styling */
+.bento-metric-top {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bento-metric-num {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--gold-light);
+  letter-spacing: -1px;
+  text-shadow: 0 0 20px var(--gold-glow);
+}
+
+.bento-metric-unit {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bento-metric-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-family: var(--font-serif);
+}
+
+.bento-metric-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bento Badges & Pill Tags */
+.bento-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.bento-badge.gold {
+  background: rgba(200, 163, 86, 0.16);
+  border-color: rgba(200, 163, 86, 0.4);
+  color: var(--gold-light);
+}
+
+.bento-badge.green {
+  background: rgba(31, 164, 124, 0.16);
+  border-color: rgba(31, 164, 124, 0.4);
+  color: var(--renner-green-bright);
+}
+
+.bento-badge.red {
+  background: rgba(220, 38, 38, 0.16);
+  border-color: rgba(220, 38, 38, 0.4);
+  color: #fca5a5;
+}
+
+/* Watermark Step Number (Background Accent) */
+.bento-step-watermark {
+  position: absolute;
+  right: 16px;
+  bottom: 8px;
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 1;
+  font-family: var(--font-serif);
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Bento Card Elements */
+.bento-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.bento-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.bento-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.bento-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.bento-card-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bento-card-list-item:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(200, 163, 86, 0.35);
+  transform: translateX(4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.bento-card-list-item strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.bento-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  margin-top: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.bento-dot.gold {
+  background: var(--gold-accent);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+
+.bento-dot.green {
+  background: var(--renner-green-bright);
+  box-shadow: 0 0 8px var(--green-glow);
+}
+
+/* Staggered Morph Reveal Animation for Slide Transitions */
+@keyframes bentoReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.slide.active .bento-card {
+  animation: bentoReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.slide.active .bento-card:nth-child(1) { animation-delay: 0.04s; }
+.slide.active .bento-card:nth-child(2) { animation-delay: 0.09s; }
+.slide.active .bento-card:nth-child(3) { animation-delay: 0.14s; }
+.slide.active .bento-card:nth-child(4) { animation-delay: 0.19s; }
+.slide.active .bento-card:nth-child(5) { animation-delay: 0.24s; }
+.slide.active .bento-card:nth-child(6) { animation-delay: 0.29s; }
+.slide.active .bento-card:nth-child(7) { animation-delay: 0.34s; }
+.slide.active .bento-card:nth-child(8) { animation-delay: 0.39s; }
+
+/* ==========================================================================
+   Folie 3 Blatt 4 (Meilenstein 1944 Brandnacht): Raging Firestorm Backdrop
+   Appears in the background behind the content container (.tree-hero-card)
+   ========================================================================== */
+
+/* Overall Fire Backdrop: spans the entire milestone panel behind content */
+.milestone-fire-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.3s;
+}
+
+#tree-milestone-3.fire-ignited .milestone-fire-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure the hero card and content sit clearly above the fire backdrop */
+.tree-hero-card {
+  z-index: 3;
+}
+
+/* 1. Deep Infernal Glow Core & Pulsing Warmth (Reaches across the slide) */
+.fire-inferno-glow {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 90% 70% at 50% 90%, rgba(255, 65, 0, 0.52) 0%, rgba(255, 115, 0, 0.36) 32%, rgba(180, 25, 0, 0.22) 58%, transparent 85%),
+    radial-gradient(ellipse 70% 55% at 20% 80%, rgba(255, 45, 0, 0.42) 0%, rgba(210, 65, 0, 0.24) 38%, transparent 72%),
+    radial-gradient(ellipse 75% 60% at 80% 80%, rgba(255, 75, 0, 0.44) 0%, rgba(225, 85, 0, 0.25) 40%, transparent 75%),
+    radial-gradient(circle at 50% 50%, rgba(230, 60, 0, 0.18) 0%, rgba(160, 25, 0, 0.1) 45%, transparent 75%);
+  filter: blur(52px);
+  opacity: 0.92;
+  animation: fireInfernoPulse 3.6s infinite alternate ease-in-out;
+  will-change: opacity, transform;
+}
+
+@keyframes fireInfernoPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  25% {
+    opacity: 0.98;
+    transform: scale(1.02);
+  }
+  48% {
+    opacity: 0.84;
+    transform: scale(0.99);
+  }
+  72% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0.88;
+    transform: scale(1);
+  }
+}
+
+/* 2. Smoke & Ash Convection Mist (Rising up through the slide) */
+.fire-smoke-drift {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 65% at 30% 70%, rgba(210, 45, 0, 0.2) 0%, rgba(45, 12, 6, 0.32) 50%, transparent 80%),
+    radial-gradient(ellipse 85% 70% at 72% 65%, rgba(230, 55, 0, 0.24) 0%, rgba(50, 15, 8, 0.34) 54%, transparent 82%),
+    linear-gradient(to top, rgba(180, 35, 0, 0.14) 0%, rgba(80, 15, 0, 0.08) 45%, transparent 85%);
+  filter: blur(42px);
+  mix-blend-mode: screen;
+  opacity: 0.78;
+  animation: fireSmokeBillow 7.5s infinite alternate ease-in-out;
+}
+
+@keyframes fireSmokeBillow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.68;
+  }
+  50% {
+    transform: translateY(-35px) scale(1.05);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.98);
+    opacity: 0.72;
+  }
+}
+
+/* 3. Ascending Fiery Embers & Sparks Field (Full Height: Rising all the way to the top) */
+.fire-embers-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fire-ember {
+  position: absolute;
+  left: var(--left, 50%);
+  bottom: 25px;
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 20%, #ffe166 50%, #ff5500 88%, transparent 100%);
+  box-shadow: 0 0 6px #ff7700, 0 0 14px #ff2200, 0 0 24px rgba(255, 80, 0, 0.65);
+  opacity: 0;
+  pointer-events: none;
+  animation: emberAscent var(--dur, 5s) infinite ease-out var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+@keyframes emberAscent {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(0.6);
+  }
+  12% {
+    opacity: 1;
+    transform: translateY(calc(var(--h, 750px) * -0.12)) translateX(calc(var(--drift, 18px) * 0.4)) scale(1.15);
+  }
+  45% {
+    opacity: 0.92;
+    transform: translateY(calc(var(--h, 750px) * -0.45)) translateX(calc(var(--drift, 18px) * -0.65)) scale(1);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(calc(var(--h, 750px) * -0.75)) translateX(calc(var(--drift, 18px) * 0.85)) scale(0.8);
+  }
+  90% {
+    opacity: 0.4;
+    transform: translateY(calc(var(--h, 750px) * -0.9)) translateX(calc(var(--drift, 18px) * -0.35)) scale(0.55);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(var(--h, 750px) * -1)) translateX(calc(var(--drift, 18px) * 0.55)) scale(0.2);
+  }
+}
+
+/* 4. Ambient Panel Glow & Background Red Illumination (Fades in with 1s delay on fire-ignited) */
+#tree-milestone-3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 95% 75% at 55% 85%, rgba(200, 40, 0, 0.28) 0%, rgba(130, 20, 0, 0.16) 45%, transparent 78%),
+    linear-gradient(to top, rgba(190, 35, 0, 0.22) 0%, rgba(110, 18, 0, 0.12) 40%, rgba(45, 6, 0, 0.05) 75%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+
+#tree-milestone-3.fire-ignited::before {
+  opacity: 1;
+}
+
+/* 5. Card Rim Lighting Reaction for Milestone 1944 Brandnacht (Activates with 1s delay on fire-ignited) */
+#tree-milestone-3.fire-ignited .tree-hero-card.is-revealed {
+  border-color: rgba(255, 120, 30, 0.85);
+  box-shadow: 
+    0 22px 56px rgba(0, 0, 0, 0.92),
+    0 0 45px rgba(255, 60, 0, 0.55),
+    0 0 95px rgba(255, 120, 0, 0.3),
+    inset 0 0 35px rgba(255, 60, 0, 0.15);
+  animation: cardFireRimPulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes cardFireRimPulse {
+  0% {
+    border-color: rgba(255, 100, 30, 0.72);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 35px rgba(255, 50, 0, 0.45),
+      0 0 75px rgba(255, 110, 0, 0.22),
+      inset 0 0 25px rgba(255, 50, 0, 0.12);
+  }
+  30% {
+    border-color: rgba(255, 140, 40, 0.92);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 55px rgba(255, 75, 0, 0.65),
+      0 0 115px rgba(255, 140, 0, 0.38),
+      inset 0 0 45px rgba(255, 70, 0, 0.22);
+  }
+  65% {
+    border-color: rgba(255, 110, 30, 0.76);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 40px rgba(255, 55, 0, 0.5),
+      0 0 88px rgba(255, 120, 0, 0.26),
+      inset 0 0 30px rgba(255, 55, 0, 0.15);
+  }
+  100% {
+    border-color: rgba(255, 150, 50, 0.96);
+    box-shadow: 
+      0 22px 56px rgba(0, 0, 0, 0.92),
+      0 0 65px rgba(255, 90, 0, 0.75),
+      0 0 135px rgba(255, 150, 0, 0.45),
+      inset 0 0 55px rgba(255, 80, 0, 0.28);
+  }
+}
+
+/* 6. Watermark "1944" Warm Reflection Reaction */
+#tree-milestone-3.fire-ignited .tree-watermark-year.is-revealed {
+  color: rgba(255, 120, 45, 0.28);
+  text-shadow: 0 0 35px rgba(255, 60, 0, 0.45), 0 0 75px rgba(255, 100, 0, 0.25);
+  transition: color 1.4s ease, text-shadow 1.4s ease;
+}
+
+/* Responsive Fire adjustments */
+@media (max-width: 1300px) {
+  .milestone-fire-backdrop {
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 900px) {
+  .milestone-fire-backdrop {
+    right: 7px;
+    width: calc(100% - 14px);
+  }
+}
+
+/* ==========================================================================
+   Folie 3 Meilenstein 9 (Blatt 9: Heute / Meuselwitz 2026):
+   Eleganter goldener Lichtschein hinter dem Inhalt (.tree-hero-card)
+   ========================================================================== */
+
+/* 1. Backdrop Container */
+.milestone-sheen-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 1.4s;
+}
+
+#tree-milestone-8.sheen-ignited .milestone-sheen-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 2. Soft Ambient Golden Glow (Fills behind the card with warm radiance) */
+.sheen-ambient-glow {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 84%;
+  max-width: 1420px;
+  height: clamp(540px, 74vh, 700px);
+  background: 
+    radial-gradient(ellipse 75% 65% at 62% 46%, rgba(200, 163, 86, 0.28) 0%, rgba(220, 185, 115, 0.16) 38%, rgba(180, 130, 45, 0.05) 66%, transparent 82%),
+    radial-gradient(circle at 45% 42%, rgba(255, 225, 155, 0.15) 0%, rgba(200, 163, 86, 0.05) 50%, transparent 75%);
+  filter: blur(50px);
+  opacity: 0.95;
+  animation: goldenSheenBreathe 8s infinite alternate ease-in-out;
+}
+
+/* 3. Concentrated Champagne Radial Flare directly behind card center */
+.sheen-radial-flare {
+  position: absolute;
+  top: 8%;
+  right: 6%;
+  width: 72%;
+  max-width: 1220px;
+  height: clamp(480px, 66vh, 620px);
+  background: 
+    radial-gradient(ellipse 55% 45% at 56% 45%, rgba(255, 240, 205, 0.32) 0%, rgba(212, 175, 55, 0.18) 32%, rgba(200, 163, 86, 0.06) 60%, transparent 76%),
+    radial-gradient(circle at 74% 38%, rgba(255, 220, 130, 0.16) 0%, transparent 55%);
+  filter: blur(36px);
+  opacity: 0.88;
+  animation: goldenFlareShift 10s infinite alternate ease-in-out;
+}
+
+/* 4. Soft Corona Ring creating atmospheric optical depth */
+.sheen-corona-ring {
+  position: absolute;
+  top: 2%;
+  right: 0%;
+  width: 88%;
+  max-width: 1480px;
+  height: clamp(560px, 76vh, 720px);
+  background: 
+    radial-gradient(ellipse 75% 55% at 60% 46%, transparent 40%, rgba(200, 163, 86, 0.15) 62%, rgba(220, 185, 115, 0.05) 78%, transparent 92%);
+  filter: blur(28px);
+  opacity: 0.75;
+  animation: goldenCoronaPulse 7s infinite alternate ease-in-out;
+}
+
+/* 5. Enhanced Card Elevation & Multi-Tier Aura on Meilenstein 9 Reveal */
+#tree-milestone-8.active .tree-hero-card.is-revealed {
+  box-shadow: 
+    0 24px 64px rgba(0, 0, 0, 0.88),
+    0 0 50px rgba(200, 163, 86, 0.38),
+    0 0 100px rgba(200, 163, 86, 0.18),
+    0 0 160px rgba(200, 163, 86, 0.08),
+    inset 0 0 25px rgba(200, 163, 86, 0.10);
+  border-color: rgba(200, 163, 86, 0.90);
+}
+
+@keyframes goldenSheenBreathe {
+  0% {
+    transform: scale(0.96) translateY(0);
+    opacity: 0.82;
+  }
+  100% {
+    transform: scale(1.04) translateY(-6px);
+    opacity: 1;
+  }
+}
+
+@keyframes goldenFlareShift {
+  0% {
+    transform: scale(0.98) translateX(0);
+    opacity: 0.78;
+  }
+  100% {
+    transform: scale(1.03) translateX(-12px);
+    opacity: 0.95;
+  }
+}
+
+@keyframes goldenCoronaPulse {
+  0% {
+    transform: scale(0.97);
+    opacity: 0.65;
+  }
+  100% {
+    transform: scale(1.03);
+    opacity: 0.88;
+  }
+}
+
+/* Responsive adjustments for Meilenstein 9 Sheen */
+@media (max-width: 1300px) {
+  .milestone-sheen-backdrop {
+    right: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+@media (max-width: 900px) {
+  .milestone-sheen-backdrop {
+    right: 7px;
+    width: calc(100% - 14px);
+  }
+}
+
+/* ==========================================================================
+   Folie 2: Subtiler eleganter Lichtschein hinter den 6 Modul-Karten
+   ========================================================================== */
+.slide[data-slide="2"] .slide-body {
+  position: relative;
+}
+
+.slide[data-slide="2"] .slide-body::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 88%;
+  transform: translate(-50%, -50%);
+  background: 
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(200, 163, 86, 0.14) 0%, rgba(200, 163, 86, 0.05) 45%, transparent 72%),
+    radial-gradient(circle at 25% 35%, rgba(255, 220, 140, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 75% 65%, rgba(200, 163, 86, 0.08) 0%, transparent 55%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  animation: bentoSheenPulse 9s infinite alternate ease-in-out;
+}
+
+@keyframes bentoSheenPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.97);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.02);
+    opacity: 0.95;
+  }
+}

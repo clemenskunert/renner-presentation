@@ -21,3 +21,6 @@ __pycache__/
 **/Adobe Premiere Pro Auto-Save/
 *.prproj~*
 
+# Deployed media duplication (Visuell is already tracked in root Visuell/)
+Deployed/Visuell/
+

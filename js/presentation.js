@@ -127,9 +127,11 @@ class PresentationController {
       this.updateLanguage(this.currentLang);
     };
 
-    // Live fetcher (only active over HTTP/HTTPS to prevent CORS/file errors)
+    // Live fetcher (only active in local development over HTTP/HTTPS to prevent CORS/file errors)
+    const isDevHost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
     this.refreshTranslationsLive = async () => {
-      if (!window.location.protocol.startsWith('http')) return;
+      if (!isDevHost || !window.location.protocol.startsWith('http')) return;
       try {
         const res = await fetch(`translations/slides_content.json?t=${Date.now()}`, { cache: 'no-store' });
         if (res.ok) {
@@ -141,30 +143,32 @@ class PresentationController {
       }
     };
 
-    // 1. Initial live fetch if served over HTTP
-    this.refreshTranslationsLive();
-
-    // 2. Window focus trigger: whenever user switches back to browser tab from editor
-    window.addEventListener('focus', () => {
+    // 1. Initial live fetch only in dev
+    if (isDevHost) {
       this.refreshTranslationsLive();
-    });
 
-    // 3. Heartbeat check every 1.5 seconds for instant hot-reload (HTTP/HTTPS only)
-    if (window.location.protocol.startsWith('http')) {
-      setInterval(async () => {
-        try {
-          const res = await fetch(`api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
-          if (res.ok) {
-            const json = await res.json();
-            if (json.version && json.version !== this.lastTranslationVersion) {
-              this.lastTranslationVersion = json.version;
-              await this.refreshTranslationsLive();
+      // 2. Window focus trigger: whenever user switches back to browser tab from editor
+      window.addEventListener('focus', () => {
+        this.refreshTranslationsLive();
+      });
+
+      // 3. Heartbeat check every 1.5 seconds for instant hot-reload (dev server only)
+      if (window.location.protocol.startsWith('http')) {
+        setInterval(async () => {
+          try {
+            const res = await fetch(`api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
+            if (res.ok) {
+              const json = await res.json();
+              if (json.version && json.version !== this.lastTranslationVersion) {
+                this.lastTranslationVersion = json.version;
+                await this.refreshTranslationsLive();
+              }
             }
+          } catch (e) {
+            // quiet fallback
           }
-        } catch (e) {
-          // quiet fallback
-        }
-      }, 1500);
+        }, 1500);
+      }
     }
   }
 
@@ -410,23 +414,46 @@ class PresentationController {
   }
 
   setupTouchGestures() {
+    this.touchStartX = 0;
+    this.touchStartY = 0;
+    this.touchEndX = 0;
+    this.touchEndY = 0;
+    this.touchStartTime = 0;
+
     window.addEventListener('touchstart', (e) => {
-      this.touchStartX = e.changedTouches[0].screenX;
+      if (!e.changedTouches || e.changedTouches.length === 0) return;
+      this.touchStartX = e.changedTouches[0].clientX;
+      this.touchStartY = e.changedTouches[0].clientY;
+      this.touchStartTime = Date.now();
     }, { passive: true });
 
     window.addEventListener('touchend', (e) => {
-      this.touchEndX = e.changedTouches[0].screenX;
+      if (!e.changedTouches || e.changedTouches.length === 0) return;
+      this.touchEndX = e.changedTouches[0].clientX;
+      this.touchEndY = e.changedTouches[0].clientY;
+
+      const target = e.target;
+      if (target && target.closest && target.closest('button, a, input, select, textarea, .timelapse-track, .timelapse-thumb, .history-journey-modal, .interactive-el, .sound-modal, .header-menu-dropdown, .slide-grid-overlay, .audio-key, .voicing-slider')) {
+        return;
+      }
+
       this.handleSwipe();
     }, { passive: true });
   }
 
   handleSwipe() {
-    const swipeThreshold = 50;
-    if (this.touchEndX < this.touchStartX - swipeThreshold) {
-      this.nextSlide(); // Swipe left -> next
-    }
-    if (this.touchEndX > this.touchStartX + swipeThreshold) {
-      this.prevSlide(); // Swipe right -> prev
+    const swipeThreshold = 45;
+    const diffX = this.touchEndX - this.touchStartX;
+    const diffY = this.touchEndY - this.touchStartY;
+    const elapsed = Date.now() - (this.touchStartTime || 0);
+
+    // Only recognize intentional horizontal swipes: under 800ms, >45px, predominantly horizontal
+    if (elapsed < 800 && Math.abs(diffX) > swipeThreshold && Math.abs(diffX) > Math.abs(diffY) * 1.3) {
+      if (diffX < 0) {
+        this.nextSlide(); // Swipe left -> next
+      } else {
+        this.prevSlide(); // Swipe right -> prev
+      }
     }
   }
 

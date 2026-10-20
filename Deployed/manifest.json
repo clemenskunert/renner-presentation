@@ -1,0 +1,19 @@
+{
+  "name": "Louis Renner - The Heart of the Piano",
+  "short_name": "Louis Renner",
+  "description": "Louis Renner Masterclass Presentation 2025 - Standalone Tablet & Mobile Edition",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "icons": [
+    {
+      "src": "Visuell/web_assets/renner_logo_weiss_schatten.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

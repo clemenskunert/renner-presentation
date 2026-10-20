@@ -49,5 +49,23 @@ def main():
 
     print(f"Successfully updated {html_path}, Start_SharePoint.aspx & presentation.aspx with {slide_definitions.TOTAL_SLIDES} slides!")
 
+    # Auto-synchronize Deployed folder if it exists
+    deployed_dir = "Deployed"
+    if os.path.exists(deployed_dir):
+        try:
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("build_deployed", os.path.join("scripts", "build_deployed_package.py"))
+            build_mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(build_mod)
+            build_mod.build_offline_tablet_html()
+            # Also update index.html and aspx in Deployed
+            shutil_copy = __import__('shutil').copy2
+            shutil_copy(html_path, os.path.join(deployed_dir, html_path))
+            shutil_copy("Start_SharePoint.aspx", os.path.join(deployed_dir, "Start_SharePoint.aspx"))
+            shutil_copy("presentation.aspx", os.path.join(deployed_dir, "presentation.aspx"))
+            print("✓ Deployed/ Ordner & index_offline_tablet.html automatisch synchronisiert!")
+        except Exception as e:
+            print(f"[HINWEIS] Konnte Deployed/ nicht automatisch synchronisieren: {e}")
+
 if __name__ == "__main__":
     main()

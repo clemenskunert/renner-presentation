@@ -3,7 +3,14 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Louis Renner">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0a0e1a">
+  <link rel="apple-touch-icon" href="Visuell/web_assets/renner_logo_weiss_schatten.png">
+  <link rel="manifest" href="manifest.json">
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
   
   <!-- Google Fonts matching louis-renner.de Aesthetic -->
@@ -4887,6 +4894,14 @@
   <script src="js/transformation-journey.js"></script>
   <script src="js/presentation.js"></script>
   <script>
+    // Offline PWA Service Worker Registration
+    if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+  <script>
     // Fail-Safe Fallback: Warnt benutzerfreundlich, wenn die Datei einzeln ohne Ressourcen heruntergeladen wurde
     setTimeout(function() {
       if (!window.presentation) {
@@ -4897,6 +4912,7 @@
           '<p style="font-size:15px;line-height:1.6;color:#e0e0e0;">Die Skripte und Präsentationsinhalte wurden nicht geladen. Dies passiert, wenn eine Datei einzeln aus dem Web-SharePoint in den Download-Ordner heruntergeladen wurde.</p>' +
           '<div style="text-align:left;background:#0d121f;padding:16px 20px;border-radius:8px;margin:20px 0;font-size:14px;line-height:1.6;">' +
           '<strong>So starten Sie die Anwendung aus SharePoint:</strong><br><br>' +
+          '• <strong>iPad / Tablet:</strong> Öffnen Sie die Präsentation im Ordner <code>Deployed/</code> oder starten Sie <code>index_offline_tablet.html</code> direkt in Safari / Chrome.<br>' +
           '• <strong>Windows:</strong> Öffnen Sie den synchronisierten SharePoint-Ordner im Windows Explorer und doppelklicken Sie auf <code>Start_Windows.bat</code>.<br>' +
           '• <strong>Mac:</strong> Doppelklicken Sie im Ordner auf <code>Start_Mac.app</code>.<br>' +
           '• <strong>OneDrive-Synchronisation:</strong> Klicken Sie in SharePoint oben in der Menüleiste auf <em>„Synchronisieren“</em>, um den Ordner auf Ihren PC einzubinden.' +
