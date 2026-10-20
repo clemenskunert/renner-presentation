@@ -1089,7 +1089,7 @@ def get_all_slides_html():
                       <span class="ffw-fact-badge" data-i18n="s5_m3_fact">🏅 Goldmedaillen London 1851, Paris 1867 & Leipzig 1850</span>
                     </div>
                   </div>
-                  <div class="ffw-panel-media">
+                  <div class="ffw-panel-media medal-spotlight">
                     <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_medaille_1850.jpg" alt="Historische Medaillen">
                     <div class="hero-corner-bracket top-left"></div>
                     <div class="hero-corner-bracket top-right"></div>

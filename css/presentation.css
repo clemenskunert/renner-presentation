@@ -4936,6 +4936,29 @@ body::before {
   line-height: 1.45;
 }
 
+/* Panel 2 Specific: Historic Medal Museum Display (Uncropped & Centered) */
+.ffw-milestone-panel[data-panel="2"] .ffw-panel-media,
+.ffw-panel-media.medal-spotlight {
+  background: radial-gradient(circle at 50% 46%, #182236 0%, #0d121c 68%, #080c14 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ffw-milestone-panel[data-panel="2"] .ffw-panel-media img,
+.ffw-panel-media.medal-spotlight img {
+  object-fit: contain;
+  object-position: center 46%;
+  padding: 8px 12px 68px 12px;
+  box-sizing: border-box;
+}
+
+.ffw-milestone-panel[data-panel="2"] .ffw-media-caption-box,
+.ffw-panel-media.medal-spotlight .ffw-media-caption-box {
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.92) 35%, #080c14 100%);
+  padding: 8px 14px 10px 14px;
+}
+
 /* ==========================================================================
    RIGHT WING: HIGH QUALITY FELT SPOTLIGHT (Texture & Acoustic Superiority)
    ========================================================================== */
