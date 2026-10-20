@@ -1420,7 +1420,7 @@
           <div>
             <div class="slide-category" data-i18n="s5_category">Teil 2: Filzherstellung • Historie & Tradition</div>
             <h2 class="slide-title" data-i18n="s5_title">Filzfabrik Wurzen (FFW) – Die Wiege des Hammerkopffilzes</h2>
-            <div class="slide-subtitle" data-i18n="s5_subtitle">Seit 1783 • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner</div>
+            <div class="slide-subtitle" data-i18n="s5_subtitle">Gegründet in Wurzen (1783) • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner</div>
           </div>
 
           <!-- Timeline Stepper & Autoplay Controls -->
@@ -1446,7 +1446,7 @@
               <div class="ffw-epoch-tabs" id="ffw-epoch-tabs" role="tablist">
                 <button class="ffw-epoch-tab active" data-epoch="0" role="tab" aria-selected="true">
                   <span class="ffw-tab-year">1783</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab1_tag">Gründung</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab1_tag">Wurzen 1783</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="1" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">1847</span>
@@ -1472,31 +1472,31 @@
 
               <!-- Active Epoch Stage Card -->
               <div class="ffw-stage-card" id="ffw-stage-card">
-                <!-- PANEL 0: 1783 GRÜNDUNG -->
+                <!-- PANEL 0: 1783 GRÜNDUNG IN WURZEN -->
                 <div class="ffw-milestone-panel active" data-panel="0">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b1_badge">>URSPRUNG 1783</span>
+                      <span class="bento-badge gold" data-i18n="s5_b1_badge">>URSPRUNG WURZEN 1783</span>
                       <span class="ffw-panel-year">1783</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m1_title">Gründung durch Johann Dankegott Weickert</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m1_subtitle">Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Leipzig</div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m1_title">Gründung der Filzmanufaktur in Wurzen</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m1_subtitle">Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Wurzen</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m1_bullet_1"><strong>Werkstatt in Leipzig:</strong> 1783 legte Johann Dankegott Weickert in Leipzig den Grundstein mit einer Werkstatt für optische Geräte und feine Wollwaren.</span>
+                        <span data-i18n="s5_m1_bullet_1"><strong>Traditionsstandort Wurzen:</strong> Seit der Gründung 1783 durch Johann Dankegott Weickert steht Wurzen im sächsischen Muldental für traditionsreiche Woll- und Filzherstellung.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m1_bullet_2"><strong>Ausbau zum Großhandel:</strong> Sohn August Moritz Weickert erweiterte das Unternehmen zu einem bedeutenden Großhandel für Werkzeuge und Qualitätsmaterialien.</span>
+                        <span data-i18n="s5_m1_bullet_2"><strong>Wegbereiter der Feinfilz-Industrie:</strong> Aus der handwerklichen Manufaktur entwickelte sich in Wurzen ein florierendes Zentrum für hochwertige technische und edle Wollfilze.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m1_bullet_3"><strong>Die Geburt des Hammerklaviers:</strong> Mit der Weiterentwicklung des Hammerklaviers im späten 18. Jahrhundert entstand die Suche nach dem idealen Anschlagmaterial für die Saiten.</span>
+                        <span data-i18n="s5_m1_bullet_3"><strong>Klanganspruch des Klavierbaus:</strong> Mit der Blüte des Hammerflügels entstand in Wurzen das Streben nach dem perfekten, elastischen Anschlagmaterial für Klaviere.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m1_fact">🏛 Älteste industrielle Filzmanufaktur weltweit</span>
+                      <span class="ffw-fact-badge" data-i18n="s5_m1_fact">🏛 Älteste industrielle Filzmanufaktur weltweit in Wurzen</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1520,23 +1520,23 @@
                       <span class="ffw-panel-year">1847</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s5_m2_title">Erster brauchbarer Pianofortefilz Deutschlands</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m2_subtitle">Friedrich Wilhelm & Carl Wilhelm Patzschke revolutionieren den Klavierbau</div>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m2_subtitle">Patzschke & Weickert revolutionieren den Klavierbau in Wurzen</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m2_bullet_1"><strong>Revolution statt Leder:</strong> 1847 gelang es den Leipziger Wollhändlern F.W. und C.W. Patzschke erstmals, einen Filz zu fertigen, der den bisherigen harten Lederbezug ersetzte.</span>
+                        <span data-i18n="s5_m2_bullet_1"><strong>Revolution statt Leder:</strong> 1847 gelang es den Pionieren Patzschke und Weickert erstmals, den bisherigen ungleichmäßigen Lederbezug durch Spezialfilz zu ersetzen.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m2_bullet_2"><strong>Partnerschaft mit Weickert:</strong> August Moritz Weickert übernahm Finanzierung und Risiko der Großproduktion; Carl Wilhelm Patzschke leitete als sachkundiger Direktor die Fabrikation.</span>
+                        <span data-i18n="s5_m2_bullet_2"><strong>Geburtsstunde des Pianofortefilzes:</strong> Die Verbindung von Weickerts Unternehmergeist und Patzschkes filztechnischer Meisterschaft begründete den weltweiten Siegeszug des Wurzener Hammerkopffilzes.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m2_bullet_3"><strong>Die Suche nach reinem Wasser:</strong> Erste Schritte in Werdau zeigten schnell: Für reinsten weißen Pianofilz sind absolut sauberes Wasser und rußfreie Luft unverzichtbar.</span>
+                        <span data-i18n="s5_m2_bullet_3"><strong>Das Geheimnis des Wassers:</strong> Für reinsten weißen Pianofilz erwies sich das naturbelassene, kalkarme Wasser der Mulde in Wurzen als entscheidender Standortvorteil.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m2_fact">🎹 Meilenstein: Filz löst Leder im Klavierbau ab</span>
+                      <span class="ffw-fact-badge" data-i18n="s5_m2_fact">🎹 Meilenstein: Wurzener Filz löst Leder im Klavierbau ab</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1599,12 +1599,12 @@
                       <span class="bento-badge gold" data-i18n="s5_b7_badge">>EXPANSION 1861</span>
                       <span class="ffw-panel-year">1861</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m4_title">Umzug nach Wurzen: Dampfmaschinen & Mulde-Wasser</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m4_subtitle">Errichtung der hochmodernen Pianofortefilzfabrik am Wurzener Mühlgraben</div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m4_title">Großfertigung am Mühlgraben in Wurzen</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m4_subtitle">Dampfmaschinen, Mulde-Wasser und modernste Walkwerke in Wurzen</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m4_bullet_1"><strong>Standort am Mühlgraben:</strong> 1861 zog die Manufaktur nach Wurzen. Es entstanden großzügige Produktionshallen und ein eigenes Heizhaus mit Dampfkraft.</span>
+                        <span data-i18n="s5_m4_bullet_1"><strong>Standort am Mühlgraben:</strong> 1861 entstanden in Wurzen großzügige Fabrikhallen direkt am Mühlgraben mit eigenem Kessel- und Dampfmaschinenhaus.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
@@ -1616,7 +1616,7 @@
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m4_fact">⚙️ Dampf-Walkerei & weiches Mulde-Flusswasser</span>
+                      <span class="ffw-fact-badge" data-i18n="s5_m4_fact">⚙️ Großfertigung am Wurzener Mühlgraben</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1640,7 +1640,7 @@
                       <span class="ffw-panel-year">1906</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s5_m5_title">Weltmarktführer für 200.000 Klaviere jährlich</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m5_subtitle">Direktor Carl Wilhelm Patzschke, seine Meister & 350 Facharbeiter</div>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m5_subtitle">Direktor Carl Wilhelm Patzschke, seine Meister & 350 Facharbeiter in Wurzen</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
@@ -1672,31 +1672,31 @@
                   </div>
                 </div>
 
-                <!-- PANEL 5: 1991–HEUTE RENAISSANCE & WEICKERT SPEZIAL -->
+                <!-- PANEL 5: HEUTE RENAISSANCE & RENNER MEUSELWITZ PARTNERSCHAFT -->
                 <div class="ffw-milestone-panel" data-panel="5">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
                       <span class="bento-badge gold" data-i18n="s5_b11_badge">>HEUTE • RENNER PARTNER</span>
                       <span class="ffw-panel-year">Heute</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m6_title">Renaissance von „Weickert Spezial“ für Renner</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m6_subtitle">Reprivatisierung durch Fam. Brand & exklusive Spitzenqualität für Louis Renner</div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m6_title">Renaissance von „Weickert Spezial“ & Partnerschaft mit Renner</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m6_subtitle">Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik Meuselwitz</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m6_bullet_1"><strong>1991 Reprivatisierung:</strong> Die Familie Brand übernahm das Werk im Einvernehmen mit den Weickert-Erben. Klavierbauer weltweit forderten die originale historische Rezeptur zurück.</span>
+                        <span data-i18n="s5_m6_bullet_1"><strong>1991 Reprivatisierung:</strong> Die Familie Brand reaktivierte das Werk in Wurzen. 2010 schloss sich mit der Wiedergeburt von „Weickert Spezial“ der Kreis zum Weltspitzen-Niveau von 1903.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m6_bullet_2"><strong>Wiedergeburt von „Weickert Spezial“:</strong> 2010 schloss sich mit der Reaktivierung der legendären Weickert-Spezial-Qualität der Kreis zu den glanzvollen Ursprüngen von 1903.</span>
+                        <span data-i18n="s5_m6_bullet_2"><strong>Räumliche Nähe Meuselwitz ↔ Wurzen:</strong> Nur rund 65 km trennen die Filzmanufaktur Wurzen vom Renner-Hauptwerk in Meuselwitz – im Herzen des mitteldeutschen Klavierbau-Clusters.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m6_bullet_3"><strong>Exklusiv-Symbiose mit Renner:</strong> Renner bezieht seinen gesamten Premium-Hammerfilz aus Wurzen – für unerreichte klangliche Plastizität und Modulationsfähigkeit.</span>
+                        <span data-i18n="s5_m6_bullet_3"><strong>Direkte Synergie & Meister-Austausch:</strong> Kurze Wege garantieren persönliche Abstimmung von Filzdichte und Elastizität zwischen den Wurzener Filzmachern und Renners Hammerkopfmeistern.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m6_fact">✨ Wieder auf dem Weltspitzen-Niveau von 1903</span>
+                      <span class="ffw-fact-badge" data-i18n="s5_m6_fact">📍 Nur 65 km: Direkte Partnerschaft Wurzen ↔ Renner Meuselwitz</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1764,8 +1764,8 @@
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s5_hl4_title">Exklusive Renner-Symbiose:</strong>
-                      <span data-i18n="s5_hl4_desc">Nur die streng selektierten Wurzener Weickert-Spezial-Tafeln erfüllen Renners Maßstäbe für Konzertflügel.</span>
+                      <strong data-i18n="s5_hl4_title">Räumliche Nähe Meuselwitz ↔ Wurzen (65 km):</strong>
+                      <span data-i18n="s5_hl4_desc">Nur ca. 65 km Distanz zwischen Filzmanufaktur Wurzen und Renner in Meuselwitz – für direkten Meister-Austausch, kurze Wege und perfekte Abstimmung.</span>
                     </div>
                   </div>
                 </div>

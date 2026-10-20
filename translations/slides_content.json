@@ -323,10 +323,10 @@
         "zh": "乌尔岑毛毡厂（FFW）– 顶级钢琴弦槌毛毡的诞生地"
       },
       "subtitle": {
-        "de": "Seit 1783 • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner",
-        "en": "Since 1783 • From the first German piano felt in 1847 to the renaissance of “Weickert Spezial” for Renner",
-        "ja": "1783年創業 • 1847年ドイツ初のピアノフェルト開発からレンナー専用「ヴァイケルト・シュペツィアル」の復刻まで",
-        "zh": "始于1783年 • 从1847年德国首创工业琴毡到专为雷诺重生的“魏克特特级”（Weickert Spezial）"
+        "de": "Gegründet in Wurzen (1783) • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner",
+        "en": "Founded in Wurzen (1783) • From Germany's first piano felt in 1847 to the renaissance of “Weickert Spezial” for Renner",
+        "ja": "ヴルツェン創業（1783年）• 1847年ドイツ初のピアノフェルト開発からレンナー専用「ヴァイケルト・シュペツィアル」復刻まで",
+        "zh": "创立于乌尔岑（1783年）• 从1847年德国首创工业琴毡到专为雷诺重生的“魏克特特级”（Weickert Spezial）"
       },
       "elements": {
         "s5_play_label": {
@@ -336,10 +336,10 @@
           "zh": "播放时光之旅"
         },
         "s5_tab1_tag": {
-          "de": "Gründung",
-          "en": "Founding",
-          "ja": "創業",
-          "zh": "创立"
+          "de": "Wurzen 1783",
+          "en": "Wurzen 1783",
+          "ja": "ヴルツェン 1783",
+          "zh": "乌尔岑 1783"
         },
         "s5_tab2_tag": {
           "de": "1. Pianofortefilz",
@@ -372,46 +372,46 @@
           "zh": "魏克特特级"
         },
         "s5_m1_badge": {
-          "de": "URSPRUNG 1783",
-          "en": "ORIGIN 1783",
-          "ja": "起源 1783",
-          "zh": "起源 1783"
+          "de": "URSPRUNG WURZEN 1783",
+          "en": "ORIGIN WURZEN 1783",
+          "ja": "ヴルツェン起源 1783",
+          "zh": "乌尔岑起源 1783"
         },
         "s5_m1_title": {
-          "de": "Gründung durch Johann Dankegott Weickert",
-          "en": "Founded by Johann Dankegott Weickert",
-          "ja": "ヨハン・ダンケゴット・ヴァイケルトによる創業",
-          "zh": "约翰·丹克戈特·魏克特创立企业"
+          "de": "Gründung der Filzmanufaktur in Wurzen",
+          "en": "Founding of the Felt Manufactory in Wurzen",
+          "ja": "ヴルツェンにおけるフェルト製造所の創業",
+          "zh": "乌尔岑毛毡制造厂创立"
         },
         "s5_m1_subtitle": {
-          "de": "Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Leipzig",
-          "en": "The historic roots in Leipzig of the world's oldest industrial felt manufactory",
-          "ja": "ライプツィヒに始まる世界最古の工業フェルト製造所の歴史的ルーツ",
-          "zh": "全球历史最悠久的工业毛毡制造企业在莱比锡的渊源根基"
+          "de": "Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Wurzen",
+          "en": "The historic roots in Wurzen of the world's oldest industrial felt manufactory",
+          "ja": "ヴルツェンに始まる世界最古の工業フェルト製造所の歴史的ルーツ",
+          "zh": "全球历史最悠久的工业毛毡制造企业在乌尔岑的渊源基石"
         },
         "s5_m1_bullet_1": {
-          "de": "<strong>Werkstatt in Leipzig:</strong> 1783 legte Johann Dankegott Weickert in Leipzig den Grundstein mit einer Werkstatt für optische Geräte und feine Wollwaren.",
-          "en": "<strong>Leipzig Workshop:</strong> In 1783, Johann Dankegott Weickert laid the cornerstone in Leipzig with a specialized workshop for optical instruments and fine woolen goods.",
-          "ja": "<strong>ライプツィヒ工房：</strong>1783年、ヨハン・ダンケゴット・ヴァイケルトがライプツィヒに光学機器と高級ウール製品の工房を開設。",
-          "zh": "<strong>莱比锡匠心工坊：</strong>1783年，约翰·丹克戈特·魏克特在莱比锡建立光学仪器与高档毛料工坊，奠定百年基业。"
+          "de": "<strong>Traditionsstandort Wurzen:</strong> Seit der Gründung 1783 durch Johann Dankegott Weickert steht Wurzen im sächsischen Muldental für traditionsreiche Woll- und Filzherstellung.",
+          "en": "<strong>Historic Wurzen Facility:</strong> Founded in 1783 by Johann Dankegott Weickert, Wurzen in Saxony's Mulde valley stands as the world's cradle of felt manufacturing.",
+          "ja": "<strong>伝統の地ヴルツェン：</strong>1783年ヨハン・ダンケゴット・ヴァイケルトの創業以来、ザクセン州ムルデ渓谷のヴルツェンは極上フェルト製造の象徴。",
+          "zh": "<strong>历史名邑乌尔岑：</strong>自1783年由约翰·丹克戈特·魏克特创立以来，萨克森州穆尔德河畔的乌尔岑始终是全球顶级毛毡制造业的殿堂。"
         },
         "s5_m1_bullet_2": {
-          "de": "<strong>Ausbau zum Großhandel:</strong> Sohn August Moritz Weickert erweiterte das Unternehmen zu einem bedeutenden Großhandel für Werkzeuge und Qualitätsmaterialien.",
-          "en": "<strong>Wholesale Expansion:</strong> Son August Moritz Weickert expanded the firm into a major wholesale house for precision tools and quality materials.",
-          "ja": "<strong>卸売への拡大：</strong>息子アウグスト・モーリッツ・ヴァイケルトが事業を発展させ、工具・高品質資材の有力卸売商へと成長。",
-          "zh": "<strong>商业版图扩张：</strong>其子奥古斯特·莫里茨·魏克特将企业拓展为经营精密工具与顶级工业材料的大型商号。"
+          "de": "<strong>Wegbereiter der Feinfilz-Industrie:</strong> Aus der handwerklichen Manufaktur entwickelte sich in Wurzen ein florierendes Zentrum für hochwertige technische und edle Wollfilze.",
+          "en": "<strong>Pioneer of Fine Feltmaking:</strong> From these artisan roots, Wurzen evolved into a flourishing hub for supreme technical and acoustic virgin wool felts.",
+          "ja": "<strong>高級フェルトの先駆者：</strong>手工業から発展し、ヴルツェンは高精度技術フェルトと高級ウールフェルトの中心地へと成長。",
+          "zh": "<strong>精细制毡业先驱：</strong>从传统手工业工坊起步，乌尔岑迅速发展为享誉欧洲的精密技术用毡与高品级羊毛毡制造枢纽。"
         },
         "s5_m1_bullet_3": {
-          "de": "<strong>Die Geburt des Hammerklaviers:</strong> Mit der Weiterentwicklung des Hammerklaviers im späten 18. Jahrhundert entstand die Suche nach dem idealen Anschlagmaterial für die Saiten.",
-          "en": "<strong>Birth of the Fortepiano:</strong> As the hammer-action piano evolved in the late 18th century, piano makers began searching for the ideal striking medium.",
-          "ja": "<strong>フォルテピアノの誕生：</strong>18世紀後半のハンマークラヴィーア発展に伴い、弦を打つ理想的な弾性打撃材の探求が本格化。",
-          "zh": "<strong>击弦古钢琴的诞生：</strong>随着18世纪末现代击弦钢琴的演进，钢琴家与制琴师迫切寻求能唤醒完美音色的理想击弦介质。"
+          "de": "<strong>Klanganspruch des Klavierbaus:</strong> Mit der Blüte des Hammerflügels entstand in Wurzen das Streben nach dem perfekten, elastischen Anschlagmaterial für Klaviere.",
+          "en": "<strong>Acoustic Quest of Piano Making:</strong> As the pianoforte flourished, Wurzen craftsmen dedicated themselves to creating the perfect resilient striking material.",
+          "ja": "<strong>ピアノづくりの音響的探求：</strong>フォルテピアノの台頭とともに、ヴルツェンでは弦を打つ理想の弾性フェルトの追求が始動。",
+          "zh": "<strong>钢琴声学的极致追求：</strong>随着击弦古钢琴在欧洲的繁荣，乌尔岑的工匠大师们开启了探寻完美弦槌回弹介质的伟大征程。"
         },
         "s5_m1_fact": {
-          "de": "🏛 Älteste industrielle Filzmanufaktur weltweit",
-          "en": "🏛 Oldest industrial felt manufactory worldwide",
-          "ja": "🏛 世界最古の工業フェルト製造メーカー",
-          "zh": "🏛 全球历史最悠久的工业羊毛毡制造企业"
+          "de": "🏛 Älteste industrielle Filzmanufaktur weltweit in Wurzen",
+          "en": "🏛 World's oldest industrial felt manufactory in Wurzen",
+          "ja": "🏛 ヴルツェンに根付く世界最古の工業フェルト製造所",
+          "zh": "🏛 位于乌尔岑的全球最古老工业羊毛毡制造企业"
         },
         "s5_m1_caption": {
           "de": "Vom handkardierten Rohwollvlies zum hochverdichteten Weickert-Filzblock",
@@ -432,34 +432,34 @@
           "zh": "德国首创高品质工业钢琴弦槌毛毡"
         },
         "s5_m2_subtitle": {
-          "de": "Friedrich Wilhelm & Carl Wilhelm Patzschke revolutionieren den Klavierbau",
-          "en": "Friedrich Wilhelm & Carl Wilhelm Patzschke revolutionize piano manufacturing",
-          "ja": "パチュケ父子がピアノ製造に革命をもたらす",
-          "zh": "帕茨克父子颠覆传统钢琴制造工艺"
+          "de": "Patzschke & Weickert revolutionieren den Klavierbau in Wurzen",
+          "en": "Patzschke & Weickert revolutionize piano craftsmanship in Wurzen",
+          "ja": "ヴルツェンにてパチュケとヴァイケルトがピアノ製造に革命をもたらす",
+          "zh": "帕茨克与魏克特在乌尔岑颠覆传统钢琴击弦机工艺"
         },
         "s5_m2_bullet_1": {
-          "de": "<strong>Revolution statt Leder:</strong> 1847 gelang es den Leipziger Wollhändlern F.W. und C.W. Patzschke erstmals, einen Filz zu fertigen, der den bisherigen harten Lederbezug ersetzte.",
-          "en": "<strong>Felt Replaces Leather:</strong> In 1847, Leipzig wool merchants F.W. and C.W. Patzschke succeeded in producing a dense felt that replaced uneven leather hammer coverings.",
-          "ja": "<strong>革からフェルトへ：</strong>1847年、ライプツィヒの羊毛商パチュケ父子が従来の硬い革巻きに代わる均一なピアノ専用フェルトの製造に初成功。",
-          "zh": "<strong>纯毛毡彻底取代皮革：</strong>1847年，莱比锡羊毛商帕茨克父子首次研制成功可替代传统粗糙皮革包裹的工业击弦机专用羊毛毡。"
+          "de": "<strong>Revolution statt Leder:</strong> 1847 gelang es den Pionieren Patzschke und Weickert erstmals, den bisherigen ungleichmäßigen Lederbezug durch Spezialfilz zu ersetzen.",
+          "en": "<strong>Felt Replaces Leather:</strong> In 1847, felt pioneers Patzschke and Weickert succeeded in replacing uneven leather hammer coverings with specialized high-density felt.",
+          "ja": "<strong>革からフェルトへ：</strong>1847年、パチュケとヴァイケルトが従来の硬く不均一な革巻きに代わる専用フェルトの開発に初成功。",
+          "zh": "<strong>毛毡彻底取代皮革：</strong>1847年，制毡先驱帕茨克与魏克特首次研制成功可替代传统粗糙皮革包裹的击弦机专用高密度纯羊毛毡。"
         },
         "s5_m2_bullet_2": {
-          "de": "<strong>Partnerschaft mit Weickert:</strong> August Moritz Weickert übernahm Finanzierung und Risiko der Großproduktion; Carl Wilhelm Patzschke leitete als sachkundiger Direktor die Fabrikation.",
-          "en": "<strong>Weickert Partnership:</strong> August Moritz Weickert financed large-scale industrialization; Carl Wilhelm Patzschke served as technical manufacturing director.",
-          "ja": "<strong>ヴァイケルトとの提携：</strong>A.M.ヴァイケルトが工業生産の資金調達とリスクを引き受け、C.W.パチュケが製造責任者・技術ディレクターに就任。",
-          "zh": "<strong>与魏克特强强联合：</strong>奥古斯特·莫里茨·魏克特出资全权担保量产并包销，卡尔·威廉·帕茨克出任技术总监主管生产。"
+          "de": "<strong>Geburtsstunde des Pianofortefilzes:</strong> Die Verbindung von Weickerts Unternehmergeist und Patzschkes filztechnischer Meisterschaft begründete den weltweiten Siegeszug des Wurzener Hammerkopffilzes.",
+          "en": "<strong>Birth of Modern Piano Felt:</strong> Combining Weickert's enterprise and Patzschke's technical mastery founded the global triumph of Wurzen hammerhead felt.",
+          "ja": "<strong>ピアノフェルトの誕生：</strong>ヴァイケルトの企業力とパチュケの技術が融合し、ヴルツェン製ハンマーフェルトの世界進出がスタート。",
+          "zh": "<strong>专业钢琴琴毡诞生：</strong>魏克特的卓越远见与帕茨克精湛的制毡技艺强强结合，奠定了乌尔岑琴毡风靡全球的基石。"
         },
         "s5_m2_bullet_3": {
-          "de": "<strong>Die Suche nach reinem Wasser:</strong> Erste Schritte in Werdau zeigten schnell: Für reinsten weißen Pianofilz sind absolut sauberes Wasser und rußfreie Luft unverzichtbar.",
-          "en": "<strong>Quest for Pure Water:</strong> Initial trials in Werdau proved that pure white piano felt requires perfectly clean river water and soot-free air.",
-          "ja": "<strong>清らかな水を求めて：</strong>ヴェアダウでの初期生産を経て、純白の極上フェルトには極めて清澄な水と煤煙のない空気が不可欠と判明。",
-          "zh": "<strong>对极致纯净水源的寻觅：</strong>威尔道初期的摸索表明，要制备不含任何杂质的纯白琴毡，极其洁净的活水与纯净空气必不可少。"
+          "de": "<strong>Das Geheimnis des Wassers:</strong> Für reinsten weißen Pianofilz erwies sich das naturbelassene, kalkarme Wasser der Mulde in Wurzen als entscheidender Standortvorteil.",
+          "en": "<strong>The Secret of Soft Water:</strong> Natural, low-lime river water in Wurzen became the decisive locational advantage for producing pure white, resilient felt.",
+          "ja": "<strong>軟水の秘密：</strong>極めてミネラル分の少ないムルデ川の清流が、純白で高弾性なフェルトを育む決定的な地の利に。",
+          "zh": "<strong>天然纯净软水的秘境：</strong>乌尔岑穆尔德河低钙、极软的天然活水，成为制备毫无杂质、弹性充沛纯白琴毡的核心地理优势。"
         },
         "s5_m2_fact": {
-          "de": "🎹 Meilenstein: Filz löst Leder im Klavierbau ab",
-          "en": "🎹 Milestone: Felt permanently replaces leather",
-          "ja": "🎹 歴史的転換点：フェルトが革を完全に置き換え",
-          "zh": "🎹 行业里程碑：纯羊毛毡彻底终结皮革击弦时代"
+          "de": "🎹 Meilenstein: Wurzener Filz löst Leder im Klavierbau ab",
+          "en": "🎹 Milestone: Wurzen felt permanently replaces leather",
+          "ja": "🎹 歴史的転換点：ヴルツェン製フェルトが革を置換",
+          "zh": "🎹 行业里程碑：乌尔岑特级琴毡终结皮革击弦时代"
         },
         "s5_m2_caption": {
           "de": "Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde",
@@ -522,22 +522,22 @@
           "zh": "扩张 1861"
         },
         "s5_m4_title": {
-          "de": "Umzug nach Wurzen: Dampfmaschinen & Mulde-Wasser",
-          "en": "Relocation to Wurzen: Steam Power & Pure Mulde Water",
-          "ja": "ヴルツェン移転：蒸気動力とムルデ川の軟水",
-          "zh": "迁厂乌尔岑：蒸汽动力驱动与穆尔德纯净软水"
+          "de": "Großfertigung am Mühlgraben in Wurzen",
+          "en": "Industrial Scale at Mühlgraben in Wurzen",
+          "ja": "ヴルツェンのミュールグラーベン大工場へ拡張",
+          "zh": "乌尔岑水渠沿岸工业化大规模扩产"
         },
         "s5_m4_subtitle": {
-          "de": "Errichtung der hochmodernen Pianofortefilzfabrik am Wurzener Mühlgraben",
-          "en": "Erection of the state-of-the-art piano felt manufactory at Mühlgraben Wurzen",
-          "ja": "ヴルツェンのミュールグラーベン沿いに最新鋭ピアノフェルト工場を建設",
-          "zh": "在乌尔岑水渠沿岸落成高度现代化的专业钢琴毛毡工厂"
+          "de": "Dampfmaschinen, Mulde-Wasser und modernste Walkwerke in Wurzen",
+          "en": "Steam engines, Mulde river water, and advanced fulling mills in Wurzen",
+          "ja": "ヴルツェンに蒸気動力、ムルデ川の軟水、最新鋭縮絨機を結集",
+          "zh": "蒸汽动力驱动、穆尔德纯净软水与乌尔岑先进缩绒机群"
         },
         "s5_m4_bullet_1": {
-          "de": "<strong>Standort am Mühlgraben:</strong> 1861 zog die Manufaktur nach Wurzen. Es entstanden großzügige Produktionshallen und ein eigenes Heizhaus mit Dampfkraft.",
-          "en": "<strong>Mühlgraben Facility:</strong> In 1861, the company relocated to Wurzen, constructing sprawling production halls and a central steam engine boiler house.",
-          "ja": "<strong>新天地ヴルツェン：</strong>1861年にヴルツェンへ移転。広大な製造棟と専用の蒸気機関ボイラー施設を建設。",
-          "zh": "<strong>乌尔岑全新核心基地：</strong>1861年企业迁至乌尔岑，建起占地宏大的生产车间和自备蒸汽锅炉动力机房。"
+          "de": "<strong>Standort am Mühlgraben:</strong> 1861 entstanden in Wurzen großzügige Fabrikhallen direkt am Mühlgraben mit eigenem Kessel- und Dampfmaschinenhaus.",
+          "en": "<strong>Mühlgraben Expansion:</strong> In 1861, expansive factory halls were erected directly on Wurzen's Mühlgraben with dedicated steam boilers.",
+          "ja": "<strong>ミュールグラーベン工場：</strong>1861年、ヴルツェンの水路沿いに蒸気ボイラー棟を備えた広大な近代工場を建設。",
+          "zh": "<strong>水渠核心工场：</strong>1861年，在乌尔岑水渠沿线建起规模宏大的生产车间与自备蒸汽锅炉动力机房。"
         },
         "s5_m4_bullet_2": {
           "de": "<strong>Dampfbetriebene Walkmaschinen:</strong> Neu entwickelte Walk- und Filzmaschinen sicherten bisher unerreichte Dichte, Elastizität und Chargenkonstanz.",
@@ -552,10 +552,10 @@
           "zh": "<strong>穆尔德河的天然秘境：</strong>穆尔德河极其软滑、低矿物含量的天然活水，成为温和彻底洗脱羊毛杂质的绝佳天赋。"
         },
         "s5_m4_fact": {
-          "de": "⚙️ Dampf-Walkerei & weiches Mulde-Flusswasser",
-          "en": "⚙️ Steam fulling & pure soft Mulde river water",
-          "ja": "⚙️ 蒸気動力縮絨とムルデ川の清冽な軟水",
-          "zh": "⚙️ 蒸汽动力强力缩绒与穆尔德河天然软水"
+          "de": "⚙️ Großfertigung am Wurzener Mühlgraben",
+          "en": "⚙️ Large-scale manufacturing at Wurzen Mühlgraben",
+          "ja": "⚙️ ヴルツェン・ミュールグラーベンでの大規模生産",
+          "zh": "⚙️ 乌尔岑水渠核心制造基地"
         },
         "s5_m4_caption": {
           "de": "Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben",
@@ -576,8 +576,8 @@
           "zh": "年供20万架钢琴用毡的世界行业领袖"
         },
         "s5_m5_subtitle": {
-          "de": "Direktor Carl Wilhelm Patzschke, seine Meister & 350 Facharbeiter",
-          "en": "Director Carl Wilhelm Patzschke, his felt masters & 350 craftsmen",
+          "de": "Direktor Carl Wilhelm Patzschke, seine Meister & 350 Facharbeiter in Wurzen",
+          "en": "Director Carl Wilhelm Patzschke, his felt masters & 350 craftsmen in Wurzen",
           "ja": "カール・ヴィルヘルム・パチュケ社長、熟練技師団と350名の工匠",
           "zh": "卡尔·威廉·帕茨克厂长、制毡大师团队与350名高级技工"
         },
@@ -624,40 +624,40 @@
           "zh": "当下 • 雷诺独家合作"
         },
         "s5_m6_title": {
-          "de": "Renaissance von „Weickert Spezial“ für Renner",
-          "en": "Renaissance of “Weickert Spezial” for Renner",
-          "ja": "レンナー専用「ヴァイケルト・シュペツィアル」の復刻",
-          "zh": "专为雷诺重生的“魏克特特级”（Weickert Spezial）"
+          "de": "Renaissance von „Weickert Spezial“ & Partnerschaft mit Renner",
+          "en": "Renaissance of “Weickert Spezial” & Partnership with Renner",
+          "ja": "「ヴァイケルト・シュペツィアル」復刻とレンナー提携",
+          "zh": "“魏克特特级”（Weickert Spezial）重生与雷诺深度战略合作"
         },
         "s5_m6_subtitle": {
-          "de": "Reprivatisierung durch Fam. Brand & exklusive Spitzenqualität für Louis Renner",
-          "en": "Reprivatization by the Brand family & exclusive gold standard for Louis Renner",
-          "ja": "ブラント家による民営化とルイス・レンナー専用の極上品質",
-          "zh": "布兰德家族再造私有化与雷诺弦槌专属顶级原料"
+          "de": "Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik Meuselwitz",
+          "en": "Historic Wurzen mill & close geographical proximity to Renner Meuselwitz",
+          "ja": "ヴルツェン伝統工場とレンナー・モイゼルヴィッツ本工場との緊密な隣接関係",
+          "zh": "乌尔岑百年工场与雷诺迈泽尔维茨（Meuselwitz）总厂的黄金近邻优势"
         },
         "s5_m6_bullet_1": {
-          "de": "<strong>1991 Reprivatisierung:</strong> Die Familie Brand übernahm das Werk im Einvernehmen mit den Weickert-Erben. Klavierbauer weltweit forderten die originale historische Rezeptur zurück.",
-          "en": "<strong>1991 Reprivatization:</strong> The Brand family reprivatized the facility alongside Weickert heirs; piano builders worldwide demanded the return of the authentic formula.",
-          "ja": "<strong>1991年民営化：</strong>ブラント家がヴァイケルト家継承者と合意し再興。世界中のピアノ職人がかつての伝説的配合の復活を熱望。",
-          "zh": "<strong>1991年历史性重启：</strong>布兰德家族与魏克特家族继承人携手重组工厂，全球顶尖钢琴制作者一致强烈呼吁重现传统配方。"
+          "de": "<strong>1991 Reprivatisierung:</strong> Die Familie Brand reaktivierte das Werk in Wurzen. 2010 schloss sich mit der Wiedergeburt von „Weickert Spezial“ der Kreis zum Weltspitzen-Niveau von 1903.",
+          "en": "<strong>1991 Reprivatization:</strong> The Brand family revitalized the Wurzen facility, re-establishing the legendary 1903 gold-standard formula in 2010.",
+          "ja": "<strong>1991年民営化と復刻：</strong>ブラント家がヴルツェン工場を再興し、2010年に伝説の特級配合を完全再現。",
+          "zh": "<strong>1991年重组与特级重生：</strong>布兰德家族再造乌尔岑百年工场，于2010年全面复刻重现1903年登峰造极的顶级配方。"
         },
         "s5_m6_bullet_2": {
-          "de": "<strong>Wiedergeburt von „Weickert Spezial“:</strong> 2010 schloss sich mit der Reaktivierung der legendären Weickert-Spezial-Qualität der Kreis zu den glanzvollen Ursprüngen von 1903.",
-          "en": "<strong>Rebirth of Weickert Spezial:</strong> In 2010, reintroducing the legendary Weickert Spezial formula brought full circle the peak standard of 1903.",
-          "ja": "<strong>ヴァイケルト・シュペツィアル復刻：</strong>2010年、伝説の特級品質「ヴァイケルト・シュペツィアル」を復活させ、1903年の頂点へと回帰。",
-          "zh": "<strong>魏克特特级王者归来：</strong>2010年，传奇的“魏克特特级”（Weickert Spezial）弦槌专用毡正式重生，全面回归1903年的世界巅峰水平。"
+          "de": "<strong>Räumliche Nähe Meuselwitz ↔ Wurzen:</strong> Nur rund 65 km trennen die Filzmanufaktur Wurzen vom Renner-Hauptwerk in Meuselwitz – im Herzen des mitteldeutschen Klavierbau-Clusters.",
+          "en": "<strong>Geographical Proximity Meuselwitz ↔ Wurzen:</strong> Only ~65 km separate the Wurzen felt mill from Renner's headquarters in Meuselwitz within Central Germany's piano cluster.",
+          "ja": "<strong>モイゼルヴィッツ ↔ ヴルツェンの至近距離：</strong>ヴルツェン工場とレンナー・モイゼルヴィッツ本社はわずか約65km。中部ドイツの伝統的ピアノクラスターの中心に位置。",
+          "zh": "<strong>迈泽尔维茨与乌尔岑的极近地缘：</strong>乌尔岑毛毡厂距离雷诺迈泽尔维茨总厂仅约65公里，同处于德国中部钢琴制造核心传统腹地。"
         },
         "s5_m6_bullet_3": {
-          "de": "<strong>Exklusiv-Symbiose mit Renner:</strong> Renner bezieht seinen gesamten Premium-Hammerfilz aus Wurzen – für unerreichte klangliche Plastizität und Modulationsfähigkeit.",
-          "en": "<strong>Exclusive Renner Symbiosis:</strong> Today Louis Renner sources its entire premium hammerhead felt from Wurzen for unparalleled acoustic clarity and power.",
-          "ja": "<strong>レンナーとの独占的共鳴：</strong>レンナーは全プレミアム弦槌フェルトをヴルツェンから独占調達。比類なき倍音と表現力を実現。",
-          "zh": "<strong>雷诺独家战略共生：</strong>雷诺全球所有音乐会顶级弦槌均独家选用乌尔岑定制特级纯羊毛毡，赋能无可比拟的动态表现力。"
+          "de": "<strong>Direkte Synergie & Meister-Austausch:</strong> Kurze Wege garantieren persönliche Abstimmung von Filzdichte und Elastizität zwischen den Wurzener Filzmachern und Renners Hammerkopfmeistern.",
+          "en": "<strong>Direct Synergies & Master Exchange:</strong> Short travel times enable face-to-face fine-tuning of felt elasticity and density between Wurzen felters and Renner hammer makers.",
+          "ja": "<strong>直接の相乗効果とマイスター交流：</strong>わずか1時間の距離が、ヴルツェンのフェルト職人とレンナーのハンマー技師による濃密な直接対話と精密調整を実現。",
+          "zh": "<strong>面对面直接协同与大师共创：</strong>极短路程让乌尔岑制毡大师与雷诺弦槌技师能够实时面对面深度测试调校，确保毛毡密度与弹性完全契合专属声学标准。"
         },
         "s5_m6_fact": {
-          "de": "✨ Wieder auf dem Weltspitzen-Niveau von 1903",
-          "en": "✨ Restored to the 1903 world-class pinnacle",
-          "ja": "✨ 1903年の世界最高峰水準を完全に再現",
-          "zh": "✨ 全面重回1903年无可撼动的全球最高巅峰"
+          "de": "📍 Nur 65 km: Direkte Partnerschaft Wurzen ↔ Renner Meuselwitz",
+          "en": "📍 Only 65 km: Direct partnership Wurzen ↔ Renner Meuselwitz",
+          "ja": "📍 わずか65km：ヴルツェン ↔ レンナー・モイゼルヴィッツの直接提携",
+          "zh": "📍 仅相距65公里：乌尔岑 ↔ 雷诺迈泽尔维茨直接独家深度共创"
         },
         "s5_m6_caption": {
           "de": "Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe",
@@ -732,23 +732,23 @@
           "zh": "天然角蛋白微螺旋弹簧结构在击弦瞬间以毫秒级极速回弹离弦，确保琴弦泛音自由共振绝无吃音。"
         },
         "s5_hl4_title": {
-          "de": "Exklusive Renner-Symbiose:",
-          "en": "Exclusive Renner Partnership:",
-          "ja": "レンナーとの独占的共創：",
-          "zh": "雷诺高定弦槌专属战略共生："
+          "de": "Räumliche Nähe Meuselwitz ↔ Wurzen (65 km):",
+          "en": "Geographical Proximity Meuselwitz ↔ Wurzen (65 km):",
+          "ja": "モイゼルヴィッツ ↔ ヴルツェンの至近距離（約65km）：",
+          "zh": "迈泽尔维茨与乌尔岑的黄金地缘（约65公里）："
         },
         "s5_hl4_desc": {
-          "de": "Nur die streng selektierten Wurzener Weickert-Spezial-Tafeln erfüllen Renners Maßstäbe für Konzertflügel.",
-          "en": "Only strictly hand-selected Wurzen Weickert Spezial sheets meet Renner's exacting acoustic tolerances.",
-          "ja": "厳選された最高格付けのヴァイケルト・シュペツィアル原板のみがレンナーの品質基準をクリア。",
-          "zh": "唯有经数十道严苛声学测试甄选的乌尔岑特级毡板，方能进入雷诺大师工坊用于顶级音乐会弦槌制作。"
+          "de": "Nur ca. 65 km Distanz zwischen Filzmanufaktur Wurzen und Renner in Meuselwitz – für direkten Meister-Austausch, kurze Wege und perfekte Abstimmung.",
+          "en": "Just ~65 km between the Wurzen felt mill and Renner's factory in Meuselwitz ensures direct master craftsman dialogue, resilient supply chains, and optimal acoustic tuning.",
+          "ja": "ヴルツェン工場とレンナー・モイゼルヴィッツ工場はわずか約65km。職人同士の直接対話、最短の輸送経路、完璧な打弦レスポンスを実現。",
+          "zh": "乌尔岑毛毡厂与雷诺迈泽尔维茨生产基地仅相距约65公里，保障大师级技术无缝直接对话、零延时物流与极其严密的音色匹配。"
         }
       },
       "notes": {
-        "de": "Folie 5: Die Firmengeschichte der Filzfabrik Wurzen (FFW) von 1783 bis heute und das Geheimnis des Weickert-Filzes. Stellen Sie die 6 historischen Meilensteine vor: 1783 Gründung in Leipzig durch J.D. Weickert, 1847 Erfindung des ersten deutschen Pianofortefilzes durch die Wollhändler Patzschke (Ablösung des Lederbezugs), 1850-1867 Weltausstellungen London & Paris mit königlichen Ehrungen, 1861 Umzug nach Wurzen an den Mühlgraben mit Dampfmaschinen und dem weichen Mulde-Wasser, 1903 Weltmarktführer für 200.000 Klaviere jährlich (Steinway New York) und 2010 die Renaissance von 'Weickert Spezial' exklusiv für Louis Renner. Betonen Sie auf der rechten Folienseite den hochwertigen Filz: 100% reine Merinowolle, rein mechanische Verfilzung ohne Harze oder Klebstoffe, dauerelastische Rückfederung und die unersetzbare Bedeutung für den warmen, tragfähigen europäischen Konzertflügelklang.",
-        "en": "Slide 5: The company history of Filzfabrik Wurzen (FFW) from 1783 to the present and the acoustic secret of Weickert felt. Introduce the 6 historical milestones: 1783 founding in Leipzig by J.D. Weickert, 1847 invention of the first German piano hammer felt by the Patzschke family (replacing leather hammer covers), 1850-1867 London & Paris World Expos with royal honors, 1861 relocation to Wurzen with steam engines and soft Mulde river water, 1903 world leader for 200,000 pianos annually (Steinway New York), and 2010 the renaissance of 'Weickert Spezial' exclusively for Louis Renner. On the right side, highlight the premium felt: 100% pure Merino virgin wool, purely mechanical fulling without resins or binders, permanent elastic springback, and its critical role in shaping the singing European grand piano tone.",
-        "ja": "スライド 5: ヴルツェンフェルト工場（FFW）の1783年から現代に至る社史と、ヴァイケルト・フェルトの音響的秘密。全6つの歴史的節目を紹介：1783年ライプツィヒ創業、1847年パチュケ父子によるドイツ初の実用ピアノフェルト発明（革巻きからの歴史的転換）、1850〜67年ロンドン・パリ万博での金メダル獲得と国王親訪、1861年蒸気機関とムルデ川軟水を活かしたヴルツェン新工場設立、1903年年間20万台分を供給する世界的首位（スタインウェイ御用達）、そして2010年のルイス・レンナー専用「ヴァイケルト・シュペツィアル」復刻。右側パネルでは極上フェルトに焦点を当て、100%純メリノウール、化学接着剤不使用の純機械的縮絨、瞬時の高弾性リバウンド力、そしてヨーロッパ伝統の歌うような豊潤な音色への決定的な貢献を強調してください。",
-        "zh": "第 5 页：乌尔岑毛毡厂（FFW）自1783年以来的传奇厂史与魏克特高级琴毡的声音奥秘。向嘉宾生动呈现六大历史里程碑：1783年魏克特在莱比锡创立工坊，1847年帕茨克父子首次研制成功工业钢琴羊毛毡（彻底终结粗糙皮革包裹时代），1850至1867年接连问鼎伦敦、巴黎世博会金奖并获国王亲访，1861年移师乌尔岑依托蒸汽机动力与穆尔德纯净软水实现工业化大生产，1903年独步天下为全球年供20万架钢琴琴毡（施坦威纽约指定原料），以及2010年“魏克特特级”（Weickert Spezial）专为雷诺王者归来。在右侧焦点面板中，重点聚焦高品质琴毡：100%纯天然美利奴初剪羊毛、绝无化学树脂与胶水的纯物理缩绒、瞬时极速回弹力，以及它对塑造欧洲温暖、通透且极具歌唱性音乐会音色的核心决定力。"
+        "de": "Folie 5: Die Firmengeschichte der Filzfabrik Wurzen (FFW) in Wurzen von 1783 bis heute und das Geheimnis des Weickert-Filzes. Stellen Sie die 6 historischen Meilensteine vor: 1783 Gründung in Wurzen durch J.D. Weickert, 1847 Erfindung des ersten deutschen Pianofortefilzes (Ablösung des Lederbezugs), 1850-1867 Weltausstellungen London & Paris mit königlichen Ehrungen, 1861 Großfertigung am Wurzener Mühlgraben mit Dampfmaschinen und dem weichen Mulde-Wasser, 1906 Weltmarktführer für 200.000 Klaviere jährlich (Steinway New York) und heute die Renaissance von 'Weickert Spezial' exklusiv für Louis Renner. Betonen Sie besonders die räumliche Nähe zwischen der Filzfabrik Wurzen und der Renner-Fabrik in Meuselwitz (nur ca. 65 km): Sie ermöglicht direkten Austausch zwischen den Filzmeistern und Hammerkopfmachern, kurze Wege und perfekte Qualitätsabstimmung.",
+        "en": "Slide 5: Company history of Filzfabrik Wurzen (FFW) in Wurzen from 1783 to the present and the acoustic secret of Weickert felt. Introduce the 6 historical milestones: 1783 founding in Wurzen by J.D. Weickert, 1847 invention of Germany's first viable piano felt (replacing leather hammer covers), 1850-1867 London & Paris World Expos with royal honors, 1861 industrial expansion at Wurzen Mühlgraben with steam engines and soft Mulde water, 1906 world leader for 200,000 pianos annually (Steinway New York), and today the renaissance of 'Weickert Spezial' exclusively for Louis Renner. Strongly emphasize the close geographical proximity between Filzfabrik Wurzen and the Renner factory in Meuselwitz (just ~65 km): enabling direct master-to-master dialogue, resilient supply chains, and perfect acoustic tuning.",
+        "ja": "スライド 5: ヴルツェンフェルト工場（FFW）のヴルツェンにおける1783年創業からの歴史と、ヴァイケルト・フェルトの音響的秘密。全6つの歴史的節目を紹介：1783年ヴルツェン創業、1847年ドイツ初のピアノフェルト開発（革巻きからの転換）、1850〜67年万博金メダル、1861年ミュールグラーベン大工場での蒸気機械化と軟水活用、1906年年間20万台分の世界首位供給、そして現代のルイス・レンナー専用「ヴァイケルト・シュペツィアル」復刻。特にヴルツェン工場とレンナー・モイゼルヴィッツ本工場との極近距離（わずか約65km）を強調してください。職人同士の直接対話、最短の輸送経路、完璧な品質調整を可能にしています。",
+        "zh": "第 5 页：乌尔岑毛毡厂（FFW）自1783年创立于乌尔岑以来的传奇厂史与魏克特高级琴毡的声音奥秘。生动呈现六大历史里程碑：1783年在乌尔岑创立、1847年德国首创工业钢琴纯羊毛毡、1850-1867年世博金奖与国王盛赞、1861年水渠沿岸蒸汽机械化大工场与穆尔德纯净软水、1906年年供20万架钢琴的世界霸主地位，以及专为雷诺重生的“魏克特特级”。特别重点强调乌尔岑毛毡厂与雷诺迈泽尔维茨总厂极近的地理空间优势（相距仅约65公里）：实现制毡大师与弦槌大师零距离深度实时交流调校、零延时物流与极其严密的音色匹配。"
       }
     },
     "slide_06": {
