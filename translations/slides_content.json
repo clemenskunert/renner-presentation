@@ -564,10 +564,10 @@
           "zh": "1871年乌尔岑钢琴毛毡工厂与水运河渠原始历史版画"
         },
         "s5_m5_badge": {
-          "de": "WELTMARKTFÜHRER 1903",
-          "en": "WORLD LEADER 1903",
-          "ja": "世界首位 1903",
-          "zh": "全球首领 1903"
+          "de": ">WELTMARKTFÜHRER 1906",
+          "en": ">WORLD LEADER 1906",
+          "ja": ">世界首位 1906",
+          "zh": ">全球霸主 1906"
         },
         "s5_m5_title": {
           "de": "Weltmarktführer für 200.000 Klaviere jährlich",
@@ -576,16 +576,16 @@
           "zh": "年供20万架钢琴用毡的世界行业领袖"
         },
         "s5_m5_subtitle": {
-          "de": "Hoflieferant für Steinway New York, Villa Patzschke & 350 Mitarbeiter",
-          "en": "Purveyor to Steinway New York, Patzschke Villa & 350 craftsmen",
-          "ja": "スタインウェイ・ニューヨーク御用達、パチュケ邸と350名の熟練職人",
-          "zh": "施坦威纽约指定供应商、帕茨克庄园与350名制毡大师"
+          "de": "Direktor Carl Wilhelm Patzschke, seine Meister & 350 Facharbeiter",
+          "en": "Director Carl Wilhelm Patzschke, his felt masters & 350 craftsmen",
+          "ja": "カール・ヴィルヘルム・パチュケ社長、熟練技師団と350名の工匠",
+          "zh": "卡尔·威廉·帕茨克厂长、制毡大师团队与350名高级技工"
         },
         "s5_m5_bullet_1": {
-          "de": "<strong>Filz für 200.000 Instrumente:</strong> Zur Blütezeit um 1903 lieferte Wurzen jährlich Hammerkopffilz für rund 200.000 Flügel und Klaviere weltweit.",
-          "en": "<strong>Felt for 200,000 Pianos:</strong> At its peak in 1903, Wurzen produced hammer felt for approximately 200,000 grand and upright pianos every year.",
-          "ja": "<strong>年間20万台分の供給：</strong>1903年の最盛期、世界中の約20万台のグランド＆アップライトピアノにフェルトを供給。",
-          "zh": "<strong>供应20万架钢琴：</strong>在1903年前后的黄金时代，乌尔岑每年为全球约20万架三角与立式钢琴提供高品质毛毡。"
+          "de": "<strong>Filz für 200.000 Instrumente:</strong> Zur Blütezeit um 1903–1906 lieferte Wurzen jährlich Hammerkopffilz für rund 200.000 Flügel und Klaviere weltweit.",
+          "en": "<strong>Felt for 200,000 Pianos:</strong> At its zenith around 1903–1906, Wurzen produced hammer felt for approximately 200,000 grand and upright pianos every year.",
+          "ja": "<strong>年間20万台分の供給：</strong>1903〜1906年の最盛期、世界中の約20万台のグランド＆アップライトピアノにフェルトを供給。",
+          "zh": "<strong>供应20万架钢琴：</strong>在1903–1906年前后的黄金盛世，乌尔岑每年为全球约20万架三角与立式钢琴提供高品质琴毡。"
         },
         "s5_m5_bullet_2": {
           "de": "<strong>Export nach Übersee:</strong> Bedeutendster Kunde war Steinway & Sons New York, neben führenden Spitzenmarken in Frankreich, England, Russland und Italien.",
@@ -594,10 +594,10 @@
           "zh": "<strong>出口欧美各大洲：</strong>最核心客户为施坦威纽约总厂，同时覆盖法国、英国、俄罗斯与意大利的所有顶级名牌。"
         },
         "s5_m5_bullet_3": {
-          "de": "<strong>Patzschke-Familiendynastie:</strong> In der 1883/84 erbauten Werksvilla leiteten drei Generationen der Familie Patzschke die Manufaktur mit 350 Meistern und Facharbeitern.",
-          "en": "<strong>Patzschke Dynasty:</strong> Inside the 1883/84 Patzschke Villa on site, three generations directed 350 skilled felt masters.",
-          "ja": "<strong>パチュケ家の指導：</strong>1883/84年に敷地内へ建立されたパチュケ邸から、3世代にわたり350名の匠を統率。",
-          "zh": "<strong>帕茨克家族三代传承：</strong>在厂区内建于1883/84年的帕茨克庄园中，家族三代领衔350名高级技师守护纯正配方。"
+          "de": "<strong>Meister & Herr Patzschke:</strong> Historische Werkstattaufnahme vom September 1906: Direktor Carl Wilhelm Patzschke mit seinen Filzmachermeistern vor dem monumentalen Hammerkopffilz-Keil.",
+          "en": "<strong>Felt Masters & Mr. Patzschke:</strong> Historical photograph of September 1906: Director Carl Wilhelm Patzschke with his felt master craftsmen before the monumental hammer felt wedge.",
+          "ja": "<strong>技師団とパチュケ氏：</strong>1906年9月の貴重な歴史写真：カール・ヴィルヘルム・パチュケ社長と巨大なハンマーフェルト楔（ブロック）を囲む熟練マイスターたち。",
+          "zh": "<strong>制毡大师与帕茨克厂长：</strong>1906年9月珍贵历史档案照片：卡尔·威廉·帕茨克厂长与全体制毡大师在巨型击弦机阶梯毛毡整块前合影。"
         },
         "s5_m5_fact": {
           "de": "🌎 Weltweiter Standard für Steinway & Sons",
@@ -605,11 +605,17 @@
           "ja": "🌎 スタインウェイをはじめ世界基準を確立",
           "zh": "🌎 确立施坦威及全球名琴统一音质标准"
         },
+        "s5_m5_badge_media": {
+          "de": ">MEISTER & HERR PATZSCHKE (1906)",
+          "en": ">FELT MASTERS & MR. PATZSCHKE (1906)",
+          "ja": ">マイスターとパチュケ氏 (1906)",
+          "zh": ">制毡大师与帕茨克厂长 (1906)"
+        },
         "s5_m5_caption": {
-          "de": "Villa Patzschke auf dem Werksgelände – Wohn- und Direktionssitz dreier Generationen",
-          "en": "Villa Patzschke on factory grounds – Residence and headquarters across 3 generations",
-          "ja": "工場敷地内のパチュケ邸 — 3世代にわたる居住・経営の拠点",
-          "zh": "厂区内的帕茨克庄园 — 历经三代大师指挥若定的历史掌舵中心"
+          "de": "Historische Originalaufnahme (Sept. 1906): Meister der Filzfabrik Wurzen mit Direktor Patzschke am Filzzuschnitt-Tisch",
+          "en": "Original historical photograph (Sept. 1906): Master felters of Filzfabrik Wurzen with Director Patzschke at the felt cutting table",
+          "ja": "1906年9月の歴史的オリジナル写真：フェルト裁断作業台を囲むヴルツェン工場のマイスターとパチュケ社長",
+          "zh": "1906年9月历史原始照片：乌尔岑毛毡厂全体大师与帕茨克厂长在阶梯裁切台前合影"
         },
         "s5_m6_badge": {
           "de": "HEUTE • RENNER PARTNER",
