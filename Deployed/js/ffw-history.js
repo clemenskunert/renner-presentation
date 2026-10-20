@@ -151,10 +151,28 @@ class FFWFirmengeschichte {
     }
   }
 
+  nextMilestoneWithResult() {
+    if (this.currentMilestone < this.totalMilestones - 1) {
+      this.stopAutoplay();
+      this.goToMilestone(this.currentMilestone + 1);
+      return true;
+    }
+    return false;
+  }
+
   prevMilestone() {
     if (this.currentMilestone > 0) {
       this.goToMilestone(this.currentMilestone - 1);
     }
+  }
+
+  prevMilestoneWithResult() {
+    if (this.currentMilestone > 0) {
+      this.stopAutoplay();
+      this.goToMilestone(this.currentMilestone - 1);
+      return true;
+    }
+    return false;
   }
 
   toggleAutoplay() {

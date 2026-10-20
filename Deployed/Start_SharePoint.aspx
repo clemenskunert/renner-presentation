@@ -5209,11 +5209,23 @@
   <script src="js/ffw-history.js"></script>
   <script src="js/presentation.js"></script>
   <script>
-    // Offline PWA Service Worker Registration
-    if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(() => {});
-      });
+    // Offline PWA Service Worker Management
+    // In local development (localhost / 127.0.0.1), unregister service workers & purge caches to ensure live code is always seen
+    if ('serviceWorker' in navigator) {
+      if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          for (const reg of registrations) reg.unregister();
+        });
+        if ('caches' in window) {
+          caches.keys().then(keys => {
+            for (const key of keys) caches.delete(key);
+          });
+        }
+      } else if (window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(() => {});
+        });
+      }
     }
   </script>
   <script>

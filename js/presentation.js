@@ -25,6 +25,35 @@ class PresentationController {
     this.currentTheme = 'de';
   }
 
+  getSlideIndexFromURL() {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const querySlide = urlParams.get('slide');
+      if (querySlide) {
+        const num = parseInt(querySlide, 10);
+        if (!isNaN(num) && num >= 1 && num <= this.totalSlides) {
+          return num - 1;
+        }
+      }
+    } catch (e) {}
+
+    const hash = (window.location.hash || '').replace(/^#/, '').trim();
+    if (hash) {
+      const match = hash.match(/^(?:slide-?)?(\d+)$/i);
+      if (match) {
+        const num = parseInt(match[1], 10);
+        if (!isNaN(num) && num >= 1 && num <= this.totalSlides) {
+          return num - 1;
+        }
+      }
+      const matchIdx = this.slides.findIndex(s => s.getAttribute('data-slide') === hash);
+      if (matchIdx !== -1) {
+        return matchIdx;
+      }
+    }
+    return 0;
+  }
+
   init() {
     this.slides = Array.from(document.querySelectorAll('.slide'));
     this.totalSlides = this.slides.length;
@@ -38,9 +67,10 @@ class PresentationController {
     this.setupVoicingWidget();
     this.setupSlideGrid();
     
-    // Set initial slide and country theme
+    // Set initial slide from URL hash (#slide-5 or #5 or ?slide=5) and country theme
     this.setCountryTheme(this.currentTheme);
-    this.goToSlide(0);
+    const initialSlideIdx = this.getSlideIndexFromURL();
+    this.goToSlide(initialSlideIdx);
     this.updateLanguage(this.currentLang);
 
     // Ensure every slide has the official Renner corner watermark logo at bottom right
@@ -230,6 +260,14 @@ class PresentationController {
       }
     });
 
+    // Deep Linking: Update slide if hash changes in URL bar (e.g. typing #slide-5 or #5 or back/forward)
+    window.addEventListener('hashchange', () => {
+      const targetIdx = this.getSlideIndexFromURL();
+      if (targetIdx !== this.currentSlideIndex) {
+        this.goToSlide(targetIdx);
+      }
+    });
+
     // Language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -359,6 +397,11 @@ class PresentationController {
         case 'A':
           e.preventDefault();
           this.goToSlide(1); // Jump to Slide 2 (Agenda / Modules)
+          break;
+
+        case '5':
+          e.preventDefault();
+          this.goToSlide(4); // Jump to Slide 5 (Filzfabrik Wurzen FFW)
           break;
 
         case 'End':
@@ -581,6 +624,15 @@ class PresentationController {
         }
       }
 
+      // Synchronize FFW Wurzen history if entering slide 5
+      if (currentSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+        if (fromIndex > index) {
+          window.ffwHistory.goToMilestone(window.ffwHistory.totalMilestones - 1);
+        } else if (fromIndex < index) {
+          window.ffwHistory.goToMilestone(0);
+        }
+      }
+
       // Autoplay or prepare video if on slide
       const activeVideos = currentSlide.querySelectorAll('video');
       activeVideos.forEach(v => {
@@ -594,6 +646,14 @@ class PresentationController {
 
     this.updateHUD();
     this.updateNotes();
+
+    // Silently synchronize URL hash to current slide (deep link support e.g. #slide-5)
+    if (typeof history !== 'undefined' && history.replaceState) {
+      const targetHash = `#slide-${this.currentSlideIndex + 1}`;
+      if (window.location.hash !== targetHash) {
+        history.replaceState(null, '', targetHash);
+      }
+    }
   }
 
   nextSlide() {
@@ -613,6 +673,11 @@ class PresentationController {
         return;
       }
       if (window.meuselwitzJourney.nextEra()) {
+        return;
+      }
+    }
+    if (activeSlide && activeSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+      if (window.ffwHistory.nextMilestoneWithResult()) {
         return;
       }
     }
@@ -638,6 +703,11 @@ class PresentationController {
         return;
       }
       if (window.meuselwitzJourney.prevEra()) {
+        return;
+      }
+    }
+    if (activeSlide && activeSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+      if (window.ffwHistory.prevMilestoneWithResult()) {
         return;
       }
     }

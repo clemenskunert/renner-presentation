@@ -1,5 +1,5 @@
 // Service Worker for Louis Renner Masterclass Presentation (Offline PWA)
-const CACHE_NAME = 'renner-presentation-v1';
+const CACHE_NAME = 'renner-presentation-v3';
 
 const STATIC_ASSETS = [
   './',
@@ -11,16 +11,18 @@ const STATIC_ASSETS = [
   './js/timelapse.js',
   './js/history-journey.js',
   './js/transformation-journey.js',
+  './js/ffw-history.js',
   './js/presentation.js',
   './manifest.json',
   './Visuell/web_assets/renner_logo_weiss_schatten.png'
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(STATIC_ASSETS);
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
@@ -28,7 +30,11 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
       );
     }).then(() => self.clients.claim())
   );
@@ -37,27 +43,27 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   
-  // Cache-first strategy for local assets, network-first fallback
+  // Network-First strategy: always fetch fresh from server, fallback to cache if offline
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-          return networkResponse;
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
         }
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
         return networkResponse;
-      }).catch(() => {
-        // Fallback to cached index.html for navigation requests
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
-      });
-    })
+      })
+      .catch(() => {
+        return caches.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          if (event.request.mode === 'navigate') {
+            return caches.match('./index.html');
+          }
+        });
+      })
   );
 });

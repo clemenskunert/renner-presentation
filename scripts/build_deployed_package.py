@@ -71,7 +71,7 @@ def build_offline_tablet_html():
         with open(css_path, "r", encoding="utf-8") as f:
             css_code = f.read()
         css_tag = f"<style>\n/* Louis Renner Presentation Styles (Embedded Standalone) */\n{css_code}\n</style>"
-        html = re.sub(r'<link\s+rel="stylesheet"\s+href="css/presentation\.css">', css_tag, html)
+        html = re.sub(r'<link\s+rel="stylesheet"\s+href="css/presentation\.css">', lambda m: css_tag, html)
 
     # 2. JS-Dateien einbetten
     js_files = [
@@ -90,10 +90,10 @@ def build_offline_tablet_html():
         if os.path.exists(p):
             with open(p, "r", encoding="utf-8") as f:
                 js_code = f.read()
-            # Ersetze das Script-Tag
+            # Ersetze das Script-Tag (Verwendung von lambda verhindert Python re-escape Fehler bei \d o.ä.)
             pattern = re.compile(rf'<script\s+src="js/{re.escape(js_name)}"></script>')
             replacement = f'<script>\n/* Embedded {js_name} */\n{js_code}\n</script>'
-            html = pattern.sub(replacement, html)
+            html = pattern.sub(lambda m, r=replacement: r, html)
 
     target_path = os.path.join(DEPLOY_DIR, "index_offline_tablet.html")
     with open(target_path, "w", encoding="utf-8") as f:
