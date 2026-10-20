@@ -40,30 +40,27 @@ def main():
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(new_content)
 
-    # Standalone SharePoint Support:
-    # SharePoint Online / On-Premise natively executes and displays .aspx files as web pages directly in the browser
-    aspx_content = '<%@ Page Language="C#" AutoEventWireup="true" %>\n' + new_content
-    for aspx_name in ("Start_SharePoint.aspx", "presentation.aspx"):
-        with open(aspx_name, "w", encoding="utf-8") as f:
-            f.write(aspx_content)
-
-    print(f"Successfully updated {html_path}, Start_SharePoint.aspx & presentation.aspx with {slide_definitions.TOTAL_SLIDES} slides!")
+    print(f"Successfully updated {html_path} with {slide_definitions.TOTAL_SLIDES} slides!")
 
     # Auto-synchronize Deployed folder if it exists
     deployed_dir = "Deployed"
     if os.path.exists(deployed_dir):
         try:
+            # Standalone SharePoint Support: write directly to Deployed/
+            aspx_content = '<%@ Page Language="C#" AutoEventWireup="true" %>\n' + new_content
+            for aspx_name in ("Start_SharePoint.aspx", "presentation.aspx"):
+                with open(os.path.join(deployed_dir, aspx_name), "w", encoding="utf-8") as f:
+                    f.write(aspx_content)
+
             import importlib.util
             spec = importlib.util.spec_from_file_location("build_deployed", os.path.join("scripts", "build_deployed_package.py"))
             build_mod = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(build_mod)
             build_mod.build_offline_tablet_html()
-            # Also update index.html and aspx in Deployed
+            # Also update index.html in Deployed
             shutil_copy = __import__('shutil').copy2
             shutil_copy(html_path, os.path.join(deployed_dir, html_path))
-            shutil_copy("Start_SharePoint.aspx", os.path.join(deployed_dir, "Start_SharePoint.aspx"))
-            shutil_copy("presentation.aspx", os.path.join(deployed_dir, "presentation.aspx"))
-            print("✓ Deployed/ Ordner & index_offline_tablet.html automatisch synchronisiert!")
+            print("✓ Deployed/ Ordner (index.html, ASPX & index_offline_tablet.html) automatisch synchronisiert!")
         except Exception as e:
             print(f"[HINWEIS] Konnte Deployed/ nicht automatisch synchronisieren: {e}")
 

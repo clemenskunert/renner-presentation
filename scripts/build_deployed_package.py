@@ -145,7 +145,7 @@ Wenn Sie die Präsentation im SharePoint-Portal Ihres Unternehmens hinterlegen:
 
 Falls der Ordner auf einen PC oder Mac kopiert wird:
 - **Windows:** Doppelklick auf `Start_Windows.bat` (startet automatisch den lokalen Server & öffnet den Browser).
-- **Mac:** Doppelklick auf `Start_Mac.command`.
+- **Mac:** Doppelklick auf `Start_Mac.app` (bequeme App mit Icon) oder `Start_Mac.command`.
 - **Ohne Server:** Doppelklick direkt auf `index.html` oder `index_offline_tablet.html`.
 
 ---
@@ -161,7 +161,7 @@ Falls der Ordner auf einen PC oder Mac kopiert wird:
 | **`Visuell/`** | Alle Bilder, Meisterklasse-Dokumente und hochauflösenden Medien. |
 | **`css/` & `js/`** | Modulare Stylesheets und vorkompilierte Übersetzungsdaten. |
 | **`Start_Windows.bat`** | 1-Klick-Starter für Windows-Rechner. |
-| **`Start_Mac.command`** | 1-Klick-Starter für macOS. |
+| **`Start_Mac.app` & `Start_Mac.command`** | 1-Klick-Starter für macOS (mit App-Icon bzw. Shell-Skript). |
 """
 
     txt_content = """======================================================================
@@ -207,15 +207,11 @@ def main():
 
     os.makedirs(DEPLOY_DIR, exist_ok=True)
 
-    # 1. Basis-Dateien kopieren
+    # 1. Basis-Dateien kopieren (Start_Mac.app, Start_Mac.command, Start_Windows.bat & ASPX liegen direkt in Deployed/)
     files_to_copy = [
         "index.html",
-        "Start_SharePoint.aspx",
-        "presentation.aspx",
         "manifest.json",
         "sw.js",
-        "Start_Windows.bat",
-        "Start_Mac.command",
         "server.py"
     ]
 
