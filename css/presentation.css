@@ -4959,6 +4959,11 @@ body::before {
   padding: 8px 14px 10px 14px;
 }
 
+/* Panel 5 Specific: Renner & FFW Hammerhead in Master Hands (Focal point centered on hammerhead) */
+.ffw-milestone-panel[data-panel="5"] .ffw-panel-media img {
+  object-position: center 52%;
+}
+
 /* ==========================================================================
    RIGHT WING: HIGH QUALITY FELT SPOTLIGHT (Texture & Acoustic Superiority)
    ========================================================================== */
