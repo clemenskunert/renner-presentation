@@ -81,6 +81,7 @@ def build_offline_tablet_html():
         "timelapse.js",
         "history-journey.js",
         "transformation-journey.js",
+        "ffw-history.js",
         "presentation.js"
     ]
 

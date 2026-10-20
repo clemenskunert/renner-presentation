@@ -4537,3 +4537,596 @@ body::before {
     opacity: 0.95;
   }
 }
+
+/* ==========================================================================
+   FOLIE 5: FFW WURZEN FIRMENGESCHICHTE & DER HOCHWERTIGE WEICKERT-FILZ
+   ========================================================================== */
+.slide[data-slide="5"] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient Felt Texture Background Layer */
+.ffw-ambient-felt-backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: url('../Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.085;
+  mix-blend-mode: luminosity;
+  filter: contrast(1.25) brightness(0.8);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slide[data-slide="5"] .slide-body {
+  position: relative;
+  z-index: 1;
+  height: calc(100% - 90px);
+  padding-bottom: 8px;
+}
+
+/* Main Two-Wing Grid Layout */
+.ffw-history-layout {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 22px;
+  height: 100%;
+  align-items: stretch;
+}
+
+/* Left Wing: Timeline & Historical Stages */
+.ffw-history-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Header Stepper & Autoplay Controls */
+.ffw-timeline-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ffw-play-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid rgba(200, 163, 86, 0.4);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+}
+
+.ffw-play-btn:hover {
+  background: rgba(200, 163, 86, 0.22);
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 16px rgba(200, 163, 86, 0.35);
+  transform: translateY(-1px);
+}
+
+.ffw-play-btn.playing {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+.ffw-play-icon {
+  font-size: 0.95rem;
+  color: var(--gold-accent);
+}
+
+.ffw-play-btn.playing .ffw-play-icon {
+  color: #10b981;
+}
+
+.ffw-play-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-accent), #ffd700);
+  transition: width 0.08s linear;
+}
+
+.ffw-step-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.ffw-step-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ffw-step-btn:hover:not(:disabled) {
+  background: var(--gold-accent);
+  color: #0a0e1a;
+  border-color: var(--gold-accent);
+}
+
+.ffw-step-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.ffw-step-counter {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  min-width: 44px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Epoch Tabs Navigation Bar */
+.ffw-epoch-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px;
+  background: rgba(14, 20, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  scrollbar-width: none;
+}
+
+.ffw-epoch-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.ffw-epoch-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ffw-epoch-tab:hover {
+  background: rgba(200, 163, 86, 0.1);
+  color: #fff;
+  border-color: rgba(200, 163, 86, 0.3);
+}
+
+.ffw-epoch-tab.active {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.25) 0%, rgba(200, 163, 86, 0.08) 100%);
+  border-color: var(--gold-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(200, 163, 86, 0.2);
+}
+
+.ffw-tab-year {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--gold-accent);
+  letter-spacing: 0.5px;
+}
+
+.ffw-epoch-tab.active .ffw-tab-year {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.ffw-tab-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  opacity: 0.85;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Stage Card: Holds Pre-rendered Panels */
+.ffw-stage-card {
+  flex: 1;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  min-height: 0;
+}
+
+.ffw-milestone-panel {
+  display: none;
+  height: 100%;
+  width: 100%;
+  padding: 24px 28px;
+  box-sizing: border-box;
+}
+
+.ffw-milestone-panel.active {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  animation: ffwPanelFade 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes ffwPanelFade {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ffw-panel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 0;
+}
+
+.ffw-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ffw-panel-year {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--gold-accent);
+  text-shadow: 0 2px 14px rgba(200, 163, 86, 0.3);
+}
+
+.ffw-panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin: 4px 0 2px 0;
+}
+
+.ffw-panel-subtitle {
+  font-size: 0.88rem;
+  color: var(--gold-light);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.ffw-panel-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 6px 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.ffw-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.ffw-bullet-item strong {
+  color: #fff;
+}
+
+.ffw-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ffw-fact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(200, 163, 86, 0.15);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Panel Media Frame */
+.ffw-panel-media {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d121c;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ffw-panel-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ffw-panel-media:hover img {
+  transform: scale(1.04);
+}
+
+.ffw-media-caption-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.95) 45%, #0a0e1a 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ffw-media-caption-text {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   RIGHT WING: HIGH QUALITY FELT SPOTLIGHT (Texture & Acoustic Superiority)
+   ========================================================================== */
+.ffw-felt-spotlight {
+  height: 100%;
+}
+
+.ffw-felt-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 22px 24px;
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  background: linear-gradient(165deg, rgba(20, 27, 44, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.ffw-felt-card::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(200, 163, 86, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ffw-felt-card-header {
+  position: relative;
+  z-index: 1;
+}
+
+.ffw-felt-card-header .bento-card-title {
+  font-size: 1.28rem;
+  margin: 8px 0 4px 0;
+  color: #fff;
+}
+
+.ffw-felt-card-header .bento-card-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Felt Texture Viewer Box */
+.ffw-texture-viewer {
+  position: relative;
+  height: 175px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 163, 86, 0.4);
+  background: #090d16;
+  cursor: zoom-in;
+  margin: 12px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 35px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.ffw-texture-viewer.is-zoomed {
+  cursor: zoom-out;
+}
+
+.ffw-texture-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  transform-origin: center center;
+}
+
+.ffw-texture-viewer.is-zoomed .ffw-texture-img {
+  transform: scale(2.4);
+}
+
+/* Animated Fiber Laser Scanning Beam */
+.ffw-texture-scanner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.9) 50%, transparent 100%);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.8), 0 0 4px #fff;
+  animation: ffwScanRay 4.5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes ffwScanRay {
+  0% {
+    top: 5%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  100% {
+    top: 95%;
+    opacity: 0;
+  }
+}
+
+.ffw-texture-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.92) 50%, #0a0e1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.ffw-texture-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ffw-zoom-toggle-btn {
+  background: rgba(200, 163, 86, 0.25);
+  border: 1px solid var(--gold-accent);
+  color: #ffd700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ffw-zoom-toggle-btn:hover,
+.ffw-zoom-toggle-btn.active {
+  background: var(--gold-accent);
+  color: #0a0e1a;
+}
+
+/* 4 Acoustic Superiority Bullet Items */
+.ffw-felt-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  position: relative;
+  z-index: 1;
+}
+
+.ffw-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ffw-highlight-item:hover {
+  background: rgba(200, 163, 86, 0.08);
+  border-color: rgba(200, 163, 86, 0.2);
+}
+
+.ffw-hl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 6px rgba(200, 163, 86, 0.6);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.ffw-highlight-item strong {
+  color: #fff;
+  font-size: 0.84rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Responsive Scaling for smaller / tablet screens */
+@media (max-width: 1400px) {
+  .ffw-history-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .ffw-milestone-panel.active {
+    grid-template-columns: 1fr;
+  }
+  .ffw-panel-media {
+    min-height: 150px;
+    height: 150px;
+  }
+  .ffw-texture-viewer {
+    height: 140px;
+  }
+}
+

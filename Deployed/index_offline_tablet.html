@@ -4560,6 +4560,599 @@ body::before {
   }
 }
 
+/* ==========================================================================
+   FOLIE 5: FFW WURZEN FIRMENGESCHICHTE & DER HOCHWERTIGE WEICKERT-FILZ
+   ========================================================================== */
+.slide[data-slide="5"] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient Felt Texture Background Layer */
+.ffw-ambient-felt-backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: url('../Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.085;
+  mix-blend-mode: luminosity;
+  filter: contrast(1.25) brightness(0.8);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slide[data-slide="5"] .slide-body {
+  position: relative;
+  z-index: 1;
+  height: calc(100% - 90px);
+  padding-bottom: 8px;
+}
+
+/* Main Two-Wing Grid Layout */
+.ffw-history-layout {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 22px;
+  height: 100%;
+  align-items: stretch;
+}
+
+/* Left Wing: Timeline & Historical Stages */
+.ffw-history-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Header Stepper & Autoplay Controls */
+.ffw-timeline-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ffw-play-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid rgba(200, 163, 86, 0.4);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+}
+
+.ffw-play-btn:hover {
+  background: rgba(200, 163, 86, 0.22);
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 16px rgba(200, 163, 86, 0.35);
+  transform: translateY(-1px);
+}
+
+.ffw-play-btn.playing {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+.ffw-play-icon {
+  font-size: 0.95rem;
+  color: var(--gold-accent);
+}
+
+.ffw-play-btn.playing .ffw-play-icon {
+  color: #10b981;
+}
+
+.ffw-play-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-accent), #ffd700);
+  transition: width 0.08s linear;
+}
+
+.ffw-step-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.ffw-step-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ffw-step-btn:hover:not(:disabled) {
+  background: var(--gold-accent);
+  color: #0a0e1a;
+  border-color: var(--gold-accent);
+}
+
+.ffw-step-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.ffw-step-counter {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  min-width: 44px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Epoch Tabs Navigation Bar */
+.ffw-epoch-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px;
+  background: rgba(14, 20, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  scrollbar-width: none;
+}
+
+.ffw-epoch-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.ffw-epoch-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ffw-epoch-tab:hover {
+  background: rgba(200, 163, 86, 0.1);
+  color: #fff;
+  border-color: rgba(200, 163, 86, 0.3);
+}
+
+.ffw-epoch-tab.active {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.25) 0%, rgba(200, 163, 86, 0.08) 100%);
+  border-color: var(--gold-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(200, 163, 86, 0.2);
+}
+
+.ffw-tab-year {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--gold-accent);
+  letter-spacing: 0.5px;
+}
+
+.ffw-epoch-tab.active .ffw-tab-year {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.ffw-tab-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  opacity: 0.85;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Stage Card: Holds Pre-rendered Panels */
+.ffw-stage-card {
+  flex: 1;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  min-height: 0;
+}
+
+.ffw-milestone-panel {
+  display: none;
+  height: 100%;
+  width: 100%;
+  padding: 24px 28px;
+  box-sizing: border-box;
+}
+
+.ffw-milestone-panel.active {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  animation: ffwPanelFade 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes ffwPanelFade {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ffw-panel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 0;
+}
+
+.ffw-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ffw-panel-year {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--gold-accent);
+  text-shadow: 0 2px 14px rgba(200, 163, 86, 0.3);
+}
+
+.ffw-panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin: 4px 0 2px 0;
+}
+
+.ffw-panel-subtitle {
+  font-size: 0.88rem;
+  color: var(--gold-light);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.ffw-panel-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 6px 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.ffw-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.ffw-bullet-item strong {
+  color: #fff;
+}
+
+.ffw-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ffw-fact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(200, 163, 86, 0.15);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Panel Media Frame */
+.ffw-panel-media {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d121c;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ffw-panel-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ffw-panel-media:hover img {
+  transform: scale(1.04);
+}
+
+.ffw-media-caption-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.95) 45%, #0a0e1a 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ffw-media-caption-text {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   RIGHT WING: HIGH QUALITY FELT SPOTLIGHT (Texture & Acoustic Superiority)
+   ========================================================================== */
+.ffw-felt-spotlight {
+  height: 100%;
+}
+
+.ffw-felt-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 22px 24px;
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  background: linear-gradient(165deg, rgba(20, 27, 44, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.ffw-felt-card::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(200, 163, 86, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ffw-felt-card-header {
+  position: relative;
+  z-index: 1;
+}
+
+.ffw-felt-card-header .bento-card-title {
+  font-size: 1.28rem;
+  margin: 8px 0 4px 0;
+  color: #fff;
+}
+
+.ffw-felt-card-header .bento-card-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Felt Texture Viewer Box */
+.ffw-texture-viewer {
+  position: relative;
+  height: 175px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 163, 86, 0.4);
+  background: #090d16;
+  cursor: zoom-in;
+  margin: 12px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 35px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.ffw-texture-viewer.is-zoomed {
+  cursor: zoom-out;
+}
+
+.ffw-texture-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  transform-origin: center center;
+}
+
+.ffw-texture-viewer.is-zoomed .ffw-texture-img {
+  transform: scale(2.4);
+}
+
+/* Animated Fiber Laser Scanning Beam */
+.ffw-texture-scanner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.9) 50%, transparent 100%);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.8), 0 0 4px #fff;
+  animation: ffwScanRay 4.5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes ffwScanRay {
+  0% {
+    top: 5%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  100% {
+    top: 95%;
+    opacity: 0;
+  }
+}
+
+.ffw-texture-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.92) 50%, #0a0e1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.ffw-texture-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ffw-zoom-toggle-btn {
+  background: rgba(200, 163, 86, 0.25);
+  border: 1px solid var(--gold-accent);
+  color: #ffd700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ffw-zoom-toggle-btn:hover,
+.ffw-zoom-toggle-btn.active {
+  background: var(--gold-accent);
+  color: #0a0e1a;
+}
+
+/* 4 Acoustic Superiority Bullet Items */
+.ffw-felt-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  position: relative;
+  z-index: 1;
+}
+
+.ffw-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ffw-highlight-item:hover {
+  background: rgba(200, 163, 86, 0.08);
+  border-color: rgba(200, 163, 86, 0.2);
+}
+
+.ffw-hl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 6px rgba(200, 163, 86, 0.6);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.ffw-highlight-item strong {
+  color: #fff;
+  font-size: 0.84rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Responsive Scaling for smaller / tablet screens */
+@media (max-width: 1400px) {
+  .ffw-history-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .ffw-milestone-panel.active {
+    grid-template-columns: 1fr;
+  }
+  .ffw-panel-media {
+    min-height: 150px;
+    height: 150px;
+  }
+  .ffw-texture-viewer {
+    height: 140px;
+  }
+}
+
+
 </style>
 </head>
 <body data-country-theme="de">
@@ -5952,52 +6545,366 @@ body::before {
           </div>
         </div>
       </section>
-<!-- SLIDE 5 (Sander Bento Mosaic) -->
+<!-- SLIDE 5 (Animierte FFW Firmengeschichte & Weickert-Filz) -->
       <section class="slide" data-slide="5">
-<div class="slide-header">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
+        <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s5_category">Teil 2: Filzherstellung • Historie & Tradition</div>
-            <h2 class="slide-title" data-i18n="s5_title">J.D. Weickert & Die Wiege des Hammerkopffilzes</h2>
-            <div class="slide-subtitle" data-i18n="s5_subtitle">1783 in Leipzig gegründet – 1847 Eröffnung der Spezialfabrik in Wurzen</div>
+            <h2 class="slide-title" data-i18n="s5_title">Filzfabrik Wurzen (FFW) – Die Wiege des Hammerkopffilzes</h2>
+            <div class="slide-subtitle" data-i18n="s5_subtitle">Seit 1783 • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner</div>
+          </div>
+
+          <!-- Timeline Stepper & Autoplay Controls -->
+          <div class="ffw-timeline-controls">
+            <button class="ffw-play-btn" id="ffw-play-btn" title="Zeitreise abspielen">
+              <span class="ffw-play-icon" id="ffw-play-icon">▶</span>
+              <span class="ffw-play-label" data-i18n="s5_play_label">Zeitreise abspielen</span>
+              <div class="ffw-play-progress" id="ffw-play-progress"></div>
+            </button>
+            <div class="ffw-step-buttons">
+              <button class="ffw-step-btn prev" id="ffw-prev-btn" title="Vorheriger Meilenstein">←</button>
+              <span class="ffw-step-counter" id="ffw-step-counter">1 / 6</span>
+              <button class="ffw-step-btn next" id="ffw-next-btn" title="Nächster Meilenstein">→</button>
+            </div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge gold" data-i18n="s5_b1_badge">>TRADITION 1783</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">1783</span>
-                <span class="bento-metric-unit">Gegründet</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Interactive History Stage (60% width) -->
+            <div class="ffw-history-main">
+              <!-- Epoch Tabs Bar -->
+              <div class="ffw-epoch-tabs" id="ffw-epoch-tabs" role="tablist">
+                <button class="ffw-epoch-tab active" data-epoch="0" role="tab" aria-selected="true">
+                  <span class="ffw-tab-year">1783</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab1_tag">Gründung</span>
+                </button>
+                <button class="ffw-epoch-tab" data-epoch="1" role="tab" aria-selected="false">
+                  <span class="ffw-tab-year">1847</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab2_tag">1. Pianofortefilz</span>
+                </button>
+                <button class="ffw-epoch-tab" data-epoch="2" role="tab" aria-selected="false">
+                  <span class="ffw-tab-year">1850–67</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab3_tag">Weltausstellung</span>
+                </button>
+                <button class="ffw-epoch-tab" data-epoch="3" role="tab" aria-selected="false">
+                  <span class="ffw-tab-year">1861</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab4_tag">Werk Wurzen</span>
+                </button>
+                <button class="ffw-epoch-tab" data-epoch="4" role="tab" aria-selected="false">
+                  <span class="ffw-tab-year">1903</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab5_tag">Weltmarktführer</span>
+                </button>
+                <button class="ffw-epoch-tab" data-epoch="5" role="tab" aria-selected="false">
+                  <span class="ffw-tab-year">Heute</span>
+                  <span class="ffw-tab-tag" data-i18n="s5_tab6_tag">Weickert Spezial</span>
+                </button>
               </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s5_bullet_1"><strong>Gründung 1783:</strong> Gegründet von Johann David Weickert in Leipzig (Sachsen). Ursprünglich Tuch- und Filzherstellung.</span>
+
+              <!-- Active Epoch Stage Card -->
+              <div class="ffw-stage-card" id="ffw-stage-card">
+                <!-- PANEL 0: 1783 GRÜNDUNG -->
+                <div class="ffw-milestone-panel active" data-panel="0">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s5_b1_badge">>URSPRUNG 1783</span>
+                      <span class="ffw-panel-year">1783</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m1_title">Gründung durch Johann Dankegott Weickert</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m1_subtitle">Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Leipzig</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m1_bullet_1"><strong>Werkstatt in Leipzig:</strong> 1783 legte Johann Dankegott Weickert in Leipzig den Grundstein mit einer Werkstatt für optische Geräte und feine Wollwaren.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m1_bullet_2"><strong>Ausbau zum Großhandel:</strong> Sohn August Moritz Weickert erweiterte das Unternehmen zu einem bedeutenden Großhandel für Werkzeuge und Qualitätsmaterialien.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m1_bullet_3"><strong>Die Geburt des Hammerklaviers:</strong> Mit der Weiterentwicklung des Hammerklaviers im späten 18. Jahrhundert entstand die Suche nach dem idealen Anschlagmaterial für die Saiten.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s5_m1_fact">🏛 Älteste industrielle Filzmanufaktur weltweit</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_wolle_kardieren_vlies.jpeg" alt="Rohwolle Vlies zu Filz">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s5_b2_badge">>FASER-URSPRUNG</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m1_caption">Vom handkardierten Rohwollvlies zum hochverdichteten Weickert-Filzblock</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s5_bullet_2"><strong>Pionierleistung 1847:</strong> In der neu errichteten Fabrik in Wurzen gelang es erstmals, speziellen Hammerkopffilz in gleichbleibender Spitzenqualität zu fertigen, wie er bis heute genutzt wird.</span>
+
+                <!-- PANEL 1: 1847 DER ERSTE PIANOFORTEFILZ -->
+                <div class="ffw-milestone-panel" data-panel="1">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s5_b3_badge">>ERFINDUNG 1847</span>
+                      <span class="ffw-panel-year">1847</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m2_title">Erster brauchbarer Pianofortefilz Deutschlands</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m2_subtitle">Friedrich Wilhelm & Carl Wilhelm Patzschke revolutionieren den Klavierbau</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m2_bullet_1"><strong>Revolution statt Leder:</strong> 1847 gelang es den Leipziger Wollhändlern F.W. und C.W. Patzschke erstmals, einen Filz zu fertigen, der den bisherigen harten Lederbezug ersetzte.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m2_bullet_2"><strong>Partnerschaft mit Weickert:</strong> August Moritz Weickert übernahm Finanzierung und Risiko der Großproduktion; Carl Wilhelm Patzschke leitete als sachkundiger Direktor die Fabrikation.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m2_bullet_3"><strong>Die Suche nach reinem Wasser:</strong> Erste Schritte in Werdau zeigten schnell: Für reinsten weißen Pianofilz sind absolut sauberes Wasser und rußfreie Luft unverzichtbar.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s5_m2_fact">🎹 Meilenstein: Filz löst Leder im Klavierbau ab</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_golzernmuehle_1850_large.png" alt="Golzernmühle 1850">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s5_b4_badge">>GOLZERNMÜHLE 1850</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m2_caption">Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s5_bullet_3"><strong>Weltweiter Hoflieferant:</strong> Bereits im 19. Jahrhundert belieferte Weickert die renommiertesten Pianoforte-Fabrikanten Europas und Amerikas.</span>
+
+                <!-- PANEL 2: 1850–1867 WELTAUSSTELLUNGEN & MEDAILLEN -->
+                <div class="ffw-milestone-panel" data-panel="2">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s5_b5_badge">>WELTRUHM 1851</span>
+                      <span class="ffw-panel-year">1851</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m3_title">Weltausstellungen & Goldmedaillen London & Paris</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m3_subtitle">Internationale Triumphe, königliche Ehrungen und weltweite Anerkennung</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m3_bullet_1"><strong>Internationale Auszeichnungen:</strong> Medaillen auf der Industrieausstellung 1850 in Leipzig sowie den Weltausstellungen 1851 in London und 1867 in Paris begründeten den Weltruf.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m3_bullet_2"><strong>Besuche sächsischer Könige:</strong> Die Könige von Sachsen besuchten die Manufaktur persönlich und würdigten die überragende Qualität des sächsischen Filzes.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m3_bullet_3"><strong>Weltweiter Hoflieferant:</strong> Führende Klaviermacher in Wien, Paris und London bestellten fortan begeistert den geschmeidigen Weickert-Filz.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s5_m3_fact">🏅 Medaillen London 1851, Paris 1867 & Leipzig</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_medaille_1850.jpg" alt="Historische Medaillen">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s5_b6_badge">>AUSZEICHNUNGEN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m3_caption">Historische Medaillen der Weltausstellungen für vollendete Filzgüte</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s5_bullet_4"><strong>Klangliche Identität:</strong> Weickert-Filz gilt weltweit als der Inbegriff des warmen, tragfähigen und farbenreichen europäischen Klaviertons.</span>
+
+                <!-- PANEL 3: 1861 WERK WURZEN -->
+                <div class="ffw-milestone-panel" data-panel="3">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s5_b7_badge">>EXPANSION 1861</span>
+                      <span class="ffw-panel-year">1861</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m4_title">Umzug nach Wurzen: Dampfmaschinen & Mulde-Wasser</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m4_subtitle">Errichtung der hochmodernen Pianofortefilzfabrik am Wurzener Mühlgraben</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m4_bullet_1"><strong>Standort am Mühlgraben:</strong> 1861 zog die Manufaktur nach Wurzen. Es entstanden großzügige Produktionshallen und ein eigenes Heizhaus mit Dampfkraft.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m4_bullet_2"><strong>Dampfbetriebene Walkmaschinen:</strong> Neu entwickelte Walk- und Filzmaschinen sicherten bisher unerreichte Dichte, Elastizität und Chargenkonstanz.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m4_bullet_3"><strong>Das Geheimnis der Mulde:</strong> Das weiche, mineralarme Wasser der Mulde erwies sich als perfekter natürlicher Faktor für die schonende Wollwäsche.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s5_m4_fact">⚙️ Dampf-Walkerei & weiches Mulde-Flusswasser</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_fabrik_1871.jpg" alt="Pianofortefilzfabrik Wurzen 1871">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s5_b8_badge">>WURZEN 1871</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m4_caption">Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PANEL 4: 1903 WELTMARKTFÜHRER -->
+                <div class="ffw-milestone-panel" data-panel="4">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s5_b9_badge">>WELTMARKTFÜHRER 1903</span>
+                      <span class="ffw-panel-year">1903</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m5_title">Weltmarktführer für 200.000 Klaviere jährlich</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m5_subtitle">Hoflieferant für Steinway New York, Villa Patzschke & 350 Mitarbeiter</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m5_bullet_1"><strong>Filz für 200.000 Instrumente:</strong> Zur Blütezeit um 1903 lieferte Wurzen jährlich Hammerkopffilz für rund 200.000 Flügel und Klaviere weltweit.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m5_bullet_2"><strong>Export nach Übersee:</strong> Bedeutendster Kunde war Steinway & Sons New York, neben führenden Spitzenmarken in Frankreich, England, Russland und Italien.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m5_bullet_3"><strong>Patzschke-Familiendynastie:</strong> In der 1883/84 erbauten Werksvilla leiteten drei Generationen der Familie Patzschke die Manufaktur mit 350 Meistern und Facharbeitern.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s5_m5_fact">🌎 Weltweiter Standard für Steinway & Sons</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_villa_patzschke.png" alt="Villa Patzschke Wurzen">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s5_b10_badge">>VILLA PATZSCHKE</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m5_caption">Villa Patzschke auf dem Werksgelände – Wohn- und Direktionssitz dreier Generationen</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PANEL 5: 1991–HEUTE RENAISSANCE & WEICKERT SPEZIAL -->
+                <div class="ffw-milestone-panel" data-panel="5">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s5_b11_badge">>HEUTE • RENNER PARTNER</span>
+                      <span class="ffw-panel-year">Heute</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s5_m6_title">Renaissance von „Weickert Spezial“ für Renner</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s5_m6_subtitle">Reprivatisierung durch Fam. Brand & exklusive Spitzenqualität für Louis Renner</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m6_bullet_1"><strong>1991 Reprivatisierung:</strong> Die Familie Brand übernahm das Werk im Einvernehmen mit den Weickert-Erben. Klavierbauer weltweit forderten die originale historische Rezeptur zurück.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m6_bullet_2"><strong>Wiedergeburt von „Weickert Spezial“:</strong> 2010 schloss sich mit der Reaktivierung der legendären Weickert-Spezial-Qualität der Kreis zu den glanzvollen Ursprüngen von 1903.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s5_m6_bullet_3"><strong>Exklusiv-Symbiose mit Renner:</strong> Renner bezieht seinen gesamten Premium-Hammerfilz aus Wurzen – für unerreichte klangliche Plastizität und Modulationsfähigkeit.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s5_m6_fact">✨ Wieder auf dem Weltspitzen-Niveau von 1903</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_hammerkopf_2010.jpg" alt="Weickert Spezial Hammerkopf">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s5_b12_badge">>WEICKERT SPEZIAL</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m6_caption">Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_3_2_Image161.jpg" alt="Geschichte Weickert Filz">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s5_b2_badge">>WURZEN (SACHSEN)</span>
-                <div class="bento-media-caption" data-i18n="s5_caption_1">Original Weickert-Manufaktur in Wurzen (Sachsen)</div>
+
+            <!-- RIGHT WING: High Quality Felt Spotlight (40% width) -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s5_b13_badge">>100% REINE MERINO-SCHURWOLLE</span>
+                  <div class="bento-card-title" data-i18n="s5_c1_title">Das Geheimnis des Weickert-Filzes</div>
+                  <div class="bento-card-desc" data-i18n="s5_c1_desc">
+                    Rein mechanische Verfilzung ohne chemische Klebstoffe – die unersetzbare klangliche Seele des Konzertflügels
+                  </div>
+                </div>
+
+                <!-- Felt Texture Viewer Box with Animation & Zoom -->
+                <div class="ffw-texture-viewer" id="ffw-texture-viewer" title="Klicken für 2,5x Makro-Faser-Inspektion">
+                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Gewalkte Merinowolle Kompression" class="ffw-texture-img" id="ffw-texture-img">
+                  <!-- Animated Fiber Laser Scanning Beam -->
+                  <div class="ffw-texture-scanner" aria-hidden="true"></div>
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s5_texture_tag">Mikro-Textur: Walk-Kompression</span>
+                    <button class="ffw-zoom-toggle-btn" id="ffw-zoom-toggle-btn" data-i18n="s5_zoom_btn">🔍 Faser-Lupe</button>
+                  </div>
+                </div>
+
+                <!-- 4 Acoustic Excellence Highlights -->
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s5_hl1_title">100% Merinowolle & Schuppenstruktur:</strong>
+                      <span data-i18n="s5_hl1_desc">Reine Naturfasern mit natürlichen mikroskopischen Schuppen, die sich beim Walken dauerhaft ineinander verkrallen.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s5_hl2_title">Reine Walkung ohne Kunstharze:</strong>
+                      <span data-i18n="s5_hl2_desc">Verdichtung ausschließlich durch heißes Mulde-Wasser, Reibung und Druck – niemals durch synthetische Kleber gedämpft.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s5_hl3_title">Dauerelastische Rückfederung:</strong>
+                      <span data-i18n="s5_hl3_desc">Organische Spannkraft federt nach dem Saitenkontakt blitzschnell zurück – keine Dämpfung der Obertonschwingung.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s5_hl4_title">Exklusive Renner-Symbiose:</strong>
+                      <span data-i18n="s5_hl4_desc">Nur die streng selektierten Wurzener Weickert-Spezial-Tafeln erfüllen Renners Maßstäbe für Konzertflügel.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -9764,16 +10671,77 @@ window.slideTranslations = {
     "s4_subtitle": "Fotodokumentation der Meilensteine des Umbaus in Meuselwitz (11.2025 – 10.2026)",
     "s4_notes": "Folie 4: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
     "s5_category": "Teil 2: Filzherstellung • Historie & Tradition",
-    "s5_title": "J.D. Weickert & Die Wiege des Hammerkopffilzes",
-    "s5_subtitle": "1783 in Leipzig gegründet – 1847 Eröffnung der Spezialfabrik in Wurzen",
-    "s5_bullet_1": "<strong>Gründung 1783:</strong> Gegründet von Johann David Weickert in Leipzig (Sachsen). Ursprünglich Tuch- und Filzherstellung.",
-    "s5_bullet_2": "<strong>Pionierleistung 1847:</strong> In der neu errichteten Fabrik in Wurzen gelang es erstmals, speziellen Hammerkopffilz in gleichbleibender Spitzenqualität zu fertigen, wie er bis heute genutzt wird.",
-    "s5_bullet_3": "<strong>Weltweiter Hoflieferant:</strong> Bereits im 19. Jahrhundert belieferte Weickert die renommiertesten Pianoforte-Fabrikanten Europas und Amerikas.",
-    "s5_bullet_4": "<strong>Klangliche Identität:</strong> Weickert-Filz gilt weltweit als der Inbegriff des warmen, tragfähigen und farbenreichen europäischen Klaviertons.",
-    "s5_caption_1": "Original Weickert-Manufaktur in Wurzen (Sachsen)",
-    "s5_b1_badge": "TRADITION 1783",
-    "s5_b2_badge": "WURZEN (SACHSEN)",
-    "s5_notes": "Folie 5: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+    "s5_title": "Filzfabrik Wurzen (FFW) – Die Wiege des Hammerkopffilzes",
+    "s5_subtitle": "Seit 1783 • Vom ersten deutschen Pianofortefilz 1847 zur Renaissance von „Weickert Spezial“ für Renner",
+    "s5_play_label": "Zeitreise abspielen",
+    "s5_tab1_tag": "Gründung",
+    "s5_tab2_tag": "1. Pianofortefilz",
+    "s5_tab3_tag": "Weltausstellung",
+    "s5_tab4_tag": "Werk Wurzen",
+    "s5_tab5_tag": "Weltmarktführer",
+    "s5_tab6_tag": "Weickert Spezial",
+    "s5_m1_badge": "URSPRUNG 1783",
+    "s5_m1_title": "Gründung durch Johann Dankegott Weickert",
+    "s5_m1_subtitle": "Die historischen Wurzeln der ältesten industriellen Filzmanufaktur der Welt in Leipzig",
+    "s5_m1_bullet_1": "<strong>Werkstatt in Leipzig:</strong> 1783 legte Johann Dankegott Weickert in Leipzig den Grundstein mit einer Werkstatt für optische Geräte und feine Wollwaren.",
+    "s5_m1_bullet_2": "<strong>Ausbau zum Großhandel:</strong> Sohn August Moritz Weickert erweiterte das Unternehmen zu einem bedeutenden Großhandel für Werkzeuge und Qualitätsmaterialien.",
+    "s5_m1_bullet_3": "<strong>Die Geburt des Hammerklaviers:</strong> Mit der Weiterentwicklung des Hammerklaviers im späten 18. Jahrhundert entstand die Suche nach dem idealen Anschlagmaterial für die Saiten.",
+    "s5_m1_fact": "🏛 Älteste industrielle Filzmanufaktur weltweit",
+    "s5_m1_caption": "Vom handkardierten Rohwollvlies zum hochverdichteten Weickert-Filzblock",
+    "s5_m2_badge": "ERFINDUNG 1847",
+    "s5_m2_title": "Erster brauchbarer Pianofortefilz Deutschlands",
+    "s5_m2_subtitle": "Friedrich Wilhelm & Carl Wilhelm Patzschke revolutionieren den Klavierbau",
+    "s5_m2_bullet_1": "<strong>Revolution statt Leder:</strong> 1847 gelang es den Leipziger Wollhändlern F.W. und C.W. Patzschke erstmals, einen Filz zu fertigen, der den bisherigen harten Lederbezug ersetzte.",
+    "s5_m2_bullet_2": "<strong>Partnerschaft mit Weickert:</strong> August Moritz Weickert übernahm Finanzierung und Risiko der Großproduktion; Carl Wilhelm Patzschke leitete als sachkundiger Direktor die Fabrikation.",
+    "s5_m2_bullet_3": "<strong>Die Suche nach reinem Wasser:</strong> Erste Schritte in Werdau zeigten schnell: Für reinsten weißen Pianofilz sind absolut sauberes Wasser und rußfreie Luft unverzichtbar.",
+    "s5_m2_fact": "🎹 Meilenstein: Filz löst Leder im Klavierbau ab",
+    "s5_m2_caption": "Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde",
+    "s5_m3_badge": "WELTRUHM 1851",
+    "s5_m3_title": "Weltausstellungen & Goldmedaillen London & Paris",
+    "s5_m3_subtitle": "Internationale Triumphe, königliche Ehrungen und weltweite Anerkennung",
+    "s5_m3_bullet_1": "<strong>Internationale Auszeichnungen:</strong> Medaillen auf der Industrieausstellung 1850 in Leipzig sowie den Weltausstellungen 1851 in London und 1867 in Paris begründeten den Weltruf.",
+    "s5_m3_bullet_2": "<strong>Besuche sächsischer Könige:</strong> Die Könige von Sachsen besuchten die Manufaktur persönlich und würdigten die überragende Qualität des sächsischen Filzes.",
+    "s5_m3_bullet_3": "<strong>Weltweiter Hoflieferant:</strong> Führende Klaviermacher in Wien, Paris und London bestellten fortan begeistert den geschmeidigen Weickert-Filz.",
+    "s5_m3_fact": "🏅 Medaillen London 1851, Paris 1867 & Leipzig",
+    "s5_m3_caption": "Historische Medaillen der Weltausstellungen für vollendete Filzgüte",
+    "s5_m4_badge": "EXPANSION 1861",
+    "s5_m4_title": "Umzug nach Wurzen: Dampfmaschinen & Mulde-Wasser",
+    "s5_m4_subtitle": "Errichtung der hochmodernen Pianofortefilzfabrik am Wurzener Mühlgraben",
+    "s5_m4_bullet_1": "<strong>Standort am Mühlgraben:</strong> 1861 zog die Manufaktur nach Wurzen. Es entstanden großzügige Produktionshallen und ein eigenes Heizhaus mit Dampfkraft.",
+    "s5_m4_bullet_2": "<strong>Dampfbetriebene Walkmaschinen:</strong> Neu entwickelte Walk- und Filzmaschinen sicherten bisher unerreichte Dichte, Elastizität und Chargenkonstanz.",
+    "s5_m4_bullet_3": "<strong>Das Geheimnis der Mulde:</strong> Das weiche, mineralarme Wasser der Mulde erwies sich als perfekter natürlicher Faktor für die schonende Wollwäsche.",
+    "s5_m4_fact": "⚙️ Dampf-Walkerei & weiches Mulde-Flusswasser",
+    "s5_m4_caption": "Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben",
+    "s5_m5_badge": "WELTMARKTFÜHRER 1903",
+    "s5_m5_title": "Weltmarktführer für 200.000 Klaviere jährlich",
+    "s5_m5_subtitle": "Hoflieferant für Steinway New York, Villa Patzschke & 350 Mitarbeiter",
+    "s5_m5_bullet_1": "<strong>Filz für 200.000 Instrumente:</strong> Zur Blütezeit um 1903 lieferte Wurzen jährlich Hammerkopffilz für rund 200.000 Flügel und Klaviere weltweit.",
+    "s5_m5_bullet_2": "<strong>Export nach Übersee:</strong> Bedeutendster Kunde war Steinway & Sons New York, neben führenden Spitzenmarken in Frankreich, England, Russland und Italien.",
+    "s5_m5_bullet_3": "<strong>Patzschke-Familiendynastie:</strong> In der 1883/84 erbauten Werksvilla leiteten drei Generationen der Familie Patzschke die Manufaktur mit 350 Meistern und Facharbeitern.",
+    "s5_m5_fact": "🌎 Weltweiter Standard für Steinway & Sons",
+    "s5_m5_caption": "Villa Patzschke auf dem Werksgelände – Wohn- und Direktionssitz dreier Generationen",
+    "s5_m6_badge": "HEUTE • RENNER PARTNER",
+    "s5_m6_title": "Renaissance von „Weickert Spezial“ für Renner",
+    "s5_m6_subtitle": "Reprivatisierung durch Fam. Brand & exklusive Spitzenqualität für Louis Renner",
+    "s5_m6_bullet_1": "<strong>1991 Reprivatisierung:</strong> Die Familie Brand übernahm das Werk im Einvernehmen mit den Weickert-Erben. Klavierbauer weltweit forderten die originale historische Rezeptur zurück.",
+    "s5_m6_bullet_2": "<strong>Wiedergeburt von „Weickert Spezial“:</strong> 2010 schloss sich mit der Reaktivierung der legendären Weickert-Spezial-Qualität der Kreis zu den glanzvollen Ursprüngen von 1903.",
+    "s5_m6_bullet_3": "<strong>Exklusiv-Symbiose mit Renner:</strong> Renner bezieht seinen gesamten Premium-Hammerfilz aus Wurzen – für unerreichte klangliche Plastizität und Modulationsfähigkeit.",
+    "s5_m6_fact": "✨ Wieder auf dem Weltspitzen-Niveau von 1903",
+    "s5_m6_caption": "Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe",
+    "s5_felt_badge": "100% REINE MERINO-SCHURWOLLE",
+    "s5_felt_title": "Das Geheimnis des Weickert-Filzes",
+    "s5_felt_subtitle": "Rein mechanische Verfilzung ohne chemische Klebstoffe – die unersetzbare klangliche Seele des Konzertflügels",
+    "s5_texture_tag": "Mikro-Textur: Walk-Kompression",
+    "s5_zoom_btn": "🔍 Faser-Lupe",
+    "s5_hl1_title": "100% Merinowolle & Schuppenstruktur:",
+    "s5_hl1_desc": "Reine Naturfasern mit natürlichen mikroskopischen Schuppen, die sich beim Walken dauerhaft ineinander verkrallen.",
+    "s5_hl2_title": "Reine Walkung ohne Kunstharze:",
+    "s5_hl2_desc": "Verdichtung ausschließlich durch heißes Mulde-Wasser, Reibung und Druck – niemals durch synthetische Kleber gedämpft.",
+    "s5_hl3_title": "Dauerelastische Rückfederung:",
+    "s5_hl3_desc": "Organische Spannkraft federt nach dem Saitenkontakt blitzschnell zurück – keine Dämpfung der Obertonschwingung.",
+    "s5_hl4_title": "Exklusive Renner-Symbiose:",
+    "s5_hl4_desc": "Nur die streng selektierten Wurzener Weickert-Spezial-Tafeln erfüllen Renners Maßstäbe für Konzertflügel.",
+    "s5_notes": "Folie 5: Die Firmengeschichte der Filzfabrik Wurzen (FFW) von 1783 bis heute und das Geheimnis des Weickert-Filzes. Stellen Sie die 6 historischen Meilensteine vor: 1783 Gründung in Leipzig durch J.D. Weickert, 1847 Erfindung des ersten deutschen Pianofortefilzes durch die Wollhändler Patzschke (Ablösung des Lederbezugs), 1850-1867 Weltausstellungen London & Paris mit königlichen Ehrungen, 1861 Umzug nach Wurzen an den Mühlgraben mit Dampfmaschinen und dem weichen Mulde-Wasser, 1903 Weltmarktführer für 200.000 Klaviere jährlich (Steinway New York) und 2010 die Renaissance von 'Weickert Spezial' exklusiv für Louis Renner. Betonen Sie auf der rechten Folienseite den hochwertigen Filz: 100% reine Merinowolle, rein mechanische Verfilzung ohne Harze oder Klebstoffe, dauerelastische Rückfederung und die unersetzbare Bedeutung für den warmen, tragfähigen europäischen Konzertflügelklang.",
     "s6_category": "Teil 2: Filzherstellung • FFW Wurzen heute",
     "s6_title": "FFW Wurzen – Weickert-Filz in der Gegenwart",
     "s6_subtitle": "Traditionelles Handwerkswissen vereint mit modernsten Produktionsstandards",
@@ -10535,17 +11503,78 @@ window.slideTranslations = {
     "s4_title": "Construction Documentary: Creation of the New Factory",
     "s4_subtitle": "Interactive journey from construction start (11.2025) to commissioning (10.2026)",
     "s4_notes": "Slide 4: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-    "s5_category": "Part 2: Felt Manufacturing • Historie & Tradition",
-    "s5_title": "J.D. Weickert & The Birthplace of Hammerhead Felt",
-    "s5_subtitle": "Founded in Leipzig in 1783 – Opening of the specialized Wurzen factory in 1847",
-    "s5_bullet_1": "<strong>Founded in 1783:</strong> Established by Johann David Weickert in Leipzig (originally founded in 1714 in Dessau), initially manufacturing fine woven woolen goods.",
-    "s5_bullet_2": "<strong>Pioneering Achievement in 1847:</strong> In the newly built factory in Wurzen, Weickert succeeded in manufacturing the world's first industrial piano hammer felt.",
-    "s5_bullet_3": "<strong>Global Purveyor to Royal Courts:</strong> As early as the 19th century, Weickert supplied all leading European piano manufacturers and was officially awarded royal purveyor titles.",
-    "s5_bullet_4": "<strong>Sonic Identity:</strong> Worldwide, Weickert felt is considered the quintessential standard for the singing, warm, yet brilliant European piano tone.",
-    "s5_caption_1": "Original Weickert manufactory in Wurzen (Saxony)",
-    "s5_b1_badge": "TRADITION 1783",
-    "s5_b2_badge": "WURZEN (SAXONY)",
-    "s5_notes": "Slide 5: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+    "s5_category": "Part 2: Felt Manufacturing • History & Tradition",
+    "s5_title": "Filzfabrik Wurzen (FFW) – The Birthplace of Piano Hammer Felt",
+    "s5_subtitle": "Since 1783 • From the first German piano felt in 1847 to the renaissance of “Weickert Spezial” for Renner",
+    "s5_play_label": "Play Time Journey",
+    "s5_tab1_tag": "Founding",
+    "s5_tab2_tag": "1st Piano Felt",
+    "s5_tab3_tag": "World Expo",
+    "s5_tab4_tag": "Wurzen Mill",
+    "s5_tab5_tag": "World Leader",
+    "s5_tab6_tag": "Weickert Special",
+    "s5_m1_badge": "ORIGIN 1783",
+    "s5_m1_title": "Founded by Johann Dankegott Weickert",
+    "s5_m1_subtitle": "The historic roots in Leipzig of the world's oldest industrial felt manufactory",
+    "s5_m1_bullet_1": "<strong>Leipzig Workshop:</strong> In 1783, Johann Dankegott Weickert laid the cornerstone in Leipzig with a specialized workshop for optical instruments and fine woolen goods.",
+    "s5_m1_bullet_2": "<strong>Wholesale Expansion:</strong> Son August Moritz Weickert expanded the firm into a major wholesale house for precision tools and quality materials.",
+    "s5_m1_bullet_3": "<strong>Birth of the Fortepiano:</strong> As the hammer-action piano evolved in the late 18th century, piano makers began searching for the ideal striking medium.",
+    "s5_m1_fact": "🏛 Oldest industrial felt manufactory worldwide",
+    "s5_m1_caption": "From hand-carded raw wool fleece to ultra-dense Weickert felt blocks",
+    "s5_m2_badge": "INVENTION 1847",
+    "s5_m2_title": "Germany's First Viable Piano Hammer Felt",
+    "s5_m2_subtitle": "Friedrich Wilhelm & Carl Wilhelm Patzschke revolutionize piano manufacturing",
+    "s5_m2_bullet_1": "<strong>Felt Replaces Leather:</strong> In 1847, Leipzig wool merchants F.W. and C.W. Patzschke succeeded in producing a dense felt that replaced uneven leather hammer coverings.",
+    "s5_m2_bullet_2": "<strong>Weickert Partnership:</strong> August Moritz Weickert financed large-scale industrialization; Carl Wilhelm Patzschke served as technical manufacturing director.",
+    "s5_m2_bullet_3": "<strong>Quest for Pure Water:</strong> Initial trials in Werdau proved that pure white piano felt requires perfectly clean river water and soot-free air.",
+    "s5_m2_fact": "🎹 Milestone: Felt permanently replaces leather",
+    "s5_m2_caption": "Golzernmühle near Grimma (1850): Early felt making on an island in the Mulde river",
+    "s5_m3_badge": "WORLD FAME 1851",
+    "s5_m3_title": "World Expos & Gold Medals in London & Paris",
+    "s5_m3_subtitle": "International triumphs, royal visits, and worldwide critical acclaim",
+    "s5_m3_bullet_1": "<strong>Prestigious Awards:</strong> Medals at the 1850 Leipzig Industrial Expo, the 1851 Great Exhibition in London, and the 1867 Paris World's Fair cemented global fame.",
+    "s5_m3_bullet_2": "<strong>Royal Visits:</strong> The Kings of Saxony personally toured the manufacturing halls, honoring the outstanding quality of Saxon piano felt.",
+    "s5_m3_bullet_3": "<strong>Purveyor to Elite Makers:</strong> Master piano builders in Vienna, Paris, and London rapidly switched exclusively to resilient Weickert felt.",
+    "s5_m3_fact": "🏅 Medals London 1851, Paris 1867 & Leipzig",
+    "s5_m3_caption": "Historical World Expo medals awarded for superlative felt excellence",
+    "s5_m4_badge": "EXPANSION 1861",
+    "s5_m4_title": "Relocation to Wurzen: Steam Power & Pure Mulde Water",
+    "s5_m4_subtitle": "Erection of the state-of-the-art piano felt manufactory at Mühlgraben Wurzen",
+    "s5_m4_bullet_1": "<strong>Mühlgraben Facility:</strong> In 1861, the company relocated to Wurzen, constructing sprawling production halls and a central steam engine boiler house.",
+    "s5_m4_bullet_2": "<strong>Steam-Driven Fulling Mills:</strong> Custom-engineered fulling and felting machines achieved unprecedented elasticity, density, and batch consistency.",
+    "s5_m4_bullet_3": "<strong>The Mulde River Secret:</strong> The soft, mineral-poor river water proved to be the ultimate natural asset for gentle, residue-free wool scouring.",
+    "s5_m4_fact": "⚙️ Steam fulling & pure soft Mulde river water",
+    "s5_m4_caption": "Original historical engraving of Pianofortefilzfabrik in Wurzen (1871)",
+    "s5_m5_badge": "WORLD LEADER 1903",
+    "s5_m5_title": "Global Market Leader for 200,000 Pianos Annually",
+    "s5_m5_subtitle": "Purveyor to Steinway New York, Patzschke Villa & 350 craftsmen",
+    "s5_m5_bullet_1": "<strong>Felt for 200,000 Pianos:</strong> At its peak in 1903, Wurzen produced hammer felt for approximately 200,000 grand and upright pianos every year.",
+    "s5_m5_bullet_2": "<strong>Global Export Giant:</strong> Foremost customer was Steinway & Sons New York, alongside premier makers in France, England, Russia, and Italy.",
+    "s5_m5_bullet_3": "<strong>Patzschke Dynasty:</strong> Inside the 1883/84 Patzschke Villa on site, three generations directed 350 skilled felt masters.",
+    "s5_m5_fact": "🌎 Global benchmark for Steinway & Sons",
+    "s5_m5_caption": "Villa Patzschke on factory grounds – Residence and headquarters across 3 generations",
+    "s5_m6_badge": "TODAY • RENNER PARTNER",
+    "s5_m6_title": "Renaissance of “Weickert Spezial” for Renner",
+    "s5_m6_subtitle": "Reprivatization by the Brand family & exclusive gold standard for Louis Renner",
+    "s5_m6_bullet_1": "<strong>1991 Reprivatization:</strong> The Brand family reprivatized the facility alongside Weickert heirs; piano builders worldwide demanded the return of the authentic formula.",
+    "s5_m6_bullet_2": "<strong>Rebirth of Weickert Spezial:</strong> In 2010, reintroducing the legendary Weickert Spezial formula brought full circle the peak standard of 1903.",
+    "s5_m6_bullet_3": "<strong>Exclusive Renner Symbiosis:</strong> Today Louis Renner sources its entire premium hammerhead felt from Wurzen for unparalleled acoustic clarity and power.",
+    "s5_m6_fact": "✨ Restored to the 1903 world-class pinnacle",
+    "s5_m6_caption": "Wurzen Weickert Spezial felt: Flawless voicing response & tonal depth",
+    "s5_felt_badge": "100% PURE MERINO VIRGIN WOOL",
+    "s5_felt_title": "The Acoustic Secret of Weickert Felt",
+    "s5_felt_subtitle": "Pure mechanical fulling without chemical binders – the irreplaceable acoustic soul of the concert grand",
+    "s5_texture_tag": "Micro-Texture: Fulling Compression",
+    "s5_zoom_btn": "🔍 Fiber Lens",
+    "s5_hl1_title": "100% Merino Wool & Scale Structure:",
+    "s5_hl1_desc": "Pure natural virgin fibers with microscopic scales that physically lock together during humid mechanical fulling.",
+    "s5_hl2_title": "Pure Fulling without Synthetic Binders:",
+    "s5_hl2_desc": "Densified exclusively by hot river water, friction, and pressure – zero acoustic damping caused by hardened glues.",
+    "s5_hl3_title": "Permanent Elastic Rebound & Springback:",
+    "s5_hl3_desc": "Organic keratin elasticity snaps back in milliseconds from the string, preventing energy loss and muting.",
+    "s5_hl4_title": "Exclusive Renner Partnership:",
+    "s5_hl4_desc": "Only strictly hand-selected Wurzen Weickert Spezial sheets meet Renner's exacting acoustic tolerances.",
+    "s5_notes": "Slide 5: The company history of Filzfabrik Wurzen (FFW) from 1783 to the present and the acoustic secret of Weickert felt. Introduce the 6 historical milestones: 1783 founding in Leipzig by J.D. Weickert, 1847 invention of the first German piano hammer felt by the Patzschke family (replacing leather hammer covers), 1850-1867 London & Paris World Expos with royal honors, 1861 relocation to Wurzen with steam engines and soft Mulde river water, 1903 world leader for 200,000 pianos annually (Steinway New York), and 2010 the renaissance of 'Weickert Spezial' exclusively for Louis Renner. On the right side, highlight the premium felt: 100% pure Merino virgin wool, purely mechanical fulling without resins or binders, permanent elastic springback, and its critical role in shaping the singing European grand piano tone.",
     "s6_category": "Part 2: Felt Manufacturing • FFW Wurzen heute",
     "s6_title": "FFW Wurzen – Weickert Felt in Contemporary Times",
     "s6_subtitle": "Traditional artisan craftsmanship combined with state-of-the-art production standards",
@@ -11307,17 +12336,78 @@ window.slideTranslations = {
     "s4_title": "新工場建設記録：モイゼルヴィッツ新本社の誕生",
     "s4_subtitle": "着工（2025年11月）から全面稼働（2026年10月）までのタイムラプス建設記録",
     "s4_notes": "スライド 4: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-    "s5_category": "第2部：極上フェルト製造の秘密（ヴルツェン工場）",
-    "s5_title": "J.D.ヴァイケルトとハンマーフェルトの原点",
-    "s5_subtitle": "1783 in Leipzig gegründet – 1847 Eröffnung der Spezialfabrik in Wurzen",
-    "s5_bullet_1": "<strong>Gründung 1783:</strong> Gegründet von Johann David Weickert in Leipzig (Sachsen). Ursprünglich Tuch- und Filzherstellung.",
-    "s5_bullet_2": "<strong>Pionierleistung 1847:</strong> In der neu errichteten Fabrik in Wurzen gelang es erstmals, speziellen Hammerkopffilz in gleichbleibender Spitzenqualität zu fertigen, wie er bis heute genutzt wird.",
-    "s5_bullet_3": "<strong>Weltweiter Hoflieferant:</strong> Bereits im 19. Jahrhundert belieferte Weickert die renommiertesten Pianoforte-Fabrikanten Europas und Amerikas.",
-    "s5_bullet_4": "<strong>Klangliche Identität:</strong> Weickert-Filz gilt weltweit als der Inbegriff des warmen, tragfähigen und farbenreichen europäischen Klaviertons.",
-    "s5_caption_1": "Original Weickert-Manufaktur in Wurzen (Sachsen)",
-    "s5_b1_badge": "伝統 1783",
-    "s5_b2_badge": "ヴルツェン（ザクセン）",
-    "s5_notes": "スライド 5: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+    "s5_category": "第2部：フェルト製造 • 歴史と伝統",
+    "s5_title": "ヴルツェンフェルト工場（FFW）– ピアノハンマーフェルトの生誕地",
+    "s5_subtitle": "1783年創業 • 1847年ドイツ初のピアノフェルト開発からレンナー専用「ヴァイケルト・シュペツィアル」の復刻まで",
+    "s5_play_label": "タイムトラベル再生",
+    "s5_tab1_tag": "創業",
+    "s5_tab2_tag": "初ピアノフェルト",
+    "s5_tab3_tag": "万国博覧会",
+    "s5_tab4_tag": "ヴルツェン工場",
+    "s5_tab5_tag": "世界シェア首位",
+    "s5_tab6_tag": "ヴァイケルト特級",
+    "s5_m1_badge": "起源 1783",
+    "s5_m1_title": "ヨハン・ダンケゴット・ヴァイケルトによる創業",
+    "s5_m1_subtitle": "ライプツィヒに始まる世界最古の工業フェルト製造所の歴史的ルーツ",
+    "s5_m1_bullet_1": "<strong>ライプツィヒ工房：</strong>1783年、ヨハン・ダンケゴット・ヴァイケルトがライプツィヒに光学機器と高級ウール製品の工房を開設。",
+    "s5_m1_bullet_2": "<strong>卸売への拡大：</strong>息子アウグスト・モーリッツ・ヴァイケルトが事業を発展させ、工具・高品質資材の有力卸売商へと成長。",
+    "s5_m1_bullet_3": "<strong>フォルテピアノの誕生：</strong>18世紀後半のハンマークラヴィーア発展に伴い、弦を打つ理想的な弾性打撃材の探求が本格化。",
+    "s5_m1_fact": "🏛 世界最古の工業フェルト製造メーカー",
+    "s5_m1_caption": "手梳きの原毛フリースから超高密度ヴァイケルト・フェルトブロックへ",
+    "s5_m2_badge": "発明 1847",
+    "s5_m2_title": "ドイツ初の実用ピアノハンマーフェルト開発",
+    "s5_m2_subtitle": "パチュケ父子がピアノ製造に革命をもたらす",
+    "s5_m2_bullet_1": "<strong>革からフェルトへ：</strong>1847年、ライプツィヒの羊毛商パチュケ父子が従来の硬い革巻きに代わる均一なピアノ専用フェルトの製造に初成功。",
+    "s5_m2_bullet_2": "<strong>ヴァイケルトとの提携：</strong>A.M.ヴァイケルトが工業生産の資金調達とリスクを引き受け、C.W.パチュケが製造責任者・技術ディレクターに就任。",
+    "s5_m2_bullet_3": "<strong>清らかな水を求めて：</strong>ヴェアダウでの初期生産を経て、純白の極上フェルトには極めて清澄な水と煤煙のない空気が不可欠と判明。",
+    "s5_m2_fact": "🎹 歴史的転換点：フェルトが革を完全に置き換え",
+    "s5_m2_caption": "ゴルツェルン水車小屋（1850年）：ムルデ川の中州で始まった初期フェルト製造",
+    "s5_m3_badge": "世界的名声 1851",
+    "s5_m3_title": "ロンドン・パリ万国博覧会での金メダル獲得",
+    "s5_m3_subtitle": "国際的勝利、ザクセン国王の親訪、世界的な名声確立",
+    "s5_m3_bullet_1": "<strong>万国博覧会の栄誉：</strong>1850年ライプツィヒ産業博、1851年ロンドン万博、1867年パリ万博で最高栄誉メダルを獲得し世界に名を轟かす。",
+    "s5_m3_bullet_2": "<strong>ザクセン国王の親訪：</strong>ザクセン国王が工場を公式訪問し、ザクセン産フェルトの卓越したクラフトマンシップを称賛。",
+    "s5_m3_bullet_3": "<strong>名門工房の指定品へ：</strong>ウィーン、パリ、ロンドンのトップピアノメーカーがこぞってヴァイケルト製フェルトを指定採用。",
+    "s5_m3_fact": "🏅 ロンドン1851、パリ1867、ライプツィヒ金メダル",
+    "s5_m3_caption": "極上のフェルト品質に対して授与された万国博覧会メダル",
+    "s5_m4_badge": "拡張 1861",
+    "s5_m4_title": "ヴルツェン移転：蒸気動力とムルデ川の軟水",
+    "s5_m4_subtitle": "ヴルツェンのミュールグラーベン沿いに最新鋭ピアノフェルト工場を建設",
+    "s5_m4_bullet_1": "<strong>新天地ヴルツェン：</strong>1861年にヴルツェンへ移転。広大な製造棟と専用の蒸気機関ボイラー施設を建設。",
+    "s5_m4_bullet_2": "<strong>蒸気駆動の縮絨機：</strong>独自開発の蒸気式縮絨・フェルト加工機により、かつてない均一性と高弾性を実現。",
+    "s5_m4_bullet_3": "<strong>ムルデ川の秘密：</strong>極めてミネラル分が少なく軟らかなムルデ川の水が、羊毛の優美な洗浄と繊維保護に理想的と実証。",
+    "s5_m4_fact": "⚙️ 蒸気動力縮絨とムルデ川の清冽な軟水",
+    "s5_m4_caption": "1871年のヴルツェン・ピアノフェルト工場の歴史的景観",
+    "s5_m5_badge": "世界首位 1903",
+    "s5_m5_title": "年間20万台のピアノ用フェルトを生産する世界的首位",
+    "s5_m5_subtitle": "スタインウェイ・ニューヨーク御用達、パチュケ邸と350名の熟練職人",
+    "s5_m5_bullet_1": "<strong>年間20万台分の供給：</strong>1903年の最盛期、世界中の約20万台のグランド＆アップライトピアノにフェルトを供給。",
+    "s5_m5_bullet_2": "<strong>世界市場への輸出：</strong>筆頭顧客スタインウェイ・ニューヨークをはじめ、英仏露伊の主要メーカーへ大量供給。",
+    "s5_m5_bullet_3": "<strong>パチュケ家の指導：</strong>1883/84年に敷地内へ建立されたパチュケ邸から、3世代にわたり350名の匠を統率。",
+    "s5_m5_fact": "🌎 スタインウェイをはじめ世界基準を確立",
+    "s5_m5_caption": "工場敷地内のパチュケ邸 — 3世代にわたる居住・経営の拠点",
+    "s5_m6_badge": "現代 • レンナー提携",
+    "s5_m6_title": "レンナー専用「ヴァイケルト・シュペツィアル」の復刻",
+    "s5_m6_subtitle": "ブラント家による民営化とルイス・レンナー専用の極上品質",
+    "s5_m6_bullet_1": "<strong>1991年民営化：</strong>ブラント家がヴァイケルト家継承者と合意し再興。世界中のピアノ職人がかつての伝説的配合の復活を熱望。",
+    "s5_m6_bullet_2": "<strong>ヴァイケルト・シュペツィアル復刻：</strong>2010年、伝説の特級品質「ヴァイケルト・シュペツィアル」を復活させ、1903年の頂点へと回帰。",
+    "s5_m6_bullet_3": "<strong>レンナーとの独占的共鳴：</strong>レンナーは全プレミアム弦槌フェルトをヴルツェンから独占調達。比類なき倍音と表現力を実現。",
+    "s5_m6_fact": "✨ 1903年の世界最高峰水準を完全に再現",
+    "s5_m6_caption": "ヴルツェン製ヴァイケルト・シュペツィアル：究極の整音性と豊かな響き",
+    "s5_felt_badge": "100% 純メリノ新毛ウール",
+    "s5_felt_title": "ヴァイケルト・フェルトの音響的秘密",
+    "s5_felt_subtitle": "化学接着剤を一切使わない純粋な機械的縮絨 — コンサートグランドの響きの魂",
+    "s5_texture_tag": "マイクロ組織：縮絨・繊維圧縮",
+    "s5_zoom_btn": "🔍 繊維ルーペ",
+    "s5_hl1_title": "100% メリノウールとキューティクル組織：",
+    "s5_hl1_desc": "縮絨によって微細なキューティクル（鱗片）が強固に絡み合う純天然の最高級繊維。",
+    "s5_hl2_title": "合成樹脂を一切含まない純粋な縮絨：",
+    "s5_hl2_desc": "熱水、摩擦、圧力のみで圧縮。合成接着剤による硬直や響きの減衰を完全排除。",
+    "s5_hl3_title": "永久的な高弾性リバウンド力：",
+    "s5_hl3_desc": "打弦後ミリ秒単位で瞬時に跳ね返り、弦の純粋な倍音振動を一切邪魔しない卓越の復元性。",
+    "s5_hl4_title": "レンナーとの独占的共創：",
+    "s5_hl4_desc": "厳選された最高格付けのヴァイケルト・シュペツィアル原板のみがレンナーの品質基準をクリア。",
+    "s5_notes": "スライド 5: ヴルツェンフェルト工場（FFW）の1783年から現代に至る社史と、ヴァイケルト・フェルトの音響的秘密。全6つの歴史的節目を紹介：1783年ライプツィヒ創業、1847年パチュケ父子によるドイツ初の実用ピアノフェルト発明（革巻きからの歴史的転換）、1850〜67年ロンドン・パリ万博での金メダル獲得と国王親訪、1861年蒸気機関とムルデ川軟水を活かしたヴルツェン新工場設立、1903年年間20万台分を供給する世界的首位（スタインウェイ御用達）、そして2010年のルイス・レンナー専用「ヴァイケルト・シュペツィアル」復刻。右側パネルでは極上フェルトに焦点を当て、100%純メリノウール、化学接着剤不使用の純機械的縮絨、瞬時の高弾性リバウンド力、そしてヨーロッパ伝統の歌うような豊潤な音色への決定的な貢献を強調してください。",
     "s6_category": "第2部：極上フェルト製造の秘密（ヴルツェン工場）",
     "s6_title": "ヴルツェンフェルト工場：現代に息づく伝統",
     "s6_subtitle": "Traditionelles Handwerkswissen vereint mit modernsten Produktionsstandards",
@@ -12079,17 +13169,78 @@ window.slideTranslations = {
     "s4_title": "莫伊瑟尔维茨高精现代化生产基地建设全景纪录片",
     "s4_subtitle": "新厂区改造启航（2025年11月）至高精生产线全面投产（2026年10月）全时空演进全景",
     "s4_notes": "第 4 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。",
-    "s5_category": "第二部分：顶级纯羊毛毡制造工艺（乌尔岑毛毡厂）",
-    "s5_title": "J.D.魏克特与顶级钢琴弦槌毛毡的诞生地",
-    "s5_subtitle": "1783 in Leipzig gegründet – 1847 Eröffnung der Spezialfabrik in Wurzen",
-    "s5_bullet_1": "<strong>Gründung 1783:</strong> Gegründet von Johann David Weickert in Leipzig (Sachsen). Ursprünglich Tuch- und Filzherstellung.",
-    "s5_bullet_2": "<strong>Pionierleistung 1847:</strong> In der neu errichteten Fabrik in Wurzen gelang es erstmals, speziellen Hammerkopffilz in gleichbleibender Spitzenqualität zu fertigen, wie er bis heute genutzt wird.",
-    "s5_bullet_3": "<strong>Weltweiter Hoflieferant:</strong> Bereits im 19. Jahrhundert belieferte Weickert die renommiertesten Pianoforte-Fabrikanten Europas und Amerikas.",
-    "s5_bullet_4": "<strong>Klangliche Identität:</strong> Weickert-Filz gilt weltweit als der Inbegriff des warmen, tragfähigen und farbenreichen europäischen Klaviertons.",
-    "s5_caption_1": "Original Weickert-Manufaktur in Wurzen (Sachsen)",
-    "s5_b1_badge": "传统 1783",
-    "s5_b2_badge": "武尔岑（萨克森）",
-    "s5_notes": "第 5 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。",
+    "s5_category": "第二部分：琴毡制造 • 历史与传统",
+    "s5_title": "乌尔岑毛毡厂（FFW）– 顶级钢琴弦槌毛毡的诞生地",
+    "s5_subtitle": "始于1783年 • 从1847年德国首创工业琴毡到专为雷诺重生的“魏克特特级”（Weickert Spezial）",
+    "s5_play_label": "播放时光之旅",
+    "s5_tab1_tag": "创立",
+    "s5_tab2_tag": "首创琴毡",
+    "s5_tab3_tag": "世博金奖",
+    "s5_tab4_tag": "乌尔岑总厂",
+    "s5_tab5_tag": "全球霸主",
+    "s5_tab6_tag": "魏克特特级",
+    "s5_m1_badge": "起源 1783",
+    "s5_m1_title": "约翰·丹克戈特·魏克特创立企业",
+    "s5_m1_subtitle": "全球历史最悠久的工业毛毡制造企业在莱比锡的渊源根基",
+    "s5_m1_bullet_1": "<strong>莱比锡匠心工坊：</strong>1783年，约翰·丹克戈特·魏克特在莱比锡建立光学仪器与高档毛料工坊，奠定百年基业。",
+    "s5_m1_bullet_2": "<strong>商业版图扩张：</strong>其子奥古斯特·莫里茨·魏克特将企业拓展为经营精密工具与顶级工业材料的大型商号。",
+    "s5_m1_bullet_3": "<strong>击弦古钢琴的诞生：</strong>随着18世纪末现代击弦钢琴的演进，钢琴家与制琴师迫切寻求能唤醒完美音色的理想击弦介质。",
+    "s5_m1_fact": "🏛 全球历史最悠久的工业羊毛毡制造企业",
+    "s5_m1_caption": "从手工梳理的原生态羊毛薄毡到极高密度的魏克特专用整块毡料",
+    "s5_m2_badge": "发明 1847",
+    "s5_m2_title": "德国首创高品质工业钢琴弦槌毛毡",
+    "s5_m2_subtitle": "帕茨克父子颠覆传统钢琴制造工艺",
+    "s5_m2_bullet_1": "<strong>纯毛毡彻底取代皮革：</strong>1847年，莱比锡羊毛商帕茨克父子首次研制成功可替代传统粗糙皮革包裹的工业击弦机专用羊毛毡。",
+    "s5_m2_bullet_2": "<strong>与魏克特强强联合：</strong>奥古斯特·莫里茨·魏克特出资全权担保量产并包销，卡尔·威廉·帕茨克出任技术总监主管生产。",
+    "s5_m2_bullet_3": "<strong>对极致纯净水源的寻觅：</strong>威尔道初期的摸索表明，要制备不含任何杂质的纯白琴毡，极其洁净的活水与纯净空气必不可少。",
+    "s5_m2_fact": "🎹 行业里程碑：纯羊毛毡彻底终结皮革击弦时代",
+    "s5_m2_caption": "格尔策恩水磨坊旧址（1850年）：在穆尔德河中孤岛建立早期制毡工场",
+    "s5_m3_badge": "享誉全球 1851",
+    "s5_m3_title": "伦敦与巴黎世博会揽获世界金奖",
+    "s5_m3_subtitle": "赢得国际赞誉、萨克森国王亲临视察并获王室特许",
+    "s5_m3_bullet_1": "<strong>世博最高殊荣：</strong>相继斩获1850年莱比锡工业博览会、1851年伦敦首届世博会及1867年巴黎世博会顶级金奖，声名大噪。",
+    "s5_m3_bullet_2": "<strong>国王亲临赐誉：</strong>萨克森王国历代国王多次亲临工厂考察，盛赞其无与伦比的毛毡韧性与弹性。",
+    "s5_m3_bullet_3": "<strong>欧洲名厂竞相定制：</strong>维也纳、巴黎与伦敦的顶级钢琴制造大师纷纷摈弃传统进口原料，指定采用魏克特琴毡。",
+    "s5_m3_fact": "🏅 1851伦敦、1867巴黎及莱比锡世博金牌",
+    "s5_m3_caption": "因极致毛毡工艺与纯净度而荣获的历史世博会珍藏金牌",
+    "s5_m4_badge": "扩张 1861",
+    "s5_m4_title": "迁厂乌尔岑：蒸汽动力驱动与穆尔德纯净软水",
+    "s5_m4_subtitle": "在乌尔岑水渠沿岸落成高度现代化的专业钢琴毛毡工厂",
+    "s5_m4_bullet_1": "<strong>乌尔岑全新核心基地：</strong>1861年企业迁至乌尔岑，建起占地宏大的生产车间和自备蒸汽锅炉动力机房。",
+    "s5_m4_bullet_2": "<strong>蒸汽缩绒机械化：</strong>专门研发的蒸汽驱动重型缩绒与压毡机，赋予毛毡前所未有的批次一致性与天然高弹性。",
+    "s5_m4_bullet_3": "<strong>穆尔德河的天然秘境：</strong>穆尔德河极其软滑、低矿物含量的天然活水，成为温和彻底洗脱羊毛杂质的绝佳天赋。",
+    "s5_m4_fact": "⚙️ 蒸汽动力强力缩绒与穆尔德河天然软水",
+    "s5_m4_caption": "1871年乌尔岑钢琴毛毡工厂与水运河渠原始历史版画",
+    "s5_m5_badge": "全球首领 1903",
+    "s5_m5_title": "年供20万架钢琴用毡的世界行业领袖",
+    "s5_m5_subtitle": "施坦威纽约指定供应商、帕茨克庄园与350名制毡大师",
+    "s5_m5_bullet_1": "<strong>供应20万架钢琴：</strong>在1903年前后的黄金时代，乌尔岑每年为全球约20万架三角与立式钢琴提供高品质毛毡。",
+    "s5_m5_bullet_2": "<strong>出口欧美各大洲：</strong>最核心客户为施坦威纽约总厂，同时覆盖法国、英国、俄罗斯与意大利的所有顶级名牌。",
+    "s5_m5_bullet_3": "<strong>帕茨克家族三代传承：</strong>在厂区内建于1883/84年的帕茨克庄园中，家族三代领衔350名高级技师守护纯正配方。",
+    "s5_m5_fact": "🌎 确立施坦威及全球名琴统一音质标准",
+    "s5_m5_caption": "厂区内的帕茨克庄园 — 历经三代大师指挥若定的历史掌舵中心",
+    "s5_m6_badge": "当下 • 雷诺独家合作",
+    "s5_m6_title": "专为雷诺重生的“魏克特特级”（Weickert Spezial）",
+    "s5_m6_subtitle": "布兰德家族再造私有化与雷诺弦槌专属顶级原料",
+    "s5_m6_bullet_1": "<strong>1991年历史性重启：</strong>布兰德家族与魏克特家族继承人携手重组工厂，全球顶尖钢琴制作者一致强烈呼吁重现传统配方。",
+    "s5_m6_bullet_2": "<strong>魏克特特级王者归来：</strong>2010年，传奇的“魏克特特级”（Weickert Spezial）弦槌专用毡正式重生，全面回归1903年的世界巅峰水平。",
+    "s5_m6_bullet_3": "<strong>雷诺独家战略共生：</strong>雷诺全球所有音乐会顶级弦槌均独家选用乌尔岑定制特级纯羊毛毡，赋能无可比拟的动态表现力。",
+    "s5_m6_fact": "✨ 全面重回1903年无可撼动的全球最高巅峰",
+    "s5_m6_caption": "乌尔岑魏克特特级毛毡：赋予弦槌极致整音张力与深邃共鸣",
+    "s5_felt_badge": "100% 纯天然美利奴初剪羊毛",
+    "s5_felt_title": "魏克特顶级纯羊毛毡的声音秘密",
+    "s5_felt_subtitle": "绝无任何化学胶黏剂的纯机械缩绒工艺 — 音乐会三角钢琴无可替代的声音之魂",
+    "s5_texture_tag": "微观纹理：天然羊毛缩绒与高弹压缩",
+    "s5_zoom_btn": "🔍 纤维微距",
+    "s5_hl1_title": "100% 顶级美利奴羊毛与鳞片结构：",
+    "s5_hl1_desc": "纯天然初剪纤维表面密布微观鳞片，在湿热与重压缩绒下紧密互锁，形成永久物理咬合。",
+    "s5_hl2_title": "纯物理缩绒，绝不添加人造树脂：",
+    "s5_hl2_desc": "完全依赖穆尔德河温润活水、往复摩擦与精密压实成型，杜绝任何化学胶水导致的死板硬化与音色杂音。",
+    "s5_hl3_title": "永不衰减的高弹回弹力（Springback）：",
+    "s5_hl3_desc": "天然角蛋白微螺旋弹簧结构在击弦瞬间以毫秒级极速回弹离弦，确保琴弦泛音自由共振绝无吃音。",
+    "s5_hl4_title": "雷诺高定弦槌专属战略共生：",
+    "s5_hl4_desc": "唯有经数十道严苛声学测试甄选的乌尔岑特级毡板，方能进入雷诺大师工坊用于顶级音乐会弦槌制作。",
+    "s5_notes": "第 5 页：乌尔岑毛毡厂（FFW）自1783年以来的传奇厂史与魏克特高级琴毡的声音奥秘。向嘉宾生动呈现六大历史里程碑：1783年魏克特在莱比锡创立工坊，1847年帕茨克父子首次研制成功工业钢琴羊毛毡（彻底终结粗糙皮革包裹时代），1850至1867年接连问鼎伦敦、巴黎世博会金奖并获国王亲访，1861年移师乌尔岑依托蒸汽机动力与穆尔德纯净软水实现工业化大生产，1903年独步天下为全球年供20万架钢琴琴毡（施坦威纽约指定原料），以及2010年“魏克特特级”（Weickert Spezial）专为雷诺王者归来。在右侧焦点面板中，重点聚焦高品质琴毡：100%纯天然美利奴初剪羊毛、绝无化学树脂与胶水的纯物理缩绒、瞬时极速回弹力，以及它对塑造欧洲温暖、通透且极具歌唱性音乐会音色的核心决定力。",
     "s6_category": "第二部分：顶级纯羊毛毡制造工艺（乌尔岑毛毡厂）",
     "s6_title": "乌尔岑毛毡厂：现代工业底蕴下的传奇魏克特毛毡",
     "s6_subtitle": "Traditionelles Handwerkswissen vereint mit modernsten Produktionsstandards",
@@ -16630,6 +17781,244 @@ window.addEventListener('DOMContentLoaded', () => {
 
 </script>
   <script>
+/* Embedded ffw-history.js */
+/**
+ * Louis Renner Presentation - FFW Wurzen Firmengeschichte (Slide 5 Controller)
+ * Manages interactive milestones, autoplay timeline, and felt texture macro zoom.
+ */
+
+class FFWFirmengeschichte {
+  constructor() {
+    this.currentMilestone = 0;
+    this.totalMilestones = 6;
+    this.isAutoplay = false;
+    this.autoplayDuration = 6000; // 6s per milestone in autoplay
+    this.autoplayRaf = null;
+    this.autoplayStartTime = null;
+    this.isZoomed = false;
+
+    this.slideEl = null;
+    this.tabs = [];
+    this.panels = [];
+    this.prevBtn = null;
+    this.nextBtn = null;
+    this.playBtn = null;
+    this.playProgressBar = null;
+    this.stepCounter = null;
+    this.textureViewer = null;
+    this.zoomBtn = null;
+    this.textureImg = null;
+
+    // Auto-init on DOMContentLoaded or immediately if already loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.init());
+    } else {
+      this.init();
+    }
+  }
+
+  init() {
+    this.slideEl = document.querySelector('.slide[data-slide="5"]');
+    if (!this.slideEl) return;
+
+    this.tabs = Array.from(this.slideEl.querySelectorAll('.ffw-epoch-tab'));
+    this.panels = Array.from(this.slideEl.querySelectorAll('.ffw-milestone-panel'));
+    this.prevBtn = this.slideEl.querySelector('#ffw-prev-btn');
+    this.nextBtn = this.slideEl.querySelector('#ffw-next-btn');
+    this.playBtn = this.slideEl.querySelector('#ffw-play-btn');
+    this.playProgressBar = this.slideEl.querySelector('#ffw-play-progress');
+    this.stepCounter = this.slideEl.querySelector('#ffw-step-counter');
+    this.textureViewer = this.slideEl.querySelector('#ffw-texture-viewer');
+    this.zoomBtn = this.slideEl.querySelector('#ffw-zoom-toggle-btn');
+    this.textureImg = this.slideEl.querySelector('#ffw-texture-img');
+
+    // Tab clicks
+    this.tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        this.stopAutoplay();
+        this.goToMilestone(idx);
+      });
+    });
+
+    // Step buttons
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => {
+        this.stopAutoplay();
+        this.prevMilestone();
+      });
+    }
+
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => {
+        this.stopAutoplay();
+        this.nextMilestone();
+      });
+    }
+
+    // Autoplay button
+    if (this.playBtn) {
+      this.playBtn.addEventListener('click', () => {
+        this.toggleAutoplay();
+      });
+    }
+
+    // Macro zoom toggle on felt texture
+    if (this.textureViewer) {
+      this.textureViewer.addEventListener('click', (e) => {
+        // Prevent click if clicking zoom button specifically handled
+        this.toggleZoom(e);
+      });
+
+      this.textureViewer.addEventListener('mousemove', (e) => {
+        if (!this.isZoomed || !this.textureImg) return;
+        const rect = this.textureViewer.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        this.textureImg.style.transformOrigin = `${x}% ${y}%`;
+      });
+
+      this.textureViewer.addEventListener('mouseleave', () => {
+        if (this.textureImg) {
+          this.textureImg.style.transformOrigin = 'center center';
+        }
+      });
+    }
+
+    if (this.zoomBtn) {
+      this.zoomBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleZoom();
+      });
+    }
+
+    // Initial state
+    this.goToMilestone(0);
+  }
+
+  goToMilestone(index) {
+    if (index < 0 || index >= this.totalMilestones) return;
+    this.currentMilestone = index;
+
+    // Update tabs
+    this.tabs.forEach((tab, idx) => {
+      const isActive = idx === this.currentMilestone;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    // Update panels
+    this.panels.forEach((panel, idx) => {
+      const isActive = idx === this.currentMilestone;
+      panel.classList.toggle('active', isActive);
+    });
+
+    // Update counter
+    if (this.stepCounter) {
+      this.stepCounter.textContent = `${this.currentMilestone + 1} / ${this.totalMilestones}`;
+    }
+
+    // Update nav button disabled states
+    if (this.prevBtn) {
+      this.prevBtn.disabled = this.currentMilestone === 0;
+    }
+    if (this.nextBtn) {
+      this.nextBtn.disabled = this.currentMilestone === this.totalMilestones - 1;
+    }
+  }
+
+  nextMilestone() {
+    if (this.currentMilestone < this.totalMilestones - 1) {
+      this.goToMilestone(this.currentMilestone + 1);
+    } else if (this.isAutoplay) {
+      // Loop back to start in autoplay
+      this.goToMilestone(0);
+    }
+  }
+
+  prevMilestone() {
+    if (this.currentMilestone > 0) {
+      this.goToMilestone(this.currentMilestone - 1);
+    }
+  }
+
+  toggleAutoplay() {
+    if (this.isAutoplay) {
+      this.stopAutoplay();
+    } else {
+      this.startAutoplay();
+    }
+  }
+
+  startAutoplay() {
+    this.isAutoplay = true;
+    if (this.playBtn) {
+      this.playBtn.classList.add('playing');
+      const icon = this.playBtn.querySelector('.ffw-play-icon');
+      if (icon) icon.textContent = '⏸';
+    }
+    this.autoplayStartTime = performance.now();
+    this.runAutoplayLoop();
+  }
+
+  stopAutoplay() {
+    this.isAutoplay = false;
+    if (this.autoplayRaf) {
+      cancelAnimationFrame(this.autoplayRaf);
+      this.autoplayRaf = null;
+    }
+    if (this.playBtn) {
+      this.playBtn.classList.remove('playing');
+      const icon = this.playBtn.querySelector('.ffw-play-icon');
+      if (icon) icon.textContent = '▶';
+    }
+    if (this.playProgressBar) {
+      this.playProgressBar.style.width = '0%';
+    }
+  }
+
+  runAutoplayLoop() {
+    if (!this.isAutoplay) return;
+
+    const step = (now) => {
+      if (!this.isAutoplay) return;
+      const elapsed = now - this.autoplayStartTime;
+      const progress = Math.min(1, elapsed / this.autoplayDuration);
+
+      if (this.playProgressBar) {
+        this.playProgressBar.style.width = `${progress * 100}%`;
+      }
+
+      if (progress >= 1) {
+        this.nextMilestone();
+        this.autoplayStartTime = performance.now();
+      }
+
+      this.autoplayRaf = requestAnimationFrame(step);
+    };
+
+    this.autoplayRaf = requestAnimationFrame(step);
+  }
+
+  toggleZoom(e) {
+    this.isZoomed = !this.isZoomed;
+    if (this.textureViewer) {
+      this.textureViewer.classList.toggle('is-zoomed', this.isZoomed);
+    }
+    if (this.zoomBtn) {
+      this.zoomBtn.classList.toggle('active', this.isZoomed);
+      this.zoomBtn.textContent = this.isZoomed ? '✕ Normal' : '🔍 Faser-Lupe';
+    }
+    if (this.textureImg && !this.isZoomed) {
+      this.textureImg.style.transformOrigin = 'center center';
+    }
+  }
+}
+
+// Global instance
+window.ffwHistory = new FFWFirmengeschichte();
+
+</script>
+  <script>
 /* Embedded presentation.js */
 /**
  * Louis Renner Presentation Engine
@@ -17170,6 +18559,11 @@ class PresentationController {
         previousSlide.querySelectorAll('.hero-image-slideshow').forEach(ss => {
           if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
         });
+      }
+
+      // Stop FFW history autoplay if leaving slide 5
+      if (previousSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+        window.ffwHistory.stopAutoplay();
       }
     }
 

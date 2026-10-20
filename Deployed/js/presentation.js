@@ -538,6 +538,11 @@ class PresentationController {
           if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
         });
       }
+
+      // Stop FFW history autoplay if leaving slide 5
+      if (previousSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+        window.ffwHistory.stopAutoplay();
+      }
     }
 
 
