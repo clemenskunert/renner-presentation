@@ -4541,7 +4541,8 @@ body::before {
 /* ==========================================================================
    FOLIE 5: FFW WURZEN FIRMENGESCHICHTE & DER HOCHWERTIGE WEICKERT-FILZ
    ========================================================================== */
-.slide[data-slide="5"] {
+.slide[data-slide="5"],
+.slide.ffw-felt-slide {
   position: relative;
   overflow: hidden;
 }
@@ -4560,7 +4561,8 @@ body::before {
   z-index: 0;
 }
 
-.slide[data-slide="5"] .slide-body {
+.slide[data-slide="5"] .slide-body,
+.slide.ffw-felt-slide .slide-body {
   position: relative;
   z-index: 1;
   flex: 1;
@@ -4772,7 +4774,8 @@ body::before {
   min-height: 0;
 }
 
-.ffw-milestone-panel {
+.ffw-milestone-panel,
+.ffw-static-panel {
   display: none;
   height: 100%;
   width: 100%;
@@ -4780,7 +4783,8 @@ body::before {
   box-sizing: border-box;
 }
 
-.ffw-milestone-panel.active {
+.ffw-milestone-panel.active,
+.ffw-static-panel {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr; /* Media frame widened by >20% for superior image clarity */
   gap: 14px;
@@ -5145,7 +5149,8 @@ body::before {
     grid-template-columns: 1.15fr 0.85fr;
     gap: 14px;
   }
-  .ffw-milestone-panel.active {
+  .ffw-milestone-panel.active,
+.ffw-static-panel {
     grid-template-columns: 1fr;
   }
   .ffw-panel-media {
@@ -5158,7 +5163,8 @@ body::before {
 }
 
 @media (max-height: 850px) {
-  .slide[data-slide="5"] .slide-body {
+  .slide[data-slide="5"] .slide-body,
+.slide.ffw-felt-slide .slide-body {
     height: calc(100% - 170px);
     max-height: calc(100% - 170px);
     margin-bottom: 96px;
@@ -5174,7 +5180,8 @@ body::before {
   .ffw-highlight-item {
     padding: 3px 6px;
   }
-  .ffw-milestone-panel {
+  .ffw-milestone-panel,
+.ffw-static-panel {
     padding: 8px 12px;
   }
   .ffw-panel-bullets {
@@ -5182,3 +5189,250 @@ body::before {
   }
 }
 
+
+
+/* ==========================================================================
+   Folie 3 Hero-Theme (Ab Folie 12)
+   Harmonisierung der Typografie, Karten, Akzente & Darstellungsform
+   analog zu Folie 3 (Tree Hero Card) und Folie 5
+   ========================================================================== */
+
+/* 1. Folien-Kopfzeile (Slide Header) */
+.slide-hero-theme .slide-header,
+.slide:nth-child(n+12) .slide-header {
+  margin-bottom: 22px;
+}
+
+.slide-hero-theme .slide-category,
+.slide:nth-child(n+12) .slide-category {
+  color: var(--gold-accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.slide-hero-theme .slide-title,
+.slide:nth-child(n+12) .slide-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 2.2vw, 2.35rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.22;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+  margin-bottom: 6px;
+}
+
+.slide-hero-theme .slide-subtitle,
+.slide:nth-child(n+12) .slide-subtitle {
+  font-size: clamp(1.05rem, 1.18vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+/* 2. Bento Card Basis (Glasmorphismus & Tiefe wie Folie 3) */
+.slide-hero-theme .bento-card,
+.slide:nth-child(n+12) .bento-card {
+  background: linear-gradient(165deg, rgba(18, 24, 38, 0.94) 0%, rgba(10, 14, 24, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 163, 86, 0.38);
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.72), 0 0 28px rgba(200, 163, 86, 0.14);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.slide-hero-theme .bento-card:hover,
+.slide:nth-child(n+12) .bento-card:hover {
+  transform: translateY(-4px) scale(1.008);
+  border-color: rgba(200, 163, 86, 0.75);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.85), 0 0 36px rgba(200, 163, 86, 0.32);
+}
+
+/* Hero-Card Akzentleiste */
+.slide-hero-theme .bento-card.hero-card,
+.slide:nth-child(n+12) .bento-card.hero-card {
+  border-top: 2px solid var(--gold-accent);
+  background: radial-gradient(circle at top left, rgba(200, 163, 86, 0.12), rgba(13, 17, 26, 0.96) 75%);
+}
+
+/* 3. Karten-Titel (Groß & Weiß wie .hero-title auf Folie 3) */
+.slide-hero-theme .bento-card-title,
+.slide:nth-child(n+12) .bento-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 1.55vw, 1.62rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.28;
+  letter-spacing: 0.2px;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 4. Karten-Beschreibung / Einleitung (Hoher Kontrast wie .hero-sentence auf Folie 3) */
+.slide-hero-theme .bento-card-desc,
+.slide:nth-child(n+12) .bento-card-desc {
+  font-size: clamp(1.08rem, 1.18vw, 1.16rem) !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  line-height: 1.52 !important;
+  font-weight: 400;
+  margin: 0 0 14px 0;
+}
+
+/* 5. Aufzählungsliste (Bullet-Items wie .hero-bullet-item auf Folie 3) */
+.slide-hero-theme .bento-card-list,
+.slide:nth-child(n+12) .bento-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 14px;
+}
+
+.slide-hero-theme .bento-card-list-item,
+.slide:nth-child(n+12) .bento-card-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: clamp(1.12rem, 1.25vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.45;
+  padding: 11px 16px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.slide-hero-theme .bento-card-list-item:hover,
+.slide:nth-child(n+12) .bento-card-list-item:hover {
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(200, 163, 86, 0.45);
+  transform: translateX(5px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.slide-hero-theme .bento-card-list-item strong,
+.slide:nth-child(n+12) .bento-card-list-item strong {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 1.28vw, 1.28rem);
+  letter-spacing: 0.2px;
+}
+
+/* 6. Leuchtende Gold-Dots (wie .hero-bullet-dot auf Folie 3) */
+.slide-hero-theme .bento-dot,
+.slide:nth-child(n+12) .bento-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 11px rgba(200, 163, 86, 0.95), 0 0 4px rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.slide-hero-theme .bento-dot.green,
+.slide:nth-child(n+12) .bento-dot.green {
+  background: var(--renner-green-bright);
+  box-shadow: 0 0 11px rgba(31, 164, 124, 0.95);
+}
+
+/* 7. Badges (Größer & markanter wie Folie 3 & 5) */
+.slide-hero-theme .bento-badge,
+.slide:nth-child(n+12) .bento-badge {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.slide-hero-theme .bento-badge.gold,
+.slide:nth-child(n+12) .bento-badge.gold {
+  background: rgba(200, 163, 86, 0.16);
+  border: 1px solid rgba(200, 163, 86, 0.45);
+  color: var(--gold-light);
+}
+
+.slide-hero-theme .bento-badge.green,
+.slide:nth-child(n+12) .bento-badge.green {
+  background: rgba(31, 164, 124, 0.16);
+  border: 1px solid rgba(31, 164, 124, 0.45);
+  color: var(--renner-green-bright);
+}
+
+/* 8. Metriken / Zahlen (wie .hero-year-pill auf Folie 3) */
+.slide-hero-theme .bento-metric-top,
+.slide:nth-child(n+12) .bento-metric-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.slide-hero-theme .bento-metric-num,
+.slide:nth-child(n+12) .bento-metric-num {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--gold-accent);
+  text-shadow: 0 0 12px rgba(200, 163, 86, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.slide-hero-theme .bento-metric-unit,
+.slide:nth-child(n+12) .bento-metric-unit {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 9. Medien-Rahmen (Media Framed) mit Folie 3 Eckwinkeln */
+.slide-hero-theme .bento-card.media-framed,
+.slide:nth-child(n+12) .bento-card.media-framed {
+  border-radius: 18px;
+  border: 1px solid rgba(200, 163, 86, 0.4);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.72), 0 0 28px rgba(200, 163, 86, 0.14);
+}
+
+.slide-hero-theme .hero-corner-bracket,
+.slide:nth-child(n+12) .hero-corner-bracket {
+  width: 16px;
+  height: 16px;
+  border-color: var(--gold-accent);
+  border-width: 2px;
+}
+
+.slide-hero-theme .bento-media-caption,
+.slide:nth-child(n+12) .bento-media-caption {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.slide-hero-theme .bento-media-subcaption,
+.slide:nth-child(n+12) .bento-media-subcaption {
+  font-size: 0.80rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.4;
+}
+
+/* 10. Dezent leuchtendes Wasserzeichen */
+.slide-hero-theme .bento-step-watermark,
+.slide:nth-child(n+12) .bento-step-watermark {
+  color: rgba(200, 163, 86, 0.06);
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 900;
+}

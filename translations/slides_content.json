@@ -820,6 +820,78 @@
           "en": "UNPRESSED BALES",
           "ja": "非圧縮ベール",
           "zh": "非压制原包"
+        },
+        "s6_panel_title": {
+          "de": "Selektion edler Merinowolle aus Übersee",
+          "en": "Selection of fine overseas Merino wool",
+          "ja": "上質な海外産メリノウールの選定",
+          "zh": "甄选优质海外美利奴羊毛"
+        },
+        "s6_panel_subtitle": {
+          "de": "Schonender Transport in unverpressten Ballen bewahrt die mikroskopische Schuppenstruktur",
+          "en": "Gentle transport in uncompressed bales preserves microscopic scale structure",
+          "ja": "圧縮を避けたベール輸送で微細なキューティクル構造を保護",
+          "zh": "未高压压缩的包装运输，保留天然毛鳞片微观结构"
+        },
+        "s6_fact_badge": {
+          "de": "🐑 100% reine Merinoschurwolle ohne synthetische Beimischung",
+          "en": "🐑 100% pure virgin Merino wool without synthetic additives",
+          "ja": "🐑 合成繊維不使用・100%純メリノバージンウール",
+          "zh": "🐑 100% 纯美利奴初剪羊毛，零合成纤维添加"
+        },
+        "s6_spotlight_badge": {
+          "de": "FASERINTEGRITÄT",
+          "en": "FIBER INTEGRITY",
+          "ja": "繊維の完全性",
+          "zh": "纤维完整度"
+        },
+        "s6_spotlight_title": {
+          "de": "Die Naturkraft des Keratins",
+          "en": "The Natural Power of Keratin",
+          "ja": "ケラチン天然の力",
+          "zh": "角蛋白天然弹性"
+        },
+        "s6_spotlight_desc": {
+          "de": "Die intakte Schuppenstruktur entscheidet über die spätere Anschlagselastizität des Hammerkopfs",
+          "en": "Intact scale structure determines the hammerhead's ultimate strike elasticity",
+          "ja": "無傷のキューティクルが打弦時の優れた反発弾性を決定づける",
+          "zh": "完好毛鳞片决定了音槌击弦时的天然反弹张力"
+        },
+        "s6_texture_tag": {
+          "de": "Faser-Makro: Schuppenstruktur",
+          "en": "Fiber Macro: Scale Structure",
+          "ja": "繊維マクロ：キューティクル構造",
+          "zh": "纤维微观：毛鳞片结构"
+        },
+        "s6_hl1_title": {
+          "de": "Schonende Carbonisierung:",
+          "en": "Gentle Carbonization:",
+          "ja": "低刺激カーボン処理：",
+          "zh": "温和脱杂脱炭："
+        },
+        "s6_hl2_title": {
+          "de": "Natürliche Spiralfedern:",
+          "en": "Natural Spiral Springs:",
+          "ja": "天然のスパイラルスプリング：",
+          "zh": "天然螺旋弹簧结构："
+        },
+        "s6_hl2_desc": {
+          "de": "Millionen feiner Biegungen federn den Aufprall an den Saiten in Millisekunden ab.",
+          "en": "Millions of fine crimps absorb string strike in milliseconds.",
+          "ja": "何百万もの微細な縮れが弦の衝撃をミリ秒単位で緩衝。",
+          "zh": "数百万道天然卷曲在毫秒间吸收琴弦冲击。"
+        },
+        "s6_hl3_title": {
+          "de": "Reines Wollfett (Lanolin):",
+          "en": "Pure Wool Grease (Lanolin):",
+          "ja": "高純度ラノリン（羊毛脂）：",
+          "zh": "天然羊毛脂（羊毛蜡）："
+        },
+        "s6_hl3_desc": {
+          "de": "Bewahrt die Fasergeschmeidigkeit und schützt vor Versprödung bei Raumklimaschwankungen.",
+          "en": "Preserves suppleness and guards against brittleness during climate swings.",
+          "ja": "繊維のしなやかさを保ち、温湿度変化による劣化を防ぐ。",
+          "zh": "保持纤维柔韧度，抵御环境温湿度变化导致的脆化。"
         }
       },
       "notes": {
@@ -892,6 +964,78 @@
           "en": "FIBER PREPARATION",
           "ja": "繊維調合",
           "zh": "纤维处理"
+        },
+        "s7_panel_title": {
+          "de": "Präzises Zusammenspiel verschiedener Wollcharaktere",
+          "en": "Precise interplay of diverse wool characteristics",
+          "ja": "多種多様な羊毛特性の精緻な調和",
+          "zh": "多产地羊毛特性的精准配比与融合"
+        },
+        "s7_fact_badge": {
+          "de": "🔒 Exklusive Renner-Mischung für maximale dynamische Bandbreite",
+          "en": "🔒 Exclusive Renner blend for maximum dynamic range",
+          "ja": "🔒 最大限のダイナミックレンジを生むレンナー専用ブレンド",
+          "zh": "🔒 雷诺独家定制配方，奠定宽广动态范围"
+        },
+        "s7_spotlight_badge": {
+          "de": "REZEPTUR-BALANCE",
+          "en": "RECIPE BALANCE",
+          "ja": "配合バランス",
+          "zh": "配方平衡"
+        },
+        "s7_spotlight_title": {
+          "de": "Federsteifigkeit nach Maß",
+          "en": "Tailored Spring Stiffness",
+          "ja": "計算された弾性剛性",
+          "zh": "量身定制的弹簧刚度"
+        },
+        "s7_spotlight_desc": {
+          "de": "Harmonisches Gleichgewicht aus langen Spannungsfasern und feinen Füllhaaren",
+          "en": "Harmonious equilibrium of long tension fibers and fine filler fibers",
+          "ja": "張力を担う長繊維と密度を保つ短繊維の完璧な均衡",
+          "zh": "长拉力纤维与细腻填充短绒的黄金配比"
+        },
+        "s7_texture_tag": {
+          "de": "Rezeptur: Chargen-Zusammenführung",
+          "en": "Recipe: Batch Synthesis",
+          "ja": "配合レシピ：ロット調合",
+          "zh": "工艺配方：批次精密混合"
+        },
+        "s7_hl1_title": {
+          "de": "Lange Zugfasern:",
+          "en": "Long Tension Fibers:",
+          "ja": "ロングテンション繊維：",
+          "zh": "长张力纤维："
+        },
+        "s7_hl1_desc": {
+          "de": "Nehmen die enormen Dehnspannungen beim Umbiegen um die Hammerkern-Spitze auf.",
+          "en": "Absorb extreme stretching forces when bent around hammer core apex.",
+          "ja": "ウッドコア先端への圧入曲げ加工時に生じる巨大な伸張応力を吸収。",
+          "zh": "承受音槌木芯顶部压弯成型时的巨大张紧拉力。"
+        },
+        "s7_hl2_title": {
+          "de": "Feine Füllfasern:",
+          "en": "Fine Filler Fibers:",
+          "ja": "極細フィラー繊維：",
+          "zh": "细腻填充纤维："
+        },
+        "s7_hl2_desc": {
+          "de": "Verdichten die Zwischenräume und sichern das elastische Rückstellvermögen.",
+          "en": "Compact interstitial voids and secure elastic rebound resilience.",
+          "ja": "隙間を緻密に埋め、打弦時の弾性復元力を長期維持。",
+          "zh": "致密填充微隙，确保长期弹性格调与高回弹力。"
+        },
+        "s7_hl3_title": {
+          "de": "Homogene Elastizität:",
+          "en": "Homogeneous Elasticity:",
+          "ja": "均一な弾性：",
+          "zh": "均匀弹力表现："
+        },
+        "s7_hl3_desc": {
+          "de": "Verhindert Dichteschwankungen und harte Nester über alle 88 Töne.",
+          "en": "Prevents density discrepancies and hard knots across all 88 keys.",
+          "ja": "88鍵全音域にわたる密度ムラや局部硬化を排除。",
+          "zh": "消除全键88个琴槌的密度波动与硬点杂音。"
         }
       },
       "notes": {
@@ -970,6 +1114,78 @@
           "en": "CARDING & FLEECE",
           "ja": "カーディング＆フリース",
           "zh": "梳理与絮片"
+        },
+        "s8_panel_title": {
+          "de": "Trommelkarden kämmen die Fasern parallel",
+          "en": "Drum cards comb fibers in parallel alignment",
+          "ja": "ドラムカード機による繊維の平行配向",
+          "zh": "梳毛机滚筒精准顺梳羊毛纤维"
+        },
+        "s8_panel_subtitle": {
+          "de": "Gezielte Längs- und Querausrichtung für vorhersehbare Elastizität beim Anschlag",
+          "en": "Deliberate longitudinal and transversal alignment for predictable strike elasticity",
+          "ja": "打弦時の反発挙動を完全に制御する縦横配向設計",
+          "zh": "精准控制纵向与横向排布，保障触键反弹高度可控"
+        },
+        "s8_fact_badge": {
+          "de": "🧵 Parallele Faserführung ist die Grundvoraussetzung präziser Intonation",
+          "en": "🧵 Parallel fiber guidance is the cornerstone of precise voicing",
+          "ja": "🧵 繊維の平行配向が精密整音の絶対的土台",
+          "zh": "🧵 纤维平行顺向排列是精准整音的根本基石"
+        },
+        "s8_spotlight_badge": {
+          "de": "VLIES-STRUKTUR",
+          "en": "FLEECE STRUCTURE",
+          "ja": "フリース構造",
+          "zh": "薄绒网结构"
+        },
+        "s8_spotlight_title": {
+          "de": "Voraussetzung für die Intonation",
+          "en": "Prerequisite for Voicing",
+          "ja": "整音のための必須条件",
+          "zh": "大师级整音前提"
+        },
+        "s8_spotlight_desc": {
+          "de": "Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche",
+          "en": "Only parallel fibers respond predictably and uniformly to needle strokes in subsequent voicing",
+          "ja": "平行に並んだ繊維のみが整音針の深刺しに予測通り均一に応答",
+          "zh": "唯有顺直排列的羊毛纤维，方能让整音针获得恒定可控的触感反馈"
+        },
+        "s8_texture_tag": {
+          "de": "Vlies-Flor: Geordnete Fasern",
+          "en": "Fleece Web: Ordered Fibers",
+          "ja": "フリースウェブ：整列繊維",
+          "zh": "绒网结构：平行顺向毛丝"
+        },
+        "s8_hl1_title": {
+          "de": "Gleitende Nadelung:",
+          "en": "Gliding Needling:",
+          "ja": "スムーズなニードリング：",
+          "zh": "顺畅进针表现："
+        },
+        "s8_hl1_desc": {
+          "de": "Intoniernadeln verdrängen parallele Fasern, anstatt sie zu zerschneiden.",
+          "en": "Voicing needles part parallel fibers rather than severing them.",
+          "ja": "整音針が繊維を断ち切ることなく滑らかに押し分ける。",
+          "zh": "整音针平滑推移纤维之间，避免斩断羊毛结构。"
+        },
+        "s8_hl2_title": {
+          "de": "Fließende Dichteverläufe:",
+          "en": "Fluid Density Gradients:",
+          "ja": "滑らかな密度勾配：",
+          "zh": "平滑渐变密度："
+        },
+        "s8_hl2_desc": {
+          "de": "Schichtung im Kreuzverbund verhindert Delamination bei extremem Tastendruck.",
+          "en": "Cross-layered stacking prevents delamination under extreme touch forces.",
+          "ja": "交差積層構造により、強打時でも層間剥離を徹底防止。",
+          "zh": "十字复合交错叠网，防范极限力度强奏时的内部层裂。"
+        },
+        "s8_hl3_title": {
+          "de": "Maximale Faserlänge:",
+          "en": "Maximum Fiber Length:",
+          "ja": "繊維長の最大保持：",
+          "zh": "最大化纤维保留："
         }
       },
       "notes": {
@@ -1090,6 +1306,84 @@
           "en": "HAMMER MILL",
           "ja": "ハンマー縮絨",
           "zh": "槌击缩绒"
+        },
+        "s9_panel_title": {
+          "de": "Reine mechanische Verfilzung ohne Fremdstoffe",
+          "en": "Pure mechanical felting without extraneous additives",
+          "ja": "化学添加剤なしの純粋機械的フェルト化",
+          "zh": "纯物理机械缩绒，杜绝化学添加"
+        },
+        "s9_panel_subtitle": {
+          "de": "Wasser, Wärme, Druck und Rhythmus verschlingen die Fasern dauerhaft",
+          "en": "Water, heat, pressure, and rhythm permanently interlock fibers",
+          "ja": "軟水・熱・加圧・リズミカルな振動で繊維を強固に結束",
+          "zh": "软水、温热、机械重压与节奏震动使纤维永久深层锁合"
+        },
+        "s9_fact_badge": {
+          "de": "🌊 Ausschließlich weiches Muldental-Wasser und Hitze – 100% chemiefrei",
+          "en": "🌊 Solely soft Muldental water and heat – 100% chemical-free",
+          "ja": "🌊 ムルデ川流域の軟水と熱のみ・完全無薬加工",
+          "zh": "🌊 仅取穆尔德河天然软水与热气物理加工，纯天然无药剂"
+        },
+        "s9_spotlight_badge": {
+          "de": "WALK-KOMPRESSION",
+          "en": "FULLING COMPRESSION",
+          "ja": "縮絨圧縮",
+          "zh": "缩绒压缩"
+        },
+        "s9_spotlight_title": {
+          "de": "Physikalische Verdichtung",
+          "en": "Physical Compaction",
+          "ja": "物理的圧縮技術",
+          "zh": "物理深层紧缩"
+        },
+        "s9_spotlight_desc": {
+          "de": "Die Schuppen der Wollhaare verhaken sich mikromechanisch wie Kletten",
+          "en": "Scales of wool hairs interlock micromechanically like burrs",
+          "ja": "羊毛キューティクルが微細なマジックテープのように噛み合う",
+          "zh": "毛鳞片像天然粘扣带微小倒钩一样深层交织锁定"
+        },
+        "s9_texture_tag": {
+          "de": "Mikro-Textur: Walk-Kompression",
+          "en": "Micro-Texture: Fulling Compression",
+          "ja": "マイクロテクスチャ：縮絨圧縮",
+          "zh": "微观质感：缩绒压缩致密层"
+        },
+        "s9_hl1_title": {
+          "de": "Keine Dämpfung durch Kleber:",
+          "en": "No Damping by Glues:",
+          "ja": "接着剤不使用による音抜け：",
+          "zh": "零胶水音色通透："
+        },
+        "s9_hl1_desc": {
+          "de": "Rein mechanische Verfilzung erhält die freie Schwingung der Wollhaare.",
+          "en": "Pure mechanical felting preserves free oscillation of wool fibers.",
+          "ja": "機械的結束により羊毛本来の自由な微小振動を一切損なわない。",
+          "zh": "纯物理交联，彻底释放羊毛天然微动传导与振动特性。"
+        },
+        "s9_hl2_title": {
+          "de": "Dauerelastizität:",
+          "en": "Permanent Elasticity:",
+          "ja": "高耐久弾性：",
+          "zh": "恒久强韧弹性："
+        },
+        "s9_hl2_desc": {
+          "de": "Natürliche Keratinfedern federn in Millisekunden ab und ermüden nicht.",
+          "en": "Natural keratin springs rebound within milliseconds without fatigue.",
+          "ja": "天然ケラチンスプリングがミリ秒で復元し経年疲労知らず。",
+          "zh": "天然角蛋白弹簧毫秒级快速复原，不易疲劳老化。"
+        },
+        "s9_hl3_title": {
+          "de": "Maximale Obertonreinheit:",
+          "en": "Maximum Overtone Purity:",
+          "ja": "ピュアな倍音響き：",
+          "zh": "纯净泛音呈现："
+        },
+        "s9_hl3_desc": {
+          "de": "Das weiche Muldental-Wasser verhindert Mineralablagerungen in den Poren.",
+          "en": "Soft Muldental water prevents mineral deposits inside fiber pores.",
+          "ja": "良質な天然軟水が繊維間へのミネラル結晶沈着を防止。",
+          "zh": "天然低矿软水杜绝杂质结晶堵塞毛细孔隙。"
         }
       },
       "notes": {
@@ -1162,6 +1456,72 @@
           "en": "Fulled felt sheets with natural resilient spring rate of 0.56 Shore",
           "ja": "Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore",
           "zh": "Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore"
+        },
+        "s10_fact_badge": {
+          "de": "🎯 0.56 Shore: Reinste Eigenelastizität ohne Verhärtungsmittel",
+          "en": "🎯 0.56 Shore: Pure natural elasticity without stiffening agents",
+          "ja": "🎯 0.56ショア：硬化剤なしの純粋な天然自己弾性",
+          "zh": "🎯 0.56 肖氏硬度：零硬化剂纯天然自弹力"
+        },
+        "s10_spotlight_badge": {
+          "de": "AKUSTISCHE PERFEKTION",
+          "en": "ACOUSTIC PERFECTION",
+          "ja": "音響的完成度",
+          "zh": "声学巅峰表现"
+        },
+        "s10_spotlight_title": {
+          "de": "Federkraft statt Härte",
+          "en": "Spring Power over Hardness",
+          "ja": "硬さではなく反発力",
+          "zh": "以弹力替代死硬"
+        },
+        "s10_spotlight_desc": {
+          "de": "Reine Walkhärte liefert unübertroffenes dynamisches Ansprechverhalten am Konzertflügel",
+          "en": "Pure fulling hardness yields unmatched dynamic responsiveness on grand pianos",
+          "ja": "純粋な縮絨硬度のみがコンサートグランドの俊敏なダイナミクスを生む",
+          "zh": "天然纯缩绒硬度，为音乐会三角琴带来灵动细腻的触感响应"
+        },
+        "s10_texture_tag": {
+          "de": "Härteprüfung: 0.56 Shore",
+          "en": "Hardness Test: 0.56 Shore",
+          "ja": "硬度測定：0.56ショア",
+          "zh": "硬度检测：0.56 肖氏极限"
+        },
+        "s10_hl1_title": {
+          "de": "Schneller Let-Off:",
+          "en": "Rapid Let-Off:",
+          "ja": "素早いレットオフ（離弦）：",
+          "zh": "毫秒级敏捷离弦："
+        },
+        "s10_hl1_desc": {
+          "de": "Der Hammer löst sich verzögerungsfrei von der Saite – kein Abdämpfen des Tons.",
+          "en": "The hammer rebounds instantly off strings without muting tone.",
+          "ja": "ハンマーが瞬時に弦から離脱し、響きを一切ミュートしない。",
+          "zh": "击弦后瞬间回弹释放琴弦，不吃音、不阻碍发声振动。"
+        },
+        "s10_hl2_title": {
+          "de": "Farbenreicher Klang:",
+          "en": "Color-Rich Tone Spectrum:",
+          "ja": "色彩豊かな響き：",
+          "zh": "色彩丰富饱满音色："
+        },
+        "s10_hl2_desc": {
+          "de": "Volle Ausbildung der Grund- und Teiltöne ohne Schrillheit im Diskant.",
+          "en": "Full blooming of fundamentals and overtones without treble harshness.",
+          "ja": "高音域で耳障りにならず、基音と倍音が豊かに立ち上がる。",
+          "zh": "高音区亮而不燥，基音饱满且高次泛音层次分明。"
+        },
+        "s10_hl3_title": {
+          "de": "Stabiler Anschlag:",
+          "en": "Stable Hammer Action:",
+          "ja": "高安定ストローク：",
+          "zh": "长效稳定敲击寿命："
+        },
+        "s10_hl3_desc": {
+          "de": "Konstante Dichte über zehntausende Anschläge hinweg.",
+          "en": "Consistent density sustained over tens of thousands of keystrokes.",
+          "ja": "何万回もの打鍵に対しても均一な密度を維持。",
+          "zh": "历经数万次强奏依然保持一致均质密度。"
         }
       },
       "notes": {
@@ -1234,6 +1594,84 @@
           "en": "HAMMER & STONE",
           "ja": "ハンマー＆ストーン",
           "zh": "毡槌与石滚"
+        },
+        "s11_panel_title": {
+          "de": "Manuelle Verdichtung und Egalisierung",
+          "en": "Manual compaction and leveling",
+          "ja": "職人技による手作業圧縮と均一化",
+          "zh": "手工敲击均质化精细定型"
+        },
+        "s11_panel_subtitle": {
+          "de": "Gezielte Hammerschläge bringen die Filzplatten auf das exakte Maß und entspannen das Fasergefüge",
+          "en": "Targeted hammer blows bring felt boards to precise dimensions while relaxing fiber lattice",
+          "ja": "熟練の木槌技で寸法を精密調整しつつ内部応力を解放",
+          "zh": "熟练匠人以毛槌与石打精准抚平微隙，释放内部应力"
+        },
+        "s11_fact_badge": {
+          "de": "🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit",
+          "en": "🔨 Intact surface fiber skin ensures maximum longevity",
+          "ja": "🔨 削らない表皮繊維が極上の長寿命を約束",
+          "zh": "🔨 完整表层皮膜保障最高抗击打使用寿命"
+        },
+        "s11_spotlight_badge": {
+          "de": "OBERFLÄCHENQUALITÄT",
+          "en": "SURFACE QUALITY",
+          "ja": "表面品質の真髄",
+          "zh": "表皮工艺品质"
+        },
+        "s11_spotlight_title": {
+          "de": "Die geschlossene Faserhaut",
+          "en": "The Closed Fiber Skin",
+          "ja": "緻密な表面スキン層",
+          "zh": "天然密闭纤维表皮"
+        },
+        "s11_spotlight_desc": {
+          "de": "Ungeschliffene Filze behalten ihre natürliche Schutzhülle und neigen nicht zum Ausfasern",
+          "en": "Unsanded felts retain their protective envelope and resist fraying",
+          "ja": "研磨を施さないフェルトは天然の保護層を保ち毛羽立たない",
+          "zh": "未经打磨砂光的毛毡完整保留天然表层，杜绝起毛开裂"
+        },
+        "s11_texture_tag": {
+          "de": "Prüfung: Seidige Faserhaut",
+          "en": "Inspection: Silky Fiber Skin",
+          "ja": "外観検査：シルク状スキン層",
+          "zh": "检测：丝缎质感密闭毛毡皮"
+        },
+        "s11_hl1_title": {
+          "de": "Kein Faserabriss:",
+          "en": "Zero Fiber Rupture:",
+          "ja": "繊維破断の皆無：",
+          "zh": "杜绝纤维拉断起毛："
+        },
+        "s11_hl1_desc": {
+          "de": "Verhindert vorzeitiges Einrillen an den Saitenkontaktpunkten.",
+          "en": "Prevents premature grooving at string strike points.",
+          "ja": "弦の打撃点における早期の溝掘れ摩耗を防止。",
+          "zh": "防范弦槽在敲击接触点提早压损凹陷。"
+        },
+        "s11_hl2_title": {
+          "de": "Spannungsausgleich:",
+          "en": "Stress Equalization:",
+          "ja": "応力バランス調整：",
+          "zh": "释放内聚张力："
+        },
+        "s11_hl2_desc": {
+          "de": "Gezielte Schläge bauen innere Scherspannungen vor dem Schneiden ab.",
+          "en": "Targeted blows relieve internal shear stresses prior to cutting.",
+          "ja": "切断前に内部の残留せん断応力を完全除去。",
+          "zh": "分段裁切前彻底消解内部残存剪切应力。"
+        },
+        "s11_hl3_title": {
+          "de": "Maßhaltigkeit:",
+          "en": "Dimensional Accuracy:",
+          "ja": "高精度な寸法保持：",
+          "zh": "尺寸极其精准稳定："
+        },
+        "s11_hl3_desc": {
+          "de": "Garantiert identische Plattenstärken für absolut symmetrische Hammerköpfe.",
+          "en": "Guarantees identical plate thickness for perfectly symmetrical hammerheads.",
+          "ja": "完全に対称なハンマーヘッドのための均一な板厚を約束。",
+          "zh": "确保板料全厚度一致，打造完美对称音槌。"
         }
       },
       "notes": {
@@ -1312,6 +1750,78 @@
           "en": "MEUSELWITZ STORAGE",
           "ja": "モイゼルヴィッツ保管庫",
           "zh": "梅瑟尔维茨仓储"
+        },
+        "s12_panel_title": {
+          "de": "Größtes Spezial-Sortiment weltweit",
+          "en": "World's largest specialized felt assortment",
+          "ja": "世界最大のピアノ専用フェルト保管ラインアップ",
+          "zh": "全球最大规模钢琴专用毛毡储库"
+        },
+        "s12_panel_subtitle": {
+          "de": "Keilförmige Plattengeometrie für maßgeschneiderte Hämmer aller Flügelhersteller",
+          "en": "Wedge-shaped board geometry tailored for all grand piano manufacturers",
+          "ja": "各名門ピアノメーカー向けに設計されたテーパー形状板材",
+          "zh": "为世界各大名琴定制打造的楔形梯形密度毛毡板"
+        },
+        "s12_fact_badge": {
+          "de": "🏛 Mindestlagerdauer baut innere Restspannungen vor dem Schnitt vollständig ab",
+          "en": "🏛 Mandatory aging relieves internal residual stresses completely prior to cutting",
+          "ja": "🏛 裁断前の熟成期間が内部応力を完全に解消",
+          "zh": "🏛 恒温恒湿充足陈化，裁切前彻底释放残存应力"
+        },
+        "s12_spotlight_badge": {
+          "de": "LAGER-KONDITIONIERUNG",
+          "en": "STORAGE CONDITIONING",
+          "ja": "温湿度コンディショニング",
+          "zh": "仓储恒温恒湿陈化"
+        },
+        "s12_spotlight_title": {
+          "de": "Reifung & Keilgeometrie",
+          "en": "Maturation & Wedge Geometry",
+          "ja": "熟成とテーパー板構造",
+          "zh": "熟化陈化与楔形梯形设计"
+        },
+        "s12_spotlight_desc": {
+          "de": "Vor dem robotischen Schnitt baut kontrollierte Lagerung letzte Eigenspannungen ab",
+          "en": "Controlled acclimatization dissipates internal strain before robotic strip-cutting",
+          "ja": "ロボット裁断に先立ち、厳密な環境下で微細な歪みを完全リセット",
+          "zh": "在机器人精密下料前，以严苛恒湿环境消除所有残余变形"
+        },
+        "s12_texture_tag": {
+          "de": "Keilprofil: Bass → Diskant",
+          "en": "Wedge Profile: Bass → Treble",
+          "ja": "テーパー勾配：低音→高音",
+          "zh": "楔形剖面：低音区至高音区渐变"
+        },
+        "s12_hl1_title": {
+          "de": "Spannungsfreies Reifen:",
+          "en": "Stress-Free Maturation:",
+          "ja": "無応力熟成プロセス：",
+          "zh": "无应力平缓陈化："
+        },
+        "s12_hl2_title": {
+          "de": "Strikte Feuchteüberwachung:",
+          "en": "Rigorous Humidity Monitoring:",
+          "ja": "厳格な湿度管理：",
+          "zh": "严苛湿度监测："
+        },
+        "s12_hl2_desc": {
+          "de": "Permanentes Monitoring garantiert identische Schnitt- und Klebebedingungen.",
+          "en": "Continuous monitoring guarantees identical cutting and gluing parameters.",
+          "ja": "常時モニタリングにより裁断および接着の最適条件を完全均一化。",
+          "zh": "实时监控保障每一条毛毡拥有恒定且最佳的裁切与胶合条件。"
+        },
+        "s12_hl3_title": {
+          "de": "Sofortige Verfügbarkeit:",
+          "en": "Immediate Global Availability:",
+          "ja": "即納体制の確立：",
+          "zh": "即时供货保障："
+        },
+        "s12_hl3_desc": {
+          "de": "Lieferfähigkeit für historische wie moderne Instrumente ohne Wartezeit.",
+          "en": "Ready delivery for historic and modern instruments without delay.",
+          "ja": "歴史的銘器から最新モデルまで待機時間ゼロで迅速供給。",
+          "zh": "不论经典历史名琴还是现代定制型号均可即时调配。"
         }
       },
       "notes": {
@@ -1384,6 +1894,78 @@
           "en": "DENSITY GRADIENT",
           "ja": "密度勾配",
           "zh": "密度梯度"
+        },
+        "s13_panel_title": {
+          "de": "Traditioneller Herkunftsnachweis am Bassanfang",
+          "en": "Traditional mark of origin at the bass foundation",
+          "ja": "低音部初頭に刻まれた伝統の出自証明",
+          "zh": "低音区起始段的传统纯正原产标识"
+        },
+        "s13_fact_badge": {
+          "de": "🏷 Eindeutige Kennzeichnung und Echtheitssiegel für Klavierbauer weltweit",
+          "en": "🏷 Distinctive hallmark and certificate of authenticity for piano makers globally",
+          "ja": "🏷 世界中の調律師・ピアノ製造技術者が信頼する真正シール",
+          "zh": "🏷 全球钢琴制造大师与技师公认的纯正正品标识"
+        },
+        "s13_spotlight_badge": {
+          "de": "CHARGEN-KONTROLLE",
+          "en": "BATCH AUTHENTICITY",
+          "ja": "ロット識別・真贋保証",
+          "zh": "批次严管与真品鉴定"
+        },
+        "s13_spotlight_title": {
+          "de": "Optische Authentizität",
+          "en": "Visual Authenticity",
+          "ja": "視覚的本物保証",
+          "zh": "肉眼辨识正品身份"
+        },
+        "s13_spotlight_desc": {
+          "de": "Sichtbare Handwerkskunst und Rückverfolgbarkeit bis in die Wurzener Manufaktur",
+          "en": "Visible craftsmanship and complete traceability to the Wurzen manufacture",
+          "ja": "ヴルツェン工場までの完全なトレーサビリティと確かな品質の証",
+          "zh": "一眼可见的精湛工艺，批次可追溯至乌尔岑百年工坊"
+        },
+        "s13_texture_tag": {
+          "de": "Echtheitsmerkmal: 1 oder 2 Seelen",
+          "en": "Authenticity Hallmark: 1 or 2 Souls",
+          "ja": "純正の証：1本または2本の芯ライン",
+          "zh": "正品质感：1道或2道芯线"
+        },
+        "s13_hl1_title": {
+          "de": "Farbige Einlage:",
+          "en": "Colored Layer Insertion:",
+          "ja": "カラーフェルト層の挿入：",
+          "zh": "特征彩色羊毛层："
+        },
+        "s13_hl1_desc": {
+          "de": "Wird bereits beim Schichten der Vlieslagen am Bassanfang integriert.",
+          "en": "Integrated during fleece-web stacking at the bass origin.",
+          "ja": "低音側のフリース積層段階で既に緻密に織り込まれる。",
+          "zh": "在低音侧毛网梳叠之初即已精密铺设嵌入。"
+        },
+        "s13_hl2_title": {
+          "de": "Klangneutrale Faser:",
+          "en": "Acoustically Neutral Fiber:",
+          "ja": "音響ニュートラルな特性：",
+          "zh": "声学完全中性表现："
+        },
+        "s13_hl2_desc": {
+          "de": "Gleiche Wolle, gleiche Dichte – rein optischer Herkunftsnachweis.",
+          "en": "Identical wool, identical density – solely an optical authentication mark.",
+          "ja": "同一の羊毛・同一の密度で音響に一切の影響を与えない視覚的刻印。",
+          "zh": "采用同质羊毛与恒定密度，仅供视觉验真，音质声学无任何偏差。"
+        },
+        "s13_hl3_title": {
+          "de": "Manufaktur-Tradition:",
+          "en": "Manufacture Tradition:",
+          "ja": "名門の歴史的伝統：",
+          "zh": "世纪名厂传承："
+        },
+        "s13_hl3_desc": {
+          "de": "Seit über einem Jahrhundert das unverwechselbare Siegel echter Wurzener Qualität.",
+          "en": "For over a century, the unmistakable hallmark of genuine Wurzen quality.",
+          "ja": "100年以上にわたり受け継がれる本物のヴルツェンクオリティ。",
+          "zh": "逾百年来全球公认的纯正乌尔岑高级毛毡独家印章。"
         }
       },
       "notes": {
@@ -1474,6 +2056,66 @@
           "en": "WEICKERT SPECIAL",
           "ja": "ヴァイケルト・スペシャル",
           "zh": "魏克特特级毡"
+        },
+        "s14_panel_subtitle": {
+          "de": "Exklusiv für Renner gefertigte Spitzenqualität mit besonders hohem Wollfettgehalt",
+          "en": "Top-tier quality produced exclusively for Renner with exceptionally high wool grease",
+          "ja": "極めて高いラノリン含有量を誇るレンナー専用の最高峰フェルト",
+          "zh": "专为雷诺特选独供、富含天然高纯度羊毛蜡的奢华级品质"
+        },
+        "s14_fact_badge": {
+          "de": "⭐ Renner Exklusiv: Maximale Standzeit und klangliche Tiefe",
+          "en": "⭐ Renner Exclusive: Ultimate durability and tonal depth",
+          "ja": "⭐ レンナー限定：圧倒的な長寿命と深遠な音の響き",
+          "zh": "⭐ 雷诺专属独家：超长敲击寿命与深邃温润音色"
+        },
+        "s14_spotlight_badge": {
+          "de": "AKUSTISCHE MEISTERSCHAFT",
+          "en": "ACOUSTIC MASTERY",
+          "ja": "音響マスタリーの極致",
+          "zh": "大师级声学造诣"
+        },
+        "s14_spotlight_title": {
+          "de": "Intonationsstabilität",
+          "en": "Voicing Longevity",
+          "ja": "整音の不変的安定性",
+          "zh": "整音成果持久稳定"
+        },
+        "s14_spotlight_desc": {
+          "de": "Der einmal ausgearbeitete Klangcharakter bleibt über Jahre hinweg unerschütterlich stabil",
+          "en": "The voiced tonal character remains rock-solid and stable over years",
+          "ja": "丹念に整えられた音色が長年にわたり揺るぎなく維持される",
+          "zh": "调律师精心修整出的丰沛音质在数年内保持坚韧如初"
+        },
+        "s14_texture_tag": {
+          "de": "Weickert Spezial: Meisterklasse",
+          "en": "Weickert Special: Masterclass",
+          "ja": "ヴァイケルト・スペシャル：最高峰品質",
+          "zh": "怀克特特选：大师典范"
+        },
+        "s14_hl1_title": {
+          "de": "Verbesserte Traktionskräfte:",
+          "en": "Enhanced Traction Dynamics:",
+          "ja": "グリップ力と張力の向上：",
+          "zh": "张紧力与粘合抓力显著跃升："
+        },
+        "s14_hl2_title": {
+          "de": "Dauerhafte Intonationshaltung:",
+          "en": "Long-Term Voicing Retention:",
+          "ja": "長期整音保持性能：",
+          "zh": "长效整音留存性能："
+        },
+        "s14_hl3_title": {
+          "de": "Direktere Tonansprache:",
+          "en": "Direct Attack & Tone Launch:",
+          "ja": "ダイレクトな発音レスポンス：",
+          "zh": "瞬态直达音响触弦反应："
+        },
+        "s14_hl3_desc": {
+          "de": "Präziser Impulsübertrag an die Saiten ohne elastischen Energieverlust.",
+          "en": "Pinpoint impulse transfer to strings without loss of elastic energy.",
+          "ja": "弾性エネルギーの損失なく打弦エネルギーを弦へダイレクトに伝達。",
+          "zh": "敲击动能直贯琴弦，零耗散传递丰沛音乐表现力。"
         }
       },
       "notes": {
