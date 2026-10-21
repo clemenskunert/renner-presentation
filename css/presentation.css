@@ -996,12 +996,12 @@ body::before {
   position: relative;
   z-index: 10;
   isolation: isolate;
-  padding: 18px 36px 14px 36px;
+  padding: 16px 36px 12px 36px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   border-bottom: 1px solid rgba(200, 163, 86, 0.28);
-  background: linear-gradient(180deg, rgba(14, 20, 30, 0.82) 0%, rgba(12, 16, 24, 0.45) 100%);
+  background: linear-gradient(180deg, rgba(14, 20, 30, 0.88) 0%, rgba(12, 16, 24, 0.52) 100%);
   flex-shrink: 0;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
@@ -1009,7 +1009,7 @@ body::before {
 }
 
 .slide-category {
-  font-size: 0.84rem;
+  font-size: clamp(0.96rem, 1.05vw, 1.15rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--renner-green-bright);
@@ -1021,21 +1021,21 @@ body::before {
 
 .slide-title {
   font-family: var(--font-serif);
-  font-size: 2.05rem;
+  font-size: clamp(2.25rem, 2.6vw, 2.9rem);
   font-weight: 700;
   color: #ffffff;
   letter-spacing: normal;
-  line-height: 1.18;
+  line-height: 1.16;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.45);
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-subtitle {
-  font-size: 0.95rem;
+  font-size: clamp(1.15rem, 1.28vw, 1.42rem);
   color: rgba(230, 200, 130, 0.95);
   margin-top: 4px;
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.38;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -1043,10 +1043,10 @@ body::before {
 .slide-body {
   flex: 1;
   width: 100%;
-  height: calc(100% - 90px);
-  max-height: calc(100% - 90px);
+  height: calc(100% - 92px);
+  max-height: calc(100% - 92px);
   box-sizing: border-box;
-  padding: 16px 36px 42px 36px; /* Extra bottom padding prevents bottom-left cutoff */
+  padding: 16px 36px 28px 36px;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -1142,15 +1142,16 @@ body::before {
 
 .card-title {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: clamp(1.35rem, 1.55vw, 1.68rem);
   color: var(--gold-light);
   margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .card-desc {
-  font-size: 0.88rem;
+  font-size: clamp(1.12rem, 1.25vw, 1.32rem);
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.62;
 }
 
 /* Media Containers (Images & Videos) - Bento Media Frame */
@@ -1200,7 +1201,7 @@ body::before {
   right: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 65%, transparent 100%);
   padding: 16px 20px 14px;
-  font-size: 0.86rem;
+  font-size: clamp(0.96rem, 1.08vw, 1.15rem);
   color: var(--text-primary);
   display: flex;
   align-items: center;
@@ -1212,8 +1213,8 @@ body::before {
 .media-tag {
   background: var(--renner-green);
   color: #fff;
-  font-size: 0.68rem;
-  padding: 2px 8px;
+  font-size: 0.75rem;
+  padding: 3px 9px;
   border-radius: 4px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -1234,25 +1235,31 @@ body::before {
 
 .bullet-item {
   flex: 1;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.035);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  padding: clamp(12px, 1.5vh, 20px) 18px;
+  padding: clamp(12px, 1.6vh, 22px) 20px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 0.94rem;
-  line-height: 1.55;
-  color: var(--text-primary);
+  gap: 16px;
+  font-size: clamp(1.12rem, 1.25vw, 1.30rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.94);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 4px 14px rgba(0, 0, 0, 0.25);
   transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+.bullet-item strong {
+  color: #ffffff;
+  font-size: clamp(1.18rem, 1.32vw, 1.36rem);
+  font-weight: 700;
+}
+
 .bullet-item:hover {
-  background: rgba(255, 255, 255, 0.055);
-  border-color: var(--border-accent);
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(200, 163, 86, 0.45);
   transform: translateX(4px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 18px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .bullet-dot {
@@ -1296,14 +1303,14 @@ body::before {
 }
 
 .hero-kicker {
-  font-size: 0.85rem;
+  font-size: clamp(0.96rem, 1.05vw, 1.15rem);
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold-light);
   margin-bottom: 16px;
   display: inline-block;
-  padding: 6px 16px;
+  padding: 6px 18px;
   background: rgba(200, 163, 86, 0.12);
   border: 1px solid var(--border-gold);
   border-radius: 20px;
@@ -1311,44 +1318,45 @@ body::before {
 
 .hero-main-title {
   font-family: var(--font-serif);
-  font-size: 3.4rem;
+  font-size: clamp(3.2rem, 3.8vw, 4.4rem);
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.5px;
-  line-height: 1.15;
-  margin-bottom: 16px;
-  max-width: 900px;
+  line-height: 1.14;
+  margin-bottom: 18px;
+  max-width: 960px;
 }
 
 .hero-main-subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1.3rem, 1.45vw, 1.65rem);
   color: var(--text-secondary);
-  max-width: 720px;
-  line-height: 1.5;
-  margin-bottom: 36px;
+  max-width: 780px;
+  line-height: 1.55;
+  margin-bottom: 38px;
 }
 
 .hero-meta-bar {
   display: flex;
   align-items: center;
-  gap: 28px;
-  background: rgba(10, 12, 16, 0.7);
-  backdrop-filter: blur(8px);
+  gap: 32px;
+  background: rgba(10, 12, 16, 0.75);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--border-subtle);
-  padding: 12px 28px;
+  padding: 14px 32px;
   border-radius: 30px;
 }
 
 .hero-meta-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
+  gap: 10px;
+  font-size: clamp(0.96rem, 1.05vw, 1.15rem);
   color: var(--text-secondary);
 }
 
 .hero-meta-item strong {
   color: var(--gold-light);
+  font-weight: 700;
 }
 
 /* ==========================================================================
@@ -2196,7 +2204,7 @@ body::before {
 }
 
 .formula-title {
-  font-size: 0.85rem;
+  font-size: clamp(0.92rem, 1.0vw, 1.05rem);
   font-weight: 700;
   color: var(--gold-light);
   text-transform: uppercase;
@@ -2205,15 +2213,15 @@ body::before {
 
 .formula-math {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
+  font-size: clamp(1.15rem, 1.3vw, 1.4rem);
   font-weight: 700;
   color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 18px;
   border-radius: 8px;
   border-left: 3px solid var(--gold-accent);
   line-height: 1.5;
-  margin: 6px 0;
+  margin: 8px 0;
 }
 
 .formula-math span.operator {
@@ -2226,9 +2234,9 @@ body::before {
 }
 
 .formula-note {
-  font-size: 0.78rem;
+  font-size: clamp(0.92rem, 1.02vw, 1.1rem);
   color: var(--text-secondary);
-  line-height: 1.35;
+  line-height: 1.4;
   margin-top: 6px;
 }
 
@@ -2240,26 +2248,26 @@ body::before {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
-  background: rgba(18, 22, 28, 0.65);
-  font-size: 0.82rem;
+  background: rgba(18, 22, 28, 0.7);
+  font-size: clamp(0.98rem, 1.1vw, 1.15rem);
   margin: 10px 0;
 }
 
 .spec-table th {
-  background: rgba(200, 163, 86, 0.15);
+  background: rgba(200, 163, 86, 0.16);
   color: var(--gold-light);
   font-weight: 700;
-  padding: 8px 12px;
+  padding: 10px 14px;
   text-align: left;
   border-bottom: 1px solid var(--border-subtle);
-  font-size: 0.76rem;
+  font-size: clamp(0.88rem, 0.98vw, 1.05rem);
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .spec-table td {
-  padding: 7px 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 9px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--text-secondary);
 }
 
@@ -2268,7 +2276,7 @@ body::before {
 }
 
 .spec-table tr:hover td {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-primary);
 }
 
@@ -2280,21 +2288,22 @@ body::before {
   font-family: var(--font-mono);
   color: var(--gold-accent);
   font-weight: 600;
+  font-size: clamp(0.96rem, 1.05vw, 1.12rem);
 }
 
 /* Tool Item Badge */
 .tool-badge {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: rgba(200, 163, 86, 0.12);
+  gap: 5px;
+  background: rgba(200, 163, 86, 0.14);
   border: 1px solid var(--border-gold);
   color: var(--gold-light);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: clamp(0.82rem, 0.92vw, 0.98rem);
   font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 4px;
+  padding: 3px 9px;
+  border-radius: 5px;
   margin-left: 6px;
   vertical-align: middle;
 }
@@ -2304,9 +2313,9 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: clamp(0.85rem, 0.95vw, 1.02rem);
   font-weight: 700;
   letter-spacing: 0.3px;
 }
@@ -2346,7 +2355,7 @@ body::before {
   background: linear-gradient(135deg, rgba(23, 74, 52, 0.35) 0%, rgba(12, 17, 24, 0.8) 100%);
   border-left: 4px solid var(--renner-green);
   border-radius: 0 10px 10px 0;
-  padding: 14px 18px;
+  padding: 16px 22px;
   margin: 12px 0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
@@ -2354,10 +2363,10 @@ body::before {
 .axiom-quote-text {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.96rem;
+  font-size: clamp(1.12rem, 1.25vw, 1.34rem);
   color: #fff;
-  line-height: 1.5;
-  margin-bottom: 6px;
+  line-height: 1.58;
+  margin-bottom: 8px;
 }
 
 .axiom-author {
@@ -3466,7 +3475,7 @@ body::before {
 }
 
 .hero-step-tag {
-  font-size: 0.88rem;
+  font-size: clamp(0.92rem, 1.0vw, 1.05rem);
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.3px;
@@ -3474,17 +3483,17 @@ body::before {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: 1.62rem;
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.28;
+  line-height: 1.24;
   margin: 6px 0 10px 0;
 }
 
 .hero-sentence {
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.94);
-  line-height: 1.55;
+  font-size: clamp(1.22rem, 1.35vw, 1.45rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.58;
   margin: 0;
 }
 
@@ -3611,12 +3620,12 @@ body::before {
   position: absolute;
   top: 16px;
   left: 18px;
-  padding: 6px 18px;
-  background: rgba(10, 14, 22, 0.88);
+  padding: 6px 20px;
+  background: rgba(10, 14, 22, 0.9);
   border: 1px solid var(--gold-accent);
   border-radius: 20px;
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: clamp(1.1rem, 1.25vw, 1.3rem);
   font-weight: 700;
   color: var(--gold-accent);
   letter-spacing: 0.5px;
@@ -3631,14 +3640,14 @@ body::before {
   position: absolute;
   top: 16px;
   right: 18px;
-  padding: 6px 16px;
-  background: rgba(10, 14, 22, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 6px 18px;
+  background: rgba(10, 14, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.85rem, 0.95vw, 1.0rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 6;
@@ -3649,21 +3658,21 @@ body::before {
 /* Subtle, Compact Bottom Caption Bar */
 .photo-caption-bar {
   flex: 0 0 auto;
-  padding: 13px 26px;
+  padding: 14px 28px;
   background: rgba(10, 14, 22, 0.96);
   border-top: 1px solid rgba(200, 163, 86, 0.35);
   border-radius: 0 0 17px 17px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   z-index: 6;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
 .photo-caption-dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--gold-accent);
   box-shadow: 0 0 10px rgba(200, 163, 86, 0.9);
@@ -3672,7 +3681,7 @@ body::before {
 
 .photo-caption-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.0rem, 1.2vw, 1.18rem);
+  font-size: clamp(1.12rem, 1.3vw, 1.38rem);
   font-weight: 700;
   color: #ffffff;
   white-space: nowrap;
@@ -3683,15 +3692,15 @@ body::before {
 .photo-caption-separator {
   color: rgba(200, 163, 86, 0.65);
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   flex-shrink: 0;
 }
 
 .photo-caption-text {
   font-family: var(--font-sans);
-  font-size: clamp(0.84rem, 0.96vw, 0.95rem);
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.35;
+  font-size: clamp(0.98rem, 1.1vw, 1.18rem);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.4;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -4859,7 +4868,7 @@ body::before {
 
 .ffw-panel-year {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: clamp(1.85rem, 2.2vw, 2.5rem);
   font-weight: 900;
   line-height: 1;
   color: var(--gold-accent);
@@ -4868,25 +4877,25 @@ body::before {
 
 .ffw-panel-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.18rem, 1.3vw, 1.38rem);
+  font-size: clamp(1.35rem, 1.55vw, 1.7rem);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
-  margin: 1px 0 2px 0;
+  margin: 2px 0 4px 0;
 }
 
 .ffw-panel-subtitle {
-  font-size: clamp(0.92rem, 1.0vw, 1.02rem);
-  color: rgba(255, 255, 255, 0.94);
-  line-height: 1.32;
+  font-size: clamp(1.05rem, 1.18vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.36;
   font-weight: 400;
 }
 
 .ffw-panel-bullets {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin: 2px 0;
+  gap: 8px;
+  margin: 4px 0;
   flex: 1;
   justify-content: center;
 }
@@ -4894,17 +4903,17 @@ body::before {
 .ffw-bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  font-size: clamp(0.95rem, 1.04vw, 1.08rem);
-  line-height: 1.32;
-  color: rgba(255, 255, 255, 0.94);
-  padding: 1px 0;
+  gap: 10px;
+  font-size: clamp(1.08rem, 1.2vw, 1.24rem);
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 2px 0;
 }
 
 .ffw-bullet-item strong {
   color: #ffffff;
   font-weight: 700;
-  font-size: clamp(0.98rem, 1.08vw, 1.12rem);
+  font-size: clamp(1.12rem, 1.24vw, 1.28rem);
   letter-spacing: 0.15px;
 }
 
@@ -5047,17 +5056,17 @@ body::before {
 
 .ffw-felt-card-header .bento-card-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.18rem, 1.3vw, 1.38rem);
+  font-size: clamp(1.32rem, 1.48vw, 1.65rem);
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 2px 0;
-  line-height: 1.2;
+  margin: 0 0 4px 0;
+  line-height: 1.22;
 }
 
 .ffw-felt-card-header .bento-card-desc {
-  font-size: clamp(0.92rem, 1.0vw, 1.02rem);
-  line-height: 1.32;
-  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1.02rem, 1.12vw, 1.22rem);
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.94);
   margin: 0;
 }
 
@@ -5109,7 +5118,7 @@ body::before {
 }
 
 .ffw-texture-tag {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -5125,7 +5134,7 @@ body::before {
   color: #ffd700;
   padding: 3px 8px;
   border-radius: 4px;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -5141,7 +5150,7 @@ body::before {
 .ffw-felt-highlights {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   position: relative;
   z-index: 1;
 }
@@ -5149,14 +5158,14 @@ body::before {
 .ffw-highlight-item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  font-size: clamp(0.9rem, 0.98vw, 1.02rem);
-  line-height: 1.3;
-  color: rgba(255, 255, 255, 0.92);
-  padding: 4px 8px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 10px;
+  font-size: clamp(1.02rem, 1.12vw, 1.20rem);
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.94);
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -5166,8 +5175,8 @@ body::before {
 }
 
 .ffw-hl-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--gold-accent);
   box-shadow: 0 0 6px rgba(200, 163, 86, 0.6);
@@ -5177,10 +5186,10 @@ body::before {
 
 .ffw-highlight-item strong {
   color: #ffffff;
-  font-size: clamp(0.94rem, 1.02vw, 1.05rem);
+  font-size: clamp(1.06rem, 1.16vw, 1.24rem);
   font-weight: 700;
   display: block;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 /* Responsive Scaling for smaller / tablet screens */
@@ -5261,7 +5270,7 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-panel-title {
-  font-size: clamp(1.22rem, 1.35vw, 1.48rem);
+  font-size: clamp(1.32rem, 1.48vw, 1.65rem);
   font-weight: 700;
   line-height: 1.22;
   margin: 0 0 6px 0;
@@ -5269,9 +5278,9 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-panel-subtitle {
-  font-size: clamp(0.9rem, 0.96vw, 1.04rem);
+  font-size: clamp(1.02rem, 1.12vw, 1.22rem);
   line-height: 1.4;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.94);
   margin-bottom: 8px;
 }
 
@@ -5296,7 +5305,7 @@ body::before {
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 10px;
-  font-size: clamp(0.92rem, 1.0vw, 1.06rem);
+  font-size: clamp(1.05rem, 1.16vw, 1.22rem);
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.94);
   box-sizing: border-box;
@@ -5310,7 +5319,7 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-bullet-item strong {
-  font-size: clamp(0.94rem, 1.02vw, 1.08rem);
+  font-size: clamp(1.08rem, 1.2vw, 1.26rem);
   color: #ffffff;
 }
 
@@ -5353,14 +5362,14 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-felt-card-header .bento-card-title {
-  font-size: clamp(1.22rem, 1.35vw, 1.48rem);
+  font-size: clamp(1.32rem, 1.48vw, 1.65rem);
   font-weight: 700;
   line-height: 1.22;
   margin: 3px 0 4px 0;
 }
 
 .slide.ffw-felt-slide .ffw-felt-card-header .bento-card-desc {
-  font-size: clamp(0.9rem, 0.96vw, 1.02rem);
+  font-size: clamp(1.02rem, 1.12vw, 1.22rem);
   line-height: 1.38;
 }
 
@@ -5391,7 +5400,7 @@ body::before {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  font-size: clamp(0.9rem, 0.98vw, 1.04rem);
+  font-size: clamp(1.02rem, 1.12vw, 1.20rem);
   line-height: 1.48;
   color: rgba(255, 255, 255, 0.94);
   box-sizing: border-box;
@@ -5405,7 +5414,7 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-highlight-item strong {
-  font-size: clamp(0.92rem, 1.0vw, 1.06rem);
+  font-size: clamp(1.06rem, 1.16vw, 1.24rem);
   color: #ffffff;
   margin-bottom: 2px;
 }
@@ -5419,153 +5428,267 @@ body::before {
 }
 
 /* ==========================================================================
-   Folie 3 Hero-Theme (Ab Folie 12)
-   Harmonisierung der Typografie, Karten, Akzente & Darstellungsform
-   analog zu Folie 3 (Tree Hero Card) und Folie 5
+   Universelles Premium Bento & Typografie-System (Alle Folien)
+   Behebt ungenutzten Raum, skaliert Schriftgrößen und verteilt Textelemente
+   optimal in Abhängigkeit zur jeweiligen Containergröße.
    ========================================================================== */
 
-/* 1. Folien-Kopfzeile (Slide Header) */
-.slide-hero-theme .slide-header,
-.slide:nth-child(n+12) .slide-header {
-  margin-bottom: 22px;
+/* 1. Folien-Kopfzeile (Slide Header) - Universell */
+.slide .slide-header,
+.slide-hero-theme .slide-header {
+  margin-bottom: 0;
   position: relative;
   z-index: 10;
   isolation: isolate;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.slide-hero-theme .slide-category,
-.slide:nth-child(n+12) .slide-category {
+.slide .slide-category,
+.slide-hero-theme .slide-category {
   color: var(--gold-accent);
-  font-size: 0.90rem;
+  font-size: clamp(0.96rem, 1.05vw, 1.15rem);
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 4px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.slide-hero-theme .slide-title,
-.slide:nth-child(n+12) .slide-title {
+.slide .slide-title,
+.slide-hero-theme .slide-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.95rem, 2.2vw, 2.45rem);
+  font-size: clamp(2.25rem, 2.6vw, 2.9rem);
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.22;
+  line-height: 1.16;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.45);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.slide-hero-theme .slide-subtitle,
-.slide:nth-child(n+12) .slide-subtitle {
-  font-size: clamp(1.05rem, 1.18vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.92);
-  line-height: 1.45;
+.slide .slide-subtitle,
+.slide-hero-theme .slide-subtitle {
+  font-size: clamp(1.15rem, 1.28vw, 1.42rem);
+  color: rgba(230, 200, 130, 0.95);
+  line-height: 1.38;
   font-weight: 400;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-/* 2. Bento Card Basis (Glasmorphismus & Tiefe wie Folie 3) */
-.slide-hero-theme .bento-card,
-.slide:nth-child(n+12) .bento-card {
+/* 2. Bento Card Basis - Universell für alle Folien (inkl. Folie 2 Agenda) */
+.slide .bento-card,
+.slide-hero-theme .bento-card {
   background: linear-gradient(165deg, rgba(18, 24, 38, 0.94) 0%, rgba(10, 14, 24, 0.98) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(200, 163, 86, 0.38);
   border-radius: 18px;
-  padding: 24px 28px;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.72), 0 0 28px rgba(200, 163, 86, 0.14);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  padding: clamp(20px, 2.4vh, 28px) clamp(22px, 2vw, 30px);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.72), 0 0 28px rgba(200, 163, 86, 0.12);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
 }
 
-.slide-hero-theme .bento-card:hover,
-.slide:nth-child(n+12) .bento-card:hover {
+.slide .bento-card:hover,
+.slide-hero-theme .bento-card:hover {
   transform: translateY(-4px) scale(1.008);
   border-color: rgba(200, 163, 86, 0.75);
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.85), 0 0 36px rgba(200, 163, 86, 0.32);
 }
 
 /* Hero-Card Akzentleiste */
-.slide-hero-theme .bento-card.hero-card,
-.slide:nth-child(n+12) .bento-card.hero-card {
+.slide .bento-card.hero-card,
+.slide-hero-theme .bento-card.hero-card {
   border-top: 2px solid var(--gold-accent);
-  background: radial-gradient(circle at top left, rgba(200, 163, 86, 0.12), rgba(13, 17, 26, 0.96) 75%);
+  background: radial-gradient(circle at top left, rgba(200, 163, 86, 0.14), rgba(13, 17, 26, 0.96) 75%);
 }
 
-/* 3. Karten-Titel (Groß & Weiß wie .hero-title auf Folie 3) */
-.slide-hero-theme .bento-card-title,
-.slide:nth-child(n+12) .bento-card-title {
+/* 3. Container-Adaptive Spacing Logic:
+   Fall A: Karte OHNE Liste (z.B. Folie 2 Agenda, Infokarten, Zitate)
+   Badge und Titel bleiben oben eng beisammen; Beschreibung füllt den Raum harmonisch */
+.slide .bento-card:not(:has(.bento-card-list)),
+.bento-card:not(:has(.bento-card-list)) {
+  justify-content: flex-start;
+  gap: clamp(14px, 1.8vh, 22px);
+}
+
+.slide .bento-card:not(:has(.bento-card-list)) .bento-badge,
+.bento-card:not(:has(.bento-card-list)) .bento-badge {
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+.slide .bento-card:not(:has(.bento-card-list)) .bento-card-header,
+.bento-card:not(:has(.bento-card-list)) .bento-card-header {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.slide .bento-card:not(:has(.bento-card-list)) .bento-card-title,
+.bento-card:not(:has(.bento-card-list)) .bento-card-title {
+  margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 1.55vw, 1.62rem);
+  font-size: clamp(1.42rem, 1.65vw, 1.82rem);
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.28;
+  line-height: 1.24;
   letter-spacing: 0.2px;
-  margin: 0 0 10px 0;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* 4. Karten-Beschreibung / Einleitung (Hoher Kontrast wie .hero-sentence auf Folie 3) */
-.slide-hero-theme .bento-card-desc,
-.slide:nth-child(n+12) .bento-card-desc {
-  font-size: clamp(1.08rem, 1.18vw, 1.16rem) !important;
+.slide .bento-card:not(:has(.bento-card-list)) .bento-card-desc,
+.bento-card:not(:has(.bento-card-list)) .bento-card-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: clamp(1.14rem, 1.28vw, 1.34rem) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  line-height: 1.65 !important;
+  font-weight: 400;
+  margin: 0 !important;
+}
+
+/* Fall B: Karte MIT Liste (Bullet-Items / Prozess-Schritte)
+   Header bleibt oben, Liste verteilt sich gleichmäßig über die verbleibende Höhe */
+.slide .bento-card:has(.bento-card-list),
+.bento-card:has(.bento-card-list) {
+  justify-content: space-between;
+  gap: clamp(10px, 1.4vh, 18px);
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-badge,
+.bento-card:has(.bento-card-list) .bento-badge {
+  margin-bottom: 6px;
+  align-self: flex-start;
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-card-title,
+.bento-card:has(.bento-card-list) .bento-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 1.55vw, 1.68rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  margin: 0 0 6px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-card-desc,
+.bento-card:has(.bento-card-list) .bento-card-desc {
+  font-size: clamp(1.08rem, 1.2vw, 1.22rem) !important;
   color: rgba(255, 255, 255, 0.94) !important;
   line-height: 1.52 !important;
   font-weight: 400;
-  margin: 0 0 14px 0;
+  margin: 0 0 8px 0 !important;
 }
 
-/* 5. Aufzählungsliste (Bullet-Items wie .hero-bullet-item auf Folie 3) */
-.slide-hero-theme .bento-card-list,
-.slide:nth-child(n+12) .bento-card-list {
+.slide .bento-card:has(.bento-card-list) .bento-card-list,
+.bento-card:has(.bento-card-list) .bento-card-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
   min-height: 0;
-  gap: clamp(10px, 1.6vh, 22px);
-  margin-top: 14px;
+  gap: clamp(10px, 1.4vh, 18px);
+  margin-top: 4px;
 }
 
-.slide-hero-theme .bento-card-list-item,
-.slide:nth-child(n+12) .bento-card-list-item {
+.slide .bento-card:has(.bento-card-list) .bento-card-list-item,
+.bento-card:has(.bento-card-list) .bento-card-list-item {
   flex: 1;
+  min-height: 0;
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: clamp(1.08rem, 1.2vw, 1.24rem);
-  color: rgba(255, 255, 255, 0.94);
-  line-height: 1.45;
-  padding: clamp(12px, 1.6vh, 22px) 20px;
-  background: rgba(255, 255, 255, 0.035);
+  gap: 16px;
+  font-size: clamp(1.12rem, 1.24vw, 1.30rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.48;
+  padding: clamp(12px, 1.8vh, 22px) clamp(16px, 1.6vw, 24px);
+  background: rgba(255, 255, 255, 0.038);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   box-sizing: border-box;
   transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.slide-hero-theme .bento-card-list-item:hover,
-.slide:nth-child(n+12) .bento-card-list-item:hover {
+.slide .bento-card:has(.bento-card-list) .bento-card-list-item:hover,
+.bento-card:has(.bento-card-list) .bento-card-list-item:hover {
   background: rgba(255, 255, 255, 0.075);
   border-color: rgba(200, 163, 86, 0.45);
   transform: translateX(5px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 6px 20px rgba(0, 0, 0, 0.45);
 }
 
-.slide-hero-theme .bento-card-list-item strong,
-.slide:nth-child(n+12) .bento-card-list-item strong {
+.slide .bento-card:has(.bento-card-list) .bento-card-list-item strong,
+.bento-card:has(.bento-card-list) .bento-card-list-item strong {
   color: #ffffff;
   font-weight: 700;
-  font-size: clamp(1.15rem, 1.28vw, 1.28rem);
+  font-size: clamp(1.18rem, 1.32vw, 1.36rem);
   letter-spacing: 0.2px;
 }
 
-/* 6. Leuchtende Gold-Dots (wie .hero-bullet-dot auf Folie 3) */
-.slide-hero-theme .bento-dot,
-.slide:nth-child(n+12) .bento-dot {
+/* 4. Spezifische Skalierungen nach Grid-Layouts */
+
+/* 3-Spalten-Grid (z.B. Folie 2 Agenda, 3 Schritte nebeneinander) */
+.bento-grid-3 .bento-card:not(:has(.bento-card-list)) .bento-card-title {
+  font-size: clamp(1.48rem, 1.7vw, 1.88rem);
+  line-height: 1.22;
+}
+
+.bento-grid-3 .bento-card:not(:has(.bento-card-list)) .bento-card-desc {
+  font-size: clamp(1.15rem, 1.28vw, 1.32rem) !important;
+  line-height: 1.68 !important;
+}
+
+.bento-grid-3 .bento-card .bento-step-watermark {
+  font-size: clamp(6.2rem, 7.5vw, 8rem);
+}
+
+/* 2x2 Grid (Kompaktere 4er-Karten) */
+.bento-grid-2 .bento-card {
+  padding: clamp(18px, 2vh, 24px) clamp(20px, 1.8vw, 26px);
+}
+
+.bento-grid-2 .bento-card .bento-card-title {
+  font-size: clamp(1.28rem, 1.45vw, 1.55rem);
+}
+
+.bento-grid-2 .bento-card .bento-card-desc {
+  font-size: clamp(1.08rem, 1.2vw, 1.24rem) !important;
+  line-height: 1.56 !important;
+}
+
+.bento-grid-2 .bento-card .bento-card-list-item {
+  padding: clamp(10px, 1.4vh, 16px) clamp(14px, 1.4vw, 20px);
+  font-size: clamp(1.06rem, 1.18vw, 1.22rem);
+}
+
+/* Hero Cards (Haupt-Feature-Karten mit 60-70% Breite) */
+.slide .bento-card.hero-card .bento-card-title,
+.bento-card.hero-card .bento-card-title {
+  font-size: clamp(1.55rem, 1.8vw, 2.1rem);
+  line-height: 1.22;
+}
+
+.slide .bento-card.hero-card .bento-card-desc,
+.bento-card.hero-card .bento-card-desc {
+  font-size: clamp(1.16rem, 1.3vw, 1.38rem) !important;
+  line-height: 1.66 !important;
+}
+
+/* 5. Leuchtende Dots & Badges */
+.slide .bento-dot,
+.slide-hero-theme .bento-dot {
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -5575,110 +5698,133 @@ body::before {
   flex-shrink: 0;
 }
 
-.slide-hero-theme .bento-dot.green,
-.slide:nth-child(n+12) .bento-dot.green {
+.slide .bento-dot.green,
+.slide-hero-theme .bento-dot.green {
   background: var(--renner-green-bright);
   box-shadow: 0 0 11px rgba(31, 164, 124, 0.95);
 }
 
-/* 7. Badges (Größer & markanter wie Folie 3 & 5) */
-.slide-hero-theme .bento-badge,
-.slide:nth-child(n+12) .bento-badge {
-  font-size: 0.84rem;
+.slide .bento-badge,
+.slide-hero-theme .bento-badge {
+  font-size: clamp(0.82rem, 0.92vw, 0.96rem);
   font-weight: 700;
   letter-spacing: 0.5px;
   padding: 6px 14px;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-.slide-hero-theme .bento-badge.gold,
-.slide:nth-child(n+12) .bento-badge.gold {
+.slide .bento-badge.gold,
+.slide-hero-theme .bento-badge.gold {
   background: rgba(200, 163, 86, 0.16);
   border: 1px solid rgba(200, 163, 86, 0.45);
   color: var(--gold-light);
 }
 
-.slide-hero-theme .bento-badge.green,
-.slide:nth-child(n+12) .bento-badge.green {
+.slide .bento-badge.green,
+.slide-hero-theme .bento-badge.green {
   background: rgba(31, 164, 124, 0.16);
   border: 1px solid rgba(31, 164, 124, 0.45);
   color: var(--renner-green-bright);
 }
 
-/* 8. Metriken / Zahlen (wie .hero-year-pill auf Folie 3) */
-.slide-hero-theme .bento-metric-top,
-.slide:nth-child(n+12) .bento-metric-top {
+/* 6. Metriken / KPIs */
+.slide .bento-metric-top,
+.slide-hero-theme .bento-metric-top {
   display: flex;
   align-items: baseline;
   gap: 12px;
   margin-bottom: 14px;
 }
 
-.slide-hero-theme .bento-metric-num,
-.slide:nth-child(n+12) .bento-metric-num {
+.slide .bento-metric-num,
+.slide-hero-theme .bento-metric-num {
   font-family: var(--font-serif);
-  font-size: 2.35rem;
+  font-size: clamp(2.8rem, 3.4vw, 3.8rem);
   font-weight: 900;
   line-height: 1;
   color: var(--gold-accent);
-  text-shadow: 0 0 12px rgba(200, 163, 86, 0.6);
+  text-shadow: 0 0 14px rgba(200, 163, 86, 0.6);
   letter-spacing: 0.5px;
 }
 
-.slide-hero-theme .bento-metric-unit,
-.slide:nth-child(n+12) .bento-metric-unit {
-  font-size: 0.95rem;
+.slide .bento-metric-unit,
+.slide-hero-theme .bento-metric-unit {
+  font-size: clamp(1.05rem, 1.2vw, 1.3rem);
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-/* 9. Medien-Rahmen (Media Framed) mit Folie 3 Eckwinkeln */
-.slide-hero-theme .bento-card.media-framed,
-.slide:nth-child(n+12) .bento-card.media-framed {
+.slide .bento-metric-title,
+.slide-hero-theme .bento-metric-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 1.5vw, 1.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.slide .bento-metric-desc,
+.slide-hero-theme .bento-metric-desc {
+  font-size: clamp(1.1rem, 1.22vw, 1.28rem);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* 7. Medien-Rahmen (Media Framed) */
+.slide .bento-card.media-framed,
+.slide-hero-theme .bento-card.media-framed {
   border-radius: 18px;
   border: 1px solid rgba(200, 163, 86, 0.4);
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.72), 0 0 28px rgba(200, 163, 86, 0.14);
 }
 
-.slide-hero-theme .hero-corner-bracket,
-.slide:nth-child(n+12) .hero-corner-bracket {
+.slide .hero-corner-bracket,
+.slide-hero-theme .hero-corner-bracket {
   width: 16px;
   height: 16px;
   border-color: var(--gold-accent);
   border-width: 2px;
 }
 
-.slide-hero-theme .bento-media-caption,
-.slide:nth-child(n+12) .bento-media-caption {
-  font-size: 0.92rem;
-  font-weight: 600;
+.slide .bento-media-caption,
+.slide-hero-theme .bento-media-caption {
+  font-size: clamp(1.05rem, 1.2vw, 1.25rem);
+  font-weight: 700;
   color: #ffffff;
+  line-height: 1.35;
+}
+
+.slide .bento-media-subcaption,
+.slide-hero-theme .bento-media-subcaption {
+  font-size: clamp(0.92rem, 1.05vw, 1.08rem);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.4;
 }
 
-.slide-hero-theme .bento-media-subcaption,
-.slide:nth-child(n+12) .bento-media-subcaption {
-  font-size: 0.80rem;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.4;
-}
-
-/* 10. Dezent leuchtendes Wasserzeichen */
-.slide-hero-theme .bento-step-watermark,
-.slide:nth-child(n+12) .bento-step-watermark {
+/* 8. Dezent leuchtendes Wasserzeichen */
+.slide .bento-step-watermark,
+.slide-hero-theme .bento-step-watermark {
   color: rgba(200, 163, 86, 0.06);
   font-family: var(--font-serif);
-  font-size: 5rem;
+  font-size: clamp(5.5rem, 6.8vw, 7.8rem);
   font-weight: 900;
+  position: absolute;
+  right: 18px;
+  bottom: 8px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
-/* 11. Auf allen Bento-Folien, Folie 2 und Folien 6-11 das doppelte/überdeckende Eck-Logo ausblenden (wird bereits im Bottom-HUD sauber angezeigt) */
+/* 9. Auf allen Bento-Folien und interaktiven Folien das doppelte/überdeckende Eck-Logo ausblenden */
+.slide .slide-corner-watermark,
 .slide-hero-theme .slide-corner-watermark,
-.slide:nth-child(n+12) .slide-corner-watermark,
 .slide.ffw-felt-slide .slide-corner-watermark,
 .slide[data-slide="2"] .slide-corner-watermark {
   display: none !important;

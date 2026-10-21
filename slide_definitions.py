@@ -2020,7 +2020,7 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">02</div>
               <span class="bento-badge gold" data-i18n="s13_b1_badge">>MARKENZEICHEN</span>
-              <div class="bento-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px;" data-i18n="s13_c1_desc">
+              <div class="bento-card-desc" style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px;" data-i18n="s13_c1_desc">
                 Beim Blick auf originale Renner-Hammerköpfe im Bass fällt oft ein feiner farbiger Streifen im Inneren des Filzes auf.
               </div>
               <div class="bento-card-list">
@@ -2335,33 +2335,33 @@ def get_all_slides_html():
               <div class="bento-card">
                 <div class="bento-card-header">
                   <span class="bento-badge green" data-i18n="s19_b1_badge">>HARTHOLZ</span>
-                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">800–860 kg/m³</span>
+                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700;">800–860 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s19_c1_title">Weißbuche (Hornbeam)</div>
+                <div class="bento-card-title" data-i18n="s19_c1_title">Weißbuche (Hornbeam)</div>
                 <div class="bento-card-desc" data-i18n="s19_c1_desc">Maximaler Punch, kraftvoller Attack, extrem formstabil</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
                   <span class="bento-badge gold" data-i18n="s19_b2_badge">>MITTELFEST</span>
-                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">530–790 kg/m³</span>
+                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700;">530–790 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s19_c2_title">Bergahorn (Maple)</div>
+                <div class="bento-card-title" data-i18n="s19_c2_title">Bergahorn (Maple)</div>
                 <div class="bento-card-desc" data-i18n="s19_c2_desc">Brillant, transparent, differenzierter obertonreicher Ton</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
                   <span class="bento-badge gold" data-i18n="s19_b3_badge">>MITTELFEST</span>
-                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">590–680 kg/m³</span>
+                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700;">590–680 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s19_c3_title">Nussbaum (Walnut)</div>
+                <div class="bento-card-title" data-i18n="s19_c3_title">Nussbaum (Walnut)</div>
                 <div class="bento-card-desc" data-i18n="s19_c3_desc">Warmer, samtiger Grundton, volles Bassfundament</div>
               </div>
               <div class="bento-card">
                 <div class="bento-card-header">
                   <span class="bento-badge green" data-i18n="s19_b4_badge">>MITTELFEST / LEICHT</span>
-                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700; font-size: 1.05rem;">490–750 kg/m³</span>
+                  <span class="mono-val" style="color: var(--gold-light); font-weight: 700;">490–750 kg/m³</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s19_c4_title">Mahagoni (Kotibé)</div>
+                <div class="bento-card-title" data-i18n="s19_c4_title">Mahagoni (Kotibé)</div>
                 <div class="bento-card-desc" data-i18n="s19_c4_desc">Geringe Trägheit, singender Diskant, leichte Ansprache</div>
               </div>
             </div>
@@ -3049,7 +3049,7 @@ def get_all_slides_html():
                   <span class="bento-metric-num">6,0</span>
                   <span class="bento-metric-unit">mm</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s33_c1_title">Stieldurchmesser</div>
+                <div class="bento-card-title" data-i18n="s33_c1_title">Stieldurchmesser</div>
                 
               </div>
               <div class="bento-card metric-card">
@@ -3058,7 +3058,7 @@ def get_all_slides_html():
                   <span class="bento-metric-num">5,3</span>
                   <span class="bento-metric-unit">mm</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s33_c2_title">Stieldurchmesser</div>
+                <div class="bento-card-title" data-i18n="s33_c2_title">Stieldurchmesser</div>
                 
               </div>
               <div class="bento-card metric-card">
@@ -3067,7 +3067,7 @@ def get_all_slides_html():
                   <span class="bento-metric-num">4,8</span>
                   <span class="bento-metric-unit">mm</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s33_c3_title">Stieldurchmesser</div>
+                <div class="bento-card-title" data-i18n="s33_c3_title">Stieldurchmesser</div>
                 
               </div>
               <div class="bento-card col-span-3">
@@ -3112,19 +3112,19 @@ def get_all_slides_html():
               <div class="bento-card">
                 <div class="bento-step-watermark">01</div>
                 <span class="bento-badge gold" data-i18n="s34_b1_badge">>AUTOMATION</span>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s34_c1_title">Automatisierte Kapselmontage</div>
+                <div class="bento-card-title" data-i18n="s34_c1_title">Automatisierte Kapselmontage</div>
                 <div class="bento-card-desc" data-i18n="s34_c1_desc">Vollautomatische Montagestraße setzt Achsen, Kapseltuch und Schrauben mit digitaler Drehmomentüberwachung.</div>
               </div>
               <div class="bento-card">
                 <div class="bento-step-watermark">02</div>
                 <span class="bento-badge green" data-i18n="s34_b2_badge">>OPTIK</span>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s34_c2_title">Optisches Kamerasystem</div>
+                <div class="bento-card-title" data-i18n="s34_c2_title">Optisches Kamerasystem</div>
                 <div class="bento-card-desc" data-i18n="s34_c2_desc">Jedes Röllchen und jede Kapselachse wird optisch vermessen. Abweichungen im Zehntelmillimeter-Bereich werden sofort ausgeschleust.</div>
               </div>
               <div class="bento-card hero-card">
                 <div class="bento-step-watermark">03</div>
                 <span class="bento-badge gold" data-i18n="s34_b3_badge">>BAUGRUPPENRUHE</span>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s34_c3_title">5-tägige Ruhephase (Setzprozess)</div>
+                <div class="bento-card-title" data-i18n="s34_c3_title">5-tägige Ruhephase (Setzprozess)</div>
                 <div class="bento-card-desc" data-i18n="s34_c3_desc">Alle montierten Hammerstiele lagern zwingend 5 Tage im klimatisierten Baugruppenlager für optimalen Spannungsabbau.</div>
               </div>
             </div>
@@ -3211,60 +3211,60 @@ def get_all_slides_html():
         <div class="slide-body">
           <div class="bento-grid bento-grid-hero-left">
             <div class="bento-grid bento-grid-2" style="gap: 10px;">
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge gold" data-i18n="s36_b1_badge">>STEINWAY</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c1_title">• Steinway & Sons</div>
+                <div class="bento-card-title" data-i18n="s36_c1_title">• Steinway & Sons</div>
                 <div class="bento-card-desc" data-i18n="s36_c1_desc">Alle Modelle & Epochen</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge green" data-i18n="s36_b2_badge">>BECHSTEIN</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c2_title">• C. Bechstein</div>
+                <div class="bento-card-title" data-i18n="s36_c2_title">• C. Bechstein</div>
                 <div class="bento-card-desc" data-i18n="s36_c2_desc">Historisch & modern</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge gold" data-i18n="s36_b3_badge">>BÖSENDORFER</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c3_title">• Bösendorfer</div>
+                <div class="bento-card-title" data-i18n="s36_c3_title">• Bösendorfer</div>
                 <div class="bento-card-desc" data-i18n="s36_c3_desc">Sämtliche Längen</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge green" data-i18n="s36_b4_badge">>BLÜTHNER</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c4_title">• Julius Blüthner</div>
+                <div class="bento-card-title" data-i18n="s36_c4_title">• Julius Blüthner</div>
                 <div class="bento-card-desc" data-i18n="s36_c4_desc">Patent & Standard</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge gold" data-i18n="s36_b5_badge">>SCHIMMEL</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c5_title">• Wilhelm Schimmel</div>
+                <div class="bento-card-title" data-i18n="s36_c5_title">• Wilhelm Schimmel</div>
                 <div class="bento-card-desc" data-i18n="s36_c5_desc">Flügel & Pianos</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge green" data-i18n="s36_b6_badge">>STEINGRAEBER</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c6_title">• Steingraeber & Söhne</div>
+                <div class="bento-card-title" data-i18n="s36_c6_title">• Steingraeber & Söhne</div>
                 <div class="bento-card-desc" data-i18n="s36_c6_desc">Konzertspezifikation</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge gold" data-i18n="s36_b7_badge">>FÖRSTER</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c7_title">• August Förster</div>
+                <div class="bento-card-title" data-i18n="s36_c7_title">• August Förster</div>
                 <div class="bento-card-desc" data-i18n="s36_c7_desc">Traditionsmaße</div>
               </div>
-              <div class="bento-card" style="padding: 14px;">
+              <div class="bento-card" style="padding: 16px 18px;">
                 <div class="bento-card-header" style="margin-bottom: 6px;">
                   <span class="bento-badge green" data-i18n="s36_b8_badge">>YAMAHA & KAWAI</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1rem;" data-i18n="s36_c8_title">• Yamaha & Kawai</div>
+                <div class="bento-card-title" data-i18n="s36_c8_title">• Yamaha & Kawai</div>
                 <div class="bento-card-desc" data-i18n="s36_c8_desc">C- / RX- / GX-Serie</div>
               </div>
             </div>
@@ -3299,13 +3299,13 @@ def get_all_slides_html():
             <div class="bento-grid bento-grid-3" style="gap: 12px;">
               <div class="bento-card col-span-3 hero-card">
                 <span class="bento-badge gold" data-i18n="s37_b1_badge">>RENNER FAUSTFORMEL</span>
-                <div class="bento-card-title" style="font-size: 1.4rem; color: var(--gold-light);" data-i18n="s37_c1_title">Länge = Gesamtlänge - 24 mm</div>
+                <div class="bento-card-title" style="color: var(--gold-light);" data-i18n="s37_c1_title">Länge = Gesamtlänge - 24 mm</div>
                 <div class="bento-card-desc" data-i18n="s37_c1_desc">Exakte Einstecktiefe des Stiels.</div>
               </div>
               <div class="bento-card">
                 <span class="bento-badge green" data-i18n="s37_b2_badge">>BOHRUNG</span>
                 <div class="bento-metric-top">
-                  <span class="bento-metric-num" style="font-size: 2.2rem;">5,4</span>
+                  <span class="bento-metric-num">5,4</span>
                   <span class="bento-metric-unit">mm ø</span>
                 </div>
                 <div class="bento-card-desc" data-i18n="s37_c2_desc">Passend für Renner Konusstiele.</div>
@@ -3313,7 +3313,7 @@ def get_all_slides_html():
               <div class="bento-card">
                 <span class="bento-badge green" data-i18n="s37_b3_badge">>HAMMER-ZU-STIEL</span>
                 <div class="bento-metric-top">
-                  <span class="bento-metric-num" style="font-size: 2.2rem;">90°</span>
+                  <span class="bento-metric-num">90°</span>
                   <span class="bento-metric-unit">Winkel</span>
                 </div>
                 <div class="bento-card-desc" data-i18n="s37_c3_desc">Rechtwinkligkeit zur Saitenebene.</div>
@@ -3321,7 +3321,7 @@ def get_all_slides_html():
               <div class="bento-card">
                 <span class="bento-badge green" data-i18n="s37_b4_badge">>RAKE-WINKEL</span>
                 <div class="bento-metric-top">
-                  <span class="bento-metric-num" style="font-size: 2.2rem;">91°</span>
+                  <span class="bento-metric-num">91°</span>
                   <span class="bento-metric-unit">Lehre</span>
                 </div>
                 <div class="bento-card-desc" data-i18n="s37_c4_desc">Leichte Vorneigung beim Einleimen.</div>
@@ -3409,14 +3409,14 @@ def get_all_slides_html():
                     <span class="bento-metric-num">90°</span>
                     <span class="bento-metric-unit">Winkel</span>
                   </div>
-                  <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s39_c1_title">Rechtwinkliger Anschlag</div>
+                  <div class="bento-card-title" data-i18n="s39_c1_title">Rechtwinkliger Anschlag</div>
                 </div>
                 <div>
                   <div class="bento-metric-top">
                     <span class="bento-metric-num">ca. 3</span>
                     <span class="bento-metric-unit">mm</span>
                   </div>
-                  <div class="bento-card-title" style="font-size: 1.1rem;" data-i18n="s39_c2_title">Stielüberhang</div>
+                  <div class="bento-card-title" data-i18n="s39_c2_title">Stielüberhang</div>
                 </div>
               </div>
               <div class="bento-card-desc" data-i18n="s39_c1_desc">
@@ -4256,7 +4256,7 @@ def get_all_slides_html():
               <div class="bento-card">
                 <div class="bento-step-watermark">01</div>
                 <span class="bento-badge red" data-i18n="s56_b1_badge">>AKUSTISCHE GRENZEN</span>
-                <div class="bento-card-title" style="color: var(--text-muted); font-size: 1.1rem;" data-i18n="s56_c1_title">Unveränderliche Faktoren</div>
+                <div class="bento-card-title" style="color: var(--text-muted);" data-i18n="s56_c1_title">Unveränderliche Faktoren</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot"></span>
@@ -4275,7 +4275,7 @@ def get_all_slides_html():
               <div class="bento-card hero-card" style="border-color: var(--border-green);">
                 <div class="bento-step-watermark">02</div>
                 <span class="bento-badge green" data-i18n="s56_b2_badge">>EINFLUSSBEREICH</span>
-                <div class="bento-card-title" style="color: var(--renner-green-bright); font-size: 1.1rem;" data-i18n="s56_c2_title">Was wir beeinflussen können:</div>
+                <div class="bento-card-title" style="color: var(--renner-green-bright);" data-i18n="s56_c2_title">Was wir beeinflussen können:</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
@@ -4327,7 +4327,7 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <span class="bento-badge gold" data-i18n="s57_b1_badge">>JENS-SÖREN KRUSE</span>
               <div class="bento-card-title" data-i18n="s57_c1_title">Der unabdingbare Kreislauf</div>
-              <div class="bento-card-desc" style="font-size: 1.05rem; line-height: 1.8; color: var(--gold-light); font-style: italic; margin-top: 8px;" data-i18n="s57_c1_desc">
+              <div class="bento-card-desc" style="font-size: clamp(1.15rem, 1.25vw, 1.35rem); line-height: 1.75; color: var(--gold-light); font-style: italic; margin-top: 8px;" data-i18n="s57_c1_desc">
                 „Ohne gute Regulierung keine saubere Stimmung,<br>
                 und ohne gute Regulierung keine saubere Intonation,<br>
                 und ohne saubere Stimmung keine saubere Intonation.<br>
@@ -4365,37 +4365,37 @@ def get_all_slides_html():
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 12px;">
+            <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 14px;">
               <div class="bento-card" style="border-left: 4px solid #3b82f6;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b1_badge"> style="background: rgba(59,130,246,0.2); color: #93c5fd; border-color: rgba(59,130,246,0.4);">FORTISSIMO (ff)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">9:00–10:00 & 2:00–3:00</span>
+                  <span class="bento-badge" data-i18n="s58_b1_badge">FORTISSIMO (ff)</span>
+                  <span class="mono-val">9:00–10:00 & 2:00–3:00</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s58_c1_title">Blauer Keil</div>
+                <div class="bento-card-title" data-i18n="s58_c1_title">Blauer Keil</div>
                 <div class="bento-card-desc" data-i18n="s58_c1_desc">Tiefe Nadelstiche zur Entspannung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #22c55e;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b2_badge"> style="background: rgba(34,197,94,0.2); color: #86efac; border-color: rgba(34,197,94,0.4);">FORTE (f)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">10:00–11:00 & 1:00–2:00</span>
+                  <span class="bento-badge" data-i18n="s58_b2_badge">FORTE (f)</span>
+                  <span class="mono-val">10:00–11:00 & 1:00–2:00</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s58_c2_title">Grüner Keil</div>
+                <div class="bento-card-title" data-i18n="s58_c2_title">Grüner Keil</div>
                 <div class="bento-card-desc" data-i18n="s58_c2_desc">Raumklang, Glanz und dynamische Entfaltung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #f97316;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b3_badge"> style="background: rgba(249,115,22,0.2); color: #fdba74; border-color: rgba(249,115,22,0.4);">PIANO (p)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">11:00–11:30 & 12:30–1:00</span>
+                  <span class="bento-badge" data-i18n="s58_b3_badge">PIANO (p)</span>
+                  <span class="mono-val">11:00–11:30 & 12:30–1:00</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s58_c3_title">Orangener Keil</div>
+                <div class="bento-card-title" data-i18n="s58_c3_title">Orangener Keil</div>
                 <div class="bento-card-desc" data-i18n="s58_c3_desc">Lyrischer Gesangston, feine Abstimmung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #a855f7;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b4_badge"> style="background: rgba(168,85,247,0.2); color: #d8b4fe; border-color: rgba(168,85,247,0.4);">PIANISSIMO (pp)</span>
-                  <span class="mono-val" style="font-size: 0.85rem;">11:30–12:00 & 12:00–12:30</span>
+                  <span class="bento-badge" data-i18n="s58_b4_badge">PIANISSIMO (pp)</span>
+                  <span class="mono-val">11:30–12:00 & 12:00–12:30</span>
                 </div>
-                <div class="bento-card-title" style="font-size: 1.05rem;" data-i18n="s58_c4_title">Violetter Keil</div>
+                <div class="bento-card-title" data-i18n="s58_c4_title">Violetter Keil</div>
                 <div class="bento-card-desc" data-i18n="s58_c4_desc">Flüsterleise Ansprache</div>
               </div>
               <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
@@ -4403,7 +4403,7 @@ def get_all_slides_html():
                   <span class="bento-badge red" data-i18n="s58_b5_badge">>ROTE ZONE (SCHEITEL)</span>
                   <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
                 </div>
-                <div class="bento-card-title" style="color: #fca5a5; font-size: 1.05rem;" data-i18n="s58_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
+                <div class="bento-card-title" style="color: #fca5a5;" data-i18n="s58_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
               </div>
             </div>
             <div class="bento-card media-framed">
