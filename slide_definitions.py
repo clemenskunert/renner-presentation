@@ -1017,7 +1017,7 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s5_b2_badge">>FASER-URSPRUNG</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m1_caption">Vom handkardierten Rohwollvlies zum hochverdichteten Weickert-Filzblock</span>
+                      <span class="ffw-media-caption-text" data-i18n="s5_m1_caption">Vom handkardierten Rohwollvlies zur hochverdichteten Oberfilz-Tafel</span>
                     </div>
                   </div>
                 </div>
@@ -1253,8 +1253,8 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s5_hl1_title">100% Merino-Schuppenstruktur:</strong>
-                      <span data-i18n="s5_hl1_desc">Mikroskopische Wollschuppen verkrallen sich beim Walken rein mechanisch zu einem unlösbaren Verbund.</span>
+                      <strong data-i18n="s5_hl1_title">Exklusive Wollmischung:</strong>
+                      <span data-i18n="s5_hl1_desc">Exklusive Filzmischung aus erlesener Wolle aus Argentinien, Südafrika und Neuseeland: Erst das präzise Zusammenspiel aus langen feinen Fasern und stark verzahnenden Wollen ergibt diesen extrem zugfesten Hammerkopffilz.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
