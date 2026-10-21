@@ -1656,10 +1656,10 @@
           "zh": "<strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen."
         },
         "s11_bullet_3": {
-          "de": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.",
-          "en": "<strong>Smooth Bending Radius:</strong> When wrapped around the hammer moulding, the felt surface remains completely intact and smooth without split cracking.",
-          "ja": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.",
-          "zh": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse."
+          "de": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen.",
+          "en": "<strong>Smooth Bending Radius:</strong> When wrapped around the hammer moulding, the felt surface remains completely intact and smooth – without tearing or slipping apart.",
+          "ja": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen.",
+          "zh": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen."
         },
         "s11_caption_1": {
           "de": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen",
@@ -1818,10 +1818,10 @@
           "zh": "打磨后（塌陷开裂）："
         },
         "s11_hl3_desc": {
-          "de": "Gekappte Fasern: Tafel knickt ein & platzt auf.",
-          "en": "Severed fibers: felt board buckles & splits open.",
-          "ja": "繊維破断：張力に耐えられず座屈・裂開。",
-          "zh": "纤网切断：毛毡板凹陷畸变并开裂。"
+          "de": "Gekappte Fasern: Fasern reißen & rutschen auseinander.",
+          "en": "Severed fibers: Fibers tear & slip apart under tension.",
+          "ja": "繊維切断：張力に耐えられず断裂し、ズレが発生。",
+          "zh": "纤维切断：失去拉力支撑，纤维撕裂并滑移错位。"
         }
       },
       "notes": {

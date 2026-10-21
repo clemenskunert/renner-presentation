@@ -2386,7 +2386,7 @@
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s11_bullet_3"><strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.</span>
+                        <span data-i18n="s11_bullet_3"><strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
@@ -2630,7 +2630,7 @@
                         <g class="apex-crack">
                           <path d="M 264,122 L 270,148 L 276,122 Z" fill="#ef4444" stroke="#ffffff" stroke-width="1.2" filter="url(#damageAlertGlow)"/>
                           <line x1="255" y1="126" x2="285" y2="126" stroke="#fca5a5" stroke-width="1.5"/>
-                          <text x="270" y="162" text-anchor="middle" class="svg-crack-label">⚠️ SCHEITEL-RISS (Fasern platzen auf)</text>
+                          <text x="270" y="162" text-anchor="middle" class="svg-crack-label">⚠️ SCHEITEL-RISS (Fasern reißen & rutschen auseinander)</text>
                         </g>
 
                         <!-- Deformed Bottom Layer -->
@@ -2674,7 +2674,7 @@
                       <span class="ffw-hl-dot"></span>
                       <strong data-i18n="s11_hl3_title">Geschliffen (Kollaps):</strong>
                     </div>
-                    <span data-i18n="s11_hl3_desc">Gekappte Fasern: Tafel knickt ein & platzt auf.</span>
+                    <span data-i18n="s11_hl3_desc">Gekappte Fasern: Fasern reißen & rutschen auseinander.</span>
                   </div>
                 </div>
               </div>
