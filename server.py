@@ -115,6 +115,7 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def do_POST(self):
+        global LAST_TRANSLATION_UPDATE
         if self.path == '/api/save-image':
             content_length = int(self.headers.get('Content-Length', 0))
             post_body = self.rfile.read(content_length)
@@ -123,7 +124,6 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                 import importlib, image_manager_backend
                 importlib.reload(image_manager_backend)
                 result = image_manager_backend.update_single_image_caption(payload, compile_now=True)
-                global LAST_TRANSLATION_UPDATE
                 LAST_TRANSLATION_UPDATE = time.time()
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
@@ -149,7 +149,6 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                     image_manager_backend.update_single_image_caption(item, compile_now=False)
                     updated += 1
                 image_manager_backend.run_compilation(sync=True)
-                global LAST_TRANSLATION_UPDATE
                 LAST_TRANSLATION_UPDATE = time.time()
                 self.send_response(200)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
@@ -248,6 +247,31 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         return f
 
+def find_and_bind_server():
+    """Finds an available port from candidates and binds ThreadingHTTPServer."""
+    requested_port = None
+    if len(sys.argv) > 1 and sys.argv[1].isdigit():
+        requested_port = int(sys.argv[1])
+    elif os.environ.get("PORT") and os.environ.get("PORT").isdigit():
+        requested_port = int(os.environ.get("PORT"))
+
+    candidate_ports = [requested_port] if requested_port else []
+    for p in (8080, 8090, 8181, 8585, 3535, 28080):
+        if p not in candidate_ports:
+            candidate_ports.append(p)
+
+    ThreadingHTTPServer.allow_reuse_address = True
+    for port in candidate_ports:
+        try:
+            httpd = ThreadingHTTPServer(('', port), RangeRequestHandler)
+            return httpd, port
+        except OSError:
+            continue
+
+    # Fallback to random ephemeral port
+    httpd = ThreadingHTTPServer(('', 0), RangeRequestHandler)
+    return httpd, httpd.server_address[1]
+
 def run():
     # Ensure correct MIME types
     mimetypes.add_type('video/mp4', '.mp4')
@@ -258,9 +282,16 @@ def run():
     mimetypes.add_type('text/javascript', '.js')
     mimetypes.add_type('text/css', '.css')
 
-    server_address = ('', PORT)
-    ThreadingHTTPServer.allow_reuse_address = True
-    httpd = ThreadingHTTPServer(server_address, RangeRequestHandler)
+    global PORT
+    httpd, active_port = find_and_bind_server()
+    PORT = active_port
+
+    try:
+        with open(os.path.join(DIRECTORY, ".active_port"), "w", encoding="utf-8") as f:
+            f.write(str(active_port))
+    except Exception:
+        pass
+
     print(f"🎵 Louis Renner Presentation Server active at http://localhost:{PORT}")
     
     # Start live translation watcher thread

@@ -4564,7 +4564,8 @@ body::before {
   display: block !important;
 }
 
-.slide[data-slide="5"] .slide-body {
+.slide[data-slide="5"] .slide-body,
+.slide.ffw-felt-slide .slide-body {
   position: relative;
   z-index: 1;
   flex: 1;
@@ -5031,13 +5032,13 @@ body::before {
 /* Felt Texture Viewer Box */
 .ffw-texture-viewer {
   position: relative;
-  height: clamp(100px, 13vh, 125px);
+  height: clamp(130px, 16.5vh, 165px);
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid rgba(200, 163, 86, 0.4);
   background: #090d16;
   cursor: zoom-in;
-  margin: 3px 0;
+  margin: 4px 0 6px 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 35px rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
@@ -5153,26 +5154,28 @@ body::before {
 /* Responsive Scaling for smaller / tablet screens */
 @media (max-width: 1400px) {
   .ffw-history-layout {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 14px;
   }
   .ffw-milestone-panel.active,
-.ffw-static-panel {
-    grid-template-columns: 1fr;
+  .ffw-static-panel {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 12px;
   }
   .ffw-panel-media {
-    min-height: 150px;
-    height: 150px;
+    min-height: 180px;
+    height: 100%;
   }
   .ffw-texture-viewer {
-    height: 120px;
+    height: clamp(115px, 15vh, 140px);
   }
 }
 
 @media (max-height: 850px) {
-  .slide[data-slide="5"] .slide-body {
-    height: calc(100% - 140px);
-    max-height: calc(100% - 140px);
+  .slide[data-slide="5"] .slide-body,
+  .slide.ffw-felt-slide .slide-body {
+    height: calc(100% - 135px);
+    max-height: calc(100% - 135px);
     margin-bottom: 64px;
     padding-top: 2px;
   }

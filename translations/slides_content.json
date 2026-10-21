@@ -1522,6 +1522,36 @@
           "en": "Consistent density sustained over tens of thousands of keystrokes.",
           "ja": "何万回もの打鍵に対しても均一な密度を維持。",
           "zh": "历经数万次强奏依然保持一致均质密度。"
+        },
+        "s10_panel_title": {
+          "de": "Vollendete Verdichtung an der physikalischen Grenze",
+          "en": "Full Densification at the Physical Limit",
+          "ja": "物理的限界点における究極の圧縮度",
+          "zh": "物理极限下的终极密度平衡"
+        },
+        "s10_panel_subtitle": {
+          "de": "Filzplatten werden exakt bis zum Punkt verdichtet, an dem sich die Fasern optimal berühren",
+          "en": "Felt sheets are compacted precisely to the point where fibers contact optimally",
+          "ja": "繊維が理想的に密着する最適点まで精緻に縮絨圧縮",
+          "zh": "毛毡板精准缩绒至羊毛纤维最紧密咬合的最佳临界点"
+        },
+        "s10_bullet_1": {
+          "de": "<strong>Maximale Faserkompression:</strong> Die Fasern lassen sich auf rein mechanischem Wege nicht weiter zusammenschieben, ohne beschädigt zu werden.",
+          "en": "<strong>Maximum Fiber Compression:</strong> Fibers cannot be mechanically compacted further without structural damage.",
+          "ja": "<strong>最大繊維圧縮：</strong>繊維を損傷することなく純粋な機械的手段で到達できる限界圧縮。",
+          "zh": "<strong>最大机械压缩极限：</strong>在绝不损伤羊毛天然纤维结构的前提下，实现最紧密的纯物理咬合。"
+        },
+        "s10_bullet_2": {
+          "de": "<strong>Höchste natürliche Rückstellkraft:</strong> Entspricht dem physikalischen Optimum an Eigenelastizität für den Konzertflügelanschlag.",
+          "en": "<strong>Peak Natural Spring Rate:</strong> Corresponds to the physical optimum of inherent elasticity for concert grand touch.",
+          "ja": "<strong>最高の天然反発弾性：</strong>コンサートグランドの打弦に求められる自己弾性の物理的最適値。",
+          "zh": "<strong>最高天然回弹弹力：</strong>契合音乐会演奏三角琴击弦所需的最理想回弹动力学标准。"
+        },
+        "s10_bullet_3": {
+          "de": "<strong>Frei von Kunstharzen:</strong> Verzicht auf synthetische Versteifer oder chemische Überhärtung sichert dauerhafte Resonanz.",
+          "en": "<strong>Free from Synthetic Resins:</strong> Eliminating chemical hardeners ensures permanent organic tone blooming.",
+          "ja": "<strong>合成樹脂フリー：</strong>人工硬化剤や化学薬品に頼らないため、恒久的な響きの豊かさを保証。",
+          "zh": "<strong>绝无合成树脂：</strong>零化学增硬剂与胶水，彻底杜绝刺耳死硬杂音，保障声学生命力。"
         }
       },
       "notes": {

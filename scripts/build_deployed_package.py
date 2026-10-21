@@ -213,7 +213,8 @@ def main():
         "index.html",
         "manifest.json",
         "sw.js",
-        "server.py"
+        "server.py",
+        "Start_Windows.bat"
     ]
 
     for fname in files_to_copy:

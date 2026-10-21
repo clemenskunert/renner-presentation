@@ -33,21 +33,38 @@ $mimeTypes = @{
     ".ico"  = "image/x-icon"
 }
 
-$listener = New-Object System.Net.HttpListener
-# IMPORTANT: Only register localhost - registering 127.0.0.1 or + requires Administrator privileges
-$listener.Prefixes.Add("http://localhost:$Port/")
+ = @(, 8090, 8181, 8585, 3535, 28080)
+ = 
+ = 0
 
-try {
-    $listener.Start()
-    Write-Host "=======================================================" -ForegroundColor Cyan
-    Write-Host "  🎹 Louis Renner Praesentations-Server (Windows)" -ForegroundColor Yellow
-    Write-Host "  URL: http://localhost:$Port" -ForegroundColor Green
-    Write-Host "  Druecken Sie Strg+C zum Beenden." -ForegroundColor Gray
-    Write-Host "=======================================================" -ForegroundColor Cyan
-} catch {
-    Write-Host "[HINWEIS] Port $Port ist bereits aktiv oder belegt." -ForegroundColor Yellow
-    exit 0
+foreach ( in ) {
+    try {
+         = New-Object System.Net.HttpListener
+        .Prefixes.Add("http://localhost:/")
+        .Start()
+         = 
+         = 
+        break
+    } catch {
+        # Port in use or restricted, continue to next candidate
+    }
 }
+
+if (-not  -or -not .IsListening) {
+    Write-Host "[FEHLER] Kein freier Port verfuegbar. Oeffne index.html direkt..." -ForegroundColor Red
+    exit 1
+}
+
+ = 
+try {
+    Set-Content -Path (Join-Path  ".active_port") -Value "" -Encoding UTF8 -Force
+} catch {}
+
+Write-Host "=======================================================" -ForegroundColor Cyan
+Write-Host "  🎹 Louis Renner Praesentations-Server (Windows)" -ForegroundColor Yellow
+Write-Host "  URL: http://localhost:" -ForegroundColor Green
+Write-Host "  Druecken Sie Strg+C zum Beenden." -ForegroundColor Gray
+Write-Host "=======================================================" -ForegroundColor Cyan
 
 # Request processing loop
 while ($listener.IsListening) {
