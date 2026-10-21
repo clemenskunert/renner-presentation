@@ -2,7 +2,7 @@
 
 Dieses Verzeichnis (`Deployed/`) enthält die **vollständig vorinstallierte und autarke Version** der Louis Renner Masterclass Konferenz-Präsentation 2025.
 
-> **Wichtig:** Auf dem Tablet ist **keine** Datensynchronisation, kein Python, kein Terminal und kein Server erforderlich! Alle 66 Folien und sämtliche Übersetzungen (Deutsch, Englisch, Japanisch, Chinesisch) sind bereits vollständig vorkompiliert.
+> **Wichtig:** Auf dem Tablet ist **keine** Datensynchronisation, kein Python, kein Terminal und kein Server erforderlich! Alle 65 Folien und sämtliche Übersetzungen (Deutsch, Englisch, Japanisch, Chinesisch) sind bereits vollständig vorkompiliert.
 
 ---
 
