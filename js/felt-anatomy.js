@@ -32,9 +32,8 @@ class FeltAnatomySimulation {
     this.tensionMeter = document.getElementById('felt-tension-meter');
     this.statusDot = document.getElementById('felt-status-dot');
     this.statusText = document.getElementById('felt-status-text');
-    this.damageOverlay = document.getElementById('svg-sanding-damage');
-    this.topVliesGroup = document.getElementById('svg-vlies-top');
-    this.tensionVectors = document.getElementById('svg-tension-vectors');
+    this.intactGroup = document.getElementById('svg-felt-intact');
+    this.deformedGroup = document.getElementById('svg-felt-deformed');
 
     // Event Listeners
     if (this.btnIntact) {
@@ -59,6 +58,11 @@ class FeltAnatomySimulation {
         this.toggleAutoPlay();
       });
     }
+
+    // React to language switch
+    window.addEventListener('languageChanged', () => {
+      this.updateTexts();
+    });
 
     // Set initial mode
     this.setMode('intact', false);
@@ -90,6 +94,24 @@ class FeltAnatomySimulation {
     }
   }
 
+  updateTexts() {
+    const lang = (window.translations && window.translations.currentLang) || 'de';
+    const tData = window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang];
+    if (!tData) return;
+
+    if (this.mode === 'intact') {
+      if (this.statusText) {
+        this.statusText.textContent = tData.s11_anim_status_intact ||
+          '✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch';
+      }
+    } else {
+      if (this.statusText) {
+        this.statusText.textContent = tData.s11_anim_status_sanded ||
+          '✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!';
+      }
+    }
+  }
+
   setMode(mode, userInteraction = true) {
     this.mode = mode;
     if (!this.container) return;
@@ -109,7 +131,7 @@ class FeltAnatomySimulation {
     const tData = window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang];
 
     if (isIntact) {
-      // 1. Tension KPI
+      // 1. Tension KPI: 100% Stability
       if (this.tensionVal) {
         this.tensionVal.textContent = '100%';
         this.tensionVal.style.color = '#86efac';
@@ -126,32 +148,20 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_intact) ||
-          '✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung';
+          '✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch';
         this.statusText.textContent = text;
         this.statusText.style.color = '#e2e8f0';
       }
 
-      // 3. SVG Elements
-      if (this.damageOverlay) {
-        this.damageOverlay.style.opacity = '0';
-        this.damageOverlay.style.pointerEvents = 'none';
-      }
-      if (this.topVliesGroup) {
-        this.topVliesGroup.classList.remove('is-cut');
-      }
-      if (this.tensionVectors) {
-        this.tensionVectors.classList.remove('is-broken');
-      }
-
     } else {
-      // Sanded / Damaged mode
-      // 1. Tension KPI (Drop from 100% to 20%)
+      // Sanded / Damaged mode: Failure under Tension
+      // 1. Tension KPI: Drops to 15% (Buckled / Deformed)
       if (this.tensionVal) {
-        this.tensionVal.textContent = '20%';
+        this.tensionVal.textContent = '15%';
         this.tensionVal.style.color = '#f87171';
       }
       if (this.tensionMeter) {
-        this.tensionMeter.style.width = '20%';
+        this.tensionMeter.style.width = '15%';
         this.tensionMeter.style.background = 'linear-gradient(90deg, #ef4444, #f87171)';
         this.tensionMeter.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.7)';
       }
@@ -162,21 +172,9 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_sanded) ||
-          '✗ Vliesbahnen gekappt: Zerstörung des Rückgrats • Totaler Spannungsverlust!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!';
         this.statusText.textContent = text;
         this.statusText.style.color = '#fca5a5';
-      }
-
-      // 3. SVG Elements
-      if (this.damageOverlay) {
-        this.damageOverlay.style.opacity = '1';
-        this.damageOverlay.style.pointerEvents = 'auto';
-      }
-      if (this.topVliesGroup) {
-        this.topVliesGroup.classList.add('is-cut');
-      }
-      if (this.tensionVectors) {
-        this.tensionVectors.classList.add('is-broken');
       }
     }
   }

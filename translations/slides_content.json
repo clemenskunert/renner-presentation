@@ -1716,46 +1716,46 @@
           "zh": "上下各6层连续纤网：毛毡张力骨架"
         },
         "s11_c1_title": {
-          "de": "2×6 Vliesbahnen: Das Spannungs-Rückgrat",
-          "en": "2×6 Fleece Webs: The Tensile Backbone",
-          "ja": "表裏各6層のフリース繊維束：張力保持の骨格",
-          "zh": "上下各6层连续纤网：毛毡张力骨架"
+          "de": "Zugspannung & Formstabilität: Das Vliesbahnen-Rückgrat",
+          "en": "Tensile Tension & Form Stability: The Fleece Web Backbone",
+          "ja": "引張張力と形状保持力：フリース繊維帯の引張骨格",
+          "zh": "拉伸张力与形状稳定性：连续纤网核心骨架"
         },
         "s11_spotlight_desc": {
-          "de": "Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.",
-          "en": "6 aligned, continuous fleece webs each on top and bottom sustain internal pre-tension. Sanding shears these webs irreversibly.",
-          "ja": "表裏各6層の連続フリース繊維帯が板の内部張力を保持。研磨はこれらを切断し致命的な張力喪失を招きます。",
-          "zh": "毛毡板上下各6条连续定向纤网牢牢锁住内部预应力。砂光打磨会切断纤网造成不可逆的张力溃散。"
+          "de": "Ungeschliffen halten die 2×6 Vliesbahnen voller Zugspannung stand. Geschliffen bricht das Rückgrat: Die Tafel kann der Spannung nicht standhalten und verformt sich irreversibel.",
+          "en": "Unground, the 2×6 fleece webs sustain maximum tension. Sanded, the backbone is destroyed: the board fails under tension and deforms irreversibly.",
+          "ja": "未研磨では表裏各6層の繊維束が強い引張力に耐え抜きます。研磨されると骨格が失われ、張力に耐え切れず不可逆的に変形・座屈します。",
+          "zh": "未打磨状态下，上下各6层连续纤网牢固支撑巨大拉伸张力。若被砂光打磨，承力骨架瓦解，毛毡板无法承受张力并发生永久性严重变形塌陷。"
         },
         "s11_c1_desc": {
-          "de": "Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.",
-          "en": "6 aligned, continuous fleece webs each on top and bottom sustain internal pre-tension. Sanding shears these webs irreversibly.",
-          "ja": "表裏各6層の連続フリース繊維帯が板の内部張力を保持。研磨はこれらを切断し致命的な張力喪失を招きます。",
-          "zh": "毛毡板上下各6条连续定向纤网牢牢锁住内部预应力。砂光打磨会切断纤网造成不可逆的张力溃散。"
+          "de": "Ungeschliffen halten die 2×6 Vliesbahnen voller Zugspannung stand. Geschliffen bricht das Rückgrat: Die Tafel kann der Spannung nicht standhalten und verformt sich irreversibel.",
+          "en": "Unground, the 2×6 fleece webs sustain maximum tension. Sanded, the backbone is destroyed: the board fails under tension and deforms irreversibly.",
+          "ja": "未研磨では表裏各6層の繊維束が強い引張力に耐え抜きます。研磨されると骨格が失われ、張力に耐え切れず不可逆的に変形・座屈します。",
+          "zh": "未打磨状态下，上下各6层连续纤网牢固支撑巨大拉伸张力。若被砂光打磨，承力骨架瓦解，毛毡板无法承受张力并发生永久性严重变形塌陷。"
         },
         "s11_anim_mode_intact": {
-          "de": "✦ 2×6 Vliesbahnen (Rückgrat)",
-          "en": "✦ 2×6 Fleece Webs (Backbone)",
-          "ja": "✦ 表裏各6層フリース束（骨格）",
-          "zh": "✦ 2×6连续纤网（应力骨架）"
+          "de": "✦ Ungeschliffen: Spannung hält (Formstabil)",
+          "en": "✦ Unground: Tension Holds (Shape-Stable)",
+          "ja": "✦ 未研磨：張力保持（高剛性・形状維持）",
+          "zh": "✦ 未打磨：张力锁定（稳固不变形）"
         },
         "s11_anim_mode_sanded": {
-          "de": "⚠️ Schleif-Schaden simulieren",
-          "en": "⚠️ Simulate Sanding Damage",
-          "ja": "⚠️ 研磨ダメージをシミュレート",
-          "zh": "⚠️ 模拟打磨损坏破坏"
+          "de": "⚠️ Geschliffen: Hält Spannung nicht (Verformung)",
+          "en": "⚠️ Sanded: Fails Under Tension (Deformed)",
+          "ja": "⚠️ 研磨後：張力に耐えられず変形・崩壊",
+          "zh": "⚠️ 打磨后：无法承受张力（塌陷严重变形）"
         },
         "s11_anim_gauge_label": {
-          "de": "Spannungs-Integrität",
-          "en": "Tension Integrity",
-          "ja": "張力保持率",
-          "zh": "张力完整率"
+          "de": "Spannungs- & Formstabilität",
+          "en": "Tension & Shape Stability",
+          "ja": "張力＆形状安定度",
+          "zh": "张力与形状稳定性"
         },
         "s11_anim_top_layers": {
-          "de": "▲ OBERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)",
-          "en": "▲ TOP SURFACE: 6 CONTINUOUS FLEECE WEBS (BACKBONE)",
-          "ja": "▲ 上面：6層の連続フリース繊維帯（張力骨格）",
-          "zh": "▲ 顶层：6层连续定向纤网（张力骨架）"
+          "de": "▲ OBERSEITE: 6 DURCHGEHENDE VLIESBAHNEN (ZUGTRÄGER)",
+          "en": "▲ TOP SURFACE: 6 CONTINUOUS FLEECE WEBS (TENSION CORDS)",
+          "ja": "▲ 上面：6層の連続フリース繊維帯（引張支持帯）",
+          "zh": "▲ 顶层：6层连续定向纤网（受拉主梁）"
         },
         "s11_anim_core": {
           "de": "ELASTISCHER FILZKERN (Wollfaser-Matrix)",
@@ -1764,22 +1764,22 @@
           "zh": "高弹毛毡芯层（天然羊毛纤维基体）"
         },
         "s11_anim_bottom_layers": {
-          "de": "▼ UNTERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)",
-          "en": "▼ BOTTOM SURFACE: 6 CONTINUOUS FLEECE WEBS (BACKBONE)",
-          "ja": "▼ 下面：6層の連続フリース繊維帯（張力骨格）",
-          "zh": "▼ 底层：6层连续定向纤网（张力骨架）"
+          "de": "▼ UNTERSEITE: 6 DURCHGEHENDE VLIESBAHNEN (DRUCKAUFNAHME)",
+          "en": "▼ BOTTOM SURFACE: 6 CONTINUOUS FLEECE WEBS (COMPRESSION BASE)",
+          "ja": "▼ 下面：6層の連続フリース繊維帯（圧縮支持帯）",
+          "zh": "▼ 底层：6层连续定向纤网（受压底层）"
         },
         "s11_anim_status_intact": {
-          "de": "✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung",
-          "en": "✓ 2×6 fleece webs intact: Structural backbone maintains full elastic tension",
-          "ja": "✓ 表裏各6層の繊維束が健全：完璧な引張骨格により弾性復元力を維持",
-          "zh": "✓ 2×6连续纤网完好：承力骨架确保毛毡弯折张力与回弹冲力"
+          "de": "✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch",
+          "en": "✓ Unground: 2×6 fleece webs absorb tensile loads completely • Board maintains form and elasticity",
+          "ja": "✓ 未研磨：表裏各6層の繊維帯が引張力を完全支持 • 形状安定性と強力な弾性復元力を維持",
+          "zh": "✓ 未打磨：上下各6层连续纤网完整吸收拉应力 • 毛毡板高度稳固、回弹力充沛"
         },
         "s11_anim_status_sanded": {
-          "de": "✗ Vliesbahnen gekappt: Zerstörung des Rückgrats • Totaler Spannungsverlust!",
-          "en": "✗ Fleece webs sheared: Backbone destroyed • Catastrophic loss of tension!",
-          "ja": "✗ 繊維束が破断：骨格破壊による致命的な張力完全喪失！",
-          "zh": "✗ 连续纤网遭切断磨损：骨架瓦解・整体物理张力彻底丧失！"
+          "de": "✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!",
+          "en": "✗ Sanded: Fleece webs severed – Board fails under tension, buckles & deforms plastically!",
+          "ja": "✗ 研磨後：繊維束破断により引張力に耐えられず、不均一に座屈・激しく塑性変形！",
+          "zh": "✗ 打磨后：纤网被切断失去拉力骨架，毛毡板无法承受张力，凹陷屈曲、严重畸形！"
         },
         "s11_anim_auto_toggle": {
           "de": "Auto-Vergleich",
@@ -1788,40 +1788,40 @@
           "zh": "自动循环对比"
         },
         "s11_hl1_title": {
-          "de": "6+6 Vliesbahnen:",
-          "en": "6+6 Fleece Webs:",
+          "de": "2×6 Vliesbahnen:",
+          "en": "2×6 Fleece Webs:",
           "ja": "表裏各6層の繊維束：",
           "zh": "上下各6层连续纤网："
         },
         "s11_hl1_desc": {
-          "de": "Ausgerichtete, durchgehende Faserbahnen auf Ober- und Unterseite bilden das tragende Rückgrat der Filztafel.",
-          "en": "Continuous, aligned fiber webs on top and bottom form the load-bearing backbone of the felt board.",
-          "ja": "表裏を走る連続した方向性繊維束が、フェルト板全体の強靭な骨格を形成。",
-          "zh": "贯穿上下表层的定向连续纤网构成毛毡板的核心承力骨架。"
+          "de": "Je 6 durchgehende, ausgerichtete Vliesbahnen auf Ober- und Unterseite bilden das tragende Zug- und Spannungsrückgrat.",
+          "en": "6 continuous, aligned fleece webs on top and bottom form the load-bearing tensile and tension backbone.",
+          "ja": "表裏を走る各6層の連続した方向性繊維束が、フェルト板全体の強靭な引張骨格を形成。",
+          "zh": "贯穿上下表层各6层连续定向纤网构成毛毡板的核心抗拉应力骨架。"
         },
         "s11_hl2_title": {
-          "de": "Spannungsträger:",
-          "en": "Tension Carriers:",
-          "ja": "張力保持機能：",
-          "zh": "高能张力维持："
+          "de": "Ungeschliffen (Spannung hält):",
+          "en": "Unground (Tension Holds):",
+          "ja": "未研磨（張力保持）：",
+          "zh": "未打磨（张力锁定）："
         },
         "s11_hl2_desc": {
-          "de": "Diese Vliesbahnen halten die enorme mechanische Eigenspannung, die beim Aufpressen des Hammerkopfs nötig ist.",
-          "en": "These webs sustain the immense internal pre-tension required when moulding the hammerhead under pressure.",
-          "ja": "ハンマー成型プレス時に不可欠な極めて高い内部プレテンションを確実に保持。",
-          "zh": "牢固锁定毛毡在高压冷成型压入木芯时所需的巨大内部预应力。"
+          "de": "Unter Biegespannung nehmen die Vliesbahnen alle Kräfte auf – die Tafel bleibt perfekt formstabil und federt elastisch zurück.",
+          "en": "Under bending stress, the fleece webs absorb all tensile loads – the board remains perfectly shape-stable and springs back.",
+          "ja": "曲げ応力下でも繊維帯がすべての引張力を吸収 • フェルト板は完璧に形状を維持し弾性復元力を発揮。",
+          "zh": "在强力弯折应力下，纤网承担全部拉伸载荷——毛毡板外形极为稳固且能瞬时弹性回弹。"
         },
         "s11_hl3_title": {
-          "de": "Schleif-Schaden:",
-          "en": "Sanding Damage:",
-          "ja": "研磨による破壊：",
-          "zh": "砂光打磨之害："
+          "de": "Geschliffen (Verformung):",
+          "en": "Sanded (Deformation):",
+          "ja": "研磨（崩壊・変形）：",
+          "zh": "打磨砂光（塌陷变形）："
         },
         "s11_hl3_desc": {
-          "de": "Schleifen der Tafel kappt die Vliesbahnen, vernichtet die Vorspannung und lässt den Filz am Scheitel aufplatzen.",
-          "en": "Sanding cuts through these webs, collapsing pre-tension and causing the felt crown to rupture or fray.",
-          "ja": "研磨は繊維束を切断し張力を破壊。打撃頂点（クラウン）の破断や毛羽立ちを引き起こします。",
-          "zh": "砂光打磨硬生生削断纤网，内应力瞬间溃散，导致槌顶在敲击时爆裂起毛。"
+          "de": "Ohne Vliesbahnen bricht die Zugfestigkeit zusammen: Die Tafel kann der Spannung nicht standhalten, verzieht sich und platzt am Scheitel auf.",
+          "en": "Without fleece webs, tensile strength collapses: the board fails under tension, warps out of shape, and splits open at the crown.",
+          "ja": "繊維束を失うと引張強度が崩壊：板は張力に耐えられず歪み、クラウン頂点部から裂け破断します。",
+          "zh": "失去连续纤网后抗拉强度彻底崩溃：毛毡板无法承受张力，剧烈扭曲塌陷，且在槌顶极易撕裂起毛。"
         }
       },
       "notes": {

@@ -5576,97 +5576,141 @@ body::before {
   display: block;
 }
 
-/* SVG Typography & Lines */
-.svg-layer-label {
+/* SVG Typography & Label Styling */
+.svg-clamp-label {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-weight: 800;
+  fill: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.svg-crown-badge-green {
   font-family: var(--font-sans);
   font-size: 8.5px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  fill: var(--gold-light);
-  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
-}
-
-.svg-core-label {
-  font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  fill: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
-}
-
-.svg-tension-text {
-  font-family: var(--font-mono);
-  font-size: 7.5px;
-  font-weight: 700;
+  font-weight: 800;
+  fill: #86efac;
   letter-spacing: 0.5px;
+}
+
+.svg-crown-badge-red {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 800;
+  fill: #fca5a5;
+  letter-spacing: 0.5px;
+  animation: warningBlink 1.4s ease-in-out infinite;
+}
+
+.svg-badge-text-green {
+  font-family: var(--font-mono);
+  font-size: 7.2px;
+  font-weight: 700;
+  fill: #86efac;
+  letter-spacing: 0.4px;
+}
+
+.svg-core-sub {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  fill: rgba(255, 255, 255, 0.65);
+}
+
+.svg-ghost-label {
+  font-family: var(--font-mono);
+  font-size: 7.2px;
+  font-weight: 700;
   fill: #ffd700;
   opacity: 0.85;
 }
 
-.vlies-pulse-stream {
-  animation: vliesFlowPulse 2.8s linear infinite;
+.svg-deform-callout {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 800;
+  fill: #fca5a5;
+  letter-spacing: 0.4px;
 }
 
-.pulse-bottom {
-  animation: vliesFlowPulse 2.8s linear infinite reverse;
+.svg-crack-label {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 800;
+  fill: #f87171;
+  letter-spacing: 0.4px;
 }
 
-@keyframes vliesFlowPulse {
-  0% { stroke-dashoffset: 44; }
+/* Mode-Dependent Geometry Display */
+.group-intact,
+.group-deformed {
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.is-intact .group-intact {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  display: block;
+}
+
+.is-intact .group-deformed {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+  display: none;
+}
+
+.is-sanded .group-intact {
+  opacity: 0;
+  transform: scale(0.98);
+  pointer-events: none;
+  display: none;
+}
+
+.is-sanded .group-deformed {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  display: block;
+}
+
+/* Dynamic Animation Streams */
+.vlies-dynamic-pulse {
+  animation: vliesPulseTravel 2.4s linear infinite;
+}
+
+@keyframes vliesPulseTravel {
+  0% { stroke-dashoffset: 49; }
   100% { stroke-dashoffset: 0; }
 }
 
-.core-pulse-wave {
-  animation: coreWaveShift 4s ease-in-out infinite alternate;
+.intact-core-wave {
+  animation: coreWaveShift 3.6s ease-in-out infinite alternate;
 }
 
 @keyframes coreWaveShift {
   0% { stroke: rgba(200, 163, 86, 0.25); }
-  50% { stroke: rgba(200, 163, 86, 0.5); }
+  50% { stroke: rgba(200, 163, 86, 0.55); }
   100% { stroke: rgba(200, 163, 86, 0.25); }
 }
 
-/* Sanded / Damage States */
-.is-sanded .vlies-top .vlies-track {
-  stroke: url(#vliesGradSanded) !important;
+.deformation-indicator {
+  animation: deformArrowBounce 1.6s ease-in-out infinite alternate;
 }
 
-.is-sanded .vlies-top .vlies-pulse-stream {
-  animation: none !important;
-  opacity: 0.15;
+@keyframes deformArrowBounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(3px); }
 }
 
-.is-sanded .top-tension {
-  fill: #ef4444 !important;
-  text-decoration: line-through;
+.apex-crack {
+  animation: crackAlertFlicker 1.4s ease-in-out infinite alternate;
 }
 
-.is-sanded .grinding-wheel {
-  animation: grindingWheelSpin 0.6s linear infinite;
-  transform-origin: 0 24px;
-}
-
-@keyframes grindingWheelSpin {
-  0% { transform: translate(240px, -15px) rotate(0deg); }
-  100% { transform: translate(240px, -15px) rotate(360deg); }
-}
-
-.is-sanded .spark-cluster circle {
-  animation: sparkFlicker 0.2s steps(2, start) infinite;
-}
-
-@keyframes sparkFlicker {
-  0%, 100% { opacity: 0.9; transform: scale(1); }
-  50% { opacity: 0.3; transform: scale(0.6) translate(1px, -2px); }
-}
-
-.is-sanded .svg-damage-warning {
-  font-family: var(--font-sans);
-  font-size: 8.5px;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  animation: warningBlink 1.4s ease-in-out infinite;
+@keyframes crackAlertFlicker {
+  0% { opacity: 0.8; filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.5)); }
+  100% { opacity: 1; filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.9)); }
 }
 
 @keyframes warningBlink {
