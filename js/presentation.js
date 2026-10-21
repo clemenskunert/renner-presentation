@@ -66,6 +66,7 @@ class PresentationController {
     this.setupGallery();
     this.setupVoicingWidget();
     this.setupSlideGrid();
+    this.setupResponsiveScaling();
     
     // Set initial slide from URL hash (#slide-5 or #5 or ?slide=5) and country theme
     this.setCountryTheme(this.currentTheme);
@@ -498,6 +499,53 @@ class PresentationController {
         this.prevSlide(); // Swipe right -> prev
       }
     }
+  }
+
+  setupResponsiveScaling() {
+    const updateScale = () => {
+      const viewport = document.querySelector('.presentation-viewport');
+      const slideDeck = document.getElementById('slide-deck');
+      if (!viewport || !slideDeck) return;
+
+      // Reference canonical dimensions based on 1080p design (1920x1080 screen)
+      const baseWidth = 1892;
+      const baseHeight = 964;
+
+      // Available space inside viewport minus subtle framing
+      const availWidth = Math.max(200, viewport.clientWidth - 28);
+      const availHeight = Math.max(200, viewport.clientHeight - 16);
+
+      const scaleX = availWidth / baseWidth;
+      const scaleY = availHeight / baseHeight;
+      const scale = Math.min(scaleX, scaleY);
+
+      slideDeck.style.width = `${baseWidth}px`;
+      slideDeck.style.height = `${baseHeight}px`;
+      slideDeck.style.transform = `scale(${scale})`;
+      slideDeck.style.transformOrigin = 'center center';
+      slideDeck.style.flexShrink = '0';
+
+      document.documentElement.style.setProperty('--deck-scale', scale.toFixed(4));
+      window.__presentationScale = scale;
+
+      // Notify interactive canvas subsystems if active
+      if (window.historyJourney && typeof window.historyJourney.resizeCanvas === 'function') {
+        window.historyJourney.resizeCanvas();
+      }
+      if (window.transformationJourney && typeof window.transformationJourney.resizeCanvas === 'function') {
+        window.transformationJourney.resizeCanvas();
+      }
+    };
+
+    updateScale();
+    window.addEventListener('resize', updateScale, { passive: true });
+    window.addEventListener('orientationchange', updateScale, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', updateScale, { passive: true });
+    }
+    document.addEventListener('fullscreenchange', () => {
+      setTimeout(updateScale, 100);
+    });
   }
 
   setupLaserPointer() {

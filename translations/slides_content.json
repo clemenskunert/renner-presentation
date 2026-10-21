@@ -35,6 +35,18 @@
       "en": "Conference 2025 • Beijing & Toyohashi",
       "ja": "2025年 カンファレンス • 北京＆豊橋",
       "zh": "2025年研讨峰会 • 北京与丰桥"
+    },
+    "rotate_device_title": {
+      "de": "Bitte Gerät drehen",
+      "en": "Please Rotate Device",
+      "ja": "画面を横向きにしてください",
+      "zh": "请旋转设备至横屏"
+    },
+    "rotate_device_desc": {
+      "de": "Die Louis Renner Masterclass ist für das Querformat (Landscape) optimiert.",
+      "en": "The Louis Renner Masterclass is optimized for landscape orientation.",
+      "ja": "ルイ・レンナー・マスタークラスは横向き表示（ランドスケープ）に最適化されています。",
+      "zh": "路易斯·雷诺大师课专为横屏展示优化，请将设备切换至横向模式。"
     }
   },
   "slides": {

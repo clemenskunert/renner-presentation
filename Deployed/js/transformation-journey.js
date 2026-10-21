@@ -470,10 +470,8 @@ class RennerTransformationJourney {
   resizeCanvas() {
     if (!this.canvas) return;
     const container = document.getElementById('build-timeline-container');
-    if (!container) return;
-    const rect = container.getBoundingClientRect();
-    this.canvasWidth = rect.width;
-    this.canvasHeight = rect.height;
+    this.canvasWidth = container.clientWidth || 1892;
+    this.canvasHeight = container.clientHeight || 800;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.canvas.width = Math.round(this.canvasWidth * dpr);
     this.canvas.height = Math.round(this.canvasHeight * dpr);

@@ -871,9 +871,8 @@ body::before {
 }
 
 /* ==========================================================================
-   Main Slide Deck Viewport
-   Abstand zum Rand (14px) entspricht exakt dem Abstand zwischen Menüband (32px)
-   und Präsentationsfenster (Top: 32px + 14px = 46px).
+   Main Slide Deck Viewport & Responsive Presentation Canvas
+   Dynamische Skalierung für Displays von 10,1" Tablet bis 80" 4K Konferenz-Screen
    ========================================================================== */
 .presentation-viewport {
   position: absolute;
@@ -885,17 +884,22 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 0;
+  overflow: hidden;
 }
 
 .slide-deck {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
+  width: 1892px;
+  height: 964px;
+  max-width: none;
+  max-height: none;
+  flex-shrink: 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .slide {
@@ -5668,6 +5672,126 @@ body::before {
   font-family: var(--font-serif);
   font-size: 5rem;
   font-weight: 900;
+}
+
+/* ==========================================================================
+   4K / Großbildschirm-Optimierung (Displays bis 80" / >= 2560px)
+   Proportionale Skalierung von Menüleisten und HUD-Bedienelementen
+   ========================================================================== */
+@media (min-width: 2500px) {
+  .header-hud {
+    height: 52px;
+    padding: 0 32px;
+  }
+  .brand-logo {
+    height: 32px;
+  }
+  .brand-name {
+    font-size: 1.25rem;
+  }
+  .brand-subtitle {
+    font-size: 1.0rem;
+  }
+  .header-modules-btn,
+  .header-menu-btn {
+    height: 40px;
+    font-size: 1.05rem;
+    padding: 0 18px;
+  }
+  .bottom-hud {
+    height: 84px;
+    padding: 0 44px;
+  }
+  .slide-counter {
+    font-size: 1.35rem;
+  }
+  .slide-brand-pill {
+    font-size: 1.05rem;
+  }
+  .slide-name-breadcrumb {
+    font-size: 1.2rem;
+    max-width: 700px;
+  }
+  .nav-arrow-btn {
+    width: 60px;
+    height: 52px;
+    font-size: 1.35rem;
+  }
+  .hud-jump-modules-btn {
+    height: 52px;
+    font-size: 1.15rem;
+    padding: 0 22px;
+  }
+  .bottom-hud-renner-logo {
+    height: 42px;
+  }
+  .presentation-viewport {
+    top: 52px;
+    bottom: 84px;
+  }
+}
+
+/* ==========================================================================
+   Portrait-Orientierungs-Hinweis für Mobile/Tablet
+   (Orientierung ist immer Landscape)
+   ========================================================================== */
+.orientation-landscape-warning {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 11, 18, 0.98);
+  z-index: 999999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.orientation-warning-card {
+  max-width: 440px;
+  padding: 32px 28px;
+  background: rgba(22, 29, 44, 0.95);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.orientation-icon {
+  font-size: 3rem;
+  animation: rotateLandscapeHint 2.4s ease-in-out infinite;
+}
+
+@keyframes rotateLandscapeHint {
+  0%, 15% { transform: rotate(0deg); }
+  50%, 65% { transform: rotate(90deg); }
+  90%, 100% { transform: rotate(0deg); }
+}
+
+.orientation-warning-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.orientation-warning-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (orientation: portrait) and (max-width: 1024px) {
+  .orientation-landscape-warning {
+    display: flex;
+  }
 }
 
 </style>
@@ -11146,6 +11270,17 @@ body::before {
        ========================================================================== -->
   <div class="laser-pointer" id="laser-pointer"></div>
 
+  <!-- ==========================================================================
+       Landscape Orientation Warning (Device rotation reminder)
+       ========================================================================== -->
+  <div class="orientation-landscape-warning" id="orientation-warning">
+    <div class="orientation-warning-card">
+      <div class="orientation-icon">🔄</div>
+      <h3 data-i18n="rotate_device_title">Bitte Gerät drehen</h3>
+      <p data-i18n="rotate_device_desc">Die Louis Renner Masterclass ist für das Querformat (Landscape) optimiert.</p>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script>
 /* Embedded translations.js */
@@ -11448,6 +11583,8 @@ window.slideTranslations = {
     "header_modules_btn": "Module (Folie 2)",
     "btn_back_to_modules": "Folie 2 (Module)",
     "conf_badge": "Konferenz 2025 • Beijing & Toyohashi",
+    "rotate_device_title": "Bitte Gerät drehen",
+    "rotate_device_desc": "Die Louis Renner Masterclass ist für das Querformat (Landscape) optimiert.",
     "s1_title": "LOUIS RENNER",
     "s1_subtitle": "Das Herzstück des Klaviers: 140 Jahre Tradition, die neue Fertigung in Meuselwitz & die hohe Kunst des Hammerkopfs",
     "s1_kicker": "Renner Masterclass & Konferenz 2025 • Beijing & Toyohashi",
@@ -12391,6 +12528,8 @@ window.slideTranslations = {
     "header_modules_btn": "Modules (Slide 2)",
     "btn_back_to_modules": "Slide 2 (Modules)",
     "conf_badge": "Conference 2025 • Beijing & Toyohashi",
+    "rotate_device_title": "Please Rotate Device",
+    "rotate_device_desc": "The Louis Renner Masterclass is optimized for landscape orientation.",
     "s1_title": "LOUIS RENNER",
     "s1_subtitle": "The Heart of the Piano: 140 Years of Tradition, Modern Manufacturing in Meuselwitz & The Art of Hammerhead Engineering",
     "s1_kicker": "Renner Masterclass & Conference 2025 • Beijing & Toyohashi",
@@ -13334,6 +13473,8 @@ window.slideTranslations = {
     "header_modules_btn": "モジュール (スライド2)",
     "btn_back_to_modules": "スライド2 (モジュール)",
     "conf_badge": "2025年 カンファレンス • 北京＆豊橋",
+    "rotate_device_title": "画面を横向きにしてください",
+    "rotate_device_desc": "ルイ・レンナー・マスタークラスは横向き表示（ランドスケープ）に最適化されています。",
     "s1_title": "LOUIS RENNER",
     "s1_subtitle": "ピアノの心臓部：140年の伝統、モイゼルヴィッツ新拠点、そして至高のハンマーヘッド製造技術",
     "s1_kicker": "レンナー・マスタークラス＆カンファレンス 2025 • 北京＆豊橋",
@@ -14277,6 +14418,8 @@ window.slideTranslations = {
     "header_modules_btn": "核心模块 (第2页)",
     "btn_back_to_modules": "第2页 (模块)",
     "conf_badge": "2025年研讨峰会 • 北京与丰桥",
+    "rotate_device_title": "请旋转设备至横屏",
+    "rotate_device_desc": "路易斯·雷诺大师课专为横屏展示优化，请将设备切换至横向模式。",
     "s1_title": "LOUIS RENNER",
     "s1_subtitle": "钢琴的心脏：雷诺140年极致工艺传承、莫伊瑟尔维茨新总部启航与弦槌声学生产大师课",
     "s1_kicker": "雷诺大师课与行业技术峰会 2025 • 北京 & 丰桥",
@@ -17088,10 +17231,8 @@ class RennerHistoryJourney {
   resizeCanvas() {
     if (!this.canvas) return;
     const container = document.getElementById('tree-timeline-container');
-    if (!container) return;
-    const rect = container.getBoundingClientRect();
-    this.canvasWidth = rect.width;
-    this.canvasHeight = rect.height;
+    this.canvasWidth = container.clientWidth || 1892;
+    this.canvasHeight = container.clientHeight || 800;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.canvas.width = Math.round(this.canvasWidth * dpr);
     this.canvas.height = Math.round(this.canvasHeight * dpr);
@@ -18392,10 +18533,8 @@ class RennerTransformationJourney {
   resizeCanvas() {
     if (!this.canvas) return;
     const container = document.getElementById('build-timeline-container');
-    if (!container) return;
-    const rect = container.getBoundingClientRect();
-    this.canvasWidth = rect.width;
-    this.canvasHeight = rect.height;
+    this.canvasWidth = container.clientWidth || 1892;
+    this.canvasHeight = container.clientHeight || 800;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.canvas.width = Math.round(this.canvasWidth * dpr);
     this.canvas.height = Math.round(this.canvasHeight * dpr);
@@ -19359,6 +19498,7 @@ class PresentationController {
     this.setupGallery();
     this.setupVoicingWidget();
     this.setupSlideGrid();
+    this.setupResponsiveScaling();
     
     // Set initial slide from URL hash (#slide-5 or #5 or ?slide=5) and country theme
     this.setCountryTheme(this.currentTheme);
@@ -19791,6 +19931,53 @@ class PresentationController {
         this.prevSlide(); // Swipe right -> prev
       }
     }
+  }
+
+  setupResponsiveScaling() {
+    const updateScale = () => {
+      const viewport = document.querySelector('.presentation-viewport');
+      const slideDeck = document.getElementById('slide-deck');
+      if (!viewport || !slideDeck) return;
+
+      // Reference canonical dimensions based on 1080p design (1920x1080 screen)
+      const baseWidth = 1892;
+      const baseHeight = 964;
+
+      // Available space inside viewport minus subtle framing
+      const availWidth = Math.max(200, viewport.clientWidth - 28);
+      const availHeight = Math.max(200, viewport.clientHeight - 16);
+
+      const scaleX = availWidth / baseWidth;
+      const scaleY = availHeight / baseHeight;
+      const scale = Math.min(scaleX, scaleY);
+
+      slideDeck.style.width = `${baseWidth}px`;
+      slideDeck.style.height = `${baseHeight}px`;
+      slideDeck.style.transform = `scale(${scale})`;
+      slideDeck.style.transformOrigin = 'center center';
+      slideDeck.style.flexShrink = '0';
+
+      document.documentElement.style.setProperty('--deck-scale', scale.toFixed(4));
+      window.__presentationScale = scale;
+
+      // Notify interactive canvas subsystems if active
+      if (window.historyJourney && typeof window.historyJourney.resizeCanvas === 'function') {
+        window.historyJourney.resizeCanvas();
+      }
+      if (window.transformationJourney && typeof window.transformationJourney.resizeCanvas === 'function') {
+        window.transformationJourney.resizeCanvas();
+      }
+    };
+
+    updateScale();
+    window.addEventListener('resize', updateScale, { passive: true });
+    window.addEventListener('orientationchange', updateScale, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', updateScale, { passive: true });
+    }
+    document.addEventListener('fullscreenchange', () => {
+      setTimeout(updateScale, 100);
+    });
   }
 
   setupLaserPointer() {
