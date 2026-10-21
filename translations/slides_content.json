@@ -869,6 +869,12 @@
           "ja": "低刺激カーボン処理：",
           "zh": "温和脱杂脱炭："
         },
+        "s6_hl1_desc": {
+          "de": "Sanfte biologisch-mechanische Reinigung entfernt pflanzliche Reste ohne die Keratin-Proteinstruktur anzugreifen.",
+          "en": "Gentle organic cleansing removes plant residues without damaging keratin protein structure.",
+          "ja": "ケラチンタンパク質構造を傷つけることなく植物残留物を除去。",
+          "zh": "温和物理与生物脱杂，在完全不伤及天然角蛋白的前提下清除草屑杂质。"
+        },
         "s6_hl2_title": {
           "de": "Natürliche Spiralfedern:",
           "en": "Natural Spiral Springs:",
@@ -970,6 +976,12 @@
           "en": "Precise interplay of diverse wool characteristics",
           "ja": "多種多様な羊毛特性の精緻な調和",
           "zh": "多产地羊毛特性的精准配比与融合"
+        },
+        "s7_panel_subtitle": {
+          "de": "Auflockerung und Mischung verschiedener Wollpartien für maßgeschneiderte Dichten",
+          "en": "Loosening and blending distinct wool batches for tailor-made densities",
+          "ja": "密度と弾性を精密に制御する各種ウールの開繊・混合工程",
+          "zh": "多批次优质羊毛的精细开松与原厂混合配比工程"
         },
         "s7_fact_badge": {
           "de": "🔒 Exklusive Renner-Mischung für maximale dynamische Bandbreite",
@@ -1186,6 +1198,12 @@
           "en": "Maximum Fiber Length:",
           "ja": "繊維長の最大保持：",
           "zh": "最大化纤维保留："
+        },
+        "s8_hl3_desc": {
+          "de": "Schonendes Kardieren verhindert Faserbruch und sichert maximale Zugfestigkeit des Vlieses.",
+          "en": "Gentle carding prevents fiber breakage and ensures maximum tensile strength of the fleece.",
+          "ja": "丁寧なカード処理で繊維の破断を防ぎ、フリースの優れた引裂強度を確保。",
+          "zh": "极其轻柔的顺梳工艺杜绝纤维断裂，赋予羊毛絮片极高的结构抗拉强度。"
         }
       },
       "notes": {
@@ -1223,6 +1241,30 @@
         "zh": "Verschlingung der Fasern durch natürliche physikalisch-thermische Reize"
       },
       "elements": {
+        "s9_bullet_1": {
+          "de": "<strong>1. Heißdampf:</strong> Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.",
+          "en": "<strong>1. Live Steam:</strong> Opens microscopic cuticle scales of fibers and renders keratin supple.",
+          "ja": "<strong>1. 熱蒸気：</strong>キューティクルを開きケラチンを柔軟化。",
+          "zh": "<strong>1. 高温蒸汽：</strong>充分打开毛鳞片微孔，软化角蛋白分子链。"
+        },
+        "s9_bullet_2": {
+          "de": "<strong>2. Mechanischer Druck:</strong> Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.",
+          "en": "<strong>2. Mechanical Pressure:</strong> Continuously compresses fleece layers, initiating progressive density increase.",
+          "ja": "<strong>2. 機械圧力：</strong>フリース層を均一に圧着し高密度化を促進。",
+          "zh": "<strong>2. 机械压力：</strong>持续层层匀压，启动渐进致密缩合。"
+        },
+        "s9_bullet_3": {
+          "de": "<strong>3. Oszillierende Bewegung:</strong> Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.",
+          "en": "<strong>3. Oscillating Motion:</strong> Frictional rubbing interlocks natural barbed scales of fibers inextricably.",
+          "ja": "<strong>3. 振動摩擦：</strong>繊維の微細なキューティクルを立体的に深層結束。",
+          "zh": "<strong>3. 往复振动：</strong>多维微幅摩擦使毛鳞片不可逆地深层咬合交锁。"
+        },
+        "s9_bullet_4": {
+          "de": "<strong>4. Handwerkliches Know-how:</strong> Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.",
+          "en": "<strong>4. Artisan Know-How:</strong> Sensory feel for the exact moment of completion governs elasticity and acoustic resonance.",
+          "ja": "<strong>4. 熟練の技：</strong>理想の縮絨タイミングを見極め、極上の弾性と音色を実現。",
+          "zh": "<strong>4. 匠师掌控：</strong>精准把控终点毫秒时机，铸就绝佳回弹与通透共振。"
+        },
         "s9_c1_title": {
           "de": "1. Heißdampf",
           "en": "1. Live Steam",

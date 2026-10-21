@@ -1286,53 +1286,109 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 6: Rohwolle & Faserselektion (Sander Bento)
-    slides.append(f'''<!-- SLIDE 6 (Sander Bento Mosaic) -->
-      <section class="slide" data-slide="6">
-<div class="slide-header">
+    # SLIDE 6: Rohwolle & Faserselektion (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 6 (FFW Felt Stage: Rohwolle & Faserselektion) -->
+      <section class="slide ffw-felt-slide" data-slide="6">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
+        <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s6_category">Teil 2: Filzherstellung • Rohstoff & Wolle</div>
             <h2 class="slide-title" data-i18n="s6_title">Reine Schurwolle: Schonung der Faserstruktur</h2>
             <div class="slide-subtitle" data-i18n="s6_subtitle">Nur unverpresste Rohwolle garantiert die maximale natürliche Elastizität</div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge gold" data-i18n="s6_b1_badge">>ROHSTOFF-SELEKTION</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">100%</span>
-                <span class="bento-metric-unit">Reine Schurwolle</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_1"><strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_2"><strong>Höhere Logistikkosten für Spitzenqualität:</strong> Dieser schonende Transport erhöht das Transportvolumen, sichert jedoch die unversehrte Faserelastizität.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_3"><strong>Starke Faserkräuselung:</strong> Nur hochgradig gekräuselte Merinowollfasern bieten beim späteren Walkprozess den optimalen Verhakungseffekt.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_4"><strong>Schonende Carbonisierung:</strong> Chemisch sanftes Reinigungsverfahren entfernt Pflanzenteilchen, ohne die Proteinstruktur des Keratins anzugreifen.</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Main Stage Card -->
+            <div class="ffw-history-main">
+              <div class="ffw-stage-card">
+                <div class="ffw-static-panel">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s6_b1_badge">>ROHSTOFF-SELEKTION</span>
+                      <span class="ffw-panel-year">01</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_panel_title">Selektion edler Merinowolle aus Übersee</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_panel_subtitle">Schonender Transport in unverpressten Ballen bewahrt die mikroskopische Schuppenstruktur</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s6_bullet_1"><strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s6_bullet_2"><strong>Höhere Logistikkosten für Spitzenqualität:</strong> Dieser schonende Transport erhöht das Transportvolumen, sichert jedoch die unversehrte Faserelastizität.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s6_bullet_3"><strong>Starke Faserkräuselung:</strong> Nur hochgradig gekräuselte Merinowollfasern bieten beim späteren Walkprozess den optimalen Verhakungseffekt.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s6_fact_badge">🐑 100% reine Merinoschurwolle ohne synthetische Beimischung</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p5_2.jpg" alt="Unverpresste Wollballen">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s6_b2_badge">>UNVERPRESSTE BALLEN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_caption_1">Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_5_2_Image181.jpg" alt="Rohwolle in Ballen">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s6_b2_badge">>UNVERPRESSTE BALLEN</span>
-                <div class="bento-media-caption" data-i18n="s6_caption_1">Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW</div>
+
+            <!-- RIGHT WING: Felt Spotlight Card -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s6_b3_badge">>FASERINTEGRITÄT</span>
+                  <div class="bento-card-title" data-i18n="s6_c1_title">Die Naturkraft des Keratins</div>
+                  <div class="bento-card-desc" data-i18n="s6_c1_desc">Die intakte Schuppenstruktur entscheidet über die spätere Anschlagselastizität des Hammerkopfs</div>
+                </div>
+
+                <div class="ffw-texture-viewer" id="s6-texture-viewer" title="Detailansicht">
+                  <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p5_3.jpg" alt="Merinowollfasern Kräuselung" class="ffw-texture-img">
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s6_texture_tag">Faser-Makro: Schuppenstruktur</span>
+                  </div>
+                </div>
+
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s6_hl1_title">Schonende Carbonisierung:</strong>
+                      <span data-i18n="s6_hl1_desc">Sanfte biologisch-mechanische Reinigung entfernt pflanzliche Reste ohne die Keratin-Proteinstruktur anzugreifen.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s6_hl2_title">Natürliche Spiralfedern:</strong>
+                      <span data-i18n="s6_hl2_desc">Millionen feiner Biegungen federn den Aufprall an den Saiten in Millisekunden ab.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s6_hl3_title">Reines Wollfett (Lanolin):</strong>
+                      <span data-i18n="s6_hl3_desc">Bewahrt die Fasergeschmeidigkeit und schützt vor Versprödung bei Raumklimaschwankungen.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1340,48 +1396,109 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 7: Die geheime Wollmischung (Sander Bento)
-    slides.append(f'''<!-- SLIDE 7 (Sander Bento Mosaic) -->
-      <section class="slide" data-slide="7">
-<div class="slide-header">
+    # SLIDE 7: Die geheime Wollmischung (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 7 (FFW Felt Stage: Die geheime Wollmischung) -->
+      <section class="slide ffw-felt-slide" data-slide="7">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
+        <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s7_category">Teil 2: Filzherstellung • Wollmischung</div>
             <h2 class="slide-title" data-i18n="s7_title">Die geheime Rezeptur der Wollmischung</h2>
             <div class="slide-subtitle" data-i18n="s7_subtitle">Auflockerung und Mischung verschiedener Wollpartien für maßgeschneiderte Dichten</div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge gold" data-i18n="s7_b1_badge">>MANUFAKTURGEHEIMNIS</span>
-              <div class="bento-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px;" data-i18n="s7_c1_desc">
-                Die Zusammensetzung und Aufbereitung der Wollfasern für Renner-Hammerköpfe ist ein streng gehütetes Manufakturgeheimnis zwischen der Filzfabrik Wurzen und Louis Renner.
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s7_bullet_1"><strong>Blend-Verfahren:</strong> Mischen unterschiedlicher Faserlängen und -stärken, um spezifische Federsteifigkeiten zu erzielen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s7_bullet_2"><strong>Faserauflockerung:</strong> Mehrstufiges maschinelles Zupfen und Belüften trennt Faserknäuel sanft in Einzelfasern.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s7_bullet_3"><strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme vor dem Kardieren verhindert elektrostatische Aufladung und Faserbruch.</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Main Stage Card -->
+            <div class="ffw-history-main">
+              <div class="ffw-stage-card">
+                <div class="ffw-static-panel">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s7_b1_badge">>MANUFAKTURGEHEIMNIS</span>
+                      <span class="ffw-panel-year">02</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s7_panel_title">Präzises Zusammenspiel verschiedener Wollcharaktere</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s7_panel_subtitle">Auflockerung und Mischung verschiedener Wollpartien für maßgeschneiderte Dichten</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s7_bullet_1"><strong>Blend-Verfahren:</strong> Mischen unterschiedlicher Faserlängen und -stärken, um spezifische Federsteifigkeiten zu erzielen.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s7_bullet_2"><strong>Faserauflockerung:</strong> Mehrstufiges maschinelles Zupfen und Belüften trennt Faserknäuel sanft in Einzelfasern.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s7_bullet_3"><strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme vor dem Kardieren verhindert elektrostatische Aufladung und Faserbruch.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s7_fact_badge">🔒 Exklusive Renner-Mischung für maximale dynamische Bandbreite</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p6_2.jpg" alt="Mischen der Wollfasern">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s7_b2_badge">>FASERAUFBEREITUNG</span>
+                      <span class="ffw-media-caption-text" data-i18n="s7_caption_1">Auflockerungs- und Mischprozess der Faserchargen bei FFW Wurzen</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_6_2_Image187.jpg" alt="Mischen der Wollfasern">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s7_b2_badge">>FASERAUFBEREITUNG</span>
-                <div class="bento-media-caption" data-i18n="s7_caption_1">Auflockerungs- und Mischprozess der Faserchargen bei FFW Wurzen</div>
+
+            <!-- RIGHT WING: Felt Spotlight Card -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s7_b3_badge">>REZEPTUR-BALANCE</span>
+                  <div class="bento-card-title" data-i18n="s7_c1_title">Federsteifigkeit nach Maß</div>
+                  <div class="bento-card-desc" data-i18n="s7_c1_desc">Harmonisches Gleichgewicht aus langen Spannungsfasern und feinen Füllhaaren</div>
+                </div>
+
+                <div class="ffw-texture-viewer" id="s7-texture-viewer" title="Detailansicht">
+                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_wolle_kardieren_vlies.jpeg" alt="Fasermischungs-Inspektion" class="ffw-texture-img">
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s7_texture_tag">Rezeptur: Chargen-Zusammenführung</span>
+                  </div>
+                </div>
+
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s7_hl1_title">Lange Zugfasern:</strong>
+                      <span data-i18n="s7_hl1_desc">Nehmen die enormen Dehnspannungen beim Umbiegen um die Hammerkern-Spitze auf.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s7_hl2_title">Feine Füllfasern:</strong>
+                      <span data-i18n="s7_hl2_desc">Verdichten die Zwischenräume und sichern das elastische Rückstellvermögen.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s7_hl3_title">Homogene Elastizität:</strong>
+                      <span data-i18n="s7_hl3_desc">Verhindert Dichteschwankungen und harte Nester über alle 88 Töne.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1389,53 +1506,109 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 8: Krempeln & Vliesbildung (Carding) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 8 (Sander Bento Mosaic) -->
-      <section class="slide" data-slide="8">
-<div class="slide-header">
+    # SLIDE 8: Krempeln & Vliesbildung (Carding) (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 8 (FFW Felt Stage: Krempeln & Vliesbildung) -->
+      <section class="slide ffw-felt-slide" data-slide="8">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
+        <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s8_category">Teil 2: Filzherstellung • Vlies & Faserrichtung</div>
             <h2 class="slide-title" data-i18n="s8_title">Krempeln: Parallele Ausrichtung zu weichen Vliesen</h2>
             <div class="slide-subtitle" data-i18n="s8_subtitle">Die definierte Faserorientierung als Fundament für Schwingung und Saitenansprache</div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge gold" data-i18n="s8_b1_badge">>FASERORIENTIERUNG</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">100%</span>
-                <span class="bento-metric-unit">Parallele Ausrichtung</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s8_bullet_1"><strong>Kardieren (Carding):</strong> Die aufgelockerten Fasern werden über feine Nadelwalzen gekämmt, entwirrt und parallel zueinander angeordnet.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s8_bullet_2"><strong>Definierte Faserrichtung:</strong> Das so entstehende hauchdünne, weiche Vlies besitzt eine exakt vorgegebene Vorzugsrichtung der Fasern.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s8_bullet_3"><strong>Schichtung:</strong> Mehrere Vlieslagen werden im Kreuz- und Längsverbund übereinandergelegt, um die gewünschte Plattendicke und Dichteverteilung aufzubauen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s8_bullet_4"><strong>Voraussetzung für die Intonation:</strong> Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche.</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Main Stage Card -->
+            <div class="ffw-history-main">
+              <div class="ffw-stage-card">
+                <div class="ffw-static-panel">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s8_b1_badge">>FASERORIENTIERUNG</span>
+                      <span class="ffw-panel-year">03</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s8_panel_title">Trommelkarden kämmen die Fasern parallel</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s8_panel_subtitle">Gezielte Längs- und Querausrichtung für vorhersehbare Elastizität beim Anschlag</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s8_bullet_1"><strong>Kardieren (Carding):</strong> Die aufgelockerten Fasern werden über feine Nadelwalzen gekämmt, entwirrt und parallel zueinander angeordnet.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s8_bullet_2"><strong>Definierte Faserrichtung:</strong> Das so entstehende hauchdünne, weiche Vlies besitzt eine exakt vorgegebene Vorzugsrichtung der Fasern.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s8_bullet_3"><strong>Schichtung:</strong> Mehrere Vlieslagen werden im Kreuz- und Längsverbund übereinandergelegt, um die gewünschte Plattendicke und Dichteverteilung aufzubauen.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s8_fact_badge">🧵 Parallele Faserführung ist die Grundvoraussetzung präziser Intonation</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p7_2.jpg" alt="Krempeln zu Vlies">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s8_b2_badge">>KARDIEREN & VLIES</span>
+                      <span class="ffw-media-caption-text" data-i18n="s8_caption_1">Auskämmen der Wolle zu seidig fließenden Vliesen mit definierter Faserrichtung</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_7_2_Image190.jpg" alt="Krempeln zu Vlies">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s8_b2_badge">>KARDIEREN & VLIES</span>
-                <div class="bento-media-caption" data-i18n="s8_caption_1">Auskämmen der Wolle zu seidig fließenden Vliesen mit definierter Faserrichtung</div>
+
+            <!-- RIGHT WING: Felt Spotlight Card -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s8_b3_badge">>VLIES-STRUKTUR</span>
+                  <div class="bento-card-title" data-i18n="s8_c1_title">Voraussetzung für die Intonation</div>
+                  <div class="bento-card-desc" data-i18n="s8_c1_desc">Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche</div>
+                </div>
+
+                <div class="ffw-texture-viewer" id="s8-texture-viewer" title="Detailansicht">
+                  <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p7_3.jpg" alt="Ausgerichtetes Wollvlies" class="ffw-texture-img">
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s8_texture_tag">Vlies-Flor: Geordnete Fasern</span>
+                  </div>
+                </div>
+
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s8_hl1_title">Gleitende Nadelung:</strong>
+                      <span data-i18n="s8_hl1_desc">Intoniernadeln verdrängen parallele Fasern, anstatt sie zu zerschneiden.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s8_hl2_title">Fließende Dichteverläufe:</strong>
+                      <span data-i18n="s8_hl2_desc">Schichtung im Kreuzverbund verhindert Delamination bei extremem Tastendruck.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s8_hl3_title">Maximale Faserlänge:</strong>
+                      <span data-i18n="s8_hl3_desc">Schonendes Kardieren verhindert Faserbruch und sichert maximale Zugfestigkeit des Vlieses.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1443,61 +1616,113 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 9: Der Walkprozess (Felting) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 9: Der Walkprozess (Felting) -->
-      <section class="slide" data-slide="9">
-<div class="slide-header">
+    # SLIDE 9: Der Walkprozess (Felting) (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 9 (FFW Felt Stage: Der Walkprozess) -->
+      <section class="slide ffw-felt-slide" data-slide="9">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
+        <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s9_category">Teil 2: Filzherstellung • Walkprozess</div>
             <h2 class="slide-title" data-i18n="s9_title">Die 4 Säulen des Walkens: Dampf, Druck, Bewegung & Wissen</h2>
             <div class="slide-subtitle" data-i18n="s9_subtitle">Verschlingung der Fasern durch natürliche physikalisch-thermische Reize</div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 14px;">
-              <div class="bento-card">
-                <div class="bento-step-watermark">01</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s9_b1_badge">>HEISSDAMPF</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Main Stage Card -->
+            <div class="ffw-history-main">
+              <div class="ffw-stage-card">
+                <div class="ffw-static-panel">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s9_b1_badge">>HAMMERWALKE</span>
+                      <span class="ffw-panel-year">04</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s9_panel_title">Reine mechanische Verfilzung ohne Fremdstoffe</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s9_panel_subtitle">Wasser, Wärme, Druck und Rhythmus verschlingen die Fasern dauerhaft</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s9_bullet_1"><strong>1. Heißdampf:</strong> Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s9_bullet_2"><strong>2. Mechanischer Druck:</strong> Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s9_bullet_3"><strong>3. Oszillierende Bewegung:</strong> Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s9_bullet_4"><strong>4. Handwerkliches Know-how:</strong> Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s9_fact_badge">🌊 Ausschließlich weiches Muldental-Wasser und Hitze – 100% chemiefrei</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p8_2.jpg" alt="Schichtung der Vliese zur Filzplatte">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s9_b2_badge">>HANDWERKSKUNST</span>
+                      <span class="ffw-media-caption-text" data-i18n="s9_caption_1">Zusammenführen und Walken der Vlieslagen zur homogenen Filzplatte</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-title" data-i18n="s9_c1_title">1. Heißdampf</div>
-                <div class="bento-card-desc" data-i18n="s9_c1_desc">Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">02</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s9_b2_badge">>MECHANISCHER DRUCK</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s9_c2_title">2. Mechanischer Druck</div>
-                <div class="bento-card-desc" data-i18n="s9_c2_desc">Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">03</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s9_b3_badge">>OSZILLATION</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s9_c3_title">3. Oszillierende Bewegung</div>
-                <div class="bento-card-desc" data-i18n="s9_c3_desc">Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">04</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s9_b4_badge">>HANDWERKSKUNST</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s9_c4_title">4. Handwerkliches Know-how</div>
-                <div class="bento-card-desc" data-i18n="s9_c4_desc">Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.</div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_8_2_Image194.jpg" alt="Der Walkprozess">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s9_b5_badge">>HAMMERWALKE</span>
-                <div class="bento-media-caption" data-i18n="s9_caption_1">Zusammenführen und Walken der Vlieslagen zur homogenen Filzplatte</div>
+
+            <!-- RIGHT WING: Felt Spotlight Card -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s9_b3_badge">>WALK-KOMPRESSION</span>
+                  <div class="bento-card-title" data-i18n="s9_c1_title">Physikalische Verdichtung</div>
+                  <div class="bento-card-desc" data-i18n="s9_c1_desc">Die Schuppen der Wollhaare verhaken sich mikromechanisch wie Kletten</div>
+                </div>
+
+                <div class="ffw-texture-viewer" id="s9-texture-viewer" title="Detailansicht">
+                  <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p8_3.jpg" alt="Walkmaschine Dampf und Druck" class="ffw-texture-img">
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s9_texture_tag">Mikro-Textur: Walk-Kompression</span>
+                  </div>
+                </div>
+
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s9_hl1_title">Keine Dämpfung durch Kleber:</strong>
+                      <span data-i18n="s9_hl1_desc">Rein mechanische Verfilzung erhält die freie Schwingung der Wollhaare.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s9_hl2_title">Dauerelastizität:</strong>
+                      <span data-i18n="s9_hl2_desc">Natürliche Keratinfedern federn in Millisekunden ab und ermüden nicht.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s9_hl3_title">Maximale Obertonreinheit:</strong>
+                      <span data-i18n="s9_hl3_desc">Das weiche Muldental-Wasser verhindert Mineralablagerungen in den Poren.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1505,9 +1730,12 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 10: Natürliche Walkhärte: 0.56 Shore (Sander Bento Stat Hero)
-    slides.append(f'''      <!-- SLIDE 10: Natürliche Walkhärte: 0.56 Shore -->
-      <section class="slide" data-slide="10">
+    # SLIDE 10: Natürliche Walkhärte: 0.56 Shore (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 10 (FFW Felt Stage: Natürliche Walkhärte 0.56 Shore) -->
+      <section class="slide ffw-felt-slide" data-slide="10">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s10_category">Teil 2: Filzherstellung • Elastizität</div>
@@ -1515,35 +1743,96 @@ def get_all_slides_html():
             <div class="slide-subtitle" data-i18n="s10_subtitle">Maximale Eigenelastizität durch Verzicht auf chemische oder thermische Überhärtung</div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s10_b1_badge">>PHYSIKALISCHE GRENZE</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">0.56</span>
-                <span class="bento-metric-unit">Shore</span>
-              </div>
-              <div class="bento-card-title" data-i18n="s10_c1_title">Maximale natürliche Walkhärte</div>
-              <div class="bento-card-desc" data-i18n="s10_c1_desc">
-                Filzplatten werden beim Walken so lange verdichtet, bis sich die Fasern auf rein mechanischem Wege nicht weiter zusammenschieben lassen. Dies entspricht der maximalen natürlichen Walkhärte von ca. 0.56 Shore.
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s10_bullet_1"><strong>Keine künstliche Versteifung:</strong> Härtere Filze anderer Hersteller werden oft durch Leime oder chemische Zusätze erzwungen – Weickert/Renner setzt auf 100% reine Faserelastizität!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s10_bullet_2"><strong>Akustisches Resultat:</strong> Reiche Obertonstruktur, schnelle Rückfederung von der Saite („Let-off“ des Hammers) und minimales Eigengeräusch.</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Main Stage Card -->
+            <div class="ffw-history-main">
+              <div class="ffw-stage-card">
+                <div class="ffw-static-panel">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s10_b1_badge">>PHYSIKALISCHE GRENZE</span>
+                      <span class="ffw-panel-year">0.56</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s10_panel_title">Vollendete Verdichtung an der physikalischen Grenze</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s10_panel_subtitle">Filzplatten werden exakt bis zum Punkt verdichtet, an dem sich die Fasern optimal berühren</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s10_bullet_1"><strong>Maximale Faserkompression:</strong> Die Fasern lassen sich auf rein mechanischem Wege nicht weiter zusammenschieben, ohne beschädigt zu werden.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s10_bullet_2"><strong>Höchste natürliche Rückstellkraft:</strong> Entspricht dem physikalischen Optimum an Eigenelastizität für den Konzertflügelanschlag.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s10_bullet_3"><strong>Frei von Kunstharzen:</strong> Verzicht auf synthetische Versteifer oder chemische Überhärtung sichert dauerhafte Resonanz.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s10_fact_badge">🎯 0.56 Shore: Reinste Eigenelastizität ohne Verhärtungsmittel</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p9_2.jpg" alt="Gewalkte Filzplatte bei 0.56 Shore">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s10_b2_badge">>FFW WURZEN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s10_caption_2">Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/image7.jpeg" alt="Filzplatten bei FFW">
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s10_b2_badge">>FFW WURZEN</span>
-                <div class="bento-media-caption" data-i18n="s10_caption_1">Filzplatten bei FFW</div>
-                <div class="bento-media-subcaption" data-i18n="s10_caption_2">Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore</div>
+
+            <!-- RIGHT WING: Felt Spotlight Card -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s10_b3_badge">>AKUSTISCHE PERFEKTION</span>
+                  <div class="bento-card-title" data-i18n="s10_c1_title">Federkraft statt Härte</div>
+                  <div class="bento-card-desc" data-i18n="s10_c1_desc">Reine Walkhärte liefert unübertroffenes dynamisches Ansprechverhalten am Konzertflügel</div>
+                </div>
+
+                <div class="ffw-texture-viewer" id="s10-texture-viewer" title="Detailansicht">
+                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Walk-Kompression Textur" class="ffw-texture-img">
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s10_texture_tag">Härteprüfung: 0.56 Shore</span>
+                  </div>
+                </div>
+
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s10_hl1_title">Schneller Let-Off:</strong>
+                      <span data-i18n="s10_hl1_desc">Der Hammer löst sich verzögerungsfrei von der Saite – kein Abdämpfen des Tons.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s10_hl2_title">Farbenreicher Klang:</strong>
+                      <span data-i18n="s10_hl2_desc">Volle Ausbildung der Grund- und Teiltöne ohne Schrillheit im Diskant.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s10_hl3_title">Stabiler Anschlag:</strong>
+                      <span data-i18n="s10_hl3_desc">Konstante Dichte über zehntausende Anschläge hinweg.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1551,54 +1840,116 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 11: Nachpressen mit Filzhämmern & Steinen (Sander Bento)
-    slides.append(f'''<!-- SLIDE 11 (Sander Bento Mosaic) -->
-      <section class="slide" data-slide="11">
-<div class="slide-header">
+    # SLIDE 11: Nachpressen mit Filzhämmern & Steinen (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 11 (FFW Felt Stage: Nachpressen mit Filzhämmern & Steinen) -->
+      <section class="slide ffw-felt-slide" data-slide="11">
+        <!-- Ambient Felt Texture Background Layer -->
+        <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
+
+        <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s11_category">Teil 2: Filzherstellung • Nachverdichtung</div>
             <h2 class="slide-title" data-i18n="s11_title">Verdichten mit Filzhämmern & Filzsteinen</h2>
             <div class="slide-subtitle" data-i18n="s11_subtitle">Formgebung auf Endmaß ohne Schleifen – Bewahrung der seidigen Faserhaut</div>
           </div>
         </div>
+
         <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge gold" data-i18n="s11_b1_badge">>FORMGEBUNG OHNE SCHLEIFEN</span>
-              <div class="bento-card-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px;" data-i18n="s11_c1_desc">
-                Die Nachbearbeitung gewalkter Platten entscheidet über deren Langzeitstabilität:
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s11_bullet_1"><strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s11_bullet_2"><strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s11_bullet_3"><strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.</span>
+          <div class="ffw-history-layout">
+            <!-- LEFT WING: Main Stage Card -->
+            <div class="ffw-history-main">
+              <div class="ffw-stage-card">
+                <div class="ffw-static-panel">
+                  <div class="ffw-panel-info">
+                    <div class="ffw-panel-header">
+                      <span class="bento-badge gold" data-i18n="s11_b1_badge">>FORMGEBUNG OHNE SCHLEIFEN</span>
+                      <span class="ffw-panel-year">05</span>
+                    </div>
+                    <h3 class="ffw-panel-title" data-i18n="s11_panel_title">Manuelle Verdichtung und Egalisierung</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s11_panel_subtitle">Gezielte Hammerschläge bringen die Filzplatten auf das exakte Maß und entspannen das Fasergefüge</div>
+                    <div class="ffw-panel-bullets">
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s11_bullet_1"><strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s11_bullet_2"><strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen.</span>
+                      </div>
+                      <div class="ffw-bullet-item">
+                        <span class="bento-dot gold"></span>
+                        <span data-i18n="s11_bullet_3"><strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt ohne aufplatzende Risse.</span>
+                      </div>
+                    </div>
+                    <div class="ffw-panel-footer">
+                      <span class="ffw-fact-badge" data-i18n="s11_fact_badge">🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit</span>
+                    </div>
+                  </div>
+                  <div class="ffw-panel-media">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p9_3.jpg" alt="Verdichten mit Filzhämmern">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+                    <div class="ffw-media-caption-box">
+                      <span class="bento-badge green" data-i18n="s11_b2_badge">>HAMMER & STEIN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s11_caption_1">Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_9_2_Image198.jpg" alt="Verdichten mit Filzhämmern">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s11_b2_badge">>HAMMER & STEIN</span>
-                <div class="bento-media-caption" data-i18n="s11_caption_1">Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen</div>
+
+            <!-- RIGHT WING: Felt Spotlight Card -->
+            <div class="ffw-felt-spotlight">
+              <div class="bento-card ffw-felt-card">
+                <div class="ffw-felt-card-header">
+                  <span class="bento-badge gold" data-i18n="s11_b3_badge">>OBERFLÄCHENQUALITÄT</span>
+                  <div class="bento-card-title" data-i18n="s11_c1_title">Die geschlossene Faserhaut</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffene Filze behalten ihre natürliche Schutzhülle und neigen nicht zum Ausfasern</div>
+                </div>
+
+                <div class="ffw-texture-viewer" id="s11-texture-viewer" title="Detailansicht">
+                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_oberflaeche_biegeradius.jpg" alt="Seidige Faserhaut und glatter Biegeradius" class="ffw-texture-img">
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+                  <div class="ffw-texture-overlay">
+                    <span class="ffw-texture-tag" data-i18n="s11_texture_tag">Prüfung: Seidige Faserhaut</span>
+                  </div>
+                </div>
+
+                <div class="ffw-felt-highlights">
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s11_hl1_title">Kein Faserabriss:</strong>
+                      <span data-i18n="s11_hl1_desc">Verhindert vorzeitiges Einrillen an den Saitenkontaktpunkten.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s11_hl2_title">Spannungsausgleich:</strong>
+                      <span data-i18n="s11_hl2_desc">Gezielte Schläge bauen innere Scherspannungen vor dem Schneiden ab.</span>
+                    </div>
+                  </div>
+                  <div class="ffw-highlight-item">
+                    <span class="ffw-hl-dot"></span>
+                    <div>
+                      <strong data-i18n="s11_hl3_title">Maßhaltigkeit:</strong>
+                      <span data-i18n="s11_hl3_desc">Garantiert identische Plattenstärken für absolut symmetrische Hammerköpfe.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 {get_watermark()}
       </section>''')
+
 
     # SLIDE 12: Das klimatisierte Filzlager in Meuselwitz (Sander Bento)
     slides.append(f'''<!-- SLIDE 12 (Sander Bento Mosaic) -->

@@ -4543,7 +4543,8 @@ body::before {
 /* ==========================================================================
    FOLIE 5: FFW WURZEN FIRMENGESCHICHTE & DER HOCHWERTIGE WEICKERT-FILZ
    ========================================================================== */
-.slide[data-slide="5"] {
+.slide[data-slide="5"],
+.slide.ffw-felt-slide {
   overflow: hidden;
 }
 
