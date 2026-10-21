@@ -1065,12 +1065,14 @@ body::before {
 .slide-body {
   flex: 1;
   width: 100%;
+  height: calc(100% - 90px);
+  max-height: calc(100% - 90px);
   box-sizing: border-box;
-  padding: 18px 36px 36px 36px; /* Extra bottom padding prevents bottom-left cutoff */
+  padding: 16px 36px 42px 36px; /* Extra bottom padding prevents bottom-left cutoff */
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
-  gap: 32px;
+  gap: 24px;
   scrollbar-width: thin;
   scrollbar-color: rgba(200, 163, 86, 0.35) transparent;
 }
@@ -1244,20 +1246,22 @@ body::before {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 0;
+  gap: clamp(10px, 1.4vh, 18px);
   padding: 0;
   margin: 0;
 }
 
 .bullet-item {
+  flex: 1;
   background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  padding: 13px 18px;
+  padding: clamp(12px, 1.5vh, 20px) 18px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   font-size: 0.94rem;
   line-height: 1.55;
@@ -3803,6 +3807,10 @@ body::before {
   display: grid;
   gap: 18px;
   width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
 }
 
 .bento-grid-2 {
@@ -3851,15 +3859,17 @@ body::before {
 /* Bento Cards Base (Glassmorphism & Micro-Border) */
 .bento-card {
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
-  padding: 24px;
+  padding: 24px 28px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
@@ -4105,23 +4115,26 @@ body::before {
 .bento-card-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 0;
+  gap: clamp(10px, 1.4vh, 18px);
   margin-top: 14px;
 }
 
 .bento-card-list-item {
+  flex: 1;
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.94rem;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(0.92rem, 1.0vw, 1.05rem);
   color: var(--text-secondary);
   line-height: 1.5;
   background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: clamp(12px, 1.5vh, 20px) 18px;
+  box-sizing: border-box;
   transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -4606,8 +4619,7 @@ body::before {
   display: block !important;
 }
 
-.slide[data-slide="5"] .slide-body,
-.slide.ffw-felt-slide .slide-body {
+.slide[data-slide="5"] .slide-body {
   position: relative;
   z-index: 1;
   flex: 1;
@@ -4616,7 +4628,7 @@ body::before {
   height: calc(100% - 150px);
   max-height: calc(100% - 150px);
   padding: 6px 36px 16px 36px;
-  margin-bottom: 74px; /* Freiraum für Renner-Logo unten links */
+  margin-bottom: 74px; /* Freiraum für Renner-Logo unten links auf Folie 5 */
   box-sizing: border-box;
   display: flex;
 }
@@ -5214,29 +5226,11 @@ body::before {
 }
 
 @media (max-height: 850px) {
-  .slide[data-slide="5"] .slide-body,
-  .slide.ffw-felt-slide .slide-body {
+  .slide[data-slide="5"] .slide-body {
     height: calc(100% - 135px);
     max-height: calc(100% - 135px);
     margin-bottom: 64px;
     padding-top: 2px;
-  }
-  .ffw-texture-viewer {
-    height: 105px;
-    margin: 2px 0;
-  }
-  .ffw-felt-highlights {
-    gap: 3px;
-  }
-  .ffw-highlight-item {
-    padding: 3px 6px;
-  }
-  .ffw-milestone-panel,
-.ffw-static-panel {
-    padding: 8px 12px;
-  }
-  .ffw-panel-bullets {
-    gap: 3px;
   }
 }
 
@@ -5245,13 +5239,14 @@ body::before {
    Gleichmäßige vertikale und horizontale Ausnutzung des Raums
    ========================================================================== */
 .slide.ffw-felt-slide .slide-body {
-  height: auto !important;
-  max-height: calc(100% - 206px) !important;
+  height: calc(100% - 90px) !important;
+  max-height: calc(100% - 90px) !important;
   flex: 1;
   min-height: 0;
-  margin-bottom: 88px !important;
-  padding: 4px 36px 8px 36px;
+  margin-bottom: 0 !important;
+  padding: 10px 36px 20px 36px !important;
   box-sizing: border-box;
+  display: flex;
 }
 
 .slide.ffw-felt-slide .ffw-stage-card {
@@ -5264,8 +5259,8 @@ body::before {
 .slide.ffw-felt-slide .ffw-static-panel {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 14px 18px;
+  gap: 20px;
+  padding: 20px 24px;
   height: 100%;
   box-sizing: border-box;
   min-height: 0;
@@ -5277,7 +5272,7 @@ body::before {
   justify-content: space-between;
   height: 100%;
   min-height: 0;
-  gap: 0;
+  gap: 8px;
 }
 
 .slide.ffw-felt-slide .ffw-panel-header {
@@ -5288,17 +5283,17 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-panel-title {
-  font-size: clamp(1.15rem, 1.28vw, 1.42rem);
+  font-size: clamp(1.22rem, 1.35vw, 1.48rem);
   font-weight: 700;
   line-height: 1.22;
-  margin: 0 0 4px 0;
+  margin: 0 0 6px 0;
   color: #ffffff;
 }
 
 .slide.ffw-felt-slide .ffw-panel-subtitle {
-  font-size: clamp(0.86rem, 0.92vw, 1.0rem);
-  line-height: 1.36;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.9rem, 0.96vw, 1.04rem);
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 8px;
 }
 
@@ -5307,8 +5302,8 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  gap: clamp(8px, 1.2vh, 12px);
-  margin: 4px 0 8px 0;
+  gap: clamp(12px, 1.8vh, 22px);
+  margin: 10px 0 14px 0;
   min-height: 0;
 }
 
@@ -5316,15 +5311,15 @@ body::before {
   flex: 1;
   display: grid;
   grid-template-columns: 8px 1fr;
-  gap: 12px;
+  gap: 14px;
   align-content: center;
-  align-items: start;
-  padding: clamp(8px, 1.2vh, 14px) 14px;
+  align-items: center;
+  padding: clamp(14px, 2.0vh, 24px) 18px;
   background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.065);
-  border-radius: 8px;
-  font-size: clamp(0.88rem, 0.94vw, 1.0rem);
-  line-height: 1.46;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  font-size: clamp(0.92rem, 1.0vw, 1.06rem);
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.94);
   box-sizing: border-box;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
@@ -5337,28 +5332,29 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-bullet-item strong {
-  font-size: clamp(0.9rem, 0.96vw, 1.02rem);
+  font-size: clamp(0.94rem, 1.02vw, 1.08rem);
   color: #ffffff;
 }
 
 .slide.ffw-felt-slide .ffw-bullet-item .bento-dot {
-  width: 7px;
-  height: 7px;
-  margin-top: 6px;
+  width: 8px;
+  height: 8px;
+  margin-top: 0;
+  align-self: center;
   flex-shrink: 0;
 }
 
 .slide.ffw-felt-slide .ffw-panel-footer {
   margin-top: auto;
-  padding-top: 6px;
+  padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .slide.ffw-felt-slide .ffw-fact-badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 10px;
-  font-size: 0.8rem;
+  padding: 6px 14px;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.3px;
   border-radius: 6px;
@@ -5373,28 +5369,28 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 14px 18px;
+  padding: 20px 24px;
   box-sizing: border-box;
   min-height: 0;
 }
 
 .slide.ffw-felt-slide .ffw-felt-card-header .bento-card-title {
-  font-size: clamp(1.15rem, 1.28vw, 1.42rem);
+  font-size: clamp(1.22rem, 1.35vw, 1.48rem);
   font-weight: 700;
   line-height: 1.22;
   margin: 3px 0 4px 0;
 }
 
 .slide.ffw-felt-slide .ffw-felt-card-header .bento-card-desc {
-  font-size: clamp(0.86rem, 0.92vw, 0.98rem);
-  line-height: 1.36;
+  font-size: clamp(0.9rem, 0.96vw, 1.02rem);
+  line-height: 1.38;
 }
 
 .slide.ffw-felt-slide .ffw-texture-viewer {
-  height: clamp(150px, 17vh, 180px);
-  margin: 6px 0 10px 0;
+  height: clamp(160px, 20vh, 210px);
+  margin: 8px 0 14px 0;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .slide.ffw-felt-slide .ffw-felt-highlights {
@@ -5402,7 +5398,7 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  gap: clamp(8px, 1.2vh, 12px);
+  gap: clamp(10px, 1.6vh, 20px);
   min-height: 0;
 }
 
@@ -5410,16 +5406,16 @@ body::before {
   flex: 1;
   display: grid;
   grid-template-columns: 8px 1fr;
-  gap: 12px;
+  gap: 14px;
   align-content: center;
-  align-items: start;
-  padding: clamp(8px, 1.2vh, 12px) 14px;
-  border-radius: 8px;
+  align-items: center;
+  padding: clamp(12px, 1.8vh, 20px) 18px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.065);
-  font-size: clamp(0.86rem, 0.92vw, 0.98rem);
-  line-height: 1.44;
-  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: clamp(0.9rem, 0.98vw, 1.04rem);
+  line-height: 1.48;
+  color: rgba(255, 255, 255, 0.94);
   box-sizing: border-box;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
@@ -5431,15 +5427,16 @@ body::before {
 }
 
 .slide.ffw-felt-slide .ffw-highlight-item strong {
-  font-size: clamp(0.88rem, 0.94vw, 1.0rem);
+  font-size: clamp(0.92rem, 1.0vw, 1.06rem);
   color: #ffffff;
   margin-bottom: 2px;
 }
 
 .slide.ffw-felt-slide .ffw-hl-dot {
-  width: 7px;
-  height: 7px;
-  margin-top: 6px;
+  width: 8px;
+  height: 8px;
+  margin-top: 0;
+  align-self: center;
   flex-shrink: 0;
 }
 
@@ -5548,24 +5545,27 @@ body::before {
 .slide:nth-child(n+12) .bento-card-list {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 0;
+  gap: clamp(10px, 1.6vh, 22px);
   margin-top: 14px;
 }
 
 .slide-hero-theme .bento-card-list-item,
 .slide:nth-child(n+12) .bento-card-list-item {
+  flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
-  font-size: clamp(1.12rem, 1.25vw, 1.25rem);
+  font-size: clamp(1.08rem, 1.2vw, 1.24rem);
   color: rgba(255, 255, 255, 0.94);
   line-height: 1.45;
-  padding: 11px 16px;
+  padding: clamp(12px, 1.6vh, 22px) 20px;
   background: rgba(255, 255, 255, 0.035);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  box-sizing: border-box;
   transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -5696,6 +5696,14 @@ body::before {
   font-family: var(--font-serif);
   font-size: 5rem;
   font-weight: 900;
+}
+
+/* 11. Auf allen Bento-Folien, Folie 2 und Folien 6-11 das doppelte/überdeckende Eck-Logo ausblenden (wird bereits im Bottom-HUD sauber angezeigt) */
+.slide-hero-theme .slide-corner-watermark,
+.slide:nth-child(n+12) .slide-corner-watermark,
+.slide.ffw-felt-slide .slide-corner-watermark,
+.slide[data-slide="2"] .slide-corner-watermark {
+  display: none !important;
 }
 
 /* ==========================================================================
