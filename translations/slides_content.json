@@ -1728,10 +1728,10 @@
           "zh": "未打磨状态下2×6连续纤网承受全部拉应力；砂光打磨则瓦解骨架，导致毛毡塌陷变形。"
         },
         "s11_c1_desc": {
-          "de": "Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Die Tafel kollabiert.",
-          "en": "Unground, 2×6 fleece webs absorb full tension. Sanded, the backbone breaks: the felt collapses.",
-          "ja": "未研磨の2×6層繊維帯が全引張力を保持。研磨すると骨格が崩壊し座屈変形します。",
-          "zh": "未打磨时2×6连续纤网承受全部拉力；砂光打磨则瓦解骨架导致毛毡塌陷。"
+          "de": "Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen verschieben und lockern sich die Fasern: Die Spannung nimmt drastisch ab.",
+          "en": "Unground, 2×6 fleece webs hold full tension. Sanded, fibers shift and loosen: tension drops drastically.",
+          "ja": "未研磨の2×6層繊維帯が全引張力を保持。研磨すると繊維がズレて弛緩し、張力が激減します。",
+          "zh": "未打磨时2×6连续纤网承受全部拉力；打磨导致纤维错位松弛，张力急剧丧失。"
         },
         "s11_anim_mode_intact": {
           "de": "✦ Ungeschliffen (Spannung hält)",
@@ -1776,10 +1776,10 @@
           "zh": "✓ 未打磨：2×6连续纤网承受拉力 • 结构稳固不变形"
         },
         "s11_anim_status_sanded": {
-          "de": "✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!",
-          "en": "✗ Sanded: Fleece webs severed – Board buckles & deforms!",
-          "ja": "✗ 研磨後：繊維帯破断により座屈・塑性変形！",
-          "zh": "✗ 打磨后：纤网断裂失去拉力支撑 • 塌陷变形！"
+          "de": "✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!",
+          "en": "✗ Sanded: Fleece webs severed – Fibers shift & slip apart: Tension drops!",
+          "ja": "✗ 研磨後：繊維帯破断により繊維がズレて滑脱：張力が著しく低下！",
+          "zh": "✗ 打磨后：纤网被切断导致纤维滑移错位，内部张力急剧丧失！"
         },
         "s11_anim_auto_toggle": {
           "de": "Auto-Vergleich",
@@ -1818,10 +1818,10 @@
           "zh": "打磨后（塌陷开裂）："
         },
         "s11_hl3_desc": {
-          "de": "Gekappte Fasern: Fasern reißen & rutschen auseinander.",
-          "en": "Severed fibers: Fibers tear & slip apart under tension.",
-          "ja": "繊維切断：張力に耐えられず断裂し、ズレが発生。",
-          "zh": "纤维切断：失去拉力支撑，纤维撕裂并滑移错位。"
+          "de": "Gekappte Fasern verschieben sich & rutschen – Spannung nimmt ab.",
+          "en": "Severed fibers shift & slip apart – tension drops.",
+          "ja": "切断された繊維がズレて滑脱：張力が著しく低下。",
+          "zh": "纤维切断导致滑移错位：拉伸张力随之骤降。"
         }
       },
       "notes": {

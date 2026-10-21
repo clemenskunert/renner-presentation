@@ -2414,7 +2414,7 @@
                 <div class="ffw-felt-card-header">
                   <span class="bento-badge gold" data-i18n="s11_b3_badge">>SCHICHTAUFBAU & RÜCKGRAT</span>
                   <div class="bento-card-title" data-i18n="s11_c1_title">Zugspannung & Formstabilität: Das Vliesbahnen-Rückgrat</div>
-                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Die Tafel kollabiert.</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen verschieben und lockern sich die Fasern: Die Spannung nimmt drastisch ab.</div>
                 </div>
 
                 <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation (Vergrößert) -->
@@ -2584,7 +2584,7 @@
                         <!-- Ghost Ideal Reference Line (Shows where unground felt stood) -->
                         <g class="ghost-reference-arch">
                           <path d="M 70,162 Q 270,36 470,162" fill="none" stroke="rgba(200, 163, 86, 0.45)" stroke-dasharray="5,4" stroke-width="1.8"/>
-                          <text x="270" y="32" text-anchor="middle" class="svg-ghost-label">--- SOLL-KONTUR (Ungeschliffen: Formstabil bei Scheitel Y=36) ---</text>
+                          <text x="270" y="32" text-anchor="middle" class="svg-ghost-label">--- SOLL-KONTUR (Ungeschliffen: Formstabil unter Spannung) ---</text>
                         </g>
 
                         <!-- Deformed / Buckled Felt Body Fill (Sunken at center, deformed) -->
@@ -2618,19 +2618,19 @@
                         <!-- Sanded Ground Trench (X: 195 to 345 - no continuous fleece!) -->
                         <path d="M 195,108 Q 235,122 270,122 Q 305,122 345,108" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
                         
-                        <!-- Large Downward Deformation Arrow (Durchsackung & Knick) -->
+                        <!-- Downward Fiber Shift & Tension Drop Callout (No mm values) -->
                         <g class="deformation-indicator">
                           <line x1="270" y1="42" x2="270" y2="108" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4,2"/>
                           <polygon points="270,114 265,103 275,103" fill="#ef4444"/>
-                          <rect x="280" y="62" width="168" height="24" rx="4" fill="rgba(15, 23, 42, 0.95)" stroke="#ef4444" stroke-width="1.2"/>
-                          <text x="286" y="78" class="svg-deform-callout" fill="#fca5a5">▼ DURCHSACKUNG: -86 mm</text>
+                          <rect x="276" y="62" width="238" height="24" rx="4" fill="rgba(15, 23, 42, 0.95)" stroke="#ef4444" stroke-width="1.2"/>
+                          <text x="282" y="77" class="svg-deform-callout" fill="#fca5a5">▼ FASERN VERSCHIEBEN &amp; RUTSCHEN: SPANNUNG NIMMT AB</text>
                         </g>
 
                         <!-- Structural Tear / Crack at Apex (Scheitel-Riss & Delamination) -->
                         <g class="apex-crack">
                           <path d="M 264,122 L 270,148 L 276,122 Z" fill="#ef4444" stroke="#ffffff" stroke-width="1.2" filter="url(#damageAlertGlow)"/>
                           <line x1="255" y1="126" x2="285" y2="126" stroke="#fca5a5" stroke-width="1.5"/>
-                          <text x="270" y="162" text-anchor="middle" class="svg-crack-label">⚠️ SCHEITEL-RISS (Fasern reißen & rutschen auseinander)</text>
+                          <text x="270" y="162" text-anchor="middle" class="svg-crack-label">⚠️ SCHEITEL-RISS (Fasern reißen &amp; rutschen auseinander)</text>
                         </g>
 
                         <!-- Deformed Bottom Layer -->
@@ -2638,7 +2638,7 @@
 
                         <!-- Failure Alert Banner -->
                         <rect x="110" y="4" width="320" height="20" rx="4" fill="rgba(153, 27, 27, 0.95)" stroke="#ef4444" stroke-width="1.2"/>
-                        <text x="270" y="18" text-anchor="middle" class="svg-crown-badge-red">⚠️ HÄLT SPANNUNG NICHT: DEFORMATION & RISS</text>
+                        <text x="270" y="18" text-anchor="middle" class="svg-crown-badge-red">⚠️ HÄLT SPANNUNG NICHT: FASERN VERRUTSCHEN &amp; REISSEN</text>
                       </g>
                     </svg>
 
@@ -2674,7 +2674,7 @@
                       <span class="ffw-hl-dot"></span>
                       <strong data-i18n="s11_hl3_title">Geschliffen (Kollaps):</strong>
                     </div>
-                    <span data-i18n="s11_hl3_desc">Gekappte Fasern: Fasern reißen & rutschen auseinander.</span>
+                    <span data-i18n="s11_hl3_desc">Gekappte Fasern verschieben sich &amp; rutschen – Spannung nimmt ab.</span>
                   </div>
                 </div>
               </div>

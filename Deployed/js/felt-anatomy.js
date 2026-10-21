@@ -107,7 +107,7 @@ class FeltAnatomySimulation {
     } else {
       if (this.statusText) {
         this.statusText.textContent = (tData && tData.s11_anim_status_sanded) ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!';
       }
     }
   }
@@ -172,7 +172,7 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_sanded) ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!';
         this.statusText.textContent = text;
         this.statusText.style.color = '#fca5a5';
       }

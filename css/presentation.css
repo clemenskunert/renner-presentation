@@ -5644,10 +5644,10 @@ body::before {
 
 .svg-deform-callout {
   font-family: var(--font-sans);
-  font-size: 8.5px;
+  font-size: 7.6px;
   font-weight: 800;
   fill: #fca5a5;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.35px;
 }
 
 .svg-crack-label {
