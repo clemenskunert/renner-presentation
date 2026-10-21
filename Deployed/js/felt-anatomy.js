@@ -101,13 +101,13 @@ class FeltAnatomySimulation {
 
     if (this.mode === 'intact') {
       if (this.statusText) {
-        this.statusText.textContent = tData.s11_anim_status_intact ||
-          '✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch';
+        this.statusText.textContent = (tData && tData.s11_anim_status_intact) ||
+          '✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil';
       }
     } else {
       if (this.statusText) {
-        this.statusText.textContent = tData.s11_anim_status_sanded ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!';
+        this.statusText.textContent = (tData && tData.s11_anim_status_sanded) ||
+          '✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!';
       }
     }
   }
@@ -148,7 +148,7 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_intact) ||
-          '✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch';
+          '✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil';
         this.statusText.textContent = text;
         this.statusText.style.color = '#e2e8f0';
       }
@@ -172,7 +172,7 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_sanded) ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!';
         this.statusText.textContent = text;
         this.statusText.style.color = '#fca5a5';
       }

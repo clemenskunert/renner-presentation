@@ -5372,81 +5372,97 @@ body::before {
   color: var(--gold-light, #f1dfb0);
 }
 
+/* Slide 11: Breiterer rechter Flügel für vergrößerte Animation & optimale Highlights */
+.slide[data-slide="11"] .ffw-history-layout {
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 16px;
+}
+
 /* Rechter Flügel (Felt Spotlight Card) */
-.slide.ffw-felt-slide .ffw-felt-card {
+.slide[data-slide="11"] .ffw-felt-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
-  padding: 20px 24px;
+  padding: 10px 14px 10px 14px;
   box-sizing: border-box;
   min-height: 0;
+  gap: 6px;
+  overflow: hidden;
+  background: linear-gradient(165deg, rgba(20, 27, 44, 0.95) 0%, rgba(12, 16, 26, 0.98) 100%);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
 }
 
-.slide.ffw-felt-slide .ffw-felt-card-header .bento-card-title {
-  font-size: clamp(1.32rem, 1.48vw, 1.65rem);
-  font-weight: 700;
-  line-height: 1.22;
-  margin: 3px 0 4px 0;
-}
-
-.slide.ffw-felt-slide .ffw-felt-card-header .bento-card-desc {
-  font-size: clamp(1.02rem, 1.12vw, 1.22rem);
-  line-height: 1.38;
-}
-
-.slide.ffw-felt-slide .ffw-texture-viewer {
-  height: clamp(160px, 20vh, 210px);
-  margin: 8px 0 14px 0;
+.slide[data-slide="11"] .ffw-felt-card-header {
   flex-shrink: 0;
-  border-radius: 10px;
 }
 
-.slide.ffw-felt-slide .ffw-felt-highlights {
+.slide[data-slide="11"] .ffw-felt-card-header .bento-card-title {
+  font-size: clamp(1.12rem, 1.25vw, 1.40rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1px 0 2px 0;
+}
+
+.slide[data-slide="11"] .ffw-felt-card-header .bento-card-desc {
+  font-size: clamp(0.82rem, 0.88vw, 0.96rem);
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.slide[data-slide="11"] .ffw-felt-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.slide[data-slide="11"] .ffw-highlight-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  gap: clamp(10px, 1.6vh, 20px);
-  min-height: 0;
-}
-
-.slide.ffw-felt-slide .ffw-highlight-item {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 8px 1fr;
-  gap: 14px;
-  align-content: center;
-  align-items: center;
-  padding: clamp(12px, 1.8vh, 20px) 18px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  font-size: clamp(1.02rem, 1.12vw, 1.20rem);
-  line-height: 1.48;
-  color: rgba(255, 255, 255, 0.94);
+  align-items: flex-start;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
+  line-height: 1.26;
+  color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.slide.ffw-felt-slide .ffw-highlight-item:hover {
-  background: rgba(200, 163, 86, 0.08);
-  border-color: rgba(200, 163, 86, 0.25);
-  transform: translateX(2px);
+.slide[data-slide="11"] .ffw-highlight-item:hover {
+  background: rgba(200, 163, 86, 0.1);
+  border-color: rgba(200, 163, 86, 0.35);
+  transform: translateY(-1px);
 }
 
-.slide.ffw-felt-slide .ffw-highlight-item strong {
-  font-size: clamp(1.06rem, 1.16vw, 1.24rem);
-  color: #ffffff;
+.slide[data-slide="11"] .ffw-hl-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   margin-bottom: 2px;
+  width: 100%;
 }
 
-.slide.ffw-felt-slide .ffw-hl-dot {
-  width: 8px;
-  height: 8px;
-  margin-top: 0;
-  align-self: center;
+.slide[data-slide="11"] .ffw-hl-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 6px rgba(200, 163, 86, 0.6);
   flex-shrink: 0;
+}
+
+.slide[data-slide="11"] .ffw-highlight-item strong {
+  font-size: clamp(0.76rem, 0.82vw, 0.92rem);
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -5458,8 +5474,8 @@ body::before {
   flex-direction: column;
   flex: 1;
   min-height: 0;
-  gap: 8px;
-  margin: 4px 0 10px 0;
+  gap: 6px;
+  margin: 2px 0 4px 0;
   position: relative;
 }
 
@@ -5578,8 +5594,9 @@ body::before {
 
 .felt-anatomy-stage {
   position: relative;
-  height: clamp(165px, 20.5vh, 215px);
-  min-height: 0;
+  flex: 1;
+  min-height: clamp(210px, 28vh, 360px);
+  height: auto;
   background: linear-gradient(180deg, #0a0e1a 0%, #070a12 100%);
   border: 1px solid rgba(200, 163, 86, 0.38);
   border-radius: 10px;
@@ -5749,6 +5766,7 @@ body::before {
   background: rgba(10, 14, 24, 0.95);
   border-top: 1px solid rgba(200, 163, 86, 0.25);
   z-index: 5;
+  flex-shrink: 0;
 }
 
 .status-indicator-dot {
@@ -8728,22 +8746,22 @@ body::before {
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
                   <span class="bento-badge gold" data-i18n="s11_b3_badge">>SCHICHTAUFBAU & RÜCKGRAT</span>
-                  <div class="bento-card-title" data-i18n="s11_c1_title">2×6 Vliesbahnen: Das Spannungs-Rückgrat</div>
-                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.</div>
+                  <div class="bento-card-title" data-i18n="s11_c1_title">Zugspannung & Formstabilität: Das Vliesbahnen-Rückgrat</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Die Tafel kollabiert.</div>
                 </div>
 
-                <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation -->
+                <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation (Vergrößert) -->
                 <div class="ffw-felt-anatomy-container is-intact" id="s11-felt-anatomy" role="region" aria-label="Filztafel Schichtaufbau und Vliesbahnen-Spannungsanimation">
                   <!-- Interactive Control Header -->
                   <div class="felt-anatomy-controls">
                     <div class="felt-mode-group">
                       <button class="felt-mode-btn active" id="felt-btn-intact" data-mode="intact" title="Ungeschliffen: 2×6 Vliesbahnen nehmen alle Zugkräfte auf">
                         <span class="mode-dot green"></span>
-                        <span data-i18n="s11_anim_mode_intact">✦ Ungeschliffen: Spannung hält (Formstabil)</span>
+                        <span data-i18n="s11_anim_mode_intact">✦ Ungeschliffen (Spannung hält)</span>
                       </button>
                       <button class="felt-mode-btn" id="felt-btn-sanded" data-mode="sanded" title="Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht halten">
                         <span class="mode-dot red"></span>
-                        <span data-i18n="s11_anim_mode_sanded">⚠️ Geschliffen: Hält Spannung nicht (Verformung)</span>
+                        <span data-i18n="s11_anim_mode_sanded">⚠️ Geschliffen (Verformung)</span>
                       </button>
                     </div>
                     <div class="felt-tension-kpi" id="felt-tension-kpi" title="Mechanische Formstabilität & Spannungsaufnahme">
@@ -8757,7 +8775,7 @@ body::before {
                     </div>
                   </div>
 
-                  <!-- Interactive Graphic Stage -->
+                  <!-- Interactive Graphic Stage (Enlarged) -->
                   <div class="felt-anatomy-stage" id="felt-anatomy-stage">
                     <div class="hero-corner-bracket top-left"></div>
                     <div class="hero-corner-bracket top-right"></div>
@@ -8869,11 +8887,11 @@ body::before {
                         <!-- BOTTOM 6 CONTINUOUS FLEECE WEBS (Unterseite: DRUCKZONE) -->
                         <g class="bottom-vlies-layers">
                           <path class="vlies-line vlies-b1" d="M 70,183 Q 270,86 470,183" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b2" d="M 70,185 Q 270,88 470,185" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b3" d="M 70,187 Q 270,90 470,187" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b4" d="M 70,189 Q 270,92 470,189" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b5" d="M 70,191 Q 270,94 470,191" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b6" d="M 70,193 Q 270,96 470,193" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b2" d="M 70,185 Q 270,88 470,185" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b3" d="M 70,187 Q 270,90 470,187" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b4" d="M 70,189 Q 270,92 470,189" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b5" d="M 70,191 Q 270,94 470,191" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b6" d="M 70,193 Q 270,96 470,193" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
                         </g>
 
                         <!-- Tension Vector Arrows (Zugkraft-Aufnahme) -->
@@ -8960,7 +8978,7 @@ body::before {
                     <!-- Bottom Status Caption Bar -->
                     <div class="felt-stage-status-bar" id="felt-stage-status-bar">
                       <span class="status-indicator-dot green" id="felt-status-dot"></span>
-                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch</span>
+                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil</span>
                       <button class="felt-auto-toggle-btn active" id="felt-auto-toggle-btn" title="Automatischen Vergleich starten/pausieren">
                         <span class="auto-toggle-icon">⏸</span>
                         <span class="auto-toggle-text" data-i18n="s11_anim_auto_toggle">Auto-Vergleich</span>
@@ -8971,25 +8989,25 @@ body::before {
 
                 <div class="ffw-felt-highlights">
                   <div class="ffw-highlight-item">
-                    <span class="ffw-hl-dot"></span>
-                    <div>
+                    <div class="ffw-hl-header">
+                      <span class="ffw-hl-dot"></span>
                       <strong data-i18n="s11_hl1_title">2×6 Vliesbahnen:</strong>
-                      <span data-i18n="s11_hl1_desc">Je 6 durchgehende, ausgerichtete Vliesbahnen auf Ober- und Unterseite bilden das tragende Zug- und Spannungsrückgrat.</span>
                     </div>
+                    <span data-i18n="s11_hl1_desc">Tragendes Spannungs-Rückgrat (oben & unten).</span>
                   </div>
                   <div class="ffw-highlight-item">
-                    <span class="ffw-hl-dot"></span>
-                    <div>
-                      <strong data-i18n="s11_hl2_title">Ungeschliffen (Spannung hält):</strong>
-                      <span data-i18n="s11_hl2_desc">Unter Biegespannung nehmen die Vliesbahnen alle Kräfte auf – die Tafel bleibt perfekt formstabil und federt elastisch zurück.</span>
+                    <div class="ffw-hl-header">
+                      <span class="ffw-hl-dot"></span>
+                      <strong data-i18n="s11_hl2_title">Ungeschliffen (Hält):</strong>
                     </div>
+                    <span data-i18n="s11_hl2_desc">Nimmt alle Zugkräfte auf – 100% formstabil.</span>
                   </div>
                   <div class="ffw-highlight-item">
-                    <span class="ffw-hl-dot"></span>
-                    <div>
-                      <strong data-i18n="s11_hl3_title">Geschliffen (Verformung):</strong>
-                      <span data-i18n="s11_hl3_desc">Ohne Vliesbahnen bricht die Zugfestigkeit zusammen: Die Tafel kann der Spannung nicht standhalten, verzieht sich und platzt am Scheitel auf.</span>
+                    <div class="ffw-hl-header">
+                      <span class="ffw-hl-dot"></span>
+                      <strong data-i18n="s11_hl3_title">Geschliffen (Kollaps):</strong>
                     </div>
+                    <span data-i18n="s11_hl3_desc">Gekappte Fasern: Tafel knickt ein & platzt auf.</span>
                   </div>
                 </div>
               </div>
@@ -12607,23 +12625,23 @@ window.slideTranslations = {
     "s11_b3_badge": "SCHICHTAUFBAU & RÜCKGRAT",
     "s11_spotlight_title": "2×6 Vliesbahnen: Das Spannungs-Rückgrat",
     "s11_c1_title": "Zugspannung & Formstabilität: Das Vliesbahnen-Rückgrat",
-    "s11_spotlight_desc": "Ungeschliffen halten die 2×6 Vliesbahnen voller Zugspannung stand. Geschliffen bricht das Rückgrat: Die Tafel kann der Spannung nicht standhalten und verformt sich irreversibel.",
-    "s11_c1_desc": "Ungeschliffen halten die 2×6 Vliesbahnen voller Zugspannung stand. Geschliffen bricht das Rückgrat: Die Tafel kann der Spannung nicht standhalten und verformt sich irreversibel.",
-    "s11_anim_mode_intact": "✦ Ungeschliffen: Spannung hält (Formstabil)",
-    "s11_anim_mode_sanded": "⚠️ Geschliffen: Hält Spannung nicht (Verformung)",
+    "s11_spotlight_desc": "Ungeschliffen halten die 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Die Tafel kollabiert und verformt sich.",
+    "s11_c1_desc": "Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Die Tafel kollabiert.",
+    "s11_anim_mode_intact": "✦ Ungeschliffen (Spannung hält)",
+    "s11_anim_mode_sanded": "⚠️ Geschliffen (Verformung)",
     "s11_anim_gauge_label": "Spannungs- & Formstabilität",
     "s11_anim_top_layers": "▲ OBERSEITE: 6 DURCHGEHENDE VLIESBAHNEN (ZUGTRÄGER)",
     "s11_anim_core": "ELASTISCHER FILZKERN (Wollfaser-Matrix)",
     "s11_anim_bottom_layers": "▼ UNTERSEITE: 6 DURCHGEHENDE VLIESBAHNEN (DRUCKAUFNAHME)",
-    "s11_anim_status_intact": "✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch",
-    "s11_anim_status_sanded": "✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!",
+    "s11_anim_status_intact": "✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil",
+    "s11_anim_status_sanded": "✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!",
     "s11_anim_auto_toggle": "Auto-Vergleich",
     "s11_hl1_title": "2×6 Vliesbahnen:",
-    "s11_hl1_desc": "Je 6 durchgehende, ausgerichtete Vliesbahnen auf Ober- und Unterseite bilden das tragende Zug- und Spannungsrückgrat.",
-    "s11_hl2_title": "Ungeschliffen (Spannung hält):",
-    "s11_hl2_desc": "Unter Biegespannung nehmen die Vliesbahnen alle Kräfte auf – die Tafel bleibt perfekt formstabil und federt elastisch zurück.",
-    "s11_hl3_title": "Geschliffen (Verformung):",
-    "s11_hl3_desc": "Ohne Vliesbahnen bricht die Zugfestigkeit zusammen: Die Tafel kann der Spannung nicht standhalten, verzieht sich und platzt am Scheitel auf.",
+    "s11_hl1_desc": "Tragendes Spannungs-Rückgrat (oben & unten).",
+    "s11_hl2_title": "Ungeschliffen (Hält):",
+    "s11_hl2_desc": "Nimmt alle Zugkräfte auf – 100% formstabil.",
+    "s11_hl3_title": "Geschliffen (Kollaps):",
+    "s11_hl3_desc": "Gekappte Fasern: Tafel knickt ein & platzt auf.",
     "s11_notes": "Folie 11: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
     "s12_category": "Teil 2: Filzherstellung • Filzlager Meuselwitz",
     "s12_title": "Über 30 Plattensorten im klimatisierten Lager",
@@ -13563,23 +13581,23 @@ window.slideTranslations = {
     "s11_b3_badge": "LAYER STRUCTURE & BACKBONE",
     "s11_spotlight_title": "2×6 Fleece Webs: The Tensile Backbone",
     "s11_c1_title": "Tensile Tension & Form Stability: The Fleece Web Backbone",
-    "s11_spotlight_desc": "Unground, the 2×6 fleece webs sustain maximum tension. Sanded, the backbone is destroyed: the board fails under tension and deforms irreversibly.",
-    "s11_c1_desc": "Unground, the 2×6 fleece webs sustain maximum tension. Sanded, the backbone is destroyed: the board fails under tension and deforms irreversibly.",
-    "s11_anim_mode_intact": "✦ Unground: Tension Holds (Shape-Stable)",
-    "s11_anim_mode_sanded": "⚠️ Sanded: Fails Under Tension (Deformed)",
+    "s11_spotlight_desc": "Unground, the 2×6 fleece webs hold full tensile tension. Sanded, the backbone fails: the felt collapses and deforms.",
+    "s11_c1_desc": "Unground, 2×6 fleece webs absorb full tension. Sanded, the backbone breaks: the felt collapses.",
+    "s11_anim_mode_intact": "✦ Unground (Tension Holds)",
+    "s11_anim_mode_sanded": "⚠️ Sanded (Deformation)",
     "s11_anim_gauge_label": "Tension & Shape Stability",
     "s11_anim_top_layers": "▲ TOP SURFACE: 6 CONTINUOUS FLEECE WEBS (TENSION CORDS)",
     "s11_anim_core": "ELASTIC FELT CORE (Wool Fiber Matrix)",
     "s11_anim_bottom_layers": "▼ BOTTOM SURFACE: 6 CONTINUOUS FLEECE WEBS (COMPRESSION BASE)",
-    "s11_anim_status_intact": "✓ Unground: 2×6 fleece webs absorb tensile loads completely • Board maintains form and elasticity",
-    "s11_anim_status_sanded": "✗ Sanded: Fleece webs severed – Board fails under tension, buckles & deforms plastically!",
+    "s11_anim_status_intact": "✓ Unground: 2×6 fleece webs hold tensile tension • Shape-stable",
+    "s11_anim_status_sanded": "✗ Sanded: Fleece webs severed – Board buckles & deforms!",
     "s11_anim_auto_toggle": "Auto Compare",
     "s11_hl1_title": "2×6 Fleece Webs:",
-    "s11_hl1_desc": "6 continuous, aligned fleece webs on top and bottom form the load-bearing tensile and tension backbone.",
-    "s11_hl2_title": "Unground (Tension Holds):",
-    "s11_hl2_desc": "Under bending stress, the fleece webs absorb all tensile loads – the board remains perfectly shape-stable and springs back.",
-    "s11_hl3_title": "Sanded (Deformation):",
-    "s11_hl3_desc": "Without fleece webs, tensile strength collapses: the board fails under tension, warps out of shape, and splits open at the crown.",
+    "s11_hl1_desc": "Load-bearing tension backbone (top & bottom).",
+    "s11_hl2_title": "Unground (Holds):",
+    "s11_hl2_desc": "Absorbs all tensile forces – 100% shape-stable.",
+    "s11_hl3_title": "Sanded (Collapse):",
+    "s11_hl3_desc": "Severed fibers: felt board buckles & splits open.",
     "s11_notes": "Slide 11: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
     "s12_category": "Part 2: Felt Manufacturing • Filzlager Meuselwitz",
     "s12_title": "Over 30 Felt Sheet Grades in Meuselwitz Climate Storage",
@@ -14519,23 +14537,23 @@ window.slideTranslations = {
     "s11_b3_badge": "層構造と引張バックボーン",
     "s11_spotlight_title": "表裏各6層のフリース繊維束：張力保持の骨格",
     "s11_c1_title": "引張張力と形状保持力：フリース繊維帯の引張骨格",
-    "s11_spotlight_desc": "未研磨では表裏各6層の繊維束が強い引張力に耐え抜きます。研磨されると骨格が失われ、張力に耐え切れず不可逆的に変形・座屈します。",
-    "s11_c1_desc": "未研磨では表裏各6層の繊維束が強い引張力に耐え抜きます。研磨されると骨格が失われ、張力に耐え切れず不可逆的に変形・座屈します。",
-    "s11_anim_mode_intact": "✦ 未研磨：張力保持（高剛性・形状維持）",
-    "s11_anim_mode_sanded": "⚠️ 研磨後：張力に耐えられず変形・崩壊",
+    "s11_spotlight_desc": "未研磨では表裏各6層の繊維帯が全引張力を保持。研磨すると骨格が崩壊し、変形・座屈します。",
+    "s11_c1_desc": "未研磨の2×6層繊維帯が全引張力を保持。研磨すると骨格が崩壊し座屈変形します。",
+    "s11_anim_mode_intact": "✦ 未研磨（張力保持）",
+    "s11_anim_mode_sanded": "⚠️ 研磨後（座屈変形）",
     "s11_anim_gauge_label": "張力＆形状安定度",
     "s11_anim_top_layers": "▲ 上面：6層の連続フリース繊維帯（引張支持帯）",
     "s11_anim_core": "弾性フェルトコア（高密度ウール母相）",
     "s11_anim_bottom_layers": "▼ 下面：6層の連続フリース繊維帯（圧縮支持帯）",
-    "s11_anim_status_intact": "✓ 未研磨：表裏各6層の繊維帯が引張力を完全支持 • 形状安定性と強力な弾性復元力を維持",
-    "s11_anim_status_sanded": "✗ 研磨後：繊維束破断により引張力に耐えられず、不均一に座屈・激しく塑性変形！",
+    "s11_anim_status_intact": "✓ 未研磨：2×6層の繊維帯が引張力を保持 • 完全形状安定",
+    "s11_anim_status_sanded": "✗ 研磨後：繊維帯破断により座屈・塑性変形！",
     "s11_anim_auto_toggle": "自動比較",
-    "s11_hl1_title": "表裏各6層の繊維束：",
-    "s11_hl1_desc": "表裏を走る各6層の連続した方向性繊維束が、フェルト板全体の強靭な引張骨格を形成。",
-    "s11_hl2_title": "未研磨（張力保持）：",
-    "s11_hl2_desc": "曲げ応力下でも繊維帯がすべての引張力を吸収 • フェルト板は完璧に形状を維持し弾性復元力を発揮。",
-    "s11_hl3_title": "研磨（崩壊・変形）：",
-    "s11_hl3_desc": "繊維束を失うと引張強度が崩壊：板は張力に耐えられず歪み、クラウン頂点部から裂け破断します。",
+    "s11_hl1_title": "表裏各6層の繊維帯：",
+    "s11_hl1_desc": "表裏で張力を支える強靭な骨格。",
+    "s11_hl2_title": "未研磨（形状保持）：",
+    "s11_hl2_desc": "引張力を完全吸収し、100%形状安定。",
+    "s11_hl3_title": "研磨後（座屈崩壊）：",
+    "s11_hl3_desc": "繊維破断：張力に耐えられず座屈・裂開。",
     "s11_notes": "スライド 11: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
     "s12_category": "第2部：極上フェルト製造の秘密（ヴルツェン工場）",
     "s12_title": "モイゼルヴィッツ調湿保管庫：30種以上のフェルト原反",
@@ -15475,23 +15493,23 @@ window.slideTranslations = {
     "s11_b3_badge": "层理结构与应力骨架",
     "s11_spotlight_title": "上下各6层连续纤网：毛毡张力骨架",
     "s11_c1_title": "拉伸张力与形状稳定性：连续纤网核心骨架",
-    "s11_spotlight_desc": "未打磨状态下，上下各6层连续纤网牢固支撑巨大拉伸张力。若被砂光打磨，承力骨架瓦解，毛毡板无法承受张力并发生永久性严重变形塌陷。",
-    "s11_c1_desc": "未打磨状态下，上下各6层连续纤网牢固支撑巨大拉伸张力。若被砂光打磨，承力骨架瓦解，毛毡板无法承受张力并发生永久性严重变形塌陷。",
-    "s11_anim_mode_intact": "✦ 未打磨：张力锁定（稳固不变形）",
-    "s11_anim_mode_sanded": "⚠️ 打磨后：无法承受张力（塌陷严重变形）",
+    "s11_spotlight_desc": "未打磨状态下2×6连续纤网承受全部拉应力；砂光打磨则瓦解骨架，导致毛毡塌陷变形。",
+    "s11_c1_desc": "未打磨时2×6连续纤网承受全部拉力；砂光打磨则瓦解骨架导致毛毡塌陷。",
+    "s11_anim_mode_intact": "✦ 未打磨（张力锁定）",
+    "s11_anim_mode_sanded": "⚠️ 打磨后（塌陷变形）",
     "s11_anim_gauge_label": "张力与形状稳定性",
     "s11_anim_top_layers": "▲ 顶层：6层连续定向纤网（受拉主梁）",
     "s11_anim_core": "高弹毛毡芯层（天然羊毛纤维基体）",
     "s11_anim_bottom_layers": "▼ 底层：6层连续定向纤网（受压底层）",
-    "s11_anim_status_intact": "✓ 未打磨：上下各6层连续纤网完整吸收拉应力 • 毛毡板高度稳固、回弹力充沛",
-    "s11_anim_status_sanded": "✗ 打磨后：纤网被切断失去拉力骨架，毛毡板无法承受张力，凹陷屈曲、严重畸形！",
+    "s11_anim_status_intact": "✓ 未打磨：2×6连续纤网承受拉力 • 结构稳固不变形",
+    "s11_anim_status_sanded": "✗ 打磨后：纤网断裂失去拉力支撑 • 塌陷变形！",
     "s11_anim_auto_toggle": "自动循环对比",
-    "s11_hl1_title": "上下各6层连续纤网：",
-    "s11_hl1_desc": "贯穿上下表层各6层连续定向纤网构成毛毡板的核心抗拉应力骨架。",
-    "s11_hl2_title": "未打磨（张力锁定）：",
-    "s11_hl2_desc": "在强力弯折应力下，纤网承担全部拉伸载荷——毛毡板外形极为稳固且能瞬时弹性回弹。",
-    "s11_hl3_title": "打磨砂光（塌陷变形）：",
-    "s11_hl3_desc": "失去连续纤网后抗拉强度彻底崩溃：毛毡板无法承受张力，剧烈扭曲塌陷，且在槌顶极易撕裂起毛。",
+    "s11_hl1_title": "2×6连续纤网：",
+    "s11_hl1_desc": "表层与底层核心抗拉应力骨架。",
+    "s11_hl2_title": "未打磨（稳固受拉）：",
+    "s11_hl2_desc": "弹性吸收全部拉力，100%稳固不变形。",
+    "s11_hl3_title": "打磨后（塌陷开裂）：",
+    "s11_hl3_desc": "纤网切断：毛毡板凹陷畸变并开裂。",
     "s11_notes": "第 11 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。",
     "s12_category": "第二部分：顶级纯羊毛毡制造工艺（乌尔岑毛毡厂）",
     "s12_title": "莫伊瑟尔维茨恒湿仓储：30余种高标准规格原毡板",
@@ -20343,13 +20361,13 @@ class FeltAnatomySimulation {
 
     if (this.mode === 'intact') {
       if (this.statusText) {
-        this.statusText.textContent = tData.s11_anim_status_intact ||
-          '✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch';
+        this.statusText.textContent = (tData && tData.s11_anim_status_intact) ||
+          '✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil';
       }
     } else {
       if (this.statusText) {
-        this.statusText.textContent = tData.s11_anim_status_sanded ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!';
+        this.statusText.textContent = (tData && tData.s11_anim_status_sanded) ||
+          '✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!';
       }
     }
   }
@@ -20390,7 +20408,7 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_intact) ||
-          '✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch';
+          '✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil';
         this.statusText.textContent = text;
         this.statusText.style.color = '#e2e8f0';
       }
@@ -20414,7 +20432,7 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (tData && tData.s11_anim_status_sanded) ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht standhalten, knickt ein & verformt sich!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Tafel knickt ein & verformt sich!';
         this.statusText.textContent = text;
         this.statusText.style.color = '#fca5a5';
       }

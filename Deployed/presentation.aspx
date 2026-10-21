@@ -2413,22 +2413,22 @@
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
                   <span class="bento-badge gold" data-i18n="s11_b3_badge">>SCHICHTAUFBAU & RÜCKGRAT</span>
-                  <div class="bento-card-title" data-i18n="s11_c1_title">2×6 Vliesbahnen: Das Spannungs-Rückgrat</div>
-                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.</div>
+                  <div class="bento-card-title" data-i18n="s11_c1_title">Zugspannung & Formstabilität: Das Vliesbahnen-Rückgrat</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Die Tafel kollabiert.</div>
                 </div>
 
-                <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation -->
+                <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation (Vergrößert) -->
                 <div class="ffw-felt-anatomy-container is-intact" id="s11-felt-anatomy" role="region" aria-label="Filztafel Schichtaufbau und Vliesbahnen-Spannungsanimation">
                   <!-- Interactive Control Header -->
                   <div class="felt-anatomy-controls">
                     <div class="felt-mode-group">
                       <button class="felt-mode-btn active" id="felt-btn-intact" data-mode="intact" title="Ungeschliffen: 2×6 Vliesbahnen nehmen alle Zugkräfte auf">
                         <span class="mode-dot green"></span>
-                        <span data-i18n="s11_anim_mode_intact">✦ Ungeschliffen: Spannung hält (Formstabil)</span>
+                        <span data-i18n="s11_anim_mode_intact">✦ Ungeschliffen (Spannung hält)</span>
                       </button>
                       <button class="felt-mode-btn" id="felt-btn-sanded" data-mode="sanded" title="Geschliffen: Vliesbahnen zerstört – Tafel kann Spannung nicht halten">
                         <span class="mode-dot red"></span>
-                        <span data-i18n="s11_anim_mode_sanded">⚠️ Geschliffen: Hält Spannung nicht (Verformung)</span>
+                        <span data-i18n="s11_anim_mode_sanded">⚠️ Geschliffen (Verformung)</span>
                       </button>
                     </div>
                     <div class="felt-tension-kpi" id="felt-tension-kpi" title="Mechanische Formstabilität & Spannungsaufnahme">
@@ -2442,7 +2442,7 @@
                     </div>
                   </div>
 
-                  <!-- Interactive Graphic Stage -->
+                  <!-- Interactive Graphic Stage (Enlarged) -->
                   <div class="felt-anatomy-stage" id="felt-anatomy-stage">
                     <div class="hero-corner-bracket top-left"></div>
                     <div class="hero-corner-bracket top-right"></div>
@@ -2554,11 +2554,11 @@
                         <!-- BOTTOM 6 CONTINUOUS FLEECE WEBS (Unterseite: DRUCKZONE) -->
                         <g class="bottom-vlies-layers">
                           <path class="vlies-line vlies-b1" d="M 70,183 Q 270,86 470,183" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b2" d="M 70,185 Q 270,88 470,185" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b3" d="M 70,187 Q 270,90 470,187" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b4" d="M 70,189 Q 270,92 470,189" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b5" d="M 70,191 Q 270,94 470,191" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
-                          <path class="vlies-line vlies-b6" d="M 70,193 Q 270,96 470,193" stroke="url(#vliesGradGold)" stroke-width="2" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b2" d="M 70,185 Q 270,88 470,185" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b3" d="M 70,187 Q 270,90 470,187" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b4" d="M 70,189 Q 270,92 470,189" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b5" d="M 70,191 Q 270,94 470,191" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
+                          <path class="vlies-line vlies-b6" d="M 70,193 Q 270,96 470,193" stroke="url(#vliesGradGold)" stroke-width="2.5" stroke-linecap="round"/>
                         </g>
 
                         <!-- Tension Vector Arrows (Zugkraft-Aufnahme) -->
@@ -2645,7 +2645,7 @@
                     <!-- Bottom Status Caption Bar -->
                     <div class="felt-stage-status-bar" id="felt-stage-status-bar">
                       <span class="status-indicator-dot green" id="felt-status-dot"></span>
-                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">✓ Ungeschliffen: 2×6 Vliesbahnen nehmen Zugkräfte voll auf • Tafel bleibt formstabil und elastisch</span>
+                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil</span>
                       <button class="felt-auto-toggle-btn active" id="felt-auto-toggle-btn" title="Automatischen Vergleich starten/pausieren">
                         <span class="auto-toggle-icon">⏸</span>
                         <span class="auto-toggle-text" data-i18n="s11_anim_auto_toggle">Auto-Vergleich</span>
@@ -2656,25 +2656,25 @@
 
                 <div class="ffw-felt-highlights">
                   <div class="ffw-highlight-item">
-                    <span class="ffw-hl-dot"></span>
-                    <div>
+                    <div class="ffw-hl-header">
+                      <span class="ffw-hl-dot"></span>
                       <strong data-i18n="s11_hl1_title">2×6 Vliesbahnen:</strong>
-                      <span data-i18n="s11_hl1_desc">Je 6 durchgehende, ausgerichtete Vliesbahnen auf Ober- und Unterseite bilden das tragende Zug- und Spannungsrückgrat.</span>
                     </div>
+                    <span data-i18n="s11_hl1_desc">Tragendes Spannungs-Rückgrat (oben & unten).</span>
                   </div>
                   <div class="ffw-highlight-item">
-                    <span class="ffw-hl-dot"></span>
-                    <div>
-                      <strong data-i18n="s11_hl2_title">Ungeschliffen (Spannung hält):</strong>
-                      <span data-i18n="s11_hl2_desc">Unter Biegespannung nehmen die Vliesbahnen alle Kräfte auf – die Tafel bleibt perfekt formstabil und federt elastisch zurück.</span>
+                    <div class="ffw-hl-header">
+                      <span class="ffw-hl-dot"></span>
+                      <strong data-i18n="s11_hl2_title">Ungeschliffen (Hält):</strong>
                     </div>
+                    <span data-i18n="s11_hl2_desc">Nimmt alle Zugkräfte auf – 100% formstabil.</span>
                   </div>
                   <div class="ffw-highlight-item">
-                    <span class="ffw-hl-dot"></span>
-                    <div>
-                      <strong data-i18n="s11_hl3_title">Geschliffen (Verformung):</strong>
-                      <span data-i18n="s11_hl3_desc">Ohne Vliesbahnen bricht die Zugfestigkeit zusammen: Die Tafel kann der Spannung nicht standhalten, verzieht sich und platzt am Scheitel auf.</span>
+                    <div class="ffw-hl-header">
+                      <span class="ffw-hl-dot"></span>
+                      <strong data-i18n="s11_hl3_title">Geschliffen (Kollaps):</strong>
                     </div>
+                    <span data-i18n="s11_hl3_desc">Gekappte Fasern: Tafel knickt ein & platzt auf.</span>
                   </div>
                 </div>
               </div>
