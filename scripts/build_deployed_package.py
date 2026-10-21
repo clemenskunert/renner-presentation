@@ -82,6 +82,7 @@ def build_offline_tablet_html():
         "history-journey.js",
         "transformation-journey.js",
         "ffw-history.js",
+        "felt-anatomy.js",
         "presentation.js"
     ]
 

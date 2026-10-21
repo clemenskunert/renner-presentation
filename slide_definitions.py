@@ -1904,19 +1904,201 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s11_b3_badge">>OBERFLÄCHENQUALITÄT</span>
-                  <div class="bento-card-title" data-i18n="s11_c1_title">Die geschlossene Faserhaut</div>
-                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffene Filze behalten ihre natürliche Schutzhülle und neigen nicht zum Ausfasern</div>
+                  <span class="bento-badge gold" data-i18n="s11_b3_badge">>SCHICHTAUFBAU & RÜCKGRAT</span>
+                  <div class="bento-card-title" data-i18n="s11_c1_title">2×6 Vliesbahnen: Das Spannungs-Rückgrat</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.</div>
                 </div>
 
-                <div class="ffw-texture-viewer" id="s11-texture-viewer" title="Detailansicht">
-                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_oberflaeche_biegeradius.jpg" alt="Seidige Faserhaut und glatter Biegeradius" class="ffw-texture-img">
-                  <div class="hero-corner-bracket top-left"></div>
-                  <div class="hero-corner-bracket top-right"></div>
-                  <div class="hero-corner-bracket bottom-left"></div>
-                  <div class="hero-corner-bracket bottom-right"></div>
-                  <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s11_texture_tag">Prüfung: Seidige Faserhaut</span>
+                <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation -->
+                <div class="ffw-felt-anatomy-container is-intact" id="s11-felt-anatomy" role="region" aria-label="Filztafel Schichtaufbau und Vliesbahnen-Spannungsanimation">
+                  <!-- Interactive Control Header -->
+                  <div class="felt-anatomy-controls">
+                    <div class="felt-mode-group">
+                      <button class="felt-mode-btn active" id="felt-btn-intact" data-mode="intact" title="Schichtaufbau mit intakten 2×6 Vliesbahnen">
+                        <span class="mode-dot green"></span>
+                        <span data-i18n="s11_anim_mode_intact">✦ 2×6 Vliesbahnen (Rückgrat)</span>
+                      </button>
+                      <button class="felt-mode-btn" id="felt-btn-sanded" data-mode="sanded" title="Simulation der Zerstörung durch Schleifen">
+                        <span class="mode-dot red"></span>
+                        <span data-i18n="s11_anim_mode_sanded">⚠️ Schleif-Schaden simulieren</span>
+                      </button>
+                    </div>
+                    <div class="felt-tension-kpi" id="felt-tension-kpi" title="Mechanische Vorspannung der Filztafel">
+                      <div class="kpi-label-row">
+                        <span class="kpi-title" data-i18n="s11_anim_gauge_label">Spannungs-Integrität</span>
+                        <span class="kpi-value" id="felt-tension-val">100%</span>
+                      </div>
+                      <div class="kpi-meter-bar">
+                        <div class="kpi-meter-fill" id="felt-tension-meter" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Interactive Graphic Stage -->
+                  <div class="felt-anatomy-stage" id="felt-anatomy-stage">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+
+                    <!-- SVG Cross-Section Illustration -->
+                    <svg class="felt-cross-section-svg" viewBox="0 0 540 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <!-- Gradients -->
+                        <linearGradient id="feltCoreGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#1e283c"/>
+                          <stop offset="50%" stop-color="#2a3752"/>
+                          <stop offset="100%" stop-color="#1e283c"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="vliesGradIntact" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#c8a356" stop-opacity="0.3"/>
+                          <stop offset="20%" stop-color="#f5e6b8" stop-opacity="0.95"/>
+                          <stop offset="50%" stop-color="#c8a356" stop-opacity="0.75"/>
+                          <stop offset="80%" stop-color="#f5e6b8" stop-opacity="0.95"/>
+                          <stop offset="100%" stop-color="#c8a356" stop-opacity="0.3"/>
+                        </linearGradient>
+
+                        <linearGradient id="vliesGradSanded" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#ef4444" stop-opacity="0.3"/>
+                          <stop offset="35%" stop-color="#f87171" stop-opacity="0.85"/>
+                          <stop offset="50%" stop-color="#450a0a" stop-opacity="0.2"/>
+                          <stop offset="85%" stop-color="#7f1d1d" stop-opacity="0.3"/>
+                          <stop offset="100%" stop-color="#1f2937" stop-opacity="0.1"/>
+                        </linearGradient>
+
+                        <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feGaussianBlur stdDeviation="3" result="blur"/>
+                          <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+
+                        <filter id="damageGlow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feGaussianBlur stdDeviation="4" result="blur"/>
+                          <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+
+                        <pattern id="woolPatt" width="20" height="20" patternUnits="userSpaceOnUse">
+                          <path d="M 0,10 Q 5,2 10,10 T 20,10" fill="none" stroke="rgba(200, 163, 86, 0.12)" stroke-width="1.2"/>
+                          <path d="M 0,15 Q 5,7 10,15 T 20,15" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                        </pattern>
+                      </defs>
+
+                      <!-- Backdrop Felt Block -->
+                      <rect x="25" y="24" width="490" height="172" rx="10" fill="url(#feltCoreGrad)" stroke="rgba(200,163,86,0.25)" stroke-width="1"/>
+                      <rect x="25" y="24" width="490" height="172" rx="10" fill="url(#woolPatt)"/>
+
+                      <!-- CENTER CORE: Elastic Cushion Zone -->
+                      <g class="core-zone-group">
+                        <rect x="27" y="76" width="486" height="68" fill="rgba(12, 17, 28, 0.55)"/>
+                        <!-- Core Spring / Dynamic Cushion Wave -->
+                        <path class="core-pulse-wave" d="M 30,110 Q 90,95 150,110 T 270,110 T 390,110 T 510,110" fill="none" stroke="rgba(200, 163, 86, 0.35)" stroke-width="2" stroke-dasharray="4,4"/>
+                        <text x="270" y="115" text-anchor="middle" class="svg-core-label" data-i18n="s11_anim_core">ELASTISCHER FILZKERN (Wollfaser-Matrix)</text>
+                      </g>
+
+                      <!-- TOP 6 VLIESBAHNEN (Oberseite: Schichten 1 bis 6) -->
+                      <g class="vlies-group vlies-top" id="svg-vlies-top">
+                        <!-- 6 Distinct Continuous Fleece Layers -->
+                        <path class="vlies-track layer-1" d="M 28,29 L 512,29" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-2" d="M 28,38 L 512,38" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-3" d="M 28,47 L 512,47" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-4" d="M 28,56 L 512,56" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-5" d="M 28,65 L 512,65" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-6" d="M 28,74 L 512,74" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+
+                        <!-- Running Pulse Stream across the 6 layers -->
+                        <path class="vlies-pulse-stream pulse-top" d="M 30,51 L 510,51" stroke="var(--gold-accent)" stroke-width="2" stroke-dasharray="16, 28" filter="url(#goldGlow)"/>
+                        
+                        <!-- Label & Vector Arrow -->
+                        <text x="36" y="20" class="svg-layer-label top-label" data-i18n="s11_anim_top_layers">▲ OBERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)</text>
+                      </g>
+
+                      <!-- BOTTOM 6 VLIESBAHNEN (Unterseite: Schichten 1 bis 6) -->
+                      <g class="vlies-group vlies-bottom" id="svg-vlies-bottom">
+                        <!-- 6 Distinct Continuous Fleece Layers -->
+                        <path class="vlies-track layer-bottom-1" d="M 28,146 L 512,146" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-2" d="M 28,155 L 512,155" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-3" d="M 28,164 L 512,164" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-4" d="M 28,173 L 512,173" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-5" d="M 28,182 L 512,182" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-6" d="M 28,191 L 512,191" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+
+                        <!-- Running Pulse Stream bottom -->
+                        <path class="vlies-pulse-stream pulse-bottom" d="M 30,168 L 510,168" stroke="var(--gold-accent)" stroke-width="2" stroke-dasharray="16, 28" filter="url(#goldGlow)"/>
+
+                        <!-- Label Bottom -->
+                        <text x="36" y="210" class="svg-layer-label bottom-label" data-i18n="s11_anim_bottom_layers">▼ UNTERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)</text>
+                      </g>
+
+                      <!-- TENSION VECTORS / KRAFTVEKTOREN (Intakt: Doppel-Spannungsanker) -->
+                      <g class="tension-vector-group" id="svg-tension-vectors">
+                        <!-- Left Spine Anchor -->
+                        <path d="M 20,30 L 12,30 L 12,190 L 20,190" fill="none" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <line x1="12" y1="110" x2="2" y2="110" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <polygon points="2,110 7,105 7,115" fill="var(--gold-accent)"/>
+                        
+                        <!-- Right Spine Anchor -->
+                        <path d="M 520,30 L 528,30 L 528,190 L 520,190" fill="none" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <line x1="528" y1="110" x2="538" y2="110" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <polygon points="538,110 533,105 533,115" fill="var(--gold-accent)"/>
+
+                        <!-- Tension Arrow Labels -->
+                        <text x="270" y="44" class="svg-tension-text top-tension" text-anchor="middle">◀────── HOHE ELASTISCHE VORSPANNUNG DURCH VLIESBAHNEN ──────▶</text>
+                        <text x="270" y="180" class="svg-tension-text bottom-tension" text-anchor="middle">◀────── HOMOGENE RÜCKSTELLKRAFT IM HAMMERKOPF ──────▶</text>
+                      </g>
+
+                      <!-- ABRASIVE GRINDING DRUM / SANDING TOOL (Appears in 'sanded' mode) -->
+                      <g class="sanding-damage-overlay" id="svg-sanding-damage" style="opacity: 0; pointer-events: none;">
+                        <!-- Sanding Cylinder / Grinding Wheel -->
+                        <g class="grinding-wheel" transform="translate(240, -15)">
+                          <rect x="-45" y="0" width="90" height="48" rx="6" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+                          <line x1="-35" y1="10" x2="35" y2="10" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+                          <line x1="-35" y1="24" x2="35" y2="24" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="6,3"/>
+                          <line x1="-35" y1="38" x2="35" y2="38" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+                          <!-- Rotation Symbol -->
+                          <circle cx="0" cy="24" r="12" fill="rgba(0,0,0,0.5)" stroke="#f59e0b" stroke-width="1.5"/>
+                          <path d="M -5,20 A 7,7 0 1,1 5,28" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- Abrasive Cut / Trench across top layers -->
+                        <path class="damage-cut-trench" d="M 170,26 Q 240,68 310,26" fill="rgba(239, 68, 68, 0.45)" stroke="#ef4444" stroke-width="3" filter="url(#damageGlow)"/>
+                        
+                        <!-- Severed Fiber Frays (Rote Faserabrisse) -->
+                        <path class="frayed-fibers" d="M 160,32 L 180,48 M 165,42 L 188,52 M 172,50 L 195,62 M 318,32 L 298,48 M 312,42 L 290,54 M 305,52 L 285,64" stroke="#fca5a5" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <!-- Grinding Sparks & Debris -->
+                        <g class="spark-cluster">
+                          <circle cx="190" cy="30" r="2.5" fill="#fef08a" filter="url(#goldGlow)"/>
+                          <circle cx="215" cy="22" r="3" fill="#f97316"/>
+                          <circle cx="280" cy="24" r="2.5" fill="#fef08a"/>
+                          <circle cx="295" cy="32" r="3" fill="#ef4444"/>
+                          <circle cx="245" cy="38" r="3.5" fill="#ffffff" filter="url(#goldGlow)"/>
+                        </g>
+
+                        <!-- Fractured Tension Breaking Waves -->
+                        <path class="tension-fracture" d="M 80,44 L 110,48 L 125,40 L 155,44" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4"/>
+                        <path class="tension-fracture" d="M 330,44 L 360,40 L 375,48 L 410,44" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+                        <!-- Warning Callout in SVG -->
+                        <rect x="100" y="80" width="340" height="34" rx="6" fill="rgba(15, 23, 42, 0.94)" stroke="#ef4444" stroke-width="1.5"/>
+                        <text x="270" y="102" text-anchor="middle" class="svg-damage-warning" fill="#fca5a5">⚠️ SCHLIFF DURCHTRENNT VLIESBAHNEN: SPANNUNG KOLLABIERT</text>
+                      </g>
+                    </svg>
+
+                    <!-- Bottom Status Caption Bar -->
+                    <div class="felt-stage-status-bar" id="felt-stage-status-bar">
+                      <span class="status-indicator-dot green" id="felt-status-dot"></span>
+                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung</span>
+                      <button class="felt-auto-toggle-btn active" id="felt-auto-toggle-btn" title="Automatischen Vergleich starten/pausieren">
+                        <span class="auto-toggle-icon">⏸</span>
+                        <span class="auto-toggle-text" data-i18n="s11_anim_auto_toggle">Auto-Vergleich</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -1924,22 +2106,22 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s11_hl1_title">Kein Faserabriss:</strong>
-                      <span data-i18n="s11_hl1_desc">Verhindert vorzeitiges Einrillen an den Saitenkontaktpunkten.</span>
+                      <strong data-i18n="s11_hl1_title">6+6 Vliesbahnen:</strong>
+                      <span data-i18n="s11_hl1_desc">Ausgerichtete, durchgehende Faserbahnen auf Ober- und Unterseite bilden das tragende Rückgrat der Filztafel.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s11_hl2_title">Spannungsausgleich:</strong>
-                      <span data-i18n="s11_hl2_desc">Gezielte Schläge bauen innere Scherspannungen vor dem Schneiden ab.</span>
+                      <strong data-i18n="s11_hl2_title">Spannungsträger:</strong>
+                      <span data-i18n="s11_hl2_desc">Diese Vliesbahnen halten die enorme mechanische Eigenspannung, die beim Aufpressen des Hammerkopfs nötig ist.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s11_hl3_title">Maßhaltigkeit:</strong>
-                      <span data-i18n="s11_hl3_desc">Garantiert identische Plattenstärken für absolut symmetrische Hammerköpfe.</span>
+                      <strong data-i18n="s11_hl3_title">Schleif-Schaden:</strong>
+                      <span data-i18n="s11_hl3_desc">Schleifen der Tafel kappt die Vliesbahnen, vernichtet die Vorspannung und lässt den Filz am Scheitel aufplatzen.</span>
                     </div>
                   </div>
                 </div>

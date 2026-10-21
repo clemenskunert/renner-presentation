@@ -1698,64 +1698,130 @@
           "zh": "🔨 完整表层皮膜保障最高抗击打使用寿命"
         },
         "s11_spotlight_badge": {
-          "de": "OBERFLÄCHENQUALITÄT",
-          "en": "SURFACE QUALITY",
-          "ja": "表面品質の真髄",
-          "zh": "表皮工艺品质"
+          "de": "SCHICHTAUFBAU & RÜCKGRAT",
+          "en": "LAYER STRUCTURE & BACKBONE",
+          "ja": "層構造と引張バックボーン",
+          "zh": "层理结构与应力骨架"
+        },
+        "s11_b3_badge": {
+          "de": "SCHICHTAUFBAU & RÜCKGRAT",
+          "en": "LAYER STRUCTURE & BACKBONE",
+          "ja": "層構造と引張バックボーン",
+          "zh": "层理结构与应力骨架"
         },
         "s11_spotlight_title": {
-          "de": "Die geschlossene Faserhaut",
-          "en": "The Closed Fiber Skin",
-          "ja": "緻密な表面スキン層",
-          "zh": "天然密闭纤维表皮"
+          "de": "2×6 Vliesbahnen: Das Spannungs-Rückgrat",
+          "en": "2×6 Fleece Webs: The Tensile Backbone",
+          "ja": "表裏各6層のフリース繊維束：張力保持の骨格",
+          "zh": "上下各6层连续纤网：毛毡张力骨架"
+        },
+        "s11_c1_title": {
+          "de": "2×6 Vliesbahnen: Das Spannungs-Rückgrat",
+          "en": "2×6 Fleece Webs: The Tensile Backbone",
+          "ja": "表裏各6層のフリース繊維束：張力保持の骨格",
+          "zh": "上下各6层连续纤网：毛毡张力骨架"
         },
         "s11_spotlight_desc": {
-          "de": "Ungeschliffene Filze behalten ihre natürliche Schutzhülle und neigen nicht zum Ausfasern",
-          "en": "Unsanded felts retain their protective envelope and resist fraying",
-          "ja": "研磨を施さないフェルトは天然の保護層を保ち毛羽立たない",
-          "zh": "未经打磨砂光的毛毡完整保留天然表层，杜绝起毛开裂"
+          "de": "Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.",
+          "en": "6 aligned, continuous fleece webs each on top and bottom sustain internal pre-tension. Sanding shears these webs irreversibly.",
+          "ja": "表裏各6層の連続フリース繊維帯が板の内部張力を保持。研磨はこれらを切断し致命的な張力喪失を招きます。",
+          "zh": "毛毡板上下各6条连续定向纤网牢牢锁住内部预应力。砂光打磨会切断纤网造成不可逆的张力溃散。"
         },
-        "s11_texture_tag": {
-          "de": "Prüfung: Seidige Faserhaut",
-          "en": "Inspection: Silky Fiber Skin",
-          "ja": "外観検査：シルク状スキン層",
-          "zh": "检测：丝缎质感密闭毛毡皮"
+        "s11_c1_desc": {
+          "de": "Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.",
+          "en": "6 aligned, continuous fleece webs each on top and bottom sustain internal pre-tension. Sanding shears these webs irreversibly.",
+          "ja": "表裏各6層の連続フリース繊維帯が板の内部張力を保持。研磨はこれらを切断し致命的な張力喪失を招きます。",
+          "zh": "毛毡板上下各6条连续定向纤网牢牢锁住内部预应力。砂光打磨会切断纤网造成不可逆的张力溃散。"
+        },
+        "s11_anim_mode_intact": {
+          "de": "✦ 2×6 Vliesbahnen (Rückgrat)",
+          "en": "✦ 2×6 Fleece Webs (Backbone)",
+          "ja": "✦ 表裏各6層フリース束（骨格）",
+          "zh": "✦ 2×6连续纤网（应力骨架）"
+        },
+        "s11_anim_mode_sanded": {
+          "de": "⚠️ Schleif-Schaden simulieren",
+          "en": "⚠️ Simulate Sanding Damage",
+          "ja": "⚠️ 研磨ダメージをシミュレート",
+          "zh": "⚠️ 模拟打磨损坏破坏"
+        },
+        "s11_anim_gauge_label": {
+          "de": "Spannungs-Integrität",
+          "en": "Tension Integrity",
+          "ja": "張力保持率",
+          "zh": "张力完整率"
+        },
+        "s11_anim_top_layers": {
+          "de": "▲ OBERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)",
+          "en": "▲ TOP SURFACE: 6 CONTINUOUS FLEECE WEBS (BACKBONE)",
+          "ja": "▲ 上面：6層の連続フリース繊維帯（張力骨格）",
+          "zh": "▲ 顶层：6层连续定向纤网（张力骨架）"
+        },
+        "s11_anim_core": {
+          "de": "ELASTISCHER FILZKERN (Wollfaser-Matrix)",
+          "en": "ELASTIC FELT CORE (Wool Fiber Matrix)",
+          "ja": "弾性フェルトコア（高密度ウール母相）",
+          "zh": "高弹毛毡芯层（天然羊毛纤维基体）"
+        },
+        "s11_anim_bottom_layers": {
+          "de": "▼ UNTERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)",
+          "en": "▼ BOTTOM SURFACE: 6 CONTINUOUS FLEECE WEBS (BACKBONE)",
+          "ja": "▼ 下面：6層の連続フリース繊維帯（張力骨格）",
+          "zh": "▼ 底层：6层连续定向纤网（张力骨架）"
+        },
+        "s11_anim_status_intact": {
+          "de": "✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung",
+          "en": "✓ 2×6 fleece webs intact: Structural backbone maintains full elastic tension",
+          "ja": "✓ 表裏各6層の繊維束が健全：完璧な引張骨格により弾性復元力を維持",
+          "zh": "✓ 2×6连续纤网完好：承力骨架确保毛毡弯折张力与回弹冲力"
+        },
+        "s11_anim_status_sanded": {
+          "de": "✗ Vliesbahnen gekappt: Zerstörung des Rückgrats • Totaler Spannungsverlust!",
+          "en": "✗ Fleece webs sheared: Backbone destroyed • Catastrophic loss of tension!",
+          "ja": "✗ 繊維束が破断：骨格破壊による致命的な張力完全喪失！",
+          "zh": "✗ 连续纤网遭切断磨损：骨架瓦解・整体物理张力彻底丧失！"
+        },
+        "s11_anim_auto_toggle": {
+          "de": "Auto-Vergleich",
+          "en": "Auto Compare",
+          "ja": "自動比較",
+          "zh": "自动循环对比"
         },
         "s11_hl1_title": {
-          "de": "Kein Faserabriss:",
-          "en": "Zero Fiber Rupture:",
-          "ja": "繊維破断の皆無：",
-          "zh": "杜绝纤维拉断起毛："
+          "de": "6+6 Vliesbahnen:",
+          "en": "6+6 Fleece Webs:",
+          "ja": "表裏各6層の繊維束：",
+          "zh": "上下各6层连续纤网："
         },
         "s11_hl1_desc": {
-          "de": "Verhindert vorzeitiges Einrillen an den Saitenkontaktpunkten.",
-          "en": "Prevents premature grooving at string strike points.",
-          "ja": "弦の打撃点における早期の溝掘れ摩耗を防止。",
-          "zh": "防范弦槽在敲击接触点提早压损凹陷。"
+          "de": "Ausgerichtete, durchgehende Faserbahnen auf Ober- und Unterseite bilden das tragende Rückgrat der Filztafel.",
+          "en": "Continuous, aligned fiber webs on top and bottom form the load-bearing backbone of the felt board.",
+          "ja": "表裏を走る連続した方向性繊維束が、フェルト板全体の強靭な骨格を形成。",
+          "zh": "贯穿上下表层的定向连续纤网构成毛毡板的核心承力骨架。"
         },
         "s11_hl2_title": {
-          "de": "Spannungsausgleich:",
-          "en": "Stress Equalization:",
-          "ja": "応力バランス調整：",
-          "zh": "释放内聚张力："
+          "de": "Spannungsträger:",
+          "en": "Tension Carriers:",
+          "ja": "張力保持機能：",
+          "zh": "高能张力维持："
         },
         "s11_hl2_desc": {
-          "de": "Gezielte Schläge bauen innere Scherspannungen vor dem Schneiden ab.",
-          "en": "Targeted blows relieve internal shear stresses prior to cutting.",
-          "ja": "切断前に内部の残留せん断応力を完全除去。",
-          "zh": "分段裁切前彻底消解内部残存剪切应力。"
+          "de": "Diese Vliesbahnen halten die enorme mechanische Eigenspannung, die beim Aufpressen des Hammerkopfs nötig ist.",
+          "en": "These webs sustain the immense internal pre-tension required when moulding the hammerhead under pressure.",
+          "ja": "ハンマー成型プレス時に不可欠な極めて高い内部プレテンションを確実に保持。",
+          "zh": "牢固锁定毛毡在高压冷成型压入木芯时所需的巨大内部预应力。"
         },
         "s11_hl3_title": {
-          "de": "Maßhaltigkeit:",
-          "en": "Dimensional Accuracy:",
-          "ja": "高精度な寸法保持：",
-          "zh": "尺寸极其精准稳定："
+          "de": "Schleif-Schaden:",
+          "en": "Sanding Damage:",
+          "ja": "研磨による破壊：",
+          "zh": "砂光打磨之害："
         },
         "s11_hl3_desc": {
-          "de": "Garantiert identische Plattenstärken für absolut symmetrische Hammerköpfe.",
-          "en": "Guarantees identical plate thickness for perfectly symmetrical hammerheads.",
-          "ja": "完全に対称なハンマーヘッドのための均一な板厚を約束。",
-          "zh": "确保板料全厚度一致，打造完美对称音槌。"
+          "de": "Schleifen der Tafel kappt die Vliesbahnen, vernichtet die Vorspannung und lässt den Filz am Scheitel aufplatzen.",
+          "en": "Sanding cuts through these webs, collapsing pre-tension and causing the felt crown to rupture or fray.",
+          "ja": "研磨は繊維束を切断し張力を破壊。打撃頂点（クラウン）の破断や毛羽立ちを引き起こします。",
+          "zh": "砂光打磨硬生生削断纤网，内应力瞬间溃散，导致槌顶在敲击时爆裂起毛。"
         }
       },
       "notes": {

@@ -5450,6 +5450,324 @@ body::before {
 }
 
 /* ==========================================================================
+   Slide 11: Filztafel-Schichtaufbau & Vliesbahnen-Spannungsanimation
+   Visualisiert die 2x6 Vliesbahnen (Rückgrat) & den Schaden durch Schleifen
+   ========================================================================== */
+.ffw-felt-anatomy-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  gap: 8px;
+  margin: 4px 0 10px 0;
+  position: relative;
+}
+
+.felt-anatomy-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(10, 14, 24, 0.85);
+  border: 1px solid rgba(200, 163, 86, 0.28);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.felt-mode-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.felt-mode-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.78rem, 0.88vw, 0.92rem);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.felt-mode-btn:hover {
+  background: rgba(200, 163, 86, 0.15);
+  border-color: var(--gold-accent);
+}
+
+.felt-mode-btn .mode-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.felt-mode-btn .mode-dot.green {
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+}
+
+.felt-mode-btn .mode-dot.red {
+  background: #ef4444;
+  box-shadow: 0 0 6px #ef4444;
+}
+
+.felt-mode-btn.active[data-mode="intact"] {
+  background: rgba(34, 197, 94, 0.18);
+  border-color: #22c55e;
+  color: #86efac;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.35);
+}
+
+.felt-mode-btn.active[data-mode="sanded"] {
+  background: rgba(239, 68, 68, 0.22);
+  border-color: #ef4444;
+  color: #fca5a5;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+
+.felt-tension-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 145px;
+}
+
+.kpi-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(0.72rem, 0.8vw, 0.84rem);
+  font-weight: 700;
+}
+
+.kpi-title {
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.kpi-value {
+  color: #86efac;
+  font-family: var(--font-mono);
+  font-size: clamp(0.82rem, 0.9vw, 0.95rem);
+  transition: color 0.3s ease;
+}
+
+.kpi-meter-bar {
+  height: 6px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.kpi-meter-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #10b981, #22c55e);
+  border-radius: 3px;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.felt-anatomy-stage {
+  position: relative;
+  height: clamp(165px, 20.5vh, 215px);
+  min-height: 0;
+  background: linear-gradient(180deg, #0a0e1a 0%, #070a12 100%);
+  border: 1px solid rgba(200, 163, 86, 0.38);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.felt-cross-section-svg {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  display: block;
+}
+
+/* SVG Typography & Lines */
+.svg-layer-label {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  fill: var(--gold-light);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+}
+
+.svg-core-label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  fill: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+.svg-tension-text {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  fill: #ffd700;
+  opacity: 0.85;
+}
+
+.vlies-pulse-stream {
+  animation: vliesFlowPulse 2.8s linear infinite;
+}
+
+.pulse-bottom {
+  animation: vliesFlowPulse 2.8s linear infinite reverse;
+}
+
+@keyframes vliesFlowPulse {
+  0% { stroke-dashoffset: 44; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.core-pulse-wave {
+  animation: coreWaveShift 4s ease-in-out infinite alternate;
+}
+
+@keyframes coreWaveShift {
+  0% { stroke: rgba(200, 163, 86, 0.25); }
+  50% { stroke: rgba(200, 163, 86, 0.5); }
+  100% { stroke: rgba(200, 163, 86, 0.25); }
+}
+
+/* Sanded / Damage States */
+.is-sanded .vlies-top .vlies-track {
+  stroke: url(#vliesGradSanded) !important;
+}
+
+.is-sanded .vlies-top .vlies-pulse-stream {
+  animation: none !important;
+  opacity: 0.15;
+}
+
+.is-sanded .top-tension {
+  fill: #ef4444 !important;
+  text-decoration: line-through;
+}
+
+.is-sanded .grinding-wheel {
+  animation: grindingWheelSpin 0.6s linear infinite;
+  transform-origin: 0 24px;
+}
+
+@keyframes grindingWheelSpin {
+  0% { transform: translate(240px, -15px) rotate(0deg); }
+  100% { transform: translate(240px, -15px) rotate(360deg); }
+}
+
+.is-sanded .spark-cluster circle {
+  animation: sparkFlicker 0.2s steps(2, start) infinite;
+}
+
+@keyframes sparkFlicker {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.6) translate(1px, -2px); }
+}
+
+.is-sanded .svg-damage-warning {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  animation: warningBlink 1.4s ease-in-out infinite;
+}
+
+@keyframes warningBlink {
+  0%, 100% { fill: #fca5a5; }
+  50% { fill: #ffffff; }
+}
+
+.felt-stage-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 12px;
+  background: rgba(10, 14, 24, 0.95);
+  border-top: 1px solid rgba(200, 163, 86, 0.25);
+  z-index: 5;
+}
+
+.status-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-indicator-dot.green {
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.status-indicator-dot.red {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.status-indicator-dot.pulse {
+  animation: dotPulse 1.2s infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.status-caption-text {
+  font-family: var(--font-sans);
+  font-size: clamp(0.78rem, 0.88vw, 0.92rem);
+  font-weight: 600;
+  color: #e2e8f0;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.felt-auto-toggle-btn {
+  background: rgba(200, 163, 86, 0.15);
+  border: 1px solid var(--gold-accent);
+  color: var(--gold-light);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.felt-auto-toggle-btn:hover,
+.felt-auto-toggle-btn.active {
+  background: var(--gold-accent);
+  color: #0a0e1a;
+}
+
+/* ==========================================================================
    Universelles Premium Bento & Typografie-System (Alle Folien)
    Behebt ungenutzten Raum, skaliert Schriftgrößen und verteilt Textelemente
    optimal in Abhängigkeit zur jeweiligen Containergröße.
@@ -8365,19 +8683,201 @@ body::before {
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s11_b3_badge">>OBERFLÄCHENQUALITÄT</span>
-                  <div class="bento-card-title" data-i18n="s11_c1_title">Die geschlossene Faserhaut</div>
-                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Ungeschliffene Filze behalten ihre natürliche Schutzhülle und neigen nicht zum Ausfasern</div>
+                  <span class="bento-badge gold" data-i18n="s11_b3_badge">>SCHICHTAUFBAU & RÜCKGRAT</span>
+                  <div class="bento-card-title" data-i18n="s11_c1_title">2×6 Vliesbahnen: Das Spannungs-Rückgrat</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.</div>
                 </div>
 
-                <div class="ffw-texture-viewer" id="s11-texture-viewer" title="Detailansicht">
-                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_oberflaeche_biegeradius.jpg" alt="Seidige Faserhaut und glatter Biegeradius" class="ffw-texture-img">
-                  <div class="hero-corner-bracket top-left"></div>
-                  <div class="hero-corner-bracket top-right"></div>
-                  <div class="hero-corner-bracket bottom-left"></div>
-                  <div class="hero-corner-bracket bottom-right"></div>
-                  <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s11_texture_tag">Prüfung: Seidige Faserhaut</span>
+                <!-- ANIMATION: 2x6 Vliesbahnen & Schleif-Schadens-Simulation -->
+                <div class="ffw-felt-anatomy-container is-intact" id="s11-felt-anatomy" role="region" aria-label="Filztafel Schichtaufbau und Vliesbahnen-Spannungsanimation">
+                  <!-- Interactive Control Header -->
+                  <div class="felt-anatomy-controls">
+                    <div class="felt-mode-group">
+                      <button class="felt-mode-btn active" id="felt-btn-intact" data-mode="intact" title="Schichtaufbau mit intakten 2×6 Vliesbahnen">
+                        <span class="mode-dot green"></span>
+                        <span data-i18n="s11_anim_mode_intact">✦ 2×6 Vliesbahnen (Rückgrat)</span>
+                      </button>
+                      <button class="felt-mode-btn" id="felt-btn-sanded" data-mode="sanded" title="Simulation der Zerstörung durch Schleifen">
+                        <span class="mode-dot red"></span>
+                        <span data-i18n="s11_anim_mode_sanded">⚠️ Schleif-Schaden simulieren</span>
+                      </button>
+                    </div>
+                    <div class="felt-tension-kpi" id="felt-tension-kpi" title="Mechanische Vorspannung der Filztafel">
+                      <div class="kpi-label-row">
+                        <span class="kpi-title" data-i18n="s11_anim_gauge_label">Spannungs-Integrität</span>
+                        <span class="kpi-value" id="felt-tension-val">100%</span>
+                      </div>
+                      <div class="kpi-meter-bar">
+                        <div class="kpi-meter-fill" id="felt-tension-meter" style="width: 100%;"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Interactive Graphic Stage -->
+                  <div class="felt-anatomy-stage" id="felt-anatomy-stage">
+                    <div class="hero-corner-bracket top-left"></div>
+                    <div class="hero-corner-bracket top-right"></div>
+                    <div class="hero-corner-bracket bottom-left"></div>
+                    <div class="hero-corner-bracket bottom-right"></div>
+
+                    <!-- SVG Cross-Section Illustration -->
+                    <svg class="felt-cross-section-svg" viewBox="0 0 540 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <!-- Gradients -->
+                        <linearGradient id="feltCoreGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#1e283c"/>
+                          <stop offset="50%" stop-color="#2a3752"/>
+                          <stop offset="100%" stop-color="#1e283c"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="vliesGradIntact" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#c8a356" stop-opacity="0.3"/>
+                          <stop offset="20%" stop-color="#f5e6b8" stop-opacity="0.95"/>
+                          <stop offset="50%" stop-color="#c8a356" stop-opacity="0.75"/>
+                          <stop offset="80%" stop-color="#f5e6b8" stop-opacity="0.95"/>
+                          <stop offset="100%" stop-color="#c8a356" stop-opacity="0.3"/>
+                        </linearGradient>
+
+                        <linearGradient id="vliesGradSanded" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#ef4444" stop-opacity="0.3"/>
+                          <stop offset="35%" stop-color="#f87171" stop-opacity="0.85"/>
+                          <stop offset="50%" stop-color="#450a0a" stop-opacity="0.2"/>
+                          <stop offset="85%" stop-color="#7f1d1d" stop-opacity="0.3"/>
+                          <stop offset="100%" stop-color="#1f2937" stop-opacity="0.1"/>
+                        </linearGradient>
+
+                        <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feGaussianBlur stdDeviation="3" result="blur"/>
+                          <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+
+                        <filter id="damageGlow" x="-20%" y="-20%" width="140%" height="140%">
+                          <feGaussianBlur stdDeviation="4" result="blur"/>
+                          <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+
+                        <pattern id="woolPatt" width="20" height="20" patternUnits="userSpaceOnUse">
+                          <path d="M 0,10 Q 5,2 10,10 T 20,10" fill="none" stroke="rgba(200, 163, 86, 0.12)" stroke-width="1.2"/>
+                          <path d="M 0,15 Q 5,7 10,15 T 20,15" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                        </pattern>
+                      </defs>
+
+                      <!-- Backdrop Felt Block -->
+                      <rect x="25" y="24" width="490" height="172" rx="10" fill="url(#feltCoreGrad)" stroke="rgba(200,163,86,0.25)" stroke-width="1"/>
+                      <rect x="25" y="24" width="490" height="172" rx="10" fill="url(#woolPatt)"/>
+
+                      <!-- CENTER CORE: Elastic Cushion Zone -->
+                      <g class="core-zone-group">
+                        <rect x="27" y="76" width="486" height="68" fill="rgba(12, 17, 28, 0.55)"/>
+                        <!-- Core Spring / Dynamic Cushion Wave -->
+                        <path class="core-pulse-wave" d="M 30,110 Q 90,95 150,110 T 270,110 T 390,110 T 510,110" fill="none" stroke="rgba(200, 163, 86, 0.35)" stroke-width="2" stroke-dasharray="4,4"/>
+                        <text x="270" y="115" text-anchor="middle" class="svg-core-label" data-i18n="s11_anim_core">ELASTISCHER FILZKERN (Wollfaser-Matrix)</text>
+                      </g>
+
+                      <!-- TOP 6 VLIESBAHNEN (Oberseite: Schichten 1 bis 6) -->
+                      <g class="vlies-group vlies-top" id="svg-vlies-top">
+                        <!-- 6 Distinct Continuous Fleece Layers -->
+                        <path class="vlies-track layer-1" d="M 28,29 L 512,29" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-2" d="M 28,38 L 512,38" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-3" d="M 28,47 L 512,47" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-4" d="M 28,56 L 512,56" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-5" d="M 28,65 L 512,65" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-6" d="M 28,74 L 512,74" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+
+                        <!-- Running Pulse Stream across the 6 layers -->
+                        <path class="vlies-pulse-stream pulse-top" d="M 30,51 L 510,51" stroke="var(--gold-accent)" stroke-width="2" stroke-dasharray="16, 28" filter="url(#goldGlow)"/>
+                        
+                        <!-- Label & Vector Arrow -->
+                        <text x="36" y="20" class="svg-layer-label top-label" data-i18n="s11_anim_top_layers">▲ OBERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)</text>
+                      </g>
+
+                      <!-- BOTTOM 6 VLIESBAHNEN (Unterseite: Schichten 1 bis 6) -->
+                      <g class="vlies-group vlies-bottom" id="svg-vlies-bottom">
+                        <!-- 6 Distinct Continuous Fleece Layers -->
+                        <path class="vlies-track layer-bottom-1" d="M 28,146 L 512,146" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-2" d="M 28,155 L 512,155" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-3" d="M 28,164 L 512,164" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-4" d="M 28,173 L 512,173" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-5" d="M 28,182 L 512,182" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+                        <path class="vlies-track layer-bottom-6" d="M 28,191 L 512,191" stroke="url(#vliesGradIntact)" stroke-width="4.5" stroke-linecap="round"/>
+
+                        <!-- Running Pulse Stream bottom -->
+                        <path class="vlies-pulse-stream pulse-bottom" d="M 30,168 L 510,168" stroke="var(--gold-accent)" stroke-width="2" stroke-dasharray="16, 28" filter="url(#goldGlow)"/>
+
+                        <!-- Label Bottom -->
+                        <text x="36" y="210" class="svg-layer-label bottom-label" data-i18n="s11_anim_bottom_layers">▼ UNTERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)</text>
+                      </g>
+
+                      <!-- TENSION VECTORS / KRAFTVEKTOREN (Intakt: Doppel-Spannungsanker) -->
+                      <g class="tension-vector-group" id="svg-tension-vectors">
+                        <!-- Left Spine Anchor -->
+                        <path d="M 20,30 L 12,30 L 12,190 L 20,190" fill="none" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <line x1="12" y1="110" x2="2" y2="110" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <polygon points="2,110 7,105 7,115" fill="var(--gold-accent)"/>
+                        
+                        <!-- Right Spine Anchor -->
+                        <path d="M 520,30 L 528,30 L 528,190 L 520,190" fill="none" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <line x1="528" y1="110" x2="538" y2="110" stroke="var(--gold-accent)" stroke-width="2"/>
+                        <polygon points="538,110 533,105 533,115" fill="var(--gold-accent)"/>
+
+                        <!-- Tension Arrow Labels -->
+                        <text x="270" y="44" class="svg-tension-text top-tension" text-anchor="middle">◀────── HOHE ELASTISCHE VORSPANNUNG DURCH VLIESBAHNEN ──────▶</text>
+                        <text x="270" y="180" class="svg-tension-text bottom-tension" text-anchor="middle">◀────── HOMOGENE RÜCKSTELLKRAFT IM HAMMERKOPF ──────▶</text>
+                      </g>
+
+                      <!-- ABRASIVE GRINDING DRUM / SANDING TOOL (Appears in 'sanded' mode) -->
+                      <g class="sanding-damage-overlay" id="svg-sanding-damage" style="opacity: 0; pointer-events: none;">
+                        <!-- Sanding Cylinder / Grinding Wheel -->
+                        <g class="grinding-wheel" transform="translate(240, -15)">
+                          <rect x="-45" y="0" width="90" height="48" rx="6" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+                          <line x1="-35" y1="10" x2="35" y2="10" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+                          <line x1="-35" y1="24" x2="35" y2="24" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="6,3"/>
+                          <line x1="-35" y1="38" x2="35" y2="38" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+                          <!-- Rotation Symbol -->
+                          <circle cx="0" cy="24" r="12" fill="rgba(0,0,0,0.5)" stroke="#f59e0b" stroke-width="1.5"/>
+                          <path d="M -5,20 A 7,7 0 1,1 5,28" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- Abrasive Cut / Trench across top layers -->
+                        <path class="damage-cut-trench" d="M 170,26 Q 240,68 310,26" fill="rgba(239, 68, 68, 0.45)" stroke="#ef4444" stroke-width="3" filter="url(#damageGlow)"/>
+                        
+                        <!-- Severed Fiber Frays (Rote Faserabrisse) -->
+                        <path class="frayed-fibers" d="M 160,32 L 180,48 M 165,42 L 188,52 M 172,50 L 195,62 M 318,32 L 298,48 M 312,42 L 290,54 M 305,52 L 285,64" stroke="#fca5a5" stroke-width="2.5" stroke-linecap="round"/>
+
+                        <!-- Grinding Sparks & Debris -->
+                        <g class="spark-cluster">
+                          <circle cx="190" cy="30" r="2.5" fill="#fef08a" filter="url(#goldGlow)"/>
+                          <circle cx="215" cy="22" r="3" fill="#f97316"/>
+                          <circle cx="280" cy="24" r="2.5" fill="#fef08a"/>
+                          <circle cx="295" cy="32" r="3" fill="#ef4444"/>
+                          <circle cx="245" cy="38" r="3.5" fill="#ffffff" filter="url(#goldGlow)"/>
+                        </g>
+
+                        <!-- Fractured Tension Breaking Waves -->
+                        <path class="tension-fracture" d="M 80,44 L 110,48 L 125,40 L 155,44" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4"/>
+                        <path class="tension-fracture" d="M 330,44 L 360,40 L 375,48 L 410,44" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+                        <!-- Warning Callout in SVG -->
+                        <rect x="100" y="80" width="340" height="34" rx="6" fill="rgba(15, 23, 42, 0.94)" stroke="#ef4444" stroke-width="1.5"/>
+                        <text x="270" y="102" text-anchor="middle" class="svg-damage-warning" fill="#fca5a5">⚠️ SCHLIFF DURCHTRENNT VLIESBAHNEN: SPANNUNG KOLLABIERT</text>
+                      </g>
+                    </svg>
+
+                    <!-- Bottom Status Caption Bar -->
+                    <div class="felt-stage-status-bar" id="felt-stage-status-bar">
+                      <span class="status-indicator-dot green" id="felt-status-dot"></span>
+                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung</span>
+                      <button class="felt-auto-toggle-btn active" id="felt-auto-toggle-btn" title="Automatischen Vergleich starten/pausieren">
+                        <span class="auto-toggle-icon">⏸</span>
+                        <span class="auto-toggle-text" data-i18n="s11_anim_auto_toggle">Auto-Vergleich</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -8385,22 +8885,22 @@ body::before {
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s11_hl1_title">Kein Faserabriss:</strong>
-                      <span data-i18n="s11_hl1_desc">Verhindert vorzeitiges Einrillen an den Saitenkontaktpunkten.</span>
+                      <strong data-i18n="s11_hl1_title">6+6 Vliesbahnen:</strong>
+                      <span data-i18n="s11_hl1_desc">Ausgerichtete, durchgehende Faserbahnen auf Ober- und Unterseite bilden das tragende Rückgrat der Filztafel.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s11_hl2_title">Spannungsausgleich:</strong>
-                      <span data-i18n="s11_hl2_desc">Gezielte Schläge bauen innere Scherspannungen vor dem Schneiden ab.</span>
+                      <strong data-i18n="s11_hl2_title">Spannungsträger:</strong>
+                      <span data-i18n="s11_hl2_desc">Diese Vliesbahnen halten die enorme mechanische Eigenspannung, die beim Aufpressen des Hammerkopfs nötig ist.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s11_hl3_title">Maßhaltigkeit:</strong>
-                      <span data-i18n="s11_hl3_desc">Garantiert identische Plattenstärken für absolut symmetrische Hammerköpfe.</span>
+                      <strong data-i18n="s11_hl3_title">Schleif-Schaden:</strong>
+                      <span data-i18n="s11_hl3_desc">Schleifen der Tafel kappt die Vliesbahnen, vernichtet die Vorspannung und lässt den Filz am Scheitel aufplatzen.</span>
                     </div>
                   </div>
                 </div>
@@ -12015,16 +12515,27 @@ window.slideTranslations = {
     "s11_panel_title": "Manuelle Verdichtung und Egalisierung",
     "s11_panel_subtitle": "Gezielte Hammerschläge bringen die Filzplatten auf das exakte Maß und entspannen das Fasergefüge",
     "s11_fact_badge": "🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit",
-    "s11_spotlight_badge": "OBERFLÄCHENQUALITÄT",
-    "s11_spotlight_title": "Die geschlossene Faserhaut",
-    "s11_spotlight_desc": "Ungeschliffene Filze behalten ihre natürliche Schutzhülle und neigen nicht zum Ausfasern",
-    "s11_texture_tag": "Prüfung: Seidige Faserhaut",
-    "s11_hl1_title": "Kein Faserabriss:",
-    "s11_hl1_desc": "Verhindert vorzeitiges Einrillen an den Saitenkontaktpunkten.",
-    "s11_hl2_title": "Spannungsausgleich:",
-    "s11_hl2_desc": "Gezielte Schläge bauen innere Scherspannungen vor dem Schneiden ab.",
-    "s11_hl3_title": "Maßhaltigkeit:",
-    "s11_hl3_desc": "Garantiert identische Plattenstärken für absolut symmetrische Hammerköpfe.",
+    "s11_spotlight_badge": "SCHICHTAUFBAU & RÜCKGRAT",
+    "s11_b3_badge": "SCHICHTAUFBAU & RÜCKGRAT",
+    "s11_spotlight_title": "2×6 Vliesbahnen: Das Spannungs-Rückgrat",
+    "s11_c1_title": "2×6 Vliesbahnen: Das Spannungs-Rückgrat",
+    "s11_spotlight_desc": "Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.",
+    "s11_c1_desc": "Je 6 ausgerichtete, durchgehende Vliesbahnen auf Ober- und Unterseite halten die Vorspannung. Schleifen zerstört dieses Gefüge irreversibel.",
+    "s11_anim_mode_intact": "✦ 2×6 Vliesbahnen (Rückgrat)",
+    "s11_anim_mode_sanded": "⚠️ Schleif-Schaden simulieren",
+    "s11_anim_gauge_label": "Spannungs-Integrität",
+    "s11_anim_top_layers": "▲ OBERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)",
+    "s11_anim_core": "ELASTISCHER FILZKERN (Wollfaser-Matrix)",
+    "s11_anim_bottom_layers": "▼ UNTERSEITE: 6 AUSGERICHTETE VLIESBAHNEN (RÜCKGRAT)",
+    "s11_anim_status_intact": "✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung",
+    "s11_anim_status_sanded": "✗ Vliesbahnen gekappt: Zerstörung des Rückgrats • Totaler Spannungsverlust!",
+    "s11_anim_auto_toggle": "Auto-Vergleich",
+    "s11_hl1_title": "6+6 Vliesbahnen:",
+    "s11_hl1_desc": "Ausgerichtete, durchgehende Faserbahnen auf Ober- und Unterseite bilden das tragende Rückgrat der Filztafel.",
+    "s11_hl2_title": "Spannungsträger:",
+    "s11_hl2_desc": "Diese Vliesbahnen halten die enorme mechanische Eigenspannung, die beim Aufpressen des Hammerkopfs nötig ist.",
+    "s11_hl3_title": "Schleif-Schaden:",
+    "s11_hl3_desc": "Schleifen der Tafel kappt die Vliesbahnen, vernichtet die Vorspannung und lässt den Filz am Scheitel aufplatzen.",
     "s11_notes": "Folie 11: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
     "s12_category": "Teil 2: Filzherstellung • Filzlager Meuselwitz",
     "s12_title": "Über 30 Plattensorten im klimatisierten Lager",
@@ -12960,16 +13471,27 @@ window.slideTranslations = {
     "s11_panel_title": "Manual compaction and leveling",
     "s11_panel_subtitle": "Targeted hammer blows bring felt boards to precise dimensions while relaxing fiber lattice",
     "s11_fact_badge": "🔨 Intact surface fiber skin ensures maximum longevity",
-    "s11_spotlight_badge": "SURFACE QUALITY",
-    "s11_spotlight_title": "The Closed Fiber Skin",
-    "s11_spotlight_desc": "Unsanded felts retain their protective envelope and resist fraying",
-    "s11_texture_tag": "Inspection: Silky Fiber Skin",
-    "s11_hl1_title": "Zero Fiber Rupture:",
-    "s11_hl1_desc": "Prevents premature grooving at string strike points.",
-    "s11_hl2_title": "Stress Equalization:",
-    "s11_hl2_desc": "Targeted blows relieve internal shear stresses prior to cutting.",
-    "s11_hl3_title": "Dimensional Accuracy:",
-    "s11_hl3_desc": "Guarantees identical plate thickness for perfectly symmetrical hammerheads.",
+    "s11_spotlight_badge": "LAYER STRUCTURE & BACKBONE",
+    "s11_b3_badge": "LAYER STRUCTURE & BACKBONE",
+    "s11_spotlight_title": "2×6 Fleece Webs: The Tensile Backbone",
+    "s11_c1_title": "2×6 Fleece Webs: The Tensile Backbone",
+    "s11_spotlight_desc": "6 aligned, continuous fleece webs each on top and bottom sustain internal pre-tension. Sanding shears these webs irreversibly.",
+    "s11_c1_desc": "6 aligned, continuous fleece webs each on top and bottom sustain internal pre-tension. Sanding shears these webs irreversibly.",
+    "s11_anim_mode_intact": "✦ 2×6 Fleece Webs (Backbone)",
+    "s11_anim_mode_sanded": "⚠️ Simulate Sanding Damage",
+    "s11_anim_gauge_label": "Tension Integrity",
+    "s11_anim_top_layers": "▲ TOP SURFACE: 6 CONTINUOUS FLEECE WEBS (BACKBONE)",
+    "s11_anim_core": "ELASTIC FELT CORE (Wool Fiber Matrix)",
+    "s11_anim_bottom_layers": "▼ BOTTOM SURFACE: 6 CONTINUOUS FLEECE WEBS (BACKBONE)",
+    "s11_anim_status_intact": "✓ 2×6 fleece webs intact: Structural backbone maintains full elastic tension",
+    "s11_anim_status_sanded": "✗ Fleece webs sheared: Backbone destroyed • Catastrophic loss of tension!",
+    "s11_anim_auto_toggle": "Auto Compare",
+    "s11_hl1_title": "6+6 Fleece Webs:",
+    "s11_hl1_desc": "Continuous, aligned fiber webs on top and bottom form the load-bearing backbone of the felt board.",
+    "s11_hl2_title": "Tension Carriers:",
+    "s11_hl2_desc": "These webs sustain the immense internal pre-tension required when moulding the hammerhead under pressure.",
+    "s11_hl3_title": "Sanding Damage:",
+    "s11_hl3_desc": "Sanding cuts through these webs, collapsing pre-tension and causing the felt crown to rupture or fray.",
     "s11_notes": "Slide 11: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
     "s12_category": "Part 2: Felt Manufacturing • Filzlager Meuselwitz",
     "s12_title": "Over 30 Felt Sheet Grades in Meuselwitz Climate Storage",
@@ -13905,16 +14427,27 @@ window.slideTranslations = {
     "s11_panel_title": "職人技による手作業圧縮と均一化",
     "s11_panel_subtitle": "熟練の木槌技で寸法を精密調整しつつ内部応力を解放",
     "s11_fact_badge": "🔨 削らない表皮繊維が極上の長寿命を約束",
-    "s11_spotlight_badge": "表面品質の真髄",
-    "s11_spotlight_title": "緻密な表面スキン層",
-    "s11_spotlight_desc": "研磨を施さないフェルトは天然の保護層を保ち毛羽立たない",
-    "s11_texture_tag": "外観検査：シルク状スキン層",
-    "s11_hl1_title": "繊維破断の皆無：",
-    "s11_hl1_desc": "弦の打撃点における早期の溝掘れ摩耗を防止。",
-    "s11_hl2_title": "応力バランス調整：",
-    "s11_hl2_desc": "切断前に内部の残留せん断応力を完全除去。",
-    "s11_hl3_title": "高精度な寸法保持：",
-    "s11_hl3_desc": "完全に対称なハンマーヘッドのための均一な板厚を約束。",
+    "s11_spotlight_badge": "層構造と引張バックボーン",
+    "s11_b3_badge": "層構造と引張バックボーン",
+    "s11_spotlight_title": "表裏各6層のフリース繊維束：張力保持の骨格",
+    "s11_c1_title": "表裏各6層のフリース繊維束：張力保持の骨格",
+    "s11_spotlight_desc": "表裏各6層の連続フリース繊維帯が板の内部張力を保持。研磨はこれらを切断し致命的な張力喪失を招きます。",
+    "s11_c1_desc": "表裏各6層の連続フリース繊維帯が板の内部張力を保持。研磨はこれらを切断し致命的な張力喪失を招きます。",
+    "s11_anim_mode_intact": "✦ 表裏各6層フリース束（骨格）",
+    "s11_anim_mode_sanded": "⚠️ 研磨ダメージをシミュレート",
+    "s11_anim_gauge_label": "張力保持率",
+    "s11_anim_top_layers": "▲ 上面：6層の連続フリース繊維帯（張力骨格）",
+    "s11_anim_core": "弾性フェルトコア（高密度ウール母相）",
+    "s11_anim_bottom_layers": "▼ 下面：6層の連続フリース繊維帯（張力骨格）",
+    "s11_anim_status_intact": "✓ 表裏各6層の繊維束が健全：完璧な引張骨格により弾性復元力を維持",
+    "s11_anim_status_sanded": "✗ 繊維束が破断：骨格破壊による致命的な張力完全喪失！",
+    "s11_anim_auto_toggle": "自動比較",
+    "s11_hl1_title": "表裏各6層の繊維束：",
+    "s11_hl1_desc": "表裏を走る連続した方向性繊維束が、フェルト板全体の強靭な骨格を形成。",
+    "s11_hl2_title": "張力保持機能：",
+    "s11_hl2_desc": "ハンマー成型プレス時に不可欠な極めて高い内部プレテンションを確実に保持。",
+    "s11_hl3_title": "研磨による破壊：",
+    "s11_hl3_desc": "研磨は繊維束を切断し張力を破壊。打撃頂点（クラウン）の破断や毛羽立ちを引き起こします。",
     "s11_notes": "スライド 11: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
     "s12_category": "第2部：極上フェルト製造の秘密（ヴルツェン工場）",
     "s12_title": "モイゼルヴィッツ調湿保管庫：30種以上のフェルト原反",
@@ -14850,16 +15383,27 @@ window.slideTranslations = {
     "s11_panel_title": "手工敲击均质化精细定型",
     "s11_panel_subtitle": "熟练匠人以毛槌与石打精准抚平微隙，释放内部应力",
     "s11_fact_badge": "🔨 完整表层皮膜保障最高抗击打使用寿命",
-    "s11_spotlight_badge": "表皮工艺品质",
-    "s11_spotlight_title": "天然密闭纤维表皮",
-    "s11_spotlight_desc": "未经打磨砂光的毛毡完整保留天然表层，杜绝起毛开裂",
-    "s11_texture_tag": "检测：丝缎质感密闭毛毡皮",
-    "s11_hl1_title": "杜绝纤维拉断起毛：",
-    "s11_hl1_desc": "防范弦槽在敲击接触点提早压损凹陷。",
-    "s11_hl2_title": "释放内聚张力：",
-    "s11_hl2_desc": "分段裁切前彻底消解内部残存剪切应力。",
-    "s11_hl3_title": "尺寸极其精准稳定：",
-    "s11_hl3_desc": "确保板料全厚度一致，打造完美对称音槌。",
+    "s11_spotlight_badge": "层理结构与应力骨架",
+    "s11_b3_badge": "层理结构与应力骨架",
+    "s11_spotlight_title": "上下各6层连续纤网：毛毡张力骨架",
+    "s11_c1_title": "上下各6层连续纤网：毛毡张力骨架",
+    "s11_spotlight_desc": "毛毡板上下各6条连续定向纤网牢牢锁住内部预应力。砂光打磨会切断纤网造成不可逆的张力溃散。",
+    "s11_c1_desc": "毛毡板上下各6条连续定向纤网牢牢锁住内部预应力。砂光打磨会切断纤网造成不可逆的张力溃散。",
+    "s11_anim_mode_intact": "✦ 2×6连续纤网（应力骨架）",
+    "s11_anim_mode_sanded": "⚠️ 模拟打磨损坏破坏",
+    "s11_anim_gauge_label": "张力完整率",
+    "s11_anim_top_layers": "▲ 顶层：6层连续定向纤网（张力骨架）",
+    "s11_anim_core": "高弹毛毡芯层（天然羊毛纤维基体）",
+    "s11_anim_bottom_layers": "▼ 底层：6层连续定向纤网（张力骨架）",
+    "s11_anim_status_intact": "✓ 2×6连续纤网完好：承力骨架确保毛毡弯折张力与回弹冲力",
+    "s11_anim_status_sanded": "✗ 连续纤网遭切断磨损：骨架瓦解・整体物理张力彻底丧失！",
+    "s11_anim_auto_toggle": "自动循环对比",
+    "s11_hl1_title": "上下各6层连续纤网：",
+    "s11_hl1_desc": "贯穿上下表层的定向连续纤网构成毛毡板的核心承力骨架。",
+    "s11_hl2_title": "高能张力维持：",
+    "s11_hl2_desc": "牢固锁定毛毡在高压冷成型压入木芯时所需的巨大内部预应力。",
+    "s11_hl3_title": "砂光打磨之害：",
+    "s11_hl3_desc": "砂光打磨硬生生削断纤网，内应力瞬间溃散，导致槌顶在敲击时爆裂起毛。",
     "s11_notes": "第 11 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。",
     "s12_category": "第二部分：顶级纯羊毛毡制造工艺（乌尔岑毛毡厂）",
     "s12_title": "莫伊瑟尔维茨恒湿仓储：30余种高标准规格原毡板",
@@ -19604,6 +20148,235 @@ class FFWFirmengeschichte {
 
 // Global instance
 window.ffwHistory = new FFWFirmengeschichte();
+
+</script>
+  <script>
+/* Embedded felt-anatomy.js */
+/**
+ * Louis Renner Presentation - Slide 11 Felt Anatomy & Sanding Damage Controller
+ * Demonstrates the 2x6 continuous fleece webs (structural backbone) and the
+ * destructive effect of grinding/sanding on felt pre-tension.
+ */
+
+class FeltAnatomySimulation {
+  constructor() {
+    this.container = null;
+    this.mode = 'intact'; // 'intact' or 'sanded'
+    this.isAutoPlay = true;
+    this.autoTimer = null;
+    this.autoDuration = 5500; // 5.5s per state
+    
+    // Auto-init on DOMContentLoaded or immediately if ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.init());
+    } else {
+      this.init();
+    }
+  }
+
+  init() {
+    this.container = document.getElementById('s11-felt-anatomy');
+    if (!this.container) return;
+
+    this.btnIntact = document.getElementById('felt-btn-intact');
+    this.btnSanded = document.getElementById('felt-btn-sanded');
+    this.btnAuto = document.getElementById('felt-auto-toggle-btn');
+    this.autoIcon = this.container.querySelector('.auto-toggle-icon');
+    this.tensionVal = document.getElementById('felt-tension-val');
+    this.tensionMeter = document.getElementById('felt-tension-meter');
+    this.statusDot = document.getElementById('felt-status-dot');
+    this.statusText = document.getElementById('felt-status-text');
+    this.damageOverlay = document.getElementById('svg-sanding-damage');
+    this.topVliesGroup = document.getElementById('svg-vlies-top');
+    this.tensionVectors = document.getElementById('svg-tension-vectors');
+
+    // Event Listeners
+    if (this.btnIntact) {
+      this.btnIntact.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.stopAutoPlay();
+        this.setMode('intact');
+      });
+    }
+
+    if (this.btnSanded) {
+      this.btnSanded.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.stopAutoPlay();
+        this.setMode('sanded');
+      });
+    }
+
+    if (this.btnAuto) {
+      this.btnAuto.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleAutoPlay();
+      });
+    }
+
+    // Set initial mode
+    this.setMode('intact', false);
+
+    // Slide Visibility Observer (start autoplay when Slide 11 is active)
+    this.initSlideObserver();
+  }
+
+  initSlideObserver() {
+    const slide11 = document.querySelector('.slide[data-slide="11"]');
+    if (!slide11) return;
+
+    const observer = new MutationObserver(() => {
+      const isActive = slide11.classList.contains('active');
+      if (isActive) {
+        if (this.isAutoPlay && !this.autoTimer) {
+          this.startAutoPlay();
+        }
+      } else {
+        this.clearTimer();
+      }
+    });
+
+    observer.observe(slide11, { attributes: true, attributeFilter: ['class'] });
+
+    // Initial check if slide 11 is currently active
+    if (slide11.classList.contains('active') && this.isAutoPlay) {
+      this.startAutoPlay();
+    }
+  }
+
+  setMode(mode, userInteraction = true) {
+    this.mode = mode;
+    if (!this.container) return;
+
+    const isIntact = mode === 'intact';
+
+    // Toggle container classes
+    this.container.classList.toggle('is-intact', isIntact);
+    this.container.classList.toggle('is-sanded', !isIntact);
+
+    // Toggle button active states
+    if (this.btnIntact) this.btnIntact.classList.toggle('active', isIntact);
+    if (this.btnSanded) this.btnSanded.classList.toggle('active', !isIntact);
+
+    // Get current language from translations if available
+    const lang = (window.translations && window.translations.currentLang) || 'de';
+    const tData = window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang];
+
+    if (isIntact) {
+      // 1. Tension KPI
+      if (this.tensionVal) {
+        this.tensionVal.textContent = '100%';
+        this.tensionVal.style.color = '#86efac';
+      }
+      if (this.tensionMeter) {
+        this.tensionMeter.style.width = '100%';
+        this.tensionMeter.style.background = 'linear-gradient(90deg, #10b981, #22c55e)';
+        this.tensionMeter.style.boxShadow = '0 0 10px rgba(34, 197, 94, 0.6)';
+      }
+
+      // 2. Status Dot & Text
+      if (this.statusDot) {
+        this.statusDot.className = 'status-indicator-dot green';
+      }
+      if (this.statusText) {
+        const text = (tData && tData.s11_anim_status_intact) ||
+          '✓ 2×6 Vliesbahnen intakt: Strukturelles Rückgrat sichert volle Biegespannung';
+        this.statusText.textContent = text;
+        this.statusText.style.color = '#e2e8f0';
+      }
+
+      // 3. SVG Elements
+      if (this.damageOverlay) {
+        this.damageOverlay.style.opacity = '0';
+        this.damageOverlay.style.pointerEvents = 'none';
+      }
+      if (this.topVliesGroup) {
+        this.topVliesGroup.classList.remove('is-cut');
+      }
+      if (this.tensionVectors) {
+        this.tensionVectors.classList.remove('is-broken');
+      }
+
+    } else {
+      // Sanded / Damaged mode
+      // 1. Tension KPI (Drop from 100% to 20%)
+      if (this.tensionVal) {
+        this.tensionVal.textContent = '20%';
+        this.tensionVal.style.color = '#f87171';
+      }
+      if (this.tensionMeter) {
+        this.tensionMeter.style.width = '20%';
+        this.tensionMeter.style.background = 'linear-gradient(90deg, #ef4444, #f87171)';
+        this.tensionMeter.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.7)';
+      }
+
+      // 2. Status Dot & Text
+      if (this.statusDot) {
+        this.statusDot.className = 'status-indicator-dot red pulse';
+      }
+      if (this.statusText) {
+        const text = (tData && tData.s11_anim_status_sanded) ||
+          '✗ Vliesbahnen gekappt: Zerstörung des Rückgrats • Totaler Spannungsverlust!';
+        this.statusText.textContent = text;
+        this.statusText.style.color = '#fca5a5';
+      }
+
+      // 3. SVG Elements
+      if (this.damageOverlay) {
+        this.damageOverlay.style.opacity = '1';
+        this.damageOverlay.style.pointerEvents = 'auto';
+      }
+      if (this.topVliesGroup) {
+        this.topVliesGroup.classList.add('is-cut');
+      }
+      if (this.tensionVectors) {
+        this.tensionVectors.classList.add('is-broken');
+      }
+    }
+  }
+
+  toggleAutoPlay() {
+    if (this.isAutoPlay) {
+      this.stopAutoPlay();
+    } else {
+      this.isAutoPlay = true;
+      this.startAutoPlay();
+    }
+  }
+
+  startAutoPlay() {
+    this.clearTimer();
+    this.isAutoPlay = true;
+    if (this.btnAuto) {
+      this.btnAuto.classList.add('active');
+      if (this.autoIcon) this.autoIcon.textContent = '⏸';
+    }
+
+    this.autoTimer = setInterval(() => {
+      const nextMode = this.mode === 'intact' ? 'sanded' : 'intact';
+      this.setMode(nextMode, false);
+    }, this.autoDuration);
+  }
+
+  stopAutoPlay() {
+    this.clearTimer();
+    this.isAutoPlay = false;
+    if (this.btnAuto) {
+      this.btnAuto.classList.remove('active');
+      if (this.autoIcon) this.autoIcon.textContent = '▶';
+    }
+  }
+
+  clearTimer() {
+    if (this.autoTimer) {
+      clearInterval(this.autoTimer);
+      this.autoTimer = null;
+    }
+  }
+}
+
+// Global instance
+window.feltAnatomySim = new FeltAnatomySimulation();
 
 </script>
   <script>
