@@ -676,7 +676,7 @@ class PresentationController {
         return;
       }
     }
-    if (activeSlide && activeSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+    if (activeSlide && (activeSlide.dataset.slide === '5' || (activeSlide.classList.contains('active') && activeSlide.querySelector('#ffw-play-btn'))) && window.ffwHistory) {
       if (window.ffwHistory.nextMilestoneWithResult()) {
         return;
       }
@@ -706,7 +706,7 @@ class PresentationController {
         return;
       }
     }
-    if (activeSlide && activeSlide.querySelector('.ffw-history-layout') && window.ffwHistory) {
+    if (activeSlide && (activeSlide.dataset.slide === '5' || (activeSlide.classList.contains('active') && activeSlide.querySelector('#ffw-play-btn'))) && window.ffwHistory) {
       if (window.ffwHistory.prevMilestoneWithResult()) {
         return;
       }

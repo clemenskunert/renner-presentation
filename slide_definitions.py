@@ -922,7 +922,7 @@ def get_all_slides_html():
 
     # SLIDE 5: FFW Wurzen Firmengeschichte & Der Hochwertige Weickert-Filz
     slides.append(f'''<!-- SLIDE 5 (Animierte FFW Firmengeschichte & Weickert-Filz) -->
-      <section class="slide" data-slide="5">
+      <section class="slide ffw-felt-slide" data-slide="5">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 

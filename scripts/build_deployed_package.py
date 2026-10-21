@@ -71,7 +71,7 @@ def build_offline_tablet_html():
         with open(css_path, "r", encoding="utf-8") as f:
             css_code = f.read()
         css_tag = f"<style>\n/* Louis Renner Presentation Styles (Embedded Standalone) */\n{css_code}\n</style>"
-        html = re.sub(r'<link\s+rel="stylesheet"\s+href="css/presentation\.css">', lambda m: css_tag, html)
+        html = re.sub(r'<link\s+rel="stylesheet"\s+href="css/presentation\.css(?:\?[^"]*)?">', lambda m: css_tag, html)
 
     # 2. JS-Dateien einbetten
     js_files = [
