@@ -871,6 +871,20 @@ class PresentationController {
       window.meuselwitzJourney.setLanguage(lang);
     }
 
+    if (window.feltAnatomySim) {
+      if (typeof window.feltAnatomySim.setLanguage === 'function') {
+        window.feltAnatomySim.setLanguage(lang);
+      } else if (typeof window.feltAnatomySim.updateTexts === 'function') {
+        window.feltAnatomySim.updateTexts();
+      }
+    }
+
+    if (window.ffwHistory && typeof window.ffwHistory.setLanguage === 'function') {
+      window.ffwHistory.setLanguage(lang);
+    }
+
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+
     this.updateHUD();
     this.updateNotes();
     this.setupSlideGrid();

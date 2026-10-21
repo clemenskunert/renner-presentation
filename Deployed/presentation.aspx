@@ -244,7 +244,7 @@
               <button class="vox-step-btn" id="vox-prev-btn" disabled title="Nach links in die Vergangenheit">
                 ← <span data-i18n="vox_past">Vergangenheit</span>
               </button>
-              <span class="vox-step-counter" id="vox-step-counter">✦ Zeitreise starten</span>
+              <span class="vox-step-counter" id="vox-step-counter" data-i18n="vox_start_journey">✦ Zeitreise starten</span>
               <button class="vox-step-btn highlight" id="vox-next-btn" title="Nach rechts in die Zukunft">
                 <span id="vox-next-label" data-i18n="vox_future">In die Zukunft</span> →
               </button>
@@ -803,7 +803,7 @@
               <button class="vox-step-btn" id="build-prev-btn" disabled title="Nach links in die Vergangenheit">
                 ← <span data-i18n="vox_past">Vergangenheit</span>
               </button>
-              <span class="vox-step-counter" id="build-step-counter">✦ Fotoreise starten</span>
+              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">✦ Fotoreise starten</span>
               <button class="vox-step-btn highlight" id="build-next-btn" title="Nach rechts in die Zukunft">
                 <span id="build-next-label" data-i18n="vox_future">In die Zukunft</span> →
               </button>
@@ -1727,7 +1727,7 @@
 
                 <!-- Felt Texture Viewer Box with Zoom -->
                 <div class="ffw-texture-viewer" id="ffw-texture-viewer" title="Klicken für Makro-Faser-Inspektion">
-                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Gewalkte Merinowolle Kompression" class="ffw-texture-img" id="ffw-texture-img">
+                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Rohfilzstruktur" class="ffw-texture-img" id="ffw-texture-img">
                   <div class="hero-corner-bracket top-left"></div>
                   <div class="hero-corner-bracket top-right"></div>
                   <div class="hero-corner-bracket bottom-left"></div>
@@ -2081,7 +2081,7 @@
                   <div class="hero-corner-bracket bottom-left"></div>
                   <div class="hero-corner-bracket bottom-right"></div>
                   <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s8_texture_tag">Vlies-Flor: Geordnete Fasern</span>
+                    <span class="ffw-texture-tag" data-i18n="s8_texture_tag">Vlies-Flor: ausgerichtete Fasern</span>
                   </div>
                 </div>
 
@@ -2168,7 +2168,7 @@
                     </div>
                   </div>
                   <div class="ffw-panel-media">
-                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p8_2.jpg" alt="Schichtung der Vliese zur Filzplatte">
+                    <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p8_2.jpg" alt="Vergleich geschichtete Fließbahnen vs. Fertige Oberfilztafel">
                     <div class="hero-corner-bracket top-left"></div>
                     <div class="hero-corner-bracket top-right"></div>
                     <div class="hero-corner-bracket bottom-left"></div>
@@ -2288,7 +2288,7 @@
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s10_b2_badge">>FFW WURZEN</span>
-                      <span class="ffw-media-caption-text" data-i18n="s10_caption_2">Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore</span>
+                      <span class="ffw-media-caption-text" data-i18n="s10_caption_2">Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen</span>
                     </div>
                   </div>
                 </div>
@@ -2305,13 +2305,13 @@
                 </div>
 
                 <div class="ffw-texture-viewer" id="s10-texture-viewer" title="Detailansicht">
-                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Walk-Kompression Textur" class="ffw-texture-img">
+                  <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.1_Filz_FFW/ffw_filz_walken_kompression.jpeg" alt="Rohfilzstruktur" class="ffw-texture-img">
                   <div class="hero-corner-bracket top-left"></div>
                   <div class="hero-corner-bracket top-right"></div>
                   <div class="hero-corner-bracket bottom-left"></div>
                   <div class="hero-corner-bracket bottom-right"></div>
                   <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s10_texture_tag">Härteprüfung: 0.56 Shore</span>
+                    <span class="ffw-texture-tag" data-i18n="s10_texture_tag">Die natürliche Walkdichte kann maximal 56% betragen.</span>
                   </div>
                 </div>
 
@@ -2401,7 +2401,7 @@
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s11_b2_badge">>HAMMER & STEIN</span>
-                      <span class="ffw-media-caption-text" data-i18n="s11_caption_1">Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen</span>
+                      <span class="ffw-media-caption-text" data-i18n="s11_caption_1">Gewalkte Filzplatten mit einer natürlichen Eindringfestigkeit im Bereich von 56 bis 68 Shore-A.</span>
                     </div>
                   </div>
                 </div>
@@ -2515,7 +2515,7 @@
                         <circle cx="47" cy="178" r="3.5" fill="#c8a356"/>
                         <line x1="14" y1="163" x2="34" y2="163" stroke="#22c55e" stroke-width="2.5"/>
                         <polygon points="37,163 30,159 30,167" fill="#22c55e"/>
-                        <text x="47" y="196" text-anchor="middle" class="svg-clamp-label">EINSPANNUNG</text>
+                        <text x="47" y="196" text-anchor="middle" class="svg-clamp-label" data-i18n="s11_svg_clamp">EINSPANNUNG</text>
                       </g>
 
                       <g class="clamping-fixture right-clamp">
@@ -2524,7 +2524,7 @@
                         <circle cx="493" cy="178" r="3.5" fill="#c8a356"/>
                         <line x1="526" y1="163" x2="506" y2="163" stroke="#22c55e" stroke-width="2.5"/>
                         <polygon points="503,163 510,159 510,167" fill="#22c55e"/>
-                        <text x="493" y="196" text-anchor="middle" class="svg-clamp-label">EINSPANNUNG</text>
+                        <text x="493" y="196" text-anchor="middle" class="svg-clamp-label" data-i18n="s11_svg_clamp">EINSPANNUNG</text>
                       </g>
 
                       <!-- ======================================================== -->
@@ -2568,13 +2568,13 @@
                           <polygon points="377,92 387,95 382,102" fill="#86efac"/>
                           <path d="M 415,122 L 380,94" stroke="#86efac" stroke-width="2"/>
 
-                          <text x="270" y="24" text-anchor="middle" class="svg-badge-text-green">◀── 2×6 VLIESBAHNEN NEHMEN ZUGSPANNUNG VOLL AUF (FORMSTABIL) ──▶</text>
-                          <text x="270" y="80" text-anchor="middle" class="svg-core-sub">Elastische Rückstellkraft: 100% Federwirkung</text>
+                          <text x="270" y="24" text-anchor="middle" class="svg-badge-text-green" data-i18n="s11_svg_vlies_intact">◀── 2×6 VLIESBAHNEN NEHMEN ZUGSPANNUNG VOLL AUF (FORMSTABIL) ──▶</text>
+                          <text x="270" y="80" text-anchor="middle" class="svg-core-sub" data-i18n="s11_svg_core_sub">Elastische Rückstellkraft: 100% Federwirkung</text>
                         </g>
 
                         <!-- Crown Stability Badge -->
                         <rect x="175" y="4" width="190" height="20" rx="4" fill="rgba(6, 78, 59, 0.94)" stroke="#22c55e" stroke-width="1.2"/>
-                        <text x="270" y="18" text-anchor="middle" class="svg-crown-badge-green">✓ SPANNUNG HÄLT: FORMSTABIL</text>
+                        <text x="270" y="18" text-anchor="middle" class="svg-crown-badge-green" data-i18n="s11_svg_crown_intact">✓ SPANNUNG HÄLT: FORMSTABIL</text>
                       </g>
 
                       <!-- ======================================================== -->
@@ -2584,7 +2584,7 @@
                         <!-- Ghost Ideal Reference Line (Shows where unground felt stood) -->
                         <g class="ghost-reference-arch">
                           <path d="M 70,162 Q 270,36 470,162" fill="none" stroke="rgba(200, 163, 86, 0.45)" stroke-dasharray="5,4" stroke-width="1.8"/>
-                          <text x="270" y="32" text-anchor="middle" class="svg-ghost-label">--- SOLL-KONTUR (Ungeschliffen: Formstabil unter Spannung) ---</text>
+                          <text x="270" y="32" text-anchor="middle" class="svg-ghost-label" data-i18n="s11_svg_ghost_label">--- SOLL-KONTUR (Ungeschliffen: Formstabil unter Spannung) ---</text>
                         </g>
 
                         <!-- Deformed / Buckled Felt Body Fill (Sunken at center, deformed) -->
@@ -2623,14 +2623,14 @@
                           <line x1="270" y1="42" x2="270" y2="108" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4,2"/>
                           <polygon points="270,114 265,103 275,103" fill="#ef4444"/>
                           <rect x="276" y="62" width="238" height="24" rx="4" fill="rgba(15, 23, 42, 0.95)" stroke="#ef4444" stroke-width="1.2"/>
-                          <text x="282" y="77" class="svg-deform-callout" fill="#fca5a5">▼ FASERN VERSCHIEBEN &amp; RUTSCHEN: SPANNUNG NIMMT AB</text>
+                          <text x="282" y="77" class="svg-deform-callout" fill="#fca5a5" data-i18n="s11_svg_deform_callout">▼ FASERN VERSCHIEBEN &amp; RUTSCHEN: SPANNUNG NIMMT AB</text>
                         </g>
 
                         <!-- Structural Tear / Crack at Apex (Scheitel-Riss & Delamination) -->
                         <g class="apex-crack">
                           <path d="M 264,122 L 270,148 L 276,122 Z" fill="#ef4444" stroke="#ffffff" stroke-width="1.2" filter="url(#damageAlertGlow)"/>
                           <line x1="255" y1="126" x2="285" y2="126" stroke="#fca5a5" stroke-width="1.5"/>
-                          <text x="270" y="162" text-anchor="middle" class="svg-crack-label">⚠️ SCHEITEL-RISS (Fasern reißen &amp; rutschen auseinander)</text>
+                          <text x="270" y="162" text-anchor="middle" class="svg-crack-label" data-i18n="s11_svg_crack_label">⚠️ SCHEITEL-RISS (Fasern reißen &amp; rutschen auseinander)</text>
                         </g>
 
                         <!-- Deformed Bottom Layer -->
@@ -2638,7 +2638,7 @@
 
                         <!-- Failure Alert Banner -->
                         <rect x="110" y="4" width="320" height="20" rx="4" fill="rgba(153, 27, 27, 0.95)" stroke="#ef4444" stroke-width="1.2"/>
-                        <text x="270" y="18" text-anchor="middle" class="svg-crown-badge-red">⚠️ HÄLT SPANNUNG NICHT: FASERN VERRUTSCHEN &amp; REISSEN</text>
+                        <text x="270" y="18" text-anchor="middle" class="svg-crown-badge-red" data-i18n="s11_svg_crown_sanded">⚠️ HÄLT SPANNUNG NICHT: FASERN VERRUTSCHEN &amp; REISSEN</text>
                       </g>
                     </svg>
 

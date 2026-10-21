@@ -1510,7 +1510,13 @@ class RennerHistoryJourney {
     const nextBtn = document.getElementById('vox-next-btn');
     const nextLabel = document.getElementById('vox-next-label');
 
-    if (counterBadge) counterBadge.textContent = '✦ Zeitreise starten';
+    const startLabels = {
+      de: '✦ Zeitreise starten',
+      en: '✦ Start Time Travel',
+      ja: '✦ タイムトラベルを開始',
+      zh: '✦ 开启时光之旅'
+    };
+    if (counterBadge) counterBadge.textContent = startLabels[this.currentLang] || startLabels.de;
     if (prevBtn) prevBtn.disabled = true;
     if (nextBtn) {
       nextBtn.disabled = false;
@@ -1975,6 +1981,23 @@ class RennerHistoryJourney {
     if (prevBtn) {
       prevBtn.disabled = (index === 0 && !this.isStarted);
     }
+    if (!this.isStarted) {
+      if (counterBadge) {
+        const startLabels = {
+          de: '✦ Zeitreise starten',
+          en: '✦ Start Time Travel',
+          ja: '✦ タイムトラベルを開始',
+          zh: '✦ 开启时光之旅'
+        };
+        counterBadge.textContent = startLabels[lang] || startLabels.de;
+      }
+      if (nextLabel) {
+        nextLabel.textContent = lang === 'de' ? 'Reise starten' :
+                                lang === 'en' ? 'Start Journey' :
+                                lang === 'ja' ? '開始' : '开始';
+      }
+      return;
+    }
     if (nextBtn) {
       nextBtn.disabled = false;
       nextBtn.classList.toggle('highlight', index === this.totalMilestones - 1 || !this.isStarted);
@@ -2112,7 +2135,11 @@ class RennerHistoryJourney {
     }
 
     // Refresh active milestone display
-    this.goToMilestone(this.currentMilestone);
+    if (this.isStarted) {
+      this.goToMilestone(this.currentMilestone);
+    } else {
+      this.updateControls(0);
+    }
   }
 }
 

@@ -47,6 +47,42 @@
       "en": "The Louis Renner Masterclass is optimized for landscape orientation.",
       "ja": "ルイ・レンナー・マスタークラスは横向き表示（ランドスケープ）に最適化されています。",
       "zh": "路易斯·雷诺大师课专为横屏展示优化，请将设备切换至横向模式。"
+    },
+    "vox_play": {
+      "de": "Zeitreise abspielen",
+      "en": "Play Journey",
+      "ja": "タイムライン再生",
+      "zh": "播放时间轴"
+    },
+    "vox_past": {
+      "de": "Vergangenheit",
+      "en": "Past",
+      "ja": "過去へ",
+      "zh": "过去"
+    },
+    "vox_future": {
+      "de": "In die Zukunft",
+      "en": "Future",
+      "ja": "未来へ",
+      "zh": "未来"
+    },
+    "vox_start_journey": {
+      "de": "✦ Zeitreise starten",
+      "en": "✦ Start Time Travel",
+      "ja": "✦ タイムトラベルを開始",
+      "zh": "✦ 开启时光之旅"
+    },
+    "build_play": {
+      "de": "Fotoreise abspielen",
+      "en": "Play Timelapse",
+      "ja": "タイムライン再生",
+      "zh": "播放纪录片"
+    },
+    "build_start_journey": {
+      "de": "✦ Fotoreise starten",
+      "en": "✦ Start Photo Journey",
+      "ja": "✦ フォトジャーニーを開始",
+      "zh": "✦ 开启建造摄影之旅"
     }
   },
   "slides": {
@@ -754,6 +790,96 @@
           "en": "Only ~65 km distance ensures direct exchange between felt and hammer masters and immediate availability.",
           "ja": "わずか約65kmの距離が、フェルトとハンマーの熟練マイスターによる直接対話と即時供給を約束。",
           "zh": "仅相距约65公里，保障制毡与弦槌顶级大师无缝当面调校，并实现零延时敏捷供应。"
+        },
+        "s5_b1_badge": {
+          "de": ">URSPRUNG WURZEN 1783",
+          "en": ">ORIGIN WURZEN 1783",
+          "ja": ">ヴルツェン創業 1783",
+          "zh": ">乌尔岑起源 1783"
+        },
+        "s5_b2_badge": {
+          "de": ">FASER-URSPRUNG",
+          "en": ">FIBER ORIGIN",
+          "ja": ">繊維の起源",
+          "zh": ">原毛溯源"
+        },
+        "s5_b3_badge": {
+          "de": ">ERFINDUNG 1847",
+          "en": ">INVENTION 1847",
+          "ja": ">発明 1847",
+          "zh": ">发明 1847"
+        },
+        "s5_b4_badge": {
+          "de": ">GOLZERNMÜHLE 1850",
+          "en": ">GOLZERN MILL 1850",
+          "ja": ">ゴルツェルン水車工場 1850",
+          "zh": ">戈尔岑水磨厂 1850"
+        },
+        "s5_b5_badge": {
+          "de": ">WELTRUHM 1851",
+          "en": ">GLOBAL ACCLAIM 1851",
+          "ja": ">世界的名声 1851",
+          "zh": ">享誉全球 1851"
+        },
+        "s5_b6_badge": {
+          "de": ">AUSZEICHNUNGEN",
+          "en": ">AWARDS & MEDALS",
+          "ja": ">受賞歴",
+          "zh": ">荣誉勋章"
+        },
+        "s5_b7_badge": {
+          "de": ">EXPANSION 1861",
+          "en": ">EXPANSION 1861",
+          "ja": ">拠点拡張 1861",
+          "zh": ">厂区扩建 1861"
+        },
+        "s5_b8_badge": {
+          "de": ">WURZEN 1871",
+          "en": ">WURZEN 1871",
+          "ja": ">ヴルツェン 1871",
+          "zh": ">乌尔岑 1871"
+        },
+        "s5_b9_badge": {
+          "de": ">WELTMARKTFÜHRER 1906",
+          "en": ">WORLD LEADER 1906",
+          "ja": ">世界シェア首位 1906",
+          "zh": ">全球领袖 1906"
+        },
+        "s5_b10_badge": {
+          "de": ">MEISTER & HERR PATZSCHKE (1906)",
+          "en": ">MASTERS & MR. PATZSCHKE (1906)",
+          "ja": ">職人衆とパチュケ取締役（1906年）",
+          "zh": ">大师团队与帕茨克厂长（1906）"
+        },
+        "s5_b11_badge": {
+          "de": ">HEUTE • RENNER PARTNER",
+          "en": ">TODAY • RENNER PARTNER",
+          "ja": ">現在 • レンナー独占パートナー",
+          "zh": ">今日 · 雷诺专属战略伙伴"
+        },
+        "s5_b12_badge": {
+          "de": ">WEICKERT SPEZIAL",
+          "en": ">WEICKERT SPECIAL",
+          "ja": ">ヴァイケルト特級フェルト",
+          "zh": ">魏克特特级定制毛毡"
+        },
+        "s5_b13_badge": {
+          "de": ">100% REINE MERINO-SCHURWOLLE",
+          "en": ">100% PURE VIRGIN MERINO WOOL",
+          "ja": ">100% 純粋メリノ新毛",
+          "zh": ">100% 纯天然美利奴初剪羊毛"
+        },
+        "s5_c1_title": {
+          "de": "Das Geheimnis des Weickert-Filzes",
+          "en": "The Secret of Weickert Felt",
+          "ja": "ヴァイケルト・フェルトの秘密",
+          "zh": "魏克特毛毡的不传之秘"
+        },
+        "s5_c1_desc": {
+          "de": "Rein mechanische Verfilzung ohne chemische Zusätze – die klangliche Seele des Konzertflügels",
+          "en": "Purely mechanical fulling without chemical additives – the acoustic soul of the concert grand",
+          "ja": "化学添加物を一切排した純機械的縮絨 — コンサートグランドの響きの魂",
+          "zh": "不含任何化学添加剂的纯物理机械缩绒 — 赋予音乐会三角琴纯净深邃的声学灵魂"
         }
       },
       "notes": {
@@ -910,6 +1036,24 @@
           "en": "Preserves suppleness and guards against brittleness during climate swings.",
           "ja": "繊維のしなやかさを保ち、温湿度変化による劣化を防ぐ。",
           "zh": "保持纤维柔韧度，抵御环境温湿度变化导致的脆化。"
+        },
+        "s6_b3_badge": {
+          "de": ">FASERINTEGRITÄT",
+          "en": ">FIBER INTEGRITY",
+          "ja": ">繊維の健全性",
+          "zh": ">纤维完整性"
+        },
+        "s6_c1_title": {
+          "de": "Die Naturkraft des Keratins",
+          "en": "The Natural Power of Keratin",
+          "ja": "ケラチンがもたらす天然の復元力",
+          "zh": "天然角蛋白的生物力学能量"
+        },
+        "s6_c1_desc": {
+          "de": "Die intakte Schuppenstruktur entscheidet über die spätere Anschlagselastizität des Hammerkopfs",
+          "en": "The intact cuticle scale structure determines the ultimate striking elasticity of the hammerhead",
+          "ja": "無傷のキューティクル鱗片構造が、完成ハンマーの打弦弾性を決定づけます",
+          "zh": "完整无损的鳞片毛鳞层微观结构，决定了弦槌最终敏锐持久的击弦回弹力"
         }
       },
       "notes": {
@@ -1060,6 +1204,24 @@
           "en": "Prevents density discrepancies and hard knots across all 88 keys.",
           "ja": "88鍵全音域にわたる密度ムラや局部硬化を排除。",
           "zh": "消除全键88个琴槌的密度波动与硬点杂音。"
+        },
+        "s7_b3_badge": {
+          "de": ">REZEPTUR-BALANCE",
+          "en": ">RECIPE BALANCE",
+          "ja": ">混紡比率の黄金比",
+          "zh": ">拼配黄金配比"
+        },
+        "s7_c1_title": {
+          "de": "Federsteifigkeit nach Maß",
+          "en": "Tailored Spring Stiffness",
+          "ja": "精密に調整されたスプリング剛性",
+          "zh": "因音区而异的精准弹簧刚性"
+        },
+        "s7_c1_desc": {
+          "de": "Harmonisches Gleichgewicht aus langen Spannungsfasern und feinen Füllhaaren",
+          "en": "Harmonious equilibrium of long tension fibers and fine cushioning fleece",
+          "ja": "長い張力支持繊維と微細なクッション毛が織りなす調和のとれた均衡",
+          "zh": "长张力承载纤维与高密微细填充羊毛的完美声学平衡"
         }
       },
       "notes": {
@@ -1176,7 +1338,7 @@
           "zh": "唯有顺直排列的羊毛纤维，方能让整音针获得恒定可控的触感反馈"
         },
         "s8_texture_tag": {
-          "de": "Vlies-Flor: Geordnete Fasern",
+          "de": "Vlies-Flor: ausgerichtete Fasern",
           "en": "Fleece Web: Ordered Fibers",
           "ja": "フリースウェブ：整列繊維",
           "zh": "绒网结构：平行顺向毛丝"
@@ -1216,6 +1378,24 @@
           "en": "Gentle carding prevents fiber breakage and ensures maximum tensile strength of the fleece.",
           "ja": "丁寧なカード処理で繊維の破断を防ぎ、フリースの優れた引裂強度を確保。",
           "zh": "极其轻柔的顺梳工艺杜绝纤维断裂，赋予羊毛絮片极高的结构抗拉强度。"
+        },
+        "s8_b3_badge": {
+          "de": ">VLIES-STRUKTUR",
+          "en": ">FLEECE STRUCTURE",
+          "ja": ">フリース配向構造",
+          "zh": ">定向纤网结构"
+        },
+        "s8_c1_title": {
+          "de": "Voraussetzung für die Intonation",
+          "en": "Prerequisite for Voicing",
+          "ja": "整音作業を支える不可欠な前提条件",
+          "zh": "高阶整音调音的先决条件"
+        },
+        "s8_c1_desc": {
+          "de": "Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche",
+          "en": "Only parallel aligned fibers respond predictably and uniformly to needle penetration during voicing",
+          "ja": "平行に整流された繊維構造のみが、整音針の刺入に対して予測可能かつ均一に反応します",
+          "zh": "唯有定向平行梳理的纤维，才能在整音调音穿刺时呈现出精准可预测的匀质声学响应"
         }
       },
       "notes": {
@@ -1506,7 +1686,7 @@
           "zh": "Filzplatten bei FFW"
         },
         "s10_caption_2": {
-          "de": "Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore",
+          "de": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen",
           "en": "Fulled felt sheets with natural resilient spring rate of 0.56 Shore",
           "ja": "Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore",
           "zh": "Gewalkte Filzplatten mit natürlicher Federkraft von 0.56 Shore"
@@ -1536,7 +1716,7 @@
           "zh": "天然纯缩绒硬度，为音乐会三角琴带来灵动细腻的触感响应"
         },
         "s10_texture_tag": {
-          "de": "Härteprüfung: 0.56 Shore",
+          "de": "Die natürliche Walkdichte kann maximal 56% betragen.",
           "en": "Hardness Test: 0.56 Shore",
           "ja": "硬度測定：0.56ショア",
           "zh": "硬度检测：0.56 肖氏极限"
@@ -1606,6 +1786,12 @@
           "en": "<strong>Free from Synthetic Resins:</strong> Eliminating chemical hardeners ensures permanent organic tone blooming.",
           "ja": "<strong>合成樹脂フリー：</strong>人工硬化剤や化学薬品に頼らないため、恒久的な響きの豊かさを保証。",
           "zh": "<strong>绝无合成树脂：</strong>零化学增硬剂与胶水，彻底杜绝刺耳死硬杂音，保障声学生命力。"
+        },
+        "s10_b3_badge": {
+          "de": ">AKUSTISCHE PERFEKTION",
+          "en": ">ACOUSTIC PERFECTION",
+          "ja": ">究極の音響性能",
+          "zh": ">声学极致追求"
         }
       },
       "notes": {
@@ -1662,7 +1848,7 @@
           "zh": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen."
         },
         "s11_caption_1": {
-          "de": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen",
+          "de": "Gewalkte Filzplatten mit einer natürlichen Eindringfestigkeit im Bereich von 56 bis 68 Shore-A.",
           "en": "Post-processing: Densifying felt sheets using specialized hammers and stone polishers",
           "ja": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen",
           "zh": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen"
@@ -1822,6 +2008,54 @@
           "en": "Severed fibers shift & slip apart – tension drops.",
           "ja": "切断された繊維がズレて滑脱：張力が著しく低下。",
           "zh": "纤维切断导致滑移错位：拉伸张力随之骤降。"
+        },
+        "s11_svg_clamp": {
+          "de": "EINSPANNUNG",
+          "en": "CLAMP FIXTURE",
+          "ja": "固定治具",
+          "zh": "固定夹具"
+        },
+        "s11_svg_vlies_intact": {
+          "de": "◀── 2×6 VLIESBAHNEN NEHMEN ZUGSPANNUNG VOLL AUF (FORMSTABIL) ──▶",
+          "en": "◀── 2×6 FLEECE WEBS ABSORB FULL TENSILE STRESS (STABLE) ──▶",
+          "ja": "◀── 2×6層の繊維帯が全引張力を吸収（形状安定） ──▶",
+          "zh": "◀── 2×6层定向纤网完全承受拉力（刚性保形） ──▶"
+        },
+        "s11_svg_core_sub": {
+          "de": "Elastische Rückstellkraft: 100% Federwirkung",
+          "en": "Elastic Resilience: 100% Spring Action",
+          "ja": "弾性復元力：100% スプリング効果",
+          "zh": "弹性回弹力：100% 弹簧机械效应"
+        },
+        "s11_svg_crown_intact": {
+          "de": "✓ SPANNUNG HÄLT: FORMSTABIL",
+          "en": "✓ TENSION HOLDS: SHAPE STABLE",
+          "ja": "✓ 張力保持：完全形状安定",
+          "zh": "✓ 维持高张力：保形稳定"
+        },
+        "s11_svg_ghost_label": {
+          "de": "--- SOLL-KONTUR (Ungeschliffen: Formstabil unter Spannung) ---",
+          "en": "--- NOMINAL CONTOUR (Unground: Shape-stable under tension) ---",
+          "ja": "--- 理想形状（未研磨：張力下で安定） ---",
+          "zh": "--- 标称轮廓（未打磨：在张力下形状稳定） ---"
+        },
+        "s11_svg_deform_callout": {
+          "de": "▼ FASERN VERSCHIEBEN & RUTSCHEN: SPANNUNG NIMMT AB",
+          "en": "▼ FIBERS SHIFT & SLIP: TENSION DROPS",
+          "ja": "▼ 繊維がズレて滑脱：張力が低下",
+          "zh": "▼ 纤维滑移错位：张力急剧减弱"
+        },
+        "s11_svg_crack_label": {
+          "de": "⚠️ SCHEITEL-RISS (Fasern reißen & rutschen auseinander)",
+          "en": "⚠️ APEX CRACK (Fibers tear & slip apart)",
+          "ja": "⚠️ 頂点亀裂（繊維の破断とズレ）",
+          "zh": "⚠️ 顶点开裂（纤维撕裂与滑脱散开）"
+        },
+        "s11_svg_crown_sanded": {
+          "de": "⚠️ HÄLT SPANNUNG NICHT: FASERN VERRUTSCHEN & REISSEN",
+          "en": "⚠️ CANNOT HOLD TENSION: FIBERS SLIP & TEAR",
+          "ja": "⚠️ 張力維持不能：繊維の滑脱と破断",
+          "zh": "⚠️ 无法维持张力：纤维严重滑移与撕裂"
         }
       },
       "notes": {
@@ -2116,6 +2350,12 @@
           "en": "For over a century, the unmistakable hallmark of genuine Wurzen quality.",
           "ja": "100年以上にわたり受け継がれる本物のヴルツェンクオリティ。",
           "zh": "逾百年来全球公认的纯正乌尔岑高级毛毡独家印章。"
+        },
+        "s13_c1_desc": {
+          "de": "Beim Blick auf originale Renner-Hammerköpfe im Bass fällt oft ein feiner farbiger Streifen im Inneren des Filzes auf.",
+          "en": "When examining original Renner bass hammerheads, a distinct colored layer is visible beneath the outer felt.",
+          "ja": "レンナー製オリジナル低音ハンマーを観察すると、外層フェルトの内側に色鮮やかなアンダーフェルトが確認できます。",
+          "zh": "观察雷诺原装低音区弦槌，常能一眼辨识出外层白毡包裹下的精致内层彩色底毡。"
         }
       },
       "notes": {
@@ -2416,6 +2656,12 @@
           "en": "TOP FELT STRIPS",
           "ja": "トップフェルト帯",
           "zh": "外层毛毡条"
+        },
+        "s16_c1_desc": {
+          "de": "Nach dem Roboterschnitt wird jeder Streifen einer optischen Prüfung unterzogen.",
+          "en": "Following high-precision robotic cutting, every felt strip undergoes strict optical inspection.",
+          "ja": "ロボット切断工程の後、すべてのフェルトストリップは厳格な光学検査を受けます。",
+          "zh": "完成微米级数控机械切削后，每根成型毛毡条均须通过严密的显微光学质检。"
         }
       },
       "notes": {
@@ -2590,6 +2836,24 @@
           "en": "14 COLOR SHADES",
           "ja": "14色展開",
           "zh": "14种定制色彩"
+        },
+        "s18_b3_badge": {
+          "de": ">TRADITION",
+          "en": ">TRADITION",
+          "ja": ">伝統と格式",
+          "zh": ">百年传统"
+        },
+        "s18_b4_badge": {
+          "de": ">DESIGN",
+          "en": ">DESIGN",
+          "ja": ">デザイン意匠",
+          "zh": ">经典设计"
+        },
+        "s18_b5_badge": {
+          "de": ">14 FARBTÖNE",
+          "en": ">14 SHADES",
+          "ja": ">14の特注色彩",
+          "zh": ">14种定制色调"
         }
       },
       "notes": {
@@ -2794,6 +3058,12 @@
           "en": "ASYMMETRICAL",
           "ja": "非対称形状",
           "zh": "非对称截面"
+        },
+        "s20_b3_badge": {
+          "de": ">KERN-GEOMETRIE",
+          "en": ">CORE GEOMETRY",
+          "ja": ">ウッドコア幾何形状",
+          "zh": ">芯木三维几何"
         }
       },
       "notes": {
@@ -3016,6 +3286,12 @@
           "en": "PRESSED MOULD",
           "ja": "プレスモール",
           "zh": "连排音槌木"
+        },
+        "s23_c1_desc": {
+          "de": "Nach dem kontrollierten Abkühlen und Abbinden des Leims wird der Hammerkopf als zusammenhängender Riegel entnommen.",
+          "en": "After controlled cooling and curing of the glue, the hammerheads are removed as a continuous molded block.",
+          "ja": "温度管理された冷却と接着剤の硬化後、ハンマーヘッドは一体成型された長尺ブロックとして取り出されます。",
+          "zh": "经过恒温受控冷却与胶液高强度固化，整套弦槌作为一体成型木毡排条完整出模。"
         }
       },
       "notes": {
@@ -3376,6 +3652,12 @@
           "en": "SAMPLE KIT SYSTEM",
           "ja": "MTKシステム",
           "zh": "MTK精准选配箱"
+        },
+        "s27_c1_desc": {
+          "de": "Bei der Reparatur historischer oder moderner Flügel und Klaviere stehen Klavierbauer oft vor unbekannten Mechanikgeometrien. Der Renner Musterteilekoffer liefert für jede Aufgabenstellung das exakt passende Original-Musterteil.",
+          "en": "When restoring historic or modern grand and upright pianos, technicians frequently face unfamiliar action geometries. The Renner sample case provides the exact matching original component for every challenge.",
+          "ja": "歴史的ピアノから現代の名器まで修復の現場では未知のアクション幾何構造に直面します。レンナー製サンプルキットはあらゆる仕様に適合する純正部品を提供します。",
+          "zh": "在修复历史名琴与现代三角钢琴时，调律师常遭遇极为复杂的机械杠杆。雷诺原厂样品箱为各种特殊规制提供100%匹配的原厂基准样件。"
         }
       },
       "notes": {
@@ -3742,6 +4024,66 @@
           "en": "16 maker-specific flange geometries",
           "ja": "16 herstellerspezifische Kapsel-Geometrien",
           "zh": "16 herstellerspezifische Kapsel-Geometrien"
+        },
+        "s32_bullet_1": {
+          "de": "Renner Standard",
+          "en": "Renner Standard",
+          "ja": "レンナー・スタンダード型",
+          "zh": "雷诺标准型"
+        },
+        "s32_bullet_2": {
+          "de": "Renner mit Tellerfedern",
+          "en": "Renner with Disc Springs",
+          "ja": "皿ばね付きレンナー型",
+          "zh": "带碟形弹簧雷诺型"
+        },
+        "s32_bullet_3": {
+          "de": "Renner ungebohrt",
+          "en": "Renner Unbored",
+          "ja": "未穿孔レンナー型（カスタム用）",
+          "zh": "雷诺未钻孔定制型"
+        },
+        "s32_bullet_4": {
+          "de": "Modifizierte Drop-Schraube",
+          "en": "Modified Drop Screw",
+          "ja": "改良型ドロップスクリュー仕様",
+          "zh": "改良型微调跌落螺丝款"
+        },
+        "s32_bullet_5": {
+          "de": "Versetzte Schraubenbohrung",
+          "en": "Offset Screw Hole",
+          "ja": "オフセット固定孔仕様",
+          "zh": "偏置螺栓定位孔款"
+        },
+        "s32_bullet_6": {
+          "de": "Mason & Hamlin (M&H)",
+          "en": "Mason & Hamlin (M&H)",
+          "ja": "メイソン＆ハムリン（M&H）専用",
+          "zh": "美森翰林（M&H）专用款"
+        },
+        "s32_bullet_7": {
+          "de": "Kawai Kapsel",
+          "en": "Kawai Flange",
+          "ja": "カワイ専用フレンジ",
+          "zh": "卡瓦依专用轴架款"
+        },
+        "s32_bullet_8": {
+          "de": "Yamaha neu / alt",
+          "en": "Yamaha New / Old",
+          "ja": "ヤマハ新旧規格対応",
+          "zh": "雅马哈新旧款专用"
+        },
+        "s32_bullet_9": {
+          "de": "Baldwin neu / alt",
+          "en": "Baldwin New / Old",
+          "ja": "ボールドウィン新旧規格対応",
+          "zh": "鲍德温新旧款专用"
+        },
+        "s32_bullet_10": {
+          "de": "Pratt-Read / Flemming",
+          "en": "Pratt-Read / Flemming",
+          "ja": "プラット・リード／フレミング規格",
+          "zh": "普拉特-里德 / 弗莱明系统"
         }
       },
       "notes": {
@@ -3838,6 +4180,36 @@
           "en": "to Renner factory specifications",
           "ja": "nach Renner-Spezifikation",
           "zh": "nach Renner-Spezifikation"
+        },
+        "s33_bullet_1": {
+          "de": "Kapseltyp:",
+          "en": "Flange Type:",
+          "ja": "フレンジタイプ：",
+          "zh": "轴架法兰规制："
+        },
+        "s33_bullet_2": {
+          "de": "Holzart:",
+          "en": "Wood Species:",
+          "ja": "木材樹種：",
+          "zh": "声学芯木材质："
+        },
+        "s33_bullet_3": {
+          "de": "Röllchenabstand:",
+          "en": "Knuckle Distance:",
+          "ja": "ローラー芯間距離：",
+          "zh": "小滚轮中心跨距："
+        },
+        "s33_bullet_4": {
+          "de": "Röllchendurchmesser:",
+          "en": "Knuckle Diameter:",
+          "ja": "ローラー直径：",
+          "zh": "小滚轮外径尺寸："
+        },
+        "s33_bullet_5": {
+          "de": "Satz-Aufteilung:",
+          "en": "Set Partitioning:",
+          "ja": "音区セット構成：",
+          "zh": "整副击弦机分区："
         }
       },
       "notes": {
@@ -3928,6 +4300,18 @@
           "en": "CLIMATE ROOM",
           "ja": "定温定湿室",
           "zh": "恒温平衡室"
+        },
+        "s34_b3_badge": {
+          "de": ">BAUGRUPPENRUHE",
+          "en": ">ASSEMBLY REST PERIOD",
+          "ja": ">アセンブリ応力緩和静置",
+          "zh": ">总成应力平衡静置"
+        },
+        "s34_b4_badge": {
+          "de": ">KLIMARAUM",
+          "en": ">CLIMATE CHAMBER",
+          "ja": ">恒温恒湿室",
+          "zh": ">恒温恒湿陈化仓"
         }
       },
       "notes": {
@@ -4150,6 +4534,48 @@
           "en": "GLOBAL STANDARD",
           "ja": "世界基準",
           "zh": "世界名琴标准"
+        },
+        "s36_b3_badge": {
+          "de": ">BÖSENDORFER",
+          "en": ">BÖSENDORFER",
+          "ja": ">ベーゼンドルファー",
+          "zh": ">贝森朵夫"
+        },
+        "s36_b4_badge": {
+          "de": ">BLÜTHNER",
+          "en": ">BLÜTHNER",
+          "ja": ">ブリュートナー",
+          "zh": ">博兰斯勒"
+        },
+        "s36_b5_badge": {
+          "de": ">SCHIMMEL",
+          "en": ">SCHIMMEL",
+          "ja": ">シンメル",
+          "zh": ">舒密尔"
+        },
+        "s36_b6_badge": {
+          "de": ">STEINGRAEBER",
+          "en": ">STEINGRAEBER",
+          "ja": ">シュタイングレーバー",
+          "zh": ">施坦格列泊"
+        },
+        "s36_b7_badge": {
+          "de": ">FÖRSTER",
+          "en": ">FÖRSTER",
+          "ja": ">アウグスト・フェルスター",
+          "zh": ">奥古斯特·霍斯特"
+        },
+        "s36_b8_badge": {
+          "de": ">YAMAHA & KAWAI",
+          "en": ">YAMAHA & KAWAI",
+          "ja": ">ヤマハ＆カワイ",
+          "zh": ">雅马哈与卡瓦依"
+        },
+        "s36_b9_badge": {
+          "de": ">WERKSARCHIV",
+          "en": ">FACTORY ARCHIVE",
+          "ja": ">レンナー公式アーカイブ",
+          "zh": ">雷诺百年原厂图档"
         }
       },
       "notes": {
@@ -4330,6 +4756,24 @@
           "en": "across the piano registers",
           "ja": "über die verschiedenen Register",
           "zh": "über die verschiedenen Register"
+        },
+        "s38_bullet_1": {
+          "de": "Klavier (UP):",
+          "en": "Upright (UP):",
+          "ja": "アップライトピアノ (UP)：",
+          "zh": "立式钢琴 (UP)："
+        },
+        "s38_bullet_2": {
+          "de": "Flügel (GP):",
+          "en": "Grand (GP):",
+          "ja": "グランドピアノ (GP)：",
+          "zh": "三角钢琴 (GP)："
+        },
+        "s38_bullet_3": {
+          "de": "Staffelung nach Chören:",
+          "en": "Gradation across Registers:",
+          "ja": "音域ごとの傾斜ステップ配分：",
+          "zh": "全琴弦组阶梯过渡："
         }
       },
       "notes": {
@@ -4402,6 +4846,12 @@
           "en": "and force vector toward the bridge",
           "ja": "und Kraftvektor zum Steg",
           "zh": "und Kraftvektor zum Steg"
+        },
+        "s39_bullet_1": {
+          "de": "Gefahr bei < 90°:",
+          "en": "Risk at < 90°:",
+          "ja": "90°未満の危険性：",
+          "zh": "< 90° 的破坏性隐患："
         }
       },
       "notes": {
@@ -4564,6 +5014,12 @@
           "en": "UPRIGHT PIANO (UP)",
           "ja": "アップライトピアノ（UP）",
           "zh": "立式琴（UP）"
+        },
+        "s41_b3_badge": {
+          "de": ">DIAGNOSEBLATT",
+          "en": ">DIAGNOSIS SHEET",
+          "ja": ">診断シート",
+          "zh": ">声学诊断表"
         }
       },
       "notes": {
@@ -4714,6 +5170,12 @@
           "en": "TONE MATCHING",
           "ja": "トーンマッチング",
           "zh": "频响共振配对"
+        },
+        "s43_c1_desc": {
+          "de": "Bevor die Schrauben endgültig angezogen werden, erfolgt die akustische Frequenzkontrolle jedes einzelnen Hammerstiels:",
+          "en": "Before tightening the screws permanently, the acoustic eigenfrequency of every hammer shank is verified:",
+          "ja": "ネジの最終本締めの前に、すべてのシャンクの固有振動周波数を音響測定します：",
+          "zh": "在紧固螺栓之前，必须对每一根弦槌柄进行独立的固有声学谐振频率核验："
         }
       },
       "notes": {
@@ -4864,6 +5326,12 @@
           "en": "SET INTEGRITY",
           "ja": "セット順序管理",
           "zh": "组序严格受控"
+        },
+        "s45_c1_desc": {
+          "de": "Jeder Renner-Hammerkopfsatz wird im Werk exakt gezählt, sortiert und ab Werk signiert. Dennoch gilt ein eiserner Grundsatz:",
+          "en": "Every Renner hammerhead set is precisely numbered, graded, and signed at the factory. Yet one golden rule applies:",
+          "ja": "すべてのレンナー製ハンマーセットは工場で厳格に刻印・選別されますが、鉄則があります：",
+          "zh": "每套雷诺弦槌在出厂前均经过严苛校准、排序与原厂封签。但始终遵循一条铁律："
         }
       },
       "notes": {
@@ -5182,6 +5650,12 @@
           "en": "COLD GLUE (D3)",
           "ja": "白ボンド（D3）",
           "zh": "白胶（D3）"
+        },
+        "s49_b3_badge": {
+          "de": ">KRISTALLINE BRÜCKE",
+          "en": ">CRYSTALLINE BRIDGE",
+          "ja": ">結晶性音響ブリッジ",
+          "zh": ">微晶声学传导桥"
         }
       },
       "notes": {
@@ -5494,6 +5968,12 @@
           "en": "STEP 02",
           "ja": "工程 02",
           "zh": "步骤 02"
+        },
+        "s53_b3_badge": {
+          "de": ">FÄNGERGEOMETRIE",
+          "en": ">BACKCHECK GEOMETRY",
+          "ja": ">バックチェック捕捉幾何",
+          "zh": ">托木三维几何制动"
         }
       },
       "notes": {
@@ -5752,6 +6232,12 @@
           "en": "SOUNDBOARD & STRINGS",
           "ja": "響板と弦",
           "zh": "音板与琴弦协同"
+        },
+        "s56_b3_badge": {
+          "de": ">RESONANZBODEN & SAITEN",
+          "en": ">SOUNDBOARD & STRINGS",
+          "ja": ">響板と弦の相互作用",
+          "zh": ">音板辐射与琴弦耦合"
         }
       },
       "notes": {
@@ -5824,6 +6310,12 @@
           "en": "prior to commencing voicing",
           "ja": "vor Beginn der Intonierarbeiten",
           "zh": "vor Beginn der Intonierarbeiten"
+        },
+        "s57_bullet_1": {
+          "de": "Wer versucht, ungleichmäßigen Ton durch Nadeln auszugleichen, wenn in Wahrheit Auslösung, Steighöhe oder Saitenchor ungleich sind, zerstört den Hammerkopf!",
+          "en": "Attempting to compensate for uneven tone via needle voicing when let-off, blow distance, or unisons are unequal will ruin the hammerhead!",
+          "ja": "レットオフ、打弦距離、ユニゾンが不揃いな状態で針入れにより音色を揃えようとすると、ハンマーフェルトを回復不能に破壊します！",
+          "zh": "若击弦机脱落距离、起落行程或同音弦组未校准，妄图以扎针整音补偿音色不匀，必将造成弦槌毛毡永久性不可逆损伤！"
         }
       },
       "notes": {
@@ -6040,6 +6532,12 @@
           "en": "BASIC ELASTICITY",
           "ja": "基本弾力性",
           "zh": "建立核心弹性"
+        },
+        "s59_c1_desc": {
+          "de": "Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:",
+          "en": "Pre-voicing is the single most critical foundation for brand-new or refelted hammerheads:",
+          "ja": "下整音（プリ・ヴォイシング）は、新品および再フェルト交換ハンマーにおける最重要工程です：",
+          "zh": "预整音是全新出厂或重新包毡弦槌建立健康弹性基座的最核心声学工序："
         }
       },
       "notes": {
@@ -6346,6 +6844,12 @@
           "en": "CROWN APEX",
           "ja": "クラウン頂点",
           "zh": "槌顶圆弧"
+        },
+        "s63_b3_badge": {
+          "de": ">SCHLEIFFEILE",
+          "en": ">SANDING PADDLE",
+          "ja": ">整形サンドファイル",
+          "zh": ">弧度打磨修整板"
         }
       },
       "notes": {
@@ -6514,6 +7018,12 @@
           "en": "Your partner for master-grade tone worldwide",
           "ja": "Ihr Partner für meisterlichen Klang weltweit",
           "zh": "Ihr Partner für meisterlichen Klang weltweit"
+        },
+        "s65_bullet_1": {
+          "de": "Experten-Tipp:",
+          "en": "Expert Master Tip:",
+          "ja": "マイスターのアドバイス：",
+          "zh": "大师级专家心得："
         }
       },
       "notes": {

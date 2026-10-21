@@ -183,6 +183,7 @@ def cmd_apply():
  */
 
 window.slideTranslations = """ + json.dumps(flat, ensure_ascii=False, indent=2) + """;
+window.TRANSLATIONS_DATA = window.slideTranslations;
 
 // Automatically merge into global translations dictionary if loaded
 if (typeof translations !== 'undefined') {

@@ -233,6 +233,28 @@ class FFWFirmengeschichte {
     this.autoplayRaf = requestAnimationFrame(step);
   }
 
+  setLanguage(lang) {
+    this.currentLang = lang;
+    this.updateZoomBtnText();
+  }
+
+  updateZoomBtnText() {
+    if (!this.zoomBtn) return;
+    const lang = this.currentLang || (window.presentation && window.presentation.currentLang) || 'de';
+    if (this.isZoomed) {
+      const zoomCloseTexts = {
+        de: '✕ Normal',
+        en: '✕ Normal',
+        ja: '✕ 標準',
+        zh: '✕ 恢复'
+      };
+      this.zoomBtn.textContent = zoomCloseTexts[lang] || zoomCloseTexts.de;
+    } else {
+      const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
+      this.zoomBtn.textContent = (dict && dict.s5_zoom_btn) || '🔍 Faser-Lupe';
+    }
+  }
+
   toggleZoom(e) {
     this.isZoomed = !this.isZoomed;
     if (this.textureViewer) {
@@ -240,7 +262,7 @@ class FFWFirmengeschichte {
     }
     if (this.zoomBtn) {
       this.zoomBtn.classList.toggle('active', this.isZoomed);
-      this.zoomBtn.textContent = this.isZoomed ? '✕ Normal' : '🔍 Faser-Lupe';
+      this.updateZoomBtnText();
     }
     if (this.textureImg && !this.isZoomed) {
       this.textureImg.style.transformOrigin = 'center center';

@@ -94,19 +94,24 @@ class FeltAnatomySimulation {
     }
   }
 
+  setLanguage(lang) {
+    this.currentLang = lang;
+    this.updateTexts();
+  }
+
   updateTexts() {
-    const lang = (window.translations && window.translations.currentLang) || 'de';
-    const tData = window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang];
-    if (!tData) return;
+    const lang = this.currentLang || (window.presentation && window.presentation.currentLang) || (window.translations && window.translations.currentLang) || 'de';
+    const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]) || (window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang]);
+    if (!dict) return;
 
     if (this.mode === 'intact') {
       if (this.statusText) {
-        this.statusText.textContent = (tData && tData.s11_anim_status_intact) ||
+        this.statusText.textContent = dict.s11_anim_status_intact ||
           '✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil';
       }
     } else {
       if (this.statusText) {
-        this.statusText.textContent = (tData && tData.s11_anim_status_sanded) ||
+        this.statusText.textContent = dict.s11_anim_status_sanded ||
           '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!';
       }
     }
@@ -127,8 +132,8 @@ class FeltAnatomySimulation {
     if (this.btnSanded) this.btnSanded.classList.toggle('active', !isIntact);
 
     // Get current language from translations if available
-    const lang = (window.translations && window.translations.currentLang) || 'de';
-    const tData = window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang];
+    const lang = this.currentLang || (window.presentation && window.presentation.currentLang) || (window.translations && window.translations.currentLang) || 'de';
+    const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]) || (window.TRANSLATIONS_DATA && window.TRANSLATIONS_DATA[lang]);
 
     if (isIntact) {
       // 1. Tension KPI: 100% Stability
@@ -147,7 +152,7 @@ class FeltAnatomySimulation {
         this.statusDot.className = 'status-indicator-dot green';
       }
       if (this.statusText) {
-        const text = (tData && tData.s11_anim_status_intact) ||
+        const text = (dict && dict.s11_anim_status_intact) ||
           '✓ Ungeschliffen: 2×6 Vliesbahnen halten Zugspannung • Formstabil';
         this.statusText.textContent = text;
         this.statusText.style.color = '#e2e8f0';
@@ -171,7 +176,7 @@ class FeltAnatomySimulation {
         this.statusDot.className = 'status-indicator-dot red pulse';
       }
       if (this.statusText) {
-        const text = (tData && tData.s11_anim_status_sanded) ||
+        const text = (dict && dict.s11_anim_status_sanded) ||
           '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!';
         this.statusText.textContent = text;
         this.statusText.style.color = '#fca5a5';

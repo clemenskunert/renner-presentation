@@ -650,14 +650,22 @@ class RennerTransformationJourney {
     const nextBtn = document.getElementById('build-next-btn');
     const nextLabel = document.getElementById('build-next-label');
 
-    if (counterBadge) counterBadge.textContent = '✦ Fotoreise starten';
+    const startLabels = {
+      de: '✦ Fotoreise starten',
+      en: '✦ Start Photo Journey',
+      ja: '✦ フォトジャーニーを開始',
+      zh: '✦ 开启建造摄影之旅'
+    };
+    if (counterBadge) counterBadge.textContent = startLabels[this.currentLang] || startLabels.de;
     if (prevBtn) prevBtn.disabled = true;
     if (nextBtn) {
       nextBtn.disabled = false;
       nextBtn.classList.add('highlight');
     }
     if (nextLabel) {
-      nextLabel.textContent = this.currentLang === 'de' ? 'In die Zukunft' : 'Future';
+      nextLabel.textContent = this.currentLang === 'de' ? 'Reise starten' :
+                              this.currentLang === 'en' ? 'Start Journey' :
+                              this.currentLang === 'ja' ? '開始' : '开始';
     }
   }
 
@@ -926,6 +934,23 @@ class RennerTransformationJourney {
     if (prevBtn) {
       prevBtn.disabled = (index === 0 && !this.isStarted);
     }
+    if (!this.isStarted) {
+      if (counterBadge) {
+        const startLabels = {
+          de: '✦ Fotoreise starten',
+          en: '✦ Start Photo Journey',
+          ja: '✦ フォトジャーニーを開始',
+          zh: '✦ 开启建造摄影之旅'
+        };
+        counterBadge.textContent = startLabels[lang] || startLabels.de;
+      }
+      if (nextLabel) {
+        nextLabel.textContent = lang === 'de' ? 'Reise starten' :
+                                lang === 'en' ? 'Start Journey' :
+                                lang === 'ja' ? '開始' : '开始';
+      }
+      return;
+    }
     if (nextBtn) {
       nextBtn.disabled = false;
       nextBtn.classList.toggle('highlight', index === this.totalMilestones - 1 || !this.isStarted);
@@ -998,7 +1023,11 @@ class RennerTransformationJourney {
 
     if (playBtn) playBtn.classList.add('playing');
     if (playIcon) playIcon.textContent = '❚❚';
-    if (playLabel) playLabel.textContent = this.currentLang === 'de' ? 'Pause' : 'Pause';
+    if (playLabel) {
+      playLabel.textContent = this.currentLang === 'de' ? 'Pause' :
+                              this.currentLang === 'en' ? 'Pause' :
+                              this.currentLang === 'ja' ? '一時停止' : '暂停';
+    }
 
     if (!this.isStarted) {
       this.startJourney();
@@ -1093,13 +1122,21 @@ class RennerTransformationJourney {
     const playLabel = document.getElementById('build-play-label');
     if (playLabel) {
       if (this.isAutoplay) {
-        playLabel.textContent = lang === 'de' ? 'Pause' : 'Pause';
+        playLabel.textContent = lang === 'de' ? 'Pause' :
+                                lang === 'en' ? 'Pause' :
+                                lang === 'ja' ? '一時停止' : '暂停';
       } else {
-        playLabel.textContent = lang === 'de' ? 'Fotoreise abspielen' : 'Play Timelapse';
+        playLabel.textContent = lang === 'de' ? 'Fotoreise abspielen' :
+                                lang === 'en' ? 'Play Timelapse' :
+                                lang === 'ja' ? 'タイムライン再生' : '播放纪录片';
       }
     }
 
-    this.goToMilestone(this.currentMilestone);
+    if (this.isStarted) {
+      this.goToMilestone(this.currentMilestone);
+    } else {
+      this.updateControls(0);
+    }
   }
 }
 
