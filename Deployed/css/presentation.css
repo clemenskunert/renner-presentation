@@ -5199,7 +5199,208 @@ body::before {
   }
 }
 
+/* ==========================================================================
+   Harmonische Raumverteilung & Typografie für FFW-Filz-Folien (Folien 6 bis 11)
+   Gleichmäßige vertikale und horizontale Ausnutzung des Raums
+   ========================================================================== */
+.slide.ffw-felt-slide .slide-body {
+  height: auto !important;
+  max-height: calc(100% - 206px) !important;
+  flex: 1;
+  min-height: 0;
+  margin-bottom: 88px !important;
+  padding: 4px 36px 8px 36px;
+  box-sizing: border-box;
+}
 
+.slide.ffw-felt-slide .ffw-stage-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(165deg, rgba(18, 24, 38, 0.94) 0%, rgba(10, 14, 24, 0.98) 100%);
+  height: 100%;
+  min-height: 0;
+}
+
+.slide.ffw-felt-slide .ffw-static-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 14px 18px;
+  height: 100%;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.slide.ffw-felt-slide .ffw-panel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 0;
+  gap: 0;
+}
+
+.slide.ffw-felt-slide .ffw-panel-header {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide.ffw-felt-slide .ffw-panel-title {
+  font-size: clamp(1.15rem, 1.28vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.22;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+}
+
+.slide.ffw-felt-slide .ffw-panel-subtitle {
+  font-size: clamp(0.86rem, 0.92vw, 1.0rem);
+  line-height: 1.36;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.slide.ffw-felt-slide .ffw-panel-bullets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: clamp(8px, 1.2vh, 12px);
+  margin: 4px 0 8px 0;
+  min-height: 0;
+}
+
+.slide.ffw-felt-slide .ffw-bullet-item {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  gap: 12px;
+  align-content: center;
+  align-items: start;
+  padding: clamp(8px, 1.2vh, 14px) 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  border-radius: 8px;
+  font-size: clamp(0.88rem, 0.94vw, 1.0rem);
+  line-height: 1.46;
+  color: rgba(255, 255, 255, 0.94);
+  box-sizing: border-box;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.slide.ffw-felt-slide .ffw-bullet-item:hover {
+  background: rgba(200, 163, 86, 0.08);
+  border-color: rgba(200, 163, 86, 0.25);
+  transform: translateX(2px);
+}
+
+.slide.ffw-felt-slide .ffw-bullet-item strong {
+  font-size: clamp(0.9rem, 0.96vw, 1.02rem);
+  color: #ffffff;
+}
+
+.slide.ffw-felt-slide .ffw-bullet-item .bento-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.slide.ffw-felt-slide .ffw-panel-footer {
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.slide.ffw-felt-slide .ffw-fact-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 6px;
+  background: rgba(200, 163, 86, 0.12);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light, #f1dfb0);
+}
+
+/* Rechter Flügel (Felt Spotlight Card) */
+.slide.ffw-felt-slide .ffw-felt-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 14px 18px;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+.slide.ffw-felt-slide .ffw-felt-card-header .bento-card-title {
+  font-size: clamp(1.15rem, 1.28vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.22;
+  margin: 3px 0 4px 0;
+}
+
+.slide.ffw-felt-slide .ffw-felt-card-header .bento-card-desc {
+  font-size: clamp(0.86rem, 0.92vw, 0.98rem);
+  line-height: 1.36;
+}
+
+.slide.ffw-felt-slide .ffw-texture-viewer {
+  height: clamp(150px, 17vh, 180px);
+  margin: 6px 0 10px 0;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.slide.ffw-felt-slide .ffw-felt-highlights {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: clamp(8px, 1.2vh, 12px);
+  min-height: 0;
+}
+
+.slide.ffw-felt-slide .ffw-highlight-item {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  gap: 12px;
+  align-content: center;
+  align-items: start;
+  padding: clamp(8px, 1.2vh, 12px) 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  font-size: clamp(0.86rem, 0.92vw, 0.98rem);
+  line-height: 1.44;
+  color: rgba(255, 255, 255, 0.92);
+  box-sizing: border-box;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.slide.ffw-felt-slide .ffw-highlight-item:hover {
+  background: rgba(200, 163, 86, 0.08);
+  border-color: rgba(200, 163, 86, 0.25);
+  transform: translateX(2px);
+}
+
+.slide.ffw-felt-slide .ffw-highlight-item strong {
+  font-size: clamp(0.88rem, 0.94vw, 1.0rem);
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.slide.ffw-felt-slide .ffw-hl-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
 
 /* ==========================================================================
    Folie 3 Hero-Theme (Ab Folie 12)
