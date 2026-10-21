@@ -517,13 +517,25 @@ class PresentationController {
 
       const scaleX = availWidth / baseWidth;
       const scaleY = availHeight / baseHeight;
-      const scale = Math.min(scaleX, scaleY);
+      let scale = Math.min(scaleX, scaleY);
+
+      // Snap to 1.0 if within 3.5% tolerance for pixel-perfect 1:1 display on 1080p screens
+      if (Math.abs(scale - 1) < 0.035) {
+        scale = 1.0;
+      }
+
+      const scaledWidth = Math.round(baseWidth * scale);
+      const scaledHeight = Math.round(baseHeight * scale);
+      const left = Math.round((viewport.clientWidth - scaledWidth) / 2);
+      const top = Math.round((viewport.clientHeight - scaledHeight) / 2);
 
       slideDeck.style.width = `${baseWidth}px`;
       slideDeck.style.height = `${baseHeight}px`;
-      slideDeck.style.transform = `scale(${scale})`;
-      slideDeck.style.transformOrigin = 'center center';
-      slideDeck.style.flexShrink = '0';
+      slideDeck.style.position = 'absolute';
+      slideDeck.style.left = `${left}px`;
+      slideDeck.style.top = `${top}px`;
+      slideDeck.style.transformOrigin = '0 0';
+      slideDeck.style.transform = `scale(${scale.toFixed(4)})`;
 
       document.documentElement.style.setProperty('--deck-scale', scale.toFixed(4));
       window.__presentationScale = scale;

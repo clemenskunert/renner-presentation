@@ -164,7 +164,6 @@ html[lang="zh"], body[lang="zh"] {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -177,6 +176,18 @@ body {
   position: relative;
   user-select: none;
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
+  text-rendering: optimizeLegibility;
+}
+
+/* Windows ClearType subpixel font rendering support */
+body, button, input, select, textarea,
+.slide-header, .slide-title, .slide-subtitle, .slide-category,
+.header-hud, .brand-name, .brand-subtitle, .hud-btn,
+.bento-card-title, .bento-card-desc, .bullet-text, .bento-badge,
+.slide-notes, .speaker-notes-content {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
 }
 
 /* Dynamic Background Atmospheric Gradient based on Country Theme */
@@ -206,16 +217,15 @@ body::before {
   left: 0;
   right: 0;
   height: 32px;
-  background: rgba(10, 12, 16, 0.90);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(200, 163, 86, 0.22);
+  background: rgba(10, 12, 16, 0.96);
+  border-bottom: 1px solid rgba(200, 163, 86, 0.25);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 18px;
   z-index: 100;
   transition: background var(--transition-fast);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* Linke Seite: Nur Logo und Slogan */
@@ -859,11 +869,8 @@ body::before {
   left: 0;
   right: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 .slide-deck {
@@ -872,12 +879,8 @@ body::before {
   max-width: none;
   max-height: none;
   flex-shrink: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: center center;
-  will-change: transform;
+  position: absolute;
+  transform-origin: 0 0;
 }
 
 .slide {
@@ -897,8 +900,6 @@ body::before {
   overflow: hidden;
   border-radius: 16px;
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-elevated);
 }
@@ -992,37 +993,51 @@ body::before {
    Slide Content Layouts
    ========================================================================== */
 .slide-header {
-  padding: 20px 36px 12px 36px;
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
+  padding: 18px 36px 14px 36px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(200, 163, 86, 0.28);
+  background: linear-gradient(180deg, rgba(14, 20, 30, 0.82) 0%, rgba(12, 16, 24, 0.45) 100%);
   flex-shrink: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
 }
 
 .slide-category {
-  font-size: 0.72rem;
+  font-size: 0.84rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--renner-green-bright);
   font-weight: 700;
   margin-bottom: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-title {
   font-family: var(--font-serif);
-  font-size: 1.95rem;
+  font-size: 2.05rem;
   font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.5px;
-  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: normal;
+  line-height: 1.18;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.45);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-subtitle {
-  font-size: 0.88rem;
-  color: var(--gold-light);
+  font-size: 0.95rem;
+  color: rgba(230, 200, 130, 0.95);
   margin-top: 4px;
   font-weight: 400;
+  line-height: 1.35;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-body {
@@ -5416,35 +5431,44 @@ body::before {
 .slide-hero-theme .slide-header,
 .slide:nth-child(n+12) .slide-header {
   margin-bottom: 22px;
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-hero-theme .slide-category,
 .slide:nth-child(n+12) .slide-category {
   color: var(--gold-accent);
-  font-size: 0.88rem;
+  font-size: 0.90rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-hero-theme .slide-title,
 .slide:nth-child(n+12) .slide-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 2.2vw, 2.35rem);
+  font-size: clamp(1.95rem, 2.2vw, 2.45rem);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.22;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.45);
   margin-bottom: 6px;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .slide-hero-theme .slide-subtitle,
 .slide:nth-child(n+12) .slide-subtitle {
   font-size: clamp(1.05rem, 1.18vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.45;
   font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* 2. Bento Card Basis (Glasmorphismus & Tiefe wie Folie 3) */
