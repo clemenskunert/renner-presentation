@@ -112,7 +112,7 @@ class FeltAnatomySimulation {
     } else {
       if (this.statusText) {
         this.statusText.textContent = dict.s11_anim_status_sanded ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben & lockern sich: Hammerkopf verliert > 40 % seiner Spannung!';
       }
     }
   }
@@ -160,14 +160,14 @@ class FeltAnatomySimulation {
 
     } else {
       // Sanded / Damaged mode: Failure under Tension
-      // 1. Tension KPI: Drops to 15% (Buckled / Deformed)
+      // 1. Tension KPI: Loses > 40% of its tension (Remaining tension < 60%)
       if (this.tensionVal) {
-        this.tensionVal.textContent = '15%';
+        this.tensionVal.textContent = '< 60% (− > 40%)';
         this.tensionVal.style.color = '#f87171';
       }
       if (this.tensionMeter) {
-        this.tensionMeter.style.width = '15%';
-        this.tensionMeter.style.background = 'linear-gradient(90deg, #ef4444, #f87171)';
+        this.tensionMeter.style.width = '58%';
+        this.tensionMeter.style.background = 'linear-gradient(90deg, #ef4444, #f97316)';
         this.tensionMeter.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.7)';
       }
 
@@ -177,7 +177,7 @@ class FeltAnatomySimulation {
       }
       if (this.statusText) {
         const text = (dict && dict.s11_anim_status_sanded) ||
-          '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben sich & rutschen: Spannung nimmt ab!';
+          '✗ Geschliffen: Vliesbahnen zerstört – Fasern verschieben & lockern sich: Hammerkopf verliert > 40 % seiner Spannung!';
         this.statusText.textContent = text;
         this.statusText.style.color = '#fca5a5';
       }

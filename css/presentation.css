@@ -5530,7 +5530,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  min-width: 145px;
+  min-width: 195px;
 }
 
 .kpi-label-row {
