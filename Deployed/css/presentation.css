@@ -4545,9 +4545,204 @@ body::before {
 }
 
 /* ==========================================================================
-   Folie 3 Meilenstein 9 (Blatt 9: Meuselwitz 2026 Video Focus)
-   Vergrößerte Inhaltsbreite für maximale visuelle Präsenz des 2.7K Drohnenvideos
+   Folie 3 Meilenstein 9 (Blatt 9: Meuselwitz 2026 Video Focus & Ladefrequenz)
+   Elegante Ladefrequenz & Resonanz-Aura vor dem Start des 2.7K Drohnenvideos
    ========================================================================== */
+.milestone-loading-frequency {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.45s ease-out, visibility 0.45s;
+}
+
+#tree-milestone-8.loading-frequency-active .milestone-loading-frequency {
+  opacity: 1;
+  visibility: visible;
+}
+
+#tree-milestone-8.loading-frequency-complete .milestone-loading-frequency {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in, visibility 0.5s;
+}
+
+/* Concentric expanding resonance rings around the docked celestial sphere */
+.frequency-resonance-rings {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frequency-resonance-rings .freq-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200, 163, 86, 0.65);
+  box-shadow: 0 0 20px rgba(200, 163, 86, 0.45), inset 0 0 14px rgba(200, 163, 86, 0.25);
+  opacity: 0;
+  animation: frequencyRingWave 1.8s infinite cubic-bezier(0.21, 0.61, 0.35, 1);
+}
+
+.frequency-resonance-rings .ring-1 {
+  animation-delay: 0s;
+}
+.frequency-resonance-rings .ring-2 {
+  animation-delay: 0.45s;
+}
+.frequency-resonance-rings .ring-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes frequencyRingWave {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.95;
+    transform: scale(0.6);
+    border-color: rgba(255, 235, 180, 0.95);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    transform: scale(1.35);
+    border-color: rgba(200, 163, 86, 0);
+  }
+}
+
+/* Golden harmonic loading frequency indicator pill */
+.frequency-indicator-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 24px;
+  background: rgba(13, 17, 26, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 163, 86, 0.6);
+  border-radius: 999px;
+  box-shadow: 
+    0 14px 40px rgba(0, 0, 0, 0.88),
+    0 0 32px rgba(200, 163, 86, 0.32),
+    inset 0 0 16px rgba(200, 163, 86, 0.14);
+  color: #f7e7c4;
+  font-size: 0.94rem;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  animation: frequencyPillBreathe 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes frequencyPillBreathe {
+  0% {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.85), 0 0 20px rgba(200, 163, 86, 0.25);
+    border-color: rgba(200, 163, 86, 0.45);
+  }
+  100% {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.95), 0 0 38px rgba(200, 163, 86, 0.5);
+    border-color: rgba(255, 225, 155, 0.88);
+  }
+}
+
+/* Equalizer frequency bars */
+.frequency-bars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 18px;
+}
+
+.frequency-bars .f-bar {
+  width: 3.5px;
+  height: 100%;
+  background: linear-gradient(to top, #c8a356, #ffe29a);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(200, 163, 86, 0.6);
+  animation: frequencyBarOscillate 1.0s infinite ease-in-out;
+}
+
+.frequency-bars .f-bar:nth-child(1) { animation-delay: 0.0s; height: 35%; }
+.frequency-bars .f-bar:nth-child(2) { animation-delay: 0.2s; height: 85%; }
+.frequency-bars .f-bar:nth-child(3) { animation-delay: 0.4s; height: 50%; }
+.frequency-bars .f-bar:nth-child(4) { animation-delay: 0.15s; height: 95%; }
+.frequency-bars .f-bar:nth-child(5) { animation-delay: 0.35s; height: 40%; }
+
+@keyframes frequencyBarOscillate {
+  0%, 100% {
+    transform: scaleY(0.28);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Comet Head Pulse when docked during frequency phase */
+.comet-head-point.frequency-pulse-active .point-corona-ring {
+  box-shadow: 0 0 45px rgba(200, 163, 86, 0.95), 0 0 90px rgba(255, 225, 155, 0.7);
+  animation: cometFrequencySurge 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes cometFrequencySurge {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+}
+
+/* Video pre-buffer shimmer veil */
+.video-buffer-shimmer {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(16, 20, 28, 0.75) 0%, rgba(6, 8, 12, 0.95) 85%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.video-buffer-shimmer.shimmer-hidden {
+  opacity: 0;
+}
+
+.video-buffer-shimmer .shimmer-spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(200, 163, 86, 0.18);
+  border-top-color: #c8a356;
+  border-right-color: #ffe29a;
+  box-shadow: 0 0 24px rgba(200, 163, 86, 0.45);
+  animation: frequencySpinner 0.85s linear infinite;
+}
+
+@keyframes frequencySpinner {
+  to { transform: rotate(360deg); }
+}
 #tree-milestone-8 .tree-hero-card {
   width: calc(100% - 44px);
   max-width: 1720px;

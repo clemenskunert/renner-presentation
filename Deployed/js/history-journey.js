@@ -858,7 +858,7 @@ class RennerHistoryJourney {
       });
     });
 
-    // 4b. Video Interaction: Click to play / pause standalone hero videos
+    // 4b. Video Interaction: Click to play / pause standalone hero videos & auto-veil removal
     document.querySelectorAll('.hero-video-media').forEach(vid => {
       vid.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -868,7 +868,22 @@ class RennerHistoryJourney {
           vid.pause();
         }
       });
+
+      const removeVeil = () => {
+        const parentCard = vid.closest('.tree-hero-card');
+        if (parentCard) {
+          const shimmer = parentCard.querySelector('.video-buffer-shimmer');
+          if (shimmer) shimmer.classList.add('shimmer-hidden');
+        }
+      };
+      vid.addEventListener('playing', removeVeil);
+      vid.addEventListener('timeupdate', () => {
+        if (vid.currentTime > 0.05) removeVeil();
+      });
     });
+
+    // 4c. Pre-prime milestone 8 video
+    this.primeMilestone8Video();
 
     // 5. Setup Viewport Gestures
     this.setupViewportGestures();
@@ -881,6 +896,17 @@ class RennerHistoryJourney {
 
     // 8. Initialize hero image slideshows (e.g. 1944 archive series)
     this.initHeroSlideshows();
+  }
+
+  primeMilestone8Video() {
+    const m8Video = document.querySelector('#tree-milestone-8 video');
+    if (!m8Video) return;
+    try {
+      m8Video.preload = 'auto';
+      if (m8Video.readyState < 2) {
+        m8Video.load();
+      }
+    } catch(e) {}
   }
 
   initHeroSlideshows() {
@@ -1515,7 +1541,13 @@ class RennerHistoryJourney {
     const m3 = document.getElementById('tree-milestone-3');
     if (m3) m3.classList.remove('fire-ignited');
     const m8 = document.getElementById('tree-milestone-8');
-    if (m8) m8.classList.remove('sheen-ignited');
+    if (m8) {
+      m8.classList.remove('sheen-ignited', 'loading-frequency-active', 'loading-frequency-complete');
+      const shimmer = m8.querySelector('.video-buffer-shimmer');
+      if (shimmer) shimmer.classList.remove('shimmer-hidden');
+    }
+    const cometHeadDark = document.getElementById('comet-head-point');
+    if (cometHeadDark) cometHeadDark.classList.remove('frequency-pulse-active');
 
     // Update Header Controls for Dark Start
     const counterBadge = document.getElementById('vox-step-counter');
@@ -1563,7 +1595,13 @@ class RennerHistoryJourney {
     const m3Start = document.getElementById('tree-milestone-3');
     if (m3Start) m3Start.classList.remove('fire-ignited');
     const m8Start = document.getElementById('tree-milestone-8');
-    if (m8Start) m8Start.classList.remove('sheen-ignited');
+    if (m8Start) {
+      m8Start.classList.remove('sheen-ignited', 'loading-frequency-active', 'loading-frequency-complete');
+      const shimmer = m8Start.querySelector('.video-buffer-shimmer');
+      if (shimmer) shimmer.classList.remove('shimmer-hidden');
+    }
+    const cometHeadStart = document.getElementById('comet-head-point');
+    if (cometHeadStart) cometHeadStart.classList.remove('frequency-pulse-active');
 
     const container = document.getElementById('tree-timeline-container');
     if (container) container.classList.remove('is-dark-start');
@@ -1759,7 +1797,18 @@ class RennerHistoryJourney {
     const m3Travel = document.getElementById('tree-milestone-3');
     if (m3Travel) m3Travel.classList.remove('fire-ignited');
     const m8Travel = document.getElementById('tree-milestone-8');
-    if (m8Travel) m8Travel.classList.remove('sheen-ignited');
+    if (m8Travel) {
+      m8Travel.classList.remove('sheen-ignited', 'loading-frequency-active', 'loading-frequency-complete');
+      const shimmer = m8Travel.querySelector('.video-buffer-shimmer');
+      if (shimmer) shimmer.classList.remove('shimmer-hidden');
+    }
+    const cometHeadTravel = document.getElementById('comet-head-point');
+    if (cometHeadTravel) cometHeadTravel.classList.remove('frequency-pulse-active');
+
+    // Preload Milestone 8 video ahead of time if approaching or at Milestone 7/8
+    if (index >= 6) {
+      this.primeMilestone8Video();
+    }
 
     // 2. Aktive Epochen-Klasse setzen
     document.querySelectorAll('.tree-milestone-panel').forEach((panel, idx) => {
@@ -1922,20 +1971,74 @@ class RennerHistoryJourney {
           }
 
           // Folie 3 Meilenstein 9 (Blatt 9: Heute / Meuselwitz 2026):
-          // Eleganter goldener Lichtschein genau 0,25s (250ms) BEVOR der Inhalt platziert wird!
-          // Da der Inhalt bei 360ms platziert wird: 360ms - 250ms = 110ms
+          // Harmonische Ladefrequenz vor dem Video-Start für einen 100% flüssigen, ruckelfreien Beginn
           if (index === 8) {
+            const currentPanel = document.getElementById('tree-milestone-8');
+            const cometHead = document.getElementById('comet-head-point');
+            const m8Video = currentPanel ? currentPanel.querySelector('video') : null;
+
+            // 1. Ladefrequenz sofort bei Kometen-Andocken aktivieren (pulsierende Resonanz)
+            if (currentPanel) {
+              currentPanel.classList.add('loading-frequency-active');
+            }
+            if (cometHead) {
+              cometHead.classList.add('frequency-pulse-active');
+            }
+
+            // 2. Goldener Umgebungs-Sheen flutet den Raum (+120ms)
             this.animationTimeouts.push(setTimeout(() => {
-              if (this.currentMilestone === 8) {
-                const currentPanel = document.getElementById('tree-milestone-8');
-                if (currentPanel && currentPanel.classList.contains('active')) {
-                  currentPanel.classList.add('sheen-ignited');
+              if (this.currentMilestone === 8 && currentPanel && currentPanel.classList.contains('active')) {
+                currentPanel.classList.add('sheen-ignited');
+              }
+            }, 120));
+
+            // 3. Video im Hintergrund lautlos anstarten (+220ms)
+            // Durch das Vorstarten hinter dem Ladeschleier puffert der Hardware-Decoder ohne Stottern!
+            this.animationTimeouts.push(setTimeout(() => {
+              if (this.currentMilestone === 8 && m8Video) {
+                try {
+                  m8Video.currentTime = 0;
+                  const p = m8Video.play();
+                  if (p) p.catch(() => {});
+                } catch(e) {}
+              }
+            }, 220));
+
+            // 4. Ladefrequenz vollenden & Karte mit bereits flüssig laufendem Video öffnen (+1150ms)
+            this.animationTimeouts.push(setTimeout(() => {
+              if (this.currentMilestone === 8 && currentPanel && currentPanel.classList.contains('active')) {
+                currentPanel.classList.remove('loading-frequency-active');
+                currentPanel.classList.add('loading-frequency-complete');
+                if (cometHead) cometHead.classList.remove('frequency-pulse-active');
+
+                const card = currentPanel.querySelector('.tree-hero-card');
+                if (card) card.classList.add('is-revealed');
+                const pill = currentPanel.querySelector('.tree-counter-pill');
+                if (pill) pill.classList.add('is-revealed');
+                const year = currentPanel.querySelector('.tree-watermark-year');
+                if (year) year.classList.add('is-revealed');
+
+                // Sicherstellen, dass das Video aktiv läuft
+                if (m8Video && m8Video.paused) {
+                  try {
+                    const p = m8Video.play();
+                    if (p) p.catch(() => {});
+                  } catch(e) {}
+                }
+
+                // Shimmer sanft ausblenden
+                const shimmer = currentPanel.querySelector('.video-buffer-shimmer');
+                if (shimmer) {
+                  shimmer.classList.add('shimmer-hidden');
                 }
               }
-            }, 110));
+            }, 1150));
+
+            this.dissolveCometTrail();
+            return;
           }
 
-          // Karte der neuen Epoche öffnet sich
+          // Karte der neuen Epoche öffnet sich (Meilensteine 0 bis 7)
           this.animationTimeouts.push(setTimeout(() => {
             const currentPanel = document.getElementById(`tree-milestone-${index}`);
             if (currentPanel) {

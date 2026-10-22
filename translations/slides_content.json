@@ -83,6 +83,12 @@
       "en": "✦ Start Photo Journey",
       "ja": "✦ フォトジャーニーを開始",
       "zh": "✦ 开启建造摄影之旅"
+    },
+    "s3_frequency_load": {
+      "de": "✦ Meuselwitz 2026 • Ladefrequenz synchronisiert...",
+      "en": "✦ Meuselwitz 2026 • Synchronizing buffer frequency...",
+      "ja": "✦ モイゼルヴィッツ 2026 • バッファ周波数を同調中...",
+      "zh": "✦ 莫伊瑟尔维茨 2026 • 正在同步加载频率..."
     }
   },
   "slides": {

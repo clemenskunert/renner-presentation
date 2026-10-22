@@ -593,7 +593,10 @@ def get_all_slides_html():
             is_vid = m.get('video') or (m.get('image') and m['image'].lower().endswith(('.mp4', '.webm', '.ogg', '.mov')))
             if is_vid:
                 video_src = m.get('video') or m['image']
-                media_html = f'<video class="hero-image hero-video-media" src="{video_src}" playsinline muted loop autoplay style="object-fit:cover; width:100%; height:100%; background:#000; cursor:pointer;" title="Klicken zum Pausieren/Abspielen"></video>'
+                media_html = f'''<video class="hero-image hero-video-media" src="{video_src}" preload="auto" playsinline muted loop style="object-fit:cover; width:100%; height:100%; background:#050505; cursor:pointer;" title="Klicken zum Pausieren/Abspielen"></video>
+                <div class="video-buffer-shimmer" id="m8-video-shimmer" aria-hidden="true">
+                  <div class="shimmer-spinner"></div>
+                </div>'''
             else:
                 media_html = f'<img class="hero-image" src="{m["image"]}" alt="{m["heading"]}">'
 
@@ -643,6 +646,24 @@ def get_all_slides_html():
               <div class="sheen-ambient-glow"></div>
               <div class="sheen-radial-flare"></div>
               <div class="sheen-corona-ring"></div>
+            </div>
+            <!-- Milestone 8 Ladefrequenz & Resonanz-Aura -->
+            <div class="milestone-loading-frequency" id="m8-loading-frequency" aria-hidden="true">
+              <div class="frequency-resonance-rings">
+                <span class="freq-ring ring-1"></span>
+                <span class="freq-ring ring-2"></span>
+                <span class="freq-ring ring-3"></span>
+              </div>
+              <div class="frequency-indicator-pill">
+                <div class="frequency-bars">
+                  <span class="f-bar"></span>
+                  <span class="f-bar"></span>
+                  <span class="f-bar"></span>
+                  <span class="f-bar"></span>
+                  <span class="f-bar"></span>
+                </div>
+                <span class="frequency-text" data-i18n="s3_frequency_load">Meuselwitz 2026 • Ladefrequenz synchronisiert...</span>
+              </div>
             </div>\n'''
 
         if m['branch'] == 'up':
