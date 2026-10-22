@@ -24,3 +24,6 @@ __pycache__/
 # Deployed media duplication (Visuell is already tracked in root Visuell/)
 Deployed/Visuell/
 
+# Raw camera / drone recordings (> 100MB, keep local & SharePoint only)
+Visuell/Video/DJI_*.mp4
+

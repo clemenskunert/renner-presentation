@@ -813,13 +813,13 @@
             <div class="tree-slot top-slot">
                           <div class="tree-hero-card">
               <div class="hero-image-wrapper">
-                <img class="hero-image" src="Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png" alt="Heute: Tradition bewahren. Zukunft gestalten.">
+                <video class="hero-image hero-video-media" src="Visuell/Video/LouisRennerMeuselwitzAußen.mp4" playsinline muted loop autoplay style="object-fit:cover; width:100%; height:100%; background:#000; cursor:pointer;" title="Klicken zum Pausieren/Abspielen"></video>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="hero-image-badge">Meuselwitz 2026</div>
-                <div class="hero-image-caption">Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)</div>
+                <div class="hero-image-caption">Welt-Hauptsitz Meuselwitz: Drohnenflug über das modernisierte Werksgelände mit neuer zentraler Filter- & Absauganlage (2026)</div>
               </div>
 
               <div class="hero-meta-wrapper">

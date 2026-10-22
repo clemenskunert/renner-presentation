@@ -4567,6 +4567,80 @@ body::before {
 }
 
 /* ==========================================================================
+   Folie 3 Meilenstein 9 (Blatt 9: Meuselwitz 2026 Video Focus)
+   Vergrößerte Inhaltsbreite für maximale visuelle Präsenz des 2.7K Drohnenvideos
+   ========================================================================== */
+#tree-milestone-8 .tree-hero-card {
+  width: calc(100% - 44px);
+  max-width: 1720px;
+  height: clamp(540px, 75vh, 700px);
+  margin-right: 22px;
+}
+
+#tree-milestone-8 .hero-image-wrapper {
+  flex: 0 0 58%;
+  background: #000;
+  position: relative;
+}
+
+#tree-milestone-8 .hero-meta-wrapper {
+  flex: 0 0 42%;
+  padding: 26px 32px;
+  box-sizing: border-box;
+}
+
+#tree-milestone-8 video.hero-video-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  transform: none !important;
+  cursor: pointer;
+}
+
+#tree-milestone-8:hover .hero-image,
+#tree-milestone-8:hover video.hero-video-media {
+  transform: none !important;
+}
+
+#tree-milestone-8 .sheen-ambient-glow {
+  max-width: 1760px;
+  width: 94%;
+}
+
+#tree-milestone-8 .sheen-corona-ring {
+  max-width: 1820px;
+  width: 96%;
+}
+
+@media (max-width: 1550px) {
+  #tree-milestone-8 .tree-hero-card {
+    max-width: 1500px;
+  }
+  #tree-milestone-8 .hero-image-wrapper {
+    flex: 0 0 55%;
+  }
+  #tree-milestone-8 .hero-meta-wrapper {
+    flex: 0 0 45%;
+    padding: 22px 26px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #tree-milestone-8 .tree-hero-card {
+    max-width: calc(100% - 24px);
+    margin-right: 12px;
+  }
+  #tree-milestone-8 .hero-image-wrapper {
+    flex: 0 0 50%;
+  }
+  #tree-milestone-8 .hero-meta-wrapper {
+    flex: 0 0 50%;
+    padding: 16px 20px;
+  }
+}
+
+/* ==========================================================================
    Folie 2: Subtiler eleganter Lichtschein hinter den 6 Modul-Karten
    ========================================================================== */
 .slide[data-slide="2"] .slide-body {
@@ -7606,13 +7680,13 @@ body::before {
             <div class="tree-slot top-slot">
                           <div class="tree-hero-card">
               <div class="hero-image-wrapper">
-                <img class="hero-image" src="Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png" alt="Heute: Tradition bewahren. Zukunft gestalten.">
+                <video class="hero-image hero-video-media" src="Visuell/Video/LouisRennerMeuselwitzAußen.mp4" playsinline muted loop autoplay style="object-fit:cover; width:100%; height:100%; background:#000; cursor:pointer;" title="Klicken zum Pausieren/Abspielen"></video>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="hero-image-badge">Meuselwitz 2026</div>
-                <div class="hero-image-caption">Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)</div>
+                <div class="hero-image-caption">Welt-Hauptsitz Meuselwitz: Drohnenflug über das modernisierte Werksgelände mit neuer zentraler Filter- & Absauganlage (2026)</div>
               </div>
 
               <div class="hero-meta-wrapper">
@@ -16329,13 +16403,14 @@ class RennerHistoryJourney {
           ja: 'クレメンス・クーナート（ルイス・レンナー モイゼルヴィッツ）',
           zh: '克莱门斯·库纳特 • 雷诺莫伊瑟尔维茨总部'
         },
-        image: 'Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png',
+        image: 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
+        video: 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
         imageTag: { de: 'Meuselwitz 2026', en: 'Meuselwitz 2026', ja: 'モイゼルヴィッツ 2026', zh: '莫伊瑟尔维茨 2026' },
         imageCaption: {
-          de: 'Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)',
-          en: 'World Headquarters Meuselwitz: Modernized production facility with central filtration & extraction system (2026)',
-          ja: 'モイゼルヴィッツ世界統合本社：最新の集中集塵・排気フィルター設備を備えた製造工場（2026年）',
-          zh: '莫伊瑟尔维茨全球总部：配备现代化中央过滤与环保吸附系统的核心生产基地（2026年）'
+          de: 'Welt-Hauptsitz Meuselwitz: Drohnenflug über das modernisierte Werksgelände mit neuer zentraler Filter- & Absauganlage (2026)',
+          en: 'World Headquarters Meuselwitz: Drone aerial footage of modernized production site with central filtration & extraction system (2026)',
+          ja: 'モイゼルヴィッツ世界統合本社：最新の集中集塵・排気フィルター設備を備えた製造工場（空撮ドローン映像・2026年）',
+          zh: '莫伊瑟尔维茨全球总部：配备现代化中央过滤与环保吸附系统的核心生产基地（无人机航拍实景·2026年）'
         }
       }
     };
@@ -16399,6 +16474,18 @@ class RennerHistoryJourney {
           if (!moved && window.presentation && typeof window.presentation.goToSlide === 'function') {
             window.presentation.goToSlide(window.presentation.currentSlideIndex + 1);
           }
+        }
+      });
+    });
+
+    // 4b. Video Interaction: Click to play / pause standalone hero videos
+    document.querySelectorAll('.hero-video-media').forEach(vid => {
+      vid.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (vid.paused) {
+          vid.play().catch(() => {});
+        } else {
+          vid.pause();
         }
       });
     });
@@ -17488,6 +17575,16 @@ class RennerHistoryJourney {
                   ss._slideshowStart();
                 }
               }
+
+              // Play standalone hero videos (e.g. Milestone 8 Meuselwitz drone video)
+              const standaloneVideos = currentPanel.querySelectorAll('video.hero-video-media, video.hero-image');
+              standaloneVideos.forEach(v => {
+                try {
+                  v.currentTime = 0;
+                  const p = v.play();
+                  if (p) p.catch(() => {});
+                } catch(e) {}
+              });
 
               // Folie 3 Blatt 4 (Meilenstein 1944 Brandnacht):
               // Flammen-Effekt erst mit 1 Sekunde Zeitversatz NACH Aufbau des Inhalts (550ms Reveal + 1000ms Versatz)

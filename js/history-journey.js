@@ -783,13 +783,14 @@ class RennerHistoryJourney {
           ja: 'クレメンス・クーナート（ルイス・レンナー モイゼルヴィッツ）',
           zh: '克莱门斯·库纳特 • 雷诺莫伊瑟尔维茨总部'
         },
-        image: 'Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png',
+        image: 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
+        video: 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
         imageTag: { de: 'Meuselwitz 2026', en: 'Meuselwitz 2026', ja: 'モイゼルヴィッツ 2026', zh: '莫伊瑟尔维茨 2026' },
         imageCaption: {
-          de: 'Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)',
-          en: 'World Headquarters Meuselwitz: Modernized production facility with central filtration & extraction system (2026)',
-          ja: 'モイゼルヴィッツ世界統合本社：最新の集中集塵・排気フィルター設備を備えた製造工場（2026年）',
-          zh: '莫伊瑟尔维茨全球总部：配备现代化中央过滤与环保吸附系统的核心生产基地（2026年）'
+          de: 'Welt-Hauptsitz Meuselwitz: Drohnenflug über das modernisierte Werksgelände mit neuer zentraler Filter- & Absauganlage (2026)',
+          en: 'World Headquarters Meuselwitz: Drone aerial footage of modernized production site with central filtration & extraction system (2026)',
+          ja: 'モイゼルヴィッツ世界統合本社：最新の集中集塵・排気フィルター設備を備えた製造工場（空撮ドローン映像・2026年）',
+          zh: '莫伊瑟尔维茨全球总部：配备现代化中央过滤与环保吸附系统的核心生产基地（无人机航拍实景·2026年）'
         }
       }
     };
@@ -853,6 +854,18 @@ class RennerHistoryJourney {
           if (!moved && window.presentation && typeof window.presentation.goToSlide === 'function') {
             window.presentation.goToSlide(window.presentation.currentSlideIndex + 1);
           }
+        }
+      });
+    });
+
+    // 4b. Video Interaction: Click to play / pause standalone hero videos
+    document.querySelectorAll('.hero-video-media').forEach(vid => {
+      vid.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (vid.paused) {
+          vid.play().catch(() => {});
+        } else {
+          vid.pause();
         }
       });
     });
@@ -1942,6 +1955,16 @@ class RennerHistoryJourney {
                   ss._slideshowStart();
                 }
               }
+
+              // Play standalone hero videos (e.g. Milestone 8 Meuselwitz drone video)
+              const standaloneVideos = currentPanel.querySelectorAll('video.hero-video-media, video.hero-image');
+              standaloneVideos.forEach(v => {
+                try {
+                  v.currentTime = 0;
+                  const p = v.play();
+                  if (p) p.catch(() => {});
+                } catch(e) {}
+              });
 
               // Folie 3 Blatt 4 (Meilenstein 1944 Brandnacht):
               // Flammen-Effekt erst mit 1 Sekunde Zeitversatz NACH Aufbau des Inhalts (550ms Reveal + 1000ms Versatz)

@@ -4545,6 +4545,80 @@ body::before {
 }
 
 /* ==========================================================================
+   Folie 3 Meilenstein 9 (Blatt 9: Meuselwitz 2026 Video Focus)
+   Vergrößerte Inhaltsbreite für maximale visuelle Präsenz des 2.7K Drohnenvideos
+   ========================================================================== */
+#tree-milestone-8 .tree-hero-card {
+  width: calc(100% - 44px);
+  max-width: 1720px;
+  height: clamp(540px, 75vh, 700px);
+  margin-right: 22px;
+}
+
+#tree-milestone-8 .hero-image-wrapper {
+  flex: 0 0 58%;
+  background: #000;
+  position: relative;
+}
+
+#tree-milestone-8 .hero-meta-wrapper {
+  flex: 0 0 42%;
+  padding: 26px 32px;
+  box-sizing: border-box;
+}
+
+#tree-milestone-8 video.hero-video-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  transform: none !important;
+  cursor: pointer;
+}
+
+#tree-milestone-8:hover .hero-image,
+#tree-milestone-8:hover video.hero-video-media {
+  transform: none !important;
+}
+
+#tree-milestone-8 .sheen-ambient-glow {
+  max-width: 1760px;
+  width: 94%;
+}
+
+#tree-milestone-8 .sheen-corona-ring {
+  max-width: 1820px;
+  width: 96%;
+}
+
+@media (max-width: 1550px) {
+  #tree-milestone-8 .tree-hero-card {
+    max-width: 1500px;
+  }
+  #tree-milestone-8 .hero-image-wrapper {
+    flex: 0 0 55%;
+  }
+  #tree-milestone-8 .hero-meta-wrapper {
+    flex: 0 0 45%;
+    padding: 22px 26px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #tree-milestone-8 .tree-hero-card {
+    max-width: calc(100% - 24px);
+    margin-right: 12px;
+  }
+  #tree-milestone-8 .hero-image-wrapper {
+    flex: 0 0 50%;
+  }
+  #tree-milestone-8 .hero-meta-wrapper {
+    flex: 0 0 50%;
+    padding: 16px 20px;
+  }
+}
+
+/* ==========================================================================
    Folie 2: Subtiler eleganter Lichtschein hinter den 6 Modul-Karten
    ========================================================================== */
 .slide[data-slide="2"] .slide-body {

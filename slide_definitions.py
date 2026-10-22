@@ -550,8 +550,9 @@ def get_all_slides_html():
         'fact': '✦ Tradition bewahren • Zukunft gestalten',
         'quote': '„Erfahrung ist die Basis – Perfektion das Ziel.“',
         'quote_author': 'Clemens Kunert • Louis Renner Meuselwitz',
-        'image': 'Visuell/Bilder/01_Geschichte/01_2026_standort_meuselwitz_hauptsitz.png',
-        'image_caption': 'Welt-Hauptsitz Meuselwitz: Modernisierte Fertigungsstätte mit neuer zentraler Filter- & Absauganlage (2026)',
+        'image': 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
+        'video': 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
+        'image_caption': 'Welt-Hauptsitz Meuselwitz: Drohnenflug über das modernisierte Werksgelände mit neuer zentraler Filter- & Absauganlage (2026)',
         'image_tag': 'Meuselwitz 2026'
       }
     ]
@@ -589,7 +590,12 @@ def get_all_slides_html():
                   </div>
                 </div>'''
         else:
-            media_html = f'<img class="hero-image" src="{m["image"]}" alt="{m["heading"]}">'
+            is_vid = m.get('video') or (m.get('image') and m['image'].lower().endswith(('.mp4', '.webm', '.ogg', '.mov')))
+            if is_vid:
+                video_src = m.get('video') or m['image']
+                media_html = f'<video class="hero-image hero-video-media" src="{video_src}" playsinline muted loop autoplay style="object-fit:cover; width:100%; height:100%; background:#000; cursor:pointer;" title="Klicken zum Pausieren/Abspielen"></video>'
+            else:
+                media_html = f'<img class="hero-image" src="{m["image"]}" alt="{m["heading"]}">'
 
         card_html = f'''            <div class="tree-hero-card">
               <div class="hero-image-wrapper">
