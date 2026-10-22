@@ -6329,3 +6329,445 @@ body::before {
     display: flex;
   }
 }
+
+/* ==========================================================================
+   Folie 2: Moderner 5-Modul Journey & Roadmap-Ablauf mit Animationen
+   ========================================================================== */
+
+.agenda-slide-body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between;
+  gap: clamp(14px, 1.6vh, 22px);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+/* 1. Connecting Journey Rail & Laser Beam */
+.agenda-journey-track-wrapper {
+  position: relative;
+  height: 44px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.agenda-journey-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.agenda-journey-laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 28%;
+  background: linear-gradient(90deg, transparent 0%, rgba(200, 163, 86, 0.3) 25%, #e5a93b 65%, #fff 85%, #2bb673 100%);
+  filter: drop-shadow(0 0 6px rgba(229, 169, 59, 0.8));
+  border-radius: 4px;
+  animation: agendaLaserFlow 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes agendaLaserFlow {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(450%); }
+}
+
+/* 2. Interactive Milestone Nodes */
+.agenda-journey-nodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  pointer-events: none;
+}
+
+.agenda-journey-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agenda-journey-node:hover {
+  transform: translateY(-2px);
+}
+
+.node-pin-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0f141c;
+  border: 2px solid #e5a93b;
+  box-shadow: 0 0 10px rgba(229, 169, 59, 0.5), inset 0 0 4px #e5a93b;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.agenda-journey-node[style*="--node-idx: 1"] .node-pin-dot,
+.agenda-journey-node[style*="--node-idx: 3"] .node-pin-dot {
+  border-color: #2bb673;
+  box-shadow: 0 0 10px rgba(43, 182, 115, 0.5), inset 0 0 4px #2bb673;
+}
+
+.node-pin-pulse {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(229, 169, 59, 0.4);
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+  animation: agendaNodePulse 2.8s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-delay: calc(var(--node-idx) * 0.45s);
+  pointer-events: none;
+}
+
+.agenda-journey-node[style*="--node-idx: 1"] .node-pin-pulse,
+.agenda-journey-node[style*="--node-idx: 3"] .node-pin-pulse {
+  border-color: rgba(43, 182, 115, 0.4);
+}
+
+@keyframes agendaNodePulse {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  70% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.node-pin-num {
+  position: absolute;
+  bottom: -2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.agenda-journey-node:hover .node-pin-dot {
+  transform: scale(1.25);
+  background: #e5a93b;
+  box-shadow: 0 0 16px rgba(229, 169, 59, 0.9);
+}
+
+.agenda-journey-node:hover .node-pin-num {
+  color: #ffffff;
+}
+
+/* 3. 5-Column Grid */
+.agenda-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(14px, 1.3vw, 22px);
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+
+/* 4. Agenda Bento Card */
+.agenda-card {
+  background: linear-gradient(175deg, rgba(24, 29, 40, 0.78) 0%, rgba(13, 17, 24, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: clamp(18px, 1.6vw, 24px) clamp(16px, 1.4vw, 22px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 12px 32px -8px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+/* Staggered entrance when Slide 2 is active */
+.slide[data-slide="2"].active .agenda-card {
+  animation: agendaCardSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--card-idx) * 0.1s + 0.05s) both;
+}
+
+@keyframes agendaCardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.96);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Glowing top micro-accent */
+.agenda-card-glow-edge {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  border-radius: 2px;
+  opacity: 0.6;
+  transition: all 0.35s ease;
+}
+
+.agenda-card-glow-edge.gold {
+  background: linear-gradient(90deg, transparent, #e5a93b, transparent);
+  box-shadow: 0 0 10px rgba(229, 169, 59, 0.5);
+}
+
+.agenda-card-glow-edge.green {
+  background: linear-gradient(90deg, transparent, #2bb673, transparent);
+  box-shadow: 0 0 10px rgba(43, 182, 115, 0.5);
+}
+
+/* Light sheen reflection on hover / sweep */
+.agenda-card-sheen {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 42%, rgba(255, 255, 255, 0.04) 50%, transparent 58%);
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.agenda-card:hover .agenda-card-sheen {
+  opacity: 1;
+  animation: agendaSheenMove 1.6s ease-in-out infinite;
+}
+
+@keyframes agendaSheenMove {
+  0% { transform: translateX(-80%) rotate(25deg); }
+  100% { transform: translateX(80%) rotate(25deg); }
+}
+
+/* Watermark Number inside card */
+.agenda-card .bento-step-watermark {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: clamp(4.5rem, 5.4vw, 6.2rem);
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.045;
+  color: #ffffff;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.agenda-card:hover .bento-step-watermark {
+  opacity: 0.085;
+  transform: scale(1.05);
+}
+
+/* Card Header (Badge & Slide pill) */
+.agenda-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: clamp(10px, 1.2vh, 16px);
+  position: relative;
+  z-index: 2;
+}
+
+.agenda-slide-pill {
+  font-size: clamp(0.72rem, 0.78vw, 0.84rem);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.3px;
+}
+
+.agenda-slide-pill .pill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.agenda-slide-pill .pill-dot.gold {
+  background: #e5a93b;
+  box-shadow: 0 0 6px rgba(229, 169, 59, 0.8);
+}
+
+.agenda-slide-pill .pill-dot.green {
+  background: #2bb673;
+  box-shadow: 0 0 6px rgba(43, 182, 115, 0.8);
+}
+
+.agenda-card.hero-highlight .agenda-slide-pill.highlight {
+  border-color: rgba(229, 169, 59, 0.3);
+  color: var(--gold-light);
+  background: rgba(229, 169, 59, 0.08);
+}
+
+/* Card Main Content */
+.agenda-card-main {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.agenda-card .bento-card-title {
+  font-size: clamp(1.22rem, 1.35vw, 1.52rem) !important;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: clamp(8px, 1vh, 12px);
+  letter-spacing: -0.2px;
+  transition: color 0.3s ease;
+}
+
+.agenda-card:hover .bento-card-title {
+  color: #fff;
+}
+
+.agenda-card .bento-card-desc {
+  font-size: clamp(0.96rem, 1.05vw, 1.14rem) !important;
+  line-height: 1.56 !important;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Card Footer */
+.agenda-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(12px, 1.4vh, 18px);
+  padding-top: clamp(8px, 1vh, 12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 2;
+}
+
+.agenda-action-text {
+  font-size: clamp(0.78rem, 0.84vw, 0.9rem);
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.agenda-nav-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover States for Cards */
+.agenda-card:hover {
+  transform: translateY(-8px) scale(1.018);
+  border-color: rgba(229, 169, 59, 0.4);
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.75),
+              0 0 24px rgba(229, 169, 59, 0.18),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.agenda-card[style*="--card-idx: 1"]:hover,
+.agenda-card[style*="--card-idx: 3"]:hover {
+  border-color: rgba(43, 182, 115, 0.4);
+  box-shadow: 0 22px 48px -12px rgba(0, 0, 0, 0.75),
+              0 0 24px rgba(43, 182, 115, 0.18),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.agenda-card:hover .agenda-card-glow-edge {
+  left: 5%;
+  right: 5%;
+  opacity: 1;
+}
+
+.agenda-card:hover .agenda-action-text {
+  color: #ffffff;
+}
+
+.agenda-card:hover .agenda-nav-arrow {
+  background: #e5a93b;
+  color: #0c0f14;
+  border-color: #e5a93b;
+  transform: translate(2px, -2px) scale(1.1);
+  box-shadow: 0 0 12px rgba(229, 169, 59, 0.6);
+}
+
+.agenda-card[style*="--card-idx: 1"]:hover .agenda-nav-arrow,
+.agenda-card[style*="--card-idx: 3"]:hover .agenda-nav-arrow {
+  background: #2bb673;
+  border-color: #2bb673;
+  box-shadow: 0 0 12px rgba(43, 182, 115, 0.6);
+}
+
+/* Modul 5 Hero Highlight */
+.agenda-card.hero-highlight {
+  background: linear-gradient(175deg, rgba(34, 28, 20, 0.8) 0%, rgba(14, 17, 24, 0.94) 100%);
+  border-color: rgba(229, 169, 59, 0.22);
+}
+
+.agenda-card.hero-highlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: radial-gradient(circle at 80% 20%, rgba(229, 169, 59, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Focus outline for keyboard navigation */
+.agenda-card:focus-visible {
+  outline: 2px solid #e5a93b;
+  outline-offset: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .agenda-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .agenda-journey-track-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .agenda-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

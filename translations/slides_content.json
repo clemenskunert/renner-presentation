@@ -8,7 +8,7 @@
       "ja": "日本語 (Japanese)",
       "zh": "中文 (Chinese)"
     },
-    "total_slides": 65,
+    "total_slides": 45,
     "description": "Zentrale Struktur zur Pflege aller Folientexte und mehrsprachigen Übersetzungen (DE, EN, JA, ZH)."
   },
   "ui": {
@@ -145,10 +145,10 @@
         "zh": "第一部分：引言与莫伊瑟尔维茨新总部"
       },
       "title": {
-        "de": "Die 6 Kernmodule der Renner Masterclass",
-        "en": "The 6 Core Modules of the Renner Masterclass",
-        "ja": "レンナー・マスタークラスの6大主要モジュール",
-        "zh": "雷诺大师课六大核心技术模块"
+        "de": "Die 5 Kernmodule der Renner Masterclass",
+        "en": "The 5 Core Modules of the Renner Masterclass",
+        "ja": "レンナー・マスタークラスの5大コアモジュール",
+        "zh": "雷诺大师课五大核心技术模块"
       },
       "subtitle": {
         "de": "Vollständiges Schulungs- & Fachprogramm auf Basis der originalen Renner Academy Unterlagen",
@@ -187,12 +187,6 @@
           "ja": "モジュール 5",
           "zh": "模块 5"
         },
-        "s2_b6_badge": {
-          "de": "MODUL 6",
-          "en": "MODULE 6",
-          "ja": "モジュール 6",
-          "zh": "模块 6"
-        },
         "s2_c1_title": {
           "de": "Geschichte & Hauptsitz",
           "en": "History & Headquarters",
@@ -218,12 +212,6 @@
           "zh": "雅马哈升级套件 (Yamaha KIT)"
         },
         "s2_c5_title": {
-          "de": "Maßblätter Geometrie",
-          "en": "Dimension Sheets & Geometry",
-          "ja": "寸法仕様書とアクション幾何学",
-          "zh": "规格测量表与击弦机几何学"
-        },
-        "s2_c6_title": {
           "de": "Intonation",
           "en": "Voicing & Intonation",
           "ja": "整音技術（イントネーション）",
@@ -254,12 +242,6 @@
           "zh": "专为雅马哈三角钢琴打造的即装即用高定套件：出厂91°精准校准、预粘接、预整音FFW琴毡，45分钟快速无损换装。"
         },
         "s2_c5_desc": {
-          "de": "Standard-Bohrungslänge (Gesamtlänge - 24 mm), Bohrwinkel in Gon (100er-Teilung), 90°-Stielwinkel und 3 mm Überhang.",
-          "en": "Standard boring length (total length - 24 mm), boring angles in gon (decimal grade), 90° shank angle, and 3 mm overhang.",
-          "ja": "標準穴あけ長（全長 - 24 mm）、ゴン角度（100分法）、90°シャンク角度、3 mmオーバーハング測定。",
-          "zh": "标准钻孔深度（总长 - 24 mm）、百分度（Gon制）钻孔倾角、90°击弦柄角度与3 mm标准悬伸量精准定位。"
-        },
-        "s2_c6_desc": {
           "de": "Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.",
           "en": "The clock dial model, 4 dynamic sound wedges (ff, f, p, pp), pre-needling, string leveling, crown shaping, and una corda voicing.",
           "ja": "クロック（時計盤）モデル、4つのダイナミック領域（ff, f, p, pp）、事前針刺し、弦合わせ、クラウン研磨、ウナ・コルダ微調整。",
@@ -267,10 +249,10 @@
         }
       },
       "notes": {
-        "de": "Folie 2: Die 6 Kernmodule der Masterclass vorstellen: Geschichte & Hauptsitz Meuselwitz, Filz Herstellung in Wurzen, Hammerkopf Fertigung, das neue Yamaha KIT als Highlight, Maßblätter Geometrie sowie die Hohe Schule der Intonation.",
-        "en": "Slide 2: Introduce the 6 core modules of the masterclass: History & Headquarters in Meuselwitz, Felt Manufacturing in Wurzen, Hammerhead Production, the new Yamaha KIT as a highlight, Dimension Sheets & Geometry, and the Art of Voicing.",
-        "ja": "スライド 2: マスタークラスの6大主要モジュール（歴史とモイゼルヴィッツ新拠点、ヴルツェンでのフェルト製造、ハンマーヘッド製造、注目ハイライトのヤマハKIT、寸法仕様書と幾何学、至高の整音技術）を紹介します。",
-        "zh": "第 2 页：介绍大师课六大核心技术模块：品牌历史与莫伊瑟尔维茨新总部、德国顶尖纯羊毛毡制造工艺、高精弦槌精密制造、重磅新品雅马哈高定套件（Yamaha KIT）、规格测量表与击弦机几何学，以及极致声音整音艺术。"
+        "de": "Folie 2: Die 5 Kernmodule der Masterclass vorstellen: Geschichte & Hauptsitz Meuselwitz, Filz Herstellung in Wurzen, Hammerkopf Fertigung, das neue Yamaha KIT als Highlight sowie die Hohe Schule der Intonation.",
+        "en": "Slide 2: Introduce the 5 core modules of the masterclass: History & Headquarters in Meuselwitz, Felt Manufacturing in Wurzen, Hammerhead Production, the new Yamaha KIT as a highlight, and the Art of Voicing.",
+        "ja": "スライド 2: マスタークラスの5大主要モジュール（歴史とモイゼルヴィッツ新拠点、ヴルツェンでのフェルト製造、ハンマーヘッド製造、注目ハイライトのヤマハKIT、至高の整音技術）を紹介します。",
+        "zh": "第 2 页：介绍大师课五大核心技术模块：品牌历史与莫伊瑟尔维茨新总部、德国顶尖纯羊毛毡制造工艺、高精弦槌精密制造、重磅新品雅马哈高定套件（Yamaha KIT），以及极致声音整音艺术。"
       }
     },
     "slide_03": {
@@ -4325,1748 +4307,14 @@
       "slide_number": 35,
       "chapter": 5,
       "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Erfassungsbogen",
-        "en": "Part 5: Maßblätter & Geometrie • Erfassungsbogen",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "Das Renner Hammerkopf-Maßblatt (Flügel & Klavier)",
-        "en": "The Renner Hammerhead Specification Sheet (Grand)",
-        "ja": "レンナー公式ハンマーヘッド仕様測定シート（グランド用）",
-        "zh": "德国雷诺官方原厂三角琴弦槌精准参数测绘表"
-      },
-      "subtitle": {
-        "de": "Vollständige Erfassung aller Geometriedaten für einbaufertige Hämmer",
-        "en": "Comprehensive capture of all geometric data for drop-in ready hammer sets",
-        "ja": "Vollständige Erfassung aller Geometriedaten für einbaufertige Hämmer",
-        "zh": "Vollständige Erfassung aller Geometriedaten für einbaufertige Hämmer"
-      },
-      "elements": {
-        "s35_bullet_1": {
-          "de": "<strong>Basisdaten des Instruments:</strong> Hersteller, Seriennummer, Modell, Baujahr (z. B. Steinway & Sons M 170 #535100 von 1996).",
-          "en": "<strong>Instrument Baseline Data:</strong> Maker, serial number, model, year of build (e.g. Steinway & Sons M 170 #535100 from 1996).",
-          "ja": "<strong>Basisdaten des Instruments:</strong> Hersteller, Seriennummer, Modell, Baujahr (z. B. Steinway & Sons M 170 #535100 von 1996).",
-          "zh": "<strong>Basisdaten des Instruments:</strong> Hersteller, Seriennummer, Modell, Baujahr (z. B. Steinway & Sons M 170 #535100 von 1996)."
-        },
-        "s35_bullet_2": {
-          "de": "<strong>Oft genügen Basisdaten:</strong> Bei renommierten Marken reichen diese Angaben bereits aus, damit Renner einen exakt passenden, gebohrten Satz liefert.",
-          "en": "<strong>Baseline Data Frequently Sufficient:</strong> For renowned brands, these parameters allow Renner to supply an exact bored set directly.",
-          "ja": "<strong>Oft genügen Basisdaten:</strong> Bei renommierten Marken reichen diese Angaben bereits aus, damit Renner einen exakt passenden, gebohrten Satz liefert.",
-          "zh": "<strong>Oft genügen Basisdaten:</strong> Bei renommierten Marken reichen diese Angaben bereits aus, damit Renner einen exakt passenden, gebohrten Satz liefert."
-        },
-        "s35_bullet_3": {
-          "de": "<strong>Präzise Einzelmaße:</strong> Bei unbekannten oder modifizierten Flügeln werden Gesamtlänge, Bohrungslänge, Stärke und Winkel erfasst.",
-          "en": "<strong>Precise Dimensional Records:</strong> For vintage, obscure, or modified pianos, total length, boring depth, thickness, and angles are recorded.",
-          "ja": "<strong>Präzise Einzelmaße:</strong> Bei unbekannten oder modifizierten Flügeln werden Gesamtlänge, Bohrungslänge, Stärke und Winkel erfasst.",
-          "zh": "<strong>Präzise Einzelmaße:</strong> Bei unbekannten oder modifizierten Flügeln werden Gesamtlänge, Bohrungslänge, Stärke und Winkel erfasst."
-        },
-        "s35_caption_1": {
-          "de": "Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere",
-          "en": "Original Renner hammerhead specification sheet for grand and upright pianos",
-          "ja": "Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere",
-          "zh": "Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere"
-        },
-        "s35_b1_badge": {
-          "de": "BESTELLSYSTEMATIK",
-          "en": "ORDERING SYSTEM",
-          "ja": "発注システム",
-          "zh": "订制规范"
-        },
-        "s35_b2_badge": {
-          "de": "MASSBLATT GP/UP",
-          "en": "SPEC SHEET GP/UP",
-          "ja": "仕様書 GP/UP",
-          "zh": "三角/立式规格表"
-        }
-      },
-      "notes": {
-        "de": "Folie 35: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 35: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 35: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 35 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_36": {
-      "slide_number": 36,
-      "chapter": 5,
-      "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Datenbank",
-        "en": "Part 5: Maßblätter & Geometrie • Datenbank",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "Werksspezifikationen für alle Weltmarken",
-        "en": "Factory Specifications for All World-Class Piano Brands",
-        "ja": "世界の主要名器ブランド別純正リペア仕様",
-        "zh": "覆盖全球所有顶级钢琴名厂的原厂工程测绘档案库"
-      },
-      "subtitle": {
-        "de": "Hunderte vorgebohrte Standard-Reparatursätze sofort lieferbar",
-        "en": "Hundreds of pre-bored standard replacement sets available immediately",
-        "ja": "Hunderte vorgebohrte Standard-Reparatursätze sofort lieferbar",
-        "zh": "Hunderte vorgebohrte Standard-Reparatursätze sofort lieferbar"
-      },
-      "elements": {
-        "s36_c1_title": {
-          "de": "• Steinway & Sons",
-          "en": "• Steinway & Sons",
-          "ja": "• Steinway & Sons",
-          "zh": "• Steinway & Sons"
-        },
-        "s36_c2_title": {
-          "de": "• C. Bechstein",
-          "en": "• C. Bechstein",
-          "ja": "• C. Bechstein",
-          "zh": "• C. Bechstein"
-        },
-        "s36_c3_title": {
-          "de": "• Bösendorfer",
-          "en": "• Bösendorfer",
-          "ja": "• Bösendorfer",
-          "zh": "• Bösendorfer"
-        },
-        "s36_c4_title": {
-          "de": "• Julius Blüthner",
-          "en": "• Julius Blüthner",
-          "ja": "• Julius Blüthner",
-          "zh": "• Julius Blüthner"
-        },
-        "s36_c5_title": {
-          "de": "• Wilhelm Schimmel",
-          "en": "• Wilhelm Schimmel",
-          "ja": "• Wilhelm Schimmel",
-          "zh": "• Wilhelm Schimmel"
-        },
-        "s36_c6_title": {
-          "de": "• Steingraeber & Söhne",
-          "en": "• Steingraeber & Söhne",
-          "ja": "• Steingraeber & Söhne",
-          "zh": "• Steingraeber & Söhne"
-        },
-        "s36_c7_title": {
-          "de": "• August Förster",
-          "en": "• August Förster",
-          "ja": "• August Förster",
-          "zh": "• August Förster"
-        },
-        "s36_c8_title": {
-          "de": "• Yamaha & Kawai",
-          "en": "• Yamaha & Kawai",
-          "ja": "• Yamaha & Kawai",
-          "zh": "• Yamaha & Kawai"
-        },
-        "s36_c1_desc": {
-          "de": "Alle Modelle & Epochen",
-          "en": "All models & historical eras",
-          "ja": "Alle Modelle & Epochen",
-          "zh": "Alle Modelle & Epochen"
-        },
-        "s36_c2_desc": {
-          "de": "Historisch & modern",
-          "en": "Historic & contemporary",
-          "ja": "Historisch & modern",
-          "zh": "Historisch & modern"
-        },
-        "s36_c3_desc": {
-          "de": "Sämtliche Längen",
-          "en": "Full spectrum of lengths",
-          "ja": "Sämtliche Längen",
-          "zh": "Sämtliche Längen"
-        },
-        "s36_c4_desc": {
-          "de": "Patent & Standard",
-          "en": "Patent & standard actions",
-          "ja": "Patent & Standard",
-          "zh": "Patent & Standard"
-        },
-        "s36_c5_desc": {
-          "de": "Flügel & Pianos",
-          "en": "Grands & uprights",
-          "ja": "Flügel & Pianos",
-          "zh": "Flügel & Pianos"
-        },
-        "s36_c6_desc": {
-          "de": "Konzertspezifikation",
-          "en": "Concert scale specifications",
-          "ja": "Konzertspezifikation",
-          "zh": "Konzertspezifikation"
-        },
-        "s36_c7_desc": {
-          "de": "Traditionsmaße",
-          "en": "Heritage traditional scaling",
-          "ja": "Traditionsmaße",
-          "zh": "Traditionsmaße"
-        },
-        "s36_c8_desc": {
-          "de": "C- / RX- / GX-Serie",
-          "en": "C / RX / GX series",
-          "ja": "C- / RX- / GX-Serie",
-          "zh": "C- / RX- / GX-Serie"
-        },
-        "s36_caption_1": {
-          "de": "Archivierte Renner Standard-Datensätze für weltweite Reparaturen",
-          "en": "Archived Renner standard datasets for worldwide restorations",
-          "ja": "Archivierte Renner Standard-Datensätze für weltweite Reparaturen",
-          "zh": "Archivierte Renner Standard-Datensätze für weltweite Reparaturen"
-        },
-        "s36_b1_badge": {
-          "de": "WERKSARCHIV",
-          "en": "FACTORY ARCHIVE",
-          "ja": "メーカーアーカイブ",
-          "zh": "百年数据档案"
-        },
-        "s36_b2_badge": {
-          "de": "GLOBALER STANDARD",
-          "en": "GLOBAL STANDARD",
-          "ja": "世界基準",
-          "zh": "世界名琴标准"
-        },
-        "s36_b3_badge": {
-          "de": ">BÖSENDORFER",
-          "en": ">BÖSENDORFER",
-          "ja": ">ベーゼンドルファー",
-          "zh": ">贝森朵夫"
-        },
-        "s36_b4_badge": {
-          "de": ">BLÜTHNER",
-          "en": ">BLÜTHNER",
-          "ja": ">ブリュートナー",
-          "zh": ">博兰斯勒"
-        },
-        "s36_b5_badge": {
-          "de": ">SCHIMMEL",
-          "en": ">SCHIMMEL",
-          "ja": ">シンメル",
-          "zh": ">舒密尔"
-        },
-        "s36_b6_badge": {
-          "de": ">STEINGRAEBER",
-          "en": ">STEINGRAEBER",
-          "ja": ">シュタイングレーバー",
-          "zh": ">施坦格列泊"
-        },
-        "s36_b7_badge": {
-          "de": ">FÖRSTER",
-          "en": ">FÖRSTER",
-          "ja": ">アウグスト・フェルスター",
-          "zh": ">奥古斯特·霍斯特"
-        },
-        "s36_b8_badge": {
-          "de": ">YAMAHA & KAWAI",
-          "en": ">YAMAHA & KAWAI",
-          "ja": ">ヤマハ＆カワイ",
-          "zh": ">雅马哈与卡瓦依"
-        },
-        "s36_b9_badge": {
-          "de": ">WERKSARCHIV",
-          "en": ">FACTORY ARCHIVE",
-          "ja": ">レンナー公式アーカイブ",
-          "zh": ">雷诺百年原厂图档"
-        }
-      },
-      "notes": {
-        "de": "Folie 36: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 36: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 36: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 36 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_37": {
-      "slide_number": 37,
-      "chapter": 5,
-      "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Standardparameter",
-        "en": "Part 5: Maßblätter & Geometrie • Standardparameter",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "Bohrungslänge = Gesamtlänge - 24 mm",
-        "en": "Boring Length = Total Length - 24 mm",
-        "ja": "ボウリング長 ＝ 全長 − 24 mm の基本法則",
-        "zh": "钻孔有效深度黄金计算公式：孔深 = 总长 - 24 mm"
-      },
-      "subtitle": {
-        "de": "Die universelle Faustformel für Flügelhammerköpfe im Renner-Standard",
-        "en": "The universal rule of thumb for grand hammerheads to Renner standards",
-        "ja": "Die universelle Faustformel für Flügelhammerköpfe im Renner-Standard",
-        "zh": "Die universelle Faustformel für Flügelhammerköpfe im Renner-Standard"
-      },
-      "elements": {
-        "s37_b1_badge": {
-          "de": "RENNER FAUSTFORMEL",
-          "en": "RENNER RULE OF THUMB",
-          "ja": "RENNER FAUSTFORMEL",
-          "zh": "RENNER FAUSTFORMEL"
-        },
-        "s37_b2_badge": {
-          "de": "BOHRUNG",
-          "en": "BORING DEPTH",
-          "ja": "BOHRUNG",
-          "zh": "BOHRUNG"
-        },
-        "s37_b3_badge": {
-          "de": "HAMMER-ZU-STIEL",
-          "en": "HAMMER-TO-SHANK",
-          "ja": "HAMMER-ZU-STIEL",
-          "zh": "HAMMER-ZU-STIEL"
-        },
-        "s37_b4_badge": {
-          "de": "RAKE-WINKEL",
-          "en": "RAKE ANGLE",
-          "ja": "RAKE-WINKEL",
-          "zh": "RAKE-WINKEL"
-        },
-        "s37_b5_badge": {
-          "de": "GEOMETRIE-NORM",
-          "en": "GEOMETRIC STANDARD",
-          "ja": "GEOMETRIE-NORM",
-          "zh": "GEOMETRIE-NORM"
-        },
-        "s37_c1_title": {
-          "de": "Länge = Gesamtlänge - 24 mm",
-          "en": "Length = Overall Length - 24 mm",
-          "ja": "Länge = Gesamtlänge - 24 mm",
-          "zh": "Länge = Gesamtlänge - 24 mm"
-        },
-        "s37_c1_desc": {
-          "de": "Exakte Einstecktiefe des Stiels.",
-          "en": "Exact insertion depth of the hammer shank.",
-          "ja": "Exakte Einstecktiefe des Stiels.",
-          "zh": "Exakte Einstecktiefe des Stiels."
-        },
-        "s37_c2_desc": {
-          "de": "Passend für Renner Konusstiele.",
-          "en": "Matching Renner conical shanks.",
-          "ja": "Passend für Renner Konusstiele.",
-          "zh": "Passend für Renner Konusstiele."
-        },
-        "s37_c3_desc": {
-          "de": "Rechtwinkligkeit zur Saitenebene.",
-          "en": "Strict perpendicularity to the string plane.",
-          "ja": "Rechtwinkligkeit zur Saitenebene.",
-          "zh": "Rechtwinkligkeit zur Saitenebene."
-        },
-        "s37_c4_desc": {
-          "de": "Leichte Vorneigung beim Einleimen.",
-          "en": "Slight forward pitch when gluing.",
-          "ja": "Leichte Vorneigung beim Einleimen.",
-          "zh": "Leichte Vorneigung beim Einleimen."
-        },
-        "s37_caption_1": {
-          "de": "Standardmaße der Flügelhammerkopf-Bohrung",
-          "en": "Standard dimensions of grand hammerhead boring",
-          "ja": "Standardmaße der Flügelhammerkopf-Bohrung",
-          "zh": "Standardmaße der Flügelhammerkopf-Bohrung"
-        },
-        "s37_caption_2": {
-          "de": "nach Renner-Norm",
-          "en": "to Renner engineering standards",
-          "ja": "nach Renner-Norm",
-          "zh": "nach Renner-Norm"
-        }
-      },
-      "notes": {
-        "de": "Folie 37: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 37: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 37: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 37 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_38": {
-      "slide_number": 38,
-      "chapter": 5,
-      "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Gon-Winkel",
-        "en": "Part 5: Maßblätter & Geometrie • Gon-Winkel",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "Bohrwinkel in Gon (100er-Teilung des 90°-Winkels)",
-        "en": "Boring Angles in Gon (100-Part 90° Division)",
-        "ja": "ゴン（Gon）単位による打弦穴角度の精密指定（90°=100gon）",
-        "zh": "采用百分度（Gon）标定钻孔偏角（90°直角等分100Gon）"
-      },
-      "subtitle": {
-        "de": "Warum Renner Bohrwinkel traditionell in Gon statt in Grad angibt",
-        "en": "Why Renner traditionally specifies boring angles in gon rather than degrees",
-        "ja": "Warum Renner Bohrwinkel traditionell in Gon statt in Grad angibt",
-        "zh": "Warum Renner Bohrwinkel traditionell in Gon statt in Grad angibt"
-      },
-      "elements": {
-        "s38_b1_badge": {
-          "de": "WINKELNORM",
-          "en": "ANGLE STANDARD",
-          "ja": "WINKELNORM",
-          "zh": "WINKELNORM"
-        },
-        "s38_b2_badge": {
-          "de": "BOHRWINKEL-TABELLE",
-          "en": "BORING ANGLE TABLE",
-          "ja": "BOHRWINKEL-TABELLE",
-          "zh": "BOHRWINKEL-TABELLE"
-        },
-        "s38_c1_title": {
-          "de": "Zehntelgrad-genaue Teilung ohne Bruchminuten",
-          "en": "Decimal-grade divisions without fractional minutes",
-          "ja": "Zehntelgrad-genaue Teilung ohne Bruchminuten",
-          "zh": "Zehntelgrad-genaue Teilung ohne Bruchminuten"
-        },
-        "s38_c1_desc": {
-          "de": "Gon ermöglicht feinere, zehntelgrad-genaue Teilungen ohne Bruchminuten. Normalwerte:",
-          "en": "Gon (gradians) enables finer, decimal-accurate angle division without fractional arc minutes. Typical values:",
-          "ja": "Gon ermöglicht feinere, zehntelgrad-genaue Teilungen ohne Bruchminuten. Normalwerte:",
-          "zh": "Gon ermöglicht feinere, zehntelgrad-genaue Teilungen ohne Bruchminuten. Normalwerte:"
-        },
-        "s38_caption_1": {
-          "de": "Bohrwinkeltabelle in Gon",
-          "en": "Boring angle schedule in gon",
-          "ja": "Bohrwinkeltabelle in Gon",
-          "zh": "Bohrwinkeltabelle in Gon"
-        },
-        "s38_caption_2": {
-          "de": "über die verschiedenen Register",
-          "en": "across the piano registers",
-          "ja": "über die verschiedenen Register",
-          "zh": "über die verschiedenen Register"
-        },
-        "s38_bullet_1": {
-          "de": "Klavier (UP):",
-          "en": "Upright (UP):",
-          "ja": "アップライトピアノ (UP)：",
-          "zh": "立式钢琴 (UP)："
-        },
-        "s38_bullet_2": {
-          "de": "Flügel (GP):",
-          "en": "Grand (GP):",
-          "ja": "グランドピアノ (GP)：",
-          "zh": "三角钢琴 (GP)："
-        },
-        "s38_bullet_3": {
-          "de": "Staffelung nach Chören:",
-          "en": "Gradation across Registers:",
-          "ja": "音域ごとの傾斜ステップ配分：",
-          "zh": "全琴弦组阶梯过渡："
-        }
-      },
-      "notes": {
-        "de": "Folie 38: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 38: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 38: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 38 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_39": {
-      "slide_number": 39,
-      "chapter": 5,
-      "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Stielwinkel-Physik",
-        "en": "Part 5: Maßblätter & Geometrie • Stielwinkel-Physik",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "90°-Stielwinkel & 3 mm Überhang: Physik des Tons",
-        "en": "90° Shank Strike Angle & 3 mm Overhang: Physics of Tone",
-        "ja": "打弦角90度と3mmオーバーハングの音響物理学",
-        "zh": "琴柄90°直角击弦瞬间与3mm外伸量：音色动态物理学定律"
-      },
-      "subtitle": {
-        "de": "Warum übermäßige Abschliffe alter Hämmer den Saitenbruch provozieren",
-        "en": "Why excessive filing of worn hammers provokes premature string breakage",
-        "ja": "Warum übermäßige Abschliffe alter Hämmer den Saitenbruch provozieren",
-        "zh": "Warum übermäßige Abschliffe alter Hämmer den Saitenbruch provozieren"
-      },
-      "elements": {
-        "s39_b1_badge": {
-          "de": "KRAFTVEKTOR",
-          "en": "FORCE VECTOR",
-          "ja": "KRAFTVEKTOR",
-          "zh": "KRAFTVEKTOR"
-        },
-        "s39_c1_title": {
-          "de": "Rechtwinkliger Anschlag",
-          "en": "Perpendicular Strike",
-          "ja": "Rechtwinkliger Anschlag",
-          "zh": "Rechtwinkliger Anschlag"
-        },
-        "s39_c2_title": {
-          "de": "Stielüberhang",
-          "en": "Shank Overhang",
-          "ja": "Stielüberhang",
-          "zh": "Stielüberhang"
-        },
-        "s39_c1_desc": {
-          "de": "Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Der Stiel muss ca. 3 mm Überhang haben. Durch die Massenträgheit wird die kinetische Energie gezielt in Richtung Steg geleitet!",
-          "en": "At the moment of string impact, the hammer must strike at an exact 90° angle. The shank must have approx. 3 mm overhang. Through inertia, strike energy is channeled directly toward the soundboard bridge!",
-          "ja": "Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Der Stiel muss ca. 3 mm Überhang haben. Durch die Massenträgheit wird die kinetische Energie gezielt in Richtung Steg geleitet!",
-          "zh": "Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Der Stiel muss ca. 3 mm Überhang haben. Durch die Massenträgheit wird die kinetische Energie gezielt in Richtung Steg geleitet!"
-        },
-        "s39_caption_1": {
-          "de": "Geometrie des Hammerstielwinkels",
-          "en": "Geometry of hammer shank angle",
-          "ja": "Geometrie des Hammerstielwinkels",
-          "zh": "Geometrie des Hammerstielwinkels"
-        },
-        "s39_caption_2": {
-          "de": "und Kraftvektor zum Steg",
-          "en": "and force vector toward the bridge",
-          "ja": "und Kraftvektor zum Steg",
-          "zh": "und Kraftvektor zum Steg"
-        },
-        "s39_bullet_1": {
-          "de": "Gefahr bei < 90°:",
-          "en": "Risk at < 90°:",
-          "ja": "90°未満の危険性：",
-          "zh": "< 90° 的破坏性隐患："
-        }
-      },
-      "notes": {
-        "de": "Folie 39: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 39: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 39: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 39 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_40": {
-      "slide_number": 40,
-      "chapter": 5,
-      "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Längenberechnung",
-        "en": "Part 5: Maßblätter & Geometrie • Längenberechnung",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "Berechnung der Bohrungslänge ohne Muster",
-        "en": "Calculating Boring Length without Existing Samples",
-        "ja": "現物サンプルがない場合のボウリング長算出4ステップ",
-        "zh": "无旧槌对照样品时逆向推导钻孔深度的四步工程测算法"
-      },
-      "subtitle": {
-        "de": "Die bewährte 4-Schritte-Methode der Renner Academy",
-        "en": "The proven 4-step calculation method developed by Renner Academy",
-        "ja": "Die bewährte 4-Schritte-Methode der Renner Academy",
-        "zh": "Die bewährte 4-Schritte-Methode der Renner Academy"
-      },
-      "elements": {
-        "s40_c1_title": {
-          "de": "Die 4-Schritte-Berechnungsformel:",
-          "en": "The 4-Step Calculation Formula:",
-          "ja": "Die 4-Schritte-Berechnungsformel:",
-          "zh": "Die 4-Schritte-Berechnungsformel:"
-        },
-        "s40_caption_1": {
-          "de": "Messschema zur Ermittlung der Bohrungslänge im Flügel",
-          "en": "Measurement diagram for determining hammer boring depth in grands",
-          "ja": "Messschema zur Ermittlung der Bohrungslänge im Flügel",
-          "zh": "Messschema zur Ermittlung der Bohrungslänge im Flügel"
-        },
-        "s40_b1_badge": {
-          "de": "FORMEL-BERECHNUNG",
-          "en": "FORMULA CALCULATION",
-          "ja": "計算式算出",
-          "zh": "公式推导"
-        },
-        "s40_b2_badge": {
-          "de": "GEOMETRISCHE ACHSE",
-          "en": "GEOMETRIC AXIS",
-          "ja": "幾何学的基準軸",
-          "zh": "几何中心轴"
-        },
-        "s40_bullet_1": {
-          "de": "<strong>1. Steighöhe & Tastenweg:</strong> Mechanikhub (46–48 mm) und Spieltiefe (10–10,5 mm) exakt einmessen.",
-          "en": "<strong>1. Blow Distance & Key Dip:</strong> Measure action blow distance (46–48 mm) and key dip (10–10.5 mm) precisely.",
-          "ja": "<strong>1. 打弦距離とキーの深さ：</strong> アクションの打弦距離（46〜48 mm）とキーの深さ（10〜10.5 mm）を正確に測定。",
-          "zh": "<strong>1. 开门与下中深度：</strong> 精确测量击弦距离（46–48 mm）和琴键下沉深度（10–10.5 mm）。"
-        },
-        "s40_bullet_2": {
-          "de": "<strong>2. Schnabellinie bestimmen:</strong> Höhe der Kapselleiste zur Saitenunterkante als Referenzmaß nehmen.",
-          "en": "<strong>2. Flange Rail Reference:</strong> Use height of flange rail relative to string underside as datum plane.",
-          "ja": "<strong>2. フレンジレールの基準線：</strong> 弦下面に対するフレンジレールの高さを基準面として設定。",
-          "zh": "<strong>2. 弦总成基准线：</strong> 以微调总成轨道至琴弦下沿的高度作为基准基面。"
-        },
-        "s40_bullet_3": {
-          "de": "<strong>3. Faustformel anwenden:</strong> Bohrungslänge = Gesamtlänge - 24 mm für Standard-Flügelgeometrien.",
-          "en": "<strong>3. Apply Rule of Thumb:</strong> Boring length = overall length - 24 mm for standard grand piano geometries.",
-          "ja": "<strong>3. 基本公式の適用：</strong> 標準的なグランドピアノではボア長＝全長 - 24 mm。",
-          "zh": "<strong>3. 应用核心公式：</strong> 标准三角琴规格采用 钻孔长度 = 总长 - 24 mm。"
-        },
-        "s40_bullet_4": {
-          "de": "<strong>4. Mathematische Kontrolle:</strong> Stielüberstand von mindestens 3 mm für Festigkeit berücksichtigen.",
-          "en": "<strong>4. Mathematical Verification:</strong> Ensure a shank protrusion of at least 3 mm for structural integrity.",
-          "ja": "<strong>4. 数学的検証：</strong> 強度確保のためシャンク突出量が最低3 mmあることを確認。",
-          "zh": "<strong>4. 数学复核校验：</strong> 确保留出至少 3 mm 的柄头余量以保障抗剪强度。"
-        }
-      },
-      "notes": {
-        "de": "Folie 40: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 40: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 40: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 40 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_41": {
-      "slide_number": 41,
-      "chapter": 5,
-      "chapter_name": {
-        "de": "Teil 5: Maßblätter & Geometrie",
-        "en": "Part 5: Measurement Sheets & Geometry",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "category": {
-        "de": "Teil 5: Maßblätter & Geometrie • Dokumentation",
-        "en": "Part 5: Maßblätter & Geometrie • Dokumentation",
-        "ja": "第5部：寸法表・幾何学的設計",
-        "zh": "第五部分：参数测绘表与击弦几何学"
-      },
-      "title": {
-        "de": "Flügel- & Klavier-Maßblätter im Vergleich",
-        "en": "Comparing Grand & Upright Measurement Sheets",
-        "ja": "グランド用とアップライト用の仕様シート徹底比較",
-        "zh": "三角琴与立式琴核心几何测绘表的关键差异全解析"
-      },
-      "subtitle": {
-        "de": "Schritt-für-Schritt Ausfüllhilfe für Großreparaturen und Neubauten",
-        "en": "Step-by-step documentation guide for comprehensive restorations and new builds",
-        "ja": "Schritt-für-Schritt Ausfüllhilfe für Großreparaturen und Neubauten",
-        "zh": "Schritt-für-Schritt Ausfüllhilfe für Großreparaturen und Neubauten"
-      },
-      "elements": {
-        "s41_c1_title": {
-          "de": "Grand Piano (GP) Formular",
-          "en": "Grand Piano (GP) Form",
-          "ja": "Grand Piano (GP) Formular",
-          "zh": "Grand Piano (GP) Formular"
-        },
-        "s41_c2_title": {
-          "de": "Upright Piano (UP) Formular",
-          "en": "Upright Piano (UP) Form",
-          "ja": "Upright Piano (UP) Formular",
-          "zh": "Upright Piano (UP) Formular"
-        },
-        "s41_c1_desc": {
-          "de": "Fokus auf Gesamtlänge, Bohrungslänge, Stielachse, Steigungswinkel und Rake-Winkel (91° Lehre). Speziell für Flach- und Konzertflügel.",
-          "en": "Focus on overall length, boring depth, shank center, rake angle (91° gauge), and lift angle. Specially designed for salon and concert grands.",
-          "ja": "Fokus auf Gesamtlänge, Bohrungslänge, Stielachse, Steigungswinkel und Rake-Winkel (91° Lehre). Speziell für Flach- und Konzertflügel.",
-          "zh": "Fokus auf Gesamtlänge, Bohrungslänge, Stielachse, Steigungswinkel und Rake-Winkel (91° Lehre). Speziell für Flach- und Konzertflügel."
-        },
-        "s41_c2_desc": {
-          "de": "Erfassung von Nussbohrung, Nusskapsel, Hammerlänge ab Achse und Steigungswinkel für Pianinos und Konzertklaviere.",
-          "en": "Recording butt boring, butt flange, hammer length from pin axis, and rake angles for uprights and concert verticals.",
-          "ja": "Erfassung von Nussbohrung, Nusskapsel, Hammerlänge ab Achse und Steigungswinkel für Pianinos und Konzertklaviere.",
-          "zh": "Erfassung von Nussbohrung, Nusskapsel, Hammerlänge ab Achse und Steigungswinkel für Pianinos und Konzertklaviere."
-        },
-        "s41_caption_1": {
-          "de": "Ausfüllfertiges GP-Maßblatt der Renner Academy",
-          "en": "Ready-to-use GP dimension sheet from the Renner Academy",
-          "ja": "Ausfüllfertiges GP-Maßblatt der Renner Academy",
-          "zh": "Ausfüllfertiges GP-Maßblatt der Renner Academy"
-        },
-        "s41_b1_badge": {
-          "de": "FLÜGEL (GP)",
-          "en": "GRAND PIANO (GP)",
-          "ja": "グランドピアノ（GP）",
-          "zh": "三角琴（GP）"
-        },
-        "s41_b2_badge": {
-          "de": "KLAVIER (UP)",
-          "en": "UPRIGHT PIANO (UP)",
-          "ja": "アップライトピアノ（UP）",
-          "zh": "立式琴（UP）"
-        },
-        "s41_b3_badge": {
-          "de": ">DIAGNOSEBLATT",
-          "en": ">DIAGNOSIS SHEET",
-          "ja": ">診断シート",
-          "zh": ">声学诊断表"
-        }
-      },
-      "notes": {
-        "de": "Folie 41: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 41: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 41: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 41 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_42": {
-      "slide_number": 42,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 1: Stielmontage",
-        "en": "Part 6: Assembly & Verleimen • Schritt 1: Stielmontage",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Vormontage der Hammerstiele & Spezialschrauben",
-        "en": "Pre-Assembly of Hammer Shanks & Alignment",
-        "ja": "ハンマーシャンクの事前組み込みと専用工具",
-        "zh": "安装前槌柄法兰的预装校准与专用工具定位"
-      },
-      "subtitle": {
-        "de": "Renner Kapselschrauben 4,5x22 mm mit Tellerfedern und Kapselabstandhalter",
-        "en": "Pre-assembly in field sections according to piano scale division",
-        "ja": "Renner Kapselschrauben 4,5x22 mm mit Tellerfedern und Kapselabstandhalter",
-        "zh": "Renner Kapselschrauben 4,5x22 mm mit Tellerfedern und Kapselabstandhalter"
-      },
-      "elements": {
-        "s42_bullet_1": {
-          "de": "<strong>Vormontage in Feldern:</strong> Stiele nach Registerverteilung aufstecken; 1–2 Positionen zwischen Feldern frei lassen.",
-          "en": "<strong>Distribution in Sections:</strong> Mount shanks in sections according to string division, leaving 1-2 positions open between sections.",
-          "ja": "<strong>Vormontage in Feldern:</strong> Stiele nach Registerverteilung aufstecken; 1–2 Positionen zwischen Feldern frei lassen.",
-          "zh": "<strong>Vormontage in Feldern:</strong> Stiele nach Registerverteilung aufstecken; 1–2 Positionen zwischen Feldern frei lassen."
-        },
-        "s42_bullet_2": {
-          "de": "<strong>Gewindegang finden:</strong> Bei gebrauchten Leisten Schraube zuerst leicht nach links drehen, bis sie spürbar in den alten Gewindegang einrastet.",
-          "en": "<strong>Starting in the Treble:</strong> Begin from note 88 working down toward bass, following Renner's factory packaging order.",
-          "ja": "<strong>Gewindegang finden:</strong> Bei gebrauchten Leisten Schraube zuerst leicht nach links drehen, bis sie spürbar in den alten Gewindegang einrastet.",
-          "zh": "<strong>Gewindegang finden:</strong> Bei gebrauchten Leisten Schraube zuerst leicht nach links drehen, bis sie spürbar in den alten Gewindegang einrastet."
-        },
-        "s42_bullet_3": {
-          "de": "<strong>Renner Flanschschraube (Art. 43-0008745):</strong> 4,5x22 mm mit Tellerfeder-Scheibe und kombiniertem Schlitz/Kreuzschlitz.",
-          "en": "<strong>Left-Hand Thread Catch:</strong> On used action rails, turn the screw counter-clockwise first until it drops into the existing thread pitch, then tighten lightly.",
-          "ja": "<strong>Renner Flanschschraube (Art. 43-0008745):</strong> 4,5x22 mm mit Tellerfeder-Scheibe und kombiniertem Schlitz/Kreuzschlitz.",
-          "zh": "<strong>Renner Flanschschraube (Art. 43-0008745):</strong> 4,5x22 mm mit Tellerfeder-Scheibe und kombiniertem Schlitz/Kreuzschlitz."
-        },
-        "s42_bullet_4": {
-          "de": "<strong>Werkzeuge:</strong> PZD 2 Ballengriff-Schraubendreher (Art. 43-0008316) und Kapselabstandhalter (Art. 43-0003286).",
-          "en": "<strong>New Screws with Disc Springs:</strong> Recommended: Renner screws with spring washers (item no. 43-0008745) for clean seating.",
-          "ja": "<strong>Werkzeuge:</strong> PZD 2 Ballengriff-Schraubendreher (Art. 43-0008316) und Kapselabstandhalter (Art. 43-0003286).",
-          "zh": "<strong>Werkzeuge:</strong> PZD 2 Ballengriff-Schraubendreher (Art. 43-0008316) und Kapselabstandhalter (Art. 43-0003286)."
-        },
-        "s42_caption_1": {
-          "de": "Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock",
-          "en": "Pre-mounting hammer shanks on the action rail in scale sections",
-          "ja": "Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock",
-          "zh": "Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock"
-        },
-        "s42_b1_badge": {
-          "de": "MONTAGE-SCHRITT 01",
-          "en": "ASSEMBLY STEP 01",
-          "ja": "組立工程 01",
-          "zh": "装配步骤 01"
-        },
-        "s42_b2_badge": {
-          "de": "SPACING-KONTROLLE",
-          "en": "SPACING CHECK",
-          "ja": "間隔調整",
-          "zh": "均等间距校验"
-        }
-      },
-      "notes": {
-        "de": "Folie 42: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 42: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 42: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 42 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_43": {
-      "slide_number": 43,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 2: Frequenzabgleich",
-        "en": "Part 6: Assembly & Verleimen • Schritt 2: Frequenzabgleich",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Frequenzprüfung & Akustische Sortierung",
-        "en": "Frequency Testing & Acoustic Shank Sorting",
-        "ja": "固有振動数（ピッチ）テストとシャンクの音響選別",
-        "zh": "敲击音频频率测定：整套槌柄声学校准与按音区排序"
-      },
-      "subtitle": {
-        "de": "Abklopfen der montierten Stiele: Tiefer Ton im Bass, hohe Resonanz im Diskant",
-        "en": "Acoustic frequency pairing of shanks to balance string response",
-        "ja": "Abklopfen der montierten Stiele: Tiefer Ton im Bass, hohe Resonanz im Diskant",
-        "zh": "Abklopfen der montierten Stiele: Tiefer Ton im Bass, hohe Resonanz im Diskant"
-      },
-      "elements": {
-        "s43_bullet_1": {
-          "de": "<strong>Klangprobe durch Antippen:</strong> Jeder Stiel wird sanft angeklopft und seine Eigenresonanz belauscht.",
-          "en": "<strong>Tapping Shanks:</strong> Lightly tapping unglued hammer shanks against the rail reveals their acoustic pitch.",
-          "ja": "<strong>Klangprobe durch Antippen:</strong> Jeder Stiel wird sanft angeklopft und seine Eigenresonanz belauscht.",
-          "zh": "<strong>Klangprobe durch Antippen:</strong> Jeder Stiel wird sanft angeklopft und seine Eigenresonanz belauscht."
-        },
-        "s43_bullet_2": {
-          "de": "<strong>Harmonischer Tonverlauf:</strong> Stiele mit tieferer Resonanzfrequenz gehören in den Bass, mittlere in die Mittellage, helle hohe Resonanzen in den Diskant.",
-          "en": "<strong>Ascending Frequency:</strong> Group shanks with ascending resonance frequency from bass to high treble.",
-          "ja": "<strong>Harmonischer Tonverlauf:</strong> Stiele mit tieferer Resonanzfrequenz gehören in den Bass, mittlere in die Mittellage, helle hohe Resonanzen in den Diskant.",
-          "zh": "<strong>Harmonischer Tonverlauf:</strong> Stiele mit tieferer Resonanzfrequenz gehören in den Bass, mittlere in die Mittellage, helle hohe Resonanzen in den Diskant."
-        },
-        "s43_bullet_3": {
-          "de": "<strong>Homogenes Spielgefühl:</strong> Diese akustische Sortierung verhindert Klangausreißer und ungleiche Energieübertragung.",
-          "en": "<strong>Acoustic Uniformity:</strong> Prevents isolated 'dead' notes and balances dynamic transmission across section breaks.",
-          "ja": "<strong>Homogenes Spielgefühl:</strong> Diese akustische Sortierung verhindert Klangausreißer und ungleiche Energieübertragung.",
-          "zh": "<strong>Homogenes Spielgefühl:</strong> Diese akustische Sortierung verhindert Klangausreißer und ungleiche Energieübertragung."
-        },
-        "s43_caption_1": {
-          "de": "Frequenzprüfung der Stiele vor dem festen Verschrauben",
-          "en": "Acoustic sorting and frequency pairing of hammer shanks",
-          "ja": "Frequenzprüfung der Stiele vor dem festen Verschrauben",
-          "zh": "Frequenzprüfung der Stiele vor dem festen Verschrauben"
-        },
-        "s43_b1_badge": {
-          "de": "AKUSTISCHE SELEKTION",
-          "en": "ACOUSTIC SELECTION",
-          "ja": "音響的選別",
-          "zh": "声学校正筛选"
-        },
-        "s43_b2_badge": {
-          "de": "KLANG-SELEKTION",
-          "en": "TONE MATCHING",
-          "ja": "トーンマッチング",
-          "zh": "频响共振配对"
-        },
-        "s43_c1_desc": {
-          "de": "Bevor die Schrauben endgültig angezogen werden, erfolgt die akustische Frequenzkontrolle jedes einzelnen Hammerstiels:",
-          "en": "Before tightening the screws permanently, the acoustic eigenfrequency of every hammer shank is verified:",
-          "ja": "ネジの最終本締めの前に、すべてのシャンクの固有振動周波数を音響測定します：",
-          "zh": "在紧固螺栓之前，必须对每一根弦槌柄进行独立的固有声学谐振频率核验："
-        }
-      },
-      "notes": {
-        "de": "Folie 43: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 43: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 43: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 43 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_44": {
-      "slide_number": 44,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 3: Traveling",
-        "en": "Part 6: Assembly & Verleimen • Schritt 3: Traveling",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Traveling: Gerader Stiellauf mit blauem Papier",
-        "en": "Traveling: Ensuring Straight Shank Travel with Paper Shims",
-        "ja": "トラベリング調整：紙テープによるシャンク直進補正",
-        "zh": "精准走槌调校（Traveling）：垫纸法确保槌柄轨迹垂直无偏"
-      },
-      "subtitle": {
-        "de": "Blaues einseitig klebendes Traveling-Papier 0,2 mm und Winkelfilzmesser",
-        "en": "Truing the shank path using blue paper under-spacers (Item 43-0005975)",
-        "ja": "Blaues einseitig klebendes Traveling-Papier 0,2 mm und Winkelfilzmesser",
-        "zh": "Blaues einseitig klebendes Traveling-Papier 0,2 mm und Winkelfilzmesser"
-      },
-      "elements": {
-        "s44_bullet_1": {
-          "de": "<strong>90°-Ausrichtung der Randstiele:</strong> Zuerst den ersten und letzten Stiel jedes Feldes rechtwinklig zur Leiste einrichten.",
-          "en": "<strong>90° Alignment of Boundary Shanks:</strong> Align the first and last shank of each section strictly perpendicular to the rail.",
-          "ja": "<strong>90°-Ausrichtung der Randstiele:</strong> Zuerst den ersten und letzten Stiel jedes Feldes rechtwinklig zur Leiste einrichten.",
-          "zh": "<strong>90°-Ausrichtung der Randstiele:</strong> Zuerst den ersten und letzten Stiel jedes Feldes rechtwinklig zur Leiste einrichten."
-        },
-        "s44_bullet_2": {
-          "de": "<strong>Traveling-Korrektur:</strong> Schief laufende Kapseln werden mit blauem, 0,2 mm dickem Klebepapier (Art. 43-0005975) unterfüttert.",
-          "en": "<strong>Traveling Correction:</strong> Shanks tracking off-center are corrected by placing 0.2 mm blue gummed paper (item 43-0005975) under the flange.",
-          "ja": "<strong>Traveling-Korrektur:</strong> Schief laufende Kapseln werden mit blauem, 0,2 mm dickem Klebepapier (Art. 43-0005975) unterfüttert.",
-          "zh": "<strong>Traveling-Korrektur:</strong> Schief laufende Kapseln werden mit blauem, 0,2 mm dickem Klebepapier (Art. 43-0005975) unterfüttert."
-        },
-        "s44_bullet_3": {
-          "de": "<strong>Winkelfilzmesser (Art. 43-0003252):</strong> Ermöglicht das saubere Unterschieben und Schneiden der Papierstreifen unter der Kapselsohle.",
-          "en": "<strong>Angled Felt Knife (Item 43-0003252):</strong> Enables clean insertion and trimming of paper shims under the flange base.",
-          "ja": "<strong>Winkelfilzmesser (Art. 43-0003252):</strong> Ermöglicht das saubere Unterschieben und Schneiden der Papierstreifen unter der Kapselsohle.",
-          "zh": "<strong>Winkelfilzmesser (Art. 43-0003252):</strong> Ermöglicht das saubere Unterschieben und Schneiden der Papierstreifen unter der Kapselsohle."
-        },
-        "s44_bullet_4": {
-          "de": "<strong>Feldverschiebung:</strong> Ganze Felder können bei älteren Flügeln gezielt nach links oder rechts korrigiert werden.",
-          "en": "<strong>Section Shifting:</strong> Entire scale sections in older grands can be systematically shifted left or right to align with string spacing.",
-          "ja": "<strong>Feldverschiebung:</strong> Ganze Felder können bei älteren Flügeln gezielt nach links oder rechts korrigiert werden.",
-          "zh": "<strong>Feldverschiebung:</strong> Ganze Felder können bei älteren Flügeln gezielt nach links oder rechts korrigiert werden."
-        },
-        "s44_caption_1": {
-          "de": "Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier",
-          "en": "Traveling hammer shanks with 0.2 mm blue gummed paper shims",
-          "ja": "Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier",
-          "zh": "Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier"
-        },
-        "s44_b1_badge": {
-          "de": "PRÄZISIONSAUSRICHTUNG",
-          "en": "PRECISION ALIGNMENT",
-          "ja": "精密垂直調整",
-          "zh": "垂直走行校正"
-        },
-        "s44_b2_badge": {
-          "de": "TRAVELING PAPER",
-          "en": "TRAVELING PAPER",
-          "ja": "トラベリングペーパー",
-          "zh": "走直校正衬纸"
-        }
-      },
-      "notes": {
-        "de": "Folie 44: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 44: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 44: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 44 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_45": {
-      "slide_number": 45,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 4: Vorbereitung",
-        "en": "Part 6: Assembly & Verleimen • Schritt 4: Vorbereitung",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Zwingende Neunummerierung vor dem Verleimen",
-        "en": "Mandatory Re-Numbering before Installation",
-        "ja": "接着作業前の番号付け直し（ナンバリング）の鉄則",
-        "zh": "拆盒后严格按声学刻度重新编号（1–88）的工艺铁律"
-      },
-      "subtitle": {
-        "de": "Warum die Tastennummern vor Beginn mit Bleistift neu aufgetragen werden müssen",
-        "en": "Why key numbers must be freshly applied in pencil prior to gluing",
-        "ja": "Warum die Tastennummern vor Beginn mit Bleistift neu aufgetragen werden müssen",
-        "zh": "Warum die Tastennummern vor Beginn mit Bleistift neu aufgetragen werden müssen"
-      },
-      "elements": {
-        "s45_bullet_1": {
-          "de": "<strong>Überzählige Hämmer aussortieren:</strong> Satz auf das Arbeitsbrett legen und Reservehämmer separieren.",
-          "en": "<strong>Sorting Out Spares:</strong> Lay the set out on the bench and separate extra spare hammers.",
-          "ja": "<strong>Überzählige Hämmer aussortieren:</strong> Satz auf das Arbeitsbrett legen und Reservehämmer separieren.",
-          "zh": "<strong>Überzählige Hämmer aussortieren:</strong> Satz auf das Arbeitsbrett legen und Reservehämmer separieren."
-        },
-        "s45_bullet_2": {
-          "de": "<strong>Gefahr des Nummernverlusts:</strong> Durch das Verjüngen der Hammerkerne (schmaler als Schnittbreite) werden Werkssignaturen oft weggeschliffen!",
-          "en": "<strong>Risk of Losing Numbers:</strong> Because hammer mouldings are tapered narrower than the cut width, factory markings are frequently planed off!",
-          "ja": "<strong>Gefahr des Nummernverlusts:</strong> Durch das Verjüngen der Hammerkerne (schmaler als Schnittbreite) werden Werkssignaturen oft weggeschliffen!",
-          "zh": "<strong>Gefahr des Nummernverlusts:</strong> Durch das Verjüngen der Hammerkerne (schmaler als Schnittbreite) werden Werkssignaturen oft weggeschliffen!"
-        },
-        "s45_bullet_3": {
-          "de": "<strong>Neunummerierung mit Bleistift:</strong> Alle 88 Hammerköpfe müssen vor dem Verleimen auf der Unterseite mit ihrer Tastennummer beschriftet werden.",
-          "en": "<strong>Re-Numbering in Pencil:</strong> All 88 hammerheads must be re-numbered on their underside with soft pencil before gluing begins.",
-          "ja": "<strong>Neunummerierung mit Bleistift:</strong> Alle 88 Hammerköpfe müssen vor dem Verleimen auf der Unterseite mit ihrer Tastennummer beschriftet werden.",
-          "zh": "<strong>Neunummerierung mit Bleistift:</strong> Alle 88 Hammerköpfe müssen vor dem Verleimen auf der Unterseite mit ihrer Tastennummer beschriftet werden."
-        },
-        "s45_caption_1": {
-          "de": "Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe",
-          "en": "Inspection, sorting, and manual re-numbering of hammerheads",
-          "ja": "Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe",
-          "zh": "Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe"
-        },
-        "s45_b1_badge": {
-          "de": "QUALITÄTSSICHERUNG",
-          "en": "QUALITY ASSURANCE",
-          "ja": "品質保証",
-          "zh": "品质保证"
-        },
-        "s45_b2_badge": {
-          "de": "SATZ-INTEGRITÄT",
-          "en": "SET INTEGRITY",
-          "ja": "セット順序管理",
-          "zh": "组序严格受控"
-        },
-        "s45_c1_desc": {
-          "de": "Jeder Renner-Hammerkopfsatz wird im Werk exakt gezählt, sortiert und ab Werk signiert. Dennoch gilt ein eiserner Grundsatz:",
-          "en": "Every Renner hammerhead set is precisely numbered, graded, and signed at the factory. Yet one golden rule applies:",
-          "ja": "すべてのレンナー製ハンマーセットは工場で厳格に刻印・選別されますが、鉄則があります：",
-          "zh": "每套雷诺弦槌在出厂前均经过严苛校准、排序与原厂封签。但始终遵循一条铁律："
-        }
-      },
-      "notes": {
-        "de": "Folie 45: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 45: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 45: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 45 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_46": {
-      "slide_number": 46,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 5: Aufreiben",
-        "en": "Part 6: Assembly & Verleimen • Schritt 5: Aufreiben",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Musterhämmer & Handreibahle ø 5,0 mm (Konus 1:50)",
-        "en": "Sample Hammers & Conical 1:50 Reaming (ø 5.0 mm)",
-        "ja": "基準ハンマーの選定と1:50テーパーリーマー加工",
-        "zh": "基准试装样槌设定与1:50圆锥度铰刀微米级扩孔"
-      },
-      "subtitle": {
-        "de": "Setzen der Referenzhämmer und Vorbereitung der konischen Bohrung",
-        "en": "Positioning reference sample hammers and preparing the conical bore",
-        "ja": "Setzen der Referenzhämmer und Vorbereitung der konischen Bohrung",
-        "zh": "Setzen der Referenzhämmer und Vorbereitung der konischen Bohrung"
-      },
-      "elements": {
-        "s46_bullet_1": {
-          "de": "<strong>Referenzhämmer setzen:</strong> Zuerst den ersten und letzten Hammer jedes Teilfeldes als Orientierungsmuster aufstecken.",
-          "en": "<strong>Setting Reference Hammers:</strong> Mount the first and last hammer of each section as visual guide samples.",
-          "ja": "<strong>Referenzhämmer setzen:</strong> Zuerst den ersten und letzten Hammer jedes Teilfeldes als Orientierungsmuster aufstecken.",
-          "zh": "<strong>Referenzhämmer setzen:</strong> Zuerst den ersten und letzten Hammer jedes Teilfeldes als Orientierungsmuster aufstecken."
-        },
-        "s46_bullet_2": {
-          "de": "<strong>Handreibahle (Art. 43-0003409):</strong> Reibahle ø 5,0 mm mit exaktem Konusmaß 1:50, Schneidrichtung stets im Uhrzeigersinn!",
-          "en": "<strong>Hand Reamer (Item 43-0003409):</strong> Reamer ø 5.0 mm with precise 1:50 taper; always rotate clockwise when cutting!",
-          "ja": "<strong>Handreibahle (Art. 43-0003409):</strong> Reibahle ø 5,0 mm mit exaktem Konusmaß 1:50, Schneidrichtung stets im Uhrzeigersinn!",
-          "zh": "<strong>Handreibahle (Art. 43-0003409):</strong> Reibahle ø 5,0 mm mit exaktem Konusmaß 1:50, Schneidrichtung stets im Uhrzeigersinn!"
-        },
-        "s46_bullet_3": {
-          "de": "<strong>Konisches Aufweiten:</strong> Die zylindrische Werksbohrung wird exakt auf die Konizität des Hammerstiels erweitert.",
-          "en": "<strong>Conical Reaming:</strong> The cylindrical factory bore is reamed to match the exact 1:50 taper of the Renner shank.",
-          "ja": "<strong>Konisches Aufweiten:</strong> Die zylindrische Werksbohrung wird exakt auf die Konizität des Hammerstiels erweitert.",
-          "zh": "<strong>Konisches Aufweiten:</strong> Die zylindrische Werksbohrung wird exakt auf die Konizität des Hammerstiels erweitert."
-        },
-        "s46_bullet_4": {
-          "de": "<strong>Spannung kontrollieren:</strong> Der Hammer muss sich ohne Klebstoff bereits fest und wackelfrei aufreiben lassen.",
-          "en": "<strong>Checking Friction Fit:</strong> The hammerhead must seat firmly and without wobble on the dry shank before adhesive is applied.",
-          "ja": "<strong>Spannung kontrollieren:</strong> Der Hammer muss sich ohne Klebstoff bereits fest und wackelfrei aufreiben lassen.",
-          "zh": "<strong>Spannung kontrollieren:</strong> Der Hammer muss sich ohne Klebstoff bereits fest und wackelfrei aufreiben lassen."
-        },
-        "s46_caption_1": {
-          "de": "Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung",
-          "en": "Hand reamer ø 5.0 mm (1:50) conically sizing the hammer bore",
-          "ja": "Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung",
-          "zh": "Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung"
-        },
-        "s46_b1_badge": {
-          "de": "REFERENZHÄMMER",
-          "en": "REFERENCE HAMMERS",
-          "ja": "基準ハンマー",
-          "zh": "基准定位槌"
-        },
-        "s46_b2_badge": {
-          "de": "KONISCHES REIBEN",
-          "en": "TAPER REAMING",
-          "ja": "テーパーリーミング",
-          "zh": "锥孔精准扩磨"
-        }
-      },
-      "notes": {
-        "de": "Folie 46: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 46: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 46: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 46 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_47": {
-      "slide_number": 47,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 6: Konus-Prinzip",
-        "en": "Part 6: Assembly & Verleimen • Schritt 6: Konus-Prinzip",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Konischer Stiel & Konische Bohrung: Die Physik",
-        "en": "The Taper Principle: Conical Shank & Conical Hole",
-        "ja": "テーパーの法則：円錐シャンクと円錐穴による接着剤封じ込め",
-        "zh": "圆锥机械力学闭锁原则：彻底杜绝胶水溢出污染击弦点"
-      },
-      "subtitle": {
-        "de": "Warum zylindrische Bohrungen versagen und Konizität unzerstörbar hält",
-        "en": "Why cylindrical bores fail and conical friction locking creates indestructible joints",
-        "ja": "Warum zylindrische Bohrungen versagen und Konizität unzerstörbar hält",
-        "zh": "Warum zylindrische Bohrungen versagen und Konizität unzerstörbar hält"
-      },
-      "elements": {
-        "s47_c1_title": {
-          "de": "Der Konus-Vorteil:",
-          "en": "The Conical Advantage:",
-          "ja": "Der Konus-Vorteil:",
-          "zh": "Der Konus-Vorteil:"
-        },
-        "s47_bullet_1": {
-          "de": "<strong>Kein Leimabstreifen:</strong> Bei zylindrischen Stielen wird der Leim beim Aufschieben nach außen geschoben – die Leimfuge verhungert.",
-          "en": "<strong>No Glue Scraping:</strong> With cylindrical shanks, sliding the head on pushes glue outward – starving the joint of adhesive.",
-          "ja": "<strong>Kein Leimabstreifen:</strong> Bei zylindrischen Stielen wird der Leim beim Aufschieben nach außen geschoben – die Leimfuge verhungert.",
-          "zh": "<strong>Kein Leimabstreifen:</strong> Bei zylindrischen Stielen wird der Leim beim Aufschieben nach außen geschoben – die Leimfuge verhungert."
-        },
-        "s47_bullet_2": {
-          "de": "<strong>Gleichmäßiger Leimfilm:</strong> Beim Konus berühren sich Holz und Bohrung erst auf den letzten Millimetern.",
-          "en": "<strong>Even Glue Film:</strong> With conical fits, wood surfaces make contact only across the final fraction of a millimeter.",
-          "ja": "<strong>Gleichmäßiger Leimfilm:</strong> Beim Konus berühren sich Holz und Bohrung erst auf den letzten Millimetern.",
-          "zh": "<strong>Gleichmäßiger Leimfilm:</strong> Beim Konus berühren sich Holz und Bohrung erst auf den letzten Millimetern."
-        },
-        "s47_bullet_3": {
-          "de": "<strong>Holzquellung als Keilverschluss:</strong> Durch das Wasser im Leim quillt das Holz in der Bohrung auf und arretiert den Stiel unlösbar.",
-          "en": "<strong>Wood Swelling Creates Wedge Lock:</strong> Moisture in the glue swells wood fibers in the bore, locking the shank in an unbreakable friction weld.",
-          "ja": "<strong>Holzquellung als Keilverschluss:</strong> Durch das Wasser im Leim quillt das Holz in der Bohrung auf und arretiert den Stiel unlösbar.",
-          "zh": "<strong>Holzquellung als Keilverschluss:</strong> Durch das Wasser im Leim quillt das Holz in der Bohrung auf und arretiert den Stiel unlösbar."
-        },
-        "s47_caption_1": {
-          "de": "Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung",
-          "en": "Cutaway diagram: Conical shank locked into conically reamed bore",
-          "ja": "Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung",
-          "zh": "Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung"
-        },
-        "s47_b1_badge": {
-          "de": "FORM- & KRAFTSCHLUSS",
-          "en": "POSITIVE FIT & LOCK",
-          "ja": "嵌合と締結",
-          "zh": "刚性形变自锁"
-        },
-        "s47_b2_badge": {
-          "de": "KEGELSITZ",
-          "en": "TAPER SEAT",
-          "ja": "テーパーシート",
-          "zh": "锥形紧密配合"
-        }
-      },
-      "notes": {
-        "de": "Folie 47: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 47: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 47: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 47 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_48": {
-      "slide_number": 48,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 7: Rake-Winkel",
-        "en": "Part 6: Assembly & Verleimen • Schritt 7: Rake-Winkel",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "91°-Rake-Winkel mit der Winkellehre",
-        "en": "Verifying 91° Rake Angle with Grand Hammer Gauge",
-        "ja": "91°レイクゲージによる傾斜角度の精密測定",
-        "zh": "使用91°专用量角规精密复核琴槌前倾角（Rake Angle）"
-      },
-      "subtitle": {
-        "de": "Präzise Neigungsmessung während des Aufsteckens und Verleimens",
-        "en": "Precise pitch angle verification during fitting and gluing",
-        "ja": "Präzise Neigungsmessung während des Aufsteckens und Verleimens",
-        "zh": "Präzise Neigungsmessung während des Aufsteckens und Verleimens"
-      },
-      "elements": {
-        "s48_bullet_1": {
-          "de": "<strong>Flügel-Hammerkopfwinkel-Lehre (Art. 43-0005650):</strong> Speziell kalibrierte 91°-Lehre für die Flügelmechanik.",
-          "en": "<strong>Grand Hammer Angle Gauge (Item 43-0005650):</strong> Specially calibrated 91° gauge designed for grand actions.",
-          "ja": "<strong>Flügel-Hammerkopfwinkel-Lehre (Art. 43-0005650):</strong> Speziell kalibrierte 91°-Lehre für die Flügelmechanik.",
-          "zh": "<strong>Flügel-Hammerkopfwinkel-Lehre (Art. 43-0005650):</strong> Speziell kalibrierte 91°-Lehre für die Flügelmechanik."
-        },
-        "s48_bullet_2": {
-          "de": "<strong>Warum 91°?</strong> Die minimale 1°-Neigung gleicht die spätere Stieldurchbiegung unter Anschlagslast exakt aus.",
-          "en": "<strong>Why 91°?</strong> The subtle 1° forward pitch exactly compensates for dynamic shank deflection under concert attack loads.",
-          "ja": "<strong>Warum 91°?</strong> Die minimale 1°-Neigung gleicht die spätere Stieldurchbiegung unter Anschlagslast exakt aus.",
-          "zh": "<strong>Warum 91°?</strong> Die minimale 1°-Neigung gleicht die spätere Stieldurchbiegung unter Anschlagslast exakt aus."
-        },
-        "s48_bullet_3": {
-          "de": "<strong>Kontrolle der Referenzhämmer:</strong> Erster und letzter Hammer jedes Feldes werden auf die 91°-Lehre justiert.",
-          "en": "<strong>Checking Reference Hammers:</strong> The first and last hammer of each section are precisely aligned to the 91° gauge.",
-          "ja": "<strong>Kontrolle der Referenzhämmer:</strong> Erster und letzter Hammer jedes Feldes werden auf die 91°-Lehre justiert.",
-          "zh": "<strong>Kontrolle der Referenzhämmer:</strong> Erster und letzter Hammer jedes Feldes werden auf die 91°-Lehre justiert."
-        },
-        "s48_caption_1": {
-          "de": "Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°",
-          "en": "Measuring with the authentic Renner 91° Grand Hammer Angle Gauge",
-          "ja": "Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°",
-          "zh": "Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°"
-        },
-        "s48_b1_badge": {
-          "de": "WINKELKALIBRIERUNG",
-          "en": "ANGLE CALIBRATION",
-          "ja": "角度校正",
-          "zh": "角度校准"
-        },
-        "s48_b2_badge": {
-          "de": "ANSCHLAGSWINKEL",
-          "en": "STRIKE ANGLE",
-          "ja": "打弦角度",
-          "zh": "击弦倾角"
-        }
-      },
-      "notes": {
-        "de": "Folie 48: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 48: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 48: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 48 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_49": {
-      "slide_number": 49,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 8: Leimauswahl",
-        "en": "Part 6: Assembly & Verleimen • Schritt 8: Leimauswahl",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Heißer Knochenleim vs. Hartholz-PVA-Leim",
-        "en": "Hot Hide Glue vs. Hardwood PVA Adhesives",
-        "ja": "温熱骨膠（膠）と高硬度木工用PVA接着剤の比較",
-        "zh": "天然温热动物骨胶与高硬度木工特种白乳胶性能深度对比"
-      },
-      "subtitle": {
-        "de": "Warmleimbecken, Perlleim, Hasenleim oder moderner D3-Weißleim",
-        "en": "Hot glue bath, pearl glue, rabbit glue vs. modern D3 PVA hardwood adhesive",
-        "ja": "Warmleimbecken, Perlleim, Hasenleim oder moderner D3-Weißleim",
-        "zh": "Warmleimbecken, Perlleim, Hasenleim oder moderner D3-Weißleim"
-      },
-      "elements": {
-        "s49_c1_title": {
-          "de": "Heißleim (Traditionelle Wahl)",
-          "en": "Hot Hide Glue (Traditional Choice)",
-          "ja": "Heißleim (Traditionelle Wahl)",
-          "zh": "Heißleim (Traditionelle Wahl)"
-        },
-        "s49_c2_title": {
-          "de": "PVA-Kaltleim (Moderne Wahl)",
-          "en": "PVA Cold Glue (Modern Choice)",
-          "ja": "PVA-Kaltleim (Moderne Wahl)",
-          "zh": "PVA-Kaltleim (Moderne Wahl)"
-        },
-        "s49_c3_title": {
-          "de": "Konsistenz-Regel:",
-          "en": "Viscosity Rule:",
-          "ja": "Konsistenz-Regel:",
-          "zh": "Konsistenz-Regel:"
-        },
-        "s49_c1_desc": {
-          "de": "Elektrisches Warmleimbecken 0,2 l (Art. 43-0003248), Perlleim braun (Art. 43-0001162) oder Hasenleim-Granulat (Art. 43-0004644). Extrem glasartige, resonanzstarke Fuge; reversibel.",
-          "en": "Electric glue pot 0.2 l (item 43-0003248), brown pearl glue (item 43-0001162), or rabbit glue granules (item 43-0004644). Cures into a glassy, acoustic joint; fully reversible.",
-          "ja": "Elektrisches Warmleimbecken 0,2 l (Art. 43-0003248), Perlleim braun (Art. 43-0001162) oder Hasenleim-Granulat (Art. 43-0004644). Extrem glasartige, resonanzstarke Fuge; reversibel.",
-          "zh": "Elektrisches Warmleimbecken 0,2 l (Art. 43-0003248), Perlleim braun (Art. 43-0001162) oder Hasenleim-Granulat (Art. 43-0004644). Extrem glasartige, resonanzstarke Fuge; reversibel."
-        },
-        "s49_c2_desc": {
-          "de": "Spezial-Weißleim für Hartholz (Art. 43-0007262). Längere offene Zeit, hochelastische Fuge.",
-          "en": "Special white glue for hardwoods (item 43-0007262). Extended open time, resilient bond.",
-          "ja": "Spezial-Weißleim für Hartholz (Art. 43-0007262). Längere offene Zeit, hochelastische Fuge.",
-          "zh": "Spezial-Weißleim für Hartholz (Art. 43-0007262). Längere offene Zeit, hochelastische Fuge."
-        },
-        "s49_c3_desc": {
-          "de": "Die Leimviskosität muss exakt der von flüssigem Bienenhonig entsprechen!",
-          "en": "Glue viscosity must precisely match that of warm liquid honey!",
-          "ja": "Die Leimviskosität muss exakt der von flüssigem Bienenhonig entsprechen!",
-          "zh": "Die Leimviskosität muss exakt der von flüssigem Bienenhonig entsprechen!"
-        },
-        "s49_caption_1": {
-          "de": "Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz",
-          "en": "Electric glue pot, pearl glue, and specialized PVA for hardwoods",
-          "ja": "Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz",
-          "zh": "Elektrischer Leimtopf, Perlleim und Spezial-PVA für Hartholz"
-        },
-        "s49_b1_badge": {
-          "de": "HEISSLEIM (65°C)",
-          "en": "HOT GLUE (65°C)",
-          "ja": "膠接着（65℃）",
-          "zh": "传统皮胶（65℃）"
-        },
-        "s49_b2_badge": {
-          "de": "KALTLEIM (D3)",
-          "en": "COLD GLUE (D3)",
-          "ja": "白ボンド（D3）",
-          "zh": "白胶（D3）"
-        },
-        "s49_b3_badge": {
-          "de": ">KRISTALLINE BRÜCKE",
-          "en": ">CRYSTALLINE BRIDGE",
-          "ja": ">結晶性音響ブリッジ",
-          "zh": ">微晶声学传导桥"
-        }
-      },
-      "notes": {
-        "de": "Folie 49: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 49: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 49: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 49 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_50": {
-      "slide_number": 50,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 9: Verleimen",
-        "en": "Part 6: Assembly & Verleimen • Schritt 9: Verleimen",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Drehverleimung für lückenlose Leimringe",
-        "en": "Rotational Twist Glueing for Seamless Glue Rings",
-        "ja": "回しながら押し込む「ツイスト接着」による均一接着層",
-        "zh": "旋转式推入胶合法（Twist Glueing）：建立360°完美闭合胶环"
-      },
-      "subtitle": {
-        "de": "Aufschieben mit Rotation und optische Fluchtkontrolle in 3er-Gruppen",
-        "en": "Rotational mounting and optical sight-line checks in groups of three",
-        "ja": "Aufschieben mit Rotation und optische Fluchtkontrolle in 3er-Gruppen",
-        "zh": "Aufschieben mit Rotation und optische Fluchtkontrolle in 3er-Gruppen"
-      },
-      "elements": {
-        "s50_bullet_1": {
-          "de": "<strong>Doppelter Leimauftrag:</strong> Dünner Leimfilm auf den Stiel und tropffrei in die Bohrung.",
-          "en": "<strong>Double Glue Application:</strong> Thin glue film on the shank tip and dripless application inside the bore.",
-          "ja": "<strong>Doppelter Leimauftrag:</strong> Dünner Leimfilm auf den Stiel und tropffrei in die Bohrung.",
-          "zh": "<strong>Doppelter Leimauftrag:</strong> Dünner Leimfilm auf den Stiel und tropffrei in die Bohrung."
-        },
-        "s50_bullet_2": {
-          "de": "<strong>Rotierende Bewegung:</strong> Beim Aufschieben wird der Hammerkopf um ca. 90° hin und her gedreht -> garantiert einen geschlossenen Leimring.",
-          "en": "<strong>Rotational Motion:</strong> Twist hammerhead ~90° back and forth while seating -> guarantees a continuous 360° glue bead.",
-          "ja": "<strong>Rotierende Bewegung:</strong> Beim Aufschieben wird der Hammerkopf um ca. 90° hin und her gedreht -> garantiert einen geschlossenen Leimring.",
-          "zh": "<strong>Rotierende Bewegung:</strong> Beim Aufschieben wird der Hammerkopf um ca. 90° hin und her gedreht -> garantiert einen geschlossenen Leimring."
-        },
-        "s50_bullet_3": {
-          "de": "<strong>3er-Gruppen-Prinzip:</strong> 3 Hämmer leimen und sofort den Durchgang des mittleren zur Referenzlinie peilen.",
-          "en": "<strong>Rule of Three:</strong> Glue 3 hammers in sequence and immediately sight the center one against reference guide hammers.",
-          "ja": "<strong>3er-Gruppen-Prinzip:</strong> 3 Hämmer leimen und sofort den Durchgang des mittleren zur Referenzlinie peilen.",
-          "zh": "<strong>3er-Gruppen-Prinzip:</strong> 3 Hämmer leimen und sofort den Durchgang des mittleren zur Referenzlinie peilen."
-        },
-        "s50_bullet_4": {
-          "de": "<strong>Fluchtkontrolle:</strong> Fluchtlinie von Vorderfilz, Rückfilz und Hammerschwänzen mit dem Auge kontrollieren.",
-          "en": "<strong>Sight-Line Verification:</strong> Visually align the sight-line across front felt, rear felt, and tails.",
-          "ja": "<strong>Fluchtkontrolle:</strong> Fluchtlinie von Vorderfilz, Rückfilz und Hammerschwänzen mit dem Auge kontrollieren.",
-          "zh": "<strong>Fluchtkontrolle:</strong> Fluchtlinie von Vorderfilz, Rückfilz und Hammerschwänzen mit dem Auge kontrollieren."
-        },
-        "s50_caption_1": {
-          "de": "Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe",
-          "en": "Twisting hammerhead onto shank to ensure uniform 360° glue bead",
-          "ja": "Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe",
-          "zh": "Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe"
-        },
-        "s50_b1_badge": {
-          "de": "HANDWERKSTECHNIK",
-          "en": "CRAFT TECHNIQUE",
-          "ja": "伝統技法",
-          "zh": "手工秘法"
-        },
-        "s50_b2_badge": {
-          "de": "DREHBEWEGUNG",
-          "en": "ROTATIONAL MOTION",
-          "ja": "回転塗布",
-          "zh": "旋转涂布均匀"
-        }
-      },
-      "notes": {
-        "de": "Folie 50: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 50: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 50: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 50 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_51": {
-      "slide_number": 51,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 10: Leimringe",
-        "en": "Part 6: Assembly & Verleimen • Schritt 10: Leimringe",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Leimfuge verputzen: Der Gummibärchen-Zustand",
-        "en": "Cleaning the Glue Joint: The Rubbery Semi-Cured Phase",
-        "ja": "接着余剰分の除去：半硬化グミ状タイミングの見極め",
-        "zh": "清理溢胶最佳时机：胶层处于半凝固“橡皮糖状态”下的剥除"
-      },
-      "subtitle": {
-        "de": "Warmwasserpinsel bei Heißleim – Sauberes Abstechen nach ca. 1 Stunde",
-        "en": "Warm water brush for hot glue – Clean slicing after approx. 1 hour cure",
-        "ja": "Warmwasserpinsel bei Heißleim – Sauberes Abstechen nach ca. 1 Stunde",
-        "zh": "Warmwasserpinsel bei Heißleim – Sauberes Abstechen nach ca. 1 Stunde"
-      },
-      "elements": {
-        "s51_bullet_1": {
-          "de": "<strong>Heißwasserpinsel:</strong> Direkt nach dem Aufsetzen wird die Fuge mit heißem Wasser (oder verdünntem „Leimwasser“ bei PVA) geglättet.",
-          "en": "<strong>Hot Water Brush:</strong> Immediately after seating, smooth the glue squeeze-out with hot water (or diluted glue wash for PVA).",
-          "ja": "<strong>Heißwasserpinsel:</strong> Direkt nach dem Aufsetzen wird die Fuge mit heißem Wasser (oder verdünntem „Leimwasser“ bei PVA) geglättet.",
-          "zh": "<strong>Heißwasserpinsel:</strong> Direkt nach dem Aufsetzen wird die Fuge mit heißem Wasser (oder verdünntem „Leimwasser“ bei PVA) geglättet."
-        },
-        "s51_bullet_2": {
-          "de": "<strong>1 Stunde Reifezeit:</strong> Nach ca. 60 Minuten erreicht der austretende Leimring die Konsistenz von Weinflaschengummi („Gummibärchen“).",
-          "en": "<strong>1-Hour Curing Window:</strong> After ~60 minutes, the protruding glue ring achieves the rubbery texture of gummy candy ('Gummibärchen').",
-          "ja": "<strong>1 Stunde Reifezeit:</strong> Nach ca. 60 Minuten erreicht der austretende Leimring die Konsistenz von Weinflaschengummi („Gummibärchen“).",
-          "zh": "<strong>1 Stunde Reifezeit:</strong> Nach ca. 60 Minuten erreicht der austretende Leimring die Konsistenz von Weinflaschengummi („Gummibärchen“)."
-        },
-        "s51_bullet_3": {
-          "de": "<strong>Sauberes Abstechen:</strong> In diesem elastischen Zustand lässt sich der Ring mit einem scharfen Schnitzmesser rückstandslos abtrennen, ohne das Holz einzukerben.",
-          "en": "<strong>Clean Trimming:</strong> In this elastic state, the bead slices away cleanly with a sharp carving knife without scoring wood.",
-          "ja": "<strong>Sauberes Abstechen:</strong> In diesem elastischen Zustand lässt sich der Ring mit einem scharfen Schnitzmesser rückstandslos abtrennen, ohne das Holz einzukerben.",
-          "zh": "<strong>Sauberes Abstechen:</strong> In diesem elastischen Zustand lässt sich der Ring mit einem scharfen Schnitzmesser rückstandslos abtrennen, ohne das Holz einzukerben."
-        },
-        "s51_caption_1": {
-          "de": "Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit",
-          "en": "Cleanly trimming the glue ring after 1 hour curing time",
-          "ja": "Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit",
-          "zh": "Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit"
-        },
-        "s51_b1_badge": {
-          "de": "VERPUTZTECHNIK",
-          "en": "CLEANING TECHNIQUE",
-          "ja": "膠面仕上げ技法",
-          "zh": "胶缝清理技法"
-        },
-        "s51_b2_badge": {
-          "de": "SAUBERE FUGE",
-          "en": "CLEAN JOINT",
-          "ja": "クリーンジョイント",
-          "zh": "平顺无残留"
-        }
-      },
-      "notes": {
-        "de": "Folie 51: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 51: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 51: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 51 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_52": {
-      "slide_number": 52,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 11: Absägen",
-        "en": "Part 6: Assembly & Verleimen • Schritt 11: Absägen",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Klemmschere & Kappen mit der Japansäge",
-        "en": "Tail Clamping Shears & Japanese Flush Cutting Saw",
-        "ja": "テール保護クランプと日本製胴付鋸による精密切断",
-        "zh": "专用琴尾保护夹具与日本细齿手锯平齐切除外伸余量"
-      },
-      "subtitle": {
-        "de": "Absoluter Achsenschutz durch die Renner Spezialklemme (Art. 43-0003233)",
-        "en": "Absolute center pin protection using the Renner Specialty Clamp (Item 43-0003233)",
-        "ja": "Absoluter Achsenschutz durch die Renner Spezialklemme (Art. 43-0003233)",
-        "zh": "Absoluter Achsenschutz durch die Renner Spezialklemme (Art. 43-0003233)"
-      },
-      "elements": {
-        "s52_bullet_1": {
-          "de": "<strong>Gefahr für die Kapselachse:</strong> Sägekräfte und Schleifdruck dürfen unter keinen Umständen auf die filigrane Kapselachse wirken!",
-          "en": "<strong>Threat to Flange Center Pin:</strong> Sawing force and sanding pressure must never transfer into the delicate center pin!",
-          "ja": "<strong>Gefahr für die Kapselachse:</strong> Sägekräfte und Schleifdruck dürfen unter keinen Umständen auf die filigrane Kapselachse wirken!",
-          "zh": "<strong>Gefahr für die Kapselachse:</strong> Sägekräfte und Schleifdruck dürfen unter keinen Umständen auf die filigrane Kapselachse wirken!"
-        },
-        "s52_bullet_2": {
-          "de": "<strong>Klemmschere für Flügelstiele (Art. 43-0003233):</strong> Blockiert den Stiel direkt hinter dem Kopf und leitet alle Kräfte direkt in die Klemme ab.",
-          "en": "<strong>Shank Clamping Pliers (Item 43-0003233):</strong> Grips the shank right behind the head, shunting all mechanical force directly into the clamp.",
-          "ja": "<strong>Klemmschere für Flügelstiele (Art. 43-0003233):</strong> Blockiert den Stiel direkt hinter dem Kopf und leitet alle Kräfte direkt in die Klemme ab.",
-          "zh": "<strong>Klemmschere für Flügelstiele (Art. 43-0003233):</strong> Blockiert den Stiel direkt hinter dem Kopf und leitet alle Kräfte direkt in die Klemme ab."
-        },
-        "s52_bullet_3": {
-          "de": "<strong>Schnitt mit der Japansäge:</strong> Feinzahnige Japansäge trennt den überstehenden Stielzapfen bündig am Holzkern ab.",
-          "en": "<strong>Japanese Flush Saw Cut:</strong> Fine-toothed Japanese saw trims the protruding shank spigot flush with the wooden moulding.",
-          "ja": "<strong>Schnitt mit der Japansäge:</strong> Feinzahnige Japansäge trennt den überstehenden Stielzapfen bündig am Holzkern ab.",
-          "zh": "<strong>Schnitt mit der Japansäge:</strong> Feinzahnige Japansäge trennt den überstehenden Stielzapfen bündig am Holzkern ab."
-        },
-        "s52_caption_1": {
-          "de": "Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes",
-          "en": "Using clamping pliers to protect center pins while trimming shank ends",
-          "ja": "Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes",
-          "zh": "Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes"
-        },
-        "s52_b1_badge": {
-          "de": "KAPPVERFAHREN",
-          "en": "TRIMMING METHOD",
-          "ja": "切断工法",
-          "zh": "切柄与修整"
-        },
-        "s52_b2_badge": {
-          "de": "DOZUKI SÄGE",
-          "en": "DOZUKI SAW",
-          "ja": "胴付鋸",
-          "zh": "道突精密手锯"
-        }
-      },
-      "notes": {
-        "de": "Folie 52: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 52: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 52: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 52 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_53": {
-      "slide_number": 53,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 12: Schwanzform",
-        "en": "Part 6: Assembly & Verleimen • Schritt 12: Schwanzform",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Schwanzformung: Weder zu rund noch zu flach",
-        "en": "Tail Shaping: Neither Overly Round Nor Flat",
-        "ja": "テール成形：丸すぎず、平らすぎず、完璧な円弧を描く",
-        "zh": "琴尾弧度精密打磨：杜绝过平或过圆，保障托木平稳咬合"
-      },
-      "subtitle": {
-        "de": "Schleifklotz Körnung 40 für sicheres Fangen ohne Klemmen oder Aufspringen",
-        "en": "40-grit sanding block for reliable checking without jamming or bouncing",
-        "ja": "Schleifklotz Körnung 40 für sicheres Fangen ohne Klemmen oder Aufspringen",
-        "zh": "Schleifklotz Körnung 40 für sicheres Fangen ohne Klemmen oder Aufspringen"
-      },
-      "elements": {
-        "s53_c1_title": {
-          "de": "Schritt 1: Überstand beischleifen",
-          "en": "Step 1: Sand Trimming Flush",
-          "ja": "Schritt 1: Überstand beischleifen",
-          "zh": "Schritt 1: Überstand beischleifen"
-        },
-        "s53_c2_title": {
-          "de": "Schritt 2: Flanke gleichmäßig ausformen",
-          "en": "Step 2: Shape Symmetrical Flank",
-          "ja": "Schritt 2: Flanke gleichmäßig ausformen",
-          "zh": "Schritt 2: Flanke gleichmäßig ausformen"
-        },
-        "s53_c3_title": {
-          "de": "Schritt 3: Griffige Fänger-Reibung",
-          "en": "Step 3: Optimum Backcheck Grip",
-          "ja": "Schritt 3: Griffige Fänger-Reibung",
-          "zh": "Schritt 3: Griffige Fänger-Reibung"
-        },
-        "s53_c1_desc": {
-          "de": "Mit Schleifklotz Körnung 40 wird der Sägegrat plan zur Schräge des Holzkerns geschliffen.",
-          "en": "With a 40-grit sanding block, sand saw burrs flush with the core wood bevel.",
-          "ja": "Mit Schleifklotz Körnung 40 wird der Sägegrat plan zur Schräge des Holzkerns geschliffen.",
-          "zh": "Mit Schleifklotz Körnung 40 wird der Sägegrat plan zur Schräge des Holzkerns geschliffen."
-        },
-        "s53_c2_desc": {
-          "de": "Gleichmäßige Schwanzschräge formen. <strong>Wichtig:</strong> Zu rund geschliffen -> Hammer springt aus dem Fänger! Zu flach geschliffen -> Hammer hakt sich beim Auslösen ein!",
-          "en": "Shape a uniform tail angle. <strong>Crucial:</strong> Too round -> hammer bounces out of check! Too flat -> hammer binds upon release!",
-          "ja": "Gleichmäßige Schwanzschräge formen. <strong>Wichtig:</strong> Zu rund geschliffen -> Hammer springt aus dem Fänger! Zu flach geschliffen -> Hammer hakt sich beim Auslösen ein!",
-          "zh": "Gleichmäßige Schwanzschräge formen. <strong>Wichtig:</strong> Zu rund geschliffen -> Hammer springt aus dem Fänger! Zu flach geschliffen -> Hammer hakt sich beim Auslösen ein!"
-        },
-        "s53_c3_desc": {
-          "de": "Die 40er-Körnung hinterlässt eine feine Holzstruktur, die optimal mit dem Fängerleder harmoniert.",
-          "en": "The 40-grit scratch pattern leaves a fine wood texture that locks perfectly into backcheck leather.",
-          "ja": "Die 40er-Körnung hinterlässt eine feine Holzstruktur, die optimal mit dem Fängerleder harmoniert.",
-          "zh": "Die 40er-Körnung hinterlässt eine feine Holzstruktur, die optimal mit dem Fängerleder harmoniert."
-        },
-        "s53_caption_1": {
-          "de": "Präzises Ausformen der Hammerschwänze für optimalen Fängerfang",
-          "en": "Precise tail shaping for optimum backcheck engagement",
-          "ja": "Präzises Ausformen der Hammerschwänze für optimalen Fängerfang",
-          "zh": "Präzises Ausformen der Hammerschwänze für optimalen Fängerfang"
-        },
-        "s53_b1_badge": {
-          "de": "SCHRITT 01",
-          "en": "STEP 01",
-          "ja": "工程 01",
-          "zh": "步骤 01"
-        },
-        "s53_b2_badge": {
-          "de": "SCHRITT 02",
-          "en": "STEP 02",
-          "ja": "工程 02",
-          "zh": "步骤 02"
-        },
-        "s53_b3_badge": {
-          "de": ">FÄNGERGEOMETRIE",
-          "en": ">BACKCHECK GEOMETRY",
-          "ja": ">バックチェック捕捉幾何",
-          "zh": ">托木三维几何制动"
-        }
-      },
-      "notes": {
-        "de": "Folie 53: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 53: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 53: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 53 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_54": {
-      "slide_number": 54,
-      "chapter": 6,
-      "chapter_name": {
-        "de": "Teil 6: Montage & Verleimung",
-        "en": "Part 6: Assembly & Glueing",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "category": {
-        "de": "Teil 6: Montage & Verleimen • Schritt 13: Endfinish",
-        "en": "Part 6: Assembly & Verleimen • Schritt 13: Endfinish",
-        "ja": "第6部：取付・接着技術",
-        "zh": "第六部分：弦槌装配与胶合工艺"
-      },
-      "title": {
-        "de": "Kantenbrechen & Flammenkorrektur der Flucht",
-        "en": "Edge Breaking & Flame Straightening of Shanks",
-        "ja": "木角のエッジ取り（面取り）とアルコール炎によるシャンク曲がり直し",
-        "zh": "木质倒角微倒圆润处理与酒精灯微火热弯校正槌柄平直度"
-      },
-      "subtitle": {
-        "de": "Feine Schleifpapierfeile, Entgraten und Ausrichten mit der Brennerlampe",
-        "en": "Fine sanding file, deburring and spirit flame truing of the sight line",
-        "ja": "Feine Schleifpapierfeile, Entgraten und Ausrichten mit der Brennerlampe",
-        "zh": "Feine Schleifpapierfeile, Entgraten und Ausrichten mit der Brennerlampe"
-      },
-      "elements": {
-        "s54_bullet_1": {
-          "de": "<strong>Kanten brechen:</strong> Scharfe Holzkanten an den Schwanzseiten werden mit feiner Schleiffeile sanft verbrochen.",
-          "en": "<strong>Breaking Edges:</strong> Sharp wooden corners along tail flanks are gently radiused with a fine sanding file.",
-          "ja": "<strong>Kanten brechen:</strong> Scharfe Holzkanten an den Schwanzseiten werden mit feiner Schleiffeile sanft verbrochen.",
-          "zh": "<strong>Kanten brechen:</strong> Scharfe Holzkanten an den Schwanzseiten werden mit feiner Schleiffeile sanft verbrochen."
-        },
-        "s54_bullet_2": {
-          "de": "<strong>Flammenkorrektur an der Brennerlampe:</strong> Kleinste Flucht- oder Neigungsfehler werden durch gezielte, sanfte Erwärmung des Stiels korrigiert.",
-          "en": "<strong>Flame Truing on Spirit Lamp:</strong> Minute alignment or spacing errors are corrected by gently warming the shank over a spirit flame.",
-          "ja": "<strong>Flammenkorrektur an der Brennerlampe:</strong> Kleinste Flucht- oder Neigungsfehler werden durch gezielte, sanfte Erwärmung des Stiels korrigiert.",
-          "zh": "<strong>Flammenkorrektur an der Brennerlampe:</strong> Kleinste Flucht- oder Neigungsfehler werden durch gezielte, sanfte Erwärmung des Stiels korrigiert."
-        },
-        "s54_bullet_3": {
-          "de": "<strong>Einbaufertiger Zustand:</strong> Der Satz ist nun mechanisch perfekt montiert, gefluchtet und bereit für die Regulierung im Instrument.",
-          "en": "<strong>Installation-Ready State:</strong> The set is now mechanically trued, aligned, and ready for action regulation in the piano.",
-          "ja": "<strong>Einbaufertiger Zustand:</strong> Der Satz ist nun mechanisch perfekt montiert, gefluchtet und bereit für die Regulierung im Instrument.",
-          "zh": "<strong>Einbaufertiger Zustand:</strong> Der Satz ist nun mechanisch perfekt montiert, gefluchtet und bereit für die Regulierung im Instrument."
-        },
-        "s54_caption_1": {
-          "de": "Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe",
-          "en": "Final finish: Breaking edges and verifying sight line over spirit lamp",
-          "ja": "Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe",
-          "zh": "Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe"
-        },
-        "s54_b1_badge": {
-          "de": "MEISTER-FINISH",
-          "en": "MASTER FINISH",
-          "ja": "マイスター仕上げ",
-          "zh": "大师级收尾"
-        },
-        "s54_b2_badge": {
-          "de": "VEREDELTE KANTEN",
-          "en": "REFINED EDGES",
-          "ja": "面取り仕上げ",
-          "zh": "倒角精细处理"
-        }
-      },
-      "notes": {
-        "de": "Folie 54: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 54: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 54: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 54 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
-      }
-    },
-    "slide_55": {
-      "slide_number": 55,
-      "chapter": 7,
-      "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
-      },
-      "category": {
-        "de": "Teil 7: Intonation • Klangphilosophie",
-        "en": "Part 7: Voicing • Klangphilosophie",
+        "de": "Teil 5: Intonation • Klangphilosophie",
+        "en": "Part 5: Voicing • Klangphilosophie",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6083,43 +4331,43 @@
         "zh": "Klangschönheit, größtmögliche Dynamik und das breiteste Teilspektrum"
       },
       "elements": {
-        "s55_c1_title": {
+        "s35_c1_title": {
           "de": "Die 3 Kernziele wahrer Intonation:",
           "en": "The 3 Core Objectives of Masterful Voicing:",
           "ja": "Die 3 Kernziele wahrer Intonation:",
           "zh": "Die 3 Kernziele wahrer Intonation:"
         },
-        "s55_bullet_1": {
+        "s35_bullet_1": {
           "de": "<strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen.",
           "en": "<strong>1. Full Tonal Beauty:</strong> Elevating the inherent sonic character of the specific piano to its highest potential.",
           "ja": "<strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen.",
           "zh": "<strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen."
         },
-        "s55_bullet_2": {
+        "s35_bullet_2": {
           "de": "<strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff.",
           "en": "<strong>2. Maximum Dynamic Gradations:</strong> Every note must offer as many dynamic shadings as possible – from pianissimo to fortissimo.",
           "ja": "<strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff.",
           "zh": "<strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff."
         },
-        "s55_bullet_3": {
+        "s35_bullet_3": {
           "de": "<strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum.",
           "en": "<strong>3. Broad Overtone Spectrum:</strong> Rich harmonic content delivering carrying projection and sustain in the hall.",
           "ja": "<strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum.",
           "zh": "<strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum."
         },
-        "s55_caption_1": {
+        "s35_caption_1": {
           "de": "Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston",
           "en": "The goal of master voicing: Open dynamic tone and singing sustain",
           "ja": "Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston",
           "zh": "Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston"
         },
-        "s55_b1_badge": {
+        "s35_b1_badge": {
           "de": "KLANGPHILOSOPHIE",
           "en": "SOUND PHILOSOPHY",
           "ja": "整音の哲学",
           "zh": "声音哲学"
         },
-        "s55_b2_badge": {
+        "s35_b2_badge": {
           "de": "DIE SEELE DES TONS",
           "en": "SOUL OF SOUND",
           "ja": "音の魂",
@@ -6127,24 +4375,24 @@
         }
       },
       "notes": {
-        "de": "Folie 55: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 55: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 55: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 35: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 35: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 35: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 55 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_56": {
-      "slide_number": 56,
-      "chapter": 7,
+    "slide_36": {
+      "slide_number": 36,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Einflussgrößen",
-        "en": "Part 7: Voicing • Einflussgrößen",
+        "de": "Teil 5: Intonation • Einflussgrößen",
+        "en": "Part 5: Voicing • Einflussgrößen",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6161,79 +4409,79 @@
         "zh": "Konstruktion und Raumakustik verstehen – Mechanik und Filz beherrschen"
       },
       "elements": {
-        "s56_c1_title": {
+        "s36_c1_title": {
           "de": "Unveränderliche Faktoren",
           "en": "Immutable Factors",
           "ja": "Unveränderliche Faktoren",
           "zh": "Unveränderliche Faktoren"
         },
-        "s56_c2_title": {
+        "s36_c2_title": {
           "de": "Was wir beeinflussen können:",
           "en": "What We Can Influence:",
           "ja": "Was wir beeinflussen können:",
           "zh": "Was wir beeinflussen können:"
         },
-        "s56_bullet_1": {
+        "s36_bullet_1": {
           "de": "<strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz",
           "en": "<strong>Design Scale:</strong> String scale, cast-iron plate, soundboard spruce",
           "ja": "<strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz",
           "zh": "<strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz"
         },
-        "s56_bullet_2": {
+        "s36_bullet_2": {
           "de": "<strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule",
           "en": "<strong>Room Acoustics:</strong> Concert hall, studio, living room, academy",
           "ja": "<strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule",
           "zh": "<strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule"
         },
-        "s56_bullet_3": {
+        "s36_bullet_3": {
           "de": "<strong>Pianist:</strong> Individueller Anschlag und Geschmack",
           "en": "<strong>Pianist:</strong> Individual touch, velocity, and aesthetic preference",
           "ja": "<strong>Pianist:</strong> Individueller Anschlag und Geschmack",
           "zh": "<strong>Pianist:</strong> Individueller Anschlag und Geschmack"
         },
-        "s56_bullet_4": {
+        "s36_bullet_4": {
           "de": "<strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis",
           "en": "<strong>Renner Hammerheads & Felts:</strong> The perfect acoustic foundation",
           "ja": "<strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis",
           "zh": "<strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis"
         },
-        "s56_bullet_5": {
+        "s36_bullet_5": {
           "de": "<strong>Renner Mechanikteile:</strong> Präzise Hebelwege",
           "en": "<strong>Renner Action Parts:</strong> Precise leverage and energy transfer",
           "ja": "<strong>Renner Mechanikteile:</strong> Präzise Hebelwege",
           "zh": "<strong>Renner Mechanikteile:</strong> Präzise Hebelwege"
         },
-        "s56_bullet_6": {
+        "s36_bullet_6": {
           "de": "<strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften",
           "en": "<strong>String Seating:</strong> Solid bedding on bridges, hitch pins, and agraffes",
           "ja": "<strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften",
           "zh": "<strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften"
         },
-        "s56_bullet_7": {
+        "s36_bullet_7": {
           "de": "<strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament",
           "en": "<strong>Fine Regulation & Tuning:</strong> The indispensable foundation",
           "ja": "<strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament",
           "zh": "<strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament"
         },
-        "s56_caption_1": {
+        "s36_caption_1": {
           "de": "Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang",
           "en": "The concert grand on stage: Room acoustics and instrument in harmony",
           "ja": "Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang",
           "zh": "Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang"
         },
-        "s56_b1_badge": {
+        "s36_b1_badge": {
           "de": "AKUSTISCHE GRENZEN",
           "en": "ACOUSTIC LIMITS",
           "ja": "音響的制約",
           "zh": "固有物理边界"
         },
-        "s56_b2_badge": {
+        "s36_b2_badge": {
           "de": "RESONANZBODEN & SAITEN",
           "en": "SOUNDBOARD & STRINGS",
           "ja": "響板と弦",
           "zh": "音板与琴弦协同"
         },
-        "s56_b3_badge": {
+        "s36_b3_badge": {
           "de": ">RESONANZBODEN & SAITEN",
           "en": ">SOUNDBOARD & STRINGS",
           "ja": ">響板と弦の相互作用",
@@ -6241,24 +4489,24 @@
         }
       },
       "notes": {
-        "de": "Folie 56: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 56: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 56: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 36: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 36: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 36: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 56 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_57": {
-      "slide_number": 57,
-      "chapter": 7,
+    "slide_37": {
+      "slide_number": 37,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Voraussetzungen",
-        "en": "Part 7: Voicing • Voraussetzungen",
+        "de": "Teil 5: Intonation • Voraussetzungen",
+        "en": "Part 5: Voicing • Voraussetzungen",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6275,43 +4523,43 @@
         "zh": "Der goldene Grundsatz von Jens-Sören Kruse (Klavierbaumeister)"
       },
       "elements": {
-        "s57_b1_badge": {
+        "s37_b1_badge": {
           "de": "JENS-SÖREN KRUSE",
           "en": "JENS-SÖREN KRUSE",
           "ja": "JENS-SÖREN KRUSE",
           "zh": "JENS-SÖREN KRUSE"
         },
-        "s57_b2_badge": {
+        "s37_b2_badge": {
           "de": "REGULIERUNG",
           "en": "REGULATION",
           "ja": "REGULIERUNG",
           "zh": "REGULIERUNG"
         },
-        "s57_c1_title": {
+        "s37_c1_title": {
           "de": "Der unabdingbare Kreislauf",
           "en": "The Indispensable Cycle",
           "ja": "Der unabdingbare Kreislauf",
           "zh": "Der unabdingbare Kreislauf"
         },
-        "s57_c1_desc": {
+        "s37_c1_desc": {
           "de": "„Ohne gute Regulierung keine saubere Stimmung,<br> und ohne gute Regulierung keine saubere Intonation,<br> und ohne saubere Stimmung keine saubere Intonation.<br> <strong>Eines führt zum anderen, und alles ist mit allem verbunden!</strong>“",
           "en": "“Without fine regulation there is no clean tuning,<br> and without fine regulation there is no clean voicing,<br> and without clean tuning there is no clean voicing.<br> <strong>One leads to the other, and everything is interconnected!”",
           "ja": "„Ohne gute Regulierung keine saubere Stimmung,<br> und ohne gute Regulierung keine saubere Intonation,<br> und ohne saubere Stimmung keine saubere Intonation.<br> <strong>Eines führt zum anderen, und alles ist mit allem verbunden!</strong>“",
           "zh": "„Ohne gute Regulierung keine saubere Stimmung,<br> und ohne gute Regulierung keine saubere Intonation,<br> und ohne saubere Stimmung keine saubere Intonation.<br> <strong>Eines führt zum anderen, und alles ist mit allem verbunden!</strong>“"
         },
-        "s57_caption_1": {
+        "s37_caption_1": {
           "de": "Präzisionsregulierung der Flügelmechanik",
           "en": "Precision regulation of the grand action",
           "ja": "Präzisionsregulierung der Flügelmechanik",
           "zh": "Präzisionsregulierung der Flügelmechanik"
         },
-        "s57_caption_2": {
+        "s37_caption_2": {
           "de": "vor Beginn der Intonierarbeiten",
           "en": "prior to commencing voicing",
           "ja": "vor Beginn der Intonierarbeiten",
           "zh": "vor Beginn der Intonierarbeiten"
         },
-        "s57_bullet_1": {
+        "s37_bullet_1": {
           "de": "Wer versucht, ungleichmäßigen Ton durch Nadeln auszugleichen, wenn in Wahrheit Auslösung, Steighöhe oder Saitenchor ungleich sind, zerstört den Hammerkopf!",
           "en": "Attempting to compensate for uneven tone via needle voicing when let-off, blow distance, or unisons are unequal will ruin the hammerhead!",
           "ja": "レットオフ、打弦距離、ユニゾンが不揃いな状態で針入れにより音色を揃えようとすると、ハンマーフェルトを回復不能に破壊します！",
@@ -6319,24 +4567,24 @@
         }
       },
       "notes": {
-        "de": "Folie 57: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 57: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 57: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 37: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 37: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 37: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 57 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_58": {
-      "slide_number": 58,
-      "chapter": 7,
+    "slide_38": {
+      "slide_number": 38,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Geometrie & Keile",
-        "en": "Part 7: Voicing • Geometrie & Keile",
+        "de": "Teil 5: Intonation • Geometrie & Keile",
+        "en": "Part 5: Voicing • Geometrie & Keile",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6353,103 +4601,103 @@
         "zh": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen"
       },
       "elements": {
-        "s58_b1_badge": {
+        "s38_b1_badge": {
           "de": "FORTISSIMO (ff)",
           "en": "FORTISSIMO (ff)",
           "ja": "FORTISSIMO (ff)",
           "zh": "FORTISSIMO (ff)"
         },
-        "s58_b2_badge": {
+        "s38_b2_badge": {
           "de": "FORTE (f)",
           "en": "FORTE (f)",
           "ja": "FORTE (f)",
           "zh": "FORTE (f)"
         },
-        "s58_b3_badge": {
+        "s38_b3_badge": {
           "de": "PIANO (p)",
           "en": "PIANO (p)",
           "ja": "PIANO (p)",
           "zh": "PIANO (p)"
         },
-        "s58_b4_badge": {
+        "s38_b4_badge": {
           "de": "PIANISSIMO (pp)",
           "en": "PIANISSIMO (pp)",
           "ja": "PIANISSIMO (pp)",
           "zh": "PIANISSIMO (pp)"
         },
-        "s58_b5_badge": {
+        "s38_b5_badge": {
           "de": "ROTE ZONE (SCHEITEL)",
           "en": "RED ZONE (APEX)",
           "ja": "ROTE ZONE (SCHEITEL)",
           "zh": "ROTE ZONE (SCHEITEL)"
         },
-        "s58_b6_badge": {
+        "s38_b6_badge": {
           "de": "JENS-SÖREN KRUSE",
           "en": "JENS-SÖREN KRUSE",
           "ja": "JENS-SÖREN KRUSE",
           "zh": "JENS-SÖREN KRUSE"
         },
-        "s58_c1_title": {
+        "s38_c1_title": {
           "de": "Blauer Keil",
           "en": "Blue Wedge",
           "ja": "Blauer Keil",
           "zh": "Blauer Keil"
         },
-        "s58_c2_title": {
+        "s38_c2_title": {
           "de": "Grüner Keil",
           "en": "Green Wedge",
           "ja": "Grüner Keil",
           "zh": "Grüner Keil"
         },
-        "s58_c3_title": {
+        "s38_c3_title": {
           "de": "Orangener Keil",
           "en": "Orange Wedge",
           "ja": "Orangener Keil",
           "zh": "Orangener Keil"
         },
-        "s58_c4_title": {
+        "s38_c4_title": {
           "de": "Violetter Keil",
           "en": "Violet Wedge",
           "ja": "Violetter Keil",
           "zh": "Violetter Keil"
         },
-        "s58_c5_title": {
+        "s38_c5_title": {
           "de": "DO NOT TOUCH! – Niemals tief einstechen!",
           "en": "DO NOT TOUCH! – Never prick deeply here!",
           "ja": "DO NOT TOUCH! – Niemals tief einstechen!",
           "zh": "DO NOT TOUCH! – Niemals tief einstechen!"
         },
-        "s58_c1_desc": {
+        "s38_c1_desc": {
           "de": "Tiefe Nadelstiche zur Entspannung",
           "en": "Deep needle stitches for tension release",
           "ja": "Tiefe Nadelstiche zur Entspannung",
           "zh": "Tiefe Nadelstiche zur Entspannung"
         },
-        "s58_c2_desc": {
+        "s38_c2_desc": {
           "de": "Raumklang, Glanz und dynamische Entfaltung",
           "en": "Projection, brilliance, and dynamic blossoming",
           "ja": "Raumklang, Glanz und dynamische Entfaltung",
           "zh": "Raumklang, Glanz und dynamische Entfaltung"
         },
-        "s58_c3_desc": {
+        "s38_c3_desc": {
           "de": "Lyrischer Gesangston, feine Abstimmung",
           "en": "Lyrical singing tone, nuanced balance",
           "ja": "Lyrischer Gesangston, feine Abstimmung",
           "zh": "Lyrischer Gesangston, feine Abstimmung"
         },
-        "s58_c4_desc": {
+        "s38_c4_desc": {
           "de": "Flüsterleise Ansprache",
           "en": "Whisper-soft pianissimo response",
           "ja": "Flüsterleise Ansprache",
           "zh": "Flüsterleise Ansprache"
         },
-        "s58_caption_1": {
+        "s38_caption_1": {
           "de": "Original Renner Uhrenmodell",
           "en": "Original Renner Clock Model",
           "ja": "Original Renner Uhrenmodell",
           "zh": "Original Renner Uhrenmodell"
         },
-        "s58_caption_2": {
+        "s38_caption_2": {
           "de": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
           "en": "with the 4 dynamic wedges (ff, f, p, pp)",
           "ja": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
@@ -6457,24 +4705,24 @@
         }
       },
       "notes": {
-        "de": "Folie 58: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 58: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 58: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 38: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 38: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 38: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 58 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_59": {
-      "slide_number": 59,
-      "chapter": 7,
+    "slide_39": {
+      "slide_number": 39,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Vorintonation",
-        "en": "Part 7: Voicing • Vorintonation",
+        "de": "Teil 5: Intonation • Vorintonation",
+        "en": "Part 5: Voicing • Vorintonation",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6491,49 +4739,49 @@
         "zh": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil"
       },
       "elements": {
-        "s59_bullet_1": {
+        "s39_bullet_1": {
           "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
           "en": "<strong>Work Zone:</strong> Exclusively in the blue fortissimo wedge (clock zones 9:00–10:00 and 2:00–3:00).",
           "ja": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
           "zh": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr)."
         },
-        "s59_bullet_2": {
+        "s39_bullet_2": {
           "de": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).",
           "en": "<strong>Deep Needling:</strong> Insert needles deeply to just short of the underfelt (never pierce underfelt or core wood!).",
           "ja": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).",
           "zh": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!)."
         },
-        "s59_bullet_3": {
+        "s39_bullet_3": {
           "de": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.",
           "en": "<strong>Tension Transfer:</strong> The head sheds rigid factory stiffness; stored tension flows into the green forte wedge.",
           "ja": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.",
           "zh": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab."
         },
-        "s59_bullet_4": {
+        "s39_bullet_4": {
           "de": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.",
           "en": "<strong>Recommendation:</strong> This step is recommended almost without exception prior to first playing-in in the instrument.",
           "ja": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.",
           "zh": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten."
         },
-        "s59_caption_1": {
+        "s39_caption_1": {
           "de": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "en": "Pre-needling: Deep stitches in the fortissimo wedge (9:00 to 10:00 o'clock)",
           "ja": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "zh": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)"
         },
-        "s59_b1_badge": {
+        "s39_b1_badge": {
           "de": "PRE-NEEDLING",
           "en": "PRE-NEEDLING",
           "ja": "下整音（針刺し）",
           "zh": "基础刺针整音"
         },
-        "s59_b2_badge": {
+        "s39_b2_badge": {
           "de": "GRUNDELASTIZITÄT",
           "en": "BASIC ELASTICITY",
           "ja": "基本弾力性",
           "zh": "建立核心弹性"
         },
-        "s59_c1_desc": {
+        "s39_c1_desc": {
           "de": "Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:",
           "en": "Pre-voicing is the single most critical foundation for brand-new or refelted hammerheads:",
           "ja": "下整音（プリ・ヴォイシング）は、新品および再フェルト交換ハンマーにおける最重要工程です：",
@@ -6541,24 +4789,24 @@
         }
       },
       "notes": {
-        "de": "Folie 59: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 59: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 59: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 39: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 39: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 39: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 59 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_60": {
-      "slide_number": 60,
-      "chapter": 7,
+    "slide_40": {
+      "slide_number": 40,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Werkzeug & Technik",
-        "en": "Part 7: Voicing • Werkzeug & Technik",
+        "de": "Teil 5: Intonation • Werkzeug & Technik",
+        "en": "Part 5: Voicing • Werkzeug & Technik",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6575,37 +4823,37 @@
         "zh": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant"
       },
       "elements": {
-        "s60_bullet_1": {
+        "s40_bullet_1": {
           "de": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
           "en": "<strong>Stitch Counts for Pre-Needling:</strong> <br>• Bass: 7–10 stitches horizontally <br>• Mid-Range: 5–10 stitches horizontally <br>• Treble: 0–7 stitches vertically",
           "ja": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
           "zh": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal"
         },
-        "s60_bullet_2": {
+        "s40_bullet_2": {
           "de": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!",
           "en": "<strong>Press, never chop!</strong> Press needles steadily using body weight. Chopping tears wool fibers uncontrollably!",
           "ja": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!",
           "zh": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!"
         },
-        "s60_bullet_3": {
+        "s40_bullet_3": {
           "de": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).",
           "en": "<strong>Original Renner Tools:</strong> <br>• Adjustable Voicing Tool (item 43-0005642) <br>• 3-Needle Voicing Tool Professional (item 43-0003270) <br>• Nickel-plated needles no. 7 ø 0.60 mm, 9 mm long (item 43-0003426).",
           "ja": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).",
           "zh": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426)."
         },
-        "s60_caption_1": {
+        "s40_caption_1": {
           "de": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "en": "Renner voicing tools, needle handles, and adjustable voicing instrument",
           "ja": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "zh": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat"
         },
-        "s60_b1_badge": {
+        "s40_b1_badge": {
           "de": "WERKZEUGKUNDE",
           "en": "TOOL SET",
           "ja": "専門工具",
           "zh": "专业整音工具"
         },
-        "s60_b2_badge": {
+        "s40_b2_badge": {
           "de": "PRÄZISIONSNADELN",
           "en": "PRECISION NEEDLES",
           "ja": "精密針",
@@ -6613,24 +4861,24 @@
         }
       },
       "notes": {
-        "de": "Folie 60: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 60: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 60: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 40: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 40: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 40: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 60 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_61": {
-      "slide_number": 61,
-      "chapter": 7,
+    "slide_41": {
+      "slide_number": 41,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Saitenlagerung",
-        "en": "Part 7: Voicing • Saitenlagerung",
+        "de": "Teil 5: Intonation • Saitenlagerung",
+        "en": "Part 5: Voicing • Saitenlagerung",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6647,37 +4895,37 @@
         "zh": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“"
       },
       "elements": {
-        "s61_caption_1": {
+        "s41_caption_1": {
           "de": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "en": "Bedding strings firmly at the hitch pin using brass drift punch",
           "ja": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "zh": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag"
         },
-        "s61_b1_badge": {
+        "s41_b1_badge": {
           "de": "SAITEN-BETTUNG",
           "en": "STRING BEDDING",
           "ja": "弦合わせ工程",
           "zh": "琴弦沉实就位"
         },
-        "s61_b2_badge": {
+        "s41_b2_badge": {
           "de": "CHORREINHEIT",
           "en": "UNISON PURITY",
           "ja": "同音同調の純度",
           "zh": "三弦同音纯净"
         },
-        "s61_bullet_1": {
+        "s41_bullet_1": {
           "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.",
           "en": "<strong>Setting Hitch Pins:</strong> Carefully seat strings from back to front at hitch pins using a brass drift punch and light hammer.",
           "ja": "<strong>ヒッチピンの弦合わせ：</strong> 真鍮ポンチと軽量ハンマーで弦をヒッチピンに慎重に密着。",
           "zh": "<strong>挂弦钉沉降：</strong> 用黄铜冲头和轻手锤将琴弦自后向前轻敲至挂弦钉根部沉实。"
         },
-        "s61_bullet_2": {
+        "s41_bullet_2": {
           "de": "<strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.",
           "en": "<strong>Bridge Pin Alignment:</strong> Seat strings on the bridge with Renner bridge punch to eliminate false beats.",
           "ja": "<strong>駒ピンの弦合わせ：</strong> 専用セッターで弦を駒に押し込み、不要なノイズや偽うなりを排除。",
           "zh": "<strong>弦码钉就位：</strong> 使用专用敲合器使琴弦紧贴弦码，消除假杂音与拍音。"
         },
-        "s61_bullet_3": {
+        "s41_bullet_3": {
           "de": "<strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.",
           "en": "<strong>Unison Purity:</strong> Before the first voicing needle, the unison must ring absolutely pure and free of unwanted friction.",
           "ja": "<strong>同音の純度調整：</strong> 最初の針刺し前に、ユニゾンが完全に澄み切りノイズのない状態に調弦。",
@@ -6685,24 +4933,24 @@
         }
       },
       "notes": {
-        "de": "Folie 61: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 61: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 61: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 41: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 41: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 41: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 61 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_62": {
-      "slide_number": 62,
-      "chapter": 7,
+    "slide_42": {
+      "slide_number": 42,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Ausrichtung",
-        "en": "Part 7: Voicing • Ausrichtung",
+        "de": "Teil 5: Intonation • Ausrichtung",
+        "en": "Part 5: Voicing • Ausrichtung",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6719,37 +4967,37 @@
         "zh": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens"
       },
       "elements": {
-        "s62_bullet_1": {
+        "s42_bullet_1": {
           "de": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
           "en": "<strong>Test Strike Point on Note 88:</strong> Shift keyframe slightly forward and back to locate the brightest, most singing treble sweet spot.",
           "ja": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
           "zh": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden."
         },
-        "s62_bullet_2": {
+        "s42_bullet_2": {
           "de": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!",
           "en": "<strong>Optimize Notes 69 to 88:</strong> The high treble on many grands improves dramatically once the strike line is precisely repositioned!",
           "ja": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!",
           "zh": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!"
         },
-        "s62_bullet_3": {
+        "s42_bullet_3": {
           "de": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.",
           "en": "<strong>Squareness of All Hammers:</strong> Test by plucking strings or lifting jacks with finger; mark corrections with chalk on key tops.",
           "ja": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.",
           "zh": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste."
         },
-        "s62_caption_1": {
+        "s42_caption_1": {
           "de": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "en": "Verifying treble strike point and square alignment of hammerheads",
           "ja": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "zh": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer"
         },
-        "s62_b1_badge": {
+        "s42_b1_badge": {
           "de": "STRIKE POINT",
           "en": "STRIKE POINT",
           "ja": "打弦点探索",
           "zh": "最佳击弦点"
         },
-        "s62_b2_badge": {
+        "s42_b2_badge": {
           "de": "DISKANTGLANZ",
           "en": "TREBLE BRILLIANCE",
           "ja": "高音域の輝き",
@@ -6757,24 +5005,24 @@
         }
       },
       "notes": {
-        "de": "Folie 62: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 62: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 62: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 42: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 42: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 42: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 62 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_63": {
-      "slide_number": 63,
-      "chapter": 7,
+    "slide_43": {
+      "slide_number": 43,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Kronenabzug",
-        "en": "Part 7: Voicing • Kronenabzug",
+        "de": "Teil 5: Intonation • Kronenabzug",
+        "en": "Part 5: Voicing • Kronenabzug",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6791,61 +5039,61 @@
         "zh": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile"
       },
       "elements": {
-        "s63_c1_title": {
+        "s43_c1_title": {
           "de": "Hohlkehle (Hollow Crown)",
           "en": "Hollow Crown",
           "ja": "Hohlkehle (Hollow Crown)",
           "zh": "Hohlkehle (Hollow Crown)"
         },
-        "s63_c2_title": {
+        "s43_c2_title": {
           "de": "Schiefe Krone (Crooked Crown)",
           "en": "Crooked Crown",
           "ja": "Schiefe Krone (Crooked Crown)",
           "zh": "Schiefe Krone (Crooked Crown)"
         },
-        "s63_c3_title": {
+        "s43_c3_title": {
           "de": "Plan & Symmetrisch (Crown OK)",
           "en": "Level & Symmetrical (Crown OK)",
           "ja": "Plan & Symmetrisch (Crown OK)",
           "zh": "Plan & Symmetrisch (Crown OK)"
         },
-        "s63_c1_desc": {
+        "s43_c1_desc": {
           "de": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.",
           "en": "Crown contacts only outer strings -> incomplete attack tone, must be filed level.",
           "ja": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.",
           "zh": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden."
         },
-        "s63_c2_desc": {
+        "s43_c2_desc": {
           "de": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.",
           "en": "Asymmetrical contact creates double attack and string buzz -> file true to string plane.",
           "ja": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.",
           "zh": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen."
         },
-        "s63_c3_desc": {
+        "s43_c3_desc": {
           "de": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.",
           "en": "Simultaneous solid contact on all 3 unison strings for a full fundamental tone.",
           "ja": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.",
           "zh": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton."
         },
-        "s63_caption_1": {
+        "s43_caption_1": {
           "de": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "en": "Filing hammer crowns for perfect flush alignment to 3-string unisons",
           "ja": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "zh": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor"
         },
-        "s63_b1_badge": {
+        "s43_b1_badge": {
           "de": "HOHL VOR RUND",
           "en": "HOLLOW BEFORE ROUND",
           "ja": "削り技法",
           "zh": "修磨技法"
         },
-        "s63_b2_badge": {
+        "s43_b2_badge": {
           "de": "KRONENSCHEITEL",
           "en": "CROWN APEX",
           "ja": "クラウン頂点",
           "zh": "槌顶圆弧"
         },
-        "s63_b3_badge": {
+        "s43_b3_badge": {
           "de": ">SCHLEIFFEILE",
           "en": ">SANDING PADDLE",
           "ja": ">整形サンドファイル",
@@ -6853,24 +5101,24 @@
         }
       },
       "notes": {
-        "de": "Folie 63: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 63: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 63: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 43: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 43: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 43: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 63 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_64": {
-      "slide_number": 64,
-      "chapter": 7,
+    "slide_44": {
+      "slide_number": 44,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Feinabstimmung",
-        "en": "Part 7: Voicing • Feinabstimmung",
+        "de": "Teil 5: Intonation • Feinabstimmung",
+        "en": "Part 5: Voicing • Feinabstimmung",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6887,43 +5135,43 @@
         "zh": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen"
       },
       "elements": {
-        "s64_bullet_1": {
+        "s44_bullet_1": {
           "de": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
           "en": "<strong>Chromatic Play-Through:</strong> Play chromatically up and down the keyboard; flag notes with harsh attack or uneven volume.",
           "ja": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
           "zh": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren."
         },
-        "s64_bullet_2": {
+        "s44_bullet_2": {
           "de": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!",
           "en": "<strong>Mid-Voicing:</strong> Gentle needle pricks in green forte and orange piano wedges. Overly soft notes are firmed by light surface sanding!",
           "ja": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!",
           "zh": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!"
         },
-        "s64_bullet_3": {
+        "s44_bullet_3": {
           "de": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).",
           "en": "<strong>Final Voicing:</strong> Short single needle (BDK handle item 43-0003269 or Chop Stick item 43-0003271).",
           "ja": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).",
           "zh": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271)."
         },
-        "s64_bullet_4": {
+        "s44_bullet_4": {
           "de": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!",
           "en": "<strong>Max. 2 mm Depth at Crown:</strong> Insert only between string grooves, never directly into the string depressions!",
           "ja": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!",
           "zh": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!"
         },
-        "s64_caption_1": {
+        "s44_caption_1": {
           "de": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "en": "Chromatic listening and fine voicing with short single needle",
           "ja": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "zh": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel"
         },
-        "s64_b1_badge": {
+        "s44_b1_badge": {
           "de": "FEININTONATION",
           "en": "FINE VOICING",
           "ja": "仕上げ整音",
           "zh": "精细色彩调配"
         },
-        "s64_b2_badge": {
+        "s44_b2_badge": {
           "de": "FARBPALETTE",
           "en": "COLOR PALETTE",
           "ja": "色彩パレット",
@@ -6931,24 +5179,24 @@
         }
       },
       "notes": {
-        "de": "Folie 64: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 64: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 64: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 44: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 44: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 44: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 64 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_65": {
-      "slide_number": 65,
-      "chapter": 7,
+    "slide_45": {
+      "slide_number": 45,
+      "chapter": 5,
       "chapter_name": {
-        "de": "Teil 7: Die Hohe Schule der Intonation",
-        "en": "Part 7: Master Voicing",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 7: Intonation • Una Corda & Dialog",
-        "en": "Part 7: Voicing • Una Corda & Dialog",
+        "de": "Teil 5: Intonation • Una Corda & Dialog",
+        "en": "Part 5: Voicing • Una Corda & Dialog",
         "ja": "第7部：ヴォイシング（整音）の極意",
         "zh": "第七部分：钢琴整音大师秘籍"
       },
@@ -6965,61 +5213,61 @@
         "zh": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog"
       },
       "elements": {
-        "s65_b1_badge": {
+        "s45_b1_badge": {
           "de": "UNA CORDA PRAXIS",
           "en": "UNA CORDA PRACTICE",
           "ja": "UNA CORDA PRAXIS",
           "zh": "UNA CORDA PRAXIS"
         },
-        "s65_b2_badge": {
+        "s45_b2_badge": {
           "de": "RENNER ACADEMY",
           "en": "RENNER ACADEMY",
           "ja": "RENNER ACADEMY",
           "zh": "RENNER ACADEMY"
         },
-        "s65_b3_badge": {
+        "s45_b3_badge": {
           "de": "LOUIS RENNER GMBH",
           "en": "LOUIS RENNER GMBH",
           "ja": "LOUIS RENNER GMBH",
           "zh": "LOUIS RENNER GMBH"
         },
-        "s65_c1_title": {
+        "s45_c1_title": {
           "de": "Verschiebungsintonation",
           "en": "Shift Pedal Voicing (Una Corda)",
           "ja": "Verschiebungsintonation",
           "zh": "Verschiebungsintonation"
         },
-        "s65_c2_title": {
+        "s45_c2_title": {
           "de": "Renner Academy & Technischer Dialog",
           "en": "Renner Academy & Technical Dialogue",
           "ja": "Renner Academy & Technischer Dialog",
           "zh": "Renner Academy & Technischer Dialog"
         },
-        "s65_c1_desc": {
+        "s45_c1_desc": {
           "de": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "en": "Play chromatically with shift pedal depressed; gently voice only the contacted string contact areas.",
           "ja": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "zh": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln."
         },
-        "s65_c2_desc": {
+        "s45_c2_desc": {
           "de": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "en": "Renner provides masterclasses, factory tours in Meuselwitz, and tailored technical support for piano technicians worldwide.",
           "ja": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "zh": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit."
         },
-        "s65_caption_1": {
+        "s45_caption_1": {
           "de": "Louis Renner GmbH",
           "en": "Louis Renner GmbH",
           "ja": "Louis Renner GmbH",
           "zh": "Louis Renner GmbH"
         },
-        "s65_caption_2": {
+        "s45_caption_2": {
           "de": "Ihr Partner für meisterlichen Klang weltweit",
           "en": "Your partner for master-grade tone worldwide",
           "ja": "Ihr Partner für meisterlichen Klang weltweit",
           "zh": "Ihr Partner für meisterlichen Klang weltweit"
         },
-        "s65_bullet_1": {
+        "s45_bullet_1": {
           "de": "Experten-Tipp:",
           "en": "Expert Master Tip:",
           "ja": "マイスターのアドバイス：",
@@ -7027,9 +5275,9 @@
         }
       },
       "notes": {
-        "de": "Folie 65: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 65: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 65: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "de": "Folie 45: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 45: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 45: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
         "zh": "第 65 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     }

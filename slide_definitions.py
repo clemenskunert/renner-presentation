@@ -11,7 +11,7 @@ Strictly based on the 5 technical masterclass documents in "Praesentation_Basis"
 plus the official louis-renner.de history and Google Photos Meuselwitz transformation album.
 """
 
-TOTAL_SLIDES = 65
+TOTAL_SLIDES = 45
 import re
 
 def get_watermark():
@@ -49,59 +49,146 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 2: Agenda & Course Topics (Sander Bento Grid)
-    slides.append(f'''      <!-- SLIDE 2: Agenda & Course Topics -->
+    # SLIDE 2: Agenda & Course Topics (Animated Masterclass Journey)
+    slides.append(f'''      <!-- SLIDE 2: Agenda & Course Topics (Animated Masterclass Journey) -->
       <section class="slide" data-slide="2">
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s2_category">Übersicht • Struktur der Masterclass</div>
-            <h2 class="slide-title" data-i18n="s2_title">Die 6 Kernmodule der Renner Masterclass</h2>
+            <h2 class="slide-title" data-i18n="s2_title">Die 5 Kernmodule der Renner Masterclass</h2>
             <div class="slide-subtitle" data-i18n="s2_subtitle">Vollständiges Schulungs- & Fachprogramm auf Basis der originalen Renner Academy Unterlagen</div>
           </div>
         </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-3">
-            <div class="bento-card" data-target-slide="3" role="button" tabindex="0">
-              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
+        <div class="slide-body agenda-slide-body">
+          <!-- Animated Journey Roadmap Rail -->
+          <div class="agenda-journey-track-wrapper">
+            <div class="agenda-journey-track">
+              <div class="agenda-journey-laser"></div>
+            </div>
+            <div class="agenda-journey-nodes">
+              <div class="agenda-journey-node" data-target-slide="3" style="--node-idx: 0;">
+                <span class="node-pin-dot"></span>
+                <span class="node-pin-pulse"></span>
+                <span class="node-pin-num">01</span>
+              </div>
+              <div class="agenda-journey-node" data-target-slide="5" style="--node-idx: 1;">
+                <span class="node-pin-dot"></span>
+                <span class="node-pin-pulse"></span>
+                <span class="node-pin-num">02</span>
+              </div>
+              <div class="agenda-journey-node" data-target-slide="15" style="--node-idx: 2;">
+                <span class="node-pin-dot"></span>
+                <span class="node-pin-pulse"></span>
+                <span class="node-pin-num">03</span>
+              </div>
+              <div class="agenda-journey-node" data-target-slide="27" style="--node-idx: 3;">
+                <span class="node-pin-dot"></span>
+                <span class="node-pin-pulse"></span>
+                <span class="node-pin-num">04</span>
+              </div>
+              <div class="agenda-journey-node" data-target-slide="35" style="--node-idx: 4;">
+                <span class="node-pin-dot"></span>
+                <span class="node-pin-pulse"></span>
+                <span class="node-pin-num">05</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 Modern Interactive Bento Cards -->
+          <div class="agenda-cards-grid">
+            <!-- MODUL 1 -->
+            <div class="bento-card agenda-card" data-target-slide="3" role="button" tabindex="0" style="--card-idx: 0;">
+              <div class="agenda-card-glow-edge gold"></div>
+              <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">01</div>
-              <span class="bento-badge gold" data-i18n="s2_b1_badge">MODUL 1</span>
-              <div class="bento-card-title" data-i18n="s2_c1_title">Geschichte & Hauptsitz</div>
-              <div class="bento-card-desc" data-i18n="s2_c1_desc">140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).</div>
+              <div class="agenda-card-header">
+                <span class="bento-badge gold" data-i18n="s2_b1_badge">MODUL 1</span>
+                <span class="agenda-slide-pill"><span class="pill-dot gold"></span>Folie 3–4</span>
+              </div>
+              <div class="agenda-card-main">
+                <div class="bento-card-title" data-i18n="s2_c1_title">Geschichte & Hauptsitz</div>
+                <div class="bento-card-desc" data-i18n="s2_c1_desc">140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).</div>
+              </div>
+              <div class="agenda-card-footer">
+                <span class="agenda-action-text">Kapitel öffnen</span>
+                <span class="agenda-nav-arrow">↗</span>
+              </div>
             </div>
-            <div class="bento-card" data-target-slide="5" role="button" tabindex="0">
-              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
+
+            <!-- MODUL 2 -->
+            <div class="bento-card agenda-card" data-target-slide="5" role="button" tabindex="0" style="--card-idx: 1;">
+              <div class="agenda-card-glow-edge green"></div>
+              <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">02</div>
-              <span class="bento-badge green" data-i18n="s2_b2_badge">MODUL 2</span>
-              <div class="bento-card-title" data-i18n="s2_c2_title">Filz Herstellung</div>
-              <div class="bento-card-desc" data-i18n="s2_c2_desc">Weickert-Tradition seit 1783, Rohwoll-Selektion, Kardieren, Walken (Shore 0.56) und exklusiver „Weickert Special“-Filz.</div>
+              <div class="agenda-card-header">
+                <span class="bento-badge green" data-i18n="s2_b2_badge">MODUL 2</span>
+                <span class="agenda-slide-pill"><span class="pill-dot green"></span>Folie 5–14</span>
+              </div>
+              <div class="agenda-card-main">
+                <div class="bento-card-title" data-i18n="s2_c2_title">Filz Herstellung</div>
+                <div class="bento-card-desc" data-i18n="s2_c2_desc">Weickert-Tradition seit 1783, Rohwoll-Selektion, Kardieren, Walken (Shore 0.56) und exklusiver „Weickert Special“-Filz.</div>
+              </div>
+              <div class="agenda-card-footer">
+                <span class="agenda-action-text">Kapitel öffnen</span>
+                <span class="agenda-nav-arrow">↗</span>
+              </div>
             </div>
-            <div class="bento-card" data-target-slide="15" role="button" tabindex="0">
-              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
+
+            <!-- MODUL 3 -->
+            <div class="bento-card agenda-card" data-target-slide="15" role="button" tabindex="0" style="--card-idx: 2;">
+              <div class="agenda-card-glow-edge gold"></div>
+              <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">03</div>
-              <span class="bento-badge gold" data-i18n="s2_b3_badge">MODUL 3</span>
-              <div class="bento-card-title" data-i18n="s2_c3_title">Hammerkopf Fertigung</div>
-              <div class="bento-card-desc" data-i18n="s2_c3_desc">Roboter-Filzzuschnitt, Unterfilzfräsen, Kernhölzer (Dichten 490–860 kg/m³), Presskräfte, CNC-Bearbeitung und T-Vernietung.</div>
+              <div class="agenda-card-header">
+                <span class="bento-badge gold" data-i18n="s2_b3_badge">MODUL 3</span>
+                <span class="agenda-slide-pill"><span class="pill-dot gold"></span>Folie 15–26</span>
+              </div>
+              <div class="agenda-card-main">
+                <div class="bento-card-title" data-i18n="s2_c3_title">Hammerkopf Fertigung</div>
+                <div class="bento-card-desc" data-i18n="s2_c3_desc">Roboter-Filzzuschnitt, Unterfilzfräsen, Kernhölzer (Dichten 490–860 kg/m³), Presskräfte, CNC-Bearbeitung und T-Vernietung.</div>
+              </div>
+              <div class="agenda-card-footer">
+                <span class="agenda-action-text">Kapitel öffnen</span>
+                <span class="agenda-nav-arrow">↗</span>
+              </div>
             </div>
-            <div class="bento-card" data-target-slide="27" role="button" tabindex="0">
-              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
+
+            <!-- MODUL 4 -->
+            <div class="bento-card agenda-card" data-target-slide="27" role="button" tabindex="0" style="--card-idx: 3;">
+              <div class="agenda-card-glow-edge green"></div>
+              <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">04</div>
-              <span class="bento-badge green" data-i18n="s2_b4_badge">MODUL 4</span>
-              <div class="bento-card-title" data-i18n="s2_c4_title">Yamaha KIT</div>
-              <div class="bento-card-desc" data-i18n="s2_c4_desc">Vorjustiertes Drop-In Kit für Yamaha Flügel: Vorgeleimt, 91°-Winkel kalibriert, FFW-Filz, 45 Min. Einbau ohne Vorintonation.</div>
+              <div class="agenda-card-header">
+                <span class="bento-badge green" data-i18n="s2_b4_badge">MODUL 4</span>
+                <span class="agenda-slide-pill"><span class="pill-dot green"></span>Folie 27–34</span>
+              </div>
+              <div class="agenda-card-main">
+                <div class="bento-card-title" data-i18n="s2_c4_title">Yamaha KIT</div>
+                <div class="bento-card-desc" data-i18n="s2_c4_desc">Vorjustiertes Drop-In Kit für Yamaha Flügel: Vorgeleimt, 91°-Winkel kalibriert, FFW-Filz, 45 Min. Einbau ohne Vorintonation.</div>
+              </div>
+              <div class="agenda-card-footer">
+                <span class="agenda-action-text">Kapitel öffnen</span>
+                <span class="agenda-nav-arrow">↗</span>
+              </div>
             </div>
-            <div class="bento-card" data-target-slide="35" role="button" tabindex="0">
-              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
+
+            <!-- MODUL 5 -->
+            <div class="bento-card agenda-card hero-highlight" data-target-slide="35" role="button" tabindex="0" style="--card-idx: 4;">
+              <div class="agenda-card-glow-edge gold"></div>
+              <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s2_b5_badge">MODUL 5</span>
-              <div class="bento-card-title" data-i18n="s2_c5_title">Maßblätter Geometrie</div>
-              <div class="bento-card-desc" data-i18n="s2_c5_desc">Standard-Bohrungslänge (Gesamtlänge - 24 mm), Bohrwinkel in Gon (100er-Teilung), 90°-Stielwinkel und 3 mm Überhang.</div>
-            </div>
-            <div class="bento-card" data-target-slide="55" role="button" tabindex="0">
-              <div class="bento-card-nav-hint" title="Zu Modul springen">↗</div>
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge green" data-i18n="s2_b6_badge">MODUL 6</span>
-              <div class="bento-card-title" data-i18n="s2_c6_title">Intonation</div>
-              <div class="bento-card-desc" data-i18n="s2_c6_desc">Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.</div>
+              <div class="agenda-card-header">
+                <span class="bento-badge gold" data-i18n="s2_b5_badge">MODUL 5</span>
+                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span>Folie 35–45</span>
+              </div>
+              <div class="agenda-card-main">
+                <div class="bento-card-title" data-i18n="s2_c5_title">Intonation</div>
+                <div class="bento-card-desc" data-i18n="s2_c5_desc">Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.</div>
+              </div>
+              <div class="agenda-card-footer">
+                <span class="agenda-action-text">Kapitel öffnen</span>
+                <span class="agenda-nav-arrow">↗</span>
+              </div>
             </div>
           </div>
         </div>
@@ -3371,1082 +3458,36 @@ def get_all_slides_html():
       </section>''')
 
     # =========================================================================
-    # KAPITEL 5: WERKSTATTPRAXIS – MASSBLÄTTER, GEOMETRIE & BOHRWINKEL (35 - 41)
+    # KAPITEL 5: DIE HOHE SCHULE DER INTONATION (RENNER MASTER VOICING) (35 - 45)
     # =========================================================================
 
-    # SLIDE 35: Das Renner Hammerkopf-Maßblatt (Sander Bento)
+    # SLIDE 35: Philosophie der Intonation (Sander Bento)
     slides.append(f'''<!-- SLIDE 35 (Sander Bento Mosaic) -->
       <section class="slide slide-hero-theme" data-slide="35">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s35_category">Teil 5: Maßblätter & Geometrie • Erfassungsbogen</div>
-            <h2 class="slide-title" data-i18n="s35_title">Das Renner Hammerkopf-Maßblatt (Flügel & Klavier)</h2>
-            <div class="slide-subtitle" data-i18n="s35_subtitle">Vollständige Erfassung aller Geometriedaten für einbaufertige Hämmer</div>
+            <div class="slide-category" data-i18n="s35_category">Teil 5: Intonation • Klangphilosophie</div>
+            <h2 class="slide-title" data-i18n="s35_title">Die Philosophie der Renner Intonation</h2>
+            <div class="slide-subtitle" data-i18n="s35_subtitle">Klangschönheit, größtmögliche Dynamik und das breiteste Teilspektrum</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s35_b1_badge">>BESTELLSYSTEMATIK</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">14</span>
-                <span class="bento-metric-unit">Kernparameter</span>
-              </div>
+              <span class="bento-badge gold" data-i18n="s35_b1_badge">>KLANGPHILOSOPHIE</span>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_1"><strong>Basisdaten des Instruments:</strong> Hersteller, Seriennummer, Modell, Baujahr (z. B. Steinway & Sons M 170 #535100 von 1996).</span>
+                  <span data-i18n="s35_bullet_1"><strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_2"><strong>Oft genügen Basisdaten:</strong> Bei renommierten Marken reichen diese Angaben bereits aus, damit Renner einen exakt passenden, gebohrten Satz liefert.</span>
+                  <span data-i18n="s35_bullet_2"><strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_3"><strong>Präzise Einzelmaße:</strong> Bei unbekannten oder modifizierten Flügeln werden Gesamtlänge, Bohrungslänge, Stärke und Winkel erfasst.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_23_2_Image265.png" alt="Renner Maßblatt">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s35_b2_badge">>MASSBLATT GP/UP</span>
-                <div class="bento-media-caption" data-i18n="s35_caption_1">Original Renner Hammerkopf-Maßblatt für Flügel und Klaviere</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 36: Das Renner Reparaturprogramm für Weltmarken (Sander Bento)
-    slides.append(f'''<!-- SLIDE 36: Das Renner Reparaturprogramm -->
-      <section class="slide slide-hero-theme" data-slide="36">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s36_category">Teil 5: Maßblätter & Geometrie • Datenbank</div>
-            <h2 class="slide-title" data-i18n="s36_title">Werksspezifikationen für alle Weltmarken</h2>
-            <div class="slide-subtitle" data-i18n="s36_subtitle">Hunderte vorgebohrte Standard-Reparatursätze sofort lieferbar</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 10px;">
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge gold" data-i18n="s36_b1_badge">>STEINWAY</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c1_title">• Steinway & Sons</div>
-                <div class="bento-card-desc" data-i18n="s36_c1_desc">Alle Modelle & Epochen</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge green" data-i18n="s36_b2_badge">>BECHSTEIN</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c2_title">• C. Bechstein</div>
-                <div class="bento-card-desc" data-i18n="s36_c2_desc">Historisch & modern</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge gold" data-i18n="s36_b3_badge">>BÖSENDORFER</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c3_title">• Bösendorfer</div>
-                <div class="bento-card-desc" data-i18n="s36_c3_desc">Sämtliche Längen</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge green" data-i18n="s36_b4_badge">>BLÜTHNER</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c4_title">• Julius Blüthner</div>
-                <div class="bento-card-desc" data-i18n="s36_c4_desc">Patent & Standard</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge gold" data-i18n="s36_b5_badge">>SCHIMMEL</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c5_title">• Wilhelm Schimmel</div>
-                <div class="bento-card-desc" data-i18n="s36_c5_desc">Flügel & Pianos</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge green" data-i18n="s36_b6_badge">>STEINGRAEBER</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c6_title">• Steingraeber & Söhne</div>
-                <div class="bento-card-desc" data-i18n="s36_c6_desc">Konzertspezifikation</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge gold" data-i18n="s36_b7_badge">>FÖRSTER</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c7_title">• August Förster</div>
-                <div class="bento-card-desc" data-i18n="s36_c7_desc">Traditionsmaße</div>
-              </div>
-              <div class="bento-card" style="padding: 16px 18px;">
-                <div class="bento-card-header" style="margin-bottom: 6px;">
-                  <span class="bento-badge green" data-i18n="s36_b8_badge">>YAMAHA & KAWAI</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s36_c8_title">• Yamaha & Kawai</div>
-                <div class="bento-card-desc" data-i18n="s36_c8_desc">C- / RX- / GX-Serie</div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_24_2_Image269.png" alt="Renner Reparaturprogramm">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s36_b9_badge">>WERKSARCHIV</span>
-                <div class="bento-media-caption" data-i18n="s36_caption_1">Archivierte Renner Standard-Datensätze für weltweite Reparaturen</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 37: Standardmaße & Bohrungslänge (Sander Bento Formula Grid)
-    slides.append(f'''      <!-- SLIDE 37: Standardmaße & Bohrungslänge -->
-      <section class="slide slide-hero-theme" data-slide="37">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s37_category">Teil 5: Maßblätter & Geometrie • Standardparameter</div>
-            <h2 class="slide-title" data-i18n="s37_title">Bohrungslänge = Gesamtlänge - 24 mm</h2>
-            <div class="slide-subtitle" data-i18n="s37_subtitle">Die universelle Faustformel für Flügelhammerköpfe im Renner-Standard</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-3" style="gap: 12px;">
-              <div class="bento-card col-span-3 hero-card">
-                <span class="bento-badge gold" data-i18n="s37_b1_badge">>RENNER FAUSTFORMEL</span>
-                <div class="bento-card-title" style="color: var(--gold-light);" data-i18n="s37_c1_title">Länge = Gesamtlänge - 24 mm</div>
-                <div class="bento-card-desc" data-i18n="s37_c1_desc">Exakte Einstecktiefe des Stiels.</div>
-              </div>
-              <div class="bento-card">
-                <span class="bento-badge green" data-i18n="s37_b2_badge">>BOHRUNG</span>
-                <div class="bento-metric-top">
-                  <span class="bento-metric-num">5,4</span>
-                  <span class="bento-metric-unit">mm ø</span>
-                </div>
-                <div class="bento-card-desc" data-i18n="s37_c2_desc">Passend für Renner Konusstiele.</div>
-              </div>
-              <div class="bento-card">
-                <span class="bento-badge green" data-i18n="s37_b3_badge">>HAMMER-ZU-STIEL</span>
-                <div class="bento-metric-top">
-                  <span class="bento-metric-num">90°</span>
-                  <span class="bento-metric-unit">Winkel</span>
-                </div>
-                <div class="bento-card-desc" data-i18n="s37_c3_desc">Rechtwinkligkeit zur Saitenebene.</div>
-              </div>
-              <div class="bento-card">
-                <span class="bento-badge green" data-i18n="s37_b4_badge">>RAKE-WINKEL</span>
-                <div class="bento-metric-top">
-                  <span class="bento-metric-num">91°</span>
-                  <span class="bento-metric-unit">Lehre</span>
-                </div>
-                <div class="bento-card-desc" data-i18n="s37_c4_desc">Leichte Vorneigung beim Einleimen.</div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_27_2_Image284.jpg" alt="Standardmaße Bohrung">
-              <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s37_b5_badge">>GEOMETRIE-NORM</span>
-                <div class="bento-media-caption" data-i18n="s37_caption_1">Standardmaße der Flügelhammerkopf-Bohrung</div>
-                <div class="bento-media-subcaption" data-i18n="s37_caption_2">nach Renner-Norm</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 38: Bohrwinkel in Gon (Sander Bento Gon Grid)
-    slides.append(f'''      <!-- SLIDE 38: Bohrwinkel in Gon -->
-      <section class="slide slide-hero-theme" data-slide="38">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s38_category">Teil 5: Maßblätter & Geometrie • Gon-Winkel</div>
-            <h2 class="slide-title" data-i18n="s38_title">Bohrwinkel in Gon (100er-Teilung des 90°-Winkels)</h2>
-            <div class="slide-subtitle" data-i18n="s38_subtitle">Warum Renner Bohrwinkel traditionell in Gon statt in Grad angibt</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s38_b1_badge">>WINKELNORM</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">100</span>
-                <span class="bento-metric-unit">Gon = 90°</span>
-              </div>
-              <div class="bento-card-title" data-i18n="s38_c1_title">Zehntelgrad-genaue Teilung ohne Bruchminuten</div>
-              <div class="bento-card-desc" data-i18n="s38_c1_desc">
-                Gon ermöglicht feinere, zehntelgrad-genaue Teilungen ohne Bruchminuten. Normalwerte:
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s38_bullet_1"><strong>Klavier (UP):</strong> Bass 30 Gon – 0 Gon | Diskant 125 Gon – 0 Gon.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s38_bullet_2"><strong>Flügel (GP):</strong> Bass 25 Gon – 0 Gon | Diskant 125 Gon – 0 Gon.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s38_bullet_3"><strong>Staffelung nach Chören:</strong> Noten 1–26 (10 Gon), 27–30 (110 Gon), 31–33 (109 Gon) bis Noten 55–88 (101 Gon).</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_28_2_Image291.jpg" alt="Bohrwinkel in Gon">
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s38_b2_badge">>BOHRWINKEL-TABELLE</span>
-                <div class="bento-media-caption" data-i18n="s38_caption_1">Bohrwinkeltabelle in Gon</div>
-                <div class="bento-media-subcaption" data-i18n="s38_caption_2">über die verschiedenen Register</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 39: Das Prinzip des Stielwinkels (Sander Bento KPI Double Hero)
-    slides.append(f'''      <!-- SLIDE 39: Das Prinzip des Stielwinkels -->
-      <section class="slide slide-hero-theme" data-slide="39">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s39_category">Teil 5: Maßblätter & Geometrie • Stielwinkel-Physik</div>
-            <h2 class="slide-title" data-i18n="s39_title">90°-Stielwinkel & 3 mm Überhang: Physik des Tons</h2>
-            <div class="slide-subtitle" data-i18n="s39_subtitle">Warum übermäßige Abschliffe alter Hämmer den Saitenbruch provozieren</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div style="display: flex; gap: 28px; align-items: baseline; margin-bottom: 14px;">
-                <div>
-                  <div class="bento-metric-top">
-                    <span class="bento-metric-num">90°</span>
-                    <span class="bento-metric-unit">Winkel</span>
-                  </div>
-                  <div class="bento-card-title" data-i18n="s39_c1_title">Rechtwinkliger Anschlag</div>
-                </div>
-                <div>
-                  <div class="bento-metric-top">
-                    <span class="bento-metric-num">ca. 3</span>
-                    <span class="bento-metric-unit">mm</span>
-                  </div>
-                  <div class="bento-card-title" data-i18n="s39_c2_title">Stielüberhang</div>
-                </div>
-              </div>
-              <div class="bento-card-desc" data-i18n="s39_c1_desc">
-                Der Hammer muss im Moment des Saitenkontakts exakt im 90°-Winkel auf die Saite treffen. Der Stiel muss ca. 3 mm Überhang haben. Durch die Massenträgheit wird die kinetische Energie gezielt in Richtung Steg geleitet!
-              </div>
-              <div class="bento-card-list" style="margin-top: 14px;">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s39_bullet_1"><strong>Gefahr bei &lt; 90°:</strong> Wird ein alter Hammer zu oft geschliffen (Kopf wird kürzer), sinkt der Winkel unter 90°. Der Hammer verkeilt sich in Richtung Agraffe -> Saite reißt, Klang wird stumpf!</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_31_1_Image169.png" alt="Prinzip Stielwinkel">
-              <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s39_b1_badge">>KRAFTVEKTOR</span>
-                <div class="bento-media-caption" data-i18n="s39_caption_1">Geometrie des Hammerstielwinkels</div>
-                <div class="bento-media-subcaption" data-i18n="s39_caption_2">und Kraftvektor zum Steg</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 40: Exakte Berechnung der Bohrungslänge ohne Muster (Sander Bento)
-    slides.append(f'''<!-- SLIDE 40 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="40">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s40_category">Teil 5: Maßblätter & Geometrie • Längenberechnung</div>
-            <h2 class="slide-title" data-i18n="s40_title">Berechnung der Bohrungslänge ohne Muster</h2>
-            <div class="slide-subtitle" data-i18n="s40_subtitle">Die bewährte 4-Schritte-Methode der Renner Academy</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s40_b1_badge">>FORMEL-BERECHNUNG</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">GL - 24</span>
-                <span class="bento-metric-unit">mm Formel</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_1"><strong>1. Steighöhe & Tastenweg:</strong> Mechanikhub (46–48 mm) und Spieltiefe (10–10,5 mm) exakt einmessen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_2"><strong>2. Schnabellinie bestimmen:</strong> Höhe der Kapselleiste zur Saitenunterkante als Referenzmaß nehmen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_3"><strong>3. Faustformel anwenden:</strong> Bohrungslänge = Gesamtlänge - 24 mm für Standard-Flügelgeometrien.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_4"><strong>4. Mathematische Kontrolle:</strong> Stielüberstand von mindestens 3 mm für Festigkeit berücksichtigen.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_32_3_Image312.png" alt="Berechnung Bohrungslänge">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s40_b2_badge">>GEOMETRISCHE ACHSE</span>
-                <div class="bento-media-caption" data-i18n="s40_caption_1">Messschema zur Ermittlung der Bohrungslänge im Flügel</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 41: Flügel- & Klavier-Maßblätter im Detail (Sander Bento)
-    slides.append(f'''<!-- SLIDE 41: Flügel- & Klavier-Maßblätter im Detail -->
-      <section class="slide slide-hero-theme" data-slide="41">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s41_category">Teil 5: Maßblätter & Geometrie • Dokumentation</div>
-            <h2 class="slide-title" data-i18n="s41_title">Flügel- & Klavier-Maßblätter im Vergleich</h2>
-            <div class="slide-subtitle" data-i18n="s41_subtitle">Schritt-für-Schritt Ausfüllhilfe für Großreparaturen und Neubauten</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 14px;">
-              <div class="bento-card hero-card">
-                <div class="bento-step-watermark">GP</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s41_b1_badge">>FLÜGEL (GP)</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s41_c1_title">Grand Piano (GP) Formular</div>
-                <div class="bento-card-desc" data-i18n="s41_c1_desc">Fokus auf Gesamtlänge, Bohrungslänge, Stieldurchmesser, Röllchenabstand (17 mm vs. 15,5 mm) und 91°-Rake-Winkel.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">UP</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s41_b2_badge">>KLAVIER (UP)</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s41_c2_title">Upright Piano (UP) Formular</div>
-                <div class="bento-card-desc" data-i18n="s41_c2_desc">Besonderheiten bei Kröpfungswinkeln der Bass- und Diskantchöre, Nussbaugruppen und Achsenpositionen.</div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/HK/page_31_2_Image309.jpg" alt="Maßblätter im Vergleich">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s41_b3_badge">>DIAGNOSEBLATT</span>
-                <div class="bento-media-caption" data-i18n="s41_caption_1">Gegenüberstellung: Renner Bestellformulare für Flügel und Klaviere</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # =========================================================================
-    # KAPITEL 6: WERKSTATTPRAXIS – MONTAGE & VERLEIMEN DER HAMMERKÖPFE (42 - 54)
-    # =========================================================================
-
-    # SLIDE 42: Vormontage der Stiele auf der Mechanikleiste (Sander Bento)
-    slides.append(f'''<!-- SLIDE 42 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="42">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s42_category">Teil 6: Montage & Verleimen • Schritt 1: Stielmontage</div>
-            <h2 class="slide-title" data-i18n="s42_title">Vormontage der Hammerstiele & Spezialschrauben</h2>
-            <div class="slide-subtitle" data-i18n="s42_subtitle">Renner Kapselschrauben 4,5x22 mm mit Tellerfedern und Kapselabstandhalter</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s42_b1_badge">>MONTAGE-SCHRITT 01</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s42_bullet_1"><strong>Vormontage in Feldern:</strong> Stiele nach Registerverteilung aufstecken; 1–2 Positionen zwischen Feldern frei lassen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s42_bullet_2"><strong>Gewindegang finden:</strong> Bei gebrauchten Leisten Schraube zuerst leicht nach links drehen, bis sie spürbar in den alten Gewindegang einrastet.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s42_bullet_3"><strong>Renner Flanschschraube (Art. 43-0008745):</strong> 4,5x22 mm mit Tellerfeder-Scheibe und kombiniertem Schlitz/Kreuzschlitz.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s42_bullet_4"><strong>Werkzeuge:</strong> PZD 2 Ballengriff-Schraubendreher (Art. 43-0008316) und Kapselabstandhalter (Art. 43-0003286).</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_3_2_Image161.jpg" alt="Vormontage Hammerstiele">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s42_b2_badge">>SPACING-KONTROLLE</span>
-                <div class="bento-media-caption" data-i18n="s42_caption_1">Vormontage der Hammerstiele auf der Mechanikleiste im Werkstattbock</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 43: Frequenzprüfung der Stiele (Klangprobe) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 43 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="43">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s43_category">Teil 6: Montage & Verleimen • Schritt 2: Frequenzabgleich</div>
-            <h2 class="slide-title" data-i18n="s43_title">Frequenzprüfung & Akustische Sortierung</h2>
-            <div class="slide-subtitle" data-i18n="s43_subtitle">Abklopfen der montierten Stiele: Tiefer Ton im Bass, hohe Resonanz im Diskant</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s43_b1_badge">>AKUSTISCHE SELEKTION</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">Hz</span>
-                <span class="bento-metric-unit">Resonanz-Matching</span>
-              </div>
-              <div class="bento-card-desc" data-i18n="s43_c1_desc">
-                Bevor die Schrauben endgültig angezogen werden, erfolgt die akustische Frequenzkontrolle jedes einzelnen Hammerstiels:
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s43_bullet_1"><strong>Klangprobe durch Antippen:</strong> Jeder Stiel wird sanft angeklopft und seine Eigenresonanz belauscht.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s43_bullet_2"><strong>Harmonischer Tonverlauf:</strong> Stiele mit tieferer Resonanzfrequenz gehören in den Bass, mittlere in die Mittellage, helle hohe Resonanzen in den Diskant.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s43_bullet_3"><strong>Homogenes Spielgefühl:</strong> Diese akustische Sortierung verhindert Klangausreißer und ungleiche Energieübertragung.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_4_2_Image173.jpg" alt="Frequenzprüfung Stiele">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s43_b2_badge">>KLANG-SELEKTION</span>
-                <div class="bento-media-caption" data-i18n="s43_caption_1">Frequenzprüfung der Stiele vor dem festen Verschrauben</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 44: Ausrichten & Traveling der Hammerstiele (Sander Bento)
-    slides.append(f'''<!-- SLIDE 44 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="44">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s44_category">Teil 6: Montage & Verleimen • Schritt 3: Traveling</div>
-            <h2 class="slide-title" data-i18n="s44_title">Traveling: Gerader Stiellauf mit blauem Papier</h2>
-            <div class="slide-subtitle" data-i18n="s44_subtitle">Blaues einseitig klebendes Traveling-Papier 0,2 mm und Winkelfilzmesser</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s44_b1_badge">>PRÄZISIONSAUSRICHTUNG</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s44_bullet_1"><strong>90°-Ausrichtung der Randstiele:</strong> Zuerst den ersten und letzten Stiel jedes Feldes rechtwinklig zur Leiste einrichten.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s44_bullet_2"><strong>Traveling-Korrektur:</strong> Schief laufende Kapseln werden mit blauem, 0,2 mm dickem Klebepapier (Art. 43-0005975) unterfüttert.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s44_bullet_3"><strong>Winkelfilzmesser (Art. 43-0003252):</strong> Ermöglicht das saubere Unterschieben und Schneiden der Papierstreifen unter der Kapselsohle.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s44_bullet_4"><strong>Feldverschiebung:</strong> Ganze Felder können bei älteren Flügeln gezielt nach links oder rechts korrigiert werden.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_5_2_Image179.jpg" alt="Traveling Hammerstiele">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s44_b2_badge">>TRAVELING PAPER</span>
-                <div class="bento-media-caption" data-i18n="s44_caption_1">Traveling der Hammerstiele mit blauem 0,2-mm-Klebepapier</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 45: Auspacken, Sortieren & Neunummerieren (Sander Bento)
-    slides.append(f'''<!-- SLIDE 45 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="45">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s45_category">Teil 6: Montage & Verleimen • Schritt 4: Vorbereitung</div>
-            <h2 class="slide-title" data-i18n="s45_title">Zwingende Neunummerierung vor dem Verleimen</h2>
-            <div class="slide-subtitle" data-i18n="s45_subtitle">Warum die Tastennummern vor Beginn mit Bleistift neu aufgetragen werden müssen</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s45_b1_badge">>QUALITÄTSSICHERUNG</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">1 – 88</span>
-                <span class="bento-metric-unit">Satz-Nummerierung</span>
-              </div>
-              <div class="bento-card-desc" data-i18n="s45_c1_desc">
-                Jeder Renner-Hammerkopfsatz wird im Werk exakt gezählt, sortiert und ab Werk signiert. Dennoch gilt ein eiserner Grundsatz:
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s45_bullet_1"><strong>Überzählige Hämmer aussortieren:</strong> Satz auf das Arbeitsbrett legen und Reservehämmer separieren.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s45_bullet_2"><strong>Gefahr des Nummernverlusts:</strong> Durch das Verjüngen der Hammerkerne (schmaler als Schnittbreite) werden Werkssignaturen oft weggeschliffen!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s45_bullet_3"><strong>Neunummerierung mit Bleistift:</strong> Alle 88 Hammerköpfe müssen vor dem Verleimen auf der Unterseite mit ihrer Tastennummer beschriftet werden.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_8_2_Image191.jpg" alt="Neunummerieren der Hammerköpfe">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s45_b2_badge">>SATZ-INTEGRITÄT</span>
-                <div class="bento-media-caption" data-i18n="s45_caption_1">Kontrolle, Sortierung und manuelle Neunummerierung der Hammerköpfe</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 46: Musterhämmer setzen & Konisches Aufreiben (Sander Bento)
-    slides.append(f'''<!-- SLIDE 46 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="46">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s46_category">Teil 6: Montage & Verleimen • Schritt 5: Aufreiben</div>
-            <h2 class="slide-title" data-i18n="s46_title">Musterhämmer & Handreibahle ø 5,0 mm (Konus 1:50)</h2>
-            <div class="slide-subtitle" data-i18n="s46_subtitle">Setzen der Referenzhämmer und Vorbereitung der konischen Bohrung</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s46_b1_badge">>REFERENZHÄMMER</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">5,4</span>
-                <span class="bento-metric-unit">mm Reibahle</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s46_bullet_1"><strong>Referenzhämmer setzen:</strong> Zuerst den ersten und letzten Hammer jedes Teilfeldes als Orientierungsmuster aufstecken.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s46_bullet_2"><strong>Handreibahle (Art. 43-0003409):</strong> Reibahle ø 5,0 mm mit exaktem Konusmaß 1:50, Schneidrichtung stets im Uhrzeigersinn!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s46_bullet_3"><strong>Konisches Aufweiten:</strong> Die zylindrische Werksbohrung wird exakt auf die Konizität des Hammerstiels erweitert.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s46_bullet_4"><strong>Spannung kontrollieren:</strong> Der Hammer muss sich ohne Klebstoff bereits fest und wackelfrei aufreiben lassen.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_10_2_Image200.jpg" alt="Handreibahle konisch">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s46_b2_badge">>KONISCHES REIBEN</span>
-                <div class="bento-media-caption" data-i18n="s46_caption_1">Handreibahle ø 5,0 mm (1:50) beim konischen Reiben der Bohrung</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 47: Das Prinzip: Konischer Stiel & Konische Bohrung (Sander Bento)
-    slides.append(f'''<!-- SLIDE 47 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="47">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s47_category">Teil 6: Montage & Verleimen • Schritt 6: Konus-Prinzip</div>
-            <h2 class="slide-title" data-i18n="s47_title">Konischer Stiel & Konische Bohrung: Die Physik</h2>
-            <div class="slide-subtitle" data-i18n="s47_subtitle">Warum zylindrische Bohrungen versagen und Konizität unzerstörbar hält</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s47_b1_badge">>FORM- & KRAFTSCHLUSS</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">1:30</span>
-                <span class="bento-metric-unit">Konusverhältnis</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s47_bullet_1"><strong>Kein Leimabstreifen:</strong> Bei zylindrischen Stielen wird der Leim beim Aufschieben nach außen geschoben – die Leimfuge verhungert.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s47_bullet_2"><strong>Gleichmäßiger Leimfilm:</strong> Beim Konus berühren sich Holz und Bohrung erst auf den letzten Millimetern.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s47_bullet_3"><strong>Holzquellung als Keilverschluss:</strong> Durch das Wasser im Leim quillt das Holz in der Bohrung auf und arretiert den Stiel unlösbar.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_12_2_Image210.png" alt="Konischer Stiel und Bohrung">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s47_b2_badge">>KEGELSITZ</span>
-                <div class="bento-media-caption" data-i18n="s47_caption_1">Schnittzeichnung: Konischer Stiel verkeilt in konischer Reibungsbohrung</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 48: Prüfen des Rake-Winkels (91°) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 48 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="48">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s48_category">Teil 6: Montage & Verleimen • Schritt 7: Rake-Winkel</div>
-            <h2 class="slide-title" data-i18n="s48_title">91°-Rake-Winkel mit der Winkellehre</h2>
-            <div class="slide-subtitle" data-i18n="s48_subtitle">Präzise Neigungsmessung während des Aufsteckens und Verleimens</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s48_b1_badge">>WINKELKALIBRIERUNG</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">91°</span>
-                <span class="bento-metric-unit">Winkellehre</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s48_bullet_1"><strong>Flügel-Hammerkopfwinkel-Lehre (Art. 43-0005650):</strong> Speziell kalibrierte 91°-Lehre für die Flügelmechanik.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s48_bullet_2"><strong>Warum 91°?</strong> Die minimale 1°-Neigung gleicht die spätere Stieldurchbiegung unter Anschlagslast exakt aus.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s48_bullet_3"><strong>Kontrolle der Referenzhämmer:</strong> Erster und letzter Hammer jedes Feldes werden auf die 91°-Lehre justiert.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_13_2_Image214.jpg" alt="Rake-Winkellehre 91 Grad">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s48_b2_badge">>ANSCHLAGSWINKEL</span>
-                <div class="bento-media-caption" data-i18n="s48_caption_1">Messung mit der originalen Renner Flügel-Hammerkopfwinkel-Lehre 91°</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 49: Leimauswahl: Heiß- vs. Kaltleim (Sander Bento)
-    slides.append(f'''<!-- SLIDE 49: Leimauswahl: Heiß- vs. Kaltleim -->
-      <section class="slide slide-hero-theme" data-slide="49">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s49_category">Teil 6: Montage & Verleimen • Schritt 8: Leimauswahl</div>
-            <h2 class="slide-title" data-i18n="s49_title">Heißer Knochenleim vs. Hartholz-PVA-Leim</h2>
-            <div class="slide-subtitle" data-i18n="s49_subtitle">Warmleimbecken, Perlleim, Hasenleim oder moderner D3-Weißleim</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 14px;">
-              <div class="bento-card hero-card">
-                <div class="bento-step-watermark">01</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s49_b1_badge">>HEISSLEIM (65°C)</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s49_c1_title">Heißleim (Traditionelle Wahl)</div>
-                <div class="bento-card-desc" data-i18n="s49_c1_desc">Elektrisches Warmleimbecken 0,2 l bei 60–65°C. Glutinleim kristallisiert glashart aus und überträgt Schwingungsenergie ohne jeden Verlust direkt auf den Hammerkopf.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">02</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s49_b2_badge">>KALTLEIM (D3)</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s49_c2_title">Hartholz-Kaltleim (D3 / Weißleim)</div>
-                <div class="bento-card-desc" data-i18n="s49_c2_desc">Höhere Elastizität, längere offene Zeit für Korrekturen, aber etwas weichere Schwingungsübertragung im obersten Frequenzbereich.</div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN_GP/page_10_2_Image203.jpg" alt="Leimauswahl">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s49_b3_badge">>KRISTALLINE BRÜCKE</span>
-                <div class="bento-media-caption" data-i18n="s49_caption_1">Warmleimbecken und Leimauftrag auf den konischen Stielsitz</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 50: Leimauftrag & Drehverleimung (Sander Bento)
-    slides.append(f'''<!-- SLIDE 50 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="50">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s50_category">Teil 6: Montage & Verleimen • Schritt 9: Verleimen</div>
-            <h2 class="slide-title" data-i18n="s50_title">Drehverleimung für lückenlose Leimringe</h2>
-            <div class="slide-subtitle" data-i18n="s50_subtitle">Aufschieben mit Rotation und optische Fluchtkontrolle in 3er-Gruppen</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s50_b1_badge">>HANDWERKSTECHNIK</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s50_bullet_1"><strong>Doppelter Leimauftrag:</strong> Dünner Leimfilm auf den Stiel und tropffrei in die Bohrung.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s50_bullet_2"><strong>Rotierende Bewegung:</strong> Beim Aufschieben wird der Hammerkopf um ca. 90° hin und her gedreht -> garantiert einen geschlossenen Leimring.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s50_bullet_3"><strong>3er-Gruppen-Prinzip:</strong> 3 Hämmer leimen und sofort den Durchgang des mittleren zur Referenzlinie peilen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s50_bullet_4"><strong>Fluchtkontrolle:</strong> Fluchtlinie von Vorderfilz, Rückfilz und Hammerschwänzen mit dem Auge kontrollieren.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_15_2_Image223.jpg" alt="Drehverleimung Hammerkopf">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s50_b2_badge">>DREHBEWEGUNG</span>
-                <div class="bento-media-caption" data-i18n="s50_caption_1">Drehendes Aufsetzen des Hammerkopfs zur Ausbildung gleichmäßiger Leimringe</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 51: Leimfuge verputzen & Säubern (Sander Bento)
-    slides.append(f'''<!-- SLIDE 51 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="51">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s51_category">Teil 6: Montage & Verleimen • Schritt 10: Leimringe</div>
-            <h2 class="slide-title" data-i18n="s51_title">Leimfuge verputzen: Der Gummibärchen-Zustand</h2>
-            <div class="slide-subtitle" data-i18n="s51_subtitle">Warmwasserpinsel bei Heißleim – Sauberes Abstechen nach ca. 1 Stunde</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s51_b1_badge">>VERPUTZTECHNIK</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s51_bullet_1"><strong>Heißwasserpinsel:</strong> Direkt nach dem Aufsetzen wird die Fuge mit heißem Wasser (oder verdünntem „Leimwasser“ bei PVA) geglättet.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s51_bullet_2"><strong>1 Stunde Reifezeit:</strong> Nach ca. 60 Minuten erreicht der austretende Leimring die Konsistenz von Weinflaschengummi („Gummibärchen“).</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s51_bullet_3"><strong>Sauberes Abstechen:</strong> In diesem elastischen Zustand lässt sich der Ring mit einem scharfen Schnitzmesser rückstandslos abtrennen, ohne das Holz einzukerben.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_20_2_Image259.jpg" alt="Leimfuge verputzen">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s51_b2_badge">>SAUBERE FUGE</span>
-                <div class="bento-media-caption" data-i18n="s51_caption_1">Sauberes Verputzen des Leimrings nach 1 Stunde Trocknungszeit</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 52: Spannen der Schwänze & Stiele absägen (Sander Bento)
-    slides.append(f'''<!-- SLIDE 52 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="52">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s52_category">Teil 6: Montage & Verleimen • Schritt 11: Absägen</div>
-            <h2 class="slide-title" data-i18n="s52_title">Klemmschere & Kappen mit der Japansäge</h2>
-            <div class="slide-subtitle" data-i18n="s52_subtitle">Absoluter Achsenschutz durch die Renner Spezialklemme (Art. 43-0003233)</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s52_b1_badge">>KAPPVERFAHREN</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">Dozuki</span>
-                <span class="bento-metric-unit">Präzisionsschnitt</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s52_bullet_1"><strong>Gefahr für die Kapselachse:</strong> Sägekräfte und Schleifdruck dürfen unter keinen Umständen auf die filigrane Kapselachse wirken!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s52_bullet_2"><strong>Klemmschere für Flügelstiele (Art. 43-0003233):</strong> Blockiert den Stiel direkt hinter dem Kopf und leitet alle Kräfte direkt in die Klemme ab.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s52_bullet_3"><strong>Schnitt mit der Japansäge:</strong> Feinzahnige Japansäge trennt den überstehenden Stielzapfen bündig am Holzkern ab.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_22_2_Image268.jpg" alt="Klemmschere und Japansäge">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s52_b2_badge">>DOZUKI SÄGE</span>
-                <div class="bento-media-caption" data-i18n="s52_caption_1">Einsatz der Klemmschere zum Achsenschutz beim Kappen des Stielendes</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 53: Schwanzformung (Sanding & Forming) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 53: Schwanzformung (Sanding & Forming) -->
-      <section class="slide slide-hero-theme" data-slide="53">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s53_category">Teil 6: Montage & Verleimen • Schritt 12: Schwanzform</div>
-            <h2 class="slide-title" data-i18n="s53_title">Schwanzformung: Weder zu rund noch zu flach</h2>
-            <div class="slide-subtitle" data-i18n="s53_subtitle">Schleifklotz Körnung 40 für sicheres Fangen ohne Klemmen oder Aufspringen</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 14px;">
-              <div class="bento-card hero-card">
-                <div class="bento-step-watermark">01</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s53_b1_badge">>SCHRITT 01</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s53_c1_title">Schritt 1: Überstand beischleifen</div>
-                <div class="bento-card-desc" data-i18n="s53_c1_desc">Mit Schleifklotz Körnung 40 wird der abgekappte Stielüberstand bündig zur Kernholzkontur beigeschliffen.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">02</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s53_b2_badge">>SCHRITT 02</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s53_c2_title">Schritt 2: Fängerprofil anpassen</div>
-                <div class="bento-card-desc" data-i18n="s53_c2_desc">Schwanzkrümmung so formen, dass der Fänger beim Repetieren sofort und geräuschlos greift, ohne abzurutschen.</div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN_GP/page_14_2_Image227.jpg" alt="Schwanzformung">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s53_b3_badge">>FÄNGERGEOMETRIE</span>
-                <div class="bento-media-caption" data-i18n="s53_caption_1">Prüfung des Fänger-Eingriffs nach dem Schleifen der Schwanzkrümmung</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # SLIDE 54: Finish, Kantenbrechen & Flammenkorrektur (Sander Bento)
-    slides.append(f'''<!-- SLIDE 54 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="54">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s54_category">Teil 6: Montage & Verleimen • Schritt 13: Endfinish</div>
-            <h2 class="slide-title" data-i18n="s54_title">Kantenbrechen & Flammenkorrektur der Flucht</h2>
-            <div class="slide-subtitle" data-i18n="s54_subtitle">Feine Schleifpapierfeile, Entgraten und Ausrichten mit der Brennerlampe</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">06</div>
-              <span class="bento-badge gold" data-i18n="s54_b1_badge">>MEISTER-FINISH</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s54_bullet_1"><strong>Kanten brechen:</strong> Scharfe Holzkanten an den Schwanzseiten werden mit feiner Schleiffeile sanft verbrochen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s54_bullet_2"><strong>Flammenkorrektur an der Brennerlampe:</strong> Kleinste Flucht- oder Neigungsfehler werden durch gezielte, sanfte Erwärmung des Stiels korrigiert.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s54_bullet_3"><strong>Einbaufertiger Zustand:</strong> Der Satz ist nun mechanisch perfekt montiert, gefluchtet und bereit für die Regulierung im Instrument.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/EN/page_26_2_Image293.jpg" alt="Kosmetik und Endfinish">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s54_b2_badge">>VEREDELTE KANTEN</span>
-                <div class="bento-media-caption" data-i18n="s54_caption_1">Endfinish: Kantenbrechen und Fluchtprüfung an der Brennerlampe</div>
-              </div>
-            </div>
-          </div>
-        </div>
-{get_watermark()}
-      </section>''')
-
-    # =========================================================================
-    # KAPITEL 7: DIE HOHE SCHULE DER INTONATION (RENNER MASTER VOICING) (55 - 65)
-    # =========================================================================
-
-    # SLIDE 55: Philosophie der Intonation (Sander Bento)
-    slides.append(f'''<!-- SLIDE 55 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="55">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s55_category">Teil 7: Intonation • Klangphilosophie</div>
-            <h2 class="slide-title" data-i18n="s55_title">Die Philosophie der Renner Intonation</h2>
-            <div class="slide-subtitle" data-i18n="s55_subtitle">Klangschönheit, größtmögliche Dynamik und das breiteste Teilspektrum</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">07</div>
-              <span class="bento-badge gold" data-i18n="s55_b1_badge">>KLANGPHILOSOPHIE</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s55_bullet_1"><strong>1. Volle Klangschönheit:</strong> Die klanglichen Eigenheiten des spezifischen Flügels auf das höchste Niveau bringen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s55_bullet_2"><strong>2. Maximale Dynamikstufen:</strong> Alle Töne müssen so viele dynamische Abstufungen wie möglich bieten – von pp bis ff.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s55_bullet_3"><strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum.</span>
+                  <span data-i18n="s35_bullet_3"><strong>3. Breites Teilspektrum:</strong> Reicher Obertongehalt für tragfähigen Ton („Sustain“) im Raum.</span>
                 </div>
               </div>
             </div>
@@ -4457,8 +3498,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s55_b2_badge">>DIE SEELE DES TONS</span>
-                <div class="bento-media-caption" data-i18n="s55_caption_1">Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston</div>
+                <span class="bento-badge green" data-i18n="s35_b2_badge">>DIE SEELE DES TONS</span>
+                <div class="bento-media-caption" data-i18n="s35_caption_1">Das Ziel meisterlicher Intonation: Offene Klangdynamik und Gesangston</div>
               </div>
             </div>
           </div>
@@ -4466,14 +3507,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 56: Unveränderliche vs. Beeinflussbare Faktoren (Sander Bento)
-    slides.append(f'''<!-- SLIDE 56: Unveränderliche vs. Beeinflussbare Faktoren -->
-      <section class="slide slide-hero-theme" data-slide="56">
+    # SLIDE 36: Unveränderliche vs. Beeinflussbare Faktoren (Sander Bento)
+    slides.append(f'''<!-- SLIDE 36: Unveränderliche vs. Beeinflussbare Faktoren -->
+      <section class="slide slide-hero-theme" data-slide="36">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s56_category">Teil 7: Intonation • Einflussgrößen</div>
-            <h2 class="slide-title" data-i18n="s56_title">Herausforderungen: Unveränderlich vs. Beeinflussbar</h2>
-            <div class="slide-subtitle" data-i18n="s56_subtitle">Konstruktion und Raumakustik verstehen – Mechanik und Filz beherrschen</div>
+            <div class="slide-category" data-i18n="s36_category">Teil 5: Intonation • Einflussgrößen</div>
+            <h2 class="slide-title" data-i18n="s36_title">Herausforderungen: Unveränderlich vs. Beeinflussbar</h2>
+            <div class="slide-subtitle" data-i18n="s36_subtitle">Konstruktion und Raumakustik verstehen – Mechanik und Filz beherrschen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4481,43 +3522,43 @@ def get_all_slides_html():
             <div class="bento-grid bento-grid-2" style="gap: 14px;">
               <div class="bento-card">
                 <div class="bento-step-watermark">01</div>
-                <span class="bento-badge red" data-i18n="s56_b1_badge">>AKUSTISCHE GRENZEN</span>
-                <div class="bento-card-title" style="color: var(--text-muted);" data-i18n="s56_c1_title">Unveränderliche Faktoren</div>
+                <span class="bento-badge red" data-i18n="s36_b1_badge">>AKUSTISCHE GRENZEN</span>
+                <div class="bento-card-title" style="color: var(--text-muted);" data-i18n="s36_c1_title">Unveränderliche Faktoren</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot"></span>
-                    <span data-i18n="s56_bullet_1"><strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz</span>
+                    <span data-i18n="s36_bullet_1"><strong>Konstruktion:</strong> Mensur, Gussplatte, Resonanzbodenholz</span>
                   </div>
                   <div class="bento-card-list-item">
                     <span class="bento-dot"></span>
-                    <span data-i18n="s56_bullet_2"><strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule</span>
+                    <span data-i18n="s36_bullet_2"><strong>Raumakustik:</strong> Großer Saal, Studio, Wohnraum, Schule</span>
                   </div>
                   <div class="bento-card-list-item">
                     <span class="bento-dot"></span>
-                    <span data-i18n="s56_bullet_3"><strong>Pianist:</strong> Individueller Anschlag und Geschmack</span>
+                    <span data-i18n="s36_bullet_3"><strong>Pianist:</strong> Individueller Anschlag und Geschmack</span>
                   </div>
                 </div>
               </div>
               <div class="bento-card hero-card" style="border-color: var(--border-green);">
                 <div class="bento-step-watermark">02</div>
-                <span class="bento-badge green" data-i18n="s56_b2_badge">>EINFLUSSBEREICH</span>
-                <div class="bento-card-title" style="color: var(--renner-green-bright);" data-i18n="s56_c2_title">Was wir beeinflussen können:</div>
+                <span class="bento-badge green" data-i18n="s36_b2_badge">>EINFLUSSBEREICH</span>
+                <div class="bento-card-title" style="color: var(--renner-green-bright);" data-i18n="s36_c2_title">Was wir beeinflussen können:</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
-                    <span data-i18n="s56_bullet_4"><strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis</span>
+                    <span data-i18n="s36_bullet_4"><strong>Renner Hammerköpfe & Filze:</strong> Perfekte Basis</span>
                   </div>
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
-                    <span data-i18n="s56_bullet_5"><strong>Renner Mechanikteile:</strong> Präzise Hebelwege</span>
+                    <span data-i18n="s36_bullet_5"><strong>Renner Mechanikteile:</strong> Präzise Hebelwege</span>
                   </div>
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
-                    <span data-i18n="s56_bullet_6"><strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften</span>
+                    <span data-i18n="s36_bullet_6"><strong>Saitenlagerung:</strong> Fester Sitz an Stegen und Stiften</span>
                   </div>
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
-                    <span data-i18n="s56_bullet_7"><strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament</span>
+                    <span data-i18n="s36_bullet_7"><strong>Feinregulierung & Stimmung:</strong> Perfektes Fundament</span>
                   </div>
                 </div>
               </div>
@@ -4529,8 +3570,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s56_b3_badge">>RESONANZBODEN & SAITEN</span>
-                <div class="bento-media-caption" data-i18n="s56_caption_1">Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang</div>
+                <span class="bento-badge green" data-i18n="s36_b3_badge">>RESONANZBODEN & SAITEN</span>
+                <div class="bento-media-caption" data-i18n="s36_caption_1">Der Flügel im Konzertsaal: Raumakustik und Instrument im Einklang</div>
               </div>
             </div>
           </div>
@@ -4538,22 +3579,22 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 57: Regulierung & Stimmung als Grundvoraussetzung (Sander Bento Quote Hero)
-    slides.append(f'''      <!-- SLIDE 57: Regulierung & Stimmung -->
-      <section class="slide slide-hero-theme" data-slide="57">
+    # SLIDE 37: Regulierung & Stimmung als Grundvoraussetzung (Sander Bento Quote Hero)
+    slides.append(f'''      <!-- SLIDE 37: Regulierung & Stimmung -->
+      <section class="slide slide-hero-theme" data-slide="37">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s57_category">Teil 7: Intonation • Voraussetzungen</div>
-            <h2 class="slide-title" data-i18n="s57_title">Keine Intonation ohne makellose Regulierung!</h2>
-            <div class="slide-subtitle" data-i18n="s57_subtitle">Der goldene Grundsatz von Jens-Sören Kruse (Klavierbaumeister)</div>
+            <div class="slide-category" data-i18n="s37_category">Teil 5: Intonation • Voraussetzungen</div>
+            <h2 class="slide-title" data-i18n="s37_title">Keine Intonation ohne makellose Regulierung!</h2>
+            <div class="slide-subtitle" data-i18n="s37_subtitle">Der goldene Grundsatz von Jens-Sören Kruse (Klavierbaumeister)</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s57_b1_badge">>JENS-SÖREN KRUSE</span>
-              <div class="bento-card-title" data-i18n="s57_c1_title">Der unabdingbare Kreislauf</div>
-              <div class="bento-card-desc" style="font-size: clamp(1.15rem, 1.25vw, 1.35rem); line-height: 1.75; color: var(--gold-light); font-style: italic; margin-top: 8px;" data-i18n="s57_c1_desc">
+              <span class="bento-badge gold" data-i18n="s37_b1_badge">>JENS-SÖREN KRUSE</span>
+              <div class="bento-card-title" data-i18n="s37_c1_title">Der unabdingbare Kreislauf</div>
+              <div class="bento-card-desc" style="font-size: clamp(1.15rem, 1.25vw, 1.35rem); line-height: 1.75; color: var(--gold-light); font-style: italic; margin-top: 8px;" data-i18n="s37_c1_desc">
                 „Ohne gute Regulierung keine saubere Stimmung,<br>
                 und ohne gute Regulierung keine saubere Intonation,<br>
                 und ohne saubere Stimmung keine saubere Intonation.<br>
@@ -4562,16 +3603,16 @@ def get_all_slides_html():
               <div class="bento-card-list" style="margin-top: 14px;">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s57_bullet_1">Wer versucht, ungleichmäßigen Ton durch Nadeln auszugleichen, wenn in Wahrheit Auslösung, Steighöhe oder Saitenchor ungleich sind, zerstört den Hammerkopf!</span>
+                  <span data-i18n="s37_bullet_1">Wer versucht, ungleichmäßigen Ton durch Nadeln auszugleichen, wenn in Wahrheit Auslösung, Steighöhe oder Saitenchor ungleich sind, zerstört den Hammerkopf!</span>
                 </div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image11.jpeg" alt="Regulierung und Feineinstellung">
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s57_b2_badge">>REGULIERUNG</span>
-                <div class="bento-media-caption" data-i18n="s57_caption_1">Präzisionsregulierung der Flügelmechanik</div>
-                <div class="bento-media-subcaption" data-i18n="s57_caption_2">vor Beginn der Intonierarbeiten</div>
+                <span class="bento-badge green" data-i18n="s37_b2_badge">>REGULIERUNG</span>
+                <div class="bento-media-caption" data-i18n="s37_caption_1">Präzisionsregulierung der Flügelmechanik</div>
+                <div class="bento-media-subcaption" data-i18n="s37_caption_2">vor Beginn der Intonierarbeiten</div>
               </div>
             </div>
           </div>
@@ -4579,14 +3620,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 58: Das Uhren-Modell & Die 4 dynamischen Keile (Sander Bento Clock Grid)
-    slides.append(f'''      <!-- SLIDE 58: Das Uhren-Modell -->
-      <section class="slide slide-hero-theme" data-slide="58">
+    # SLIDE 38: Das Uhren-Modell & Die 4 dynamischen Keile (Sander Bento Clock Grid)
+    slides.append(f'''      <!-- SLIDE 38: Das Uhren-Modell -->
+      <section class="slide slide-hero-theme" data-slide="38">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s58_category">Teil 7: Intonation • Geometrie & Keile</div>
-            <h2 class="slide-title" data-i18n="s58_title">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
-            <div class="slide-subtitle" data-i18n="s58_subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
+            <div class="slide-category" data-i18n="s38_category">Teil 5: Intonation • Geometrie & Keile</div>
+            <h2 class="slide-title" data-i18n="s38_title">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
+            <div class="slide-subtitle" data-i18n="s38_subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4594,50 +3635,50 @@ def get_all_slides_html():
             <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 14px;">
               <div class="bento-card" style="border-left: 4px solid #3b82f6;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b1_badge">FORTISSIMO (ff)</span>
+                  <span class="bento-badge" data-i18n="s38_b1_badge">FORTISSIMO (ff)</span>
                   <span class="mono-val">9:00–10:00 & 2:00–3:00</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s58_c1_title">Blauer Keil</div>
-                <div class="bento-card-desc" data-i18n="s58_c1_desc">Tiefe Nadelstiche zur Entspannung</div>
+                <div class="bento-card-title" data-i18n="s38_c1_title">Blauer Keil</div>
+                <div class="bento-card-desc" data-i18n="s38_c1_desc">Tiefe Nadelstiche zur Entspannung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #22c55e;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b2_badge">FORTE (f)</span>
+                  <span class="bento-badge" data-i18n="s38_b2_badge">FORTE (f)</span>
                   <span class="mono-val">10:00–11:00 & 1:00–2:00</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s58_c2_title">Grüner Keil</div>
-                <div class="bento-card-desc" data-i18n="s58_c2_desc">Raumklang, Glanz und dynamische Entfaltung</div>
+                <div class="bento-card-title" data-i18n="s38_c2_title">Grüner Keil</div>
+                <div class="bento-card-desc" data-i18n="s38_c2_desc">Raumklang, Glanz und dynamische Entfaltung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #f97316;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b3_badge">PIANO (p)</span>
+                  <span class="bento-badge" data-i18n="s38_b3_badge">PIANO (p)</span>
                   <span class="mono-val">11:00–11:30 & 12:30–1:00</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s58_c3_title">Orangener Keil</div>
-                <div class="bento-card-desc" data-i18n="s58_c3_desc">Lyrischer Gesangston, feine Abstimmung</div>
+                <div class="bento-card-title" data-i18n="s38_c3_title">Orangener Keil</div>
+                <div class="bento-card-desc" data-i18n="s38_c3_desc">Lyrischer Gesangston, feine Abstimmung</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #a855f7;">
                 <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s58_b4_badge">PIANISSIMO (pp)</span>
+                  <span class="bento-badge" data-i18n="s38_b4_badge">PIANISSIMO (pp)</span>
                   <span class="mono-val">11:30–12:00 & 12:00–12:30</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s58_c4_title">Violetter Keil</div>
-                <div class="bento-card-desc" data-i18n="s58_c4_desc">Flüsterleise Ansprache</div>
+                <div class="bento-card-title" data-i18n="s38_c4_title">Violetter Keil</div>
+                <div class="bento-card-desc" data-i18n="s38_c4_desc">Flüsterleise Ansprache</div>
               </div>
               <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
                 <div class="bento-card-header">
-                  <span class="bento-badge red" data-i18n="s58_b5_badge">>ROTE ZONE (SCHEITEL)</span>
+                  <span class="bento-badge red" data-i18n="s38_b5_badge">>ROTE ZONE (SCHEITEL)</span>
                   <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
                 </div>
-                <div class="bento-card-title" style="color: #fca5a5;" data-i18n="s58_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
+                <div class="bento-card-title" style="color: #fca5a5;" data-i18n="s38_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
               </div>
             </div>
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/Intonation/page_11_2_Image210.jpg" alt="Das Uhren-Modell der Intonation">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s58_b6_badge">>JENS-SÖREN KRUSE</span>
-                <div class="bento-media-caption" data-i18n="s58_caption_1">Original Renner Uhrenmodell</div>
-                <div class="bento-media-subcaption" data-i18n="s58_caption_2">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
+                <span class="bento-badge gold" data-i18n="s38_b6_badge">>JENS-SÖREN KRUSE</span>
+                <div class="bento-media-caption" data-i18n="s38_caption_1">Original Renner Uhrenmodell</div>
+                <div class="bento-media-subcaption" data-i18n="s38_caption_2">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
               </div>
             </div>
           </div>
@@ -4645,44 +3686,44 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 59: Die Vorintonation (Pre-Needling) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 59 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="59">
+    # SLIDE 39: Die Vorintonation (Pre-Needling) (Sander Bento)
+    slides.append(f'''<!-- SLIDE 39 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="39">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s59_category">Teil 7: Intonation • Vorintonation</div>
-            <h2 class="slide-title" data-i18n="s59_title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
-            <div class="slide-subtitle" data-i18n="s59_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
+            <div class="slide-category" data-i18n="s39_category">Teil 5: Intonation • Vorintonation</div>
+            <h2 class="slide-title" data-i18n="s39_title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
+            <div class="slide-subtitle" data-i18n="s39_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <div class="bento-step-watermark">07</div>
-              <span class="bento-badge gold" data-i18n="s59_b1_badge">>PRE-NEEDLING</span>
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s39_b1_badge">>PRE-NEEDLING</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">pp – ff</span>
                 <span class="bento-metric-unit">Vorintonation</span>
               </div>
-              <div class="bento-card-desc" data-i18n="s59_c1_desc">
+              <div class="bento-card-desc" data-i18n="s39_c1_desc">
                 Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:
               </div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s59_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).</span>
+                  <span data-i18n="s39_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s59_bullet_2"><strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).</span>
+                  <span data-i18n="s39_bullet_2"><strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s59_bullet_3"><strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.</span>
+                  <span data-i18n="s39_bullet_3"><strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s59_bullet_4"><strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.</span>
+                  <span data-i18n="s39_bullet_4"><strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.</span>
                 </div>
               </div>
             </div>
@@ -4693,8 +3734,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s59_b2_badge">>GRUNDELASTIZITÄT</span>
-                <div class="bento-media-caption" data-i18n="s59_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
+                <span class="bento-badge green" data-i18n="s39_b2_badge">>GRUNDELASTIZITÄT</span>
+                <div class="bento-media-caption" data-i18n="s39_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
               </div>
             </div>
           </div>
@@ -4702,21 +3743,21 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 60: Werkzeuge & Nadelstich-Vorgaben (Sander Bento)
-    slides.append(f'''<!-- SLIDE 60 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="60">
+    # SLIDE 40: Werkzeuge & Nadelstich-Vorgaben (Sander Bento)
+    slides.append(f'''<!-- SLIDE 40 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="40">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s60_category">Teil 7: Intonation • Werkzeug & Technik</div>
-            <h2 class="slide-title" data-i18n="s60_title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
-            <div class="slide-subtitle" data-i18n="s60_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
+            <div class="slide-category" data-i18n="s40_category">Teil 5: Intonation • Werkzeug & Technik</div>
+            <h2 class="slide-title" data-i18n="s40_title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
+            <div class="slide-subtitle" data-i18n="s40_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <div class="bento-step-watermark">07</div>
-              <span class="bento-badge gold" data-i18n="s60_b1_badge">>WERKZEUGKUNDE</span>
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s40_b1_badge">>WERKZEUGKUNDE</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">3 & 1</span>
                 <span class="bento-metric-unit">Nadelwerkzeuge</span>
@@ -4724,18 +3765,18 @@ def get_all_slides_html():
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s60_bullet_1"><strong>Stichanzahlen Pre-Needling:</strong>
+                  <span data-i18n="s40_bullet_1"><strong>Stichanzahlen Pre-Needling:</strong>
                 <br>• Bass: 7–10 Stiche horizontal
                 <br>• Mittellage: 5–10 Stiche horizontal
                 <br>• Diskant: 0–7 Stiche vertikal</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s60_bullet_2"><strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!</span>
+                  <span data-i18n="s40_bullet_2"><strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s60_bullet_3"><strong>Original Renner Werkzeuge:</strong>
+                  <span data-i18n="s40_bullet_3"><strong>Original Renner Werkzeuge:</strong>
                 <br>• Intonierapparat verstellbar (Art. 43-0005642)
                 <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270)
                 <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).</span>
@@ -4749,8 +3790,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s60_b2_badge">>PRÄZISIONSNADELN</span>
-                <div class="bento-media-caption" data-i18n="s60_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
+                <span class="bento-badge green" data-i18n="s40_b2_badge">>PRÄZISIONSNADELN</span>
+                <div class="bento-media-caption" data-i18n="s40_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
               </div>
             </div>
           </div>
@@ -4758,33 +3799,33 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 61: Saitenvorbereitung im Instrument (Sander Bento)
-    slides.append(f'''<!-- SLIDE 61 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="61">
+    # SLIDE 41: Saitenvorbereitung im Instrument (Sander Bento)
+    slides.append(f'''<!-- SLIDE 41 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="41">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s61_category">Teil 7: Intonation • Saitenlagerung</div>
-            <h2 class="slide-title" data-i18n="s61_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
-            <div class="slide-subtitle" data-i18n="s61_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
+            <div class="slide-category" data-i18n="s41_category">Teil 5: Intonation • Saitenlagerung</div>
+            <h2 class="slide-title" data-i18n="s41_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
+            <div class="slide-subtitle" data-i18n="s41_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <div class="bento-step-watermark">07</div>
-              <span class="bento-badge gold" data-i18n="s61_b1_badge">>SAITEN-BETTUNG</span>
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s41_b1_badge">>SAITEN-BETTUNG</span>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s61_bullet_1"><strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.</span>
+                  <span data-i18n="s41_bullet_1"><strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s61_bullet_2"><strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.</span>
+                  <span data-i18n="s41_bullet_2"><strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s61_bullet_3"><strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.</span>
+                  <span data-i18n="s41_bullet_3"><strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.</span>
                 </div>
               </div>
             </div>
@@ -4795,8 +3836,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s61_b2_badge">>CHORREINHEIT</span>
-                <div class="bento-media-caption" data-i18n="s61_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
+                <span class="bento-badge green" data-i18n="s41_b2_badge">>CHORREINHEIT</span>
+                <div class="bento-media-caption" data-i18n="s41_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
               </div>
             </div>
           </div>
@@ -4804,21 +3845,21 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 62: Anschlagspunkt & Geradheit der Hammerköpfe (Sander Bento)
-    slides.append(f'''<!-- SLIDE 62 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="62">
+    # SLIDE 42: Anschlagspunkt & Geradheit der Hammerköpfe (Sander Bento)
+    slides.append(f'''<!-- SLIDE 42 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="42">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s62_category">Teil 7: Intonation • Ausrichtung</div>
-            <h2 class="slide-title" data-i18n="s62_title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
-            <div class="slide-subtitle" data-i18n="s62_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
+            <div class="slide-category" data-i18n="s42_category">Teil 5: Intonation • Ausrichtung</div>
+            <h2 class="slide-title" data-i18n="s42_title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
+            <div class="slide-subtitle" data-i18n="s42_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <div class="bento-step-watermark">07</div>
-              <span class="bento-badge gold" data-i18n="s62_b1_badge">>STRIKE POINT</span>
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s42_b1_badge">>STRIKE POINT</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">3</span>
                 <span class="bento-metric-unit">Saiten Tricord</span>
@@ -4826,15 +3867,15 @@ def get_all_slides_html():
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s62_bullet_1"><strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.</span>
+                  <span data-i18n="s42_bullet_1"><strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s62_bullet_2"><strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!</span>
+                  <span data-i18n="s42_bullet_2"><strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s62_bullet_3"><strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.</span>
+                  <span data-i18n="s42_bullet_3"><strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.</span>
                 </div>
               </div>
             </div>
@@ -4845,8 +3886,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s62_b2_badge">>DISKANTGLANZ</span>
-                <div class="bento-media-caption" data-i18n="s62_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
+                <span class="bento-badge green" data-i18n="s42_b2_badge">>DISKANTGLANZ</span>
+                <div class="bento-media-caption" data-i18n="s42_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
               </div>
             </div>
           </div>
@@ -4854,14 +3895,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 63: Abziehen der Hammerkronen (Filing) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 63: Abziehen der Hammerkronen (Filing) -->
-      <section class="slide slide-hero-theme" data-slide="63">
+    # SLIDE 43: Abziehen der Hammerkronen (Filing) (Sander Bento)
+    slides.append(f'''<!-- SLIDE 43: Abziehen der Hammerkronen (Filing) -->
+      <section class="slide slide-hero-theme" data-slide="43">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s63_category">Teil 7: Intonation • Kronenabzug</div>
-            <h2 class="slide-title" data-i18n="s63_title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
-            <div class="slide-subtitle" data-i18n="s63_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
+            <div class="slide-category" data-i18n="s43_category">Teil 5: Intonation • Kronenabzug</div>
+            <h2 class="slide-title" data-i18n="s43_title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
+            <div class="slide-subtitle" data-i18n="s43_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4870,18 +3911,18 @@ def get_all_slides_html():
               <div class="bento-card hero-card">
                 <div class="bento-step-watermark">01</div>
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s63_b1_badge">>HOHL VOR RUND</span>
+                  <span class="bento-badge gold" data-i18n="s43_b1_badge">>HOHL VOR RUND</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s63_c1_title">1. Hohl vor Rund (Seitenabzug)</div>
-                <div class="bento-card-desc" data-i18n="s63_c1_desc">Mit dem Schleifbrettchen von den Schultern her zur Scheitelmitte hin arbeiten, um die natürliche Keilspannung zu bewahren.</div>
+                <div class="bento-card-title" data-i18n="s43_c1_title">1. Hohl vor Rund (Seitenabzug)</div>
+                <div class="bento-card-desc" data-i18n="s43_c1_desc">Mit dem Schleifbrettchen von den Schultern her zur Scheitelmitte hin arbeiten, um die natürliche Keilspannung zu bewahren.</div>
               </div>
               <div class="bento-card">
                 <div class="bento-step-watermark">02</div>
                 <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s63_b2_badge">>KRONENSCHEITEL</span>
+                  <span class="bento-badge green" data-i18n="s43_b2_badge">>KRONENSCHEITEL</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s63_c2_title">2. Sanfter Kronenscheitel</div>
-                <div class="bento-card-desc" data-i18n="s63_c2_desc">Abschließend den Scheitel mit feinstem Schleifleinen (Körnung 320–400) vorsichtig verrunden, ohne Scheitelfilz abzutragen.</div>
+                <div class="bento-card-title" data-i18n="s43_c2_title">2. Sanfter Kronenscheitel</div>
+                <div class="bento-card-desc" data-i18n="s43_c2_desc">Abschließend den Scheitel mit feinstem Schleifleinen (Körnung 320–400) vorsichtig verrunden, ohne Scheitelfilz abzutragen.</div>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4891,8 +3932,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s63_b3_badge">>SCHLEIFFEILE</span>
-                <div class="bento-media-caption" data-i18n="s63_caption_1">Kronenabzug: Schleifbrettführung für gleichmäßigen Scheitelradius</div>
+                <span class="bento-badge green" data-i18n="s43_b3_badge">>SCHLEIFFEILE</span>
+                <div class="bento-media-caption" data-i18n="s43_caption_1">Kronenabzug: Schleifbrettführung für gleichmäßigen Scheitelradius</div>
               </div>
             </div>
           </div>
@@ -4900,37 +3941,37 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 64: Zwischen- & Feinintonation (Mid & Balance Voicing) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 64 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="64">
+    # SLIDE 44: Zwischen- & Feinintonation (Mid & Balance Voicing) (Sander Bento)
+    slides.append(f'''<!-- SLIDE 44 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="44">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s64_category">Teil 7: Intonation • Feinabstimmung</div>
-            <h2 class="slide-title" data-i18n="s64_title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
-            <div class="slide-subtitle" data-i18n="s64_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
+            <div class="slide-category" data-i18n="s44_category">Teil 5: Intonation • Feinabstimmung</div>
+            <h2 class="slide-title" data-i18n="s44_title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
+            <div class="slide-subtitle" data-i18n="s44_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
-              <div class="bento-step-watermark">07</div>
-              <span class="bento-badge gold" data-i18n="s64_b1_badge">>FEININTONATION</span>
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s44_b1_badge">>FEININTONATION</span>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s64_bullet_1"><strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.</span>
+                  <span data-i18n="s44_bullet_1"><strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s64_bullet_2"><strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!</span>
+                  <span data-i18n="s44_bullet_2"><strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s64_bullet_3"><strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).</span>
+                  <span data-i18n="s44_bullet_3"><strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s64_bullet_4"><strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!</span>
+                  <span data-i18n="s44_bullet_4"><strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!</span>
                 </div>
               </div>
             </div>
@@ -4941,8 +3982,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s64_b2_badge">>FARBPALETTE</span>
-                <div class="bento-media-caption" data-i18n="s64_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
+                <span class="bento-badge green" data-i18n="s44_b2_badge">>FARBPALETTE</span>
+                <div class="bento-media-caption" data-i18n="s44_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
               </div>
             </div>
           </div>
@@ -4950,36 +3991,36 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 65: Verschiebungsintonation & Die Renner Academy (Sander Bento Finale)
-    slides.append(f'''      <!-- SLIDE 65: Una Corda & Fazit -->
-      <section class="slide slide-hero-theme" data-slide="65">
+    # SLIDE 45: Verschiebungsintonation & Die Renner Academy (Sander Bento Finale)
+    slides.append(f'''      <!-- SLIDE 45: Una Corda & Fazit -->
+      <section class="slide slide-hero-theme" data-slide="45">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s65_category">Teil 7: Intonation • Una Corda & Dialog</div>
-            <h2 class="slide-title" data-i18n="s65_title">Verschiebungsintonation & Die Renner Academy</h2>
-            <div class="slide-subtitle" data-i18n="s65_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
+            <div class="slide-category" data-i18n="s45_category">Teil 5: Intonation • Una Corda & Dialog</div>
+            <h2 class="slide-title" data-i18n="s45_title">Verschiebungsintonation & Die Renner Academy</h2>
+            <div class="slide-subtitle" data-i18n="s45_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-grid" style="grid-template-columns: 1fr; gap: 12px;">
               <div class="bento-card">
-                <span class="bento-badge green" data-i18n="s65_b1_badge">>UNA CORDA PRAXIS</span>
-                <div class="bento-card-title" data-i18n="s65_c1_title">Verschiebungsintonation</div>
-                <div class="bento-card-desc" data-i18n="s65_c1_desc">
+                <span class="bento-badge green" data-i18n="s45_b1_badge">>UNA CORDA PRAXIS</span>
+                <div class="bento-card-title" data-i18n="s45_c1_title">Verschiebungsintonation</div>
+                <div class="bento-card-desc" data-i18n="s45_c1_desc">
                   Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.
                 </div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot gold"></span>
-                    <span data-i18n="s65_bullet_1"><strong>Experten-Tipp:</strong> Leichtes Brechen der linken Kante der Hammerkrone mit feiner Schleiffeile verhindert Reibgeräusche an Nachbarsaiten!</span>
+                    <span data-i18n="s45_bullet_1"><strong>Experten-Tipp:</strong> Leichtes Brechen der linken Kante der Hammerkrone mit feiner Schleiffeile verhindert Reibgeräusche an Nachbarsaiten!</span>
                   </div>
                 </div>
               </div>
               <div class="bento-card hero-card">
-                <span class="bento-badge gold" data-i18n="s65_b2_badge">>RENNER ACADEMY</span>
-                <div class="bento-card-title" data-i18n="s65_c2_title">Renner Academy & Technischer Dialog</div>
-                <div class="bento-card-desc" data-i18n="s65_c2_desc">
+                <span class="bento-badge gold" data-i18n="s45_b2_badge">>RENNER ACADEMY</span>
+                <div class="bento-card-title" data-i18n="s45_c2_title">Renner Academy & Technischer Dialog</div>
+                <div class="bento-card-desc" data-i18n="s45_c2_desc">
                   Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.
                 </div>
               </div>
@@ -4987,9 +4028,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image31.png" alt="Renner Abschluss">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s65_b3_badge">>LOUIS RENNER GMBH</span>
-                <div class="bento-media-caption" data-i18n="s65_caption_1">Louis Renner GmbH</div>
-                <div class="bento-media-subcaption" data-i18n="s65_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
+                <span class="bento-badge gold" data-i18n="s45_b3_badge">>LOUIS RENNER GMBH</span>
+                <div class="bento-media-caption" data-i18n="s45_caption_1">Louis Renner GmbH</div>
+                <div class="bento-media-subcaption" data-i18n="s45_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
               </div>
             </div>
           </div>
