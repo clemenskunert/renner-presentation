@@ -6337,20 +6337,23 @@ body::before {
 .agenda-slide-body {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between;
-  gap: clamp(14px, 1.6vh, 22px);
+  justify-content: center !important;
+  gap: clamp(14px, 2vh, 24px);
   position: relative;
   z-index: 1;
   height: 100%;
+  padding: 0 clamp(8px, 1.2vw, 24px) clamp(16px, 2.2vh, 32px) !important;
+  box-sizing: border-box;
 }
 
 /* 1. Connecting Journey Rail & Laser Beam */
 .agenda-journey-track-wrapper {
   position: relative;
-  height: 44px;
-  margin: 0 10px;
+  height: 40px;
+  margin: 0 clamp(16px, 1.8vw, 36px);
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .agenda-journey-track {
@@ -6451,8 +6454,8 @@ body::before {
 
 .node-pin-num {
   position: absolute;
-  bottom: -2px;
-  font-size: 0.72rem;
+  bottom: -4px;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: var(--text-muted);
@@ -6469,22 +6472,23 @@ body::before {
   color: #ffffff;
 }
 
-/* 3. 5-Column Grid */
+/* 3. 5-Column Grid with Reduced Height (~30% smaller) */
 .agenda-cards-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: clamp(14px, 1.3vw, 22px);
-  flex: 1;
-  min-height: 0;
+  gap: clamp(14px, 1.4vw, 24px);
+  height: clamp(340px, 42vh, 410px);
+  max-height: clamp(340px, 42vh, 410px);
   align-items: stretch;
+  box-sizing: border-box;
 }
 
-/* 4. Agenda Bento Card */
+/* 4. Agenda Bento Card: Even Content Distribution */
 .agenda-card {
-  background: linear-gradient(175deg, rgba(24, 29, 40, 0.78) 0%, rgba(13, 17, 24, 0.92) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: clamp(18px, 1.6vw, 24px) clamp(16px, 1.4vw, 22px);
+  background: linear-gradient(175deg, rgba(24, 29, 40, 0.82) 0%, rgba(13, 17, 24, 0.94) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: clamp(20px, 2.2vh, 28px) clamp(18px, 1.5vw, 24px);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -6492,7 +6496,7 @@ body::before {
   justify-content: space-between;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 12px 32px -8px rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 14px 34px -8px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -6509,7 +6513,7 @@ body::before {
 @keyframes agendaCardSlideIn {
   0% {
     opacity: 0;
-    transform: translateY(32px) scale(0.96);
+    transform: translateY(28px) scale(0.96);
     filter: blur(4px);
   }
   100% {
@@ -6569,18 +6573,18 @@ body::before {
 .agenda-card .bento-step-watermark {
   position: absolute;
   top: 8px;
-  right: 12px;
-  font-size: clamp(4.5rem, 5.4vw, 6.2rem);
+  right: 14px;
+  font-size: clamp(3.8rem, 4.6vw, 5.2rem);
   font-weight: 900;
   line-height: 1;
-  opacity: 0.045;
+  opacity: 0.04;
   color: #ffffff;
   pointer-events: none;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .agenda-card:hover .bento-step-watermark {
-  opacity: 0.085;
+  opacity: 0.08;
   transform: scale(1.05);
 }
 
@@ -6590,28 +6594,36 @@ body::before {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: clamp(10px, 1.2vh, 16px);
+  margin-bottom: 0;
   position: relative;
   z-index: 2;
+  flex-shrink: 0;
+}
+
+.agenda-card .bento-badge {
+  font-size: clamp(0.84rem, 0.94vw, 1.02rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  padding: 5px 12px !important;
 }
 
 .agenda-slide-pill {
-  font-size: clamp(0.72rem, 0.78vw, 0.84rem);
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
   font-weight: 600;
   color: var(--text-muted);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  padding: 3px 10px;
+  padding: 4px 12px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   letter-spacing: 0.3px;
 }
 
 .agenda-slide-pill .pill-dot {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
 }
 
@@ -6626,70 +6638,72 @@ body::before {
 }
 
 .agenda-card.hero-highlight .agenda-slide-pill.highlight {
-  border-color: rgba(229, 169, 59, 0.3);
+  border-color: rgba(229, 169, 59, 0.35);
   color: var(--gold-light);
-  background: rgba(229, 169, 59, 0.08);
+  background: rgba(229, 169, 59, 0.1);
 }
 
-/* Card Main Content */
+/* Card Main Content: Vertically Centered & Larger Text */
 .agenda-card-main {
   position: relative;
   z-index: 2;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: clamp(12px, 1.6vh, 20px) 0;
+  gap: clamp(8px, 1.1vh, 14px);
 }
 
 .agenda-card .bento-card-title {
-  font-size: clamp(1.22rem, 1.35vw, 1.52rem) !important;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.25;
-  margin-bottom: clamp(8px, 1vh, 12px);
+  font-size: clamp(1.38rem, 1.58vw, 1.82rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.24 !important;
+  margin: 0 !important;
   letter-spacing: -0.2px;
   transition: color 0.3s ease;
 }
 
-.agenda-card:hover .bento-card-title {
-  color: #fff;
-}
-
 .agenda-card .bento-card-desc {
-  font-size: clamp(0.96rem, 1.05vw, 1.14rem) !important;
-  line-height: 1.56 !important;
-  color: var(--text-secondary);
-  margin: 0;
+  font-size: clamp(1.1rem, 1.22vw, 1.34rem) !important;
+  line-height: 1.6 !important;
+  color: var(--text-secondary) !important;
+  margin: 0 !important;
 }
 
-/* Card Footer */
+/* Card Footer: Pinned at bottom */
 .agenda-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: clamp(12px, 1.4vh, 18px);
-  padding-top: clamp(8px, 1vh, 12px);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 0;
+  padding-top: clamp(10px, 1.3vh, 16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   z-index: 2;
+  flex-shrink: 0;
 }
 
 .agenda-action-text {
-  font-size: clamp(0.78rem, 0.84vw, 0.9rem);
+  font-size: clamp(0.84rem, 0.92vw, 1.02rem);
   font-weight: 600;
   color: var(--text-muted);
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 .agenda-nav-arrow {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -6761,6 +6775,8 @@ body::before {
 @media (max-width: 1200px) {
   .agenda-cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    max-height: none;
   }
   .agenda-journey-track-wrapper {
     display: none;
@@ -6769,5 +6785,7 @@ body::before {
 @media (max-width: 768px) {
   .agenda-cards-grid {
     grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
   }
 }
