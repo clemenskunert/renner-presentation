@@ -158,46 +158,46 @@
       },
       "elements": {
         "s2_b1_badge": {
-          "de": "MODUL 1",
-          "en": "MODULE 1",
-          "ja": "モジュール 1",
-          "zh": "模块 1"
+          "de": "KAPITEL 1",
+          "en": "CHAPTER 1",
+          "ja": "第1章",
+          "zh": "第1章"
         },
         "s2_b2_badge": {
-          "de": "MODUL 2",
-          "en": "MODULE 2",
-          "ja": "モジュール 2",
-          "zh": "模块 2"
+          "de": "KAPITEL 2",
+          "en": "CHAPTER 2",
+          "ja": "第2章",
+          "zh": "第2章"
         },
         "s2_b3_badge": {
-          "de": "MODUL 3",
-          "en": "MODULE 3",
-          "ja": "モジュール 3",
-          "zh": "模块 3"
+          "de": "KAPITEL 3",
+          "en": "CHAPTER 3",
+          "ja": "第3章",
+          "zh": "第3章"
         },
         "s2_b4_badge": {
-          "de": "MODUL 4",
-          "en": "MODULE 4",
-          "ja": "モジュール 4",
-          "zh": "模块 4"
+          "de": "KAPITEL 4",
+          "en": "CHAPTER 4",
+          "ja": "第4章",
+          "zh": "第4章"
         },
         "s2_b5_badge": {
-          "de": "MODUL 5",
-          "en": "MODULE 5",
-          "ja": "モジュール 5",
-          "zh": "模块 5"
+          "de": "KAPITEL 5",
+          "en": "CHAPTER 5",
+          "ja": "第5章",
+          "zh": "第5章"
         },
         "s2_c1_title": {
-          "de": "Geschichte & Hauptsitz",
-          "en": "History & Headquarters",
-          "ja": "歴史と本社新拠点",
-          "zh": "品牌历史与总部基地"
+          "de": "Geschichte & Gegenwart",
+          "en": "History & Present Day",
+          "ja": "歴史と現在",
+          "zh": "历史积淀与现代辉煌"
         },
         "s2_c2_title": {
-          "de": "Filz Herstellung",
-          "en": "Felt Manufacturing",
-          "ja": "フェルト製造技術",
-          "zh": "纯羊毛毡制造工艺"
+          "de": "Filzfertigung & Tradition",
+          "en": "Felt Manufacturing & Tradition",
+          "ja": "フェルト製造と伝統技術",
+          "zh": "毛毡制造工艺与百年传统"
         },
         "s2_c3_title": {
           "de": "Hammerkopf Fertigung",
@@ -218,16 +218,16 @@
           "zh": "极致声音整音艺术"
         },
         "s2_c1_desc": {
-          "de": "140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).",
-          "en": "140+ years of milestones, consolidation of production sites & the state-of-the-art facility in Meuselwitz (built 09/2023–2025).",
-          "ja": "140年以上の歩み、拠点統合、そしてモイゼルヴィッツ新工場の最新生産ライン（2023年9月〜2025年竣工）。",
-          "zh": "140余年辉煌里程碑、生产基地整合及莫伊瑟尔维茨全新高科技现代化制造基地（2023年9月–2025年）。"
+          "de": "140+ Jahre Geschichte, Zusammenlegung der Standorte & der neue Hauptsitz in Meuselwitz.",
+          "en": "140+ years of history, consolidation of production sites & the new headquarters in Meuselwitz.",
+          "ja": "140年以上の歩み、拠点統合、そしてモイゼルヴィッツ新本社の誕生。",
+          "zh": "140余年厚重历史、生产基地全面整合及莫伊瑟尔维茨全新总部。"
         },
         "s2_c2_desc": {
-          "de": "Weickert-Tradition seit 1783, Rohwoll-Selektion, Kardieren, Walken (Shore 0.56) und exklusiver „Weickert Special“-Filz.",
-          "en": "Weickert tradition since 1783, raw wool selection, carding, fulling (Shore 0.56), and exclusive \"Weickert Special\" felt.",
-          "ja": "1783年創業のヴァイケルトの伝統、原毛選別、カーディング、縮絨（ショア硬度0.56）、最高峰「Weickert Special」フェルト。",
-          "zh": "始于1783年的魏克特传统工艺、纯原毛精选、梳理、缩绒（硬度Shore 0.56）与雷诺专属“Weickert Special”特制琴毡。"
+          "de": "FFW- & Weickert-Tradition seit 1783, reine Merinowolle, natürliches Walken (0.56 Shore) & der exklusive Weickert-Special-Filz.",
+          "en": "FFW & Weickert tradition since 1783, pure Merino wool, natural fulling (0.56 Shore) & exclusive Weickert Special felt.",
+          "ja": "1783年創業のFFW・ヴァイケルトの伝統、純メリノウール、天然縮絨（ショア硬度0.56）＆最高峰「Weickert Special」フェルト。",
+          "zh": "始于1783年的FFW与魏克特传统、纯美利奴羊毛、天然缩绒（硬度Shore 0.56）与雷诺专属Weickert Special特制琴毡。"
         },
         "s2_c3_desc": {
           "de": "Roboter-Filzzuschnitt, Unterfilzfräsen, Kernhölzer (Dichten 490–860 kg/m³), Presskräfte, CNC-Bearbeitung und T-Vernietung.",

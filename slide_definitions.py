@@ -96,18 +96,18 @@ def get_all_slides_html():
 
           <!-- 5 Modern Interactive Bento Cards -->
           <div class="agenda-cards-grid">
-            <!-- MODUL 1 -->
+            <!-- KAPITEL 1 -->
             <div class="bento-card agenda-card" data-target-slide="3" role="button" tabindex="0" style="--card-idx: 0;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">01</div>
               <div class="agenda-card-header">
-                <span class="bento-badge gold" data-i18n="s2_b1_badge">MODUL 1</span>
+                <span class="bento-badge gold" data-i18n="s2_b1_badge">KAPITEL 1</span>
                 <span class="agenda-slide-pill"><span class="pill-dot gold"></span>Folie 3–4</span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c1_title">Geschichte & Hauptsitz</div>
-                <div class="bento-card-desc" data-i18n="s2_c1_desc">140+ Jahre Meilensteine, Zusammenlegung der Standorte & die neue moderne Produktion in Meuselwitz (Bau 09.2023–2025).</div>
+                <div class="bento-card-title" data-i18n="s2_c1_title">Geschichte & Gegenwart</div>
+                <div class="bento-card-desc" data-i18n="s2_c1_desc">140+ Jahre Geschichte, Zusammenlegung der Standorte & der neue Hauptsitz in Meuselwitz.</div>
               </div>
               <div class="agenda-card-footer">
                 <span class="agenda-action-text">Kapitel öffnen</span>
@@ -115,18 +115,18 @@ def get_all_slides_html():
               </div>
             </div>
 
-            <!-- MODUL 2 -->
+            <!-- KAPITEL 2 -->
             <div class="bento-card agenda-card" data-target-slide="5" role="button" tabindex="0" style="--card-idx: 1;">
               <div class="agenda-card-glow-edge green"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">02</div>
               <div class="agenda-card-header">
-                <span class="bento-badge green" data-i18n="s2_b2_badge">MODUL 2</span>
+                <span class="bento-badge green" data-i18n="s2_b2_badge">KAPITEL 2</span>
                 <span class="agenda-slide-pill"><span class="pill-dot green"></span>Folie 5–14</span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c2_title">Filz Herstellung</div>
-                <div class="bento-card-desc" data-i18n="s2_c2_desc">Weickert-Tradition seit 1783, Rohwoll-Selektion, Kardieren, Walken (Shore 0.56) und exklusiver „Weickert Special“-Filz.</div>
+                <div class="bento-card-title" data-i18n="s2_c2_title">Filzfertigung & Tradition</div>
+                <div class="bento-card-desc" data-i18n="s2_c2_desc">FFW- & Weickert-Tradition seit 1783, reine Merinowolle, natürliches Walken (0.56 Shore) & der exklusive Weickert-Special-Filz.</div>
               </div>
               <div class="agenda-card-footer">
                 <span class="agenda-action-text">Kapitel öffnen</span>
@@ -134,13 +134,13 @@ def get_all_slides_html():
               </div>
             </div>
 
-            <!-- MODUL 3 -->
+            <!-- KAPITEL 3 -->
             <div class="bento-card agenda-card" data-target-slide="15" role="button" tabindex="0" style="--card-idx: 2;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">03</div>
               <div class="agenda-card-header">
-                <span class="bento-badge gold" data-i18n="s2_b3_badge">MODUL 3</span>
+                <span class="bento-badge gold" data-i18n="s2_b3_badge">KAPITEL 3</span>
                 <span class="agenda-slide-pill"><span class="pill-dot gold"></span>Folie 15–26</span>
               </div>
               <div class="agenda-card-main">
@@ -153,13 +153,13 @@ def get_all_slides_html():
               </div>
             </div>
 
-            <!-- MODUL 4 -->
+            <!-- KAPITEL 4 -->
             <div class="bento-card agenda-card" data-target-slide="27" role="button" tabindex="0" style="--card-idx: 3;">
               <div class="agenda-card-glow-edge green"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">04</div>
               <div class="agenda-card-header">
-                <span class="bento-badge green" data-i18n="s2_b4_badge">MODUL 4</span>
+                <span class="bento-badge green" data-i18n="s2_b4_badge">KAPITEL 4</span>
                 <span class="agenda-slide-pill"><span class="pill-dot green"></span>Folie 27–34</span>
               </div>
               <div class="agenda-card-main">
@@ -172,13 +172,13 @@ def get_all_slides_html():
               </div>
             </div>
 
-            <!-- MODUL 5 -->
+            <!-- KAPITEL 5 -->
             <div class="bento-card agenda-card hero-highlight" data-target-slide="35" role="button" tabindex="0" style="--card-idx: 4;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">05</div>
               <div class="agenda-card-header">
-                <span class="bento-badge gold" data-i18n="s2_b5_badge">MODUL 5</span>
+                <span class="bento-badge gold" data-i18n="s2_b5_badge">KAPITEL 5</span>
                 <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span>Folie 35–45</span>
               </div>
               <div class="agenda-card-main">
