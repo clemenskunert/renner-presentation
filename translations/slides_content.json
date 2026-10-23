@@ -8,7 +8,7 @@
       "ja": "日本語 (Japanese)",
       "zh": "中文 (Chinese)"
     },
-    "total_slides": 45,
+    "total_slides": 35,
     "description": "Zentrale Struktur zur Pflege aller Folientexte und mehrsprachigen Übersetzungen (DE, EN, JA, ZH)."
   },
   "ui": {
@@ -3587,988 +3587,490 @@
         "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
       },
       "category": {
-        "de": "Teil 4: Yamaha Kit • Produktpremiere",
-        "en": "Part 4: Yamaha Kit • Product Premiere",
-        "ja": "第4部：YAMAHA キット・製品発表",
-        "zh": "第四部分：雅马哈套件 • 重磅首发"
+        "de": "Teil 4: Yamaha Kit • Produktvorstellung",
+        "en": "Part 4: Yamaha Kit • Product Showcase",
+        "ja": "第4部：YAMAHA 専用キット・製品紹介",
+        "zh": "第四部分：雅马哈套件 • 产品专场"
       },
       "title": {
-        "de": "Original Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Original Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "ルイ・レンナー オリジナル YAMAHA 専用キット（C1〜C3）",
-        "zh": "德国雷诺官方原厂雅马哈全套定制套件（C1-C3）"
+        "de": "Original Louis Renner Yamaha Kit (C1–C3) – Veredelte Köpfe & Stiele",
+        "en": "Original Louis Renner Yamaha Kit (C1–C3) – Master Hammers & Shanks",
+        "ja": "ルイ・レンナー オリジナル YAMAHA キット（C1〜C3）– 精密ハンマー＆シャンク",
+        "zh": "德国雷诺原厂雅马哈升级套件（C1-C3）– 精密槌头与槌柄"
       },
       "subtitle": {
-        "de": "Die Drop-In Revolution: Von tagelanger Werkstattarbeit zu wenigen Stunden am Instrument",
-        "en": "The Drop-In Revolution: From Days of Tedious Workshop Hours to a Single Afternoon",
-        "ja": "ドロップインの革新：工房での数日間の重労働から、現場でのわずか数時間の作業へ",
-        "zh": "即插即用颠覆性革新：告别数日繁琐车间改装，数小时现场极速升级"
+        "de": "Die Drop-In Revolution: Vorkonfektionierter Hammerkopfsatz auf Stielen für Yamaha Flügel",
+        "en": "The Drop-In Revolution: Factory Pre-Glued Hammer & Shank Set for Yamaha Grands",
+        "ja": "ドロップインの革新：あらかじめ膠付けされたYAMAHAグランドピアノ専用アセンブリ",
+        "zh": "即插即用颠覆性革新：出厂预装胶合、免现场打孔打磨的雅马哈专用高定总成"
       },
       "elements": {
+        "s27_play_label": {
+          "de": "Präsentation abspielen",
+          "en": "Play Presentation",
+          "ja": "プレゼンテーション再生",
+          "zh": "自动演示"
+        },
+        "s27_tab1_tag": {
+          "de": "Wurzen-Filz",
+          "en": "Wurzen Felt",
+          "ja": "ヴルツェンフェルト",
+          "zh": "乌尔岑羊毛毡"
+        },
+        "s27_tab2_tag": {
+          "de": "Drop-In Kapsel",
+          "en": "Drop-In Flange",
+          "ja": "ドロップインフランジ",
+          "zh": "即插即用轴架"
+        },
+        "s27_tab3_tag": {
+          "de": "Glutenleim",
+          "en": "Gluten Glue",
+          "ja": "膠接着91度",
+          "zh": "91°骨胶胶合"
+        },
+        "s27_tab4_tag": {
+          "de": "88 Teile Satz",
+          "en": "88-Piece Set",
+          "ja": "88鍵セット",
+          "zh": "88键完整套装"
+        },
+        "s27_tab5_tag": {
+          "de": "Vorher/Nachher",
+          "en": "Before/After",
+          "ja": "交換ビフォーアフター",
+          "zh": "新旧效果对比"
+        },
+        "s27_p1_badge": {
+          "de": ">WURZEN WEICKERT-SPEZIAL",
+          "en": ">WURZEN WEICKERT SPECIAL",
+          "ja": ">ヴルツェン・ヴァイケルト特殊フェルト",
+          "zh": ">乌尔岑魏克特特级定制毡"
+        },
+        "s27_p1_title": {
+          "de": "Renner Hammerköpfe mit Nussbaumkern",
+          "en": "Renner Hammerheads with American Walnut Core",
+          "ja": "ウォルナット（胡桃）モールド採用レンナーハンマーヘッド",
+          "zh": "配美洲黑核桃木心之雷诺高定槌头"
+        },
+        "s27_p1_subtitle": {
+          "de": "Gefertigt in Meuselwitz – elastischer Weickert-Spezialfilz ohne chemische Härtung",
+          "en": "Handcrafted in Meuselwitz – Elastic Weickert Special Felt without chemical hardening",
+          "ja": "モーゼルヴィッツ製造 — 化学硬化剤を一切排した高弾性ヴァイケルト特殊フェルト",
+          "zh": "默瑟尔维茨精工制造 — 彻底杜绝化学硬化剂的高弹性特制纯羊毛毡"
+        },
+        "s27_p1_bullet_1": {
+          "de": "<strong>Konzert-Oberfilz:</strong> Ausschließlich reine, elastische Schurwolle für obertonreichen, warmen Gesangston.",
+          "en": "<strong>Concert Top Felt:</strong> 100% pure elastic virgin wool delivering singing European harmonic resonance.",
+          "ja": "<strong>コンサートトップフェルト：</strong>豊かな倍音と暖かみのある欧州の歌声を生む100%純粋バージンウール。",
+          "zh": "<strong>音乐厅级面毡：</strong>100%纯天然优质初剪羊毛，带来丰富温暖且极具歌唱性的欧系泛音。"
+        },
+        "s27_p1_bullet_2": {
+          "de": "<strong>Amerikanischer Nussbaum:</strong> Leichter, resonanzstarker Holzkern, exakt auf die Yamaha C1–C3 Hebel kalibriert.",
+          "en": "<strong>American Walnut:</strong> Lightweight, resonant wood core calibrated precisely for Yamaha C1–C3 action leverage.",
+          "ja": "<strong>アメリカンウォルナット：</strong>ヤマハC1〜C3のアクションレバー比に正確に適合させた軽量高響力木芯。",
+          "zh": "<strong>美洲黑核桃木芯：</strong>超轻高共鸣木心，完美契合雅马哈C1-C3杠杆力学配比。"
+        },
+        "s27_p1_bullet_3": {
+          "de": "<strong>Roter Unterfilz:</strong> Definierter Dämpfungskeil für sauberen Saitenkontakt und dynamische Projektion.",
+          "en": "<strong>Signature Crimson Underfelt:</strong> Calibrated damping wedge ensuring clean string contact and dynamic projection.",
+          "ja": "<strong>伝統の赤アンダーフェルト：</strong>確実な弦当たりと豊かなダイナミックレンジを両立するクッション設計。",
+          "zh": "<strong>雷诺经典红底毡：</strong>精密校准缓冲楔，确保极度干净利落的击弦接触与声学投射。"
+        },
+        "s27_p1_fact": {
+          "de": "✦ Reines Naturprodukt: Keine synthetischen Harze oder chemische Weichmacher",
+          "en": "✦ 100% Natural Product: No synthetic resins, lacquer, or chemical softeners",
+          "ja": "✦ 100%天然素材：合成樹脂や化学薬品による硬化・軟化は一切不使用",
+          "zh": "✦ 纯天然无添加：绝无任何合成树脂、化学渗透漆或人工软化剂"
+        },
+        "s27_p1_cap_badge": {
+          "de": ">ORIGINAL RENNER",
+          "en": ">ORIGINAL RENNER",
+          "ja": ">純正レンナー",
+          "zh": ">德国雷诺原厂"
+        },
+        "s27_p1_caption": {
+          "de": "Nussbaumkern mit Weickert-Spezialfilz und authentischer Renner-Prägung",
+          "en": "Walnut core with Weickert special felt and authentic Renner embossing",
+          "ja": "ヴァイケルト特殊フェルトと純正レンナー刻印が施されたウォルナットコア",
+          "zh": "印刻雷诺原厂防伪钢印之特级核桃木心与顶级羊毛毡"
+        },
+        "s27_p2_badge": {
+          "de": ">1-SCHRAUBEN DROP-IN",
+          "en": ">1-SCREW DROP-IN",
+          "ja": ">ネジ1本で簡単装着",
+          "zh": ">单颗螺丝即插即用"
+        },
+        "s27_p2_title": {
+          "de": "Hainbuchenstiele & vorkonfektionierte Kapseln",
+          "en": "Hornbeam Shanks & Pre-Assembled Flanges",
+          "ja": "シデ（木製）シャンク＆組立て済みフランジ",
+          "zh": "精选鹅耳枥木槌柄与预装精密轴架"
+        },
+        "s27_p2_subtitle": {
+          "de": "Exakt aufgeteilt und montagefertig für die originale Yamaha-Aluminiumleiste",
+          "en": "Chronologically spaced and ready to install onto the original Yamaha aluminum rail",
+          "ja": "ヤマハ純正アルミレールへ直付けできるよう精密調整された完全完成品",
+          "zh": "出厂完全规整、完美严丝合缝对齐雅马哈原厂铝合金总成轨道"
+        },
+        "s27_p2_bullet_1": {
+          "de": "<strong>Feinjährige Hainbuche:</strong> Höchste Biegesteifigkeit und resonanzoptimiertes Schwingungsverhalten.",
+          "en": "<strong>Close-Grained Hornbeam:</strong> Maximum bending stiffness and resonance-optimized vibration behavior.",
+          "ja": "<strong>高密度ヨーロピアンシデ材：</strong>優れた曲げ剛性と音響振動の減衰を防ぐ最適しなり特性。",
+          "zh": "<strong>细密纹理鹅耳枥木：</strong>超高抗弯刚度，提供极佳的声学震动传导效率。"
+        },
+        "s27_p2_bullet_2": {
+          "de": "<strong>Kalibrierte Röllchen:</strong> 17,0 mm Röllchenabstand für verzögerungsfreie Kraftübertragung von der Wippe.",
+          "en": "<strong>Calibrated Knuckles:</strong> 17.0 mm knuckle distance for instant, zero-lag touch response from the wippen.",
+          "ja": "<strong>精密キャリブレーション・ローラー：</strong>17.0mmローラー距離でウィッペンからの力を瞬時に伝達。",
+          "zh": "<strong>精准滚柱（小鹿皮）：</strong>严格17.0mm滚柱中心距，实现与联动杆无延迟灵敏触觉响应。"
+        },
+        "s27_p2_bullet_3": {
+          "de": "<strong>1-Schrauben Drop-In:</strong> Passgenaue Kapseln, Note für Note direkt in die Yamaha-Schiene verschraubbar.",
+          "en": "<strong>1-Screw Drop-In:</strong> Flanges bolt directly onto the Yamaha rail, note for note, with zero modifications.",
+          "ja": "<strong>1本のネジで直付け：</strong>ヤマハ純正レールに1音ずつそのままネジ止めできる完全互換設計。",
+          "zh": "<strong>极速紧固安装：</strong>单颗螺丝精准对扣锁定于雅马哈原机铝轨，免任何改装。"
+        },
+        "s27_p2_fact": {
+          "de": "✦ Werkstatt-Zeitersparnis: Komplette Montage in 90 Minuten direkt vor Ort",
+          "en": "✦ Huge Time Savings: Complete hammer replacement in approx. 90 minutes on site",
+          "ja": "✦ 大幅な時短：工房への運搬不要、現場にて約90分で交換完了",
+          "zh": "✦ 惊人时效革命：全套无需搬抬琴盘返厂，仅需90分钟上门现场即可交付"
+        },
+        "s27_p2_cap_badge": {
+          "de": ">STIELE & KAPSELN",
+          "en": ">SHANKS & FLANGES",
+          "ja": ">シャンク＆フランジ",
+          "zh": ">槌柄与轴架"
+        },
+        "s27_p2_caption": {
+          "de": "Vorkonfektionierte Hammerstiele mit Kapseln für Yamaha C1, C2 und C3",
+          "en": "Pre-assembled hammer shanks with flanges for Yamaha C1, C2, and C3",
+          "ja": "ヤマハC1・C2・C3専用に設計・組立された純正シャンク＆フランジ",
+          "zh": "专为雅马哈C1、C2及C3型号专属严选定制的预装槌柄轴架总成"
+        },
+        "s27_p3_badge": {
+          "de": ">WERKSKALIBRIERT",
+          "en": ">FACTORY CALIBRATED",
+          "ja": ">工場にて精密キャリブレーション",
+          "zh": ">德国原厂高精度校准"
+        },
+        "s27_p3_title": {
+          "de": "Werkseitig 91° verleimt mit Glutenleim",
+          "en": "Factory-Glued at 91° with Traditional Gluten Glue",
+          "ja": "伝統の膠（ニカワ）を用い91度の最適角度で膠着済み",
+          "zh": "出厂原装天然热骨胶91°黄金倾角胶合"
+        },
+        "s27_p3_subtitle": {
+          "de": "Glasharte Schwingungskopplung – kein Bohren oder Heißleimen in der Werkstatt erforderlich",
+          "en": "Rock-hard acoustic energy transmission – eliminates all manual reaming, drilling, and hot glueing",
+          "ja": "音響エネルギーを逃さないガラス硬度の接着 — 現場でのボーリングや熱膠作業は一切不要",
+          "zh": "水晶般坚硬的无阻尼震动传导 — 完全省去车间繁复打孔、热胶水锅与人工组装"
+        },
+        "s27_p3_bullet_1": {
+          "de": "<strong>Null Werkstatt-Bohrarbeit:</strong> Alle 88 Köpfe sind im exakten 91°-Winkel fertig verleimt.",
+          "en": "<strong>Zero Bench Boring:</strong> All 88 hammerheads arrive pre-bored and glued at the exact 91° strike angle.",
+          "ja": "<strong>現場での穴あけ不要：</strong>全88鍵のヘッドがあらかじめ完璧な91度で強固に膠付け済み。",
+          "zh": "<strong>彻底告别现场钻孔：</strong>全部88只槌头出厂以激光精度完成91°倾角胶合固化。"
+        },
+        "s27_p3_bullet_2": {
+          "de": "<strong>Glasharter Glutenleim:</strong> Natürlicher Renner Glutenleim sichert ungedämpften Schwingungsfluss.",
+          "en": "<strong>Pure Gluten Glue:</strong> Natural protein glue provides an uncompressed, undamped acoustic bond.",
+          "ja": "<strong>高純度ニカワ接着：</strong>合成接着剤と異なり音の減衰がなく、エネルギーを忠実に弦へ伝達。",
+          "zh": "<strong>纯天然高硬度骨胶：</strong>雷诺专用动物蛋白热胶，提供全频段无任何衰减的声学直通。"
+        },
+        "s27_p3_bullet_3": {
+          "de": "<strong>Lasergeprüfte Flucht:</strong> Absolute Gleichmäßigkeit sichert senkrechtes, paralleles Steigen.",
+          "en": "<strong>Laser-Aligned Uniformity:</strong> Guarantees parallel, perpendicular hammer travel without crooked heads.",
+          "ja": "<strong>レーザー検査による均一性：</strong>ヘッドの平行かつ垂直な直進動作を完全保証。",
+          "zh": "<strong>激光核验直线度：</strong>确保整排槌头垂直同步升降，绝无倾斜或扭曲跑偏。"
+        },
+        "s27_p3_fact": {
+          "de": "✦ Höchste Prozesssicherheit: Null Fehlerrisiko bei Bohrung oder Leimtemperatur",
+          "en": "✦ Maximum Process Reliability: Zero risk of drilling errors or glue temperature failure",
+          "ja": "✦ 最高峰の加工信頼性：現場での穴あけミスや温度管理の失敗リスクを完全解消",
+          "zh": "✦ 极致制造可靠度：零钻孔失误率、零胶水固化不良风险"
+        },
+        "s27_p3_cap_badge": {
+          "de": ">91° PRÄZISION",
+          "en": ">91° PRECISION",
+          "ja": ">91度高精度",
+          "zh": ">91°黄金精度"
+        },
+        "s27_p3_caption": {
+          "de": "Akustisch harter Glutenleim im exakt kalibrierten 91°-Winkel",
+          "en": "Acoustically hard gluten glue bond at precisely calibrated 91° angle",
+          "ja": "極めて硬質な接着面を形成する91度直付けアセンブリ",
+          "zh": "出厂原装超硬骨胶高精度91度牢固直联总成"
+        },
+        "s27_p4_badge": {
+          "de": ">88 TEILE VORSORTIERT",
+          "en": ">88 PARTS PRE-SORTED",
+          "ja": ">88鍵分完全に事前仕分け",
+          "zh": ">88键部件有序预分拣"
+        },
+        "s27_p4_title": {
+          "de": "Das 3-Zonen Verpackungskonzept",
+          "en": "The 3-Zone Tray Packaging Concept",
+          "ja": "3ゾーン分割トレイによる確実な作業性",
+          "zh": "三区域独立收纳预分拣托盘系统"
+        },
+        "s27_p4_subtitle": {
+          "de": "Chronologisch sortiert in separaten Fächern: Bass, Mittellage und Diskant",
+          "en": "Chronologically arranged in dedicated trays: Bass, Middle, and Treble",
+          "ja": "低音部・中音部・高音部が順番通りに整然と格納された特製ボックス",
+          "zh": "低音区、中音区与高音区严格按键位编号依序排布，杜绝混淆"
+        },
+        "s27_p4_bullet_1": {
+          "de": "<strong>Bass (Noten 1–26):</strong> Kräftige Kerne, 7°–9° Schrägbohrung, voluminöser Konzertfilz.",
+          "en": "<strong>Bass (Notes 1–26):</strong> Heavy walnut cores, 7°–9° angle drilling, voluminous concert felt.",
+          "ja": "<strong>低音部（1〜26鍵）：</strong>重厚な木芯、7°〜9°の斜角ボーリング、豊かな量感のフェルト。",
+          "zh": "<strong>低音区（1-26键）：</strong>加宽加重核桃芯、7°-9°精密倾角、厚重饱满的基频毛毡。"
+        },
+        "s27_p4_bullet_2": {
+          "de": "<strong>Mittellage (Noten 27–59):</strong> Homogener Registerübergang und gleichmäßige Verjüngung.",
+          "en": "<strong>Middle Section (Notes 27–59):</strong> Seamless register transition and uniform tapering.",
+          "ja": "<strong>中音部（27〜59鍵）：</strong>スムーズな音域推移と滑らかなテーパー加工。",
+          "zh": "<strong>中音区（27-59键）：</strong>天衣无缝的音区过渡比例，平滑递减的槌身轮廓。"
+        },
+        "s27_p4_bullet_3": {
+          "de": "<strong>Diskant (Noten 60–88):</strong> Maximale Faserkompression an der Scheitelspitze für silbrige Höhen.",
+          "en": "<strong>Treble (Notes 60–88):</strong> Highest fiber density at the apex for crystal-clear bell-like projection.",
+          "ja": "<strong>高音部（60〜88鍵）：</strong>トップ頂点の最高密度圧縮により、透き通るような輝く高音を実現。",
+          "zh": "<strong>高音区（60-88键）：</strong>槌冠超高密度物理压缩，释放清澈通透如银铃般高频。"
+        },
+        "s27_p4_fact": {
+          "de": "✦ Unpack | Install | Upgrade: Schneller und fehlerfreier Montageablauf",
+          "en": "✦ Unpack | Install | Upgrade: Swift, foolproof installation workflow",
+          "ja": "✦ 開封・装着・即グレードアップ：ミスを一切生まない直感的な作業性",
+          "zh": "✦ 开箱即装、全面飞跃：无与伦比的高效防呆作业流程"
+        },
+        "s27_p4_cap_badge": {
+          "de": ">PREMIUM BOX",
+          "en": ">PREMIUM PACKAGING",
+          "ja": ">プレミアムボックス",
+          "zh": ">高定专属礼盒"
+        },
+        "s27_p4_caption": {
+          "de": "Die offizielle Louis Renner Yamaha Kit Box (C1–C3)",
+          "en": "The official Louis Renner Yamaha Kit Box (C1–C3)",
+          "ja": "ルイ・レンナー公式 YAMAHA キット特製パッケージ（C1〜C3）",
+          "zh": "德国雷诺官方原厂雅马哈定制套件专属保护收纳盒（C1-C3）"
+        },
+        "s27_p5_badge": {
+          "de": ">REPLACE THE PAST",
+          "en": ">REPLACE THE PAST",
+          "ja": ">過去を脱ぎ捨て、真の響きへ",
+          "zh": ">告别过去 • 升华音色"
+        },
+        "s27_p5_title": {
+          "de": "Replace the Past · Den Ton vollenden",
+          "en": "Replace the Past · Elevate the Tone",
+          "ja": "Replace the Past · 響きを完成させる変革",
+          "zh": "告别过去，让音色重获新生"
+        },
+        "s27_p5_subtitle": {
+          "de": "Der direkte Vorher-Nachher-Vergleich: 25 Jahre Verschleiß vs. Renner-Konzertklang",
+          "en": "Direct Before/After Comparison: 25 Years of Wear vs. Genuine Renner Concert Voice",
+          "ja": "交換前後の比較：摩耗・硬化した古いハンマーから純正レンナーの響きへ",
+          "zh": "直观新旧对比：数十年琴槌击扁硬化 vs 雷诺德系音乐厅温暖歌唱音色"
+        },
+        "s27_p5_bullet_1": {
+          "de": "<strong>Vergangenheit:</strong> Flachgeschlagene Hammerkronen, tiefe Saitenrillen, verhärteter Filz, schriller Ton.",
+          "en": "<strong>The Past:</strong> Flattened hammer crowns, deep string grooves, hardened felt, harsh metallic sound.",
+          "ja": "<strong>過去（摩耗品）：</strong>打弦面が平らになり深い溝、フェルトの硬化による耳障りで金属的な音。",
+          "zh": "<strong>过去（旧槌）：</strong>顶端击打扁平起槽、羊毛毡板结硬化，声音刺耳金属声严重。"
+        },
+        "s27_p5_bullet_2": {
+          "de": "<strong>Gegenwart:</strong> Neu modellierter Scheitel, elastischer Wurzen-Filz, singender europäischer Tonumfang.",
+          "en": "<strong>Renner Upgrade:</strong> Perfectly parabolic crown, resilient Wurzen felt, warm singing European resonance.",
+          "ja": "<strong>現在（レンナー）：</strong>理想的な放物線クラウン、弾力あるヴルツェンフェルト、豊かな歌声。",
+          "zh": "<strong>现在（雷诺）：</strong>完美饱满抛物线槌冠、高弹性初剪羊毛，极富感染力的欧系歌唱音色。"
+        },
+        "s27_p5_bullet_3": {
+          "de": "<strong>Pianisten-Erlebnis:</strong> Unmittelbare Ansprache vom feinsten Pianissimo bis zum tragfähigen Fortissimo.",
+          "en": "<strong>Pianist Experience:</strong> Effortless dynamic control from whisper-soft pianissimo to heroic fortissimo.",
+          "ja": "<strong>ピアニストの感動：</strong>最弱音（pp）から圧倒的な最強音（ff）まで思い通りのコントロール性。",
+          "zh": "<strong>演奏家体验：</strong>从极轻柔弱音（pp）至排山倒海强音（ff）的随心所欲控制感。"
+        },
+        "s27_p5_fact": {
+          "de": "✦ Meister-Upgrade: Veredelt Yamaha Flügel auf internationales Konzertniveau",
+          "en": "✦ Master Upgrade: Elevates Yamaha grands to international concert hall standard",
+          "ja": "✦ 名器への昇華：ヤマハグランドピアノを世界水準のコンサートトーンへ変貌",
+          "zh": "✦ 大师级跃升：赋予雅马哈三角钢琴国际顶级音乐厅般的德系饱满音质"
+        },
+        "s27_p5_cap_badge": {
+          "de": ">VERGLEICH",
+          "en": ">COMPARISON",
+          "ja": ">新旧比較",
+          "zh": ">新旧对比"
+        },
+        "s27_p5_caption": {
+          "de": "Ausgespielter Althammer vs. Neuer Renner Präzisions-Hammerkopf auf Stiel",
+          "en": "Worn factory hammer vs. New Renner precision hammerhead on shank",
+          "ja": "摩耗した旧ハンマー（右）と新品の純正レンナー・アセンブリ（左）",
+          "zh": "击弦磨平发硬的旧品（右）与德系雷诺高精高定新品总成（左）"
+        },
+        "s27_spotlight_badge": {
+          "de": ">ORIGINAL RENNER YAMAHA KIT",
+          "en": ">ORIGINAL RENNER YAMAHA KIT",
+          "ja": ">純正レンナー YAMAHA キット",
+          "zh": ">德国雷诺原厂雅马哈定制套件"
+        },
+        "s27_spotlight_title": {
+          "de": "Das Kit: Köpfe & Stiele im Detail",
+          "en": "The Kit: Heads & Shanks in Detail",
+          "ja": "キット詳細：ヘッド＆シャンクの構造美",
+          "zh": "套件细节：高品质槌头与槌柄剖析"
+        },
+        "s27_spotlight_desc": {
+          "de": "100% einbaufertig vorkonfektioniert für die Modelle Yamaha C1, C2 und C3",
+          "en": "100% drop-in pre-assembled for Yamaha models C1, C2, and C3",
+          "ja": "ヤマハ C1・C2・C3 グランドピアノ専用の完全プレアセンブル製品",
+          "zh": "专为雅马哈C1、C2与C3型号量身打造的100%预装直配总成"
+        },
+        "s27_texture_tag": {
+          "de": "Makro: Kopf auf Stiel mit Kapsel",
+          "en": "Macro: Head on Shank with Flange",
+          "ja": "マクロ撮影：フランジ付きハンマーアセンブリ",
+          "zh": "微距特写：带轴架的槌头槌柄完整总成"
+        },
+        "s27_zoom_btn": {
+          "de": "🔍 Detail-Lupe",
+          "en": "🔍 Macro Zoom",
+          "ja": "🔍 拡大ルーペ",
+          "zh": "🔍 放大镜观察"
+        },
+        "s27_hl1_title": {
+          "de": "Wurzen Weickert-Spezialfilz:",
+          "en": "Wurzen Weickert Special Felt:",
+          "ja": "ヴルツェン・ヴァイケルト特殊フェルト：",
+          "zh": "乌尔岑魏克特特制纯羊毛毡："
+        },
+        "s27_hl1_desc": {
+          "de": "Rein mechanisch gewalkte Schurwolle für facettenreichen Gesangston ohne synthetische Harze.",
+          "en": "Pure mechanical milled wool providing singing warmth without synthetic hardeners.",
+          "ja": "薬品処理をせず伝統技法で縮絨。温かみのある歌声と無限のダイナミクス。",
+          "zh": "纯物理缩绒工艺，不含任何合成化学硬化剂，赋予钢琴醇厚饱满的歌唱感。"
+        },
+        "s27_hl2_title": {
+          "de": "Amerikanischer Nussbaumkern:",
+          "en": "American Walnut Core:",
+          "ja": "アメリカンウォルナットコア：",
+          "zh": "精选美洲黑核桃木芯："
+        },
+        "s27_hl2_desc": {
+          "de": "Optimiertes Trägheitsmoment für schnelles Repetierverhalten und ermüdungsfreies Spiel.",
+          "en": "Optimized moment of inertia for rapid repetition and effortless, responsive touch.",
+          "ja": "慣性モーメントを最適化し、高速な連打性と疲れにくい軽快なタッチを実現。",
+          "zh": "精准优化的转动惯量，确保极为敏捷的震音连击性能与轻松自如的触键感。"
+        },
+        "s27_hl3_title": {
+          "de": "Glutenleim im 91°-Winkel:",
+          "en": "Gluten Glue Bond at 91°:",
+          "ja": "91度ニカワ接着：",
+          "zh": "91度天然骨胶原装胶合："
+        },
+        "s27_hl3_desc": {
+          "de": "Glasharte akustische Schwingungskopplung, werkseitig fertig verleimt – 0h Bohrarbeit.",
+          "en": "Rock-hard acoustic energy transmission, factory glued – zero bench boring required.",
+          "ja": "極めて高い剛性を誇るニカワ接合。完全仕上がり状態で納品、穴あけ作業ゼロ。",
+          "zh": "出厂原装超硬骨胶紧密固定，声学能量零损耗传导，彻底告别打孔工序。"
+        },
+        "s27_hl4_title": {
+          "de": "1-Schrauben Drop-In Kapsel:",
+          "en": "1-Screw Drop-In Flange:",
+          "ja": "ネジ1本で簡単装着フランジ：",
+          "zh": "单颗螺丝即插即用轴架："
+        },
+        "s27_hl4_desc": {
+          "de": "Passgenau für das Yamaha-Aluminiumprofil – Montage an einem Nachmittag direkt vor Ort.",
+          "en": "Custom-fit for the Yamaha aluminum rail – finish replacement in a single afternoon.",
+          "ja": "ヤマハ純正アルミレールに完全適合。工房運搬なしでその日のうちに完了。",
+          "zh": "完全严丝合缝匹配雅马哈铝轨总成，仅需一个下午即可在客户家中全部交付。"
+        },
         "s27_b1_badge": {
-          "de": ">DROP-IN UPGRADE",
-          "en": ">DROP-IN UPGRADE",
-          "ja": ">ドロップイン・アップグレード",
-          "zh": ">即插即用升级套件"
+          "de": ">WURZEN WEICKERT-SPEZIAL",
+          "en": ">WURZEN WEICKERT SPECIAL",
+          "ja": ">ヴルツェン・ヴァイケルト特殊フェルト",
+          "zh": ">乌尔岑魏克特特级定制毡"
         },
         "s27_b2_badge": {
-          "de": ">VERPACKUNGS-MOCKUP",
-          "en": ">PACKAGING MOCKUP",
-          "ja": ">パッケージ・モックアップ",
-          "zh": ">官方原装包装"
+          "de": ">ORIGINAL RENNER",
+          "en": ">ORIGINAL RENNER",
+          "ja": ">純正レンナー",
+          "zh": ">德国雷诺原厂"
+        },
+        "s27_b3_badge": {
+          "de": ">1-SCHRAUBEN DROP-IN",
+          "en": ">1-SCREW DROP-IN",
+          "ja": ">ネジ1本で簡単装着",
+          "zh": ">单颗螺丝即插即用"
+        },
+        "s27_b4_badge": {
+          "de": ">STIELE & KAPSELN",
+          "en": ">SHANKS & FLANGES",
+          "ja": ">シャンク＆フランジ",
+          "zh": ">槌柄与轴架"
+        },
+        "s27_b5_badge": {
+          "de": ">WERKSKALIBRIERT",
+          "en": ">FACTORY CALIBRATED",
+          "ja": ">工場にて精密キャリブレーション",
+          "zh": ">德国原厂高精度校准"
+        },
+        "s27_b6_badge": {
+          "de": ">91° PRÄZISION",
+          "en": ">91° PRECISION",
+          "ja": ">91度高精度",
+          "zh": ">91°黄金精度"
+        },
+        "s27_b7_badge": {
+          "de": ">88 TEILE VORSORTIERT",
+          "en": ">88 PARTS PRE-SORTED",
+          "ja": ">88鍵分完全に事前仕分け",
+          "zh": ">88键部件有序预分拣"
+        },
+        "s27_b8_badge": {
+          "de": ">PREMIUM BOX",
+          "en": ">PREMIUM PACKAGING",
+          "ja": ">プレミアムボックス",
+          "zh": ">高定专属礼盒"
+        },
+        "s27_b9_badge": {
+          "de": ">REPLACE THE PAST",
+          "en": ">REPLACE THE PAST",
+          "ja": ">過去を脱ぎ捨て、真の響きへ",
+          "zh": ">告别过去 • 升华音色"
+        },
+        "s27_b10_badge": {
+          "de": ">VERGLEICH",
+          "en": ">COMPARISON",
+          "ja": ">新旧比較",
+          "zh": ">新旧对比"
+        },
+        "s27_b11_badge": {
+          "de": ">ORIGINAL RENNER YAMAHA KIT",
+          "en": ">ORIGINAL RENNER YAMAHA KIT",
+          "ja": ">純正レンナー YAMAHA キット",
+          "zh": ">德国雷诺原厂雅马哈定制套件"
         },
         "s27_c1_title": {
-          "de": "Auspacken | Einbauen | Aufwerten",
-          "en": "Unpack | Install | Upgrade",
-          "ja": "開梱 | 装着 | 音色昇華",
-          "zh": "拆箱即装 | 极速换装 | 跃升音质"
+          "de": "Das Kit: Köpfe & Stiele im Detail",
+          "en": "The Kit: Heads & Shanks in Detail",
+          "ja": "キット詳細：ヘッド＆シャンクの構造美",
+          "zh": "套件细节：高品质槌头与槌柄剖析"
         },
         "s27_c1_desc": {
-          "de": "Mit dem neuen Yamaha Kit für die Modelle C1, C2 und C3 revolutioniert Renner die traditionelle Hammerkopferneuerung. Erstmals erhalten Klavierbauer einen komplett vorkonfektionierten, werkseitig im perfekten 91°-Winkel mit natürlichem Glutenleim verleimten Satz, der direkt in die Kapselleiste eingehängt werden kann.",
-          "en": "With the new Yamaha Kit for C1, C2, and C3 models, Renner revolutionizes traditional hammer replacement. Piano technicians receive a fully factory-calibrated set, pre-glued at the exact 91° strike angle with natural gluten glue, ready to screw directly onto the flange rail.",
-          "ja": "ヤマハ C1、C2、C3 専用に開発された本キットにより、レンナーは従来のハンマー交換プロセスを根本から刷新します。91°の適正打弦角度に工場でグルテン膠接着済みの完成アセンブリを、フレンジレールに直接取り付けることができます。",
-          "zh": "专为雅马哈C1、C2及C3量身定制，雷诺彻底颠覆了传统钢琴音槌更换流程。钢琴技师首次迎来出厂完成91°黄金角度精调并由天然骨胶预粘接的总成套件，开箱即可直接固定于击弦机总档铝轨。"
-        },
-        "s27_bullet_1": {
-          "de": "100% Plug & Play: Keine zeitraubende Bohr-, Mess- und Leimarbeit mehr in der Werkstatt.",
-          "en": "100% Plug & Play: Zero boring, measuring strike angles, or glue curing in the workshop.",
-          "ja": "100% プラグ＆プレイ：工房での面倒な穴あけ、角度測定、接着乾燥が一切不要。",
-          "zh": "100% 即插即用：告别繁琐的车间钻孔打孔、反复角度测量与耗时上胶。"
-        },
-        "s27_bullet_2": {
-          "de": "Wurzen-Konzertfilz & Nussbaum: Verleiht dem Instrument sofort tragfähigen, warmen europäischen Gesangston.",
-          "en": "Wurzen Concert Felt & Walnut: Imparts an immediate, singing European tone with rich dynamic projection.",
-          "ja": "ヴルツェン製高級フェルト＆ウォールナット：豊かで温かみのある欧州伝統の歌う音色を瞬時に実現。",
-          "zh": "乌尔岑顶级音乐会羊毛毡与黑胡桃木：赋予钢琴饱满温暖、极具穿透力的欧系歌唱性音色。"
-        },
-        "s27_bullet_3": {
-          "de": "Fertigstellung an einem Nachmittag: Kompletter Wechsel in ca. 90 Minuten direkt beim Kunden vor Ort.",
-          "en": "Single-Afternoon Completion: Full hammer swap in approx. 90 minutes directly on site.",
-          "ja": "1日で作業完了：客先やステージ上で、約90分間で88鍵すべての交換が完了。",
-          "zh": "单日极速交付：在客户现场或音乐厅舞台，约90分钟即可全套更换完毕。"
-        },
-        "s27_caption_1": {
-          "de": "Die offizielle Louis Renner Yamaha Kit Box (C1–C3) mit edlem Deckel-Branding und 3 vorsortierten Trays",
-          "en": "Official Louis Renner Yamaha Kit Box (C1–C3) featuring signature lid branding and 3 pre-sorted trays",
-          "ja": "Louis Renner YAMAHA 専用キット純正パッケージ（C1〜C3）および整然と分別されたトレイ",
-          "zh": "德国雷诺官方原装雅马哈套件礼盒（C1-C3）与三分区高精度定位内衬托盘"
+          "de": "100% einbaufertig vorkonfektioniert für die Modelle Yamaha C1, C2 und C3",
+          "en": "100% drop-in pre-assembled for Yamaha models C1, C2, and C3",
+          "ja": "ヤマハ C1・C2・C3 グランドピアノ専用の完全プレアセンブル製品",
+          "zh": "专为雅马哈C1、C2与C3型号量身打造的100%预装直配总成"
         }
-      },
-      "notes": {
-        "de": "Produktpremiere des Yamaha Kits. Betonen Sie die Einsparung von 10 Stunden Arbeitszeit und die sofortige Konzertreife.",
-        "en": "Product premiere of the Yamaha Kit. Emphasize the 10-hour labor savings and instant concert-grade tone.",
-        "ja": "YAMAHAキットの初公開。10時間の作業時間短縮と即座に得られるコンサートグレードの音色を強調してください。",
-        "zh": "雅马哈套件重磅发布。重点阐述节省10小时工时以及开箱即享的音乐会级音色。"
       }
     },
     "slide_28": {
       "slide_number": 28,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Werkstatt-Vergleich",
-        "en": "Part 4: Yamaha Kit • Workshop Comparison",
-        "ja": "第4部：YAMAHA キット・工房比較",
-        "zh": "第四部分：雅马哈套件 • 车间工时对比"
-      },
-      "title": {
-        "de": "Traditionelle Werkstatt vs. Drop-In Präzision",
-        "en": "Traditional Workshop vs. Drop-In Precision",
-        "ja": "従来の工房作業 vs. ドロップイン高精度アセンブリ",
-        "zh": "传统工坊繁复工序 vs. 原厂即插即用精密总成"
-      },
-      "subtitle": {
-        "de": "Wie das Kit die Arbeitszeit von Klavierbauern und Technikern um ca. 10 Stunden reduziert",
-        "en": "How the Kit Saves Technicians Approx. 10 Hours of Bench Time Per Grand Piano",
-        "ja": "ピアノ技術者の作業時間を約10時間削減する革新的なプロセスの全貌",
-        "zh": "如何为钢琴技师与调律师节省约10小时车间重体力台架工时"
-      },
-      "elements": {
-        "s28_b1_badge": {
-          "de": ">EFFIZIENZ-VERGLEICH",
-          "en": ">EFFICIENCY COMPARISON",
-          "ja": ">効率比較",
-          "zh": ">效率颠覆对比"
-        },
-        "s28_b2_badge": {
-          "de": ">VORHER / NACHHER",
-          "en": ">BEFORE / AFTER",
-          "ja": ">ビフォー / アフター",
-          "zh": ">新旧对立对比"
-        },
-        "s28_c1_title": {
-          "de": "Klassischer Ablauf: ~12 Stunden",
-          "en": "Traditional Workflow: ~12 Hours",
-          "ja": "従来の交換工程：約12時間",
-          "zh": "传统手工翻新流程：约12小时"
-        },
-        "s28_c1_desc": {
-          "de": "Alte Köpfe abdämpfen, 88 Rohköpfe manuell ausmessen & bohren (Schrägwinkel, Bohrlehre), Heißleim kochen, Stiele einleimen, Flucht richten, 48h Trocknung, langwierige Vorintonation.",
-          "en": "Steaming off old heads, manually drilling 88 blanks with boring jig & angles, heating hide glue, gluing shanks, correcting alignment, 48h curing time, exhausting pre-needling.",
-          "ja": "旧ハンマーの蒸気剥離、88個のブランクを手作業で測定・穴あけ、膠の調合、接着・整列、48時間の乾燥硬化、過酷な針入れ予備整音作業。",
-          "zh": "蒸汽加热脱胶拆旧头、夹具手工定位钻孔88个槌头、熬制动物胶、逐根涂胶对齐木柄、固化等待48小时、费时费力的初步深层扎针整音。"
-        },
-        "s28_c2_title": {
-          "de": "Louis Renner Kit: ~1.5 Stunden",
-          "en": "Louis Renner Kit: ~1.5 Hours",
-          "ja": "レンナー専用キット：約1.5時間",
-          "zh": "雷诺即插即用套件：约1.5小时"
-        },
-        "s28_c2_desc": {
-          "de": "100% einbaufertig vormontiert mit Kapseln. Direkte 1-Schrauben-Montage an der Schiene. 0h Bohren, 0h Leimen, 0h Vorintonation. Direkt vor Ort beim Kunden fertiggestellt!",
-          "en": "100% pre-assembled with flanges. 1-screw installation directly on the Yamaha rail. Zero drilling, zero gluing, zero pre-voicing. Finished directly at the client's home or hall!",
-          "ja": "フレンジ付き完全組み立て済み。レールに1本のネジで直接留めるだけ。穴あけゼロ、接着ゼロ、予備整音ゼロ。客先でその日のうちに完了！",
-          "zh": "100%全套带法兰盘总成出厂预装。单颗螺丝直上雅马哈铝轨。零钻孔、零胶水、零预整音。在客户家中或琴行现场即可全套交付！"
-        },
-        "s28_bullet_1": {
-          "de": "Zeitersparnis von über 85 %: Aus Tagen harter Werkstattarbeit wird ein einzelner Termin.",
-          "en": "Over 85% time savings: Multiple tedious workshop days turn into a single client visit.",
-          "ja": "85%以上の作業時間短縮：数日間にわたる工房の拘束が、わずか1回の訪問で完結。",
-          "zh": "工时缩减85%以上：将长达数天的枯燥车间台架作业压缩为一次轻松的上门服务。"
-        },
-        "s28_bullet_2": {
-          "de": "Höchste Prozesssicherheit: Kein Risiko von schiefen Bohrungen oder Leimfehlern.",
-          "en": "Maximum process reliability: Zero risk of drilling misalignments or glue failures.",
-          "ja": "完全な再現性・信頼性：穴あけ角度の狂いや接着不良のリスクを完全に排除。",
-          "zh": "杜绝返工风险：彻底消除手工钻孔跑偏、角度公差与胶合脱胶的一切隐患。"
-        },
-        "s28_caption_1": {
-          "de": "Vergleich: Ausgespielter Althammer (rechts) vs. neuer Louis Renner Konzertkopf mit Wurzen-Filz (links)",
-          "en": "Direct Comparison: Heavily worn original hammer (right) vs. brand new Renner concert head (left)",
-          "ja": "比較：摩耗したオリジナルハンマー（右） vs. ヴルツェン製フェルト採用の新品レンナーハンマー（左）",
-          "zh": "实物对决：严重凹陷硬化的旧槌头（右） vs. 乌尔岑特级羊毛毡全新雷诺音乐会槌头（左）"
-        }
-      },
-      "notes": {
-        "de": "Vorher/Nachher-Gegenüberstellung. Die Einsparung von 10 Stunden Bench Time ist das stärkste Verkaufsargument für Techniker.",
-        "en": "Before/After comparison. Saving 10 bench hours is the primary value proposition for technicians.",
-        "ja": "ビフォー・アフター比較。10時間の工房工数削減は技術者にとって最大のメリットです。",
-        "zh": "新旧工序直接对比。节省10小时台架工时是打动专业技师的最核心卖点。"
-      }
-    },
-    "slide_29": {
-      "slide_number": 29,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Akustik & Saitenwellen",
-        "en": "Part 4: Yamaha Kit • Acoustic Resonance",
-        "ja": "第4部：YAMAHA キット・音響と弦振動",
-        "zh": "第四部分：雅马哈套件 • 声学生理与弦波共鸣"
-      },
-      "title": {
-        "de": "Replace the Past · Elevate the Tone",
-        "en": "Replace the Past · Elevate the Tone",
-        "ja": "過去を刷新し、極上の響きへ（Replace the Past · Elevate the Tone）",
-        "zh": "换新旧声 · 升华绝响（Replace the Past · Elevate the Tone）"
-      },
-      "subtitle": {
-        "de": "Die klangliche Wiedergeburt: Warum Yamaha-Flügel durch Renner-Köpfe veredelt werden",
-        "en": "The Acoustic Rebirth: How Renner Concert Heads Elevate Yamaha Grand Pianos",
-        "ja": "響きの再生：レンナー製ハンマーがヤマハグランドピアノを別次元へと昇華させる理由",
-        "zh": "声学新生之旅：为何雷诺音乐会槌头能让雅马哈三角琴彻底脱胎换骨"
-      },
-      "elements": {
-        "s29_b1_badge": {
-          "de": ">AKUSTIK-INNOVATION",
-          "en": ">ACOUSTIC INNOVATION",
-          "ja": ">音響イノベーション",
-          "zh": ">声学共振创新"
-        },
-        "s29_b2_badge": {
-          "de": ">SAITEN-SCHALLWELLE",
-          "en": ">STRING SOUNDWAVE",
-          "ja": ">弦の音響波動",
-          "zh": ">琴弦声波物理"
-        },
-        "s29_c1_title": {
-          "de": "Vom harten Attack zum warmen Konzertgesang",
-          "en": "From Hard Attack to Warm Singing Resonance",
-          "ja": "硬い打撃音から、温かく歌うコンサートレゾナンスへ",
-          "zh": "告别干硬敲击杂音，拥抱欧系温暖歌唱性共振"
-        },
-        "s29_c1_desc": {
-          "de": "Yamaha-Flügel besitzen eine hochpräzise Mechanik, doch nach jahrelangem Spiel verhärtet der Originalfilz und verliert seine Elastizität. Das Resultat ist ein spitzer, metallischer Anschlag mit kurzem Ausklang. Der Wechsel auf das Renner Yamaha Kit stellt die volle dynamische Tragfähigkeit und Wärme wieder her.",
-          "en": "Yamaha grands feature exceptionally precise action geometry, but after years of playing, standard felts compress and harden, creating an overly bright, metallic attack with poor sustain. The Renner Yamaha Kit instantly restores harmonic warmth, depth, and expansive dynamic headroom.",
-          "ja": "ヤマハのグランドピアノは極めて精密なアクション構造を備えていますが、経年使用によりフェルトが硬化し、金属的でサステインの短い打撃音になりがちです。レンナーキットへ交換することで、倍音豊かな深みと豊かなダイナミクスが蘇ります。",
-          "zh": "雅马哈三角琴拥有极高精度的击弦机几何结构，但长期弹奏后原厂毡面极易紧实硬化，产生刺耳金属撞击声且泛音短促。雷诺套件能瞬间唤醒琴体木质共鸣，重塑纯净饱满的歌唱性长延音与宏大动态。"
-        },
-        "s29_bullet_1": {
-          "de": "Horizontale Schallwelle: Elastische Übertragung der Anschlagsenergie am Scheitelpunkt in die Saite.",
-          "en": "Horizontal Soundwave: Elastic energy transfer from the hammer crown directly into string vibrations.",
-          "ja": "水平音響波動：ハンマー頂点から弦へとロスなく伝わる弾性エネルギーの理想的伝達。",
-          "zh": "水平弦振声波：琴槌顶点将击弦动能无损、柔韧地转化为纯净的琴弦横向驻波。"
-        },
-        "s29_bullet_2": {
-          "de": "Wurzen Weickert Special Filz: Singender Diskant und resonantes Bassfundament ohne Härte.",
-          "en": "Wurzen Weickert Special Felt: Singing bell-like treble and deep resonance without harshness.",
-          "ja": "ヴルツェン製ヴァイカート・スペシャル：耳障りな成分のない、輝く高音と重厚な低音。",
-          "zh": "乌尔岑魏克特特级毡：高音清澈如水晶银铃，低音深沉浑厚，彻底去除刺耳杂音。"
-        },
-        "s29_bullet_3": {
-          "de": "Dynamische Weite: Nuancierte Kontrolle von zartestem Pianissimo (ppp) bis zum strahlenden Fortissimo (fff).",
-          "en": "Expanded Dynamic Range: Effortless touch nuance from whisper-quiet ppp to roaring fff.",
-          "ja": "圧倒的なダイナミックレンジ：極微のpppから壮大なfffまで指先の意図を忠実に再現。",
-          "zh": "广袤动态掌控：指尖从极弱ppp的耳语触感，到辉煌极强fff的音乐厅爆发力收放自如。"
-        },
-        "s29_caption_1": {
-          "de": "Die Renner Schallwelle (Hero Effekt 3): Horizontale Energieausbreitung am oberen Anschlagspunkt der Saite",
-          "en": "The Renner Soundwave (Hero Effect 3): Horizontal harmonic wave expanding at the impact point",
-          "ja": "レンナー・サウンドウェーブ（エフェクト3）：打弦点で水平に広がる倍音共鳴の波動",
-          "zh": "雷诺声波图腾（效果3）：琴弦撞击接触点激发出向两侧横向扩展的纯净谐波之浪"
-        }
-      },
-      "notes": {
-        "de": "Erläutern Sie die physikalische Wirkungsweise: Der elastische Weickert-Filz absorbiert Störschall und überträgt pure Energie.",
-        "en": "Explain the physical principle: Elastic Weickert felt absorbs impact noise while projecting pure harmonic energy.",
-        "ja": "物理的メカニズムを解説：高弾性フェルトが打撃ノイズを吸収し、純粋な倍音エネルギーへと変換します。",
-        "zh": "讲解声学物理原理：特制高弹性羊毛毡能够吸收杂乱敲击噪点，将纯粹能量转化为谐波共鸣。"
-      }
-    },
-    "slide_30": {
-      "slide_number": 30,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Material-Exzellenz",
-        "en": "Part 4: Yamaha Kit • Material Excellence",
-        "ja": "第4部：YAMAHA キット・最高峰のマテリアル",
-        "zh": "第四部分：雅马哈套件 • 三大物料支柱"
-      },
-      "title": {
-        "de": "Die 3 Säulen: Wurzenfilz, Nussbaum & Glutenleim",
-        "en": "The 3 Pillars: Wurzen Felt, Walnut Core & Gluten Glue",
-        "ja": "3大支柱：ヴルツェンフェルト、ウォールナット、天然グルテン膠",
-        "zh": "三大品质支柱：乌尔岑毛毡、黑胡桃槌芯与天然骨胶"
-      },
-      "subtitle": {
-        "de": "Deutsche Handwerkskunst und edelste Rohstoffe, gefertigt in Meuselwitz",
-        "en": "German Master Craftsmanship and Noble Materials Handcrafted in Meuselwitz",
-        "ja": "マウゼルヴィッツの熟練マイスターが選りすぐりの素材で手作りするドイツの誇り",
-        "zh": "源自德国梅瑟尔维茨工坊的百年大师精工与无可挑剔的顶级选材"
-      },
-      "elements": {
-        "s30_b1_badge": {
-          "de": ">WURZEN KONZERTFILZ",
-          "en": ">WURZEN CONCERT FELT",
-          "ja": ">ヴルツェン高級フェルト",
-          "zh": ">乌尔岑音乐会特级毡"
-        },
-        "s30_b2_badge": {
-          "de": ">NUSSBAUM & HAINBUCHE",
-          "en": ">WALNUT & HORNBEAM",
-          "ja": ">ウォールナット＆シデ材",
-          "zh": ">美洲黑胡桃与欧洲角树"
-        },
-        "s30_b3_badge": {
-          "de": ">RENNER GLUTENLEIM",
-          "en": ">RENNER GLUTEN GLUE",
-          "ja": ">レンナー伝統グルテン膠",
-          "zh": ">雷诺传统纯天然骨胶"
-        },
-        "s30_c1_title": {
-          "de": "Wurzen Weickert Special Filz",
-          "en": "Wurzen Weickert Special Felt",
-          "ja": "ヴルツェン製ヴァイカート・スペシャル",
-          "zh": "乌尔岑魏克特特级纯羊毛毡"
-        },
-        "s30_c1_desc": {
-          "de": "Ausschließlich aus feinster Schurwolle ohne chemische Zusätze hergestellt. Die elastisch gewalkte Faserstruktur bietet enorme Lebensdauer und unverwechselbaren Klangfarbenreichtum.",
-          "en": "Crafted purely from pristine virgin wool without chemical hardeners. Resilient milled fibers provide extraordinary longevity and a rich harmonic palette.",
-          "ja": "化学薬品不使用、厳選された最高純度の生羊毛のみを使用。弾性に富む縮絨繊維が驚異的な耐久性と色彩豊かな音色を生み出します。",
-          "zh": "完全选用未经化学硬化剂污染的天然纯新羊毛。天然缩绒纤维结构具备极强弹性记忆，持久耐磨且音色变幻无穷。"
-        },
-        "s30_c2_title": {
-          "de": "Amerikanischer Nussbaum Kern",
-          "en": "American Walnut Core & Hornbeam",
-          "ja": "アメリカン・ウォールナット芯材",
-          "zh": "美洲黑胡桃木槌芯与白角树柄"
-        },
-        "s30_c2_desc": {
-          "de": "Speziell auf die Trägheitsmomente der Yamaha C1–C3 Mechanik kalibriert. Geringes Gewicht kombiniert mit optimaler Steifigkeit ermöglicht blitzschnelle Repetition.",
-          "en": "Calibrated specifically to the inertia and leverage of Yamaha C1–C3 grand actions. Lightweight rigidity yields ultra-responsive, effortless repetition.",
-          "ja": "ヤマハ C1〜C3 アクションの慣性モーメントに完璧に調和。軽量かつ優れた剛性が、指先に吸い付くような俊敏な連打性を実現します。",
-          "zh": "针对雅马哈C1-C3击弦机的力矩特性专项标定配重。轻盈质量与极致刚性的完美结合，带来无懈可击的高速复奏性能。"
-        },
-        "s30_c3_title": {
-          "de": "Akustisch harter Glutenleim",
-          "en": "Acoustically Transparent Gluten Glue",
-          "ja": "音響を損なわない伝統グルテン膠",
-          "zh": "声学无阻隔天然坚硬骨胶"
-        },
-        "s30_c3_desc": {
-          "de": "Im Heißleimverfahren unter hohem Druck verpresst. Die knochenharte Verbindung dämpft keine Schwingungen und leitet 100% der Energie verlustfrei in die Saite.",
-          "en": "Hot-pressed under high pressure. The crystalline, bone-hard bond dampens zero acoustic vibrations, transferring 100% of attack energy into the string.",
-          "ja": "高圧下で熱圧着される伝統の膠。結晶化した硬い接着層は振動を減衰させることなく、打撃エネルギーを100%弦へと伝えます。",
-          "zh": "采用传统热压工艺极限加压结合。固化后如骨骼般晶莹坚硬，彻底规避现代白乳胶的阻尼吸音缺陷，将动能100%注入琴弦。"
-        },
-        "s30_caption_1": {
-          "de": "Makroaufnahme: Perfekte Symbiose aus Nussbaum-Kern, rubinrotem Unterfilz und Weickert-Deckfilz",
-          "en": "Macro Shot: Harmonious union of walnut core, signature crimson underfelt, and Weickert top felt",
-          "ja": "マクロ撮影：ウォールナット芯材、真紅のアンダーフェルト、最高級トップフェルトの調和",
-          "zh": "微距特写：美洲黑胡桃木芯、经典深红下层垫毡与魏克特特级外层毛毡的完美融合"
-        }
-      },
-      "notes": {
-        "de": "Präsentieren Sie die 3 Säulen als unverhandelbare Qualitätsmerkmale des Meuselwitzer Werks.",
-        "en": "Present the 3 pillars as non-negotiable hallmarks of Renner manufacturing excellence.",
-        "ja": "3大支柱をレンナー社の妥協なきクラフトマンシップの証として紹介してください。",
-        "zh": "将三大支柱作为德国雷诺梅瑟尔维茨原厂无可争议的至高品质象征进行推介。"
-      }
-    },
-    "slide_31": {
-      "slide_number": 31,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Vorkonfektionierung",
-        "en": "Part 4: Yamaha Kit • Tray Organization",
-        "ja": "第4部：YAMAHA キット・トレイ構成",
-        "zh": "第四部分：雅马哈套件 • 三大音区托盘结构"
-      },
-      "title": {
-        "de": "88 vorjustierte Präzisionsteile – Fehlerfrei sortiert",
-        "en": "88 Pre-Calibrated Notes – Flawlessly Organized",
-        "ja": "88鍵すべてを完全プリセット・誤認のない専用トレイ構成",
-        "zh": "88键原厂全预设高精总成 · 零差错分区收纳"
-      },
-      "subtitle": {
-        "de": "Strukturierte Trays für einen intuitiven und verwechslungsfreien Werkstatt-Workflow",
-        "en": "Structured Tray Packaging for an Intuitive, Error-Free Technician Workflow",
-        "ja": "直感的で取り違えのないスムーズな作業を約束する機能的パッケージ",
-        "zh": "科学三段式内衬托盘，确保现场安装流程井然有序、绝无拿错装混"
-      },
-      "elements": {
-        "s31_b1_badge": {
-          "de": ">VORKONFEKTIONIERUNG",
-          "en": ">PRE-CALIBRATED",
-          "ja": ">高精度プリセット",
-          "zh": ">出厂高精标定"
-        },
-        "s31_b2_badge": {
-          "de": ">3-TRAY-SYSTEM",
-          "en": ">3-TRAY SYSTEM",
-          "ja": ">3分割トレイ構造",
-          "zh": ">三大音区分装体系"
-        },
-        "s31_c1_title": {
-          "de": "Das 3-Zonen Verpackungskonzept",
-          "en": "The 3-Zone Tray Architecture",
-          "ja": "3つの音域に特化したトレイ設計",
-          "zh": "三音区科学定制分装体系"
-        },
-        "s31_c1_desc": {
-          "de": "Die 88 Hammerköpfe mit Stielen und Kapseln liegen in drei maßgefertigten Schaumstoff-Trays, aufgeteilt nach akustischen Registern. Jeder Hammer ist exakt für seine Notenposition nummeriert und kalibriert.",
-          "en": "The 88 hammer assemblies rest in three precision foam trays, organized by acoustic registers. Every single hammer is factory-numbered and tailored to its exact key location.",
-          "ja": "88個のハンマーアセンブリは、音域ごとに専用設計された3つのフォームトレイに収納。各ハンマーにはノート番号が刻印され、位置ごとに最適化されています。",
-          "zh": "88套琴槌柄与法兰盘总成整齐排列于三只高密度定制托盘中，按声学音区独立归类。每一枚琴槌均出厂激光刻印琴键序号与匹配规格。"
-        },
-        "s31_bullet_1": {
-          "de": "Bassbereich (Noten 1–26): Kräftige Kerne, 7°–9° Schrägungswinkel für ideale Saitenüberdeckung.",
-          "en": "Bass Register (Notes 1–26): Wider walnut cores with calibrated 7°–9° strike angles for double bass strings.",
-          "ja": "低音域（1〜26番）：幅広の芯材と7°〜9°の傾斜角度で低音2本巻弦に完璧にアプローチ。",
-          "zh": "低音区（第1-26键）：加宽黑胡桃槌芯，精确设定7°-9°倾角以完美贴合双联缠丝低音弦。"
-        },
-        "s31_bullet_2": {
-          "de": "Mittellage (Noten 27–59): Homogener Übergang der Kernbreite (10,5 auf 10,0 mm) ohne Stufen.",
-          "en": "Tenor / Mid Range (Notes 27–59): Seamless gradation of core widths (10.5mm to 10.0mm) for smooth register balance.",
-          "ja": "中音域（27〜59番）：芯材幅を10.5mmから10.0mmへと滑らかにグラデーションさせ、音域間の段差を解消。",
-          "zh": "中音区（第27-59键）：槌芯宽度自10.5mm平缓收敛至10.0mm，彻底抹平换区音色突变断层。"
-        },
-        "s31_bullet_3": {
-          "de": "Diskantbereich (Noten 60–88): Maximale Faserkompression an der Spitze für brillante, langanhaltende Obertöne.",
-          "en": "Treble Register (Notes 60–88): Maximum felt compression at the crown for singing, sparkling overtones.",
-          "ja": "高音域（60〜88番）：頂点部の高密度繊維が、クリアで伸びやかな倍音の輝きを生み出します。",
-          "zh": "高音区（第60-88键）：槌顶极高纤维压缩密度，激发出如钟鸣般通透、经久不绝的高频泛音。"
-        },
-        "s31_caption_1": {
-          "de": "Die 3 vorsortierten Fächer des Yamaha Kits: Bass (1–26), Mitten (27–59) und Diskant (60–88)",
-          "en": "The 3 sorted compartments of the Yamaha Kit: Bass (1–26), Mid (27–59), and Treble (60–88)",
-          "ja": "YAMAHAキットの3つの分別トレイ：低音（1〜26）、中音（27〜59）、高音（60〜88）",
-          "zh": "雅马哈套件的三分区托盘实景：低音区（1-26）、中音区（27-59）与高音区（60-88）"
-        }
-      },
-      "notes": {
-        "de": "Interaktive Tastaturleiste vorführen. Betonen Sie, dass Verwechslungen durch die Tray-Struktur unmöglich sind.",
-        "en": "Demonstrate the interactive keyboard selector. Emphasize that tray layout makes mix-ups impossible.",
-        "ja": "インタラクティブ鍵盤バーを操作。トレイ構造により取り付けミスが起こり得ない点を強調。",
-        "zh": "演示互动式键盘音区选择条。重点强调托盘防呆设计彻底避免了技师装错键位的风险。"
-      }
-    },
-    "slide_32": {
-      "slide_number": 32,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Montage & Kapselleiste",
-        "en": "Part 4: Yamaha Kit • Flange Rail Installation",
-        "ja": "第4部：YAMAHA キット・レール取り付け",
-        "zh": "第四部分：雅马哈套件 • 击弦机总档极速安装"
-      },
-      "title": {
-        "de": "Phase 1 & 2: 1-Schrauben-Kapselmontage an der Schiene",
-        "en": "Phase 1 & 2: 1-Screw Flange Attachment on the Rail",
-        "ja": "フェーズ1＆2：レールへの1点ネジ止めダイレクト装着",
-        "zh": "阶段1与2：总档铝轨单螺丝直上极速换装"
-      },
-      "subtitle": {
-        "de": "Passgenauer Wechsel ohne Ausbau des Mechanikrahmens – Note für Note",
-        "en": "Direct Drop-In Swap Without Dismantling Action Rails – Note by Note",
-        "ja": "アクションレールを分解することなく、鍵盤ごとにスムーズに脱着可能",
-        "zh": "无需繁杂拆卸整个击弦机框架，逐音单螺丝即换即装"
-      },
-      "elements": {
-        "s32_b1_badge": {
-          "de": ">MONTAGE-WORKFLOW",
-          "en": ">INSTALLATION WORKFLOW",
-          "ja": ">装着ワークフロー",
-          "zh": ">安装实操工作流"
-        },
-        "s32_b2_badge": {
-          "de": ">KAPSELLEISTE",
-          "en": ">FLANGE RAIL",
-          "ja": ">フレンジレール",
-          "zh": ">总档定位导轨"
-        },
-        "s32_c1_title": {
-          "de": "Die Linksdreh-Regel (Gewinde erfühlen)",
-          "en": "The Left-Turn Rule (Feeling the Thread)",
-          "ja": "逆回転クリックの法則（既存ネジ山を感じ取る）",
-          "zh": "左旋卡扣黄金法则（感知原装螺纹契合）"
-        },
-        "s32_c1_desc": {
-          "de": "Die Kapselbohrung passt 1:1 auf das Aluminiumprofil der Yamaha C1–C3 Mechanik. Um das Gewinde im Aluminiumprofil lebenslang zu schützen, gilt die goldene Regel von Klavierbaumeister Jens-Sören Kruse:",
-          "en": "The Renner flange matches Yamaha C1–C3 extruded aluminum rails with 100% precision. To protect original aluminum threads forever, Master Voicer Jens-Sören Kruse prescribes this rule:",
-          "ja": "レンナー製フレンジはヤマハ C1〜C3 のアルミ押出レールにミリ単位で適合。アルミ側のネジ山を痛めないため、マイスター・クルーゼの黄金則を遵守します：",
-          "zh": "雷诺法兰盘底座与雅马哈C1-C3挤压铝合金总档型材1:1精密契合。为永久保护铝轨内丝扣，钢琴制造大师延斯-索伦·克鲁泽制定了必守准则："
-        },
-        "s32_bullet_1": {
-          "de": "Linksdreh-Klick: Kapselschraube zuerst linksherum drehen, bis sie spürbar in den alten Gewindegang einrastet.",
-          "en": "Left-Turn Click: Turn screw counter-clockwise first until you feel it drop into the existing thread.",
-          "ja": "逆回転クリック：ネジをまず反時計回りに回し、既存のネジ山にカチッと嵌まり込む感触を指で確認。",
-          "zh": "左旋入槽：将螺丝先向逆时针轻转，直到指尖清晰感受到卡入既有螺纹沟槽的一记轻巧落位感。"
-        },
-        "s32_bullet_2": {
-          "de": "Kein neues Gewinde schneiden: Verhindert Überdrehen und Ausleiern der Bohrung im Aluminiumprofil.",
-          "en": "Never cut a cross-thread: Prevents stripping and loosening the soft aluminum extrusion profile.",
-          "ja": "新しいネジ山を切らない：アルミレールのネジ穴のナメやガタつきを恒久的に防止。",
-          "zh": "绝不生硬强拧：杜绝划乱螺纹或导致较软的铝合金型材滑丝报废。"
-        },
-        "s32_bullet_3": {
-          "de": "Handfest anziehen: Gleichmäßiges Drehmoment für dauerhaften Kapselhalt und perfekte Flucht.",
-          "en": "Snug Hand-Tightening: Balanced torque secures the flange securely with parallel hammer travel.",
-          "ja": "適度な手締め：均一なトルクで締め付けることで、強固な固定と真っ直ぐな打弦軌道を実現。",
-          "zh": "匀力适度手拧：施加均衡锁紧扭矩，确保法兰盘坚固就位且击弦轨迹绝对平正垂直。"
-        },
-        "s32_caption_1": {
-          "de": "Einhängen und Fixieren der neuen Renner-Kapsel direkt auf dem Yamaha Aluminium-Profil",
-          "en": "Mounting and fastening the Renner flange assembly directly onto the Yamaha aluminum rail",
-          "ja": "ヤマハのアルミレールに直接レンナー製フレンジをマウントして固定する様子",
-          "zh": "在雅马哈原装铝制总档型材上直接安装并紧固雷诺全新法兰盘总成"
-        }
-      },
-      "notes": {
-        "de": "Die Linksdreh-Regel ist das Markenzeichen der Renner Schulung. Verhindert Reklamationen durch beschädigte Aluminiumleisten.",
-        "en": "The left-turn rule is a signature training point. Prevents stripped aluminum rail issues.",
-        "ja": "逆回転の法則はレンナー・アカデミー直伝の実践テクニック。アルミレールの破損クレームを防止。",
-        "zh": "左旋卡槽法则是雷诺学院的标志性实操要诀，彻底杜绝由于暴力拆装导致的铝总档滑丝索赔。"
-      }
-    },
-    "slide_33": {
-      "slide_number": 33,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Mechanik-Regulation",
-        "en": "Part 4: Yamaha Kit • Action Regulation",
-        "ja": "第4部：YAMAHA キット・アクション調整",
-        "zh": "第四部分：雅马哈套件 • 击弦机精调标准"
-      },
-      "title": {
-        "de": "Phase 3: Präzise Geometrie & Sollmaße der Yamaha-Mechanik",
-        "en": "Phase 3: Yamaha Action Regulation & Factory Benchmarks",
-        "ja": "フェーズ3：ヤマハアクションの厳密なジオメトリと基準調整値",
-        "zh": "阶段3：雅马哈击弦机几何精调与出厂黄金公差"
-      },
-      "subtitle": {
-        "de": "Alle Kernmaße auf einen Blick für die fehlerfreie Regulierung der Hebelverhältnisse",
-        "en": "Essential Regulation Tolerances for Flawless Mechanical Leverage and Response",
-        "ja": "レバー比を完全に調和させ、理想のタッチ感を生み出す基準寸法一覧",
-        "zh": "核心几何公差参数全览，精准匹配杠杆传动比与灵敏触键反馈"
-      },
-      "elements": {
-        "s33_b1_badge": {
-          "de": ">GEOMETRIE-SOLLMAßE",
-          "en": ">REGULATION BENCHMARKS",
-          "ja": ">基準調整寸法",
-          "zh": ">核心几何标准"
-        },
-        "s33_b2_badge": {
-          "de": ">PRÄZISIONSMESSUNG",
-          "en": ">PRECISION MEASUREMENT",
-          "ja": ">高精度計測",
-          "zh": ">高精测量校准"
-        },
-        "s33_c1_title": {
-          "de": "Sollwerte für Yamaha C1, C2 & C3",
-          "en": "Tolerances for Yamaha C1, C2 & C3",
-          "ja": "ヤマハ C1、C2、C3 の標準調整仕様",
-          "zh": "雅马哈C1、C2与C3出厂标定标准参数"
-        },
-        "s33_c1_desc": {
-          "de": "Da die Renner-Hammerköpfe werkseitig im optimalen 91°-Winkel und vorgebohrter Tiefe verleimt sind, greift die Mechanik sofort in ihre ideale Hebelgeometrie ein.",
-          "en": "Because Renner heads arrive pre-glued at the calibrated 91° strike angle and exact bore depth, the action immediately locks into ideal geometric leverage.",
-          "ja": "レンナー製ハンマーは最適な91°の角度と計算された穴あけ深さで工場接着されているため、装着した瞬間から理想のアクションジオメトリが整います。",
-          "zh": "得益于雷诺琴槌在出厂时即完成91°黄金击弦角与精确钻孔深度的胶接，整套击弦机在入位后可立即契入最佳机械杠杆几何。"
-        },
-        "s33_bullet_1": {
-          "de": "Steighöhe (45,0 – 47,0 mm): Schnelleinstellung über die Pilotenschraube (Wippen-Pilote).",
-          "en": "Blow Distance (45.0 – 47.0 mm): Rapid adjustment via wippen capstan screws.",
-          "ja": "打弦距離（45.0〜47.0 mm）：キャプスタンスクリューによる迅速な基本高さ出し。",
-          "zh": "击弦距离（45.0 - 47.0 mm）：通过联动杆顶柱（卡丁螺丝）迅速完成高度定位。"
-        },
-        "s33_bullet_2": {
-          "de": "Traveling & Senkrechter Gang: Hammerstiele laufen absolut spurtreu ohne seitliches Scheren.",
-          "en": "Hammer Traveling: Perfectly vertical shank movement without lateral drifting.",
-          "ja": "トラベリング（直進性）：左右のブレなく、真上に真っ直ぐ立ち上がる軌道を確認。",
-          "zh": "琴槌行进轨迹（Traveling）：确保槌柄垂直笔直升降，绝不产生左右摆动跑偏。"
-        },
-        "s33_bullet_3": {
-          "de": "Auslösung (Let-off): Im Bass 1/2 Saite (ca. 2 mm), im Diskant auf 1,0 – 1,5 mm einstellen.",
-          "en": "Let-off (Auslösung): Bass set to 1/2 string thickness (~2mm), Treble to 1.0 – 1.5 mm.",
-          "ja": "レットオフ（脱進）：低音部は弦の太さの半分（約2mm）、高音部は1.0〜1.5mmに設定。",
-          "zh": "断进/脱扣（Let-off）：低音区设定为半根琴弦粗细（约2mm），高音区设定为1.0-1.5mm。"
-        },
-        "s33_bullet_4": {
-          "de": "Abfall (Drop): Exakt 1,0 – 2,0 mm unterhalb der Auslösung für feinstes Pianissimo-Spiel.",
-          "en": "Drop: Exactly 1.0 – 2.0 mm below let-off for effortless, feather-light pianissimo control.",
-          "ja": "ドロップ（落下量）：繊細なピアニッシモ制御のため、脱進点より1.0〜2.0mm下に設定。",
-          "zh": "落音距离（Drop）：严格设定于断进点下方1.0-2.0mm处，以赋能极致轻灵的弱奏控制。"
-        },
-        "s33_caption_1": {
-          "de": "Einstellung der Steighöhe (45–47 mm) und parallele Flucht aller 88 Hammerköpfe",
-          "en": "Regulating hammer blow distance (45–47 mm) and parallel alignment across all 88 notes",
-          "ja": "打弦距離（45〜47mm）の調整と全88鍵の平行なハンマー整列作業",
-          "zh": "测量并微调45-47mm击弦距离并确保88枚琴槌呈现完美平行基准线"
-        }
-      },
-      "notes": {
-        "de": "Gehen Sie die Sollwerte durch. Betonen Sie, dass die werksseitige 91°-Vorjustierung 90% der Ausrichtungszeit einspart.",
-        "en": "Walk through regulation values. Highlight that factory 91° pre-alignment saves 90% of regulation time.",
-        "ja": "基準調整寸法を解説。工場での91°事前調合が整調作業の90%を短縮することをアピール。",
-        "zh": "逐项讲解公差参数。强调雷诺原厂91°预调校省去了90%以上的反复刮削校准时间。"
-      }
-    },
-    "slide_34": {
-      "slide_number": 34,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Meister-Regeln",
-        "en": "Part 4: Yamaha Kit • Master Rules",
-        "ja": "第4部：YAMAHA キット・マイスター4大原則",
-        "zh": "第四部分：雅马哈套件 • 大师四大黄金法则"
-      },
-      "title": {
-        "de": "Die 4 goldenen Meister-Regeln der Renner Academy",
-        "en": "The 4 Golden Master Rules of the Renner Academy",
-        "ja": "レンナー・アカデミー直伝：4つの黄金マイスター原則",
-        "zh": "雷诺学院传世宝典：四大黄金调律与整修法则"
-      },
-      "subtitle": {
-        "de": "Essentielles Praxiswissen von Jens-Sören Kruse (Klavierbaumeister & Concert Voicer)",
-        "en": "Essential Workshop Secrets by Jens-Sören Kruse (Master Piano Builder & Concert Voicer)",
-        "ja": "ピアノ製造マイスター兼コンサートヴォイサー イェンス＝ソーレン・クルーゼによる実践知",
-        "zh": "钢琴制造大师兼音乐会首席整音专家 延斯-索伦·克鲁泽 毕生实操心得"
-      },
-      "elements": {
-        "s34_b1_badge": {
-          "de": ">JENS-SÖREN KRUSE",
-          "en": ">JENS-SÖREN KRUSE",
-          "ja": ">イェンス＝ソーレン・クルーゼ",
-          "zh": ">雷诺大师亲授"
-        },
-        "s34_b2_badge": {
-          "de": ">SCHEITELPROFIL",
-          "en": ">CROWN PROFILE",
-          "ja": ">ハンマー頂点プロファイル",
-          "zh": ">琴槌冠顶微观轮廓"
-        },
-        "s34_c1_title": {
-          "de": "1. Linksdreh-Regel (Gewinde)",
-          "en": "1. Left-Turn Rule (Thread)",
-          "ja": "1. 逆回転クリックの法則",
-          "zh": "1. 逆时针微旋卡槽法则"
-        },
-        "s34_c1_desc": {
-          "de": "Kapselschraube erst linksdrehen, bis sie spürbar in den alten Gewindegang einrastet. Nie neues Gewinde schneiden!",
-          "en": "Turn screw counter-clockwise first until it clicks into the original thread. Never force cut a new thread!",
-          "ja": "ネジを反時計回りに回し、古いネジ山にカチッと嵌まり込むのを確認。新しく溝を削らない！",
-          "zh": "螺丝务必先逆向回旋直至感知准确落入原装丝槽，绝不可盲目硬拧破坏铝轨既有螺纹！"
-        },
-        "s34_c2_title": {
-          "de": "2. Repetierfeder (Oberer Schenkel)",
-          "en": "2. Repetition Spring (Top Arm)",
-          "ja": "2. スプリング調整（上側アーム）",
-          "zh": "2. 复奏弹簧仅调上臂法则"
-        },
-        "s34_c2_desc": {
-          "de": "Federjustage ausschließlich am oberen Schenkel mit dem Federhaken durchführen. Unteren Schenkel niemals biegen!",
-          "en": "Adjust tension exclusively at the upper spring arm using a spring hook. Never bend the lower arm!",
-          "ja": "スプリング調整は専用フックを用い必ず上側のアームのみで行うこと。下側は絶対に曲げない！",
-          "zh": "必须使用专用簧钩仅在弹簧上臂进行张力微调，严禁触碰或弯折下臂以防破坏力学基点！"
-        },
-        "s34_c3_title": {
-          "de": "3. Scheitelprofil (Kein Hohlstand)",
-          "en": "3. Crown Profile (Convex Strike)",
-          "ja": "3. クラウン成型（凸状の維持）",
-          "zh": "3. 饱满凸面顶峰法则"
-        },
-        "s34_c3_desc": {
-          "de": "Scheitelfläche muss gleichmäßig konvex sein. Hohlscheitel und Schrägscheitel sofort hauchdünn mit Schleiffeile abziehen.",
-          "en": "Hammer strike crown must remain uniformly convex. Immediately re-file hollow or slanted crowns with sanding strip.",
-          "ja": "打弦面は均一な凸面でなければならない。凹みや偏摩耗はサンドファイルで薄く均一に研磨修正。",
-          "zh": "击弦冠顶必须保持均匀圆润的外凸弧线。若出现中央内凹或倾斜，须立即用细砂板极微量修圆。"
-        },
-        "s34_c4_title": {
-          "de": "4. Nachdruck (exakt 1,0 mm)",
-          "en": "4. Aftertouch (Exactly 1.0 mm)",
-          "ja": "4. アフタータッチ（厳密に1.0mm）",
-          "zh": "4. 触键余程死守1.0mm"
-        },
-        "s34_c4_desc": {
-          "de": "Exakt 1,0 mm Resthub nach der Auslösung garantiert saubere, blitzschnelle Repetition ohne Tastenklemmen.",
-          "en": "Exactly 1.0 mm remaining key travel after let-off guarantees clean, lightning-fast repetition without jamming.",
-          "ja": "脱進後の余白（アフタータッチ）を厳密に1.0mm確保することで、鍵盤の引っ掛かりのない高速連打を実現。",
-          "zh": "琴键断进脱扣后严格保留1.0mm余程深度，方能保障高速连续颤音与复奏敏捷响应且绝不卡键。"
-        },
-        "s34_caption_1": {
-          "de": "Scheitelprofil beim Abziehen: Hohlscheitel ✗ | Schrägscheitel ✗ | Scheitel korrekt gewölbt ✓",
-          "en": "Filing Crown Profiles: Hollow ✗ | Slanted ✗ | Correctly Convex ✓",
-          "ja": "ハンマー頂点プロファイル：凹状 ✗ | 偏摩耗 ✗ | 理想的な凸状成型 ✓",
-          "zh": "琴槌冠顶修形规范对照：凹心扁平 ✗ | 倾斜偏磨 ✗ | 完美均匀微凸弧线 ✓"
-        }
-      },
-      "notes": {
-        "de": "Die 4 Regeln repräsentieren den Erfahrungsschatz von Kruse. Sie sind praxiserprobt und sichern Langlebigkeit.",
-        "en": "These 4 rules represent decades of Kruse's mastery. Proven in practice, ensuring lasting quality.",
-        "ja": "マイスター・クルーゼが数十年培った知見の結晶。長期的な信頼性を担保する重要事項です。",
-        "zh": "四大法则是克鲁泽大师数十载整修功力的结晶，是确保改造后整琴拥有长效顶级表现的核心保障。"
-      }
-    },
-    "slide_35": {
-      "slide_number": 35,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Klaviatur & Dreichor",
-        "en": "Part 4: Yamaha Kit • Keyboard & Trichord",
-        "ja": "第4部：YAMAHA キット・鍵盤と3弦打弦",
-        "zh": "第四部分：雅马哈套件 • 琴键触感与三弦同步"
-      },
-      "title": {
-        "de": "Phase 4 & 5: Dreichorauflage, Wippen & Tastentiefgang",
-        "en": "Phase 4 & 5: Trichord Strike, Wippens & Key Dip",
-        "ja": "フェーズ4＆5：同音3弦同時打弦・ウィッペン整列・キードリップ",
-        "zh": "阶段4与5：同音三弦同步击打 · 联动杆对中与触键深度"
-      },
-      "subtitle": {
-        "de": "Gleichzeitiger Anschlag aller 3 Saiten und zentrische Kraftübertragung",
-        "en": "Simultaneous 3-String Contact and Centered Mechanical Energy Transmission",
-        "ja": "3本の弦すべてを同時に均一に捉え、センターロスのない打撃を実現",
-        "zh": "同音弦组3根琴弦绝对同时起振接触，动力传动中线分毫不偏"
-      },
-      "elements": {
-        "s35_b1_badge": {
-          "de": ">DREICHORAUFLAGE",
-          "en": ">TRICHORD STRIKE",
-          "ja": ">3弦同時打弦",
-          "zh": ">三弦同振同步"
-        },
-        "s35_b2_badge": {
-          "de": ">KLAVIATUR-JUSTAGE",
-          "en": ">KEYBOARD REGULATION",
-          "ja": ">鍵盤レギュレーション",
-          "zh": ">琴键触键深度标定"
-        },
-        "s35_c1_title": {
-          "de": "Synchroner Anschlag & zentrische Führung",
-          "en": "Synchronous Strike & Centered Leverage",
-          "ja": "完全な同調打弦と正確なセンター配置",
-          "zh": "同步齐击与绝对中线轴心传动"
-        },
-        "s35_c1_desc": {
-          "de": "Damit die Energie des Hammerkopfes vollkommen rein in die Saiten übergeht, müssen alle drei Saiten eines Chors absolut zeitgleich getroffen werden. Jede Schiefstellung raubt Obertöne.",
-          "en": "For hammer energy to convert cleanly into acoustic projection, all three strings of a unison choir must be struck simultaneously. Any angular tilt compromises harmonics.",
-          "ja": "ハンマーのエネルギーを純粋に弦へと伝えるため、同音トリプル弦すべてを同時に均等にヒットさせる必要があります。わずかな傾きも倍音を損ねます。",
-          "zh": "欲使琴槌撞击动能100%纯净激荡发声，同音弦组的三根琴弦必须在毫秒级别完全同步触击，任何微小倾斜均会剧烈削弱高频泛音。"
-        },
-        "s35_bullet_1": {
-          "de": "Dreichorauflage prüfen: Taste langsam niederdrücken – alle drei Saiten müssen im selben Moment berührt werden.",
-          "en": "Check Trichord Mating: Depress key slowly – all three unison strings must damp at the exact same instant.",
-          "ja": "3弦打弦の確認：鍵盤をゆっくり沈め、3本の弦すべてが同タイミングで静かに消音されるか検証。",
-          "zh": "检测同音三弦齐触：极慢按下琴键，确认三根琴弦在接触瞬间完全无时间差同步被触碰。"
-        },
-        "s35_bullet_2": {
-          "de": "Zentrische Stoßzunge: Stoßzungen müssen exakt mittig unter dem Hammerröllchen stehen.",
-          "en": "Centered Jack: Jacks must sit perfectly centered beneath the hammer roller (knuckle).",
-          "ja": "ジャックのセンター出し：ジャックがローラー（ナックル）の真下中央に位置するよう調整。",
-          "zh": "顶杆精确对中：复奏顶杆必须严丝合缝正对小槌头小鹿皮辊（Knuckle）正中央。"
-        },
-        "s35_bullet_3": {
-          "de": "Tastentiefgang (10,0 mm): Gleichmäßiger Tiefgang über alle 88 Tasten sichert die ergonomische Haptik.",
-          "en": "Key Dip (10.0 mm): Uniform 10mm key travel across all 88 keys ensures concert-grade ergonomics.",
-          "ja": "キードリップ（10.0mm）：全88鍵で均一な10mmの鍵盤沈み量を設定し、快適なタッチを確立。",
-          "zh": "触键下沉深度（10.0 mm）：88键全程保持统一10mm下沉深度，确保顶尖触键舒适性。"
-        },
-        "s35_bullet_4": {
-          "de": "Klaviaturhöhe: Weiß ca. 20 / 65 mm, Schwarz 12 mm Überstand über dem Elfenbein.",
-          "en": "Key Height: White keys approx. 20 / 65 mm, sharp keys raised 12 mm above naturals.",
-          "ja": "鍵盤高さ：白鍵約20/65mm、黒鍵は白鍵面より12mmの適正な突出高さを確保。",
-          "zh": "键盘基准高度：白键前沿约20/65mm，黑键高出白键琴面12mm标准凸起。"
-        },
-        "s35_caption_1": {
-          "de": "Prüfung der planparallelen Dreichorauflage am Diskantsaitenchor mit dem Kruse-Flügelprüfer",
-          "en": "Inspecting flush trichord string alignment in the treble section using precision gauge",
-          "ja": "高音域セクションにおいて3弦が完全にフラットに当たるかをゲージで検証する様子",
-          "zh": "使用大师级精密规尺检测高音区同音弦组平面与琴槌冠顶的绝对平行吻合度"
-        }
-      },
-      "notes": {
-        "de": "Erklären Sie, dass Dreichorauflage oft übersehen wird, aber für den brillanten Diskant unverzichtbar ist.",
-        "en": "Explain that trichord mating is often overlooked yet essential for crystal-clear treble resonance.",
-        "ja": "3弦打弦の調整は見落とされがちですが、クリアな高音の響きには不可欠であることを説明。",
-        "zh": "强调三弦同步齐触常被普通调律师忽视，但它是高音区散发晶莹泛音的根本命门。"
-      }
-    },
-    "slide_36": {
-      "slide_number": 36,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Fänger & Feinintonation",
-        "en": "Part 4: Yamaha Kit • Catchers & Voicing",
-        "ja": "第4部：YAMAHA キット・バックチェックと最終整音",
-        "zh": "第四部分：雅马哈套件 • 托木调整与音乐会最终整音"
-      },
-      "title": {
-        "de": "Phase 6: Fänger, Repetierfeder & Klang-Vollendung",
-        "en": "Phase 6: Catchers, Springs & Tonal Completion",
-        "ja": "フェーズ6：バックチェック、スプリング、そして響きの完成",
-        "zh": "阶段6：托木止退、复奏微调与音色终极升华"
-      },
-      "subtitle": {
-        "de": "Minimaler Abstimmungsaufwand – Sofortige Konzertreife ohne zeitraubende Vorintonation",
-        "en": "Minimal Bench Time – Instant Concert Resonance Without Tedious Pre-Voicing",
-        "ja": "最小限の微調整のみで完了：過酷な予備整音なしで即座にコンサート音色を実現",
-        "zh": "告别繁重扎针：仅需极少微调即可达到音乐会独奏标准，彻底省去车间预整音"
-      },
-      "elements": {
-        "s36_b1_badge": {
-          "de": ">KONZERTREIFE",
-          "en": ">CONCERT GRADE",
-          "ja": ">コンサートグレード",
-          "zh": ">独奏音乐会级"
-        },
-        "s36_b2_badge": {
-          "de": ">88 NOTEN FLUCHT",
-          "en": ">88-NOTE ALIGNMENT",
-          "ja": ">88鍵パーフェクト整列",
-          "zh": ">88键如一线排列"
-        },
-        "s36_c1_title": {
-          "de": "Vom Einbau zum Konzertklang in Rekordzeit",
-          "en": "From Drop-In to Concert Tone in Record Time",
-          "ja": "取り付けから極上の音色へ：驚異的なスピードで完成",
-          "zh": "从装配就位到唱响音乐厅级天籁仅需片刻"
-        },
-        "s36_c1_desc": {
-          "de": "Weil der Weickert-Special-Filz von Renner bereits im Kern die perfekte Dichte und Elastizität besitzt, entfällt das stundenlange Vorintonieren (Pre-Needling) komplett. Der Techniker widmet sich nur der musikalischen Feinabstimmung.",
-          "en": "Because Renner Weickert Special felt possesses ideal organic density and resilience straight from the mold, tedious hours of pre-needling are completely eliminated. The voicer focuses purely on artistic refinement.",
-          "ja": "レンナーの高級フェルトは成型時点で理想的な繊維密度と弾性を備えているため、何時間にも及ぶ予備の針入れ作業が一切不要。技術者は最後の芸術的微調整のみに集中できます。",
-          "zh": "由于雷诺魏克特特选羊毛毡自出模起就拥有完美的内部密度与弹性梯度，耗时数小时的狂暴深层扎针（预整音）被彻底终结。技师只需将精力聚焦于音乐艺术层面的终极微调。"
-        },
-        "s36_bullet_1": {
-          "de": "Fanghöhe (ca. 15 mm): Gleichmäßiger Fang bei Forte-Anschlag, Fänger parallel zu den Gegenfängern kröpfen.",
-          "en": "Catching Height (~15 mm): Uniform hammer catch at forte; align backchecks parallel to hammer tails.",
-          "ja": "バックチェック高さ（約15mm）：フォルテ打弦時の均一なキャッチ。ハンマーテールと並行にクランプ調整。",
-          "zh": "托木托捕高度（约15mm）：强奏打弦后琴槌平稳被托于距弦15mm处，托木接触面与槌尾保持绝对平行。"
-        },
-        "s36_bullet_2": {
-          "de": "Repetierfeder: Zügiges, prellfreies Aufsteigen des Hammers zur Auslösung für virtuose Spieltechnik.",
-          "en": "Repetition Spring: Swift, bounce-free rise of hammer to let-off position for effortless trills.",
-          "ja": "レペティションスプリング：バウンドのないスムーズな立ち上がりで、俊敏なトリル・連打を保証。",
-          "zh": "复奏弹簧调节：琴槌释放后迅速、无颤抖颠簸地升回原位，为演奏大师高速颤音提供源源动力。"
-        },
-        "s36_bullet_3": {
-          "de": "Ausgleichsintonation: Nur feine Stiche in den elastischen Schulterzonen – die Hammerkrone wird geschont!",
-          "en": "Balancing Needles: Gentle voicing only in elastic shoulder zones – preserving crown integrity!",
-          "ja": "音色の均一化整音：柔軟なショルダー部にのみ繊細な針入れを行い、ハンマー頂点（クラウン）は温存！",
-          "zh": "均衡点扎整音：仅在极富弹性的槌肩部位进行浅层微调针刺，绝不粗暴破坏最核心的击弦冠顶！"
-        },
-        "s36_bullet_4": {
-          "de": "Konzert-Feinstimmung: Abschließende Stimmung auf Kammerton A4 = 440 – 442 Hz.",
-          "en": "Concert Fine Tuning: Final concert pitch tuning at A4 = 440 – 442 Hz.",
-          "ja": "コンサート最終調律：A4 = 440〜442Hzのコンサートピッチへ最終調律。",
-          "zh": "音乐会精细调律：最终将整台钢琴精准校准至A4 = 440-442Hz标准音乐会音高。"
-        },
-        "s36_caption_1": {
-          "de": "Makellose Flucht und Ausrichtung aller 88 montierten Louis Renner Hammerköpfe im Flügel",
-          "en": "Impeccable alignment and seamless travel across all 88 installed Renner hammer assemblies",
-          "ja": "グランドピアノに装着された全88個のレンナーハンマーが描く完璧な整列美",
-          "zh": "88枚德国雷诺原装琴槌总成在三角钢琴内部呈现出的极具视觉冲击力的工业美学基线"
-        }
-      },
-      "notes": {
-        "de": "Präsentieren Sie das Gesamtbild aller 88 Hämmer als Meisterstück deutscher Präzisionsfertigung.",
-        "en": "Present the overview photo of all 88 hammers as a masterpiece of German precision manufacturing.",
-        "ja": "88個すべてのハンマーが並ぶ写真をドイツ精密工学の結晶としてアピールしてください。",
-        "zh": "将88枚琴槌整齐排列的全景照片作为德国至高工艺水平的代表作进行重点展示。"
-      }
-    },
-    "slide_37": {
-      "slide_number": 37,
-      "chapter": 4,
-      "chapter_name": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
-        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
-        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
-        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
-      },
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Zusammenfassung & Nutzen",
-        "en": "Part 4: Yamaha Kit • Value & ROI",
-        "ja": "第4部：YAMAHA キット・価値とROI",
-        "zh": "第四部分：雅马哈套件 • 商业价值与投资回报"
-      },
-      "title": {
-        "de": "Die Bilanz: Höchste Effizienz & Weltklasse-Klang",
-        "en": "The Verdict: Maximum Efficiency & World-Class Tone",
-        "ja": "総括：圧倒的な効率性と世界最高峰の響き",
-        "zh": "全面总结：极致车间工效与世界顶级音色的双重飞跃"
-      },
-      "subtitle": {
-        "de": "Der unschlagbare Mehrwert für Techniker, Klavierhäuser und anspruchsvolle Pianisten",
-        "en": "Unbeatable Value for Technicians, Piano Dealers, and Discerning Pianists",
-        "ja": "技術者、ピアノディーラー、そしてピアニストすべてに約束される計り知れないメリット",
-        "zh": "为调律师、品牌琴行、维修工坊与挑剔钢琴家构筑的全赢价值闭环"
-      },
-      "elements": {
-        "s37_b1_badge": {
-          "de": ">FÜR TECHNIKER",
-          "en": ">FOR TECHNICIANS",
-          "ja": ">技術者のメリット",
-          "zh": ">技师效益倍增"
-        },
-        "s37_b2_badge": {
-          "de": ">FÜR DEN HANDEL",
-          "en": ">FOR PIANO DEALERS",
-          "ja": ">販売店のメリット",
-          "zh": ">琴行价值跃升"
-        },
-        "s37_b3_badge": {
-          "de": ">FÜR PIANISTEN",
-          "en": ">FOR PIANISTS",
-          "ja": ">ピアニストの感動",
-          "zh": ">琴童大师赞叹"
-        },
-        "s37_c1_title": {
-          "de": "10h Bench Time gespart",
-          "en": "10h Bench Time Saved",
-          "ja": "10時間の工房工数を削減",
-          "zh": "每台立省10小时工时"
-        },
-        "s37_c1_desc": {
-          "de": "Kein mühsames Ausmessen, Bohren und Leimen. Einbau direkt beim Kunden an einem einzigen Nachmittag. Null Risiko von Fehlbohrungen oder Kleberesten.",
-          "en": "Zero boring, jig alignment, or glue heating. Complete installation directly on site in a single afternoon. Zero scrap risk.",
-          "ja": "面倒な計測、穴あけ、接着作業から完全解放。客先での1回のアフタヌーン訪問で完結。失敗リスクも完全にゼロ。",
-          "zh": "彻底免除漫长测量、钻孔定位与热胶作业。单次上门数小时全套交付，零报废废品风险。"
-        },
-        "s37_c2_title": {
-          "de": "Höhere Marge & Durchlauf",
-          "en": "Higher Margins & Turnaround",
-          "ja": "収益率と回転率の劇的向上",
-          "zh": "利润倍增与高速周转"
-        },
-        "s37_c2_desc": {
-          "de": "Verwandelt Gebrauchtflügel in begehrte Premium-Instrumente mit offiziellem Renner-Upgrade. Kürzere Standzeiten und überzeugende Verkaufsargumente.",
-          "en": "Transforms pre-owned Yamaha grands into premium performance instruments with official Renner pedigree. Shorter inventory turnaround.",
-          "ja": "中古ヤマハピアノを公式レンナーパーツで極上のプレミアム仕様へアップグレード。展示期間を大幅短縮し成約率向上。",
-          "zh": "将普通二手或老旧雅马哈三角琴秒变拥有雷诺原厂认证的高溢价臻品，大幅加速展厅周转率与成交转化。"
-        },
-        "s37_c3_title": {
-          "de": "Europäischer Konzertgesang",
-          "en": "Noble European Concert Tone",
-          "ja": "憧れの欧州コンサートの歌声",
-          "zh": "醇正欧系音乐会歌唱之声"
-        },
-        "s37_c3_desc": {
-          "de": "Warmer, farbenreicher Gesangston statt greller Attack-Härte. Federleichte, feinfühlige Repetition und spürbare Wertsteigerung des Instruments.",
-          "en": "Warm, singing European tone replacing harsh metallic attacks. Feather-light, sensitive touch response and lasting asset appreciation.",
-          "ja": "金属的な耳障りなアタック音から、温かく歌う欧州トーンへ。羽のように軽快な連打性と、楽器資産価値の大幅な向上。",
-          "zh": "告别尖锐刺耳的金属敲击声，迎来圆润温暖的德系天籁。指尖轻盈灵动的复奏反馈与钢琴保值升值的双重保证。"
-        },
-        "s37_caption_1": {
-          "de": "Offizieller Leitfaden: QR-Code scannen für die digitale Montageanleitung auf louis-renner.de",
-          "en": "Official Installation Guide: Scan QR code for complete instructions at louis-renner.de",
-          "ja": "公式ガイド：QRコードをスキャンして louis-renner.de の完全マニュアルへアクセス",
-          "zh": "官方权威指南：微信或相机扫码即刻查阅 louis-renner.de 原厂全套数字图文安装手册"
-        }
-      },
-      "notes": {
-        "de": "Abschlussfolie Kapitel 4. Fassen Sie die Win-Win-Situation für Klavierbauer, Händler und Pianisten zusammen.",
-        "en": "Closing slide of Chapter 4. Summarize the triple win for technicians, dealerships, and pianists.",
-        "ja": "第4部の締めくくり。技術者、販売店、演奏者の3者すべてが得る圧倒的メリットを力強く総括。",
-        "zh": "第四部分总结页。强力升华技术人员、琴行投资人与钢琴演奏者三方共赢的革命性价值。"
-      }
-    },
-    "slide_38": {
-      "slide_number": 38,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4595,103 +4097,103 @@
         "zh": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen"
       },
       "elements": {
-        "s38_b1_badge": {
+        "s28_b1_badge": {
           "de": "FORTISSIMO (ff)",
           "en": "FORTISSIMO (ff)",
           "ja": "FORTISSIMO (ff)",
           "zh": "FORTISSIMO (ff)"
         },
-        "s38_b2_badge": {
+        "s28_b2_badge": {
           "de": "FORTE (f)",
           "en": "FORTE (f)",
           "ja": "FORTE (f)",
           "zh": "FORTE (f)"
         },
-        "s38_b3_badge": {
+        "s28_b3_badge": {
           "de": "PIANO (p)",
           "en": "PIANO (p)",
           "ja": "PIANO (p)",
           "zh": "PIANO (p)"
         },
-        "s38_b4_badge": {
+        "s28_b4_badge": {
           "de": "PIANISSIMO (pp)",
           "en": "PIANISSIMO (pp)",
           "ja": "PIANISSIMO (pp)",
           "zh": "PIANISSIMO (pp)"
         },
-        "s38_b5_badge": {
+        "s28_b5_badge": {
           "de": "ROTE ZONE (SCHEITEL)",
           "en": "RED ZONE (APEX)",
           "ja": "ROTE ZONE (SCHEITEL)",
           "zh": "ROTE ZONE (SCHEITEL)"
         },
-        "s38_b6_badge": {
+        "s28_b6_badge": {
           "de": "JENS-SÖREN KRUSE",
           "en": "JENS-SÖREN KRUSE",
           "ja": "JENS-SÖREN KRUSE",
           "zh": "JENS-SÖREN KRUSE"
         },
-        "s38_c1_title": {
+        "s28_c1_title": {
           "de": "Blauer Keil",
           "en": "Blue Wedge",
           "ja": "Blauer Keil",
           "zh": "Blauer Keil"
         },
-        "s38_c2_title": {
+        "s28_c2_title": {
           "de": "Grüner Keil",
           "en": "Green Wedge",
           "ja": "Grüner Keil",
           "zh": "Grüner Keil"
         },
-        "s38_c3_title": {
+        "s28_c3_title": {
           "de": "Orangener Keil",
           "en": "Orange Wedge",
           "ja": "Orangener Keil",
           "zh": "Orangener Keil"
         },
-        "s38_c4_title": {
+        "s28_c4_title": {
           "de": "Violetter Keil",
           "en": "Violet Wedge",
           "ja": "Violetter Keil",
           "zh": "Violetter Keil"
         },
-        "s38_c5_title": {
+        "s28_c5_title": {
           "de": "DO NOT TOUCH! – Niemals tief einstechen!",
           "en": "DO NOT TOUCH! – Never prick deeply here!",
           "ja": "DO NOT TOUCH! – Niemals tief einstechen!",
           "zh": "DO NOT TOUCH! – Niemals tief einstechen!"
         },
-        "s38_c1_desc": {
+        "s28_c1_desc": {
           "de": "Tiefe Nadelstiche zur Entspannung",
           "en": "Deep needle stitches for tension release",
           "ja": "Tiefe Nadelstiche zur Entspannung",
           "zh": "Tiefe Nadelstiche zur Entspannung"
         },
-        "s38_c2_desc": {
+        "s28_c2_desc": {
           "de": "Raumklang, Glanz und dynamische Entfaltung",
           "en": "Projection, brilliance, and dynamic blossoming",
           "ja": "Raumklang, Glanz und dynamische Entfaltung",
           "zh": "Raumklang, Glanz und dynamische Entfaltung"
         },
-        "s38_c3_desc": {
+        "s28_c3_desc": {
           "de": "Lyrischer Gesangston, feine Abstimmung",
           "en": "Lyrical singing tone, nuanced balance",
           "ja": "Lyrischer Gesangston, feine Abstimmung",
           "zh": "Lyrischer Gesangston, feine Abstimmung"
         },
-        "s38_c4_desc": {
+        "s28_c4_desc": {
           "de": "Flüsterleise Ansprache",
           "en": "Whisper-soft pianissimo response",
           "ja": "Flüsterleise Ansprache",
           "zh": "Flüsterleise Ansprache"
         },
-        "s38_caption_1": {
+        "s28_caption_1": {
           "de": "Original Renner Uhrenmodell",
           "en": "Original Renner Clock Model",
           "ja": "Original Renner Uhrenmodell",
           "zh": "Original Renner Uhrenmodell"
         },
-        "s38_caption_2": {
+        "s28_caption_2": {
           "de": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
           "en": "with the 4 dynamic wedges (ff, f, p, pp)",
           "ja": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
@@ -4705,8 +4207,8 @@
         "zh": "第 58 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_39": {
-      "slide_number": 39,
+    "slide_29": {
+      "slide_number": 29,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4733,49 +4235,49 @@
         "zh": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil"
       },
       "elements": {
-        "s39_bullet_1": {
+        "s29_bullet_1": {
           "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
           "en": "<strong>Work Zone:</strong> Exclusively in the blue fortissimo wedge (clock zones 9:00–10:00 and 2:00–3:00).",
           "ja": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
           "zh": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr)."
         },
-        "s39_bullet_2": {
+        "s29_bullet_2": {
           "de": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).",
           "en": "<strong>Deep Needling:</strong> Insert needles deeply to just short of the underfelt (never pierce underfelt or core wood!).",
           "ja": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).",
           "zh": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!)."
         },
-        "s39_bullet_3": {
+        "s29_bullet_3": {
           "de": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.",
           "en": "<strong>Tension Transfer:</strong> The head sheds rigid factory stiffness; stored tension flows into the green forte wedge.",
           "ja": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.",
           "zh": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab."
         },
-        "s39_bullet_4": {
+        "s29_bullet_4": {
           "de": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.",
           "en": "<strong>Recommendation:</strong> This step is recommended almost without exception prior to first playing-in in the instrument.",
           "ja": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.",
           "zh": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten."
         },
-        "s39_caption_1": {
+        "s29_caption_1": {
           "de": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "en": "Pre-needling: Deep stitches in the fortissimo wedge (9:00 to 10:00 o'clock)",
           "ja": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "zh": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)"
         },
-        "s39_b1_badge": {
+        "s29_b1_badge": {
           "de": "PRE-NEEDLING",
           "en": "PRE-NEEDLING",
           "ja": "下整音（針刺し）",
           "zh": "基础刺针整音"
         },
-        "s39_b2_badge": {
+        "s29_b2_badge": {
           "de": "GRUNDELASTIZITÄT",
           "en": "BASIC ELASTICITY",
           "ja": "基本弾力性",
           "zh": "建立核心弹性"
         },
-        "s39_c1_desc": {
+        "s29_c1_desc": {
           "de": "Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:",
           "en": "Pre-voicing is the single most critical foundation for brand-new or refelted hammerheads:",
           "ja": "下整音（プリ・ヴォイシング）は、新品および再フェルト交換ハンマーにおける最重要工程です：",
@@ -4789,8 +4291,8 @@
         "zh": "第 59 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_40": {
-      "slide_number": 40,
+    "slide_30": {
+      "slide_number": 30,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4817,37 +4319,37 @@
         "zh": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant"
       },
       "elements": {
-        "s40_bullet_1": {
+        "s30_bullet_1": {
           "de": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
           "en": "<strong>Stitch Counts for Pre-Needling:</strong> <br>• Bass: 7–10 stitches horizontally <br>• Mid-Range: 5–10 stitches horizontally <br>• Treble: 0–7 stitches vertically",
           "ja": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
           "zh": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal"
         },
-        "s40_bullet_2": {
+        "s30_bullet_2": {
           "de": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!",
           "en": "<strong>Press, never chop!</strong> Press needles steadily using body weight. Chopping tears wool fibers uncontrollably!",
           "ja": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!",
           "zh": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!"
         },
-        "s40_bullet_3": {
+        "s30_bullet_3": {
           "de": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).",
           "en": "<strong>Original Renner Tools:</strong> <br>• Adjustable Voicing Tool (item 43-0005642) <br>• 3-Needle Voicing Tool Professional (item 43-0003270) <br>• Nickel-plated needles no. 7 ø 0.60 mm, 9 mm long (item 43-0003426).",
           "ja": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).",
           "zh": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426)."
         },
-        "s40_caption_1": {
+        "s30_caption_1": {
           "de": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "en": "Renner voicing tools, needle handles, and adjustable voicing instrument",
           "ja": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "zh": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat"
         },
-        "s40_b1_badge": {
+        "s30_b1_badge": {
           "de": "WERKZEUGKUNDE",
           "en": "TOOL SET",
           "ja": "専門工具",
           "zh": "专业整音工具"
         },
-        "s40_b2_badge": {
+        "s30_b2_badge": {
           "de": "PRÄZISIONSNADELN",
           "en": "PRECISION NEEDLES",
           "ja": "精密針",
@@ -4861,8 +4363,8 @@
         "zh": "第 60 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_41": {
-      "slide_number": 41,
+    "slide_31": {
+      "slide_number": 31,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4889,37 +4391,37 @@
         "zh": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“"
       },
       "elements": {
-        "s41_caption_1": {
+        "s31_caption_1": {
           "de": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "en": "Bedding strings firmly at the hitch pin using brass drift punch",
           "ja": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "zh": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag"
         },
-        "s41_b1_badge": {
+        "s31_b1_badge": {
           "de": "SAITEN-BETTUNG",
           "en": "STRING BEDDING",
           "ja": "弦合わせ工程",
           "zh": "琴弦沉实就位"
         },
-        "s41_b2_badge": {
+        "s31_b2_badge": {
           "de": "CHORREINHEIT",
           "en": "UNISON PURITY",
           "ja": "同音同調の純度",
           "zh": "三弦同音纯净"
         },
-        "s41_bullet_1": {
+        "s31_bullet_1": {
           "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.",
           "en": "<strong>Setting Hitch Pins:</strong> Carefully seat strings from back to front at hitch pins using a brass drift punch and light hammer.",
           "ja": "<strong>ヒッチピンの弦合わせ：</strong> 真鍮ポンチと軽量ハンマーで弦をヒッチピンに慎重に密着。",
           "zh": "<strong>挂弦钉沉降：</strong> 用黄铜冲头和轻手锤将琴弦自后向前轻敲至挂弦钉根部沉实。"
         },
-        "s41_bullet_2": {
+        "s31_bullet_2": {
           "de": "<strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.",
           "en": "<strong>Bridge Pin Alignment:</strong> Seat strings on the bridge with Renner bridge punch to eliminate false beats.",
           "ja": "<strong>駒ピンの弦合わせ：</strong> 専用セッターで弦を駒に押し込み、不要なノイズや偽うなりを排除。",
           "zh": "<strong>弦码钉就位：</strong> 使用专用敲合器使琴弦紧贴弦码，消除假杂音与拍音。"
         },
-        "s41_bullet_3": {
+        "s31_bullet_3": {
           "de": "<strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.",
           "en": "<strong>Unison Purity:</strong> Before the first voicing needle, the unison must ring absolutely pure and free of unwanted friction.",
           "ja": "<strong>同音の純度調整：</strong> 最初の針刺し前に、ユニゾンが完全に澄み切りノイズのない状態に調弦。",
@@ -4933,8 +4435,8 @@
         "zh": "第 61 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_42": {
-      "slide_number": 42,
+    "slide_32": {
+      "slide_number": 32,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4961,37 +4463,37 @@
         "zh": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens"
       },
       "elements": {
-        "s42_bullet_1": {
+        "s32_bullet_1": {
           "de": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
           "en": "<strong>Test Strike Point on Note 88:</strong> Shift keyframe slightly forward and back to locate the brightest, most singing treble sweet spot.",
           "ja": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
           "zh": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden."
         },
-        "s42_bullet_2": {
+        "s32_bullet_2": {
           "de": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!",
           "en": "<strong>Optimize Notes 69 to 88:</strong> The high treble on many grands improves dramatically once the strike line is precisely repositioned!",
           "ja": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!",
           "zh": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!"
         },
-        "s42_bullet_3": {
+        "s32_bullet_3": {
           "de": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.",
           "en": "<strong>Squareness of All Hammers:</strong> Test by plucking strings or lifting jacks with finger; mark corrections with chalk on key tops.",
           "ja": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.",
           "zh": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste."
         },
-        "s42_caption_1": {
+        "s32_caption_1": {
           "de": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "en": "Verifying treble strike point and square alignment of hammerheads",
           "ja": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "zh": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer"
         },
-        "s42_b1_badge": {
+        "s32_b1_badge": {
           "de": "STRIKE POINT",
           "en": "STRIKE POINT",
           "ja": "打弦点探索",
           "zh": "最佳击弦点"
         },
-        "s42_b2_badge": {
+        "s32_b2_badge": {
           "de": "DISKANTGLANZ",
           "en": "TREBLE BRILLIANCE",
           "ja": "高音域の輝き",
@@ -5005,8 +4507,8 @@
         "zh": "第 62 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_43": {
-      "slide_number": 43,
+    "slide_33": {
+      "slide_number": 33,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5033,61 +4535,61 @@
         "zh": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile"
       },
       "elements": {
-        "s43_c1_title": {
+        "s33_c1_title": {
           "de": "Hohlkehle (Hollow Crown)",
           "en": "Hollow Crown",
           "ja": "Hohlkehle (Hollow Crown)",
           "zh": "Hohlkehle (Hollow Crown)"
         },
-        "s43_c2_title": {
+        "s33_c2_title": {
           "de": "Schiefe Krone (Crooked Crown)",
           "en": "Crooked Crown",
           "ja": "Schiefe Krone (Crooked Crown)",
           "zh": "Schiefe Krone (Crooked Crown)"
         },
-        "s43_c3_title": {
+        "s33_c3_title": {
           "de": "Plan & Symmetrisch (Crown OK)",
           "en": "Level & Symmetrical (Crown OK)",
           "ja": "Plan & Symmetrisch (Crown OK)",
           "zh": "Plan & Symmetrisch (Crown OK)"
         },
-        "s43_c1_desc": {
+        "s33_c1_desc": {
           "de": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.",
           "en": "Crown contacts only outer strings -> incomplete attack tone, must be filed level.",
           "ja": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.",
           "zh": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden."
         },
-        "s43_c2_desc": {
+        "s33_c2_desc": {
           "de": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.",
           "en": "Asymmetrical contact creates double attack and string buzz -> file true to string plane.",
           "ja": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.",
           "zh": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen."
         },
-        "s43_c3_desc": {
+        "s33_c3_desc": {
           "de": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.",
           "en": "Simultaneous solid contact on all 3 unison strings for a full fundamental tone.",
           "ja": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.",
           "zh": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton."
         },
-        "s43_caption_1": {
+        "s33_caption_1": {
           "de": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "en": "Filing hammer crowns for perfect flush alignment to 3-string unisons",
           "ja": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "zh": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor"
         },
-        "s43_b1_badge": {
+        "s33_b1_badge": {
           "de": "HOHL VOR RUND",
           "en": "HOLLOW BEFORE ROUND",
           "ja": "削り技法",
           "zh": "修磨技法"
         },
-        "s43_b2_badge": {
+        "s33_b2_badge": {
           "de": "KRONENSCHEITEL",
           "en": "CROWN APEX",
           "ja": "クラウン頂点",
           "zh": "槌顶圆弧"
         },
-        "s43_b3_badge": {
+        "s33_b3_badge": {
           "de": ">SCHLEIFFEILE",
           "en": ">SANDING PADDLE",
           "ja": ">整形サンドファイル",
@@ -5101,8 +4603,8 @@
         "zh": "第 63 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_44": {
-      "slide_number": 44,
+    "slide_34": {
+      "slide_number": 34,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5129,43 +4631,43 @@
         "zh": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen"
       },
       "elements": {
-        "s44_bullet_1": {
+        "s34_bullet_1": {
           "de": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
           "en": "<strong>Chromatic Play-Through:</strong> Play chromatically up and down the keyboard; flag notes with harsh attack or uneven volume.",
           "ja": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
           "zh": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren."
         },
-        "s44_bullet_2": {
+        "s34_bullet_2": {
           "de": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!",
           "en": "<strong>Mid-Voicing:</strong> Gentle needle pricks in green forte and orange piano wedges. Overly soft notes are firmed by light surface sanding!",
           "ja": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!",
           "zh": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!"
         },
-        "s44_bullet_3": {
+        "s34_bullet_3": {
           "de": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).",
           "en": "<strong>Final Voicing:</strong> Short single needle (BDK handle item 43-0003269 or Chop Stick item 43-0003271).",
           "ja": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).",
           "zh": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271)."
         },
-        "s44_bullet_4": {
+        "s34_bullet_4": {
           "de": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!",
           "en": "<strong>Max. 2 mm Depth at Crown:</strong> Insert only between string grooves, never directly into the string depressions!",
           "ja": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!",
           "zh": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!"
         },
-        "s44_caption_1": {
+        "s34_caption_1": {
           "de": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "en": "Chromatic listening and fine voicing with short single needle",
           "ja": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "zh": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel"
         },
-        "s44_b1_badge": {
+        "s34_b1_badge": {
           "de": "FEININTONATION",
           "en": "FINE VOICING",
           "ja": "仕上げ整音",
           "zh": "精细色彩调配"
         },
-        "s44_b2_badge": {
+        "s34_b2_badge": {
           "de": "FARBPALETTE",
           "en": "COLOR PALETTE",
           "ja": "色彩パレット",
@@ -5179,8 +4681,8 @@
         "zh": "第 64 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_45": {
-      "slide_number": 45,
+    "slide_35": {
+      "slide_number": 35,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5207,61 +4709,61 @@
         "zh": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog"
       },
       "elements": {
-        "s45_b1_badge": {
+        "s35_b1_badge": {
           "de": "UNA CORDA PRAXIS",
           "en": "UNA CORDA PRACTICE",
           "ja": "UNA CORDA PRAXIS",
           "zh": "UNA CORDA PRAXIS"
         },
-        "s45_b2_badge": {
+        "s35_b2_badge": {
           "de": "RENNER ACADEMY",
           "en": "RENNER ACADEMY",
           "ja": "RENNER ACADEMY",
           "zh": "RENNER ACADEMY"
         },
-        "s45_b3_badge": {
+        "s35_b3_badge": {
           "de": "LOUIS RENNER GMBH",
           "en": "LOUIS RENNER GMBH",
           "ja": "LOUIS RENNER GMBH",
           "zh": "LOUIS RENNER GMBH"
         },
-        "s45_c1_title": {
+        "s35_c1_title": {
           "de": "Verschiebungsintonation",
           "en": "Shift Pedal Voicing (Una Corda)",
           "ja": "Verschiebungsintonation",
           "zh": "Verschiebungsintonation"
         },
-        "s45_c2_title": {
+        "s35_c2_title": {
           "de": "Renner Academy & Technischer Dialog",
           "en": "Renner Academy & Technical Dialogue",
           "ja": "Renner Academy & Technischer Dialog",
           "zh": "Renner Academy & Technischer Dialog"
         },
-        "s45_c1_desc": {
+        "s35_c1_desc": {
           "de": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "en": "Play chromatically with shift pedal depressed; gently voice only the contacted string contact areas.",
           "ja": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "zh": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln."
         },
-        "s45_c2_desc": {
+        "s35_c2_desc": {
           "de": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "en": "Renner provides masterclasses, factory tours in Meuselwitz, and tailored technical support for piano technicians worldwide.",
           "ja": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "zh": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit."
         },
-        "s45_caption_1": {
+        "s35_caption_1": {
           "de": "Louis Renner GmbH",
           "en": "Louis Renner GmbH",
           "ja": "Louis Renner GmbH",
           "zh": "Louis Renner GmbH"
         },
-        "s45_caption_2": {
+        "s35_caption_2": {
           "de": "Ihr Partner für meisterlichen Klang weltweit",
           "en": "Your partner for master-grade tone worldwide",
           "ja": "Ihr Partner für meisterlichen Klang weltweit",
           "zh": "Ihr Partner für meisterlichen Klang weltweit"
         },
-        "s45_bullet_1": {
+        "s35_bullet_1": {
           "de": "Experten-Tipp:",
           "en": "Expert Master Tip:",
           "ja": "マイスターのアドバイス：",

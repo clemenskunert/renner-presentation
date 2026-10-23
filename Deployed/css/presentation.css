@@ -5258,8 +5258,8 @@ body::before {
   line-height: 1.45;
 }
 
-/* Panel 2 Specific: Historic Medal Museum Display (Uncropped & Centered) */
-.ffw-milestone-panel[data-panel="2"] .ffw-panel-media,
+/* Panel 2 Specific for Slide 5: Historic Medal Museum Display (Uncropped & Centered) */
+.slide[data-slide="5"] .ffw-milestone-panel[data-panel="2"] .ffw-panel-media,
 .ffw-panel-media.medal-spotlight {
   background: radial-gradient(circle at 50% 46%, #182236 0%, #0d121c 68%, #080c14 100%);
   display: flex;
@@ -5267,7 +5267,7 @@ body::before {
   justify-content: center;
 }
 
-.ffw-milestone-panel[data-panel="2"] .ffw-panel-media img,
+.slide[data-slide="5"] .ffw-milestone-panel[data-panel="2"] .ffw-panel-media img,
 .ffw-panel-media.medal-spotlight img {
   object-fit: contain;
   object-position: center 46%;
@@ -5275,14 +5275,14 @@ body::before {
   box-sizing: border-box;
 }
 
-.ffw-milestone-panel[data-panel="2"] .ffw-media-caption-box,
+.slide[data-slide="5"] .ffw-milestone-panel[data-panel="2"] .ffw-media-caption-box,
 .ffw-panel-media.medal-spotlight .ffw-media-caption-box {
   background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.92) 35%, #080c14 100%);
   padding: 8px 14px 10px 14px;
 }
 
-/* Panel 5 Specific: Renner & FFW Hammerhead in Master Hands (Focal point centered on hammerhead) */
-.ffw-milestone-panel[data-panel="5"] .ffw-panel-media img {
+/* Panel 5 Specific for Slide 5: Renner & FFW Hammerhead in Master Hands (Focal point centered on hammerhead) */
+.slide[data-slide="5"] .ffw-milestone-panel[data-panel="5"] .ffw-panel-media img {
   object-position: center 52%;
 }
 

@@ -1,174 +1,247 @@
 /**
- * Louis Renner Presentation - Yamaha Kit Interactive Features (Chapter 4)
- * Presentation-optimized interactive behaviors:
- * 1. Web Audio piano strike sound simulation (A4 = 440 Hz) with string vibration
- * 2. 88-Key range zone selector (Bass, Mid, Treble)
- * 3. Animated time comparison bars on Slide 28
+ * Louis Renner Presentation - Yamaha Kit Stage Controller (Slide 27)
+ * Implements the interactive stage layout matching Folie 5 (FFW History):
+ * - Epoch/Topic tabs navigation
+ * - Milestone stage panels with fade transition
+ * - Stepper controls (Prev, Next, Step Counter)
+ * - Autoplay tour with progress indicator
+ * - Macro texture/product zoom viewer on right spotlight card
  */
 
-(function () {
-  'use strict';
+class YamahaKitStage {
+  constructor() {
+    this.currentMilestone = 0;
+    this.totalMilestones = 5;
+    this.isAutoplay = false;
+    this.autoplayDuration = 6000; // 6s per panel in autoplay
+    this.autoplayRaf = null;
+    this.autoplayStartTime = null;
+    this.isZoomed = false;
 
-  // --- 1. Soundwave Acoustic Trigger (Slide 29) ---
-  window.triggerSoundwavePulse = function () {
-    const stringEl = document.getElementById('ykVibratingString');
-    const container = document.getElementById('ykSoundwaveContainer');
+    this.slideEl = null;
+    this.tabs = [];
+    this.panels = [];
+    this.prevBtn = null;
+    this.nextBtn = null;
+    this.playBtn = null;
+    this.playProgressBar = null;
+    this.stepCounter = null;
+    this.textureViewer = null;
+    this.zoomBtn = null;
+    this.textureImg = null;
 
-    if (stringEl) {
-      stringEl.classList.remove('vibrating');
-      void stringEl.offsetWidth; // Force reflow
-      stringEl.classList.add('vibrating');
-      setTimeout(() => {
-        stringEl.classList.remove('vibrating');
-      }, 3200);
-    }
-
-    if (container) {
-      const ripple = document.createElement('div');
-      ripple.className = 'yk-dynamic-ripple';
-      ripple.style.position = 'absolute';
-      ripple.style.top = '42%';
-      ripple.style.left = '50%';
-      ripple.style.transform = 'translate(-50%, -50%)';
-      ripple.style.width = '20px';
-      ripple.style.height = '20px';
-      ripple.style.borderRadius = '50%';
-      ripple.style.border = '2px solid #00d4ff';
-      ripple.style.pointerEvents = 'none';
-      ripple.style.animation = 'ripple-expand 2.5s ease-out forwards';
-      container.appendChild(ripple);
-
-      setTimeout(() => {
-        if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
-      }, 2600);
-    }
-
-    playYamahaConcertTone();
-  };
-
-  function playYamahaConcertTone() {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = window._rennerAudioCtx || new AudioCtx();
-      window._rennerAudioCtx = ctx;
-
-      if (ctx.state === 'suspended') {
-        ctx.resume();
-      }
-
-      const now = ctx.currentTime;
-      // Fundamental A4 (440Hz) + Warm Piano Harmonics
-      const freqs = [440, 880, 1320, 1760, 2200];
-      const gains = [0.45, 0.22, 0.12, 0.06, 0.02];
-
-      freqs.forEach((freq, idx) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = idx === 0 ? 'triangle' : 'sine';
-        osc.frequency.setValueAtTime(freq, now);
-
-        gain.gain.setValueAtTime(gains[idx], now);
-        // Exponential decay simulating piano hammer strike
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 3.2);
-      });
-    } catch (e) {
-      console.warn('[YAMAHA-KIT] Audio synthesis note failed:', e);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.init());
+    } else {
+      this.init();
     }
   }
 
-  // --- 2. 88-Key Range Explorer (Slide 31) ---
-  function initKeyboardSelector() {
-    const bar = document.getElementById('ykKeyboardBar');
-    if (!bar) return;
+  init() {
+    this.slideEl = document.querySelector('.slide[data-slide="27"]');
+    if (!this.slideEl) return;
 
-    const zones = bar.querySelectorAll('.yk-keyboard-zone');
-    const descBass = document.getElementById('ykZoneDescBass');
-    const descMid = document.getElementById('ykZoneDescMid');
-    const descTreble = document.getElementById('ykZoneDescTreble');
+    this.tabs = Array.from(this.slideEl.querySelectorAll('#yk-epoch-tabs .ffw-epoch-tab'));
+    this.panels = Array.from(this.slideEl.querySelectorAll('#yk-stage-card .ffw-milestone-panel'));
+    this.prevBtn = this.slideEl.querySelector('#yk-prev-btn');
+    this.nextBtn = this.slideEl.querySelector('#yk-next-btn');
+    this.playBtn = this.slideEl.querySelector('#yk-play-btn');
+    this.playProgressBar = this.slideEl.querySelector('#yk-play-progress');
+    this.stepCounter = this.slideEl.querySelector('#yk-step-counter');
+    this.textureViewer = this.slideEl.querySelector('#yk-texture-viewer');
+    this.zoomBtn = this.slideEl.querySelector('#yk-zoom-toggle-btn');
+    this.textureImg = this.slideEl.querySelector('#yk-texture-img');
 
-    zones.forEach(zone => {
-      zone.addEventListener('click', function () {
-        zones.forEach(z => z.classList.remove('active'));
-        this.classList.add('active');
-
-        const zType = this.getAttribute('data-zone');
-        [descBass, descMid, descTreble].forEach(el => {
-          if (el) {
-            el.style.opacity = '0.4';
-            el.style.transform = 'scale(0.98)';
-            el.style.transition = 'all 0.25s ease';
-          }
-        });
-
-        if (zType === 'bass' && descBass) {
-          descBass.style.opacity = '1';
-          descBass.style.transform = 'scale(1.02)';
-        } else if (zType === 'mid' && descMid) {
-          descMid.style.opacity = '1';
-          descMid.style.transform = 'scale(1.02)';
-        } else if (zType === 'treble' && descTreble) {
-          descTreble.style.opacity = '1';
-          descTreble.style.transform = 'scale(1.02)';
-        }
+    // Tab click listeners
+    this.tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        this.stopAutoplay();
+        this.goToMilestone(idx);
       });
     });
-  }
 
-  // --- 3. Time Comparison Animation Observer (Slide 28) ---
-  function initTimeComparisonAnimation() {
-    const slide28 = document.querySelector('section[data-slide="28"]');
-    if (!slide28) return;
+    // Prev / Next button listeners
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => {
+        this.stopAutoplay();
+        this.prevMilestone();
+      });
+    }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const fills = entry.target.querySelectorAll('.yk-bar-fill, .time-progress-bar');
-          fills.forEach(bar => {
-            bar.style.width = '0%';
-            setTimeout(() => {
-              if (bar.classList.contains('red')) {
-                bar.style.width = '100%';
-              } else if (bar.classList.contains('green')) {
-                bar.style.width = '12.5%';
-              }
-            }, 250);
-          });
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => {
+        this.stopAutoplay();
+        this.nextMilestone();
+      });
+    }
+
+    // Play / Autoplay button
+    if (this.playBtn) {
+      this.playBtn.addEventListener('click', () => {
+        this.toggleAutoplay();
+      });
+    }
+
+    // Macro zoom viewer on right card
+    if (this.textureViewer) {
+      this.textureViewer.addEventListener('click', (e) => {
+        this.toggleZoom(e);
+      });
+
+      this.textureViewer.addEventListener('mousemove', (e) => {
+        if (!this.isZoomed || !this.textureImg) return;
+        const rect = this.textureViewer.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        this.textureImg.style.transformOrigin = `${x}% ${y}%`;
+      });
+
+      this.textureViewer.addEventListener('mouseleave', () => {
+        if (this.textureImg) {
+          this.textureImg.style.transformOrigin = 'center center';
         }
       });
-    }, { threshold: 0.3 });
+    }
 
-    observer.observe(slide28);
+    if (this.zoomBtn) {
+      this.zoomBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleZoom(e);
+      });
+    }
+
+    // Initial state
+    this.updateUI();
   }
 
-  // Attach button listener on Slide 29
-  function initAudioButton() {
-    const btn = document.getElementById('ykPlayAudioBtn');
-    if (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.triggerSoundwavePulse();
-      });
+  goToMilestone(index) {
+    if (index < 0 || index >= this.totalMilestones) return;
+    this.currentMilestone = index;
+    this.updateUI();
+  }
+
+  nextMilestone() {
+    if (this.currentMilestone < this.totalMilestones - 1) {
+      this.goToMilestone(this.currentMilestone + 1);
+    } else if (this.isAutoplay) {
+      this.stopAutoplay();
     }
   }
 
-  // DOM Ready
-  function initAll() {
-    initKeyboardSelector();
-    initTimeComparisonAnimation();
-    initAudioButton();
+  prevMilestone() {
+    if (this.currentMilestone > 0) {
+      this.goToMilestone(this.currentMilestone - 1);
+    }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAll);
-  } else {
-    initAll();
+  updateUI() {
+    // 1. Update Tabs
+    this.tabs.forEach((tab, idx) => {
+      const isActive = idx === this.currentMilestone;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    // 2. Update Panels with animation
+    this.panels.forEach((panel, idx) => {
+      const isActive = idx === this.currentMilestone;
+      panel.classList.toggle('active', isActive);
+    });
+
+    // 3. Update Step Counter
+    if (this.stepCounter) {
+      this.stepCounter.textContent = `${this.currentMilestone + 1} / ${this.totalMilestones}`;
+    }
+
+    // 4. Update Prev/Next buttons
+    if (this.prevBtn) {
+      this.prevBtn.disabled = this.currentMilestone === 0;
+    }
+    if (this.nextBtn) {
+      this.nextBtn.disabled = this.currentMilestone === this.totalMilestones - 1;
+    }
   }
-})();
+
+  toggleAutoplay() {
+    if (this.isAutoplay) {
+      this.stopAutoplay();
+    } else {
+      this.startAutoplay();
+    }
+  }
+
+  startAutoplay() {
+    this.isAutoplay = true;
+    if (this.playBtn) {
+      this.playBtn.classList.add('playing');
+      const icon = this.playBtn.querySelector('.ffw-play-icon');
+      if (icon) icon.textContent = '⏸';
+    }
+    this.runAutoplayStep();
+  }
+
+  stopAutoplay() {
+    this.isAutoplay = false;
+    if (this.autoplayRaf) {
+      cancelAnimationFrame(this.autoplayRaf);
+      this.autoplayRaf = null;
+    }
+    if (this.playProgressBar) {
+      this.playProgressBar.style.width = '0%';
+    }
+    if (this.playBtn) {
+      this.playBtn.classList.remove('playing');
+      const icon = this.playBtn.querySelector('.ffw-play-icon');
+      if (icon) icon.textContent = '▶';
+    }
+  }
+
+  runAutoplayStep() {
+    if (!this.isAutoplay) return;
+    this.autoplayStartTime = performance.now();
+
+    const loop = (now) => {
+      if (!this.isAutoplay) return;
+      const elapsed = now - this.autoplayStartTime;
+      const progress = Math.min(100, (elapsed / this.autoplayDuration) * 100);
+
+      if (this.playProgressBar) {
+        this.playProgressBar.style.width = `${progress}%`;
+      }
+
+      if (elapsed >= this.autoplayDuration) {
+        if (this.currentMilestone < this.totalMilestones - 1) {
+          this.nextMilestone();
+          this.runAutoplayStep();
+        } else {
+          this.stopAutoplay();
+        }
+      } else {
+        this.autoplayRaf = requestAnimationFrame(loop);
+      }
+    };
+
+    this.autoplayRaf = requestAnimationFrame(loop);
+  }
+
+  toggleZoom(e) {
+    if (e) e.preventDefault();
+    this.isZoomed = !this.isZoomed;
+
+    if (this.textureViewer) {
+      this.textureViewer.classList.toggle('zoomed', this.isZoomed);
+    }
+    if (this.textureImg) {
+      this.textureImg.style.transform = this.isZoomed ? 'scale(2.2)' : 'scale(1)';
+      if (!this.isZoomed) {
+        this.textureImg.style.transformOrigin = 'center center';
+      }
+    }
+    if (this.zoomBtn) {
+      this.zoomBtn.textContent = this.isZoomed ? '✕ Schließen' : '🔍 Detail-Lupe';
+    }
+  }
+}
+
+// Global initialization
+window.YamahaKitController = new YamahaKitStage();
