@@ -83,6 +83,7 @@ def build_offline_tablet_html():
         "transformation-journey.js",
         "ffw-history.js",
         "felt-anatomy.js",
+        "yamaha-kit.js",
         "presentation.js"
     ]
 

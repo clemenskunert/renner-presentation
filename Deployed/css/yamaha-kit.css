@@ -1,0 +1,583 @@
+/* ==========================================================================
+   LOUIS RENNER YAMAHA KIT (KAPITEL 4: FOLIEN 27–37)
+   Interactive Animations, High-End Compositing, Soundwaves & Time Comparisons
+   ========================================================================== */
+
+/* 1. Global Kit Glow & Accent Tokens */
+:root {
+  --yk-cyan: #00d4ff;
+  --yk-cyan-glow: rgba(0, 212, 255, 0.4);
+  --yk-gold: #c5a059;
+  --yk-gold-bright: #f5d77f;
+  --yk-gold-glow: rgba(197, 160, 89, 0.35);
+  --yk-navy-deep: #07152b;
+  --yk-navy-card: rgba(14, 37, 79, 0.65);
+  --yk-danger: #ef4444;
+  --yk-danger-glow: rgba(239, 68, 68, 0.25);
+  --yk-success: #10b981;
+  --yk-success-glow: rgba(16, 185, 129, 0.3);
+}
+
+/* 2. Soundwave Acoustic Wave Effect (Slide 29) */
+.soundwave-hero-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 60%, rgba(0, 43, 102, 0.5) 0%, rgba(4, 12, 26, 0.95) 75%);
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 212, 255, 0.08);
+}
+
+.soundwave-bg-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soundwave-hero-container:hover .soundwave-bg-media {
+  transform: scale(1.025);
+}
+
+.soundwave-strings-overlay {
+  position: absolute;
+  top: 32%;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.soundwave-string-line {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  height: 1.5px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(197, 160, 89, 0.4) 15%, 
+    rgba(0, 212, 255, 0.85) 50%, 
+    rgba(197, 160, 89, 0.4) 85%, 
+    transparent 100%);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 0 0 4px #fff;
+  animation: string-vibrate 2.4s infinite ease-in-out;
+}
+
+.soundwave-string-line:nth-child(1) { top: 18px; animation-delay: 0s; }
+.soundwave-string-line:nth-child(2) { top: 28px; animation-delay: 0.15s; }
+.soundwave-string-line:nth-child(3) { top: 38px; animation-delay: 0.3s; }
+
+@keyframes string-vibrate {
+  0%, 100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateY(-2.5px) scaleY(1.4);
+    opacity: 1;
+  }
+}
+
+.soundwave-impact-pulse {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle, #ffffff 20%, #00d4ff 60%, transparent 90%);
+  border-radius: 50%;
+  box-shadow: 0 0 30px #00d4ff, 0 0 60px rgba(0, 212, 255, 0.6);
+  z-index: 3;
+  animation: impact-glow 2s infinite ease-in-out;
+}
+
+@keyframes impact-glow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 45px #00d4ff, 0 0 90px rgba(197, 160, 89, 0.75);
+  }
+}
+
+.soundwave-ripple-wave {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 24px;
+  border: 1.5px solid rgba(0, 212, 255, 0.65);
+  border-radius: 50%;
+  z-index: 2;
+  animation: acoustic-ripple 2.4s infinite cubic-bezier(0.1, 0.7, 0.1, 1);
+  pointer-events: none;
+}
+
+.soundwave-ripple-wave:nth-child(2) {
+  animation-delay: 0.8s;
+  border-color: rgba(197, 160, 89, 0.6);
+}
+
+.soundwave-ripple-wave:nth-child(3) {
+  animation-delay: 1.6s;
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+@keyframes acoustic-ripple {
+  0% {
+    width: 30px;
+    height: 12px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    width: 480px;
+    height: 140px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* 3. Interactive Soundwave Trigger Button */
+.soundwave-trigger-btn {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(10, 20, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--yk-gold);
+  border-radius: 20px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.soundwave-trigger-btn:hover {
+  background: var(--yk-gold);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.5);
+}
+
+.soundwave-trigger-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* 4. Time Comparison Interactive Dashboard (Slide 28) */
+.time-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.time-card {
+  background: rgba(14, 25, 48, 0.65);
+  border-radius: var(--radius-md, 12px);
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.time-card:hover {
+  transform: translateY(-2px);
+}
+
+.time-card.traditional {
+  border-left: 4px solid var(--yk-danger);
+}
+
+.time-card.renner-kit {
+  border-left: 4px solid var(--yk-success);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(14, 37, 79, 0.7) 100%);
+  box-shadow: 0 8px 28px rgba(16, 185, 129, 0.15);
+}
+
+.time-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.time-card-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.time-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.time-badge.red {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.time-badge.green {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.time-metric-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.time-metric-number {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.time-card.traditional .time-metric-number {
+  color: #ef4444;
+}
+
+.time-card.renner-kit .time-metric-number {
+  color: #34d399;
+  text-shadow: 0 0 16px rgba(52, 211, 153, 0.4);
+}
+
+.time-metric-label {
+  font-size: 0.85rem;
+  color: var(--text-muted, #94a3b8);
+  font-weight: 500;
+}
+
+.time-progress-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 12px 0 14px;
+}
+
+.time-progress-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.time-progress-bar.red {
+  background: linear-gradient(90deg, #b91c1c, #ef4444);
+  width: 100%;
+}
+
+.time-progress-bar.green {
+  background: linear-gradient(90deg, #059669, #34d399);
+  width: 12.5%; /* 1.5h / 12h */
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.8);
+}
+
+.time-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.time-step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-dim, #cbd5e1);
+}
+
+.time-step-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.time-step-icon.cross {
+  background: rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+
+.time-step-icon.check {
+  background: rgba(16, 185, 129, 0.25);
+  color: #34d399;
+}
+
+/* 5. Interactive 88-Key Range Explorer (Slide 31) */
+.range-keyboard-bar {
+  display: flex;
+  width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 12px 0 16px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: #0d1627;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.range-zone-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.25s ease;
+  position: relative;
+  user-select: none;
+}
+
+.range-zone-btn:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.range-zone-btn.bass {
+  background: linear-gradient(180deg, rgba(30, 58, 138, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.range-zone-btn.mid {
+  background: linear-gradient(180deg, rgba(4, 120, 87, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.range-zone-btn.treble {
+  background: linear-gradient(180deg, rgba(180, 83, 9, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.range-zone-btn.active, .range-zone-btn:hover {
+  filter: brightness(1.25);
+  box-shadow: inset 0 -3px 0 var(--yk-cyan);
+}
+
+.range-zone-sub {
+  font-size: 0.64rem;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+/* 6. Blueprint Specs Table (Slide 33) */
+.blueprint-spec-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.84rem;
+}
+
+.blueprint-spec-table th {
+  background: rgba(0, 43, 102, 0.8);
+  color: var(--yk-gold-bright);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.blueprint-spec-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.blueprint-spec-table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.blueprint-spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.blueprint-spec-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  color: var(--yk-cyan);
+}
+
+/* 7. Jens-Sören Kruse Master Rules Cards (Slide 34) */
+.meister-rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.meister-rule-card {
+  background: rgba(14, 25, 48, 0.6);
+  border-radius: var(--radius-md, 10px);
+  padding: 12px 14px;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.meister-rule-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--yk-gold);
+  background: rgba(18, 33, 64, 0.8);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.15);
+}
+
+.meister-rule-num {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgba(197, 160, 89, 0.25);
+}
+
+.meister-rule-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--yk-gold-bright);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meister-rule-text {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+/* 8. 3D Packaging Mockup Zoom Container (Slide 27) */
+.mockup-zoom-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg, 14px);
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: #000;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+.mockup-zoom-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mockup-zoom-container:hover img {
+  transform: scale(1.04);
+}
+
+.mockup-badge-seal {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 5;
+  background: rgba(7, 21, 43, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--yk-gold);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mockup-badge-seal img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.mockup-badge-text-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.mockup-badge-text-sub {
+  font-size: 0.68rem;
+  color: var(--yk-gold);
+  letter-spacing: 0.04em;
+}
+
+/* 9. Light Sheen Animation */
+.yk-sheen-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.yk-sheen-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: rotate(30deg);
+  animation: sheen-sweep 4s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes sheen-sweep {
+  0% { left: -60%; }
+  35%, 100% { left: 140%; }
+}
