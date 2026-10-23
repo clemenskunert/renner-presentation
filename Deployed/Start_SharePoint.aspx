@@ -3608,49 +3608,91 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 27 (Yamaha Kit Premiere) -->
+<!-- SLIDE 27 (Flyer Style: Premiere & Mockup) -->
       <section class="slide slide-hero-theme" data-slide="27">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s27_category">Teil 4: Yamaha Kit • Produktpremiere</div>
-            <h2 class="slide-title" data-i18n="s27_title">Original Louis Renner Yamaha Kit (C1–C3)</h2>
-            <div class="slide-subtitle" data-i18n="s27_subtitle">Die Drop-In Revolution: Von tagelanger Werkstattarbeit zu wenigen Stunden am Instrument</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card yk-sheen-effect">
-              <div class="bento-step-watermark">04</div>
-              <span class="bento-badge gold" data-i18n="s27_b1_badge">>DROP-IN UPGRADE</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s27_c1_title">Auspacken | Einbauen | Aufwerten</div>
-              <div class="bento-card-desc" data-i18n="s27_c1_desc">
-                Mit dem neuen Yamaha Kit für die Modelle C1, C2 und C3 revolutioniert Renner die traditionelle Hammerkopferneuerung. Erstmals erhalten Klavierbauer einen komplett vorkonfektionierten, werkseitig im perfekten 91°-Winkel mit natürlichem Glutenleim verleimten Satz, der direkt in die Kapselleiste eingehängt werden kann.
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s27_category">THE CONCERT UPGRADE · YAMAHA C1 – C3</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s27_b1_badge">>DROP-IN UPGRADE</span>
               </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s27_bullet_1"><strong>100% Plug & Play:</strong> Keine zeitraubende Bohr-, Mess- und Leimarbeit mehr in der Werkstatt.</span>
+              <h2 class="slide-title flyer-main-title" data-i18n="s27_title">Original Louis Renner Yamaha Kit (C1–C3)</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s27_subtitle">Die Drop-In Revolution: Von tagelanger Werkstattarbeit zu wenigen Stunden am Instrument</div>
+              <div class="flyer-divider"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: 3 Pillars & Vorteile -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.15rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 6px;" data-i18n="s27_c1_title">
+                    Auspacken | Einbauen | Aufwerten
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.84rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 12px;" data-i18n="s27_c1_desc">
+                    Mit dem neuen Yamaha Kit für die Modelle C1, C2 und C3 revolutioniert Renner die traditionelle Hammerkopferneuerung. Erstmals erhalten Klavierbauer einen komplett vorkonfektionierten, werkseitig im perfekten 91°-Winkel mit natürlichem Glutenleim verleimten Satz, der direkt in die Kapselleiste eingehängt werden kann.
+                  </div>
+
+                  <!-- 3 Drop-In Advantage Cards (aus Flyer Seite 3) -->
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px;">
+                    <div class="flyer-pillar-card" style="padding: 8px 10px;">
+                      <div style="font-family: 'Roboto Slab', serif; font-size: 0.78rem; font-weight: 700; color: #fff;">0h Bohren & Leimen</div>
+                      <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 2px;">91°-Winkel kalibriert, mit Glutenleim verleimt</div>
+                    </div>
+                    <div class="flyer-pillar-card" style="padding: 8px 10px;">
+                      <div style="font-family: 'Roboto Slab', serif; font-size: 0.78rem; font-weight: 700; color: #fff;">1-Schrauben Fit</div>
+                      <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 2px;">Direktes Verschrauben auf der Yamaha-Schiene</div>
+                    </div>
+                    <div class="flyer-pillar-card" style="padding: 8px 10px;">
+                      <div style="font-family: 'Roboto Slab', serif; font-size: 0.78rem; font-weight: 700; color: #fff;">Keine Vorintonation</div>
+                      <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 2px;">Sofortiger Konzertklang ab dem ersten Anschlag</div>
+                    </div>
+                  </div>
+
+                  <!-- Bullet List -->
+                  <div class="bento-card-list" style="display: flex; flex-direction: column; gap: 6px;">
+                    <div class="bento-card-list-item" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: #e2e8f0;">
+                      <span class="bento-dot gold" style="width: 6px; height: 6px; border-radius: 50%; background: var(--c-gold-pure); margin-top: 6px; flex-shrink: 0;"></span>
+                      <span data-i18n="s27_bullet_1"><strong>100% Plug & Play:</strong> Keine zeitraubende Bohr-, Mess- und Leimarbeit mehr in der Werkstatt.</span>
+                    </div>
+                    <div class="bento-card-list-item" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: #e2e8f0;">
+                      <span class="bento-dot gold" style="width: 6px; height: 6px; border-radius: 50%; background: var(--c-gold-pure); margin-top: 6px; flex-shrink: 0;"></span>
+                      <span data-i18n="s27_bullet_2"><strong>Wurzen-Konzertfilz & Nussbaum:</strong> Verleiht dem Instrument sofort tragfähigen, warmen europäischen Gesangston.</span>
+                    </div>
+                    <div class="bento-card-list-item" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: #e2e8f0;">
+                      <span class="bento-dot gold" style="width: 6px; height: 6px; border-radius: 50%; background: var(--c-gold-pure); margin-top: 6px; flex-shrink: 0;"></span>
+                      <span data-i18n="s27_bullet_3"><strong>Fertigstellung an einem Nachmittag:</strong> Kompletter Wechsel in ca. 90 Minuten direkt beim Kunden vor Ort.</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s27_bullet_2"><strong>Wurzen-Konzertfilz & Nussbaum:</strong> Verleiht dem Instrument sofort tragfähigen, warmen europäischen Gesangston.</span>
+
+                <!-- Bottom Banner (Flyer Bottom CTA) -->
+                <div style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.3); border-radius: 4px; padding: 6px 12px; border: 1px solid rgba(197, 160, 89, 0.25);">
+                  <span style="font-size: 0.74rem; font-weight: 700; color: var(--c-gold-light); letter-spacing: 0.05em;">VON TAGEN IN DER WERKSTATT ZU WENIGEN STUNDEN —</span>
+                  <span class="flyer-cinnabar-badge">DIREKT VOR ORT</span>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s27_bullet_3"><strong>Fertigstellung an einem Nachmittag:</strong> Kompletter Wechsel in ca. 90 Minuten direkt beim Kunden vor Ort.</span>
+              </div>
+
+              <!-- Rechte Seite: 3D Mockup Box -->
+              <div class="mockup-zoom-container">
+                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/Verpackung_Deckel_Mockup_Box_DE.jpg" alt="Louis Renner Yamaha Kit Box Mockup">
+                <div class="hero-corner-bracket top-left"></div>
+                <div class="hero-corner-bracket top-right"></div>
+                <div class="hero-corner-bracket bottom-left"></div>
+                <div class="hero-corner-bracket bottom-right"></div>
+                <div class="bento-media-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(180deg, transparent 0%, rgba(4,12,26,0.95) 100%);">
+                  <span class="bento-badge green flyer-gold-pill" data-i18n="s27_b2_badge">>VERPACKUNGS-MOCKUP</span>
+                  <div class="bento-media-caption flyer-photo-caption" data-i18n="s27_caption_1" style="background: none; padding: 0; border: none; margin-top: 4px;">
+                    Die offizielle Louis Renner Yamaha Kit Box (C1–C3) mit edlem Deckel-Branding und 3 vorsortierten Trays
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="bento-card media-framed mockup-zoom-container">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/Verpackung_Deckel_Mockup_Box_DE.jpg" alt="Louis Renner Yamaha Kit Box Mockup">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s27_b2_badge">>VERPACKUNGS-MOCKUP</span>
-                <div class="bento-media-caption" data-i18n="s27_caption_1">Die offizielle Louis Renner Yamaha Kit Box (C1–C3) mit edlem Deckel-Branding und 3 vorsortierten Trays</div>
-              </div>
+
+            <!-- Offizielles Siegel unten -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span style="font-size: 0.68rem; color: #94a3b8;">ORIGINAL LOUIS RENNER YAMAHA KIT (C1–C3)</span>
             </div>
           </div>
         </div>
@@ -3661,78 +3703,97 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 28 (Workshop Comparison & Time Savings) -->
+<!-- SLIDE 28 (Flyer Style: Workshop vs Drop-In) -->
       <section class="slide slide-hero-theme" data-slide="28">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s28_category">Teil 4: Yamaha Kit • Werkstatt-Vergleich</div>
-            <h2 class="slide-title" data-i18n="s28_title">Traditionelle Werkstatt vs. Drop-In Präzision</h2>
-            <div class="slide-subtitle" data-i18n="s28_subtitle">Wie das Kit die Arbeitszeit von Klavierbauern und Technikern um ca. 10 Stunden reduziert</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card" style="padding-bottom: 12px;">
-              <span class="bento-badge gold" data-i18n="s28_b1_badge">>EFFIZIENZ-VERGLEICH</span>
-              <div class="time-comparison-grid">
-                <!-- Traditionelle Werkstatt -->
-                <div class="time-card traditional">
-                  <div class="time-card-header">
-                    <span class="time-card-title" data-i18n="s28_c1_title">Klassischer Ablauf: ~12 Stunden</span>
-                    <span class="time-badge red">Bisher</span>
-                  </div>
-                  <div class="time-metric-hero">
-                    <span class="time-metric-number">12</span>
-                    <span class="time-metric-label">Stunden Werkstattaufwand</span>
-                  </div>
-                  <div class="time-progress-track">
-                    <div class="time-progress-bar red"></div>
-                  </div>
-                  <div class="time-card-desc" data-i18n="s28_c1_desc" style="font-size: 0.78rem; margin-bottom: 8px;">
-                    Alte Köpfe abdämpfen, 88 Rohköpfe manuell ausmessen & bohren (Schrägwinkel, Bohrlehre), Heißleim kochen, Stiele einleimen, Flucht richten, 48h Trocknung, langwierige Vorintonation.
-                  </div>
-                </div>
-
-                <!-- Renner Drop-In Kit -->
-                <div class="time-card renner-kit">
-                  <div class="time-card-header">
-                    <span class="time-card-title" data-i18n="s28_c2_title">Louis Renner Kit: ~1.5 Stunden</span>
-                    <span class="time-badge green">–88% ZEIT</span>
-                  </div>
-                  <div class="time-metric-hero">
-                    <span class="time-metric-number">1.5</span>
-                    <span class="time-metric-label">Stunden Vor-Ort-Einbau</span>
-                  </div>
-                  <div class="time-progress-track">
-                    <div class="time-progress-bar green"></div>
-                  </div>
-                  <div class="time-card-desc" data-i18n="s28_c2_desc" style="font-size: 0.78rem; margin-bottom: 8px;">
-                    100% einbaufertig vormontiert mit Kapseln. Direkte 1-Schrauben-Montage an der Schiene. 0h Bohren, 0h Leimen, 0h Vorintonation. Direkt vor Ort beim Kunden fertiggestellt!
-                  </div>
-                </div>
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s28_category">DIRECT DROP-IN INSTALLATION · GERMAN PRECISION</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s28_b1_badge">>EFFIZIENZ-VERGLEICH</span>
               </div>
+              <h2 class="slide-title flyer-main-title" data-i18n="s28_title">Traditionelle Werkstatt vs. Drop-In Präzision</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s28_subtitle">Wie das Kit die Arbeitszeit von Klavierbauern und Technikern um ca. 10 Stunden reduziert</div>
+              <div class="flyer-divider"></div>
+            </div>
 
-              <div class="bento-card-list" style="margin-top: 10px;">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s28_bullet_1"><strong>Zeitersparnis von über 85 %:</strong> Aus Tagen harter Werkstattarbeit wird ein einzelner Termin.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s28_bullet_2"><strong>Höchste Prozesssicherheit:</strong> Kein Risiko von schiefen Bohrungen oder Leimfehlern.</span>
+            <!-- Hero Transformation Photo Frame (aus Flyer Seite 4) -->
+            <div class="transformation-hero-banner" style="height: 120px; margin: 0 0 10px;">
+              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/replace_past_1433.jpg" alt="Transformation Photo Alt vs Neu">
+              <div class="bento-media-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 6px 12px; background: linear-gradient(180deg, transparent 0%, rgba(4,12,26,0.92) 100%);">
+                <span class="bento-badge green flyer-gold-pill" data-i18n="s28_b2_badge">>VORHER / NACHHER</span>
+                <div class="bento-media-caption" style="font-size: 0.72rem; color: #cbd5e1;" data-i18n="s28_caption_1">
+                  Vergleich: Ausgespielter Althammer (rechts) vs. neuer Louis Renner Konzertkopf mit Wurzen-Filz (links)
                 </div>
               </div>
             </div>
 
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/replace_past_1433.jpg" alt="Vergleich Alter vs. Neuer Hammerkopf">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s28_b2_badge">>VORHER / NACHHER</span>
-                <div class="bento-media-caption" data-i18n="s28_caption_1">Vergleich: Ausgespielter Althammer (rechts) vs. neuer Louis Renner Konzertkopf mit Wurzen-Filz (links)</div>
+            <!-- Transformation Subtitle Labels (aus Flyer Seite 4) -->
+            <div class="transformation-label-bar" style="margin-bottom: 8px;">
+              <div class="transformation-label new">
+                ◄ NEU: Louis Renner Konzertköpfe
+                <span class="transformation-sublabel">Amerikanischer Nussbaum · Wurzen-Filz · Glutenleim</span>
+              </div>
+              <div class="transformation-label past">
+                VERGANGENHEIT: Ausgespielte Althämmer ►
+                <span class="transformation-sublabel">Verdichteter Filz · Spitzer Attack · Träge Mechanik</span>
+              </div>
+            </div>
+
+            <!-- 2-Spalten Zeitvergleich Grid -->
+            <div class="time-comparison-grid" style="margin: 6px 0;">
+              <!-- Traditionell -->
+              <div class="time-card traditional">
+                <div class="time-card-header">
+                  <span class="time-card-title" data-i18n="s28_c1_title">Klassischer Ablauf: ~12 Stunden</span>
+                  <span class="time-badge red">Bisher</span>
+                </div>
+                <div class="time-metric-hero">
+                  <span class="time-metric-number">12</span>
+                  <span class="time-metric-label">Stunden Werkstattaufwand</span>
+                </div>
+                <div class="time-progress-track">
+                  <div class="time-progress-bar red"></div>
+                </div>
+                <div class="time-card-desc" data-i18n="s28_c1_desc" style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">
+                  Alte Köpfe abdämpfen, 88 Rohköpfe manuell ausmessen & bohren (Schrägwinkel, Bohrlehre), Heißleim kochen, Stiele einleimen, Flucht richten, 48h Trocknung, langwierige Vorintonation.
+                </div>
+              </div>
+
+              <!-- Renner Kit -->
+              <div class="time-card renner-kit">
+                <div class="time-card-header">
+                  <span class="time-card-title" data-i18n="s28_c2_title">Louis Renner Kit: ~1.5 Stunden</span>
+                  <span class="time-badge green">–88% ZEIT</span>
+                </div>
+                <div class="time-metric-hero">
+                  <span class="time-metric-number">1.5</span>
+                  <span class="time-metric-label">Stunden Vor-Ort-Einbau</span>
+                </div>
+                <div class="time-progress-track">
+                  <div class="time-progress-bar green"></div>
+                </div>
+                <div class="time-card-desc" data-i18n="s28_c2_desc" style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">
+                  100% einbaufertig vormontiert mit Kapseln. Direkte 1-Schrauben-Montage an der Schiene. 0h Bohren, 0h Leimen, 0h Vorintonation. Direkt vor Ort beim Kunden fertiggestellt!
+                </div>
+              </div>
+            </div>
+
+            <!-- Meister-Tipp Box -->
+            <div class="meister-tipp-box" style="margin: 8px 0 4px;">
+              <span class="meister-tipp-badge">MEISTER-TIPP</span>
+              <div class="meister-tipp-content">
+                <span class="meister-tipp-title">10 Stunden Zeitersparnis:</span>
+                Was bisher tagelang die Werkstatt blockierte, wird an einem einzigen Nachmittag direkt beim Kunden erledigt. Kein Transportrisiko für das Instrument!
+              </div>
+            </div>
+
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <div class="bento-card-list" style="display: flex; gap: 16px;">
+                <span data-i18n="s28_bullet_1" style="font-size: 0.72rem; color: var(--c-gold-bright);">✓ Über 85% Zeitersparnis</span>
+                <span data-i18n="s28_bullet_2" style="font-size: 0.72rem; color: var(--c-gold-bright);">✓ Höchste Prozesssicherheit</span>
               </div>
             </div>
           </div>
@@ -3744,58 +3805,102 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 29 (Soundwave Acoustic Vibration) -->
+<!-- SLIDE 29 (Flyer Style: Hero Soundwave Vibration) -->
       <section class="slide slide-hero-theme" data-slide="29">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s29_category">Teil 4: Yamaha Kit • Akustik & Saitenwellen</div>
-            <h2 class="slide-title" data-i18n="s29_title">Replace the Past · Elevate the Tone</h2>
-            <div class="slide-subtitle" data-i18n="s29_subtitle">Die klangliche Wiedergeburt: Warum Yamaha-Flügel durch Renner-Köpfe veredelt werden</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s29_b1_badge">>AKUSTIK-INNOVATION</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s29_c1_title">Vom harten Attack zum warmen Konzertgesang</div>
-              <div class="bento-card-desc" data-i18n="s29_c1_desc">
-                Yamaha-Flügel besitzen eine hochpräzise Mechanik, doch nach jahrelangem Spiel verhärtet der Originalfilz und verliert seine Elastizität. Das Resultat ist ein spitzer, metallischer Anschlag mit kurzem Ausklang. Der Wechsel auf das Renner Yamaha Kit stellt die volle dynamische Tragfähigkeit und Wärme wieder her.
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s29_category">THE ACOUSTIC REBIRTH · SOUNDWAVE RESONANCE</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s29_b1_badge">>AKUSTIK-INNOVATION</span>
               </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_1"><strong>Horizontale Schallwelle:</strong> Elastische Übertragung der Anschlagsenergie am Scheitelpunkt in die Saite.</span>
+              <h2 class="slide-title flyer-main-title" data-i18n="s29_title">Replace the Past · Elevate the Tone</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s29_subtitle">Die klangliche Wiedergeburt: Warum Yamaha-Flügel durch Renner-Köpfe veredelt werden</div>
+              <div class="flyer-divider"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: 3 Klang-Pillars -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.15rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 6px;" data-i18n="s29_c1_title">
+                    Vom harten Attack zum warmen Konzertgesang
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.84rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 12px;" data-i18n="s29_c1_desc">
+                    Yamaha-Flügel besitzen eine hochpräzise Mechanik, doch nach jahrelangem Spiel verhärtet der Originalfilz und verliert seine Elastizität. Das Resultat ist ein spitzer, metallischer Anschlag mit kurzem Ausklang. Der Wechsel auf das Renner Yamaha Kit stellt die volle dynamische Tragfähigkeit und Wärme wieder her.
+                  </div>
+
+                  <!-- 3 Klang-Pillars mit farbigen Punkten (aus Flyer Seite 2) -->
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div class="flyer-pillar-card" style="padding: 8px 12px;">
+                      <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                        <span class="flyer-pillar-bullet-dot gold"></span>
+                        <strong style="font-family: 'Roboto Slab', serif; font-size: 0.84rem; color: var(--c-gold-bright);">Wurzen Weickert Special Filz</strong>
+                      </div>
+                      <span data-i18n="s29_bullet_2" style="font-size: 0.76rem; color: #cbd5e1; line-height: 1.4;">
+                        Elastische Schurwolle nach Renner-Spezifikation erzeugt singenden Diskant und resonantes Bassfundament ohne schrille Härte.
+                      </span>
+                    </div>
+
+                    <div class="flyer-pillar-card" style="padding: 8px 12px;">
+                      <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                        <span class="flyer-pillar-bullet-dot cinnabar"></span>
+                        <strong style="font-family: 'Roboto Slab', serif; font-size: 0.84rem; color: #fff;">Amerikanischer Nussbaum & Glutenleim</strong>
+                      </div>
+                      <span data-i18n="s29_bullet_1" style="font-size: 0.76rem; color: #cbd5e1; line-height: 1.4;">
+                        Massenträgheitskalibriert für Yamaha-Geometrie. Die knochenharte Leimschicht leitet 100% der Energie verlustfrei in die Saite.
+                      </span>
+                    </div>
+
+                    <div class="flyer-pillar-card" style="padding: 8px 12px;">
+                      <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                        <span class="flyer-pillar-bullet-dot cyan"></span>
+                        <strong style="font-family: 'Roboto Slab', serif; font-size: 0.84rem; color: #00d4ff;">Dynamische Ausdrucksweite</strong>
+                      </div>
+                      <span data-i18n="s29_bullet_3" style="font-size: 0.76rem; color: #cbd5e1; line-height: 1.4;">
+                        Nuancierte Kontrolle von zartestem Pianissimo (ppp) bis zum strahlenden, raumfüllenden Fortissimo (fff).
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_2"><strong>Wurzen Weickert Special Filz:</strong> Singender Diskant und resonantes Bassfundament ohne Härte.</span>
+
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">Klang-Verwandlung:</span>
+                    Der Flügel gewinnt sofort die typische europäische Wärme und Kantilene zurück – ein Quantensprung für jeden Pianisten.
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_3"><strong>Dynamische Weite:</strong> Nuancierte Kontrolle von zartestem Pianissimo (ppp) bis zum strahlenden Fortissimo (fff).</span>
+              </div>
+
+              <!-- Rechte Seite: Soundwave Hero Animation -->
+              <div class="soundwave-hero-container">
+                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/hero_effekt_3_mit_hammerkopf.png" class="soundwave-bg-media" alt="Renner Hero Soundwave">
+                <div class="soundwave-strings-overlay">
+                  <div class="soundwave-string-line"></div>
+                  <div class="soundwave-string-line"></div>
+                  <div class="soundwave-string-line"></div>
+                </div>
+                <div class="soundwave-impact-pulse"></div>
+                <div class="soundwave-ripple-wave"></div>
+                <div class="soundwave-ripple-wave"></div>
+                <button class="soundwave-trigger-btn" onclick="triggerSoundwavePulse()">
+                  <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                  <span>Anschlag simulieren</span>
+                </button>
+                <div class="bento-media-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(180deg, transparent 0%, rgba(4,12,26,0.92) 100%); pointer-events: none;">
+                  <span class="bento-badge green flyer-gold-pill" data-i18n="s29_b2_badge">>SAITEN-SCHALLWELLE</span>
+                  <div class="bento-media-caption" style="font-size: 0.72rem; color: #cbd5e1; margin-top: 3px;" data-i18n="s29_caption_1">
+                    Die Renner Schallwelle (Hero Effekt 3): Horizontale Energieausbreitung am oberen Anschlagspunkt der Saite
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Interaktive Soundwave Animation -->
-            <div class="bento-card soundwave-hero-container">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/hero_effekt_3_mit_hammerkopf.png" class="soundwave-bg-media" alt="Renner Hero Soundwave">
-              <div class="soundwave-strings-overlay">
-                <div class="soundwave-string-line"></div>
-                <div class="soundwave-string-line"></div>
-                <div class="soundwave-string-line"></div>
-              </div>
-              <div class="soundwave-impact-pulse"></div>
-              <div class="soundwave-ripple-wave"></div>
-              <div class="soundwave-ripple-wave"></div>
-              <button class="soundwave-trigger-btn" onclick="triggerSoundwavePulse()">
-                <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
-                <span>Anschlag simulieren</span>
-              </button>
-              <div class="bento-media-overlay" style="pointer-events: none;">
-                <span class="bento-badge green" data-i18n="s29_b2_badge">>SAITEN-SCHALLWELLE</span>
-                <div class="bento-media-caption" data-i18n="s29_caption_1">Die Renner Schallwelle (Hero Effekt 3): Horizontale Energieausbreitung am oberen Anschlagspunkt der Saite</div>
-              </div>
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span style="font-size: 0.68rem; color: #94a3b8;">ACOUSTIC SOUNDWAVE COMPOSITING · EFFEKT 3</span>
             </div>
           </div>
         </div>
@@ -3806,53 +3911,88 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 30 (3 Craftsmanship Pillars) -->
+<!-- SLIDE 30 (Flyer Style: 3 Pillars of Craftsmanship) -->
       <section class="slide slide-hero-theme" data-slide="30">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s30_category">Teil 4: Yamaha Kit • Material-Exzellenz</div>
-            <h2 class="slide-title" data-i18n="s30_title">Die 3 Säulen: Wurzenfilz, Nussbaum & Glutenleim</h2>
-            <div class="slide-subtitle" data-i18n="s30_subtitle">Deutsche Handwerkskunst und edelste Rohstoffe, gefertigt in Meuselwitz</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-3">
-            <!-- Säule 1 -->
-            <div class="bento-card">
-              <div class="bento-step-watermark">01</div>
-              <span class="bento-badge gold" data-i18n="s30_b1_badge">>WURZEN KONZERTFILZ</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s30_c1_title">Wurzen Weickert Special Filz</div>
-              <div class="bento-card-desc" data-i18n="s30_c1_desc">
-                Ausschließlich aus feinster Schurwolle ohne chemische Zusätze hergestellt. Die elastisch gewalkte Faserstruktur bietet enorme Lebensdauer und unverwechselbaren Klangfarbenreichtum.
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s30_category">GERMAN MASTER CRAFTSMANSHIP · NOBLE MATERIALS</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s30_b1_badge">>WURZEN KONZERTFILZ</span>
               </div>
-              <div style="margin-top: 14px; border-radius: 8px; overflow: hidden; height: 110px;">
-                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/felt_and_wood.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Filz und Holz Detail">
+              <h2 class="slide-title flyer-main-title" data-i18n="s30_title">Die 3 Säulen: Wurzenfilz, Nussbaum & Glutenleim</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s30_subtitle">Deutsche Handwerkskunst und edelste Rohstoffe, gefertigt in Meuselwitz</div>
+              <div class="flyer-divider"></div>
+            </div>
+
+            <!-- 3 Luxury Pillars Grid (aus Flyer Seite 2) -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; flex: 1; min-height: 0;">
+              <!-- Säule 1 -->
+              <div class="flyer-pillar-card" style="padding: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span class="flyer-pillar-bullet-dot gold"></span>
+                  <span style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: rgba(197, 160, 89, 0.4); font-weight: 700;">PILLAR I</span>
+                </div>
+                <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 0.95rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 4px;" data-i18n="s30_c1_title">
+                  Wurzen Weickert Special Filz
+                </div>
+                <div class="bento-card-desc" style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;" data-i18n="s30_c1_desc">
+                  Ausschließlich aus feinster Schurwolle ohne chemische Zusätze hergestellt. Die elastisch gewalkte Faserstruktur bietet enorme Lebensdauer und unverwechselbaren Klangfarbenreichtum.
+                </div>
+                <div style="margin-top: auto; border-radius: 4px; overflow: hidden; height: 110px; border: 1px solid rgba(197, 160, 89, 0.35);">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/felt_and_wood.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Filz und Holz Detail">
+                </div>
+              </div>
+
+              <!-- Säule 2 -->
+              <div class="flyer-pillar-card" style="padding: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span class="flyer-pillar-bullet-dot cinnabar"></span>
+                  <span style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: rgba(197, 160, 89, 0.4); font-weight: 700;">PILLAR II</span>
+                </div>
+                <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 0.95rem; font-weight: 800; color: #ffffff; margin-bottom: 4px;" data-i18n="s30_c2_title">
+                  Amerikanischer Nussbaum Kern
+                </div>
+                <div class="bento-card-desc" style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;" data-i18n="s30_c2_desc">
+                  Speziell auf die Trägheitsmomente der Yamaha C1–C3 Mechanik kalibriert. Geringes Gewicht kombiniert mit optimaler Steifigkeit ermöglicht blitzschnelle Repetition.
+                </div>
+                <div style="margin-top: auto; border-radius: 4px; overflow: hidden; height: 110px; border: 1px solid rgba(197, 160, 89, 0.35);">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/hero_action_sharp.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Nussbaumkern Detail">
+                </div>
+              </div>
+
+              <!-- Säule 3 -->
+              <div class="flyer-pillar-card" style="padding: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span class="flyer-pillar-bullet-dot cyan"></span>
+                  <span style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: rgba(197, 160, 89, 0.4); font-weight: 700;">PILLAR III</span>
+                </div>
+                <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 0.95rem; font-weight: 800; color: #00d4ff; margin-bottom: 4px;" data-i18n="s30_c3_title">
+                  Akustisch harter Glutenleim
+                </div>
+                <div class="bento-card-desc" style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;" data-i18n="s30_c3_desc">
+                  Im Heißleimverfahren unter hohem Druck verpresst. Die knochenharte Verbindung dämpft keine Schwingungen und leitet 100% der Energie verlustfrei in die Saite.
+                </div>
+                <div style="margin-top: auto; border-radius: 4px; overflow: hidden; height: 110px; border: 1px solid rgba(197, 160, 89, 0.35); display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5);">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/HK-DE freigestellt.jpg" style="height: 100%; width: auto; object-fit: contain;" alt="Made in Germany Hammerkopf">
+                </div>
               </div>
             </div>
 
-            <!-- Säule 2 -->
-            <div class="bento-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge green" data-i18n="s30_b2_badge">>NUSSBAUM & HAINBUCHE</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s30_c2_title">Amerikanischer Nussbaum Kern</div>
-              <div class="bento-card-desc" data-i18n="s30_c2_desc">
-                Speziell auf die Trägheitsmomente der Yamaha C1–C3 Mechanik kalibriert. Geringes Gewicht kombiniert mit optimaler Steifigkeit ermöglicht blitzschnelle Repetition.
-              </div>
-              <div style="margin-top: 14px; border-radius: 8px; overflow: hidden; height: 110px;">
-                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/hero_action_sharp.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Nussbaumkern Detail">
+            <!-- Meister-Tipp Box -->
+            <div class="meister-tipp-box" style="margin: 10px 0 4px;">
+              <span class="meister-tipp-badge">MEISTER-TIPP</span>
+              <div class="meister-tipp-content">
+                <span class="meister-tipp-title">Keine Chemie-Härter:</span>
+                Die natürliche Walkhärte von FFW Wurzen sorgt für jahrzehntelange Spannkraft. Künstliche Lacktränkungen, die den Ton hart und unmusikalisch machen, sind bei Renner tabu!
               </div>
             </div>
 
-            <!-- Säule 3 -->
-            <div class="bento-card">
-              <div class="bento-step-watermark">03</div>
-              <span class="bento-badge gold" data-i18n="s30_b3_badge">>RENNER GLUTENLEIM</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s30_c3_title">Akustisch harter Glutenleim</div>
-              <div class="bento-card-desc" data-i18n="s30_c3_desc">
-                Im Heißleimverfahren unter hohem Druck verpresst. Die knochenharte Verbindung dämpft keine Schwingungen und leitet 100% der Energie verlustfrei in die Saite.
-              </div>
-              <div style="margin-top: 14px; border-radius: 8px; overflow: hidden; height: 110px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
-                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/HK-DE freigestellt.jpg" style="height: 100%; width: auto; object-fit: contain;" alt="Made in Germany Hammerkopf">
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <div class="bento-media-caption" style="font-size: 0.7rem; color: #94a3b8;" data-i18n="s30_caption_1">
+                Verbindung aus edlem Nussbaum, purpurrotem Unterfilz und Weickert-Special-Deckfilz
               </div>
             </div>
           </div>
@@ -3864,73 +4004,94 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 31 (Tray Architecture & 88 Notes) -->
+<!-- SLIDE 31 (OnePager Style: 3-Zone Tray Architecture) -->
       <section class="slide slide-hero-theme" data-slide="31">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s31_category">Teil 4: Yamaha Kit • Vorkonfektionierung</div>
-            <h2 class="slide-title" data-i18n="s31_title">88 vorjustierte Präzisionsteile – Fehlerfrei sortiert</h2>
-            <div class="slide-subtitle" data-i18n="s31_subtitle">Strukturierte Trays für einen intuitiven und verwechslungsfreien Werkstatt-Workflow</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s31_b1_badge">>VORKONFEKTIONIERUNG</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s31_c1_title">Das 3-Zonen Verpackungskonzept</div>
-              <div class="bento-card-desc" data-i18n="s31_c1_desc">
-                Die 88 Hammerköpfe mit Stielen und Kapseln liegen in drei maßgefertigten Schaumstoff-Trays, aufgeteilt nach akustischen Registern. Jeder Hammer ist exakt für seine Notenposition nummeriert und kalibriert.
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s31_category">ERROR-FREE WORKFLOW · REGISTER CALIBRATION</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s31_b1_badge">>VORKONFEKTIONIERUNG</span>
+              </div>
+              <h2 class="slide-title flyer-main-title" data-i18n="s31_title">88 vorjustierte Präzisionsteile – Fehlerfrei sortiert</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s31_subtitle">Strukturierte Trays für einen intuitiven und verwechslungsfreien Werkstatt-Workflow</div>
+              <div class="flyer-divider"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: Zonen-Details -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.1rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 4px;" data-i18n="s31_c1_title">
+                    Das 3-Zonen Verpackungskonzept
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;" data-i18n="s31_c1_desc">
+                    Die 88 Hammerköpfe mit Stielen und Kapseln liegen in drei maßgefertigten Schaumstoff-Trays, aufgeteilt nach akustischen Registern. Jeder Hammer ist exakt für seine Notenposition nummeriert und kalibriert.
+                  </div>
+
+                  <!-- Interaktive Tastaturleiste -->
+                  <div class="range-keyboard-bar">
+                    <div class="range-zone-btn bass active" onclick="selectRangeZone('bass', this)">
+                      <span>Bass 1–26</span>
+                      <span class="range-zone-sub">7°–9° Schrägung</span>
+                    </div>
+                    <div class="range-zone-btn mid" onclick="selectRangeZone('mid', this)">
+                      <span>Mitte 27–59</span>
+                      <span class="range-zone-sub">Homogene Verjüngung</span>
+                    </div>
+                    <div class="range-zone-btn treble" onclick="selectRangeZone('treble', this)">
+                      <span>Diskant 60–88</span>
+                      <span class="range-zone-sub">Glockenbrillanz</span>
+                    </div>
+                  </div>
+
+                  <!-- Dynamische Anzeige der gewählten Zone -->
+                  <div id="range-zone-display-panel" style="background: rgba(0, 43, 102, 0.35); border: 1px solid var(--c-gold-main); border-radius: 4px; padding: 10px 14px; margin-bottom: 10px;">
+                    <div id="range-zone-display-title" style="font-family: 'Roboto Slab', serif; font-size: 0.92rem; font-weight: 700; color: var(--c-gold-bright);">Bassbereich: Maximale Masse & Resonanz</div>
+                    <div id="range-zone-display-desc" style="font-size: 0.78rem; color: #cbd5e1; margin-top: 2px;">Breite Nussbaumkerne mit speziellem Schrägwinkel zur Saitenebene. Großvolumiger Wurzen-Filz erzeugt ein warmes, tragfähiges Bassfundament.</div>
+                    <div id="range-zone-display-specs" style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: #00d4ff; margin-top: 4px;">Kernbreite: 11,2 mm · Schrägwinkel: 7° – 9° · Röllchenabstand: 17,0 mm</div>
+                  </div>
+
+                  <!-- Bullet List -->
+                  <div class="bento-card-list" style="display: flex; flex-direction: column; gap: 5px;">
+                    <div class="bento-card-list-item" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="bento-dot gold" style="width: 5px; height: 5px; border-radius: 50%; background: var(--c-gold-pure); margin-top: 6px; flex-shrink: 0;"></span>
+                      <span data-i18n="s31_bullet_1"><strong>Bassbereich (Noten 1–26):</strong> Kräftige Kerne, 7°–9° Schrägungswinkel für ideale Saitenüberdeckung.</span>
+                    </div>
+                    <div class="bento-card-list-item" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="bento-dot gold" style="width: 5px; height: 5px; border-radius: 50%; background: var(--c-gold-pure); margin-top: 6px; flex-shrink: 0;"></span>
+                      <span data-i18n="s31_bullet_2"><strong>Mittellage (Noten 27–59):</strong> Homogener Übergang der Kernbreite (10,5 auf 10,0 mm) ohne Stufen.</span>
+                    </div>
+                    <div class="bento-card-list-item" style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="bento-dot gold" style="width: 5px; height: 5px; border-radius: 50%; background: var(--c-gold-pure); margin-top: 6px; flex-shrink: 0;"></span>
+                      <span data-i18n="s31_bullet_3"><strong>Diskantbereich (Noten 60–88):</strong> Maximale Faserkompression an der Spitze für brillante, langanhaltende Obertöne.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">Verwechslungsfreier Einbau:</span>
+                    Jedes Tray ist separat entnehmbar – kein langes Suchen oder Sortieren in der Werkstatt!
+                  </div>
+                </div>
               </div>
 
-              <!-- Interaktive Tastaturleiste -->
-              <div class="range-keyboard-bar">
-                <div class="range-zone-btn bass active" onclick="selectRangeZone('bass', this)">
-                  <span>Bass 1–26</span>
-                  <span class="range-zone-sub">7°–9° Schrägung</span>
-                </div>
-                <div class="range-zone-btn mid" onclick="selectRangeZone('mid', this)">
-                  <span>Mitte 27–59</span>
-                  <span class="range-zone-sub">Homogene Verjüngung</span>
-                </div>
-                <div class="range-zone-btn treble" onclick="selectRangeZone('treble', this)">
-                  <span>Diskant 60–88</span>
-                  <span class="range-zone-sub">Glockenbrillanz</span>
-                </div>
-              </div>
-
-              <!-- Dynamische Anzeige der gewählten Zone -->
-              <div id="range-zone-display-panel" style="background: rgba(0, 43, 102, 0.25); border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 8px; padding: 10px 14px; margin-bottom: 12px;">
-                <div id="range-zone-display-title" style="font-family: 'Roboto Slab', serif; font-size: 0.92rem; font-weight: 700; color: var(--gold-light);">Bassbereich: Maximale Masse & Resonanz</div>
-                <div id="range-zone-display-desc" style="font-size: 0.78rem; color: #cbd5e1; margin-top: 2px;">Breite Nussbaumkerne mit speziellem Schrägwinkel zur Saitenebene. Großvolumiger Wurzen-Filz erzeugt ein warmes, tragfähiges Bassfundament.</div>
-                <div id="range-zone-display-specs" style="font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: #00d4ff; margin-top: 4px;">Kernbreite: 11,2 mm · Schrägwinkel: 7° – 9° · Röllchenabstand: 17,0 mm</div>
-              </div>
-
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s31_bullet_1"><strong>Bassbereich (Noten 1–26):</strong> Kräftige Kerne, 7°–9° Schrägungswinkel für ideale Saitenüberdeckung.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s31_bullet_2"><strong>Mittellage (Noten 27–59):</strong> Homogener Übergang der Kernbreite (10,5 auf 10,0 mm) ohne Stufen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s31_bullet_3"><strong>Diskantbereich (Noten 60–88):</strong> Maximale Faserkompression an der Spitze für brillante, langanhaltende Obertöne.</span>
+              <!-- Rechte Seite: Tray Foto -->
+              <div class="flyer-photo-frame" style="height: 100%; min-height: 250px;">
+                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image16.jpg" style="height: calc(100% - 38px);" alt="Yamaha Kit Vorsortierte Trays">
+                <div class="flyer-photo-caption" data-i18n="s31_caption_1">
+                  <strong>SCHRITT 3: VORJUSTIERTE TRAYS</strong>
+                  Die 3 vorsortierten Fächer des Yamaha Kits: Bass (1–26), Mitten (27–59) und Diskant (60–88)
                 </div>
               </div>
             </div>
 
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image16.jpg" alt="Yamaha Kit Vorsortierte Trays">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s31_b2_badge">>3-TRAY-SYSTEM</span>
-                <div class="bento-media-caption" data-i18n="s31_caption_1">Die 3 vorsortierten Fächer des Yamaha Kits: Bass (1–26), Mitten (27–59) und Diskant (60–88)</div>
-              </div>
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span class="bento-badge green flyer-cinnabar-badge" data-i18n="s31_b2_badge">AUSPACKEN | EINBAUEN | AUFWERTEN</span>
             </div>
           </div>
         </div>
@@ -3941,53 +4102,89 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 32 (1-Screw Flange Attachment) -->
+<!-- SLIDE 32 (Montageanleitung Style: Phase 1 & 2 Rail Attachment) -->
       <section class="slide slide-hero-theme" data-slide="32">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s32_category">Teil 4: Yamaha Kit • Montage & Kapselleiste</div>
-            <h2 class="slide-title" data-i18n="s32_title">Phase 1 & 2: 1-Schrauben-Kapselmontage an der Schiene</h2>
-            <div class="slide-subtitle" data-i18n="s32_subtitle">Passgenauer Wechsel ohne Ausbau des Mechanikrahmens – Note für Note</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s32_b1_badge">>MONTAGE-WORKFLOW</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s32_c1_title">Die Linksdreh-Regel (Gewinde erfühlen)</div>
-              <div class="bento-card-desc" data-i18n="s32_c1_desc">
-                Die Kapselbohrung passt 1:1 auf das Aluminiumprofil der Yamaha C1–C3 Mechanik. Um das Gewinde im Aluminiumprofil lebenslang zu schützen, gilt die goldene Regel von Klavierbaumeister Jens-Sören Kruse:
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <!-- Phase Banner aus Montageanleitung -->
+            <div class="phase-banner-header">
+              <div class="phase-banner-left">
+                <span class="phase-badge-tag">PHASE 1 & 2</span>
+                <span class="phase-title-text" data-i18n="s32_title">1-Schrauben-Kapselmontage an der Schiene</span>
+                <span class="phase-subtitle-text" data-i18n="s32_subtitle">· Direkt auf dem Aluminiumprofil</span>
               </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s32_bullet_1"><strong>Linksdreh-Klick:</strong> Kapselschraube zuerst linksherum drehen, bis sie spürbar in den alten Gewindegang einrastet.</span>
+              <div class="phase-academy-tag">RENNER ACADEMY</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: Linksdreh-Regel & Schritte -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.1rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 4px;" data-i18n="s32_c1_title">
+                    Die Linksdreh-Regel (Gewinde erfühlen)
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 12px;" data-i18n="s32_c1_desc">
+                    Die Kapselbohrung passt 1:1 auf das Aluminiumprofil der Yamaha C1–C3 Mechanik. Um das Gewinde im Aluminiumprofil lebenslang zu schützen, gilt die goldene Regel von Klavierbaumeister Jens-Sören Kruse:
+                  </div>
+
+                  <!-- 3 nummerierte Schritte -->
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(197, 160, 89, 0.25); border-radius: 4px; padding: 8px 10px;">
+                      <span class="step-number-circle">1</span>
+                      <div style="font-size: 0.78rem; color: #e2e8f0; line-height: 1.4;">
+                        <span data-i18n="s32_bullet_1"><strong>Linksdreh-Klick:</strong> Kapselschraube zuerst linksherum drehen, bis sie spürbar in den alten Gewindegang einrastet.</span>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(197, 160, 89, 0.25); border-radius: 4px; padding: 8px 10px;">
+                      <span class="step-number-circle">2</span>
+                      <div style="font-size: 0.78rem; color: #e2e8f0; line-height: 1.4;">
+                        <span data-i18n="s32_bullet_2"><strong>Kein neues Gewinde schneiden:</strong> Verhindert Überdrehen und Ausleiern der Bohrung im Aluminiumprofil.</span>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(197, 160, 89, 0.25); border-radius: 4px; padding: 8px 10px;">
+                      <span class="step-number-circle">3</span>
+                      <div style="font-size: 0.78rem; color: #e2e8f0; line-height: 1.4;">
+                        <span data-i18n="s32_bullet_3"><strong>Handfest anziehen:</strong> Gleichmäßiges Drehmoment für dauerhaften Kapselhalt und perfekte Flucht.</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s32_bullet_2"><strong>Kein neues Gewinde schneiden:</strong> Verhindert Überdrehen und Ausleiern der Bohrung im Aluminiumprofil.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s32_bullet_3"><strong>Handfest anziehen:</strong> Gleichmäßiges Drehmoment für dauerhaften Kapselhalt und perfekte Flucht.</span>
+
+                <!-- Meister-Tipp Box -->
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">Kapselschrauben-Gefühl:</span>
+                    Der 'Klick' signalisiert den perfekten Formschluss. Niemals Akkuschrauber verwenden – nur feinfühlig per Hand festziehen!
+                  </div>
                 </div>
               </div>
-              <div style="margin-top: 14px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 8px; padding: 10px 14px;">
-                <span style="font-weight: 700; color: #34d399; font-size: 0.82rem;">⚡ Zeitersparnis:</span>
-                <span style="font-size: 0.78rem; color: #e2e8f0; margin-left: 6px;">Der komplette Wechsel aller 88 Stiele an der Schiene dauert weniger als 35 Minuten!</span>
+
+              <!-- Rechte Seite: 2-Photo Visual Duo (aus Flyer Seite 3) -->
+              <div class="flyer-visual-grid" style="grid-template-columns: 1fr; gap: 10px;">
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/installation_rail.jpg" style="height: 115px;" alt="1-Schrauben Kapselmontage Schiene">
+                  <div class="flyer-photo-caption" data-i18n="s32_caption_1">
+                    <strong>SCHRITT 4: KAPSELMONTAGE AN DER SCHIENE</strong>
+                    Einhängen und Verschrauben der Renner-Kapsel direkt auf dem Yamaha Aluminium-Profil
+                  </div>
+                </div>
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image21.jpg" style="height: 115px;" alt="Linksdreh-Klick Gewinde">
+                  <div class="flyer-photo-caption">
+                    <strong>MEISTER-REGEL 1: DER LINKSDREH-KLICK</strong>
+                    Gewindegang im weichen Aluminium erfühlen vor dem Festziehen
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/installation_rail.jpg" alt="1-Schrauben Kapselmontage Schiene">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s32_b2_badge">>KAPSELLEISTE</span>
-                <div class="bento-media-caption" data-i18n="s32_caption_1">Einhängen und Fixieren der neuen Renner-Kapsel direkt auf dem Yamaha Aluminium-Profil</div>
-              </div>
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span class="flyer-cinnabar-badge">WECHSEL IN UNTER 35 MINUTEN</span>
             </div>
           </div>
         </div>
@@ -3998,92 +4195,108 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 33 (Action Regulation & Benchmarks) -->
+<!-- SLIDE 33 (OnePager Style: Regulation Benchmarks) -->
       <section class="slide slide-hero-theme" data-slide="33">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s33_category">Teil 4: Yamaha Kit • Mechanik-Regulation</div>
-            <h2 class="slide-title" data-i18n="s33_title">Phase 3: Präzise Geometrie & Sollmaße der Yamaha-Mechanik</h2>
-            <div class="slide-subtitle" data-i18n="s33_subtitle">Alle Kernmaße auf einen Blick für die fehlerfreie Regulierung der Hebelverhältnisse</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s33_b1_badge">>GEOMETRIE-SOLLMAßE</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s33_c1_title">Sollwerte für Yamaha C1, C2 & C3</div>
-              <div class="bento-card-desc" data-i18n="s33_c1_desc">
-                Da die Renner-Hammerköpfe werkseitig im optimalen 91°-Winkel und vorgebohrter Tiefe verleimt sind, greift die Mechanik sofort in ihre ideale Hebelgeometrie ein.
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <!-- Phase Banner -->
+            <div class="phase-banner-header">
+              <div class="phase-banner-left">
+                <span class="phase-badge-tag">PHASE 3</span>
+                <span class="phase-title-text" data-i18n="s33_title">Präzise Geometrie & Sollmaße der Yamaha-Mechanik</span>
+                <span class="phase-subtitle-text" data-i18n="s33_subtitle">· Werks-Spezifikationen auf einen Blick</span>
+              </div>
+              <div class="phase-academy-tag">RENNER ACADEMY</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: Blueprint Specs Tabelle & Bullets -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.05rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 4px;" data-i18n="s33_c1_title">
+                    Sollwerte für Yamaha C1, C2 & C3
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4; margin-bottom: 8px;" data-i18n="s33_c1_desc">
+                    Da die Renner-Hammerköpfe werkseitig im optimalen 91°-Winkel und vorgebohrter Tiefe verleimt sind, greift die Mechanik sofort in ihre ideale Hebelgeometrie ein.
+                  </div>
+
+                  <!-- Blueprint Specs Table (aus OnePager Spalte 3) -->
+                  <table class="blueprint-spec-table">
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Sollwert Yamaha C1–C3</th>
+                        <th>Einstellorgan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Steighöhe (Blow Distance)</td>
+                        <td class="blueprint-spec-val">45,0 – 47,0 mm</td>
+                        <td>Pilotenschraube</td>
+                      </tr>
+                      <tr>
+                        <td>Auslösung Bass (Let-off)</td>
+                        <td class="blueprint-spec-val">1/2 Saitendurchmesser</td>
+                        <td>Auslösepuppe</td>
+                      </tr>
+                      <tr>
+                        <td>Auslösung Diskant</td>
+                        <td class="blueprint-spec-val">1,0 – 1,5 mm</td>
+                        <td>Auslösepuppe</td>
+                      </tr>
+                      <tr>
+                        <td>Abfall (Drop)</td>
+                        <td class="blueprint-spec-val">1,0 – 2,0 mm unter Auslösung</td>
+                        <td>Dropschraube</td>
+                      </tr>
+                      <tr>
+                        <td>Nachdruck (Aftertouch)</td>
+                        <td class="blueprint-spec-val">exakt 1,0 mm</td>
+                        <td>Tastentiefgang</td>
+                      </tr>
+                      <tr>
+                        <td>Fanghöhe (Catch)</td>
+                        <td class="blueprint-spec-val">ca. 15,0 mm</td>
+                        <td>Fänger</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Meister-Tipp Box -->
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">91°-Werksjustage:</span>
+                    Spart über 90 % der zeitraubenden Richtarbeit. Die Hämmer stehen von Natur aus im perfekten Anschlagswinkel zum Saitenchor.
+                  </div>
+                </div>
               </div>
 
-              <!-- Blueprint Specs Table -->
-              <table class="blueprint-spec-table" style="margin: 10px 0;">
-                <thead>
-                  <tr>
-                    <th>Regulierparameter</th>
-                    <th>Yamaha C1–C3 Sollmaß</th>
-                    <th>Einstellorgan</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Steighöhe (Blow Distance)</td>
-                    <td class="blueprint-spec-val">45,0 – 47,0 mm</td>
-                    <td>Wippen-Pilote</td>
-                  </tr>
-                  <tr>
-                    <td>Auslösung Bass (Let-off)</td>
-                    <td class="blueprint-spec-val">1/2 Saitendurchmesser</td>
-                    <td>Auslösepuppe</td>
-                  </tr>
-                  <tr>
-                    <td>Auslösung Diskant</td>
-                    <td class="blueprint-spec-val">1,0 – 1,5 mm</td>
-                    <td>Auslösepuppe</td>
-                  </tr>
-                  <tr>
-                    <td>Abfall (Drop)</td>
-                    <td class="blueprint-spec-val">1,0 – 2,0 mm unter Auslösung</td>
-                    <td>Dropschraube</td>
-                  </tr>
-                  <tr>
-                    <td>Nachdruck (Aftertouch)</td>
-                    <td class="blueprint-spec-val">exakt 1,0 mm</td>
-                    <td>Tastentiefgang</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s33_bullet_1"><strong>Steighöhe (45,0 – 47,0 mm):</strong> Schnelleinstellung über die Pilotenschraube (Wippen-Pilote).</span>
+              <!-- Rechte Seite: Visual Duo (Fotos der Regulierung) -->
+              <div class="flyer-visual-grid" style="grid-template-columns: 1fr; gap: 10px;">
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image24.jpg" style="height: 115px;" alt="Hammerkopfabstände">
+                  <div class="flyer-photo-caption">
+                    <strong>SCHRITT 5: HAMMERKOPFABSTÄNDE</strong>
+                    Fluchtend und parallel zu den Saitenchören ausrichten
+                  </div>
                 </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s33_bullet_2"><strong>Traveling & Senkrechter Gang:</strong> Hammerstiele laufen absolut spurtreu ohne seitliches Scheren.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s33_bullet_3"><strong>Auslösung (Let-off):</strong> Im Bass 1/2 Saite (ca. 2 mm), im Diskant auf 1,0 – 1,5 mm einstellen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s33_bullet_4"><strong>Abfall (Drop):</strong> Exakt 1,0 – 2,0 mm unterhalb der Auslösung für feinstes Pianissimo-Spiel.</span>
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image25.jpg" style="height: 115px;" alt="Steighöhe Regulierung">
+                  <div class="flyer-photo-caption" data-i18n="s33_caption_1">
+                    <strong>SCHRITT 6: STEIGHÖHE (45–47 MM)</strong>
+                    Einstellung über die Pilotenschrauben der Klaviatur
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image25.jpg" alt="Steighöhe Regulierung">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s33_b2_badge">>PRÄZISIONSMESSUNG</span>
-                <div class="bento-media-caption" data-i18n="s33_caption_1">Einstellung der Steighöhe (45–47 mm) und parallele Flucht aller 88 Hammerköpfe</div>
-              </div>
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span class="flyer-gold-pill" data-i18n="s33_b1_badge">>GEOMETRIE-SOLLMAßE</span>
             </div>
           </div>
         </div>
@@ -4094,72 +4307,96 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 34 (4 Master Rules by Jens-Sören Kruse) -->
+<!-- SLIDE 34 (OnePager Style: 4 Master Rules of Jens-Sören Kruse) -->
       <section class="slide slide-hero-theme" data-slide="34">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s34_category">Teil 4: Yamaha Kit • Meister-Regeln</div>
-            <h2 class="slide-title" data-i18n="s34_title">Die 4 goldenen Meister-Regeln der Renner Academy</h2>
-            <div class="slide-subtitle" data-i18n="s34_subtitle">Essentielles Praxiswissen von Jens-Sören Kruse (Klavierbaumeister & Concert Voicer)</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/master_kruse.jpg" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid var(--yk-gold);" alt="Jens-Sören Kruse">
-                <div>
-                  <span class="bento-badge gold" data-i18n="s34_b1_badge">>JENS-SÖREN KRUSE</span>
-                  <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 2px;">Klavierbaumeister & Head of Productmanagement</div>
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s34_category">RENNER ACADEMY MASTERCLASS · JENS-SÖREN KRUSE</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s34_b1_badge">>JENS-SÖREN KRUSE</span>
+              </div>
+              <h2 class="slide-title flyer-main-title" data-i18n="s34_title">Die 4 goldenen Meister-Regeln der Renner Academy</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s34_subtitle">Essentielles Praxiswissen von Jens-Sören Kruse (Klavierbaumeister & Concert Voicer)</div>
+              <div class="flyer-divider"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: 4 Meisterkarten (aus OnePager Spalte 1) -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="meister-rules-grid">
+                  <div class="meister-rule-card">
+                    <span class="meister-rule-num">01</span>
+                    <div class="meister-rule-title" data-i18n="s34_c1_title">1. Linksdreh-Regel (Gewinde)</div>
+                    <div class="meister-rule-text" data-i18n="s34_c1_desc">
+                      Kapselschraube erst linksdrehen, bis sie spürbar in den alten Gewindegang einrastet. Nie neues Gewinde schneiden!
+                    </div>
+                  </div>
+
+                  <div class="meister-rule-card">
+                    <span class="meister-rule-num">02</span>
+                    <div class="meister-rule-title" data-i18n="s34_c2_title">2. Repetierfeder (Oberer Schenkel)</div>
+                    <div class="meister-rule-text" data-i18n="s34_c2_desc">
+                      Federjustage ausschließlich am oberen Schenkel mit dem Federhaken durchführen. Unteren Schenkel niemals biegen!
+                    </div>
+                  </div>
+
+                  <div class="meister-rule-card">
+                    <span class="meister-rule-num">03</span>
+                    <div class="meister-rule-title" data-i18n="s34_c3_title">3. Scheitelprofil (Kein Hohlstand)</div>
+                    <div class="meister-rule-text" data-i18n="s34_c3_desc">
+                      Scheitelfläche muss gleichmäßig konvex sein. Hohlscheitel und Schrägscheitel sofort hauchdünn mit Schleiffeile abziehen.
+                    </div>
+                  </div>
+
+                  <div class="meister-rule-card">
+                    <span class="meister-rule-num">04</span>
+                    <div class="meister-rule-title" data-i18n="s34_c4_title">4. Nachdruck (exakt 1,0 mm)</div>
+                    <div class="meister-rule-text" data-i18n="s34_c4_desc">
+                      Exakt 1,0 mm Resthub nach der Auslösung garantiert saubere, blitzschnelle Repetition ohne Tastenklemmen.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">Kruse-Grundsatz:</span>
+                    „Ohne gute Regulierung keine saubere Stimmung, und ohne gute Regulierung keine saubere Intonation. Eines führt zum anderen!“
+                  </div>
                 </div>
               </div>
 
-              <!-- 4 Meisterkarten -->
-              <div class="meister-rules-grid">
-                <div class="meister-rule-card">
-                  <span class="meister-rule-num">01</span>
-                  <div class="meister-rule-title" data-i18n="s34_c1_title">1. Linksdreh-Regel (Gewinde)</div>
-                  <div class="meister-rule-text" data-i18n="s34_c1_desc">
-                    Kapselschraube erst linksdrehen, bis sie spürbar in den alten Gewindegang einrastet. Nie neues Gewinde schneiden!
+              <!-- Rechte Seite: Scheitelprofil Vergleichsgrafik (aus OnePager Spalte 3) -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between; background: rgba(0,0,0,0.3); border: 1px solid rgba(197, 160, 89, 0.35); border-radius: 4px; padding: 12px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/master_kruse.jpg" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--c-gold-main);" alt="Jens-Sören Kruse">
+                  <div>
+                    <div style="font-family: 'Roboto Slab', serif; font-size: 0.88rem; font-weight: 700; color: #fff;">Jens-Sören Kruse</div>
+                    <div style="font-size: 0.7rem; color: var(--c-gold-bright);">Klavierbaumeister & Head of Productmanagement</div>
                   </div>
                 </div>
 
-                <div class="meister-rule-card">
-                  <span class="meister-rule-num">02</span>
-                  <div class="meister-rule-title" data-i18n="s34_c2_title">2. Repetierfeder (Oberer Schenkel)</div>
-                  <div class="meister-rule-text" data-i18n="s34_c2_desc">
-                    Federjustage ausschließlich am oberen Schenkel mit dem Federhaken durchführen. Unteren Schenkel niemals biegen!
-                  </div>
+                <div style="border-radius: 4px; overflow: hidden; background: #fff; padding: 6px; border: 1px solid #cbd5e1;">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image58.jpg" style="width: 100%; height: 95px; object-fit: contain;" alt="Scheitelprofile beim Abziehen">
                 </div>
 
-                <div class="meister-rule-card">
-                  <span class="meister-rule-num">03</span>
-                  <div class="meister-rule-title" data-i18n="s34_c3_title">3. Scheitelprofil (Kein Hohlstand)</div>
-                  <div class="meister-rule-text" data-i18n="s34_c3_desc">
-                    Scheitelfläche muss gleichmäßig konvex sein. Hohlscheitel und Schrägscheitel sofort hauchdünn mit Schleiffeile abziehen.
-                  </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; gap: 4px; margin-top: 6px;">
+                  <div style="font-size: 0.68rem; color: #ef4444; font-weight: 700;">Hohlscheitel ✗</div>
+                  <div style="font-size: 0.68rem; color: #ef4444; font-weight: 700;">Schrägscheitel ✗</div>
+                  <div style="font-size: 0.68rem; color: #10b981; font-weight: 700;">Scheitel korrekt ✓</div>
                 </div>
 
-                <div class="meister-rule-card">
-                  <span class="meister-rule-num">04</span>
-                  <div class="meister-rule-title" data-i18n="s34_c4_title">4. Nachdruck (exakt 1,0 mm)</div>
-                  <div class="meister-rule-text" data-i18n="s34_c4_desc">
-                    Exakt 1,0 mm Resthub nach der Auslösung garantiert saubere, blitzschnelle Repetition ohne Tastenklemmen.
-                  </div>
+                <div class="bento-media-caption" style="font-size: 0.72rem; color: #cbd5e1; margin-top: 6px; text-align: center;" data-i18n="s34_caption_1">
+                  Scheitelprofil beim Abziehen: Hohlscheitel ✗ | Schrägscheitel ✗ | Scheitel korrekt gewölbt ✓
                 </div>
               </div>
             </div>
 
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image58.jpg" alt="Scheitelprofile beim Abziehen">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s34_b2_badge">>SCHEITELPROFIL</span>
-                <div class="bento-media-caption" data-i18n="s34_caption_1">Scheitelprofil beim Abziehen: Hohlscheitel ✗ | Schrägscheitel ✗ | Scheitel korrekt gewölbt ✓</div>
-              </div>
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span class="flyer-gold-pill" data-i18n="s34_b2_badge">>SCHEITELPROFIL</span>
             </div>
           </div>
         </div>
@@ -4170,174 +4407,273 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 35 (Trichord Mating & Key Dip) -->
+<!-- SLIDE 35 (Montageanleitung Style: Trichord Strike & Key Dip) -->
       <section class="slide slide-hero-theme" data-slide="35">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s35_category">Teil 4: Yamaha Kit • Klaviatur & Dreichor</div>
-            <h2 class="slide-title" data-i18n="s35_title">Phase 4 & 5: Dreichorauflage, Wippen & Tastentiefgang</h2>
-            <div class="slide-subtitle" data-i18n="s35_subtitle">Gleichzeitiger Anschlag aller 3 Saiten und zentrische Kraftübertragung</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s35_b1_badge">>DREICHORAUFLAGE</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s35_c1_title">Synchroner Anschlag & zentrische Führung</div>
-              <div class="bento-card-desc" data-i18n="s35_c1_desc">
-                Damit die Energie des Hammerkopfes vollkommen rein in die Saiten übergeht, müssen alle drei Saiten eines Chors absolut zeitgleich getroffen werden. Jede Schiefstellung raubt Obertöne.
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <!-- Phase Banner -->
+            <div class="phase-banner-header">
+              <div class="phase-banner-left">
+                <span class="phase-badge-tag">PHASE 4 & 5</span>
+                <span class="phase-title-text" data-i18n="s35_title">Dreichorauflage, Wippen & Tastentiefgang</span>
+                <span class="phase-subtitle-text" data-i18n="s35_subtitle">· Gleichzeitiger 3-Saiten-Kontakt</span>
               </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_1"><strong>Dreichorauflage prüfen:</strong> Taste langsam niederdrücken – alle drei Saiten müssen im selben Moment berührt werden.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_2"><strong>Zentrische Stoßzunge:</strong> Stoßzungen müssen exakt mittig unter dem Hammerröllchen stehen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_3"><strong>Tastentiefgang (10,0 mm):</strong> Gleichmäßiger Tiefgang über alle 88 Tasten sichert die ergonomische Haptik.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_4"><strong>Klaviaturhöhe:</strong> Weiß ca. 20 / 65 mm, Schwarz 12 mm Überstand über dem Elfenbein.</span>
-                </div>
-              </div>
+              <div class="phase-academy-tag">RENNER ACADEMY</div>
             </div>
 
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image43.jpg" alt="Dreichorauflage Prüfung">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s35_b2_badge">>KLAVIATUR-JUSTAGE</span>
-                <div class="bento-media-caption" data-i18n="s35_caption_1">Prüfung der planparallelen Dreichorauflage am Diskantsaitenchor mit dem Kruse-Flügelprüfer</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-corner-watermark">
-          <div class="brand-logo-container corner-variant">
-            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
-            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-<!-- SLIDE 36 (Final Regulation & Concert Voicing) -->
-      <section class="slide slide-hero-theme" data-slide="36">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s36_category">Teil 4: Yamaha Kit • Fänger & Feinintonation</div>
-            <h2 class="slide-title" data-i18n="s36_title">Phase 6: Fänger, Repetierfeder & Klang-Vollendung</h2>
-            <div class="slide-subtitle" data-i18n="s36_subtitle">Minimaler Abstimmungsaufwand – Sofortige Konzertreife ohne zeitraubende Vorintonation</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <span class="bento-badge gold" data-i18n="s36_b1_badge">>KONZERTREIFE</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s36_c1_title">Vom Einbau zum Konzertklang in Rekordzeit</div>
-              <div class="bento-card-desc" data-i18n="s36_c1_desc">
-                Weil der Weickert-Special-Filz von Renner bereits im Kern die perfekte Dichte und Elastizität besitzt, entfällt das stundenlange Vorintonieren (Pre-Needling) komplett. Der Techniker widmet sich nur der musikalischen Feinabstimmung.
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_1"><strong>Fanghöhe (ca. 15 mm):</strong> Gleichmäßiger Fang bei Forte-Anschlag, Fänger parallel zu den Gegenfängern kröpfen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_2"><strong>Repetierfeder:</strong> Zügiges, prellfreies Aufsteigen des Hammers zur Auslösung für virtuose Spieltechnik.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_3"><strong>Ausgleichsintonation:</strong> Nur feine Stiche in den elastischen Schulterzonen – die Hammerkrone wird geschont!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_4"><strong>Konzert-Feinstimmung:</strong> Abschließende Stimmung auf Kammerton A4 = 440 – 442 Hz.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="bento-card media-framed">
-              <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/installed_hammers_overview.jpg" alt="88 montierte Renner Hammerköpfe">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s36_b2_badge">>88 NOTEN FLUCHT</span>
-                <div class="bento-media-caption" data-i18n="s36_caption_1">Makellose Flucht und Ausrichtung aller 88 montierten Louis Renner Hammerköpfe im Flügel</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-corner-watermark">
-          <div class="brand-logo-container corner-variant">
-            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
-            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-<!-- SLIDE 37 (Economic & Acoustic Value Dashboard) -->
-      <section class="slide slide-hero-theme" data-slide="37">
-        <div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s37_category">Teil 4: Yamaha Kit • Zusammenfassung & Nutzen</div>
-            <h2 class="slide-title" data-i18n="s37_title">Die Bilanz: Höchste Effizienz & Weltklasse-Klang</h2>
-            <div class="slide-subtitle" data-i18n="s37_subtitle">Der unschlagbare Mehrwert für Techniker, Klavierhäuser und anspruchsvolle Pianisten</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-3">
-            <!-- Nutzen für den Techniker -->
-            <div class="bento-card">
-              <div class="bento-step-watermark">01</div>
-              <span class="bento-badge gold" data-i18n="s37_b1_badge">>FÜR TECHNIKER</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s37_c1_title">10h Bench Time gespart</div>
-              <div class="bento-card-desc" data-i18n="s37_c1_desc">
-                Kein mühsames Ausmessen, Bohren und Leimen. Einbau direkt beim Kunden an einem einzigen Nachmittag. Null Risiko von Fehlbohrungen oder Kleberesten.
-              </div>
-              <div style="margin-top: 14px; background: rgba(0, 43, 102, 0.35); border-radius: 8px; padding: 10px; border: 1px solid rgba(197, 160, 89, 0.2);">
-                <div style="font-family: 'Cinzel', serif; font-size: 1.4rem; color: #34d399; font-weight: 700;">–88%</div>
-                <div style="font-size: 0.72rem; color: #94a3b8;">Arbeitszeitreduktion pro Flügel</div>
-              </div>
-            </div>
-
-            <!-- Nutzen für den Handel -->
-            <div class="bento-card">
-              <div class="bento-step-watermark">02</div>
-              <span class="bento-badge green" data-i18n="s37_b2_badge">>FÜR DEN HANDEL</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s37_c2_title">Höhere Marge & Durchlauf</div>
-              <div class="bento-card-desc" data-i18n="s37_c2_desc">
-                Verwandelt Gebrauchtflügel in begehrte Premium-Instrumente mit offiziellem Renner-Upgrade. Kürzere Standzeiten und überzeugende Verkaufsargumente.
-              </div>
-              <div style="margin-top: 14px; background: rgba(0, 43, 102, 0.35); border-radius: 8px; padding: 10px; border: 1px solid rgba(197, 160, 89, 0.2);">
-                <div style="font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--gold-light); font-weight: 700;">+25%</div>
-                <div style="font-size: 0.72rem; color: #94a3b8;">Wertsteigerung des Flügels</div>
-              </div>
-            </div>
-
-            <!-- Nutzen für den Pianisten -->
-            <div class="bento-card">
-              <div class="bento-step-watermark">03</div>
-              <span class="bento-badge gold" data-i18n="s37_b3_badge">>FÜR PIANISTEN</span>
-              <div class="bento-card-title" style="margin-top: 8px;" data-i18n="s37_c3_title">Europäischer Konzertgesang</div>
-              <div class="bento-card-desc" data-i18n="s37_c3_desc">
-                Warmer, farbenreicher Gesangston statt greller Attack-Härte. Federleichte, feinfühlige Repetition und spürbare Wertsteigerung des Instruments.
-              </div>
-              <!-- QR Code & Link Support -->
-              <div style="margin-top: 12px; display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.4); border-radius: 8px; padding: 8px 10px; border: 1px solid rgba(197, 160, 89, 0.25);">
-                <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/qr_yamaha_kit.png" style="width: 44px; height: 44px; border-radius: 4px;" alt="QR Code Yamaha Kit">
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: Dreichor & Wippen -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                  <div style="font-size: 0.72rem; font-weight: 700; color: #fff;">Online-Montageleitfaden</div>
-                  <div style="font-size: 0.65rem; color: var(--gold-light);">louis-renner.de/renner-hammerkoepfe</div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.05rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 4px;" data-i18n="s35_c1_title">
+                    Synchroner Anschlag & zentrische Führung
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;" data-i18n="s35_c1_desc">
+                    Damit die Energie des Hammerkopfes vollkommen rein in die Saiten übergeht, müssen alle drei Saiten eines Chors absolut zeitgleich getroffen werden. Jede Schiefstellung raubt Obertöne.
+                  </div>
+
+                  <!-- 4 nummerierte Punkte -->
+                  <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">12</span>
+                      <span data-i18n="s35_bullet_1"><strong>Dreichorauflage prüfen:</strong> Taste langsam niederdrücken – alle drei Saiten müssen im selben Moment berührt werden.</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">13</span>
+                      <span data-i18n="s35_bullet_2"><strong>Zentrische Stoßzunge:</strong> Stoßzungen müssen exakt mittig unter dem Hammerröllchen stehen.</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">14</span>
+                      <span data-i18n="s35_bullet_3"><strong>Tastentiefgang (10,0 mm):</strong> Gleichmäßiger Tiefgang über alle 88 Tasten sichert die ergonomische Haptik.</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">11</span>
+                      <span data-i18n="s35_bullet_4"><strong>Klaviaturhöhe:</strong> Weiß ca. 20 / 65 mm, Schwarz 12 mm Überstand über dem Elfenbein.</span>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Meister-Tipp Box -->
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">Klangverlust verhindern:</span>
+                    Trifft der Hammer nur 2 von 3 Saiten gleichzeitig, entsteht Phasenauslöschung. Die Dreichorauflage ist das Fundament für silbrigen Diskant!
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rechte Seite: Visual Duo (Dreichor & Stoßzunge) -->
+              <div class="flyer-visual-grid" style="grid-template-columns: 1fr; gap: 10px;">
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image43.jpg" style="height: 115px;" alt="Dreichorauflage Prüfung">
+                  <div class="flyer-photo-caption" data-i18n="s35_caption_1">
+                    <strong>SCHRITT 12: DREICHORAUFLAGE PRÜFEN</strong>
+                    Prüfung der planparallelen Dreichorauflage am Diskantsaitenchor mit dem Kruse-Flügelprüfer
+                  </div>
+                </div>
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/steps/image46.jpg" style="height: 115px;" alt="Stoßzunge zentrisch">
+                  <div class="flyer-photo-caption">
+                    <strong>SCHRITT 13: WIPPEN & STOßZUNGEN</strong>
+                    Zentrisch exakt unter dem Hammerröllchen ausgerichtet für verlustfreie Hebelübertragung
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span class="flyer-gold-pill" data-i18n="s35_b1_badge">>DREICHORAUFLAGE</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+<!-- SLIDE 36 (Montageanleitung Style: Final Regulation & Voicing) -->
+      <section class="slide slide-hero-theme" data-slide="36">
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <!-- Phase Banner -->
+            <div class="phase-banner-header">
+              <div class="phase-banner-left">
+                <span class="phase-badge-tag">PHASE 6</span>
+                <span class="phase-title-text" data-i18n="s36_title">Fänger, Repetierfeder & Klang-Vollendung</span>
+                <span class="phase-subtitle-text" data-i18n="s36_subtitle">· Sofortige Konzertreife ohne Vorintonation</span>
+              </div>
+              <div class="phase-academy-tag">RENNER ACADEMY</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; flex: 1; min-height: 0;">
+              <!-- Linke Seite: Schritte & Endabstimmung -->
+              <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1.05rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 4px;" data-i18n="s36_c1_title">
+                    Vom Einbau zum Konzertklang in Rekordzeit
+                  </div>
+                  <div class="bento-card-desc" style="font-size: 0.82rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 10px;" data-i18n="s36_c1_desc">
+                    Weil der Weickert-Special-Filz von Renner bereits im Kern die perfekte Dichte und Elastizität besitzt, entfällt das stundenlange Vorintonieren (Pre-Needling) komplett. Der Techniker widmet sich nur der musikalischen Feinabstimmung.
+                  </div>
+
+                  <!-- 4 nummerierte Punkte -->
+                  <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">16</span>
+                      <span data-i18n="s36_bullet_1"><strong>Fanghöhe (ca. 15 mm):</strong> Gleichmäßiger Fang bei Forte-Anschlag, Fänger parallel zu den Gegenfängern kröpfen.</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">17</span>
+                      <span data-i18n="s36_bullet_2"><strong>Repetierfeder:</strong> Zügiges, prellfreies Aufsteigen des Hammers zur Auslösung für virtuose Spieltechnik.</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">20</span>
+                      <span data-i18n="s36_bullet_3"><strong>Ausgleichsintonation:</strong> Nur feine Stiche in den elastischen Schulterzonen – die Hammerkrone wird geschont!</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.78rem; color: #e2e8f0;">
+                      <span class="step-number-circle" style="width: 20px; height: 20px; font-size: 0.7rem;">19</span>
+                      <span data-i18n="s36_bullet_4"><strong>Konzert-Feinstimmung:</strong> Abschließende Stimmung auf Kammerton A4 = 440 – 442 Hz.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Meister-Tipp Box -->
+                <div class="meister-tipp-box" style="margin: 8px 0 0;">
+                  <span class="meister-tipp-badge">MEISTER-TIPP</span>
+                  <div class="meister-tipp-content">
+                    <span class="meister-tipp-title">Krone schonen:</span>
+                    Niemals mit der 3er-Nadel direkt in die Scheitelfläche stechen! Der Ton verliert sonst seinen Glanz und seine dynamische Spreizung.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rechte Seite: Visual Duo (88 Hämmer & Saitenresonanz) -->
+              <div class="flyer-visual-grid" style="grid-template-columns: 1fr; gap: 10px;">
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/installed_hammers_overview.jpg" style="height: 115px;" alt="88 montierte Renner Hammerköpfe">
+                  <div class="flyer-photo-caption" data-i18n="s36_caption_1">
+                    <strong>SCHRITT 18: FLUCHT ALLER 88 NOTEN</strong>
+                    Makellose Flucht und Ausrichtung aller 88 montierten Louis Renner Hammerköpfe im Flügel
+                  </div>
+                </div>
+                <div class="flyer-photo-frame">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/grand_piano_strings.jpg" style="height: 115px;" alt="Flügelbesaitung Resonanz">
+                  <div class="flyer-photo-caption">
+                    <strong>SCHRITT 19 & 20: RESONANZ & STIMMUNG</strong>
+                    Volle harmonische Resonanz und modulationsfähiger Konzertklang
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELWITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <span class="flyer-cinnabar-badge">SOFORTIGE KONZERTREIFE</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+<!-- SLIDE 37 (Flyer Style: Value, ROI & Official Distribution) -->
+      <section class="slide slide-hero-theme" data-slide="37">
+        <div class="slide-body" style="padding: 10px 20px; height: 100%;">
+          <div class="flyer-luxury-panel">
+            <div class="flyer-header-block">
+              <div class="flyer-kicker">
+                <span class="slide-category" data-i18n="s37_category">100% PLUG & PLAY PRECISION · GLOBAL AVAILABILITY</span>
+                <span class="bento-badge gold flyer-gold-pill" data-i18n="s37_b1_badge">>FÜR TECHNIKER</span>
+              </div>
+              <h2 class="slide-title flyer-main-title" data-i18n="s37_title">Die Bilanz: Höchste Effizienz & Weltklasse-Klang</h2>
+              <div class="slide-subtitle flyer-subtitle" data-i18n="s37_subtitle">Der unschlagbare Mehrwert für Techniker, Klavierhäuser und anspruchsvolle Pianisten</div>
+              <div class="flyer-divider"></div>
+            </div>
+
+            <!-- 3-Spalten Nutzenmatrix (aus Flyer Seite 3 & 4) -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; flex: 1; min-height: 0;">
+              <!-- Für den Techniker -->
+              <div class="flyer-pillar-card" style="padding: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span class="flyer-pillar-bullet-dot gold"></span>
+                  <span class="flyer-cinnabar-badge" style="font-size: 0.62rem;">–88% ZEIT</span>
+                </div>
+                <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1rem; font-weight: 800; color: var(--c-gold-bright); margin-bottom: 6px;" data-i18n="s37_c1_title">
+                  10h Bench Time gespart
+                </div>
+                <div class="bento-card-desc" style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 12px;" data-i18n="s37_c1_desc">
+                  Kein mühsames Ausmessen, Bohren und Leimen. Einbau direkt beim Kunden an einem einzigen Nachmittag. Null Risiko von Fehlbohrungen oder Kleberesten.
+                </div>
+                <div style="margin-top: auto; background: rgba(0, 43, 102, 0.4); border-radius: 4px; padding: 10px; border: 1px solid rgba(197, 160, 89, 0.25);">
+                  <div style="font-family: 'Cinzel', serif; font-size: 1.4rem; color: #34d399; font-weight: 700;">1,5 Std.</div>
+                  <div style="font-size: 0.72rem; color: #94a3b8;">Kompletter Vor-Ort-Einbau</div>
+                </div>
+              </div>
+
+              <!-- Für den Handel -->
+              <div class="flyer-pillar-card" style="padding: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span class="flyer-pillar-bullet-dot cinnabar"></span>
+                  <span class="flyer-gold-pill" style="font-size: 0.62rem;">WERTSCHÖPFUNG</span>
+                </div>
+                <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;" data-i18n="s37_c2_title">
+                  Höhere Marge & Durchlauf
+                </div>
+                <div class="bento-card-desc" style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 12px;" data-i18n="s37_c2_desc">
+                  Verwandelt Gebrauchtflügel in begehrte Premium-Instrumente mit offiziellem Renner-Upgrade. Kürzere Standzeiten und überzeugende Verkaufsargumente.
+                </div>
+                <div style="margin-top: auto; background: rgba(0, 43, 102, 0.4); border-radius: 4px; padding: 10px; border: 1px solid rgba(197, 160, 89, 0.25);">
+                  <div style="font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--c-gold-bright); font-weight: 700;">+25%</div>
+                  <div style="font-size: 0.72rem; color: #94a3b8;">Wertsteigerung des Flügels</div>
+                </div>
+              </div>
+
+              <!-- Für den Pianisten -->
+              <div class="flyer-pillar-card" style="padding: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span class="flyer-pillar-bullet-dot cyan"></span>
+                  <span class="flyer-gold-pill" style="font-size: 0.62rem;">KONZERTKLANG</span>
+                </div>
+                <div class="bento-card-title" style="font-family: 'Roboto Slab', serif; font-size: 1rem; font-weight: 800; color: #00d4ff; margin-bottom: 6px;" data-i18n="s37_c3_title">
+                  Europäischer Konzertgesang
+                </div>
+                <div class="bento-card-desc" style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 12px;" data-i18n="s37_c3_desc">
+                  Warmer, farbenreicher Gesangston statt greller Attack-Härte. Federleichte, feinfühlige Repetition und spürbare Wertsteigerung des Instruments.
+                </div>
+                <!-- QR Code & Link Support -->
+                <div style="margin-top: auto; display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.45); border-radius: 4px; padding: 8px 10px; border: 1px solid rgba(197, 160, 89, 0.3);">
+                  <img src="Visuell/Bilder/05_Yamaha_Kit/kit_assets/qr_yamaha_kit.png" style="width: 44px; height: 44px; border-radius: 3px;" alt="QR Code Yamaha Kit">
+                  <div>
+                    <div style="font-size: 0.72rem; font-weight: 700; color: #fff;">Online-Montageleitfaden</div>
+                    <div style="font-size: 0.65rem; color: var(--c-gold-bright);">louis-renner.de/renner-hammerkoepfe</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Meister-Tipp Box -->
+            <div class="meister-tipp-box" style="margin: 10px 0 4px;">
+              <span class="meister-tipp-badge">MEISTER-TIPP</span>
+              <div class="meister-tipp-content">
+                <span class="meister-tipp-title">Kundenbegeisterung:</span>
+                Kunden hören und spüren den Unterschied im ersten Takt. Ein überzeugendes Argument für jeden Klavierbauer beim Vor-Ort-Service!
+              </div>
+            </div>
+
+            <!-- Offizielles Siegel -->
+            <div class="flyer-bottom-seal">
+              <span class="flyer-bottom-seal-text">HANDCRAFTED IN MEUSELVITZ · GERMANY · 100% ORIGINAL RENNER</span>
+              <div class="bento-media-caption" style="font-size: 0.7rem; color: #94a3b8;" data-i18n="s37_caption_1">
+                Offizieller Leitfaden: QR-Code scannen für die digitale Montageanleitung auf louis-renner.de
               </div>
             </div>
           </div>
