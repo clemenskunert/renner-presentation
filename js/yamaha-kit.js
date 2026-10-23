@@ -1,7 +1,9 @@
 /**
  * Louis Renner Presentation - Yamaha Kit Interactive Features (Chapter 4)
- * Provides interactive soundwave visualization, time-comparison toggle,
- * and 88-key range explorer.
+ * Presentation-optimized interactive behaviors:
+ * 1. Web Audio piano strike sound simulation (A4 = 440 Hz) with string vibration
+ * 2. 88-Key range zone selector (Bass, Mid, Treble)
+ * 3. Animated time comparison bars on Slide 28
  */
 
 (function () {
@@ -9,27 +11,38 @@
 
   // --- 1. Soundwave Acoustic Trigger (Slide 29) ---
   window.triggerSoundwavePulse = function () {
-    const container = document.querySelector('.soundwave-hero-container');
-    if (!container) return;
+    const stringEl = document.getElementById('ykVibratingString');
+    const container = document.getElementById('ykSoundwaveContainer');
 
-    // Trigger visual pulse animation
-    container.classList.remove('pulse-active');
-    void container.offsetWidth; // Force reflow
-    container.classList.add('pulse-active');
+    if (stringEl) {
+      stringEl.classList.remove('vibrating');
+      void stringEl.offsetWidth; // Force reflow
+      stringEl.classList.add('vibrating');
+      setTimeout(() => {
+        stringEl.classList.remove('vibrating');
+      }, 3200);
+    }
 
-    // Create dynamic acoustic ripple effect
-    const ripple = document.createElement('div');
-    ripple.className = 'soundwave-ripple-wave dynamic';
-    ripple.style.width = '30px';
-    ripple.style.height = '12px';
-    ripple.style.borderColor = '#00d4ff';
-    container.appendChild(ripple);
+    if (container) {
+      const ripple = document.createElement('div');
+      ripple.className = 'yk-dynamic-ripple';
+      ripple.style.position = 'absolute';
+      ripple.style.top = '42%';
+      ripple.style.left = '50%';
+      ripple.style.transform = 'translate(-50%, -50%)';
+      ripple.style.width = '20px';
+      ripple.style.height = '20px';
+      ripple.style.borderRadius = '50%';
+      ripple.style.border = '2px solid #00d4ff';
+      ripple.style.pointerEvents = 'none';
+      ripple.style.animation = 'ripple-expand 2.5s ease-out forwards';
+      container.appendChild(ripple);
 
-    setTimeout(() => {
-      if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
-    }, 2500);
+      setTimeout(() => {
+        if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
+      }, 2600);
+    }
 
-    // Audio synth trigger: Play warm piano note A4 (440Hz) with harmonics if AudioContext is available
     playYamahaConcertTone();
   };
 
@@ -47,7 +60,7 @@
       const now = ctx.currentTime;
       // Fundamental A4 (440Hz) + Warm Piano Harmonics
       const freqs = [440, 880, 1320, 1760, 2200];
-      const gains = [0.4, 0.22, 0.12, 0.06, 0.02];
+      const gains = [0.45, 0.22, 0.12, 0.06, 0.02];
 
       freqs.forEach((freq, idx) => {
         const osc = ctx.createOscillator();
@@ -72,44 +85,42 @@
   }
 
   // --- 2. 88-Key Range Explorer (Slide 31) ---
-  const ZONE_DATA = {
-    bass: {
-      range: 'Noten 1 – 26 (Subkontra A bis h)',
-      title: 'Bassbereich: Maximale Masse & Resonanz',
-      desc: 'Breite Nussbaumkerne mit speziellem Schrägwinkel zur Saitenebene. Großvolumiger Wurzen-Filz erzeugt ein warmes, tragfähiges Bassfundament.',
-      specs: 'Kernbreite: 11,2 mm · Schrägwinkel: 7° – 9° · Röllchenabstand: 17,0 mm'
-    },
-    mid: {
-      range: 'Noten 27 – 59 (c bis d\'\'\')',
-      title: 'Mittellage: Homogener Registerübergang',
-      desc: 'Fließende Verjüngung der Kernholzbreite und kontinuierliche Abstufung der Filzelastizität. Garantiert bruchlosen Übergang ohne klangliche Brüche.',
-      specs: 'Kernbreite: 10,5 mm – 10,0 mm · Schrägwinkel: 0° (gerade) · Röllchenabstand: 17,0 mm'
-    },
-    treble: {
-      range: 'Noten 60 – 88 (dis\'\'\' bis c\'\'\'\')',
-      title: 'Diskant: Silbrige Glockenbrillanz',
-      desc: 'Schlanke Hammerform mit maximaler Faserdichte an der Krone. Kurze Anschlagzeit und minimale Dämpfung für perlende, langanhaltende Obertöne.',
-      specs: 'Kernbreite: 9,5 mm – 9,0 mm · Maximale Walkhärte · Röllchenabstand: 17,0 mm'
-    }
-  };
+  function initKeyboardSelector() {
+    const bar = document.getElementById('ykKeyboardBar');
+    if (!bar) return;
 
-  window.selectRangeZone = function (zoneKey, btnEl) {
-    const data = ZONE_DATA[zoneKey];
-    if (!data) return;
+    const zones = bar.querySelectorAll('.yk-keyboard-zone');
+    const descBass = document.getElementById('ykZoneDescBass');
+    const descMid = document.getElementById('ykZoneDescMid');
+    const descTreble = document.getElementById('ykZoneDescTreble');
 
-    // Update active button state
-    document.querySelectorAll('.range-zone-btn').forEach(b => b.classList.remove('active'));
-    if (btnEl) btnEl.classList.add('active');
+    zones.forEach(zone => {
+      zone.addEventListener('click', function () {
+        zones.forEach(z => z.classList.remove('active'));
+        this.classList.add('active');
 
-    // Update display panel
-    const titleEl = document.getElementById('range-zone-display-title');
-    const descEl = document.getElementById('range-zone-display-desc');
-    const specsEl = document.getElementById('range-zone-display-specs');
+        const zType = this.getAttribute('data-zone');
+        [descBass, descMid, descTreble].forEach(el => {
+          if (el) {
+            el.style.opacity = '0.4';
+            el.style.transform = 'scale(0.98)';
+            el.style.transition = 'all 0.25s ease';
+          }
+        });
 
-    if (titleEl) titleEl.textContent = data.title;
-    if (descEl) descEl.textContent = data.desc;
-    if (specsEl) specsEl.textContent = data.specs;
-  };
+        if (zType === 'bass' && descBass) {
+          descBass.style.opacity = '1';
+          descBass.style.transform = 'scale(1.02)';
+        } else if (zType === 'mid' && descMid) {
+          descMid.style.opacity = '1';
+          descMid.style.transform = 'scale(1.02)';
+        } else if (zType === 'treble' && descTreble) {
+          descTreble.style.opacity = '1';
+          descTreble.style.transform = 'scale(1.02)';
+        }
+      });
+    });
+  }
 
   // --- 3. Time Comparison Animation Observer (Slide 28) ---
   function initTimeComparisonAnimation() {
@@ -119,8 +130,8 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const bars = entry.target.querySelectorAll('.time-progress-bar');
-          bars.forEach(bar => {
+          const fills = entry.target.querySelectorAll('.yk-bar-fill, .time-progress-bar');
+          fills.forEach(bar => {
             bar.style.width = '0%';
             setTimeout(() => {
               if (bar.classList.contains('red')) {
@@ -128,7 +139,7 @@
               } else if (bar.classList.contains('green')) {
                 bar.style.width = '12.5%';
               }
-            }, 200);
+            }, 250);
           });
         }
       });
@@ -137,10 +148,27 @@
     observer.observe(slide28);
   }
 
+  // Attach button listener on Slide 29
+  function initAudioButton() {
+    const btn = document.getElementById('ykPlayAudioBtn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.triggerSoundwavePulse();
+      });
+    }
+  }
+
   // DOM Ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTimeComparisonAnimation);
-  } else {
+  function initAll() {
+    initKeyboardSelector();
     initTimeComparisonAnimation();
+    initAudioButton();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
   }
 })();
