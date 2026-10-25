@@ -3075,7 +3075,7 @@ def get_all_slides_html():
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s27_category">Teil 4: Yamaha Kit • Produktvorstellung</div>
-            <h2 class="slide-title" data-i18n="s27_title">Original Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau &amp; Maximale Klangveredelung</h2>
+            <h2 class="slide-title" data-i18n="s27_title">Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau &amp; Maximale Klangveredelung</h2>
             <div class="slide-subtitle" data-i18n="s27_subtitle">Maßgeschneidert für Yamaha-Flügel C1–C3: Dynamische Ausdruckskraft, brillante Obertöne &amp; satter Fundamentalbass</div>
           </div>
 
@@ -3132,7 +3132,7 @@ def get_all_slides_html():
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">INNOVATION</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s27_p1_title">Proprietäres Mess- &amp; Fertigungssystem für wiederholgenauen Klang</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p1_subtitle">Übertrifft den Original-Hammerkopf eines fabrikneuen Yamaha C1–C3 – vollendete Klangkultur für neue wie bestehende Instrumente</div>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p1_subtitle">Übertrifft den Original-Hammerkopf eines fabrikneuen Yamaha C1–C3<br>– vollendete Klangkultur für neue wie bestehende Instrumente</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
@@ -3172,7 +3172,7 @@ def get_all_slides_html():
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">DYNAMIK</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s27_p2_title">Perfekt ausbalanciertes Gewicht &amp; Blitzschnelle Repetition</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p2_subtitle">Exakt auf die Yamaha C1–C3 Hebelverhältnisse kalibrierter Holzkern und feinjährige Hainbuchenstiele</div>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p2_subtitle">Exakt auf die Yamaha C1–C3 Hebelverhältnisse kalibrierter Nussbaumkern und feinjährige Hainbuchenstiele</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
@@ -3184,7 +3184,7 @@ def get_all_slides_html():
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p2_bullet_3"><strong>Röllchen mit hoher Eigenspannung (17,0 mm):</strong> Die werkseitige Verleimung unter hoher Zugspannung übertrifft das Rückstellverhalten der Yamaha-Röllchen deutlich – für verlustfreien Kontakt an der Stoßzunge und höchste Repetitionsgeschwindigkeit.</span>
+                        <span data-i18n="s27_p2_bullet_3"><strong>Röllchen mit hoher Eigenspannung:</strong> Die werkseitige Verleimung unter hoher Zugspannung übertrifft das Rückstellverhalten der Yamaha-Röllchen deutlich – für verlustfreien Kontakt an der Stoßzunge und höchste Repetitionsgeschwindigkeit.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
@@ -3291,24 +3291,24 @@ def get_all_slides_html():
                       <span class="bento-badge gold" data-i18n="s27_b9_badge">&gt;STUNDEN STATT TAGE</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">EFFIZIENZ</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p5_title">Von 3–4 Tagen Werkstatt auf 4–5 Stunden am Instrument</h3>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p5_title">Von 3–7 Tagen Werkstatt auf 4–5 Stunden am Instrument</h3>
                     <div class="ffw-panel-subtitle" data-i18n="s27_p5_subtitle">Der direkte Praxisvergleich: Mehrtägige Werkstatt-Prozedur vs. taggleicher Tausch &amp; Regulation – sogar direkt auf der Konzertbühne.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p5_bullet_1"><strong>Traditioneller Ablauf (3–4 Tage):</strong> Mechaniktransport in die Werkstatt, Altköpfe abdämpfen, 88 Rohlinge manuell bohren, Heißleim ansetzen, Flucht richten, 48 h Trocknung und langwierige Nadel-Vorintonation.</span>
+                        <span data-i18n="s27_p5_bullet_1"><strong>Traditioneller Ablauf (3–7 Tage):</strong> Mechaniktransport in die Werkstatt, Bohrtabelle erstellen, Altköpfe ausleimen bzw. Röllchen tauschen, Warmleim vorbereiten, Einleimen, Flucht richten, Aushärten sowie mehrstufiges Regulieren, Abziehen, Vor- und Fertigintonieren.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p5_bullet_2"><strong>Mit Renner Kit (4–5 Stunden):</strong> 100 % passgenauen Satz direkt verschrauben, einrichten und die gesamte Mechanik an einem halben Tag vor Ort fertig regulieren – <strong>ohne Vorintonation</strong>.</span>
+                        <span data-i18n="s27_p5_bullet_2"><strong>Mit Renner Kit (4–5 Stunden):</strong> Passgenauen Satz direkt aufschrauben, einrichten und tragen lassen. Die Köpfe sind bereits werksseitig abgezogen – lediglich Saitenebene und Scheitel ausrichten und bei Bedarf fertig intonieren (ohne Vorintonation).</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p5_bullet_3"><strong>Kein Transportrisiko:</strong> Das Instrument bleibt beim Kunden – die gesamte Klangveredelung und Mechanikeinstellung gelingt in einem einzigen Vor-Ort-Termin.</span>
+                        <span data-i18n="s27_p5_bullet_3"><strong>Kein Transportrisiko &amp; mehr Raumakustik-Fokus:</strong> Das Instrument verbleibt vor Ort beim Kunden. Ohne zeitraubende Werkstattarbeit gewinnt der Techniker wertvolle Zeit, um den Hammerkopf direkt auf die Raumakustik und das individuelle Klangerlebnis des Kunden abzustimmen.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s27_p5_fact">✦ Höchste Wirtschaftlichkeit: Reduziert den Gesamtaufwand von 3–4 Arbeitstagen auf einen halben Tag (4–5 Std.)</span>
+                      <span class="ffw-fact-badge" data-i18n="s27_p5_fact">✦ Höchste Wirtschaftlichkeit: Reduziert den Gesamtaufwand von 3–7 Arbeitstagen auf einen halben Tag (4–5 Std.)</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -3330,7 +3330,7 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s27_b11_badge">&gt;ORIGINAL RENNER YAMAHA KIT</span>
+                  <span class="bento-badge gold" data-i18n="s27_b11_badge">&gt;RENNER YAMAHA KIT</span>
                   <div class="bento-card-title" data-i18n="s27_c1_title">Das Kit: Köpfe &amp; Stiele im Detail</div>
                   <div class="bento-card-desc" data-i18n="s27_c1_desc">
                     100% einbaufertig vorkonfektioniert für die Modelle Yamaha C1, C2 und C3
