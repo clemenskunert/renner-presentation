@@ -3651,7 +3651,7 @@
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="2" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">DROP-IN</span>
-                  <span class="ffw-tab-tag" data-i18n="s27_tab3_tag">1-Schrauben-Montage</span>
+                  <span class="ffw-tab-tag" data-i18n="s27_tab3_tag">Einschrauben, richten</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="3" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">KLANG</span>
@@ -3752,7 +3752,7 @@
                       <span class="bento-badge gold" data-i18n="s27_b5_badge">&gt;EINSCHRAUBEN · AUSRICHTEN · FERTIG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">DROP-IN</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p3_title">Simple einschrauben, fertig</h3>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p3_title">Einfach einschrauben, richten fertig.</h3>
                     <div class="ffw-panel-subtitle" data-i18n="s27_p3_subtitle">Vollständig auf Kapseln aufgeleimter Satz – werkseitig mit natürlichem Glutenleim fixiert.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">

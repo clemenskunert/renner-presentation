@@ -3624,10 +3624,10 @@
           "zh": "配重与灵敏手感"
         },
         "s27_tab3_tag": {
-          "de": "1-Schrauben-Montage",
-          "en": "1-Screw Drop-In",
-          "ja": "ネジ1本簡単装着",
-          "zh": "单颗螺丝即插即用"
+          "de": "Einschrauben, richten",
+          "en": "Screw In & Align",
+          "ja": "ネジ留め・整列",
+          "zh": "拧入并对齐"
         },
         "s27_tab4_tag": {
           "de": "Konzertklang",
@@ -3756,10 +3756,10 @@
           "zh": ">拧入固定 · 校正对齐 · 交付完成"
         },
         "s27_p3_title": {
-          "de": "Simple einschrauben, fertig",
-          "en": "Simply Screw In, Done",
-          "ja": "ネジ留めだけで完了",
-          "zh": "极简拧入，直接交付"
+          "de": "Einfach einschrauben, richten fertig.",
+          "en": "Simply screw in, align, done.",
+          "ja": "ネジ留め・整列・完了。",
+          "zh": "轻松拧入，校准对齐，即刻交付。"
         },
         "s27_p3_subtitle": {
           "de": "Vollständig auf Kapseln aufgeleimter Satz – werkseitig mit natürlichem Glutenleim fixiert.",
