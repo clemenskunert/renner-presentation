@@ -3068,7 +3068,7 @@ def get_all_slides_html():
 
     # SLIDE 27: Das Louis Renner Yamaha Kit (Folie 5 Layout Struktur)
     slides.append(f'''<!-- SLIDE 27: Original Louis Renner Yamaha Kit (Folie 5 Layout Struktur) -->
-      <section class="slide" data-slide="27">
+      <section class="slide yk-kit-slide" data-slide="27">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
@@ -3076,7 +3076,7 @@ def get_all_slides_html():
           <div>
             <div class="slide-category" data-i18n="s27_category">Teil 4: Yamaha Kit • Produktvorstellung</div>
             <h2 class="slide-title" data-i18n="s27_title">Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau &amp; Maximale Klangveredelung</h2>
-            <div class="slide-subtitle" data-i18n="s27_subtitle">Maßgeschneidert für Yamaha-Flügel C1–C3: Dynamische Ausdruckskraft, brillante Obertöne &amp; satter Fundamentalbass</div>
+            <div class="slide-subtitle" data-i18n="s27_subtitle">Maßgeschneidert für Yamaha C1–C3: Dynamische Ausdruckskraft, brillante Obertöne &amp; tiefer Fundamentalbass.</div>
           </div>
 
           <!-- Timeline Stepper & Autoplay Controls -->
@@ -3096,17 +3096,17 @@ def get_all_slides_html():
 
         <div class="slide-body">
           <div class="ffw-history-layout">
-            <!-- LEFT WING: Interactive Stage (64% width) -->
+            <!-- LEFT WING: Interactive Stage (62% width) -->
             <div class="ffw-history-main">
               <!-- Epoch / Topic Tabs Bar -->
               <div class="ffw-epoch-tabs" id="yk-epoch-tabs" role="tablist">
                 <button class="ffw-epoch-tab active" data-epoch="0" role="tab" aria-selected="true">
                   <span class="ffw-tab-year">INNOVATION</span>
-                  <span class="ffw-tab-tag" data-i18n="s27_tab1_tag">Messbasiertes Fertigungssystem</span>
+                  <span class="ffw-tab-tag" data-i18n="s27_tab1_tag">Messbasiertes System</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="1" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">DYNAMIK</span>
-                  <span class="ffw-tab-tag" data-i18n="s27_tab2_tag">Gewicht &amp; Spielgefühl</span>
+                  <span class="ffw-tab-tag" data-i18n="s27_tab2_tag">Gewicht &amp; Dynamik</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="2" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">DROP-IN</span>
@@ -3114,7 +3114,7 @@ def get_all_slides_html():
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="3" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">KLANG</span>
-                  <span class="ffw-tab-tag" data-i18n="s27_tab4_tag">Reiches Klangspektrum</span>
+                  <span class="ffw-tab-tag" data-i18n="s27_tab4_tag">Konzertklang</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="4" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">EFFIZIENZ</span>
@@ -3131,24 +3131,24 @@ def get_all_slides_html():
                       <span class="bento-badge gold" data-i18n="s27_b1_badge">&gt;MESSBASIERTE FERTIGUNG · 5 JAHRE ENTWICKLUNG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">INNOVATION</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p1_title">Proprietäres Mess- &amp; Fertigungssystem für wiederholgenauen Klang</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p1_subtitle">Übertrifft den Original-Hammerkopf eines fabrikneuen Yamaha C1–C3<br>– vollendete Klangkultur für neue wie bestehende Instrumente</div>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p1_title">Proprietäres Mess- &amp; Fertigungssystem</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p1_subtitle">Übertrifft den Werks-Hammerkopf fabrikneuer Yamaha C1–C3<br>– vollendete Klangkultur für neue wie bestehende Instrumente.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p1_bullet_1"><strong>Aufeinander abgestimmtes System:</strong> Ein in fünfjähriger Entwicklungsarbeit geschaffenes Mess- und Produktionsverfahren kalibriert Dichte, Elastizität und Wollfilzspannung mit absoluter Prozesssicherheit.</span>
+                        <span data-i18n="s27_p1_bullet_1"><strong>Kalibriertes System:</strong> 5 Jahre Entwicklung für ein Messverfahren, das Dichte, Elastizität und Filzspannung prozesssicher abstimmt.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p1_bullet_2"><strong>Garantierter Zielklang:</strong> Jeder Satz wird wiederholgenau auf das ideale akustische Frequenzspektrum des Yamaha C1–C3 gefertigt.</span>
+                        <span data-i18n="s27_p1_bullet_2"><strong>Definierter Zielklang:</strong> Jeder Satz wird wiederholgenau auf das akustische Optimum des Yamaha C1–C3 gefertigt.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p1_bullet_3"><strong>Prozesssichere Klangperfektion:</strong> Erzielt an jedem Flügel – ob fabrikneu ab Händler oder nach Jahrzehnten des Spiels – ein volleres, wärmeres Klangspektrum als der originale Yamaha-Hammerkopf, völlig ohne Vorintonation. Selbst ohne regelmäßige Intonierpraxis erzielen Techniker damit auf Anhieb ein erstklassiges, reproduzierbares Klangergebnis.</span>
+                        <span data-i18n="s27_p1_bullet_3"><strong>Klang ohne Nadelarbeit:</strong> Vollerer, wärmerer Ton als beim Original – sofort reproduzierbar, auch ohne regelmäßige Intonierpraxis.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s27_p1_fact">✦ Prozesssichere Klangqualität: Vollendeter Konzertton auch ohne Intonier-Routine – keine Vorintonation notwendig</span>
+                      <span class="ffw-fact-badge" data-i18n="s27_p1_fact">✦ Prozesssicherer Konzertklang: Sofortiges Meisterergebnis – keine Vorintonation erforderlich</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -3159,7 +3159,7 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s27_b2_badge">&gt;RENNER MESS-SYSTEM</span>
-                      <span class="ffw-media-caption-text" data-i18n="s27_p1_caption">Messbasiert vorkalibrierter Hammerkopfsatz: Vollendetes Klangspektrum ohne manuelle Nadelung</span>
+                      <span class="ffw-media-caption-text" data-i18n="s27_p1_caption">Vorkalibrierter Hammerkopfsatz: Vollendetes Klangspektrum ohne manuelle Nadelung</span>
                     </div>
                   </div>
                 </div>
@@ -3171,24 +3171,24 @@ def get_all_slides_html():
                       <span class="bento-badge gold" data-i18n="s27_b3_badge">&gt;OPTIMIERTES TRÄGHEITSMOMENT</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">DYNAMIK</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p2_title">Perfekt ausbalanciertes Gewicht &amp; Blitzschnelle Repetition</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p2_subtitle">Exakt auf die Yamaha C1–C3 Hebelverhältnisse kalibrierter Nussbaumkern und feinjährige Hainbuchenstiele</div>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p2_title">Ausbalanciertes Gewicht &amp; Schnelle Repetition</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p2_subtitle">Exakt auf Yamaha C1–C3 Hebelverhältnisse kalibrierter Nussbaumkern mit feinjährigen Hainbuchenstielen.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p2_bullet_1"><strong>Amerikanischer Nussbaum:</strong> Leichter, resonanzstarker Holzkern reduziert das Trägheitsmoment für müheloses, agiles Spiel.</span>
+                        <span data-i18n="s27_p2_bullet_1"><strong>Amerikanischer Nussbaum:</strong> Leichter, resonanzstarker Holzkern senkt das Trägheitsmoment für agiles, müheloses Spiel.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p2_bullet_2"><strong>140 Jahre Holzauswahl-Expertise:</strong> Hammerstiele aus selektierter europäischer Weißbuche mit feinsten Jahresringen – makelloses, einschlussfreies Spiegelholz für maximale Biegesteifigkeit und ungedämpfte Schwingungsübertragung.</span>
+                        <span data-i18n="s27_p2_bullet_2"><strong>Selektierte Weißbuche:</strong> Feinjähriges Spiegelholz garantiert maximale Biegesteifigkeit und verlustfreie Schwingungsübertragung.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p2_bullet_3"><strong>Röllchen mit hoher Eigenspannung:</strong> Die werkseitige Verleimung unter hoher Zugspannung übertrifft das Rückstellverhalten der Yamaha-Röllchen deutlich – für verlustfreien Kontakt an der Stoßzunge und höchste Repetitionsgeschwindigkeit.</span>
+                        <span data-i18n="s27_p2_bullet_3"><strong>Vorgespannte Röllchen:</strong> Unter hoher Zugspannung verleimt für überlegene Rückstellkraft und verzögerungsfreie Repetition.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s27_p2_fact">✦ Enorme Zeitersparnis: Kompletter Wechsel &amp; Mechanikregulation in nur 4–5 Stunden direkt vor Ort</span>
+                      <span class="ffw-fact-badge" data-i18n="s27_p2_fact">✦ Enorme Zeitersparnis: Kompletter Tausch &amp; Feinregulation in nur 4–5 Stunden vor Ort</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -3199,7 +3199,7 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s27_b4_badge">&gt;GEWICHT &amp; GEOMETRIE</span>
-                      <span class="ffw-media-caption-text" data-i18n="s27_p2_caption">Auf Yamaha C1–C3 kalibrierte Hammerstiele mit Kapseln für ein agiles, feinfühliges Spielgefühl</span>
+                      <span class="ffw-media-caption-text" data-i18n="s27_p2_caption">Auf Yamaha C1–C3 kalibrierte Hammerstiele mit Kapseln für feinfühliges Spielgefühl</span>
                     </div>
                   </div>
                 </div>
@@ -3211,24 +3211,24 @@ def get_all_slides_html():
                       <span class="bento-badge gold" data-i18n="s27_b5_badge">&gt;EINSCHRAUBEN · AUSRICHTEN · FERTIG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">DROP-IN</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p3_title">Simple Drop-In Montage – Einbaufertig aufgeleimte Hammerköpfe auf Stielen</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p3_subtitle">Hammerstiele mit passgenauen Kapseln, individuell für jeden Ton werkseitig aufgeleimt – mit traditionellem Glutenleim für maximale Schwingungsenergie und minimale Dämpfung.</div>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p3_title">Simple Drop-In Montage</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p3_subtitle">Fertig aufgeleimte Köpfe auf Stielen mit Kapseln – traditionell mit natürlichem Glutenleim verbunden.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p3_bullet_1"><strong>1-Schrauben-Fixierung:</strong> Maßgefertigte Kapseln lassen sich Note für Note direkt in das bestehende Yamaha-Aluminiumprofil verschrauben.</span>
+                        <span data-i18n="s27_p3_bullet_1"><strong>1-Schrauben-Fixierung:</strong> Maßgefertigte Kapseln werden Note für Note direkt in das Yamaha-Aluminiumprofil verschraubt.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p3_bullet_2"><strong>Individuelle Ton-für-Ton-Bohrung:</strong> Jeder Hammerkopf ist mit exakt kalibrierten Bohrwinkeln für seine jeweilige Position vorgebohrt. Das erspart fehleranfällige Bohrvorrichtungen, aufwändiges Einmessen und stundenlange Vorbereitungs- und Aufleimarbeiten in der Werkstatt.</span>
+                        <span data-i18n="s27_p3_bullet_2"><strong>Präzise Vorbohrung:</strong> Jeder Kopf ist im exakten Winkel vorgebohrt – kein Einmessen, keine Bohrvorrichtungen in der Werkstatt.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p3_bullet_3"><strong>Traditioneller Knochen- &amp; Hautleim-Mix:</strong> Ein speziell abgestimmter Naturleim-Mix aus reinem Knochen- und Hautleim kristallisiert glashart aus – für maximale akustische Schwingungsübertragung direkt in den Stiel bei minimaler Eigendämpfung.</span>
+                        <span data-i18n="s27_p3_bullet_3"><strong>Glasharter Glutenleim:</strong> Ausgewählter Knochen- und Hautleim kristallisiert glashart aus für ungedämpften Schwingungsfluss.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s27_p3_fact">✦ Höchste Prozesssicherheit: Null Fehlerrisiko bei Bohrung oder Leimtemperatur – echtes Plug &amp; Play direkt am Instrument</span>
+                      <span class="ffw-fact-badge" data-i18n="s27_p3_fact">✦ Maximale Prozesssicherheit: Null Fehlerrisiko bei Bohrung und Leimung – echtes Plug &amp; Play</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -3239,7 +3239,7 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s27_b6_badge">&gt;PLUG &amp; PLAY</span>
-                      <span class="ffw-media-caption-text" data-i18n="s27_p3_caption">Fertig im 91°-Winkel verleimter Satz auf Kapseln – direkt auf die originale Yamaha-Schiene montierbar</span>
+                      <span class="ffw-media-caption-text" data-i18n="s27_p3_caption">Im 91°-Winkel verleimter Satz auf Kapseln – direkt auf die originale Yamaha-Schiene montierbar</span>
                     </div>
                   </div>
                 </div>
@@ -3251,24 +3251,24 @@ def get_all_slides_html():
                       <span class="bento-badge gold" data-i18n="s27_b7_badge">&gt;OBERTONREICHER KONZERTKLANG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">KLANG</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p4_title">Reiches Klangspektrum &amp; Nuancenreiche Farbigkeit</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p4_subtitle">Vom warmen europäischen Pianissimo bis zur strahlenden dynamischen Tragfähigkeit im Fortissimo</div>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p4_title">Reiches Klangspektrum &amp; Farbigkeit</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p4_subtitle">Vom warmen europäischen Pianissimo bis zur strahlenden dynamischen Tragfähigkeit im Fortissimo.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p4_bullet_1"><strong>3D-berechnete Fräs- und Verdichtungsprofile:</strong> Aus dem 3D-Modell werden für jeden Hammerkopfsatz die exakten Fräsprofile sowie die notwendigen Zulagen und tonindividuellen Verdichtungsprofile abgeleitet. Der gesamte Satz wird aus einem einzigen, ungestückelten Filzstreifen gefertigt – für vollkommen homogene, bruchlose Klangübergänge über alle 88 Tasten.</span>
+                        <span data-i18n="s27_p4_bullet_1"><strong>3D-Fräs- &amp; Verdichtungsprofile:</strong> Individuelle Zulagen aus dem 3D-Modell gefertigt aus einem einzigen ungestückelten Filzstreifen – für bruchlose Übergänge über alle 88 Tasten.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p4_bullet_2"><strong>Differenzierter Fundamentalbass:</strong> Das exakt austarierte Masseverhältnis verleiht dem Bassbereich tiefe Grundtönigkeit. Gezielte Spannungsverteilung und optimierte Kopfform sichern ein kraftvolles Fortissimo – gepaart mit dem hochelastischen Filz lässt sich jeder einzelne Basston trennscharf und sauber separieren.</span>
+                        <span data-i18n="s27_p4_bullet_2"><strong>Differenzierter Bass:</strong> Austariertes Masseverhältnis und elastischer Filz für tiefe Grundtönigkeit, kraftvolles Fortissimo und saubere Tontrennung.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p4_bullet_3"><strong>Kraftvoller, glockenähnlicher Diskant:</strong> Das Zusammenspiel aus leichtem Holzkern, hochelastischem Filz und gezielter Hochverdichtung am Scheitel erzeugt einen kraftvollen, glockenreinen Klang mit langem, tragfähigem Gesangston.</span>
+                        <span data-i18n="s27_p4_bullet_3"><strong>Glockenreiner Diskant:</strong> Leichter Kern, elastischer Filz und gezielte Hochverdichtung am Scheitel formen einen tragfähigen Gesangston.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s27_p4_fact">✦ Akustische Wiedergeburt: Verwandelt den typisch spitzen Attack in einen warmen, tragenden europäischen Konzertklang</span>
+                      <span class="ffw-fact-badge" data-i18n="s27_p4_fact">✦ Klangveredelung: Verwandelt spitzen Attack in warmen, tragenden europäischen Konzertton</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -3279,7 +3279,7 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
                       <span class="bento-badge green" data-i18n="s27_b8_badge">&gt;DYNAMIK &amp; KLANGFARBEN</span>
-                      <span class="ffw-media-caption-text" data-i18n="s27_p4_caption">Gefertigt aus einem einzigen homogenen Filzstreifen: Nahtlose Klangübergänge ohne Registerbrüche</span>
+                      <span class="ffw-media-caption-text" data-i18n="s27_p4_caption">Aus einem homogenen Filzstreifen gefertigt: Nahtlose Klangübergänge ohne Registerbrüche</span>
                     </div>
                   </div>
                 </div>
@@ -3291,24 +3291,24 @@ def get_all_slides_html():
                       <span class="bento-badge gold" data-i18n="s27_b9_badge">&gt;STUNDEN STATT TAGE</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;">EFFIZIENZ</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s27_p5_title">Von 3–7 Tagen Werkstatt auf 4–5 Stunden am Instrument</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s27_p5_subtitle">Der direkte Praxisvergleich: Mehrtägige Werkstatt-Prozedur vs. taggleicher Tausch &amp; Regulation – sogar direkt auf der Konzertbühne.</div>
+                    <h3 class="ffw-panel-title" data-i18n="s27_p5_title">Von 3–7 Tagen auf 4–5 Stunden vor Ort</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s27_p5_subtitle">Der Praxisvergleich: Mehrtägige Werkstatt-Prozedur vs. taggleicher Tausch &amp; Regulation direkt am Instrument.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p5_bullet_1"><strong>Traditioneller Ablauf (3–7 Tage):</strong> Mechaniktransport in die Werkstatt, Bohrtabelle erstellen, Altköpfe ausleimen bzw. Röllchen tauschen, Warmleim vorbereiten, Einleimen, Flucht richten, Aushärten sowie mehrstufiges Regulieren, Abziehen, Vor- und Fertigintonieren.</span>
+                        <span data-i18n="s27_p5_bullet_1"><strong>Klassisch (3–7 Tage):</strong> Transport, Altköpfe ausleimen, Bohrtabelle, Warmleim, Flucht richten, Trocknen, mehrfaches Regulieren, Abziehen und Vorintonieren.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p5_bullet_2"><strong>Mit Renner Kit (4–5 Stunden):</strong> Passgenauen Satz direkt aufschrauben, einrichten und tragen lassen. Die Köpfe sind bereits werksseitig abgezogen – lediglich Saitenebene und Scheitel ausrichten und bei Bedarf fertig intonieren (ohne Vorintonation).</span>
+                        <span data-i18n="s27_p5_bullet_2"><strong>Renner Kit (4–5 Stunden):</strong> Satz direkt aufschrauben, einrichten, tragen lassen. Köpfe sind werksseitig abgezogen – nur Saitenebene/Scheitel ausrichten und bei Bedarf fertig intonieren.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s27_p5_bullet_3"><strong>Kein Transportrisiko &amp; mehr Raumakustik-Fokus:</strong> Das Instrument verbleibt vor Ort beim Kunden. Ohne zeitraubende Werkstattarbeit gewinnt der Techniker wertvolle Zeit, um den Hammerkopf direkt auf die Raumakustik und das individuelle Klangerlebnis des Kunden abzustimmen.</span>
+                        <span data-i18n="s27_p5_bullet_3"><strong>Vor Ort &amp; Raumakustik:</strong> Kein Transportrisiko für das Instrument. Der Techniker gewinnt Zeit für die perfekte Abstimmung auf Raumakustik und Kundenwunsch.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s27_p5_fact">✦ Höchste Wirtschaftlichkeit: Reduziert den Gesamtaufwand von 3–7 Arbeitstagen auf einen halben Tag (4–5 Std.)</span>
+                      <span class="ffw-fact-badge" data-i18n="s27_p5_fact">✦ Höchste Wirtschaftlichkeit: Gesamtaufwand von 3–7 Arbeitstagen auf 4–5 Stunden vor Ort reduziert</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -3326,14 +3326,14 @@ def get_all_slides_html():
               </div>
             </div>
 
-            <!-- RIGHT WING: Kit Spotlight Card (36% width) -->
+            <!-- RIGHT WING: Kit Spotlight Card (38% width) -->
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
                   <span class="bento-badge gold" data-i18n="s27_b11_badge">&gt;RENNER YAMAHA KIT</span>
-                  <div class="bento-card-title" data-i18n="s27_c1_title">Das Kit: Köpfe &amp; Stiele im Detail</div>
+                  <div class="bento-card-title" data-i18n="s27_c1_title">Köpfe &amp; Stiele im Detail</div>
                   <div class="bento-card-desc" data-i18n="s27_c1_desc">
-                    100% einbaufertig vorkonfektioniert für die Modelle Yamaha C1, C2 und C3
+                    100% einbaufertig vorkonfektioniert für Yamaha C1, C2 und C3.
                   </div>
                 </div>
 
@@ -3355,29 +3355,29 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s27_hl1_title">Proprietäres Mess- &amp; Fertigungssystem:</strong>
-                      <span data-i18n="s27_hl1_desc">5 Jahre F&amp;E sichern ein definiertes Klangspektrum, das selbst den Original-Hammerkopf fabrikneuer Yamaha-Flügel übertrifft – keine Vorintonation notwendig.</span>
+                      <strong data-i18n="s27_hl1_title">Proprietäres Mess-System:</strong>
+                      <span data-i18n="s27_hl1_desc">Kalibriertes Klangspektrum übertrifft den Werks-Hammerkopf – ohne Vorintonation.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s27_hl2_title">Amerikanischer Nussbaumkern:</strong>
-                      <span data-i18n="s27_hl2_desc">Optimiertes Trägheitsmoment für blitzschnelle Repetition und ermüdungsfreies Spiel.</span>
+                      <strong data-i18n="s27_hl2_title">Nussbaumkern &amp; Weißbuche:</strong>
+                      <span data-i18n="s27_hl2_desc">Minimiertes Trägheitsmoment für blitzschnelle Repetition und feinfühliges Spiel.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s27_hl3_title">Simple Drop-In &amp; 91°-Leimung:</strong>
-                      <span data-i18n="s27_hl3_desc">Glasharte Schwingungskopplung mit natürlichem Glutenleim, werkseitig fertig verleimt – 0h Bohrarbeit.</span>
+                      <strong data-i18n="s27_hl3_title">Drop-In &amp; 91°-Glutenleim:</strong>
+                      <span data-i18n="s27_hl3_desc">Glasharte Schwingungskopplung, werkseitig fertig verleimt – 0 h Bohrarbeit.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s27_hl4_title">1-Schrauben Drop-In Kapsel:</strong>
-                      <span data-i18n="s27_hl4_desc">Passgenau für das Yamaha-Profil – Montage und präzise Mechanikregulation in nur 4–5 Stunden vor Ort.</span>
+                      <strong data-i18n="s27_hl4_title">1-Schrauben-Kapsel:</strong>
+                      <span data-i18n="s27_hl4_desc">Passgenau für das Yamaha-Profil – Montage und Mechanikregulation in 4–5 Stunden vor Ort.</span>
                     </div>
                   </div>
                 </div>
