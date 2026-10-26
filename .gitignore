@@ -26,4 +26,8 @@ Deployed/Visuell/
 
 # Raw camera / drone recordings (> 100MB, keep local & SharePoint only)
 Visuell/Video/DJI_*.mp4
+Visuell/Video/MeuselwitzInnenRaw.mp4
+Visuell/Video/MeuselwitzInnen_Geglaettet*.mp4
+
+
 
