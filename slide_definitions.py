@@ -3584,12 +3584,12 @@ def get_all_slides_html():
           <div class="yka-control-strip">
             <div class="yka-btn-group">
               <span class="yka-group-label" data-i18n="s29_lbl_oct">Register:</span>
-              <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>Bass</small></button>
-              <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>Tenor</small></button>
-              <button class="yka-oct-btn active" data-oct="2" type="button">A2–A4<small>Mitte</small></button>
-              <button class="yka-oct-btn" data-oct="3" type="button">A3–A5<small>Gesang</small></button>
-              <button class="yka-oct-btn" data-oct="4" type="button">A4–A6<small>Diskant</small></button>
-              <button class="yka-oct-btn" data-oct="5" type="button">A5–A7<small>Brillanz</small></button>
+              <button class="yka-oct-btn" data-oct="0" type="button" data-i18n="s29_btn_oct0">A0–A2<small>Bass</small></button>
+              <button class="yka-oct-btn" data-oct="1" type="button" data-i18n="s29_btn_oct1">A1–A3<small>Tenor</small></button>
+              <button class="yka-oct-btn active" data-oct="2" type="button" data-i18n="s29_btn_oct2">A2–A4<small>Mitte</small></button>
+              <button class="yka-oct-btn" data-oct="3" type="button" data-i18n="s29_btn_oct3">A3–A5<small>Diskant 1</small></button>
+              <button class="yka-oct-btn" data-oct="4" type="button" data-i18n="s29_btn_oct4">A4–A6<small>Diskant 2</small></button>
+              <button class="yka-oct-btn" data-oct="5" type="button" data-i18n="s29_btn_oct5">A5–A7<small>Brillanz</small></button>
               <button class="yka-oct-btn" data-oct="all" type="button" data-i18n="s29_btn_all">Gesamt<small>A0–C8</small></button>
             </div>
             <div class="yka-slider-item" style="min-width: 280px;">

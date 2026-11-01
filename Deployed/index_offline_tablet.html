@@ -12088,12 +12088,12 @@ body::before {
           <div class="yka-control-strip">
             <div class="yka-btn-group">
               <span class="yka-group-label" data-i18n="s29_lbl_oct">Register:</span>
-              <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>Bass</small></button>
-              <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>Tenor</small></button>
-              <button class="yka-oct-btn active" data-oct="2" type="button">A2–A4<small>Mitte</small></button>
-              <button class="yka-oct-btn" data-oct="3" type="button">A3–A5<small>Gesang</small></button>
-              <button class="yka-oct-btn" data-oct="4" type="button">A4–A6<small>Diskant</small></button>
-              <button class="yka-oct-btn" data-oct="5" type="button">A5–A7<small>Brillanz</small></button>
+              <button class="yka-oct-btn" data-oct="0" type="button" data-i18n="s29_btn_oct0">A0–A2<small>Bass</small></button>
+              <button class="yka-oct-btn" data-oct="1" type="button" data-i18n="s29_btn_oct1">A1–A3<small>Tenor</small></button>
+              <button class="yka-oct-btn active" data-oct="2" type="button" data-i18n="s29_btn_oct2">A2–A4<small>Mitte</small></button>
+              <button class="yka-oct-btn" data-oct="3" type="button" data-i18n="s29_btn_oct3">A3–A5<small>Diskant 1</small></button>
+              <button class="yka-oct-btn" data-oct="4" type="button" data-i18n="s29_btn_oct4">A4–A6<small>Diskant 2</small></button>
+              <button class="yka-oct-btn" data-oct="5" type="button" data-i18n="s29_btn_oct5">A5–A7<small>Brillanz</small></button>
               <button class="yka-oct-btn" data-oct="all" type="button" data-i18n="s29_btn_all">Gesamt<small>A0–C8</small></button>
             </div>
             <div class="yka-slider-item" style="min-width: 280px;">
@@ -13689,6 +13689,12 @@ window.slideTranslations = {
     "s29_tab3": "REGISTER ΔL(f)",
     "s29_tab4": "DYNAMIK & SLOPE",
     "s29_lbl_oct": "Register:",
+    "s29_btn_oct0": "A0–A2<small>Bass</small>",
+    "s29_btn_oct1": "A1–A3<small>Tenor</small>",
+    "s29_btn_oct2": "A2–A4<small>Mitte</small>",
+    "s29_btn_oct3": "A3–A5<small>Diskant 1</small>",
+    "s29_btn_oct4": "A4–A6<small>Diskant 2</small>",
+    "s29_btn_oct5": "A5–A7<small>Brillanz</small>",
     "s29_btn_all": "Gesamt<small>A0–C8</small>",
     "s29_sl_oct": "Startnote:",
     "s29_lbl_pmode": "Modus:",
@@ -14272,6 +14278,12 @@ window.slideTranslations = {
     "s29_tab3": "REGISTERS ΔL(f)",
     "s29_tab4": "DYNAMICS & SLOPE",
     "s29_lbl_oct": "Register:",
+    "s29_btn_oct0": "A0–A2<small>Bass</small>",
+    "s29_btn_oct1": "A1–A3<small>Tenor</small>",
+    "s29_btn_oct2": "A2–A4<small>Middle</small>",
+    "s29_btn_oct3": "A3–A5<small>Treble 1</small>",
+    "s29_btn_oct4": "A4–A6<small>Treble 2</small>",
+    "s29_btn_oct5": "A5–A7<small>Brilliance</small>",
     "s29_btn_all": "Full<small>A0–C8</small>",
     "s29_sl_oct": "Start Note:",
     "s29_lbl_pmode": "Mode:",
@@ -14855,6 +14867,12 @@ window.slideTranslations = {
     "s29_tab3": "音域ゲイン ΔL(f)",
     "s29_tab4": "動態＆スロープ",
     "s29_lbl_oct": "音域:",
+    "s29_btn_oct0": "A0–A2<small>低音</small>",
+    "s29_btn_oct1": "A1–A3<small>中低音</small>",
+    "s29_btn_oct2": "A2–A4<small>中音</small>",
+    "s29_btn_oct3": "A3–A5<small>高音 1</small>",
+    "s29_btn_oct4": "A4–A6<small>高音 2</small>",
+    "s29_btn_oct5": "A5–A7<small>最高音</small>",
     "s29_btn_all": "全域<small>A0–C8</small>",
     "s29_sl_oct": "開始音:",
     "s29_lbl_pmode": "表示:",
@@ -15438,6 +15456,12 @@ window.slideTranslations = {
     "s29_tab3": "音区增益 ΔL(f)",
     "s29_tab4": "动态与斜率",
     "s29_lbl_oct": "音区:",
+    "s29_btn_oct0": "A0–A2<small>低音</small>",
+    "s29_btn_oct1": "A1–A3<small>次中音</small>",
+    "s29_btn_oct2": "A2–A4<small>中音</small>",
+    "s29_btn_oct3": "A3–A5<small>高音 1</small>",
+    "s29_btn_oct4": "A4–A6<small>高音 2</small>",
+    "s29_btn_oct5": "A5–A7<small>辉煌区</small>",
     "s29_btn_all": "全音域<small>A0–C8</small>",
     "s29_sl_oct": "起始音:",
     "s29_lbl_pmode": "模式:",
@@ -21896,25 +21920,31 @@ window.YamahaKitController = new YamahaKitStage();
         } else if (stats.fLo < 180) {
           txt = `Middle register (${stats.noteLo}–${stats.noteHi}): H2 (+1.6 dB), H3 (+3.2 dB), H4 (+3.5 dB) & H8 (+4.7 dB) surge for orchestral warmth.`;
         } else if (stats.fLo < 350) {
-          txt = `Singing register (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
+          txt = `Treble 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
+        } else if (stats.fLo < 700) {
+          txt = `Treble 2 (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection (> 6 kHz excluded).`;
         } else {
-          txt = `Treble (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection (> 6 kHz excluded).`;
+          txt = `Brilliance (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & partials ≤ 6 kHz (H2–H${maxHNum}) deliver crystal-clear projection (> 6 kHz excluded).`;
         }
       } else if (this.lang === 'ja') {
         if (stats.fLo < 45) {
           txt = `低音域（${stats.noteLo}–${stats.noteHi}）：基音H1を維持し、H2–H4の濁りを−1.7〜−2.9 dB整理して明瞭な分離を実現。`;
         } else if (stats.fLo < 180) {
           txt = `中音域（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）・H3（+3.2 dB）・H4（+3.5 dB）が向上し豊かな響きに。`;
+        } else if (stats.fLo < 350) {
+          txt = `高音域1（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
         } else {
-          txt = `高音域（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
+          txt = `高音域2（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、輝かしい遠達性を実現。`;
         }
       } else if (this.lang === 'zh') {
         if (stats.fLo < 45) {
           txt = `低音区（${stats.noteLo}–${stats.noteHi}）：稳固基音H1，消除H2–H4浑浊（−1.7至−2.9 dB），低音干净通透。`;
         } else if (stats.fLo < 180) {
           txt = `核心音区（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）、H3（+3.2 dB）、H4（+3.5 dB）显著跃升，共鸣醇厚。`;
+        } else if (stats.fLo < 350) {
+          txt = `高音区1（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，音色饱满绽放。`;
         } else {
-          txt = `高音区（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣穿透力。`;
+          txt = `高音区2（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣穿透力。`;
         }
       } else {
         if (stats.fLo < 45) {
@@ -21924,9 +21954,11 @@ window.YamahaKitController = new YamahaKitStage();
         } else if (stats.fLo < 180) {
           txt = `Klangzentrum (${stats.noteLo}–${stats.noteHi}): H2 (+${stats.deltaRelH1[1].toFixed(1)} dB), H3 (+${stats.deltaRelH1[2].toFixed(1)} dB), H4 (+${stats.deltaRelH1[3].toFixed(1)} dB) & H8 (+${stats.deltaRelH1[7].toFixed(1)} dB) gewinnen massiv an Fülle.`;
         } else if (stats.fLo < 350) {
-          txt = `Gesangsregister (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
+          txt = `Diskant 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
+        } else if (stats.fLo < 700) {
+          txt = `Diskant 2 (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft (> 6 kHz ausgeklammert).`;
         } else {
-          txt = `Diskant (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft (> 6 kHz ausgeklammert).`;
+          txt = `Brillanz (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne ≤ 6 kHz (H2–H${maxHNum}) liefern kristallklare Brillanz (> 6 kHz ausgeklammert).`;
         }
       }
       document.querySelectorAll('.yka-diag-text').forEach(el => {

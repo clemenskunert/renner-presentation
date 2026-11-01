@@ -1518,25 +1518,31 @@
         } else if (stats.fLo < 180) {
           txt = `Middle register (${stats.noteLo}–${stats.noteHi}): H2 (+1.6 dB), H3 (+3.2 dB), H4 (+3.5 dB) & H8 (+4.7 dB) surge for orchestral warmth.`;
         } else if (stats.fLo < 350) {
-          txt = `Singing register (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
+          txt = `Treble 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
+        } else if (stats.fLo < 700) {
+          txt = `Treble 2 (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection (> 6 kHz excluded).`;
         } else {
-          txt = `Treble (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection (> 6 kHz excluded).`;
+          txt = `Brilliance (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & partials ≤ 6 kHz (H2–H${maxHNum}) deliver crystal-clear projection (> 6 kHz excluded).`;
         }
       } else if (this.lang === 'ja') {
         if (stats.fLo < 45) {
           txt = `低音域（${stats.noteLo}–${stats.noteHi}）：基音H1を維持し、H2–H4の濁りを−1.7〜−2.9 dB整理して明瞭な分離を実現。`;
         } else if (stats.fLo < 180) {
           txt = `中音域（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）・H3（+3.2 dB）・H4（+3.5 dB）が向上し豊かな響きに。`;
+        } else if (stats.fLo < 350) {
+          txt = `高音域1（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
         } else {
-          txt = `高音域（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
+          txt = `高音域2（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、輝かしい遠達性を実現。`;
         }
       } else if (this.lang === 'zh') {
         if (stats.fLo < 45) {
           txt = `低音区（${stats.noteLo}–${stats.noteHi}）：稳固基音H1，消除H2–H4浑浊（−1.7至−2.9 dB），低音干净通透。`;
         } else if (stats.fLo < 180) {
           txt = `核心音区（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）、H3（+3.2 dB）、H4（+3.5 dB）显著跃升，共鸣醇厚。`;
+        } else if (stats.fLo < 350) {
+          txt = `高音区1（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，音色饱满绽放。`;
         } else {
-          txt = `高音区（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣穿透力。`;
+          txt = `高音区2（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣穿透力。`;
         }
       } else {
         if (stats.fLo < 45) {
@@ -1546,9 +1552,11 @@
         } else if (stats.fLo < 180) {
           txt = `Klangzentrum (${stats.noteLo}–${stats.noteHi}): H2 (+${stats.deltaRelH1[1].toFixed(1)} dB), H3 (+${stats.deltaRelH1[2].toFixed(1)} dB), H4 (+${stats.deltaRelH1[3].toFixed(1)} dB) & H8 (+${stats.deltaRelH1[7].toFixed(1)} dB) gewinnen massiv an Fülle.`;
         } else if (stats.fLo < 350) {
-          txt = `Gesangsregister (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
+          txt = `Diskant 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
+        } else if (stats.fLo < 700) {
+          txt = `Diskant 2 (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft (> 6 kHz ausgeklammert).`;
         } else {
-          txt = `Diskant (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft (> 6 kHz ausgeklammert).`;
+          txt = `Brillanz (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne ≤ 6 kHz (H2–H${maxHNum}) liefern kristallklare Brillanz (> 6 kHz ausgeklammert).`;
         }
       }
       document.querySelectorAll('.yka-diag-text').forEach(el => {

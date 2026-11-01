@@ -2710,6 +2710,42 @@
           "ja": "音域:",
           "zh": "音区:"
         },
+        "s29_btn_oct0": {
+          "de": "A0–A2<small>Bass</small>",
+          "en": "A0–A2<small>Bass</small>",
+          "ja": "A0–A2<small>低音</small>",
+          "zh": "A0–A2<small>低音</small>"
+        },
+        "s29_btn_oct1": {
+          "de": "A1–A3<small>Tenor</small>",
+          "en": "A1–A3<small>Tenor</small>",
+          "ja": "A1–A3<small>中低音</small>",
+          "zh": "A1–A3<small>次中音</small>"
+        },
+        "s29_btn_oct2": {
+          "de": "A2–A4<small>Mitte</small>",
+          "en": "A2–A4<small>Middle</small>",
+          "ja": "A2–A4<small>中音</small>",
+          "zh": "A2–A4<small>中音</small>"
+        },
+        "s29_btn_oct3": {
+          "de": "A3–A5<small>Diskant 1</small>",
+          "en": "A3–A5<small>Treble 1</small>",
+          "ja": "A3–A5<small>高音 1</small>",
+          "zh": "A3–A5<small>高音 1</small>"
+        },
+        "s29_btn_oct4": {
+          "de": "A4–A6<small>Diskant 2</small>",
+          "en": "A4–A6<small>Treble 2</small>",
+          "ja": "A4–A6<small>高音 2</small>",
+          "zh": "A4–A6<small>高音 2</small>"
+        },
+        "s29_btn_oct5": {
+          "de": "A5–A7<small>Brillanz</small>",
+          "en": "A5–A7<small>Brilliance</small>",
+          "ja": "A5–A7<small>最高音</small>",
+          "zh": "A5–A7<small>辉煌区</small>"
+        },
         "s29_btn_all": {
           "de": "Gesamt<small>A0–C8</small>",
           "en": "Full<small>A0–C8</small>",
