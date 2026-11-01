@@ -325,32 +325,60 @@
     }
 
     computeWindowPartials(mLo, mHi) {
+      const MAX_PARTIAL_FREQ = 6000.0;
       const semiSub = DATA.semitones.filter(s => s.midi >= mLo && s.midi <= mHi);
       const count = Math.max(1, semiSub.length);
-      const pOrigLin = new Array(12).fill(0);
-      const pKitLin = new Array(12).fill(0);
-      const pKitNormLin = new Array(12).fill(0);
+      const fLo = semiSub[0] ? semiSub[0].f0 : this.customFMin;
+      const fHi = semiSub[semiSub.length - 1] ? semiSub[semiSub.length - 1].f0 : this.customFMax;
+      const isFullRange = (mHi - mLo) > 30;
+      // Reference frequency at 75% of the 2-octave window: partials above 6000 Hz here are excluded
+      const fRef = isFullRange ? 200.0 : (Math.pow(fLo, 0.25) * Math.pow(fHi, 0.75));
 
-      semiSub.forEach(s => {
-        for (let h = 0; h < 12; h++) {
-          pOrigLin[h] += Math.pow(10.0, s.orig_db[h] / 10.0);
-          pKitLin[h] += Math.pow(10.0, s.kit_db[h] / 10.0);
-          pKitNormLin[h] += Math.pow(10.0, s.kit_norm_db[h] / 10.0);
+      const origAbsDb = new Array(12).fill(-90);
+      const kitAbsDb = new Array(12).fill(-90);
+      const kitNormDb = new Array(12).fill(-90);
+      const origRelH1 = new Array(12).fill(0);
+      const kitRelH1 = new Array(12).fill(0);
+      const deltaRelH1 = new Array(12).fill(0);
+      const deltaNormDb = new Array(12).fill(0);
+      const validMask = new Array(12).fill(false);
+      let maxValidH = 0; // 0-based index of highest valid partial <= 6000 Hz
+
+      for (let h = 0; h < 12; h++) {
+        const k = h + 1;
+        // Strictly exclude any note whose k-th partial exceeds 6000 Hz
+        const validSemis = semiSub.filter(s => (h === 0) || (s.f0 * k <= MAX_PARTIAL_FREQ));
+        const isAllowed = (h === 0) || (k * fRef <= MAX_PARTIAL_FREQ && validSemis.length >= Math.min(4, count));
+
+        if (isAllowed && validSemis.length > 0) {
+          validMask[h] = true;
+          maxValidH = h;
+          const nV = validSemis.length;
+          let oH = 0, kH = 0, knH = 0, o0 = 0, k0 = 0;
+          validSemis.forEach(s => {
+            oH += Math.pow(10.0, s.orig_db[h] / 10.0);
+            kH += Math.pow(10.0, s.kit_db[h] / 10.0);
+            knH += Math.pow(10.0, s.kit_norm_db[h] / 10.0);
+            o0 += Math.pow(10.0, s.orig_db[0] / 10.0);
+            k0 += Math.pow(10.0, s.kit_db[0] / 10.0);
+          });
+          origAbsDb[h] = 10.0 * Math.log10(oH / nV + 1e-20);
+          kitAbsDb[h] = 10.0 * Math.log10(kH / nV + 1e-20);
+          kitNormDb[h] = 10.0 * Math.log10(knH / nV + 1e-20);
+
+          const o0Db = 10.0 * Math.log10(o0 / nV + 1e-20);
+          const k0Db = 10.0 * Math.log10(k0 / nV + 1e-20);
+          origRelH1[h] = h === 0 ? 0.0 : (origAbsDb[h] - o0Db);
+          kitRelH1[h] = h === 0 ? 0.0 : (kitAbsDb[h] - k0Db);
+          deltaRelH1[h] = kitRelH1[h] - origRelH1[h];
+          deltaNormDb[h] = kitNormDb[h] - origAbsDb[h];
         }
-      });
+      }
 
-      const origAbsDb = pOrigLin.map(v => 10.0 * Math.log10(v / count + 1e-20));
-      const kitAbsDb = pKitLin.map(v => 10.0 * Math.log10(v / count + 1e-20));
-      const kitNormDb = pKitNormLin.map(v => 10.0 * Math.log10(v / count + 1e-20));
-
-      const origRelH1 = origAbsDb.map(v => v - origAbsDb[0]);
-      const kitRelH1 = kitAbsDb.map(v => v - kitAbsDb[0]);
-      const deltaRelH1 = kitRelH1.map((v, i) => v - origRelH1[i]);
-      const deltaNormDb = kitNormDb.map((v, i) => v - origAbsDb[i]);
-
-      let sumX = 0, sumY1 = 0, sumY2 = 0, sumXX = 0, sumXY1 = 0, sumXY2 = 0;
-      const nFit = 8; // Fit H1..H8
-      for (let h = 0; h < nFit; h++) {
+      // Fit harmonic roll-off (dB/octave) only across valid partials H1..H8 <= 6000 Hz
+      let sumX = 0, sumY1 = 0, sumY2 = 0, sumXX = 0, sumXY1 = 0, sumXY2 = 0, nFit = 0;
+      for (let h = 0; h < Math.min(8, maxValidH + 1); h++) {
+        if (!validMask[h]) continue;
         const x = Math.log2(h + 1);
         sumX += x;
         sumY1 += origRelH1[h];
@@ -358,33 +386,39 @@
         sumXX += x * x;
         sumXY1 += x * origRelH1[h];
         sumXY2 += x * kitRelH1[h];
+        nFit++;
       }
       const denom = nFit * sumXX - sumX * sumX;
-      const slopeOctOrig = (nFit * sumXY1 - sumX * sumY1) / denom;
-      const slopeOctKit = (nFit * sumXY2 - sumX * sumY2) / denom;
+      const slopeOctOrig = (nFit >= 2 && Math.abs(denom) > 1e-9) ? (nFit * sumXY1 - sumX * sumY1) / denom : -6.0;
+      const slopeOctKit = (nFit >= 2 && Math.abs(denom) > 1e-9) ? (nFit * sumXY2 - sumX * sumY2) / denom : -4.8;
 
-      const evenGainRel = (deltaRelH1[1] + deltaRelH1[3] + deltaRelH1[5] + deltaRelH1[7]) / 4.0;
-      const oddGainRel = (deltaRelH1[2] + deltaRelH1[4] + deltaRelH1[6]) / 3.0;
-      const meanOvertoneGain = (deltaRelH1.slice(1, 8).reduce((a, b) => a + b, 0)) / 7.0;
+      const evenIndices = [1, 3, 5, 7].filter(h => validMask[h]);
+      const oddIndices = [2, 4, 6].filter(h => validMask[h]);
+      const ovIndices = [1, 2, 3, 4, 5, 6, 7].filter(h => validMask[h]);
 
-      // Find peak partial gain among H2..H8
+      const evenGainRel = evenIndices.length ? (evenIndices.reduce((a, h) => a + deltaRelH1[h], 0) / evenIndices.length) : 0.0;
+      const oddGainRel = oddIndices.length ? (oddIndices.reduce((a, h) => a + deltaRelH1[h], 0) / oddIndices.length) : evenGainRel;
+      const meanOvertoneGain = ovIndices.length ? (ovIndices.reduce((a, h) => a + deltaRelH1[h], 0) / ovIndices.length) : deltaNormDb[0];
+
+      // Find peak partial gain among valid overtones <= 6000 Hz
       let maxGainH = 2;
-      let maxGainVal = deltaRelH1[1];
-      for (let h = 1; h < 8; h++) {
+      let maxGainVal = ovIndices.length ? deltaRelH1[ovIndices[0]] : deltaNormDb[0];
+      ovIndices.forEach(h => {
         if (deltaRelH1[h] > maxGainVal) {
           maxGainVal = deltaRelH1[h];
           maxGainH = h + 1;
         }
-      }
+      });
 
       return {
         mLo, mHi,
-        fLo: semiSub[0] ? semiSub[0].f0 : this.customFMin,
-        fHi: semiSub[semiSub.length - 1] ? semiSub[semiSub.length - 1].f0 : this.customFMax,
+        fLo,
+        fHi,
         noteLo: semiSub[0] ? semiSub[0].note : this.freqToNoteName(this.customFMin),
         noteHi: semiSub[semiSub.length - 1] ? semiSub[semiSub.length - 1].note : this.freqToNoteName(this.customFMax),
         origAbsDb, kitAbsDb, kitNormDb,
         origRelH1, kitRelH1, deltaRelH1, deltaNormDb,
+        validMask, maxValidH,
         slopeOctOrig, slopeOctKit,
         evenGainRel, oddGainRel, meanOvertoneGain,
         maxGainH, maxGainVal,
@@ -510,9 +544,10 @@
 
       if (this.octStartMidi !== 0) {
         const mCenter = 0.5 * (mLo + mHi);
+        const fCenter = this.midiToFreq(mCenter);
         [2, 3, 4, 6, 8].forEach(h => {
           const mHarm = mCenter + 12.0 * Math.log2(h);
-          if (mHarm <= 108) {
+          if (mHarm <= 108 && fCenter * h <= 6000.0) {
             const xH = padL + (mHarm - 21) * kw;
             ctx.fillStyle = '#10b981';
             ctx.beginPath();
@@ -538,16 +573,16 @@
       const ph = H - padT - padB;
 
       let viewFMin = 27.5;
-      let viewFMax = 8000.0;
+      let viewFMax = 6000.0;
       if (this.zoomMode === 'fund' || this.zoomMode === 'strict2oct') {
         viewFMin = Math.max(25.0, this.customFMin);
-        viewFMax = Math.min(16000.0, Math.max(this.customFMin * 1.5, this.customFMax));
+        viewFMax = Math.min(6000.0, Math.max(this.customFMin * 1.5, this.customFMax));
       } else if ((this.zoomMode === 'partials' || this.zoomMode === 'harmonics') && this.octStartMidi !== 0) {
         viewFMin = Math.max(25.0, this.customFMin * 0.92);
-        viewFMax = Math.min(14000.0, Math.max(this.customFMax * 6.5, this.customFMin * 12.0));
+        viewFMax = Math.min(6000.0, Math.max(this.customFMax * 6.0, this.customFMin * 10.0));
       } else {
         viewFMin = this.freqScale === 'log' ? 27.5 : 50.0;
-        viewFMax = this.freqScale === 'log' ? 12000.0 : 6000.0;
+        viewFMax = this.freqScale === 'log' ? 10000.0 : 6000.0;
       }
 
       const isLog = this.freqScale === 'log';
@@ -627,7 +662,7 @@
         const fCenter = Math.sqrt(this.customFMin * this.customFMax);
         for (let h = 2; h <= 10; h++) {
           const fhMid = fCenter * h;
-          if (fhMid >= viewFMin && fhMid <= viewFMax) {
+          if (fhMid >= viewFMin && fhMid <= Math.min(viewFMax, 6000.0)) {
             const xh = mapX(fhMid);
             const isHoverH = (this.hoverPartialIdx === h - 1);
             ctx.strokeStyle = isHoverH ? '#10b981' : 'rgba(31, 164, 124, 0.38)';
@@ -802,7 +837,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // SLIDE 29: PARTIALS H1-H12 & CHROMATIC 24-SEMITONE RESOLUTION
+    // SLIDE 29: PARTIALS H1-H12 & CHROMATIC 24-SEMITONE RESOLUTION (≤ 6.000 HZ)
     // -------------------------------------------------------------------------
     drawPartialsCanvas() {
       const prep = this.prepareCanvas(document.getElementById('yka-canvas-partials'), 760, 340);
@@ -819,18 +854,32 @@
       const isRel = (this.partialMode === 'rel' || this.partialMode === 'rel_h1');
       const isDelta = (this.partialMode === 'delta');
 
+      // Clamp hovered partial to valid partials <= 6000 Hz
+      const activeHp = Math.min(this.hoverPartialIdx, stats.maxValidH);
+
+      // Compute Y-axis bounds strictly from valid partials <= 6000 Hz
       let yMin = -45, yMax = 5;
       if (isRel) {
-        const allVals = stats.origRelH1.concat(stats.kitRelH1);
-        yMin = Math.min(-30, Math.floor(Math.min(...allVals) / 5) * 5 - 3);
-        yMax = Math.max(5, Math.ceil(Math.max(...allVals) / 5) * 5 + 3);
+        const validRel = [];
+        for (let h = 0; h < nH; h++) {
+          if (stats.validMask[h]) {
+            validRel.push(stats.origRelH1[h], stats.kitRelH1[h]);
+          }
+        }
+        yMin = Math.min(-25, Math.floor(Math.min(...validRel) / 5) * 5 - 3);
+        yMax = Math.max(5, Math.ceil(Math.max(...validRel) / 5) * 5 + 3);
       } else if (isDelta) {
         yMin = -4.5;
         yMax = 6.5;
       } else {
-        const allVals = stats.origAbsDb.concat(stats.kitNormDb);
-        yMin = Math.floor(Math.min(...allVals) / 5) * 5 - 3;
-        yMax = Math.ceil(Math.max(...allVals) / 5) * 5 + 3;
+        const validAbs = [];
+        for (let h = 0; h < nH; h++) {
+          if (stats.validMask[h]) {
+            validAbs.push(stats.origAbsDb[h], stats.kitNormDb[h]);
+          }
+        }
+        yMin = Math.floor(Math.min(...validAbs) / 5) * 5 - 3;
+        yMax = Math.ceil(Math.max(...validAbs) / 5) * 5 + 3;
       }
 
       const mapY = (v) => {
@@ -853,10 +902,49 @@
       ctx.setLineDash([]);
 
       const zeroY = mapY(0);
+      const intvNames = ["1f₀", "Okt", "Quin", "2Okt", "Terz", "Quin", "Sept", "3Okt", "Non", "Dez", "11f₀", "12f₀"];
+
+      // If upper partials exceed 6000 Hz, shade the excluded > 6000 Hz zone
+      if (stats.maxValidH < nH - 1) {
+        const xExclStart = padL + (stats.maxValidH + 1) * slotW;
+        const wExcl = (nH - 1 - stats.maxValidH) * slotW;
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.72)';
+        ctx.fillRect(xExclStart, padT, wExcl, ph);
+        ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([5, 4]);
+        ctx.beginPath();
+        ctx.moveTo(xExclStart, padT);
+        ctx.lineTo(xExclStart, padT + ph);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Label inside excluded > 6000 Hz region
+        const cxExcl = xExclStart + wExcl / 2;
+        const cyExcl = padT + ph / 2;
+        ctx.fillStyle = '#fbbf24';
+        ctx.font = '700 12px Roboto, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('> 6.000 Hz ausgeklammert', cxExcl, cyExcl - 6);
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '500 11px Roboto, sans-serif';
+        ctx.fillText('(Klavierstück / Mehrklang)', cxExcl, cyExcl + 12);
+      }
 
       for (let h = 0; h < nH; h++) {
         const cx = padL + (h + 0.5) * slotW;
-        const isSel = (this.hoverPartialIdx === h);
+        const isValid = stats.validMask[h];
+        const isSel = isValid && (activeHp === h);
+
+        if (!isValid) {
+          ctx.fillStyle = 'rgba(148, 163, 184, 0.35)';
+          ctx.font = '600 11px JetBrains Mono, monospace';
+          ctx.textAlign = 'center';
+          ctx.fillText(`H${h + 1}`, cx, padT + ph + 16);
+          ctx.font = '500 9px JetBrains Mono, monospace';
+          ctx.fillText('>6k', cx, padT + ph + 29);
+          continue;
+        }
 
         if (isSel) {
           ctx.fillStyle = 'rgba(200, 163, 86, 0.14)';
@@ -902,16 +990,15 @@
         ctx.font = isSel ? '800 12px JetBrains Mono, monospace' : '700 11px JetBrains Mono, monospace';
         ctx.textAlign = 'center';
         ctx.fillText(`H${h + 1}`, cx, padT + ph + 16);
-        const intvNames = ["1f₀", "Okt", "Quin", "2Okt", "Terz", "Quin", "Sept", "3Okt", "Non", "Dez", "11f₀", "12f₀"];
         ctx.fillStyle = '#94a3b8';
         ctx.font = '600 10px Roboto, sans-serif';
         ctx.fillText(intvNames[h], cx, padT + ph + 29);
       }
 
-      if (isRel) {
+      if (isRel && stats.maxValidH >= 1) {
         ctx.beginPath();
         ctx.setLineDash([4, 3]);
-        for (let h = 0; h < nH; h++) {
+        for (let h = 0; h <= stats.maxValidH; h++) {
           const cx = padL + (h + 0.5) * slotW;
           const y = mapY(stats.origRelH1[h]);
           if (h === 0) ctx.moveTo(cx, y); else ctx.lineTo(cx, y);
@@ -922,7 +1009,7 @@
 
         ctx.beginPath();
         ctx.setLineDash([]);
-        for (let h = 0; h < nH; h++) {
+        for (let h = 0; h <= stats.maxValidH; h++) {
           const cx = padL + (h + 0.5) * slotW;
           const y = mapY(stats.kitRelH1[h]);
           if (h === 0) ctx.moveTo(cx, y); else ctx.lineTo(cx, y);
@@ -932,10 +1019,10 @@
         ctx.stroke();
       }
 
-      // Update Partial Readout Bar on Slide 29
-      const hp = this.hoverPartialIdx;
+      // Update Partial Readout Bar on Slide 29 (capped at 6000 Hz)
+      const hp = activeHp;
       const fPartLo = Math.round(stats.fLo * (hp + 1));
-      const fPartHi = Math.round(stats.fHi * (hp + 1));
+      const fPartHi = Math.min(6000, Math.round(stats.fHi * (hp + 1)));
       const dRel = hp === 0 ? stats.deltaNormDb[0] : stats.deltaRelH1[hp];
       const pctP = (Math.pow(10, dRel / 10.0) - 1.0) * 100.0;
 
@@ -944,7 +1031,7 @@
       const elFreq = document.getElementById('yka-ro-part-freq');
       const elDelta = document.getElementById('yka-ro-part-delta');
       if (elName) elName.textContent = pNames[hp];
-      if (elFreq) elFreq.textContent = `${stats.noteLo}–${stats.noteHi}: ${fPartLo}–${fPartHi} Hz`;
+      if (elFreq) elFreq.textContent = `${stats.noteLo}–${stats.noteHi}: ${fPartLo}–${fPartHi} Hz (≤ 6 kHz)`;
       if (elDelta) {
         const sgn = dRel >= 0 ? '+' : '';
         elDelta.textContent = `Δ: ${sgn}${dRel.toFixed(2)} dB (${sgn}${Math.round(pctP)} %)`;
@@ -995,15 +1082,29 @@
       const nS = semis.length;
       const sw = pw / nS;
 
-      const ovOrig = [], ovKit = [];
+      const ovOrig = [], ovKit = [], maxHLabel = [];
       semis.forEach(s => {
-        let e1 = 0, e2 = 0;
+        let e1 = 0, e2 = 0, nValid = 0, maxK = 1;
+        // Include only overtones H2..H8 whose frequency <= 6000 Hz
         for (let h = 1; h < 8; h++) {
-          e1 += Math.pow(10, s.orig_db[h] / 10.0);
-          e2 += Math.pow(10, s.kit_norm_db[h] / 10.0);
+          if (s.f0 * (h + 1) <= 6000.0) {
+            e1 += Math.pow(10, s.orig_db[h] / 10.0);
+            e2 += Math.pow(10, s.kit_norm_db[h] / 10.0);
+            nValid++;
+            maxK = h + 1;
+          }
         }
-        ovOrig.push(10 * Math.log10(e1 / 7.0 + 1e-20));
-        ovKit.push(10 * Math.log10(e2 / 7.0 + 1e-20));
+        // If even H2 > 6000 Hz (notes above F#7 = 2960 Hz), fall back to H1 (fundamental <= 6000 Hz)
+        if (nValid === 0) {
+          e1 = Math.pow(10, s.orig_db[0] / 10.0);
+          e2 = Math.pow(10, s.kit_norm_db[0] / 10.0);
+          nValid = 1;
+          maxHLabel.push('H₁ (≤ 6 kHz)');
+        } else {
+          maxHLabel.push(maxK === 2 ? 'H₂ (≤ 6 kHz)' : `H₂–H${maxK} (≤ 6 kHz)`);
+        }
+        ovOrig.push(10 * Math.log10(e1 / nValid + 1e-20));
+        ovKit.push(10 * Math.log10(e2 / nValid + 1e-20));
       });
 
       const minV = Math.floor(Math.min(...ovOrig, ...ovKit) / 5) * 5 - 3;
@@ -1066,7 +1167,7 @@
         ctx.font = '700 12.5px JetBrains Mono, monospace';
         ctx.textAlign = 'left';
         ctx.fillText(
-          `Ton ${selSemi.note} (f₀ = ${selSemi.f0.toFixed(1)} Hz) · Orig: ${v1.toFixed(1)} dB → Kit: ${v2.toFixed(1)} dB · Δ H₂–H₈: ${sgn}${dSemi.toFixed(2)} dB (${sgn}${Math.round(pctS)} %)`,
+          `Ton ${selSemi.note} (f₀ = ${selSemi.f0.toFixed(1)} Hz) · Orig: ${v1.toFixed(1)} → Kit: ${v2.toFixed(1)} dB · Δ ${maxHLabel[activeSemiIdx]}: ${sgn}${dSemi.toFixed(2)} dB (${sgn}${Math.round(pctS)} %)`,
           padL + 4,
           padT - 7
         );
@@ -1397,7 +1498,7 @@
         el.textContent = `Δ H1: ${dH1 >= 0 ? '+' : ''}${dH1.toFixed(2)} dB`;
       });
 
-      const locSlope = this.calcLocalPsdSlope(Math.max(50, stats.fLo), Math.min(8000, Math.max(stats.fHi * 6, 1000)));
+      const locSlope = this.calcLocalPsdSlope(Math.max(50, stats.fLo), Math.min(6000, Math.max(stats.fHi * 6, 1000)));
       const dKhz = locSlope.s2_khz - locSlope.s1_khz;
       document.querySelectorAll('.yka-kpi-local-slope').forEach(el => {
         el.textContent = `${dKhz >= 0 ? '+' : ''}${dKhz.toFixed(2)} dB/kHz`;
@@ -1407,6 +1508,7 @@
         el.textContent = `Orig: ${locSlope.s1_khz.toFixed(2)} → Kit: ${locSlope.s2_khz.toFixed(2)} dB/kHz`;
       });
 
+      const maxHNum = stats.maxValidH + 1;
       let txt = "";
       if (this.lang === 'en') {
         if (stats.fLo < 45) {
@@ -1416,9 +1518,9 @@
         } else if (stats.fLo < 180) {
           txt = `Middle register (${stats.noteLo}–${stats.noteHi}): H2 (+1.6 dB), H3 (+3.2 dB), H4 (+3.5 dB) & H8 (+4.7 dB) surge for orchestral warmth.`;
         } else if (stats.fLo < 350) {
-          txt = `Singing register (${stats.noteLo}–${stats.noteHi}): H2–H10 rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
+          txt = `Singing register (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
         } else {
-          txt = `Treble (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H6 (up to +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection to C8.`;
+          txt = `Treble (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection (> 6 kHz excluded).`;
         }
       } else if (this.lang === 'ja') {
         if (stats.fLo < 45) {
@@ -1426,7 +1528,7 @@
         } else if (stats.fLo < 180) {
           txt = `中音域（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）・H3（+3.2 dB）・H4（+3.5 dB）が向上し豊かな響きに。`;
         } else {
-          txt = `高音域（${stats.noteLo}–${stats.noteHi}）：H2〜H10が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
+          txt = `高音域（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
         }
       } else if (this.lang === 'zh') {
         if (stats.fLo < 45) {
@@ -1434,7 +1536,7 @@
         } else if (stats.fLo < 180) {
           txt = `核心音区（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）、H3（+3.2 dB）、H4（+3.5 dB）显著跃升，共鸣醇厚。`;
         } else {
-          txt = `高音区（${stats.noteLo}–${stats.noteHi}）：H2–H10最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣般的穿透力。`;
+          txt = `高音区（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣穿透力。`;
         }
       } else {
         if (stats.fLo < 45) {
@@ -1444,9 +1546,9 @@
         } else if (stats.fLo < 180) {
           txt = `Klangzentrum (${stats.noteLo}–${stats.noteHi}): H2 (+${stats.deltaRelH1[1].toFixed(1)} dB), H3 (+${stats.deltaRelH1[2].toFixed(1)} dB), H4 (+${stats.deltaRelH1[3].toFixed(1)} dB) & H8 (+${stats.deltaRelH1[7].toFixed(1)} dB) gewinnen massiv an Fülle.`;
         } else if (stats.fLo < 350) {
-          txt = `Gesangsregister (${stats.noteLo}–${stats.noteHi}): H2–H10 steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
+          txt = `Gesangsregister (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
         } else {
-          txt = `Diskant (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H6 (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft bis C8.`;
+          txt = `Diskant (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft (> 6 kHz ausgeklammert).`;
         }
       }
       document.querySelectorAll('.yka-diag-text').forEach(el => {

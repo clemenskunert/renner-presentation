@@ -2747,16 +2747,16 @@
           "zh": "绝对值 (dB)"
         },
         "s29_l_badge": {
-          "de": ">TEILTÖNE H₁–H₁₂",
-          "en": ">PARTIALS H₁–H₁₂",
-          "ja": ">倍音 H₁–H₁₂",
-          "zh": ">泛音 H₁–H₁₂"
+          "de": ">TEILTÖNE ≤ 6 KHZ",
+          "en": ">PARTIALS ≤ 6 KHZ",
+          "ja": ">倍音 ≤ 6 KHZ",
+          "zh": ">泛音 ≤ 6 KHZ"
         },
         "s29_l_title": {
-          "de": "Harmonische Teiltonverteilung",
-          "en": "Harmonic Partial Distribution",
-          "ja": "倍音エネルギー分布",
-          "zh": "谐波泛音分布"
+          "de": "Harmonische Teiltonverteilung (≤ 6.000 Hz)",
+          "en": "Harmonic Partial Distribution (≤ 6,000 Hz)",
+          "ja": "倍音エネルギー分布 (≤ 6,000 Hz)",
+          "zh": "谐波泛音分布 (≤ 6,000 Hz)"
         },
         "s29_pkpi1": {
           "de": "Abfall (H₁→H₈)",
@@ -2789,16 +2789,16 @@
           "zh": "辉煌与穿透"
         },
         "s29_r_badge": {
-          "de": ">24 HALBTÖNE",
-          "en": ">24 SEMITONES",
-          "ja": ">24半音解析",
-          "zh": ">24 半音分析"
+          "de": ">24 HALBTÖNE ≤ 6 KHZ",
+          "en": ">24 SEMITONES ≤ 6 KHZ",
+          "ja": ">24半音 ≤ 6 KHZ",
+          "zh": ">24 半音 ≤ 6 KHZ"
         },
         "s29_r_title": {
-          "de": "Oberton-Energie (H₂–H₈) pro Note",
-          "en": "Overtone Energy (H₂–H₈) per Note",
-          "ja": "ノート別倍音エネルギー (H₂–H₈)",
-          "zh": "逐音泛音能量 (H₂–H₈)"
+          "de": "Oberton-Energie pro Note (≤ 6.000 Hz)",
+          "en": "Overtone Energy per Note (≤ 6,000 Hz)",
+          "ja": "ノート別倍音エネルギー (≤ 6,000 Hz)",
+          "zh": "逐音泛音能量 (≤ 6,000 Hz)"
         },
         "s29_diag_badge": {
           "de": "✦ TEILTON-DIAGNOSE",
