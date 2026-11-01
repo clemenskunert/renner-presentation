@@ -36,7 +36,7 @@
 
   <div class="max-w-[1440px] mx-auto space-y-5">
 
-    <!-- TOP HEADER & LIVE AUDIO SIMULATOR BAR -->
+    <!-- TOP HEADER BAR -->
     <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 border-b border-[var(--border)] pb-4">
         <div>
@@ -51,39 +51,6 @@
             <span class="font-semibold">Teil 1 (0:00–5:17):</span> Original-Hammerköpfe vs.
             <span class="font-semibold text-amber-500">Teil 2 (5:18–11:42):</span> Mit Louis Renner Yamaha Kit
           </p>
-        </div>
-
-        <!-- INTERACTIVE WEB-AUDIO A/B SOUND SIMULATOR -->
-        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-3.5 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
-          <div class="space-y-1.5">
-            <div class="text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)] flex items-center gap-1.5">
-              <span>🎧 Gemessene 2-Oktaven-Teiltonverteilung hören (A/B Synth)</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <select id="synth-note" class="bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-lg px-2.5 py-1.5 text-xs font-semibold">
-                <option value="oct">Aktiver 2-Oktaven-Bereich (Zentrum)</option>
-                <option value="55">Tiefer Bass: A1 (55 Hz)</option>
-                <option value="110">Bass/Tenor: A2 (110 Hz)</option>
-                <option value="220">Mittellage: A3 (220 Hz)</option>
-                <option value="440">Gesangslage: A4 (440 Hz)</option>
-                <option value="880">Diskant: A5 (880 Hz)</option>
-                <option value="1760">Hoher Diskant: A6 (1760 Hz)</option>
-              </select>
-              <select id="synth-dyn" class="bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-lg px-2.5 py-1.5 text-xs font-semibold">
-                <option value="0.45">Dynamik: p</option>
-                <option value="0.75" selected>Dynamik: mf</option>
-                <option value="1.0">Dynamik: ff</option>
-              </select>
-            </div>
-          </div>
-          <div class="flex items-center gap-2">
-            <button id="btn-play-orig" class="px-3.5 py-2 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:opacity-90 text-[var(--foreground)] text-xs font-bold flex items-center gap-1.5 transition">
-              <span>🔈 Original (≤ 5:17)</span>
-            </button>
-            <button id="btn-play-kit" class="px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold flex items-center gap-1.5 shadow-md transition">
-              <span>🔊 Mit Yamaha Kit (≥ 5:18)</span>
-            </button>
-          </div>
         </div>
       </div>
 
@@ -434,7 +401,7 @@
             <span class="text-xs font-extrabold text-[var(--foreground)]">
               1C. Einzelton-Auflösung innerhalb des 2-Oktaven-Fensters (25 Halbtöne: Obertonenergie H2–H8 vs. Grundton H1)
             </span>
-            <span class="text-xs text-[var(--muted-foreground)]">Klicken Sie auf einen Halbton zum direkten Anhören (A/B)</span>
+            <span class="text-xs text-[var(--muted-foreground)]">Grau: Original (≤ 5:17) • Gold/Blau: Mit Renner Yamaha Kit (≥ 5:18)</span>
           </div>
           <div class="relative bg-slate-950/95 border border-slate-800 rounded-lg p-1.5">
             <canvas id="canvas-semitones" width="820" height="145"></canvas>
@@ -449,14 +416,6 @@
             <p id="diag-reg-text" class="text-[var(--muted-foreground)] leading-relaxed mt-1.5">
               In der kleinen und eingestrichenen Oktave (A2–A4, 110–440 Hz) liegen die ersten 8 Teiltöne direkt im empfindlichsten Hörbereich (220–3.520 Hz). Mit dem Louis Renner Yamaha Kit steigen der 2. bis 4. Teilton (Oktave, Duodezime, Doppeloktave) relativ zum Grundton um +1,6 bis +4,0 dB – das verleiht dem Tenor- und Mittelregister Fülle, Kern und klangliche Noblesse.
             </p>
-          </div>
-          <div class="pt-2.5 mt-2 border-t border-[var(--border)] flex items-center justify-between gap-2">
-            <button id="btn-play-oct-orig" class="flex-1 py-1.5 px-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] hover:opacity-90 font-bold text-center transition">
-              🔈 2-Okt.-Klang Original
-            </button>
-            <button id="btn-play-oct-kit" class="flex-1 py-1.5 px-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-center shadow transition">
-              🔊 2-Okt.-Klang Yamaha Kit
-            </button>
           </div>
         </div>
       </div>
@@ -1860,65 +1819,6 @@
       });
     }
 
-    // =========================================================================
-    // WEB AUDIO SYNTHESIZER USING EXACT MEASURED 2-OCTAVE PARTIALS H1..H12
-    // =========================================================================
-    let audioCtx = null;
-    function playPianoComparison(isYamahaKit, forceFreq = null) {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-      if (audioCtx.state === 'suspended') audioCtx.resume();
-
-      const stats = getCurrentWindowStats();
-      let f0 = forceFreq;
-      if (!f0) {
-        const selVal = document.getElementById('synth-note').value;
-        if (selVal === 'oct') {
-          f0 = Math.sqrt(customFMin * customFMax);
-        } else {
-          f0 = parseFloat(selVal);
-        }
-      }
-
-      const dyn = parseFloat(document.getElementById('synth-dyn').value);
-      const now = audioCtx.currentTime;
-      const duration = 2.7;
-
-      const masterGain = audioCtx.createGain();
-      masterGain.gain.setValueAtTime(0.001, now);
-      const attackTime = isYamahaKit ? 0.0055 : 0.012;
-      masterGain.gain.linearRampToValueAtTime(0.32 * dyn, now + attackTime);
-      masterGain.gain.exponentialRampToValueAtTime(0.0008, now + duration);
-      masterGain.connect(audioCtx.destination);
-
-      // Use the actual measured relative partial levels (H1..H12) of the active 2-octave window!
-      const relArr = isYamahaKit ? stats.kitRelH1 : stats.origRelH1;
-      for (let h = 1; h <= 12; h++) {
-        const fh = f0 * h * Math.sqrt(1 + 0.0002 * h * h);
-        if (fh > 14000) break;
-
-        // Combine measured partial distribution with natural acoustic scaling
-        const relDb = relArr[h - 1] - 3.5 * Math.log2(h);
-        const amp = Math.min(1.0, Math.pow(10, relDb / 20.0));
-        if (amp < 0.0005) continue;
-
-        const osc = audioCtx.createOscillator();
-        const hGain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(fh, now);
-
-        const hDecay = Math.max(0.22, duration / Math.pow(h, 0.52));
-        hGain.gain.setValueAtTime(amp * 0.45, now);
-        hGain.gain.exponentialRampToValueAtTime(0.0001, now + hDecay);
-
-        osc.connect(hGain);
-        hGain.connect(masterGain);
-        osc.start(now);
-        osc.stop(now + hDecay + 0.05);
-      }
-    }
-
     function renderAll() {
       drawPianoCanvas();
       drawSpectrumCanvas();
@@ -2035,20 +1935,6 @@
       }
     });
 
-    // Click on Semitones Canvas to play that specific note
-    const semiCanvas = document.getElementById('canvas-semitones');
-    semiCanvas.addEventListener('click', e => {
-      const r = semiCanvas.getBoundingClientRect();
-      const px = e.clientX - r.left;
-      const stats = getCurrentWindowStats();
-      const padL = 44, padR = 12;
-      const pw = r.width - padL - padR;
-      if (px >= padL && px <= padL + pw && stats.semitones.length > 0) {
-        const idx = Math.max(0, Math.min(stats.semitones.length - 1, Math.floor(((px - padL) / pw) * stats.semitones.length)));
-        playPianoComparison(true, stats.semitones[idx].f0);
-      }
-    });
-
     // Advantage cards
     document.querySelectorAll('.advantage-card').forEach(card => {
       card.addEventListener('click', () => {
@@ -2118,10 +2004,6 @@
     });
 
     document.getElementById('calc-freq-slider').addEventListener('input', updateFormulaCalculator);
-    document.getElementById('btn-play-orig').addEventListener('click', () => playPianoComparison(false));
-    document.getElementById('btn-play-kit').addEventListener('click', () => playPianoComparison(true));
-    document.getElementById('btn-play-oct-orig').addEventListener('click', () => playPianoComparison(false, Math.sqrt(customFMin * customFMax)));
-    document.getElementById('btn-play-oct-kit').addEventListener('click', () => playPianoComparison(true, Math.sqrt(customFMin * customFMax)));
 
     window.addEventListener('resize', renderAll);
     window.addEventListener('DOMContentLoaded', () => {
