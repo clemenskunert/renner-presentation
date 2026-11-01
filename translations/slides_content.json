@@ -2538,12 +2538,6 @@
           "ja": "1日で完結するフル導入（タイムスタンプ記録）",
           "zh": "一天内完成全套安装（时间戳实录）"
         },
-        "s28_c1_pill": {
-          "de": "⏱ 1 Arbeitstag vor Ort",
-          "en": "⏱ 1 Workday on Site",
-          "ja": "⏱ 現地作業1日",
-          "zh": "⏱ 现场1个工作日"
-        },
         "s28_c1_b1": {
           "de": "<strong>Taggleicher Umbau (10:00–18:00 Uhr):</strong> Kompletter Wechsel auf das vorkonfektionierte Renner Yamaha Kit direkt vor Ort in Indien.",
           "en": "<strong>Same-Day Conversion (10:00 AM–6:00 PM):</strong> Complete replacement with the pre-assembled Renner Yamaha Kit on site in India.",
@@ -2557,22 +2551,16 @@
           "zh": "<strong>即装即用高效流程：</strong>直接拧入原厂铝轨、对准弦列并完成精调，无需运回工坊。"
         },
         "s28_b2_badge": {
-          "de": ">PIANISTEN-FEEDBACK · KLANGBEWEIS",
-          "en": ">PIANIST FEEDBACK · ACOUSTIC PROOF",
-          "ja": ">ピアニスト評価 · 音響実証",
-          "zh": ">钢琴家反馈 · 音色实证"
+          "de": "⏱ 1 Arbeitstag vor Ort",
+          "en": "⏱ 1 Workday on Site",
+          "ja": "⏱ 現地作業1日",
+          "zh": "⏱ 现场1个工作日"
         },
         "s28_c2_title": {
           "de": "Pianistin Raaga: Klang & Spielgefühl im Test",
           "en": "Pianist Raaga: Tone & Touch in Action",
           "ja": "ピアニスト Raaga：音色とタッチの実演評価",
           "zh": "钢琴家 Raaga：音色与触键实测评价"
-        },
-        "s28_c2_pill": {
-          "de": "🎹 Künstler-Urteil",
-          "en": "🎹 Artist Verdict",
-          "ja": "🎹 演奏家レビュー",
-          "zh": "🎹 艺术家评价"
         },
         "s28_c2_b1": {
           "de": "<strong>Klangliche Verwandlung:</strong> Unmittelbar wärmerer, tragfähigerer Konzertton mit blühendem Diskant und sauberer Basstrennung.",
@@ -2585,6 +2573,18 @@
           "en": "<strong>Dynamics &amp; Repetition:</strong> Noticeably more responsive touch and effortless control from delicate pianissimo to fortissimo.",
           "ja": "<strong>ダイナミクス＆連打性：</strong>繊細なピアニッシモから力強いフォルティッシモまで、軽快な反応と自在なコントロールを実現。",
           "zh": "<strong>动态与复振：</strong>触键响应更加敏锐，从极弱音到极强音皆可轻松自如地控制。"
+        },
+        "s28_b3_badge": {
+          "de": ">PIANISTEN-FEEDBACK · KLANGBEWEIS",
+          "en": ">PIANIST FEEDBACK · ACOUSTIC PROOF",
+          "ja": ">ピアニスト評価 · 音響実証",
+          "zh": ">钢琴家反馈 · 音色实证"
+        },
+        "s28_b4_badge": {
+          "de": "🎹 Künstler-Urteil",
+          "en": "🎹 Artist Verdict",
+          "ja": "🎹 演奏家レビュー",
+          "zh": "🎹 艺术家评价"
         }
       }
     },
