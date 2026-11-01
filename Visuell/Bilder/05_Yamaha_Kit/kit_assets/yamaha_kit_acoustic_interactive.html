@@ -568,20 +568,32 @@
 
                 <div>
                   <div class="flex justify-between font-bold mb-0.5">
-                    <span>Frequenz f:</span>
+                    <span>Frequenz f (bis C8 = 4.300 Hz):</span>
                     <span id="calc-freq-label" class="text-amber-500 font-extrabold">3.500 Hz (A7)</span>
                   </div>
-                  <input id="calc-freq-slider" type="range" min="200" max="6000" step="50" value="3500" class="w-full cursor-pointer">
+                  <input id="calc-freq-slider" type="range" min="100" max="4300" step="25" value="3500" class="w-full cursor-pointer">
+                  <div class="flex justify-between text-[10px] text-[var(--muted-foreground)] mt-0.5">
+                    <span>100 Hz (G2)</span>
+                    <span>Max: 4.300 Hz (C8)</span>
+                  </div>
                 </div>
               </div>
 
-              <div class="pt-1.5 border-t border-[var(--border)] flex items-center justify-between">
-                <span class="font-bold text-[var(--muted-foreground)]">Slope-Gewinn @ f:</span>
-                <span id="calc-gain-db" class="font-extrabold text-emerald-500 text-sm">+3,26 dB (+112 % Leistung)</span>
+              <div class="space-y-1 pt-1.5 border-t border-[var(--border)]">
+                <div class="flex justify-between text-[11px]">
+                  <span class="text-[var(--muted-foreground)]">Höhenabfall Original:</span>
+                  <span id="calc-loss-orig" class="font-bold text-slate-400">−31,35 dB</span>
+                </div>
+                <div class="flex justify-between text-[11px]">
+                  <span class="text-[var(--muted-foreground)]">Höhenabfall Yamaha Kit:</span>
+                  <span id="calc-loss-kit" class="font-bold text-amber-500">−28,09 dB</span>
+                </div>
+                <div class="flex items-center justify-between pt-1 border-t border-[var(--border)]">
+                  <span class="font-bold text-[var(--foreground)]">Slope-Gewinn @ f:</span>
+                  <span id="calc-gain-db" class="font-extrabold text-emerald-500 text-sm">+3,26 dB (+112 % Leistung)</span>
+                </div>
               </div>
               <div class="hidden">
-                <span id="calc-loss-orig"></span>
-                <span id="calc-loss-kit"></span>
                 <span id="ro-time"></span>
               </div>
             </div>
@@ -1794,14 +1806,17 @@
     }
 
     function updateFormulaCalculator() {
-      const fHz = parseFloat(document.getElementById('calc-freq-slider').value);
+      const fHz = Math.min(4300, Math.max(100, parseFloat(document.getElementById('calc-freq-slider').value)));
       const fKhz = fHz / 1000.0;
       const lossOrig = -8.956 * fKhz;
       const lossKit = -8.026 * fKhz;
       const gainDb = lossKit - lossOrig;
       const powerPct = (Math.pow(10, gainDb / 10.0) - 1.0) * 100.0;
+      const noteLbl = fHz >= 4186 ? 'C8' : freqToNoteName(fHz);
 
-      document.getElementById('calc-freq-label').textContent = `${fHz} Hz (${freqToNoteName(fHz)})`;
+      document.getElementById('calc-freq-label').textContent = `${fHz} Hz (${fKhz.toFixed(2)} kHz • ${noteLbl})`;
+      document.getElementById('calc-loss-orig').textContent = `${lossOrig.toFixed(2)} dB`;
+      document.getElementById('calc-loss-kit').textContent = `${lossKit.toFixed(2)} dB`;
       document.getElementById('calc-gain-db').textContent = `+${gainDb.toFixed(2)} dB (+${Math.round(powerPct)} % Leistung)`;
     }
 
