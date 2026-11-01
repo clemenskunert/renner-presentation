@@ -887,628 +887,132 @@
           </div>
         </div>
       </section>
-      <!-- SLIDE 4: Interaktive Baudokumentation Meuselwitz (Harmonic Flying Light Point & Photo-Focus Timeline) -->
+      <!-- SLIDE 4: Chronologisches 3D-Diorama / Daumenkino & Drohnenflug Finale -->
       <section class="slide" data-slide="4">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung & Historie • Meuselwitz Transformation</div>
-            <h2 class="slide-title" id="build-main-title">Baudokumentation: Die Entstehung des neuen Werks</h2>
-            <div class="slide-subtitle" id="build-main-subtitle">Fotodokumentation der Meilensteine des Umbaus in Meuselwitz (11.2025 – 10.2026)</div>
+            <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung &amp; Historie • Meuselwitz Transformation</div>
+            <h2 class="slide-title" id="build-main-title" data-i18n="s4_title">Baudokumentation: Die Entstehung des neuen Werks</h2>
+            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s4_subtitle">Chronologisches Daumenkino im 3D-Diorama (11.2025 – 10.2026) &amp; anschließender Drohnenflug durch das Werk</div>
           </div>
 
-          <!-- Timeline Controls -->
+          <!-- Timeline & Flipbook Controls -->
           <div class="vox-timeline-header-controls">
-            <!-- Autoplay Video Mode Button -->
-            <button class="vox-play-btn" id="build-play-btn" title="Fotoreise als Video / Film abspielen">
+            <button class="vox-play-btn" id="build-play-btn" title="Daumenkino (47 Bilder) + Drohnenflug abspielen">
               <span class="vox-play-icon" id="build-play-icon">▶</span>
-              <span class="vox-play-label" id="build-play-label" data-i18n="build_play">Fotoreise abspielen</span>
+              <span class="vox-play-label" id="build-play-label" data-i18n="build_play">Daumenkino starten</span>
               <div class="vox-play-progress" id="build-play-progress"></div>
             </button>
 
-            <!-- Stepping Controls -->
+            <button class="vox-step-btn diorama-drone-quick-btn" id="build-drone-btn" title="Direkt zum Drohnenflug-Video springen">
+              🎬 <span data-i18n="s4_drone_btn">Drohnenflug</span>
+            </button>
+
             <div class="vox-nav-group">
-              <button class="vox-step-btn" id="build-prev-btn" disabled title="Nach links in die Vergangenheit">
+              <button class="vox-step-btn" id="build-prev-btn" title="Ein Bild zurück">
                 ← <span data-i18n="vox_past">Vergangenheit</span>
               </button>
-              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">✦ Fotoreise starten</span>
-              <button class="vox-step-btn highlight" id="build-next-btn" title="Nach rechts in die Zukunft">
-                <span id="build-next-label" data-i18n="vox_future">In die Zukunft</span> →
+              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">11.2025 • 01 / 47</span>
+              <button class="vox-step-btn highlight" id="build-next-btn" title="Zum Drohnenflug / Nächste Folie">
+                <span id="build-next-label" data-i18n="s4_drone_btn">Drohnenflug</span> →
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Central Timeline Container with Flying Light Sphere -->
-        <div class="tree-timeline-container is-dark-start" id="build-timeline-container">
-          
-          <!-- Full-Frame Canvas for Real Curved Comet Tail & Stardust Particles -->
-          <canvas class="comet-trail-canvas" id="build-trail-canvas"></canvas>
+        <!-- Central 3D Diorama Flipbook & Drone Stage -->
+        <div class="diorama-stage-container" id="build-timeline-container">
+          <div class="diorama-watermark-year" id="diorama-watermark">11.2025</div>
 
-          <!-- Flying Light Sphere Traveler ("Licht-Kugel mit harmonischer Welle") -->
-          <div class="flying-comet-traveler" id="build-comet-traveler">
-            <!-- Vertical Branching Ray -->
-            <div class="comet-branch-ray" id="build-branch-ray">
-              <div class="ray-light-shaft"></div>
-              <div class="ray-blooming-flare"></div>
-            </div>
-
-            <!-- Radiant Harmonic Light Sphere Head -->
-            <div class="comet-head-point" id="build-head-point" data-luminosity="0">
-              <div class="point-core-white"></div>
-              <div class="point-corona-ring"></div>
-              <div class="point-starburst-flare"></div>
-              <div class="point-birth-burst" id="build-birth-burst"></div>
-            </div>
-          </div>
-
-          <!-- Horizontal Tracking Viewport -->
-          <div class="tree-viewport" id="build-viewport">
-            <!-- Sliding Panorama Track -->
-            <div class="tree-pan-track" id="build-pan-track">
-          <!-- BUILD MILESTONE 0: 11.2025 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel active branch-up" data-milestone="0" id="build-milestone-0">
-            <div class="tree-watermark-year tree-watermark-month-year">11.2025</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Start Bauvorhaben: Entkernung">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">11.2025</div>
-                <div class="photo-card-step-badge">Bauphase 1 von 14</div>
+          <!-- 3D Diorama Arena (Left Wing, Center Flipbook Stack, Right Wing) -->
+          <div class="diorama-3d-arena">
+            <!-- Left Diorama Wing (Previous Frame) -->
+            <div class="diorama-wing left">
+              <div class="diorama-wing-card">
+                <div class="diorama-wing-label" data-i18n="s4_wing_prev">◀ Vorheriges Bild</div>
+                <img id="diorama-wing-left-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Vorheriges Bild">
               </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Start Bauvorhaben: Entkernung</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Freilegung der tragenden Hallenstrukturen im Bereich des künftigen Verwaltungs- und Empfangstrakts.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev" disabled title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
+            </div>
+
+            <!-- Center 3D Daumenkino (Flipbook) Stack -->
+            <div class="diorama-center-stack">
+              <div class="diorama-stack-card back-2">
+                <img id="diorama-back2-img" src="Visuell/Bilder/02_Umbau_und_Umzug/03_20251104_152550.jpg" alt="">
+              </div>
+              <div class="diorama-stack-card back-1">
+                <img id="diorama-back1-img" src="Visuell/Bilder/02_Umbau_und_Umzug/02_20251104_152516.jpg" alt="">
+              </div>
+
+              <!-- Active Front Flipbook Card -->
+              <div class="diorama-stack-card front">
+                <div class="diorama-photo-frame">
+                  <img id="diorama-main-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Baudokumentation Meuselwitz">
+
+                  <!-- Animated 3D Flipping Page Sheet -->
+                  <div class="diorama-flip-sheet" id="diorama-flip-sheet">
+                    <img id="diorama-flip-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="">
+                  </div>
+
+                  <div class="hero-corner-bracket top-left"></div>
+                  <div class="hero-corner-bracket top-right"></div>
+                  <div class="hero-corner-bracket bottom-left"></div>
+                  <div class="hero-corner-bracket bottom-right"></div>
+
+                  <div class="diorama-top-badges">
+                    <div class="diorama-date-badge" id="diorama-date-badge">📅 03.11.2025</div>
+                    <div class="diorama-phase-pill" id="diorama-phase-badge">Phase 1: Hallenvorbereitung &amp; Entkernung</div>
+                    <div class="diorama-frame-badge" id="diorama-frame-badge">Bild 01 / 47</div>
+                  </div>
+                </div>
+
+                <div class="diorama-caption-bar">
+                  <div class="photo-caption-dot"></div>
+                  <div class="diorama-caption-title" id="diorama-phase-title">Start Bauvorhaben: Entkernung</div>
+                  <span class="photo-caption-separator">•</span>
+                  <div class="diorama-caption-text" id="diorama-phase-caption">Freilegung der tragenden Hallenstrukturen im Bereich des künftigen Verwaltungs- und Empfangstrakts.</div>
                 </div>
               </div>
             </div>
-            </div>
 
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 1: Hallenvorbereitung & Entkernung</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
+            <!-- Right Diorama Wing (Next Frame) -->
+            <div class="diorama-wing right">
+              <div class="diorama-wing-card">
+                <div class="diorama-wing-label" data-i18n="s4_wing_next">Nächstes Bild ▶</div>
+                <img id="diorama-wing-right-img" src="Visuell/Bilder/02_Umbau_und_Umzug/02_20251104_152516.jpg" alt="Nächstes Bild">
+              </div>
             </div>
           </div>
-          <!-- BUILD MILESTONE 1: 12.2025 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="1" id="build-milestone-1">
-            <div class="tree-watermark-year tree-watermark-month-year">12.2025</div>
 
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 2: Entkernung Foyer & Baufeld</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/14_20251201_135805.jpg" alt="Entkernung des Foyers & Eingangsbereichs">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">12.2025</div>
-                <div class="photo-card-step-badge">Bauphase 2 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Entkernung des Foyers & Eingangsbereichs</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Blick vom Foyer in Richtung Filzproduktion: Freigeräumte Großflächen für die neue Manufaktur-Infrastruktur.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
+          <!-- Full-Stage Drone Flight Finale Overlay (starts automatically after Frame 47) -->
+          <div class="diorama-drone-stage" id="diorama-drone-stage">
+            <div class="diorama-drone-card">
+              <div class="diorama-drone-topbar">
+                <div class="diorama-drone-topbar-left">
+                  <span class="bento-badge" data-i18n="s4_b1_badge">&gt;DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)</span>
+                  <span class="diorama-drone-title" data-i18n="s4_drone_title">Das fertiggestellte Werk Meuselwitz im Drohnenflug</span>
                 </div>
+                <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s4_replay_btn">↺ Daumenkino wiederholen</button>
               </div>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 2: 01.2026 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-up" data-milestone="2" id="build-milestone-2">
-            <div class="tree-watermark-year tree-watermark-month-year">01.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/18_20260106_135356.jpg" alt="Medien- & Trinkwasserversorgung">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">01.2026</div>
-                <div class="photo-card-step-badge">Bauphase 3 von 14</div>
+              <div class="diorama-drone-video-wrap">
+                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/poster_drone_meuselwitz.jpg" controls playsinline preload="metadata"></video>
               </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Medien- & Trinkwasserversorgung</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Präzise Schachtarbeiten für Frisch- und Brauchwasserleitungen – unterbrechungsfrei bei laufender Produktion.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 3: Tiefbau & Medienversorgung</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 3: 02.2026 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="3" id="build-milestone-3">
-            <div class="tree-watermark-year tree-watermark-month-year">02.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 4: Klaviermechanik-Aufbau</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/23_20260227_074933.jpg" alt="Aufbau der Klaviermechanik-Fertigung">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">02.2026</div>
-                <div class="photo-card-step-badge">Bauphase 4 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Aufbau der Klaviermechanik-Fertigung</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Frühere Lagerflächen werden zur hochmodernen Fertigungsstraße für Klavier-Hebeglieder umgebaut.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 4: 03.2026 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-up" data-milestone="4" id="build-milestone-4">
-            <div class="tree-watermark-year tree-watermark-month-year">03.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/25_20260320_090128.jpg" alt="Intelligente Lagerlogistik & Lagerlifte">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">03.2026</div>
-                <div class="photo-card-step-badge">Bauphase 5 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Intelligente Lagerlogistik & Lagerlifte</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Maximale Flächeneffizienz: Installation moderner vertikaler Shuttle-Lagerlifte für zehntausende Bauteile.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 5: Moderne Lagerlogistik</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 5: 04.2026 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="5" id="build-milestone-5">
-            <div class="tree-watermark-year tree-watermark-month-year">04.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 6: Umzug Hammerkopffertigung</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/34_20260521_144701.jpg" alt="Umzug der Hammerkopf-Manufaktur">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">04.2026</div>
-                <div class="photo-card-step-badge">Bauphase 6 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Umzug der Hammerkopf-Manufaktur</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Das akustische Herzstück von Renner bezieht seinen neuen, klimastabilen Fertigungsbereich in Meuselwitz.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 6: 05.2026 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-up" data-milestone="6" id="build-milestone-6">
-            <div class="tree-watermark-year tree-watermark-month-year">05.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/27_20260428_083959.jpg" alt="Spezialfundament für die Filteranlage">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">05.2026</div>
-                <div class="photo-card-step-badge">Bauphase 7 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Spezialfundament für die Filteranlage</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Statische Hochpräzision: Fundamentierung für die 40 Tonnen schwere und 12 Meter hohe zentrale Absauganlage.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 7: Fundamente Absauganlage</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 7: 05.2026 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="7" id="build-milestone-7">
-            <div class="tree-watermark-year tree-watermark-month-year">05.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 8: Kranhub der Filtermodule</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <video class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/31_20260512_113224.mp4" autoplay loop muted playsinline></video>
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">05.2026</div>
-                <div class="photo-card-step-badge">Bauphase 8 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Anlieferung & Kranhub der Filtermodule</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Schwerlast-Logistik per 70-Tonnen-Autokran: Millimetergenaue Positionierung der tonnenschweren Filterkomponenten.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 8: 05.2026 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-up" data-milestone="8" id="build-milestone-8">
-            <div class="tree-watermark-year tree-watermark-month-year">05.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/33_20260513_120405.jpg" alt="Kranmontage des Filterturms">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">05.2026</div>
-                <div class="photo-card-step-badge">Bauphase 9 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Kranmontage des Filterturms</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Präzisionsmontage in luftiger Höhe: Das 12 Meter hohe Filterturm-Oberteil wird auf die schwingungsentkoppelte Stahlkonstruktion gesetzt.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 9: Kranmontage des Filterturms</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 9: 06.2026 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="9" id="build-milestone-9">
-            <div class="tree-watermark-year tree-watermark-month-year">06.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 10: Montage der Großfilteranlage</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/36_20260610_075535.jpg" alt="Montage der Großfilter- & Absauganlage">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">06.2026</div>
-                <div class="photo-card-step-badge">Bauphase 10 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Montage der Großfilter- & Absauganlage</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Mit 120.000 m³/h Luftleistung garantiert die neu errichtete Filteranlage staubfreie, hochpräzise Fertigungsprozesse.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 10: 07.2026 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-up" data-milestone="10" id="build-milestone-10">
-            <div class="tree-watermark-year tree-watermark-month-year">07.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/38_20260708_120853.jpg" alt="Absaugtrassen & Hallenverrohrung">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">07.2026</div>
-                <div class="photo-card-step-badge">Bauphase 11 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Absaugtrassen & Hallenverrohrung</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Installation der großdimensionierten Rohrtrassen zur lückenlosen Absaugung aller Holzbearbeitungsmaschinen.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 11: Hallenverrohrung & Trassenbau</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 11: 09.2026 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="11" id="build-milestone-11">
-            <div class="tree-watermark-year tree-watermark-month-year">09.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 12: Dachzentrale & Klimatechnik</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/42_20260909_094559.jpg" alt="Dachzentrale: Prozessluft & Klimatechnik">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">09.2026</div>
-                <div class="photo-card-step-badge">Bauphase 12 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Dachzentrale: Prozessluft & Klimatechnik</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Perfekte Klimastabilität: Garantierte 45–50 % relative Luftfeuchte und konstante Temperaturen – sommers wie winters.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 12: 09.2026 (Branch UP) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-up" data-milestone="12" id="build-milestone-12">
-            <div class="tree-watermark-year tree-watermark-month-year">09.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Meuselwitz_Umbau/44_20260915_133800.jpg" alt="Prozessluft- und Klimaanlage">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">09.2026</div>
-                <div class="photo-card-step-badge">Bauphase 13 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Prozessluft- und Klimaanlage</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Hocheffiziente Prozessluft- und Klimatechnik auf dem Werksdach: Höchste Klimastabilität für anspruchsvollste Holz- und Filzverarbeitung.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Weiter">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 13: Prozessluft- & Klimaanlage</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-          </div>
-          <!-- BUILD MILESTONE 13: 10.2026 (Branch DOWN) -->
-          <div class="tree-milestone-panel build-milestone-panel  branch-down" data-milestone="13" id="build-milestone-13">
-            <div class="tree-watermark-year tree-watermark-month-year">10.2026</div>
-
-            <!-- Top Slot -->
-            <div class="tree-slot top-slot">
-                          <div class="tree-counter-pill">
-              <span class="tree-counter-text">Phase 14: Kehlerei & Vollbetrieb Meuselwitz</span>
-              <span class="tree-counter-author">• Louis Renner Meuselwitz</span>
-            </div>
-            </div>
-
-            <!-- Center Spine Spacer -->
-            <div class="tree-slot spine-slot"></div>
-
-            <!-- Bottom Slot -->
-            <div class="tree-slot bottom-slot">
-                          <div class="tree-hero-card photo-focus-card">
-              <div class="photo-card-img-wrapper">
-                <img class="photo-card-img" src="Visuell/Bilder/02_Umbau_und_Umzug/48_20261009_081342.jpg" alt="Montage der Kehlerei & Vollendung">
-                <div class="hero-corner-bracket top-left"></div>
-                <div class="hero-corner-bracket top-right"></div>
-                <div class="hero-corner-bracket bottom-left"></div>
-                <div class="hero-corner-bracket bottom-right"></div>
-                <div class="photo-card-month-badge">10.2026</div>
-                <div class="photo-card-step-badge">Bauphase 14 von 14</div>
-              </div>
-              <div class="photo-caption-bar">
-                <div class="photo-caption-dot"></div>
-                <div class="photo-caption-title">Montage der Kehlerei & Vollendung</div>
-                <span class="photo-caption-separator">•</span>
-                <div class="photo-caption-text">Letzte Abteilung erfolgreich verlagert: Die traditionsreiche Kehlerei und die gesamte Holzfertigung produzieren nun in Meuselwitz.</div>
-                <div class="photo-caption-nav">
-                  <button class="photo-nav-btn prev" data-dir="prev"  title="Zurück">←</button>
-                  <button class="photo-nav-btn next" data-dir="next"  title="Nächste Folie">→</button>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
             </div>
           </div>
 
+          <!-- Bottom 47-Frame Chronological Scrubber + Drone Flight Finale Pill -->
+          <div class="diorama-scrubber-bar">
+            <div class="diorama-scrubber-track-wrap">
+              <div class="diorama-scrubber-fill" id="diorama-progress-fill"></div>
+              <div class="diorama-ticks-row">
+                <button class="diorama-tick is-month-start" data-frame="0" title="Bild 1 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">11.25</span></button><button class="diorama-tick " data-frame="1" title="Bild 2 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="2" title="Bild 3 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="3" title="Bild 4 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="4" title="Bild 5 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="5" title="Bild 6 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="6" title="Bild 7 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="7" title="Bild 8 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="8" title="Bild 9 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="9" title="Bild 10 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="10" title="Bild 11 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="11" title="Bild 12 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">12.25</span></button><button class="diorama-tick " data-frame="12" title="Bild 13 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="13" title="Bild 14 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="14" title="Bild 15 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="15" title="Bild 16 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="16" title="Bild 17 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="17" title="Bild 18 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">01.26</span></button><button class="diorama-tick " data-frame="18" title="Bild 19 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="19" title="Bild 20 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="20" title="Bild 21 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="21" title="Bild 22 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="22" title="Bild 23 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">02.26</span></button><button class="diorama-tick " data-frame="23" title="Bild 24 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="24" title="Bild 25 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">03.26</span></button><button class="diorama-tick " data-frame="25" title="Bild 26 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="26" title="Bild 27 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">04.26</span></button><button class="diorama-tick " data-frame="27" title="Bild 28 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="28" title="Bild 29 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">05.26</span></button><button class="diorama-tick " data-frame="29" title="Bild 30 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="30" title="Bild 31 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="31" title="Bild 32 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="32" title="Bild 33 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="33" title="Bild 34 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="34" title="Bild 35 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="35" title="Bild 36 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">06.26</span></button><button class="diorama-tick " data-frame="36" title="Bild 37 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="37" title="Bild 38 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">07.26</span></button><button class="diorama-tick " data-frame="38" title="Bild 39 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="39" title="Bild 40 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="40" title="Bild 41 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="41" title="Bild 42 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">09.26</span></button><button class="diorama-tick " data-frame="42" title="Bild 43 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="43" title="Bild 44 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="44" title="Bild 45 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="45" title="Bild 46 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="46" title="Bild 47 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">10.26</span></button>
+              </div>
+            </div>
+            <button class="diorama-drone-finale-pill" id="diorama-scrubber-drone" title="Drohnenflug durch das Werk Meuselwitz starten">
+              🎬 <span data-i18n="s4_drone_finale">Drohnenflug Finale</span>
+            </button>
+          </div>
         </div>
+
         <!-- Backward-compat hidden anchor for slide navigation hooks -->
         <div id="build-slide-body" style="display:none;"></div>
         <div class="slide-corner-watermark">
