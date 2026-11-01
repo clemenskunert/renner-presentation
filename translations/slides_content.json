@@ -2494,25 +2494,38 @@
     },
     "slide_28": {
       "slide_number": 28,
+      "chapter": 4,
+      "chapter_name": {
+        "de": "Teil 4: Yamaha Kit",
+        "en": "Part 4: Yamaha Kit",
+        "ja": "第4部：ヤマハキット",
+        "zh": "第4部分：雅马哈套件"
+      },
+      "category": {
+        "de": "Teil 4: Yamaha Kit • Praxisbeweis Indien (10/2026)",
+        "en": "Part 4: Yamaha Kit • Field Proof India (10/2026)",
+        "ja": "第4部：ヤマハキット • インド現地導入実証（2026年10月）",
+        "zh": "第4部分：雅马哈套件 • 印度现场安装实证 (2026年10月)"
+      },
+      "title": {
+        "de": "Einbau im Zeitraffer & Pianisten-Feedback vor Ort",
+        "en": "Time-Lapse Installation & Pianist Feedback on Site",
+        "ja": "タイムラプス導入映像＆ピアニストによる現地評価",
+        "zh": "延时摄影安装实录与钢琴家现场反馈"
+      },
+      "subtitle": {
+        "de": "Taggleicher Einbau des Louis Renner Yamaha Kits (10:00–18:00 Uhr) und unmittelbares Künstler-Urteil am Flügel",
+        "en": "Same-day installation of the Louis Renner Yamaha Kit (10:00 AM–6:00 PM) and immediate artist evaluation at the grand piano",
+        "ja": "ルイス・レンナー・ヤマハキットの即日導入（10:00〜18:00）とグランドピアノでの演奏家による直接評価",
+        "zh": "路易斯·雷纳雅马哈套件当日完成安装（10:00–18:00）及三角钢琴现场演奏评价"
+      },
+      "notes": {
+        "de": "Folie 28: Zeigen Sie links das Zeitraffer-Video des kompletten Einbaus in Indien (10:00 bis 18:00 Uhr) und rechts das unmittelbare Feedback der Pianistin Raaga am umgerüsteten Yamaha-Flügel.",
+        "en": "Slide 28: Show the time-lapse video of the complete installation in India (10:00 AM to 6:00 PM) on the left and pianist Raaga's immediate feedback at the converted Yamaha grand on the right.",
+        "ja": "スライド 28: 左側でインドでの導入タイムラプス（10:00〜18:00）、右側でピアニストRaagaによる導入直後の演奏とコメントを紹介します。",
+        "zh": "幻灯片 28：左侧展示印度现场全天安装延时摄影（10:00至18:00），右侧展示钢琴家Raaga在改装后雅马哈三角钢琴上的现场演奏与评价。"
+      },
       "elements": {
-        "s28_category": {
-          "de": "Teil 4: Yamaha Kit • Praxisbeweis Indien (10/2026)",
-          "en": "Part 4: Yamaha Kit • Field Proof India (10/2026)",
-          "ja": "第4部：ヤマハキット • インド現地導入実証（2026年10月）",
-          "zh": "第4部分：雅马哈套件 • 印度现场安装实证 (2026年10月)"
-        },
-        "s28_title": {
-          "de": "Einbau im Zeitraffer & Pianisten-Feedback vor Ort",
-          "en": "Time-Lapse Installation & Pianist Feedback on Site",
-          "ja": "タイムラプス導入映像＆ピアニストによる現地評価",
-          "zh": "延时摄影安装实录与钢琴家现场反馈"
-        },
-        "s28_subtitle": {
-          "de": "Taggleicher Einbau des Louis Renner Yamaha Kits (10:00–18:00 Uhr) und unmittelbares Künstler-Urteil am Flügel",
-          "en": "Same-day installation of the Louis Renner Yamaha Kit (10:00 AM–6:00 PM) and immediate artist evaluation at the grand piano",
-          "ja": "ルイス・レンナー・ヤマハキットの即日導入（10:00〜18:00）とグランドピアノでの演奏家による直接評価",
-          "zh": "路易斯·雷纳雅马哈套件当日完成安装（10:00–18:00）及三角钢琴现场演奏评价"
-        },
         "s28_b1_badge": {
           "de": ">ZEITRAFFER · 10:00 – 18:00 UHR",
           "en": ">TIME-LAPSE · 10:00 AM – 6:00 PM",
@@ -2572,17 +2585,29 @@
           "en": "<strong>Dynamics &amp; Repetition:</strong> Noticeably more responsive touch and effortless control from delicate pianissimo to fortissimo.",
           "ja": "<strong>ダイナミクス＆連打性：</strong>繊細なピアニッシモから力強いフォルティッシモまで、軽快な反応と自在なコントロールを実現。",
           "zh": "<strong>动态与复振：</strong>触键响应更加敏锐，从极弱音到极强音皆可轻松自如地控制。"
-        },
-        "s28_notes": {
-          "de": "Folie 28: Zeigen Sie links das Zeitraffer-Video des kompletten Einbaus in Indien (10:00 bis 18:00 Uhr) und rechts das unmittelbare Feedback der Pianistin Raaga am umgerüsteten Yamaha-Flügel.",
-          "en": "Slide 28: Show the time-lapse video of the complete installation in India (10:00 AM to 6:00 PM) on the left and pianist Raaga's immediate feedback at the converted Yamaha grand on the right.",
-          "ja": "スライド 28: 左側でインドでの導入タイムラプス（10:00〜18:00）、右側でピアニストRaagaによる導入直後の演奏とコメントを紹介します。",
-          "zh": "幻灯片 28：左侧展示印度现场全天安装延时摄影（10:00至18:00），右侧展示钢琴家Raaga在改装后雅马哈三角钢琴上的现场演奏与评价。"
         }
       }
     },
     "slide_29": {
       "slide_number": 29,
+      "category": {
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (1/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (1/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (1/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (1/4)"
+      },
+      "title": {
+        "de": "Leistungsdichtespektrum & 2-Oktaven-Filter",
+        "en": "Power Spectrum & 2-Octave Filter",
+        "ja": "パワースペクトル＆2オクターブフィルター",
+        "zh": "功率谱密度与 2 八度滤波器"
+      },
+      "subtitle": {
+        "de": "Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)",
+        "en": "Original Hammerheads (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)",
+        "ja": "オリジナル・ハンマー (0:00–5:17) 対 Louis Renner ヤマハ・キット (5:18–11:42)",
+        "zh": "原装弦槌 (0:00–5:17) 对比 Louis Renner 雅马哈套件 (5:18–11:42)"
+      },
       "elements": {
         "s29_tab1": {
           "de": "SPEKTRUM",
@@ -2722,10 +2747,34 @@
           "ja": "💡 鍵盤クリック、またはタブ02を選択。",
           "zh": "💡 点击键盘条或切换至标签 02。"
         }
+      },
+      "notes": {
+        "de": "Auf dieser ersten Analyse-Folie sehen wir das hochauflösende Leistungsdichtespektrum L(f) der 11:42-minütigen Vergleichsaufnahme (0:00–5:17 Original-Hammerköpfe vs. 5:18–11:42 Louis Renner Yamaha Kit). Über die 2-Oktaven-Buttons oder direkt auf der 88-Tasten-Klaviatur lässt sich jedes beliebige 2-Oktaven-Fenster eingrenzen.",
+        "en": "On this first analysis slide we examine the high-resolution Power Spectral Density L(f) of the 11:42-minute comparison recording (0:00–5:17 original hammerheads vs. 5:18–11:42 Louis Renner Yamaha Kit). Use the 2-octave buttons or click directly on the 88-key piano to isolate any 2-octave register.",
+        "ja": "この最初の解析スライドでは、11分42秒の比較録音（0:00–5:17 オリジナル・ハンマー対 5:18–11:42 Louis Renner ヤマハ・キット）の高分解能パワースペクトル密度 L(f) を確認できます。2オクターブボタンや88鍵盤バーで任意の2オクターブ音域を絞り込めます。",
+        "zh": "在第一张分析幻灯片中，我们展示了 11 分 42 秒对比录音（0:00–5:17 原装弦槌 vs. 5:18–11:42 Louis Renner 雅马哈套件）的高分辨率功率谱密度 L(f)。可通过 2 八度按钮或直接点击 88 键钢琴条锁定任意 2 八度音区。"
       }
     },
     "slide_30": {
       "slide_number": 30,
+      "category": {
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (2/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (2/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (2/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (2/4)"
+      },
+      "title": {
+        "de": "Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Analyse",
+        "en": "Partial Distribution (H₁–H₁₂) & 24 Semitones",
+        "ja": "倍音分布 (H₁–H₁₂) ＆ 24半音解析",
+        "zh": "泛音分布 (H₁–H₁₂) 与 24 半音分析"
+      },
+      "subtitle": {
+        "de": "Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz",
+        "en": "Overtone architecture per 2-octave window: More warmth and brilliance",
+        "ja": "2オクターブごとの倍音構造：温かさと輝きの向上",
+        "zh": "2 八度泛音架构：兼具温暖度与辉煌感"
+      },
       "elements": {
         "s30_tab1": {
           "de": "SPEKTRUM",
@@ -2889,10 +2938,34 @@
           "ja": "✦ 倍音診断",
           "zh": "✦ 泛音诊断"
         }
+      },
+      "notes": {
+        "de": "Folie 29 schlüsselt für jedes 2-Oktaven-Fenster die Teiltonreihe von H1 (Grundton) bis H12 auf. Links sehen wir den Vergleich der 12 Harmonischen (umschaltbar zwischen Relativ zu H1, Delta-Gewinn und Absolutpegel), rechts die chromatische Einzelton-Auflösung aller 24 Halbtöne des gewählten 2-Oktaven-Bereichs.",
+        "en": "Slide 29 breaks down the harmonic series from H1 (fundamental) to H12 for any selected 2-octave window. On the left is the 12-partial comparison (toggleable between Relative to H1, Delta Gain, and Absolute Level); on the right is the chromatic 24-semitone resolution.",
+        "ja": "スライド29では、選択した2オクターブ領域における基音（H1）から第12倍音（H12）までの倍音分布を解析します。左側は12倍音の比較グラフ、右側は24半音すべてのノート別倍音エネルギー（H2〜H8）です。",
+        "zh": "第 29 张幻灯片针对所选 2 八度窗口解析从基音 H1 到第 12 泛音 H12 的分布。左侧展示 12 个谐波泛音对比，右侧展示该 2 八度内全部 24 个半音的逐音泛音能量。"
       }
     },
     "slide_31": {
       "slide_number": 31,
+      "category": {
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (3/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (3/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (3/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (3/4)"
+      },
+      "title": {
+        "de": "Differenzkurve ΔL(f) & Die 4 Kernvorteile",
+        "en": "Difference Curve ΔL(f) & 4 Core Advantages",
+        "ja": "差分曲線 ΔL(f) ＆ 4大メリット",
+        "zh": "差值曲线 ΔL(f) 与四大核心优势"
+      },
+      "subtitle": {
+        "de": "Pegelgewinn ΔL(f) = Kit − Original über alle 5 Klavierregister",
+        "en": "Level gain ΔL(f) = Kit − Original across all 5 piano registers",
+        "ja": "全5音域のレベルゲイン ΔL(f) = Kit − Original",
+        "zh": "五大钢琴音区的电平增益 ΔL(f) = Kit − Original"
+      },
       "elements": {
         "s31_tab1": {
           "de": "SPEKTRUM",
@@ -3032,10 +3105,34 @@
           "ja": "倍音保持率が向上（−6.45 dB/kHz）し、打鍵応答性が高速化。",
           "zh": "泛音更丰富（−6.45 dB/kHz），触键瞬态响应更敏捷。"
         }
+      },
+      "notes": {
+        "de": "Folie 30 zeigt die direkte Differenzkurve ΔL(f) = L_Kit(f) − L_Original(f) über die fünf akustischen Klavierregister sowie die 4 quantifizierten Hauptvorteile: +2,53 dB (+79 % Energie) im Gesangsregister, +1,87 dB (+54 % Energie) im Brillanzband, −3,28 dB Entmulmung im Bass und ein um +0,93 dB/kHz flacherer Spectral Slope.",
+        "en": "Slide 30 presents the direct difference curve ΔL(f) = L_Kit(f) − L_Original(f) across the five acoustic piano registers alongside the 4 quantified core advantages: +2.53 dB (+79% energy) in the singing register, +1.87 dB (+54% energy) in treble brilliance, −3.28 dB bass de-mudding, and a +0.93 dB/kHz flatter spectral slope.",
+        "ja": "スライド30では、5つのピアノ音域にわたる差分曲線 ΔL(f) と4つの主要メリットを示します。歌唱帯域で+2.53 dB（+79%）、高音ブリリアンスで+1.87 dB（+54%）、低域のこもり解消（−3.28 dB）、そしてスペクトルスロープの+0.93 dB/kHz改善です。",
+        "zh": "第 30 张幻灯片展示了横跨五大钢琴声学音区的直接差值曲线 ΔL(f) 以及四大核心量化优势：歌唱音区提升 +2.53 dB（+79% 能量）、高音辉煌区提升 +1.87 dB（+54% 能量）、低音去浑浊 −3.28 dB，以及频谱斜率平缓 +0.93 dB/kHz。"
       }
     },
     "slide_32": {
       "slide_number": 32,
+      "category": {
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (4/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (4/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (4/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (4/4)"
+      },
+      "title": {
+        "de": "Amplituden-Dynamik & Spectral-Slope-Rechner (bis C8)",
+        "en": "Amplitude Dynamics & Spectral Slope Calculator (to C8)",
+        "ja": "振幅ダイナミクス＆スロープ計算機 (最大 C8)",
+        "zh": "振幅动态与频谱斜率计算器 (至 C8)"
+      },
+      "subtitle": {
+        "de": "Impulstreue (Crest-Faktor) und Oberton-Erhalt bis C8 = 4.300 Hz",
+        "en": "Impulse fidelity (crest factor) and overtone retention up to C8 = 4,300 Hz",
+        "ja": "トランジェント応答性と最高音 C8 = 4,300 Hz までの倍音保持",
+        "zh": "瞬态脉冲保真度与最高至 C8 = 4,300 Hz 的泛音保持"
+      },
       "elements": {
         "s32_tab1": {
           "de": "SPEKTRUM",
@@ -3151,10 +3248,41 @@
           "ja": "純ゲイン",
           "zh": "净增益"
         }
+      },
+      "notes": {
+        "de": "Auf Folie 31 betrachten wir links den Zeitverlauf (0:00–11:42) mit einer Steigerung des Transienten-Crest-Faktors um +0,42 dB bei identischem Durchschnitts-RMS. Rechts zeigt die Punktewolke den Spectral Slope über der Anschlagsdynamik: Über alle Lautstärken von pp bis ff liegt die Regressionsgerade des Renner Kits parallel über dem Original. Mit dem Live-Rechner (begrenzt auf die höchste Klaviertaste C8 = 4.186 Hz / max. 4.300 Hz) lässt sich der exakte Obertongewinn für jede Zielfrequenz berechnen.",
+        "en": "On Slide 31, the left chart shows the time-domain envelope (0:00–11:42) with a +0.42 dB increase in transient crest factor at identical mean RMS. On the right, the scatter plot maps spectral slope against playing dynamics: across all dynamic levels from pp to ff, the Renner Kit regression line lies consistently above the original. The live calculator (capped at the highest piano key C8 = 4,186 Hz / max 4,300 Hz) computes the exact overtone gain for any frequency.",
+        "ja": "スライド31の左側は時間領域エンベロープ（0:00–11:42）で、同一RMS下でクレストファクターが+0.42 dB向上しています。右側は打鍵ダイナミクスに対するスペクトルスロープの散布図と、最高音C8（4,186 Hz / 最大4,300 Hz）まで対応したライブ計算機です。",
+        "zh": "第 31 张幻灯片左侧展示时域振幅包络（0:00–11:42），在相同平均 RMS 下瞬态波峰因数提升了 +0.42 dB。右侧展示随触键力度变化的频谱斜率散点回归图，以及上限设为钢琴最高音 C8（4,186 Hz / 最大 4,300 Hz）的实时频谱斜率计算器。"
       }
     },
     "slide_33": {
       "slide_number": 33,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Geometrie & Keile",
+        "en": "Part 5: Voicing • Geometrie & Keile",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Das Uhren-Modell: Die 4 dynamischen Keile",
+        "en": "The Clock Model: The 4 Dynamic Wedges",
+        "ja": "時計盤モデル：4つのダイナミック・ウェッジ（楔領域）",
+        "zh": "表盘时钟声学模型：弦槌四大力度动态弹性楔区（ff, f, p, pp）"
+      },
+      "subtitle": {
+        "de": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen",
+        "en": "Structured hammerhead zoning by register and dynamic objectives",
+        "ja": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen",
+        "zh": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen"
+      },
       "elements": {
         "s33_b1_badge": {
           "de": "FORTISSIMO (ff)",
@@ -3258,10 +3386,41 @@
           "ja": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
           "zh": "mit den 4 dynamischen Keilen (ff, f, p, pp)"
         }
+      },
+      "notes": {
+        "de": "Folie 38: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 38: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 38: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 58 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_34": {
       "slide_number": 34,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Vorintonation",
+        "en": "Part 5: Voicing • Vorintonation",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil",
+        "en": "Pre-Voicing (Pre-Needling): Deep 90° Stitches in Blue Wedge",
+        "ja": "予備整音（初期針入れ）：ブルーウェッジへの深層90度針入れ",
+        "zh": "初期预整音（Pre-Needling）：蓝色极强音楔区深度垂直扎针释放死应力"
+      },
+      "subtitle": {
+        "de": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil",
+        "en": "Relieving factory pre-tension and channeling elastic energy into the forte wedge",
+        "ja": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil",
+        "zh": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil"
+      },
       "elements": {
         "s34_bullet_1": {
           "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
@@ -3311,10 +3470,41 @@
           "ja": "下整音（プリ・ヴォイシング）は、新品および再フェルト交換ハンマーにおける最重要工程です：",
           "zh": "预整音是全新出厂或重新包毡弦槌建立健康弹性基座的最核心声学工序："
         }
+      },
+      "notes": {
+        "de": "Folie 39: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 39: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 39: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 59 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_35": {
       "slide_number": 35,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Werkzeug & Technik",
+        "en": "Part 5: Voicing • Werkzeug & Technik",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Nadelstich-Vorgaben & Intonierwerkzeuge",
+        "en": "Needle Insertion Standards & Voicing Tools",
+        "ja": "針入れの深さ・角度基準と専用整音工具",
+        "zh": "进针深度、角度与专业排针/单针整音工具规范"
+      },
+      "subtitle": {
+        "de": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant",
+        "en": "Press, do not chop – Exact stitch counts for bass, mid-range, and treble",
+        "ja": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant",
+        "zh": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant"
+      },
       "elements": {
         "s35_bullet_1": {
           "de": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
@@ -3352,10 +3542,41 @@
           "ja": "精密針",
           "zh": "进口精密排针"
         }
+      },
+      "notes": {
+        "de": "Folie 40: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 40: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 40: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 60 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_36": {
       "slide_number": 36,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Saitenlagerung",
+        "en": "Part 5: Voicing • Saitenlagerung",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen",
+        "en": "String Preparation: Hitch Pins, Bridge Pins & Leveling",
+        "ja": "弦の事前調整：ヒッチピン・駒ピンの着座と3弦フラット化",
+        "zh": "弦列声学校准：弦枕销敲实、挂弦销紧固与同音弦三弦同高平整"
+      },
+      "subtitle": {
+        "de": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“",
+        "en": "“The finest hammerhead can only reveal what is programmed into the instrument!”",
+        "ja": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“",
+        "zh": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“"
+      },
       "elements": {
         "s36_caption_1": {
           "de": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
@@ -3393,10 +3614,41 @@
           "ja": "<strong>同音の純度調整：</strong> 最初の針刺し前に、ユニゾンが完全に澄み切りノイズのない状態に調弦。",
           "zh": "<strong>同音同轴纯净度：</strong> 首次刺针整音前，三根同音弦必须调校至完全纯净、绝无杂音。"
         }
+      },
+      "notes": {
+        "de": "Folie 41: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 41: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 41: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 61 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_37": {
       "slide_number": 37,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Ausrichtung",
+        "en": "Part 5: Voicing • Ausrichtung",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Anschlagspunkt im Diskant & Geradheitsprüfung",
+        "en": "Treble Strike Point Alignment & Hammer Straightness",
+        "ja": "最高音部の打弦点調整とハンマー直立の完全一致",
+        "zh": "高音区击弦点最佳纵深定位与弦槌三弦垂直平行对准"
+      },
+      "subtitle": {
+        "de": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens",
+        "en": "Optimizing notes 69–88 by micro-shifting the keyframe strike line",
+        "ja": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens",
+        "zh": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens"
+      },
       "elements": {
         "s37_bullet_1": {
           "de": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
@@ -3434,10 +3686,41 @@
           "ja": "高音域の輝き",
           "zh": "高音晶莹通透"
         }
+      },
+      "notes": {
+        "de": "Folie 42: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 42: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 42: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 62 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_38": {
       "slide_number": 38,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Kronenabzug",
+        "en": "Part 5: Voicing • Kronenabzug",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief",
+        "en": "Crown Filing: Concave, Correct or Tilted",
+        "ja": "ハンマークラウンのサンディング（整型）：凹面・正常・傾き",
+        "zh": "槌顶打磨整形（Filing）：凹陷、偏斜与饱满平滑弧度的正确砂光"
+      },
+      "subtitle": {
+        "de": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile",
+        "en": "Adapting the strike crown to the 3-string unison using a fine hammer file",
+        "ja": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile",
+        "zh": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile"
+      },
       "elements": {
         "s38_c1_title": {
           "de": "Hohlkehle (Hollow Crown)",
@@ -3499,10 +3782,41 @@
           "ja": ">整形サンドファイル",
           "zh": ">弧度打磨修整板"
         }
+      },
+      "notes": {
+        "de": "Folie 43: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 43: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 43: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 63 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_39": {
       "slide_number": 39,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Feinabstimmung",
+        "en": "Part 5: Voicing • Feinabstimmung",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Zwischen- & Feinintonation: Die 2-mm-Kronenstiche",
+        "en": "Intermediate & Fine Voicing: The 2 mm Limit at the Crown",
+        "ja": "中間整音・仕上げ微細整音：クラウン直下2mmの厳守境界",
+        "zh": "过渡微调与精细整音：槌顶击弦点表层严控2mm以内浅挑原则"
+      },
+      "subtitle": {
+        "de": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen",
+        "en": "Chromatic listening and delicate evening-out of individual notes",
+        "ja": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen",
+        "zh": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen"
+      },
       "elements": {
         "s39_bullet_1": {
           "de": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
@@ -3546,10 +3860,41 @@
           "ja": "色彩パレット",
           "zh": "全音域色彩平衡"
         }
+      },
+      "notes": {
+        "de": "Folie 44: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 44: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 44: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 64 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
     "slide_40": {
       "slide_number": 40,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
+        "de": "Teil 5: Intonation • Una Corda & Dialog",
+        "en": "Part 5: Voicing • Una Corda & Dialog",
+        "ja": "第7部：ヴォイシング（整音）の極意",
+        "zh": "第七部分：钢琴整音大师秘籍"
+      },
+      "title": {
+        "de": "Verschiebungsintonation & Die Renner Academy",
+        "en": "Shift Pedal Voicing (Una Corda) & Renner Technical Dialogue",
+        "ja": "シフトペダル（ウナ・コルダ）の整音＆レンナー技術対話",
+        "zh": "弱音踏板（Una Corda）专属整音技巧与德国雷诺全球技术支持对话"
+      },
+      "subtitle": {
+        "de": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog",
+        "en": "Voicing the una corda pedal, eliminating noise & welcome to the Renner dialogue",
+        "ja": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog",
+        "zh": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog"
+      },
       "elements": {
         "s40_b1_badge": {
           "de": "UNA CORDA PRAXIS",
@@ -3611,6 +3956,12 @@
           "ja": "マイスターのアドバイス：",
           "zh": "大师级专家心得："
         }
+      },
+      "notes": {
+        "de": "Folie 45: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
+        "en": "Slide 45: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
+        "ja": "スライド 45: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
+        "zh": "第 65 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     }
   }
