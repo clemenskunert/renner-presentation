@@ -8196,9 +8196,30 @@ body::before {
   object-fit: cover;
   object-position: center center;
   display: block;
+  transition: filter 0.16s ease, transform 0.16s ease;
 }
 
-/* 3D Flipbook Page Peel / Flip Sheet */
+.diorama-photo-frame[data-bloom="1"] > #diorama-main-img {
+  filter: brightness(1.18) contrast(1.06);
+  transform: scale(1.01);
+}
+
+.diorama-photo-frame[data-bloom="2"] > #diorama-main-img {
+  filter: brightness(1.38) contrast(1.08);
+  transform: scale(1.02);
+}
+
+.diorama-photo-frame[data-bloom="3"] > #diorama-main-img {
+  filter: brightness(1.68) contrast(1.10);
+  transform: scale(1.03);
+}
+
+.diorama-photo-frame[data-bloom="4"] > #diorama-main-img {
+  filter: brightness(2.15) contrast(1.12);
+  transform: scale(1.045);
+}
+
+/* 3D Flipbook Page Peel / Flip Sheet & Luminous Cross-Dissolve */
 .diorama-flip-sheet {
   position: absolute;
   inset: 0;
@@ -8206,7 +8227,7 @@ body::before {
   pointer-events: none;
   opacity: 0;
   transform-origin: bottom center;
-  will-change: transform, opacity;
+  will-change: transform, opacity, filter;
 }
 
 .diorama-flip-sheet img {
@@ -8218,7 +8239,12 @@ body::before {
 }
 
 .diorama-flip-sheet.is-flipping {
-  animation: dioramaPageFlip 0.15s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
+  animation: dioramaPageFlip 0.22s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
+}
+
+.diorama-flip-sheet.is-luminous-blend {
+  mix-blend-mode: screen;
+  animation: dioramaLuminousBlend 0.26s ease-out forwards;
 }
 
 @keyframes dioramaPageFlip {
@@ -8232,6 +8258,64 @@ body::before {
     transform: rotateX(-76deg) translateY(14px) scale(0.96);
     filter: brightness(0.45);
   }
+}
+
+@keyframes dioramaLuminousBlend {
+  0% {
+    opacity: 0.95;
+    transform: scale(1);
+    filter: brightness(1.45) contrast(1.08);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.02);
+    filter: brightness(1.95) blur(1.5px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+    filter: brightness(2.4) blur(3px);
+  }
+}
+
+/* Full-Stage Luminous White-Gold Bloom Overlay (ramps up on last 4 images, then dissolves directly into Drone Flight) */
+.diorama-bright-flash {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 48%, #ffffff 0%, rgba(255, 250, 232, 0.96) 45%, rgba(241, 223, 176, 0.88) 100%);
+  mix-blend-mode: screen;
+  transition: opacity 0.18s ease-out;
+}
+
+.diorama-bright-flash[data-bloom="1"] {
+  opacity: 0.18;
+}
+
+.diorama-bright-flash[data-bloom="2"] {
+  opacity: 0.38;
+}
+
+.diorama-bright-flash[data-bloom="3"] {
+  opacity: 0.65;
+}
+
+.diorama-bright-flash[data-bloom="4"] {
+  opacity: 0.88;
+}
+
+.diorama-bright-flash[data-bloom="peak"] {
+  mix-blend-mode: normal;
+  opacity: 0.98;
+  transition: opacity 0.08s ease-in;
+}
+
+.diorama-bright-flash[data-bloom="dissolve"] {
+  mix-blend-mode: normal;
+  opacity: 0;
+  transition: opacity 0.72s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Top Overlay Badges on Active Frame */
@@ -8431,7 +8515,7 @@ body::before {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(47, 1fr);
+  grid-template-columns: repeat(46, 1fr);
   align-items: center;
 }
 
@@ -8460,6 +8544,12 @@ body::before {
   height: 13px;
   width: 2.5px;
   background: rgba(200, 163, 86, 0.65);
+}
+
+.diorama-tick.is-final-four .diorama-tick-bar {
+  height: 12px;
+  background: rgba(255, 238, 186, 0.72);
+  box-shadow: 0 0 5px rgba(255, 238, 186, 0.45);
 }
 
 .diorama-tick.is-passed .diorama-tick-bar {

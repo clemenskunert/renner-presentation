@@ -93,7 +93,7 @@ class RennerTransformationJourney {
       }
     ];
 
-    // All 47 chronological images (01_20251103 .. 48_20261009)
+    // All 46 chronological images (01_20251103 .. 46_20260924) — every image in the folder except the last one (48_20261009)
     const rawFiles = [
       ['01_20251103_152224.jpg', '03.11.2025', '11.2025', 0],
       ['02_20251104_152516.jpg', '04.11.2025', '11.2025', 0],
@@ -139,9 +139,8 @@ class RennerTransformationJourney {
       ['42_20260909_094559.jpg', '09.09.2026', '09.2026', 11],
       ['43_20260915_112232.jpg', '15.09.2026', '09.2026', 12],
       ['44_20260915_133800.jpg', '15.09.2026', '09.2026', 12],
-      ['45_20260924_104802.jpg', '24.09.2026', '09.2026', 12],
-      ['46_20260924_140257.jpg', '24.09.2026', '09.2026', 12],
-      ['48_20261009_081342.jpg', '09.10.2026', '10.2026', 13]
+      ['45_20260924_104802.jpg', '24.09.2026', '09.2026', 13],
+      ['46_20260924_140257.jpg', '24.09.2026', '09.2026', 13]
     ];
 
     this.frames = rawFiles.map(([file, dateStr, monthYear, phaseIdx], idx) => ({
@@ -273,15 +272,41 @@ class RennerTransformationJourney {
     const phaseObj = this.phases[cur.phaseIdx] || this.phases[0];
     const lang = this.currentLang;
 
-    // 1. Trigger 3D Daumenkino flip animation on outgoing sheet
+    // Check if we are in the final 4 accelerating images (indices 42, 43, 44, 45)
+    const isFinalFour = clamped >= this.totalFrames - 4;
+    const finalFourStep = isFinalFour ? (clamped - (this.totalFrames - 4) + 1) : 0; // 1, 2, 3, 4
+
+    const photoFrame = document.getElementById('diorama-photo-frame');
+    if (photoFrame) {
+      if (isFinalFour && this.isPlayingFlipbook) {
+        photoFrame.setAttribute('data-bloom', String(finalFourStep));
+      } else {
+        photoFrame.removeAttribute('data-bloom');
+      }
+    }
+
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) {
+      if (isFinalFour && this.isPlayingFlipbook) {
+        brightFlash.setAttribute('data-bloom', String(finalFourStep));
+      } else if (!this.inDroneMode) {
+        brightFlash.removeAttribute('data-bloom');
+      }
+    }
+
+    // 1. Trigger 3D Daumenkino flip OR Luminous Cross-Dissolve on outgoing sheet
     const flipSheet = document.getElementById('diorama-flip-sheet');
     const flipImg = document.getElementById('diorama-flip-img');
     if (flipSheet && flipImg && animateFlip && prevIdx !== clamped) {
       const outgoing = this.frames[prevIdx] || prev;
       flipImg.src = outgoing.src;
-      flipSheet.classList.remove('is-flipping');
+      flipSheet.classList.remove('is-flipping', 'is-luminous-blend');
       void flipSheet.offsetWidth;
-      flipSheet.classList.add('is-flipping');
+      if (isFinalFour) {
+        flipSheet.classList.add('is-luminous-blend');
+      } else {
+        flipSheet.classList.add('is-flipping');
+      }
     }
 
     // 2. Update Main Active Image & 3D Diorama Stack / Wings
@@ -352,6 +377,9 @@ class RennerTransformationJourney {
       container.classList.remove('is-dark-start', 'is-drone-mode');
     }
 
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) brightFlash.removeAttribute('data-bloom');
+
     const droneStage = document.getElementById('diorama-drone-stage');
     if (droneStage) droneStage.classList.remove('is-active');
 
@@ -371,10 +399,18 @@ class RennerTransformationJourney {
   scheduleNextFlip() {
     if (!this.isPlayingFlipbook) return;
 
-    // Dynamic Daumenkino cadence: ~155ms per photo (~7.3 seconds for all 47 photos)
-    let delay = 155;
-    if (this.currentFrame < 2) delay = 210;
-    else if (this.currentFrame >= this.totalFrames - 2) delay = 240;
+    // 0.5 seconds (500ms) per image for images 1..42, then accelerating on the last 4 images (indices 42, 43, 44, 45)
+    let delay = 500;
+    const remainingFromStartOfFinalFour = this.currentFrame - (this.totalFrames - 4);
+    if (remainingFromStartOfFinalFour === 0) {
+      delay = 310; // 4th from last (#43)
+    } else if (remainingFromStartOfFinalFour === 1) {
+      delay = 210; // 3rd from last (#44)
+    } else if (remainingFromStartOfFinalFour === 2) {
+      delay = 140; // 2nd from last (#45)
+    } else if (remainingFromStartOfFinalFour >= 3) {
+      delay = 100; // Final image (#46) -> immediate luminous flash into Drone Flight!
+    }
 
     this.flipTimer = setTimeout(() => {
       if (!this.isPlayingFlipbook) return;
@@ -382,11 +418,9 @@ class RennerTransformationJourney {
         this.renderFrame(this.currentFrame + 1, true);
         this.scheduleNextFlip();
       } else {
-        // Reached the final chronological photo (#47, 10.2026) -> automatically launch Drone Flight!
+        // Reached the 4th final image (#46) -> emerge directly from the bright flash into the Drone Flight!
         this.isPlayingFlipbook = false;
-        this.flipTimer = setTimeout(() => {
-          this.startDroneVideo();
-        }, 420);
+        this.startDroneVideo(true);
       }
     }, delay);
   }
@@ -404,10 +438,29 @@ class RennerTransformationJourney {
     }
   }
 
-  startDroneVideo() {
+  startDroneVideo(fromBrightFlash = false) {
     this.pauseFlipbook();
     this.isStarted = true;
     this.inDroneMode = true;
+
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) {
+      if (fromBrightFlash) {
+        brightFlash.setAttribute('data-bloom', 'peak');
+        setTimeout(() => {
+          if (brightFlash.getAttribute('data-bloom') === 'peak') {
+            brightFlash.setAttribute('data-bloom', 'dissolve');
+          }
+        }, 90);
+        setTimeout(() => {
+          if (brightFlash.getAttribute('data-bloom') === 'dissolve') {
+            brightFlash.removeAttribute('data-bloom');
+          }
+        }, 850);
+      } else {
+        brightFlash.removeAttribute('data-bloom');
+      }
+    }
 
     const container = document.getElementById('build-timeline-container');
     if (container) {
@@ -450,6 +503,12 @@ class RennerTransformationJourney {
     this.inDroneMode = false;
     const container = document.getElementById('build-timeline-container');
     if (container) container.classList.remove('is-drone-mode');
+
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) brightFlash.removeAttribute('data-bloom');
+
+    const photoFrame = document.getElementById('diorama-photo-frame');
+    if (photoFrame) photoFrame.removeAttribute('data-bloom');
 
     const droneStage = document.getElementById('diorama-drone-stage');
     if (droneStage) droneStage.classList.remove('is-active');

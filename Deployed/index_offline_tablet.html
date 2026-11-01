@@ -8218,9 +8218,30 @@ body::before {
   object-fit: cover;
   object-position: center center;
   display: block;
+  transition: filter 0.16s ease, transform 0.16s ease;
 }
 
-/* 3D Flipbook Page Peel / Flip Sheet */
+.diorama-photo-frame[data-bloom="1"] > #diorama-main-img {
+  filter: brightness(1.18) contrast(1.06);
+  transform: scale(1.01);
+}
+
+.diorama-photo-frame[data-bloom="2"] > #diorama-main-img {
+  filter: brightness(1.38) contrast(1.08);
+  transform: scale(1.02);
+}
+
+.diorama-photo-frame[data-bloom="3"] > #diorama-main-img {
+  filter: brightness(1.68) contrast(1.10);
+  transform: scale(1.03);
+}
+
+.diorama-photo-frame[data-bloom="4"] > #diorama-main-img {
+  filter: brightness(2.15) contrast(1.12);
+  transform: scale(1.045);
+}
+
+/* 3D Flipbook Page Peel / Flip Sheet & Luminous Cross-Dissolve */
 .diorama-flip-sheet {
   position: absolute;
   inset: 0;
@@ -8228,7 +8249,7 @@ body::before {
   pointer-events: none;
   opacity: 0;
   transform-origin: bottom center;
-  will-change: transform, opacity;
+  will-change: transform, opacity, filter;
 }
 
 .diorama-flip-sheet img {
@@ -8240,7 +8261,12 @@ body::before {
 }
 
 .diorama-flip-sheet.is-flipping {
-  animation: dioramaPageFlip 0.15s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
+  animation: dioramaPageFlip 0.22s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
+}
+
+.diorama-flip-sheet.is-luminous-blend {
+  mix-blend-mode: screen;
+  animation: dioramaLuminousBlend 0.26s ease-out forwards;
 }
 
 @keyframes dioramaPageFlip {
@@ -8254,6 +8280,64 @@ body::before {
     transform: rotateX(-76deg) translateY(14px) scale(0.96);
     filter: brightness(0.45);
   }
+}
+
+@keyframes dioramaLuminousBlend {
+  0% {
+    opacity: 0.95;
+    transform: scale(1);
+    filter: brightness(1.45) contrast(1.08);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.02);
+    filter: brightness(1.95) blur(1.5px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+    filter: brightness(2.4) blur(3px);
+  }
+}
+
+/* Full-Stage Luminous White-Gold Bloom Overlay (ramps up on last 4 images, then dissolves directly into Drone Flight) */
+.diorama-bright-flash {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 48%, #ffffff 0%, rgba(255, 250, 232, 0.96) 45%, rgba(241, 223, 176, 0.88) 100%);
+  mix-blend-mode: screen;
+  transition: opacity 0.18s ease-out;
+}
+
+.diorama-bright-flash[data-bloom="1"] {
+  opacity: 0.18;
+}
+
+.diorama-bright-flash[data-bloom="2"] {
+  opacity: 0.38;
+}
+
+.diorama-bright-flash[data-bloom="3"] {
+  opacity: 0.65;
+}
+
+.diorama-bright-flash[data-bloom="4"] {
+  opacity: 0.88;
+}
+
+.diorama-bright-flash[data-bloom="peak"] {
+  mix-blend-mode: normal;
+  opacity: 0.98;
+  transition: opacity 0.08s ease-in;
+}
+
+.diorama-bright-flash[data-bloom="dissolve"] {
+  mix-blend-mode: normal;
+  opacity: 0;
+  transition: opacity 0.72s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Top Overlay Badges on Active Frame */
@@ -8453,7 +8537,7 @@ body::before {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(47, 1fr);
+  grid-template-columns: repeat(46, 1fr);
   align-items: center;
 }
 
@@ -8482,6 +8566,12 @@ body::before {
   height: 13px;
   width: 2.5px;
   background: rgba(200, 163, 86, 0.65);
+}
+
+.diorama-tick.is-final-four .diorama-tick-bar {
+  height: 12px;
+  background: rgba(255, 238, 186, 0.72);
+  box-shadow: 0 0 5px rgba(255, 238, 186, 0.45);
 }
 
 .diorama-tick.is-passed .diorama-tick-bar {
@@ -9406,12 +9496,12 @@ body::before {
           <div>
             <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung &amp; Historie • Meuselwitz Transformation</div>
             <h2 class="slide-title" id="build-main-title" data-i18n="s4_title">Baudokumentation: Die Entstehung des neuen Werks</h2>
-            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s4_subtitle">Chronologisches Daumenkino im 3D-Diorama (11.2025 – 10.2026) &amp; anschließender Drohnenflug durch das Werk</div>
+            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s4_subtitle">Chronologisches Daumenkino im 3D-Diorama (11.2025 – 09.2026) &amp; anschließender Drohnenflug durch das Werk</div>
           </div>
 
           <!-- Timeline & Flipbook Controls -->
           <div class="vox-timeline-header-controls">
-            <button class="vox-play-btn" id="build-play-btn" title="Daumenkino (47 Bilder) + Drohnenflug abspielen">
+            <button class="vox-play-btn" id="build-play-btn" title="Daumenkino (46 Bilder) + Drohnenflug abspielen">
               <span class="vox-play-icon" id="build-play-icon">▶</span>
               <span class="vox-play-label" id="build-play-label" data-i18n="build_play">Daumenkino starten</span>
               <div class="vox-play-progress" id="build-play-progress"></div>
@@ -9425,7 +9515,7 @@ body::before {
               <button class="vox-step-btn" id="build-prev-btn" title="Ein Bild zurück">
                 ← <span data-i18n="vox_past">Vergangenheit</span>
               </button>
-              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">11.2025 • 01 / 47</span>
+              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">11.2025 • 01 / 46</span>
               <button class="vox-step-btn highlight" id="build-next-btn" title="Zum Drohnenflug / Nächste Folie">
                 <span id="build-next-label" data-i18n="s4_drone_btn">Drohnenflug</span> →
               </button>
@@ -9436,6 +9526,9 @@ body::before {
         <!-- Central 3D Diorama Flipbook & Drone Stage -->
         <div class="diorama-stage-container" id="build-timeline-container">
           <div class="diorama-watermark-year" id="diorama-watermark">11.2025</div>
+
+          <!-- Luminous White-Gold Cross-Fade Bloom Overlay (bridges the final 4 accelerating images into the Drone Flight) -->
+          <div class="diorama-bright-flash" id="diorama-bright-flash"></div>
 
           <!-- 3D Diorama Arena (Left Wing, Center Flipbook Stack, Right Wing) -->
           <div class="diorama-3d-arena">
@@ -9458,10 +9551,10 @@ body::before {
 
               <!-- Active Front Flipbook Card -->
               <div class="diorama-stack-card front">
-                <div class="diorama-photo-frame">
+                <div class="diorama-photo-frame" id="diorama-photo-frame">
                   <img id="diorama-main-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Baudokumentation Meuselwitz">
 
-                  <!-- Animated 3D Flipping Page Sheet -->
+                  <!-- Animated 3D Flipping / Luminous Cross-Blending Page Sheet -->
                   <div class="diorama-flip-sheet" id="diorama-flip-sheet">
                     <img id="diorama-flip-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="">
                   </div>
@@ -9474,7 +9567,7 @@ body::before {
                   <div class="diorama-top-badges">
                     <div class="diorama-date-badge" id="diorama-date-badge">📅 03.11.2025</div>
                     <div class="diorama-phase-pill" id="diorama-phase-badge">Phase 1: Hallenvorbereitung &amp; Entkernung</div>
-                    <div class="diorama-frame-badge" id="diorama-frame-badge">Bild 01 / 47</div>
+                    <div class="diorama-frame-badge" id="diorama-frame-badge">Bild 01 / 46</div>
                   </div>
                 </div>
 
@@ -9496,7 +9589,7 @@ body::before {
             </div>
           </div>
 
-          <!-- Full-Stage Drone Flight Finale Overlay (starts automatically after Frame 47) -->
+          <!-- Full-Stage Drone Flight Finale Overlay (starts directly out of the bright flash after Frame 46) -->
           <div class="diorama-drone-stage" id="diorama-drone-stage">
             <div class="diorama-drone-card">
               <div class="diorama-drone-topbar">
@@ -9507,17 +9600,17 @@ body::before {
                 <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s4_replay_btn">↺ Daumenkino wiederholen</button>
               </div>
               <div class="diorama-drone-video-wrap">
-                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/poster_drone_meuselwitz.jpg" controls playsinline preload="metadata"></video>
+                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/poster_drone_meuselwitz.jpg" controls playsinline preload="auto"></video>
               </div>
             </div>
           </div>
 
-          <!-- Bottom 47-Frame Chronological Scrubber + Drone Flight Finale Pill -->
+          <!-- Bottom 46-Frame Chronological Scrubber + Drone Flight Finale Pill -->
           <div class="diorama-scrubber-bar">
             <div class="diorama-scrubber-track-wrap">
               <div class="diorama-scrubber-fill" id="diorama-progress-fill"></div>
               <div class="diorama-ticks-row">
-                <button class="diorama-tick is-month-start" data-frame="0" title="Bild 1 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">11.25</span></button><button class="diorama-tick " data-frame="1" title="Bild 2 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="2" title="Bild 3 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="3" title="Bild 4 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="4" title="Bild 5 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="5" title="Bild 6 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="6" title="Bild 7 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="7" title="Bild 8 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="8" title="Bild 9 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="9" title="Bild 10 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="10" title="Bild 11 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="11" title="Bild 12 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">12.25</span></button><button class="diorama-tick " data-frame="12" title="Bild 13 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="13" title="Bild 14 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="14" title="Bild 15 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="15" title="Bild 16 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="16" title="Bild 17 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="17" title="Bild 18 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">01.26</span></button><button class="diorama-tick " data-frame="18" title="Bild 19 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="19" title="Bild 20 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="20" title="Bild 21 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="21" title="Bild 22 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="22" title="Bild 23 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">02.26</span></button><button class="diorama-tick " data-frame="23" title="Bild 24 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="24" title="Bild 25 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">03.26</span></button><button class="diorama-tick " data-frame="25" title="Bild 26 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="26" title="Bild 27 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">04.26</span></button><button class="diorama-tick " data-frame="27" title="Bild 28 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="28" title="Bild 29 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">05.26</span></button><button class="diorama-tick " data-frame="29" title="Bild 30 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="30" title="Bild 31 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="31" title="Bild 32 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="32" title="Bild 33 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="33" title="Bild 34 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="34" title="Bild 35 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="35" title="Bild 36 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">06.26</span></button><button class="diorama-tick " data-frame="36" title="Bild 37 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="37" title="Bild 38 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">07.26</span></button><button class="diorama-tick " data-frame="38" title="Bild 39 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="39" title="Bild 40 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="40" title="Bild 41 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="41" title="Bild 42 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">09.26</span></button><button class="diorama-tick " data-frame="42" title="Bild 43 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="43" title="Bild 44 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="44" title="Bild 45 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick " data-frame="45" title="Bild 46 / 47"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start" data-frame="46" title="Bild 47 / 47"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">10.26</span></button>
+                <button class="diorama-tick is-month-start " data-frame="0" title="Bild 1 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">11.25</span></button><button class="diorama-tick  " data-frame="1" title="Bild 2 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="2" title="Bild 3 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="3" title="Bild 4 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="4" title="Bild 5 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="5" title="Bild 6 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="6" title="Bild 7 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="7" title="Bild 8 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="8" title="Bild 9 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="9" title="Bild 10 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="10" title="Bild 11 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="11" title="Bild 12 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">12.25</span></button><button class="diorama-tick  " data-frame="12" title="Bild 13 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="13" title="Bild 14 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="14" title="Bild 15 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="15" title="Bild 16 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="16" title="Bild 17 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="17" title="Bild 18 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">01.26</span></button><button class="diorama-tick  " data-frame="18" title="Bild 19 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="19" title="Bild 20 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="20" title="Bild 21 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="21" title="Bild 22 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="22" title="Bild 23 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">02.26</span></button><button class="diorama-tick  " data-frame="23" title="Bild 24 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="24" title="Bild 25 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">03.26</span></button><button class="diorama-tick  " data-frame="25" title="Bild 26 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="26" title="Bild 27 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">04.26</span></button><button class="diorama-tick  " data-frame="27" title="Bild 28 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="28" title="Bild 29 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">05.26</span></button><button class="diorama-tick  " data-frame="29" title="Bild 30 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="30" title="Bild 31 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="31" title="Bild 32 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="32" title="Bild 33 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="33" title="Bild 34 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="34" title="Bild 35 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="35" title="Bild 36 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">06.26</span></button><button class="diorama-tick  " data-frame="36" title="Bild 37 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="37" title="Bild 38 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">07.26</span></button><button class="diorama-tick  " data-frame="38" title="Bild 39 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="39" title="Bild 40 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  " data-frame="40" title="Bild 41 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick is-month-start " data-frame="41" title="Bild 42 / 46"><span class="diorama-tick-bar"></span><span class="diorama-tick-label">09.26</span></button><button class="diorama-tick  is-final-four" data-frame="42" title="Bild 43 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  is-final-four" data-frame="43" title="Bild 44 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  is-final-four" data-frame="44" title="Bild 45 / 46"><span class="diorama-tick-bar"></span></button><button class="diorama-tick  is-final-four" data-frame="45" title="Bild 46 / 46"><span class="diorama-tick-bar"></span></button>
               </div>
             </div>
             <button class="diorama-drone-finale-pill" id="diorama-scrubber-drone" title="Drohnenflug durch das Werk Meuselwitz starten">
@@ -13484,7 +13577,7 @@ window.slideTranslations = {
     "s3_notes": "Folie 3: Zeitleiste 140+ Jahre Tradition (9 Meilensteine). Besonderer Fokus auf Meilenstein 1 (1882: Gründung in Stuttgart – Beginn mit Klaviermechaniken; historische Parallele zu Carl Rönisch / Erfindung Voll-Panzerplatte 1866; Wurzel Meuselwitz), Meilenstein 2 (1906: Aufnahme der anspruchsvollen Hammerkopffertigung – Von Cristoforis lederbezogenem Papierröllchen 1700 zu Renners eigener Hammerkopfproduktion ab 1906, die später den Klang eines jeden Steinway-Flügels definierte und einen weltweiten Qualitätsstandard setzte; Bilderserie mit Cristofori, Hammer-Mechanik 1700, historischer Mechanikfertigung und Hammerkopfpressen 1906), Meilenstein 3 (1911: Technisierung & Flügelprogramm – Érard-Repetitionsmechanik als Basis des modernen Flügelspiels; Überleitung zur Aufnahme eigener Konzert-Flügelmechaniken bei Renner; Technisierung unter Oscar Renner mit neuzeitlichen Maschinen, arbeitssparenden Methoden und Umstellung von Transmissionen auf hunderte elektrische Einzelantriebe; Abrundung des Programms aus einer Hand; Bilderserie mit Sébastien Érard, 1808 Érard-Mechanik und elektrifizierter Arbeitsumgebung), Meilenstein 4 (1944: Brandnacht & Wiederaufbau), Meilenstein 5 (1951/1952: Dr. Manfred Renner; Wiederbezug 1955), Meilenstein 6 (1990: Mauerfall, Zeitenwende & Rettung des Fortbestands – Übernahme der Mechanik-Fertigung der Piano Union Zeitz im Wettbewerb mit tschechischen Herstellern und zur Sicherung des Großkunden Schimmel mit >40 Klavieren/Tag), Meilenstein 7 (2011: Der Neubau in Gärtringen und die neue moderne Fertigung in Meuselwitz nach dem Umzug von Zeitz nach Meuselwitz; Zusammenlegung an zwei festen Standorten: Meuselwitz 6.800 m² und Gärtringen; Bilderserie mit Neubau Gärtringen und Meuselwitz aus der Vogelperspektive), Meilenstein 8 (2019: Steinway & Sons Übernahme; Dank an Inhaber Clemens von Arnim) und Meilenstein 9 (Tradition bewahren. Zukunft gestalten: Vollendung der Bündelung aller Prozesse in Meuselwitz nach Projektstart Oktober 2025 mit neuer zentraler Filter- & Absauganlage; Dank an das Team Gärtringen).",
     "s4_category": "Teil 1: Einführung & Historie • Meuselwitz Transformation",
     "s4_title": "Baudokumentation: Die Entstehung des neuen Werks",
-    "s4_subtitle": "Chronologisches Daumenkino im 3D-Diorama (11.2025 – 10.2026) & anschließender Drohnenflug durch das Werk",
+    "s4_subtitle": "Chronologisches Daumenkino im 3D-Diorama (11.2025 – 09.2026) & anschließender Drohnenflug durch das Werk",
     "s4_drone_btn": "Drohnenflug",
     "s4_wing_prev": "◀ Vorheriges Bild",
     "s4_wing_next": "Nächstes Bild ▶",
@@ -13492,7 +13585,7 @@ window.slideTranslations = {
     "s4_drone_title": "Das fertiggestellte Werk Meuselwitz im Drohnenflug",
     "s4_replay_btn": "↺ Daumenkino wiederholen",
     "s4_drone_finale": "Drohnenflug Finale",
-    "s4_notes": "Folie 4 zeigt alle 47 chronologischen Baufotos (03.11.2025 bis 09.10.2026) im schnellen Durchblättern wie ein Daumenkino in einem 3D-Diorama. Unmittelbar nach dem 47. Bild startet automatisch der Drohnenflug durch das fertiggestellte Werk in Meuselwitz (APTA2026-MeuselwitzInnen.mp4).",
+    "s4_notes": "Folie 4 zeigt alle 46 chronologischen Baufotos (bis auf das letzte im Ordner) mit 0,5 Sekunden pro Bild im 3D-Diorama. Bei den letzten 4 Bildern beschleunigt die Bildfolge und überblendet sich in einer hellen Licht-Einblendung, aus der direkt der Drohnenflug durch das fertiggestellte Werk in Meuselwitz (APTA2026-MeuselwitzInnen.mp4) startet.",
     "s5_category": "Teil 2: Filzherstellung • Historie & Tradition",
     "s5_title": "Filzfabrik Wurzen (FFW) – Die Wiege des Hammerkopffilzes",
     "s5_subtitle": "Wurzen 1783 • Vom ersten Pianofortefilz 1847 zur Weickert-Spezial-Partnerschaft mit Renner",
@@ -14335,7 +14428,7 @@ window.slideTranslations = {
     "s3_notes": "Slide 3: Timeline of 140+ years of tradition (9 milestones). Key focus on Milestone 1 (1882: Founding in Stuttgart – The journey begins with piano actions; parallel to Carl Rönisch), Milestone 2 (1906: Dedicated hammerhead manufacturing – From Cristofori's leather-covered paper roll in 1700 to Renner's proprietary hammerhead production from 1906, which would later define the tone of every Steinway grand and establish a worldwide benchmark; image series featuring Cristofori, 1700 hammer action, historical action manufacturing and 1906 hammerhead presses), Milestone 3 (1911: Modernization & grand action manufacturing – Érard repetition action as cornerstone of modern grand piano playing; transition to Renner's first grand piano actions; Oscar Renner's industrial modernization with cutting-edge machinery, streamlined methods and transition from shaft drives to hundreds of individual electric motors; uniting all branches under one roof; image series featuring Sébastien Érard, 1808 Érard action and electrified workshop), Milestone 4 (1944: Air raid & rebuilding), Milestone 5 (1951/1952: Dr. Manfred Renner; 1955 return), Milestone 6 (1990: Fall of the Wall, historic turning point & survival – acquisition of Piano Union's action facility in Zeitz amidst pressure from Czech competitors to preserve largest customer Schimmel producing >40 pianos/day), Milestone 7 (2011: New facility in Gärtringen and modern manufacturing in Meuselwitz after relocating from Zeitz; consolidation across two core sites: Meuselwitz 6,800 m² and Gärtringen; image series featuring Gärtringen new facility and Meuselwitz bird's-eye view), Milestone 8 (2019: Steinway & Sons acquisition; tribute to Clemens von Arnim) and Milestone 9 (Preserving tradition, shaping future: Full consolidation of all operations in Meuselwitz following October 2025 launch with modern facility and new central filtration & extraction system; gratitude to Gärtringen workforce).",
     "s4_category": "Part 1: Einführung & Historie • Meuselwitz Transformation",
     "s4_title": "Construction Documentary: Creation of the New Factory",
-    "s4_subtitle": "Chronological 3D Diorama Flipbook (11.2025 – 10.2026) followed by an Interior Drone Flight through the Plant",
+    "s4_subtitle": "Chronological 3D Diorama Flipbook (11.2025 – 09.2026) followed by an Interior Drone Flight through the Plant",
     "s4_drone_btn": "Drone Flight",
     "s4_wing_prev": "◀ Previous Frame",
     "s4_wing_next": "Next Frame ▶",
@@ -14343,7 +14436,7 @@ window.slideTranslations = {
     "s4_drone_title": "The Completed Meuselwitz Plant – Interior Drone Flight",
     "s4_replay_btn": "↺ Replay Flipbook",
     "s4_drone_finale": "Drone Flight Finale",
-    "s4_notes": "Slide 4 rapidly flips through all 47 chronological construction photos (Nov 3, 2025 to Oct 9, 2026) like a flipbook inside a 3D diorama, then automatically launches the interior drone flight through the completed Meuselwitz plant (APTA2026-MeuselwitzInnen.mp4).",
+    "s4_notes": "Slide 4 displays all 46 chronological construction photos (all except the final file in the folder) at 0.5 seconds per image inside a 3D diorama. On the last 4 images, the cadence accelerates and cross-dissolves into a bright luminous flash from which the interior drone flight (APTA2026-MeuselwitzInnen.mp4) launches directly.",
     "s5_category": "Part 2: Felt Manufacturing • History & Tradition",
     "s5_title": "Filzfabrik Wurzen (FFW) – The Birthplace of Piano Hammer Felt",
     "s5_subtitle": "Wurzen 1783 • From the first piano felt in 1847 to the Weickert Spezial partnership with Renner",
@@ -15186,7 +15279,7 @@ window.slideTranslations = {
     "s3_notes": "スライド 3: 140余年の歴史年表（全9節目）。注目は節目1（1882年：シュトゥットガルト創業 — ホイシュタイグ通りの工房でアクションから始まった歴史；カール・レーニッシュ総鉄骨フレーム革新との呼応）、節目2（1906年：自社ハンマーヘッド製造開始 — 1700年のクリストフォリによる革巻き紙ロールから1906年のレンナー自社生産へ。後にすべてのスタインウェイの響きを決定づけ世界基準を確立；クリストフォリ、1700年アクション、歴史的機械製造、1906年プレス機画像シリーズ）、節目3（1911年：電化革命とグランドピアノ機構 — エラールのレペティション機構を礎とする近代グランド演奏；レンナー初のグランド用アクション自社製造への飛躍；オスカー・レンナーによる最新工作機械・省力化工法・総軸から数百基の独立電動モーターへの転換；全工程の内製化；エラール、1808年機構、電化工房画像シリーズ）、節目4（1944年空襲と再建）、節目5（1951/1952年：マンフレート・レンナー博士）、節目6（1990年：ベルリンの壁崩壊と存亡を賭けたツァイツ工場買収 — チェコ製メーカー台頭の中で1日40台以上を生産する最大顧客シンメル社を守り抜いた歴史的転換点）、節目7（2011年：ゲルトリンゲン新社屋とツァイツからモイゼルヴィッツへの移転・最新生産拠点展開；2大拠点体制の確立；ゲルトリンゲン新社屋と上空からのモイゼルヴィッツ拠点画像シリーズ）、節目8（2019年：スタインウェイ買収と故アルニム氏追悼）、そして節目9（伝統を守り未来を創る：2025年10月始動の全プロセス・モイゼルヴィッツ統合完了と最新の集中集塵・排気フィルター設備導入、ゲルトリンゲン社員への深謝）。",
     "s4_category": "第1部：序論とモイゼルヴィッツ新拠点",
     "s4_title": "新工場建設記録：モイゼルヴィッツ新本社の誕生",
-    "s4_subtitle": "3Dジオラマ・パラパラ映像（2025年11月〜2026年10月）と新工場内部ドローンフライト",
+    "s4_subtitle": "3Dジオラマ・パラパラ映像（2025年11月〜2026年9月）と新工場内部ドローンフライト",
     "s4_drone_btn": "ドローン映像",
     "s4_wing_prev": "◀ 前の写真",
     "s4_wing_next": "次の写真 ▶",
@@ -15194,7 +15287,7 @@ window.slideTranslations = {
     "s4_drone_title": "完成したモイゼルヴィッツ新工場 — ドローン空撮ツアー",
     "s4_replay_btn": "↺ パラパラ映像を再生",
     "s4_drone_finale": "ドローン映像フィナーレ",
-    "s4_notes": "スライド4では、2025年11月3日から2026年10月9日までの建設写真全47枚を3Dジオラマ内のパラパラマンガ（フリップブック）として高速再生し、最後に完成したモイゼルヴィッツ工場内部のドローン映像（APTA2026-MeuselwitzInnen.mp4）が自動再生されます。",
+    "s4_notes": "スライド4ではフォルダ内の最後を除く46枚の建設写真を0.5秒間隔で3Dジオラマ再生し、最後の4枚で加速しながら明るい光へとクロスフェードし、そのまま新工場内部ドローン映像（APTA2026-MeuselwitzInnen.mp4）が直ちに始まります。",
     "s5_category": "第2部：フェルト製造 • 歴史と伝統",
     "s5_title": "ヴルツェンフェルト工場（FFW）– ピアノハンマーフェルトの生誕地",
     "s5_subtitle": "ヴルツェン創業（1783年）• 1847年初のピアノフェルトからレンナー専用「ヴァイケルト特級」提携まで",
@@ -16037,7 +16130,7 @@ window.slideTranslations = {
     "s3_notes": "第 3 页：140余年荣耀时光轴（共9个关键里程碑）。重点阐述里程碑 1（1882年：斯图加特匠心工坊创立 — 击弦机开启百年传奇之旅；与卡尔·罗尼施全铸铁铠装音板的历史呼应）、里程碑 2（1906年：开启声学核心部件弦槌自主生产 — 从1700年克里斯托弗里皮革包裹纸卷弦槌到1906年雷诺自产弦槌，日后定义了每一架施坦威三角钢琴的独特音色并确立全球工业标准；克里斯托弗里、1700年早期击弦机、早期手工车间与1906年专用压力模具全景图集）、里程碑 3（1911年：工业电化革命与三角钢琴击弦机 — 传承埃拉尔复奏结构现代演奏之基石；迈向雷诺首批三角击弦机自主生产；奥斯卡·雷诺推进专用精密机床、工序优化并以数百台独立电机单驱彻底替代传统总轴皮带；全谱系制造完美闭环；埃拉尔、1808年结构与工业电化车间全景图集）、里程碑 4（1944年空袭重生）、里程碑 5（1951/1952年：曼弗雷德·雷诺博士）、里程碑 6（1990年：柏林墙倒塌与雷诺生死存亡之战 — 收购蔡茨击弦机基地以抵御捷克厂商冲击，力挽日产逾40架钢琴的第一大客户舒密尔）、里程碑 7（2011年：盖特林根新厂落成与从蔡茨迁至莫伊瑟尔维茨后的现代化核心制造基地；莫伊瑟尔维茨6,800平米与盖特林根双基地格局；盖特林根新总部与鸟瞰莫伊瑟尔维茨生产基地全景图集）、里程碑 8（2019年：施坦威集团收购与深切缅怀阿尔尼姆先生）以及里程碑 9（恪守传统 · 塑造未来：2025年10月启动的莫伊瑟尔维茨全流程整合圆满收官，落成全新现代化中央过滤排风吸附系统，并向盖特灵根团队致以深切谢意）。",
     "s4_category": "第一部分：引言与莫伊瑟尔维茨新总部",
     "s4_title": "莫伊瑟尔维茨高精现代化生产基地建设全景纪录片",
-    "s4_subtitle": "3D立体微缩翻页动画（2025年11月–2026年10月）与新工厂内部无人机航拍巡礼",
+    "s4_subtitle": "3D立体微缩翻页动画（2025年11月–2026年9月）与新工厂内部无人机航拍巡礼",
     "s4_drone_btn": "无人机航拍",
     "s4_wing_prev": "◀ 上一画面",
     "s4_wing_next": "下一画面 ▶",
@@ -16045,7 +16138,7 @@ window.slideTranslations = {
     "s4_drone_title": "竣工投产的莫伊瑟尔维茨新工厂 — 室内无人机全景航拍",
     "s4_replay_btn": "↺ 重播翻页纪实",
     "s4_drone_finale": "无人机航拍终章",
-    "s4_notes": "第 4 页以 3D 立体微缩景观与翻页书（Daumenkino）形式快速按时间顺序播放全部 47 张施工纪实照片（2025年11月3日至2026年10月9日），随后自动无缝开启莫伊瑟尔维茨新工厂内部无人机航拍影片（APTA2026-MeuselwitzInnen.mp4）。",
+    "s4_notes": "第 4 页在 3D 立体微缩景观中以每张 0.5 秒的速度按时间顺序播放 46 张施工纪实照片（除文件夹最后一张外），最后 4 张加速并在明亮的光晕叠化中交融，直接无缝开启莫伊瑟尔维茨新工厂内部无人机航拍影片（APTA2026-MeuselwitzInnen.mp4）。",
     "s5_category": "第二部分：琴毡制造 • 历史与传统",
     "s5_title": "乌尔岑毛毡厂（FFW）– 顶级钢琴弦槌毛毡的诞生地",
     "s5_subtitle": "乌尔岑 1783 • 从1847年德国首创工业琴毡到雷诺专属“魏克特特级”深度合作",
@@ -19796,7 +19889,7 @@ class RennerTransformationJourney {
       }
     ];
 
-    // All 47 chronological images (01_20251103 .. 48_20261009)
+    // All 46 chronological images (01_20251103 .. 46_20260924) — every image in the folder except the last one (48_20261009)
     const rawFiles = [
       ['01_20251103_152224.jpg', '03.11.2025', '11.2025', 0],
       ['02_20251104_152516.jpg', '04.11.2025', '11.2025', 0],
@@ -19842,9 +19935,8 @@ class RennerTransformationJourney {
       ['42_20260909_094559.jpg', '09.09.2026', '09.2026', 11],
       ['43_20260915_112232.jpg', '15.09.2026', '09.2026', 12],
       ['44_20260915_133800.jpg', '15.09.2026', '09.2026', 12],
-      ['45_20260924_104802.jpg', '24.09.2026', '09.2026', 12],
-      ['46_20260924_140257.jpg', '24.09.2026', '09.2026', 12],
-      ['48_20261009_081342.jpg', '09.10.2026', '10.2026', 13]
+      ['45_20260924_104802.jpg', '24.09.2026', '09.2026', 13],
+      ['46_20260924_140257.jpg', '24.09.2026', '09.2026', 13]
     ];
 
     this.frames = rawFiles.map(([file, dateStr, monthYear, phaseIdx], idx) => ({
@@ -19976,15 +20068,41 @@ class RennerTransformationJourney {
     const phaseObj = this.phases[cur.phaseIdx] || this.phases[0];
     const lang = this.currentLang;
 
-    // 1. Trigger 3D Daumenkino flip animation on outgoing sheet
+    // Check if we are in the final 4 accelerating images (indices 42, 43, 44, 45)
+    const isFinalFour = clamped >= this.totalFrames - 4;
+    const finalFourStep = isFinalFour ? (clamped - (this.totalFrames - 4) + 1) : 0; // 1, 2, 3, 4
+
+    const photoFrame = document.getElementById('diorama-photo-frame');
+    if (photoFrame) {
+      if (isFinalFour && this.isPlayingFlipbook) {
+        photoFrame.setAttribute('data-bloom', String(finalFourStep));
+      } else {
+        photoFrame.removeAttribute('data-bloom');
+      }
+    }
+
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) {
+      if (isFinalFour && this.isPlayingFlipbook) {
+        brightFlash.setAttribute('data-bloom', String(finalFourStep));
+      } else if (!this.inDroneMode) {
+        brightFlash.removeAttribute('data-bloom');
+      }
+    }
+
+    // 1. Trigger 3D Daumenkino flip OR Luminous Cross-Dissolve on outgoing sheet
     const flipSheet = document.getElementById('diorama-flip-sheet');
     const flipImg = document.getElementById('diorama-flip-img');
     if (flipSheet && flipImg && animateFlip && prevIdx !== clamped) {
       const outgoing = this.frames[prevIdx] || prev;
       flipImg.src = outgoing.src;
-      flipSheet.classList.remove('is-flipping');
+      flipSheet.classList.remove('is-flipping', 'is-luminous-blend');
       void flipSheet.offsetWidth;
-      flipSheet.classList.add('is-flipping');
+      if (isFinalFour) {
+        flipSheet.classList.add('is-luminous-blend');
+      } else {
+        flipSheet.classList.add('is-flipping');
+      }
     }
 
     // 2. Update Main Active Image & 3D Diorama Stack / Wings
@@ -20055,6 +20173,9 @@ class RennerTransformationJourney {
       container.classList.remove('is-dark-start', 'is-drone-mode');
     }
 
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) brightFlash.removeAttribute('data-bloom');
+
     const droneStage = document.getElementById('diorama-drone-stage');
     if (droneStage) droneStage.classList.remove('is-active');
 
@@ -20074,10 +20195,18 @@ class RennerTransformationJourney {
   scheduleNextFlip() {
     if (!this.isPlayingFlipbook) return;
 
-    // Dynamic Daumenkino cadence: ~155ms per photo (~7.3 seconds for all 47 photos)
-    let delay = 155;
-    if (this.currentFrame < 2) delay = 210;
-    else if (this.currentFrame >= this.totalFrames - 2) delay = 240;
+    // 0.5 seconds (500ms) per image for images 1..42, then accelerating on the last 4 images (indices 42, 43, 44, 45)
+    let delay = 500;
+    const remainingFromStartOfFinalFour = this.currentFrame - (this.totalFrames - 4);
+    if (remainingFromStartOfFinalFour === 0) {
+      delay = 310; // 4th from last (#43)
+    } else if (remainingFromStartOfFinalFour === 1) {
+      delay = 210; // 3rd from last (#44)
+    } else if (remainingFromStartOfFinalFour === 2) {
+      delay = 140; // 2nd from last (#45)
+    } else if (remainingFromStartOfFinalFour >= 3) {
+      delay = 100; // Final image (#46) -> immediate luminous flash into Drone Flight!
+    }
 
     this.flipTimer = setTimeout(() => {
       if (!this.isPlayingFlipbook) return;
@@ -20085,11 +20214,9 @@ class RennerTransformationJourney {
         this.renderFrame(this.currentFrame + 1, true);
         this.scheduleNextFlip();
       } else {
-        // Reached the final chronological photo (#47, 10.2026) -> automatically launch Drone Flight!
+        // Reached the 4th final image (#46) -> emerge directly from the bright flash into the Drone Flight!
         this.isPlayingFlipbook = false;
-        this.flipTimer = setTimeout(() => {
-          this.startDroneVideo();
-        }, 420);
+        this.startDroneVideo(true);
       }
     }, delay);
   }
@@ -20107,10 +20234,29 @@ class RennerTransformationJourney {
     }
   }
 
-  startDroneVideo() {
+  startDroneVideo(fromBrightFlash = false) {
     this.pauseFlipbook();
     this.isStarted = true;
     this.inDroneMode = true;
+
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) {
+      if (fromBrightFlash) {
+        brightFlash.setAttribute('data-bloom', 'peak');
+        setTimeout(() => {
+          if (brightFlash.getAttribute('data-bloom') === 'peak') {
+            brightFlash.setAttribute('data-bloom', 'dissolve');
+          }
+        }, 90);
+        setTimeout(() => {
+          if (brightFlash.getAttribute('data-bloom') === 'dissolve') {
+            brightFlash.removeAttribute('data-bloom');
+          }
+        }, 850);
+      } else {
+        brightFlash.removeAttribute('data-bloom');
+      }
+    }
 
     const container = document.getElementById('build-timeline-container');
     if (container) {
@@ -20153,6 +20299,12 @@ class RennerTransformationJourney {
     this.inDroneMode = false;
     const container = document.getElementById('build-timeline-container');
     if (container) container.classList.remove('is-drone-mode');
+
+    const brightFlash = document.getElementById('diorama-bright-flash');
+    if (brightFlash) brightFlash.removeAttribute('data-bloom');
+
+    const photoFrame = document.getElementById('diorama-photo-frame');
+    if (photoFrame) photoFrame.removeAttribute('data-bloom');
 
     const droneStage = document.getElementById('diorama-drone-stage');
     if (droneStage) droneStage.classList.remove('is-active');

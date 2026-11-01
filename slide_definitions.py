@@ -761,7 +761,7 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 4: Chronologisches 3D-Diorama / Daumenkino (47 Bilder) & Drohnenflug Finale (APTA2026-MeuselwitzInnen.mp4)
+    # SLIDE 4: Chronologisches 3D-Diorama / Daumenkino (46 Bilder, 0.5s/Bild + helle Überblendung der letzten 4 Bilder) & Drohnenflug Finale
     diorama_month_starts = {
         0: '11.25',
         11: '12.25',
@@ -773,15 +773,15 @@ def get_all_slides_html():
         35: '06.26',
         37: '07.26',
         41: '09.26',
-        46: '10.26',
     }
     diorama_ticks_html = []
-    for f_idx in range(47):
+    for f_idx in range(46):
         m_lbl = diorama_month_starts.get(f_idx, '')
         is_milestone_cls = 'is-month-start' if m_lbl else ''
+        is_final_four_cls = 'is-final-four' if f_idx >= 42 else ''
         lbl_span = f'<span class="diorama-tick-label">{m_lbl}</span>' if m_lbl else ''
         diorama_ticks_html.append(
-            f'<button class="diorama-tick {is_milestone_cls}" data-frame="{f_idx}" title="Bild {f_idx + 1} / 47">'
+            f'<button class="diorama-tick {is_milestone_cls} {is_final_four_cls}" data-frame="{f_idx}" title="Bild {f_idx + 1} / 46">'
             f'<span class="diorama-tick-bar"></span>{lbl_span}</button>'
         )
     diorama_ticks_str = ''.join(diorama_ticks_html)
@@ -792,12 +792,12 @@ def get_all_slides_html():
           <div>
             <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung &amp; Historie • Meuselwitz Transformation</div>
             <h2 class="slide-title" id="build-main-title" data-i18n="s4_title">Baudokumentation: Die Entstehung des neuen Werks</h2>
-            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s4_subtitle">Chronologisches Daumenkino im 3D-Diorama (11.2025 – 10.2026) &amp; anschließender Drohnenflug durch das Werk</div>
+            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s4_subtitle">Chronologisches Daumenkino im 3D-Diorama (11.2025 – 09.2026) &amp; anschließender Drohnenflug durch das Werk</div>
           </div>
 
           <!-- Timeline & Flipbook Controls -->
           <div class="vox-timeline-header-controls">
-            <button class="vox-play-btn" id="build-play-btn" title="Daumenkino (47 Bilder) + Drohnenflug abspielen">
+            <button class="vox-play-btn" id="build-play-btn" title="Daumenkino (46 Bilder) + Drohnenflug abspielen">
               <span class="vox-play-icon" id="build-play-icon">▶</span>
               <span class="vox-play-label" id="build-play-label" data-i18n="build_play">Daumenkino starten</span>
               <div class="vox-play-progress" id="build-play-progress"></div>
@@ -811,7 +811,7 @@ def get_all_slides_html():
               <button class="vox-step-btn" id="build-prev-btn" title="Ein Bild zurück">
                 ← <span data-i18n="vox_past">Vergangenheit</span>
               </button>
-              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">11.2025 • 01 / 47</span>
+              <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">11.2025 • 01 / 46</span>
               <button class="vox-step-btn highlight" id="build-next-btn" title="Zum Drohnenflug / Nächste Folie">
                 <span id="build-next-label" data-i18n="s4_drone_btn">Drohnenflug</span> →
               </button>
@@ -822,6 +822,9 @@ def get_all_slides_html():
         <!-- Central 3D Diorama Flipbook & Drone Stage -->
         <div class="diorama-stage-container" id="build-timeline-container">
           <div class="diorama-watermark-year" id="diorama-watermark">11.2025</div>
+
+          <!-- Luminous White-Gold Cross-Fade Bloom Overlay (bridges the final 4 accelerating images into the Drone Flight) -->
+          <div class="diorama-bright-flash" id="diorama-bright-flash"></div>
 
           <!-- 3D Diorama Arena (Left Wing, Center Flipbook Stack, Right Wing) -->
           <div class="diorama-3d-arena">
@@ -844,10 +847,10 @@ def get_all_slides_html():
 
               <!-- Active Front Flipbook Card -->
               <div class="diorama-stack-card front">
-                <div class="diorama-photo-frame">
+                <div class="diorama-photo-frame" id="diorama-photo-frame">
                   <img id="diorama-main-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Baudokumentation Meuselwitz">
 
-                  <!-- Animated 3D Flipping Page Sheet -->
+                  <!-- Animated 3D Flipping / Luminous Cross-Blending Page Sheet -->
                   <div class="diorama-flip-sheet" id="diorama-flip-sheet">
                     <img id="diorama-flip-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="">
                   </div>
@@ -860,7 +863,7 @@ def get_all_slides_html():
                   <div class="diorama-top-badges">
                     <div class="diorama-date-badge" id="diorama-date-badge">📅 03.11.2025</div>
                     <div class="diorama-phase-pill" id="diorama-phase-badge">Phase 1: Hallenvorbereitung &amp; Entkernung</div>
-                    <div class="diorama-frame-badge" id="diorama-frame-badge">Bild 01 / 47</div>
+                    <div class="diorama-frame-badge" id="diorama-frame-badge">Bild 01 / 46</div>
                   </div>
                 </div>
 
@@ -882,7 +885,7 @@ def get_all_slides_html():
             </div>
           </div>
 
-          <!-- Full-Stage Drone Flight Finale Overlay (starts automatically after Frame 47) -->
+          <!-- Full-Stage Drone Flight Finale Overlay (starts directly out of the bright flash after Frame 46) -->
           <div class="diorama-drone-stage" id="diorama-drone-stage">
             <div class="diorama-drone-card">
               <div class="diorama-drone-topbar">
@@ -893,12 +896,12 @@ def get_all_slides_html():
                 <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s4_replay_btn">↺ Daumenkino wiederholen</button>
               </div>
               <div class="diorama-drone-video-wrap">
-                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/poster_drone_meuselwitz.jpg" controls playsinline preload="metadata"></video>
+                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/poster_drone_meuselwitz.jpg" controls playsinline preload="auto"></video>
               </div>
             </div>
           </div>
 
-          <!-- Bottom 47-Frame Chronological Scrubber + Drone Flight Finale Pill -->
+          <!-- Bottom 46-Frame Chronological Scrubber + Drone Flight Finale Pill -->
           <div class="diorama-scrubber-bar">
             <div class="diorama-scrubber-track-wrap">
               <div class="diorama-scrubber-fill" id="diorama-progress-fill"></div>
