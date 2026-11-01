@@ -7954,7 +7954,12 @@ body::before {
   gap: 8px;
 }
 
-/* Slide 28: India Field Installation Dual-Video Cinema Layout */
+/* Slides 28 & 29: India Field Installation Widescreen Cinema Layout */
+.bento-grid.bento-grid-video-stage {
+  grid-template-columns: 0.72fr 1.28fr;
+  align-items: stretch;
+}
+
 .yka-video-frame {
   position: relative;
   width: 100%;

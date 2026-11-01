@@ -1665,7 +1665,7 @@
         obs.observe(s, { attributes: true, attributeFilter: ['class'] });
       });
 
-      // Mutual-exclusion playback and auto-pause on slide leave for Slide 28 India videos
+      // Auto-pause India videos on Slide 28 & Slide 29 when leaving their slide or playing another
       const indiaVids = Array.from(document.querySelectorAll('.yka-india-video'));
       indiaVids.forEach(vid => {
         vid.addEventListener('play', () => {
@@ -1673,16 +1673,16 @@
             if (other !== vid && !other.paused) other.pause();
           });
         });
+        const parentSlide = vid.closest('.slide');
+        if (parentSlide) {
+          const obsVid = new MutationObserver(() => {
+            if (!parentSlide.classList.contains('active') && !vid.paused) {
+              vid.pause();
+            }
+          });
+          obsVid.observe(parentSlide, { attributes: true, attributeFilter: ['class'] });
+        }
       });
-      const slide28 = document.querySelector('.slide[data-slide="28"]');
-      if (slide28 && indiaVids.length) {
-        const obs28 = new MutationObserver(() => {
-          if (!slide28.classList.contains('active')) {
-            indiaVids.forEach(v => { if (!v.paused) v.pause(); });
-          }
-        });
-        obs28.observe(slide28, { attributes: true, attributeFilter: ['class'] });
-      }
     }
 
     bindEvents() {
