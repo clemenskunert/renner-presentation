@@ -7954,6 +7954,54 @@ body::before {
   gap: 8px;
 }
 
+/* Slide 28: India Field Installation Dual-Video Cinema Layout */
+.yka-video-frame {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 163, 86, 0.38);
+  background: #050810;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yka-india-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #050810;
+  display: block;
+}
+
+.yka-video-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.yka-video-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(0.98rem, 1.08vw, 1.16rem);
+  line-height: 1.42;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.yka-video-bullet-item strong {
+  color: var(--gold-light);
+}
+
 /* ==========================================================================
    YAMAHA KIT ENHANCEMENTS
    ========================================================================== */

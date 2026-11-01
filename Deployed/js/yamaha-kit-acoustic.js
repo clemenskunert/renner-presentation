@@ -1241,18 +1241,6 @@
         ctx.strokeRect(x0 + 8, top, x1 - x0 - 16, bh);
       });
 
-      const xW0 = mapX(this.customFMin), xW1 = mapX(this.customFMax);
-      const xH6 = mapX(Math.min(12000, this.customFMax * 6));
-      ctx.strokeStyle = 'rgba(251, 191, 36, 0.85)';
-      ctx.lineWidth = 2.0;
-      ctx.strokeRect(xW0, padT + 2, Math.max(4, xW1 - xW0), ph - 4);
-      if (xH6 > xW1 + 8) {
-        ctx.strokeStyle = 'rgba(16, 185, 129, 0.65)';
-        ctx.setLineDash([4, 3]);
-        ctx.strokeRect(xW1, padT + 6, xH6 - xW1, ph - 12);
-        ctx.setLineDash([]);
-      }
-
       ctx.beginPath();
       ctx.moveTo(mapX(DATA.f_log[0]), zeroY);
       DATA.f_log.forEach((f, i) => {
@@ -1668,9 +1656,7 @@
     }
 
     initSlideObservers() {
-      ['28', '29', '30', '31'].forEach(num => {
-        const s = document.querySelector(`.slide[data-slide="${num}"]`);
-        if (!s) return;
+      document.querySelectorAll('.slide.yka-slide').forEach(s => {
         const obs = new MutationObserver(() => {
           if (s.classList.contains('active')) {
             setTimeout(() => this.renderAllVisible(), 30);
@@ -1678,6 +1664,25 @@
         });
         obs.observe(s, { attributes: true, attributeFilter: ['class'] });
       });
+
+      // Mutual-exclusion playback and auto-pause on slide leave for Slide 28 India videos
+      const indiaVids = Array.from(document.querySelectorAll('.yka-india-video'));
+      indiaVids.forEach(vid => {
+        vid.addEventListener('play', () => {
+          indiaVids.forEach(other => {
+            if (other !== vid && !other.paused) other.pause();
+          });
+        });
+      });
+      const slide28 = document.querySelector('.slide[data-slide="28"]');
+      if (slide28 && indiaVids.length) {
+        const obs28 = new MutationObserver(() => {
+          if (!slide28.classList.contains('active')) {
+            indiaVids.forEach(v => { if (!v.paused) v.pause(); });
+          }
+        });
+        obs28.observe(slide28, { attributes: true, attributeFilter: ['class'] });
+      }
     }
 
     bindEvents() {
