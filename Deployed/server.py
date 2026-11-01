@@ -50,12 +50,13 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
 
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
-        if self.path.endswith('.json') or self.path.endswith('.js') or self.path.endswith('.html') or self.path.endswith('.css'):
+        clean_path = self.path.split('?')[0].lower()
+        if clean_path.endswith(('.json', '.js', '.html', '.css')):
             self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
             self.send_header('Pragma', 'no-cache')
             self.send_header('Expires', '0')
         else:
-            self.send_header('Cache-Control', 'no-cache, must-revalidate')
+            self.send_header('Cache-Control', 'public, max-age=3600')
         super().end_headers()
 
     def do_OPTIONS(self):

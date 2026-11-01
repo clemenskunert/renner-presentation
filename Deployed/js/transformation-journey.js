@@ -145,7 +145,7 @@ class RennerTransformationJourney {
 
     this.frames = rawFiles.map(([file, dateStr, monthYear, phaseIdx], idx) => ({
       index: idx,
-      src: `Visuell/Bilder/02_Umbau_und_Umzug/${file}`,
+      src: `Visuell/Bilder/02_Umbau_und_Umzug/web_hd/${file}`,
       dateStr,
       monthYear,
       phaseIdx
@@ -154,6 +154,11 @@ class RennerTransformationJourney {
     this.totalFrames = this.frames.length;
     this.totalMilestones = this.totalFrames; // compatibility with presentation.js
     this.currentMilestone = 0;
+    this.activeBuffer = 'main'; // 'main' (#diorama-main-img) or 'flip' (#diorama-flip-img)
+    this.stageNextTimer = null;
+    this.droneDecoderPrimed = false;
+    this.dronePreStarted = false;
+    this.decodedImages = [];
   }
 
   init() {
@@ -252,11 +257,77 @@ class RennerTransformationJourney {
   }
 
   preloadImages() {
-    // Preload all 47 photos in the background for zero-flicker Daumenkino flipping
-    this.frames.forEach(f => {
+    // Preload and GPU-decode all 46 Full-HD photos sequentially & concurrently for zero decode stutter
+    this.decodedImages = this.frames.map(f => {
       const img = new Image();
+      img.decoding = 'async';
       img.src = f.src;
+      if (typeof img.decode === 'function') {
+        img.decode().catch(() => {});
+      }
+      return img;
     });
+  }
+
+  warmUpDroneVideo() {
+    const droneVid = document.getElementById('diorama-drone-video');
+    if (!droneVid) return;
+
+    droneVid.preload = 'auto';
+    if (droneVid.readyState === 0) {
+      try { droneVid.load(); } catch (e) {}
+    }
+
+    // Prime the hardware HEVC decoder while the 46 images are running so play() has 0ms latency
+    const primeDecoder = () => {
+      if (this.droneDecoderPrimed || this.inDroneMode) return;
+      this.droneDecoderPrimed = true;
+      const prevMuted = droneVid.muted;
+      droneVid.muted = true;
+      const p = droneVid.play();
+      if (p && typeof p.then === 'function') {
+        p.then(() => {
+          setTimeout(() => {
+            if (!this.inDroneMode && !this.dronePreStarted) {
+              try {
+                droneVid.pause();
+                droneVid.currentTime = 0.001;
+                droneVid.muted = prevMuted;
+              } catch (e) {}
+            }
+          }, 45);
+        }).catch(() => {
+          droneVid.muted = prevMuted;
+        });
+      }
+    };
+
+    if (droneVid.readyState >= 3) {
+      primeDecoder();
+    } else {
+      droneVid.addEventListener('canplay', primeDecoder, { once: true });
+    }
+  }
+
+  preStartDronePlayback() {
+    if (this.dronePreStarted || this.inDroneMode) return;
+    this.dronePreStarted = true;
+    const droneVid = document.getElementById('diorama-drone-video');
+    if (droneVid) {
+      try {
+        droneVid.muted = false;
+        if (droneVid.currentTime > 0.2) {
+          droneVid.currentTime = 0;
+        }
+        const p = droneVid.play();
+        if (p && typeof p.catch === 'function') {
+          p.catch(() => {
+            droneVid.muted = true;
+            droneVid.play().catch(() => {});
+          });
+        }
+      } catch (e) {}
+    }
   }
 
   renderFrame(index, animateFlip = true) {
@@ -276,6 +347,11 @@ class RennerTransformationJourney {
     const isFinalFour = clamped >= this.totalFrames - 4;
     const finalFourStep = isFinalFour ? (clamped - (this.totalFrames - 4) + 1) : 0; // 1, 2, 3, 4
 
+    // Pre-start the already warmed-up Drone Video on step 3 of the final 4 (~240ms before transition)
+    if (finalFourStep >= 3 && this.isPlayingFlipbook) {
+      this.preStartDronePlayback();
+    }
+
     const photoFrame = document.getElementById('diorama-photo-frame');
     if (photoFrame) {
       if (isFinalFour && this.isPlayingFlipbook) {
@@ -294,29 +370,53 @@ class RennerTransformationJourney {
       }
     }
 
-    // 1. Trigger 3D Daumenkino flip OR Luminous Cross-Dissolve on outgoing sheet
-    const flipSheet = document.getElementById('diorama-flip-sheet');
+    // 1. True Double-Buffered GPU Crossfade between #diorama-main-img and #diorama-flip-img
+    const mainImg = document.getElementById('diorama-main-img');
     const flipImg = document.getElementById('diorama-flip-img');
-    if (flipSheet && flipImg && animateFlip && prevIdx !== clamped) {
-      const outgoing = this.frames[prevIdx] || prev;
-      flipImg.src = outgoing.src;
-      flipSheet.classList.remove('is-flipping', 'is-luminous-blend');
-      void flipSheet.offsetWidth;
-      if (isFinalFour) {
-        flipSheet.classList.add('is-luminous-blend');
+
+    if (this.stageNextTimer) {
+      clearTimeout(this.stageNextTimer);
+      this.stageNextTimer = null;
+    }
+
+    if (mainImg && flipImg) {
+      if (!animateFlip || prevIdx === clamped) {
+        this.activeBuffer = 'main';
+        mainImg.src = cur.src;
+        mainImg.classList.add('is-visible');
+        flipImg.classList.remove('is-visible');
+        // Stage next frame into hidden buffer B immediately so it is pre-decoded before next tick
+        flipImg.src = next1.src;
+        if (typeof flipImg.decode === 'function') flipImg.decode().catch(() => {});
       } else {
-        flipSheet.classList.add('is-flipping');
+        const incoming = this.activeBuffer === 'main' ? flipImg : mainImg;
+        const outgoing = this.activeBuffer === 'main' ? mainImg : flipImg;
+        this.activeBuffer = this.activeBuffer === 'main' ? 'flip' : 'main';
+
+        // Only update incoming.src if it wasn't already pre-staged to cur.src
+        if (!incoming.getAttribute('src') || !incoming.getAttribute('src').endsWith(cur.src)) {
+          incoming.src = cur.src;
+        }
+        incoming.classList.add('is-visible');
+        outgoing.classList.remove('is-visible');
+
+        // After the crossfade settles, stage next1.src onto the now-hidden outgoing buffer
+        const stageDelay = isFinalFour ? 95 : 260;
+        this.stageNextTimer = setTimeout(() => {
+          if (outgoing && !outgoing.classList.contains('is-visible')) {
+            outgoing.src = next1.src;
+            if (typeof outgoing.decode === 'function') outgoing.decode().catch(() => {});
+          }
+        }, stageDelay);
       }
     }
 
-    // 2. Update Main Active Image & 3D Diorama Stack / Wings
-    const mainImg = document.getElementById('diorama-main-img');
+    // 2. Update 3D Diorama Stack / Wings
     const back1Img = document.getElementById('diorama-back1-img');
     const back2Img = document.getElementById('diorama-back2-img');
     const wingLeftImg = document.getElementById('diorama-wing-left-img');
     const wingRightImg = document.getElementById('diorama-wing-right-img');
 
-    if (mainImg) mainImg.src = cur.src;
     if (back1Img) back1Img.src = next1.src;
     if (back2Img) back2Img.src = next2.src;
     if (wingLeftImg) wingLeftImg.src = prev.src;
@@ -371,6 +471,7 @@ class RennerTransformationJourney {
     this.isStarted = true;
     this.inDroneMode = false;
     this.isPlayingFlipbook = true;
+    this.dronePreStarted = false;
 
     const container = document.getElementById('build-timeline-container');
     if (container) {
@@ -385,11 +486,17 @@ class RennerTransformationJourney {
 
     const droneVid = document.getElementById('diorama-drone-video');
     if (droneVid) {
-      try { droneVid.pause(); } catch (e) {}
+      try {
+        droneVid.pause();
+        droneVid.currentTime = 0.001;
+      } catch (e) {}
     }
 
     const dronePill = document.getElementById('diorama-scrubber-drone');
     if (dronePill) dronePill.classList.remove('active');
+
+    // Utilize the 21-second flipbook playback window to buffer and warm up the Drone Video decoder
+    this.warmUpDroneVideo();
 
     this.renderFrame(startIndex, false);
     this.scheduleNextFlip();
@@ -436,6 +543,10 @@ class RennerTransformationJourney {
       clearTimeout(this.flipTimer);
       this.flipTimer = null;
     }
+    if (this.stageNextTimer) {
+      clearTimeout(this.stageNextTimer);
+      this.stageNextTimer = null;
+    }
   }
 
   startDroneVideo(fromBrightFlash = false) {
@@ -451,12 +562,12 @@ class RennerTransformationJourney {
           if (brightFlash.getAttribute('data-bloom') === 'peak') {
             brightFlash.setAttribute('data-bloom', 'dissolve');
           }
-        }, 90);
+        }, 70);
         setTimeout(() => {
           if (brightFlash.getAttribute('data-bloom') === 'dissolve') {
             brightFlash.removeAttribute('data-bloom');
           }
-        }, 850);
+        }, 900);
       } else {
         brightFlash.removeAttribute('data-bloom');
       }
@@ -490,9 +601,17 @@ class RennerTransformationJourney {
     const droneVid = document.getElementById('diorama-drone-video');
     if (droneVid) {
       try {
-        droneVid.currentTime = 0;
-        const p = droneVid.play();
-        if (p && typeof p.catch === 'function') p.catch(() => {});
+        // If preStartDronePlayback() already started the video during the last 2 frames, keep it rolling seamlessly!
+        if (droneVid.paused) {
+          if (!fromBrightFlash) droneVid.currentTime = 0;
+          const p = droneVid.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(() => {
+              droneVid.muted = true;
+              droneVid.play().catch(() => {});
+            });
+          }
+        }
       } catch (e) {}
     }
 

@@ -832,28 +832,24 @@ def get_all_slides_html():
             <div class="diorama-wing left">
               <div class="diorama-wing-card">
                 <div class="diorama-wing-label" data-i18n="s4_wing_prev">◀ Vorheriges Bild</div>
-                <img id="diorama-wing-left-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Vorheriges Bild">
+                <img id="diorama-wing-left-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/01_20251103_152224.jpg" alt="Vorheriges Bild" decoding="async">
               </div>
             </div>
 
             <!-- Center 3D Daumenkino (Flipbook) Stack -->
             <div class="diorama-center-stack">
               <div class="diorama-stack-card back-2">
-                <img id="diorama-back2-img" src="Visuell/Bilder/02_Umbau_und_Umzug/03_20251104_152550.jpg" alt="">
+                <img id="diorama-back2-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/03_20251104_152550.jpg" alt="" decoding="async">
               </div>
               <div class="diorama-stack-card back-1">
-                <img id="diorama-back1-img" src="Visuell/Bilder/02_Umbau_und_Umzug/02_20251104_152516.jpg" alt="">
+                <img id="diorama-back1-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/02_20251104_152516.jpg" alt="" decoding="async">
               </div>
 
-              <!-- Active Front Flipbook Card -->
+              <!-- Active Front Flipbook Card with Double-Buffered GPU Crossfade -->
               <div class="diorama-stack-card front">
                 <div class="diorama-photo-frame" id="diorama-photo-frame">
-                  <img id="diorama-main-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="Baudokumentation Meuselwitz">
-
-                  <!-- Animated 3D Flipping / Luminous Cross-Blending Page Sheet -->
-                  <div class="diorama-flip-sheet" id="diorama-flip-sheet">
-                    <img id="diorama-flip-img" src="Visuell/Bilder/02_Umbau_und_Umzug/01_20251103_152224.jpg" alt="">
-                  </div>
+                  <img class="diorama-buffer-img is-visible" id="diorama-main-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/01_20251103_152224.jpg" alt="Baudokumentation Meuselwitz" decoding="async">
+                  <img class="diorama-buffer-img" id="diorama-flip-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/02_20251104_152516.jpg" alt="" decoding="async">
 
                   <div class="hero-corner-bracket top-left"></div>
                   <div class="hero-corner-bracket top-right"></div>
@@ -880,7 +876,7 @@ def get_all_slides_html():
             <div class="diorama-wing right">
               <div class="diorama-wing-card">
                 <div class="diorama-wing-label" data-i18n="s4_wing_next">Nächstes Bild ▶</div>
-                <img id="diorama-wing-right-img" src="Visuell/Bilder/02_Umbau_und_Umzug/02_20251104_152516.jpg" alt="Nächstes Bild">
+                <img id="diorama-wing-right-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/02_20251104_152516.jpg" alt="Nächstes Bild" decoding="async">
               </div>
             </div>
           </div>
@@ -896,7 +892,7 @@ def get_all_slides_html():
                 <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s4_replay_btn">↺ Daumenkino wiederholen</button>
               </div>
               <div class="diorama-drone-video-wrap">
-                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/poster_drone_meuselwitz.jpg" controls playsinline preload="auto"></video>
+                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/poster_drone_meuselwitz.jpg" controls playsinline preload="auto"></video>
               </div>
             </div>
           </div>
