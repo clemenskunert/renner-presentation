@@ -7334,6 +7334,626 @@ body::before {
 
 
 /* ==========================================================================
+   FOLIEN 28–31: INTERAKTIVE YAMAHA KIT AKUSTIK- & SPEKTRALANALYSE (4 TEILE)
+   ========================================================================== */
+.slide.yka-slide .slide-header {
+  padding: clamp(10px, 1.3vh, 14px) clamp(24px, 2.5vw, 38px) clamp(6px, 0.8vh, 10px) clamp(24px, 2.5vw, 38px) !important;
+}
+
+.slide.yka-slide .slide-title {
+  font-size: clamp(1.65rem, calc(1.5vw + 0.45vh), 2.15rem);
+  line-height: 1.18;
+  margin-bottom: 2px;
+}
+
+.slide.yka-slide .slide-subtitle {
+  font-size: clamp(0.94rem, calc(0.82vw + 0.28vh), 1.12rem);
+  line-height: 1.3;
+}
+
+.slide.yka-slide .slide-body {
+  height: calc(100% - 96px) !important;
+  max-height: calc(100% - 96px) !important;
+  flex: 1;
+  min-height: 0;
+  padding: clamp(6px, 0.9vh, 10px) clamp(24px, 2.5vw, 38px) clamp(12px, 1.5vh, 18px) clamp(24px, 2.5vw, 38px) !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1vh, 12px);
+}
+
+/* Sub-Slide Navigation Bar (1/4 .. 4/4) */
+.yka-subnav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(14, 20, 34, 0.92);
+  border: 1px solid rgba(200, 163, 86, 0.28);
+  border-radius: 10px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.yka-subnav-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  flex: 1;
+}
+
+.yka-subnav-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.22s ease;
+}
+
+.yka-subnav-tab:hover {
+  background: rgba(200, 163, 86, 0.12);
+  border-color: rgba(200, 163, 86, 0.4);
+  color: #ffffff;
+}
+
+.yka-subnav-tab.active {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.22), rgba(31, 164, 124, 0.16));
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(200, 163, 86, 0.22);
+}
+
+.yka-tab-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: rgba(200, 163, 86, 0.18);
+  color: var(--gold-light);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  flex-shrink: 0;
+}
+
+.yka-subnav-tab.active .yka-tab-num {
+  background: var(--gold-accent);
+  color: #090d16;
+}
+
+.yka-tab-label {
+  font-size: clamp(0.8rem, 0.85vw, 0.94rem);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.yka-subnav-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.yka-step-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.yka-step-btn:hover {
+  background: var(--gold-accent);
+  color: #090d16;
+}
+
+.yka-step-counter {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  min-width: 44px;
+  text-align: center;
+}
+
+/* Main 2-Column Layout inside Sub-Slides */
+.yka-main-grid {
+  display: grid;
+  grid-template-columns: 1.38fr 0.62fr;
+  gap: clamp(12px, 1.3vw, 18px);
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+.yka-main-grid.yka-grid-equal {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.yka-main-grid.yka-grid-s30 {
+  grid-template-columns: 1.18fr 0.82fr;
+}
+
+.yka-card {
+  background: linear-gradient(165deg, rgba(16, 22, 36, 0.95) 0%, rgba(9, 13, 22, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  padding: clamp(10px, 1.2vh, 14px) clamp(12px, 1.3vw, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(6px, 0.8vh, 10px);
+  min-height: 0;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.yka-card.yka-card-gold {
+  border-color: rgba(200, 163, 86, 0.38);
+}
+
+.yka-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.yka-card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.yka-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.15vw, 1.28rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.yka-card-sub {
+  font-size: clamp(0.78rem, 0.84vw, 0.9rem);
+  color: var(--text-secondary);
+}
+
+/* Interactive Control Bar (2-Octave Presets, Zoom Modes, Sliders) */
+.yka-control-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: rgba(8, 12, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 6px 10px;
+  flex-shrink: 0;
+}
+
+.yka-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.yka-group-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--gold-light);
+  margin-right: 4px;
+}
+
+.yka-oct-btn,
+.yka-zmode-btn,
+.yka-scale-btn,
+.yka-pmode-btn,
+.yka-calc-preset,
+.yka-layer-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.86);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: clamp(0.72rem, 0.76vw, 0.82rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: var(--font-sans);
+  line-height: 1.15;
+}
+
+.yka-oct-btn small {
+  display: block;
+  font-size: 0.63rem;
+  font-family: var(--font-mono);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.yka-oct-btn:hover,
+.yka-zmode-btn:hover,
+.yka-scale-btn:hover,
+.yka-pmode-btn:hover,
+.yka-calc-preset:hover {
+  border-color: rgba(200, 163, 86, 0.55);
+  color: #ffffff;
+  background: rgba(200, 163, 86, 0.14);
+}
+
+.yka-oct-btn.active,
+.yka-zmode-btn.active,
+.yka-scale-btn.active,
+.yka-pmode-btn.active {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.3), rgba(31, 164, 124, 0.22));
+  border-color: var(--gold-accent);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(200, 163, 86, 0.28);
+}
+
+.yka-oct-btn.active small {
+  color: var(--gold-light);
+}
+
+.yka-layer-pill.active {
+  background: rgba(31, 164, 124, 0.18);
+  border-color: rgba(46, 204, 113, 0.55);
+  color: #ffffff;
+}
+
+/* Sliders Row */
+.yka-slider-strip {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  background: rgba(10, 14, 24, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+}
+
+.yka-slider-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.yka-slider-item label {
+  white-space: nowrap;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.yka-slider-item input[type="range"],
+.yka-calc-slider {
+  flex: 1;
+  accent-color: var(--gold-accent);
+  height: 5px;
+  cursor: pointer;
+}
+
+.yka-slider-val {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  white-space: nowrap;
+}
+
+/* Canvas Wrappers */
+.yka-piano-wrap {
+  width: 100%;
+  height: 54px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 163, 86, 0.3);
+  background: #070a12;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.yka-piano-wrap canvas,
+.yka-canvas-box canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.yka-canvas-box {
+  width: 100%;
+  flex: 1;
+  min-height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: #070b13;
+  position: relative;
+}
+
+/* Readout Bar below Canvas */
+.yka-readout-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(8, 12, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: clamp(0.74rem, 0.8vw, 0.84rem);
+  flex-shrink: 0;
+}
+
+/* KPI Grid / Metric Cards */
+.yka-kpi-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.yka-kpi-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.yka-kpi-box {
+  background: rgba(255, 255, 255, 0.038);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-left: 3px solid var(--gold-accent);
+  border-radius: 9px;
+  padding: 9px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.yka-kpi-box.green {
+  border-left-color: var(--renner-green-bright);
+}
+
+.yka-kpi-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.yka-kpi-val {
+  font-family: var(--font-mono);
+  font-size: clamp(0.96rem, 1.08vw, 1.18rem);
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.yka-kpi-val.emerald {
+  color: #2ecc71;
+}
+
+.yka-kpi-val.gold {
+  color: var(--gold-light);
+}
+
+.yka-kpi-sub {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Dynamic Diagnosis Box */
+.yka-diag-box {
+  background: radial-gradient(circle at top left, rgba(200, 163, 86, 0.14), rgba(10, 15, 26, 0.95) 75%);
+  border: 1px solid rgba(200, 163, 86, 0.35);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+.yka-diag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--gold-light);
+}
+
+.yka-diag-text {
+  font-size: clamp(0.94rem, 1.04vw, 1.12rem);
+  line-height: 1.56;
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0;
+}
+
+.yka-diag-text strong {
+  color: var(--gold-light);
+}
+
+/* Slide 30: Register Pills & 2x2 Advantage Grid */
+.yka-band-pills {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.yka-band-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  color: #ffffff;
+}
+
+.yka-band-pill:hover,
+.yka-band-pill.active {
+  background: rgba(200, 163, 86, 0.18);
+  border-color: var(--gold-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.yka-bp-name {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.yka-bp-val {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.yka-adv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: clamp(8px, 1vw, 12px);
+  height: 100%;
+  min-height: 0;
+}
+
+.yka-adv-card {
+  background: linear-gradient(160deg, rgba(19, 26, 42, 0.95) 0%, rgba(10, 14, 24, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-top: 3px solid var(--gold-accent);
+  border-radius: 12px;
+  padding: clamp(14px, 1.6vh, 20px) clamp(14px, 1.4vw, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(8px, 1.1vh, 14px);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-sizing: border-box;
+}
+
+.yka-adv-card.emerald {
+  border-top-color: #2ecc71;
+}
+
+.yka-adv-card:hover,
+.yka-adv-card.active {
+  border-color: var(--gold-accent);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65), 0 0 18px rgba(200, 163, 86, 0.22);
+  transform: translateY(-3px);
+}
+
+.yka-adv-metric {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 1.95vw, 2.2rem);
+  font-weight: 900;
+  color: var(--gold-light);
+  line-height: 1.08;
+  margin-top: 4px;
+}
+
+.yka-adv-card.emerald .yka-adv-metric {
+  color: #2ecc71;
+}
+
+.yka-adv-title {
+  font-size: clamp(1.02rem, 1.12vw, 1.22rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 6px 0 2px 0;
+  line-height: 1.25;
+}
+
+.yka-adv-desc {
+  font-size: clamp(0.88rem, 0.98vw, 1.06rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Slide 31: Live Spectral-Slope Calculator Box (C8 = 4300 Hz max) */
+.yka-calc-box {
+  background: linear-gradient(145deg, rgba(20, 28, 44, 0.96), rgba(11, 15, 26, 0.98));
+  border: 1px solid rgba(200, 163, 86, 0.42);
+  border-radius: 11px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.yka-calc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.yka-calc-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.yka-calc-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* ==========================================================================
    YAMAHA KIT ENHANCEMENTS
    ========================================================================== */
 @import url("yamaha-kit.css");

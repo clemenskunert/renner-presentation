@@ -477,7 +477,7 @@ class PresentationController {
       this.touchEndY = e.changedTouches[0].clientY;
 
       const target = e.target;
-      if (target && target.closest && target.closest('button, a, input, select, textarea, .timelapse-track, .timelapse-thumb, .history-journey-modal, .interactive-el, .sound-modal, .header-menu-dropdown, .slide-grid-overlay, .audio-key, .voicing-slider')) {
+      if (target && target.closest && target.closest('button, a, input, select, textarea, canvas, .yka-slider-oct, .yka-calc-slider, .timelapse-track, .timelapse-thumb, .history-journey-modal, .interactive-el, .sound-modal, .header-menu-dropdown, .slide-grid-overlay, .audio-key, .voicing-slider')) {
         return;
       }
 

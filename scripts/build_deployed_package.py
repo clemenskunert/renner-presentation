@@ -84,6 +84,7 @@ def build_offline_tablet_html():
         "ffw-history.js",
         "felt-anatomy.js",
         "yamaha-kit.js",
+        "yamaha-kit-acoustic.js",
         "presentation.js"
     ]
 

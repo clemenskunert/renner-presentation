@@ -140,7 +140,7 @@
       <section class="slide active hero-slide" data-slide="1">
         <span class="hero-kicker" data-i18n="s1_kicker">Renner Masterclass & Konferenz 2025 • Beijing & Toyohashi</span>
         <h1 class="hero-main-title" data-i18n="s1_title">LOUIS RENNER</h1>
-        <p class="hero-main-subtitle" data-i18n="s1_subtitle">Das Herzstück des Klaviers: 140 Jahre Tradition, die neue Fertigung in Meuselwitz & die hohe Kunst des Hammerkopfs</p>
+        <p class="hero-main-subtitle" data-i18n="s1_subtitle"></p>
         <div class="hero-meta-bar">
           <div class="hero-meta-item">
             <span>Speaker:</span> <strong>Clemens Kunert</strong>
@@ -195,7 +195,7 @@
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">04</span>
               </div>
-              <div class="agenda-journey-node" data-target-slide="28" style="--node-idx: 4;">
+              <div class="agenda-journey-node" data-target-slide="32" style="--node-idx: 4;">
                 <span class="node-pin-dot"></span>
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">05</span>
@@ -269,7 +269,7 @@
               <div class="bento-step-watermark">04</div>
               <div class="agenda-card-header">
                 <span class="bento-badge green" data-i18n="s2_b4_badge">KAPITEL 4</span>
-                <span class="agenda-slide-pill"><span class="pill-dot green"></span>Folie 27</span>
+                <span class="agenda-slide-pill"><span class="pill-dot green"></span>Folie 27–31</span>
               </div>
               <div class="agenda-card-main">
                 <div class="bento-card-title" data-i18n="s2_c4_title">Yamaha KIT</div>
@@ -282,13 +282,13 @@
             </div>
 
             <!-- KAPITEL 5 -->
-            <div class="bento-card agenda-card hero-highlight" data-target-slide="28" role="button" tabindex="0" style="--card-idx: 4;">
+            <div class="bento-card agenda-card hero-highlight" data-target-slide="32" role="button" tabindex="0" style="--card-idx: 4;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">05</div>
               <div class="agenda-card-header">
                 <span class="bento-badge gold" data-i18n="s2_b5_badge">KAPITEL 5</span>
-                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span>Folie 28–35</span>
+                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span>Folie 32–39</span>
               </div>
               <div class="agenda-card-main">
                 <div class="bento-card-title" data-i18n="s2_c5_title">Intonation</div>
@@ -3933,64 +3933,148 @@
           </div>
         </div>
       </section>
-      <!-- SLIDE 28: Das Uhren-Modell -->
-      <section class="slide slide-hero-theme" data-slide="28">
+      <!-- SLIDE 28: Yamaha Kit Akustik-Analyse (1/4) - Spektrum & 2-Oktaven-Filter -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="28">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s28_category">Teil 5: Intonation • Geometrie & Keile</div>
-            <h2 class="slide-title" data-i18n="s28_title">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
-            <div class="slide-subtitle" data-i18n="s28_subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
+            <div class="slide-category" data-i18n="s28_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (1/4)</div>
+            <h2 class="slide-title" data-i18n="s28_title">Leistungsdichtespektrum L(f) &amp; Interaktive 2-Oktaven-Eingrenzung</h2>
+            <div class="slide-subtitle" data-i18n="s28_subtitle">Welch-PSD (44,1 kHz, 699 s Aufnahme): Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
           </div>
         </div>
         <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 14px;">
-              <div class="bento-card" style="border-left: 4px solid #3b82f6;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s28_b1_badge">FORTISSIMO (ff)</span>
-                  <span class="mono-val">9:00–10:00 & 2:00–3:00</span>
+          <!-- Interactive 4-Part Sub-Slide Navigation Bar -->
+          <div class="yka-subnav-bar">
+            <div class="yka-subnav-tabs">
+              <button class="yka-subnav-tab active" data-target-slide="28" type="button">
+                <span class="yka-tab-num">01</span>
+                <span class="yka-tab-label" data-i18n="s28_tab1">SPEKTRUM & 2-OKTAVEN</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="29" type="button">
+                <span class="yka-tab-num">02</span>
+                <span class="yka-tab-label" data-i18n="s28_tab2">TEILTÖNE H1–H12</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="30" type="button">
+                <span class="yka-tab-num">03</span>
+                <span class="yka-tab-label" data-i18n="s28_tab3">REGISTER-GEWINN ΔL(f)</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="31" type="button">
+                <span class="yka-tab-num">04</span>
+                <span class="yka-tab-label" data-i18n="s28_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+              </button>
+            </div>
+            <div class="yka-subnav-stepper">
+              <button class="yka-step-btn" data-target-slide="27" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <span class="yka-step-counter">1 / 4</span>
+              <button class="yka-step-btn" data-target-slide="29" title="Nächste Analyse-Ansicht" type="button">→</button>
+            </div>
+          </div>
+          <div class="yka-main-grid">
+            <!-- LEFT: Interactive 2-Octave Spectrum & 88-Key Piano -->
+            <div class="yka-card yka-card-gold">
+              <div class="yka-control-strip">
+                <div class="yka-btn-group">
+                  <span class="yka-group-label" data-i18n="s28_lbl_oct">2-Oktaven-Fenster:</span>
+                  <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>27–110 Hz</small></button>
+                  <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>55–220 Hz</small></button>
+                  <button class="yka-oct-btn active" data-oct="2" type="button">A2–A4<small>110–440 Hz</small></button>
+                  <button class="yka-oct-btn" data-oct="3" type="button">A3–A5<small>220–880 Hz</small></button>
+                  <button class="yka-oct-btn" data-oct="4" type="button">A4–A6<small>440–1760 Hz</small></button>
+                  <button class="yka-oct-btn" data-oct="5" type="button">A5–A7<small>880–3520 Hz</small></button>
+                  <button class="yka-oct-btn" data-oct="all" type="button" data-i18n="s28_btn_all">Gesamt<small>25–10k Hz</small></button>
                 </div>
-                <div class="bento-card-title" data-i18n="s28_c1_title">Blauer Keil</div>
-                <div class="bento-card-desc" data-i18n="s28_c1_desc">Tiefe Nadelstiche zur Entspannung</div>
+                <div class="yka-btn-group">
+                  <button class="yka-zmode-btn active" data-zmode="partials" type="button" data-i18n="s28_zmode_part">2 Okt. + Teiltöne (H1–H8)</button>
+                  <button class="yka-zmode-btn" data-zmode="fund" type="button" data-i18n="s28_zmode_fund">Exakt 2 Oktaven</button>
+                  <button class="yka-zmode-btn" data-zmode="full" type="button" data-i18n="s28_zmode_full">Vollbereich</button>
+                  <button class="yka-scale-btn active" data-scale="log" type="button">Log</button>
+                  <button class="yka-scale-btn" data-scale="lin" type="button">Lin</button>
+                </div>
               </div>
-              <div class="bento-card" style="border-left: 4px solid #22c55e;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s28_b2_badge">FORTE (f)</span>
-                  <span class="mono-val">10:00–11:00 & 1:00–2:00</span>
+
+              <div class="yka-slider-strip">
+                <div class="yka-slider-item">
+                  <label data-i18n="s28_sl_oct">Startnote (2 Okt.):</label>
+                  <input type="range" class="yka-slider-oct" min="21" max="84" step="1" value="45">
+                  <span class="yka-slider-val yka-lbl-oct-range">A2 – A4 (110 – 440 Hz)</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s28_c2_title">Grüner Keil</div>
-                <div class="bento-card-desc" data-i18n="s28_c2_desc">Raumklang, Glanz und dynamische Entfaltung</div>
+                <div class="yka-slider-item">
+                  <label>f<sub>min</sub>:</label>
+                  <input type="range" id="yka-slider-fmin" min="25" max="2000" step="5" value="55">
+                  <span class="yka-slider-val" id="yka-lbl-fmin">55 Hz</span>
+                </div>
+                <div class="yka-slider-item">
+                  <label>f<sub>max</sub>:</label>
+                  <input type="range" id="yka-slider-fmax" min="200" max="10000" step="10" value="1760">
+                  <span class="yka-slider-val" id="yka-lbl-fmax">1760 Hz</span>
+                </div>
               </div>
-              <div class="bento-card" style="border-left: 4px solid #f97316;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s28_b3_badge">PIANO (p)</span>
-                  <span class="mono-val">11:00–11:30 & 12:30–1:00</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s28_c3_title">Orangener Keil</div>
-                <div class="bento-card-desc" data-i18n="s28_c3_desc">Lyrischer Gesangston, feine Abstimmung</div>
+
+              <div class="yka-piano-wrap" title="Klicken oder ziehen, um das 2-Oktaven-Fenster (24 Halbtöne) auf der 88-Tasten-Klaviatur zu verschieben">
+                <canvas id="yka-canvas-piano"></canvas>
               </div>
-              <div class="bento-card" style="border-left: 4px solid #a855f7;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s28_b4_badge">PIANISSIMO (pp)</span>
-                  <span class="mono-val">11:30–12:00 & 12:00–12:30</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s28_c4_title">Violetter Keil</div>
-                <div class="bento-card-desc" data-i18n="s28_c4_desc">Flüsterleise Ansprache</div>
+
+              <div class="yka-canvas-box">
+                <canvas id="yka-canvas-spectrum"></canvas>
               </div>
-              <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
-                <div class="bento-card-header">
-                  <span class="bento-badge red" data-i18n="s28_b5_badge">>ROTE ZONE (SCHEITEL)</span>
-                  <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
+
+              <div class="yka-readout-bar">
+                <div class="yka-btn-group">
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-orig" checked hidden> ● <span data-i18n="s28_chk_orig">Original (0:00–5:17)</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-kit" checked hidden> ● <span data-i18n="s28_chk_kit">Renner Yamaha Kit (5:18–11:42)</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-gain" checked hidden> ▲ <span data-i18n="s28_chk_gain">Oberton-Gewinn</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-hmarkers" checked hidden> ⋮ <span data-i18n="s28_chk_hm">Teiltöne H1–H8</span></label>
+                  <label class="yka-layer-pill"><input type="checkbox" id="yka-chk-peak" hidden> 📈 <span data-i18n="s28_chk_peak">Max-Hold P95</span></label>
                 </div>
-                <div class="bento-card-title" style="color: #fca5a5;" data-i18n="s28_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
+                <div>
+                  <span id="yka-ro-spec-freq" style="color: var(--gold-light); font-weight: 700;">Cursor: 1.000 Hz</span> ·
+                  <span id="yka-ro-spec-orig" style="color: #ff7675;">Orig: −38,4 dB</span> ·
+                  <span id="yka-ro-spec-kit" style="color: #2ecc71;">Kit: −35,9 dB</span> ·
+                  <strong id="yka-ro-spec-delta" style="color: #2ecc71;">Δ: +2,53 dB (+79 %)</strong>
+                </div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_11_2_Image210.jpg" alt="Das Uhren-Modell der Intonation">
-              <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s28_b6_badge">>JENS-SÖREN KRUSE</span>
-                <div class="bento-media-caption" data-i18n="s28_caption_1">Original Renner Uhrenmodell</div>
-                <div class="bento-media-subcaption" data-i18n="s28_caption_2">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
+
+            <!-- RIGHT: Live 2-Octave Telemetry & Acoustic Diagnosis -->
+            <div class="yka-card">
+              <div class="yka-card-head">
+                <div class="yka-card-title-wrap">
+                  <span class="bento-badge gold" data-i18n="s28_b1_badge">&gt;LIVE 2-OKTAVEN-TELEMETRIE</span>
+                  <h3 class="yka-card-title" data-i18n="s28_r_title">Messwerte im gewählten 2-Oktaven-Fenster</h3>
+                </div>
+              </div>
+
+              <div class="yka-kpi-stack">
+                <div class="yka-kpi-box">
+                  <span class="yka-kpi-label" data-i18n="s28_kpi1_lbl">Aktives 2-Oktaven-Fenster</span>
+                  <span class="yka-kpi-val gold yka-kpi-win-notes">A2 – A4 (110 – 440 Hz)</span>
+                  <span class="yka-kpi-sub yka-kpi-win-sub">Klaviatur-Mitte &amp; Grundton-Zentrum</span>
+                </div>
+                <div class="yka-kpi-box green">
+                  <span class="yka-kpi-label" data-i18n="s28_kpi2_lbl">Mittlerer Oberton-Gewinn (H2–H8)</span>
+                  <span class="yka-kpi-val emerald yka-kpi-ot-gain">+1,89 dB (+55 % Energie)</span>
+                  <span class="yka-kpi-sub yka-kpi-ot-sub">Spitzengewinn bei H5 (+3,42 dB)</span>
+                </div>
+                <div class="yka-kpi-box">
+                  <span class="yka-kpi-label" data-i18n="s28_kpi3_lbl">Grundton-Pegel H1 (f₀)</span>
+                  <span class="yka-kpi-val yka-kpi-h1-vals">−23,4 dB → −23,5 dB</span>
+                  <span class="yka-kpi-sub yka-kpi-h1-sub">Δ H1: −0,08 dB (Original vs. Kit)</span>
+                </div>
+                <div class="yka-kpi-box green">
+                  <span class="yka-kpi-label" data-i18n="s28_kpi4_lbl">Lokaler Spectral Slope (Abfall)</span>
+                  <span class="yka-kpi-val emerald yka-kpi-local-slope">+0,93 dB/kHz flacher</span>
+                  <span class="yka-kpi-sub yka-kpi-slope-sub">Orig: −7,38 vs. Kit: −6,45 dB/kHz</span>
+                </div>
+              </div>
+
+              <div class="yka-diag-box">
+                <span class="yka-diag-badge" data-i18n="s28_diag_badge">✦ AKUSTISCHE DIAGNOSE DES GEWÄHLTEN REGISTERS</span>
+                <p class="yka-diag-text">
+                  Im zentralen Spielregister <strong>A2–A4</strong> bleibt der Grundtonpegel ($H_1$) nahezu identisch, während die Obertöne $H_3$ bis $H_8$ (330 Hz bis 3,5 kHz) massiv um bis zu <strong>+3,4 dB (+119 % Schallenergie)</strong> aufblühen. Das Instrument gewinnt enorme Gesanglichkeit (Cantabile).
+                </p>
+                <div class="yka-readout-bar" style="margin-top: auto;">
+                  <span data-i18n="s28_hint_nav">💡 Tipp: Klicken Sie auf die 88-Tasten-Klaviatur oder nutzen Sie Tab 02 für die Teilton-Analyse H1–H12.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -4002,43 +4086,519 @@
           </div>
         </div>
       </section>
-<!-- SLIDE 29 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="29">
+      <!-- SLIDE 29: Yamaha Kit Akustik-Analyse (2/4) - Teiltonverteilung H1-H12 & 24 Halbtöne -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="29">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s29_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (2/4)</div>
+            <h2 class="slide-title" data-i18n="s29_title">2-Oktaven-Teiltonverteilung (H₁–H₁₂) &amp; Chromatische 24-Halbton-Auflösung</h2>
+            <div class="slide-subtitle" data-i18n="s29_subtitle">Harmonische Oberton-Architektur je 2-Oktaven-Register: Warum das Renner Kit wärmer und zugleich brillanter klingt</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <!-- Interactive 4-Part Sub-Slide Navigation Bar -->
+          <div class="yka-subnav-bar">
+            <div class="yka-subnav-tabs">
+              <button class="yka-subnav-tab" data-target-slide="28" type="button">
+                <span class="yka-tab-num">01</span>
+                <span class="yka-tab-label" data-i18n="s29_tab1">SPEKTRUM & 2-OKTAVEN</span>
+              </button>
+              <button class="yka-subnav-tab active" data-target-slide="29" type="button">
+                <span class="yka-tab-num">02</span>
+                <span class="yka-tab-label" data-i18n="s29_tab2">TEILTÖNE H1–H12</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="30" type="button">
+                <span class="yka-tab-num">03</span>
+                <span class="yka-tab-label" data-i18n="s29_tab3">REGISTER-GEWINN ΔL(f)</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="31" type="button">
+                <span class="yka-tab-num">04</span>
+                <span class="yka-tab-label" data-i18n="s29_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+              </button>
+            </div>
+            <div class="yka-subnav-stepper">
+              <button class="yka-step-btn" data-target-slide="28" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <span class="yka-step-counter">2 / 4</span>
+              <button class="yka-step-btn" data-target-slide="30" title="Nächste Analyse-Ansicht" type="button">→</button>
+            </div>
+          </div>
+          <!-- Synchronized 2-Octave Control Bar -->
+          <div class="yka-control-strip">
+            <div class="yka-btn-group">
+              <span class="yka-group-label" data-i18n="s29_lbl_oct">2-Oktaven-Register wählen:</span>
+              <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>Kontra/Bass</small></button>
+              <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>Bass/Tenor</small></button>
+              <button class="yka-oct-btn active" data-oct="2" type="button">A2–A4<small>Mitte</small></button>
+              <button class="yka-oct-btn" data-oct="3" type="button">A3–A5<small>Melodie</small></button>
+              <button class="yka-oct-btn" data-oct="4" type="button">A4–A6<small>Diskant</small></button>
+              <button class="yka-oct-btn" data-oct="5" type="button">A5–A7<small>Hochdiskant</small></button>
+              <button class="yka-oct-btn" data-oct="all" type="button" data-i18n="s29_btn_all">Gesamt<small>A0–C8</small></button>
+            </div>
+            <div class="yka-slider-item" style="min-width: 280px;">
+              <label data-i18n="s29_sl_oct">Stufenlos (24 Halbtöne):</label>
+              <input type="range" class="yka-slider-oct" min="21" max="84" step="1" value="45">
+              <span class="yka-slider-val yka-lbl-oct-range">A2 – A4 (110 – 440 Hz)</span>
+            </div>
+            <div class="yka-btn-group">
+              <span class="yka-group-label" data-i18n="s29_lbl_pmode">Darstellung:</span>
+              <button class="yka-pmode-btn active" data-pmode="rel" type="button" data-i18n="s29_pmode_rel">Relativ zu H₁ = 0 dB</button>
+              <button class="yka-pmode-btn" data-pmode="delta" type="button" data-i18n="s29_pmode_delta">Δ Gewinn pro Teilton</button>
+              <button class="yka-pmode-btn" data-pmode="abs" type="button" data-i18n="s29_pmode_abs">Absolutpegel (dB)</button>
+            </div>
+          </div>
+
+          <div class="yka-main-grid yka-grid-equal">
+            <!-- LEFT: Harmonics H1..H12 Chart -->
+            <div class="yka-card yka-card-gold">
+              <div class="yka-card-head">
+                <div class="yka-card-title-wrap">
+                  <span class="bento-badge gold" data-i18n="s29_b1_badge">&gt;TEILTON-ARCHITEKTUR H₁–H₁₂</span>
+                  <h3 class="yka-card-title" data-i18n="s29_l_title">Harmonische Teiltonverteilung im 2-Oktaven-Fenster</h3>
+                </div>
+              </div>
+
+              <div class="yka-canvas-box">
+                <canvas id="yka-canvas-partials"></canvas>
+              </div>
+
+              <div class="yka-readout-bar">
+                <span id="yka-ro-part-name" style="color: var(--gold-light); font-weight: 700;">H5 (Terz (2 Okt.+Gr.Terz))</span>
+                <span id="yka-ro-part-freq">Frequenzband: 550 – 2200 Hz</span>
+                <strong id="yka-ro-part-delta" style="color: #2ecc71;">Δ Kit: +2,64 dB (+84 % Energie)</strong>
+              </div>
+
+              <div class="yka-kpi-row-3">
+                <div class="yka-kpi-box green">
+                  <span class="yka-kpi-label" data-i18n="s29_pkpi1">Teilton-Abfall (H₁→H₈)</span>
+                  <span class="yka-kpi-val emerald" id="yka-kpi-p-decay">+1,12 dB/Okt.</span>
+                  <span class="yka-kpi-sub" id="yka-kpi-p-decay-sub">Orig: −6,8 vs. Kit: −5,7 dB/Okt.</span>
+                </div>
+                <div class="yka-kpi-box">
+                  <span class="yka-kpi-label" data-i18n="s29_pkpi2">Geradzahlige (H₂, H₄, H₆, H₈)</span>
+                  <span class="yka-kpi-val gold" id="yka-kpi-p-even">+1,74 dB</span>
+                  <span class="yka-kpi-sub" data-i18n="s29_pkpi2_sub">Oktav-Wärme &amp; Fülle</span>
+                </div>
+                <div class="yka-kpi-box green">
+                  <span class="yka-kpi-label" data-i18n="s29_pkpi3">Ungeradzahlige (H₃, H₅, H₇)</span>
+                  <span class="yka-kpi-val emerald" id="yka-kpi-p-odd">+2,18 dB</span>
+                  <span class="yka-kpi-sub" data-i18n="s29_pkpi3_sub">Quint-/Terz-Brillanz &amp; Kern</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: 24-Semitone Chromatic Resolution -->
+            <div class="yka-card">
+              <div class="yka-card-head">
+                <div class="yka-card-title-wrap">
+                  <span class="bento-badge green" data-i18n="s29_b2_badge">&gt;24 HALBTÖNE CHROMATISCH</span>
+                  <h3 class="yka-card-title" data-i18n="s29_r_title">Oberton-Energie (H₂–H₈) Note für Note im 2-Oktaven-Fenster</h3>
+                </div>
+              </div>
+
+              <div class="yka-canvas-box">
+                <canvas id="yka-canvas-semitones"></canvas>
+              </div>
+
+              <div class="yka-diag-box" style="flex: 0 0 auto;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="yka-diag-badge" data-i18n="s29_diag_badge">✦ TEILTON-DIAGNOSE</span>
+                  <span class="yka-kpi-val emerald yka-kpi-ot-gain" style="font-size:0.9rem;">+1,89 dB (+55 % Energie)</span>
+                </div>
+                <p class="yka-diag-text" style="font-size: 0.84rem;">
+                  Der hochwertige FFW-Merinofilz des Renner Yamaha Kits speichert die Anschlagsenergie elastisch und gibt sie ohne hochfrequente Dämpfungsverluste an die Saite zurück: Die Teiltöne <strong>H₃ bis H₈</strong> gewinnen massiv an Tragkraft.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SLIDE 30: Yamaha Kit Akustik-Analyse (3/4) - Spektrale Differenzkurve & 4 Kernvorteile -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="30">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s30_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (3/4)</div>
+            <h2 class="slide-title" data-i18n="s30_title">Spektrale Differenzkurve ΔL(f) nach Registern &amp; Die 4 Kernvorteile</h2>
+            <div class="slide-subtitle" data-i18n="s30_subtitle">Direkter Pegelgewinn ΔL(f) = L_Kit(f) − L_Original(f) über alle 5 akustischen Klavierregister</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <!-- Interactive 4-Part Sub-Slide Navigation Bar -->
+          <div class="yka-subnav-bar">
+            <div class="yka-subnav-tabs">
+              <button class="yka-subnav-tab" data-target-slide="28" type="button">
+                <span class="yka-tab-num">01</span>
+                <span class="yka-tab-label" data-i18n="s30_tab1">SPEKTRUM & 2-OKTAVEN</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="29" type="button">
+                <span class="yka-tab-num">02</span>
+                <span class="yka-tab-label" data-i18n="s30_tab2">TEILTÖNE H1–H12</span>
+              </button>
+              <button class="yka-subnav-tab active" data-target-slide="30" type="button">
+                <span class="yka-tab-num">03</span>
+                <span class="yka-tab-label" data-i18n="s30_tab3">REGISTER-GEWINN ΔL(f)</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="31" type="button">
+                <span class="yka-tab-num">04</span>
+                <span class="yka-tab-label" data-i18n="s30_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+              </button>
+            </div>
+            <div class="yka-subnav-stepper">
+              <button class="yka-step-btn" data-target-slide="29" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <span class="yka-step-counter">3 / 4</span>
+              <button class="yka-step-btn" data-target-slide="31" title="Nächste Analyse-Ansicht" type="button">→</button>
+            </div>
+          </div>
+          <div class="yka-main-grid yka-grid-s30">
+            <!-- LEFT: Interactive Spectral Difference Curve ΔL(f) -->
+            <div class="yka-card yka-card-gold">
+              <div class="yka-card-head">
+                <div class="yka-card-title-wrap">
+                  <span class="bento-badge gold" data-i18n="s30_b1_badge">&gt;DIFFERENZSPEKTRUM ΔL(f)</span>
+                  <h3 class="yka-card-title" data-i18n="s30_l_title">Pegeländerung nach Einbau des Louis Renner Yamaha Kits</h3>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem;">
+                  <span id="yka-ro-diff-freq" style="color: var(--gold-light);">Frequenz: 1.450 Hz</span> ·
+                  <strong id="yka-ro-diff-val" style="color: #2ecc71;">+2,68 dB (+85 % Schallenergie)</strong>
+                </div>
+              </div>
+
+              <!-- 5 Interactive Register Pills -->
+              <div class="yka-band-pills">
+                <button class="yka-band-pill" data-band="0" type="button">
+                  <span class="yka-bp-name" data-i18n="s30_bp0_name">1. Bass (20–250 Hz)</span>
+                  <span class="yka-bp-val" style="color: var(--gold-light);">−3,28 dB</span>
+                </button>
+                <button class="yka-band-pill" data-band="1" type="button">
+                  <span class="yka-bp-name" data-i18n="s30_bp1_name">2. Grundton (250–800 Hz)</span>
+                  <span class="yka-bp-val" style="color: #74b9ff;">−0,07 dB</span>
+                </button>
+                <button class="yka-band-pill active" data-band="2" type="button">
+                  <span class="yka-bp-name" data-i18n="s30_bp2_name">3. Präsenz (0,8–2,5 kHz)</span>
+                  <span class="yka-bp-val" style="color: #2ecc71;">+2,53 dB</span>
+                </button>
+                <button class="yka-band-pill" data-band="3" type="button">
+                  <span class="yka-bp-name" data-i18n="s30_bp3_name">4. Brillanz (2,5–6 kHz)</span>
+                  <span class="yka-bp-val" style="color: #2ecc71;">+1,87 dB</span>
+                </button>
+                <button class="yka-band-pill" data-band="4" type="button">
+                  <span class="yka-bp-name" data-i18n="s30_bp4_name">5. Air (6–10 kHz)</span>
+                  <span class="yka-bp-val" style="color: var(--gold-light);">+0,31 dB</span>
+                </button>
+              </div>
+
+              <div class="yka-canvas-box">
+                <canvas id="yka-canvas-diff"></canvas>
+              </div>
+
+              <div class="yka-diag-box" style="flex: 0 0 auto;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong id="yka-bi-title" style="color:#ffffff; font-size:0.95rem;">Präsenz &amp; Gesangsregister (800 – 2.500 Hz)</strong>
+                  <span class="bento-badge green" data-i18n="s30_b2_badge">Δ Mittel: +2,53 dB (+79 % Energie)</span>
+                </div>
+                <p class="yka-diag-text" id="yka-bi-desc" style="font-size:0.84rem;">
+                  Der entscheidende akustische Hauptgewinn (+79 % mehr Schallenergie, Spitzen bis +3,4 dB bei 1,45 kHz): Das Instrument erhält seine tragfähige „Singstimme“ (Cantabile) und projiziert mühelos im Raum.
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT: 2x2 Grid of the 4 Core Acoustic Advantages -->
+            <div class="yka-adv-grid">
+              <div class="yka-adv-card emerald active" data-band="2">
+                <div>
+                  <span class="bento-badge green" data-i18n="s30_b3_badge">&gt;VORTEIL 01 • CANTABILE</span>
+                  <div class="yka-adv-metric">+2,53 dB <small style="font-size:0.55em;">(+79 %)</small></div>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv1_title">Strahlendes Gesangsregister (0,8–2,5 kHz)</h4>
+                </div>
+                <p class="yka-adv-desc" data-i18n="s30_adv1_desc">
+                  Massive Aufwertung des Formant- und Melodiebereichs (Spitzen bis +3,4 dB bei 1,45 kHz). Verleiht dem Yamaha-Flügel einen warmen, singenden Konzertton.
+                </p>
+              </div>
+
+              <div class="yka-adv-card emerald" data-band="3">
+                <div>
+                  <span class="bento-badge green" data-i18n="s30_b4_badge">&gt;VORTEIL 02 • PROJEKTION</span>
+                  <div class="yka-adv-metric">+1,87 dB <small style="font-size:0.55em;">(+54 %)</small></div>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv2_title">Glockige Diskant-Brillanz (2,5–6,0 kHz)</h4>
+                </div>
+                <p class="yka-adv-desc" data-i18n="s30_adv2_desc">
+                  Deutlich höhere Oberton-Reichweite ohne metallische Schärfe dank präziser Scheitel-Elastizität des FFW-Merinofilzes und glasharter Glutenleim-Kopplung.
+                </p>
+              </div>
+
+              <div class="yka-adv-card" data-band="0">
+                <div>
+                  <span class="bento-badge gold" data-i18n="s30_b5_badge">&gt;VORTEIL 03 • TRANSPARENZ</span>
+                  <div class="yka-adv-metric">−3,28 dB <small style="font-size:0.55em;">(−53 %)</small></div>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv3_title">Entmulmung &amp; Bass-Präzision (20–250 Hz)</h4>
+                </div>
+                <p class="yka-adv-desc" data-i18n="s30_adv3_desc">
+                  Gezielter Abbau von dumpfem Tiefton-Mulm ausgespielter Althämmer. Akkorde in der kleinen und großen Oktave klingen glasklar durchhörbar.
+                </p>
+              </div>
+
+              <div class="yka-adv-card" data-band="3">
+                <div>
+                  <span class="bento-badge gold" data-i18n="s30_b6_badge">&gt;VORTEIL 04 • SPECTRAL SLOPE</span>
+                  <div class="yka-adv-metric">+0,93 dB/kHz <small style="font-size:0.52em;">(+1,52 dB/Okt.)</small></div>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv4_title">Flacherer Spektralabfall &amp; +0,42 dB Crest</h4>
+                </div>
+                <p class="yka-adv-desc" data-i18n="s30_adv4_desc">
+                  12,6 % flacherer linearer Spectral Slope (−6,45 statt −7,38 dB/kHz) kombiniert mit +0,42 dB höherem Transienten-Crest-Faktor für schnellere Ansprache.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SLIDE 31: Yamaha Kit Akustik-Analyse (4/4) - Dynamik, Spectral Slope & Live-Rechner (C8 = 4300 Hz) -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="31">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s31_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (4/4)</div>
+            <h2 class="slide-title" data-i18n="s31_title">Amplituden-Dynamik (0:00–11:42) &amp; Spectral-Slope-Rechner (bis C8 = 4.300 Hz)</h2>
+            <div class="slide-subtitle" data-i18n="s31_subtitle">Transienten-Impulstreue (Crest-Faktor) und mathematische Regression des Oberton-Erhalts über alle Dynamikstufen</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <!-- Interactive 4-Part Sub-Slide Navigation Bar -->
+          <div class="yka-subnav-bar">
+            <div class="yka-subnav-tabs">
+              <button class="yka-subnav-tab" data-target-slide="28" type="button">
+                <span class="yka-tab-num">01</span>
+                <span class="yka-tab-label" data-i18n="s31_tab1">SPEKTRUM & 2-OKTAVEN</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="29" type="button">
+                <span class="yka-tab-num">02</span>
+                <span class="yka-tab-label" data-i18n="s31_tab2">TEILTÖNE H1–H12</span>
+              </button>
+              <button class="yka-subnav-tab" data-target-slide="30" type="button">
+                <span class="yka-tab-num">03</span>
+                <span class="yka-tab-label" data-i18n="s31_tab3">REGISTER-GEWINN ΔL(f)</span>
+              </button>
+              <button class="yka-subnav-tab active" data-target-slide="31" type="button">
+                <span class="yka-tab-num">04</span>
+                <span class="yka-tab-label" data-i18n="s31_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+              </button>
+            </div>
+            <div class="yka-subnav-stepper">
+              <button class="yka-step-btn" data-target-slide="30" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <span class="yka-step-counter">4 / 4</span>
+              <button class="yka-step-btn" data-target-slide="32" title="Nächste Analyse-Ansicht" type="button">→</button>
+            </div>
+          </div>
+          <div class="yka-main-grid yka-grid-equal">
+            <!-- LEFT: Amplitude Envelope & Crest Factor (0:00 - 11:42) -->
+            <div class="yka-card">
+              <div class="yka-card-head">
+                <div class="yka-card-title-wrap">
+                  <span class="bento-badge gold" data-i18n="s31_b1_badge">&gt;ZEITBEREICH &amp; TRANSIENTEN</span>
+                  <h3 class="yka-card-title" data-i18n="s31_l_title">Amplituden-Hüllkurve: RMS-Energie &amp; Spitzenpegel (0:00–11:42)</h3>
+                </div>
+              </div>
+
+              <div class="yka-canvas-box">
+                <canvas id="yka-canvas-wave"></canvas>
+              </div>
+
+              <div class="yka-readout-bar">
+                <span data-i18n="s31_wave_split">Trennpunkt bei 05:18 Min. (Umbau auf Louis Renner Yamaha Kit)</span>
+                <span id="yka-ro-wave-vals" style="color: var(--gold-light); font-weight: 700;">05:18 Min (Kit) · Peak: −2,4 dBFS · RMS: −15,8 dBFS</span>
+              </div>
+
+              <div class="yka-kpi-row-3">
+                <div class="yka-kpi-box green">
+                  <span class="yka-kpi-label" data-i18n="s31_wkpi1">Crest-Faktor (Peak − RMS)</span>
+                  <span class="yka-kpi-val emerald">+0,42 dB</span>
+                  <span class="yka-kpi-sub">Orig: 10,50 dB → Kit: 10,92 dB</span>
+                </div>
+                <div class="yka-kpi-box">
+                  <span class="yka-kpi-label" data-i18n="s31_wkpi2">Aktiver RMS-Pegel</span>
+                  <span class="yka-kpi-val gold">−16,47 dBFS</span>
+                  <span class="yka-kpi-sub" data-i18n="s31_wkpi2_sub">Orig: −16,25 dBFS (gleiche Spielstärke)</span>
+                </div>
+                <div class="yka-kpi-box green">
+                  <span class="yka-kpi-label" data-i18n="s31_wkpi3">Dynamik-Spannweite (P95−P10)</span>
+                  <span class="yka-kpi-val emerald">13,56 dB</span>
+                  <span class="yka-kpi-sub" data-i18n="s31_wkpi3_sub">Feinere Differenzierung pp bis ff</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Spectral Slope vs Dynamics & Live Calculator (max C8 = 4300 Hz) -->
+            <div class="yka-card yka-card-gold">
+              <div class="yka-card-head">
+                <div class="yka-card-title-wrap">
+                  <span class="bento-badge green" data-i18n="s31_b2_badge">&gt;SPECTRAL SLOPE &amp; RECHNER (MAX. C8 = 4.300 HZ)</span>
+                  <h3 class="yka-card-title" data-i18n="s31_r_title">Spektrale Steigung über der Anschlagsdynamik &amp; Live-Rechner</h3>
+                </div>
+              </div>
+
+              <div class="yka-canvas-box">
+                <canvas id="yka-canvas-scatter"></canvas>
+              </div>
+
+              <!-- Live Spectral-Slope Calculator strictly capped at C8 = 4300 Hz -->
+              <div class="yka-calc-box">
+                <div class="yka-calc-top">
+                  <span class="yka-calc-title" data-i18n="s31_calc_title">🧮 Live Spectral-Slope-Rechner (100 Hz – C8 4.300 Hz):</span>
+                  <div class="yka-btn-group">
+                    <button class="yka-calc-preset" data-freq="440" type="button">A4 (440 Hz)</button>
+                    <button class="yka-calc-preset" data-freq="1047" type="button">C6 (1047 Hz)</button>
+                    <button class="yka-calc-preset active" data-freq="2500" type="button">Dis7 (2500 Hz)</button>
+                    <button class="yka-calc-preset" data-freq="3520" type="button">A7 (3520 Hz)</button>
+                    <button class="yka-calc-preset" data-freq="4186" type="button">C8 (4186 Hz)</button>
+                  </div>
+                </div>
+
+                <div class="yka-slider-item">
+                  <label data-i18n="s31_calc_lbl">Zielfrequenz f (max. C8 = 4.300 Hz):</label>
+                  <input type="range" class="yka-calc-slider" id="yka-calc-freq-slider" min="100" max="4300" step="10" value="2500">
+                  <span class="yka-slider-val" id="yka-calc-freq-val">2.500 Hz (2,50 kHz · Dis7)</span>
+                </div>
+
+                <div class="yka-calc-results">
+                  <div class="yka-kpi-box">
+                    <span class="yka-kpi-label" data-i18n="s31_calc_r1">Abfall Original (−7,38 dB/kHz)</span>
+                    <span class="yka-kpi-val" id="yka-calc-loss-orig" style="color:#ff7675;">−18,45 dB</span>
+                  </div>
+                  <div class="yka-kpi-box green">
+                    <span class="yka-kpi-label" data-i18n="s31_calc_r2">Abfall Renner Kit (−6,45 dB/kHz)</span>
+                    <span class="yka-kpi-val emerald" id="yka-calc-loss-kit">−16,13 dB</span>
+                  </div>
+                  <div class="yka-kpi-box green">
+                    <span class="yka-kpi-label" data-i18n="s31_calc_r3">Netto-Gewinn durch Slope</span>
+                    <span class="yka-kpi-val gold" id="yka-calc-gain-db">+2,33 dB (+71 % Energie)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SLIDE 32: Das Uhren-Modell -->
+      <section class="slide slide-hero-theme" data-slide="32">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s32_category">Teil 5: Intonation • Geometrie & Keile</div>
+            <h2 class="slide-title" data-i18n="s32_title">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
+            <div class="slide-subtitle" data-i18n="s32_subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="bento-grid bento-grid-hero-left">
+            <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 14px;">
+              <div class="bento-card" style="border-left: 4px solid #3b82f6;">
+                <div class="bento-card-header">
+                  <span class="bento-badge" data-i18n="s32_b1_badge">FORTISSIMO (ff)</span>
+                  <span class="mono-val">9:00–10:00 & 2:00–3:00</span>
+                </div>
+                <div class="bento-card-title" data-i18n="s32_c1_title">Blauer Keil</div>
+                <div class="bento-card-desc" data-i18n="s32_c1_desc">Tiefe Nadelstiche zur Entspannung</div>
+              </div>
+              <div class="bento-card" style="border-left: 4px solid #22c55e;">
+                <div class="bento-card-header">
+                  <span class="bento-badge" data-i18n="s32_b2_badge">FORTE (f)</span>
+                  <span class="mono-val">10:00–11:00 & 1:00–2:00</span>
+                </div>
+                <div class="bento-card-title" data-i18n="s32_c2_title">Grüner Keil</div>
+                <div class="bento-card-desc" data-i18n="s32_c2_desc">Raumklang, Glanz und dynamische Entfaltung</div>
+              </div>
+              <div class="bento-card" style="border-left: 4px solid #f97316;">
+                <div class="bento-card-header">
+                  <span class="bento-badge" data-i18n="s32_b3_badge">PIANO (p)</span>
+                  <span class="mono-val">11:00–11:30 & 12:30–1:00</span>
+                </div>
+                <div class="bento-card-title" data-i18n="s32_c3_title">Orangener Keil</div>
+                <div class="bento-card-desc" data-i18n="s32_c3_desc">Lyrischer Gesangston, feine Abstimmung</div>
+              </div>
+              <div class="bento-card" style="border-left: 4px solid #a855f7;">
+                <div class="bento-card-header">
+                  <span class="bento-badge" data-i18n="s32_b4_badge">PIANISSIMO (pp)</span>
+                  <span class="mono-val">11:30–12:00 & 12:00–12:30</span>
+                </div>
+                <div class="bento-card-title" data-i18n="s32_c4_title">Violetter Keil</div>
+                <div class="bento-card-desc" data-i18n="s32_c4_desc">Flüsterleise Ansprache</div>
+              </div>
+              <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
+                <div class="bento-card-header">
+                  <span class="bento-badge red" data-i18n="s32_b5_badge">>ROTE ZONE (SCHEITEL)</span>
+                  <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
+                </div>
+                <div class="bento-card-title" style="color: #fca5a5;" data-i18n="s32_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
+              </div>
+            </div>
+            <div class="bento-card media-framed">
+              <img src="Visuell/basis_media/Intonation/page_11_2_Image210.jpg" alt="Das Uhren-Modell der Intonation">
+              <div class="bento-media-overlay">
+                <span class="bento-badge gold" data-i18n="s32_b6_badge">>JENS-SÖREN KRUSE</span>
+                <div class="bento-media-caption" data-i18n="s32_caption_1">Original Renner Uhrenmodell</div>
+                <div class="bento-media-subcaption" data-i18n="s32_caption_2">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+<!-- SLIDE 33 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="33">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s29_category">Teil 5: Intonation • Vorintonation</div>
-            <h2 class="slide-title" data-i18n="s29_title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
-            <div class="slide-subtitle" data-i18n="s29_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
+            <div class="slide-category" data-i18n="s33_category">Teil 5: Intonation • Vorintonation</div>
+            <h2 class="slide-title" data-i18n="s33_title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
+            <div class="slide-subtitle" data-i18n="s33_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s29_b1_badge">>PRE-NEEDLING</span>
+              <span class="bento-badge gold" data-i18n="s33_b1_badge">>PRE-NEEDLING</span>
               <div class="bento-metric-top">
                 <span class="bento-metric-num">pp – ff</span>
                 <span class="bento-metric-unit">Vorintonation</span>
               </div>
-              <div class="bento-card-desc" data-i18n="s29_c1_desc">
+              <div class="bento-card-desc" data-i18n="s33_c1_desc">
                 Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:
               </div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).</span>
+                  <span data-i18n="s33_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_2"><strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).</span>
+                  <span data-i18n="s33_bullet_2"><strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_3"><strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.</span>
+                  <span data-i18n="s33_bullet_3"><strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s29_bullet_4"><strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.</span>
+                  <span data-i18n="s33_bullet_4"><strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.</span>
                 </div>
               </div>
             </div>
@@ -4049,218 +4609,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s29_b2_badge">>GRUNDELASTIZITÄT</span>
-                <div class="bento-media-caption" data-i18n="s29_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-corner-watermark">
-          <div class="brand-logo-container corner-variant">
-            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
-            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-<!-- SLIDE 30 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="30">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s30_category">Teil 5: Intonation • Werkzeug & Technik</div>
-            <h2 class="slide-title" data-i18n="s30_title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
-            <div class="slide-subtitle" data-i18n="s30_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s30_b1_badge">>WERKZEUGKUNDE</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">3 & 1</span>
-                <span class="bento-metric-unit">Nadelwerkzeuge</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s30_bullet_1"><strong>Stichanzahlen Pre-Needling:</strong>
-                <br>• Bass: 7–10 Stiche horizontal
-                <br>• Mittellage: 5–10 Stiche horizontal
-                <br>• Diskant: 0–7 Stiche vertikal</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s30_bullet_2"><strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s30_bullet_3"><strong>Original Renner Werkzeuge:</strong>
-                <br>• Intonierapparat verstellbar (Art. 43-0005642)
-                <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270)
-                <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_13_2_Image257.png" alt="Intonierwerkzeuge Renner">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s30_b2_badge">>PRÄZISIONSNADELN</span>
-                <div class="bento-media-caption" data-i18n="s30_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-corner-watermark">
-          <div class="brand-logo-container corner-variant">
-            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
-            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-<!-- SLIDE 31 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="31">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s31_category">Teil 5: Intonation • Saitenlagerung</div>
-            <h2 class="slide-title" data-i18n="s31_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
-            <div class="slide-subtitle" data-i18n="s31_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s31_b1_badge">>SAITEN-BETTUNG</span>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s31_bullet_1"><strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s31_bullet_2"><strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s31_bullet_3"><strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_16_2_Image274.jpg" alt="Saiten setzen Anhangstift">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s31_b2_badge">>CHORREINHEIT</span>
-                <div class="bento-media-caption" data-i18n="s31_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-corner-watermark">
-          <div class="brand-logo-container corner-variant">
-            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
-            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-<!-- SLIDE 32 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="32">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s32_category">Teil 5: Intonation • Ausrichtung</div>
-            <h2 class="slide-title" data-i18n="s32_title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
-            <div class="slide-subtitle" data-i18n="s32_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-mosaic">
-            <div class="bento-card hero-card">
-              <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s32_b1_badge">>STRIKE POINT</span>
-              <div class="bento-metric-top">
-                <span class="bento-metric-num">3</span>
-                <span class="bento-metric-unit">Saiten Tricord</span>
-              </div>
-              <div class="bento-card-list">
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s32_bullet_1"><strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s32_bullet_2"><strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s32_bullet_3"><strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.</span>
-                </div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_20_2_Image291.jpg" alt="Anschlagspunkt und Geradheit">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s32_b2_badge">>DISKANTGLANZ</span>
-                <div class="bento-media-caption" data-i18n="s32_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-corner-watermark">
-          <div class="brand-logo-container corner-variant">
-            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
-            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-<!-- SLIDE 33: Abziehen der Hammerkronen (Filing) -->
-      <section class="slide slide-hero-theme" data-slide="33">
-<div class="slide-header">
-          <div>
-            <div class="slide-category" data-i18n="s33_category">Teil 5: Intonation • Kronenabzug</div>
-            <h2 class="slide-title" data-i18n="s33_title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
-            <div class="slide-subtitle" data-i18n="s33_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
-          </div>
-        </div>
-        <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid bento-grid-2" style="gap: 14px;">
-              <div class="bento-card hero-card">
-                <div class="bento-step-watermark">01</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s33_b1_badge">>HOHL VOR RUND</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s33_c1_title">1. Hohl vor Rund (Seitenabzug)</div>
-                <div class="bento-card-desc" data-i18n="s33_c1_desc">Mit dem Schleifbrettchen von den Schultern her zur Scheitelmitte hin arbeiten, um die natürliche Keilspannung zu bewahren.</div>
-              </div>
-              <div class="bento-card">
-                <div class="bento-step-watermark">02</div>
-                <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s33_b2_badge">>KRONENSCHEITEL</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s33_c2_title">2. Sanfter Kronenscheitel</div>
-                <div class="bento-card-desc" data-i18n="s33_c2_desc">Abschließend den Scheitel mit feinstem Schleifleinen (Körnung 320–400) vorsichtig verrunden, ohne Scheitelfilz abzutragen.</div>
-              </div>
-            </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_11_2_Image209.jpg" alt="Kronenabzug">
-              <div class="hero-corner-bracket top-left"></div>
-              <div class="hero-corner-bracket top-right"></div>
-              <div class="hero-corner-bracket bottom-left"></div>
-              <div class="hero-corner-bracket bottom-right"></div>
-              <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s33_b3_badge">>SCHLEIFFEILE</span>
-                <div class="bento-media-caption" data-i18n="s33_caption_1">Kronenabzug: Schleifbrettführung für gleichmäßigen Scheitelradius</div>
+                <span class="bento-badge green" data-i18n="s33_b2_badge">>GRUNDELASTIZITÄT</span>
+                <div class="bento-media-caption" data-i18n="s33_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
               </div>
             </div>
           </div>
@@ -4276,44 +4626,50 @@
       <section class="slide slide-hero-theme" data-slide="34">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s34_category">Teil 5: Intonation • Feinabstimmung</div>
-            <h2 class="slide-title" data-i18n="s34_title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
-            <div class="slide-subtitle" data-i18n="s34_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
+            <div class="slide-category" data-i18n="s34_category">Teil 5: Intonation • Werkzeug & Technik</div>
+            <h2 class="slide-title" data-i18n="s34_title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
+            <div class="slide-subtitle" data-i18n="s34_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
-              <span class="bento-badge gold" data-i18n="s34_b1_badge">>FEININTONATION</span>
+              <span class="bento-badge gold" data-i18n="s34_b1_badge">>WERKZEUGKUNDE</span>
+              <div class="bento-metric-top">
+                <span class="bento-metric-num">3 & 1</span>
+                <span class="bento-metric-unit">Nadelwerkzeuge</span>
+              </div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s34_bullet_1"><strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.</span>
+                  <span data-i18n="s34_bullet_1"><strong>Stichanzahlen Pre-Needling:</strong>
+                <br>• Bass: 7–10 Stiche horizontal
+                <br>• Mittellage: 5–10 Stiche horizontal
+                <br>• Diskant: 0–7 Stiche vertikal</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s34_bullet_2"><strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!</span>
+                  <span data-i18n="s34_bullet_2"><strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s34_bullet_3"><strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).</span>
-                </div>
-                <div class="bento-card-list-item">
-                  <span class="bento-dot gold"></span>
-                  <span data-i18n="s34_bullet_4"><strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!</span>
+                  <span data-i18n="s34_bullet_3"><strong>Original Renner Werkzeuge:</strong>
+                <br>• Intonierapparat verstellbar (Art. 43-0005642)
+                <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270)
+                <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).</span>
                 </div>
               </div>
             </div>
             <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_22_2_Image298.jpg" alt="Feinintonation chromatisch">
+              <img src="Visuell/basis_media/Intonation/page_13_2_Image257.png" alt="Intonierwerkzeuge Renner">
               <div class="hero-corner-bracket top-left"></div>
               <div class="hero-corner-bracket top-right"></div>
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s34_b2_badge">>FARBPALETTE</span>
-                <div class="bento-media-caption" data-i18n="s34_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
+                <span class="bento-badge green" data-i18n="s34_b2_badge">>PRÄZISIONSNADELN</span>
+                <div class="bento-media-caption" data-i18n="s34_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
               </div>
             </div>
           </div>
@@ -4325,35 +4681,239 @@
           </div>
         </div>
       </section>
-      <!-- SLIDE 35: Una Corda & Fazit -->
+<!-- SLIDE 35 (Sander Bento Mosaic) -->
       <section class="slide slide-hero-theme" data-slide="35">
+<div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s35_category">Teil 5: Intonation • Saitenlagerung</div>
+            <h2 class="slide-title" data-i18n="s35_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
+            <div class="slide-subtitle" data-i18n="s35_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="bento-grid bento-grid-mosaic">
+            <div class="bento-card hero-card">
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s35_b1_badge">>SAITEN-BETTUNG</span>
+              <div class="bento-card-list">
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s35_bullet_1"><strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s35_bullet_2"><strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s35_bullet_3"><strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.</span>
+                </div>
+              </div>
+            </div>
+            <div class="bento-card media-framed">
+              <img src="Visuell/basis_media/Intonation/page_16_2_Image274.jpg" alt="Saiten setzen Anhangstift">
+              <div class="hero-corner-bracket top-left"></div>
+              <div class="hero-corner-bracket top-right"></div>
+              <div class="hero-corner-bracket bottom-left"></div>
+              <div class="hero-corner-bracket bottom-right"></div>
+              <div class="bento-media-overlay">
+                <span class="bento-badge green" data-i18n="s35_b2_badge">>CHORREINHEIT</span>
+                <div class="bento-media-caption" data-i18n="s35_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+<!-- SLIDE 36 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="36">
+<div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s36_category">Teil 5: Intonation • Ausrichtung</div>
+            <h2 class="slide-title" data-i18n="s36_title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
+            <div class="slide-subtitle" data-i18n="s36_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="bento-grid bento-grid-mosaic">
+            <div class="bento-card hero-card">
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s36_b1_badge">>STRIKE POINT</span>
+              <div class="bento-metric-top">
+                <span class="bento-metric-num">3</span>
+                <span class="bento-metric-unit">Saiten Tricord</span>
+              </div>
+              <div class="bento-card-list">
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s36_bullet_1"><strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s36_bullet_2"><strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s36_bullet_3"><strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.</span>
+                </div>
+              </div>
+            </div>
+            <div class="bento-card media-framed">
+              <img src="Visuell/basis_media/Intonation/page_20_2_Image291.jpg" alt="Anschlagspunkt und Geradheit">
+              <div class="hero-corner-bracket top-left"></div>
+              <div class="hero-corner-bracket top-right"></div>
+              <div class="hero-corner-bracket bottom-left"></div>
+              <div class="hero-corner-bracket bottom-right"></div>
+              <div class="bento-media-overlay">
+                <span class="bento-badge green" data-i18n="s36_b2_badge">>DISKANTGLANZ</span>
+                <div class="bento-media-caption" data-i18n="s36_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+<!-- SLIDE 37: Abziehen der Hammerkronen (Filing) -->
+      <section class="slide slide-hero-theme" data-slide="37">
+<div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s37_category">Teil 5: Intonation • Kronenabzug</div>
+            <h2 class="slide-title" data-i18n="s37_title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
+            <div class="slide-subtitle" data-i18n="s37_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="bento-grid bento-grid-hero-left">
+            <div class="bento-grid bento-grid-2" style="gap: 14px;">
+              <div class="bento-card hero-card">
+                <div class="bento-step-watermark">01</div>
+                <div class="bento-card-header">
+                  <span class="bento-badge gold" data-i18n="s37_b1_badge">>HOHL VOR RUND</span>
+                </div>
+                <div class="bento-card-title" data-i18n="s37_c1_title">1. Hohl vor Rund (Seitenabzug)</div>
+                <div class="bento-card-desc" data-i18n="s37_c1_desc">Mit dem Schleifbrettchen von den Schultern her zur Scheitelmitte hin arbeiten, um die natürliche Keilspannung zu bewahren.</div>
+              </div>
+              <div class="bento-card">
+                <div class="bento-step-watermark">02</div>
+                <div class="bento-card-header">
+                  <span class="bento-badge green" data-i18n="s37_b2_badge">>KRONENSCHEITEL</span>
+                </div>
+                <div class="bento-card-title" data-i18n="s37_c2_title">2. Sanfter Kronenscheitel</div>
+                <div class="bento-card-desc" data-i18n="s37_c2_desc">Abschließend den Scheitel mit feinstem Schleifleinen (Körnung 320–400) vorsichtig verrunden, ohne Scheitelfilz abzutragen.</div>
+              </div>
+            </div>
+            <div class="bento-card media-framed">
+              <img src="Visuell/basis_media/Intonation/page_11_2_Image209.jpg" alt="Kronenabzug">
+              <div class="hero-corner-bracket top-left"></div>
+              <div class="hero-corner-bracket top-right"></div>
+              <div class="hero-corner-bracket bottom-left"></div>
+              <div class="hero-corner-bracket bottom-right"></div>
+              <div class="bento-media-overlay">
+                <span class="bento-badge green" data-i18n="s37_b3_badge">>SCHLEIFFEILE</span>
+                <div class="bento-media-caption" data-i18n="s37_caption_1">Kronenabzug: Schleifbrettführung für gleichmäßigen Scheitelradius</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+<!-- SLIDE 38 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="38">
+<div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s38_category">Teil 5: Intonation • Feinabstimmung</div>
+            <h2 class="slide-title" data-i18n="s38_title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
+            <div class="slide-subtitle" data-i18n="s38_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="bento-grid bento-grid-mosaic">
+            <div class="bento-card hero-card">
+              <div class="bento-step-watermark">05</div>
+              <span class="bento-badge gold" data-i18n="s38_b1_badge">>FEININTONATION</span>
+              <div class="bento-card-list">
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s38_bullet_1"><strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s38_bullet_2"><strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s38_bullet_3"><strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).</span>
+                </div>
+                <div class="bento-card-list-item">
+                  <span class="bento-dot gold"></span>
+                  <span data-i18n="s38_bullet_4"><strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!</span>
+                </div>
+              </div>
+            </div>
+            <div class="bento-card media-framed">
+              <img src="Visuell/basis_media/Intonation/page_22_2_Image298.jpg" alt="Feinintonation chromatisch">
+              <div class="hero-corner-bracket top-left"></div>
+              <div class="hero-corner-bracket top-right"></div>
+              <div class="hero-corner-bracket bottom-left"></div>
+              <div class="hero-corner-bracket bottom-right"></div>
+              <div class="bento-media-overlay">
+                <span class="bento-badge green" data-i18n="s38_b2_badge">>FARBPALETTE</span>
+                <div class="bento-media-caption" data-i18n="s38_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-corner-watermark">
+          <div class="brand-logo-container corner-variant">
+            <img src="Visuell/web_assets/renner_logo_weiss_schatten.png" alt="Louis Renner" class="slide-corner-logo">
+            <div class="brand-logo-light-sheen" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SLIDE 39: Una Corda & Fazit -->
+      <section class="slide slide-hero-theme" data-slide="39">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s35_category">Teil 5: Intonation • Una Corda & Dialog</div>
-            <h2 class="slide-title" data-i18n="s35_title">Verschiebungsintonation & Die Renner Academy</h2>
-            <div class="slide-subtitle" data-i18n="s35_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
+            <div class="slide-category" data-i18n="s39_category">Teil 5: Intonation • Una Corda & Dialog</div>
+            <h2 class="slide-title" data-i18n="s39_title">Verschiebungsintonation & Die Renner Academy</h2>
+            <div class="slide-subtitle" data-i18n="s39_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
           </div>
         </div>
         <div class="slide-body">
           <div class="bento-grid bento-grid-mosaic">
             <div class="bento-grid" style="grid-template-columns: 1fr; gap: 12px;">
               <div class="bento-card">
-                <span class="bento-badge green" data-i18n="s35_b1_badge">>UNA CORDA PRAXIS</span>
-                <div class="bento-card-title" data-i18n="s35_c1_title">Verschiebungsintonation</div>
-                <div class="bento-card-desc" data-i18n="s35_c1_desc">
+                <span class="bento-badge green" data-i18n="s39_b1_badge">>UNA CORDA PRAXIS</span>
+                <div class="bento-card-title" data-i18n="s39_c1_title">Verschiebungsintonation</div>
+                <div class="bento-card-desc" data-i18n="s39_c1_desc">
                   Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.
                 </div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot gold"></span>
-                    <span data-i18n="s35_bullet_1"><strong>Experten-Tipp:</strong> Leichtes Brechen der linken Kante der Hammerkrone mit feiner Schleiffeile verhindert Reibgeräusche an Nachbarsaiten!</span>
+                    <span data-i18n="s39_bullet_1"><strong>Experten-Tipp:</strong> Leichtes Brechen der linken Kante der Hammerkrone mit feiner Schleiffeile verhindert Reibgeräusche an Nachbarsaiten!</span>
                   </div>
                 </div>
               </div>
               <div class="bento-card hero-card">
-                <span class="bento-badge gold" data-i18n="s35_b2_badge">>RENNER ACADEMY</span>
-                <div class="bento-card-title" data-i18n="s35_c2_title">Renner Academy & Technischer Dialog</div>
-                <div class="bento-card-desc" data-i18n="s35_c2_desc">
+                <span class="bento-badge gold" data-i18n="s39_b2_badge">>RENNER ACADEMY</span>
+                <div class="bento-card-title" data-i18n="s39_c2_title">Renner Academy & Technischer Dialog</div>
+                <div class="bento-card-desc" data-i18n="s39_c2_desc">
                   Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.
                 </div>
               </div>
@@ -4361,9 +4921,9 @@
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image31.png" alt="Renner Abschluss">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s35_b3_badge">>LOUIS RENNER GMBH</span>
-                <div class="bento-media-caption" data-i18n="s35_caption_1">Louis Renner GmbH</div>
-                <div class="bento-media-subcaption" data-i18n="s35_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
+                <span class="bento-badge gold" data-i18n="s39_b3_badge">>LOUIS RENNER GMBH</span>
+                <div class="bento-media-caption" data-i18n="s39_caption_1">Louis Renner GmbH</div>
+                <div class="bento-media-subcaption" data-i18n="s39_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
               </div>
             </div>
           </div>
@@ -4467,6 +5027,7 @@
   <script src="js/ffw-history.js"></script>
   <script src="js/felt-anatomy.js"></script>
   <script src="js/yamaha-kit.js"></script>
+  <script src="js/yamaha-kit-acoustic.js"></script>
   <script src="js/presentation.js"></script>
   <script>
     // Offline PWA Service Worker Management
