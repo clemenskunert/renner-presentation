@@ -42,210 +42,210 @@
 
   const PARTIAL_NAMES_I18N = {
     de: [
-      "H1 • 1. Teilton (Grundton 1·f₀)",
-      "H2 • 2. Teilton (Oktave 2·f₀)",
-      "H3 • 3. Teilton (Duodezime 3·f₀)",
-      "H4 • 4. Teilton (Doppeloktave 4·f₀)",
-      "H5 • 5. Teilton (Große Terz 5·f₀)",
-      "H6 • 6. Teilton (Quinte 6·f₀)",
-      "H7 • 7. Teilton (Naturseptime 7·f₀)",
-      "H8 • 8. Teilton (3. Oktave 8·f₀)",
-      "H9 • 9. Teilton (Große None 9·f₀)",
-      "H10 • 10. Teilton (Große Dezime 10·f₀)",
+      "H1 • Grundton (1·f₀)",
+      "H2 • Oktave (2·f₀)",
+      "H3 • Duodezime (3·f₀)",
+      "H4 • 2. Oktave (4·f₀)",
+      "H5 • Gr. Terz (5·f₀)",
+      "H6 • Quinte (6·f₀)",
+      "H7 • Septime (7·f₀)",
+      "H8 • 3. Oktave (8·f₀)",
+      "H9 • None (9·f₀)",
+      "H10 • Dezime (10·f₀)",
       "H11 • 11. Teilton (11·f₀)",
-      "H12 • 12. Teilton (Dreioktav-Quinte 12·f₀)"
+      "H12 • 12. Teilton (12·f₀)"
     ],
     en: [
-      "H1 • 1st Partial (Fundamental 1·f₀)",
-      "H2 • 2nd Partial (Octave 2·f₀)",
-      "H3 • 3rd Partial (Twelfth 3·f₀)",
-      "H4 • 4th Partial (Double Octave 4·f₀)",
-      "H5 • 5th Partial (Major Third 5·f₀)",
-      "H6 • 6th Partial (Fifth 6·f₀)",
-      "H7 • 7th Partial (Harmonic 7th 7·f₀)",
-      "H8 • 8th Partial (Triple Octave 8·f₀)",
-      "H9 • 9th Partial (Major Ninth 9·f₀)",
-      "H10 • 10th Partial (Major Tenth 10·f₀)",
+      "H1 • Fundamental (1·f₀)",
+      "H2 • Octave (2·f₀)",
+      "H3 • Twelfth (3·f₀)",
+      "H4 • 2nd Octave (4·f₀)",
+      "H5 • Major Third (5·f₀)",
+      "H6 • Fifth (6·f₀)",
+      "H7 • 7th Partial (7·f₀)",
+      "H8 • 3rd Octave (8·f₀)",
+      "H9 • Ninth (9·f₀)",
+      "H10 • Tenth (10·f₀)",
       "H11 • 11th Partial (11·f₀)",
-      "H12 • 12th Partial (Twelfth 12·f₀)"
+      "H12 • 12th Partial (12·f₀)"
     ],
     ja: [
-      "H1 • 第1倍音（基音 1·f₀）",
-      "H2 • 第2倍音（1オクターブ 2·f₀）",
-      "H3 • 第3倍音（12度 3·f₀）",
-      "H4 • 第4倍音（2オクターブ 4·f₀）",
-      "H5 • 第5倍音（長3度 5·f₀）",
-      "H6 • 第6倍音（完全5度 6·f₀）",
-      "H7 • 第7倍音（自然7度 7·f₀）",
-      "H8 • 第8倍音（3オクターブ 8·f₀）",
-      "H9 • 第9倍音（長9度 9·f₀）",
-      "H10 • 第10倍音（長10度 10·f₀）",
-      "H11 • 第11倍音（11·f₀）",
-      "H12 • 第12倍音（12·f₀）"
+      "H1 • 基音 (1·f₀)",
+      "H2 • 第2倍音 (2·f₀)",
+      "H3 • 第3倍音 (3·f₀)",
+      "H4 • 第4倍音 (4·f₀)",
+      "H5 • 第5倍音 (5·f₀)",
+      "H6 • 第6倍音 (6·f₀)",
+      "H7 • 第7倍音 (7·f₀)",
+      "H8 • 第8倍音 (8·f₀)",
+      "H9 • 第9倍音 (9·f₀)",
+      "H10 • 第10倍音 (10·f₀)",
+      "H11 • 第11倍音 (11·f₀)",
+      "H12 • 第12倍音 (12·f₀)"
     ],
     zh: [
-      "H1 • 第1谐波（基音 1·f₀）",
-      "H2 • 第2谐波（八度 2·f₀）",
-      "H3 • 第3谐波（十二度 3·f₀）",
-      "H4 • 第4谐波（双八度 4·f₀）",
-      "H5 • 第5谐波（大三度 5·f₀）",
-      "H6 • 第6谐波（五度 6·f₀）",
-      "H7 • 第7谐波（自然七度 7·f₀）",
-      "H8 • 第8谐波（三八度 8·f₀）",
-      "H9 • 第9谐波（大九度 9·f₀）",
-      "H10 • 第10谐波（大十度 10·f₀）",
-      "H11 • 第11谐波（11·f₀）",
-      "H12 • 第12谐波（12·f₀）"
+      "H1 • 基音 (1·f₀)",
+      "H2 • 八度 (2·f₀)",
+      "H3 • 十二度 (3·f₀)",
+      "H4 • 双八度 (4·f₀)",
+      "H5 • 大三度 (5·f₀)",
+      "H6 • 五度 (6·f₀)",
+      "H7 • 自然七度 (7·f₀)",
+      "H8 • 三八度 (8·f₀)",
+      "H9 • 大九度 (9·f₀)",
+      "H10 • 大十度 (10·f₀)",
+      "H11 • 第11谐波 (11·f₀)",
+      "H12 • 第12谐波 (12·f₀)"
     ]
   };
 
   const BAND_META_I18N = {
     de: [
       {
-        name: "Bass & Fundament (50 – 250 Hz)",
-        delta: "−3,28 dB (rel.) / −3,54 dB (abs.)",
-        factor: "Δ Mittel: −3,28 dB (−53 % Mulm)",
+        name: "1. Bass (50–250 Hz)",
+        delta: "−3,28 dB",
+        factor: "−53 % Mulm",
         color: "#38bdf8",
-        desc: "Abgenutzte Originalhämmer mit breitem Scheitel regen tieffrequentes Dröhnen an. Die präzise Renner-Scheitelgeometrie strafft den Bass und sorgt für glasklare Tontrennung."
+        desc: "Strafft tieffrequentes Dröhnen abgenutzter Althämmer – für glasklare Akkord-Trennung im Bass."
       },
       {
-        name: "Grundton & Wärme (250 – 800 Hz)",
-        delta: "−0,07 dB (rel.) / −0,32 dB (abs.)",
-        factor: "Δ Mittel: −0,07 dB (100 % Stabil)",
+        name: "2. Grundton (250–800 Hz)",
+        delta: "−0,07 dB",
+        factor: "100 % Stabil",
         color: "#94a3b8",
-        desc: "Das volle, warme Grundtonfundament des Flügels bleibt vollkommen erhalten – die höhere Brillanz geht nicht auf Kosten der klanglichen Fülle."
+        desc: "Das warme Grundtonfundament bleibt vollständig erhalten – mehr Brillanz ohne Verlust an Fülle."
       },
       {
-        name: "Präsenz & Gesangsregister (800 – 2.500 Hz)",
-        delta: "+2,53 dB (rel.) / +2,28 dB (abs.)",
-        factor: "Δ Mittel: +2,53 dB (+79 % Energie)",
+        name: "3. Präsenz (800–2.500 Hz)",
+        delta: "+2,53 dB",
+        factor: "+79 % Energie",
         color: "#f59e0b",
-        desc: "Der wichtigste Gewinn: Im menschlichen Gesangsregister liefert das Louis Renner Yamaha Kit +79 % mehr Schallintensität für tragfähigen, singenden Konzertton."
+        desc: "Hauptgewinn im Gesangsregister (Spitze +3,4 dB bei 1,45 kHz): Tragfähiger, singender Konzertton."
       },
       {
-        name: "Brillanz & Obertöne (2.500 – 6.000 Hz)",
-        delta: "+2,87 dB in H3–H8 / +1,87 dB Band",
-        factor: "Δ Mittel: +1,87 dB (+54 % Energie)",
+        name: "4. Brillanz (2,5–6,0 kHz)",
+        delta: "+1,87 dB",
+        factor: "+54 % Energie",
         color: "#10b981",
-        desc: "Durch den ungeschliffenen Weickert-Special-Filz und den flacheren Spectral Slope (+0,93 dB/kHz) entfalten sich reichere Harmonische und feine Klangfarben."
+        desc: "Glockige Obertöne und reichere Klangfarben dank Weickert-Special-Filz und flacherem Spectral Slope."
       },
       {
-        name: "Air & Anschlag-Transienten (6.000 – 12.000 Hz)",
-        delta: "+0,31 dB (rel.) / +0,05 dB (abs.)",
-        factor: "Δ Mittel: +0,31 dB (+7 % Energie)",
+        name: "5. Air (6,0–12,0 kHz)",
+        delta: "+0,31 dB",
+        factor: "+7 % Energie",
         color: "#eab308",
-        desc: "Saubere Anschlagsdefinition ohne schrille oder metallische Überspitzung in den extremen Höhen."
+        desc: "Präzise Anschlagsdefinition ohne schrille oder metallische Härte im höchsten Diskant."
       }
     ],
     en: [
       {
-        name: "Bass & Foundation (50 – 250 Hz)",
-        delta: "−3.28 dB (rel.) / −3.54 dB (abs.)",
-        factor: "Δ Mean: −3.28 dB (−53% Mud)",
+        name: "1. Bass (50–250 Hz)",
+        delta: "−3.28 dB",
+        factor: "−53% Mud",
         color: "#38bdf8",
-        desc: "Worn original hammers with flattened crowns excite low-frequency mud. Precise Renner crown geometry tightens the bass for crystal-clear chord separation."
+        desc: "Eliminates low-frequency boominess from worn hammers for crystal-clear bass chord separation."
       },
       {
-        name: "Fundamental & Warmth (250 – 800 Hz)",
-        delta: "−0.07 dB (rel.) / −0.32 dB (abs.)",
-        factor: "Δ Mean: −0.07 dB (100% Stable)",
+        name: "2. Body (250–800 Hz)",
+        delta: "−0.07 dB",
+        factor: "100% Stable",
         color: "#94a3b8",
-        desc: "The warm fundamental body of the grand piano remains completely intact — enhanced brilliance never comes at the expense of tonal warmth."
+        desc: "Warm fundamental body remains completely intact — higher brilliance without losing fullness."
       },
       {
-        name: "Presence & Singing Register (800 – 2,500 Hz)",
-        delta: "+2.53 dB (rel.) / +2.28 dB (abs.)",
-        factor: "Δ Mean: +2.53 dB (+79% Energy)",
+        name: "3. Presence (800–2,500 Hz)",
+        delta: "+2.53 dB",
+        factor: "+79% Energy",
         color: "#f59e0b",
-        desc: "Key acoustic gain: In the human singing formant, the Louis Renner Yamaha Kit delivers +79% more acoustic intensity for a projecting concert tone."
+        desc: "Primary gain in the singing register (peak +3.4 dB at 1.45 kHz) for a projecting concert tone."
       },
       {
-        name: "Brilliance & Overtones (2,500 – 6,000 Hz)",
-        delta: "+2.87 dB in H3–H8 / +1.87 dB Band",
-        factor: "Δ Mean: +1.87 dB (+54% Energy)",
+        name: "4. Brilliance (2.5–6.0 kHz)",
+        delta: "+1.87 dB",
+        factor: "+54% Energy",
         color: "#10b981",
-        desc: "Thanks to unground Weickert Special felt and a flatter spectral slope (+0.93 dB/kHz), richer harmonics and bell-like overtones blossom effortlessly."
+        desc: "Bell-like overtones and richer timbres via Weickert Special felt and flatter spectral slope."
       },
       {
-        name: "Air & Attack Transients (6,000 – 12,000 Hz)",
-        delta: "+0.31 dB (rel.) / +0.05 dB (abs.)",
-        factor: "Δ Mean: +0.31 dB (+7% Energy)",
+        name: "5. Air (6.0–12.0 kHz)",
+        delta: "+0.31 dB",
+        factor: "+7% Energy",
         color: "#eab308",
-        desc: "Crisp articulation and attack definition without harsh or metallic brightness in the upper treble."
+        desc: "Crisp attack definition without metallic harshness in the extreme treble."
       }
     ],
     ja: [
       {
-        name: "低音・基音帯域 (50 – 250 Hz)",
-        delta: "−3.28 dB (相対) / −3.54 dB (絶対)",
-        factor: "平均 Δ: −3.28 dB (濁り −53%)",
+        name: "1. 低音 (50–250 Hz)",
+        delta: "−3.28 dB",
+        factor: "濁り −53%",
         color: "#38bdf8",
-        desc: "摩耗した旧ハンマーは低域の濁りを生みます。レンナーの精密なクラウン形状が低音を引き締め、明瞭な和音分離を実現します。"
+        desc: "旧ハンマーの低域のこもりを解消し、クリアな和音分離を実現します。"
       },
       {
-        name: "中低音・温かみ (250 – 800 Hz)",
-        delta: "−0.07 dB (相対) / −0.32 dB (絶対)",
-        factor: "平均 Δ: −0.07 dB (100% 維持)",
+        name: "2. 基音 (250–800 Hz)",
+        delta: "−0.07 dB",
+        factor: "100% 維持",
         color: "#94a3b8",
-        desc: "ピアノ本来の豊かな基音と温かみはそのまま維持され、高域の輝きが増しても音が細くなりません。"
+        desc: "豊かな基音と温かみを維持し、高域の輝きと厚みを両立します。"
       },
       {
-        name: "プレゼンス・歌唱帯域 (800 – 2,500 Hz)",
-        delta: "+2.53 dB (相対) / +2.28 dB (絶対)",
-        factor: "平均 Δ: +2.53 dB (+79% エネルギー)",
+        name: "3. プレゼンス (800–2,500 Hz)",
+        delta: "+2.53 dB",
+        factor: "+79% エネルギー",
         color: "#f59e0b",
-        desc: "最大の改善点：人間の聴覚が最も敏感な歌唱帯域で音響エネルギーが+79%向上し、ホールに響き渡るコンサートトーンを実現します。"
+        desc: "歌唱帯域で+79%向上（1.45 kHzで最大+3.4 dB）。ホールに響くコンサートトーン。"
       },
       {
-        name: "ブリリアンス・倍音帯域 (2,500 – 6,000 Hz)",
-        delta: "H3–H8で +2.87 dB / 帯域 +1.87 dB",
-        factor: "平均 Δ: +1.87 dB (+54% エネルギー)",
+        name: "4. ブリリアンス (2.5–6.0 kHz)",
+        delta: "+1.87 dB",
+        factor: "+54% エネルギー",
         color: "#10b981",
-        desc: "無研磨ヴァイケルト・スペシャルフェルトと緩やかなスペクトルスロープ（+0.93 dB/kHz）により、豊かな倍音と色彩感が開花します。"
+        desc: "ヴァイケルト・フェルトと緩やかな減衰特性により、鐘のように澄んだ高音倍音を実現。"
       },
       {
-        name: "エア・打弦トランジェント (6,000 – 12,000 Hz)",
-        delta: "+0.31 dB (相対) / +0.05 dB (絶対)",
-        factor: "平均 Δ: +0.31 dB (+7%)",
+        name: "5. エアー (6.0–12.0 kHz)",
+        delta: "+0.31 dB",
+        factor: "+7%",
         color: "#eab308",
-        desc: "超高域の耳障りな金属音を抑えつつ、クリアで俊敏な打弦アタックを実現します。"
+        desc: "耳障りな金属音を抑え、俊敏でクリアな打弦アタックを実現。"
       }
     ],
     zh: [
       {
-        name: "低音与基频区 (50 – 250 Hz)",
-        delta: "−3.28 dB (相对) / −3.54 dB (绝对)",
-        factor: "平均 Δ: −3.28 dB (浑浊度 −53%)",
+        name: "1. 低音区 (50–250 Hz)",
+        delta: "−3.28 dB",
+        factor: "浑浊度 −53%",
         color: "#38bdf8",
-        desc: "磨损扁平的旧槌头易激发低频轰鸣。雷诺精准的槌冠几何结构大幅收紧低音，带来水晶般清晰的低音和弦分离度。"
+        desc: "消除旧弦槌的低频轰鸣，带来清晰的低音和弦分离度。"
       },
       {
-        name: "基音与温暖度 (250 – 800 Hz)",
-        delta: "−0.07 dB (相对) / −0.32 dB (绝对)",
-        factor: "平均 Δ: −0.07 dB (100% 饱满保留)",
+        name: "2. 基音区 (250–800 Hz)",
+        delta: "−0.07 dB",
+        factor: "100% 稳定",
         color: "#94a3b8",
-        desc: "三角钢琴醇厚温暖的基音共鸣得到完整保留——高频泛音的提升绝不牺牲中音区的丰满度。"
+        desc: "完整保留温暖基音共鸣，高频更辉煌且不失醇厚感。"
       },
       {
-        name: "临场感与歌唱音区 (800 – 2,500 Hz)",
-        delta: "+2.53 dB (相对) / +2.28 dB (绝对)",
-        factor: "平均 Δ: +2.53 dB (+79% 能量)",
+        name: "3. 歌唱区 (800–2,500 Hz)",
+        delta: "+2.53 dB",
+        factor: "+79% 能量",
         color: "#f59e0b",
-        desc: "核心声学飞跃：在人耳最敏感的歌唱共振峰频段，雷诺雅马哈套件提供+79%的声强增益，赋予琴音极佳的音乐厅穿透力。"
+        desc: "歌唱频段提升+79%（1.45 kHz峰值+3.4 dB），赋予极佳舞台穿透力。"
       },
       {
-        name: "辉煌度与高次谐波 (2,500 – 6,000 Hz)",
-        delta: "H3–H8 +2.87 dB / 频段 +1.87 dB",
-        factor: "平均 Δ: +1.87 dB (+54% 能量)",
+        name: "4. 辉煌区 (2.5–6.0 kHz)",
+        delta: "+1.87 dB",
+        factor: "+54% 能量",
         color: "#10b981",
-        desc: "得益于天然魏克特特级毛毡与更平缓的频谱斜率（+0.93 dB/kHz），高音区绽放出钟鸣般晶莹剔透的泛音层次。"
+        desc: "特级毛毡与平缓频谱斜率带来钟鸣般晶莹的高音泛音。"
       },
       {
-        name: "空气感与击弦瞬态 (6,000 – 12,000 Hz)",
-        delta: "+0.31 dB (相对) / +0.05 dB (绝对)",
-        factor: "平均 Δ: +0.31 dB (+7%)",
+        name: "5. 空气感 (6.0–12.0 kHz)",
+        delta: "+0.31 dB",
+        factor: "+7%",
         color: "#eab308",
-        desc: "清晰敏锐的触键瞬态定义，同时绝无刺耳或生硬的金属噪感。"
+        desc: "敏锐清晰的触键瞬态，绝无刺耳金属噪感。"
       }
     ]
   };
@@ -593,7 +593,7 @@
       ctx.strokeStyle = 'rgba(255,255,255,0.08)';
       ctx.lineWidth = 1;
       ctx.fillStyle = '#94a3b8';
-      ctx.font = '600 11px JetBrains Mono, monospace';
+      ctx.font = '600 12px JetBrains Mono, monospace';
       ctx.textAlign = 'right';
       const dbStep = (dbMax - dbMin) <= 35 ? 5 : 10;
       for (let db = Math.ceil(dbMin / dbStep) * dbStep; db <= dbMax; db += dbStep) {
@@ -618,9 +618,9 @@
         ctx.strokeRect(xWin0, padT, xWin1 - xWin0, ph);
 
         ctx.fillStyle = '#fbbf24';
-        ctx.font = '700 11px Roboto, sans-serif';
+        ctx.font = '700 12px Roboto, sans-serif';
         ctx.textAlign = 'left';
-        ctx.fillText(`H1 (${this.freqToNoteName(this.customFMin)}–${this.freqToNoteName(this.customFMax)}: ${Math.round(this.customFMin)}–${Math.round(this.customFMax)} Hz)`, Math.max(padL + 6, xWin0 + 6), padT + 14);
+        ctx.fillText(`H1 (${this.freqToNoteName(this.customFMin)}–${this.freqToNoteName(this.customFMax)}: ${Math.round(this.customFMin)}–${Math.round(this.customFMax)} Hz)`, Math.max(padL + 6, xWin0 + 6), padT + 15);
       }
 
       if (this.showHarmGrid && this.octStartMidi !== 0) {
@@ -640,16 +640,16 @@
             ctx.setLineDash([]);
 
             ctx.fillStyle = isHoverH ? '#10b981' : '#34d399';
-            ctx.font = isHoverH ? '800 11px JetBrains Mono, monospace' : '700 10px JetBrains Mono, monospace';
+            ctx.font = isHoverH ? '800 12px JetBrains Mono, monospace' : '700 11px JetBrains Mono, monospace';
             ctx.textAlign = 'center';
-            ctx.fillText(`H${h}`, xh, padT + 14);
+            ctx.fillText(`H${h}`, xh, padT + 15);
           }
         }
       }
 
       // X-axis ticks
       ctx.fillStyle = '#94a3b8';
-      ctx.font = '600 11px JetBrains Mono, monospace';
+      ctx.font = '600 12px JetBrains Mono, monospace';
       ctx.textAlign = 'center';
       const candTicks = [27.5, 40, 55, 80, 110, 160, 220, 330, 440, 660, 880, 1320, 1760, 2500, 3520, 5000, 7040, 10000, 14000];
       let lastTickX = -100;
@@ -838,7 +838,7 @@
         return padT + ph - ((c - yMin) / (yMax - yMin + 1e-12)) * ph;
       };
 
-      ctx.font = '600 11px JetBrains Mono, monospace';
+      ctx.font = '600 12px JetBrains Mono, monospace';
       ctx.textAlign = 'right';
       const step = (yMax - yMin) <= 15 ? 2 : 10;
       for (let v = Math.ceil(yMin / step) * step; v <= yMax; v += step) {
@@ -872,9 +872,9 @@
           ctx.fillRect(cx - slotW * 0.32, top, slotW * 0.64, bh);
 
           ctx.fillStyle = dv >= 0 ? '#34d399' : '#38bdf8';
-          ctx.font = '700 10px JetBrains Mono, monospace';
+          ctx.font = '700 11px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
-          ctx.fillText(`${dv >= 0 ? '+' : ''}${dv.toFixed(1)}`, cx, dv >= 0 ? top - 4 : top + bh + 11);
+          ctx.fillText(`${dv >= 0 ? '+' : ''}${dv.toFixed(1)}`, cx, dv >= 0 ? top - 4 : top + bh + 12);
         } else {
           const v1 = isRel ? stats.origRelH1[h] : stats.origAbsDb[h];
           const v2 = isRel ? stats.kitRelH1[h] : stats.kitNormDb[h];
@@ -892,20 +892,20 @@
           const diff = v2 - v1;
           if (Math.abs(diff) >= 0.4 && h > 0) {
             ctx.fillStyle = diff >= 0 ? '#34d399' : '#38bdf8';
-            ctx.font = '700 9px JetBrains Mono, monospace';
+            ctx.font = '700 10px JetBrains Mono, monospace';
             ctx.textAlign = 'center';
             ctx.fillText(`${diff >= 0 ? '+' : ''}${diff.toFixed(1)}`, cx + 2, Math.min(y1, y2) - 4);
           }
         }
 
         ctx.fillStyle = isSel ? '#fbbf24' : '#e2e8f0';
-        ctx.font = isSel ? '800 11px JetBrains Mono, monospace' : '700 10px JetBrains Mono, monospace';
+        ctx.font = isSel ? '800 12px JetBrains Mono, monospace' : '700 11px JetBrains Mono, monospace';
         ctx.textAlign = 'center';
-        ctx.fillText(`H${h + 1}`, cx, padT + ph + 15);
+        ctx.fillText(`H${h + 1}`, cx, padT + ph + 16);
         const intvNames = ["1f₀", "Okt", "Quin", "2Okt", "Terz", "Quin", "Sept", "3Okt", "Non", "Dez", "11f₀", "12f₀"];
         ctx.fillStyle = '#94a3b8';
-        ctx.font = '600 9px Roboto, sans-serif';
-        ctx.fillText(intvNames[h], cx, padT + ph + 28);
+        ctx.font = '600 10px Roboto, sans-serif';
+        ctx.fillText(intvNames[h], cx, padT + ph + 29);
       }
 
       if (isRel) {
@@ -944,10 +944,10 @@
       const elFreq = document.getElementById('yka-ro-part-freq');
       const elDelta = document.getElementById('yka-ro-part-delta');
       if (elName) elName.textContent = pNames[hp];
-      if (elFreq) elFreq.textContent = `Frequenzband (${stats.noteLo}–${stats.noteHi}): ${fPartLo} – ${fPartHi} Hz`;
+      if (elFreq) elFreq.textContent = `${stats.noteLo}–${stats.noteHi}: ${fPartLo}–${fPartHi} Hz`;
       if (elDelta) {
         const sgn = dRel >= 0 ? '+' : '';
-        elDelta.textContent = `Δ Kit: ${sgn}${dRel.toFixed(2)} dB (${sgn}${Math.round(pctP)} % Energie)`;
+        elDelta.textContent = `Δ: ${sgn}${dRel.toFixed(2)} dB (${sgn}${Math.round(pctP)} %)`;
         elDelta.style.color = dRel >= 0 ? '#2ecc71' : '#38bdf8';
       }
 
@@ -964,7 +964,7 @@
         elDecay.style.color = dSlope >= 0 ? '#2ecc71' : '#38bdf8';
       }
       if (elDecaySub) {
-        elDecaySub.textContent = `Orig: ${stats.slopeOctOrig.toFixed(1)} vs. Kit: ${stats.slopeOctKit.toFixed(1)} dB/Okt.`;
+        elDecaySub.textContent = `${stats.slopeOctOrig.toFixed(1)} → ${stats.slopeOctKit.toFixed(1)} dB/Okt.`;
       }
       if (elEven) {
         const sEven = stats.evenGainRel >= 0 ? '+' : '';
@@ -989,7 +989,7 @@
       const semis = stats.semitones;
       if (!semis.length) { ctx.restore(); return; }
 
-      const padL = 46, padR = 14, padT = 22, padB = 34;
+      const padL = 48, padR = 14, padT = 26, padB = 36;
       const pw = W - padL - padR;
       const ph = H - padT - padB;
       const nS = semis.length;
@@ -1012,7 +1012,7 @@
 
       ctx.strokeStyle = 'rgba(255,255,255,0.08)';
       ctx.fillStyle = '#94a3b8';
-      ctx.font = '600 10px JetBrains Mono, monospace';
+      ctx.font = '600 11px JetBrains Mono, monospace';
       ctx.textAlign = 'right';
       [minV + 5, Math.round((minV + maxV) / 2), maxV - 3].forEach(gv => {
         const y = mapY(gv);
@@ -1043,13 +1043,13 @@
         ctx.fillRect(cx + 0.5, y2, bw, Math.max(2, bot - y2));
 
         if (nS <= 28 || i % 3 === 0) {
-          ctx.fillStyle = isSel ? '#2ecc71' : ((s.midi % 12 === 9 || s.midi % 12 === 0) ? '#fbbf24' : '#94a3b8');
-          ctx.font = (isSel || s.midi % 12 === 9 || s.midi % 12 === 0) ? '700 9px JetBrains Mono, monospace' : '600 8px JetBrains Mono, monospace';
+          ctx.fillStyle = isSel ? '#2ecc71' : ((s.midi % 12 === 9 || s.midi % 12 === 0) ? '#fbbf24' : '#cbd5e1');
+          ctx.font = (isSel || s.midi % 12 === 9 || s.midi % 12 === 0) ? '700 10px JetBrains Mono, monospace' : '600 9px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
-          ctx.fillText(s.note, cx, padT + ph + 13);
+          ctx.fillText(s.note, cx, padT + ph + 14);
           if ((i % 3 === 0 || isSel) && nS <= 28) {
-            ctx.fillStyle = isSel ? '#fbbf24' : '#64748b';
-            ctx.fillText(`${Math.round(s.f0)}Hz`, cx, padT + ph + 25);
+            ctx.fillStyle = isSel ? '#fbbf24' : '#94a3b8';
+            ctx.fillText(`${Math.round(s.f0)}Hz`, cx, padT + ph + 27);
           }
         }
       });
@@ -1063,12 +1063,12 @@
         const pctS = (Math.pow(10, dSemi / 10.0) - 1.0) * 100.0;
         const sgn = dSemi >= 0 ? '+' : '';
         ctx.fillStyle = '#fbbf24';
-        ctx.font = '700 11px JetBrains Mono, monospace';
+        ctx.font = '700 12.5px JetBrains Mono, monospace';
         ctx.textAlign = 'left';
         ctx.fillText(
-          `Ausgewählter Halbton: ${selSemi.note} (f₀ = ${selSemi.f0.toFixed(1)} Hz) · Orig: ${v1.toFixed(1)} dB → Kit: ${v2.toFixed(1)} dB · Δ H₂–H₈: ${sgn}${dSemi.toFixed(2)} dB (${sgn}${Math.round(pctS)} %)`,
+          `Ton ${selSemi.note} (f₀ = ${selSemi.f0.toFixed(1)} Hz) · Orig: ${v1.toFixed(1)} dB → Kit: ${v2.toFixed(1)} dB · Δ H₂–H₈: ${sgn}${dSemi.toFixed(2)} dB (${sgn}${Math.round(pctS)} %)`,
           padL + 4,
-          padT - 6
+          padT - 7
         );
       }
 
@@ -1097,7 +1097,7 @@
       };
       const zeroY = mapY(0);
 
-      ctx.font = '600 11px JetBrains Mono, monospace';
+      ctx.font = '600 12px JetBrains Mono, monospace';
       ctx.textAlign = 'right';
       [-4, -2, 0, 2, 4].forEach(db => {
         const y = mapY(db);
@@ -1202,10 +1202,10 @@
 
         const elDFreq = document.getElementById('yka-ro-diff-freq');
         const elDVal = document.getElementById('yka-ro-diff-val');
-        if (elDFreq) elDFreq.textContent = `Frequenz: ${Math.round(fCur)} Hz (${this.freqToNoteName(fCur)})`;
+        if (elDFreq) elDFreq.textContent = `${Math.round(fCur)} Hz (${this.freqToNoteName(fCur)})`;
         if (elDVal) {
           const sgn = dVal >= 0 ? '+' : '';
-          elDVal.textContent = `${sgn}${dVal.toFixed(2)} dB (${sgn}${Math.round(pct)} % Schallenergie)`;
+          elDVal.textContent = `${sgn}${dVal.toFixed(2)} dB (${sgn}${Math.round(pct)} % Energie)`;
           elDVal.style.color = dVal >= 0 ? '#2ecc71' : '#38bdf8';
         }
       }
@@ -1236,7 +1236,7 @@
 
       ctx.strokeStyle = 'rgba(255,255,255,0.07)';
       ctx.fillStyle = '#94a3b8';
-      ctx.font = '600 10px JetBrains Mono, monospace';
+      ctx.font = '600 11px JetBrains Mono, monospace';
       ctx.textAlign = 'center';
       for (let m = 0; m <= 11; m++) {
         const x = padL + ((m * 60) / totalS) * pw;
@@ -1266,10 +1266,10 @@
       ctx.setLineDash([]);
 
       ctx.fillStyle = '#cbd5e1';
-      ctx.font = '700 11px Roboto, sans-serif';
+      ctx.font = '700 12px Roboto, sans-serif';
       ctx.fillText('ORIGINAL (0:00–5:17)', (padL + splitX) / 2, padT - 7);
       ctx.fillStyle = '#fbbf24';
-      ctx.fillText('LOUIS RENNER YAMAHA KIT (5:18–11:42)', (splitX + padL + pw) / 2, padT - 7);
+      ctx.fillText('YAMAHA KIT (5:18–11:42)', (splitX + padL + pw) / 2, padT - 7);
 
       if (this.waveMouseX !== null && this.waveMouseX >= padL && this.waveMouseX <= padL + pw) {
         const tCur = ((this.waveMouseX - padL) / pw) * totalS;
@@ -1288,7 +1288,7 @@
         const isK = tCur >= 317.5;
         const elWave = document.getElementById('yka-ro-wave-vals');
         if (elWave) {
-          elWave.textContent = `${mm}:${ss} Min. (${isK ? 'Yamaha Kit' : 'Original'}) · Peak: ${pkDb.toFixed(1)} dBFS · Crest: ${crestDb.toFixed(1)} dB`;
+          elWave.textContent = `${mm}:${ss} (${isK ? 'Kit' : 'Orig'}) · Peak: ${pkDb.toFixed(1)} dBFS · Crest: ${crestDb.toFixed(1)} dB`;
         }
       }
 
@@ -1311,7 +1311,7 @@
 
       ctx.strokeStyle = 'rgba(255,255,255,0.08)';
       ctx.fillStyle = '#94a3b8';
-      ctx.font = '600 10px JetBrains Mono, monospace';
+      ctx.font = '600 11px JetBrains Mono, monospace';
       ctx.textAlign = 'right';
       [-12, -10, -8, -6].forEach(s => {
         const y = mapY(s);
@@ -1355,7 +1355,7 @@
     // -------------------------------------------------------------------------
     update2OctDiagnosis() {
       const stats = this.getCurrentWindowStats();
-      const rangeStr = `${stats.noteLo} – ${stats.noteHi} (${Math.round(stats.fLo)} – ${Math.round(stats.fHi)} Hz)`;
+      const rangeStr = `${stats.noteLo} – ${stats.noteHi} (${Math.round(stats.fLo)}–${Math.round(stats.fHi)} Hz)`;
 
       // 1. Update slider labels (.yka-lbl-oct-range on Slide 28 & Slide 29)
       document.querySelectorAll('.yka-lbl-oct-range').forEach(el => {
@@ -1369,84 +1369,84 @@
 
       // 2. Update Right-Hand Telemetry KPI boxes on Slide 28 & Slide 29
       document.querySelectorAll('.yka-kpi-win-notes').forEach(el => {
-        el.textContent = rangeStr;
+        el.textContent = `${stats.noteLo} – ${stats.noteHi}`;
       });
       document.querySelectorAll('.yka-kpi-win-sub').forEach(el => {
-        el.textContent = `${stats.semitones.length} Halbtöne · f₀ = ${stats.fLo.toFixed(1)}–${stats.fHi.toFixed(1)} Hz`;
+        el.textContent = `${stats.semitones.length} Halbtöne · f₀ = ${Math.round(stats.fLo)}–${Math.round(stats.fHi)} Hz`;
       });
 
       const mGain = stats.meanOvertoneGain;
       const pctGain = (Math.pow(10, mGain / 10.0) - 1.0) * 100.0;
       const sgnG = mGain >= 0 ? '+' : '';
       document.querySelectorAll('.yka-kpi-ot-gain').forEach(el => {
-        el.textContent = `${sgnG}${mGain.toFixed(2)} dB (${sgnG}${Math.round(pctGain)} % Energie)`;
+        el.textContent = `${sgnG}${mGain.toFixed(2)} dB (${sgnG}${Math.round(pctGain)} %)`;
         el.style.color = mGain >= 0 ? '#2ecc71' : '#38bdf8';
       });
       document.querySelectorAll('.yka-kpi-ot-sub').forEach(el => {
         const sgnMax = stats.maxGainVal >= 0 ? '+' : '';
-        el.textContent = `Spitzengewinn bei H${stats.maxGainH} (${sgnMax}${stats.maxGainVal.toFixed(2)} dB)`;
+        el.textContent = `Spitze bei H${stats.maxGainH} (${sgnMax}${stats.maxGainVal.toFixed(2)} dB)`;
       });
 
       const h1Orig = stats.origAbsDb[0];
       const h1Kit = stats.kitNormDb[0];
       const dH1 = h1Kit - h1Orig;
       document.querySelectorAll('.yka-kpi-h1-vals').forEach(el => {
-        el.textContent = `${h1Orig.toFixed(1)} dB → ${h1Kit.toFixed(1)} dB`;
+        el.textContent = `${h1Orig.toFixed(1)} → ${h1Kit.toFixed(1)} dB`;
       });
       document.querySelectorAll('.yka-kpi-h1-sub').forEach(el => {
-        el.textContent = `Δ H1: ${dH1 >= 0 ? '+' : ''}${dH1.toFixed(2)} dB (Original vs. Kit)`;
+        el.textContent = `Δ H1: ${dH1 >= 0 ? '+' : ''}${dH1.toFixed(2)} dB`;
       });
 
       const locSlope = this.calcLocalPsdSlope(Math.max(50, stats.fLo), Math.min(8000, Math.max(stats.fHi * 6, 1000)));
       const dKhz = locSlope.s2_khz - locSlope.s1_khz;
       document.querySelectorAll('.yka-kpi-local-slope').forEach(el => {
-        el.textContent = `${dKhz >= 0 ? '+' : ''}${dKhz.toFixed(2)} dB/kHz flacher`;
+        el.textContent = `${dKhz >= 0 ? '+' : ''}${dKhz.toFixed(2)} dB/kHz`;
         el.style.color = dKhz >= 0 ? '#2ecc71' : '#38bdf8';
       });
       document.querySelectorAll('.yka-kpi-slope-sub').forEach(el => {
-        el.textContent = `Orig: ${locSlope.s1_khz.toFixed(2)} vs. Kit: ${locSlope.s2_khz.toFixed(2)} dB/kHz`;
+        el.textContent = `Orig: ${locSlope.s1_khz.toFixed(2)} → Kit: ${locSlope.s2_khz.toFixed(2)} dB/kHz`;
       });
 
       let txt = "";
       if (this.lang === 'en') {
         if (stats.fLo < 45) {
-          txt = `In the sub/contra bass (${stats.noteLo}–${stats.noteHi}), fundamental H1 remains rock-solid (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(2)} dB) while boomy partials H2–H4 (55–250 Hz) are cleaned up by −1.7 to −2.9 dB for dry, transparent chord definition.`;
+          txt = `Bass (${stats.noteLo}–${stats.noteHi}): Solid H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB), boomy partials H2–H4 cleaned up (−1.7 to −2.9 dB) for clear chord definition.`;
         } else if (stats.fLo < 90) {
-          txt = `In the bass/baritone transition (${stats.noteLo}–${stats.noteHi}), low-mid mud is reduced while color partials H5–H9 gain +2.4 to +3.0 dB relative to H1 — delivering a focused, resonant baritone growl.`;
+          txt = `Baritone (${stats.noteLo}–${stats.noteHi}): Less low-mid mud, while overtones H5–H9 gain +2.4 to +3.0 dB for focused resonance.`;
         } else if (stats.fLo < 180) {
-          txt = `In the tenor & middle register (${stats.noteLo}–${stats.noteHi}), partials H2 (+1.6 dB), H3 (+3.2 dB), H4 (+3.5 dB) and H8 (+4.7 dB) surge in energy, providing orchestral fullness and warmth.`;
+          txt = `Middle register (${stats.noteLo}–${stats.noteHi}): H2 (+1.6 dB), H3 (+3.2 dB), H4 (+3.5 dB) & H8 (+4.7 dB) surge for orchestral warmth.`;
         } else if (stats.fLo < 350) {
-          txt = `In the singing register (${stats.noteLo}–${stats.noteHi}), partials H2–H8 fall directly into the human presence formant (440–5,000 Hz). Every partial H2–H10 rises by +1.6 to +3.9 dB — notes bloom after the attack.`;
+          txt = `Singing register (${stats.noteLo}–${stats.noteHi}): H2–H10 rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
         } else {
-          txt = `In the treble (${stats.noteLo}–${stats.noteHi}), both fundamental H1 (+1.2 to +1.8 dB) and overtones H2–H6 (+1.8 to +3.4 dB) increase significantly for bell-like projection without harshness.`;
+          txt = `Treble (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H6 (up to +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection to C8.`;
         }
       } else if (this.lang === 'ja') {
         if (stats.fLo < 45) {
-          txt = `重低音域（${stats.noteLo}–${stats.noteHi}）では基音H1を維持しつつ、濁りの原因となる第2〜第4倍音（55–250 Hz）を−1.7〜−2.9 dB整理し、明瞭な低音分離を実現します。`;
+          txt = `低音域（${stats.noteLo}–${stats.noteHi}）：基音H1を維持し、H2–H4の濁りを−1.7〜−2.9 dB整理して明瞭な分離を実現。`;
         } else if (stats.fLo < 180) {
-          txt = `中低音〜中央音域（${stats.noteLo}–${stats.noteHi}）では、第2倍音（+1.6 dB）、第3倍音（+3.2 dB）、第4倍音（+3.5 dB）が大きく向上し、オーケストラのような豊かな響きを生みます。`;
+          txt = `中音域（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）・H3（+3.2 dB）・H4（+3.5 dB）が向上し豊かな響きに。`;
         } else {
-          txt = `歌唱音域〜高音域（${stats.noteLo}–${stats.noteHi}）では、第2〜第10倍音が+1.6〜+3.9 dB向上し、打弦後に音が華やかに開花するコンサートトーンを実現します。`;
+          txt = `高音域（${stats.noteLo}–${stats.noteHi}）：H2〜H10が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
         }
       } else if (this.lang === 'zh') {
         if (stats.fLo < 45) {
-          txt = `在超低音区（${stats.noteLo}–${stats.noteHi}），基音H1保持稳固，同时消除H2–H4（55–250 Hz）的浑浊轰鸣（−1.7至−2.9 dB），令低音干净通透。`;
+          txt = `低音区（${stats.noteLo}–${stats.noteHi}）：稳固基音H1，消除H2–H4浑浊（−1.7至−2.9 dB），低音干净通透。`;
         } else if (stats.fLo < 180) {
-          txt = `在中低音与核心音区（${stats.noteLo}–${stats.noteHi}），H2（+1.6 dB）、H3（+3.2 dB）、H4（+3.5 dB）能量显著跃升，赋予管弦乐般的醇厚共鸣。`;
+          txt = `核心音区（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）、H3（+3.2 dB）、H4（+3.5 dB）显著跃升，共鸣醇厚。`;
         } else {
-          txt = `在歌唱音区与高音区（${stats.noteLo}–${stats.noteHi}），H2至H10谐波全面提升+1.6至+3.9 dB，琴音在触键后绽放出钟鸣般的歌唱穿透力。`;
+          txt = `高音区（${stats.noteLo}–${stats.noteHi}）：H2–H10最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣般的穿透力。`;
         }
       } else {
         if (stats.fLo < 45) {
-          txt = `Im tiefen 2-Oktaven-Bass (${stats.noteLo}–${stats.noteHi}) bleibt das Grundtonfundament H1 voll erhalten (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(2)} dB), während dröhnende Mulm-Teiltöne H2–H4 (55–250 Hz) um −1,7 bis −2,9 dB entschlackt werden: Der Bass klingt trocken, definiert und transparent.`;
+          txt = `Tiefer Bass (${stats.noteLo}–${stats.noteHi}): Stabiles Fundament H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB), Mulm-Teiltöne H2–H4 um −1,7 bis −2,9 dB entschlackt – trocken & präzise.`;
         } else if (stats.fLo < 90) {
-          txt = `Im Übergangsregister Große/Kleine Oktave (${stats.noteLo}–${stats.noteHi}) zeigt sich die Entmulmung in H1–H2, während die klangfärbenden Obertöne H5 bis H9 um +2,4 bis +3,0 dB relativ zum Grundton zulegen – für einen tragfähigen Bariton-Charakter.`;
+          txt = `Bariton (${stats.noteLo}–${stats.noteHi}): Entmulmte Grundtöne, während Obertöne H5–H9 um +2,4 bis +3,0 dB für kernige Tragfähigkeit zulegen.`;
         } else if (stats.fLo < 180) {
-          txt = `In der kleinen & eingestrichenen Oktave (${stats.noteLo}–${stats.noteHi}) liegt das harmonische Zentrum: Die Teiltöne H2 (${stats.deltaRelH1[1] >= 0 ? '+' : ''}${stats.deltaRelH1[1].toFixed(1)} dB), H3 (${stats.deltaRelH1[2] >= 0 ? '+' : ''}${stats.deltaRelH1[2].toFixed(1)} dB), H4 (${stats.deltaRelH1[3] >= 0 ? '+' : ''}${stats.deltaRelH1[3].toFixed(1)} dB) und H8 (${stats.deltaRelH1[7] >= 0 ? '+' : ''}${stats.deltaRelH1[7].toFixed(1)} dB) gewinnen massiv an Energie.`;
+          txt = `Klangzentrum (${stats.noteLo}–${stats.noteHi}): H2 (+${stats.deltaRelH1[1].toFixed(1)} dB), H3 (+${stats.deltaRelH1[2].toFixed(1)} dB), H4 (+${stats.deltaRelH1[3].toFixed(1)} dB) & H8 (+${stats.deltaRelH1[7].toFixed(1)} dB) gewinnen massiv an Fülle.`;
         } else if (stats.fLo < 350) {
-          txt = `Im Gesangsregister (${stats.noteLo}–${stats.noteHi}) fallen die Teiltöne H2 bis H8 exakt in das menschliche Präsenzband (440–5.000 Hz). Das Louis Renner Yamaha Kit steigert H2 bis H10 um bis zu +${stats.maxGainVal.toFixed(1)} dB (bei H${stats.maxGainH}) – der Ton „blüht“ nach dem Anschlag auf.`;
+          txt = `Gesangsregister (${stats.noteLo}–${stats.noteHi}): H2–H10 steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
         } else {
-          txt = `Im Diskant (${stats.noteLo}–${stats.noteHi}) steigen sowohl der Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) als auch die brillanten Teiltöne H2–H6 (Spitze +${stats.maxGainVal.toFixed(1)} dB bei H${stats.maxGainH}) deutlich an – für glockige Strahlkraft bis C8 ohne metallische Härte.`;
+          txt = `Diskant (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H6 (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft bis C8.`;
         }
       }
       document.querySelectorAll('.yka-diag-text').forEach(el => {
@@ -1539,7 +1539,7 @@
       if (elLbl) elLbl.textContent = `${Math.round(fHz)} Hz (${fKhz.toFixed(2)} kHz · ${noteLbl})`;
       if (elOrig) elOrig.textContent = `${lossOrig.toFixed(2)} dB`;
       if (elKit) elKit.textContent = `${lossKit.toFixed(2)} dB`;
-      if (elGain) elGain.textContent = `+${gainDb.toFixed(2)} dB (+${Math.round(powerPct)} % Energie)`;
+      if (elGain) elGain.textContent = `+${gainDb.toFixed(2)} dB (+${Math.round(powerPct)} %)`;
 
       document.querySelectorAll('.yka-calc-preset').forEach(btn => {
         const pf = parseInt(btn.getAttribute('data-freq'), 10);

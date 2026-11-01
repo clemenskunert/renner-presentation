@@ -2494,164 +2494,162 @@
     },
     "slide_28": {
       "slide_number": 28,
-      "chapter": 4,
-      "chapter_name": "Das Louis Renner Yamaha Kit",
       "category": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (1/4)",
-        "en": "Part 4: The Louis Renner Yamaha Kit • Acoustic Measurement Analysis (1/4)",
-        "ja": "第4部：Louis Renner ヤマハ・キット • 音響測定解析 (1/4)",
-        "zh": "第四部分：Louis Renner 雅马哈套件 • 声学测量分析 (1/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (1/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (1/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (1/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (1/4)"
       },
       "title": {
-        "de": "Leistungsdichtespektrum L(f) & Interaktive 2-Oktaven-Eingrenzung",
-        "en": "Power Spectral Density L(f) & Interactive 2-Octave Frequency Filter",
-        "ja": "パワースペクトル密度 L(f) とインタラクティブ 2オクターブ周波数フィルター",
-        "zh": "功率谱密度 L(f) 与交互式 2 八度频率范围筛选"
+        "de": "Leistungsdichtespektrum & 2-Oktaven-Filter",
+        "en": "Power Spectrum & 2-Octave Filter",
+        "ja": "パワースペクトル＆2オクターブフィルター",
+        "zh": "功率谱密度与 2 八度滤波器"
       },
       "subtitle": {
-        "de": "Welch-PSD (44,1 kHz, 699 s Aufnahme): Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)",
-        "en": "Welch PSD (44.1 kHz, 699 s recording): Original hammerheads (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)",
-        "ja": "Welch PSD（44.1 kHz、699秒録音）：オリジナル・ハンマー（0:00–5:17）対 Louis Renner ヤマハ・キット（5:18–11:42）",
-        "zh": "Welch 功率谱密度（44.1 kHz，699 秒录音）：原装弦槌（0:00–5:17）对比 Louis Renner 雅马哈套件（5:18–11:42）"
+        "de": "Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)",
+        "en": "Original Hammerheads (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)",
+        "ja": "オリジナル・ハンマー (0:00–5:17) 対 Louis Renner ヤマハ・キット (5:18–11:42)",
+        "zh": "原装弦槌 (0:00–5:17) 对比 Louis Renner 雅马哈套件 (5:18–11:42)"
       },
       "elements": {
         "s28_tab1": {
-          "de": "SPEKTRUM & 2-OKTAVEN",
-          "en": "SPECTRUM & 2-OCTAVES",
-          "ja": "スペクトル＆2オクターブ",
-          "zh": "频谱与2八度窗口"
+          "de": "SPEKTRUM",
+          "en": "SPECTRUM",
+          "ja": "スペクトル",
+          "zh": "频谱"
         },
         "s28_tab2": {
           "de": "TEILTÖNE H1–H12",
           "en": "PARTIALS H1–H12",
-          "ja": "倍音分布 H1–H12",
-          "zh": "泛音分布 H1–H12"
+          "ja": "倍音 H1–H12",
+          "zh": "泛音 H1–H12"
         },
         "s28_tab3": {
-          "de": "REGISTER-GEWINN ΔL(f)",
-          "en": "REGISTER GAIN ΔL(f)",
-          "ja": "音域別ゲイン ΔL(f)",
+          "de": "REGISTER ΔL(f)",
+          "en": "REGISTERS ΔL(f)",
+          "ja": "音域ゲイン ΔL(f)",
           "zh": "音区增益 ΔL(f)"
         },
         "s28_tab4": {
-          "de": "DYNAMIK & SPECTRAL SLOPE",
-          "en": "DYNAMICS & SPECTRAL SLOPE",
-          "ja": "ダイナミクス＆スロープ",
-          "zh": "动态与频谱斜率"
+          "de": "DYNAMIK & SLOPE",
+          "en": "DYNAMICS & SLOPE",
+          "ja": "動態＆スロープ",
+          "zh": "动态与斜率"
         },
         "s28_lbl_oct": {
-          "de": "2-Oktaven-Fenster:",
-          "en": "2-Octave Window:",
-          "ja": "2オクターブ窓:",
-          "zh": "2八度窗口:"
+          "de": "Register:",
+          "en": "Register:",
+          "ja": "音域:",
+          "zh": "音区:"
         },
         "s28_btn_all": {
           "de": "Gesamt<small>25–10k Hz</small>",
           "en": "Full<small>25–10k Hz</small>",
           "ja": "全域<small>25–10k Hz</small>",
-          "zh": "全频段<small>25–10k Hz</small>"
+          "zh": "全域<small>25–10k Hz</small>"
         },
         "s28_zmode_part": {
-          "de": "2 Okt. + Teiltöne (H1–H8)",
-          "en": "2 Oct. + Partials (H1–H8)",
-          "ja": "2オクターブ＋倍音(H1–H8)",
-          "zh": "2八度 + 泛音 (H1–H8)"
+          "de": "2 Okt. + H1–H8",
+          "en": "2 Oct. + H1–H8",
+          "ja": "2オクターブ+H1–H8",
+          "zh": "2八度+H1–H8"
         },
         "s28_zmode_fund": {
-          "de": "Exakt 2 Oktaven",
-          "en": "Exact 2 Octaves",
-          "ja": "基音2オクターブのみ",
-          "zh": "仅限2八度基音"
+          "de": "2 Oktaven",
+          "en": "2 Octaves",
+          "ja": "2オクターブ",
+          "zh": "2八度"
         },
         "s28_zmode_full": {
-          "de": "Vollbereich",
-          "en": "Full Range",
+          "de": "Gesamt",
+          "en": "Full",
           "ja": "全帯域",
-          "zh": "全频域"
+          "zh": "全频段"
         },
         "s28_sl_oct": {
-          "de": "Startnote (2 Okt.):",
-          "en": "Start Note (2 Oct.):",
-          "ja": "開始音 (2オクターブ):",
-          "zh": "起始音符 (2八度):"
+          "de": "Startnote:",
+          "en": "Start Note:",
+          "ja": "開始音:",
+          "zh": "起始音:"
         },
         "s28_chk_orig": {
-          "de": "Original (0:00–5:17)",
-          "en": "Original (0:00–5:17)",
-          "ja": "オリジナル (0:00–5:17)",
-          "zh": "原装弦槌 (0:00–5:17)"
+          "de": "Original",
+          "en": "Original",
+          "ja": "オリジナル",
+          "zh": "原装"
         },
         "s28_chk_kit": {
-          "de": "Renner Yamaha Kit (5:18–11:42)",
-          "en": "Renner Yamaha Kit (5:18–11:42)",
-          "ja": "Renner キット (5:18–11:42)",
-          "zh": "Renner 套件 (5:18–11:42)"
+          "de": "Yamaha Kit",
+          "en": "Yamaha Kit",
+          "ja": "Rennerキット",
+          "zh": "Renner套件"
         },
         "s28_chk_gain": {
-          "de": "Oberton-Gewinn",
-          "en": "Overtone Gain",
-          "ja": "倍音ゲイン",
-          "zh": "泛音增益"
+          "de": "Gewinn",
+          "en": "Gain",
+          "ja": "ゲイン",
+          "zh": "增益"
         },
         "s28_chk_hm": {
-          "de": "Teiltöne H1–H8",
-          "en": "Partials H1–H8",
-          "ja": "倍音マーカー H1–H8",
-          "zh": "泛音标记 H1–H8"
+          "de": "H1–H8",
+          "en": "H1–H8",
+          "ja": "H1–H8",
+          "zh": "H1–H8"
         },
         "s28_chk_peak": {
-          "de": "Max-Hold P95",
-          "en": "Max-Hold P95",
-          "ja": "ピークホールド P95",
-          "zh": "峰值保持 P95"
+          "de": "P95 Peak",
+          "en": "P95 Peak",
+          "ja": "P95ピーク",
+          "zh": "P95峰值"
         },
         "s28_r_badge": {
-          "de": ">LIVE 2-OKTAVEN-TELEMETRIE",
-          "en": ">LIVE 2-OCTAVE TELEMETRY",
-          "ja": ">ライブ 2オクターブ測定値",
-          "zh": ">实时 2 八度遥测数据"
+          "de": ">2-OKTAVEN-MESSWERTE",
+          "en": ">2-OCTAVE METRICS",
+          "ja": ">2オクターブ測定値",
+          "zh": ">2八度实测值"
         },
         "s28_r_title": {
-          "de": "Messwerte im gewählten 2-Oktaven-Fenster",
-          "en": "Measurements in Selected 2-Octave Window",
-          "ja": "選択した2オクターブ領域の測定データ",
-          "zh": "所选 2 八度窗口内的实测指标"
+          "de": "Kennzahlen im 2-Oktaven-Fenster",
+          "en": "Metrics in 2-Octave Window",
+          "ja": "2オクターブ領域の主要指標",
+          "zh": "2 八度窗口核心指标"
         },
         "s28_kpi1_lbl": {
-          "de": "Aktives 2-Oktaven-Fenster",
-          "en": "Active 2-Octave Window",
-          "ja": "現在の2オクターブ窓",
-          "zh": "当前 2 八度窗口"
+          "de": "2-Oktaven-Fenster",
+          "en": "2-Octave Window",
+          "ja": "2オクターブ窓",
+          "zh": "2 八度窗口"
         },
         "s28_kpi2_lbl": {
-          "de": "Mittlerer Oberton-Gewinn (H2–H8)",
-          "en": "Mean Overtone Gain (H2–H8)",
-          "ja": "平均倍音ゲイン (H2–H8)",
-          "zh": "平均泛音增益 (H2–H8)"
+          "de": "Oberton-Gewinn (H2–H8)",
+          "en": "Overtone Gain (H2–H8)",
+          "ja": "倍音ゲイン (H2–H8)",
+          "zh": "泛音增益 (H2–H8)"
         },
         "s28_kpi3_lbl": {
-          "de": "Grundton-Pegel H1 (f₀)",
-          "en": "Fundamental Level H1 (f₀)",
-          "ja": "基音レベル H1 (f₀)",
-          "zh": "基音电平 H1 (f₀)"
+          "de": "Grundton H1 (f₀)",
+          "en": "Fundamental H1 (f₀)",
+          "ja": "基音 H1 (f₀)",
+          "zh": "基音 H1 (f₀)"
         },
         "s28_kpi4_lbl": {
-          "de": "Lokaler Spectral Slope (Abfall)",
-          "en": "Local Spectral Slope",
-          "ja": "局所スペクトルスロープ",
-          "zh": "局部频谱斜率 (衰减)"
+          "de": "Spectral Slope",
+          "en": "Spectral Slope",
+          "ja": "スペクトルスロープ",
+          "zh": "频谱斜率"
         },
         "s28_diag_badge": {
-          "de": "✦ AKUSTISCHE DIAGNOSE DES GEWÄHLTEN REGISTERS",
-          "en": "✦ ACOUSTIC DIAGNOSIS OF SELECTED REGISTER",
-          "ja": "✦ 選択音域の音響診断",
-          "zh": "✦ 所选音区的声学诊断"
+          "de": "✦ AKUSTISCHE DIAGNOSE",
+          "en": "✦ ACOUSTIC DIAGNOSIS",
+          "ja": "✦ 音響診断",
+          "zh": "✦ 声学诊断"
         },
         "s28_hint_nav": {
-          "de": "💡 Tipp: Klicken Sie auf die 88-Tasten-Klaviatur oder nutzen Sie Tab 02 für die Teilton-Analyse H1–H12.",
-          "en": "💡 Tip: Click the 88-key piano bar or switch to Tab 02 for the H1–H12 partial analysis.",
-          "ja": "💡 ヒント：88鍵盤をクリックするか、タブ02でH1〜H12の倍音分布を確認できます。",
-          "zh": "💡 提示：点击 88 键钢琴条或切换至标签 02 查看 H1–H12 泛音分布。"
+          "de": "💡 Klaviatur anklicken oder Tab 02 wählen.",
+          "en": "💡 Click piano bar or select Tab 02.",
+          "ja": "💡 鍵盤クリック、またはタブ02を選択。",
+          "zh": "💡 点击键盘条或切换至标签 02。"
         }
       },
       "notes": {
@@ -2663,56 +2661,54 @@
     },
     "slide_29": {
       "slide_number": 29,
-      "chapter": 4,
-      "chapter_name": "Das Louis Renner Yamaha Kit",
       "category": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (2/4)",
-        "en": "Part 4: The Louis Renner Yamaha Kit • Acoustic Measurement Analysis (2/4)",
-        "ja": "第4部：Louis Renner ヤマハ・キット • 音響測定解析 (2/4)",
-        "zh": "第四部分：Louis Renner 雅马哈套件 • 声学测量分析 (2/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (2/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (2/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (2/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (2/4)"
       },
       "title": {
-        "de": "2-Oktaven-Teiltonverteilung (H₁–H₁₂) & Chromatische 24-Halbton-Auflösung",
-        "en": "2-Octave Partial Distribution (H₁–H₁₂) & Chromatic 24-Semitone Resolution",
-        "ja": "2オクターブ倍音分布 (H₁–H₁₂) と半音単位（24半音）の倍音エネルギー解析",
-        "zh": "2 八度泛音分布 (H₁–H₁₂) 与 24 半音阶逐音解析"
+        "de": "Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Analyse",
+        "en": "Partial Distribution (H₁–H₁₂) & 24 Semitones",
+        "ja": "倍音分布 (H₁–H₁₂) ＆ 24半音解析",
+        "zh": "泛音分布 (H₁–H₁₂) 与 24 半音分析"
       },
       "subtitle": {
-        "de": "Harmonische Oberton-Architektur je 2-Oktaven-Register: Warum das Renner Kit wärmer und zugleich brillanter klingt",
-        "en": "Harmonic overtone architecture per 2-octave register: Why the Renner Kit sounds both warmer and more brilliant",
-        "ja": "2オクターブ音域ごとの倍音構造：Renner キットが温かさと輝かしさを両立する理由",
-        "zh": "每个 2 八度音区的谐波泛音架构：为何 Renner 套件兼具温暖音色与辉煌穿透力"
+        "de": "Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz",
+        "en": "Overtone architecture per 2-octave window: More warmth and brilliance",
+        "ja": "2オクターブごとの倍音構造：温かさと輝きの向上",
+        "zh": "2 八度泛音架构：兼具温暖度与辉煌感"
       },
       "elements": {
         "s29_tab1": {
-          "de": "SPEKTRUM & 2-OKTAVEN",
-          "en": "SPECTRUM & 2-OCTAVES",
-          "ja": "スペクトル＆2オクターブ",
-          "zh": "频谱与2八度窗口"
+          "de": "SPEKTRUM",
+          "en": "SPECTRUM",
+          "ja": "スペクトル",
+          "zh": "频谱"
         },
         "s29_tab2": {
           "de": "TEILTÖNE H1–H12",
           "en": "PARTIALS H1–H12",
-          "ja": "倍音分布 H1–H12",
-          "zh": "泛音分布 H1–H12"
+          "ja": "倍音 H1–H12",
+          "zh": "泛音 H1–H12"
         },
         "s29_tab3": {
-          "de": "REGISTER-GEWINN ΔL(f)",
-          "en": "REGISTER GAIN ΔL(f)",
-          "ja": "音域別ゲイン ΔL(f)",
+          "de": "REGISTER ΔL(f)",
+          "en": "REGISTERS ΔL(f)",
+          "ja": "音域ゲイン ΔL(f)",
           "zh": "音区增益 ΔL(f)"
         },
         "s29_tab4": {
-          "de": "DYNAMIK & SPECTRAL SLOPE",
-          "en": "DYNAMICS & SPECTRAL SLOPE",
-          "ja": "ダイナミクス＆スロープ",
-          "zh": "动态与频谱斜率"
+          "de": "DYNAMIK & SLOPE",
+          "en": "DYNAMICS & SLOPE",
+          "ja": "動態＆スロープ",
+          "zh": "动态与斜率"
         },
         "s29_lbl_oct": {
-          "de": "2-Oktaven-Register wählen:",
-          "en": "Select 2-Octave Register:",
-          "ja": "2オクターブ音域選択:",
-          "zh": "选择 2 八度音区:"
+          "de": "Register:",
+          "en": "Register:",
+          "ja": "音域:",
+          "zh": "音区:"
         },
         "s29_btn_all": {
           "de": "Gesamt<small>A0–C8</small>",
@@ -2721,94 +2717,94 @@
           "zh": "全音域<small>A0–C8</small>"
         },
         "s29_sl_oct": {
-          "de": "Stufenlos (24 Halbtöne):",
-          "en": "Continuous (24 Semitones):",
-          "ja": "連続スライド (24半音):",
-          "zh": "无级滑动 (24半音):"
+          "de": "Startnote:",
+          "en": "Start Note:",
+          "ja": "開始音:",
+          "zh": "起始音:"
         },
         "s29_lbl_pmode": {
-          "de": "Darstellung:",
-          "en": "Display Mode:",
-          "ja": "表示モード:",
-          "zh": "显示模式:"
+          "de": "Modus:",
+          "en": "Mode:",
+          "ja": "表示:",
+          "zh": "模式:"
         },
         "s29_pmode_rel": {
-          "de": "Relativ zu H₁ = 0 dB",
-          "en": "Relative to H₁ = 0 dB",
-          "ja": "基音 H₁ = 0 dB 基準",
-          "zh": "相对于基音 H₁ = 0 dB"
+          "de": "Relativ H₁",
+          "en": "Relative H₁",
+          "ja": "H₁基準",
+          "zh": "相对 H₁"
         },
         "s29_pmode_delta": {
-          "de": "Δ Gewinn pro Teilton",
-          "en": "Δ Gain per Partial",
-          "ja": "倍音別 Δ ゲイン",
-          "zh": "各泛音 Δ 增益"
+          "de": "Δ Gewinn",
+          "en": "Δ Gain",
+          "ja": "Δ ゲイン",
+          "zh": "Δ 增益"
         },
         "s29_pmode_abs": {
-          "de": "Absolutpegel (dB)",
-          "en": "Absolute Level (dB)",
-          "ja": "絶対レベル (dB)",
-          "zh": "绝对电平 (dB)"
+          "de": "Absolut (dB)",
+          "en": "Absolute (dB)",
+          "ja": "絶対値 (dB)",
+          "zh": "绝对值 (dB)"
         },
         "s29_l_badge": {
-          "de": ">TEILTON-ARCHITEKTUR H₁–H₁₂",
-          "en": ">PARTIAL ARCHITECTURE H₁–H₁₂",
-          "ja": ">倍音アーキテクチャ H₁–H₁₂",
-          "zh": ">泛音架构 H₁–H₁₂"
+          "de": ">TEILTÖNE H₁–H₁₂",
+          "en": ">PARTIALS H₁–H₁₂",
+          "ja": ">倍音 H₁–H₁₂",
+          "zh": ">泛音 H₁–H₁₂"
         },
         "s29_l_title": {
-          "de": "Harmonische Teiltonverteilung im 2-Oktaven-Fenster",
-          "en": "Harmonic Partial Distribution in 2-Octave Window",
-          "ja": "2オクターブ窓内の倍音エネルギー分布",
-          "zh": "2 八度窗口内的谐波泛音分布"
+          "de": "Harmonische Teiltonverteilung",
+          "en": "Harmonic Partial Distribution",
+          "ja": "倍音エネルギー分布",
+          "zh": "谐波泛音分布"
         },
         "s29_pkpi1": {
-          "de": "Teilton-Abfall (H₁→H₈)",
-          "en": "Partial Roll-Off (H₁→H₈)",
-          "ja": "倍音減衰率 (H₁→H₈)",
-          "zh": "泛音衰减斜率 (H₁→H₈)"
+          "de": "Abfall (H₁→H₈)",
+          "en": "Roll-Off (H₁→H₈)",
+          "ja": "減衰率 (H₁→H₈)",
+          "zh": "衰减 (H₁→H₈)"
         },
         "s29_pkpi2": {
-          "de": "Geradzahlige (H₂, H₄, H₆, H₈)",
-          "en": "Even Partials (H₂, H₄, H₆, H₈)",
-          "ja": "偶数次倍音 (H₂, H₄, H₆, H₈)",
-          "zh": "偶次泛音 (H₂, H₄, H₆, H₈)"
+          "de": "Gerade (H₂, H₄, H₆, H₈)",
+          "en": "Even (H₂, H₄, H₆, H₈)",
+          "ja": "偶数倍音 (H₂–H₈)",
+          "zh": "偶次泛音 (H₂–H₈)"
         },
         "s29_pkpi2_sub": {
-          "de": "Oktav-Wärme & Fülle",
-          "en": "Octave Warmth & Body",
-          "ja": "オクターブの温かみと豊かさ",
-          "zh": "八度温暖感与丰满度"
+          "de": "Wärme & Fülle",
+          "en": "Warmth & Body",
+          "ja": "温かみと豊かさ",
+          "zh": "温暖与丰满"
         },
         "s29_pkpi3": {
-          "de": "Ungeradzahlige (H₃, H₅, H₇)",
-          "en": "Odd Partials (H₃, H₅, H₇)",
-          "ja": "奇数次倍音 (H₃, H₅, H₇)",
-          "zh": "奇次泛音 (H₃, H₅, H₇)"
+          "de": "Ungerade (H₃, H₅, H₇)",
+          "en": "Odd (H₃, H₅, H₇)",
+          "ja": "奇数倍音 (H₃–H₇)",
+          "zh": "奇次泛音 (H₃–H₇)"
         },
         "s29_pkpi3_sub": {
-          "de": "Quint-/Terz-Brillanz & Kern",
-          "en": "Fifth/Third Brilliance & Core",
-          "ja": "5度・3度の輝きと芯",
-          "zh": "五度/三度辉煌感与核心穿透力"
+          "de": "Brillanz & Kern",
+          "en": "Brilliance & Core",
+          "ja": "輝きと芯",
+          "zh": "辉煌与穿透"
         },
         "s29_r_badge": {
-          "de": ">24 HALBTÖNE CHROMATISCH",
-          "en": ">24 CHROMATIC SEMITONES",
-          "ja": ">24半音クロマチック解析",
-          "zh": ">24 半音阶逐音分析"
+          "de": ">24 HALBTÖNE",
+          "en": ">24 SEMITONES",
+          "ja": ">24半音解析",
+          "zh": ">24 半音分析"
         },
         "s29_r_title": {
-          "de": "Oberton-Energie (H₂–H₈) Note für Note im 2-Oktaven-Fenster",
-          "en": "Note-by-Note Overtone Energy (H₂–H₈) Across 24 Semitones",
-          "ja": "24半音それぞれの倍音エネルギー (H₂–H₈) 比較",
-          "zh": "2 八度窗口内 24 个半音的逐音泛音能量 (H₂–H₈)"
+          "de": "Oberton-Energie (H₂–H₈) pro Note",
+          "en": "Overtone Energy (H₂–H₈) per Note",
+          "ja": "ノート別倍音エネルギー (H₂–H₈)",
+          "zh": "逐音泛音能量 (H₂–H₈)"
         },
         "s29_diag_badge": {
           "de": "✦ TEILTON-DIAGNOSE",
           "en": "✦ PARTIAL DIAGNOSIS",
-          "ja": "✦ 倍音バランス診断",
-          "zh": "✦ 泛音结构诊断"
+          "ja": "✦ 倍音診断",
+          "zh": "✦ 泛音诊断"
         }
       },
       "notes": {
@@ -2820,164 +2816,162 @@
     },
     "slide_30": {
       "slide_number": 30,
-      "chapter": 4,
-      "chapter_name": "Das Louis Renner Yamaha Kit",
       "category": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (3/4)",
-        "en": "Part 4: The Louis Renner Yamaha Kit • Acoustic Measurement Analysis (3/4)",
-        "ja": "第4部：Louis Renner ヤマハ・キット • 音響測定解析 (3/4)",
-        "zh": "第四部分：Louis Renner 雅马哈套件 • 声学测量分析 (3/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (3/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (3/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (3/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (3/4)"
       },
       "title": {
-        "de": "Spektrale Differenzkurve ΔL(f) nach Registern & Die 4 Kernvorteile",
-        "en": "Spectral Difference Curve ΔL(f) by Register & The 4 Core Advantages",
-        "ja": "音域別スペクトル差分曲線 ΔL(f) と 4つの音響的コアメリット",
-        "zh": "按音区划分的频谱差值曲线 ΔL(f) 与四大核心声学优势"
+        "de": "Differenzkurve ΔL(f) & Die 4 Kernvorteile",
+        "en": "Difference Curve ΔL(f) & 4 Core Advantages",
+        "ja": "差分曲線 ΔL(f) ＆ 4大メリット",
+        "zh": "差值曲线 ΔL(f) 与四大核心优势"
       },
       "subtitle": {
-        "de": "Direkter Pegelgewinn ΔL(f) = L_Kit(f) − L_Original(f) über alle 5 akustischen Klavierregister",
-        "en": "Direct level gain ΔL(f) = L_Kit(f) − L_Original(f) across all 5 acoustic piano registers",
-        "ja": "5つのピアノ音響レジスターにおける直接ゲイン ΔL(f) = L_Kit(f) − L_Original(f)",
-        "zh": "横跨 5 大钢琴声学音区的直接电平增益 ΔL(f) = L_Kit(f) − L_Original(f)"
+        "de": "Pegelgewinn ΔL(f) = Kit − Original über alle 5 Klavierregister",
+        "en": "Level gain ΔL(f) = Kit − Original across all 5 piano registers",
+        "ja": "全5音域のレベルゲイン ΔL(f) = Kit − Original",
+        "zh": "五大钢琴音区的电平增益 ΔL(f) = Kit − Original"
       },
       "elements": {
         "s30_tab1": {
-          "de": "SPEKTRUM & 2-OKTAVEN",
-          "en": "SPECTRUM & 2-OCTAVES",
-          "ja": "スペクトル＆2オクターブ",
-          "zh": "频谱与2八度窗口"
+          "de": "SPEKTRUM",
+          "en": "SPECTRUM",
+          "ja": "スペクトル",
+          "zh": "频谱"
         },
         "s30_tab2": {
           "de": "TEILTÖNE H1–H12",
           "en": "PARTIALS H1–H12",
-          "ja": "倍音分布 H1–H12",
-          "zh": "泛音分布 H1–H12"
+          "ja": "倍音 H1–H12",
+          "zh": "泛音 H1–H12"
         },
         "s30_tab3": {
-          "de": "REGISTER-GEWINN ΔL(f)",
-          "en": "REGISTER GAIN ΔL(f)",
-          "ja": "音域別ゲイン ΔL(f)",
+          "de": "REGISTER ΔL(f)",
+          "en": "REGISTERS ΔL(f)",
+          "ja": "音域ゲイン ΔL(f)",
           "zh": "音区增益 ΔL(f)"
         },
         "s30_tab4": {
-          "de": "DYNAMIK & SPECTRAL SLOPE",
-          "en": "DYNAMICS & SPECTRAL SLOPE",
-          "ja": "ダイナミクス＆スロープ",
-          "zh": "动态与频谱斜率"
+          "de": "DYNAMIK & SLOPE",
+          "en": "DYNAMICS & SLOPE",
+          "ja": "動態＆スロープ",
+          "zh": "动态与斜率"
         },
         "s30_l_badge": {
-          "de": ">DIFFERENZSPEKTRUM ΔL(f)",
-          "en": ">DIFFERENCE SPECTRUM ΔL(f)",
-          "ja": ">差分スペクトル ΔL(f)",
-          "zh": ">差值频谱 ΔL(f)"
+          "de": ">DIFFERENZ ΔL(f)",
+          "en": ">DIFFERENCE ΔL(f)",
+          "ja": ">差分 ΔL(f)",
+          "zh": ">差值 ΔL(f)"
         },
         "s30_l_title": {
-          "de": "Pegeländerung nach Einbau des Louis Renner Yamaha Kits",
-          "en": "Level Change After Installing the Louis Renner Yamaha Kit",
-          "ja": "Louis Renner ヤマハ・キット導入後のレベル変化",
-          "zh": "安装 Louis Renner 雅马哈套件后的电平变化"
+          "de": "Pegelgewinn durch das Yamaha Kit",
+          "en": "Level Gain with Yamaha Kit",
+          "ja": "ヤマハ・キットによるレベル向上",
+          "zh": "雅马哈套件带来的电平增益"
         },
         "s30_bp0_name": {
-          "de": "1. Bass (20–250 Hz)",
-          "en": "1. Bass (20–250 Hz)",
-          "ja": "1. 低音 (20–250 Hz)",
-          "zh": "1. 低音区 (20–250 Hz)"
+          "de": "1. Bass",
+          "en": "1. Bass",
+          "ja": "1. 低音",
+          "zh": "1. 低音"
         },
         "s30_bp1_name": {
-          "de": "2. Grundton (250–800 Hz)",
-          "en": "2. Body (250–800 Hz)",
-          "ja": "2. 基音 (250–800 Hz)",
-          "zh": "2. 基音区 (250–800 Hz)"
+          "de": "2. Grundton",
+          "en": "2. Body",
+          "ja": "2. 基音",
+          "zh": "2. 基音"
         },
         "s30_bp2_name": {
-          "de": "3. Präsenz (0,8–2,5 kHz)",
-          "en": "3. Presence (0.8–2.5 kHz)",
-          "ja": "3. プレゼンス (0.8–2.5 kHz)",
-          "zh": "3. 临场歌唱区 (0.8–2.5 kHz)"
+          "de": "3. Präsenz",
+          "en": "3. Presence",
+          "ja": "3. 歌唱域",
+          "zh": "3. 临场"
         },
         "s30_bp3_name": {
-          "de": "4. Brillanz (2,5–6 kHz)",
-          "en": "4. Brilliance (2.5–6 kHz)",
-          "ja": "4. ブリリアンス (2.5–6 kHz)",
-          "zh": "4. 辉煌高音区 (2.5–6 kHz)"
+          "de": "4. Brillanz",
+          "en": "4. Brilliance",
+          "ja": "4. 輝き",
+          "zh": "4. 辉煌"
         },
         "s30_bp4_name": {
-          "de": "5. Air (6–10 kHz)",
-          "en": "5. Air (6–10 kHz)",
-          "ja": "5. エアー (6–10 kHz)",
-          "zh": "5. 空气泛音区 (6–10 kHz)"
+          "de": "5. Air",
+          "en": "5. Air",
+          "ja": "5. 空気感",
+          "zh": "5. 空气感"
         },
         "s30_adv1_badge": {
-          "de": ">VORTEIL 01 • CANTABILE",
-          "en": ">ADVANTAGE 01 • CANTABILE",
-          "ja": ">メリット 01 • カンタービレ",
-          "zh": ">优势 01 • 如歌音色"
+          "de": ">01 • CANTABILE",
+          "en": ">01 • CANTABILE",
+          "ja": ">01 • カンタービレ",
+          "zh": ">01 • 如歌音色"
         },
         "s30_adv1_title": {
-          "de": "Strahlendes Gesangsregister (0,8–2,5 kHz)",
-          "en": "Radiant Singing Register (0.8–2.5 kHz)",
-          "ja": "豊かな歌唱レジスター (0.8–2.5 kHz)",
-          "zh": "辉煌饱满的歌唱音区 (0.8–2.5 kHz)"
+          "de": "Gesangsregister (0,8–2,5 kHz)",
+          "en": "Singing Register (0.8–2.5 kHz)",
+          "ja": "歌唱レジスター (0.8–2.5 kHz)",
+          "zh": "歌唱音区 (0.8–2.5 kHz)"
         },
         "s30_adv1_desc": {
-          "de": "Massive Aufwertung des Formant- und Melodiebereichs (Spitzen bis +3,4 dB bei 1,45 kHz). Verleiht dem Yamaha-Flügel einen warmen, singenden Konzertton.",
-          "en": "Massive boost in the formant and melody region (peaks up to +3.4 dB at 1.45 kHz), giving the Yamaha grand a warm, singing concert tone.",
-          "ja": "フォルマントおよびメロディ帯域が劇的に向上（1.45 kHzで最大+3.4 dB）。ヤマハグランドに温かく歌うようなコンサートトーンを与えます。",
-          "zh": "共振峰与旋律频段显著提升（1.45 kHz 处峰值达 +3.4 dB），赋予雅马哈三角钢琴温暖如歌的音乐会音色。"
+          "de": "Bis zu +3,4 dB bei 1,45 kHz für einen warmen, tragfähigen Konzertton.",
+          "en": "Up to +3.4 dB at 1.45 kHz for a warm, singing concert tone.",
+          "ja": "1.45 kHzで最大+3.4 dB向上し、温かく歌うコンサートトーンを実現。",
+          "zh": "1.45 kHz 处峰值达 +3.4 dB，塑造温暖如歌的音乐会音色。"
         },
         "s30_adv2_badge": {
-          "de": ">VORTEIL 02 • PROJEKTION",
-          "en": ">ADVANTAGE 02 • PROJECTION",
-          "ja": ">メリット 02 • 遠達性",
-          "zh": ">优势 02 • 舞台穿透力"
+          "de": ">02 • PROJEKTION",
+          "en": ">02 • PROJECTION",
+          "ja": ">02 • 遠達性",
+          "zh": ">02 • 穿透力"
         },
         "s30_adv2_title": {
-          "de": "Glockige Diskant-Brillanz (2,5–6,0 kHz)",
-          "en": "Bell-Like Treble Brilliance (2.5–6.0 kHz)",
-          "ja": "鐘のように澄んだ高音の輝き (2.5–6.0 kHz)",
-          "zh": "钟鸣般清澈的高音辉煌感 (2.5–6.0 kHz)"
+          "de": "Diskant-Brillanz (2,5–6,0 kHz)",
+          "en": "Treble Brilliance (2.5–6.0 kHz)",
+          "ja": "高音の輝き (2.5–6.0 kHz)",
+          "zh": "高音辉煌感 (2.5–6.0 kHz)"
         },
         "s30_adv2_desc": {
-          "de": "Deutlich höhere Oberton-Reichweite ohne metallische Schärfe dank präziser Scheitel-Elastizität des FFW-Merinofilzes und glasharter Glutenleim-Kopplung.",
-          "en": "Significantly greater overtone projection without metallic harshness thanks to FFW Merino felt crown elasticity and rock-hard hide glue joints.",
-          "ja": "FFWメリノフェルトのクラウン弾性と硬質な膠接着により、金属的な硬さを排した伸びやかな高音倍音を実現します。",
-          "zh": "得益于 FFW 美利奴毛毡冠部弹性与坚硬皮胶耦合，在不产生金属刺耳感的前提下显著提升高音泛音投射力。"
+          "de": "Glockige Oberton-Reichweite ohne Schärfe dank FFW-Merinofilz.",
+          "en": "Bell-like overtone projection without harshness via FFW Merino felt.",
+          "ja": "FFWメリノフェルトにより、硬さを排した鐘のような高音倍音を実現。",
+          "zh": "凭借 FFW 美利奴毛毡，展现清澈不刺耳的钟鸣般泛音投射。"
         },
         "s30_adv3_badge": {
-          "de": ">VORTEIL 03 • TRANSPARENZ",
-          "en": ">ADVANTAGE 03 • CLARITY",
-          "ja": ">メリット 03 • 透明感",
-          "zh": ">优势 03 • 低音清晰度"
+          "de": ">03 • TRANSPARENZ",
+          "en": ">03 • CLARITY",
+          "ja": ">03 • 透明感",
+          "zh": ">03 • 清晰度"
         },
         "s30_adv3_title": {
-          "de": "Entmulmung & Bass-Präzision (20–250 Hz)",
-          "en": "De-Mudding & Bass Definition (20–250 Hz)",
-          "ja": "低音の濁り解消と明瞭度向上 (20–250 Hz)",
-          "zh": "消除浑浊与低音精准度 (20–250 Hz)"
+          "de": "Bass-Präzision (20–250 Hz)",
+          "en": "Bass Precision (20–250 Hz)",
+          "ja": "低音の明瞭度 (20–250 Hz)",
+          "zh": "低音精准度 (20–250 Hz)"
         },
         "s30_adv3_desc": {
-          "de": "Gezielter Abbau von dumpfem Tiefton-Mulm ausgespielter Althämmer. Akkorde in der kleinen und großen Oktave klingen glasklar durchhörbar.",
-          "en": "Targeted reduction of boomy low-end mud from worn hammers. Chords in the bass and tenor octaves become crystal-clear and articulate.",
-          "ja": "摩耗した旧ハンマー特有の低音のこもりを解消。低音〜中低音の和音がクリアに分離して響きます。",
-          "zh": "精准消除老化旧弦槌带来的低频轰鸣与浑浊感，使大字组与小字组和弦层次分明、清澈通透。"
+          "de": "Gezielte Entmulmung für glasklare Akkorde im Bass.",
+          "en": "Targeted de-mudding for crystal-clear bass chords.",
+          "ja": "低音のこもりを解消し、クリアな和音分離を実現。",
+          "zh": "精准消除低频浑浊，令和弦层次分明、清澈通透。"
         },
         "s30_adv4_badge": {
-          "de": ">VORTEIL 04 • SPECTRAL SLOPE",
-          "en": ">ADVANTAGE 04 • SPECTRAL SLOPE",
-          "ja": ">メリット 04 • スペクトルスロープ",
-          "zh": ">优势 04 • 频谱斜率优化"
+          "de": ">04 • SPECTRAL SLOPE",
+          "en": ">04 • SPECTRAL SLOPE",
+          "ja": ">04 • スロープ改善",
+          "zh": ">04 • 斜率优化"
         },
         "s30_adv4_title": {
-          "de": "Flacherer Spektralabfall & +0,42 dB Crest",
-          "en": "Flatter Spectral Roll-Off & +0.42 dB Crest",
-          "ja": "緩やかな倍音減衰と +0.42 dB のクレスト向上",
-          "zh": "更平缓的频谱衰减与 +0.42 dB 波峰因数提升"
+          "de": "12,6 % flacherer Abfall & +0,42 dB Crest",
+          "en": "12.6% Flatter Slope & +0.42 dB Crest",
+          "ja": "12.6%緩やかな減衰＆+0.42 dBクレスト",
+          "zh": "斜率平缓 12.6% 且波峰提升 +0.42 dB"
         },
         "s30_adv4_desc": {
-          "de": "12,6 % flacherer linearer Spectral Slope (−6,45 statt −7,38 dB/kHz) kombiniert mit +0,42 dB höherem Transienten-Crest-Faktor für schnellere Ansprache.",
-          "en": "12.6% flatter linear spectral slope (−6.45 vs. −7.38 dB/kHz) combined with a +0.42 dB higher transient crest factor for faster attack response.",
-          "ja": "スペクトル減衰傾きが12.6%緩やかになり（−7.38→−6.45 dB/kHz）、クレストファクターが+0.42 dB向上して打鍵応答性が飛躍的に高まります。",
-          "zh": "线性频谱斜率平缓 12.6%（从 −7.38 改善至 −6.45 dB/kHz），结合 +0.42 dB 的瞬态波峰因数提升，带来更敏捷的触键响应。"
+          "de": "Mehr Obertöne (−6,45 statt −7,38 dB/kHz) und schnellere Ansprache.",
+          "en": "Richer overtones (−6.45 vs. −7.38 dB/kHz) and faster attack response.",
+          "ja": "倍音保持率が向上（−6.45 dB/kHz）し、打鍵応答性が高速化。",
+          "zh": "泛音更丰富（−6.45 dB/kHz），触键瞬态响应更敏捷。"
         }
       },
       "notes": {
@@ -2989,140 +2983,138 @@
     },
     "slide_31": {
       "slide_number": 31,
-      "chapter": 4,
-      "chapter_name": "Das Louis Renner Yamaha Kit",
       "category": {
-        "de": "Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (4/4)",
-        "en": "Part 4: The Louis Renner Yamaha Kit • Acoustic Measurement Analysis (4/4)",
-        "ja": "第4部：Louis Renner ヤマハ・キット • 音響測定解析 (4/4)",
-        "zh": "第四部分：Louis Renner 雅马哈套件 • 声学测量分析 (4/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (4/4)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (4/4)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (4/4)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (4/4)"
       },
       "title": {
-        "de": "Amplituden-Dynamik (0:00–11:42) & Spectral-Slope-Rechner (bis C8 = 4.300 Hz)",
-        "en": "Amplitude Dynamics (0:00–11:42) & Spectral Slope Calculator (up to C8 = 4,300 Hz)",
-        "ja": "振幅ダイナミクス (0:00–11:42) とスペクトルスロープ計算機 (最大 C8 = 4,300 Hz)",
-        "zh": "振幅包络动态 (0:00–11:42) 与频谱斜率实时计算器 (最高至 C8 = 4,300 Hz)"
+        "de": "Amplituden-Dynamik & Spectral-Slope-Rechner (bis C8)",
+        "en": "Amplitude Dynamics & Spectral Slope Calculator (to C8)",
+        "ja": "振幅ダイナミクス＆スロープ計算機 (最大 C8)",
+        "zh": "振幅动态与频谱斜率计算器 (至 C8)"
       },
       "subtitle": {
-        "de": "Transienten-Impulstreue (Crest-Faktor) und mathematische Regression des Oberton-Erhalts über alle Dynamikstufen",
-        "en": "Transient impulse fidelity (crest factor) and mathematical regression of overtone preservation across all dynamic levels",
-        "ja": "トランジェント応答性（クレストファクター）と全ダイナミクス領域における倍音保持率の回帰分析",
-        "zh": "瞬态脉冲保真度（波峰因数）与全动态范围内泛音保持率的数学回归分析"
+        "de": "Impulstreue (Crest-Faktor) und Oberton-Erhalt bis C8 = 4.300 Hz",
+        "en": "Impulse fidelity (crest factor) and overtone retention up to C8 = 4,300 Hz",
+        "ja": "トランジェント応答性と最高音 C8 = 4,300 Hz までの倍音保持",
+        "zh": "瞬态脉冲保真度与最高至 C8 = 4,300 Hz 的泛音保持"
       },
       "elements": {
         "s31_tab1": {
-          "de": "SPEKTRUM & 2-OKTAVEN",
-          "en": "SPECTRUM & 2-OCTAVES",
-          "ja": "スペクトル＆2オクターブ",
-          "zh": "频谱与2八度窗口"
+          "de": "SPEKTRUM",
+          "en": "SPECTRUM",
+          "ja": "スペクトル",
+          "zh": "频谱"
         },
         "s31_tab2": {
           "de": "TEILTÖNE H1–H12",
           "en": "PARTIALS H1–H12",
-          "ja": "倍音分布 H1–H12",
-          "zh": "泛音分布 H1–H12"
+          "ja": "倍音 H1–H12",
+          "zh": "泛音 H1–H12"
         },
         "s31_tab3": {
-          "de": "REGISTER-GEWINN ΔL(f)",
-          "en": "REGISTER GAIN ΔL(f)",
-          "ja": "音域別ゲイン ΔL(f)",
+          "de": "REGISTER ΔL(f)",
+          "en": "REGISTERS ΔL(f)",
+          "ja": "音域ゲイン ΔL(f)",
           "zh": "音区增益 ΔL(f)"
         },
         "s31_tab4": {
-          "de": "DYNAMIK & SPECTRAL SLOPE",
-          "en": "DYNAMICS & SPECTRAL SLOPE",
-          "ja": "ダイナミクス＆スロープ",
-          "zh": "动态与频谱斜率"
+          "de": "DYNAMIK & SLOPE",
+          "en": "DYNAMICS & SLOPE",
+          "ja": "動態＆スロープ",
+          "zh": "动态与斜率"
         },
         "s31_l_badge": {
-          "de": ">ZEITBEREICH & TRANSIENTEN",
-          "en": ">TIME DOMAIN & TRANSIENTS",
-          "ja": ">時間領域＆トランジェント",
-          "zh": ">时域包络与瞬态响应"
+          "de": ">ZEITVERLAUF",
+          "en": ">TIME DOMAIN",
+          "ja": ">時間領域",
+          "zh": ">时域包络"
         },
         "s31_l_title": {
-          "de": "Amplituden-Hüllkurve: RMS-Energie & Spitzenpegel (0:00–11:42)",
-          "en": "Amplitude Envelope: RMS Energy & Peak Level (0:00–11:42)",
-          "ja": "振幅エンベロープ：RMSエネルギー＆ピークレベル (0:00–11:42)",
-          "zh": "振幅包络：RMS 能量与峰值电平 (0:00–11:42)"
+          "de": "Amplituden-Hüllkurve (0:00–11:42)",
+          "en": "Amplitude Envelope (0:00–11:42)",
+          "ja": "振幅エンベロープ (0:00–11:42)",
+          "zh": "振幅包络 (0:00–11:42)"
         },
         "s31_wave_split": {
-          "de": "Trennpunkt bei 05:18 Min. (Umbau auf Louis Renner Yamaha Kit)",
-          "en": "Split at 05:18 min (Conversion to Louis Renner Yamaha Kit)",
-          "ja": "05:18 が境界（Louis Renner ヤマハ・キットへの交換）",
-          "zh": "05:18 分界点（换装 Louis Renner 雅马哈套件）"
+          "de": "Umbau bei 05:18 Min.",
+          "en": "Conversion at 05:18 min",
+          "ja": "05:18 でキット交換",
+          "zh": "05:18 换装套件"
         },
         "s31_wkpi1": {
-          "de": "Crest-Faktor (Peak − RMS)",
-          "en": "Crest Factor (Peak − RMS)",
-          "ja": "クレストファクター (Peak − RMS)",
-          "zh": "波峰因数 (Peak − RMS)"
+          "de": "Crest-Faktor",
+          "en": "Crest Factor",
+          "ja": "クレストファクター",
+          "zh": "波峰因数"
         },
         "s31_wkpi2": {
-          "de": "Aktiver RMS-Pegel",
-          "en": "Active RMS Level",
-          "ja": "実効 RMS レベル",
-          "zh": "有效 RMS 电平"
+          "de": "RMS-Pegel",
+          "en": "RMS Level",
+          "ja": "実効 RMS",
+          "zh": "RMS 电平"
         },
         "s31_wkpi2_sub": {
-          "de": "Orig: −16,25 dBFS (gleiche Spielstärke)",
-          "en": "Orig: −16.25 dBFS (matched playing force)",
-          "ja": "Orig: −16.25 dBFS（同一打鍵強度）",
-          "zh": "原装: −16.25 dBFS（相同触键力度）"
+          "de": "Orig: −16,25 dBFS (gleiche Stärke)",
+          "en": "Orig: −16.25 dBFS (matched)",
+          "ja": "Orig: −16.25 dBFS (同一強度)",
+          "zh": "原装: −16.25 dBFS (同力度)"
         },
         "s31_wkpi3": {
-          "de": "Dynamik-Spannweite (P95−P10)",
+          "de": "Dynamik (P95−P10)",
           "en": "Dynamic Span (P95−P10)",
-          "ja": "ダイナミックレンジ幅 (P95−P10)",
+          "ja": "動態幅 (P95−P10)",
           "zh": "动态跨度 (P95−P10)"
         },
         "s31_wkpi3_sub": {
-          "de": "Feinere Differenzierung pp bis ff",
-          "en": "Finer gradation from pp to ff",
-          "ja": "pp から ff までより繊細な表現力",
-          "zh": "从 pp 到 ff 更细腻的层次控制"
+          "de": "Feinere Abstufung pp–ff",
+          "en": "Finer gradation pp–ff",
+          "ja": "繊細な pp–ff 表現",
+          "zh": "更细腻的 pp–ff 层次"
         },
         "s31_r_badge": {
-          "de": ">SPECTRAL SLOPE & RECHNER (MAX. C8 = 4.300 HZ)",
-          "en": ">SPECTRAL SLOPE & CALCULATOR (MAX C8 = 4,300 HZ)",
-          "ja": ">スペクトルスロープ＆計算機 (最大 C8 = 4,300 HZ)",
-          "zh": ">频谱斜率与计算器 (上限 C8 = 4,300 HZ)"
+          "de": ">SPECTRAL SLOPE (MAX. C8 = 4.300 HZ)",
+          "en": ">SPECTRAL SLOPE (MAX C8 = 4,300 HZ)",
+          "ja": ">スペクトルスロープ (最大 C8 = 4,300 HZ)",
+          "zh": ">频谱斜率 (上限 C8 = 4,300 HZ)"
         },
         "s31_r_title": {
-          "de": "Spektrale Steigung über der Anschlagsdynamik & Live-Rechner",
-          "en": "Spectral Slope vs. Playing Dynamics & Live Calculator",
-          "ja": "打鍵ダイナミクスに対するスペクトル傾き＆ライブ計算機",
-          "zh": "随触键力度变化的频谱斜率与实时计算器"
+          "de": "Steigung über Dynamik & Live-Rechner",
+          "en": "Slope vs. Dynamics & Live Calculator",
+          "ja": "動態別スロープ＆ライブ計算機",
+          "zh": "动态斜率与实时计算器"
         },
         "s31_calc_title": {
-          "de": "🧮 Live Spectral-Slope-Rechner (100 Hz – C8 4.300 Hz):",
-          "en": "🧮 Live Spectral Slope Calculator (100 Hz – C8 4,300 Hz):",
-          "ja": "🧮 ライブ・スペクトルスロープ計算機 (100 Hz – C8 4,300 Hz):",
-          "zh": "🧮 实时频谱斜率计算器 (100 Hz – C8 4,300 Hz):"
+          "de": "🧮 Live-Rechner (bis C8 = 4.300 Hz):",
+          "en": "🧮 Live Calculator (to C8 = 4,300 Hz):",
+          "ja": "🧮 ライブ計算機 (最大 C8 = 4,300 Hz):",
+          "zh": "🧮 实时计算器 (至 C8 = 4,300 Hz):"
         },
         "s31_calc_lbl": {
-          "de": "Zielfrequenz f (max. C8 = 4.300 Hz):",
-          "en": "Target Frequency f (max. C8 = 4,300 Hz):",
-          "ja": "目標周波数 f (最大 C8 = 4,300 Hz):",
-          "zh": "目标频率 f (最高 C8 = 4,300 Hz):"
+          "de": "Frequenz f:",
+          "en": "Frequency f:",
+          "ja": "周波数 f:",
+          "zh": "频率 f:"
         },
         "s31_calc_r1": {
-          "de": "Abfall Original (−7,38 dB/kHz)",
-          "en": "Roll-Off Original (−7.38 dB/kHz)",
-          "ja": "オリジナル減衰 (−7.38 dB/kHz)",
-          "zh": "原装衰减 (−7.38 dB/kHz)"
+          "de": "Original (−7,38 dB/kHz)",
+          "en": "Original (−7.38 dB/kHz)",
+          "ja": "オリジナル (−7.38 dB/kHz)",
+          "zh": "原装 (−7.38 dB/kHz)"
         },
         "s31_calc_r2": {
-          "de": "Abfall Renner Kit (−6,45 dB/kHz)",
-          "en": "Roll-Off Renner Kit (−6.45 dB/kHz)",
-          "ja": "Renner キット減衰 (−6.45 dB/kHz)",
-          "zh": "Renner 套件衰减 (−6.45 dB/kHz)"
+          "de": "Yamaha Kit (−6,45 dB/kHz)",
+          "en": "Yamaha Kit (−6.45 dB/kHz)",
+          "ja": "Rennerキット (−6.45 dB/kHz)",
+          "zh": "Renner套件 (−6.45 dB/kHz)"
         },
         "s31_calc_r3": {
-          "de": "Netto-Gewinn durch Slope",
-          "en": "Net Slope Gain",
-          "ja": "スロープ改善による純ゲイン",
-          "zh": "斜率改善带来的净增益"
+          "de": "Netto-Gewinn",
+          "en": "Net Gain",
+          "ja": "純ゲイン",
+          "zh": "净增益"
         }
       },
       "notes": {

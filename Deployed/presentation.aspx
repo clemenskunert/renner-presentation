@@ -3937,9 +3937,9 @@
       <section class="slide slide-hero-theme yka-slide" data-slide="28">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s28_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (1/4)</div>
-            <h2 class="slide-title" data-i18n="s28_title">Leistungsdichtespektrum L(f) &amp; Interaktive 2-Oktaven-Eingrenzung</h2>
-            <div class="slide-subtitle" data-i18n="s28_subtitle">Welch-PSD (44,1 kHz, 699 s Aufnahme): Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
+            <div class="slide-category" data-i18n="s28_category">Teil 4: Yamaha Kit • Akustik-Analyse (1/4)</div>
+            <h2 class="slide-title" data-i18n="s28_title">Leistungsdichtespektrum &amp; 2-Oktaven-Filter</h2>
+            <div class="slide-subtitle" data-i18n="s28_subtitle">Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3948,7 +3948,7 @@
             <div class="yka-subnav-tabs">
               <button class="yka-subnav-tab active" data-target-slide="28" type="button">
                 <span class="yka-tab-num">01</span>
-                <span class="yka-tab-label" data-i18n="s28_tab1">SPEKTRUM & 2-OKTAVEN</span>
+                <span class="yka-tab-label" data-i18n="s28_tab1">SPEKTRUM</span>
               </button>
               <button class="yka-subnav-tab" data-target-slide="29" type="button">
                 <span class="yka-tab-num">02</span>
@@ -3956,11 +3956,11 @@
               </button>
               <button class="yka-subnav-tab" data-target-slide="30" type="button">
                 <span class="yka-tab-num">03</span>
-                <span class="yka-tab-label" data-i18n="s28_tab3">REGISTER-GEWINN ΔL(f)</span>
+                <span class="yka-tab-label" data-i18n="s28_tab3">REGISTER ΔL(f)</span>
               </button>
               <button class="yka-subnav-tab" data-target-slide="31" type="button">
                 <span class="yka-tab-num">04</span>
-                <span class="yka-tab-label" data-i18n="s28_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+                <span class="yka-tab-label" data-i18n="s28_tab4">DYNAMIK & SLOPE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
@@ -3974,7 +3974,7 @@
             <div class="yka-card yka-card-gold">
               <div class="yka-control-strip">
                 <div class="yka-btn-group">
-                  <span class="yka-group-label" data-i18n="s28_lbl_oct">2-Oktaven-Fenster:</span>
+                  <span class="yka-group-label" data-i18n="s28_lbl_oct">Register:</span>
                   <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>27–110 Hz</small></button>
                   <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>55–220 Hz</small></button>
                   <button class="yka-oct-btn active" data-oct="2" type="button">A2–A4<small>110–440 Hz</small></button>
@@ -3984,9 +3984,9 @@
                   <button class="yka-oct-btn" data-oct="all" type="button" data-i18n="s28_btn_all">Gesamt<small>25–10k Hz</small></button>
                 </div>
                 <div class="yka-btn-group">
-                  <button class="yka-zmode-btn active" data-zmode="partials" type="button" data-i18n="s28_zmode_part">2 Okt. + Teiltöne (H1–H8)</button>
-                  <button class="yka-zmode-btn" data-zmode="fund" type="button" data-i18n="s28_zmode_fund">Exakt 2 Oktaven</button>
-                  <button class="yka-zmode-btn" data-zmode="full" type="button" data-i18n="s28_zmode_full">Vollbereich</button>
+                  <button class="yka-zmode-btn active" data-zmode="partials" type="button" data-i18n="s28_zmode_part">2 Okt. + H1–H8</button>
+                  <button class="yka-zmode-btn" data-zmode="fund" type="button" data-i18n="s28_zmode_fund">2 Oktaven</button>
+                  <button class="yka-zmode-btn" data-zmode="full" type="button" data-i18n="s28_zmode_full">Gesamt</button>
                   <button class="yka-scale-btn active" data-scale="log" type="button">Log</button>
                   <button class="yka-scale-btn" data-scale="lin" type="button">Lin</button>
                 </div>
@@ -3994,9 +3994,9 @@
 
               <div class="yka-slider-strip">
                 <div class="yka-slider-item">
-                  <label data-i18n="s28_sl_oct">Startnote (2 Okt.):</label>
+                  <label data-i18n="s28_sl_oct">Startnote:</label>
                   <input type="range" class="yka-slider-oct" min="21" max="84" step="1" value="45">
-                  <span class="yka-slider-val yka-lbl-oct-range">A2 – A4 (110 – 440 Hz)</span>
+                  <span class="yka-slider-val yka-lbl-oct-range">A2 – A4 (110–440 Hz)</span>
                 </div>
                 <div class="yka-slider-item">
                   <label>f<sub>min</sub>:</label>
@@ -4020,14 +4020,14 @@
 
               <div class="yka-readout-bar">
                 <div class="yka-btn-group">
-                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-orig" checked hidden> ● <span data-i18n="s28_chk_orig">Original (0:00–5:17)</span></label>
-                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-kit" checked hidden> ● <span data-i18n="s28_chk_kit">Renner Yamaha Kit (5:18–11:42)</span></label>
-                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-gain" checked hidden> ▲ <span data-i18n="s28_chk_gain">Oberton-Gewinn</span></label>
-                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-hmarkers" checked hidden> ⋮ <span data-i18n="s28_chk_hm">Teiltöne H1–H8</span></label>
-                  <label class="yka-layer-pill"><input type="checkbox" id="yka-chk-peak" hidden> 📈 <span data-i18n="s28_chk_peak">Max-Hold P95</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-orig" checked hidden> ● <span data-i18n="s28_chk_orig">Original</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-kit" checked hidden> ● <span data-i18n="s28_chk_kit">Yamaha Kit</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-gain" checked hidden> ▲ <span data-i18n="s28_chk_gain">Gewinn</span></label>
+                  <label class="yka-layer-pill active"><input type="checkbox" id="yka-chk-hmarkers" checked hidden> ⋮ <span data-i18n="s28_chk_hm">H1–H8</span></label>
+                  <label class="yka-layer-pill"><input type="checkbox" id="yka-chk-peak" hidden> 峰值 <span data-i18n="s28_chk_peak">P95 Peak</span></label>
                 </div>
                 <div>
-                  <span id="yka-ro-spec-freq" style="color: var(--gold-light); font-weight: 700;">Cursor: 1.000 Hz</span> ·
+                  <span id="yka-ro-spec-freq" style="color: var(--gold-light); font-weight: 700;">1.000 Hz</span> ·
                   <span id="yka-ro-spec-orig" style="color: #ff7675;">Orig: −38,4 dB</span> ·
                   <span id="yka-ro-spec-kit" style="color: #2ecc71;">Kit: −35,9 dB</span> ·
                   <strong id="yka-ro-spec-delta" style="color: #2ecc71;">Δ: +2,53 dB (+79 %)</strong>
@@ -4039,41 +4039,41 @@
             <div class="yka-card">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge gold" data-i18n="s28_b1_badge">&gt;LIVE 2-OKTAVEN-TELEMETRIE</span>
-                  <h3 class="yka-card-title" data-i18n="s28_r_title">Messwerte im gewählten 2-Oktaven-Fenster</h3>
+                  <span class="bento-badge gold" data-i18n="s28_b1_badge">&gt;2-OKTAVEN-MESSWERTE</span>
+                  <h3 class="yka-card-title" data-i18n="s28_r_title">Kennzahlen im 2-Oktaven-Fenster</h3>
                 </div>
               </div>
 
               <div class="yka-kpi-stack">
                 <div class="yka-kpi-box">
-                  <span class="yka-kpi-label" data-i18n="s28_kpi1_lbl">Aktives 2-Oktaven-Fenster</span>
-                  <span class="yka-kpi-val gold yka-kpi-win-notes">A2 – A4 (110 – 440 Hz)</span>
-                  <span class="yka-kpi-sub yka-kpi-win-sub">Klaviatur-Mitte &amp; Grundton-Zentrum</span>
+                  <span class="yka-kpi-label" data-i18n="s28_kpi1_lbl">2-Oktaven-Fenster</span>
+                  <span class="yka-kpi-val gold yka-kpi-win-notes">A2 – A4 (110–440 Hz)</span>
+                  <span class="yka-kpi-sub yka-kpi-win-sub">25 Halbtöne · f₀ = 110–440 Hz</span>
                 </div>
                 <div class="yka-kpi-box green">
-                  <span class="yka-kpi-label" data-i18n="s28_kpi2_lbl">Mittlerer Oberton-Gewinn (H2–H8)</span>
-                  <span class="yka-kpi-val emerald yka-kpi-ot-gain">+1,89 dB (+55 % Energie)</span>
-                  <span class="yka-kpi-sub yka-kpi-ot-sub">Spitzengewinn bei H5 (+3,42 dB)</span>
+                  <span class="yka-kpi-label" data-i18n="s28_kpi2_lbl">Oberton-Gewinn (H2–H8)</span>
+                  <span class="yka-kpi-val emerald yka-kpi-ot-gain">+1,89 dB (+55 %)</span>
+                  <span class="yka-kpi-sub yka-kpi-ot-sub">Spitze bei H5 (+3,42 dB)</span>
                 </div>
                 <div class="yka-kpi-box">
-                  <span class="yka-kpi-label" data-i18n="s28_kpi3_lbl">Grundton-Pegel H1 (f₀)</span>
-                  <span class="yka-kpi-val yka-kpi-h1-vals">−23,4 dB → −23,5 dB</span>
-                  <span class="yka-kpi-sub yka-kpi-h1-sub">Δ H1: −0,08 dB (Original vs. Kit)</span>
+                  <span class="yka-kpi-label" data-i18n="s28_kpi3_lbl">Grundton H1 (f₀)</span>
+                  <span class="yka-kpi-val yka-kpi-h1-vals">−23,4 → −23,5 dB</span>
+                  <span class="yka-kpi-sub yka-kpi-h1-sub">Δ H1: −0,08 dB</span>
                 </div>
                 <div class="yka-kpi-box green">
-                  <span class="yka-kpi-label" data-i18n="s28_kpi4_lbl">Lokaler Spectral Slope (Abfall)</span>
+                  <span class="yka-kpi-label" data-i18n="s28_kpi4_lbl">Spectral Slope</span>
                   <span class="yka-kpi-val emerald yka-kpi-local-slope">+0,93 dB/kHz flacher</span>
                   <span class="yka-kpi-sub yka-kpi-slope-sub">Orig: −7,38 vs. Kit: −6,45 dB/kHz</span>
                 </div>
               </div>
 
               <div class="yka-diag-box">
-                <span class="yka-diag-badge" data-i18n="s28_diag_badge">✦ AKUSTISCHE DIAGNOSE DES GEWÄHLTEN REGISTERS</span>
+                <span class="yka-diag-badge" data-i18n="s28_diag_badge">✦ AKUSTISCHE DIAGNOSE</span>
                 <p class="yka-diag-text">
-                  Im zentralen Spielregister <strong>A2–A4</strong> bleibt der Grundtonpegel ($H_1$) nahezu identisch, während die Obertöne $H_3$ bis $H_8$ (330 Hz bis 3,5 kHz) massiv um bis zu <strong>+3,4 dB (+119 % Schallenergie)</strong> aufblühen. Das Instrument gewinnt enorme Gesanglichkeit (Cantabile).
+                  Klangzentrum (A2–A4): H2 (+1,6 dB), H3 (+3,2 dB), H4 (+3,5 dB) &amp; H8 (+4,7 dB) gewinnen massiv an Fülle.
                 </p>
                 <div class="yka-readout-bar" style="margin-top: auto;">
-                  <span data-i18n="s28_hint_nav">💡 Tipp: Klicken Sie auf die 88-Tasten-Klaviatur oder nutzen Sie Tab 02 für die Teilton-Analyse H1–H12.</span>
+                  <span data-i18n="s28_hint_nav">💡 Klaviatur anklicken oder Tab 02 wählen.</span>
                 </div>
               </div>
             </div>
@@ -4090,9 +4090,9 @@
       <section class="slide slide-hero-theme yka-slide" data-slide="29">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s29_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (2/4)</div>
-            <h2 class="slide-title" data-i18n="s29_title">2-Oktaven-Teiltonverteilung (H₁–H₁₂) &amp; Chromatische 24-Halbton-Auflösung</h2>
-            <div class="slide-subtitle" data-i18n="s29_subtitle">Harmonische Oberton-Architektur je 2-Oktaven-Register: Warum das Renner Kit wärmer und zugleich brillanter klingt</div>
+            <div class="slide-category" data-i18n="s29_category">Teil 4: Yamaha Kit • Akustik-Analyse (2/4)</div>
+            <h2 class="slide-title" data-i18n="s29_title">Teiltonverteilung (H₁–H₁₂) &amp; 24-Halbton-Analyse</h2>
+            <div class="slide-subtitle" data-i18n="s29_subtitle">Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4101,7 +4101,7 @@
             <div class="yka-subnav-tabs">
               <button class="yka-subnav-tab" data-target-slide="28" type="button">
                 <span class="yka-tab-num">01</span>
-                <span class="yka-tab-label" data-i18n="s29_tab1">SPEKTRUM & 2-OKTAVEN</span>
+                <span class="yka-tab-label" data-i18n="s29_tab1">SPEKTRUM</span>
               </button>
               <button class="yka-subnav-tab active" data-target-slide="29" type="button">
                 <span class="yka-tab-num">02</span>
@@ -4109,11 +4109,11 @@
               </button>
               <button class="yka-subnav-tab" data-target-slide="30" type="button">
                 <span class="yka-tab-num">03</span>
-                <span class="yka-tab-label" data-i18n="s29_tab3">REGISTER-GEWINN ΔL(f)</span>
+                <span class="yka-tab-label" data-i18n="s29_tab3">REGISTER ΔL(f)</span>
               </button>
               <button class="yka-subnav-tab" data-target-slide="31" type="button">
                 <span class="yka-tab-num">04</span>
-                <span class="yka-tab-label" data-i18n="s29_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+                <span class="yka-tab-label" data-i18n="s29_tab4">DYNAMIK & SLOPE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
@@ -4125,25 +4125,25 @@
           <!-- Synchronized 2-Octave Control Bar -->
           <div class="yka-control-strip">
             <div class="yka-btn-group">
-              <span class="yka-group-label" data-i18n="s29_lbl_oct">2-Oktaven-Register wählen:</span>
-              <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>Kontra/Bass</small></button>
-              <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>Bass/Tenor</small></button>
+              <span class="yka-group-label" data-i18n="s29_lbl_oct">Register:</span>
+              <button class="yka-oct-btn" data-oct="0" type="button">A0–A2<small>Bass</small></button>
+              <button class="yka-oct-btn" data-oct="1" type="button">A1–A3<small>Tenor</small></button>
               <button class="yka-oct-btn active" data-oct="2" type="button">A2–A4<small>Mitte</small></button>
-              <button class="yka-oct-btn" data-oct="3" type="button">A3–A5<small>Melodie</small></button>
+              <button class="yka-oct-btn" data-oct="3" type="button">A3–A5<small>Gesang</small></button>
               <button class="yka-oct-btn" data-oct="4" type="button">A4–A6<small>Diskant</small></button>
-              <button class="yka-oct-btn" data-oct="5" type="button">A5–A7<small>Hochdiskant</small></button>
+              <button class="yka-oct-btn" data-oct="5" type="button">A5–A7<small>Brillanz</small></button>
               <button class="yka-oct-btn" data-oct="all" type="button" data-i18n="s29_btn_all">Gesamt<small>A0–C8</small></button>
             </div>
             <div class="yka-slider-item" style="min-width: 280px;">
-              <label data-i18n="s29_sl_oct">Stufenlos (24 Halbtöne):</label>
+              <label data-i18n="s29_sl_oct">Startnote:</label>
               <input type="range" class="yka-slider-oct" min="21" max="84" step="1" value="45">
-              <span class="yka-slider-val yka-lbl-oct-range">A2 – A4 (110 – 440 Hz)</span>
+              <span class="yka-slider-val yka-lbl-oct-range">A2 – A4 (110–440 Hz)</span>
             </div>
             <div class="yka-btn-group">
-              <span class="yka-group-label" data-i18n="s29_lbl_pmode">Darstellung:</span>
-              <button class="yka-pmode-btn active" data-pmode="rel" type="button" data-i18n="s29_pmode_rel">Relativ zu H₁ = 0 dB</button>
-              <button class="yka-pmode-btn" data-pmode="delta" type="button" data-i18n="s29_pmode_delta">Δ Gewinn pro Teilton</button>
-              <button class="yka-pmode-btn" data-pmode="abs" type="button" data-i18n="s29_pmode_abs">Absolutpegel (dB)</button>
+              <span class="yka-group-label" data-i18n="s29_lbl_pmode">Modus:</span>
+              <button class="yka-pmode-btn active" data-pmode="rel" type="button" data-i18n="s29_pmode_rel">Relativ H₁</button>
+              <button class="yka-pmode-btn" data-pmode="delta" type="button" data-i18n="s29_pmode_delta">Δ Gewinn</button>
+              <button class="yka-pmode-btn" data-pmode="abs" type="button" data-i18n="s29_pmode_abs">Absolut (dB)</button>
             </div>
           </div>
 
@@ -4152,8 +4152,8 @@
             <div class="yka-card yka-card-gold">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge gold" data-i18n="s29_b1_badge">&gt;TEILTON-ARCHITEKTUR H₁–H₁₂</span>
-                  <h3 class="yka-card-title" data-i18n="s29_l_title">Harmonische Teiltonverteilung im 2-Oktaven-Fenster</h3>
+                  <span class="bento-badge gold" data-i18n="s29_b1_badge">&gt;TEILTÖNE H₁–H₁₂</span>
+                  <h3 class="yka-card-title" data-i18n="s29_l_title">Harmonische Teiltonverteilung</h3>
                 </div>
               </div>
 
@@ -4162,26 +4162,26 @@
               </div>
 
               <div class="yka-readout-bar">
-                <span id="yka-ro-part-name" style="color: var(--gold-light); font-weight: 700;">H5 (Terz (2 Okt.+Gr.Terz))</span>
-                <span id="yka-ro-part-freq">Frequenzband: 550 – 2200 Hz</span>
-                <strong id="yka-ro-part-delta" style="color: #2ecc71;">Δ Kit: +2,64 dB (+84 % Energie)</strong>
+                <span id="yka-ro-part-name" style="color: var(--gold-light); font-weight: 700;">H5 (Terz (5·f₀))</span>
+                <span id="yka-ro-part-freq">550–2200 Hz</span>
+                <strong id="yka-ro-part-delta" style="color: #2ecc71;">Δ Kit: +2,64 dB (+84 %)</strong>
               </div>
 
               <div class="yka-kpi-row-3">
                 <div class="yka-kpi-box green">
-                  <span class="yka-kpi-label" data-i18n="s29_pkpi1">Teilton-Abfall (H₁→H₈)</span>
+                  <span class="yka-kpi-label" data-i18n="s29_pkpi1">Abfall (H₁→H₈)</span>
                   <span class="yka-kpi-val emerald" id="yka-kpi-p-decay">+1,12 dB/Okt.</span>
                   <span class="yka-kpi-sub" id="yka-kpi-p-decay-sub">Orig: −6,8 vs. Kit: −5,7 dB/Okt.</span>
                 </div>
                 <div class="yka-kpi-box">
-                  <span class="yka-kpi-label" data-i18n="s29_pkpi2">Geradzahlige (H₂, H₄, H₆, H₈)</span>
+                  <span class="yka-kpi-label" data-i18n="s29_pkpi2">Gerade (H₂, H₄, H₆, H₈)</span>
                   <span class="yka-kpi-val gold" id="yka-kpi-p-even">+1,74 dB</span>
-                  <span class="yka-kpi-sub" data-i18n="s29_pkpi2_sub">Oktav-Wärme &amp; Fülle</span>
+                  <span class="yka-kpi-sub" data-i18n="s29_pkpi2_sub">Wärme &amp; Fülle</span>
                 </div>
                 <div class="yka-kpi-box green">
-                  <span class="yka-kpi-label" data-i18n="s29_pkpi3">Ungeradzahlige (H₃, H₅, H₇)</span>
+                  <span class="yka-kpi-label" data-i18n="s29_pkpi3">Ungerade (H₃, H₅, H₇)</span>
                   <span class="yka-kpi-val emerald" id="yka-kpi-p-odd">+2,18 dB</span>
-                  <span class="yka-kpi-sub" data-i18n="s29_pkpi3_sub">Quint-/Terz-Brillanz &amp; Kern</span>
+                  <span class="yka-kpi-sub" data-i18n="s29_pkpi3_sub">Brillanz &amp; Kern</span>
                 </div>
               </div>
             </div>
@@ -4190,8 +4190,8 @@
             <div class="yka-card">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge green" data-i18n="s29_b2_badge">&gt;24 HALBTÖNE CHROMATISCH</span>
-                  <h3 class="yka-card-title" data-i18n="s29_r_title">Oberton-Energie (H₂–H₈) Note für Note im 2-Oktaven-Fenster</h3>
+                  <span class="bento-badge green" data-i18n="s29_b2_badge">&gt;24 HALBTÖNE</span>
+                  <h3 class="yka-card-title" data-i18n="s29_r_title">Oberton-Energie (H₂–H₈) pro Note</h3>
                 </div>
               </div>
 
@@ -4202,10 +4202,10 @@
               <div class="yka-diag-box" style="flex: 0 0 auto;">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
                   <span class="yka-diag-badge" data-i18n="s29_diag_badge">✦ TEILTON-DIAGNOSE</span>
-                  <span class="yka-kpi-val emerald yka-kpi-ot-gain" style="font-size:0.9rem;">+1,89 dB (+55 % Energie)</span>
+                  <span class="yka-kpi-val emerald yka-kpi-ot-gain">+1,89 dB (+55 %)</span>
                 </div>
-                <p class="yka-diag-text" style="font-size: 0.84rem;">
-                  Der hochwertige FFW-Merinofilz des Renner Yamaha Kits speichert die Anschlagsenergie elastisch und gibt sie ohne hochfrequente Dämpfungsverluste an die Saite zurück: Die Teiltöne <strong>H₃ bis H₈</strong> gewinnen massiv an Tragkraft.
+                <p class="yka-diag-text">
+                  Klangzentrum (A2–A4): H2 (+1,6 dB), H3 (+3,2 dB), H4 (+3,5 dB) &amp; H8 (+4,7 dB) gewinnen massiv an Fülle.
                 </p>
               </div>
             </div>
@@ -4222,9 +4222,9 @@
       <section class="slide slide-hero-theme yka-slide" data-slide="30">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s30_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (3/4)</div>
-            <h2 class="slide-title" data-i18n="s30_title">Spektrale Differenzkurve ΔL(f) nach Registern &amp; Die 4 Kernvorteile</h2>
-            <div class="slide-subtitle" data-i18n="s30_subtitle">Direkter Pegelgewinn ΔL(f) = L_Kit(f) − L_Original(f) über alle 5 akustischen Klavierregister</div>
+            <div class="slide-category" data-i18n="s30_category">Teil 4: Yamaha Kit • Akustik-Analyse (3/4)</div>
+            <h2 class="slide-title" data-i18n="s30_title">Differenzkurve ΔL(f) &amp; Die 4 Kernvorteile</h2>
+            <div class="slide-subtitle" data-i18n="s30_subtitle">Pegelgewinn ΔL(f) = Kit − Original über alle 5 Klavierregister</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4233,7 +4233,7 @@
             <div class="yka-subnav-tabs">
               <button class="yka-subnav-tab" data-target-slide="28" type="button">
                 <span class="yka-tab-num">01</span>
-                <span class="yka-tab-label" data-i18n="s30_tab1">SPEKTRUM & 2-OKTAVEN</span>
+                <span class="yka-tab-label" data-i18n="s30_tab1">SPEKTRUM</span>
               </button>
               <button class="yka-subnav-tab" data-target-slide="29" type="button">
                 <span class="yka-tab-num">02</span>
@@ -4241,11 +4241,11 @@
               </button>
               <button class="yka-subnav-tab active" data-target-slide="30" type="button">
                 <span class="yka-tab-num">03</span>
-                <span class="yka-tab-label" data-i18n="s30_tab3">REGISTER-GEWINN ΔL(f)</span>
+                <span class="yka-tab-label" data-i18n="s30_tab3">REGISTER ΔL(f)</span>
               </button>
               <button class="yka-subnav-tab" data-target-slide="31" type="button">
                 <span class="yka-tab-num">04</span>
-                <span class="yka-tab-label" data-i18n="s30_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+                <span class="yka-tab-label" data-i18n="s30_tab4">DYNAMIK & SLOPE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
@@ -4259,35 +4259,35 @@
             <div class="yka-card yka-card-gold">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge gold" data-i18n="s30_b1_badge">&gt;DIFFERENZSPEKTRUM ΔL(f)</span>
-                  <h3 class="yka-card-title" data-i18n="s30_l_title">Pegeländerung nach Einbau des Louis Renner Yamaha Kits</h3>
+                  <span class="bento-badge gold" data-i18n="s30_b1_badge">&gt;DIFFERENZ ΔL(f)</span>
+                  <h3 class="yka-card-title" data-i18n="s30_l_title">Pegelgewinn durch das Yamaha Kit</h3>
                 </div>
-                <div style="font-family: var(--font-mono); font-size: 0.8rem;">
-                  <span id="yka-ro-diff-freq" style="color: var(--gold-light);">Frequenz: 1.450 Hz</span> ·
-                  <strong id="yka-ro-diff-val" style="color: #2ecc71;">+2,68 dB (+85 % Schallenergie)</strong>
+                <div style="font-family: var(--font-mono); font-size: 0.96rem;">
+                  <span id="yka-ro-diff-freq" style="color: var(--gold-light);">1.450 Hz</span> ·
+                  <strong id="yka-ro-diff-val" style="color: #2ecc71;">+2,68 dB (+85 % Energie)</strong>
                 </div>
               </div>
 
               <!-- 5 Interactive Register Pills -->
               <div class="yka-band-pills">
                 <button class="yka-band-pill" data-band="0" type="button">
-                  <span class="yka-bp-name" data-i18n="s30_bp0_name">1. Bass (20–250 Hz)</span>
+                  <span class="yka-bp-name" data-i18n="s30_bp0_name">1. Bass</span>
                   <span class="yka-bp-val" style="color: var(--gold-light);">−3,28 dB</span>
                 </button>
                 <button class="yka-band-pill" data-band="1" type="button">
-                  <span class="yka-bp-name" data-i18n="s30_bp1_name">2. Grundton (250–800 Hz)</span>
+                  <span class="yka-bp-name" data-i18n="s30_bp1_name">2. Grundton</span>
                   <span class="yka-bp-val" style="color: #74b9ff;">−0,07 dB</span>
                 </button>
                 <button class="yka-band-pill active" data-band="2" type="button">
-                  <span class="yka-bp-name" data-i18n="s30_bp2_name">3. Präsenz (0,8–2,5 kHz)</span>
+                  <span class="yka-bp-name" data-i18n="s30_bp2_name">3. Präsenz</span>
                   <span class="yka-bp-val" style="color: #2ecc71;">+2,53 dB</span>
                 </button>
                 <button class="yka-band-pill" data-band="3" type="button">
-                  <span class="yka-bp-name" data-i18n="s30_bp3_name">4. Brillanz (2,5–6 kHz)</span>
+                  <span class="yka-bp-name" data-i18n="s30_bp3_name">4. Brillanz</span>
                   <span class="yka-bp-val" style="color: #2ecc71;">+1,87 dB</span>
                 </button>
                 <button class="yka-band-pill" data-band="4" type="button">
-                  <span class="yka-bp-name" data-i18n="s30_bp4_name">5. Air (6–10 kHz)</span>
+                  <span class="yka-bp-name" data-i18n="s30_bp4_name">5. Air</span>
                   <span class="yka-bp-val" style="color: var(--gold-light);">+0,31 dB</span>
                 </button>
               </div>
@@ -4298,11 +4298,11 @@
 
               <div class="yka-diag-box" style="flex: 0 0 auto;">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <strong id="yka-bi-title" style="color:#ffffff; font-size:0.95rem;">Präsenz &amp; Gesangsregister (800 – 2.500 Hz)</strong>
-                  <span class="bento-badge green" data-i18n="s30_b2_badge">Δ Mittel: +2,53 dB (+79 % Energie)</span>
+                  <strong id="yka-bi-title" style="color:#ffffff; font-size:1.08rem;">Präsenz &amp; Gesang (0,8–2,5 kHz)</strong>
+                  <span class="bento-badge green" data-i18n="s30_b2_badge">Δ +2,53 dB (+79 % Energie)</span>
                 </div>
-                <p class="yka-diag-text" id="yka-bi-desc" style="font-size:0.84rem;">
-                  Der entscheidende akustische Hauptgewinn (+79 % mehr Schallenergie, Spitzen bis +3,4 dB bei 1,45 kHz): Das Instrument erhält seine tragfähige „Singstimme“ (Cantabile) und projiziert mühelos im Raum.
+                <p class="yka-diag-text" id="yka-bi-desc">
+                  Hauptgewinn (+79 % Energie, Spitze +3,4 dB bei 1,45 kHz): Tragfähige Singstimme (Cantabile) und Raumprojektion.
                 </p>
               </div>
             </div>
@@ -4311,45 +4311,45 @@
             <div class="yka-adv-grid">
               <div class="yka-adv-card emerald active" data-band="2">
                 <div>
-                  <span class="bento-badge green" data-i18n="s30_b3_badge">&gt;VORTEIL 01 • CANTABILE</span>
+                  <span class="bento-badge green" data-i18n="s30_b3_badge">&gt;01 • CANTABILE</span>
                   <div class="yka-adv-metric">+2,53 dB <small style="font-size:0.55em;">(+79 %)</small></div>
-                  <h4 class="yka-adv-title" data-i18n="s30_adv1_title">Strahlendes Gesangsregister (0,8–2,5 kHz)</h4>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv1_title">Gesangsregister (0,8–2,5 kHz)</h4>
                 </div>
                 <p class="yka-adv-desc" data-i18n="s30_adv1_desc">
-                  Massive Aufwertung des Formant- und Melodiebereichs (Spitzen bis +3,4 dB bei 1,45 kHz). Verleiht dem Yamaha-Flügel einen warmen, singenden Konzertton.
+                  Bis zu +3,4 dB bei 1,45 kHz für einen warmen, tragfähigen Konzertton.
                 </p>
               </div>
 
               <div class="yka-adv-card emerald" data-band="3">
                 <div>
-                  <span class="bento-badge green" data-i18n="s30_b4_badge">&gt;VORTEIL 02 • PROJEKTION</span>
+                  <span class="bento-badge green" data-i18n="s30_b4_badge">&gt;02 • PROJEKTION</span>
                   <div class="yka-adv-metric">+1,87 dB <small style="font-size:0.55em;">(+54 %)</small></div>
-                  <h4 class="yka-adv-title" data-i18n="s30_adv2_title">Glockige Diskant-Brillanz (2,5–6,0 kHz)</h4>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv2_title">Diskant-Brillanz (2,5–6,0 kHz)</h4>
                 </div>
                 <p class="yka-adv-desc" data-i18n="s30_adv2_desc">
-                  Deutlich höhere Oberton-Reichweite ohne metallische Schärfe dank präziser Scheitel-Elastizität des FFW-Merinofilzes und glasharter Glutenleim-Kopplung.
+                  Glockige Oberton-Reichweite ohne Schärfe dank FFW-Merinofilz.
                 </p>
               </div>
 
               <div class="yka-adv-card" data-band="0">
                 <div>
-                  <span class="bento-badge gold" data-i18n="s30_b5_badge">&gt;VORTEIL 03 • TRANSPARENZ</span>
+                  <span class="bento-badge gold" data-i18n="s30_b5_badge">&gt;03 • TRANSPARENZ</span>
                   <div class="yka-adv-metric">−3,28 dB <small style="font-size:0.55em;">(−53 %)</small></div>
-                  <h4 class="yka-adv-title" data-i18n="s30_adv3_title">Entmulmung &amp; Bass-Präzision (20–250 Hz)</h4>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv3_title">Bass-Präzision (20–250 Hz)</h4>
                 </div>
                 <p class="yka-adv-desc" data-i18n="s30_adv3_desc">
-                  Gezielter Abbau von dumpfem Tiefton-Mulm ausgespielter Althämmer. Akkorde in der kleinen und großen Oktave klingen glasklar durchhörbar.
+                  Gezielte Entmulmung für glasklare Akkorde im Bass.
                 </p>
               </div>
 
               <div class="yka-adv-card" data-band="3">
                 <div>
-                  <span class="bento-badge gold" data-i18n="s30_b6_badge">&gt;VORTEIL 04 • SPECTRAL SLOPE</span>
+                  <span class="bento-badge gold" data-i18n="s30_b6_badge">&gt;04 • SPECTRAL SLOPE</span>
                   <div class="yka-adv-metric">+0,93 dB/kHz <small style="font-size:0.52em;">(+1,52 dB/Okt.)</small></div>
-                  <h4 class="yka-adv-title" data-i18n="s30_adv4_title">Flacherer Spektralabfall &amp; +0,42 dB Crest</h4>
+                  <h4 class="yka-adv-title" data-i18n="s30_adv4_title">12,6 % flacherer Abfall &amp; +0,42 dB Crest</h4>
                 </div>
                 <p class="yka-adv-desc" data-i18n="s30_adv4_desc">
-                  12,6 % flacherer linearer Spectral Slope (−6,45 statt −7,38 dB/kHz) kombiniert mit +0,42 dB höherem Transienten-Crest-Faktor für schnellere Ansprache.
+                  Mehr Obertöne (−6,45 statt −7,38 dB/kHz) und schnellere Ansprache.
                 </p>
               </div>
             </div>
@@ -4366,9 +4366,9 @@
       <section class="slide slide-hero-theme yka-slide" data-slide="31">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s31_category">Teil 4: Das Louis Renner Yamaha Kit • Akustische Messanalyse (4/4)</div>
-            <h2 class="slide-title" data-i18n="s31_title">Amplituden-Dynamik (0:00–11:42) &amp; Spectral-Slope-Rechner (bis C8 = 4.300 Hz)</h2>
-            <div class="slide-subtitle" data-i18n="s31_subtitle">Transienten-Impulstreue (Crest-Faktor) und mathematische Regression des Oberton-Erhalts über alle Dynamikstufen</div>
+            <div class="slide-category" data-i18n="s31_category">Teil 4: Yamaha Kit • Akustik-Analyse (4/4)</div>
+            <h2 class="slide-title" data-i18n="s31_title">Amplituden-Dynamik &amp; Spectral-Slope-Rechner (bis C8)</h2>
+            <div class="slide-subtitle" data-i18n="s31_subtitle">Impulstreue (Crest-Faktor) und Oberton-Erhalt bis C8 = 4.300 Hz</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4377,7 +4377,7 @@
             <div class="yka-subnav-tabs">
               <button class="yka-subnav-tab" data-target-slide="28" type="button">
                 <span class="yka-tab-num">01</span>
-                <span class="yka-tab-label" data-i18n="s31_tab1">SPEKTRUM & 2-OKTAVEN</span>
+                <span class="yka-tab-label" data-i18n="s31_tab1">SPEKTRUM</span>
               </button>
               <button class="yka-subnav-tab" data-target-slide="29" type="button">
                 <span class="yka-tab-num">02</span>
@@ -4385,11 +4385,11 @@
               </button>
               <button class="yka-subnav-tab" data-target-slide="30" type="button">
                 <span class="yka-tab-num">03</span>
-                <span class="yka-tab-label" data-i18n="s31_tab3">REGISTER-GEWINN ΔL(f)</span>
+                <span class="yka-tab-label" data-i18n="s31_tab3">REGISTER ΔL(f)</span>
               </button>
               <button class="yka-subnav-tab active" data-target-slide="31" type="button">
                 <span class="yka-tab-num">04</span>
-                <span class="yka-tab-label" data-i18n="s31_tab4">DYNAMIK & SPECTRAL SLOPE</span>
+                <span class="yka-tab-label" data-i18n="s31_tab4">DYNAMIK & SLOPE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
@@ -4403,8 +4403,8 @@
             <div class="yka-card">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge gold" data-i18n="s31_b1_badge">&gt;ZEITBEREICH &amp; TRANSIENTEN</span>
-                  <h3 class="yka-card-title" data-i18n="s31_l_title">Amplituden-Hüllkurve: RMS-Energie &amp; Spitzenpegel (0:00–11:42)</h3>
+                  <span class="bento-badge gold" data-i18n="s31_b1_badge">&gt;ZEITVERLAUF</span>
+                  <h3 class="yka-card-title" data-i18n="s31_l_title">Amplituden-Hüllkurve (0:00–11:42)</h3>
                 </div>
               </div>
 
@@ -4413,25 +4413,25 @@
               </div>
 
               <div class="yka-readout-bar">
-                <span data-i18n="s31_wave_split">Trennpunkt bei 05:18 Min. (Umbau auf Louis Renner Yamaha Kit)</span>
-                <span id="yka-ro-wave-vals" style="color: var(--gold-light); font-weight: 700;">05:18 Min (Kit) · Peak: −2,4 dBFS · RMS: −15,8 dBFS</span>
+                <span data-i18n="s31_wave_split">Umbau bei 05:18 Min.</span>
+                <span id="yka-ro-wave-vals" style="color: var(--gold-light); font-weight: 700;">05:18 (Kit) · Peak: −2,4 dBFS · Crest: 10,9 dB</span>
               </div>
 
               <div class="yka-kpi-row-3">
                 <div class="yka-kpi-box green">
-                  <span class="yka-kpi-label" data-i18n="s31_wkpi1">Crest-Faktor (Peak − RMS)</span>
+                  <span class="yka-kpi-label" data-i18n="s31_wkpi1">Crest-Faktor</span>
                   <span class="yka-kpi-val emerald">+0,42 dB</span>
-                  <span class="yka-kpi-sub">Orig: 10,50 dB → Kit: 10,92 dB</span>
+                  <span class="yka-kpi-sub">Orig: 10,50 → Kit: 10,92 dB</span>
                 </div>
                 <div class="yka-kpi-box">
-                  <span class="yka-kpi-label" data-i18n="s31_wkpi2">Aktiver RMS-Pegel</span>
+                  <span class="yka-kpi-label" data-i18n="s31_wkpi2">RMS-Pegel</span>
                   <span class="yka-kpi-val gold">−16,47 dBFS</span>
-                  <span class="yka-kpi-sub" data-i18n="s31_wkpi2_sub">Orig: −16,25 dBFS (gleiche Spielstärke)</span>
+                  <span class="yka-kpi-sub" data-i18n="s31_wkpi2_sub">Orig: −16,25 dBFS (gleiche Stärke)</span>
                 </div>
                 <div class="yka-kpi-box green">
-                  <span class="yka-kpi-label" data-i18n="s31_wkpi3">Dynamik-Spannweite (P95−P10)</span>
+                  <span class="yka-kpi-label" data-i18n="s31_wkpi3">Dynamik (P95−P10)</span>
                   <span class="yka-kpi-val emerald">13,56 dB</span>
-                  <span class="yka-kpi-sub" data-i18n="s31_wkpi3_sub">Feinere Differenzierung pp bis ff</span>
+                  <span class="yka-kpi-sub" data-i18n="s31_wkpi3_sub">Feinere Abstufung pp–ff</span>
                 </div>
               </div>
             </div>
@@ -4440,8 +4440,8 @@
             <div class="yka-card yka-card-gold">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge green" data-i18n="s31_b2_badge">&gt;SPECTRAL SLOPE &amp; RECHNER (MAX. C8 = 4.300 HZ)</span>
-                  <h3 class="yka-card-title" data-i18n="s31_r_title">Spektrale Steigung über der Anschlagsdynamik &amp; Live-Rechner</h3>
+                  <span class="bento-badge green" data-i18n="s31_b2_badge">&gt;SPECTRAL SLOPE (MAX. C8 = 4.300 HZ)</span>
+                  <h3 class="yka-card-title" data-i18n="s31_r_title">Steigung über Dynamik &amp; Live-Rechner</h3>
                 </div>
               </div>
 
@@ -4452,7 +4452,7 @@
               <!-- Live Spectral-Slope Calculator strictly capped at C8 = 4300 Hz -->
               <div class="yka-calc-box">
                 <div class="yka-calc-top">
-                  <span class="yka-calc-title" data-i18n="s31_calc_title">🧮 Live Spectral-Slope-Rechner (100 Hz – C8 4.300 Hz):</span>
+                  <span class="yka-calc-title" data-i18n="s31_calc_title">🧮 Live-Rechner (bis C8 = 4.300 Hz):</span>
                   <div class="yka-btn-group">
                     <button class="yka-calc-preset" data-freq="440" type="button">A4 (440 Hz)</button>
                     <button class="yka-calc-preset" data-freq="1047" type="button">C6 (1047 Hz)</button>
@@ -4463,23 +4463,23 @@
                 </div>
 
                 <div class="yka-slider-item">
-                  <label data-i18n="s31_calc_lbl">Zielfrequenz f (max. C8 = 4.300 Hz):</label>
+                  <label data-i18n="s31_calc_lbl">Frequenz f:</label>
                   <input type="range" class="yka-calc-slider" id="yka-calc-freq-slider" min="100" max="4300" step="10" value="2500">
                   <span class="yka-slider-val" id="yka-calc-freq-val">2.500 Hz (2,50 kHz · Dis7)</span>
                 </div>
 
                 <div class="yka-calc-results">
                   <div class="yka-kpi-box">
-                    <span class="yka-kpi-label" data-i18n="s31_calc_r1">Abfall Original (−7,38 dB/kHz)</span>
+                    <span class="yka-kpi-label" data-i18n="s31_calc_r1">Original (−7,38 dB/kHz)</span>
                     <span class="yka-kpi-val" id="yka-calc-loss-orig" style="color:#ff7675;">−18,45 dB</span>
                   </div>
                   <div class="yka-kpi-box green">
-                    <span class="yka-kpi-label" data-i18n="s31_calc_r2">Abfall Renner Kit (−6,45 dB/kHz)</span>
+                    <span class="yka-kpi-label" data-i18n="s31_calc_r2">Yamaha Kit (−6,45 dB/kHz)</span>
                     <span class="yka-kpi-val emerald" id="yka-calc-loss-kit">−16,13 dB</span>
                   </div>
                   <div class="yka-kpi-box green">
-                    <span class="yka-kpi-label" data-i18n="s31_calc_r3">Netto-Gewinn durch Slope</span>
-                    <span class="yka-kpi-val gold" id="yka-calc-gain-db">+2,33 dB (+71 % Energie)</span>
+                    <span class="yka-kpi-label" data-i18n="s31_calc_r3">Netto-Gewinn</span>
+                    <span class="yka-kpi-val gold" id="yka-calc-gain-db">+2,33 dB (+71 %)</span>
                   </div>
                 </div>
               </div>
