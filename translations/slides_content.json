@@ -8,7 +8,7 @@
       "ja": "日本語 (Japanese)",
       "zh": "中文 (Chinese)"
     },
-    "total_slides": 41,
+    "total_slides": 40,
     "description": "Zentrale Struktur zur Pflege aller Folientexte und mehrsprachigen Übersetzungen (DE, EN, JA, ZH)."
   },
   "ui": {
@@ -4487,10 +4487,10 @@
     "slide_30": {
       "slide_number": 30,
       "category": {
-        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (1/4)",
-        "en": "Part 4: Yamaha Kit • Acoustic Analysis (1/4)",
-        "ja": "第4部：ヤマハ・キット • 音響解析 (1/4)",
-        "zh": "第四部分：雅马哈套件 • 声学分析 (1/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (1/3)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (1/3)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (1/3)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (1/3)"
       },
       "title": {
         "de": "Leistungsdichtespektrum & 2-Oktaven-Filter",
@@ -4518,16 +4518,10 @@
           "zh": "泛音 H1–H12"
         },
         "s30_tab3": {
-          "de": "REGISTER ΔL(f)",
-          "en": "REGISTERS ΔL(f)",
-          "ja": "音域ゲイン ΔL(f)",
-          "zh": "音区增益 ΔL(f)"
-        },
-        "s30_tab4": {
-          "de": "DYNAMIK & SLOPE",
-          "en": "DYNAMICS & SLOPE",
-          "ja": "動態＆スロープ",
-          "zh": "动态与斜率"
+          "de": "KERNVORTEILE & SLOPE",
+          "en": "KEY GAINS & SLOPE",
+          "ja": "4大優位性＆スロープ",
+          "zh": "四大优势与斜率"
         },
         "s30_lbl_oct": {
           "de": "Register:",
@@ -4649,15 +4643,22 @@
         "en": "On this first analysis slide we examine the high-resolution Power Spectral Density L(f) of the 11:42-minute comparison recording (0:00–5:17 original hammerheads vs. 5:18–11:42 Louis Renner Yamaha Kit). Use the 2-octave buttons or click directly on the 88-key piano to isolate any 2-octave register.",
         "ja": "この最初の解析スライドでは、11分42秒の比較録音（0:00–5:17 オリジナル・ハンマー対 5:18–11:42 Louis Renner ヤマハ・キット）の高分解能パワースペクトル密度 L(f) を確認できます。2オクターブボタンや88鍵盤バーで任意の2オクターブ音域を絞り込めます。",
         "zh": "在第一张分析幻灯片中，我们展示了 11 分 42 秒对比录音（0:00–5:17 原装弦槌 vs. 5:18–11:42 Louis Renner 雅马哈套件）的高分辨率功率谱密度 L(f)。可通过 2 八度按钮或直接点击 88 键钢琴条锁定任意 2 八度音区。"
+      },
+      "chapter": 4,
+      "chapter_name": {
+        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
+        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
+        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
+        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
       }
     },
     "slide_31": {
       "slide_number": 31,
       "category": {
-        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (2/4)",
-        "en": "Part 4: Yamaha Kit • Acoustic Analysis (2/4)",
-        "ja": "第4部：ヤマハ・キット • 音響解析 (2/4)",
-        "zh": "第四部分：雅马哈套件 • 声学分析 (2/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (2/3)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (2/3)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (2/3)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (2/3)"
       },
       "title": {
         "de": "Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Analyse",
@@ -4685,16 +4686,10 @@
           "zh": "泛音 H1–H12"
         },
         "s31_tab3": {
-          "de": "REGISTER ΔL(f)",
-          "en": "REGISTERS ΔL(f)",
-          "ja": "音域ゲイン ΔL(f)",
-          "zh": "音区增益 ΔL(f)"
-        },
-        "s31_tab4": {
-          "de": "DYNAMIK & SLOPE",
-          "en": "DYNAMICS & SLOPE",
-          "ja": "動態＆スロープ",
-          "zh": "动态与斜率"
+          "de": "KERNVORTEILE & SLOPE",
+          "en": "KEY GAINS & SLOPE",
+          "ja": "4大優位性＆スロープ",
+          "zh": "四大优势与斜率"
         },
         "s31_lbl_oct": {
           "de": "Register:",
@@ -4840,27 +4835,41 @@
         "en": "Slide 29 breaks down the harmonic series from H1 (fundamental) to H12 for any selected 2-octave window. On the left is the 12-partial comparison (toggleable between Relative to H1, Delta Gain, and Absolute Level); on the right is the chromatic 24-semitone resolution.",
         "ja": "スライド29では、選択した2オクターブ領域における基音（H1）から第12倍音（H12）までの倍音分布を解析します。左側は12倍音の比較グラフ、右側は24半音すべてのノート別倍音エネルギー（H2〜H8）です。",
         "zh": "第 29 张幻灯片针对所选 2 八度窗口解析从基音 H1 到第 12 泛音 H12 的分布。左侧展示 12 个谐波泛音对比，右侧展示该 2 八度内全部 24 个半音的逐音泛音能量。"
+      },
+      "chapter": 4,
+      "chapter_name": {
+        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
+        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
+        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
+        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
       }
     },
     "slide_32": {
       "slide_number": 32,
+      "chapter": 4,
+      "chapter_name": {
+        "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
+        "en": "Part 4: The Louis Renner Yamaha Kit (C1–C3)",
+        "ja": "第4部：ルイ・レンナー YAMAHA 専用キット（C1〜C3）",
+        "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1-C3）"
+      },
       "category": {
-        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (3/4)",
-        "en": "Part 4: Yamaha Kit • Acoustic Analysis (3/4)",
-        "ja": "第4部：ヤマハ・キット • 音響解析 (3/4)",
-        "zh": "第四部分：雅马哈套件 • 声学分析 (3/4)"
+        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (3/3)",
+        "en": "Part 4: Yamaha Kit • Acoustic Analysis (3/3)",
+        "ja": "第4部：ヤマハ・キット • 音響解析 (3/3)",
+        "zh": "第四部分：雅马哈套件 • 声学分析 (3/3)"
       },
       "title": {
-        "de": "Differenzkurve ΔL(f) & Die 4 Kernvorteile",
-        "en": "Difference Curve ΔL(f) & 4 Core Advantages",
-        "ja": "差分曲線 ΔL(f) ＆ 4大メリット",
-        "zh": "差值曲线 ΔL(f) 与四大核心优势"
+        "de": "Die 4 Kernvorteile & Spectral-Slope-Rechner (bis C8)",
+        "en": "4 Core Advantages & Spectral Slope Calculator (to C8)",
+        "ja": "4大音響メリット＆スペクトルスロープ計算機 (最大 C8)",
+        "zh": "四大核心优势与频谱斜率计算器 (至 C8)"
       },
       "subtitle": {
-        "de": "Pegelgewinn ΔL(f) = Kit − Original über alle 5 Klavierregister",
-        "en": "Level gain ΔL(f) = Kit − Original across all 5 piano registers",
-        "ja": "全5音域のレベルゲイン ΔL(f) = Kit − Original",
-        "zh": "五大钢琴音区的电平增益 ΔL(f) = Kit − Original"
+        "de": "Messbarer Klanggewinn in allen Registern und Oberton-Erhalt bis C8 = 4.300 Hz",
+        "en": "Measurable tonal gain across all registers and overtone retention up to C8 = 4,300 Hz",
+        "ja": "全音域での音響ゲインと最高音 C8 = 4,300 Hz までの倍音保持率",
+        "zh": "全音区实测音色增益与高至 C8 = 4,300 Hz 的泛音保持力"
       },
       "elements": {
         "s32_tab1": {
@@ -4876,58 +4885,10 @@
           "zh": "泛音 H1–H12"
         },
         "s32_tab3": {
-          "de": "REGISTER ΔL(f)",
-          "en": "REGISTERS ΔL(f)",
-          "ja": "音域ゲイン ΔL(f)",
-          "zh": "音区增益 ΔL(f)"
-        },
-        "s32_tab4": {
-          "de": "DYNAMIK & SLOPE",
-          "en": "DYNAMICS & SLOPE",
-          "ja": "動態＆スロープ",
-          "zh": "动态与斜率"
-        },
-        "s32_l_badge": {
-          "de": "DIFFERENZ ΔL(f)",
-          "en": "DIFFERENCE ΔL(f)",
-          "ja": "差分 ΔL(f)",
-          "zh": "差值 ΔL(f)"
-        },
-        "s32_l_title": {
-          "de": "Pegelgewinn durch das Yamaha Kit",
-          "en": "Level Gain with Yamaha Kit",
-          "ja": "ヤマハ・キットによるレベル向上",
-          "zh": "雅马哈套件带来的电平增益"
-        },
-        "s32_bp0_name": {
-          "de": "1. Bass",
-          "en": "1. Bass",
-          "ja": "1. 低音",
-          "zh": "1. 低音"
-        },
-        "s32_bp1_name": {
-          "de": "2. Grundton",
-          "en": "2. Body",
-          "ja": "2. 基音",
-          "zh": "2. 基音"
-        },
-        "s32_bp2_name": {
-          "de": "3. Präsenz",
-          "en": "3. Presence",
-          "ja": "3. 歌唱域",
-          "zh": "3. 临场"
-        },
-        "s32_bp3_name": {
-          "de": "4. Brillanz",
-          "en": "4. Brilliance",
-          "ja": "4. 輝き",
-          "zh": "4. 辉煌"
-        },
-        "s32_bp4_name": {
-          "de": "5. Air",
-          "en": "5. Air",
-          "ja": "5. 空気感",
-          "zh": "5. 空气感"
+          "de": "KERNVORTEILE & SLOPE",
+          "en": "KEY GAINS & SLOPE",
+          "ja": "4大優位性＆スロープ",
+          "zh": "四大优势与斜率"
         },
         "s32_adv1_badge": {
           "de": "01 • CANTABILE",
@@ -5002,149 +4963,42 @@
           "zh": "泛音更丰富（−6.45 dB/kHz），触键瞬态响应更敏捷。"
         },
         "s32_r_badge": {
-          "de": "Δ +2,53 dB (+79 % ENERGIE)",
-          "en": "Δ +2.53 dB (+79% ENERGY)",
-          "ja": "Δ +2.53 dB（+79% エネルギー）",
-          "zh": "Δ +2.53 dB（+79% 声能提升）"
-        }
-      },
-      "notes": {
-        "de": "Folie 30 zeigt die direkte Differenzkurve ΔL(f) = L_Kit(f) − L_Original(f) über die fünf akustischen Klavierregister sowie die 4 quantifizierten Hauptvorteile: +2,53 dB (+79 % Energie) im Gesangsregister, +1,87 dB (+54 % Energie) im Brillanzband, −3,28 dB Entmulmung im Bass und ein um +0,93 dB/kHz flacherer Spectral Slope.",
-        "en": "Slide 30 presents the direct difference curve ΔL(f) = L_Kit(f) − L_Original(f) across the five acoustic piano registers alongside the 4 quantified core advantages: +2.53 dB (+79% energy) in the singing register, +1.87 dB (+54% energy) in treble brilliance, −3.28 dB bass de-mudding, and a +0.93 dB/kHz flatter spectral slope.",
-        "ja": "スライド30では、5つのピアノ音域にわたる差分曲線 ΔL(f) と4つの主要メリットを示します。歌唱帯域で+2.53 dB（+79%）、高音ブリリアンスで+1.87 dB（+54%）、低域のこもり解消（−3.28 dB）、そしてスペクトルスロープの+0.93 dB/kHz改善です。",
-        "zh": "第 30 张幻灯片展示了横跨五大钢琴声学音区的直接差值曲线 ΔL(f) 以及四大核心量化优势：歌唱音区提升 +2.53 dB（+79% 能量）、高音辉煌区提升 +1.87 dB（+54% 能量）、低音去浑浊 −3.28 dB，以及频谱斜率平缓 +0.93 dB/kHz。"
-      }
-    },
-    "slide_33": {
-      "slide_number": 33,
-      "category": {
-        "de": "Teil 4: Yamaha Kit • Akustik-Analyse (4/4)",
-        "en": "Part 4: Yamaha Kit • Acoustic Analysis (4/4)",
-        "ja": "第4部：ヤマハ・キット • 音響解析 (4/4)",
-        "zh": "第四部分：雅马哈套件 • 声学分析 (4/4)"
-      },
-      "title": {
-        "de": "Amplituden-Dynamik & Spectral-Slope-Rechner (bis C8)",
-        "en": "Amplitude Dynamics & Spectral Slope Calculator (to C8)",
-        "ja": "振幅ダイナミクス＆スロープ計算機 (最大 C8)",
-        "zh": "振幅动态与频谱斜率计算器 (至 C8)"
-      },
-      "subtitle": {
-        "de": "Impulstreue (Crest-Faktor) und Oberton-Erhalt bis C8 = 4.300 Hz",
-        "en": "Impulse fidelity (crest factor) and overtone retention up to C8 = 4,300 Hz",
-        "ja": "トランジェント応答性と最高音 C8 = 4,300 Hz までの倍音保持",
-        "zh": "瞬态脉冲保真度与最高至 C8 = 4,300 Hz 的泛音保持"
-      },
-      "elements": {
-        "s33_tab1": {
-          "de": "SPEKTRUM",
-          "en": "SPECTRUM",
-          "ja": "スペクトル",
-          "zh": "频谱"
-        },
-        "s33_tab2": {
-          "de": "TEILTÖNE H1–H12",
-          "en": "PARTIALS H1–H12",
-          "ja": "倍音 H1–H12",
-          "zh": "泛音 H1–H12"
-        },
-        "s33_tab3": {
-          "de": "REGISTER ΔL(f)",
-          "en": "REGISTERS ΔL(f)",
-          "ja": "音域ゲイン ΔL(f)",
-          "zh": "音区增益 ΔL(f)"
-        },
-        "s33_tab4": {
-          "de": "DYNAMIK & SLOPE",
-          "en": "DYNAMICS & SLOPE",
-          "ja": "動態＆スロープ",
-          "zh": "动态与斜率"
-        },
-        "s33_l_badge": {
-          "de": "ZEITVERLAUF",
-          "en": "TIME DOMAIN",
-          "ja": "時間領域",
-          "zh": "时域包络"
-        },
-        "s33_l_title": {
-          "de": "Amplituden-Hüllkurve (0:00–11:42)",
-          "en": "Amplitude Envelope (0:00–11:42)",
-          "ja": "振幅エンベロープ (0:00–11:42)",
-          "zh": "振幅包络 (0:00–11:42)"
-        },
-        "s33_wave_split": {
-          "de": "Umbau bei 05:18 Min.",
-          "en": "Conversion at 05:18 min",
-          "ja": "05:18 でキット交換",
-          "zh": "05:18 换装套件"
-        },
-        "s33_wkpi1": {
-          "de": "Crest-Faktor",
-          "en": "Crest Factor",
-          "ja": "クレストファクター",
-          "zh": "波峰因数"
-        },
-        "s33_wkpi2": {
-          "de": "RMS-Pegel",
-          "en": "RMS Level",
-          "ja": "実効 RMS",
-          "zh": "RMS 电平"
-        },
-        "s33_wkpi2_sub": {
-          "de": "Orig: −16,25 dBFS (gleiche Stärke)",
-          "en": "Orig: −16.25 dBFS (matched)",
-          "ja": "Orig: −16.25 dBFS (同一強度)",
-          "zh": "原装: −16.25 dBFS (同力度)"
-        },
-        "s33_wkpi3": {
-          "de": "Dynamik (P95−P10)",
-          "en": "Dynamic Span (P95−P10)",
-          "ja": "動態幅 (P95−P10)",
-          "zh": "动态跨度 (P95−P10)"
-        },
-        "s33_wkpi3_sub": {
-          "de": "Feinere Abstufung pp–ff",
-          "en": "Finer gradation pp–ff",
-          "ja": "繊細な pp–ff 表現",
-          "zh": "更细腻的 pp–ff 层次"
-        },
-        "s33_r_badge": {
           "de": "SPECTRAL SLOPE (MAX. C8 = 4.300 HZ)",
           "en": "SPECTRAL SLOPE (MAX C8 = 4,300 HZ)",
           "ja": "スペクトルスロープ (最大 C8 = 4,300 HZ)",
           "zh": "频谱斜率 (上限 C8 = 4,300 HZ)"
         },
-        "s33_r_title": {
+        "s32_r_title": {
           "de": "Steigung über Dynamik & Live-Rechner",
           "en": "Slope vs. Dynamics & Live Calculator",
           "ja": "動態別スロープ＆ライブ計算機",
           "zh": "动态斜率与实时计算器"
         },
-        "s33_calc_title": {
+        "s32_calc_title": {
           "de": "🧮 Live-Rechner (bis C8 = 4.300 Hz):",
           "en": "🧮 Live Calculator (to C8 = 4,300 Hz):",
           "ja": "🧮 ライブ計算機 (最大 C8 = 4,300 Hz):",
           "zh": "🧮 实时计算器 (至 C8 = 4,300 Hz):"
         },
-        "s33_calc_lbl": {
+        "s32_calc_lbl": {
           "de": "Frequenz f:",
           "en": "Frequency f:",
           "ja": "周波数 f:",
           "zh": "频率 f:"
         },
-        "s33_calc_r1": {
+        "s32_calc_r1": {
           "de": "Original (−7,38 dB/kHz)",
           "en": "Original (−7.38 dB/kHz)",
           "ja": "オリジナル (−7.38 dB/kHz)",
           "zh": "原装 (−7.38 dB/kHz)"
         },
-        "s33_calc_r2": {
+        "s32_calc_r2": {
           "de": "Yamaha Kit (−6,45 dB/kHz)",
           "en": "Yamaha Kit (−6.45 dB/kHz)",
           "ja": "Rennerキット (−6.45 dB/kHz)",
           "zh": "Renner套件 (−6.45 dB/kHz)"
         },
-        "s33_calc_r3": {
+        "s32_calc_r3": {
           "de": "Netto-Gewinn",
           "en": "Net Gain",
           "ja": "純ゲイン",
@@ -5152,14 +5006,14 @@
         }
       },
       "notes": {
-        "de": "Auf Folie 31 betrachten wir links den Zeitverlauf (0:00–11:42) mit einer Steigerung des Transienten-Crest-Faktors um +0,42 dB bei identischem Durchschnitts-RMS. Rechts zeigt die Punktewolke den Spectral Slope über der Anschlagsdynamik: Über alle Lautstärken von pp bis ff liegt die Regressionsgerade des Renner Kits parallel über dem Original. Mit dem Live-Rechner (begrenzt auf die höchste Klaviertaste C8 = 4.186 Hz / max. 4.300 Hz) lässt sich der exakte Obertongewinn für jede Zielfrequenz berechnen.",
-        "en": "On Slide 31, the left chart shows the time-domain envelope (0:00–11:42) with a +0.42 dB increase in transient crest factor at identical mean RMS. On the right, the scatter plot maps spectral slope against playing dynamics: across all dynamic levels from pp to ff, the Renner Kit regression line lies consistently above the original. The live calculator (capped at the highest piano key C8 = 4,186 Hz / max 4,300 Hz) computes the exact overtone gain for any frequency.",
-        "ja": "スライド31の左側は時間領域エンベロープ（0:00–11:42）で、同一RMS下でクレストファクターが+0.42 dB向上しています。右側は打鍵ダイナミクスに対するスペクトルスロープの散布図と、最高音C8（4,186 Hz / 最大4,300 Hz）まで対応したライブ計算機です。",
-        "zh": "第 31 张幻灯片左侧展示时域振幅包络（0:00–11:42），在相同平均 RMS 下瞬态波峰因数提升了 +0.42 dB。右侧展示随触键力度变化的频谱斜率散点回归图，以及上限设为钢琴最高音 C8（4,186 Hz / 最大 4,300 Hz）的实时频谱斜率计算器。"
+        "de": "Folie 32 fasst links die 4 quantifizierten Hauptvorteile des Louis Renner Yamaha Kits zusammen (+2,53 dB / +79 % im Gesangsregister, +1,87 dB / +54 % im Brillanzband, −3,28 dB Entmulmung im Bass sowie +0,93 dB/kHz flacherer Spectral Slope & +0,42 dB Crest). Rechts zeigt die Regressionsanalyse den Spectral Slope über der Anschlagsdynamik (pp–ff) samt Live-Rechner bis zur höchsten Klaviertaste C8 (4.186 Hz / max. 4.300 Hz).",
+        "en": "Slide 32 summarizes on the left the 4 quantified core advantages of the Louis Renner Yamaha Kit (+2.53 dB / +79% in the singing register, +1.87 dB / +54% treble brilliance, −3.28 dB bass clarity, and a +0.93 dB/kHz flatter spectral slope & +0.42 dB crest). On the right, the scatter regression maps spectral slope across playing dynamics (pp–ff) alongside the live calculator up to C8 (4,186 Hz / max 4,300 Hz).",
+        "ja": "スライド32の左側では、Louis Renner ヤマハ・キットの4大音響メリット（歌唱域+2.53 dB / +79%、高音域+1.87 dB / +54%、低音の透明化−3.28 dB、スロープ+0.93 dB/kHz改善＆クレスト+0.42 dB）を一覧化。右側では打鍵ダイナミクス別のスペクトルスロープ回帰図と最高音C8（最大4,300 Hz）対応のライブ計算機を表示します。",
+        "zh": "第 32 页左侧汇总了 Louis Renner 雅马哈套件的四大实测声学优势（歌唱区 +2.53 dB / +79%、高音辉煌感 +1.87 dB / +54%、低音清晰度去浑 −3.28 dB，以及斜率平缓 +0.93 dB/kHz 与波峰提升 +0.42 dB）。右侧展示全动态范围（pp–ff）频谱斜率散点回归图与上限至钢琴最高音 C8（4,186 Hz / 最大 4,300 Hz）的实时计算器。"
       }
     },
-    "slide_34": {
-      "slide_number": 34,
+    "slide_33": {
+      "slide_number": 33,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5186,109 +5040,109 @@
         "zh": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen"
       },
       "elements": {
-        "s34_b1_badge": {
+        "s33_b1_badge": {
           "de": "FORTISSIMO (ff)",
           "en": "FORTISSIMO (ff)",
           "ja": "FORTISSIMO (ff)",
           "zh": "FORTISSIMO (ff)"
         },
-        "s34_b2_badge": {
+        "s33_b2_badge": {
           "de": "FORTE (f)",
           "en": "FORTE (f)",
           "ja": "FORTE (f)",
           "zh": "FORTE (f)"
         },
-        "s34_b3_badge": {
+        "s33_b3_badge": {
           "de": "PIANO (p)",
           "en": "PIANO (p)",
           "ja": "PIANO (p)",
           "zh": "PIANO (p)"
         },
-        "s34_b4_badge": {
+        "s33_b4_badge": {
           "de": "PIANISSIMO (pp)",
           "en": "PIANISSIMO (pp)",
           "ja": "PIANISSIMO (pp)",
           "zh": "PIANISSIMO (pp)"
         },
-        "s34_b5_badge": {
+        "s33_b5_badge": {
           "de": "ROTE ZONE (SCHEITEL)",
           "en": "RED ZONE (APEX)",
           "ja": "ROTE ZONE (SCHEITEL)",
           "zh": "ROTE ZONE (SCHEITEL)"
         },
-        "s34_b6_badge": {
+        "s33_b6_badge": {
           "de": "JENS-SÖREN KRUSE",
           "en": "JENS-SÖREN KRUSE",
           "ja": "JENS-SÖREN KRUSE",
           "zh": "JENS-SÖREN KRUSE"
         },
-        "s34_c1_title": {
+        "s33_c1_title": {
           "de": "Blauer Keil",
           "en": "Blue Wedge",
           "ja": "Blauer Keil",
           "zh": "Blauer Keil"
         },
-        "s34_c2_title": {
+        "s33_c2_title": {
           "de": "Grüner Keil",
           "en": "Green Wedge",
           "ja": "Grüner Keil",
           "zh": "Grüner Keil"
         },
-        "s34_c3_title": {
+        "s33_c3_title": {
           "de": "Orangener Keil",
           "en": "Orange Wedge",
           "ja": "Orangener Keil",
           "zh": "Orangener Keil"
         },
-        "s34_c4_title": {
+        "s33_c4_title": {
           "de": "Violetter Keil",
           "en": "Violet Wedge",
           "ja": "Violetter Keil",
           "zh": "Violetter Keil"
         },
-        "s34_c5_title": {
+        "s33_c5_title": {
           "de": "DO NOT TOUCH! – Niemals tief einstechen!",
           "en": "DO NOT TOUCH! – Never prick deeply here!",
           "ja": "DO NOT TOUCH! – Niemals tief einstechen!",
           "zh": "DO NOT TOUCH! – Niemals tief einstechen!"
         },
-        "s34_c1_desc": {
+        "s33_c1_desc": {
           "de": "Tiefe 90°-Stiche bauen die harte Werksspannung ab und speisen den Forte-Keil.",
           "en": "Deep 90° stitches release rigid factory tension and feed elasticity into the forte wedge.",
           "ja": "深い90°の針刺しで工場出荷時の硬い張力を解き、フォルテ領域へ弾性を送ります。",
           "zh": "深层90°垂直刺针释放出厂僵硬应力，并将弹性势能导向强音扇区。"
         },
-        "s34_c2_desc": {
+        "s33_c2_desc": {
           "de": "Steuert tragende Klangfülle, Obertonreichtum und Projektion im großen Saal.",
           "en": "Shapes carrying tonal fullness, harmonic bloom, and concert hall projection.",
           "ja": "豊かな響きの厚み、倍音の輝き、ホール全体へ届く遠達性をコントロールします。",
           "zh": "塑造饱满宏大的共鸣厚度、泛音光泽与音乐厅远距离投射力。"
         },
-        "s34_c3_desc": {
+        "s33_c3_desc": {
           "de": "Formt den warmen, lyrischen Gesangston im kontrollierten Mezzopiano-Anschlag.",
           "en": "Sculpts a warm, lyrical singing tone across moderate piano and mezzopiano touch.",
           "ja": "ピアノ〜メゾピアノの繊細なタッチで温かく歌うようなカンタービレを作ります。",
           "zh": "雕琢弱音至中弱音触键下温暖柔和、如歌般的抒情音色线条。"
         },
-        "s34_c4_desc": {
+        "s33_c4_desc": {
           "de": "Feinste Kurznadelung für seidige, flüsterleise Ansprache im zartesten Pianissimo.",
           "en": "Delicate shallow needling for a silky, whisper-soft response in extreme pianissimo.",
           "ja": "極浅の微細な針入れにより、囁くようなピアニッシモでの絹のように滑らかな発音を実現。",
           "zh": "极浅微针精修，赋予极弱音（pp）下如耳语般丝滑敏锐的起音响应。"
         },
-        "s34_caption_1": {
+        "s33_caption_1": {
           "de": "Original Renner Uhrenmodell",
           "en": "Original Renner Clock Model",
           "ja": "Original Renner Uhrenmodell",
           "zh": "Original Renner Uhrenmodell"
         },
-        "s34_caption_2": {
+        "s33_caption_2": {
           "de": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
           "en": "with the 4 dynamic wedges (ff, f, p, pp)",
           "ja": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
           "zh": "mit den 4 dynamischen Keilen (ff, f, p, pp)"
         },
-        "s34_c5_desc": {
+        "s33_c5_desc": {
           "de": "Scheitelzone niemals tief nadeln – höchstens 1–2 mm zwischen den Saitenrillen bei Glasigkeit!",
           "en": "Never needle deeply into the crown—at most 1–2 mm between string grooves if glassy!",
           "ja": "打弦点への深い針刺しは厳禁 — 硬質な場合のみ弦溝の間へ最大1〜2 mmで微調整！",
@@ -5302,8 +5156,8 @@
         "zh": "第 58 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_35": {
-      "slide_number": 35,
+    "slide_34": {
+      "slide_number": 34,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5330,67 +5184,67 @@
         "zh": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil"
       },
       "elements": {
-        "s35_bullet_1": {
+        "s34_bullet_1": {
           "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (9:00–10:00 Uhr bzw. 2:00–3:00 Uhr) arbeiten.",
           "en": "<strong>Working Zone:</strong> Work strictly inside the blue fortissimo wedge (9:00–10:00 and 2:00–3:00 o'clock).",
           "ja": "<strong>作業ゾーン：</strong> 青色のフォルティッシモ領域（9〜10時および2〜3時方向）のみに針を入れます。",
           "zh": "<strong>施针区域：</strong> 严格限定在蓝色极强音扇区（9:00–10:00 及 2:00–3:00 钟点方向）作业。"
         },
-        "s35_bullet_2": {
+        "s34_bullet_2": {
           "de": "<strong>Tiefe Einstiche:</strong> Ruhig bis kurz vor den Unterfilz führen – niemals in Unterfilz oder Holzkern stechen!",
           "en": "<strong>Deep Stitches:</strong> Press smoothly to just above the underfelt—never pierce into underfelt or wood core!",
           "ja": "<strong>深い運針：</strong> アンダーフェルト直前まで静かに押し込み、下巻きやウッドコアへは絶対に刺しません！",
           "zh": "<strong>深层进针：</strong> 平稳推针至底毡上方即止——严禁刺穿底毡或伤及实木槌芯！"
         },
-        "s35_bullet_3": {
+        "s34_bullet_3": {
           "de": "<strong>Spannungstransfer:</strong> Die starre Werkshärte weicht; elastische Energie fließt in den grünen Forte-Keil.",
           "en": "<strong>Tension Transfer:</strong> Rigid factory stiffness softens as elastic energy flows into the green forte wedge.",
           "ja": "<strong>張力トランスファー：</strong> 出荷時の硬さがほぐれ、緑色のフォルテ領域へと豊かな弾性エネルギーが移ります。",
           "zh": "<strong>张力传递：</strong> 化解出厂时的僵硬紧绷感，使充沛的弹性势能顺畅导入绿色强音扇区。"
         },
-        "s35_bullet_4": {
+        "s34_bullet_4": {
           "de": "<strong>Praxis-Empfehlung:</strong> Vor dem ersten Anspielen im Flügel fast ausnahmslos als Fundament anzuraten.",
           "en": "<strong>Best Practice:</strong> Recommended almost without exception before first playing-in inside the piano.",
           "ja": "<strong>実践推奨ステップ：</strong> 楽器へ組み込んで弾き込む前に、ほぼ例外なく推奨される基礎工程です。",
           "zh": "<strong>实战标准流程：</strong> 在装入钢琴首次试奏前，几乎毫无例外建议先行完成此步基础整音。"
         },
-        "s35_caption_1": {
+        "s34_caption_1": {
           "de": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "en": "Pre-needling: Deep stitches in the fortissimo wedge (9:00 to 10:00 o'clock)",
           "ja": "プレニードリング：フォルティッシモ領域（9〜10時）への深い針入れ",
           "zh": "预整音：在极强音扇区（9:00至10:00方向）进行深层刺针"
         },
-        "s35_b1_badge": {
+        "s34_b1_badge": {
           "de": "PRE-NEEDLING",
           "en": "PRE-NEEDLING",
           "ja": "下整音（針刺し）",
           "zh": "基础刺针整音"
         },
-        "s35_b2_badge": {
+        "s34_b2_badge": {
           "de": "GRUNDELASTIZITÄT",
           "en": "BASIC ELASTICITY",
           "ja": "基本弾力性",
           "zh": "建立核心弹性"
         },
-        "s35_c1_desc": {
+        "s34_c1_desc": {
           "de": "Die Vorintonation ist der entscheidende Basisschritt bei fabrikneuen oder neu befilzten Hammerköpfen.",
           "en": "Pre-needling is the essential foundational step on factory-new or newly refelted hammerheads.",
           "ja": "プレニードリング（下整音）は新品またはフェルト張替ハンマーに不可欠な基礎工程です。",
           "zh": "预整音（Pre-Needling）是全新弦槌或新包毛毡弦槌装琴前至关重要的基础工序。"
         },
-        "s35_kpi": {
+        "s34_kpi": {
           "de": "pp – ff",
           "en": "pp – ff",
           "ja": "pp 〜 ff",
           "zh": "pp – ff 全动态"
         },
-        "s35_c1_title": {
+        "s34_c1_title": {
           "de": "Gezielter Spannungsabbau im blauen Fortissimo-Keil",
           "en": "Targeted Tension Release in the Blue Fortissimo Wedge",
           "ja": "青のフォルティッシモ領域における計画的な張力解放",
           "zh": "蓝色极强音扇区的定向预应力释放"
         },
-        "s35_fact": {
+        "s34_fact": {
           "de": "🎯 Öffnet das elastische Klangvolumen, ohne die Scheitelkrone zu schwächen",
           "en": "🎯 Unlocks elastic tonal volume without weakening the strike crown",
           "ja": "🎯 打弦点の強度を損なうことなく弾力ある豊かな響きを解放します",
@@ -5404,8 +5258,8 @@
         "zh": "第 59 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_36": {
-      "slide_number": 36,
+    "slide_35": {
+      "slide_number": 35,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5432,67 +5286,67 @@
         "zh": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant"
       },
       "elements": {
-        "s36_bullet_1": {
+        "s35_bullet_1": {
           "de": "<strong>Bass &amp; Mittellage:</strong> Horizontaler Einstich im ff-Keil mit 7–10 Stichen im Bass und 5–10 Stichen in der Mitte.",
           "en": "<strong>Bass &amp; Midrange:</strong> Horizontal stitches in the ff wedge—7–10 stitches in the bass and 5–10 in the midrange.",
           "ja": "<strong>低音〜中音域の基準：</strong> ff領域へ水平方向に、低音で7〜10回、中音で5〜10回刺し入れます。",
           "zh": "<strong>低音与中音区规范：</strong> 于ff扇区水平进针——低音区7–10针，中音区5–10针。"
         },
-        "s36_bullet_2": {
+        "s35_bullet_2": {
           "de": "<strong>Diskant-Dosierung:</strong> Vertikal geführte Einstiche mit 0–7 Stichen je nach gewünschter Brillanz und Tragkraft.",
           "en": "<strong>Treble Dosage:</strong> Vertically guided stitches of 0–7 insertions depending on desired brilliance and projection.",
           "ja": "<strong>高音域の微調整：</strong> 求める輝きと遠達性に応じ、垂直方向へ0〜7回慎重に針を入れます。",
           "zh": "<strong>高音区精细定量：</strong> 视所需明亮度与穿透力，沿垂直方向精准施针0–7次。"
         },
-        "s36_bullet_3": {
+        "s35_bullet_3": {
           "de": "<strong>Drücken, niemals hacken:</strong> Nadeln ruhig mit Körpergewicht führen – Hacken zerreißt das Fasergefüge irreversibel!",
           "en": "<strong>Press, Never Chop:</strong> Push needles smoothly using body weight—chopping tears wool fibers irreversibly!",
           "ja": "<strong>「押す」のであり「叩き刺さない」：</strong> 体重を乗せて静かに押し込みます。叩き刺しは繊維を破壊します！",
           "zh": "<strong>稳压而非劈刺：</strong> 借助身体重心平稳推针入毡——猛烈劈刺会不可逆地撕裂羊毛纤维！"
         },
-        "s36_caption_1": {
+        "s35_caption_1": {
           "de": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "en": "Renner voicing tools, needle handles, and adjustable voicing instrument",
           "ja": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "zh": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat"
         },
-        "s36_b1_badge": {
+        "s35_b1_badge": {
           "de": "WERKZEUGKUNDE",
           "en": "TOOL SET",
           "ja": "専門工具",
           "zh": "专业整音工具"
         },
-        "s36_b2_badge": {
+        "s35_b2_badge": {
           "de": "PRÄZISIONSNADELN",
           "en": "PRECISION NEEDLES",
           "ja": "精密針",
           "zh": "进口精密排针"
         },
-        "s36_kpi": {
+        "s35_kpi": {
           "de": "Nr. 7 · ø 0,60 mm",
           "en": "No. 7 · ø 0.60 mm",
           "ja": "7番針・ø0.60 mm",
           "zh": "7号针 · ø 0.60 mm"
         },
-        "s36_c1_title": {
+        "s35_c1_title": {
           "de": "Richtwerte pro Register & schonende Nadelführung",
           "en": "Register Stitch Guidelines & Gentle Needle Technique",
           "ja": "音域別の基準針数と繊維を守る正しい運針技術",
           "zh": "各音区标准刺针数与不伤纤维的稳压针法"
         },
-        "s36_c1_desc": {
+        "s35_c1_desc": {
           "de": "Ruhiges Eindrücken mit Original-Werkzeugen verdrängt die Wollfasern kontrolliert, statt sie zu zerreißen.",
           "en": "Steady pressing with genuine Renner tools parts the wool fibers cleanly instead of tearing them.",
           "ja": "純正ツールで静かに押し込むことで、羊毛繊維を断ち切らずに整然と緩めます。",
           "zh": "使用原厂工具平稳压入，能够柔和拨开羊毛纤维而不将其暴力扯断。"
         },
-        "s36_bullet_4": {
+        "s35_bullet_4": {
           "de": "<strong>Original Renner Werkzeuge:</strong> Intonierapparat (43-0005642), 3er-Profi-Halter (43-0003270) und Nadeln Nr. 7 (43-0003426).",
           "en": "<strong>Genuine Renner Tools:</strong> Adjustable voicer (43-0005642), 3-needle pro holder (43-0003270), and No. 7 needles (43-0003426).",
           "ja": "<strong>純正レンナー工具：</strong> 可変整音器（43-0005642）、3本針プロホルダー（43-0003270）、7番針（43-0003426）。",
           "zh": "<strong>雷纳原厂工具组：</strong> 可调整音器（43-0005642）、三针专业针柄（43-0003270）及7号镀镍针（43-0003426）。"
         },
-        "s36_fact": {
+        "s35_fact": {
           "de": "🛠 Glatte vernickelte Nadeln (ø 0,60 mm, 9 mm) gleiten faserschonend ins Vlies",
           "en": "🛠 Nickel-plated needles (ø 0.60 mm, 9 mm) glide smoothly between wool fibers",
           "ja": "🛠 ニッケルメッキ針（ø0.60 mm・長さ9 mm）が繊維を傷めず滑らかに進入",
@@ -5506,8 +5360,8 @@
         "zh": "第 60 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_37": {
-      "slide_number": 37,
+    "slide_36": {
+      "slide_number": 36,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5534,61 +5388,61 @@
         "zh": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“"
       },
       "elements": {
-        "s37_caption_1": {
+        "s36_caption_1": {
           "de": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "en": "Bedding strings firmly at the hitch pin using brass drift punch",
           "ja": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "zh": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag"
         },
-        "s37_b1_badge": {
+        "s36_b1_badge": {
           "de": "SAITEN-BETTUNG",
           "en": "STRING BEDDING",
           "ja": "弦合わせ工程",
           "zh": "琴弦沉实就位"
         },
-        "s37_b2_badge": {
+        "s36_b2_badge": {
           "de": "CHORREINHEIT",
           "en": "UNISON PURITY",
           "ja": "同音同調の純度",
           "zh": "三弦同音纯净"
         },
-        "s37_bullet_1": {
+        "s36_bullet_1": {
           "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn mit Messingdurchschlag und leichtem Hammer sanft anlegen.",
           "en": "<strong>Seat at Hitch Pins:</strong> Gently tap strings down from back to front at the hitch pins using a brass punch.",
           "ja": "<strong>ヒッチピンの密着：</strong> 真鍮ポンチと軽量ハンマーで奥から手前へ弦を優しく叩き落ち着かせます。",
           "zh": "<strong>挂弦钉落座贴合：</strong> 用黄铜冲子配合轻锤由后向前轻敲，使琴弦在挂弦钉处稳固服帖。"
         },
-        "s37_bullet_2": {
+        "s36_bullet_2": {
           "de": "<strong>Stegstifte anpassen:</strong> Mit dem Renner-Setzer die Saiten sauber auf den Steg drücken, um Nebentöne zu eliminieren.",
           "en": "<strong>Seat at Bridge Pins:</strong> Press strings cleanly onto the bridge with the Renner setter to eliminate false beats.",
           "ja": "<strong>駒ピンへの密着：</strong> レンナー専用セッターで弦を駒へ確実に密着させ、唸りや雑振動を排除します。",
           "zh": "<strong>码钉压实贴合：</strong> 使用雷纳专用压弦器将琴弦稳压于音板弦码，彻底消除假拍与杂音。"
         },
-        "s37_bullet_3": {
+        "s36_bullet_3": {
           "de": "<strong>Reine Chorstimmung:</strong> Vor jeder Nadelarbeit muss jeder 3er-Chor absolut schwebungs- und nebengeräuschfrei stehen.",
           "en": "<strong>Pure Unison Tuning:</strong> Every 3-string unison must ring completely pure and noise-free before voicing begins.",
           "ja": "<strong>純粋なユニゾン調律：</strong> 整音前にすべての同音弦を雑音やうなりのない完全なユニゾンに整えます。",
           "zh": "<strong>纯净同度调律：</strong> 在下针整音前，每一组三弦同度必须调至零拍音、零杂音的纯净状态。"
         },
-        "s37_kpi": {
+        "s36_kpi": {
           "de": "100 % Chorrein",
           "en": "100% Unison",
           "ja": "完全なユニゾン",
           "zh": "100% 同度纯净"
         },
-        "s37_c1_title": {
+        "s36_c1_title": {
           "de": "Exakte Saitenauflage vor dem ersten Nadelstich",
           "en": "Exact String Seating Prior to the First Needle Stitch",
           "ja": "最初の針を入れる前に不可欠な弦の密着と純粋な調律",
           "zh": "动针整音前必须确保琴弦贴合与同度纯净"
         },
-        "s37_c1_desc": {
+        "s36_c1_desc": {
           "de": "Nur sauber aufliegende und rein gestimmte Saitenchöre erlauben eine ehrliche klangliche Diagnose am Hammerkopf.",
           "en": "Only cleanly seated and purely tuned string unisons permit an honest acoustic diagnosis of the hammerhead.",
           "ja": "弦が確実に密着しユニゾンが澄み切って初めて、ハンマー本来の音色を正しく診断できます。",
           "zh": "唯有琴弦稳固贴合且同度弦组绝对纯净，方能真实判断弦槌本身的声学状态。"
         },
-        "s37_fact": {
+        "s36_fact": {
           "de": "🎵 Goldene Regel: Keine Nadel korrigiert einen unsauber gelagerten Saitenchor!",
           "en": "🎵 Golden Rule: No needle can fix a poorly seated or impure string unison!",
           "ja": "🎵 鉄則：弦の密着不良やユニゾンの乱れは針入れでは決して解決できません！",
@@ -5602,8 +5456,8 @@
         "zh": "第 61 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_38": {
-      "slide_number": 38,
+    "slide_37": {
+      "slide_number": 37,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5630,61 +5484,61 @@
         "zh": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens"
       },
       "elements": {
-        "s38_bullet_1": {
+        "s37_bullet_1": {
           "de": "<strong>Referenzton Note 88:</strong> Klaviaturrahmen minimal vor- und zurückschieben, bis der hellste, vollste Ton einrastet.",
           "en": "<strong>Note 88 Reference:</strong> Shift the keyframe slightly fore and aft until the brightest, fullest tone locks in.",
           "ja": "<strong>第88鍵での基準探索：</strong> 筬をわずかに前後させ、最も明るく豊かな響きが得られる打弦点を見つけます。",
           "zh": "<strong>第88键基准寻优：</strong> 前后微移键盘架，直至找到高音最明亮饱满、共鸣最通透的最佳击弦位置。"
         },
-        "s38_bullet_2": {
+        "s37_bullet_2": {
           "de": "<strong>Diskantfenster 69–88:</strong> Eine exakte Justierung des Anschlagspunkts hebt das Klangvolumen vieler Flügel dramatisch.",
           "en": "<strong>Treble Window 69–88:</strong> Fine-tuning the strike point dramatically elevates treble singing power on most grands.",
           "ja": "<strong>第69〜88鍵の劇的改善：</strong> 打弦点の最適化だけで多くのグランドピアノの高音域が見違えるほど歌い始めます。",
           "zh": "<strong>69–88键显著蜕变：</strong> 精准校准高音区击弦点，往往能让三角钢琴的高音歌唱性获得质的飞跃。"
         },
-        "s38_bullet_3": {
+        "s37_bullet_3": {
           "de": "<strong>Geradheit &amp; Flucht:</strong> Kontrolle durch sanftes Anheben an der Klinke oder Zupfhaken; Korrekturbedarf auf der Taste markieren.",
           "en": "<strong>Straight Travel &amp; Spacing:</strong> Check travel via jack lift or plucking hook; mark any deviations with chalk on the keys.",
           "ja": "<strong>直進性と間隔の確認：</strong> ジャック持ち上げやフックで動きを確認し、修正箇所を鍵盤上にチョークで記録します。",
           "zh": "<strong>运行轨迹与对正检验：</strong> 轻抬顶杆或用拨钩检查槌头起落垂直度，并用粉笔在琴键上标记偏差音。"
         },
-        "s38_caption_1": {
+        "s37_caption_1": {
           "de": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "en": "Verifying treble strike point and square alignment of hammerheads",
           "ja": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "zh": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer"
         },
-        "s38_b1_badge": {
+        "s37_b1_badge": {
           "de": "STRIKE POINT",
           "en": "STRIKE POINT",
           "ja": "打弦点探索",
           "zh": "最佳击弦点"
         },
-        "s38_b2_badge": {
+        "s37_b2_badge": {
           "de": "DISKANTGLANZ",
           "en": "TREBLE BRILLIANCE",
           "ja": "高音域の輝き",
           "zh": "高音晶莹通透"
         },
-        "s38_kpi": {
+        "s37_kpi": {
           "de": "Note 69–88",
           "en": "Notes 69–88",
           "ja": "第69〜88鍵",
           "zh": "第 69–88 键"
         },
-        "s38_c1_title": {
+        "s37_c1_title": {
           "de": "Optimaler Anschlagspunkt & präzise Hammerflucht",
           "en": "Optimal Treble Strike Point & Hammer Alignment",
           "ja": "高音域の最適打弦点と正確なハンマー整列",
           "zh": "高音区最佳击弦点寻优与弦槌精准对正"
         },
-        "s38_c1_desc": {
+        "s37_c1_desc": {
           "de": "Bereits Millimeterbruchteile der Klaviaturposition entscheiden im hohen Diskant über Tragkraft und Obertonglanz.",
           "en": "Fractions of a millimeter in keyframe position determine projection and bloom in the upper treble.",
           "ja": "高音域では筬（キーフレーム）のわずか数コンマ数ミリの前後位置が遠達性と輝きを左右します。",
           "zh": "在高音区，键盘架前后哪怕零点几毫米的微调，都直接决定音色的穿透力与泛音光泽。"
         },
-        "s38_fact": {
+        "s37_fact": {
           "de": "✨ Perfekte Mechanikgeometrie vor der Feinintonation spart unnötige Nadelarbeit",
           "en": "✨ Perfect strike geometry before fine voicing prevents unnecessary needling",
           "ja": "✨ 仕上げ整音前の完璧な打弦ジオメトリーが無駄な針入れを防ぎます",
@@ -5698,8 +5552,8 @@
         "zh": "第 62 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_39": {
-      "slide_number": 39,
+    "slide_38": {
+      "slide_number": 38,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5726,67 +5580,67 @@
         "zh": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile"
       },
       "elements": {
-        "s39_c1_title": {
+        "s38_c1_title": {
           "de": "1. Hohlkehle (Hollow Crown)",
           "en": "1. Hollow Crown",
           "ja": "1. 中央凹み（ホロウ・クラウン）",
           "zh": "1. 槌冠中凹（Hollow Crown）"
         },
-        "s39_c2_title": {
+        "s38_c2_title": {
           "de": "2. Schiefe Krone (Crooked Crown)",
           "en": "2. Crooked Crown",
           "ja": "2. 傾斜クラウン（片当たり）",
           "zh": "2. 槌冠偏斜（Crooked Crown）"
         },
-        "s39_c3_title": {
+        "s38_c3_title": {
           "de": "3. Plan &amp; Symmetrisch (Crown OK)",
           "en": "3. Level &amp; Symmetrical (Crown OK)",
           "ja": "3. 平面かつ左右対称（理想状態）",
           "zh": "3. 平正对称（理想槌冠状态）"
         },
-        "s39_c1_desc": {
+        "s38_c1_desc": {
           "de": "Scheitel trifft nur die äußeren Randsaiten – dünner, unvollständiger Ton; von den Schultern her plan abziehen.",
           "en": "Crown contacts only the outer strings—thin, incomplete tone; file level working from the shoulders.",
           "ja": "外側の弦しか打たず音が痩せる状態 — ショルダー側から丁寧に平らへ整えます。",
           "zh": "槌冠仅擦碰两侧外弦导致音色单薄残缺——须从槌肩向中心精细打磨找平。"
         },
-        "s39_c2_desc": {
+        "s38_c2_desc": {
           "de": "Einseitiger Saitenkontakt erzeugt Doppelattacke und Brummen – Scheitel exakt parallel zur Saitenebene beiziehen.",
           "en": "One-sided contact causes double attack and buzz—true the crown strictly parallel to the 3-string plane.",
           "ja": "片当たりは二重発音や雑音の原因 — 3本弦の平面と完全に平行になるよう成形します。",
           "zh": "单侧先触弦会引发双重起音与嗡鸣杂音——须将槌冠修整至与三弦平面严格平行。"
         },
-        "s39_c3_desc": {
+        "s38_c3_desc": {
           "de": "Gleichzeitiger, satter Anschlag auf alle drei Chorsaiten mit feinster Körnung (320–400) für vollen Grundton.",
           "en": "Simultaneous, solid contact across all three unison strings finished with 320–400 grit for full tone.",
           "ja": "320〜400番の極細研磨布で仕上げ、3本すべての弦を同時に捉える豊かな基音を実現。",
           "zh": "以320–400目极细砂布精修收光，确保三根同度弦同时饱满受击，基音浑厚纯粹。"
         },
-        "s39_caption_1": {
+        "s38_caption_1": {
           "de": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "en": "Filing hammer crowns for perfect flush alignment to 3-string unisons",
           "ja": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "zh": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor"
         },
-        "s39_b1_badge": {
+        "s38_b1_badge": {
           "de": "FEHLERBILD 1 • HOHL",
           "en": "DEFECT 1 • HOLLOW",
           "ja": "症状 1・中央凹み",
           "zh": "缺陷 1 · 槌冠中凹"
         },
-        "s39_b2_badge": {
+        "s38_b2_badge": {
           "de": "FEHLERBILD 2 • SCHIEF",
           "en": "DEFECT 2 • CROOKED",
           "ja": "症状 2・片当たり",
           "zh": "缺陷 2 · 槌冠偏斜"
         },
-        "s39_b3_badge": {
+        "s38_b3_badge": {
           "de": "SOLL-ZUSTAND • PLAN",
           "en": "TARGET • LEVEL CROWN",
           "ja": "理想状態・3弦同時",
           "zh": "理想状态 · 平正对称"
         },
-        "s39_b4_badge": {
+        "s38_b4_badge": {
           "de": "SCHLEIFFEILE",
           "en": "SANDING FILE",
           "ja": "ハンマーヤスリ",
@@ -5800,8 +5654,8 @@
         "zh": "第 63 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_40": {
-      "slide_number": 40,
+    "slide_39": {
+      "slide_number": 39,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5828,67 +5682,67 @@
         "zh": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen"
       },
       "elements": {
-        "s40_bullet_1": {
+        "s39_bullet_1": {
           "de": "<strong>Chromatisches Abhören:</strong> Auf- und abwärts durchspielen, um kleinste Ausreißer in Klangfarbe oder Härte zu orten.",
           "en": "<strong>Chromatic Listening:</strong> Play ascending and descending scales to pinpoint subtle outliers in brightness or hardness.",
           "ja": "<strong>半音階での聴き比べ：</strong> 上行・下行で弾き比べ、音色や硬さのわずかな不揃いを特定します。",
           "zh": "<strong>半音阶上下行审听：</strong> 逐键连贯弹奏上下行半音阶，精准定位亮度或硬度突兀的单音。"
         },
-        "s40_bullet_2": {
+        "s39_bullet_2": {
           "de": "<strong>Zwischenintonation:</strong> Dosiertes Nadeln im Forte- und Piano-Keil; zu weiche Köpfe durch feines Abziehen straffen.",
           "en": "<strong>Mid-Voicing:</strong> Measured needling in the forte and piano wedges; firm up overly soft heads by light filing.",
           "ja": "<strong>中間整音：</strong> フォルテ・ピアノ領域を適度に整え、柔らかすぎる音は微細な整形研磨で引き締めます。",
           "zh": "<strong>中度过渡整音：</strong> 在强音与弱音扇区适度施针；偏软无力的弦槌则通过精细打磨恢复张力。"
         },
-        "s40_bullet_3": {
+        "s39_bullet_3": {
           "de": "<strong>Feinintonations-Halter:</strong> Kurze Einzelnadel im BDK-Halter (43-0003269) oder Chop-Stick-Halter (43-0003271).",
           "en": "<strong>Fine-Voicing Holders:</strong> Short single needle in the BDK holder (43-0003269) or Chop-Stick holder (43-0003271).",
           "ja": "<strong>仕上げ用シングル針：</strong> BDKホルダー（43-0003269）またはチョップスティック（43-0003271）の短針を使用。",
           "zh": "<strong>精整音单针工具：</strong> 选用装夹短单针的BDK针柄（43-0003269）或Chop-Stick针柄（43-0003271）。"
         },
-        "s40_bullet_4": {
+        "s39_bullet_4": {
           "de": "<strong>2-mm-Kronenregel:</strong> Am Scheitel höchstens 2 mm tief und ausschließlich zwischen den Saitenrillen einstechen!",
           "en": "<strong>2 mm Crown Rule:</strong> At the crown, pierce at most 2 mm deep and strictly between the string grooves—never inside!",
           "ja": "<strong>クラウン2 mmルール：</strong> 頂点付近は深さ最大2 mmまでとし、必ず弦溝と弦溝の間だけを狙います！",
           "zh": "<strong>槌冠2毫米铁律：</strong> 槌冠处进针深度绝不超过2 mm，且只准刺在弦痕间隙，严禁刺入弦槽！"
         },
-        "s40_caption_1": {
+        "s39_caption_1": {
           "de": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "en": "Chromatic listening and fine voicing with short single needle",
           "ja": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "zh": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel"
         },
-        "s40_b1_badge": {
+        "s39_b1_badge": {
           "de": "FEININTONATION",
           "en": "FINE VOICING",
           "ja": "仕上げ整音",
           "zh": "精细色彩调配"
         },
-        "s40_b2_badge": {
+        "s39_b2_badge": {
           "de": "FARBPALETTE",
           "en": "COLOR PALETTE",
           "ja": "色彩パレット",
           "zh": "全音域色彩平衡"
         },
-        "s40_kpi": {
+        "s39_kpi": {
           "de": "Max. 2 mm",
           "en": "Max. 2 mm",
           "ja": "深さ最大 2 mm",
           "zh": "最大深度 2 mm"
         },
-        "s40_c1_title": {
+        "s39_c1_title": {
           "de": "Chromatisches Egalisieren bis zur Konzertreife",
           "en": "Chromatic Equalization to Concert Perfection",
           "ja": "半音階チェックによるコンサートレベルの均一化",
           "zh": "半音阶逐音均衡精修直至音乐会完美状态"
         },
-        "s40_c1_desc": {
+        "s39_c1_desc": {
           "de": "In der Zwischen- und Feinintonation verschmelzen alle 88 Töne zu einem bruchlosen Perlenketten-Verlauf.",
           "en": "Mid- and fine-voicing blend all 88 notes into one seamless, pearl-like tonal progression.",
           "ja": "中間整音と仕上げ整音により、全88音を真珠の首飾りのように滑らかな音色へと揃えます。",
           "zh": "通过中度与精细整音，令全琴88个音符融汇如珍珠项链般均匀连贯的音色过渡。"
         },
-        "s40_fact": {
+        "s39_fact": {
           "de": "🪡 Feinste Dosierung entscheidet über den seidigen Schimmer im Pianissimo",
           "en": "🪡 Micro-dosage at the crown defines the silky shimmer in pianissimo",
           "ja": "🪡 ミリ単位の繊細な針加減がピアニッシモの絹のような輝きを決めます",
@@ -5902,8 +5756,8 @@
         "zh": "第 64 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_41": {
-      "slide_number": 41,
+    "slide_40": {
+      "slide_number": 40,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5930,67 +5784,67 @@
         "zh": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog"
       },
       "elements": {
-        "s41_b1_badge": {
+        "s40_b1_badge": {
           "de": "UNA CORDA PRAXIS",
           "en": "UNA CORDA PRACTICE",
           "ja": "UNA CORDA PRAXIS",
           "zh": "UNA CORDA PRAXIS"
         },
-        "s41_b2_badge": {
+        "s40_b2_badge": {
           "de": "RENNER ACADEMY",
           "en": "RENNER ACADEMY",
           "ja": "RENNER ACADEMY",
           "zh": "RENNER ACADEMY"
         },
-        "s41_b3_badge": {
+        "s40_b3_badge": {
           "de": "LOUIS RENNER GMBH",
           "en": "LOUIS RENNER GMBH",
           "ja": "LOUIS RENNER GMBH",
           "zh": "LOUIS RENNER GMBH"
         },
-        "s41_c1_title": {
+        "s40_c1_title": {
           "de": "Verschiebungsintonation",
           "en": "Shift Pedal Voicing (Una Corda)",
           "ja": "Verschiebungsintonation",
           "zh": "Verschiebungsintonation"
         },
-        "s41_c2_title": {
+        "s40_c2_title": {
           "de": "Renner Academy & Technischer Dialog",
           "en": "Renner Academy & Technical Dialogue",
           "ja": "Renner Academy & Technischer Dialog",
           "zh": "Renner Academy & Technischer Dialog"
         },
-        "s41_c1_desc": {
+        "s40_c1_desc": {
           "de": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "en": "Play chromatically with shift pedal depressed; gently voice only the contacted string contact areas.",
           "ja": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "zh": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln."
         },
-        "s41_c2_desc": {
+        "s40_c2_desc": {
           "de": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "en": "Renner provides masterclasses, factory tours in Meuselwitz, and tailored technical support for piano technicians worldwide.",
           "ja": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "zh": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit."
         },
-        "s41_caption_1": {
+        "s40_caption_1": {
           "de": "Louis Renner GmbH",
           "en": "Louis Renner GmbH",
           "ja": "Louis Renner GmbH",
           "zh": "Louis Renner GmbH"
         },
-        "s41_caption_2": {
+        "s40_caption_2": {
           "de": "Ihr Partner für meisterlichen Klang weltweit",
           "en": "Your partner for master-grade tone worldwide",
           "ja": "Ihr Partner für meisterlichen Klang weltweit",
           "zh": "Ihr Partner für meisterlichen Klang weltweit"
         },
-        "s41_bullet_1": {
+        "s40_bullet_1": {
           "de": "<strong>Praxis-Tipp Una Corda:</strong> Linke Kronenkante hauchfein brechen, um Reibgeräusche an Nachbarsaiten sicher auszuschließen.",
           "en": "<strong>Una Corda Pro Tip:</strong> Lightly chamfer the left crown edge to prevent rubbing noise against adjacent strings.",
           "ja": "<strong>ウナ・コルダの実践知：</strong> クラウン左端をわずかに面取りし、隣接弦との擦れ音を確実に防ぎます。",
           "zh": "<strong>弱音踏板实战技巧：</strong> 轻柔倒角打磨槌冠左侧边缘，彻底消除横移时擦碰相邻琴弦的杂音。"
         },
-        "s41_bullet_2": {
+        "s40_bullet_2": {
           "de": "<strong>Direkter Meister-Dialog:</strong> Schulungen in der Renner Academy, Werksbesuche in Meuselwitz &amp; persönliche Fachberatung.",
           "en": "<strong>Direct Master Dialogue:</strong> Hands-on Renner Academy courses, Meuselwitz factory tours, and personal technical support.",
           "ja": "<strong>マイスターとの直接対話：</strong> レンナー・アカデミー講習会、モイゼルヴィッツ工場見学、個別技術サポートを提供。",

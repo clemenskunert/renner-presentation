@@ -1389,7 +1389,7 @@
       if (!prep) return;
       const { ctx, W, H } = prep;
 
-      const padL = 50, padR = 14, padT = 18, padB = 28;
+      const padL = 74, padR = 16, padT = 22, padB = 28;
       const pw = W - padL - padR;
       const ph = H - padT - padB;
       const rMin = -36, rMax = -7;
@@ -1405,7 +1405,7 @@
       [-12, -10, -8, -6].forEach(s => {
         const y = mapY(s);
         ctx.beginPath(); ctx.setLineDash([3, 3]); ctx.moveTo(padL, y); ctx.lineTo(padL + pw, y); ctx.stroke();
-        ctx.fillText(`${s} dB/k`, padL - 4, y + 3);
+        ctx.fillText(`${s} dB/kHz`, padL - 6, y + 3);
       });
       ctx.setLineDash([]);
 
@@ -1865,13 +1865,19 @@
         });
       }
 
-      // 13. 4 Advantage Cards on Slide 30
+      // 13. 4 Advantage Cards on Slide 32 (syncs with Live Spectral-Slope Calculator)
       document.querySelectorAll('.yka-adv-card').forEach(card => {
         card.addEventListener('click', () => {
           document.querySelectorAll('.yka-adv-card').forEach(c => c.classList.toggle('active', c === card));
           const bandIdx = parseInt(card.getAttribute('data-band'), 10);
           if (!isNaN(bandIdx)) {
             this.updateBandInfo(bandIdx);
+          }
+          const calcFreq = parseInt(card.getAttribute('data-calc-freq'), 10);
+          const sl = document.getElementById('yka-calc-freq-slider');
+          if (!isNaN(calcFreq) && sl) {
+            sl.value = calcFreq;
+            this.updateFormulaCalculator();
           }
         });
       });
