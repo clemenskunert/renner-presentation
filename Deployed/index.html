@@ -291,7 +291,7 @@
               </div>
               <div class="agenda-card-main">
                 <div class="bento-card-title" data-i18n="s2_c5_title">Intonation</div>
-                <div class="bento-card-desc" data-i18n="s2_c5_desc">Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.</div>
+                <div class="bento-card-desc" data-i18n="s2_c5_desc">Teiltonaufbau auf A₁ (55 Hz) &amp; Anschlagspunkt, Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.</div>
               </div>
               <div class="agenda-card-footer">
                 <span class="agenda-action-text">Kapitel öffnen</span>
@@ -4018,65 +4018,130 @@
           </div>
         </div>
       </section>
-      <!-- SLIDE 33: Das Uhren-Modell -->
-      <section class="slide slide-hero-theme" data-slide="33">
+      <!-- SLIDE 33: Teiltonaufbau auf A1 (55 Hz): Tonhärte & Anschlagspunkt -->
+      <section class="slide slide-hero-theme pta-slide" data-slide="33">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s33_category">Teil 5: Intonation • Geometrie & Keile</div>
-            <h2 class="slide-title" data-i18n="s33_title">Das Uhren-Modell: Die 4 dynamischen Keile</h2>
-            <div class="slide-subtitle" data-i18n="s33_subtitle">Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen</div>
+            <div class="slide-category" data-i18n="s33_category">Teil 5: Intonation • Auftakt: Klangphysik &amp; Klavierton</div>
+            <h2 class="slide-title" data-i18n="s33_title">Teiltonaufbau auf A₁ (55 Hz): Tonhärte &amp; Anschlagspunkt</h2>
+            <div class="slide-subtitle" data-i18n="s33_subtitle">Zu- und Abnahme der Teiltöne H₁–H₁₂ in Dezibel (dB) durch Hammerfilz-Elastizität und Anschlagsposition</div>
           </div>
         </div>
         <div class="slide-body">
-          <div class="bento-grid bento-grid-hero-left">
-            <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); gap: 14px;">
-              <div class="bento-card" style="border-left: 4px solid #3b82f6;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s33_b1_badge">FORTISSIMO (ff)</span>
-                  <span class="mono-val">9:00–10:00 & 2:00–3:00</span>
+          <div class="pta-main-grid">
+            <!-- LINKE SPALTE: TEILTONSPEKTRUM (dB / ΔdB) + SAITEN-ANSCHLAGSPUNKT -->
+            <div class="pta-col-left">
+              <!-- KARTE 1: Interaktives Teiltonspektrum H1..H12 auf A1 (55 Hz) -->
+              <div class="pta-card gold-edge spec-card">
+                <div class="pta-toolbar">
+                  <div class="pta-btn-group">
+                    <button class="pta-chip-btn soft" id="btn-preset-soft" type="button" data-i18n="s33_btn_soft">☁️ Tonlich weich</button>
+                    <button class="pta-chip-btn active" id="btn-preset-concert" type="button" data-i18n="s33_btn_concert">✦ Konzert-Ideal (0 dB Δ)</button>
+                    <button class="pta-chip-btn hard" id="btn-preset-hard" type="button" data-i18n="s33_btn_hard">⚡ Tonlich hart</button>
+                  </div>
+                  <div class="pta-btn-group">
+                    <button class="pta-chip-btn active" id="btn-mode-abs" type="button" data-i18n="s33_mode_abs">Pegel (dB) + ΔdB</button>
+                    <button class="pta-chip-btn" id="btn-mode-delta" type="button" data-i18n="s33_mode_delta">Nur Zu-/Abnahme (ΔdB)</button>
+                    <button class="pta-play-btn" id="btn-play-a1" type="button">
+                      <span>🔊</span> <span id="lbl-play-a1" data-i18n="s33_btn_play">A₁ (55 Hz) anhören</span>
+                    </button>
+                  </div>
                 </div>
-                <div class="bento-card-title" data-i18n="s33_c1_title">Blauer Keil</div>
-                <div class="bento-card-desc" data-i18n="s33_c1_desc">Tiefe 90°-Stiche bauen die harte Werksspannung ab und speisen den Forte-Keil.</div>
+
+                <div class="pta-canvas-wrap">
+                  <canvas id="pta-canvas-spectrum"></canvas>
+                </div>
+
+                <div class="pta-readout-strip">
+                  <span id="pta-ro-partial" style="color: var(--gold-light); font-weight: 700;">H8 · A4 (440 Hz · 3. Oktave (440 Hz))</span>
+                  <span id="pta-ro-levels">Referenz: −26,5 dB → Aktuell: −26,5 dB</span>
+                  <strong id="pta-ro-delta" style="color: #2ecc71;">Δ Gesamt: ±0,0 dB (Härte: ±0,0 dB | Anschlag: ±0,0 dB)</strong>
+                </div>
               </div>
-              <div class="bento-card" style="border-left: 4px solid #22c55e;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s33_b2_badge">FORTE (f)</span>
-                  <span class="mono-val">10:00–11:00 & 1:00–2:00</span>
+
+              <!-- KARTE 2: Interaktiver Saitenschnitt & Hammer-Anschlagspunkt x0 / L -->
+              <div class="pta-card string-card">
+                <div class="pta-card-head">
+                  <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+                    <span class="bento-badge green" data-i18n="s33_str_badge">ANSCHLAGSPUNKT x₀ / L</span>
+                    <h3 class="pta-card-title" data-i18n="s33_str_title">Stehende Welle A₁ (L = 1.560 mm) &amp; Knoten-Auslöschung</h3>
+                  </div>
+                  <span id="pta-string-wave-lbl" style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--gold-light); white-space: nowrap;">
+                    Wellenform: H8 (8 Bäuche) — Klick wechselt Teilton
+                  </span>
                 </div>
-                <div class="bento-card-title" data-i18n="s33_c2_title">Grüner Keil</div>
-                <div class="bento-card-desc" data-i18n="s33_c2_desc">Steuert tragende Klangfülle, Obertonreichtum und Projektion im großen Saal.</div>
-              </div>
-              <div class="bento-card" style="border-left: 4px solid #f97316;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s33_b3_badge">PIANO (p)</span>
-                  <span class="mono-val">11:00–11:30 & 12:30–1:00</span>
+
+                <div class="pta-canvas-wrap">
+                  <canvas id="pta-canvas-string"></canvas>
                 </div>
-                <div class="bento-card-title" data-i18n="s33_c3_title">Orangener Keil</div>
-                <div class="bento-card-desc" data-i18n="s33_c3_desc">Formt den warmen, lyrischen Gesangston im kontrollierten Mezzopiano-Anschlag.</div>
-              </div>
-              <div class="bento-card" style="border-left: 4px solid #a855f7;">
-                <div class="bento-card-header">
-                  <span class="bento-badge" data-i18n="s33_b4_badge">PIANISSIMO (pp)</span>
-                  <span class="mono-val">11:30–12:00 & 12:00–12:30</span>
-                </div>
-                <div class="bento-card-title" data-i18n="s33_c4_title">Violetter Keil</div>
-                <div class="bento-card-desc" data-i18n="s33_c4_desc">Feinste Kurznadelung für seidige, flüsterleise Ansprache im zartesten Pianissimo.</div>
-              </div>
-              <div class="bento-card col-span-2" style="border-left: 4px solid #ef4444; background: rgba(239,68,68,0.08);">
-                <div class="bento-card-header">
-                  <span class="bento-badge red" data-i18n="s33_b5_badge">ROTE ZONE (SCHEITEL)</span>
-                  <span class="mono-val" style="color: #f87171; font-weight: 700;">12:00 UHR KRONENSPITZE</span>
-                </div>
-                <div class="bento-card-title" style="color: #fca5a5;" data-i18n="s33_c5_title">DO NOT TOUCH! – Niemals tief einstechen!</div>
-                <div class="bento-card-desc" data-i18n="s33_c5_desc">Scheitelzone niemals tief nadeln – höchstens 1–2 mm zwischen den Saitenrillen bei Glasigkeit!</div>
               </div>
             </div>
-            <div class="bento-card media-framed">
-              <img src="Visuell/basis_media/Intonation/page_11_2_Image210.jpg" alt="Das Uhren-Modell der Intonation">
-              <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s33_b6_badge">JENS-SÖREN KRUSE</span>
-                <div class="bento-media-caption" data-i18n="s33_caption_1">Original Renner Uhrenmodell</div>
-                <div class="bento-media-subcaption" data-i18n="s33_caption_2">mit den 4 dynamischen Keilen (ff, f, p, pp)</div>
+
+            <!-- RECHTE SPALTE: STEUERUNG, MESSWERTE IN dB & FACH-ERKLÄRUNG -->
+            <div class="pta-col-right">
+              <div class="pta-card" style="height: 100%; justify-content: space-between;">
+                <!-- Regler 1: Tonlich weicher <-> Tonlich härter -->
+                <div class="pta-ctrl-block">
+                  <div class="pta-ctrl-top">
+                    <span class="pta-ctrl-label" data-i18n="s33_ctrl1_lbl">1. Tonhärte (Hammerfilz)</span>
+                    <span class="pta-ctrl-val" id="pta-lbl-hardness">Konzert-Ideal · τc ≈ 2,4 ms</span>
+                  </div>
+                  <input type="range" class="pta-range" id="pta-slider-hardness" min="-100" max="100" step="1" value="0">
+                  <div class="pta-scale-labels">
+                    <span style="color:#38bdf8;" data-i18n="s33_scale_soft">← Tonlich weicher (genadelt)</span>
+                    <span data-i18n="s33_scale_ref">0 % Referenz</span>
+                    <span style="color:#fb923c;" data-i18n="s33_scale_hard">Tonlich härter (verdichtet) →</span>
+                  </div>
+                </div>
+
+                <!-- Regler 2: Anschlagspunkt vom Hammer -->
+                <div class="pta-ctrl-block">
+                  <div class="pta-ctrl-top">
+                    <span class="pta-ctrl-label" data-i18n="s33_ctrl2_lbl">2. Anschlagspunkt (x₀ / L)</span>
+                    <span class="pta-ctrl-val" id="pta-lbl-strike">1/8,0 L (12,5 % · 195 mm)</span>
+                  </div>
+                  <input type="range" class="pta-range strike-range" id="pta-slider-strike" min="80" max="205" step="1" value="125">
+                  <div class="pta-btn-group" style="justify-content: space-between; margin-top: 2px;">
+                    <button class="pta-chip-btn strike-preset" data-alpha="83" type="button" data-i18n="s33_sp_12">1/12 L (8,3%)</button>
+                    <button class="pta-chip-btn strike-preset" data-alpha="111" type="button" data-i18n="s33_sp_9">1/9 L (H₉)</button>
+                    <button class="pta-chip-btn strike-preset active" data-alpha="125" type="button" data-i18n="s33_sp_8">1/8 L (Std.)</button>
+                    <button class="pta-chip-btn strike-preset" data-alpha="143" type="button" data-i18n="s33_sp_7">1/7 L (H₇)</button>
+                    <button class="pta-chip-btn strike-preset" data-alpha="200" type="button" data-i18n="s33_sp_5">1/5 L (H₅)</button>
+                  </div>
+                </div>
+
+                <!-- 3 Live-dB-Kennzahlen -->
+                <div class="pta-kpi-row">
+                  <div class="pta-kpi blue">
+                    <span class="pta-kpi-lbl" data-i18n="s33_kpi1_lbl">Fundament (H₁–H₄)</span>
+                    <span class="pta-kpi-num" id="pta-kpi-warmth">±0,0 dB</span>
+                    <span class="pta-kpi-sub" id="pta-kpi-warmth-sub" data-i18n="s33_kpi1_sub">55–220 Hz Grundton &amp; Fülle</span>
+                  </div>
+                  <div class="pta-kpi">
+                    <span class="pta-kpi-lbl" data-i18n="s33_kpi2_lbl">Obertöne (H₆–H₁₂)</span>
+                    <span class="pta-kpi-num" id="pta-kpi-bright">±0,0 dB</span>
+                    <span class="pta-kpi-sub" id="pta-kpi-bright-sub" data-i18n="s33_kpi2_sub">330–660 Hz Brillanz</span>
+                  </div>
+                  <div class="pta-kpi green">
+                    <span class="pta-kpi-lbl" data-i18n="s33_kpi3_lbl">Knoten-Dämpfung</span>
+                    <span class="pta-kpi-num" id="pta-kpi-node" style="color:#2ecc71;">H8 (−15,7 dB)</span>
+                    <span class="pta-kpi-sub" id="pta-kpi-node-sub">A4 (440 Hz) gedämpft</span>
+                  </div>
+                </div>
+
+                <!-- Dynamische Meister-Erklärung -->
+                <div class="pta-explain-box">
+                  <div>
+                    <span class="bento-badge gold" id="pta-exp-badge" style="margin-bottom:6px;" data-i18n="s33_exp_badge">✦ AKUSTISCHE WIRKUNG IM KLAVIERTON</span>
+                    <h4 class="pta-explain-title" id="pta-exp-title">Konzert-Balance: Tragfähiger Kern mit kontrollierter Obertonkrone</h4>
+                  </div>
+                  <p class="pta-explain-text" id="pta-exp-body">
+                    Ausgewogene Hammerelastizität (<strong>τc ≈ 2,4 ms</strong>): Volles Bassfundament (H₁–H₄) verbindet sich mit der singenden großen Terz H₅ (275 Hz) und Quinte H₆ (330 Hz) ohne metallische Härte.
+                  </p>
+                  <div class="pta-explain-bullet" id="pta-exp-strike">
+                    <strong>Klassischer Anschlagspunkt 1/8 L (195 mm):</strong> Legt einen Knoten auf <strong>H₈ (−15,7 dB)</strong> und dämpft zugleich die reibenden Nachbarn <strong>H₇ (Septime)</strong> und <strong>H₉ (Sekunde)</strong> harmonisch ab.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -4591,6 +4656,7 @@
   <script src="js/felt-anatomy.js"></script>
   <script src="js/yamaha-kit.js"></script>
   <script src="js/yamaha-kit-acoustic.js"></script>
+  <script src="js/piano-tone-a1.js"></script>
   <script src="js/presentation.js"></script>
   <script>
     // Offline PWA Service Worker Management

@@ -248,10 +248,10 @@
           "zh": "雅马哈三角琴即插即用升级：单螺丝极速固定，节省约10小时台架工时，免去打孔上胶，开箱即享音乐会级共鸣。"
         },
         "s2_c5_desc": {
-          "de": "Das Uhren-Modell, 4 dynamische Keile (ff, f, p, pp), Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.",
-          "en": "The clock dial model, 4 dynamic sound wedges (ff, f, p, pp), pre-needling, string leveling, crown shaping, and una corda voicing.",
-          "ja": "クロック（時計盤）モデル、4つのダイナミック領域（ff, f, p, pp）、事前針刺し、弦合わせ、クラウン研磨、ウナ・コルダ微調整。",
-          "zh": "时钟表盘整音法、四层动态音色扇区（ff, f, p, pp）、预刺针、三弦平整度校准、槌顶弧度修整与左踏板弱音极细调谐。"
+          "de": "Teiltonaufbau auf A₁ (55 Hz) & Anschlagspunkt, Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.",
+          "en": "Partial structure on A₁ (55 Hz) & strike point, pre-needling, string leveling, crown shaping, and una corda fine voicing.",
+          "ja": "A₁ (55 Hz) の倍音構造と打弦点、予備針入れ、弦レベル合わせ、クラウン整形、ウナ・コルダ微調整。",
+          "zh": "A₁ (55 Hz) 泛音结构与击弦点声学、预刺针、三弦找平、槌冠修整与左踏板精细整音。"
         }
       },
       "notes": {
@@ -5022,138 +5022,174 @@
         "zh": "第五部分：极致整音艺术"
       },
       "category": {
-        "de": "Teil 5: Intonation • Geometrie & Keile",
-        "en": "Part 5: Voicing • Geometrie & Keile",
-        "ja": "第7部：ヴォイシング（整音）の極意",
-        "zh": "第七部分：钢琴整音大师秘籍"
+        "de": "Teil 5: Intonation • Auftakt: Klangphysik & Klavierton",
+        "en": "Part 5: Voicing • Opening: Piano Tone Physics & Partials",
+        "ja": "第5部：整音技術 • 導入：ピアノ音の倍音構造と音響物理",
+        "zh": "第五部分：整音艺术 • 开篇：钢琴乐音泛音结构与击弦声学"
       },
       "title": {
-        "de": "Das Uhren-Modell: Die 4 dynamischen Keile",
-        "en": "The Clock Model: The 4 Dynamic Wedges",
-        "ja": "時計盤モデル：4つのダイナミック・ウェッジ（楔領域）",
-        "zh": "表盘时钟声学模型：弦槌四大力度动态弹性楔区（ff, f, p, pp）"
+        "de": "Teiltonaufbau auf A₁ (55 Hz): Tonhärte & Anschlagspunkt",
+        "en": "Partial Structure on A₁ (55 Hz): Felt Hardness & Strike Point",
+        "ja": "A₁ (55 Hz) の倍音構造：フェルト硬度と打弦点の影響",
+        "zh": "A₁ (55 Hz) 泛音结构解析：弦槌硬度与击弦点位置"
       },
       "subtitle": {
-        "de": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen",
-        "en": "Structured hammerhead zoning by register and dynamic objectives",
-        "ja": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen",
-        "zh": "Strukturierte Aufteilung des Hammerkopfs nach Register- und Lautstärkezielen"
+        "de": "Zu- und Abnahme der Teiltöne H₁–H₁₂ in Dezibel (dB) durch Hammerfilz-Elastizität und Anschlagsposition",
+        "en": "Increase and decrease of partials H₁–H₁₂ in decibels (dB) driven by hammer felt elasticity and strike ratio",
+        "ja": "ハンマーフェルトの弾性と打弦位置による第1〜第12倍音（H₁〜H₁₂）のデシベル（dB）増減",
+        "zh": "弦槌毛毡弹性与击弦点比例对第 1–12 泛音（H₁–H₁₂）分贝（dB）增减的声学调控"
       },
       "elements": {
-        "s33_b1_badge": {
-          "de": "FORTISSIMO (ff)",
-          "en": "FORTISSIMO (ff)",
-          "ja": "FORTISSIMO (ff)",
-          "zh": "FORTISSIMO (ff)"
+        "s33_btn_soft": {
+          "de": "☁️ Tonlich weich",
+          "en": "☁️ Tonally Soft",
+          "ja": "☁️ 柔らかい音色",
+          "zh": "☁️ 音色偏柔"
         },
-        "s33_b2_badge": {
-          "de": "FORTE (f)",
-          "en": "FORTE (f)",
-          "ja": "FORTE (f)",
-          "zh": "FORTE (f)"
+        "s33_btn_concert": {
+          "de": "✦ Konzert-Ideal (0 dB Δ)",
+          "en": "✦ Concert Ideal (0 dB Δ)",
+          "ja": "✦ コンサート基準 (0 dB Δ)",
+          "zh": "✦ 音乐会理想基准 (0 dB Δ)"
         },
-        "s33_b3_badge": {
-          "de": "PIANO (p)",
-          "en": "PIANO (p)",
-          "ja": "PIANO (p)",
-          "zh": "PIANO (p)"
+        "s33_btn_hard": {
+          "de": "⚡ Tonlich hart",
+          "en": "⚡ Tonally Hard",
+          "ja": "⚡ 硬い音色",
+          "zh": "⚡ 音色偏硬"
         },
-        "s33_b4_badge": {
-          "de": "PIANISSIMO (pp)",
-          "en": "PIANISSIMO (pp)",
-          "ja": "PIANISSIMO (pp)",
-          "zh": "PIANISSIMO (pp)"
+        "s33_mode_abs": {
+          "de": "Pegel (dB) + ΔdB",
+          "en": "Level (dB) + ΔdB",
+          "ja": "レベル (dB) + ΔdB",
+          "zh": "绝对电平 (dB) + ΔdB"
         },
-        "s33_b5_badge": {
-          "de": "ROTE ZONE (SCHEITEL)",
-          "en": "RED ZONE (APEX)",
-          "ja": "ROTE ZONE (SCHEITEL)",
-          "zh": "ROTE ZONE (SCHEITEL)"
+        "s33_mode_delta": {
+          "de": "Nur Zu-/Abnahme (ΔdB)",
+          "en": "Gain / Loss Only (ΔdB)",
+          "ja": "増減のみ (ΔdB)",
+          "zh": "仅显示增减 (ΔdB)"
         },
-        "s33_b6_badge": {
-          "de": "JENS-SÖREN KRUSE",
-          "en": "JENS-SÖREN KRUSE",
-          "ja": "JENS-SÖREN KRUSE",
-          "zh": "JENS-SÖREN KRUSE"
+        "s33_btn_play": {
+          "de": "A₁ (55 Hz) anhören",
+          "en": "Listen to A₁ (55 Hz)",
+          "ja": "A₁ (55 Hz) を試聴",
+          "zh": "试听 A₁ (55 Hz)"
         },
-        "s33_c1_title": {
-          "de": "Blauer Keil",
-          "en": "Blue Wedge",
-          "ja": "Blauer Keil",
-          "zh": "Blauer Keil"
+        "s33_str_badge": {
+          "de": "ANSCHLAGSPUNKT x₀ / L",
+          "en": "STRIKE POINT x₀ / L",
+          "ja": "打弦点 x₀ / L",
+          "zh": "击弦点 x₀ / L"
         },
-        "s33_c2_title": {
-          "de": "Grüner Keil",
-          "en": "Green Wedge",
-          "ja": "Grüner Keil",
-          "zh": "Grüner Keil"
+        "s33_str_title": {
+          "de": "Stehende Welle A₁ (L = 1.560 mm) & Knoten-Auslöschung",
+          "en": "Standing Wave A₁ (L = 1,560 mm) & Node Cancellation",
+          "ja": "A₁弦（L = 1,560 mm）の定常波と節（ノード）減衰",
+          "zh": "A₁ 琴弦（L = 1,560 mm）驻波形态与波节消音效应"
         },
-        "s33_c3_title": {
-          "de": "Orangener Keil",
-          "en": "Orange Wedge",
-          "ja": "Orangener Keil",
-          "zh": "Orangener Keil"
+        "s33_ctrl1_lbl": {
+          "de": "1. Tonhärte (Hammerfilz)",
+          "en": "1. Tonal Hardness (Felt)",
+          "ja": "1. 音色の硬さ（フェルト）",
+          "zh": "1. 音色软硬度（弦槌毛毡）"
         },
-        "s33_c4_title": {
-          "de": "Violetter Keil",
-          "en": "Violet Wedge",
-          "ja": "Violetter Keil",
-          "zh": "Violetter Keil"
+        "s33_scale_soft": {
+          "de": "← Tonlich weicher (genadelt)",
+          "en": "← Softer (needled)",
+          "ja": "← 柔らかく（針入れ）",
+          "zh": "← 偏柔和（刺针松弛）"
         },
-        "s33_c5_title": {
-          "de": "DO NOT TOUCH! – Niemals tief einstechen!",
-          "en": "DO NOT TOUCH! – Never prick deeply here!",
-          "ja": "DO NOT TOUCH! – Niemals tief einstechen!",
-          "zh": "DO NOT TOUCH! – Niemals tief einstechen!"
+        "s33_scale_ref": {
+          "de": "0 % Referenz",
+          "en": "0% Reference",
+          "ja": "0% 基準",
+          "zh": "0% 基准"
         },
-        "s33_c1_desc": {
-          "de": "Tiefe 90°-Stiche bauen die harte Werksspannung ab und speisen den Forte-Keil.",
-          "en": "Deep 90° stitches release rigid factory tension and feed elasticity into the forte wedge.",
-          "ja": "深い90°の針刺しで工場出荷時の硬い張力を解き、フォルテ領域へ弾性を送ります。",
-          "zh": "深层90°垂直刺针释放出厂僵硬应力，并将弹性势能导向强音扇区。"
+        "s33_scale_hard": {
+          "de": "Tonlich härter (verdichtet) →",
+          "en": "Harder (compressed) →",
+          "ja": "硬く（高密度） →",
+          "zh": "偏刚硬（高密压实） →"
         },
-        "s33_c2_desc": {
-          "de": "Steuert tragende Klangfülle, Obertonreichtum und Projektion im großen Saal.",
-          "en": "Shapes carrying tonal fullness, harmonic bloom, and concert hall projection.",
-          "ja": "豊かな響きの厚み、倍音の輝き、ホール全体へ届く遠達性をコントロールします。",
-          "zh": "塑造饱满宏大的共鸣厚度、泛音光泽与音乐厅远距离投射力。"
+        "s33_ctrl2_lbl": {
+          "de": "2. Anschlagspunkt (x₀ / L)",
+          "en": "2. Strike Point (x₀ / L)",
+          "ja": "2. 打弦点位置 (x₀ / L)",
+          "zh": "2. 击弦点位置 (x₀ / L)"
         },
-        "s33_c3_desc": {
-          "de": "Formt den warmen, lyrischen Gesangston im kontrollierten Mezzopiano-Anschlag.",
-          "en": "Sculpts a warm, lyrical singing tone across moderate piano and mezzopiano touch.",
-          "ja": "ピアノ〜メゾピアノの繊細なタッチで温かく歌うようなカンタービレを作ります。",
-          "zh": "雕琢弱音至中弱音触键下温暖柔和、如歌般的抒情音色线条。"
+        "s33_sp_12": {
+          "de": "1/12 L (8,3%)",
+          "en": "1/12 L (8.3%)",
+          "ja": "1/12 L (8.3%)",
+          "zh": "1/12 L (8.3%)"
         },
-        "s33_c4_desc": {
-          "de": "Feinste Kurznadelung für seidige, flüsterleise Ansprache im zartesten Pianissimo.",
-          "en": "Delicate shallow needling for a silky, whisper-soft response in extreme pianissimo.",
-          "ja": "極浅の微細な針入れにより、囁くようなピアニッシモでの絹のように滑らかな発音を実現。",
-          "zh": "极浅微针精修，赋予极弱音（pp）下如耳语般丝滑敏锐的起音响应。"
+        "s33_sp_9": {
+          "de": "1/9 L (H₉)",
+          "en": "1/9 L (H₉)",
+          "ja": "1/9 L (H₉)",
+          "zh": "1/9 L (H₉)"
         },
-        "s33_caption_1": {
-          "de": "Original Renner Uhrenmodell",
-          "en": "Original Renner Clock Model",
-          "ja": "Original Renner Uhrenmodell",
-          "zh": "Original Renner Uhrenmodell"
+        "s33_sp_8": {
+          "de": "1/8 L (Std.)",
+          "en": "1/8 L (Std.)",
+          "ja": "1/8 L (標準)",
+          "zh": "1/8 L (标准)"
         },
-        "s33_caption_2": {
-          "de": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
-          "en": "with the 4 dynamic wedges (ff, f, p, pp)",
-          "ja": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
-          "zh": "mit den 4 dynamischen Keilen (ff, f, p, pp)"
+        "s33_sp_7": {
+          "de": "1/7 L (H₇)",
+          "en": "1/7 L (H₇)",
+          "ja": "1/7 L (H₇)",
+          "zh": "1/7 L (H₇)"
         },
-        "s33_c5_desc": {
-          "de": "Scheitelzone niemals tief nadeln – höchstens 1–2 mm zwischen den Saitenrillen bei Glasigkeit!",
-          "en": "Never needle deeply into the crown—at most 1–2 mm between string grooves if glassy!",
-          "ja": "打弦点への深い針刺しは厳禁 — 硬質な場合のみ弦溝の間へ最大1〜2 mmで微調整！",
-          "zh": "严禁在槌冠击弦点深刺——仅在音色过亮发脆时于弦痕间隙浅刺最多1–2 mm！"
+        "s33_sp_5": {
+          "de": "1/5 L (H₅)",
+          "en": "1/5 L (H₅)",
+          "ja": "1/5 L (H₅)",
+          "zh": "1/5 L (H₅)"
+        },
+        "s33_kpi1_lbl": {
+          "de": "Fundament (H₁–H₄)",
+          "en": "Foundation (H₁–H₄)",
+          "ja": "基音・土台 (H₁–H₄)",
+          "zh": "低音基频 (H₁–H₄)"
+        },
+        "s33_kpi1_sub": {
+          "de": "55–220 Hz Grundton & Fülle",
+          "en": "55–220 Hz Fundamental & Body",
+          "ja": "55–220 Hz 基音と豊かさ",
+          "zh": "55–220 Hz 基音与丰满度"
+        },
+        "s33_kpi2_lbl": {
+          "de": "Obertöne (H₆–H₁₂)",
+          "en": "Overtones (H₆–H₁₂)",
+          "ja": "高次倍音 (H₆–H₁₂)",
+          "zh": "高次泛音 (H₆–H₁₂)"
+        },
+        "s33_kpi2_sub": {
+          "de": "330–660 Hz Brillanz",
+          "en": "330–660 Hz Brilliance",
+          "ja": "330–660 Hz 輝きと明瞭度",
+          "zh": "330–660 Hz 明亮度与穿透力"
+        },
+        "s33_kpi3_lbl": {
+          "de": "Knoten-Dämpfung",
+          "en": "Node Suppression",
+          "ja": "節（ノード）減衰",
+          "zh": "波节抑制"
+        },
+        "s33_exp_badge": {
+          "de": "✦ AKUSTISCHE WIRKUNG IM KLAVIERTON",
+          "en": "✦ ACOUSTIC EFFECT ON PIANO TONE",
+          "ja": "✦ ピアノ音における音響作用",
+          "zh": "✦ 钢琴乐音声学作用机制"
         }
       },
       "notes": {
-        "de": "Folie 38: Erläutern Sie die wesentlichen technischen Parameter und Qualitätskriterien aus den Renner Academy Unterlagen.",
-        "en": "Slide 38: Present the key highlights and emphasize Louis Renner's German precision craftsmanship.",
-        "ja": "スライド 38: ルイス・レンナー社のドイツ精密製造技術と品質の優位性を解説してください。",
-        "zh": "第 58 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
+        "de": "Folie 33 (Auftakt Kapitel 5: Intonation): Zeigen Sie interaktiv am tiefen A₁ (55 Hz, klingende Länge L = 1.560 mm), wie sich ein Klavierton aus seinen harmonischen Teiltönen H₁–H₁₂ zusammensetzt. Demonstrieren Sie zuerst die Tonhärte: Ein weicherer, genadelter Hammerkopf verlängert die Kontaktzeit τc (~3,8 ms) und senkt hohe Obertöne in dB ab, während ein härterer Scheitel (τc ~1,3 ms) hohe Teiltöne stark anhebt. Zeigen Sie danach am Saitenmodell das Young-Helmholtz-Gesetz: Bei 1/8 L bzw. 1/7 L dämpft der Hammer gezielt scharfe Reibungstöne (H₇ Naturseptime, H₉ Sekunde) im Schwingungsknoten ab, ohne die singende Dur-Terz H₅ (1/5 L) zu verlieren.",
+        "en": "Slide 33 (Chapter 5 Opening: Voicing): Interactively demonstrate on bass note A₁ (55 Hz, speaking length L = 1,560 mm) how a piano tone is built from partials H₁–H₁₂. First show felt hardness: a softer, needled hammer lengthens contact time τc (~3.8 ms) and reduces upper partials in dB, whereas a harder crown (τc ~1.3 ms) boosts upper partials sharply. Next demonstrate the Young-Helmholtz strike-point law: striking near 1/8 L or 1/7 L suppresses dissonant partials (H₇ natural seventh, H₉ major second) at their nodes while preserving the singing major third H₅ (1/5 L).",
+        "ja": "スライド 33（第5部・整音導入）：最低音域 A₁（55 Hz、有効弦長 L = 1,560 mm）を例に、第1〜第12倍音（H₁〜H₁₂）の構築を実演します。まずフェルト硬度：針入れで柔らかくすると接触時間 τc（約3.8 ms）が伸びて高次倍音が dB 単位で減衰し、硬いクラウン（τc 約1.3 ms）では高次倍音が急増します。次にヤング＝ヘルムホルツの打弦点法則：1/8 L や 1/7 L では不協和な第7・第9倍音を節で抑えつつ、歌うような長3度 H₅（1/5 L）を豊かに保ちます。",
+        "zh": "第 33 页（第五部分整音开篇）：以低音 A₁（55 Hz，有效弦长 L = 1,560 mm）为例，交互演示钢琴音色由 H₁–H₁₂ 泛音构成的物理本质。首先演示弦槌软硬度：刺针柔化延长接触时间 τc（约 3.8 ms），以分贝（dB）为单位衰减高次泛音；高密硬槌（τc 约 1.3 ms）则大幅拉升高频泛音。随后演示杨-亥姆霍兹击弦点定律：在 1/8 L 或 1/7 L 处击弦可在波节处精准抑制不协和的 H₇（自然七度）与 H₉（大二度），同时保留决定歌唱色彩的大三度 H₅（1/5 L）。"
       }
     },
     "slide_34": {

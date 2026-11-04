@@ -85,6 +85,7 @@ def build_offline_tablet_html():
         "felt-anatomy.js",
         "yamaha-kit.js",
         "yamaha-kit-acoustic.js",
+        "piano-tone-a1.js",
         "presentation.js"
     ]
 
