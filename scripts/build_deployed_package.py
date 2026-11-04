@@ -87,6 +87,7 @@ def build_offline_tablet_html():
         "yamaha-kit-acoustic.js",
         "piano-tone-a1.js",
         "hammer-spring.js",
+        "voicing-zones.js",
         "presentation.js"
     ]
 

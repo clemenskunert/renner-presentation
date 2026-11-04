@@ -9125,7 +9125,8 @@ body::before {
    - Bedienelemente, 5-Stufen-Toggles, Readouts & KPIs klar lesbar (16.6px–23.2px)
    ========================================================================== */
 .slide.pta-slide .slide-body,
-.slide.hsp-slide .slide-body {
+.slide.hsp-slide .slide-body,
+.slide.vzn-slide .slide-body {
   flex: 1 1 0 !important;
   height: auto !important;
   max-height: none !important;
@@ -9195,7 +9196,8 @@ body::before {
 .hsp-card.curve-card { flex: 0.92; }
 
 .pta-slide .bento-badge,
-.hsp-slide .bento-badge {
+.hsp-slide .bento-badge,
+.vzn-slide .bento-badge {
   font-size: 16.8px;
   padding: 3px 10px;
   line-height: 1.2;
@@ -9704,7 +9706,8 @@ body::before {
 }
 
 #pta-exp-badge,
-#hsp-exp-badge {
+#hsp-exp-badge,
+#vzn-exp-badge {
   font-size: 16.8px !important;
   padding: 2.5px 9px !important;
   line-height: 1.18 !important;
@@ -9760,3 +9763,124 @@ body::before {
 .hsp-explain-box.blocked-alert .hsp-explain-bullet strong {
   color: #fca5a5;
 }
+
+/* ==========================================================================
+   FOLIE 35 (KAPITEL 5): INTONATIONS-ZONEN & STICHWIRKUNG (UHRENMODELL)
+   ========================================================================== */
+.vzn-slide .hsp-mode-btn.vzn-pill {
+  font-size: 16.4px;
+  padding: 4.5px 7.5px;
+}
+
+.vzn-zone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5px;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.vzn-zone-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(10, 15, 25, 0.80);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-left: 4px solid #38bdf8;
+  border-radius: 10px;
+  padding: 5.5px 10px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  min-width: 0;
+}
+
+.vzn-zone-item[data-zone="blue"]   { border-left-color: #38bdf8; }
+.vzn-zone-item[data-zone="green"]  { border-left-color: #2ecc71; }
+.vzn-zone-item[data-zone="orange"] { border-left-color: #fb923c; }
+.vzn-zone-item[data-zone="purple"] { border-left-color: #c084fc; }
+.vzn-zone-item[data-zone="red"]    { border-left-color: #ef4444; }
+
+.vzn-zone-item:hover {
+  background: rgba(22, 32, 52, 0.90);
+  border-color: rgba(230, 200, 130, 0.45);
+}
+
+.vzn-zone-item.active[data-zone="blue"] {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.22), rgba(10, 16, 28, 0.92));
+  border-color: rgba(125, 211, 252, 0.80);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.20);
+}
+
+.vzn-zone-item.active[data-zone="green"] {
+  background: linear-gradient(90deg, rgba(46, 204, 113, 0.22), rgba(10, 16, 28, 0.92));
+  border-color: rgba(134, 239, 172, 0.80);
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.20);
+}
+
+.vzn-zone-item.active[data-zone="orange"] {
+  background: linear-gradient(90deg, rgba(251, 146, 60, 0.22), rgba(10, 16, 28, 0.92));
+  border-color: rgba(253, 186, 116, 0.82);
+  box-shadow: 0 0 12px rgba(251, 146, 60, 0.20);
+}
+
+.vzn-zone-item.active[data-zone="purple"] {
+  background: linear-gradient(90deg, rgba(192, 132, 252, 0.24), rgba(10, 16, 28, 0.92));
+  border-color: rgba(216, 180, 254, 0.85);
+  box-shadow: 0 0 12px rgba(192, 132, 252, 0.22);
+}
+
+.vzn-zone-item.active[data-zone="red"] {
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.26), rgba(28, 10, 16, 0.94));
+  border-color: rgba(252, 165, 165, 0.88);
+  box-shadow: 0 0 13px rgba(239, 68, 68, 0.28);
+}
+
+.vzn-zone-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.vzn-zone-name {
+  font-family: var(--font-sans);
+  font-size: 18.6px;
+  font-weight: 700;
+  line-height: 1.18;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vzn-zone-depth {
+  font-family: var(--font-mono);
+  font-size: 16.2px;
+  font-weight: 700;
+  line-height: 1.16;
+  padding: 1.5px 7px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--gold-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.vzn-zone-item[data-zone="red"] .vzn-zone-depth {
+  background: rgba(153, 27, 27, 0.45);
+  border-color: rgba(248, 113, 113, 0.65);
+  color: #fecaca;
+}
+
+.vzn-zone-desc {
+  font-family: var(--font-sans);
+  font-size: 17.0px;
+  line-height: 1.20;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

@@ -11,7 +11,7 @@ Strictly based on the 5 technical masterclass documents in "Praesentation_Basis"
 plus the official louis-renner.de history and Google Photos Meuselwitz transformation album.
 """
 
-TOTAL_SLIDES = 41
+TOTAL_SLIDES = 42
 import re
 
 def get_watermark():
@@ -179,11 +179,11 @@ def get_all_slides_html():
               <div class="bento-step-watermark">05</div>
               <div class="agenda-card-header">
                 <span class="bento-badge gold" data-i18n="s2_b5_badge">KAPITEL 5</span>
-                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span>Folie 33–41</span>
+                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span>Folie 33–42</span>
               </div>
               <div class="agenda-card-main">
                 <div class="bento-card-title" data-i18n="s2_c5_title">Intonation</div>
-                <div class="bento-card-desc" data-i18n="s2_c5_desc">Teiltonaufbau auf A₁ (55 Hz), die komplexe Feder Hammerkopf (Cristofori bis Zonen-Balance), Pre-Needling, Kronenabzug &amp; Una Corda.</div>
+                <div class="bento-card-desc" data-i18n="s2_c5_desc">Teiltonaufbau A₁, komplexe Feder Hammerkopf, Intonations-Zonen &amp; Stichwirkung (Uhrenmodell), Pre-Needling &amp; Una Corda.</div>
               </div>
               <div class="agenda-card-footer">
                 <span class="agenda-action-text">Kapitel öffnen</span>
@@ -4158,14 +4158,174 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 35: Die Vorintonation (Pre-Needling) (Sander Bento)
+    # SLIDE 35: Intonations-Zonen & Stichwirkung – Das Renner-Uhrenmodell (Interaktiv)
+    slides.append(f'''      <!-- SLIDE 35: Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell -->
+      <section class="slide slide-hero-theme vzn-slide" data-slide="35">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s35_category">Teil 5: Intonation • Stichzonen, Stichtiefe &amp; Klangeffekte</div>
+            <h2 class="slide-title" data-i18n="s35_title">Intonations-Zonen &amp; Stichwirkung: Das Renner-Uhrenmodell</h2>
+            <div class="slide-subtitle" data-i18n="s35_subtitle">Wo beim Intonieren Stiche gesetzt werden (9:00–3:00 Uhr), wie tief genadelt wird und welchen Klangeffekt jede Zone bewirkt</div>
+          </div>
+        </div>
+        <div class="slide-body">
+          <div class="hsp-main-grid">
+            <!-- LINKE SPALTE: INTERAKTIVER HAMMERKOPF-QUERSCHNITT (5 KEILE) + TEILTON-/DYNAMIK-EFFEKT -->
+            <div class="hsp-col-left">
+              <!-- KARTE 1: Hammerkopf-Uhrenmodell & Stichwinkel -->
+              <div class="hsp-card gold-edge stage-card">
+                <div class="hsp-toolbar">
+                  <div class="hsp-btn-group">
+                    <button class="hsp-mode-btn vzn-pill active" id="vzn-pill-blue" type="button" data-i18n="s35_pill_blue">🔵 Blau (ff)</button>
+                    <button class="hsp-mode-btn vzn-pill" id="vzn-pill-green" type="button" data-i18n="s35_pill_green">🟢 Grün (f)</button>
+                    <button class="hsp-mode-btn vzn-pill" id="vzn-pill-orange" type="button" data-i18n="s35_pill_orange">🟠 Orange (p)</button>
+                    <button class="hsp-mode-btn vzn-pill" id="vzn-pill-purple" type="button" data-i18n="s35_pill_purple">🟣 Violett (pp)</button>
+                    <button class="hsp-mode-btn vzn-pill" id="vzn-pill-red" type="button" data-i18n="s35_pill_red">🔴 12:00 Tabu</button>
+                  </div>
+                  <div class="hsp-btn-group">
+                    <button class="hsp-mode-btn active" id="vzn-btn-loop" type="button" data-i18n="s35_btn_loop">⏸ Nadel-Impuls</button>
+                    <button class="hsp-strike-btn" id="vzn-btn-strike" type="button">
+                      <span>🔨</span> <span id="vzn-lbl-strike" data-i18n="s35_btn_strike">Stich &amp; Klang</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="hsp-canvas-wrap">
+                  <canvas id="vzn-canvas-head"></canvas>
+                </div>
+
+                <div class="hsp-readout-strip">
+                  <span id="vzn-ro-zone" style="color: #7dd3fc; font-weight: 700;">🔵 Blauer ff-Keil (9–10 / 2–3 Uhr)</span>
+                  <span id="vzn-ro-depth">Tiefe: 7–9 mm (vor Unterfilz) · 90°</span>
+                  <strong id="vzn-ro-effect" style="color: #e6c882;">Grundton +3,2 dB · freies, tragendes ff</strong>
+                </div>
+              </div>
+
+              <!-- KARTE 2: Akustischer Effekt der Stichzone (H1–H12 & Dynamik pp–ff) -->
+              <div class="hsp-card curve-card">
+                <div class="hsp-card-head">
+                  <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+                    <span class="bento-badge green" id="vzn-curve-badge" data-i18n="s35_curve_badge">STICHWIRKUNG</span>
+                    <h3 class="hsp-card-title" id="vzn-curve-title" data-i18n="s35_curve_title">Akustischer Effekt der Stichzone (H1–H12)</h3>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+                    <button type="button" class="hsp-mode-btn active" id="vzn-spec-delta" data-i18n="s35_spec_delta">ΔdB Sticheffekt</button>
+                    <button type="button" class="hsp-mode-btn" id="vzn-spec-dyn" data-i18n="s35_spec_dyn">Dynamik pp–ff</button>
+                  </div>
+                </div>
+
+                <div class="hsp-canvas-wrap">
+                  <canvas id="vzn-canvas-effect"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- RECHTE SPALTE: 3-STUFEN STICHTECHNIK, ALLE 5 STICHZONEN IM ÜBERBLICK, 3 KPIS & PRAXIS-REGEL -->
+            <div class="hsp-col-right">
+              <div class="hsp-card" style="height: 100%; justify-content: space-between;">
+                <!-- 3-Stufen-Toggle: Stichtechnik & Winkel -->
+                <div class="hsp-ctrl-block">
+                  <div class="hsp-ctrl-top">
+                    <span class="hsp-ctrl-label" id="vzn-lbl-tech" data-i18n="s35_tech_lbl">Stichtechnik &amp; Winkel (Außenkontur)</span>
+                    <span class="hsp-ctrl-val" id="vzn-val-tech" style="color:#4ade80;">✓ 90° radial · σ bleibt intakt</span>
+                  </div>
+                  <div class="hsp-step-group" id="vzn-grp-tech" role="group" aria-labelledby="vzn-lbl-tech">
+                    <button type="button" class="hsp-step-btn" data-tech="raw" data-tone="soft" aria-pressed="false" data-i18n="s35_tech_s1">1 · Unbehandelt</button>
+                    <button type="button" class="hsp-step-btn active" data-tech="ideal" data-tone="good" aria-pressed="true" data-i18n="s35_tech_s2">2 · ✓ 90° Drücken</button>
+                    <button type="button" class="hsp-step-btn" data-tech="wrong" data-tone="bad" aria-pressed="false" data-i18n="s35_tech_s3">3 · ✕ Quer / Hacken</button>
+                  </div>
+                </div>
+
+                <!-- Alle 5 Stichzonen & Effekte auf einen Blick (anklickbar) -->
+                <div class="vzn-zone-list" role="listbox" aria-label="Intonations-Zonen">
+                  <div class="vzn-zone-item active" data-zone="blue" role="option" tabindex="0" aria-selected="true">
+                    <div class="vzn-zone-top">
+                      <span class="vzn-zone-name" data-i18n="s35_z1_name">🔵 Blauer ff-Keil (9–10 &amp; 2–3 Uhr)</span>
+                      <span class="vzn-zone-depth" data-i18n="s35_z1_depth">Tief · vor Unterfilz</span>
+                    </div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z1_desc">Löst starre Werkshärte, leitet Energie ↑ in f-Keil → volles, freies ff</div>
+                  </div>
+
+                  <div class="vzn-zone-item" data-zone="green" role="option" tabindex="0" aria-selected="false">
+                    <div class="vzn-zone-top">
+                      <span class="vzn-zone-name" data-i18n="s35_z2_name">🟢 Grüner f-Keil (10–11 &amp; 1–2 Uhr)</span>
+                      <span class="vzn-zone-depth" data-i18n="s35_z2_depth">Mittel · 4–6 mm (90°)</span>
+                    </div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z2_desc">Öffnet steife Übergangskontur → singender Cantabile-Kern (mf–f)</div>
+                  </div>
+
+                  <div class="vzn-zone-item" data-zone="orange" role="option" tabindex="0" aria-selected="false">
+                    <div class="vzn-zone-top">
+                      <span class="vzn-zone-name" data-i18n="s35_z3_name">🟠 Oranger p-Keil (11–11:45 &amp; 12:15–1 Uhr)</span>
+                      <span class="vzn-zone-depth" data-i18n="s35_z3_depth">Fein · 2,5–4 mm (90°)</span>
+                    </div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z3_desc">Dämpft glasige Obertöne (H8–H12) → runder, warmer Piano-Ton</div>
+                  </div>
+
+                  <div class="vzn-zone-item" data-zone="purple" role="option" tabindex="0" aria-selected="false">
+                    <div class="vzn-zone-top">
+                      <span class="vzn-zone-name" data-i18n="s35_z4_name">🟣 Violetter pp-Keil (11:45–12:15 Krone)</span>
+                      <span class="vzn-zone-depth" data-i18n="s35_z4_depth">Oberfläche · ≤ 2 mm</span>
+                    </div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z4_desc">Nur zwischen Saitenrillen! Samtpolster für müheloses Pianissimo</div>
+                  </div>
+
+                  <div class="vzn-zone-item" data-zone="red" role="option" tabindex="0" aria-selected="false">
+                    <div class="vzn-zone-top">
+                      <span class="vzn-zone-name" data-i18n="s35_z5_name">🔴 Rote Sperrzone (12:00 Scheitelkern)</span>
+                      <span class="vzn-zone-depth" data-i18n="s35_z5_depth">✕ TABU (&gt; 2 mm)</span>
+                    </div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z5_desc">Zerstört Oberflächenspannung σ → τc ↑, Ton wird hohl, matt &amp; tot!</div>
+                  </div>
+                </div>
+
+                <!-- 3 Live-KPIs -->
+                <div class="hsp-kpi-row">
+                  <div class="hsp-kpi green">
+                    <span class="hsp-kpi-lbl" id="vzn-kpi1-lbl" data-i18n="s35_kpi1_lbl">Stichtiefe &amp; Nadel</span>
+                    <span class="hsp-kpi-num" id="vzn-kpi1-num">7–9 mm</span>
+                    <span class="hsp-kpi-sub" id="vzn-kpi1-sub">3er-Halter · Nadel Nr. 7</span>
+                  </div>
+                  <div class="hsp-kpi blue">
+                    <span class="hsp-kpi-lbl" id="vzn-kpi2-lbl" data-i18n="s35_kpi2_lbl">Oberflächenspannung</span>
+                    <span class="hsp-kpi-num" id="vzn-kpi2-num" style="color:#2ecc71;">98 % · 1,78 ms</span>
+                    <span class="hsp-kpi-sub" id="vzn-kpi2-sub">✓ Fasern geteilt, σ intakt</span>
+                  </div>
+                  <div class="hsp-kpi amber">
+                    <span class="hsp-kpi-lbl" id="vzn-kpi3-lbl" data-i18n="s35_kpi3_lbl">Klangeffekt</span>
+                    <span class="hsp-kpi-num" id="vzn-kpi3-num" style="color:#38bdf8;">+3,2 dB</span>
+                    <span class="hsp-kpi-sub" id="vzn-kpi3-sub">Fülle H1–H4 ↑ · ff frei</span>
+                  </div>
+                </div>
+
+                <!-- Dynamische Meister-Erklärung (Kruse / Olbrich) -->
+                <div class="hsp-explain-box" id="vzn-exp-box">
+                  <div>
+                    <span class="bento-badge gold" id="vzn-exp-badge" data-i18n="s35_exp_badge">✦ VORINTONATION • BLAUER FORTISSIMO-KEIL (9–10 &amp; 2–3 UHR)</span>
+                    <h4 class="hsp-explain-title" id="vzn-exp-title">Tiefe 90°-Stiche lösen starre Werkshärte und speisen den Forte-Keil</h4>
+                  </div>
+                  <p class="hsp-explain-text" id="vzn-exp-body">
+                    Kräftiges, ruhiges Eindrücken bis <strong>kurz vor den Unterfilz</strong> (nie in Unterfilz/Holz!) baut die starre Unterflanken-Spannung ab: Elastische Energie <strong>wandert aufwärts in den grünen Forte-Keil</strong> und öffnet volles, rundes <em>Fortissimo</em>.
+                  </p>
+                  <div class="hsp-explain-bullet" id="vzn-exp-bullet">
+                    <strong>Praxis-Effekt:</strong> Stärkt Grundtonfülle &amp; Sustain (<strong>H1–H4 +3,2 dB</strong>), ohne die Scheitelkrone für <em>p/pp</em> zu schwächen.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{get_watermark()}
+      </section>''')
+
+    # SLIDE 36: Die Vorintonation (Pre-Needling) (Sander Bento)
     slides.append(f'''<!-- SLIDE 33 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="35">
+      <section class="slide slide-hero-theme" data-slide="36">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s35_category">Teil 5: Intonation • Vorintonation</div>
-            <h2 class="slide-title" data-i18n="s35_title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
-            <div class="slide-subtitle" data-i18n="s35_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
+            <div class="slide-category" data-i18n="s36_category">Teil 5: Intonation • Vorintonation</div>
+            <h2 class="slide-title" data-i18n="s36_title">Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil</h2>
+            <div class="slide-subtitle" data-i18n="s36_subtitle">Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4173,31 +4333,31 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s35_kpi">pp – ff</span>
-                <span class="bento-badge gold" data-i18n="s35_b1_badge">PRE-NEEDLING</span>
+                <span class="hero-kpi-pill" data-i18n="s36_kpi">pp – ff</span>
+                <span class="bento-badge gold" data-i18n="s36_b1_badge">PRE-NEEDLING</span>
               </div>
-              <div class="bento-card-title" data-i18n="s35_c1_title">Gezielter Spannungsabbau im blauen Fortissimo-Keil</div>
-              <div class="bento-card-desc" data-i18n="s35_c1_desc">Die Vorintonation ist der entscheidende Basisschritt bei fabrikneuen oder neu befilzten Hammerköpfen.</div>
+              <div class="bento-card-title" data-i18n="s36_c1_title">Gezielter Spannungsabbau im blauen Fortissimo-Keil</div>
+              <div class="bento-card-desc" data-i18n="s36_c1_desc">Die Vorintonation ist der entscheidende Basisschritt bei fabrikneuen oder neu befilzten Hammerköpfen.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (9:00–10:00 Uhr bzw. 2:00–3:00 Uhr) arbeiten.</span>
+                  <span data-i18n="s36_bullet_1"><strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (9:00–10:00 Uhr bzw. 2:00–3:00 Uhr) arbeiten.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_2"><strong>Tiefe Einstiche:</strong> Ruhig bis kurz vor den Unterfilz führen – niemals in Unterfilz oder Holzkern stechen!</span>
+                  <span data-i18n="s36_bullet_2"><strong>Tiefe Einstiche:</strong> Ruhig bis kurz vor den Unterfilz führen – niemals in Unterfilz oder Holzkern stechen!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_3"><strong>Spannungstransfer:</strong> Die starre Werkshärte weicht; elastische Energie fließt in den grünen Forte-Keil.</span>
+                  <span data-i18n="s36_bullet_3"><strong>Spannungstransfer:</strong> Die starre Werkshärte weicht; elastische Energie fließt in den grünen Forte-Keil.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s35_bullet_4"><strong>Praxis-Empfehlung:</strong> Vor dem ersten Anspielen im Flügel fast ausnahmslos als Fundament anzuraten.</span>
+                  <span data-i18n="s36_bullet_4"><strong>Praxis-Empfehlung:</strong> Vor dem ersten Anspielen im Flügel fast ausnahmslos als Fundament anzuraten.</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s35_fact">🎯 Öffnet das elastische Klangvolumen, ohne die Scheitelkrone zu schwächen</span>
+                <span class="hero-fact-pill" data-i18n="s36_fact">🎯 Öffnet das elastische Klangvolumen, ohne die Scheitelkrone zu schwächen</span>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4207,8 +4367,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s35_b2_badge">GRUNDELASTIZITÄT</span>
-                <div class="bento-media-caption" data-i18n="s35_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
+                <span class="bento-badge green" data-i18n="s36_b2_badge">GRUNDELASTIZITÄT</span>
+                <div class="bento-media-caption" data-i18n="s36_caption_1">Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)</div>
               </div>
             </div>
           </div>
@@ -4216,14 +4376,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 36: Werkzeuge & Nadelstich-Vorgaben (Sander Bento)
+    # SLIDE 37: Werkzeuge & Nadelstich-Vorgaben (Sander Bento)
     slides.append(f'''<!-- SLIDE 34 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="36">
+      <section class="slide slide-hero-theme" data-slide="37">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s36_category">Teil 5: Intonation • Werkzeug & Technik</div>
-            <h2 class="slide-title" data-i18n="s36_title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
-            <div class="slide-subtitle" data-i18n="s36_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
+            <div class="slide-category" data-i18n="s37_category">Teil 5: Intonation • Werkzeug & Technik</div>
+            <h2 class="slide-title" data-i18n="s37_title">Nadelstich-Vorgaben & Intonierwerkzeuge</h2>
+            <div class="slide-subtitle" data-i18n="s37_subtitle">Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4231,31 +4391,31 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s36_kpi">Nr. 7 · ø 0,60 mm</span>
-                <span class="bento-badge gold" data-i18n="s36_b1_badge">WERKZEUGKUNDE</span>
+                <span class="hero-kpi-pill" data-i18n="s37_kpi">Nr. 7 · ø 0,60 mm</span>
+                <span class="bento-badge gold" data-i18n="s37_b1_badge">WERKZEUGKUNDE</span>
               </div>
-              <div class="bento-card-title" data-i18n="s36_c1_title">Richtwerte pro Register & schonende Nadelführung</div>
-              <div class="bento-card-desc" data-i18n="s36_c1_desc">Ruhiges Eindrücken mit Original-Werkzeugen verdrängt die Wollfasern kontrolliert, statt sie zu zerreißen.</div>
+              <div class="bento-card-title" data-i18n="s37_c1_title">Richtwerte pro Register & schonende Nadelführung</div>
+              <div class="bento-card-desc" data-i18n="s37_c1_desc">Ruhiges Eindrücken mit Original-Werkzeugen verdrängt die Wollfasern kontrolliert, statt sie zu zerreißen.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_1"><strong>Bass &amp; Mittellage:</strong> Horizontaler Einstich im ff-Keil mit 7–10 Stichen im Bass und 5–10 Stichen in der Mitte.</span>
+                  <span data-i18n="s37_bullet_1"><strong>Bass &amp; Mittellage:</strong> Horizontaler Einstich im ff-Keil mit 7–10 Stichen im Bass und 5–10 Stichen in der Mitte.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_2"><strong>Diskant-Dosierung:</strong> Vertikal geführte Einstiche mit 0–7 Stichen je nach gewünschter Brillanz und Tragkraft.</span>
+                  <span data-i18n="s37_bullet_2"><strong>Diskant-Dosierung:</strong> Vertikal geführte Einstiche mit 0–7 Stichen je nach gewünschter Brillanz und Tragkraft.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_3"><strong>Drücken, niemals hacken:</strong> Nadeln ruhig mit Körpergewicht führen – Hacken zerreißt das Fasergefüge irreversibel!</span>
+                  <span data-i18n="s37_bullet_3"><strong>Drücken, niemals hacken:</strong> Nadeln ruhig mit Körpergewicht führen – Hacken zerreißt das Fasergefüge irreversibel!</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s36_bullet_4"><strong>Original Renner Werkzeuge:</strong> Intonierapparat (43-0005642), 3er-Profi-Halter (43-0003270) und Nadeln Nr. 7 (43-0003426).</span>
+                  <span data-i18n="s37_bullet_4"><strong>Original Renner Werkzeuge:</strong> Intonierapparat (43-0005642), 3er-Profi-Halter (43-0003270) und Nadeln Nr. 7 (43-0003426).</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s36_fact">🛠 Glatte vernickelte Nadeln (ø 0,60 mm, 9 mm) gleiten faserschonend ins Vlies</span>
+                <span class="hero-fact-pill" data-i18n="s37_fact">🛠 Glatte vernickelte Nadeln (ø 0,60 mm, 9 mm) gleiten faserschonend ins Vlies</span>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4265,8 +4425,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s36_b2_badge">PRÄZISIONSNADELN</span>
-                <div class="bento-media-caption" data-i18n="s36_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
+                <span class="bento-badge green" data-i18n="s37_b2_badge">PRÄZISIONSNADELN</span>
+                <div class="bento-media-caption" data-i18n="s37_caption_1">Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat</div>
               </div>
             </div>
           </div>
@@ -4274,14 +4434,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 37: Saitenvorbereitung im Instrument (Sander Bento)
-    slides.append(f'''<!-- SLIDE 35 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="37">
+    # SLIDE 38: Saitenvorbereitung im Instrument (Sander Bento)
+    slides.append(f'''<!-- SLIDE 36 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="38">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s37_category">Teil 5: Intonation • Saitenlagerung</div>
-            <h2 class="slide-title" data-i18n="s37_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
-            <div class="slide-subtitle" data-i18n="s37_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
+            <div class="slide-category" data-i18n="s38_category">Teil 5: Intonation • Saitenlagerung</div>
+            <h2 class="slide-title" data-i18n="s38_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
+            <div class="slide-subtitle" data-i18n="s38_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4289,27 +4449,27 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s37_kpi">100 % Chorrein</span>
-                <span class="bento-badge gold" data-i18n="s37_b1_badge">SAITEN-BETTUNG</span>
+                <span class="hero-kpi-pill" data-i18n="s38_kpi">100 % Chorrein</span>
+                <span class="bento-badge gold" data-i18n="s38_b1_badge">SAITEN-BETTUNG</span>
               </div>
-              <div class="bento-card-title" data-i18n="s37_c1_title">Exakte Saitenauflage vor dem ersten Nadelstich</div>
-              <div class="bento-card-desc" data-i18n="s37_c1_desc">Nur sauber aufliegende und rein gestimmte Saitenchöre erlauben eine ehrliche klangliche Diagnose am Hammerkopf.</div>
+              <div class="bento-card-title" data-i18n="s38_c1_title">Exakte Saitenauflage vor dem ersten Nadelstich</div>
+              <div class="bento-card-desc" data-i18n="s38_c1_desc">Nur sauber aufliegende und rein gestimmte Saitenchöre erlauben eine ehrliche klangliche Diagnose am Hammerkopf.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s37_bullet_1"><strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn mit Messingdurchschlag und leichtem Hammer sanft anlegen.</span>
+                  <span data-i18n="s38_bullet_1"><strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn mit Messingdurchschlag und leichtem Hammer sanft anlegen.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s37_bullet_2"><strong>Stegstifte anpassen:</strong> Mit dem Renner-Setzer die Saiten sauber auf den Steg drücken, um Nebentöne zu eliminieren.</span>
+                  <span data-i18n="s38_bullet_2"><strong>Stegstifte anpassen:</strong> Mit dem Renner-Setzer die Saiten sauber auf den Steg drücken, um Nebentöne zu eliminieren.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s37_bullet_3"><strong>Reine Chorstimmung:</strong> Vor jeder Nadelarbeit muss jeder 3er-Chor absolut schwebungs- und nebengeräuschfrei stehen.</span>
+                  <span data-i18n="s38_bullet_3"><strong>Reine Chorstimmung:</strong> Vor jeder Nadelarbeit muss jeder 3er-Chor absolut schwebungs- und nebengeräuschfrei stehen.</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s37_fact">🎵 Goldene Regel: Keine Nadel korrigiert einen unsauber gelagerten Saitenchor!</span>
+                <span class="hero-fact-pill" data-i18n="s38_fact">🎵 Goldene Regel: Keine Nadel korrigiert einen unsauber gelagerten Saitenchor!</span>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4319,8 +4479,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s37_b2_badge">CHORREINHEIT</span>
-                <div class="bento-media-caption" data-i18n="s37_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
+                <span class="bento-badge green" data-i18n="s38_b2_badge">CHORREINHEIT</span>
+                <div class="bento-media-caption" data-i18n="s38_caption_1">Saiten niederschlagen am Anhangstift mit Messingdurchschlag</div>
               </div>
             </div>
           </div>
@@ -4328,14 +4488,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 38: Anschlagspunkt & Geradheit der Hammerköpfe (Sander Bento)
-    slides.append(f'''<!-- SLIDE 36 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="38">
+    # SLIDE 39: Anschlagspunkt & Geradheit der Hammerköpfe (Sander Bento)
+    slides.append(f'''<!-- SLIDE 37 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="39">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s38_category">Teil 5: Intonation • Ausrichtung</div>
-            <h2 class="slide-title" data-i18n="s38_title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
-            <div class="slide-subtitle" data-i18n="s38_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
+            <div class="slide-category" data-i18n="s39_category">Teil 5: Intonation • Ausrichtung</div>
+            <h2 class="slide-title" data-i18n="s39_title">Anschlagspunkt im Diskant & Geradheitsprüfung</h2>
+            <div class="slide-subtitle" data-i18n="s39_subtitle">Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4343,27 +4503,27 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s38_kpi">Note 69–88</span>
-                <span class="bento-badge gold" data-i18n="s38_b1_badge">STRIKE POINT</span>
+                <span class="hero-kpi-pill" data-i18n="s39_kpi">Note 69–88</span>
+                <span class="bento-badge gold" data-i18n="s39_b1_badge">STRIKE POINT</span>
               </div>
-              <div class="bento-card-title" data-i18n="s38_c1_title">Optimaler Anschlagspunkt & präzise Hammerflucht</div>
-              <div class="bento-card-desc" data-i18n="s38_c1_desc">Bereits Millimeterbruchteile der Klaviaturposition entscheiden im hohen Diskant über Tragkraft und Obertonglanz.</div>
+              <div class="bento-card-title" data-i18n="s39_c1_title">Optimaler Anschlagspunkt & präzise Hammerflucht</div>
+              <div class="bento-card-desc" data-i18n="s39_c1_desc">Bereits Millimeterbruchteile der Klaviaturposition entscheiden im hohen Diskant über Tragkraft und Obertonglanz.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s38_bullet_1"><strong>Referenzton Note 88:</strong> Klaviaturrahmen minimal vor- und zurückschieben, bis der hellste, vollste Ton einrastet.</span>
+                  <span data-i18n="s39_bullet_1"><strong>Referenzton Note 88:</strong> Klaviaturrahmen minimal vor- und zurückschieben, bis der hellste, vollste Ton einrastet.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s38_bullet_2"><strong>Diskantfenster 69–88:</strong> Eine exakte Justierung des Anschlagspunkts hebt das Klangvolumen vieler Flügel dramatisch.</span>
+                  <span data-i18n="s39_bullet_2"><strong>Diskantfenster 69–88:</strong> Eine exakte Justierung des Anschlagspunkts hebt das Klangvolumen vieler Flügel dramatisch.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s38_bullet_3"><strong>Geradheit &amp; Flucht:</strong> Kontrolle durch sanftes Anheben an der Klinke oder Zupfhaken; Korrekturbedarf auf der Taste markieren.</span>
+                  <span data-i18n="s39_bullet_3"><strong>Geradheit &amp; Flucht:</strong> Kontrolle durch sanftes Anheben an der Klinke oder Zupfhaken; Korrekturbedarf auf der Taste markieren.</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s38_fact">✨ Perfekte Mechanikgeometrie vor der Feinintonation spart unnötige Nadelarbeit</span>
+                <span class="hero-fact-pill" data-i18n="s39_fact">✨ Perfekte Mechanikgeometrie vor der Feinintonation spart unnötige Nadelarbeit</span>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4373,8 +4533,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s38_b2_badge">DISKANTGLANZ</span>
-                <div class="bento-media-caption" data-i18n="s38_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
+                <span class="bento-badge green" data-i18n="s39_b2_badge">DISKANTGLANZ</span>
+                <div class="bento-media-caption" data-i18n="s39_caption_1">Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer</div>
               </div>
             </div>
           </div>
@@ -4382,14 +4542,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 39: Abziehen der Hammerkronen (Filing) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 39: Abziehen der Hammerkronen (Filing) -->
-      <section class="slide slide-hero-theme" data-slide="39">
+    # SLIDE 40: Abziehen der Hammerkronen (Filing) (Sander Bento)
+    slides.append(f'''<!-- SLIDE 40: Abziehen der Hammerkronen (Filing) -->
+      <section class="slide slide-hero-theme" data-slide="40">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s39_category">Teil 5: Intonation • Kronenabzug</div>
-            <h2 class="slide-title" data-i18n="s39_title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
-            <div class="slide-subtitle" data-i18n="s39_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
+            <div class="slide-category" data-i18n="s40_category">Teil 5: Intonation • Kronenabzug</div>
+            <h2 class="slide-title" data-i18n="s40_title">Abziehen der Hammerkrone: Hohl vs. Plan vs. Schief</h2>
+            <div class="slide-subtitle" data-i18n="s40_subtitle">Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4398,26 +4558,26 @@ def get_all_slides_html():
               <div class="bento-card" style="border-left: 4px solid #f59e0b;">
                 <div class="bento-step-watermark">01</div>
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s39_b1_badge">FEHLERBILD 1 • HOHL</span>
+                  <span class="bento-badge gold" data-i18n="s40_b1_badge">FEHLERBILD 1 • HOHL</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s39_c1_title">1. Hohlkehle (Hollow Crown)</div>
-                <div class="bento-card-desc" data-i18n="s39_c1_desc">Scheitel trifft nur die äußeren Randsaiten – dünner, unvollständiger Ton; von den Schultern her plan abziehen.</div>
+                <div class="bento-card-title" data-i18n="s40_c1_title">1. Hohlkehle (Hollow Crown)</div>
+                <div class="bento-card-desc" data-i18n="s40_c1_desc">Scheitel trifft nur die äußeren Randsaiten – dünner, unvollständiger Ton; von den Schultern her plan abziehen.</div>
               </div>
               <div class="bento-card" style="border-left: 4px solid #ef4444;">
                 <div class="bento-step-watermark">02</div>
                 <div class="bento-card-header">
-                  <span class="bento-badge red" data-i18n="s39_b2_badge">FEHLERBILD 2 • SCHIEF</span>
+                  <span class="bento-badge red" data-i18n="s40_b2_badge">FEHLERBILD 2 • SCHIEF</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s39_c2_title">2. Schiefe Krone (Crooked Crown)</div>
-                <div class="bento-card-desc" data-i18n="s39_c2_desc">Einseitiger Saitenkontakt erzeugt Doppelattacke und Brummen – Scheitel exakt parallel zur Saitenebene beiziehen.</div>
+                <div class="bento-card-title" data-i18n="s40_c2_title">2. Schiefe Krone (Crooked Crown)</div>
+                <div class="bento-card-desc" data-i18n="s40_c2_desc">Einseitiger Saitenkontakt erzeugt Doppelattacke und Brummen – Scheitel exakt parallel zur Saitenebene beiziehen.</div>
               </div>
               <div class="bento-card hero-card" style="border-left: 4px solid #22c55e;">
                 <div class="bento-step-watermark">03</div>
                 <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s39_b3_badge">SOLL-ZUSTAND • PLAN</span>
+                  <span class="bento-badge green" data-i18n="s40_b3_badge">SOLL-ZUSTAND • PLAN</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s39_c3_title">3. Plan &amp; Symmetrisch (Crown OK)</div>
-                <div class="bento-card-desc" data-i18n="s39_c3_desc">Gleichzeitiger, satter Anschlag auf alle drei Chorsaiten mit feinster Körnung (320–400) für vollen Grundton.</div>
+                <div class="bento-card-title" data-i18n="s40_c3_title">3. Plan &amp; Symmetrisch (Crown OK)</div>
+                <div class="bento-card-desc" data-i18n="s40_c3_desc">Gleichzeitiger, satter Anschlag auf alle drei Chorsaiten mit feinster Körnung (320–400) für vollen Grundton.</div>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4427,8 +4587,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s39_b4_badge">SCHLEIFFEILE</span>
-                <div class="bento-media-caption" data-i18n="s39_caption_1">Kronenabzug: Schleifbrettführung für gleichmäßigen Scheitelradius</div>
+                <span class="bento-badge green" data-i18n="s40_b4_badge">SCHLEIFFEILE</span>
+                <div class="bento-media-caption" data-i18n="s40_caption_1">Kronenabzug: Schleifbrettführung für gleichmäßigen Scheitelradius</div>
               </div>
             </div>
           </div>
@@ -4436,14 +4596,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 40: Zwischen- & Feinintonation (Mid & Balance Voicing) (Sander Bento)
-    slides.append(f'''<!-- SLIDE 38 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="40">
+    # SLIDE 41: Zwischen- & Feinintonation (Mid & Balance Voicing) (Sander Bento)
+    slides.append(f'''<!-- SLIDE 39 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="41">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s40_category">Teil 5: Intonation • Feinabstimmung</div>
-            <h2 class="slide-title" data-i18n="s40_title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
-            <div class="slide-subtitle" data-i18n="s40_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
+            <div class="slide-category" data-i18n="s41_category">Teil 5: Intonation • Feinabstimmung</div>
+            <h2 class="slide-title" data-i18n="s41_title">Zwischen- & Feinintonation: Die 2-mm-Kronenstiche</h2>
+            <div class="slide-subtitle" data-i18n="s41_subtitle">Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4451,31 +4611,31 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s40_kpi">Max. 2 mm</span>
-                <span class="bento-badge gold" data-i18n="s40_b1_badge">FEININTONATION</span>
+                <span class="hero-kpi-pill" data-i18n="s41_kpi">Max. 2 mm</span>
+                <span class="bento-badge gold" data-i18n="s41_b1_badge">FEININTONATION</span>
               </div>
-              <div class="bento-card-title" data-i18n="s40_c1_title">Chromatisches Egalisieren bis zur Konzertreife</div>
-              <div class="bento-card-desc" data-i18n="s40_c1_desc">In der Zwischen- und Feinintonation verschmelzen alle 88 Töne zu einem bruchlosen Perlenketten-Verlauf.</div>
+              <div class="bento-card-title" data-i18n="s41_c1_title">Chromatisches Egalisieren bis zur Konzertreife</div>
+              <div class="bento-card-desc" data-i18n="s41_c1_desc">In der Zwischen- und Feinintonation verschmelzen alle 88 Töne zu einem bruchlosen Perlenketten-Verlauf.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_1"><strong>Chromatisches Abhören:</strong> Auf- und abwärts durchspielen, um kleinste Ausreißer in Klangfarbe oder Härte zu orten.</span>
+                  <span data-i18n="s41_bullet_1"><strong>Chromatisches Abhören:</strong> Auf- und abwärts durchspielen, um kleinste Ausreißer in Klangfarbe oder Härte zu orten.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_2"><strong>Zwischenintonation:</strong> Dosiertes Nadeln im Forte- und Piano-Keil; zu weiche Köpfe durch feines Abziehen straffen.</span>
+                  <span data-i18n="s41_bullet_2"><strong>Zwischenintonation:</strong> Dosiertes Nadeln im Forte- und Piano-Keil; zu weiche Köpfe durch feines Abziehen straffen.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_3"><strong>Feinintonations-Halter:</strong> Kurze Einzelnadel im BDK-Halter (43-0003269) oder Chop-Stick-Halter (43-0003271).</span>
+                  <span data-i18n="s41_bullet_3"><strong>Feinintonations-Halter:</strong> Kurze Einzelnadel im BDK-Halter (43-0003269) oder Chop-Stick-Halter (43-0003271).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s40_bullet_4"><strong>2-mm-Kronenregel:</strong> Am Scheitel höchstens 2 mm tief und ausschließlich zwischen den Saitenrillen einstechen!</span>
+                  <span data-i18n="s41_bullet_4"><strong>2-mm-Kronenregel:</strong> Am Scheitel höchstens 2 mm tief und ausschließlich zwischen den Saitenrillen einstechen!</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s40_fact">🪡 Feinste Dosierung entscheidet über den seidigen Schimmer im Pianissimo</span>
+                <span class="hero-fact-pill" data-i18n="s41_fact">🪡 Feinste Dosierung entscheidet über den seidigen Schimmer im Pianissimo</span>
               </div>
             </div>
             <div class="bento-card media-framed">
@@ -4485,8 +4645,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge green" data-i18n="s40_b2_badge">FARBPALETTE</span>
-                <div class="bento-media-caption" data-i18n="s40_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
+                <span class="bento-badge green" data-i18n="s41_b2_badge">FARBPALETTE</span>
+                <div class="bento-media-caption" data-i18n="s41_caption_1">Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel</div>
               </div>
             </div>
           </div>
@@ -4494,14 +4654,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 41: Verschiebungsintonation & Die Renner Academy (Sander Bento Finale)
-    slides.append(f'''      <!-- SLIDE 41: Una Corda & Fazit -->
-      <section class="slide slide-hero-theme" data-slide="41">
+    # SLIDE 42: Verschiebungsintonation & Die Renner Academy (Sander Bento Finale)
+    slides.append(f'''      <!-- SLIDE 42: Una Corda & Fazit -->
+      <section class="slide slide-hero-theme" data-slide="42">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s41_category">Teil 5: Intonation • Una Corda & Dialog</div>
-            <h2 class="slide-title" data-i18n="s41_title">Verschiebungsintonation & Die Renner Academy</h2>
-            <div class="slide-subtitle" data-i18n="s41_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
+            <div class="slide-category" data-i18n="s42_category">Teil 5: Intonation • Una Corda & Dialog</div>
+            <h2 class="slide-title" data-i18n="s42_title">Verschiebungsintonation & Die Renner Academy</h2>
+            <div class="slide-subtitle" data-i18n="s42_subtitle">Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4509,27 +4669,27 @@ def get_all_slides_html():
             <div class="bento-grid bento-grid-stack-2">
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s41_b1_badge">UNA CORDA PRAXIS</span>
+                  <span class="bento-badge green" data-i18n="s42_b1_badge">UNA CORDA PRAXIS</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s41_c1_title">Verschiebungsintonation</div>
-                <div class="bento-card-desc" data-i18n="s41_c1_desc">Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.</div>
+                <div class="bento-card-title" data-i18n="s42_c1_title">Verschiebungsintonation</div>
+                <div class="bento-card-desc" data-i18n="s42_c1_desc">Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
-                    <span data-i18n="s41_bullet_1"><strong>Praxis-Tipp Una Corda:</strong> Linke Kronenkante hauchfein brechen, um Reibgeräusche an Nachbarsaiten sicher auszuschließen.</span>
+                    <span data-i18n="s42_bullet_1"><strong>Praxis-Tipp Una Corda:</strong> Linke Kronenkante hauchfein brechen, um Reibgeräusche an Nachbarsaiten sicher auszuschließen.</span>
                   </div>
                 </div>
               </div>
               <div class="bento-card hero-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s41_b2_badge">RENNER ACADEMY</span>
+                  <span class="bento-badge gold" data-i18n="s42_b2_badge">RENNER ACADEMY</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s41_c2_title">Renner Academy & Technischer Dialog</div>
-                <div class="bento-card-desc" data-i18n="s41_c2_desc">Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.</div>
+                <div class="bento-card-title" data-i18n="s42_c2_title">Renner Academy & Technischer Dialog</div>
+                <div class="bento-card-desc" data-i18n="s42_c2_desc">Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot gold"></span>
-                    <span data-i18n="s41_bullet_2"><strong>Direkter Meister-Dialog:</strong> Schulungen in der Renner Academy, Werksbesuche in Meuselwitz &amp; persönliche Fachberatung.</span>
+                    <span data-i18n="s42_bullet_2"><strong>Direkter Meister-Dialog:</strong> Schulungen in der Renner Academy, Werksbesuche in Meuselwitz &amp; persönliche Fachberatung.</span>
                   </div>
                 </div>
               </div>
@@ -4537,9 +4697,9 @@ def get_all_slides_html():
             <div class="bento-card media-framed">
               <img src="Visuell/basis_media/image31.png" alt="Renner Abschluss">
               <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s41_b3_badge">LOUIS RENNER GMBH</span>
-                <div class="bento-media-caption" data-i18n="s41_caption_1">Louis Renner GmbH</div>
-                <div class="bento-media-subcaption" data-i18n="s41_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
+                <span class="bento-badge gold" data-i18n="s42_b3_badge">LOUIS RENNER GMBH</span>
+                <div class="bento-media-caption" data-i18n="s42_caption_1">Louis Renner GmbH</div>
+                <div class="bento-media-subcaption" data-i18n="s42_caption_2">Ihr Partner für meisterlichen Klang weltweit</div>
               </div>
             </div>
           </div>
