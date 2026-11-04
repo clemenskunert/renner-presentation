@@ -5041,40 +5041,40 @@
       },
       "elements": {
         "s33_btn_soft": {
-          "de": "☁️ Tonlich weich",
-          "en": "☁️ Tonally Soft",
-          "ja": "☁️ 柔らかい音色",
-          "zh": "☁️ 音色偏柔"
+          "de": "☁️ Weich",
+          "en": "☁️ Soft",
+          "ja": "☁️ 柔らかめ",
+          "zh": "☁️ 偏柔"
         },
         "s33_btn_concert": {
-          "de": "✦ Konzert-Ideal (0 dB Δ)",
-          "en": "✦ Concert Ideal (0 dB Δ)",
-          "ja": "✦ コンサート基準 (0 dB Δ)",
-          "zh": "✦ 音乐会理想基准 (0 dB Δ)"
+          "de": "✦ Konzert-Ideal",
+          "en": "✦ Concert Ideal",
+          "ja": "✦ コンサート基準",
+          "zh": "✦ 音乐会基准"
         },
         "s33_btn_hard": {
-          "de": "⚡ Tonlich hart",
-          "en": "⚡ Tonally Hard",
-          "ja": "⚡ 硬い音色",
-          "zh": "⚡ 音色偏硬"
+          "de": "⚡ Hart",
+          "en": "⚡ Hard",
+          "ja": "⚡ 硬め",
+          "zh": "⚡ 偏硬"
         },
         "s33_mode_abs": {
-          "de": "Pegel (dB) + ΔdB",
-          "en": "Level (dB) + ΔdB",
-          "ja": "レベル (dB) + ΔdB",
-          "zh": "绝对电平 (dB) + ΔdB"
+          "de": "Pegel + ΔdB",
+          "en": "Level + ΔdB",
+          "ja": "レベル + ΔdB",
+          "zh": "电平 + ΔdB"
         },
         "s33_mode_delta": {
-          "de": "Nur Zu-/Abnahme (ΔdB)",
-          "en": "Gain / Loss Only (ΔdB)",
-          "ja": "増減のみ (ΔdB)",
-          "zh": "仅显示增减 (ΔdB)"
+          "de": "ΔdB-Änderung",
+          "en": "ΔdB Shift",
+          "ja": "ΔdB 増減",
+          "zh": "ΔdB 增减"
         },
         "s33_btn_play": {
-          "de": "A₁ (55 Hz) anhören",
-          "en": "Listen to A₁ (55 Hz)",
-          "ja": "A₁ (55 Hz) を試聴",
-          "zh": "试听 A₁ (55 Hz)"
+          "de": "A₁ (55 Hz)",
+          "en": "Play A₁ (55 Hz)",
+          "ja": "A₁ 試聴",
+          "zh": "试听 A₁"
         },
         "s33_str_badge": {
           "de": "ANSCHLAGSPUNKT x₀ / L",
@@ -5083,10 +5083,10 @@
           "zh": "击弦点 x₀ / L"
         },
         "s33_str_title": {
-          "de": "Stehende Welle A₁ (L = 1.560 mm) & Knoten-Auslöschung",
-          "en": "Standing Wave A₁ (L = 1,560 mm) & Node Cancellation",
-          "ja": "A₁弦（L = 1,560 mm）の定常波と節（ノード）減衰",
-          "zh": "A₁ 琴弦（L = 1,560 mm）驻波形态与波节消音效应"
+          "de": "Stehende Welle A₁ (1.560 mm) & Knoten-Dämpfung",
+          "en": "Standing Wave A₁ (1,560 mm) & Node Cancellation",
+          "ja": "A₁弦 (1,560 mm) の定常波と節（ノード）減衰",
+          "zh": "A₁ 琴弦 (1,560 mm) 驻波与波节消音效应"
         },
         "s33_ctrl1_lbl": {
           "de": "1. Tonhärte (Hammerfilz)",
@@ -5156,7 +5156,7 @@
         },
         "s33_kpi1_sub": {
           "de": "55–220 Hz Grundton & Fülle",
-          "en": "55–220 Hz Fundamental & Body",
+          "en": "55–220 Hz Core & Warmth",
           "ja": "55–220 Hz 基音と豊かさ",
           "zh": "55–220 Hz 基音与丰满度"
         },

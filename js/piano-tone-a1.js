@@ -32,16 +32,16 @@
   const I18N = {
     de: {
       intervals: [
-        'Grundton (Prime)', '1. Oktave', 'Duodezime (Quinte)', '2. Oktave',
-        'Große Terz (+2 Okt.)', 'Quinte (+2 Okt.)', 'Naturseptime (−31 ct)', '3. Oktave',
-        'Große Sekunde', 'Große Terz (+3 Okt.)', '11. Teilton (−49 ct)', 'Quinte (+3 Okt.)'
+        'Grundton', '1. Okt.', 'Duodezime', '2. Okt.',
+        'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.',
+        'Gr. Sek.', 'Gr. Terz', '11. Teilt.', 'Quinte'
       ],
       roles: [
         'Fundament & Tragkraft', 'Volumen, Wärme & Körper', 'Sonorer Kern & Fülle', 'Klarer Oktavglanz',
         'Cantabile & edle Klangfarbe', 'Brillanz & Projektion', 'Reibungston (rau / unrein)', 'Strahlkraft & Präsenz',
         'Metallische Schärfe', 'Heller Obertonglanz', 'Scharfer Zwischen-Teilton', 'Feine Attack-Spitze'
       ],
-      legendAbs: '--- Weiße Linie = Konzert-Ideal  |  Grün: H₁–H₄ Fundament  |  Gold: Konsonante Obertöne  |  Bernstein: Reibungstöne (H₇, H₉, H₁₁)',
+      legendAbs: '--- Konzert-Ideal  |  Grün: H₁–H₄ Fundament  |  Gold: Konsonante Obertöne  |  Bernstein: Reibungstöne (H₇, H₉, H₁₁)',
       legendDelta: 'Orange (+dB): Teilton-Zunahme ggü. Konzert-Ideal  |  Hellblau (−dB): Teilton-Abnahme / Knoten-Dämpfung',
       agraffe: 'Agraffe (0)',
       bridge: 'Basssteg (L = 1.560 mm)',
@@ -53,8 +53,8 @@
       hSlightlySoft: (p) => `Leicht weich (${p} %)`,
       hHard: (p) => `Tonlich hart (+${p} %)`,
       hSlightlyHard: (p) => `Leicht brillant (+${p} %)`,
-      roRefCur: (r, c) => `Ref.: ${r} → Akt.: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (Filz ${felt} | Punkt ${str})`,
+      roRefCur: (r, c) => `Ref ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (Filz ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) gedämpft`,
       expTitleSoft: 'Tonlich weicher Klang: Lange Kontaktzeit dämpft hohe Teiltöne',
@@ -82,16 +82,16 @@
 
     en: {
       intervals: [
-        'Fundamental (Unison)', '1st Octave', 'Twelfth (Perfect 5th)', '2nd Octave',
-        'Major 3rd (+2 Oct.)', 'Perfect 5th (+2 Oct.)', 'Harmonic 7th (−31 ct)', '3rd Octave',
-        'Major 2nd', 'Major 3rd (+3 Oct.)', '11th Partial (−49 ct)', 'Perfect 5th (+3 Oct.)'
+        'Fundam.', '1st Oct', 'Twelfth', '2nd Oct',
+        'Maj 3rd', 'Perf 5th', 'Harm 7th', '3rd Oct',
+        'Maj 2nd', 'Maj 3rd', '11th Part.', 'Perf 5th'
       ],
       roles: [
         'Foundation & Projection', 'Warmth, Body & Volume', 'Sonorous Core & Richness', 'Clear Octave Sheen',
         'Cantabile & Singing Color', 'Brilliance & Carry', 'Roughness Partial (unpure)', 'Presence & Radiance',
         'Metallic Edge', 'Bright Overtone Shimmer', 'Sharp Inter-Harmonic', 'Crisp Attack Tip'
       ],
-      legendAbs: '--- White Line = Concert Ideal  |  Green: H₁–H₄ Foundation  |  Gold: Consonant Overtones  |  Amber: Roughness Partials (H₇, H₉, H₁₁)',
+      legendAbs: '--- Concert Ideal  |  Green: H₁–H₄ Foundation  |  Gold: Consonant Overtones  |  Amber: Roughness (H₇, H₉, H₁₁)',
       legendDelta: 'Orange (+dB): Partial Gain vs. Concert Ideal  |  Sky Blue (−dB): Partial Loss / Node Suppression',
       agraffe: 'Agraffe (0)',
       bridge: 'Bass Bridge (L = 1,560 mm)',
@@ -103,8 +103,8 @@
       hSlightlySoft: (p) => `Slightly Soft (${p}%)`,
       hHard: (p) => `Tonally Hard (+${p}%)`,
       hSlightlyHard: (p) => `Slightly Bright (+${p}%)`,
-      roRefCur: (r, c) => `Ref: ${r} → Now: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (Felt ${felt} | Strike ${str})`,
+      roRefCur: (r, c) => `Ref ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (Felt ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) suppressed`,
       expTitleSoft: 'Tonally Soft Sound: Longer Contact Time Attenuates Upper Partials',
@@ -132,9 +132,9 @@
 
     ja: {
       intervals: [
-        '基音（第1倍音）', '第1オクターブ', '12度（完全5度）', '第2オクターブ',
-        '長3度（+2 Oct.）', '完全5度（+2 Oct.）', '自然7度（−31 ct）', '第3オクターブ（440 Hz）',
-        '長2度', '長3度（+3 Oct.）', '第11倍音（−49 ct）', '完全5度（+3 Oct.）'
+        '基音', '第1Oct', '12度（5度）', '第2Oct',
+        '長3度', '完全5度', '自然7度', '第3Oct',
+        '長2度', '長3度', '第11倍音', '完全5度'
       ],
       roles: [
         '重厚な土台と遠達性', '温かみと豊かな響き', '充実した音の芯', '澄んだオクターブの輝き',
@@ -153,8 +153,8 @@
       hSlightlySoft: (p) => `やや柔らかめ (${p}%)`,
       hHard: (p) => `硬い音色 (+${p}%)`,
       hSlightlyHard: (p) => `やや華やか (+${p}%)`,
-      roRefCur: (r, c) => `基準: ${r} → 現在: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (硬度 ${felt} | 打弦 ${str})`,
+      roRefCur: (r, c) => `基準 ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n}（腹 ${n} 個）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) を抑制`,
       expTitleSoft: '柔らかい音色：長い接触時間が高次倍音を穏やかに減衰',
@@ -182,9 +182,9 @@
 
     zh: {
       intervals: [
-        '基音（纯一度）', '第一八度', '十二度（纯五度）', '第二八度',
-        '大三度（+2 八度）', '纯五度（+2 八度）', '自然七度（−31 音分）', '第三八度（440 Hz）',
-        '大二度', '大三度（+3 八度）', '第11泛音（−49 音分）', '纯五度（+3 八度）'
+        '基音', '第一八度', '十二度', '第二八度',
+        '大三度', '纯五度', '自然七度', '第三八度',
+        '大二度', '大三度', '第11泛音', '纯五度'
       ],
       roles: [
         '低音根基与穿透力', '温暖度与共鸣腔体', '浑厚音芯与饱满度', '清澈八度光泽',
@@ -203,8 +203,8 @@
       hSlightlySoft: (p) => `略微柔和 (${p}%)`,
       hHard: (p) => `音色偏硬 (+${p}%)`,
       hSlightlyHard: (p) => `略微明亮 (+${p}%)`,
-      roRefCur: (r, c) => `基准: ${r} → 当前: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (硬度 ${felt} | 击弦 ${str})`,
+      roRefCur: (r, c) => `基准 ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n}（${n} 个波腹）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) 波节抑制`,
       expTitleSoft: '音色偏柔：较长弦槌接触时间显著衰减高次泛音',
@@ -350,7 +350,7 @@
       const spec = this.computeSpectrum();
       const dict = this.t();
 
-      const padL = 64, padR = 18, padT = 32, padB = 52;
+      const padL = 74, padR = 18, padT = 35, padB = 58;
       const pw = W - padL - padR;
       const ph = H - padT - padB;
       this.barHitRegions = [];
@@ -359,7 +359,7 @@
         const dbMax = 6, dbMin = -46;
         const mapY = db => padT + ((dbMax - Math.max(dbMin, Math.min(dbMax, db))) / (dbMax - dbMin)) * ph;
 
-        ctx.font = '600 12px JetBrains Mono, monospace';
+        ctx.font = '600 14.7px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [0, -10, -20, -30, -40].forEach(db => {
           const y = mapY(db);
@@ -371,7 +371,7 @@
           ctx.lineTo(padL + pw, y);
           ctx.stroke();
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText((db === 0 ? '0' : '−' + Math.abs(db)) + ' dB', padL - 8, y + 4);
+          ctx.fillText((db === 0 ? '0' : '−' + Math.abs(db)) + ' dB', padL - 8, y + 5);
         });
         ctx.setLineDash([]);
 
@@ -390,7 +390,7 @@
 
           if (p.n === this.selectedN) {
             ctx.fillStyle = 'rgba(200, 163, 86, 0.11)';
-            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 62);
+            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 68);
           }
 
           if (Math.abs(p.deltaDb) >= 0.25) {
@@ -431,7 +431,7 @@
 
           const dAbs = Math.abs(p.deltaDb);
           const labelY = Math.max(padT - 8, Math.min(yCur, yRef) - 7);
-          ctx.font = '700 12px JetBrains Mono, monospace';
+          ctx.font = '700 14.7px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           if (dAbs < 0.15) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.78)';
@@ -442,25 +442,28 @@
             ctx.fillText(sgn + this.fmtNum(dAbs, 1) + ' dB', cx, labelY);
           }
 
-          ctx.font = p.n === this.selectedN ? '800 13px Roboto, sans-serif' : '700 12.5px Roboto, sans-serif';
+          const xNote = p.n >= 10 ? ('H' + p.n + '·' + p.note) : ('H' + p.n + ' · ' + p.note);
+          ctx.font = p.n === this.selectedN
+            ? (p.n >= 10 ? '800 14.5px Roboto, sans-serif' : '800 15.7px Roboto, sans-serif')
+            : (p.n >= 10 ? '700 14.2px Roboto, sans-serif' : '700 15.2px Roboto, sans-serif');
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 19);
+          ctx.fillText(xNote, cx, yBot + 22);
 
-          ctx.font = '600 11.5px JetBrains Mono, monospace';
+          ctx.font = '600 14.2px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 36);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 42);
         });
 
-        ctx.font = '600 12px Roboto, sans-serif';
+        ctx.font = '600 14.7px Roboto, sans-serif';
         ctx.textAlign = 'right';
-        ctx.fillStyle = 'rgba(255,255,255,0.86)';
-        ctx.fillText(dict.legendAbs, padL + pw, 16);
+        ctx.fillStyle = 'rgba(255,255,255,0.88)';
+        ctx.fillText(dict.legendAbs, padL + pw, 18);
       } else {
         const dMax = 20, dMin = -20;
         const mapY = d => padT + ((dMax - Math.max(dMin, Math.min(dMax, d))) / (dMax - dMin)) * ph;
         const yZero = mapY(0);
 
-        ctx.font = '600 12px JetBrains Mono, monospace';
+        ctx.font = '600 14.7px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [15, 10, 5, 0, -5, -10, -15].forEach(d => {
           const y = mapY(d);
@@ -473,7 +476,7 @@
           ctx.stroke();
           ctx.fillStyle = d === 0 ? '#e6c882' : '#94a3b8';
           const lbl = d > 0 ? '+' + d + ' dB' : (d < 0 ? '−' + Math.abs(d) + ' dB' : '0 dB');
-          ctx.fillText(lbl, padL - 8, y + 4);
+          ctx.fillText(lbl, padL - 8, y + 5);
         });
         ctx.setLineDash([]);
 
@@ -488,7 +491,7 @@
 
           if (p.n === this.selectedN) {
             ctx.fillStyle = 'rgba(200, 163, 86, 0.11)';
-            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 62);
+            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 68);
           }
 
           const top = Math.min(yZero, yVal);
@@ -498,25 +501,28 @@
           ctx.roundRect(x, top, barW, h, 5);
           ctx.fill();
 
-          ctx.font = '700 12px JetBrains Mono, monospace';
+          ctx.font = '700 14.7px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           ctx.fillStyle = p.deltaDb >= 0 ? '#fdba74' : '#7dd3fc';
-          const ty = p.deltaDb >= 0 ? top - 6 : top + h + 14;
+          const ty = p.deltaDb >= 0 ? top - 7 : top + h + 16;
           ctx.fillText(this.fmtSignedDb(p.deltaDb), cx, ty);
 
           const yBot = padT + ph;
-          ctx.font = p.n === this.selectedN ? '800 13px Roboto, sans-serif' : '700 12.5px Roboto, sans-serif';
+          const xNote = p.n >= 10 ? ('H' + p.n + '·' + p.note) : ('H' + p.n + ' · ' + p.note);
+          ctx.font = p.n === this.selectedN
+            ? (p.n >= 10 ? '800 14.5px Roboto, sans-serif' : '800 15.7px Roboto, sans-serif')
+            : (p.n >= 10 ? '700 14.2px Roboto, sans-serif' : '700 15.2px Roboto, sans-serif');
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 19);
-          ctx.font = '600 11.5px JetBrains Mono, monospace';
+          ctx.fillText(xNote, cx, yBot + 22);
+          ctx.font = '600 14.2px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 36);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 42);
         });
 
-        ctx.font = '600 12px Roboto, sans-serif';
+        ctx.font = '600 14.7px Roboto, sans-serif';
         ctx.textAlign = 'right';
-        ctx.fillStyle = 'rgba(255,255,255,0.86)';
-        ctx.fillText(dict.legendDelta, padL + pw, 16);
+        ctx.fillStyle = 'rgba(255,255,255,0.88)';
+        ctx.fillText(dict.legendDelta, padL + pw, 18);
       }
 
       ctx.restore();
@@ -530,7 +536,7 @@
       const sel = spec[this.selectedN - 1] || spec[7];
       const dict = this.t();
 
-      const padL = 62, padR = 62;
+      const padL = 66, padR = 66;
       const strY = Math.round(H * 0.42);
       const strW = W - padL - padR;
 
@@ -589,10 +595,10 @@
       ctx.lineTo(padL, strY - 2);
       ctx.closePath();
       ctx.fill();
-      ctx.font = '700 12.5px Roboto, sans-serif';
+      ctx.font = '700 15.2px Roboto, sans-serif';
       ctx.textAlign = 'left';
       ctx.fillStyle = '#e6c882';
-      ctx.fillText(dict.agraffe, Math.max(8, padL - 26), 16);
+      ctx.fillText(dict.agraffe, Math.max(8, padL - 28), 18);
 
       ctx.fillStyle = '#cbd5e1';
       ctx.beginPath();
@@ -603,7 +609,7 @@
       ctx.fill();
       ctx.textAlign = 'right';
       ctx.fillStyle = '#cbd5e1';
-      ctx.fillText(dict.bridge, padL + strW + 30, 16);
+      ctx.fillText(dict.bridge, padL + strW + 32, 18);
 
       const hx = padL + this.alpha * strW;
       const crownHalfPx = Math.round(13 - 4.5 * this.hardness);
@@ -641,13 +647,13 @@
         ? dict.hitNode(n, this.fmtDb(sel.nodeLossDb))
         : (hitPhase > 0.82 ? dict.hitAntinode(n) : dict.hitPartial(n, this.fmtDb(sel.nodeLossDb)));
 
-      ctx.font = '700 13px JetBrains Mono, monospace';
+      ctx.font = '700 15.7px JetBrains Mono, monospace';
       ctx.textAlign = 'left';
-      const infoX = Math.min(W - 365, hx + 26);
+      const infoX = Math.min(W - 435, hx + 28);
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 23);
+      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 25);
       ctx.fillStyle = hitPhase < 0.22 ? '#7dd3fc' : '#86efac';
-      ctx.fillText(hitStatus, infoX, strY + 42);
+      ctx.fillText(hitStatus, infoX, strY + 47);
 
       ctx.restore();
     }

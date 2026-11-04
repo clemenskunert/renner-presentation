@@ -9140,11 +9140,11 @@ body::before {
 
 /* ==========================================================================
    FOLIEN 33 & 34 (KAPITEL 5): INTERAKTIVE KLANGPHYSIK & FEDER HAMMERKOPF
-   Einheitliche Typografie-Hierarchie abgeglichen mit Folie 3:
+   Einheitliche Typografie-Hierarchie abgeglichen mit Folie 3 (+2 pt vergrößert):
    - Header (.slide-category, .slide-title, .slide-subtitle) 1:1 identisch mit Folie 3
-   - Karten- & Erklärungstitel in Roboto Slab (var(--font-serif)), ~24px
-   - Fließtext & Kern-Bullets in Roboto (var(--font-sans)), ~20-21.5px (analog #tree-milestone-8)
-   - Bedienelemente, 5-Stufen-Toggles, Readouts & KPIs klar lesbar (~15-22px)
+   - Karten- & Erklärungstitel in Roboto Slab (var(--font-serif)), 23.2px
+   - Fließtext & Kern-Bullets in Roboto (var(--font-sans)), 20.3px / 19.3px
+   - Bedienelemente, 5-Stufen-Toggles, Readouts & KPIs klar lesbar (16.6px–23.2px)
    ========================================================================== */
 .slide.pta-slide .slide-body,
 .slide.hsp-slide .slide-body {
@@ -9152,19 +9152,19 @@ body::before {
   height: auto !important;
   max-height: none !important;
   min-height: 0 !important;
-  padding: 10px 36px 18px 36px !important;
+  padding: 6px 28px 12px 28px !important;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   overflow: hidden;
 }
 
 .pta-main-grid,
 .hsp-main-grid {
   display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
-  gap: clamp(14px, 1.3vw, 18px);
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 14px;
   flex: 1;
   min-height: 0;
   min-width: 0;
@@ -9177,7 +9177,7 @@ body::before {
 .hsp-col-right {
   display: flex;
   flex-direction: column;
-  gap: clamp(9px, 1.0vh, 12px);
+  gap: 9px;
   min-height: 0;
   min-width: 0;
   height: 100%;
@@ -9189,10 +9189,10 @@ body::before {
   background: linear-gradient(165deg, rgba(16, 22, 36, 0.95) 0%, rgba(9, 13, 22, 0.98) 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
-  padding: clamp(10px, 1.05vh, 13px) clamp(13px, 1.25vw, 17px);
+  padding: 9px 14px;
   display: flex;
   flex-direction: column;
-  gap: clamp(6px, 0.75vh, 9px);
+  gap: 6px;
   min-height: 0;
   min-width: 0;
   box-sizing: border-box;
@@ -9202,8 +9202,8 @@ body::before {
 }
 
 .hsp-col-right > .hsp-card {
-  padding: clamp(8px, 0.90vh, 11px) clamp(12px, 1.15vw, 15px);
-  gap: clamp(5px, 0.60vh, 7px);
+  padding: 7px 13px;
+  gap: 4.5px;
 }
 
 .pta-card.gold-edge,
@@ -9218,6 +9218,9 @@ body::before {
 
 .pta-slide .bento-badge,
 .hsp-slide .bento-badge {
+  font-size: 16.8px;
+  padding: 3px 10px;
+  line-height: 1.2;
   white-space: nowrap;
   flex-shrink: 0;
   margin-bottom: 0;
@@ -9236,7 +9239,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 7px;
   flex-wrap: nowrap;
   flex-shrink: 0;
   min-width: 0;
@@ -9246,7 +9249,7 @@ body::before {
 .hsp-btn-group {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   flex-wrap: nowrap;
   min-width: 0;
 }
@@ -9257,11 +9260,11 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: rgba(255, 255, 255, 0.92);
   border-radius: 8px;
-  padding: 6px 11px;
+  padding: 5px 9px;
   font-family: var(--font-sans);
-  font-size: clamp(0.82rem, 0.90vw, 0.98rem);
+  font-size: 18.4px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.18;
   cursor: pointer;
   transition: all 0.18s ease;
   white-space: nowrap;
@@ -9295,8 +9298,8 @@ body::before {
 .pta-chip-btn.strike-preset {
   flex: 1;
   min-width: 0;
-  padding: 6px 5px;
-  font-size: clamp(0.78rem, 0.86vw, 0.94rem);
+  padding: 5px 4px;
+  font-size: 17.7px;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9306,16 +9309,16 @@ body::before {
 .hsp-strike-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: linear-gradient(135deg, #1fa47c 0%, #146e53 100%);
   border: 1px solid rgba(46, 204, 113, 0.72);
   color: #ffffff;
   border-radius: 8px;
-  padding: 6px 12px;
+  padding: 5px 10px;
   font-family: var(--font-sans);
-  font-size: clamp(0.84rem, 0.92vw, 1.00rem);
+  font-size: 18.7px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.18;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(31, 164, 124, 0.35);
   transition: all 0.18s ease;
@@ -9362,15 +9365,15 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: nowrap;
   background: rgba(6, 9, 15, 0.90);
   border: 1px solid rgba(200, 163, 86, 0.26);
   border-radius: 8px;
-  padding: 5px 11px;
+  padding: 5px 10px;
   font-family: var(--font-mono);
-  font-size: clamp(0.74rem, 0.80vw, 0.88rem);
-  line-height: 1.22;
+  font-size: 16.8px;
+  line-height: 1.20;
   color: rgba(255, 255, 255, 0.94);
   flex-shrink: 0;
   min-width: 0;
@@ -9393,11 +9396,11 @@ body::before {
 .pta-card-title,
 .hsp-card-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.04rem, 1.15vw, 1.28rem);
+  font-size: 23.2px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
-  line-height: 1.20;
+  line-height: 1.18;
   white-space: nowrap;
   min-width: 0;
   overflow: hidden;
@@ -9407,7 +9410,7 @@ body::before {
 #pta-string-wave-lbl,
 .hsp-sub-hint {
   font-family: var(--font-mono);
-  font-size: clamp(0.75rem, 0.81vw, 0.89rem) !important;
+  font-size: 16.9px !important;
   color: var(--gold-light);
   white-space: nowrap;
   flex-shrink: 0;
@@ -9417,7 +9420,7 @@ body::before {
 .hsp-ctrl-grid {
   display: flex;
   flex-direction: column;
-  gap: clamp(3px, 0.42vh, 5px);
+  gap: 3.5px;
   flex-shrink: 0;
 }
 
@@ -9425,18 +9428,18 @@ body::before {
 .hsp-ctrl-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3.5px;
   background: rgba(10, 14, 24, 0.76);
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 10px;
-  padding: clamp(8px, 0.92vh, 11px) 12px;
+  padding: 7px 11px;
   flex-shrink: 0;
   min-width: 0;
 }
 
 .hsp-ctrl-block {
   gap: 2px;
-  padding: clamp(4px, 0.48vh, 6px) 10px;
+  padding: 3.5px 9px;
 }
 
 .hsp-ctrl-block.warn-contour {
@@ -9456,9 +9459,9 @@ body::before {
 .pta-ctrl-label,
 .hsp-ctrl-label {
   font-family: var(--font-sans);
-  font-size: clamp(0.90rem, 0.99vw, 1.08rem);
+  font-size: 20.0px;
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.16;
   color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
@@ -9468,9 +9471,9 @@ body::before {
 .pta-ctrl-val,
 .hsp-ctrl-val {
   font-family: var(--font-mono);
-  font-size: clamp(0.82rem, 0.91vw, 0.99rem);
+  font-size: 18.5px;
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.16;
   color: var(--gold-light);
   white-space: nowrap;
   flex-shrink: 0;
@@ -9507,7 +9510,7 @@ body::before {
 .hsp-step-group {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 5px;
+  gap: 4px;
   margin-top: 1px;
 }
 
@@ -9516,12 +9519,12 @@ body::before {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 7px;
-  padding: 3.5px 4px;
-  color: rgba(255, 255, 255, 0.86);
+  padding: 3px 3px;
+  color: rgba(255, 255, 255, 0.88);
   font-family: var(--font-sans);
-  font-size: clamp(0.77rem, 0.84vw, 0.90rem);
+  font-size: 17.1px;
   font-weight: 600;
-  line-height: 1.16;
+  line-height: 1.15;
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
@@ -9582,9 +9585,9 @@ body::before {
   justify-content: space-between;
   gap: 8px;
   font-family: var(--font-sans);
-  font-size: clamp(0.76rem, 0.83vw, 0.90rem);
-  line-height: 1.18;
-  color: rgba(255, 255, 255, 0.84);
+  font-size: 17.1px;
+  line-height: 1.16;
+  color: rgba(255, 255, 255, 0.86);
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -9598,7 +9601,7 @@ body::before {
   background: linear-gradient(165deg, rgba(12, 20, 34, 0.92), rgba(8, 12, 22, 0.96));
   border: 1px solid rgba(200, 163, 86, 0.36);
   border-radius: 10px;
-  padding: clamp(4px, 0.48vh, 6px) 10px;
+  padding: 3.5px 9px;
   min-width: 0;
   flex-shrink: 0;
 }
@@ -9618,15 +9621,15 @@ body::before {
 .hsp-dyn-seg {
   text-align: center;
   font-family: var(--font-mono);
-  font-size: clamp(0.77rem, 0.84vw, 0.92rem);
+  font-size: 17.4px;
   font-weight: 800;
-  padding: 1.5px 0;
+  padding: 1px 0;
   border-radius: 5px;
   border: 1px solid rgba(46, 204, 113, 0.52);
   background: rgba(46, 204, 113, 0.18);
   color: #86efac;
   transition: all 0.18s ease;
-  line-height: 1.18;
+  line-height: 1.16;
   white-space: nowrap;
 }
 
@@ -9648,7 +9651,7 @@ body::before {
 .hsp-kpi-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
+  gap: 6px;
   flex-shrink: 0;
   min-width: 0;
 }
@@ -9659,7 +9662,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-left: 3px solid var(--gold-accent);
   border-radius: 10px;
-  padding: 4.5px 8px;
+  padding: 4px 8px;
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -9673,12 +9676,12 @@ body::before {
 .pta-kpi-lbl,
 .hsp-kpi-lbl {
   font-family: var(--font-sans);
-  font-size: clamp(0.74rem, 0.82vw, 0.88rem);
+  font-size: 16.8px;
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.16;
   text-transform: uppercase;
-  letter-spacing: 0.30px;
-  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.20px;
+  color: rgba(255, 255, 255, 0.80);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9687,19 +9690,19 @@ body::before {
 .pta-kpi-num,
 .hsp-kpi-num {
   font-family: var(--font-mono);
-  font-size: clamp(1.02rem, 1.16vw, 1.28rem);
+  font-size: 23.2px;
   font-weight: 800;
   color: #ffffff;
-  line-height: 1.16;
+  line-height: 1.14;
   white-space: nowrap;
 }
 
 .pta-kpi-sub,
 .hsp-kpi-sub {
   font-family: var(--font-sans);
-  font-size: clamp(0.73rem, 0.80vw, 0.87rem);
-  line-height: 1.18;
-  color: rgba(255, 255, 255, 0.82);
+  font-size: 16.6px;
+  line-height: 1.16;
+  color: rgba(255, 255, 255, 0.84);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9711,11 +9714,11 @@ body::before {
   background: radial-gradient(circle at top left, rgba(200, 163, 86, 0.16), rgba(10, 15, 26, 0.96) 75%);
   border: 1px solid rgba(200, 163, 86, 0.40);
   border-radius: 14px;
-  padding: clamp(8px, 0.95vh, 12px) clamp(12px, 1.15vw, 15px);
+  padding: 7px 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: clamp(4px, 0.55vh, 7px);
+  gap: 4px;
   flex: 1;
   min-height: 0;
   min-width: 0;
@@ -9724,10 +9727,10 @@ body::before {
 
 #pta-exp-badge,
 #hsp-exp-badge {
-  font-size: clamp(0.75rem, 0.82vw, 0.88rem) !important;
-  padding: 3px 9px !important;
-  line-height: 1.2 !important;
-  margin-bottom: 2px !important;
+  font-size: 16.8px !important;
+  padding: 2.5px 9px !important;
+  line-height: 1.18 !important;
+  margin-bottom: 1px !important;
 }
 
 .hsp-explain-box.blocked-alert {
@@ -9738,18 +9741,18 @@ body::before {
 .pta-explain-title,
 .hsp-explain-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.04rem, 1.16vw, 1.28rem);
+  font-size: 23.2px;
   font-weight: 700;
   color: #ffffff;
-  margin: 2px 0 0 0;
-  line-height: 1.20;
+  margin: 1px 0 0 0;
+  line-height: 1.18;
 }
 
 .pta-explain-text,
 .hsp-explain-text {
   font-family: var(--font-sans);
-  font-size: clamp(0.90rem, 1.00vw, 1.10rem);
-  line-height: 1.32;
+  font-size: 20.3px;
+  line-height: 1.27;
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
 }
@@ -9764,10 +9767,10 @@ body::before {
   background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 9px;
-  padding: 5px 10px;
+  padding: 4.5px 10px;
   font-family: var(--font-sans);
-  font-size: clamp(0.86rem, 0.94vw, 1.04rem);
-  line-height: 1.28;
+  font-size: 19.3px;
+  line-height: 1.24;
   color: rgba(255, 255, 255, 0.94);
 }
 
@@ -15662,14 +15665,14 @@ window.slideTranslations = {
     "s33_category": "Teil 5: Intonation • Auftakt: Klangphysik & Klavierton",
     "s33_title": "Teiltonaufbau auf A₁ (55 Hz): Tonhärte & Anschlagspunkt",
     "s33_subtitle": "Zu- und Abnahme der Teiltöne H₁–H₁₂ in Dezibel (dB) durch Hammerfilz-Elastizität und Anschlagsposition",
-    "s33_btn_soft": "☁️ Tonlich weich",
-    "s33_btn_concert": "✦ Konzert-Ideal (0 dB Δ)",
-    "s33_btn_hard": "⚡ Tonlich hart",
-    "s33_mode_abs": "Pegel (dB) + ΔdB",
-    "s33_mode_delta": "Nur Zu-/Abnahme (ΔdB)",
-    "s33_btn_play": "A₁ (55 Hz) anhören",
+    "s33_btn_soft": "☁️ Weich",
+    "s33_btn_concert": "✦ Konzert-Ideal",
+    "s33_btn_hard": "⚡ Hart",
+    "s33_mode_abs": "Pegel + ΔdB",
+    "s33_mode_delta": "ΔdB-Änderung",
+    "s33_btn_play": "A₁ (55 Hz)",
     "s33_str_badge": "ANSCHLAGSPUNKT x₀ / L",
-    "s33_str_title": "Stehende Welle A₁ (L = 1.560 mm) & Knoten-Auslöschung",
+    "s33_str_title": "Stehende Welle A₁ (1.560 mm) & Knoten-Dämpfung",
     "s33_ctrl1_lbl": "1. Tonhärte (Hammerfilz)",
     "s33_scale_soft": "← Tonlich weicher (genadelt)",
     "s33_scale_ref": "0 % Referenz",
@@ -16605,14 +16608,14 @@ window.slideTranslations = {
     "s33_category": "Part 5: Voicing • Opening: Piano Tone Physics & Partials",
     "s33_title": "Partial Structure on A₁ (55 Hz): Felt Hardness & Strike Point",
     "s33_subtitle": "Increase and decrease of partials H₁–H₁₂ in decibels (dB) driven by hammer felt elasticity and strike ratio",
-    "s33_btn_soft": "☁️ Tonally Soft",
-    "s33_btn_concert": "✦ Concert Ideal (0 dB Δ)",
-    "s33_btn_hard": "⚡ Tonally Hard",
-    "s33_mode_abs": "Level (dB) + ΔdB",
-    "s33_mode_delta": "Gain / Loss Only (ΔdB)",
-    "s33_btn_play": "Listen to A₁ (55 Hz)",
+    "s33_btn_soft": "☁️ Soft",
+    "s33_btn_concert": "✦ Concert Ideal",
+    "s33_btn_hard": "⚡ Hard",
+    "s33_mode_abs": "Level + ΔdB",
+    "s33_mode_delta": "ΔdB Shift",
+    "s33_btn_play": "Play A₁ (55 Hz)",
     "s33_str_badge": "STRIKE POINT x₀ / L",
-    "s33_str_title": "Standing Wave A₁ (L = 1,560 mm) & Node Cancellation",
+    "s33_str_title": "Standing Wave A₁ (1,560 mm) & Node Cancellation",
     "s33_ctrl1_lbl": "1. Tonal Hardness (Felt)",
     "s33_scale_soft": "← Softer (needled)",
     "s33_scale_ref": "0% Reference",
@@ -16624,7 +16627,7 @@ window.slideTranslations = {
     "s33_sp_7": "1/7 L (H₇)",
     "s33_sp_5": "1/5 L (H₅)",
     "s33_kpi1_lbl": "Foundation (H₁–H₄)",
-    "s33_kpi1_sub": "55–220 Hz Fundamental & Body",
+    "s33_kpi1_sub": "55–220 Hz Core & Warmth",
     "s33_kpi2_lbl": "Overtones (H₆–H₁₂)",
     "s33_kpi2_sub": "330–660 Hz Brilliance",
     "s33_kpi3_lbl": "Node Suppression",
@@ -17548,14 +17551,14 @@ window.slideTranslations = {
     "s33_category": "第5部：整音技術 • 導入：ピアノ音の倍音構造と音響物理",
     "s33_title": "A₁ (55 Hz) の倍音構造：フェルト硬度と打弦点の影響",
     "s33_subtitle": "ハンマーフェルトの弾性と打弦位置による第1〜第12倍音（H₁〜H₁₂）のデシベル（dB）増減",
-    "s33_btn_soft": "☁️ 柔らかい音色",
-    "s33_btn_concert": "✦ コンサート基準 (0 dB Δ)",
-    "s33_btn_hard": "⚡ 硬い音色",
-    "s33_mode_abs": "レベル (dB) + ΔdB",
-    "s33_mode_delta": "増減のみ (ΔdB)",
-    "s33_btn_play": "A₁ (55 Hz) を試聴",
+    "s33_btn_soft": "☁️ 柔らかめ",
+    "s33_btn_concert": "✦ コンサート基準",
+    "s33_btn_hard": "⚡ 硬め",
+    "s33_mode_abs": "レベル + ΔdB",
+    "s33_mode_delta": "ΔdB 増減",
+    "s33_btn_play": "A₁ 試聴",
     "s33_str_badge": "打弦点 x₀ / L",
-    "s33_str_title": "A₁弦（L = 1,560 mm）の定常波と節（ノード）減衰",
+    "s33_str_title": "A₁弦 (1,560 mm) の定常波と節（ノード）減衰",
     "s33_ctrl1_lbl": "1. 音色の硬さ（フェルト）",
     "s33_scale_soft": "← 柔らかく（針入れ）",
     "s33_scale_ref": "0% 基準",
@@ -18491,14 +18494,14 @@ window.slideTranslations = {
     "s33_category": "第五部分：整音艺术 • 开篇：钢琴乐音泛音结构与击弦声学",
     "s33_title": "A₁ (55 Hz) 泛音结构解析：弦槌硬度与击弦点位置",
     "s33_subtitle": "弦槌毛毡弹性与击弦点比例对第 1–12 泛音（H₁–H₁₂）分贝（dB）增减的声学调控",
-    "s33_btn_soft": "☁️ 音色偏柔",
-    "s33_btn_concert": "✦ 音乐会理想基准 (0 dB Δ)",
-    "s33_btn_hard": "⚡ 音色偏硬",
-    "s33_mode_abs": "绝对电平 (dB) + ΔdB",
-    "s33_mode_delta": "仅显示增减 (ΔdB)",
-    "s33_btn_play": "试听 A₁ (55 Hz)",
+    "s33_btn_soft": "☁️ 偏柔",
+    "s33_btn_concert": "✦ 音乐会基准",
+    "s33_btn_hard": "⚡ 偏硬",
+    "s33_mode_abs": "电平 + ΔdB",
+    "s33_mode_delta": "ΔdB 增减",
+    "s33_btn_play": "试听 A₁",
     "s33_str_badge": "击弦点 x₀ / L",
-    "s33_str_title": "A₁ 琴弦（L = 1,560 mm）驻波形态与波节消音效应",
+    "s33_str_title": "A₁ 琴弦 (1,560 mm) 驻波与波节消音效应",
     "s33_ctrl1_lbl": "1. 音色软硬度（弦槌毛毡）",
     "s33_scale_soft": "← 偏柔和（刺针松弛）",
     "s33_scale_ref": "0% 基准",
@@ -25003,16 +25006,16 @@ window.YamahaKitController = new YamahaKitStage();
   const I18N = {
     de: {
       intervals: [
-        'Grundton (Prime)', '1. Oktave', 'Duodezime (Quinte)', '2. Oktave',
-        'Große Terz (+2 Okt.)', 'Quinte (+2 Okt.)', 'Naturseptime (−31 ct)', '3. Oktave',
-        'Große Sekunde', 'Große Terz (+3 Okt.)', '11. Teilton (−49 ct)', 'Quinte (+3 Okt.)'
+        'Grundton', '1. Okt.', 'Duodezime', '2. Okt.',
+        'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.',
+        'Gr. Sek.', 'Gr. Terz', '11. Teilt.', 'Quinte'
       ],
       roles: [
         'Fundament & Tragkraft', 'Volumen, Wärme & Körper', 'Sonorer Kern & Fülle', 'Klarer Oktavglanz',
         'Cantabile & edle Klangfarbe', 'Brillanz & Projektion', 'Reibungston (rau / unrein)', 'Strahlkraft & Präsenz',
         'Metallische Schärfe', 'Heller Obertonglanz', 'Scharfer Zwischen-Teilton', 'Feine Attack-Spitze'
       ],
-      legendAbs: '--- Weiße Linie = Konzert-Ideal  |  Grün: H₁–H₄ Fundament  |  Gold: Konsonante Obertöne  |  Bernstein: Reibungstöne (H₇, H₉, H₁₁)',
+      legendAbs: '--- Konzert-Ideal  |  Grün: H₁–H₄ Fundament  |  Gold: Konsonante Obertöne  |  Bernstein: Reibungstöne (H₇, H₉, H₁₁)',
       legendDelta: 'Orange (+dB): Teilton-Zunahme ggü. Konzert-Ideal  |  Hellblau (−dB): Teilton-Abnahme / Knoten-Dämpfung',
       agraffe: 'Agraffe (0)',
       bridge: 'Basssteg (L = 1.560 mm)',
@@ -25024,8 +25027,8 @@ window.YamahaKitController = new YamahaKitStage();
       hSlightlySoft: (p) => `Leicht weich (${p} %)`,
       hHard: (p) => `Tonlich hart (+${p} %)`,
       hSlightlyHard: (p) => `Leicht brillant (+${p} %)`,
-      roRefCur: (r, c) => `Ref.: ${r} → Akt.: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (Filz ${felt} | Punkt ${str})`,
+      roRefCur: (r, c) => `Ref ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (Filz ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) gedämpft`,
       expTitleSoft: 'Tonlich weicher Klang: Lange Kontaktzeit dämpft hohe Teiltöne',
@@ -25053,16 +25056,16 @@ window.YamahaKitController = new YamahaKitStage();
 
     en: {
       intervals: [
-        'Fundamental (Unison)', '1st Octave', 'Twelfth (Perfect 5th)', '2nd Octave',
-        'Major 3rd (+2 Oct.)', 'Perfect 5th (+2 Oct.)', 'Harmonic 7th (−31 ct)', '3rd Octave',
-        'Major 2nd', 'Major 3rd (+3 Oct.)', '11th Partial (−49 ct)', 'Perfect 5th (+3 Oct.)'
+        'Fundam.', '1st Oct', 'Twelfth', '2nd Oct',
+        'Maj 3rd', 'Perf 5th', 'Harm 7th', '3rd Oct',
+        'Maj 2nd', 'Maj 3rd', '11th Part.', 'Perf 5th'
       ],
       roles: [
         'Foundation & Projection', 'Warmth, Body & Volume', 'Sonorous Core & Richness', 'Clear Octave Sheen',
         'Cantabile & Singing Color', 'Brilliance & Carry', 'Roughness Partial (unpure)', 'Presence & Radiance',
         'Metallic Edge', 'Bright Overtone Shimmer', 'Sharp Inter-Harmonic', 'Crisp Attack Tip'
       ],
-      legendAbs: '--- White Line = Concert Ideal  |  Green: H₁–H₄ Foundation  |  Gold: Consonant Overtones  |  Amber: Roughness Partials (H₇, H₉, H₁₁)',
+      legendAbs: '--- Concert Ideal  |  Green: H₁–H₄ Foundation  |  Gold: Consonant Overtones  |  Amber: Roughness (H₇, H₉, H₁₁)',
       legendDelta: 'Orange (+dB): Partial Gain vs. Concert Ideal  |  Sky Blue (−dB): Partial Loss / Node Suppression',
       agraffe: 'Agraffe (0)',
       bridge: 'Bass Bridge (L = 1,560 mm)',
@@ -25074,8 +25077,8 @@ window.YamahaKitController = new YamahaKitStage();
       hSlightlySoft: (p) => `Slightly Soft (${p}%)`,
       hHard: (p) => `Tonally Hard (+${p}%)`,
       hSlightlyHard: (p) => `Slightly Bright (+${p}%)`,
-      roRefCur: (r, c) => `Ref: ${r} → Now: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (Felt ${felt} | Strike ${str})`,
+      roRefCur: (r, c) => `Ref ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (Felt ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) suppressed`,
       expTitleSoft: 'Tonally Soft Sound: Longer Contact Time Attenuates Upper Partials',
@@ -25103,9 +25106,9 @@ window.YamahaKitController = new YamahaKitStage();
 
     ja: {
       intervals: [
-        '基音（第1倍音）', '第1オクターブ', '12度（完全5度）', '第2オクターブ',
-        '長3度（+2 Oct.）', '完全5度（+2 Oct.）', '自然7度（−31 ct）', '第3オクターブ（440 Hz）',
-        '長2度', '長3度（+3 Oct.）', '第11倍音（−49 ct）', '完全5度（+3 Oct.）'
+        '基音', '第1Oct', '12度（5度）', '第2Oct',
+        '長3度', '完全5度', '自然7度', '第3Oct',
+        '長2度', '長3度', '第11倍音', '完全5度'
       ],
       roles: [
         '重厚な土台と遠達性', '温かみと豊かな響き', '充実した音の芯', '澄んだオクターブの輝き',
@@ -25124,8 +25127,8 @@ window.YamahaKitController = new YamahaKitStage();
       hSlightlySoft: (p) => `やや柔らかめ (${p}%)`,
       hHard: (p) => `硬い音色 (+${p}%)`,
       hSlightlyHard: (p) => `やや華やか (+${p}%)`,
-      roRefCur: (r, c) => `基準: ${r} → 現在: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (硬度 ${felt} | 打弦 ${str})`,
+      roRefCur: (r, c) => `基準 ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n}（腹 ${n} 個）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) を抑制`,
       expTitleSoft: '柔らかい音色：長い接触時間が高次倍音を穏やかに減衰',
@@ -25153,9 +25156,9 @@ window.YamahaKitController = new YamahaKitStage();
 
     zh: {
       intervals: [
-        '基音（纯一度）', '第一八度', '十二度（纯五度）', '第二八度',
-        '大三度（+2 八度）', '纯五度（+2 八度）', '自然七度（−31 音分）', '第三八度（440 Hz）',
-        '大二度', '大三度（+3 八度）', '第11泛音（−49 音分）', '纯五度（+3 八度）'
+        '基音', '第一八度', '十二度', '第二八度',
+        '大三度', '纯五度', '自然七度', '第三八度',
+        '大二度', '大三度', '第11泛音', '纯五度'
       ],
       roles: [
         '低音根基与穿透力', '温暖度与共鸣腔体', '浑厚音芯与饱满度', '清澈八度光泽',
@@ -25174,8 +25177,8 @@ window.YamahaKitController = new YamahaKitStage();
       hSlightlySoft: (p) => `略微柔和 (${p}%)`,
       hHard: (p) => `音色偏硬 (+${p}%)`,
       hSlightlyHard: (p) => `略微明亮 (+${p}%)`,
-      roRefCur: (r, c) => `基准: ${r} → 当前: ${c}`,
-      roDelta: (tot, felt, str) => `Δ: ${tot} (硬度 ${felt} | 击弦 ${str})`,
+      roRefCur: (r, c) => `基准 ${r} → ${c}`,
+      roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n}（${n} 个波腹）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) 波节抑制`,
       expTitleSoft: '音色偏柔：较长弦槌接触时间显著衰减高次泛音',
@@ -25321,7 +25324,7 @@ window.YamahaKitController = new YamahaKitStage();
       const spec = this.computeSpectrum();
       const dict = this.t();
 
-      const padL = 64, padR = 18, padT = 32, padB = 52;
+      const padL = 74, padR = 18, padT = 35, padB = 58;
       const pw = W - padL - padR;
       const ph = H - padT - padB;
       this.barHitRegions = [];
@@ -25330,7 +25333,7 @@ window.YamahaKitController = new YamahaKitStage();
         const dbMax = 6, dbMin = -46;
         const mapY = db => padT + ((dbMax - Math.max(dbMin, Math.min(dbMax, db))) / (dbMax - dbMin)) * ph;
 
-        ctx.font = '600 12px JetBrains Mono, monospace';
+        ctx.font = '600 14.7px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [0, -10, -20, -30, -40].forEach(db => {
           const y = mapY(db);
@@ -25342,7 +25345,7 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.lineTo(padL + pw, y);
           ctx.stroke();
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText((db === 0 ? '0' : '−' + Math.abs(db)) + ' dB', padL - 8, y + 4);
+          ctx.fillText((db === 0 ? '0' : '−' + Math.abs(db)) + ' dB', padL - 8, y + 5);
         });
         ctx.setLineDash([]);
 
@@ -25361,7 +25364,7 @@ window.YamahaKitController = new YamahaKitStage();
 
           if (p.n === this.selectedN) {
             ctx.fillStyle = 'rgba(200, 163, 86, 0.11)';
-            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 62);
+            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 68);
           }
 
           if (Math.abs(p.deltaDb) >= 0.25) {
@@ -25402,7 +25405,7 @@ window.YamahaKitController = new YamahaKitStage();
 
           const dAbs = Math.abs(p.deltaDb);
           const labelY = Math.max(padT - 8, Math.min(yCur, yRef) - 7);
-          ctx.font = '700 12px JetBrains Mono, monospace';
+          ctx.font = '700 14.7px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           if (dAbs < 0.15) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.78)';
@@ -25413,25 +25416,28 @@ window.YamahaKitController = new YamahaKitStage();
             ctx.fillText(sgn + this.fmtNum(dAbs, 1) + ' dB', cx, labelY);
           }
 
-          ctx.font = p.n === this.selectedN ? '800 13px Roboto, sans-serif' : '700 12.5px Roboto, sans-serif';
+          const xNote = p.n >= 10 ? ('H' + p.n + '·' + p.note) : ('H' + p.n + ' · ' + p.note);
+          ctx.font = p.n === this.selectedN
+            ? (p.n >= 10 ? '800 14.5px Roboto, sans-serif' : '800 15.7px Roboto, sans-serif')
+            : (p.n >= 10 ? '700 14.2px Roboto, sans-serif' : '700 15.2px Roboto, sans-serif');
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 19);
+          ctx.fillText(xNote, cx, yBot + 22);
 
-          ctx.font = '600 11.5px JetBrains Mono, monospace';
+          ctx.font = '600 14.2px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 36);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 42);
         });
 
-        ctx.font = '600 12px Roboto, sans-serif';
+        ctx.font = '600 14.7px Roboto, sans-serif';
         ctx.textAlign = 'right';
-        ctx.fillStyle = 'rgba(255,255,255,0.86)';
-        ctx.fillText(dict.legendAbs, padL + pw, 16);
+        ctx.fillStyle = 'rgba(255,255,255,0.88)';
+        ctx.fillText(dict.legendAbs, padL + pw, 18);
       } else {
         const dMax = 20, dMin = -20;
         const mapY = d => padT + ((dMax - Math.max(dMin, Math.min(dMax, d))) / (dMax - dMin)) * ph;
         const yZero = mapY(0);
 
-        ctx.font = '600 12px JetBrains Mono, monospace';
+        ctx.font = '600 14.7px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [15, 10, 5, 0, -5, -10, -15].forEach(d => {
           const y = mapY(d);
@@ -25444,7 +25450,7 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.stroke();
           ctx.fillStyle = d === 0 ? '#e6c882' : '#94a3b8';
           const lbl = d > 0 ? '+' + d + ' dB' : (d < 0 ? '−' + Math.abs(d) + ' dB' : '0 dB');
-          ctx.fillText(lbl, padL - 8, y + 4);
+          ctx.fillText(lbl, padL - 8, y + 5);
         });
         ctx.setLineDash([]);
 
@@ -25459,7 +25465,7 @@ window.YamahaKitController = new YamahaKitStage();
 
           if (p.n === this.selectedN) {
             ctx.fillStyle = 'rgba(200, 163, 86, 0.11)';
-            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 62);
+            ctx.fillRect(padL + slotW * i + 2, padT - 20, slotW - 4, ph + 68);
           }
 
           const top = Math.min(yZero, yVal);
@@ -25469,25 +25475,28 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.roundRect(x, top, barW, h, 5);
           ctx.fill();
 
-          ctx.font = '700 12px JetBrains Mono, monospace';
+          ctx.font = '700 14.7px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           ctx.fillStyle = p.deltaDb >= 0 ? '#fdba74' : '#7dd3fc';
-          const ty = p.deltaDb >= 0 ? top - 6 : top + h + 14;
+          const ty = p.deltaDb >= 0 ? top - 7 : top + h + 16;
           ctx.fillText(this.fmtSignedDb(p.deltaDb), cx, ty);
 
           const yBot = padT + ph;
-          ctx.font = p.n === this.selectedN ? '800 13px Roboto, sans-serif' : '700 12.5px Roboto, sans-serif';
+          const xNote = p.n >= 10 ? ('H' + p.n + '·' + p.note) : ('H' + p.n + ' · ' + p.note);
+          ctx.font = p.n === this.selectedN
+            ? (p.n >= 10 ? '800 14.5px Roboto, sans-serif' : '800 15.7px Roboto, sans-serif')
+            : (p.n >= 10 ? '700 14.2px Roboto, sans-serif' : '700 15.2px Roboto, sans-serif');
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 19);
-          ctx.font = '600 11.5px JetBrains Mono, monospace';
+          ctx.fillText(xNote, cx, yBot + 22);
+          ctx.font = '600 14.2px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 36);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 42);
         });
 
-        ctx.font = '600 12px Roboto, sans-serif';
+        ctx.font = '600 14.7px Roboto, sans-serif';
         ctx.textAlign = 'right';
-        ctx.fillStyle = 'rgba(255,255,255,0.86)';
-        ctx.fillText(dict.legendDelta, padL + pw, 16);
+        ctx.fillStyle = 'rgba(255,255,255,0.88)';
+        ctx.fillText(dict.legendDelta, padL + pw, 18);
       }
 
       ctx.restore();
@@ -25501,7 +25510,7 @@ window.YamahaKitController = new YamahaKitStage();
       const sel = spec[this.selectedN - 1] || spec[7];
       const dict = this.t();
 
-      const padL = 62, padR = 62;
+      const padL = 66, padR = 66;
       const strY = Math.round(H * 0.42);
       const strW = W - padL - padR;
 
@@ -25560,10 +25569,10 @@ window.YamahaKitController = new YamahaKitStage();
       ctx.lineTo(padL, strY - 2);
       ctx.closePath();
       ctx.fill();
-      ctx.font = '700 12.5px Roboto, sans-serif';
+      ctx.font = '700 15.2px Roboto, sans-serif';
       ctx.textAlign = 'left';
       ctx.fillStyle = '#e6c882';
-      ctx.fillText(dict.agraffe, Math.max(8, padL - 26), 16);
+      ctx.fillText(dict.agraffe, Math.max(8, padL - 28), 18);
 
       ctx.fillStyle = '#cbd5e1';
       ctx.beginPath();
@@ -25574,7 +25583,7 @@ window.YamahaKitController = new YamahaKitStage();
       ctx.fill();
       ctx.textAlign = 'right';
       ctx.fillStyle = '#cbd5e1';
-      ctx.fillText(dict.bridge, padL + strW + 30, 16);
+      ctx.fillText(dict.bridge, padL + strW + 32, 18);
 
       const hx = padL + this.alpha * strW;
       const crownHalfPx = Math.round(13 - 4.5 * this.hardness);
@@ -25612,13 +25621,13 @@ window.YamahaKitController = new YamahaKitStage();
         ? dict.hitNode(n, this.fmtDb(sel.nodeLossDb))
         : (hitPhase > 0.82 ? dict.hitAntinode(n) : dict.hitPartial(n, this.fmtDb(sel.nodeLossDb)));
 
-      ctx.font = '700 13px JetBrains Mono, monospace';
+      ctx.font = '700 15.7px JetBrains Mono, monospace';
       ctx.textAlign = 'left';
-      const infoX = Math.min(W - 365, hx + 26);
+      const infoX = Math.min(W - 435, hx + 28);
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 23);
+      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 25);
       ctx.fillStyle = hitPhase < 0.22 ? '#7dd3fc' : '#86efac';
-      ctx.fillText(hitStatus, infoX, strY + 42);
+      ctx.fillText(hitStatus, infoX, strY + 47);
 
       ctx.restore();
     }
@@ -26075,12 +26084,12 @@ window.YamahaKitController = new YamahaKitStage();
           tauIdeal: 'Kurze τc · ff entfaltet frei',
           tauWarn: '△ τc steigt · ff begrenzt',
           tauSlow: '⚠ Verlängert → kein ff!',
-          toneSoft: 'Samtig-weich (feines pp)',
-          toneIdeal: 'Singend (pp bis ff)',
-          toneCrisp: 'Silbrig-klar (piano & forte)',
-          toneHardNoPp: 'Hart im Ansatz (kein pp!)',
-          toneStiffNoFf: 'Matt & gedämpft (kein ff!)',
-          toneBlocked: 'Hart & abgedämpft (kein pp/ff)',
+          toneSoft: 'Samtig-weich (pp)',
+          toneIdeal: 'Singend (pp–ff)',
+          toneCrisp: 'Silbrig-klar (p–f)',
+          toneHardNoPp: 'Harter Ansatz (kein pp)',
+          toneStiffNoFf: 'Matt & gedämpft (kein ff)',
+          toneBlocked: 'Hart & matt (kein pp/ff)',
           cvForceVec: 'F_Feder',
           cvString: '3-chörige Stahlsaite (Anschlagspunkt)',
           cvCristoforiTop: 'Hirschleder-Polster (Kontaktzone)',
@@ -26119,11 +26128,11 @@ window.YamahaKitController = new YamahaKitStage();
           cvAxisX: 'Einfederung x (mm)',
           cvAxisT: 'Kontaktzeit t (ms)',
           roPrinC: 'Ringfeder + Hirschleder (1700)',
-          roPrinR: (ap, fl) => `Scheitel ${ap} % → Flanke ${fl} % (½) · pp–ff`,
-          roPrinNoPp: (ap) => `⚠ Scheitel (${ap} %) zu hart → kein pp`,
-          roPrinNoFf: (tau) => `⚠ Unelastisch → τc = ${tau} ms (kein ff)`,
-          roPrinBlock: '⚠ Übergang sperrt → τc verlängert',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          roPrinR: (ap, fl) => `Scheitel ${ap}% → Flanke ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ Scheitel ${ap}% hart → kein pp`,
+          roPrinNoFf: (tau) => `⚠ Steif → τc = ${tau} ms (kein ff)`,
+          roPrinBlock: '⚠ Übergang sperrt → τc ↑',
+          roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
           expBadgeC: '✦ CRISTOFORIS UR-PRINZIP (1700)',
           expTitleC: 'Das belederte Röllchen: Maximale Elastizität für „col piano e forte“',
@@ -26211,11 +26220,11 @@ window.YamahaKitController = new YamahaKitStage();
           tauIdeal: 'Short τc · free ff bloom',
           tauWarn: '△ τc rising · ff capped',
           tauSlow: '⚠ Prolonged → chokes ff!',
-          toneSoft: 'Velvety soft (delicate pp)',
-          toneIdeal: 'Singing (full pp to ff)',
-          toneCrisp: 'Silvery-clear (piano & forte)',
-          toneHardNoPp: 'Harsh onset (no pp!)',
-          toneStiffNoFf: 'Dull & choked (no ff!)',
+          toneSoft: 'Velvety soft (pp)',
+          toneIdeal: 'Singing (pp–ff)',
+          toneCrisp: 'Silvery-clear (p–f)',
+          toneHardNoPp: 'Harsh onset (no pp)',
+          toneStiffNoFf: 'Dull & choked (no ff)',
           toneBlocked: 'Harsh & choked (no pp/ff)',
           cvForceVec: 'F_Spring',
           cvString: 'Tri-chord steel string (strike point)',
@@ -26254,12 +26263,12 @@ window.YamahaKitController = new YamahaKitStage();
           cvPulseLongTau: '⚠ τc prolonged → no ff!',
           cvAxisX: 'Deflection x (mm)',
           cvAxisT: 'Contact time t (ms)',
-          roPrinC: 'Hollow parchment ring-spring + leather (1700)',
-          roPrinR: (ap, fl) => `Crown ${ap}% → Flank ${fl}% (½) · pp–ff open`,
-          roPrinNoPp: (ap) => `⚠ Crown (${ap}%) / transition too hard → no pp`,
-          roPrinNoFf: (tau) => `⚠ Inelastic felt → τc = ${tau} ms (no ff)`,
-          roPrinBlock: '⚠ Stiff felt/transition → τc prolonged',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          roPrinC: 'Hollow parchment ring + leather',
+          roPrinR: (ap, fl) => `Crown ${ap}% → Flank ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ Crown ${ap}% hard → no pp`,
+          roPrinNoFf: (tau) => `⚠ Stiff → τc = ${tau} ms (no ff)`,
+          roPrinBlock: '⚠ Transition locked → τc ↑',
+          roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
           expBadgeC: '✦ CRISTOFORI’S ORIGINAL PRINCIPLE (1700)',
           expTitleC: 'The Leathered Roll: Surface-Tension Elasticity for “col piano e forte”',
@@ -26347,12 +26356,12 @@ window.YamahaKitController = new YamahaKitStage();
           tauIdeal: '短い τc・豊かな ff 開放',
           tauWarn: '△ τc やや増加・ff 頭打ち',
           tauSlow: '⚠ 接触延長 → ff 減衰！',
-          toneSoft: 'ビロードの柔らかさ (pp)',
-          toneIdeal: '歌うような響き (pp〜ff)',
-          toneCrisp: '銀色の透明感 (piano & forte)',
-          toneHardNoPp: '立ち上がり過硬 (pp 不可!)',
-          toneStiffNoFf: '鈍く詰まる音 (ff 不可!)',
-          toneBlocked: '硬く詰まった音 (pp/ff 不可)',
+          toneSoft: 'ビロードの響き (pp)',
+          toneIdeal: '歌う響き (pp〜ff)',
+          toneCrisp: '銀色の透明感 (p〜f)',
+          toneHardNoPp: '初期過硬 (pp不可)',
+          toneStiffNoFf: '詰まる音 (ff不可)',
+          toneBlocked: '硬く詰まる音 (pp/ff不可)',
           cvForceVec: 'F_弾性',
           cvString: '3本同音スチール弦（打弦点）',
           cvCristoforiTop: '鹿革パッド（接触ゾーン）',
@@ -26390,12 +26399,12 @@ window.YamahaKitController = new YamahaKitStage();
           cvPulseLongTau: '⚠ τc 延長 → ff 不可！',
           cvAxisX: '圧縮変位 x (mm)',
           cvAxisT: '接触時間 t (ms)',
-          roPrinC: '中空羊皮紙リングばね＋鹿革 (1700年)',
-          roPrinR: (ap, fl) => `クラウン ${ap}% → フランク ${fl}% (½) · pp–ff 開放`,
-          roPrinNoPp: (ap) => `⚠ クラウン (${ap}%)／移行帯が過硬 → pp 不可`,
-          roPrinNoFf: (tau) => `⚠ 弾性不足フェルト → τc = ${tau} ms (ff 不可)`,
-          roPrinBlock: '⚠ 過硬フェルト／移行帯 → 接触時間 τc が延長',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          roPrinC: '中空羊皮紙リング＋鹿革 (1700)',
+          roPrinR: (ap, fl) => `クラウン ${ap}% → フランク ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ クラウン ${ap}% 過硬 → pp不可`,
+          roPrinNoFf: (tau) => `⚠ 弾性不足 → τc = ${tau} ms`,
+          roPrinBlock: '⚠ 移行帯遮断 → τc 延長↑',
+          roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
           expBadgeC: '✦ クリストフォリの原点原理 (1700)',
           expTitleC: '革巻きロール：「ピアノとフォルテ」を生んだ表面張力弾性',
@@ -27038,9 +27047,9 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 13px Roboto, sans-serif';
+          ctx.font = '700 15.7px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText(dict.cvString, 28, 22);
+          ctx.fillText(dict.cvString, 28, 24);
 
           // Live Force-Direction Phase Pill at Top-Right of Canvas
           let phLabel = dict.phRest;
@@ -27073,19 +27082,19 @@ window.YamahaKitController = new YamahaKitStage();
             phColor = '#4ade80';
             phBorder = 'rgba(74, 222, 128, 0.65)';
           }
-          ctx.font = '700 12px Roboto, sans-serif';
-          const pillW = ctx.measureText(phLabel).width + 20;
+          ctx.font = '700 14.7px Roboto, sans-serif';
+          const pillW = ctx.measureText(phLabel).width + 22;
           const pillX = W - pillW - 18;
           ctx.fillStyle = 'rgba(8, 12, 22, 0.88)';
           ctx.strokeStyle = phBorder;
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(pillX, 6, pillW, 23, 11.5);
+          ctx.roundRect(pillX, 5, pillW, 26, 13);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = phColor;
           ctx.textAlign = 'right';
-          ctx.fillText(phLabel, W - 28, 21);
+          ctx.fillText(phLabel, W - 29, 23);
           ctx.restore();
 
           if (this.mode === 'cristofori') {
@@ -27231,31 +27240,31 @@ window.YamahaKitController = new YamahaKitStage();
           // High-contrast floating force badge to the right of the Cristofori roll (zero inner-wall overlap!)
           ctx.save();
           const isDownBounce = (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound');
-          ctx.font = '700 11.5px JetBrains Mono, monospace';
+          ctx.font = '700 14.2px JetBrains Mono, monospace';
           const vecTag = isDownBounce
             ? `F_Bounce ↓ (${phys.reboundPct}%)`
             : `${dict.cvForceVec} ↑ (${phys.reboundPct}%)`;
-          const bw = ctx.measureText(vecTag).width + 14;
+          const bw = ctx.measureText(vecTag).width + 16;
           const bx = cx + rx + 20;
           const by = cy - ry * 0.42;
           ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
           ctx.strokeStyle = isDownBounce ? 'rgba(46, 204, 113, 0.72)' : 'rgba(251, 191, 36, 0.65)';
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(bx, by - 12, bw, 19, 6);
+          ctx.roundRect(bx, by - 14, bw, 23, 6);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isDownBounce ? '#4ade80' : '#fef08a';
           ctx.textAlign = 'left';
-          ctx.fillText(vecTag, bx + 7, by + 1);
+          ctx.fillText(vecTag, bx + 8, by + 2);
 
           // Callout lines & labels anchored cleanly on left (pointing to reference geometry)
-          const refTopY = stringBaseY + 26;
+          const refTopY = stringBaseY + 28;
           const refMidY = restCy;
           const refLowY = restCy + baseR * 0.62;
 
           ctx.textAlign = 'left';
-          ctx.font = '700 13px Roboto, sans-serif';
+          ctx.font = '700 15.7px Roboto, sans-serif';
           ctx.fillStyle = '#f8fafc';
           ctx.fillText(dict.cvCristoforiTop, 26, refTopY);
           const xTopStart = Math.min(cx - rx * 0.65, 26 + ctx.measureText(dict.cvCristoforiTop).width + 8);
@@ -27938,34 +27947,34 @@ window.YamahaKitController = new YamahaKitStage();
 
           // Right-Side Diagnostic Badges (Force Flow Status + Rebound Force)
           ctx.save();
-          ctx.font = '700 11.5px JetBrains Mono, monospace';
+          ctx.font = '700 14.2px JetBrains Mono, monospace';
           const flowTxt = isBlocked ? dict.cvFlowBlock : dict.cvFlowOpen(phys.flankActivePct);
-          const flowW = ctx.measureText(flowTxt).width + 14;
+          const flowW = ctx.measureText(flowTxt).width + 16;
           const flowX = cx + shoulderHW + 16;
           const flowY = Math.max(54, shoulderY - 15);
           ctx.fillStyle = isBlocked ? 'rgba(42, 10, 16, 0.92)' : 'rgba(8, 18, 26, 0.88)';
           ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.82)' : 'rgba(56, 189, 248, 0.62)';
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(flowX, flowY - 12, flowW, 19, 6);
+          ctx.roundRect(flowX, flowY - 14, flowW, 23, 6);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
           ctx.textAlign = 'left';
-          ctx.fillText(flowTxt, flowX + 7, flowY + 1);
+          ctx.fillText(flowTxt, flowX + 8, flowY + 2);
 
           if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
             const bTxt = `F_Bounce ↓ (${phys.reboundPct}%)`;
-            const bw = ctx.measureText(bTxt).width + 14;
-            const by = flowY + 24;
+            const bw = ctx.measureText(bTxt).width + 16;
+            const by = flowY + 28;
             ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
             ctx.strokeStyle = isBlocked ? 'rgba(251, 146, 60, 0.72)' : 'rgba(46, 204, 113, 0.72)';
             ctx.beginPath();
-            ctx.roundRect(flowX, by - 12, bw, 19, 6);
+            ctx.roundRect(flowX, by - 14, bw, 23, 6);
             ctx.fill();
             ctx.stroke();
             ctx.fillStyle = isBlocked ? '#fdba74' : '#4ade80';
-            ctx.fillText(bTxt, flowX + 7, by + 1);
+            ctx.fillText(bTxt, flowX + 8, by + 2);
           }
           ctx.restore();
 
@@ -27974,14 +27983,14 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.textAlign = 'center';
           // Crown Pill (Scheitel = Peak Compaction)
           const crownTag = `${dict.cvZoneCrown} ${phys.rhoApexPct}%`;
-          ctx.font = '700 11px JetBrains Mono, monospace';
-          const cwTag = ctx.measureText(crownTag).width + 10;
-          const cyTag = crownTopY + 17;
-          ctx.fillStyle = 'rgba(10, 14, 24, 0.82)';
+          ctx.font = '700 13.7px JetBrains Mono, monospace';
+          const cwTag = ctx.measureText(crownTag).width + 12;
+          const cyTag = crownTopY + 19;
+          ctx.fillStyle = 'rgba(10, 14, 24, 0.84)';
           ctx.strokeStyle = 'rgba(251, 191, 36, 0.62)';
           ctx.lineWidth = 1.0;
           ctx.beginPath();
-          ctx.roundRect(cx - cwTag / 2, cyTag - 10, cwTag, 14, 4);
+          ctx.roundRect(cx - cwTag / 2, cyTag - 12, cwTag, 17, 4.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = '#fef08a';
@@ -27989,17 +27998,17 @@ window.YamahaKitController = new YamahaKitStage();
 
           // Left & Right Widest Flank Pills (Flanke = exact 1/2 Compaction of Crown!)
           const flankTag = `½ (${phys.rhoFlankPct}%)`;
-          ctx.font = '700 10.5px JetBrains Mono, monospace';
-          const fwTag = ctx.measureText(flankTag).width + 8;
+          ctx.font = '700 13.2px JetBrains Mono, monospace';
+          const fwTag = ctx.measureText(flankTag).width + 10;
           const flankCenterOff = ufOuterHW + (shoulderHW - ufOuterHW) * 0.54;
           if (shoulderHW - ufOuterHW > fwTag * 0.62) {
             for (const dir of [-1, 1]) {
               const fx = cx + dir * flankCenterOff;
-              const fy = shoulderY + 3;
-              ctx.fillStyle = 'rgba(8, 13, 24, 0.82)';
+              const fy = shoulderY + 4;
+              ctx.fillStyle = 'rgba(8, 13, 24, 0.84)';
               ctx.strokeStyle = isBlocked ? 'rgba(148, 163, 184, 0.45)' : 'rgba(56, 189, 248, 0.65)';
               ctx.beginPath();
-              ctx.roundRect(fx - fwTag / 2, fy - 9.5, fwTag, 13.5, 4);
+              ctx.roundRect(fx - fwTag / 2, fy - 11.5, fwTag, 16.5, 4.5);
               ctx.fill();
               ctx.stroke();
               ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
@@ -28008,19 +28017,19 @@ window.YamahaKitController = new YamahaKitStage();
           }
 
           // --- 9. Clean Left Zone Callouts With Measured Leader Lines (Zero Overlap!) ---
-          const yLbl1 = stringBaseY + 26;
+          const yLbl1 = stringBaseY + 28;
           const yLbl2 = restY0 + feltH * 0.35;
           const yLbl3 = restY0 + feltH * 0.63;
           const yLbl4 = restY0 + feltH * 0.90;
 
           ctx.textAlign = 'left';
-          ctx.font = '600 12.5px Roboto, sans-serif';
+          ctx.font = '600 15.2px Roboto, sans-serif';
 
           // Callout 1: Scheitel (Peak Compaction)
           const txt1 = dict.cvCallCrown(phys.rhoApexPct);
           ctx.fillStyle = '#fde047';
-          ctx.fillText(txt1, 22, yLbl1);
-          const x1 = Math.min(cx - shoulderHW * 0.55, 22 + ctx.measureText(txt1).width + 8);
+          ctx.fillText(txt1, 20, yLbl1);
+          const x1 = Math.min(cx - shoulderHW * 0.55, 20 + ctx.measureText(txt1).width + 8);
           ctx.strokeStyle = 'rgba(253, 224, 71, 0.40)';
           ctx.lineWidth = 1.15;
           ctx.beginPath(); ctx.moveTo(x1, yLbl1 - 3); ctx.lineTo(cx - flatHW - 12, crownTopY + 12); ctx.stroke();
@@ -28028,35 +28037,35 @@ window.YamahaKitController = new YamahaKitStage();
           // Callout 2: Outer-Contour Transition Zone (Scheitel -> Flanke)
           const txt2 = isBlocked ? dict.cvCallContourBlock : dict.cvCallContourOpen;
           ctx.fillStyle = isBlocked ? '#f87171' : '#4ade80';
-          ctx.fillText(txt2, 22, yLbl2);
+          ctx.fillText(txt2, 20, yLbl2);
           const xContourTarget = cx - evalUpperX(0.56);
           const yContourTarget = evalUpperY(0.56);
-          const x2 = Math.min(xContourTarget - 14, 22 + ctx.measureText(txt2).width + 8);
+          const x2 = Math.min(xContourTarget - 14, 20 + ctx.measureText(txt2).width + 8);
           ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.55)' : 'rgba(74, 222, 128, 0.38)';
           ctx.beginPath(); ctx.moveTo(x2, yLbl2 - 3); ctx.lineTo(xContourTarget - 3, yContourTarget); ctx.stroke();
 
           // Callout 3: Widest Flank (1/2 Compaction) & Lower Flank Spring Belly
           const txt3 = isBlocked ? dict.cvCallFlankBlock(phys.rhoFlankPct) : dict.cvCallFlankOpen(phys.rhoFlankPct);
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#38bdf8';
-          ctx.fillText(txt3, 22, yLbl3);
-          const x3 = Math.min(cx - shoulderHW - 12, 22 + ctx.measureText(txt3).width + 8);
+          ctx.fillText(txt3, 20, yLbl3);
+          const x3 = Math.min(cx - shoulderHW - 12, 20 + ctx.measureText(txt3).width + 8);
           ctx.strokeStyle = isBlocked ? 'rgba(252, 165, 165, 0.45)' : 'rgba(56, 189, 248, 0.42)';
           ctx.beginPath(); ctx.moveTo(x3, yLbl3 - 3); ctx.lineTo(cx - shoulderHW + 4, shoulderY + 4); ctx.stroke();
 
           // Callout 4: Fiber Run-Out on Wood + Glue + Brass Rivet
           ctx.fillStyle = '#fbbf24';
-          ctx.fillText(dict.cvRennerFix, 22, yLbl4);
-          const x4 = Math.min(cx - rivetOuterHW - 14, 22 + ctx.measureText(dict.cvRennerFix).width + 8);
+          ctx.fillText(dict.cvRennerFix, 20, yLbl4);
+          const x4 = Math.min(cx - rivetOuterHW - 14, 20 + ctx.measureText(dict.cvRennerFix).width + 8);
           ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
           ctx.beginPath(); ctx.moveTo(x4, yLbl4 - 3); ctx.lineTo(cx - rivetOuterHW - 4, rivetY); ctx.stroke();
           ctx.restore();
         }
 
         drawFiberLoupe(ctx, W, H, phys, dict) {
-          const boxW = Math.min(238, W * 0.285);
-          const boxH = Math.min(152, H * 0.55);
-          const bx = W - boxW - 16;
-          const by = H - boxH - 14;
+          const boxW = Math.min(286, W * 0.315);
+          const boxH = Math.min(170, H * 0.59);
+          const bx = W - boxW - 14;
+          const by = H - boxH - 12;
           const isBlocked = this.mode === 'renner' && phys.blockFactor >= 0.35;
 
           ctx.save();
@@ -28069,12 +28078,12 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 11.5px Roboto, sans-serif';
+          ctx.font = '700 14.2px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 16);
+          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 19);
 
           if (this.mode === 'cristofori') {
-            const midY = by + boxH * 0.54;
+            const midY = by + boxH * 0.55;
             ctx.strokeStyle = '#f8fafc';
             ctx.lineWidth = 4;
             ctx.beginPath();
@@ -28091,7 +28100,7 @@ window.YamahaKitController = new YamahaKitStage();
               ctx.stroke();
             }
             ctx.fillStyle = '#cbd5e1';
-            ctx.font = '500 11.5px Roboto, sans-serif';
+            ctx.font = '500 14.2px Roboto, sans-serif';
             ctx.fillText(dict.cvFiberCristofori, bx + 10, by + boxH - 9);
           } else {
             // Split 2-Zone Micro-Comparison: Top = Dense Scheitel (100%rel) vs. Bottom = 1/2-Dense Flanke!
@@ -28099,15 +28108,15 @@ window.YamahaKitController = new YamahaKitStage();
 
             // 1) Top Half: High-Compaction Scheitel (tightly packed fibers)
             ctx.fillStyle = '#fde047';
-            ctx.font = '600 11px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 31);
+            ctx.font = '600 13.7px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 37);
 
             const crownSpacing = 5.4 - phys.D * 1.4; // Tighter spacing as Crown density rises!
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = r === 0 ? '#fb923c' : '#fbbf24';
               ctx.lineWidth = r === 0 ? 1.8 : 1.35;
               ctx.beginPath();
-              const y0 = by + 39 + r * crownSpacing;
+              const y0 = by + 46 + r * crownSpacing;
               for (let x = 0; x <= boxW - 24; x += 4) {
                 const py = y0 + Math.sin(x * 0.34 + r) * (crimpAmp * 0.72);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
@@ -28120,15 +28129,15 @@ window.YamahaKitController = new YamahaKitStage();
             ctx.setLineDash(isBlocked ? [4, 3] : []);
             ctx.lineWidth = isBlocked ? 1.4 : 1.0;
             ctx.beginPath();
-            ctx.moveTo(bx + 10, by + 61);
-            ctx.lineTo(bx + boxW - 10, by + 61);
+            ctx.moveTo(bx + 10, by + 70);
+            ctx.lineTo(bx + boxW - 10, by + 70);
             ctx.stroke();
             ctx.setLineDash([]);
 
             // 2) Bottom Half: Half-Compaction Flanke (2x wider elastic spacing!)
             ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
-            ctx.font = '600 11px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 75);
+            ctx.font = '600 13.7px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 88);
 
             const flankSpacing = crownSpacing * 2.0; // Visually 2x wider spacing = 1/2 density!
             for (let r = 0; r < 3; r++) {
@@ -28137,7 +28146,7 @@ window.YamahaKitController = new YamahaKitStage();
                 : (r === 0 ? '#2ecc71' : '#38bdf8');
               ctx.lineWidth = r === 0 ? 1.7 : 1.3;
               ctx.beginPath();
-              const y0 = by + 85 + r * Math.min(10.5, flankSpacing);
+              const y0 = by + 98 + r * Math.min(10.5, flankSpacing);
               for (let x = 0; x <= boxW - 24; x += 4) {
                 const py = y0 + Math.sin(x * 0.24 + r * 1.4) * (crimpAmp * 1.15);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
@@ -28158,8 +28167,8 @@ window.YamahaKitController = new YamahaKitStage();
               loupeFootCol = '#fca5a5';
             }
             ctx.fillStyle = loupeFootCol;
-            ctx.font = '600 11px Roboto, sans-serif';
-            ctx.fillText(loupeFootTxt, bx + 10, by + boxH - 8);
+            ctx.font = '600 13.7px Roboto, sans-serif';
+            ctx.fillText(loupeFootTxt, bx + 10, by + boxH - 9);
           }
           ctx.restore();
         }
@@ -28173,7 +28182,7 @@ window.YamahaKitController = new YamahaKitStage();
           const dyn = this.computeBounceState(phys);
           const shimmer = dyn.inContact ? 1.0 : Math.min(1, dyn.stringWaveAmp / 8.0);
 
-          const padL = 62, padR = 18, padT = 36, padB = 38;
+          const padL = 72, padR = 18, padT = 40, padB = 46;
           const pw = W - padL - padR;
           const ph = H - padT - padB;
           const slotW = pw / 12;
@@ -28206,14 +28215,14 @@ window.YamahaKitController = new YamahaKitStage();
           ctx.restore();
 
           // Top Register Zone Labels + Live tau_c Spectral Status Pill
-          ctx.font = '700 11.5px Roboto, sans-serif';
+          ctx.font = '700 14.2px Roboto, sans-serif';
           ctx.textAlign = 'left';
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
-          ctx.fillText(dict.specZone1, xZ1 + 4, 15);
+          ctx.fillText(dict.specZone1, xZ1 + 4, 18);
           ctx.fillStyle = '#e6c882';
-          ctx.fillText(dict.specZone2, xZ2 + 6, 15);
+          ctx.fillText(dict.specZone2, xZ2 + 6, 18);
           ctx.fillStyle = phys.noFf ? '#fca5a5' : (phys.noPp ? '#fdba74' : '#86efac');
-          ctx.fillText(dict.specZone3, xZ3 + 6, 15);
+          ctx.fillText(dict.specZone3, xZ3 + 6, 18);
           const z3End = xZ3 + 6 + ctx.measureText(dict.specZone3).width;
 
           let stTxt = dict.specStatusOk(this.fmt(phys.tauMs, 2));
@@ -28232,20 +28241,20 @@ window.YamahaKitController = new YamahaKitStage();
             stCol = '#fdba74';
             stBrd = 'rgba(251, 146, 60, 0.65)';
           }
-          ctx.font = '700 11px JetBrains Mono, monospace';
-          const stW = ctx.measureText(stTxt).width + 14;
+          ctx.font = '700 13.7px JetBrains Mono, monospace';
+          const stW = ctx.measureText(stTxt).width + 16;
           if (W - padR - stW > z3End + 10) {
             const sx = W - padR - stW;
             ctx.fillStyle = 'rgba(8, 12, 22, 0.90)';
             ctx.strokeStyle = stBrd;
             ctx.lineWidth = 1.1;
             ctx.beginPath();
-            ctx.roundRect(sx, 3.5, stW, 17, 6);
+            ctx.roundRect(sx, 3.5, stW, 21, 6);
             ctx.fill();
             ctx.stroke();
             ctx.fillStyle = stCol;
             ctx.textAlign = 'right';
-            ctx.fillText(stTxt, W - padR - 7, 15);
+            ctx.fillText(stTxt, W - padR - 8, 18);
           }
 
           // Helper for bar coloring by acoustic condition
@@ -28269,7 +28278,7 @@ window.YamahaKitController = new YamahaKitStage();
             const y0 = mapY(0);
 
             // Horizontal dB Gridlines (+8, +4, 0, -4, -8 dB)
-            ctx.font = '600 11px JetBrains Mono, monospace';
+            ctx.font = '600 13.7px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [8, 4, 0, -4, -8]) {
               const yg = mapY(g);
@@ -28290,7 +28299,7 @@ window.YamahaKitController = new YamahaKitStage();
 
               ctx.fillStyle = g === 0 ? '#fef08a' : '#94a3b8';
               const gLbl = g > 0 ? `+${g} dB` : (g < 0 ? `−${Math.abs(g)} dB` : '0 dB');
-              ctx.fillText(gLbl, padL - 6, yg + 3.5);
+              ctx.fillText(gLbl, padL - 7, yg + 4.5);
             }
 
             // Draw Bipolar ΔdB Bars + Labels
@@ -28328,7 +28337,7 @@ window.YamahaKitController = new YamahaKitStage();
               ctx.restore();
 
               // Signed ΔdB label above/below bar
-              ctx.font = '700 11px JetBrains Mono, monospace';
+              ctx.font = '700 13.7px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
@@ -28337,8 +28346,8 @@ window.YamahaKitController = new YamahaKitStage();
                 ? ((phys.noPp && p.n >= 4 && p.deltaDb > 1.0) ? '#fdba74' : '#fef08a')
                 : (((isBlocked && p.n <= 3) || (phys.noFf && p.n >= 4)) ? '#fca5a5' : '#7dd3fc');
               const lblY = p.deltaDb >= 0
-                ? Math.max(padT + 4, barTop - 4.5)
-                : Math.min(yb - 2, barTop + barH + 10.5);
+                ? Math.max(padT + 5, barTop - 5.5)
+                : Math.min(yb - 2, barTop + barH + 13.5);
               ctx.fillText(valTxt, cx, lblY);
             });
 
@@ -28368,7 +28377,7 @@ window.YamahaKitController = new YamahaKitStage();
             const maxD = 8, minD = -38;
             const mapY = (d) => padT + ((maxD - Math.max(minD, Math.min(maxD, d))) / (maxD - minD)) * ph;
 
-            ctx.font = '600 11px JetBrains Mono, monospace';
+            ctx.font = '600 13.7px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [0, -10, -20, -30]) {
               const yg = mapY(g);
@@ -28380,7 +28389,7 @@ window.YamahaKitController = new YamahaKitStage();
               ctx.stroke();
               ctx.setLineDash([]);
               ctx.fillStyle = '#94a3b8';
-              ctx.fillText(g === 0 ? '0 dB' : `−${Math.abs(g)} dB`, padL - 6, yg + 3.5);
+              ctx.fillText(g === 0 ? '0 dB' : `−${Math.abs(g)} dB`, padL - 7, yg + 4.5);
             }
 
             phys.partials.forEach((p, i) => {
@@ -28418,12 +28427,12 @@ window.YamahaKitController = new YamahaKitStage();
               ctx.stroke();
               ctx.restore();
 
-              ctx.font = '700 11px JetBrains Mono, monospace';
+              ctx.font = '700 13.7px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
               ctx.fillStyle = p.deltaDb >= 0 ? '#fef08a' : '#7dd3fc';
-              ctx.fillText(`${signStr}${this.fmt(absV, 1)}`, cx, Math.max(padT + 5, Math.min(yc, yr) - 5));
+              ctx.fillText(`${signStr}${this.fmt(absV, 1)}`, cx, Math.max(padT + 6, Math.min(yc, yr) - 6));
             });
           }
 
@@ -28439,13 +28448,13 @@ window.YamahaKitController = new YamahaKitStage();
           phys.partials.forEach((p, i) => {
             const cx = padL + slotW * (i + 0.5);
             ctx.textAlign = 'center';
-            ctx.font = '700 11.5px JetBrains Mono, monospace';
+            ctx.font = '700 14.2px JetBrains Mono, monospace';
             ctx.fillStyle = p.dissonant ? '#fcd34d' : '#f8fafc';
-            ctx.fillText(`H${p.n}`, cx, yb + 14);
+            ctx.fillText(`H${p.n}`, cx, yb + 17);
 
-            ctx.font = '500 10.5px Roboto, sans-serif';
+            ctx.font = '500 13.2px Roboto, sans-serif';
             ctx.fillStyle = '#94a3b8';
-            ctx.fillText(roles[i] || '', cx, yb + 26);
+            ctx.fillText(roles[i] || '', cx, yb + 34);
           });
 
           ctx.restore();

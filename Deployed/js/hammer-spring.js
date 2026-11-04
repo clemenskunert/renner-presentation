@@ -67,12 +67,12 @@
           tauIdeal: 'Kurze τc · ff entfaltet frei',
           tauWarn: '△ τc steigt · ff begrenzt',
           tauSlow: '⚠ Verlängert → kein ff!',
-          toneSoft: 'Samtig-weich (feines pp)',
-          toneIdeal: 'Singend (pp bis ff)',
-          toneCrisp: 'Silbrig-klar (piano & forte)',
-          toneHardNoPp: 'Hart im Ansatz (kein pp!)',
-          toneStiffNoFf: 'Matt & gedämpft (kein ff!)',
-          toneBlocked: 'Hart & abgedämpft (kein pp/ff)',
+          toneSoft: 'Samtig-weich (pp)',
+          toneIdeal: 'Singend (pp–ff)',
+          toneCrisp: 'Silbrig-klar (p–f)',
+          toneHardNoPp: 'Harter Ansatz (kein pp)',
+          toneStiffNoFf: 'Matt & gedämpft (kein ff)',
+          toneBlocked: 'Hart & matt (kein pp/ff)',
           cvForceVec: 'F_Feder',
           cvString: '3-chörige Stahlsaite (Anschlagspunkt)',
           cvCristoforiTop: 'Hirschleder-Polster (Kontaktzone)',
@@ -111,11 +111,11 @@
           cvAxisX: 'Einfederung x (mm)',
           cvAxisT: 'Kontaktzeit t (ms)',
           roPrinC: 'Ringfeder + Hirschleder (1700)',
-          roPrinR: (ap, fl) => `Scheitel ${ap} % → Flanke ${fl} % (½) · pp–ff`,
-          roPrinNoPp: (ap) => `⚠ Scheitel (${ap} %) zu hart → kein pp`,
-          roPrinNoFf: (tau) => `⚠ Unelastisch → τc = ${tau} ms (kein ff)`,
-          roPrinBlock: '⚠ Übergang sperrt → τc verlängert',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          roPrinR: (ap, fl) => `Scheitel ${ap}% → Flanke ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ Scheitel ${ap}% hart → kein pp`,
+          roPrinNoFf: (tau) => `⚠ Steif → τc = ${tau} ms (kein ff)`,
+          roPrinBlock: '⚠ Übergang sperrt → τc ↑',
+          roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
           expBadgeC: '✦ CRISTOFORIS UR-PRINZIP (1700)',
           expTitleC: 'Das belederte Röllchen: Maximale Elastizität für „col piano e forte“',
@@ -203,11 +203,11 @@
           tauIdeal: 'Short τc · free ff bloom',
           tauWarn: '△ τc rising · ff capped',
           tauSlow: '⚠ Prolonged → chokes ff!',
-          toneSoft: 'Velvety soft (delicate pp)',
-          toneIdeal: 'Singing (full pp to ff)',
-          toneCrisp: 'Silvery-clear (piano & forte)',
-          toneHardNoPp: 'Harsh onset (no pp!)',
-          toneStiffNoFf: 'Dull & choked (no ff!)',
+          toneSoft: 'Velvety soft (pp)',
+          toneIdeal: 'Singing (pp–ff)',
+          toneCrisp: 'Silvery-clear (p–f)',
+          toneHardNoPp: 'Harsh onset (no pp)',
+          toneStiffNoFf: 'Dull & choked (no ff)',
           toneBlocked: 'Harsh & choked (no pp/ff)',
           cvForceVec: 'F_Spring',
           cvString: 'Tri-chord steel string (strike point)',
@@ -246,12 +246,12 @@
           cvPulseLongTau: '⚠ τc prolonged → no ff!',
           cvAxisX: 'Deflection x (mm)',
           cvAxisT: 'Contact time t (ms)',
-          roPrinC: 'Hollow parchment ring-spring + leather (1700)',
-          roPrinR: (ap, fl) => `Crown ${ap}% → Flank ${fl}% (½) · pp–ff open`,
-          roPrinNoPp: (ap) => `⚠ Crown (${ap}%) / transition too hard → no pp`,
-          roPrinNoFf: (tau) => `⚠ Inelastic felt → τc = ${tau} ms (no ff)`,
-          roPrinBlock: '⚠ Stiff felt/transition → τc prolonged',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          roPrinC: 'Hollow parchment ring + leather',
+          roPrinR: (ap, fl) => `Crown ${ap}% → Flank ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ Crown ${ap}% hard → no pp`,
+          roPrinNoFf: (tau) => `⚠ Stiff → τc = ${tau} ms (no ff)`,
+          roPrinBlock: '⚠ Transition locked → τc ↑',
+          roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
           expBadgeC: '✦ CRISTOFORI’S ORIGINAL PRINCIPLE (1700)',
           expTitleC: 'The Leathered Roll: Surface-Tension Elasticity for “col piano e forte”',
@@ -339,12 +339,12 @@
           tauIdeal: '短い τc・豊かな ff 開放',
           tauWarn: '△ τc やや増加・ff 頭打ち',
           tauSlow: '⚠ 接触延長 → ff 減衰！',
-          toneSoft: 'ビロードの柔らかさ (pp)',
-          toneIdeal: '歌うような響き (pp〜ff)',
-          toneCrisp: '銀色の透明感 (piano & forte)',
-          toneHardNoPp: '立ち上がり過硬 (pp 不可!)',
-          toneStiffNoFf: '鈍く詰まる音 (ff 不可!)',
-          toneBlocked: '硬く詰まった音 (pp/ff 不可)',
+          toneSoft: 'ビロードの響き (pp)',
+          toneIdeal: '歌う響き (pp〜ff)',
+          toneCrisp: '銀色の透明感 (p〜f)',
+          toneHardNoPp: '初期過硬 (pp不可)',
+          toneStiffNoFf: '詰まる音 (ff不可)',
+          toneBlocked: '硬く詰まる音 (pp/ff不可)',
           cvForceVec: 'F_弾性',
           cvString: '3本同音スチール弦（打弦点）',
           cvCristoforiTop: '鹿革パッド（接触ゾーン）',
@@ -382,12 +382,12 @@
           cvPulseLongTau: '⚠ τc 延長 → ff 不可！',
           cvAxisX: '圧縮変位 x (mm)',
           cvAxisT: '接触時間 t (ms)',
-          roPrinC: '中空羊皮紙リングばね＋鹿革 (1700年)',
-          roPrinR: (ap, fl) => `クラウン ${ap}% → フランク ${fl}% (½) · pp–ff 開放`,
-          roPrinNoPp: (ap) => `⚠ クラウン (${ap}%)／移行帯が過硬 → pp 不可`,
-          roPrinNoFf: (tau) => `⚠ 弾性不足フェルト → τc = ${tau} ms (ff 不可)`,
-          roPrinBlock: '⚠ 過硬フェルト／移行帯 → 接触時間 τc が延長',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          roPrinC: '中空羊皮紙リング＋鹿革 (1700)',
+          roPrinR: (ap, fl) => `クラウン ${ap}% → フランク ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ クラウン ${ap}% 過硬 → pp不可`,
+          roPrinNoFf: (tau) => `⚠ 弾性不足 → τc = ${tau} ms`,
+          roPrinBlock: '⚠ 移行帯遮断 → τc 延長↑',
+          roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
           expBadgeC: '✦ クリストフォリの原点原理 (1700)',
           expTitleC: '革巻きロール：「ピアノとフォルテ」を生んだ表面張力弾性',
@@ -1030,9 +1030,9 @@
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 13px Roboto, sans-serif';
+          ctx.font = '700 15.7px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText(dict.cvString, 28, 22);
+          ctx.fillText(dict.cvString, 28, 24);
 
           // Live Force-Direction Phase Pill at Top-Right of Canvas
           let phLabel = dict.phRest;
@@ -1065,19 +1065,19 @@
             phColor = '#4ade80';
             phBorder = 'rgba(74, 222, 128, 0.65)';
           }
-          ctx.font = '700 12px Roboto, sans-serif';
-          const pillW = ctx.measureText(phLabel).width + 20;
+          ctx.font = '700 14.7px Roboto, sans-serif';
+          const pillW = ctx.measureText(phLabel).width + 22;
           const pillX = W - pillW - 18;
           ctx.fillStyle = 'rgba(8, 12, 22, 0.88)';
           ctx.strokeStyle = phBorder;
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(pillX, 6, pillW, 23, 11.5);
+          ctx.roundRect(pillX, 5, pillW, 26, 13);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = phColor;
           ctx.textAlign = 'right';
-          ctx.fillText(phLabel, W - 28, 21);
+          ctx.fillText(phLabel, W - 29, 23);
           ctx.restore();
 
           if (this.mode === 'cristofori') {
@@ -1223,31 +1223,31 @@
           // High-contrast floating force badge to the right of the Cristofori roll (zero inner-wall overlap!)
           ctx.save();
           const isDownBounce = (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound');
-          ctx.font = '700 11.5px JetBrains Mono, monospace';
+          ctx.font = '700 14.2px JetBrains Mono, monospace';
           const vecTag = isDownBounce
             ? `F_Bounce ↓ (${phys.reboundPct}%)`
             : `${dict.cvForceVec} ↑ (${phys.reboundPct}%)`;
-          const bw = ctx.measureText(vecTag).width + 14;
+          const bw = ctx.measureText(vecTag).width + 16;
           const bx = cx + rx + 20;
           const by = cy - ry * 0.42;
           ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
           ctx.strokeStyle = isDownBounce ? 'rgba(46, 204, 113, 0.72)' : 'rgba(251, 191, 36, 0.65)';
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(bx, by - 12, bw, 19, 6);
+          ctx.roundRect(bx, by - 14, bw, 23, 6);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isDownBounce ? '#4ade80' : '#fef08a';
           ctx.textAlign = 'left';
-          ctx.fillText(vecTag, bx + 7, by + 1);
+          ctx.fillText(vecTag, bx + 8, by + 2);
 
           // Callout lines & labels anchored cleanly on left (pointing to reference geometry)
-          const refTopY = stringBaseY + 26;
+          const refTopY = stringBaseY + 28;
           const refMidY = restCy;
           const refLowY = restCy + baseR * 0.62;
 
           ctx.textAlign = 'left';
-          ctx.font = '700 13px Roboto, sans-serif';
+          ctx.font = '700 15.7px Roboto, sans-serif';
           ctx.fillStyle = '#f8fafc';
           ctx.fillText(dict.cvCristoforiTop, 26, refTopY);
           const xTopStart = Math.min(cx - rx * 0.65, 26 + ctx.measureText(dict.cvCristoforiTop).width + 8);
@@ -1930,34 +1930,34 @@
 
           // Right-Side Diagnostic Badges (Force Flow Status + Rebound Force)
           ctx.save();
-          ctx.font = '700 11.5px JetBrains Mono, monospace';
+          ctx.font = '700 14.2px JetBrains Mono, monospace';
           const flowTxt = isBlocked ? dict.cvFlowBlock : dict.cvFlowOpen(phys.flankActivePct);
-          const flowW = ctx.measureText(flowTxt).width + 14;
+          const flowW = ctx.measureText(flowTxt).width + 16;
           const flowX = cx + shoulderHW + 16;
           const flowY = Math.max(54, shoulderY - 15);
           ctx.fillStyle = isBlocked ? 'rgba(42, 10, 16, 0.92)' : 'rgba(8, 18, 26, 0.88)';
           ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.82)' : 'rgba(56, 189, 248, 0.62)';
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(flowX, flowY - 12, flowW, 19, 6);
+          ctx.roundRect(flowX, flowY - 14, flowW, 23, 6);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
           ctx.textAlign = 'left';
-          ctx.fillText(flowTxt, flowX + 7, flowY + 1);
+          ctx.fillText(flowTxt, flowX + 8, flowY + 2);
 
           if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
             const bTxt = `F_Bounce ↓ (${phys.reboundPct}%)`;
-            const bw = ctx.measureText(bTxt).width + 14;
-            const by = flowY + 24;
+            const bw = ctx.measureText(bTxt).width + 16;
+            const by = flowY + 28;
             ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
             ctx.strokeStyle = isBlocked ? 'rgba(251, 146, 60, 0.72)' : 'rgba(46, 204, 113, 0.72)';
             ctx.beginPath();
-            ctx.roundRect(flowX, by - 12, bw, 19, 6);
+            ctx.roundRect(flowX, by - 14, bw, 23, 6);
             ctx.fill();
             ctx.stroke();
             ctx.fillStyle = isBlocked ? '#fdba74' : '#4ade80';
-            ctx.fillText(bTxt, flowX + 7, by + 1);
+            ctx.fillText(bTxt, flowX + 8, by + 2);
           }
           ctx.restore();
 
@@ -1966,14 +1966,14 @@
           ctx.textAlign = 'center';
           // Crown Pill (Scheitel = Peak Compaction)
           const crownTag = `${dict.cvZoneCrown} ${phys.rhoApexPct}%`;
-          ctx.font = '700 11px JetBrains Mono, monospace';
-          const cwTag = ctx.measureText(crownTag).width + 10;
-          const cyTag = crownTopY + 17;
-          ctx.fillStyle = 'rgba(10, 14, 24, 0.82)';
+          ctx.font = '700 13.7px JetBrains Mono, monospace';
+          const cwTag = ctx.measureText(crownTag).width + 12;
+          const cyTag = crownTopY + 19;
+          ctx.fillStyle = 'rgba(10, 14, 24, 0.84)';
           ctx.strokeStyle = 'rgba(251, 191, 36, 0.62)';
           ctx.lineWidth = 1.0;
           ctx.beginPath();
-          ctx.roundRect(cx - cwTag / 2, cyTag - 10, cwTag, 14, 4);
+          ctx.roundRect(cx - cwTag / 2, cyTag - 12, cwTag, 17, 4.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = '#fef08a';
@@ -1981,17 +1981,17 @@
 
           // Left & Right Widest Flank Pills (Flanke = exact 1/2 Compaction of Crown!)
           const flankTag = `½ (${phys.rhoFlankPct}%)`;
-          ctx.font = '700 10.5px JetBrains Mono, monospace';
-          const fwTag = ctx.measureText(flankTag).width + 8;
+          ctx.font = '700 13.2px JetBrains Mono, monospace';
+          const fwTag = ctx.measureText(flankTag).width + 10;
           const flankCenterOff = ufOuterHW + (shoulderHW - ufOuterHW) * 0.54;
           if (shoulderHW - ufOuterHW > fwTag * 0.62) {
             for (const dir of [-1, 1]) {
               const fx = cx + dir * flankCenterOff;
-              const fy = shoulderY + 3;
-              ctx.fillStyle = 'rgba(8, 13, 24, 0.82)';
+              const fy = shoulderY + 4;
+              ctx.fillStyle = 'rgba(8, 13, 24, 0.84)';
               ctx.strokeStyle = isBlocked ? 'rgba(148, 163, 184, 0.45)' : 'rgba(56, 189, 248, 0.65)';
               ctx.beginPath();
-              ctx.roundRect(fx - fwTag / 2, fy - 9.5, fwTag, 13.5, 4);
+              ctx.roundRect(fx - fwTag / 2, fy - 11.5, fwTag, 16.5, 4.5);
               ctx.fill();
               ctx.stroke();
               ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
@@ -2000,19 +2000,19 @@
           }
 
           // --- 9. Clean Left Zone Callouts With Measured Leader Lines (Zero Overlap!) ---
-          const yLbl1 = stringBaseY + 26;
+          const yLbl1 = stringBaseY + 28;
           const yLbl2 = restY0 + feltH * 0.35;
           const yLbl3 = restY0 + feltH * 0.63;
           const yLbl4 = restY0 + feltH * 0.90;
 
           ctx.textAlign = 'left';
-          ctx.font = '600 12.5px Roboto, sans-serif';
+          ctx.font = '600 15.2px Roboto, sans-serif';
 
           // Callout 1: Scheitel (Peak Compaction)
           const txt1 = dict.cvCallCrown(phys.rhoApexPct);
           ctx.fillStyle = '#fde047';
-          ctx.fillText(txt1, 22, yLbl1);
-          const x1 = Math.min(cx - shoulderHW * 0.55, 22 + ctx.measureText(txt1).width + 8);
+          ctx.fillText(txt1, 20, yLbl1);
+          const x1 = Math.min(cx - shoulderHW * 0.55, 20 + ctx.measureText(txt1).width + 8);
           ctx.strokeStyle = 'rgba(253, 224, 71, 0.40)';
           ctx.lineWidth = 1.15;
           ctx.beginPath(); ctx.moveTo(x1, yLbl1 - 3); ctx.lineTo(cx - flatHW - 12, crownTopY + 12); ctx.stroke();
@@ -2020,35 +2020,35 @@
           // Callout 2: Outer-Contour Transition Zone (Scheitel -> Flanke)
           const txt2 = isBlocked ? dict.cvCallContourBlock : dict.cvCallContourOpen;
           ctx.fillStyle = isBlocked ? '#f87171' : '#4ade80';
-          ctx.fillText(txt2, 22, yLbl2);
+          ctx.fillText(txt2, 20, yLbl2);
           const xContourTarget = cx - evalUpperX(0.56);
           const yContourTarget = evalUpperY(0.56);
-          const x2 = Math.min(xContourTarget - 14, 22 + ctx.measureText(txt2).width + 8);
+          const x2 = Math.min(xContourTarget - 14, 20 + ctx.measureText(txt2).width + 8);
           ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.55)' : 'rgba(74, 222, 128, 0.38)';
           ctx.beginPath(); ctx.moveTo(x2, yLbl2 - 3); ctx.lineTo(xContourTarget - 3, yContourTarget); ctx.stroke();
 
           // Callout 3: Widest Flank (1/2 Compaction) & Lower Flank Spring Belly
           const txt3 = isBlocked ? dict.cvCallFlankBlock(phys.rhoFlankPct) : dict.cvCallFlankOpen(phys.rhoFlankPct);
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#38bdf8';
-          ctx.fillText(txt3, 22, yLbl3);
-          const x3 = Math.min(cx - shoulderHW - 12, 22 + ctx.measureText(txt3).width + 8);
+          ctx.fillText(txt3, 20, yLbl3);
+          const x3 = Math.min(cx - shoulderHW - 12, 20 + ctx.measureText(txt3).width + 8);
           ctx.strokeStyle = isBlocked ? 'rgba(252, 165, 165, 0.45)' : 'rgba(56, 189, 248, 0.42)';
           ctx.beginPath(); ctx.moveTo(x3, yLbl3 - 3); ctx.lineTo(cx - shoulderHW + 4, shoulderY + 4); ctx.stroke();
 
           // Callout 4: Fiber Run-Out on Wood + Glue + Brass Rivet
           ctx.fillStyle = '#fbbf24';
-          ctx.fillText(dict.cvRennerFix, 22, yLbl4);
-          const x4 = Math.min(cx - rivetOuterHW - 14, 22 + ctx.measureText(dict.cvRennerFix).width + 8);
+          ctx.fillText(dict.cvRennerFix, 20, yLbl4);
+          const x4 = Math.min(cx - rivetOuterHW - 14, 20 + ctx.measureText(dict.cvRennerFix).width + 8);
           ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
           ctx.beginPath(); ctx.moveTo(x4, yLbl4 - 3); ctx.lineTo(cx - rivetOuterHW - 4, rivetY); ctx.stroke();
           ctx.restore();
         }
 
         drawFiberLoupe(ctx, W, H, phys, dict) {
-          const boxW = Math.min(238, W * 0.285);
-          const boxH = Math.min(152, H * 0.55);
-          const bx = W - boxW - 16;
-          const by = H - boxH - 14;
+          const boxW = Math.min(286, W * 0.315);
+          const boxH = Math.min(170, H * 0.59);
+          const bx = W - boxW - 14;
+          const by = H - boxH - 12;
           const isBlocked = this.mode === 'renner' && phys.blockFactor >= 0.35;
 
           ctx.save();
@@ -2061,12 +2061,12 @@
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 11.5px Roboto, sans-serif';
+          ctx.font = '700 14.2px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 16);
+          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 19);
 
           if (this.mode === 'cristofori') {
-            const midY = by + boxH * 0.54;
+            const midY = by + boxH * 0.55;
             ctx.strokeStyle = '#f8fafc';
             ctx.lineWidth = 4;
             ctx.beginPath();
@@ -2083,7 +2083,7 @@
               ctx.stroke();
             }
             ctx.fillStyle = '#cbd5e1';
-            ctx.font = '500 11.5px Roboto, sans-serif';
+            ctx.font = '500 14.2px Roboto, sans-serif';
             ctx.fillText(dict.cvFiberCristofori, bx + 10, by + boxH - 9);
           } else {
             // Split 2-Zone Micro-Comparison: Top = Dense Scheitel (100%rel) vs. Bottom = 1/2-Dense Flanke!
@@ -2091,15 +2091,15 @@
 
             // 1) Top Half: High-Compaction Scheitel (tightly packed fibers)
             ctx.fillStyle = '#fde047';
-            ctx.font = '600 11px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 31);
+            ctx.font = '600 13.7px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 37);
 
             const crownSpacing = 5.4 - phys.D * 1.4; // Tighter spacing as Crown density rises!
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = r === 0 ? '#fb923c' : '#fbbf24';
               ctx.lineWidth = r === 0 ? 1.8 : 1.35;
               ctx.beginPath();
-              const y0 = by + 39 + r * crownSpacing;
+              const y0 = by + 46 + r * crownSpacing;
               for (let x = 0; x <= boxW - 24; x += 4) {
                 const py = y0 + Math.sin(x * 0.34 + r) * (crimpAmp * 0.72);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
@@ -2112,15 +2112,15 @@
             ctx.setLineDash(isBlocked ? [4, 3] : []);
             ctx.lineWidth = isBlocked ? 1.4 : 1.0;
             ctx.beginPath();
-            ctx.moveTo(bx + 10, by + 61);
-            ctx.lineTo(bx + boxW - 10, by + 61);
+            ctx.moveTo(bx + 10, by + 70);
+            ctx.lineTo(bx + boxW - 10, by + 70);
             ctx.stroke();
             ctx.setLineDash([]);
 
             // 2) Bottom Half: Half-Compaction Flanke (2x wider elastic spacing!)
             ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
-            ctx.font = '600 11px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 75);
+            ctx.font = '600 13.7px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 88);
 
             const flankSpacing = crownSpacing * 2.0; // Visually 2x wider spacing = 1/2 density!
             for (let r = 0; r < 3; r++) {
@@ -2129,7 +2129,7 @@
                 : (r === 0 ? '#2ecc71' : '#38bdf8');
               ctx.lineWidth = r === 0 ? 1.7 : 1.3;
               ctx.beginPath();
-              const y0 = by + 85 + r * Math.min(10.5, flankSpacing);
+              const y0 = by + 98 + r * Math.min(10.5, flankSpacing);
               for (let x = 0; x <= boxW - 24; x += 4) {
                 const py = y0 + Math.sin(x * 0.24 + r * 1.4) * (crimpAmp * 1.15);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
@@ -2150,8 +2150,8 @@
               loupeFootCol = '#fca5a5';
             }
             ctx.fillStyle = loupeFootCol;
-            ctx.font = '600 11px Roboto, sans-serif';
-            ctx.fillText(loupeFootTxt, bx + 10, by + boxH - 8);
+            ctx.font = '600 13.7px Roboto, sans-serif';
+            ctx.fillText(loupeFootTxt, bx + 10, by + boxH - 9);
           }
           ctx.restore();
         }
@@ -2165,7 +2165,7 @@
           const dyn = this.computeBounceState(phys);
           const shimmer = dyn.inContact ? 1.0 : Math.min(1, dyn.stringWaveAmp / 8.0);
 
-          const padL = 62, padR = 18, padT = 36, padB = 38;
+          const padL = 72, padR = 18, padT = 40, padB = 46;
           const pw = W - padL - padR;
           const ph = H - padT - padB;
           const slotW = pw / 12;
@@ -2198,14 +2198,14 @@
           ctx.restore();
 
           // Top Register Zone Labels + Live tau_c Spectral Status Pill
-          ctx.font = '700 11.5px Roboto, sans-serif';
+          ctx.font = '700 14.2px Roboto, sans-serif';
           ctx.textAlign = 'left';
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
-          ctx.fillText(dict.specZone1, xZ1 + 4, 15);
+          ctx.fillText(dict.specZone1, xZ1 + 4, 18);
           ctx.fillStyle = '#e6c882';
-          ctx.fillText(dict.specZone2, xZ2 + 6, 15);
+          ctx.fillText(dict.specZone2, xZ2 + 6, 18);
           ctx.fillStyle = phys.noFf ? '#fca5a5' : (phys.noPp ? '#fdba74' : '#86efac');
-          ctx.fillText(dict.specZone3, xZ3 + 6, 15);
+          ctx.fillText(dict.specZone3, xZ3 + 6, 18);
           const z3End = xZ3 + 6 + ctx.measureText(dict.specZone3).width;
 
           let stTxt = dict.specStatusOk(this.fmt(phys.tauMs, 2));
@@ -2224,20 +2224,20 @@
             stCol = '#fdba74';
             stBrd = 'rgba(251, 146, 60, 0.65)';
           }
-          ctx.font = '700 11px JetBrains Mono, monospace';
-          const stW = ctx.measureText(stTxt).width + 14;
+          ctx.font = '700 13.7px JetBrains Mono, monospace';
+          const stW = ctx.measureText(stTxt).width + 16;
           if (W - padR - stW > z3End + 10) {
             const sx = W - padR - stW;
             ctx.fillStyle = 'rgba(8, 12, 22, 0.90)';
             ctx.strokeStyle = stBrd;
             ctx.lineWidth = 1.1;
             ctx.beginPath();
-            ctx.roundRect(sx, 3.5, stW, 17, 6);
+            ctx.roundRect(sx, 3.5, stW, 21, 6);
             ctx.fill();
             ctx.stroke();
             ctx.fillStyle = stCol;
             ctx.textAlign = 'right';
-            ctx.fillText(stTxt, W - padR - 7, 15);
+            ctx.fillText(stTxt, W - padR - 8, 18);
           }
 
           // Helper for bar coloring by acoustic condition
@@ -2261,7 +2261,7 @@
             const y0 = mapY(0);
 
             // Horizontal dB Gridlines (+8, +4, 0, -4, -8 dB)
-            ctx.font = '600 11px JetBrains Mono, monospace';
+            ctx.font = '600 13.7px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [8, 4, 0, -4, -8]) {
               const yg = mapY(g);
@@ -2282,7 +2282,7 @@
 
               ctx.fillStyle = g === 0 ? '#fef08a' : '#94a3b8';
               const gLbl = g > 0 ? `+${g} dB` : (g < 0 ? `−${Math.abs(g)} dB` : '0 dB');
-              ctx.fillText(gLbl, padL - 6, yg + 3.5);
+              ctx.fillText(gLbl, padL - 7, yg + 4.5);
             }
 
             // Draw Bipolar ΔdB Bars + Labels
@@ -2320,7 +2320,7 @@
               ctx.restore();
 
               // Signed ΔdB label above/below bar
-              ctx.font = '700 11px JetBrains Mono, monospace';
+              ctx.font = '700 13.7px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
@@ -2329,8 +2329,8 @@
                 ? ((phys.noPp && p.n >= 4 && p.deltaDb > 1.0) ? '#fdba74' : '#fef08a')
                 : (((isBlocked && p.n <= 3) || (phys.noFf && p.n >= 4)) ? '#fca5a5' : '#7dd3fc');
               const lblY = p.deltaDb >= 0
-                ? Math.max(padT + 4, barTop - 4.5)
-                : Math.min(yb - 2, barTop + barH + 10.5);
+                ? Math.max(padT + 5, barTop - 5.5)
+                : Math.min(yb - 2, barTop + barH + 13.5);
               ctx.fillText(valTxt, cx, lblY);
             });
 
@@ -2360,7 +2360,7 @@
             const maxD = 8, minD = -38;
             const mapY = (d) => padT + ((maxD - Math.max(minD, Math.min(maxD, d))) / (maxD - minD)) * ph;
 
-            ctx.font = '600 11px JetBrains Mono, monospace';
+            ctx.font = '600 13.7px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [0, -10, -20, -30]) {
               const yg = mapY(g);
@@ -2372,7 +2372,7 @@
               ctx.stroke();
               ctx.setLineDash([]);
               ctx.fillStyle = '#94a3b8';
-              ctx.fillText(g === 0 ? '0 dB' : `−${Math.abs(g)} dB`, padL - 6, yg + 3.5);
+              ctx.fillText(g === 0 ? '0 dB' : `−${Math.abs(g)} dB`, padL - 7, yg + 4.5);
             }
 
             phys.partials.forEach((p, i) => {
@@ -2410,12 +2410,12 @@
               ctx.stroke();
               ctx.restore();
 
-              ctx.font = '700 11px JetBrains Mono, monospace';
+              ctx.font = '700 13.7px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
               ctx.fillStyle = p.deltaDb >= 0 ? '#fef08a' : '#7dd3fc';
-              ctx.fillText(`${signStr}${this.fmt(absV, 1)}`, cx, Math.max(padT + 5, Math.min(yc, yr) - 5));
+              ctx.fillText(`${signStr}${this.fmt(absV, 1)}`, cx, Math.max(padT + 6, Math.min(yc, yr) - 6));
             });
           }
 
@@ -2431,13 +2431,13 @@
           phys.partials.forEach((p, i) => {
             const cx = padL + slotW * (i + 0.5);
             ctx.textAlign = 'center';
-            ctx.font = '700 11.5px JetBrains Mono, monospace';
+            ctx.font = '700 14.2px JetBrains Mono, monospace';
             ctx.fillStyle = p.dissonant ? '#fcd34d' : '#f8fafc';
-            ctx.fillText(`H${p.n}`, cx, yb + 14);
+            ctx.fillText(`H${p.n}`, cx, yb + 17);
 
-            ctx.font = '500 10.5px Roboto, sans-serif';
+            ctx.font = '500 13.2px Roboto, sans-serif';
             ctx.fillStyle = '#94a3b8';
-            ctx.fillText(roles[i] || '', cx, yb + 26);
+            ctx.fillText(roles[i] || '', cx, yb + 34);
           });
 
           ctx.restore();
