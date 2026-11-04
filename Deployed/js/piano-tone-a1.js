@@ -41,13 +41,13 @@
         'Cantabile & edle Klangfarbe', 'Brillanz & Projektion', 'Reibungston (rau / unrein)', 'Strahlkraft & Präsenz',
         'Metallische Schärfe', 'Heller Obertonglanz', 'Scharfer Zwischen-Teilton', 'Feine Attack-Spitze'
       ],
-      legendAbs: '--- Konzert-Ideal  |  Grün: H₁–H₄ Fundament  |  Gold: Konsonante Obertöne  |  Bernstein: Reibungstöne (H₇, H₉, H₁₁)',
-      legendDelta: 'Orange (+dB): Teilton-Zunahme ggü. Konzert-Ideal  |  Hellblau (−dB): Teilton-Abnahme / Knoten-Dämpfung',
+      legendAbs: '--- Konzert-Ideal  |  Grün: H₁–H₄  |  Gold: Konsonant  |  Bernstein: H₇, H₉, H₁₁',
+      legendDelta: 'Orange (+dB): Zunahme  |  Hellblau (−dB): Abnahme / Knoten',
       agraffe: 'Agraffe (0)',
       bridge: 'Basssteg (L = 1.560 mm)',
-      hitNode: (n, db) => `● Trifft Knoten von H${n} (${db})`,
-      hitAntinode: (n) => `▲ Trifft Schwingungsbauch von H${n} (maximal)`,
-      hitPartial: (n, db) => `◐ Teil-Anregung von H${n} (${db})`,
+      hitNode: (n, db) => `● Knoten H${n} (${db})`,
+      hitAntinode: (n) => `▲ Bauch H${n} (max.)`,
+      hitPartial: (n, db) => `◐ Teil-Anregung H${n} (${db})`,
       hConcert: 'Konzert-Ideal',
       hSoft: (p) => `Tonlich weich (${p} %)`,
       hSlightlySoft: (p) => `Leicht weich (${p} %)`,
@@ -57,27 +57,27 @@
       roDelta: (tot, felt, str) => `Δ ${tot} (Filz ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) gedämpft`,
-      expTitleSoft: 'Tonlich weicher Klang: Lange Kontaktzeit dämpft hohe Teiltöne',
+      expTitleSoft: 'Weicher Filz: Lange τc dämpft hohe Teiltöne',
       expBodySoft: (tau, mb) =>
-        `Der elastischere Filz federt tiefer ein (<strong>τc ≈ ${tau} ms</strong>): Die Obertöne H₆–H₁₂ nehmen im Mittel um <strong>${mb}</strong> ab, während Grundton H₁ und Oktave H₂ warm und lang ausschwingend hervortreten.`,
-      expTitleHard: 'Tonlich harter Klang: Kurzer Kraftimpuls hebt hohe Teiltöne stark an',
+        `Tieferes Einfedern (<strong>τc ≈ ${tau} ms</strong>) senkt H₆–H₁₂ um <strong>${mb}</strong> — Grundton H₁ und H₂ klingen warm nach.`,
+      expTitleHard: 'Harter Filz: Kurze τc hebt hohe Teiltöne an',
       expBodyHard: (tau, mb, h12) =>
-        `Der stark verdichtete Scheitel prallt kurz ab (<strong>τc ≈ ${tau} ms</strong>): Hohe Teiltöne H₆–H₁₂ steigen im Mittel um <strong>${mb}</strong> (Spitze H₁₂: <strong>${h12}</strong>) — der Ton wird lauter und metallischer, schwingt aber kürzer aus.`,
-      expTitleConcert: 'Konzert-Balance: Tragfähiger Kern mit kontrollierter Obertonkrone',
+        `Kurzer Abprall (<strong>τc ≈ ${tau} ms</strong>) hebt H₆–H₁₂ um <strong>${mb}</strong> (H₁₂: <strong>${h12}</strong>) — brillant, aber kürzer.`,
+      expTitleConcert: 'Konzert-Balance: Tragender Kern & klare Krone',
       expBodyConcert: (tau) =>
-        `Ausgewogene Hammerelastizität (<strong>τc ≈ ${tau} ms</strong>): Volles Bassfundament (H₁–H₄) verbindet sich mit der singenden großen Terz H₅ (275 Hz) und Quinte H₆ (330 Hz) ohne metallische Härte.`,
+        `Ausgewogene Elastizität (<strong>τc ≈ ${tau} ms</strong>) verbindet volles Fundament (H₁–H₄) mit singender Terz H₅ und Quinte H₆.`,
       strikeNear: (mm, ratio, d1) =>
-        `<strong>Anschlagspunkt nah an der Agraffe (${mm} mm · 1/${ratio} L):</strong> Grundton H₁ verliert <strong>${d1}</strong> an Hebelarm, während hohe Teiltöne stark hervortreten — das Klangbild wirkt dünner und drahtig.`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L):</strong> H₁ verliert <strong>${d1}</strong> — dünner, drahtiger Klang.`,
       strike9: (mm) =>
-        `<strong>Anschlagspunkt ≈ 1/9 L (${mm} mm):</strong> Löscht gezielt den scharfen <strong>9. Teilton H₉ (Sekunde, 495 Hz)</strong> im Knoten aus und öffnet H₅–H₈ für klare Projektion.`,
+        `<strong>x₀ ≈ 1/9 L (${mm} mm):</strong> Löscht die scharfe Sekunde <strong>H₉ (495 Hz)</strong> im Knoten aus.`,
       strike8: (mm, loss8) =>
-        `<strong>Klassischer Anschlagspunkt 1/8 L (${mm} mm):</strong> Legt einen Knoten auf <strong>H₈ (${loss8})</strong> und dämpft zugleich die reibenden Nachbarn <strong>H₇ (Septime)</strong> und <strong>H₉ (Sekunde)</strong> harmonisch ab.`,
+        `<strong>x₀ = 1/8 L (${mm} mm):</strong> Knoten auf <strong>H₈ (${loss8})</strong>, dämpft Reibungstöne H₇ &amp; H₉.`,
       strike7: (mm, loss7) =>
-        `<strong>Helmholtz-Anschlagspunkt 1/7 L (${mm} mm):</strong> Unterdrückt gezielt die unreine <strong>Naturseptime H₇ (385 Hz, ${loss7})</strong> im Schwingungsknoten für maximale Milde und Grundtonfülle.`,
+        `<strong>x₀ = 1/7 L (${mm} mm):</strong> Löscht die unreine Septime <strong>H₇ (${loss7})</strong> für warme Fülle.`,
       strikeCenter: (mm, ratio, d5) =>
-        `<strong>Anschlagspunkt Richtung Saitenmitte (${mm} mm · 1/${ratio} L):</strong> Löscht die klangentscheidende <strong>Dur-Terz H₅ (275 Hz, ${d5})</strong> aus — der Ton verliert seinen Glanz und klingt hohl.`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L):</strong> Löscht die Dur-Terz <strong>H₅ (${d5})</strong> — hohler Klang.`,
       strikeCustom: (mm, ratio, n, note, loss) =>
-        `<strong>Anschlagspunkt ${mm} mm (1/${ratio} L):</strong> Stärkste Knoten-Dämpfung liegt aktuell bei <strong>H${n} (${note}, ${loss})</strong>; verschieben Sie den Hammer für den direkten Knoten-Vergleich.`
+        `<strong>x₀ = ${mm} mm (1/${ratio} L):</strong> Stärkster Knoten bei <strong>H${n} (${note}, ${loss})</strong>.`
     },
 
     en: {
@@ -91,13 +91,13 @@
         'Cantabile & Singing Color', 'Brilliance & Carry', 'Roughness Partial (unpure)', 'Presence & Radiance',
         'Metallic Edge', 'Bright Overtone Shimmer', 'Sharp Inter-Harmonic', 'Crisp Attack Tip'
       ],
-      legendAbs: '--- Concert Ideal  |  Green: H₁–H₄ Foundation  |  Gold: Consonant Overtones  |  Amber: Roughness (H₇, H₉, H₁₁)',
-      legendDelta: 'Orange (+dB): Partial Gain vs. Concert Ideal  |  Sky Blue (−dB): Partial Loss / Node Suppression',
+      legendAbs: '--- Concert Ideal  |  Green: H₁–H₄  |  Gold: Consonant  |  Amber: H₇, H₉, H₁₁',
+      legendDelta: 'Orange (+dB): Gain  |  Sky Blue (−dB): Loss / Node',
       agraffe: 'Agraffe (0)',
       bridge: 'Bass Bridge (L = 1,560 mm)',
-      hitNode: (n, db) => `● Hits Node of H${n} (${db})`,
-      hitAntinode: (n) => `▲ Hits Antinode of H${n} (max)`,
-      hitPartial: (n, db) => `◐ Partial Excitation of H${n} (${db})`,
+      hitNode: (n, db) => `● Node H${n} (${db})`,
+      hitAntinode: (n) => `▲ Antinode H${n} (max)`,
+      hitPartial: (n, db) => `◐ Partial H${n} (${db})`,
       hConcert: 'Concert Ideal',
       hSoft: (p) => `Tonally Soft (${p}%)`,
       hSlightlySoft: (p) => `Slightly Soft (${p}%)`,
@@ -107,27 +107,27 @@
       roDelta: (tot, felt, str) => `Δ ${tot} (Felt ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) suppressed`,
-      expTitleSoft: 'Tonally Soft Sound: Longer Contact Time Attenuates Upper Partials',
+      expTitleSoft: 'Soft Felt: Longer τc Tames Upper Partials',
       expBodySoft: (tau, mb) =>
-        `More elastic felt cushions deeper (<strong>τc ≈ ${tau} ms</strong>): Upper partials H₆–H₁₂ drop by <strong>${mb}</strong> on average, while fundamental H₁ and octave H₂ bloom warmly with longer sustain.`,
-      expTitleHard: 'Tonally Hard Sound: Short Impulse Strongly Boosts Upper Partials',
+        `Deeper cushioning (<strong>τc ≈ ${tau} ms</strong>) lowers H₆–H₁₂ by <strong>${mb}</strong> — H₁ and H₂ bloom warmly.`,
+      expTitleHard: 'Hard Felt: Short τc Boosts Upper Partials',
       expBodyHard: (tau, mb, h12) =>
-        `A heavily compressed crown rebounds fast (<strong>τc ≈ ${tau} ms</strong>): Upper partials H₆–H₁₂ rise by <strong>${mb}</strong> (peak H₁₂: <strong>${h12}</strong>) — sounding louder and brighter, but with shorter sustain.`,
-      expTitleConcert: 'Concert Balance: Carrying Core with Controlled Harmonic Crown',
+        `Fast rebound (<strong>τc ≈ ${tau} ms</strong>) lifts H₆–H₁₂ by <strong>${mb}</strong> (H₁₂: <strong>${h12}</strong>) — brighter, shorter sustain.`,
+      expTitleConcert: 'Concert Balance: Rich Core & Controlled Crown',
       expBodyConcert: (tau) =>
-        `Balanced hammer elasticity (<strong>τc ≈ ${tau} ms</strong>): Full bass foundation (H₁–H₄) blends with the singing major third H₅ (275 Hz) and fifth H₆ (330 Hz) without metallic harshness.`,
+        `Balanced elasticity (<strong>τc ≈ ${tau} ms</strong>) blends full bass foundation (H₁–H₄) with singing H₅ and H₆.`,
       strikeNear: (mm, ratio, d1) =>
-        `<strong>Strike Point Near Agraffe (${mm} mm · 1/${ratio} L):</strong> Fundamental H₁ loses <strong>${d1}</strong> of leverage while upper partials dominate — producing a thin, wiry timbre.`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L):</strong> H₁ loses <strong>${d1}</strong> — thin, wiry timbre.`,
       strike9: (mm) =>
-        `<strong>Strike Point ≈ 1/9 L (${mm} mm):</strong> Cancels the sharp <strong>9th partial H₉ (major 2nd, 495 Hz)</strong> at its node while opening H₅–H₈ for clear projection.`,
+        `<strong>x₀ ≈ 1/9 L (${mm} mm):</strong> Cancels sharp <strong>H₉ (495 Hz)</strong> at its node.`,
       strike8: (mm, loss8) =>
-        `<strong>Classic Strike Point 1/8 L (${mm} mm):</strong> Places a node on <strong>H₈ (${loss8})</strong> and simultaneously tames neighboring dissonant partials <strong>H₇ (7th)</strong> and <strong>H₉ (2nd)</strong>.`,
+        `<strong>x₀ = 1/8 L (${mm} mm):</strong> Node on <strong>H₈ (${loss8})</strong>, tames dissonant H₇ &amp; H₉.`,
       strike7: (mm, loss7) =>
-        `<strong>Helmholtz Strike Point 1/7 L (${mm} mm):</strong> Suppresses the unpure <strong>natural seventh H₇ (385 Hz, ${loss7})</strong> at its node for maximum warmth and smoothness.`,
+        `<strong>x₀ = 1/7 L (${mm} mm):</strong> Cancels natural 7th <strong>H₇ (${loss7})</strong> for smooth warmth.`,
       strikeCenter: (mm, ratio, d5) =>
-        `<strong>Strike Point Toward String Center (${mm} mm · 1/${ratio} L):</strong> Cancels the vital <strong>major third H₅ (275 Hz, ${d5})</strong> — stripping singing color and leaving a hollow tone.`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L):</strong> Cancels major 3rd <strong>H₅ (${d5})</strong> — hollow tone.`,
       strikeCustom: (mm, ratio, n, note, loss) =>
-        `<strong>Strike Point ${mm} mm (1/${ratio} L):</strong> Strongest node suppression is currently at <strong>H${n} (${note}, ${loss})</strong>; drag the hammer along the string to compare nodes.`
+        `<strong>x₀ = ${mm} mm (1/${ratio} L):</strong> Strongest node at <strong>H${n} (${note}, ${loss})</strong>.`
     },
 
     ja: {
@@ -141,13 +141,13 @@
         'カンタービレと色彩感', 'ブリリアンスと投射力', 'うなり・粗さ成分', '存在感と輝き',
         '金属的な鋭さ', '明るい高次倍音', '鋭い中間倍音', '繊細なアタック成分'
       ],
-      legendAbs: '--- 白破線 = コンサート基準  |  緑: H₁–H₄ 基音土台  |  金: 協和倍音  |  琥珀: 不協和倍音 (H₇, H₉, H₁₁)',
-      legendDelta: 'オレンジ (+dB): 基準からの倍音増加  |  水色 (−dB): 倍音減少・節（ノード）減衰',
+      legendAbs: '--- 基準  |  緑: H₁–H₄  |  金: 協和倍音  |  琥珀: H₇, H₉, H₁₁',
+      legendDelta: '橙 (+dB): 増加  |  水色 (−dB): 減少・節減衰',
       agraffe: 'アグラフ (0)',
       bridge: '低音駒 (L = 1,560 mm)',
-      hitNode: (n, db) => `● H${n} の節（ノード）を打弦 (${db})`,
-      hitAntinode: (n) => `▲ H${n} の腹（最大振幅）を打弦`,
-      hitPartial: (n, db) => `◐ H${n} を部分励起 (${db})`,
+      hitNode: (n, db) => `● 節 H${n} (${db})`,
+      hitAntinode: (n) => `▲ 腹 H${n} (最大)`,
+      hitPartial: (n, db) => `◐ 部分励起 H${n} (${db})`,
       hConcert: 'コンサート基準',
       hSoft: (p) => `柔らかい音色 (${p}%)`,
       hSlightlySoft: (p) => `やや柔らかめ (${p}%)`,
@@ -157,27 +157,27 @@
       roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n}（腹 ${n} 個）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) を抑制`,
-      expTitleSoft: '柔らかい音色：長い接触時間が高次倍音を穏やかに減衰',
+      expTitleSoft: '柔らかい音色：長い τc が高次倍音を抑制',
       expBodySoft: (tau, mb) =>
-        `弾性に富むフェルトが深く沈み込み（<strong>τc ≈ ${tau} ms</strong>）、高次倍音 H₆–H₁₂ は平均 <strong>${mb}</strong> 減少。基音 H₁ と H₂ が温かく長い余韻で響きます。`,
-      expTitleHard: '硬い音色：短い打撃インパルスが高次倍音を強力に増幅',
+        `深いクッション（<strong>τc ≈ ${tau} ms</strong>）で H₆–H₁₂ が <strong>${mb}</strong> 減少し、基音 H₁・H₂ が温かく響きます。`,
+      expTitleHard: '硬い音色：短い τc が高次倍音を増幅',
       expBodyHard: (tau, mb, h12) =>
-        `高密度のクラウンが素早く反発（<strong>τc ≈ ${tau} ms</strong>）：高次倍音 H₆–H₁₂ が平均 <strong>${mb}</strong> 上昇（H₁₂ 最大: <strong>${h12}</strong>）し、金属的で鋭いアタックになります。`,
-      expTitleConcert: 'コンサート・バランス：豊かな基音と制御された倍音の冠',
+        `素早い反発（<strong>τc ≈ ${tau} ms</strong>）で H₆–H₁₂ が <strong>${mb}</strong> 上昇（H₁₂: <strong>${h12}</strong>）し、鋭いアタックに。`,
+      expTitleConcert: 'コンサート均衡：豊かな基音と澄んだ倍音',
       expBodyConcert: (tau) =>
-        `理想的なハンマー弾性（<strong>τc ≈ ${tau} ms</strong>）：重厚な低音土台（H₁–H₄）に歌うような長3度 H₅（275 Hz）と完全5度 H₆（330 Hz）が調和します。`,
+        `最適な弾性（<strong>τc ≈ ${tau} ms</strong>）が低音土台（H₁–H₄）と歌う H₅・H₆ を調和させます。`,
       strikeNear: (mm, ratio, d1) =>
-        `<strong>アグラフに近い打弦点 (${mm} mm · 1/${ratio} L)：</strong> 基音 H₁ が <strong>${d1}</strong> 低下し高次倍音が際立つため、細く硬質な響きになります。`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L)：</strong> H₁ が <strong>${d1}</strong> 低下し、細く硬質な響きに。`,
       strike9: (mm) =>
-        `<strong>打弦点 ≈ 1/9 L (${mm} mm)：</strong> 鋭い<strong>第9倍音 H₉（長2度・495 Hz）</strong>を節で打ち消し、H₅–H₈ の明瞭な遠達性を引き出します。`,
+        `<strong>x₀ ≈ 1/9 L (${mm} mm)：</strong> 鋭い <strong>H₉（495 Hz）</strong>を節で打ち消します。`,
       strike8: (mm, loss8) =>
-        `<strong>標準打弦点 1/8 L (${mm} mm)：</strong> <strong>H₈ (${loss8})</strong> の節を突きつつ、隣接する不協和成分 <strong>H₇（自然7度）</strong>と <strong>H₉（長2度）</strong>もバランス良く抑えます。`,
+        `<strong>x₀ = 1/8 L (${mm} mm)：</strong> <strong>H₈ (${loss8})</strong> の節を突き、不協和な H₇・H₉ を抑制。`,
       strike7: (mm, loss7) =>
-        `<strong>ヘルムホルツ打弦点 1/7 L (${mm} mm)：</strong> 不純な<strong>自然7度 H₇（385 Hz, ${loss7}）</strong>を振動の節で抑制し、最もまろやかな響きを生みます。`,
+        `<strong>x₀ = 1/7 L (${mm} mm)：</strong> 自然7度 <strong>H₇ (${loss7})</strong> を抑え、まろやかな響きに。`,
       strikeCenter: (mm, ratio, d5) =>
-        `<strong>弦中央寄りの打弦点 (${mm} mm · 1/${ratio} L)：</strong> 音色の要である<strong>長3度 H₅（275 Hz, ${d5}）</strong>を消失させ、空虚な響きになります。`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L)：</strong> 長3度 <strong>H₅ (${d5})</strong> が消え、空虚な響きに。`,
       strikeCustom: (mm, ratio, n, note, loss) =>
-        `<strong>打弦点 ${mm} mm (1/${ratio} L)：</strong> 現在の最大ノード減衰は <strong>H${n} (${note}, ${loss})</strong> です。ハンマーをドラッグして節の位置を比較できます。`
+        `<strong>x₀ = ${mm} mm (1/${ratio} L)：</strong> 最大減衰は <strong>H${n} (${note}, ${loss})</strong>。`
     },
 
     zh: {
@@ -191,12 +191,12 @@
         '如歌旋律色彩', '辉煌感与大厅投射', '粗糙摩擦泛音（不协和）', '临场感与光辉度',
         '金属锐利感', '明亮高次泛音', '尖锐中高频泛音', '瞬态起音锋芒'
       ],
-      legendAbs: '--- 白色虚线 = 音乐会基准  |  绿: H₁–H₄ 低音根基  |  金: 协和泛音  |  琥珀: 不协和摩擦泛音 (H₇, H₉, H₁₁)',
-      legendDelta: '橙色 (+dB): 相对基准泛音增强  |  天蓝 (−dB): 泛音衰减 / 波节抵消',
+      legendAbs: '--- 基准  |  绿: H₁–H₄  |  金: 协和泛音  |  琥珀: H₇, H₉, H₁₁',
+      legendDelta: '橙 (+dB): 增强  |  天蓝 (−dB): 衰减 / 波节',
       agraffe: '压弦纽 Agraffe (0)',
       bridge: '低音码桥 (L = 1,560 mm)',
-      hitNode: (n, db) => `● 击中 H${n} 波节 (${db})`,
-      hitAntinode: (n) => `▲ 击中 H${n} 波腹（最大激发）`,
+      hitNode: (n, db) => `● 波节 H${n} (${db})`,
+      hitAntinode: (n) => `▲ 波腹 H${n} (最大)`,
       hitPartial: (n, db) => `◐ 部分激发 H${n} (${db})`,
       hConcert: '音乐会理想基准',
       hSoft: (p) => `音色偏柔 (${p}%)`,
@@ -207,27 +207,27 @@
       roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
       waveLbl: (n) => `H${n}（${n} 个波腹）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) 波节抑制`,
-      expTitleSoft: '音色偏柔：较长弦槌接触时间显著衰减高次泛音',
+      expTitleSoft: '音色偏柔：较长 τc 衰减高次泛音',
       expBodySoft: (tau, mb) =>
-        `高弹性毛毡缓冲更深（<strong>τc ≈ ${tau} ms</strong>）：高次泛音 H₆–H₁₂ 平均衰减 <strong>${mb}</strong>，基音 H₁ 与八度 H₂ 温暖柔和、延音悠长。`,
-      expTitleHard: '音色偏硬：短促冲击脉冲大幅拉升高次泛音',
+        `更深缓冲（<strong>τc ≈ ${tau} ms</strong>）使 H₆–H₁₂ 衰减 <strong>${mb}</strong>，基音 H₁ 与 H₂ 温润悠长。`,
+      expTitleHard: '音色偏硬：短促 τc 拉升高次泛音',
       expBodyHard: (tau, mb, h12) =>
-        `高密压实槌冠快速弹离（<strong>τc ≈ ${tau} ms</strong>）：高次泛音 H₆–H₁₂ 平均提升 <strong>${mb}</strong>（H₁₂ 峰值 <strong>${h12}</strong>），起音刚猛金属感强但延音缩短。`,
-      expTitleConcert: '音乐会黄金平衡：浑厚音芯与可控泛音光泽',
+        `快速弹离（<strong>τc ≈ ${tau} ms</strong>）使 H₆–H₁₂ 提升 <strong>${mb}</strong>（H₁₂: <strong>${h12}</strong>），明亮但延音缩短。`,
+      expTitleConcert: '音乐会平衡：浑厚音芯与清澈泛音',
       expBodyConcert: (tau) =>
-        `理想的雷诺弦槌弹性（<strong>τc ≈ ${tau} ms</strong>）：深沉基频（H₁–H₄）与歌唱性的大三度 H₅（275 Hz）、纯五度 H₆（330 Hz）完美交融而无金属燥感。`,
+        `理想弹性（<strong>τc ≈ ${tau} ms</strong>）令低音根基（H₁–H₄）与如歌的 H₅、H₆ 自然交融。`,
       strikeNear: (mm, ratio, d1) =>
-        `<strong>靠近压弦纽击弦 (${mm} mm · 1/${ratio} L)：</strong> 基音 H₁ 损失 <strong>${d1}</strong> 杠杆力矩，高频泛音突出，音色偏薄偏细。`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L)：</strong> 基音 H₁ 损失 <strong>${d1}</strong>，音色偏薄。`,
       strike9: (mm) =>
-        `<strong>击弦点 ≈ 1/9 L (${mm} mm)：</strong> 在波节处精准抵消尖锐的<strong>第9泛音 H₉（大二度，495 Hz）</strong>，充分释放 H₅–H₈ 投射力。`,
+        `<strong>x₀ ≈ 1/9 L (${mm} mm)：</strong> 在波节处抵消尖锐的 <strong>H₉（495 Hz）</strong>。`,
       strike8: (mm, loss8) =>
-        `<strong>音乐会标准击弦点 1/8 L (${mm} mm)：</strong> 波节精准落在 <strong>H₈ (${loss8})</strong>，同时柔和抑制两侧不协和的 <strong>H₇（自然七度）</strong>与 <strong>H₉（大二度）</strong>。`,
+        `<strong>x₀ = 1/8 L (${mm} mm)：</strong> 波节落在 <strong>H₈ (${loss8})</strong>，同时柔化 H₇ 与 H₉。`,
       strike7: (mm, loss7) =>
-        `<strong>亥姆霍兹击弦点 1/7 L (${mm} mm)：</strong> 在波节处抑制不纯的<strong>自然七度 H₇（385 Hz, ${loss7}）</strong>，获得最温润醇厚的低音质感。`,
+        `<strong>x₀ = 1/7 L (${mm} mm)：</strong> 抑制自然七度 <strong>H₇ (${loss7})</strong>，音色最温润。`,
       strikeCenter: (mm, ratio, d5) =>
-        `<strong>偏向琴弦中部击弦 (${mm} mm · 1/${ratio} L)：</strong> 抵消决定色彩的<strong>大三度 H₅（275 Hz, ${d5}）</strong>，导致音色发空失去光泽。`,
+        `<strong>x₀ = ${mm} mm (1/${ratio} L)：</strong> 抵消大三度 <strong>H₅ (${d5})</strong>，音色发空。`,
       strikeCustom: (mm, ratio, n, note, loss) =>
-        `<strong>当前击弦点 ${mm} mm (1/${ratio} L)：</strong> 最强波节抑制位于 <strong>H${n} (${note}, ${loss})</strong>；可直接拖动弦槌对比各泛音波节。`
+        `<strong>x₀ = ${mm} mm (1/${ratio} L)：</strong> 最强抑制位于 <strong>H${n} (${note}, ${loss})</strong>。`
     }
   };
 
@@ -359,7 +359,7 @@
         const dbMax = 6, dbMin = -46;
         const mapY = db => padT + ((dbMax - Math.max(dbMin, Math.min(dbMax, db))) / (dbMax - dbMin)) * ph;
 
-        ctx.font = '600 14.7px JetBrains Mono, monospace';
+        ctx.font = '600 13.4px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [0, -10, -20, -30, -40].forEach(db => {
           const y = mapY(db);
@@ -431,7 +431,7 @@
 
           const dAbs = Math.abs(p.deltaDb);
           const labelY = Math.max(padT - 8, Math.min(yCur, yRef) - 7);
-          ctx.font = '700 14.7px JetBrains Mono, monospace';
+          ctx.font = '700 13.4px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           if (dAbs < 0.15) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.78)';
@@ -444,17 +444,17 @@
 
           const xNote = p.n >= 10 ? ('H' + p.n + '·' + p.note) : ('H' + p.n + ' · ' + p.note);
           ctx.font = p.n === this.selectedN
-            ? (p.n >= 10 ? '800 14.5px Roboto, sans-serif' : '800 15.7px Roboto, sans-serif')
-            : (p.n >= 10 ? '700 14.2px Roboto, sans-serif' : '700 15.2px Roboto, sans-serif');
+            ? (p.n >= 10 ? '800 13.2px Roboto, sans-serif' : '800 14.3px Roboto, sans-serif')
+            : (p.n >= 10 ? '700 12.9px Roboto, sans-serif' : '700 13.9px Roboto, sans-serif');
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText(xNote, cx, yBot + 22);
+          ctx.fillText(xNote, cx, yBot + 21);
 
-          ctx.font = '600 14.2px JetBrains Mono, monospace';
+          ctx.font = '600 12.9px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 42);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 40);
         });
 
-        ctx.font = '600 14.7px Roboto, sans-serif';
+        ctx.font = '600 13.4px Roboto, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillStyle = 'rgba(255,255,255,0.88)';
         ctx.fillText(dict.legendAbs, padL + pw, 18);
@@ -463,7 +463,7 @@
         const mapY = d => padT + ((dMax - Math.max(dMin, Math.min(dMax, d))) / (dMax - dMin)) * ph;
         const yZero = mapY(0);
 
-        ctx.font = '600 14.7px JetBrains Mono, monospace';
+        ctx.font = '600 13.4px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [15, 10, 5, 0, -5, -10, -15].forEach(d => {
           const y = mapY(d);
@@ -501,25 +501,25 @@
           ctx.roundRect(x, top, barW, h, 5);
           ctx.fill();
 
-          ctx.font = '700 14.7px JetBrains Mono, monospace';
+          ctx.font = '700 13.4px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           ctx.fillStyle = p.deltaDb >= 0 ? '#fdba74' : '#7dd3fc';
-          const ty = p.deltaDb >= 0 ? top - 7 : top + h + 16;
+          const ty = p.deltaDb >= 0 ? top - 7 : top + h + 15;
           ctx.fillText(this.fmtSignedDb(p.deltaDb), cx, ty);
 
           const yBot = padT + ph;
           const xNote = p.n >= 10 ? ('H' + p.n + '·' + p.note) : ('H' + p.n + ' · ' + p.note);
           ctx.font = p.n === this.selectedN
-            ? (p.n >= 10 ? '800 14.5px Roboto, sans-serif' : '800 15.7px Roboto, sans-serif')
-            : (p.n >= 10 ? '700 14.2px Roboto, sans-serif' : '700 15.2px Roboto, sans-serif');
+            ? (p.n >= 10 ? '800 13.2px Roboto, sans-serif' : '800 14.3px Roboto, sans-serif')
+            : (p.n >= 10 ? '700 12.9px Roboto, sans-serif' : '700 13.9px Roboto, sans-serif');
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText(xNote, cx, yBot + 22);
-          ctx.font = '600 14.2px JetBrains Mono, monospace';
+          ctx.fillText(xNote, cx, yBot + 21);
+          ctx.font = '600 12.9px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 42);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 40);
         });
 
-        ctx.font = '600 14.7px Roboto, sans-serif';
+        ctx.font = '600 13.4px Roboto, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillStyle = 'rgba(255,255,255,0.88)';
         ctx.fillText(dict.legendDelta, padL + pw, 18);
@@ -595,7 +595,7 @@
       ctx.lineTo(padL, strY - 2);
       ctx.closePath();
       ctx.fill();
-      ctx.font = '700 15.2px Roboto, sans-serif';
+      ctx.font = '700 13.9px Roboto, sans-serif';
       ctx.textAlign = 'left';
       ctx.fillStyle = '#e6c882';
       ctx.fillText(dict.agraffe, Math.max(8, padL - 28), 18);
@@ -647,13 +647,13 @@
         ? dict.hitNode(n, this.fmtDb(sel.nodeLossDb))
         : (hitPhase > 0.82 ? dict.hitAntinode(n) : dict.hitPartial(n, this.fmtDb(sel.nodeLossDb)));
 
-      ctx.font = '700 15.7px JetBrains Mono, monospace';
+      ctx.font = '700 14.3px JetBrains Mono, monospace';
       ctx.textAlign = 'left';
-      const infoX = Math.min(W - 435, hx + 28);
+      const infoX = Math.min(W - 395, hx + 26);
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 25);
+      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 24);
       ctx.fillStyle = hitPhase < 0.22 ? '#7dd3fc' : '#86efac';
-      ctx.fillText(hitStatus, infoX, strY + 47);
+      ctx.fillText(hitStatus, infoX, strY + 45);
 
       ctx.restore();
     }

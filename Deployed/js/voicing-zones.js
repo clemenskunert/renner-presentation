@@ -115,28 +115,28 @@
       specDelta: 'ΔdB Sticheffekt',
       specDyn: 'Dynamik pp–ff',
       techRawVal: '0 Stiche · Werksspannung',
-      techIdealVal: '✓ 90° radial · σ bleibt intakt',
-      techWrongVal: '✕ Faserschnitt · σ zerstört!',
-      techRedVal: '✕ TABU: Scheitelkern zerstört!',
-      cvString: '3-chörige Stahlsaite · Anschlagspunkt (12:00 Uhr)',
-      cvAxis12: '12:00 Kraftachse',
-      cvAxisCheekL: '9:00 Breiteste Flanke',
-      cvAxisCheekR: 'Breiteste Flanke 3:00',
+      techIdealVal: '✓ 90° radial · σ intakt',
+      techWrongVal: '✕ Faserschnitt · σ zerstört',
+      techRedVal: '✕ TABU: Scheitelkern zerstört',
+      cvString: 'Stahlsaite · Anschlag (12:00)',
+      cvAxis12: '12:00 Achse',
+      cvAxisCheekL: '9:00 Flanke',
+      cvAxisCheekR: 'Flanke 3:00',
       cvAxisUf: 'Oberkante Unterfilz',
-      cvGlueRivet: 'Klebstoff + T-Niete',
-      cvTransferUp: 'Spannungstransfer ↑ in f-Keil',
-      cvBetweenGrooves: 'Nur zwischen Saitenrillen (≤ 2 mm)!',
-      cvTabooWarn: '✕ NICHT TIEF STECHEN! (> 2 mm zerstört σ)',
-      cvWrongWarn: '✕ Quer-/Hackstich zerschneidet Außenfasern!',
-      cvRawHint: 'Rohzustand vor dem Nadeln (Werkshärte)',
-      cvClickHint: 'Keil anklicken zum Prüfen',
-      specZone1: 'H1–H4 Fundament & Fülle',
-      specZone2: 'H5–H8 Gesangskern (Cantabile)',
-      specZone3: 'H9–H12 Brillanz & Schärfe',
-      dynTitle: 'Spielbare Ansprache & Tragkraft nach Dynamikstufe (pp → ff)',
-      dynBefore: 'Vorher (Roh)',
+      cvGlueRivet: 'Klebstoff + Niete',
+      cvTransferUp: 'Spannung ↑ in f-Keil',
+      cvBetweenGrooves: 'Nur zw. Saitenrillen (≤ 2 mm)!',
+      cvTabooWarn: '✕ TABU: > 2 mm zerstört σ!',
+      cvWrongWarn: '✕ Querstich zerschneidet Fasern!',
+      cvRawHint: 'Werkszustand (0 Stiche)',
+      cvClickHint: 'Keil anklicken',
+      specZone1: 'H1–H4 Fundament',
+      specZone2: 'H5–H8 Gesangskern',
+      specZone3: 'H9–H12 Brillanz',
+      dynTitle: 'Spielbare Ansprache nach Dynamik (pp → ff)',
+      dynBefore: 'Vorher',
       dynAfter: 'Nach Stich',
-      dynLabels: ['pp (Pianissimo)', 'p (Piano)', 'mf (Mezzoforte)', 'f (Forte)', 'ff (Fortissimo)'],
+      dynLabels: ['pp', 'p', 'mf', 'f', 'ff'],
       zones: {
         blue: {
           roZone: '🔵 Blauer ff-Keil (9–10 / 2–3h)',
@@ -146,86 +146,86 @@
           kpi1Sub: '3er-Halter · Nadel Nr. 7',
           kpi2Sub: '✓ Fasern geteilt, σ intakt',
           kpi3Num: '+3,2 dB',
-          kpi3Sub: 'Fülle H1–H4 ↑ · ff frei',
-          badge: '✦ VORINTONATION • BLAUER FORTISSIMO-KEIL (9–10 & 2–3 UHR)',
-          title: 'Tiefe 90°-Stiche lösen starre Werkshärte und speisen den Forte-Keil',
-          body: 'Kräftiges, ruhiges Eindrücken bis <strong>kurz vor den Unterfilz</strong> (nie in Unterfilz/Holz!) baut die starre Unterflanken-Spannung ab: Elastische Energie <strong>wandert aufwärts in den grünen Forte-Keil</strong> und öffnet volles, rundes <em>Fortissimo</em>.',
-          bullet: '<strong>Praxis-Effekt:</strong> Stärkt Grundtonfülle &amp; Sustain (<strong>H1–H4 +3,2 dB</strong>), ohne die Scheitelkrone für <em>p/pp</em> zu schwächen.'
+          kpi3Sub: 'H1–H4 ↑ · ff frei',
+          badge: '✦ VORINTONATION • BLAUER FF-KEIL (9–10 / 2–3H)',
+          title: 'Tiefe 90°-Stiche lösen Werkshärte und speisen den f-Keil',
+          body: 'Ruhiges Eindrücken bis <strong>kurz vor den Unterfilz</strong> leitet Elastizität <strong>aufwärts in den grünen Keil</strong> und öffnet das <em>Fortissimo</em>.',
+          bullet: '<strong>Effekt:</strong> Mehr Grundtonfülle (<strong>H1–H4 +3,2 dB</strong>), Krone bleibt stabil.'
         },
         green: {
           roZone: '🟢 Grüner f-Keil (10–11 / 1–2h)',
-          roDepth: '4–6 mm (Mittel) · 90°',
+          roDepth: '4–6 mm · 90° radial',
           roEffect: 'Kern +2,4 dB · Schärfe −2,5 dB',
           kpi1Num: '4–6 mm',
           kpi1Sub: 'Mid-Voicing · 90° radial',
-          kpi2Sub: '✓ Kraftfluss zur Flanke frei',
+          kpi2Sub: '✓ Kraftfluss frei',
           kpi3Num: '+2,4 dB',
           kpi3Sub: 'Singendes mf–f (H3–H6 ↑)',
-          badge: '✦ MID-VOICING • GRÜNER FORTE-KEIL (10–11 & 1–2 UHR)',
-          title: 'Öffnet die kritische Übergangszone zwischen Scheitel und Flanke',
-          body: 'Mitteltiefe <strong>90°-Radialstiche (4–6 mm)</strong> entspannen verhärtete Außenkontur-Zonen: Die untere ½-Flanke federt wieder frei mit, metallische Härte im <em>Forte</em> verschwindet zugunsten eines tragfähigen <strong>Cantabile-Kerns</strong>.',
-          bullet: '<strong>Praxis-Effekt:</strong> Harmonisiert den dynamischen Übergang von <em>mf</em> nach <em>f</em> und rundet scharfe Hochmitten (<strong>H8–H12 −2,5 dB</strong>) ab.'
+          badge: '✦ MID-VOICING • GRÜNER F-KEIL (10–11 / 1–2H)',
+          title: 'Öffnet den Übergang zwischen Scheitel und ½-Flanke',
+          body: '<strong>90°-Stiche (4–6 mm)</strong> entspannen die Außenkontur: Die Flanke federt frei mit und formt einen tragenden <strong>Cantabile-Kern</strong>.',
+          bullet: '<strong>Effekt:</strong> Fließendes <em>mf–f</em>, scharfe Obertöne sinken (<strong>−2,5 dB</strong>).'
         },
         orange: {
           roZone: '🟠 Oranger p-Keil (11–12 / 12–1h)',
-          roDepth: '2,5–4 mm (Fein) · 90°',
+          roDepth: '2,5–4 mm · 90° radial',
           roEffect: 'H8–H12 −3,8 dB · warmer p-Ton',
           kpi1Num: '2,5–4 mm',
           kpi1Sub: 'Feine Nadel · Kronenflanke',
-          kpi2Sub: '✓ Kerndruck bleibt erhalten',
+          kpi2Sub: '✓ Kerndruck intakt',
           kpi3Num: '−3,8 dB',
-          kpi3Sub: 'Spitzen weg · warmer p-Ton',
-          badge: '✦ AUSGLEICHSINTONATION • ORANGER PIANO-KEIL (11–12 / 12–1 UHR)',
-          title: 'Fein dosierte Stiche neben der Krone formen den warmen Gesangston',
-          body: 'Behutsame <strong>2,5–4 mm Stiche im 90°-Winkel</strong> direkt seitlich der Anschlagskrone dämpfen glasige Obertöne im <em>Piano</em> und <em>Mezzopiano</em>, während der tiefere Spannungsbogen für das <em>Forte</em> voll erhalten bleibt.',
-          bullet: '<strong>Praxis-Effekt:</strong> Gleichmäßige 88-Tasten-Farbbalance durch gezieltes Absenken spitzer Teiltöne (<strong>H8–H12 −3,8 dB</strong>).'
+          kpi3Sub: 'Warmer p-Ton',
+          badge: '✦ AUSGLEICH • ORANGER P-KEIL (11–12 / 12–1H)',
+          title: 'Feine Stiche neben der Krone formen warmen Gesangston',
+          body: '<strong>2,5–4 mm Stiche (90°)</strong> seitlich der Krone dämpfen glasige Obertöne im <em>Piano</em>, ohne die <em>Forte</em>-Spannung zu schwächen.',
+          bullet: '<strong>Effekt:</strong> Ausgeglichene Klangfarbe über 88 Tasten (<strong>H8–H12 −3,8 dB</strong>).'
         },
         purple: {
           roZone: '🟣 Violetter pp-Keil (Krone)',
           roDepth: '≤ 2 mm · zw. Saitenrillen',
           roEffect: 'H9–H12 −5,1 dB · samtiges pp',
           kpi1Num: '≤ 2,0 mm',
-          kpi1Sub: '1er-Kurznadel · zw. Rillen',
+          kpi1Sub: '1er-Nadel · zw. Rillen',
           kpi2Sub: '✓ 96 % Kernspannung intakt',
           kpi3Num: '−5,1 dB',
           kpi3Sub: 'H9–H12 sanft · edles pp',
-          badge: '✦ FEININTONATION • VIOLETTER PIANISSIMO-KEIL (MAX. 2 MM)',
-          title: 'Minimale Oberflächenstiche schaffen ein Samtpolster für feinstes pp',
-          body: 'Mit kurzer Einzelnadel <strong>höchstens 1–2 mm tief</strong> und <strong>ausschließlich zwischen den Saitenrillen</strong> tupfen: Nur die äußerste Kontaktschicht wird samtig geschmeidig — der tragende Scheitelkern darunter bleibt unberührt!',
-          bullet: '<strong>Goldene Regel:</strong> Niemals in die Saitenrillen selbst und niemals tiefer als <strong>2 mm</strong> am Scheitel stechen!'
+          badge: '✦ FEININTONATION • VIOLETTER PP-KEIL (≤ 2 MM)',
+          title: 'Minimale Oberflächenstiche schaffen ein Samtpolster für pp',
+          body: 'Kurze Einzelnadel <strong>max. 1–2 mm tief</strong> und <strong>nur zwischen den Saitenrillen</strong>: Der tragende Scheitelkern bleibt unberührt.',
+          bullet: '<strong>Regel:</strong> Nie in die Saitenrillen und nie tiefer als <strong>2 mm</strong>!'
         },
         red: {
           roZone: '🔴 Sperrzone (12:00 Kern)',
           roDepth: '✕ TABU: > 2 mm verboten!',
           roEffect: '⚠ σ 34 % · τc 3,15 ms · Ton tot!',
           kpi1Num: '✕ TABU',
-          kpi1Sub: 'Nie > 2 mm in 12:00 Uhr!',
-          kpi2Sub: '✕ Spannungsbogen zerstört!',
+          kpi1Sub: 'Nie > 2 mm bei 12:00!',
+          kpi2Sub: '✕ Spannung zerstört!',
           kpi3Num: '−6,8 dB',
-          kpi3Sub: 'Hohl, schwammig & leblos',
-          badge: '⚠️ SPERRZONE 12:00 UHR • „DO NOT TOUCH!“ (TIEFER SCHEITELKERN)',
-          title: 'Tiefe Scheitelstiche zerstören die Oberflächenspannung irreversibel!',
-          body: 'Wer tiefer als 2 mm senkrecht in das <strong>rote Scheiteldreieck über dem Unterfilz</strong> sticht, durchtrennt das Zuggewölbe des Hammerkopfs: Die Rückstellkraft kollabiert, die Kontaktzeit schnellt auf <strong>τc ≈ 3,15 ms</strong> hoch.',
-          bullet: '<strong>Irreversibler Schaden:</strong> Der Ton wird <strong>hohl, pappig und leblos</strong> — weder tragfähiges <em>Piano</em> noch <em>Fortissimo</em> sind mehr möglich!'
+          kpi3Sub: 'Hohl & leblos',
+          badge: '⚠️ SPERRZONE 12:00 • TIEFER SCHEITELKERN',
+          title: 'Tiefe Scheitelstiche zerstören die Spannung irreversibel!',
+          body: 'Stiche <strong>> 2 mm in das rote Scheiteldreieck</strong> durchtrennen das Zuggewölbe: Rückstellkraft bricht ein, <strong>τc steigt auf 3,15 ms</strong>.',
+          bullet: '<strong>Folge:</strong> Der Ton wird <strong>hohl und tot</strong> — kein <em>p</em> und kein <em>ff</em> mehr!'
         }
       },
       wrongOverride: {
         roDepth: '✕ FEHLER: Quer-/Hackstich!',
         roEffect: '⚠ Fasern zerschnitten · τc ↑',
         kpi2Sub: '✕ Zugfasern durchtrennt!',
-        badge: '⚠️ STICHFEHLER • QUER STECHEN ODER HACKEN ZERSTÖRT DEN FILZ',
-        title: 'Flache Schrägstiche & Hacken zerschneiden die tragenden Wollvlies-Lagen!',
-        body: 'Statt die Wollfasern im <strong>90°-Winkel zur Außenkontur</strong> sanft nach dem Akupunktur-Prinzip zu teilen, durchtrennt schräges Stechen oder Hacken die gespannten Faserbrücken: Kraftfluss zur Flanke reißt ab und <strong>τc verlängert sich</strong>.',
-        bullet: '<strong>Kruse &amp; Olbrich Grundgesetz:</strong> Immer <strong>90° senkrecht zur Kontur</strong> ansetzen und ruhig mit Körpergewicht <strong>drücken statt hacken</strong>!'
+        badge: '⚠️ STICHFEHLER • QUER STECHEN / HACKEN',
+        title: 'Schrägstiche und Hacken zerschneiden tragende Wolllagen!',
+        body: 'Schräges Stechen durchtrennt gespannte Faserbrücken statt sie im <strong>90°-Winkel</strong> zu teilen: Kraftfluss reißt ab, <strong>τc steigt</strong>.',
+        bullet: '<strong>Grundgesetz:</strong> Immer <strong>90° zur Kontur</strong> ruhig <strong>drücken statt hacken</strong>!'
       },
       rawOverride: {
         roDepth: '0 Stiche · Werkszustand',
-        roEffect: '0,0 dB · volle Werksspannung',
-        kpi2Sub: '100 % Werksspannung (starr)',
-        badge: '✦ AUSGANGSZUSTAND • UNBEHANDELTER HAMMERKOPF VOR DEM NADELN',
-        title: 'Hohe Werksvorspannung benötigt gezielte Zonen-Balance im Instrument',
-        body: 'Fabrikneue Hammerköpfe besitzen eine hohe Grundspannung. Wählen Sie <strong>„2 · ✓ 90° Drücken“</strong>, um live zu vergleichen, wie das gezielte Nadeln jeder Uhrzeit-Zone Teiltonspektrum und Dynamik formt.',
-        bullet: '<strong>Reihenfolge nach Renner Academy:</strong> Erst Mechanik &amp; Saitensitz prüfen → <strong>Blauer ff-Keil</strong> → <strong>Grün/Orange</strong> → zuletzt <strong>Violett (≤ 2 mm)</strong>.'
+        roEffect: '0,0 dB · Werksspannung',
+        kpi2Sub: '100 % Werksspannung',
+        badge: '✦ WERKSZUSTAND • VOR DEM NADELN',
+        title: 'Hohe Werksvorspannung benötigt gezielte Zonen-Balance',
+        body: 'Wählen Sie <strong>„2 · ✓ 90° Drücken“</strong>, um zu sehen, wie jede Uhrzeit-Zone Teiltonspektrum und Dynamik formt.',
+        bullet: '<strong>Ablauf:</strong> Mechanik &amp; Saitensitz → <strong>Blau</strong> → <strong>Grün/Orange</strong> → <strong>Violett (≤ 2 mm)</strong>.'
       }
     },
 
@@ -241,84 +241,84 @@
       specDelta: 'ΔdB Stitch Effect',
       specDyn: 'Dynamics pp–ff',
       techRawVal: '0 Stitches · Factory Tension',
-      techIdealVal: '✓ 90° radial · σ stays intact',
-      techWrongVal: '✕ Fibers cut · σ destroyed!',
-      techRedVal: '✕ TABOO: Crown core ruined!',
-      cvString: 'Tri-chord steel string · Strike point (12:00)',
-      cvAxis12: '12:00 Energy Axis',
-      cvAxisCheekL: '9:00 Widest Cheek',
-      cvAxisCheekR: 'Widest Cheek 3:00',
+      techIdealVal: '✓ 90° radial · σ intact',
+      techWrongVal: '✕ Fibers cut · σ ruined',
+      techRedVal: '✕ TABOO: Crown core ruined',
+      cvString: 'Steel string · Strike (12:00)',
+      cvAxis12: '12:00 Axis',
+      cvAxisCheekL: '9:00 Flank',
+      cvAxisCheekR: 'Flank 3:00',
       cvAxisUf: 'Top Edge Underfelt',
       cvGlueRivet: 'Glue + T-Rivet',
-      cvTransferUp: 'Tension transfer ↑ to f-wedge',
-      cvBetweenGrooves: 'Between string grooves only (≤ 2 mm)!',
-      cvTabooWarn: '✕ DO NOT TOUCH DEEPLY! (> 2 mm ruins σ)',
-      cvWrongWarn: '✕ Oblique/chopping cut severs outer fibers!',
-      cvRawHint: 'Unvoiced factory state (raw tension)',
-      cvClickHint: 'Click any wedge to inspect',
-      specZone1: 'H1–H4 Fundamental & Warmth',
-      specZone2: 'H5–H8 Singing Core (Cantabile)',
-      specZone3: 'H9–H12 Brilliance & Edge',
-      dynTitle: 'Playable Response & Projection Across Dynamic Levels (pp → ff)',
-      dynBefore: 'Raw (Before)',
-      dynAfter: 'After Needling',
-      dynLabels: ['pp (Pianissimo)', 'p (Piano)', 'mf (Mezzoforte)', 'f (Forte)', 'ff (Fortissimo)'],
+      cvTransferUp: 'Tension ↑ to f-wedge',
+      cvBetweenGrooves: 'Between grooves only (≤ 2 mm)!',
+      cvTabooWarn: '✕ TABOO: > 2 mm ruins σ!',
+      cvWrongWarn: '✕ Cross-cut severs outer fibers!',
+      cvRawHint: 'Factory state (0 stitches)',
+      cvClickHint: 'Click wedge',
+      specZone1: 'H1–H4 Foundation',
+      specZone2: 'H5–H8 Singing Core',
+      specZone3: 'H9–H12 Brilliance',
+      dynTitle: 'Playable Response Across Dynamics (pp → ff)',
+      dynBefore: 'Before',
+      dynAfter: 'After Stitch',
+      dynLabels: ['pp', 'p', 'mf', 'f', 'ff'],
       zones: {
         blue: {
           roZone: '🔵 Blue ff-Wedge (9–10 / 2–3h)',
           roDepth: '7–9 mm (pre-UF) · 90°',
           roEffect: 'H1–H4 +3.2 dB · open ff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3-needle tool · No. 7',
+          kpi1Sub: '3-needle · No. 7',
           kpi2Sub: '✓ Fibers parted, σ intact',
           kpi3Num: '+3.2 dB',
-          kpi3Sub: 'Warmth H1–H4 ↑ · free ff',
-          badge: '✦ PRE-NEEDLING • BLUE FORTISSIMO WEDGE (9–10 & 2–3 O’CLOCK)',
-          title: 'Deep 90° stitches release rigid factory tension into the Forte wedge',
-          body: 'Pressing smoothly right up to <strong>just before the underfelt</strong> (never into underfelt or wood!) relieves lower-shoulder rigidity: elastic tension <strong>flows upward into the green Forte wedge</strong>, unlocking a free, resonant <em>fortissimo</em>.',
-          bullet: '<strong>Acoustic Effect:</strong> Boosts fundamental fullness &amp; sustain (<strong>H1–H4 +3.2 dB</strong>) without weakening the strike crown.'
+          kpi3Sub: 'H1–H4 ↑ · free ff',
+          badge: '✦ PRE-NEEDLING • BLUE FF-WEDGE (9–10 / 2–3H)',
+          title: 'Deep 90° stitches release factory rigidity into the f-wedge',
+          body: 'Pressing smoothly up to <strong>just before the underfelt</strong> channels elasticity <strong>upward into the green wedge</strong> for resonant <em>ff</em>.',
+          bullet: '<strong>Effect:</strong> Boosts bass fullness (<strong>H1–H4 +3.2 dB</strong>) while keeping the crown intact.'
         },
         green: {
           roZone: '🟢 Green f-Wedge (10–11 / 1–2h)',
-          roDepth: '4–6 mm (Medium) · 90°',
+          roDepth: '4–6 mm · 90° radial',
           roEffect: 'Core +2.4 dB · edge −2.5 dB',
           kpi1Num: '4–6 mm',
           kpi1Sub: 'Mid-voicing · 90° radial',
-          kpi2Sub: '✓ Flank force flow open',
+          kpi2Sub: '✓ Flank flow open',
           kpi3Num: '+2.4 dB',
           kpi3Sub: 'Singing mf–f (H3–H6 ↑)',
-          badge: '✦ MID-VOICING • GREEN FORTE WEDGE (10–11 & 1–2 O’CLOCK)',
-          title: 'Opens the critical outer-contour bridge between crown and flank',
-          body: 'Medium-depth <strong>90° radial stitches (4–6 mm)</strong> relax stiff outer-contour regions so the ½-density flank flexes freely again, replacing metallic <em>forte</em> glare with a rich <strong>cantabile core</strong>.',
-          bullet: '<strong>Acoustic Effect:</strong> Harmonizes <em>mf → f</em> progression while smoothing harsh upper-mid partials (<strong>H8–H12 −2.5 dB</strong>).'
+          badge: '✦ MID-VOICING • GREEN F-WEDGE (10–11 / 1–2H)',
+          title: 'Opens the transition bridge between crown and ½-flank',
+          body: '<strong>90° stitches (4–6 mm)</strong> relax stiff outer contours so the flank flexes freely, building a rich <strong>cantabile core</strong>.',
+          bullet: '<strong>Effect:</strong> Smooth <em>mf → f</em> growth and softer upper glare (<strong>−2.5 dB</strong>).'
         },
         orange: {
           roZone: '🟠 Orange p-Wedge (11–12 / 12–1h)',
-          roDepth: '2.5–4 mm (Shallow) · 90°',
+          roDepth: '2.5–4 mm · 90° radial',
           roEffect: 'H8–H12 −3.8 dB · warm piano',
           kpi1Num: '2.5–4 mm',
           kpi1Sub: 'Fine needle · crown flank',
-          kpi2Sub: '✓ Core arch stays intact',
+          kpi2Sub: '✓ Core arch intact',
           kpi3Num: '−3.8 dB',
-          kpi3Sub: 'Smooths glare · warm p',
-          badge: '✦ BALANCE VOICING • ORANGE PIANO WEDGE (11–12 / 12–1 O’CLOCK)',
-          title: 'Shallow radial stitches flanking the crown shape a warm lyrical tone',
-          body: 'Controlled <strong>2.5–4 mm stitches at 90°</strong> beside the crown cushion glassy overtones in <em>piano</em> and <em>mezzopiano</em> while preserving deep structural support for <em>forte</em>.',
-          bullet: '<strong>Acoustic Effect:</strong> Evens note-to-note color across 88 keys by gently rolling off bright partials (<strong>H8–H12 −3.8 dB</strong>).'
+          kpi3Sub: 'Warm piano tone',
+          badge: '✦ BALANCE • ORANGE P-WEDGE (11–12 / 12–1H)',
+          title: 'Shallow stitches beside the crown shape a warm lyrical tone',
+          body: '<strong>2.5–4 mm stitches (90°)</strong> flanking the crown cushion glassy <em>piano</em> partials while keeping deep <em>forte</em> support.',
+          bullet: '<strong>Effect:</strong> Evens tone color across 88 keys (<strong>H8–H12 −3.8 dB</strong>).'
         },
         purple: {
           roZone: '🟣 Purple pp-Wedge (Crown)',
-          roDepth: '≤ 2 mm · btw string grooves',
+          roDepth: '≤ 2 mm · btw grooves',
           roEffect: 'H9–H12 −5.1 dB · velvety pp',
           kpi1Num: '≤ 2.0 mm',
           kpi1Sub: 'Short 1-needle · btw grooves',
           kpi2Sub: '✓ 96% core tension intact',
           kpi3Num: '−5.1 dB',
           kpi3Sub: 'Silky H9–H12 · pure pp',
-          badge: '✦ FINE VOICING • PURPLE PIANISSIMO WEDGE (MAX. 2 MM)',
-          title: 'Ultra-shallow micro-stitches create a velvet cushion for whisper pp',
-          body: 'Using a short single needle <strong>no deeper than 1–2 mm</strong> and <strong>strictly between the string grooves</strong> softens only the outermost contact fibers while leaving the load-bearing crown arch untouched!',
-          bullet: '<strong>Golden Rule:</strong> Never prick inside the string grooves and never exceed <strong>2 mm depth</strong> at the crown!'
+          badge: '✦ FINE VOICING • PURPLE PP-WEDGE (≤ 2 MM)',
+          title: 'Micro-surface stitches create a velvet cushion for pp',
+          body: 'Short single needle <strong>max. 1–2 mm deep</strong> and <strong>strictly between string grooves</strong> leaves the core arch untouched.',
+          bullet: '<strong>Rule:</strong> Never prick in the grooves and never exceed <strong>2 mm</strong>!'
         },
         red: {
           roZone: '🔴 Red Taboo (12:00 Core)',
@@ -328,30 +328,30 @@
           kpi1Sub: 'Never > 2 mm at 12:00!',
           kpi2Sub: '✕ Tension arch severed!',
           kpi3Num: '−6.8 dB',
-          kpi3Sub: 'Hollow, spongy & lifeless',
-          badge: '⚠️ TABOO ZONE 12:00 • “DO NOT TOUCH!” (DEEP CROWN CORE)',
-          title: 'Deep vertical crown stitches destroy surface tension irreversibly!',
-          body: 'Needling deeper than 2 mm into the <strong>red central triangle above the underfelt</strong> severs the hammerhead’s tension arch: restoring force collapses and contact time jumps to <strong>τc ≈ 3.15 ms</strong>.',
-          bullet: '<strong>Irreversible Damage:</strong> Tone turns <strong>hollow, spongy, and dead</strong> — losing both carrying <em>piano</em> and concert <em>fortissimo</em>!'
+          kpi3Sub: 'Hollow & lifeless',
+          badge: '⚠️ TABOO ZONE 12:00 • DEEP CROWN CORE',
+          title: 'Deep crown stitches destroy surface tension irreversibly!',
+          body: 'Needling <strong>> 2 mm into the red core triangle</strong> severs the tension arch: rebound collapses and <strong>τc jumps to 3.15 ms</strong>.',
+          bullet: '<strong>Damage:</strong> Tone turns <strong>hollow and dead</strong> — losing both <em>p</em> and <em>ff</em>!'
         }
       },
       wrongOverride: {
         roDepth: '✕ ERROR: Cross-cut / chop!',
         roEffect: '⚠ Fibers severed · τc ↑',
         kpi2Sub: '✕ Tension webs severed!',
-        badge: '⚠️ NEEDLING ERROR • OBLIQUE STITCHES OR CHOPPING RUIN FELT',
-        title: 'Flat cross-stitches & chopping slice through tensioned wool layers!',
-        body: 'Instead of parting wool fibers at <strong>90° perpendicular to the outer contour</strong> (acupuncture principle), oblique jabbing cuts tensioned fiber bridges, severing flank force transfer and <strong>prolonging τc</strong>.',
-        bullet: '<strong>Kruse &amp; Olbrich Law:</strong> Always align <strong>90° to the outer contour</strong> and <strong>press smoothly</strong> with body weight — never stab!'
+        badge: '⚠️ NEEDLING ERROR • CROSS-CUT / CHOPPING',
+        title: 'Oblique stitches and chopping slice tensioned wool layers!',
+        body: 'Jabbing obliquely cuts fiber bridges instead of parting them at <strong>90°</strong>, severing flank force flow and <strong>prolonging τc</strong>.',
+        bullet: '<strong>Core Law:</strong> Always align <strong>90° to the contour</strong> and <strong>press smoothly</strong>!'
       },
       rawOverride: {
         roDepth: '0 Stitches · Factory state',
-        roEffect: '0.0 dB · full factory tension',
-        kpi2Sub: '100% factory tension (rigid)',
-        badge: '✦ BASELINE • UNVOICED HAMMERHEAD BEFORE NEEDLING',
-        title: 'High factory pre-tension awaits targeted zone voicing in the piano',
-        body: 'New hammerheads carry firm factory tension. Switch to <strong>“2 · ✓ 90° Press”</strong> to compare how needling each clock-face wedge shapes partial spectrum and dynamic bloom.',
-        bullet: '<strong>Renner Academy Sequence:</strong> Regulate &amp; seat strings first → <strong>Blue ff-wedge</strong> → <strong>Green/Orange</strong> → finally <strong>Purple (≤ 2 mm)</strong>.'
+        roEffect: '0.0 dB · factory tension',
+        kpi2Sub: '100% factory tension',
+        badge: '✦ FACTORY BASELINE • BEFORE NEEDLING',
+        title: 'High factory pre-tension awaits targeted zone balance',
+        body: 'Select <strong>“2 · ✓ 90° Press”</strong> to compare how each clock-face wedge shapes partial spectrum and dynamics.',
+        bullet: '<strong>Sequence:</strong> Regulate &amp; seat strings → <strong>Blue</strong> → <strong>Green/Orange</strong> → <strong>Purple (≤ 2 mm)</strong>.'
       }
     },
 
@@ -366,118 +366,118 @@
       strikeBtn: '刺針＆試聴',
       specDelta: 'ΔdB 整音効果',
       specDyn: 'ダイナミクス pp–ff',
-      techRawVal: '0刺 · 工場出荷張力',
-      techIdealVal: '✓ 90°垂直押し · 張力σ維持',
-      techWrongVal: '✕ 繊維切断 · 張力σ崩壊！',
-      techRedVal: '✕ 厳禁：クラウン深部破壊！',
-      cvString: '3本同音スチール弦 · 打弦点 (12:00)',
-      cvAxis12: '12:00 中心エネルギー軸',
-      cvAxisCheekL: '9:00 最大幅フランク',
-      cvAxisCheekR: '最大幅フランク 3:00',
+      techRawVal: '0刺 · 出荷張力',
+      techIdealVal: '✓ 90°垂直押し · σ維持',
+      techWrongVal: '✕ 繊維切断 · σ崩壊',
+      techRedVal: '✕ 厳禁：深部破壊',
+      cvString: 'スチール弦 · 打弦点 (12:00)',
+      cvAxis12: '12:00 軸',
+      cvAxisCheekL: '9:00 フランク',
+      cvAxisCheekR: 'フランク 3:00',
       cvAxisUf: 'アンダーフェルト上端',
-      cvGlueRivet: '接着層＋Tリベット',
-      cvTransferUp: '張力が緑のfウェッジへ移動 ↑',
-      cvBetweenGrooves: '弦溝の間のみ（最大2mm）！',
-      cvTabooWarn: '✕ 深刺し厳禁！（2mm超で張力σ崩壊）',
-      cvWrongWarn: '✕ 斜め刺し・叩き刺しは外層繊維を切断！',
-      cvRawHint: '未整音状態（出荷時の硬い張力）',
-      cvClickHint: '各ウェッジをクリックして確認',
-      specZone1: 'H1–H4 基音・豊かな響き',
-      specZone2: 'H5–H8 歌唱コア (Cantabile)',
-      specZone3: 'H9–H12 輝かしさ・鋭さ',
-      dynTitle: 'ダイナミクス別の発音レスポンスと遠達性 (pp → ff)',
+      cvGlueRivet: '接着＋リベット',
+      cvTransferUp: '弾性が緑のf領域へ ↑',
+      cvBetweenGrooves: '弦溝の間のみ（≤2mm）！',
+      cvTabooWarn: '✕ 深刺し厳禁（>2mmでσ崩壊）',
+      cvWrongWarn: '✕ 斜め・叩き刺しは繊維切断！',
+      cvRawHint: '未整音状態（0刺）',
+      cvClickHint: 'ゾーンを選択',
+      specZone1: 'H1–H4 基音・土台',
+      specZone2: 'H5–H8 歌唱コア',
+      specZone3: 'H9–H12 輝き・鋭さ',
+      dynTitle: 'ダイナミクス別の発音レスポンス (pp → ff)',
       dynBefore: '整音前',
       dynAfter: '刺針後',
-      dynLabels: ['pp (最弱音)', 'p (弱音)', 'mf (中強音)', 'f (強音)', 'ff (最強音)'],
+      dynLabels: ['pp', 'p', 'mf', 'f', 'ff'],
       zones: {
         blue: {
-          roZone: '🔵 青のffウェッジ (9–10時 / 2–3時)',
-          roDepth: '深さ: 7–9 mm (UF手前まで) · 90°',
-          roEffect: '基音 +3.2 dB · 伸びやかなff解放',
+          roZone: '🔵 青のffウェッジ (9–10 / 2–3時)',
+          roDepth: '7–9 mm (UF手前) · 90°',
+          roEffect: '基音 +3.2 dB · 豊かなff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3本針ホルダー · 7番針',
-          kpi2Sub: '✓ 繊維を分け張力σ維持',
+          kpi1Sub: '3本針 · 7番針',
+          kpi2Sub: '✓ 繊維を分けσ維持',
           kpi3Num: '+3.2 dB',
-          kpi3Sub: '低次倍音↑ · 豊かなff',
-          badge: '✦ 予備整音 (PRE-NEEDLING) • 青のffウェッジ (9–10時＆2–3時)',
-          title: 'アンダーフェルト手前までの深い90°刺針がfウェッジへ弾性を送る',
-          body: '下部ショルダーへ<strong>アンダーフェルト手前まで</strong>静かに垂直押し込み（UFや木芯への刺針は厳禁！）、硬い初期張力を解放。弾性エネルギーが<strong>緑のフォルテ領域へ上昇</strong>し豊かな<em>ff</em>を開放します。',
-          bullet: '<strong>音響効果：</strong>クラウン頂点を弱めずに基音の厚みと伸びを増強（<strong>H1–H4 +3.2 dB</strong>）。'
+          kpi3Sub: 'H1–H4 ↑ · ff解放',
+          badge: '✦ 予備整音 • 青のFFウェッジ (9–10 / 2–3時)',
+          title: '深い90°刺針が初期硬さを解きfウェッジへ弾性を送る',
+          body: '<strong>アンダーフェルト手前まで</strong>垂直に押し込み、弾性を<strong>緑のフォルテ領域へ上昇</strong>させて豊かな<em>ff</em>を開放します。',
+          bullet: '<strong>効果：</strong>頂点を弱めずに基音の厚みを増強（<strong>H1–H4 +3.2 dB</strong>）。'
         },
         green: {
-          roZone: '🟢 緑のfウェッジ (10–11時 / 1–2時)',
-          roDepth: '深さ: 4–6 mm (中深) · 90°放射状',
-          roEffect: '歌唱コア +2.4 dB · 硬質倍音 −2.5 dB',
+          roZone: '🟢 緑のfウェッジ (10–11 / 1–2時)',
+          roDepth: '4–6 mm · 90°放射状',
+          roEffect: '歌唱核 +2.4 dB · 鋭さ −2.5 dB',
           kpi1Num: '4–6 mm',
           kpi1Sub: '中整音 · 90°放射状',
-          kpi2Sub: '✓ フランクへの力伝達解放',
+          kpi2Sub: '✓ フランク伝達開放',
           kpi3Num: '+2.4 dB',
           kpi3Sub: '歌うmf–f (H3–H6 ↑)',
-          badge: '✦ 中整音 (MID-VOICING) • 緑のフォルテ・ウェッジ (10–11時＆1–2時)',
-          title: 'クラウンとフランクを結ぶ外輪郭の硬化ゾーンをしなやかに解放',
-          body: '中程度の<strong>90°放射状刺針（4–6 mm）</strong>が移行部の硬さを解き、1/2密度フランクの弾性変形を回復。金属的な硬さを抑え、伸びのある<strong>カンタービレの核</strong>を引き出します。',
-          bullet: '<strong>音響効果：</strong><em>mf〜f</em>の繋がりを滑らかにし、耳障りな中高域倍音（<strong>H8–H12 −2.5 dB</strong>）を整えます。'
+          badge: '✦ 中整音 • 緑のFウェッジ (10–11 / 1–2時)',
+          title: 'クラウンと½フランクを結ぶ移行帯をしなやかに解放',
+          body: '<strong>90°刺針（4–6 mm）</strong>が外輪郭の硬さを解き、フランク弾性と伸びやかな<strong>カンタービレ核</strong>を引き出します。',
+          bullet: '<strong>効果：</strong><em>mf〜f</em>を滑らかに繋ぎ、硬い倍音（<strong>−2.5 dB</strong>）を緩和。'
         },
         orange: {
-          roZone: '🟠 橙のpウェッジ (11–11:45 / 12:15–1時)',
-          roDepth: '深さ: 2.5–4 mm (浅〜中) · 90°',
-          roEffect: '高次倍音 H8–H12 −3.8 dB · 温かいp',
+          roZone: '🟠 橙のpウェッジ (11–12 / 12–1時)',
+          roDepth: '2.5–4 mm · 90°放射状',
+          roEffect: 'H8–H12 −3.8 dB · 温かいp',
           kpi1Num: '2.5–4 mm',
-          kpi1Sub: '細針 · クラウン側部',
-          kpi2Sub: '✓ 中心アーチ張力を保持',
+          kpi1Sub: '細針 · クラウン脇',
+          kpi2Sub: '✓ 深部アーチ保持',
           kpi3Num: '−3.8 dB',
-          kpi3Sub: '角を取り温かいp音色へ',
-          badge: '✦ バランス整音 • 橙のピアノ・ウェッジ (11–12時＆12–1時)',
-          title: 'クラウン脇への繊細な90°刺針が温かく丸みのある弱音を形成',
-          body: '打弦点脇へ<strong>2.5–4 mmの90°刺針</strong>を行い、<em>p〜mp</em>でのガラス質な硬さを緩和。深部の張力アーチは保たれるため<em>f/ff</em>の力強さは損なわれません。',
-          bullet: '<strong>音響効果：</strong>鋭い高次倍音（<strong>H8–H12 −3.8 dB</strong>）を穏やかに整え、88鍵の音色統一を実現。'
+          kpi3Sub: '温かいp音色',
+          badge: '✦ バランス整音 • 橙のPウェッジ (11–12 / 12–1時)',
+          title: 'クラウン脇への浅い90°刺針が温かい弱音を形成',
+          body: '打弦点脇への<strong>2.5–4 mm刺針</strong>が<em>p〜mp</em>のガラス質な硬さを和らげ、深部の<em>f</em>支持力は保ちます。',
+          bullet: '<strong>効果：</strong>鋭い高次倍音（<strong>H8–H12 −3.8 dB</strong>）を抑え88鍵を均一化。'
         },
         purple: {
-          roZone: '🟣 紫のppウェッジ (11:45–12:15 頂点表層)',
-          roDepth: '深さ: 最大2 mm！ · 弦溝の間のみ',
-          roEffect: '打弦ノイズ −5.1 dB · 絹のようなpp',
+          roZone: '🟣 紫のppウェッジ (頂点表層)',
+          roDepth: '≤ 2 mm · 弦溝の間のみ',
+          roEffect: 'H9–H12 −5.1 dB · 繊細なpp',
           kpi1Num: '≤ 2.0 mm',
-          kpi1Sub: '短い1本針 · 弦溝の間',
-          kpi2Sub: '✓ 96%深部張力を維持',
+          kpi1Sub: '短単針 · 弦溝の間',
+          kpi2Sub: '✓ 96%深部張力維持',
           kpi3Num: '−5.1 dB',
-          kpi3Sub: 'H9–H12抑制 · 極上のpp',
-          badge: '✦ 最終仕上げ整音 • 紫のピアニッシモ表層 (最大 2 MM)',
-          title: '弦溝の間への極浅刺針（2 mm以下）が繊細なppのクッションを作る',
-          body: '短い単針で<strong>深さ1〜2 mm以内</strong>、必ず<strong>弦溝の間だけ</strong>に浅く刺針。最表層のみをビロードのように整え、下層の支持コアは完全に無傷に保ちます！',
-          bullet: '<strong>絶対原則：</strong>弦溝の内部には刺さず、頂点では絶対に<strong>深さ2 mm</strong>を超えないこと！'
+          kpi3Sub: 'H9–H12抑制 · 極上pp',
+          badge: '✦ 仕上げ整音 • 紫のPP表層 (≤ 2 MM)',
+          title: '弦溝の間への極浅刺針が繊細なppクッションを作る',
+          body: '短い単針で<strong>1〜2 mm以内・弦溝の間のみ</strong>を浅く整え、下層の支持コアは無傷に保ちます。',
+          bullet: '<strong>鉄則：</strong>弦溝内には刺さず、頂点では<strong>深さ2 mm</strong>を絶対厳守！'
         },
         red: {
           roZone: '🔴 赤の禁止ゾーン (12時深部)',
           roDepth: '✕ 厳禁: > 2 mm 不可！',
-          roEffect: '⚠ σ崩壊 (34%) · τc 3.15 ms',
+          roEffect: '⚠ σ 34% · τc 3.15 ms · 死音！',
           kpi1Num: '✕ 厳禁',
-          kpi1Sub: '12時深部 > 2mm禁止！',
-          kpi2Sub: '✕ 表面張力アーチ断裂！',
+          kpi1Sub: '12時 > 2mm禁止！',
+          kpi2Sub: '✕ 張力アーチ断裂！',
           kpi3Num: '−6.8 dB',
-          kpi3Sub: '空疎で芯のない死んだ音',
-          badge: '⚠️ 12:00 絶対禁止ゾーン • “DO NOT TOUCH!” (クラウン深部コア)',
-          title: '12時方向への深い垂直刺針は表面張力を不可逆的に破壊する！',
-          body: 'アンダーフェルト上の<strong>赤い中央三角ゾーン</strong>へ2 mmを超えて深く刺すと、外周張力アーチが断裂。復元力が失われ接触時間が<strong>τc ≈ 3.15 ms</strong>へ延びて弦振動を阻害します。',
-          bullet: '<strong>回復不能な損傷：</strong>音は<strong>空洞でぼやけた死んだ響き</strong>となり、<em>p</em>の遠達性も<em>ff</em>の輝きも失われます！'
+          kpi3Sub: '空疎で死んだ音',
+          badge: '⚠️ 12:00 禁止ゾーン • クラウン深部コア',
+          title: '12時深部への刺針は表面張力を不可逆的に破壊する！',
+          body: '<strong>赤い中央三角ゾーンへ2 mm超</strong>の刺針は張力アーチを切断し、接触時間が<strong>τc ≈ 3.15 ms</strong>へ急増します。',
+          bullet: '<strong>損傷：</strong>音は<strong>空洞で死んだ響き</strong>となり<em>p</em>も<em>ff</em>も失われます！'
         }
       },
       wrongOverride: {
-        roDepth: '✕ エラー: 斜め横刺し・叩き刺し！',
-        roEffect: '⚠ 外層繊維が断裂 · τc増大 · 曇った音',
-        kpi2Sub: '✕ 張力繊維ネット切断！',
-        badge: '⚠️ 刺針エラー • 斜め刺しや叩き刺しはフェルト構造を破壊する',
-        title: '外輪郭を横切る浅い斜め刺しや叩き刺しは羊毛層を切断する！',
-        body: '外輪郭に対し<strong>90°垂直</strong>に繊維を押し分ける（鍼の原理）のではなく斜めに突き刺すと、張力を担う羊毛繊維網が切れ、フランクへの力伝達と反発力が失われます。',
-        bullet: '<strong>クルーゼ＆オルブリヒの鉄則：</strong>常に<strong>輪郭へ90°直角</strong>に当て、体重を乗せて<strong>静かに押し込む</strong>こと！'
+        roDepth: '✕ エラー: 斜め・叩き刺し！',
+        roEffect: '⚠ 繊維切断 · τc増大',
+        kpi2Sub: '✕ 張力繊維切断！',
+        badge: '⚠️ 刺針エラー • 斜め刺し・叩き刺し',
+        title: '斜め刺しや叩き刺しは張力を担う羊毛層を切断する！',
+        body: '輪郭へ<strong>90°垂直</strong>に押し分けず斜めに突くと羊毛網が切れ、フランク伝達と反発力が失われます。',
+        bullet: '<strong>鉄則：</strong>常に<strong>輪郭へ90°直角</strong>に当て、静かに<strong>押し込む</strong>こと！'
       },
       rawOverride: {
-        roDepth: '0刺 · 未整音の工場出荷状態',
-        roEffect: '0.0 dB 基準 · 出荷時の高い初期張力',
-        kpi2Sub: '100% 初期張力 (硬質)',
-        badge: '✦ 基準状態 • 針入れ前の未整音ハンマーヘッド',
-        title: '高い工場出荷張力を時計モデルのゾーン整音で最適化する',
-        body: '新品ハンマーは高い初期張力を持っています。<strong>「2 · ✓ 90°垂直押し」</strong>に切り替えて、各時計ゾーンへの刺針が倍音構造とダイナミクスをどう変えるか比較してください。',
-        bullet: '<strong>レンナー推奨手順：</strong>整調と弦密着が先決 → <strong>青(ff)</strong> → <strong>緑・橙(f/p)</strong> → 最後に<strong>紫(≤2 mm)</strong>。'
+        roDepth: '0刺 · 出荷状態',
+        roEffect: '0.0 dB · 初期張力',
+        kpi2Sub: '100% 出荷張力',
+        badge: '✦ 基準状態 • 針入れ前のハンマー',
+        title: '高い初期張力を時計モデルのゾーン整音で最適化する',
+        body: '<strong>「2 · ✓ 90°垂直押し」</strong>に切り替え、各ゾーンの刺針が倍音とダイナミクスを整える様子を確認してください。',
+        bullet: '<strong>手順：</strong>整調・弦密着 → <strong>青(ff)</strong> → <strong>緑・橙</strong> → <strong>紫(≤2 mm)</strong>。'
       }
     },
 
@@ -492,118 +492,118 @@
       strikeBtn: '扎针试听',
       specDelta: 'ΔdB 整音效果',
       specDyn: '动态响应 pp–ff',
-      techRawVal: '0针 · 出厂原始张力',
-      techIdealVal: '✓ 90°垂直静压 · 张力σ完好',
-      techWrongVal: '✕ 割断纤维 · 张力σ崩塌！',
-      techRedVal: '✕ 绝对禁区：槌心张力损毁！',
-      cvString: '三弦同音钢弦 · 击弦点 (12:00方向)',
-      cvAxis12: '12:00 中心能量轴',
-      cvAxisCheekL: '9:00 最宽槌肩侧翼',
-      cvAxisCheekR: '最宽槌肩侧翼 3:00',
-      cvAxisUf: '底毡上沿基准线',
-      cvGlueRivet: '胶合层 + T型铜铆钉',
-      cvTransferUp: '弹性张力向上传导至绿区 ↑',
-      cvBetweenGrooves: '仅限弦沟之间浅扎 (≤ 2 mm)！',
-      cvTabooWarn: '✕ 严禁深扎！(超过2 mm彻底毁坏张力σ)',
-      cvWrongWarn: '✕ 横刺或劈扎会割断外层受拉毛网！',
-      cvRawHint: '未整音原始状态（出厂刚性预张力）',
-      cvClickHint: '点击任意色彩楔区查看效果',
-      specZone1: 'H1–H4 基音饱满度与延音',
-      specZone2: 'H5–H8 歌唱性核心 (Cantabile)',
-      specZone3: 'H9–H12 明亮度与尖锐泛音',
-      dynTitle: '各动态力度下的触键响应与穿透力 (pp → ff)',
+      techRawVal: '0针 · 出厂张力',
+      techIdealVal: '✓ 90°静压 · σ完好',
+      techWrongVal: '✕ 割断纤维 · σ崩塌',
+      techRedVal: '✕ 禁区：槌心损毁',
+      cvString: '钢弦 · 击弦点 (12:00)',
+      cvAxis12: '12:00 轴',
+      cvAxisCheekL: '9:00 侧翼',
+      cvAxisCheekR: '侧翼 3:00',
+      cvAxisUf: '底毡上沿',
+      cvGlueRivet: '胶层 + 铆钉',
+      cvTransferUp: '张力向上导入绿区 ↑',
+      cvBetweenGrooves: '仅限弦沟间 (≤ 2 mm)！',
+      cvTabooWarn: '✕ 严禁深扎 (>2 mm 毁坏σ)！',
+      cvWrongWarn: '✕ 横刺劈扎割断外层纤维！',
+      cvRawHint: '出厂原始状态 (0针)',
+      cvClickHint: '点击楔区',
+      specZone1: 'H1–H4 基音厚度',
+      specZone2: 'H5–H8 歌唱核心',
+      specZone3: 'H9–H12 明亮度',
+      dynTitle: '各力度下的触键响应 (pp → ff)',
       dynBefore: '整音前',
       dynAfter: '扎针后',
-      dynLabels: ['pp (极弱音)', 'p (弱音)', 'mf (中强音)', 'f (强音)', 'ff (极强音)'],
+      dynLabels: ['pp', 'p', 'mf', 'f', 'ff'],
       zones: {
         blue: {
-          roZone: '🔵 蓝色ff楔区 (9–10点 / 2–3点)',
-          roDepth: '深度: 7–9 mm (底毡前止) · 90°',
-          roEffect: '基音 +3.2 dB · 释放恢弘通透ff',
+          roZone: '🔵 蓝色ff楔区 (9–10 / 2–3点)',
+          roDepth: '7–9 mm (底毡前) · 90°',
+          roEffect: '基音 +3.2 dB · 通透ff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3针整音柄 · 7号针',
+          kpi1Sub: '3针柄 · 7号针',
           kpi2Sub: '✓ 拨开纤维，σ完好',
           kpi3Num: '+3.2 dB',
-          kpi3Sub: 'H1–H4浑厚↑ · ff全开',
-          badge: '✦ 预整音 (PRE-NEEDLING) • 蓝色极强音楔区 (9–10点与2–3点)',
-          title: '深层90°静压进针释放出厂死硬张力，将弹性导入强音区',
-          body: '在下部槌肩平稳深压至<strong>底毡前缘</strong>（绝不可刺入底毡或木芯！），解除下侧翼僵硬感；弹性张力<strong>向上传递至绿色强音楔区</strong>，瞬间打开宽广浑厚的<em>ff</em>音量。',
-          bullet: '<strong>声学效果：</strong>显著增强基音厚度与延音（<strong>H1–H4 +3.2 dB</strong>），且丝毫不削弱槌顶击弦冠。'
+          kpi3Sub: 'H1–H4 ↑ · ff全开',
+          badge: '✦ 预整音 • 蓝色FF楔区 (9–10 / 2–3点)',
+          title: '深层90°静压化解出厂死硬，将弹性导入f楔区',
+          body: '平稳深压至<strong>底毡前缘</strong>，使弹性<strong>向上传至绿色强音区</strong>，瞬间打开浑厚<em>ff</em>。',
+          bullet: '<strong>效果：</strong>增强基音延音（<strong>H1–H4 +3.2 dB</strong>），不伤槌顶。'
         },
         green: {
-          roZone: '🟢 绿色f楔区 (10–11点 / 1–2点)',
-          roDepth: '深度: 4–6 mm (中等深度) · 90°径向',
-          roEffect: '歌唱核心 +2.4 dB · 燥刺感 −2.5 dB',
+          roZone: '🟢 绿色f楔区 (10–11 / 1–2点)',
+          roDepth: '4–6 mm · 90°径向',
+          roEffect: '核心 +2.4 dB · 燥感 −2.5 dB',
           kpi1Num: '4–6 mm',
-          kpi1Sub: '中整音 · 90°垂直径向',
-          kpi2Sub: '✓ 侧翼力流完全畅通',
+          kpi1Sub: '中整音 · 90°径向',
+          kpi2Sub: '✓ 侧翼力流畅通',
           kpi3Num: '+2.4 dB',
-          kpi3Sub: '歌唱性mf–f (H3–H6 ↑)',
-          badge: '✦ 中度整音 (MID-VOICING) • 绿色强音楔区 (10–11点与1–2点)',
-          title: '打通槌顶至侧翼的关键过渡带，塑造饱满歌唱性核心',
-          body: '中等深度<strong>90°径向进针（4–6 mm）</strong>柔化僵硬的外轮廓过渡区，恢复1/2密度侧翼的协同弹性，消除<em>forte</em>中的金属噪感并强化<strong>如歌的中频核心</strong>。',
-          bullet: '<strong>声学效果：</strong>使<em>mf→f</em>动态衔接如丝般顺滑，柔化刺耳高次泛音（<strong>H8–H12 −2.5 dB</strong>）。'
+          kpi3Sub: '如歌mf–f (H3–H6 ↑)',
+          badge: '✦ 中度整音 • 绿色F楔区 (10–11 / 1–2点)',
+          title: '打通槌顶至½侧翼过渡带，塑造歌唱性核心',
+          body: '<strong>90°中深进针（4–6 mm）</strong>柔化外轮廓，恢复侧翼协同弹性与<strong>如歌中频核心</strong>。',
+          bullet: '<strong>效果：</strong><em>mf→f</em>衔接顺滑，柔化刺耳泛音（<strong>−2.5 dB</strong>）。'
         },
         orange: {
           roZone: '🟠 橙色p楔区 (11–12 / 12–1点)',
           roDepth: '2.5–4 mm · 90°径向',
           roEffect: 'H8–H12 −3.8 dB · 温暖弱音',
           kpi1Num: '2.5–4 mm',
-          kpi1Sub: '细针 · 槌冠两侧过渡',
-          kpi2Sub: '✓ 内部张力拱完全保留',
+          kpi1Sub: '细针 · 槌冠两侧',
+          kpi2Sub: '✓ 内部张力拱保留',
           kpi3Num: '−3.8 dB',
-          kpi3Sub: '褪去尖锐 · 温暖圆润p',
-          badge: '✦ 均衡整音 • 橙色弱音楔区 (11–12点与12–1点)',
-          title: '槌冠两侧精细浅扎柔化玻璃声，雕琢温暖抒情的弱音音色',
-          body: '在击弦冠两侧以<strong>90°角浅扎2.5–4 mm</strong>，有效缓冲<em>p–mp</em>轻触时的尖硬泛音，同时完整保留深层张力拱对<em>f/ff</em>的强力支撑。',
-          bullet: '<strong>声学效果：</strong>精准衰减尖锐泛音（<strong>H8–H12 −3.8 dB</strong>），实现全琴88键音色均匀统一。'
+          kpi3Sub: '温暖圆润p',
+          badge: '✦ 均衡整音 • 橙色P楔区 (11–12 / 12–1点)',
+          title: '槌冠两侧精细浅扎，雕琢温暖柔和弱音',
+          body: '槌冠两侧<strong>90°浅扎2.5–4 mm</strong>，缓冲<em>p–mp</em>尖硬玻璃声，完整保留深层<em>f</em>支撑。',
+          bullet: '<strong>效果：</strong>衰减高频毛刺（<strong>H8–H12 −3.8 dB</strong>），统一88键音色。'
         },
         purple: {
           roZone: '🟣 紫色pp楔区 (槌顶表层)',
-          roDepth: '严控 ≤ 2 mm · 弦沟之间',
-          roEffect: '敲击声 −5.1 dB · 丝绒pp',
+          roDepth: '≤ 2 mm · 弦沟之间',
+          roEffect: 'H9–H12 −5.1 dB · 丝绒pp',
           kpi1Num: '≤ 2.0 mm',
-          kpi1Sub: '短单针 · 仅在弦沟间',
-          kpi2Sub: '✓ 96%深层核心张力完好',
+          kpi1Sub: '短单针 · 弦沟之间',
+          kpi2Sub: '✓ 96%核心张力完好',
           kpi3Num: '−5.1 dB',
-          kpi3Sub: '滤除高频杂音 · 纯净pp',
-          badge: '✦ 精微整音 • 紫色极弱音表层区 (最大深度 2 MM)',
-          title: '弦沟间微米级表层轻刺（≤2 mm），铺就如丝绒般的pp触感垫',
-          body: '使用短单针<strong>深度绝不超过1–2 mm</strong>，且<strong>严格扎在两条弦沟之间</strong>：仅令最外层接触毛纤柔顺缓冲，下方的承重槌心张力拱毫发无损！',
-          bullet: '<strong>黄金铁律：</strong>绝不可扎在弦沟凹槽内，且在槌顶绝不可超过<strong>2 mm深度</strong>！'
+          kpi3Sub: '滤除杂音 · 纯净pp',
+          badge: '✦ 精微整音 • 紫色PP表层 (≤ 2 MM)',
+          title: '弦沟间微表层轻刺（≤2 mm），铺就丝绒pp触感',
+          body: '短单针<strong>严控1–2 mm</strong>且<strong>仅扎在弦沟之间</strong>，仅柔化表层而不伤承重槌心。',
+          bullet: '<strong>铁律：</strong>绝不刺入弦沟内，槌顶严禁超过<strong>2 mm</strong>！'
         },
         red: {
           roZone: '🔴 红色禁区 (12点槌心)',
           roDepth: '✕ 严禁深扎 (> 2 mm)！',
           roEffect: '⚠ σ 34% · τc 3.15 ms · 枯死！',
           kpi1Num: '✕ 禁区',
-          kpi1Sub: '12点严禁深超2mm！',
-          kpi2Sub: '✕ 表面张力拱彻底断裂！',
+          kpi1Sub: '12点禁超2mm！',
+          kpi2Sub: '✕ 张力拱断裂！',
           kpi3Num: '−6.8 dB',
-          kpi3Sub: '空洞、绵软、毫无生机',
-          badge: '⚠️ 12:00 绝对禁区 • “DO NOT TOUCH!” (深层击弦核心)',
-          title: '垂直深刺槌顶核心将不可逆地摧毁弦槌表面张力拱！',
-          body: '若超过2 mm深刺入<strong>底毡尖端上方的红色中心三角区</strong>，将直接切断弦槌外周受拉拱梁：回弹力瞬间瓦解，接触时间暴增至<strong>τc ≈ 3.15 ms</strong>并闷死琴弦振动。',
-          bullet: '<strong>不可逆报废损伤：</strong>声音变得<strong>空洞、松散如棉絮</strong>，既无清晰<em>p</em>也无辉煌<em>ff</em>！'
+          kpi3Sub: '空洞无力',
+          badge: '⚠️ 12:00 绝对禁区 • 深层击弦核心',
+          title: '深刺槌顶核心将不可逆地摧毁表面张力拱！',
+          body: '<strong>超过2 mm刺入红色中心区</strong>会切断受拉拱梁，回弹瓦解且<strong>τc暴增至3.15 ms</strong>。',
+          bullet: '<strong>后果：</strong>音色<strong>空洞枯死</strong>，彻底丧失<em>p</em>与<em>ff</em>！'
         }
       },
       wrongOverride: {
-        roDepth: '✕ 错误手法: 横向斜刺 / 猛扎劈砍！',
-        roEffect: '⚠ 割断外层纤维网 · τc延长 · 声音发闷',
-        kpi2Sub: '✕ 受拉羊毛层被切断！',
-        badge: '⚠️ 整音大忌 • 横刺或猛扎会直接割断承重羊毛层',
-        title: '斜向横穿外轮廓或猛烈劈扎会切断连续受拉的毛毡纤维桥！',
-        body: '违背<strong>90°垂直于外轮廓</strong>轻柔拨开纤维的“针灸原理”，横向斜刺会割断外层高张力毛网，阻断向侧翼的力流并<strong>大幅延长接触时间τc</strong>。',
-        bullet: '<strong>克鲁泽与奥尔布里希铁律：</strong>永远<strong>90°垂直于外轮廓</strong>对准张力中心，借身体重量<strong>平稳静压而非猛戳</strong>！'
+        roDepth: '✕ 错误: 横刺 / 劈扎！',
+        roEffect: '⚠ 割断纤维 · τc延长',
+        kpi2Sub: '✕ 羊毛层被切断！',
+        badge: '⚠️ 整音大忌 • 横刺或猛扎',
+        title: '斜向横刺或猛烈劈扎会割断受拉羊毛纤维桥！',
+        body: '违背<strong>90°垂直</strong>分纤原理，横刺会割断外层高张力毛网，阻断侧翼力流并<strong>延长τc</strong>。',
+        bullet: '<strong>铁律：</strong>永远<strong>90°垂直于外轮廓</strong>，平稳<strong>静压而非猛戳</strong>！'
       },
       rawOverride: {
-        roDepth: '0针 · 出厂未整音原始状态',
-        roEffect: '0.0 dB 基准线 · 满额出厂预张力',
-        kpi2Sub: '100% 出厂张力 (偏硬)',
-        badge: '✦ 基准参照 • 施针前的全新高张力弦槌',
-        title: '出厂高预张力弦槌需借时钟五区整音在琴上释放最佳潜能',
-        body: '新弦槌具备充沛的原始张力。请切换至<strong>“2 · ✓ 90°静压”</strong>，直观对比在不同时钟楔区施针如何精准塑造泛音结构与动态范围。',
-        bullet: '<strong>雷诺学院标准流程：</strong>先整调与敲实琴弦 → <strong>蓝区(ff)</strong> → <strong>绿/橙区(f/p)</strong> → 最后<strong>紫区(≤2 mm)</strong>。'
+        roDepth: '0针 · 出厂状态',
+        roEffect: '0.0 dB · 出厂预张力',
+        kpi2Sub: '100% 出厂张力',
+        badge: '✦ 出厂基准 • 施针前弦槌',
+        title: '出厂高预张力需借时钟五区整音释放潜能',
+        body: '切换至<strong>“2 · ✓ 90°静压”</strong>，对比各时钟楔区如何塑造泛音与动态范围。',
+        bullet: '<strong>流程：</strong>整调与压弦 → <strong>蓝区</strong> → <strong>绿/橙区</strong> → <strong>紫区(≤2 mm)</strong>。'
       }
     }
   };
@@ -902,7 +902,7 @@
         ctx.arc(cx + sx, stringY, 3.1, 0, Math.PI * 2);
         ctx.fill();
       }
-      ctx.font = '600 13.6px Roboto, sans-serif';
+      ctx.font = '600 12.4px Roboto, sans-serif';
       ctx.fillStyle = 'rgba(226, 232, 240, 0.88)';
       ctx.textAlign = 'left';
       ctx.fillText(d.cvString, 12, 20);
@@ -1271,7 +1271,7 @@
         { lbl: '2:00', deg: 61 },
         { lbl: '3:00', deg: 90 }
       ];
-      ctx.font = '700 13.4px JetBrains Mono, monospace';
+      ctx.font = '700 12.1px JetBrains Mono, monospace';
       for (const tk of clockTicks) {
         const rad = Math.abs(tk.deg) * Math.PI / 180;
         const pt = evalOuterHalf(rad);
@@ -1328,19 +1328,19 @@
         if (this.tech === 'ideal' && !st.isAlert) {
           const bx = isTop ? (cx + 22) : (hx1 + 12);
           const by = isTop ? Math.max(18, crownTopY - 26) : Math.max(24, Math.min(h - 32, hy1));
-          ctx.font = '700 13.6px JetBrains Mono, monospace';
+          ctx.font = '700 12.2px JetBrains Mono, monospace';
           const bTxt = '90° ✓';
-          const bw = ctx.measureText(bTxt).width + 14;
+          const bw = ctx.measureText(bTxt).width + 13;
           ctx.fillStyle = 'rgba(16, 46, 34, 0.94)';
           ctx.strokeStyle = '#4ade80';
-          ctx.lineWidth = 1.3;
+          ctx.lineWidth = 1.25;
           ctx.beginPath();
-          ctx.roundRect(bx, by - 12, bw, 22, 6);
+          ctx.roundRect(bx, by - 11, bw, 20, 5.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = '#bbf7d0';
           ctx.textAlign = 'left';
-          ctx.fillText(bTxt, bx + 7, by + 4);
+          ctx.fillText(bTxt, bx + 6.5, by + 3.5);
         }
         ctx.restore();
       }
@@ -1350,7 +1350,7 @@
       const padX = 12;
 
       // Top-Left: Underfelt reference label
-      ctx.font = '600 13.8px Roboto, sans-serif';
+      ctx.font = '600 12.5px Roboto, sans-serif';
       ctx.fillStyle = '#f9a8d4';
       ctx.textAlign = 'left';
       ctx.fillText(d.cvAxisUf, padX, ufTipY - 5);
@@ -1363,7 +1363,7 @@
 
       // Mid-Left: 9:00 Widest Cheek label
       ctx.fillStyle = '#7dd3fc';
-      ctx.fillText(d.cvAxisCheekL, padX, shoulderY + 18);
+      ctx.fillText(d.cvAxisCheekL, padX, shoulderY + 17);
 
       // Bottom-Left: Glue + T-Rivet label
       ctx.fillStyle = '#fde68a';
@@ -1375,21 +1375,21 @@
       ctx.stroke();
 
       // Bottom-Right: Click hint pill
-      ctx.font = '600 13.4px Roboto, sans-serif';
+      ctx.font = '600 12.1px Roboto, sans-serif';
       const hintTxt = `🖱 ${d.cvClickHint}`;
-      const hw = ctx.measureText(hintTxt).width + 16;
+      const hw = ctx.measureText(hintTxt).width + 14;
       ctx.fillStyle = 'rgba(15, 23, 42, 0.86)';
       ctx.strokeStyle = 'rgba(200, 163, 86, 0.42)';
       ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.roundRect(w - hw - 10, h - 29, hw, 22, 6);
+      ctx.roundRect(w - hw - 10, h - 28, hw, 20.5, 5.5);
       ctx.fill();
       ctx.stroke();
       ctx.fillStyle = 'rgba(230, 200, 130, 0.94)';
       ctx.textAlign = 'right';
-      ctx.fillText(hintTxt, w - 18, h - 14);
+      ctx.fillText(hintTxt, w - 17, h - 13.5);
 
-      // Contextual Status Banner at Bottom-Left / Top-Right depending on active zone & tech
+      // Contextual Status Banner at Bottom-Left
       let statusBanner = '';
       let bannerBg = 'rgba(14, 36, 28, 0.92)';
       let bannerBorder = '#4ade80';
@@ -1423,20 +1423,20 @@
       }
 
       if (statusBanner) {
-        ctx.font = '700 14.0px Roboto, sans-serif';
-        const sw = Math.min(w * 0.46, ctx.measureText(statusBanner).width + 18);
+        ctx.font = '700 12.6px Roboto, sans-serif';
+        const sw = Math.min(w * 0.46, ctx.measureText(statusBanner).width + 16);
         const sx = 10;
-        const sy = h - 30;
+        const sy = h - 29;
         ctx.fillStyle = bannerBg;
         ctx.strokeStyle = bannerBorder;
-        ctx.lineWidth = 1.3;
+        ctx.lineWidth = 1.25;
         ctx.beginPath();
-        ctx.roundRect(sx, sy, sw, 23, 6);
+        ctx.roundRect(sx, sy, sw, 21.5, 5.5);
         ctx.fill();
         ctx.stroke();
         ctx.fillStyle = bannerTextCol;
         ctx.textAlign = 'left';
-        ctx.fillText(statusBanner, sx + 9, sy + 16, sw - 16);
+        ctx.fillText(statusBanner, sx + 8, sy + 15, sw - 14);
       }
 
       ctx.restore();
@@ -1458,21 +1458,21 @@
         const ph = h - padT - padB;
 
         ctx.save();
-        ctx.font = '700 14.2px Roboto, sans-serif';
+        ctx.font = '700 12.9px Roboto, sans-serif';
         ctx.fillStyle = 'rgba(255,255,255,0.90)';
         ctx.textAlign = 'left';
         ctx.fillText(d.dynTitle, padL, 18);
 
         // Legend on top right
-        ctx.font = '600 13.4px Roboto, sans-serif';
+        ctx.font = '600 12.1px Roboto, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillStyle = st.isAlert ? '#f87171' : st.zm.color;
         ctx.fillText(`■ ${d.dynAfter}`, w - padR, 18);
         ctx.fillStyle = 'rgba(148, 163, 184, 0.85)';
-        ctx.fillText(`□ ${d.dynBefore}`, w - padR - ctx.measureText(`■ ${d.dynAfter}`).width - 16, 18);
+        ctx.fillText(`□ ${d.dynBefore}`, w - padR - ctx.measureText(`■ ${d.dynAfter}`).width - 14, 18);
 
         // Grid lines (0%, 50%, 100%)
-        ctx.font = '600 12.8px JetBrains Mono, monospace';
+        ctx.font = '600 11.6px JetBrains Mono, monospace';
         for (const pct of [0, 50, 100]) {
           const gy = padT + ph * (1 - pct / 100);
           ctx.strokeStyle = 'rgba(255,255,255,0.09)';
@@ -1513,13 +1513,13 @@
           ctx.fill();
 
           // Value label on After bar
-          ctx.font = '700 13.0px JetBrains Mono, monospace';
+          ctx.font = '700 11.8px JetBrains Mono, monospace';
           ctx.fillStyle = '#ffffff';
           ctx.textAlign = 'center';
-          ctx.fillText(`${vAft}%`, cxBar + 2 + bw / 2, Math.max(padT + 11, padT + ph - hAft - 4));
+          ctx.fillText(`${vAft}%`, cxBar + 2 + bw / 2, Math.max(padT + 10, padT + ph - hAft - 4));
 
           // X-axis label
-          ctx.font = '700 13.8px Roboto, sans-serif';
+          ctx.font = '700 12.5px Roboto, sans-serif';
           ctx.fillStyle = 'rgba(255,255,255,0.92)';
           ctx.fillText(d.dynLabels[i], cxBar, h - 8);
         }
@@ -1548,14 +1548,14 @@
         const bw = ((b.e - b.s) / 12) * pw;
         ctx.fillStyle = b.bg;
         ctx.fillRect(bx, padT, bw, ph);
-        ctx.font = '700 13.2px Roboto, sans-serif';
+        ctx.font = '700 12.0px Roboto, sans-serif';
         ctx.fillStyle = b.col;
         ctx.textAlign = 'center';
         ctx.fillText(b.lbl, bx + bw / 2, 16, bw - 8);
       }
 
       // Horizontal dB gridlines (+4, 0, -4, -8 dB)
-      ctx.font = '600 12.8px JetBrains Mono, monospace';
+      ctx.font = '600 11.6px JetBrains Mono, monospace';
       for (const gv of [4, 0, -4, -8]) {
         const gy = padT + ((maxDb - gv) / rangeDb) * ph;
         ctx.strokeStyle = gv === 0 ? 'rgba(230, 200, 130, 0.65)' : 'rgba(255,255,255,0.09)';
@@ -1599,16 +1599,16 @@
 
         // Numeric ΔdB label above/below bar
         if (Math.abs(val) >= 0.15) {
-          ctx.font = '700 12.4px JetBrains Mono, monospace';
+          ctx.font = '700 11.4px JetBrains Mono, monospace';
           ctx.fillStyle = '#ffffff';
           ctx.textAlign = 'center';
           const lblTxt = `${val > 0 ? '+' : '−'}${this.fmt(Math.abs(val), 1)}`;
-          const ly = val >= 0 ? Math.max(padT + 11, topY - 4) : Math.min(padT + ph - 3, topY + barH + 12);
+          const ly = val >= 0 ? Math.max(padT + 10, topY - 4) : Math.min(padT + ph - 3, topY + barH + 11);
           ctx.fillText(lblTxt, cxBar, ly);
         }
 
         // H1..H12 X-axis label
-        ctx.font = '700 13.4px JetBrains Mono, monospace';
+        ctx.font = '700 12.1px JetBrains Mono, monospace';
         ctx.fillStyle = 'rgba(255,255,255,0.90)';
         ctx.textAlign = 'center';
         ctx.fillText(`H${i + 1}`, cxBar, h - 8);

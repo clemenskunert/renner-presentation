@@ -35,81 +35,71 @@
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → Obertöne gedämpft`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 hart · τc = ${tau} ms ↑`,
           specRoles: ['Grundton', 'Oktave', 'Quinte', '2. Okt.', 'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.', 'Sekunde', 'Gr. Terz', '11. Teilt.', 'Duodez.'],
-          c1: '1. Filz-Elastizität & Oberflächenspannung',
+          c1: '1. Filz-Elastizität & Spannung',
           steps1: ['1 · Träge', '2 · Mittel', '3 · Elastisch'],
-          c2: '2. Hammerkopf-Form (Scheitelradius)',
+          c2: '2. Hammerkopf-Form (Radius)',
           steps2: ['1 · Breit', '2 · Konzert', '3 · Spitz'],
           c3: '3. Scheitel-Verdichtung (Flanke = ½)',
           steps3: ['1 · Weich', '2 · Ideal', '3 · Zu hart'],
           c3ValR: (ap, fl) => `Scheitel ${ap} % · Flanke ${fl} %`,
           c3ValC: (d) => `Wicklung ${d} %`,
-          c4: '4. Übergang Scheitel → Flanke (Außenkontur)',
+          c4: '4. Übergang Scheitel → Flanke',
           steps4: ['1 · Frei', '2 · Fest', '3 · Sperrt ✕'],
-          c4Open: (pct) => `Kraftfluss frei (${pct} % Flanke)`,
-          c4Mid: (pct) => `Teil-Sperre (${pct} % Flanke)`,
-          c4Block: (pct) => `Blockiert! (${pct} % Flanke)`,
+          c4Open: (pct) => `Frei (${pct} % Flanke)`,
+          c4Mid: (pct) => `Teil-Sperre (${pct} %)`,
+          c4Block: (pct) => `Gesperrt! (${pct} %)`,
           dynLbl: 'Spielbare Dynamik (Ergebnis)',
           dynFull: '✓ Volles Spektrum (pp – ff)',
-          dynNoPp: '⚠ Kein pp (Ansatz zu hart)',
-          dynNoFf: '⚠ Kein ff (τc verlängert)',
+          dynNoPp: '⚠ Kein pp (zu hart)',
+          dynNoFf: '⚠ Kein ff (τc ↑)',
           dynNone: '✕ Kein pp & kein ff!',
-          dynNotePpOk: '✓ pp frei (weicher Ansatz)',
-          dynNotePpWarn: '△ pp erschwert (Scheitel fest)',
-          dynNotePpNo: '✕ Kein pp: Scheitel/Übergang zu hart',
-          dynNoteFfOk: '✓ ff frei (kurze τc · elastisch)',
-          dynNoteFfWarn: '△ ff begrenzt (τc steigt)',
-          dynNoteFfNo: '✕ Kein ff: Zu steif → τc verlängert',
+          dynNotePpOk: '✓ pp frei',
+          dynNotePpWarn: '△ pp erschwert',
+          dynNotePpNo: '✕ Kein pp (Ansatz hart)',
+          dynNoteFfOk: '✓ ff frei (kurze τc)',
+          dynNoteFfWarn: '△ ff begrenzt (τc ↑)',
+          dynNoteFfNo: '✕ Kein ff (τc zu lang)',
           kpi1: 'Rückstellkraft',
           kpi2: 'Kontaktzeit τc',
           kpi3: 'Toncharakter',
           hystSub: (loss) => `${loss} % Hysterese-Verlust`,
           tauFast: 'Schneller Ring-Abprall',
-          tauIdeal: 'Kurze τc · ff entfaltet frei',
+          tauIdeal: 'Kurze τc · ff frei',
           tauWarn: '△ τc steigt · ff begrenzt',
           tauSlow: '⚠ Verlängert → kein ff!',
           toneSoft: 'Samtig-weich (pp)',
           toneIdeal: 'Singend (pp–ff)',
           toneCrisp: 'Silbrig-klar (p–f)',
           toneHardNoPp: 'Harter Ansatz (kein pp)',
-          toneStiffNoFf: 'Matt & gedämpft (kein ff)',
+          toneStiffNoFf: 'Matt (kein ff)',
           toneBlocked: 'Hart & matt (kein pp/ff)',
-          cvForceVec: 'F_Feder',
-          cvString: '3-chörige Stahlsaite (Anschlagspunkt)',
-          cvCristoforiTop: 'Hirschleder-Polster (Kontaktzone)',
-          cvCristoforiRing: 'Pergament-Röhrchen (Oberflächenspannung σ)',
-          cvCristoforiHollow: 'Hohler Federkern (0 tote Masse)',
+          cvForceVec: 'Feder',
+          cvReboundVec: 'Rückprall',
+          cvString: 'Stahlsaite (3-chörig)',
+          cvCristoforiTop: 'Hirschleder-Polster',
+          cvCristoforiRing: 'Pergament-Ring (σ)',
+          cvCristoforiHollow: 'Hohler Federkern',
           cvZoneCrown: 'SCHEITEL',
           cvZoneFlank: 'FLANKE',
-          cvCallCrown: (ap) => `Scheitel: höchste Dichte (${ap} %)`,
-          cvCallContourOpen: 'Übergang (Scheitel→Flanke): Kraftfluss frei',
-          cvCallContourBlock: '⚠ Zu steifer Übergang: sperrt Flanke & pp!',
-          cvCallFlankOpen: (fl) => `Breiteste Flanke: ½ Dichte (${fl} %) · federt`,
-          cvCallFlankBlock: (fl) => `Untere Flanke (${fl} % = ½): abgekoppelt!`,
-          cvRennerFix: 'Faser-Auslauf auf Holz · Klebstoff + Niete',
-          cvFlowOpen: (pct) => `✓ Kraftfluss → Flanke (${pct} %)`,
-          cvFlowBlock: '✕ Flanke gesperrt · τc ↑',
-          phRest: 'Ruhelage · Vorgespannter Federbogen',
-          phApproach: '① Anflug: Hammer-Impuls ↑ zur Saite',
-          phCompressC: '② Einfederung: Ovalisierung ↔ & Ring-Zug σ',
-          phCompressR: '② Einfederung: Scheitel → Flanke (½) federt ↔ bis zur Niete',
-          phCompressBlock: '② Einfederung: ⚠ Zu steifer Filz sperrt Flanke & verlängert τc!',
-          phPushoff: '③ Scheitelpunkt: Impuls ↑ Saite · Rückstoß ↓ beginnt',
-          phRebound: '④ Elastischer Rückprall: F_Bounce ↓ von der Saite weg',
-          cvFiberTitle: 'Zonen- & Faser-Lupe',
-          cvFiberCristofori: 'Leder + gespanntes Pergament',
-          cvLoupeCrown: (ap) => `Scheitel (${ap}%): hochverdichtet`,
-          cvLoupeFlank: (fl) => `Flanke (${fl}% = ½): elastisch`,
-          cvLoupeFooterOpen: 'Elastisch · pp bis ff offen',
-          cvLoupeFooterNoPp: '⚠ Zu hart: kein pp möglich!',
-          cvLoupeFooterNoFf: '⚠ Unelastisch: τc ↑ · kein ff!',
-          cvLoupeFooterBlock: '⚠ Zu steif: kein pp / kein ff!',
-          cvLeftPlot: 'Federkennlinie F(x) & Hysterese',
-          cvRightPlot: 'Kraftimpuls F(t) & Kontaktzeit τc',
-          cvCurveNoPp: '⚠ Harter Ansatz → kein pp',
-          cvCurveKink: '⚠ Flanke sperrt → Hysterese ↑',
-          cvPulseLongTau: '⚠ τc verlängert → kein ff!',
-          cvAxisX: 'Einfederung x (mm)',
-          cvAxisT: 'Kontaktzeit t (ms)',
+          cvCallCrown: (ap) => `Scheitel (${ap} %)`,
+          cvCallContourOpen: 'Übergang: Kraftfluss frei',
+          cvCallContourBlock: '⚠ Übergang sperrt!',
+          cvCallFlankOpen: (fl) => `Flanke ½ (${fl} %) · federt`,
+          cvCallFlankBlock: (fl) => `Flanke ½ (${fl} %): inaktiv`,
+          cvRennerFix: 'Klebstoff + Niete',
+          cvFlowOpen: (pct) => `✓ Kraftfluss (${pct} %)`,
+          cvFlowBlock: '✕ Flanke gesperrt',
+          phRest: 'Ruhelage',
+          phApproach: '① Anflug ↑',
+          phCompressC: '② Ring-Spannung σ',
+          phCompressR: '② Flanke federt mit',
+          phCompressBlock: '② ⚠ Flanke sperrt · τc ↑',
+          phPushoff: '③ Umkehrpunkt',
+          phRebound: '④ Rückprall ↓',
+          cvFiberTitle: 'Zonen-Lupe',
+          cvFiberCristofori: 'Leder + Pergament',
+          cvLoupeCrown: (ap) => `Scheitel (${ap} %)`,
+          cvLoupeFlank: (fl) => `Flanke ½ (${fl} %)`,
           roPrinC: 'Ringfeder + Hirschleder (1700)',
           roPrinR: (ap, fl) => `Scheitel ${ap}% → Flanke ${fl}% (½)`,
           roPrinNoPp: (ap) => `⚠ Scheitel ${ap}% hart → kein pp`,
@@ -117,36 +107,36 @@
           roPrinBlock: '⚠ Übergang sperrt → τc ↑',
           roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
-          expBadgeC: '✦ CRISTOFORIS UR-PRINZIP (1700)',
-          expTitleC: 'Das belederte Röllchen: Maximale Elastizität für „col piano e forte“',
+          expBadgeC: '✦ CRISTOFORI (1700)',
+          expTitleC: 'Beledertes Röllchen: Spannung erzeugt Elastizität',
           expBodyC: (reb, tau) =>
-            `Bartolomeo Cristoforis <strong>beledertes Pergament-Röllchen</strong> nutzt die <strong>Oberflächenspannung</strong> des hohlen Rings: Sanftes Hirschleder formt das <em>piano</em>, während <strong>${reb} % Rückstellkraft</strong> (<strong>τc ≈ ${tau} ms</strong>) das Röhrchen blitzschnell von der Saite löst.`,
+            `Hirschleder formt zartes <em>piano</em>; die Ring-Spannung (<strong>${reb} % Bounce</strong>, <strong>τc ≈ ${tau} ms</strong>) löst den Hammer schnell von der Saite.`,
           expBulletC:
-            `<strong>Schlüssel-Erkenntnis:</strong> Nur echte <strong>Elastizität durch Spannung</strong> hält die Kontaktzeit kurz — bloße starre Steifigkeit ohne Federweg würde die Saite abdämpfen.`,
-          expBadgeR: '✦ ZONEN-BALANCE FÜR VOLLES DYNAMIKFENSTER (pp ↔ ff)',
-          expTitleR: 'Geschmeidiger Scheitel-Übergang für pp — elastische ½-Flanke für ff',
+            `<strong>Kernprinzip:</strong> Spannung hält τc kurz — starre Masse ohne Federweg dämpft die Saite ab.`,
+          expBadgeR: '✦ ZONEN-BALANCE (pp ↔ ff)',
+          expTitleR: 'Weicher Übergang für pp — elastische ½-Flanke für ff',
           expBodyR: (reb, tau, hardDb, ap, fl) =>
-            `Der harmonische Übergang vom <strong>Scheitel (${ap} %)</strong> in die halb so dichte <strong>Flanke (${fl} % = ½)</strong> ermöglicht feinstes <em>Pianissimo</em>; zugleich sorgt hohe Filz-Elastizität (<strong>${reb} % Bounce</strong>) für kurze <strong>τc ≈ ${tau} ms</strong> und volles <em>Fortissimo</em> (<strong>${hardDb}</strong>).`,
+            `Vom <strong>Scheitel (${ap} %)</strong> fließt die Kraft frei in die <strong>½-Flanke (${fl} %)</strong>: feines <em>pp</em> und kurze <strong>τc ≈ ${tau} ms</strong> für volles <em>ff</em> (<strong>${hardDb}</strong>).`,
           expBulletR:
-            `<strong>Warum Dynamik kein freier Regler ist:</strong> Nur wenn Anfangsnachgiebigkeit (für <em>pp</em>) und elastischer Flanken-Rückprall (für <em>ff</em>) zusammenspielen, steht die gesamte Dynamikspanne offen.`,
-          expBadgeNoPp: '⚠️ DYNAMIKVERLUST OBEN: KEIN PIANISSIMO (pp)',
-          expTitleNoPp: 'Zu harter Scheitel & Übergang lassen kein zartes Pianissimo zu!',
+            `<strong>Merke:</strong> Volle Dynamik entsteht nur aus nachgiebigem Ansatz und schnellem Flanken-Bounce.`,
+          expBadgeNoPp: '⚠ KEIN PIANISSIMO (pp)',
+          expTitleNoPp: 'Zu harter Scheitel oder Übergang verhindert das pp',
           expBodyNoPp: (ap, tau, hardDb) =>
-            `Bei einem zu harten <strong>Scheitel (${ap} %)</strong> bzw. verhärtetem Übergang zur Flanke fehlt das feine Anfangspolster: Selbst sanftester Anschlag prallt sofort auf eine harte Schale (<strong>${hardDb}</strong>, <strong>τc ≈ ${tau} ms</strong>) — <strong>ein Pianissimo kann nicht entstehen</strong>.`,
+            `Ohne Anfangspolster am <strong>Scheitel (${ap} %)</strong> prallt selbst zarter Anschlag hart ab (<strong>${hardDb}</strong>, <strong>τc ≈ ${tau} ms</strong>) — kein <em>pp</em> möglich.`,
           expBulletNoPp:
-            `<strong>Intonations-Abhilfe:</strong> Behutsames Lockern der Übergangszone nach dem Scheitel stellt die feine Anfangsnachgiebigkeit für das <em>pp</em> wieder her, ohne den Kern zu schwächen.`,
-          expBadgeNoFf: '⚠️ VERLÄNGERTE KONTAKTZEIT: KEIN FORTISSIMO (ff)',
-          expTitleNoFf: 'Unzureichende Elastizität durch steifen/trägen Filz verlängert τc!',
+            `<strong>Abhilfe:</strong> Übergang nach dem Scheitel behutsam mit 90°-Stichen lockern.`,
+          expBadgeNoFf: '⚠ KEIN FORTISSIMO (ff)',
+          expTitleNoFf: 'Fehlende Elastizität verlängert die Kontaktzeit τc',
           expBodyNoFf: (reb, tau) =>
-            `Fehlt dem Filz die elastische Rückstellkraft (nur <strong>${reb} % Bounce</strong>), federt der Hammerkopf nicht schnell genug zurück: Die <strong>Kontaktzeit verlängert sich auf τc ≈ ${tau} ms</strong>, der Hammer dämpft die schwingende Saite ab — <strong>ein Fortissimo kann nicht entstehen</strong>.`,
+            `Träger, steifer Filz (nur <strong>${reb} % Bounce</strong>) bleibt mit <strong>τc ≈ ${tau} ms</strong> zu lange an der Saite und dämpft das <em>ff</em> ab.`,
           expBulletNoFf:
-            `<strong>Physik-Kernpunkt:</strong> Für tragfähiges <em>ff</em> braucht der Hammerkopf maximale innere <strong>Spannungs-Elastizität</strong> statt träger Masse oder steifer Reibung.`,
-          expBadgeBlock: '⚠️ DOPPEL-SPERRE: WEDER PIANISSIMO NOCH FORTISSIMO',
-          expTitleBlock: 'Zu harter Übergang sperrt pp — fehlende Flanken-Elastizität verhindert ff!',
+            `<strong>Physik:</strong> Tragendes <em>ff</em> braucht schnelle Rückstellkraft statt starrer Härte.`,
+          expBadgeBlock: '⚠ DOPPEL-SPERRE (KEIN pp & ff)',
+          expTitleBlock: 'Steifer Übergang sperrt pp und koppelt die Flanke ab',
           expBodyBlock: (flankPct, tau) =>
-            `Der zu steife Übergang nach dem Scheitel verhindert jedes weiche <strong>Pianissimo</strong>; gleichzeitig koppelt er die elastische ½-Flanke ab (nur <strong>${flankPct} % aktiv</strong>). Durch die unzureichende Elastizität <strong>verlängert sich τc auf ${tau} ms</strong> und würgt das <strong>Fortissimo</strong> ab.`,
+            `Harter Ansatz verhindert <em>pp</em>; die gesperrte Flanke (<strong>${flankPct} % aktiv</strong>) verlängert <strong>τc auf ${tau} ms</strong> und würgt <em>ff</em> ab.`,
           expBulletBlock:
-            `<strong>Intonations-Diagnose:</strong> Gezieltes Öffnen der steifen Außenkontur zwischen Scheitel und Flanke gibt sowohl den sanften <em>pp</em>-Ansatz als auch die schnelle Flankenfederung für <em>ff</em> frei.`
+            `<strong>Diagnose:</strong> Steife Außenkontur öffnen, um <em>pp</em>-Polster und Flankenfederung freizugeben.`
         },
         en: {
           prvSub: 'INTERACTIVE PREVIEW • THE HAMMERHEAD AS A COMPLEX SPRING',
@@ -171,81 +161,71 @@
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → overtones damped`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 harsh · τc = ${tau} ms ↑`,
           specRoles: ['Fundam.', 'Octave', '5th', '2nd Oct', 'Maj 3rd', '5th', '7th', '3rd Oct', 'Maj 2nd', 'Maj 3rd', '11th', '12th'],
-          c1: '1. Felt Elasticity & Surface Tension',
+          c1: '1. Felt Elasticity & Tension',
           steps1: ['1 · Sluggish', '2 · Medium', '3 · Elastic'],
-          c2: '2. Hammerhead Shape (Crown Radius)',
+          c2: '2. Hammerhead Shape (Radius)',
           steps2: ['1 · Wide', '2 · Concert', '3 · Pointed'],
           c3: '3. Crown Compaction (Flank = ½)',
           steps3: ['1 · Soft', '2 · Ideal', '3 · Too Hard'],
           c3ValR: (ap, fl) => `Crown ${ap}% · Flank ${fl}%`,
-          c3ValC: (d) => `Roll Winding ${d}%`,
-          c4: '4. Crown → Flank Transition (Outer Contour)',
+          c3ValC: (d) => `Winding ${d}%`,
+          c4: '4. Crown → Flank Transition',
           steps4: ['1 · Open', '2 · Firm', '3 · Locked ✕'],
-          c4Open: (pct) => `Open Flow (${pct}% Flank)`,
-          c4Mid: (pct) => `Partial Block (${pct}% Flank)`,
-          c4Block: (pct) => `Blocked! (${pct}% Flank)`,
+          c4Open: (pct) => `Open (${pct}% Flank)`,
+          c4Mid: (pct) => `Partial (${pct}%)`,
+          c4Block: (pct) => `Locked! (${pct}%)`,
           dynLbl: 'Playable Dynamics (Outcome)',
           dynFull: '✓ Full Range (pp – ff)',
-          dynNoPp: '⚠ No pp (Crown/Transition Hard)',
-          dynNoFf: '⚠ No ff (τc Prolonged)',
+          dynNoPp: '⚠ No pp (Too Hard)',
+          dynNoFf: '⚠ No ff (τc ↑)',
           dynNone: '✕ Neither pp nor ff!',
-          dynNotePpOk: '✓ pp open (supple crown)',
-          dynNotePpWarn: '△ pp restricted (hard crown)',
-          dynNotePpNo: '✕ No pp: crown/transition too hard',
-          dynNoteFfOk: '✓ ff open (short τc · elastic)',
-          dynNoteFfWarn: '△ ff capped (τc rising)',
-          dynNoteFfNo: '✕ No ff: too stiff → τc prolonged',
+          dynNotePpOk: '✓ pp open',
+          dynNotePpWarn: '△ pp restricted',
+          dynNotePpNo: '✕ No pp (hard onset)',
+          dynNoteFfOk: '✓ ff open (short τc)',
+          dynNoteFfWarn: '△ ff capped (τc ↑)',
+          dynNoteFfNo: '✕ No ff (τc prolonged)',
           kpi1: 'Restoring Force',
           kpi2: 'Contact Time τc',
           kpi3: 'Tonal Character',
           hystSub: (loss) => `${loss}% hysteresis loss`,
-          tauFast: 'Crisp hollow-ring rebound',
-          tauIdeal: 'Short τc · free ff bloom',
+          tauFast: 'Crisp ring rebound',
+          tauIdeal: 'Short τc · free ff',
           tauWarn: '△ τc rising · ff capped',
-          tauSlow: '⚠ Prolonged → chokes ff!',
+          tauSlow: '⚠ Prolonged → no ff!',
           toneSoft: 'Velvety soft (pp)',
           toneIdeal: 'Singing (pp–ff)',
           toneCrisp: 'Silvery-clear (p–f)',
           toneHardNoPp: 'Harsh onset (no pp)',
-          toneStiffNoFf: 'Dull & choked (no ff)',
-          toneBlocked: 'Harsh & choked (no pp/ff)',
-          cvForceVec: 'F_Spring',
-          cvString: 'Tri-chord steel string (strike point)',
-          cvCristoforiTop: 'Deer-leather pad (contact zone)',
-          cvCristoforiRing: 'Parchment tube (surface tension σ)',
-          cvCristoforiHollow: 'Hollow spring core (0 dead mass)',
+          toneStiffNoFf: 'Dull (no ff)',
+          toneBlocked: 'Harsh & dull (no pp/ff)',
+          cvForceVec: 'Spring',
+          cvReboundVec: 'Rebound',
+          cvString: 'Tri-chord steel string',
+          cvCristoforiTop: 'Deer-leather pad',
+          cvCristoforiRing: 'Parchment ring (σ)',
+          cvCristoforiHollow: 'Hollow core',
           cvZoneCrown: 'CROWN',
           cvZoneFlank: 'FLANK',
-          cvCallCrown: (ap) => `Crown: peak compaction (${ap}%)`,
-          cvCallContourOpen: 'Transition (Crown→Flank): force flow open',
-          cvCallContourBlock: '⚠ Stiff transition: blocks flank & pp!',
-          cvCallFlankOpen: (fl) => `Widest flank: ½ density (${fl}%) · flexes`,
-          cvCallFlankBlock: (fl) => `Lower flank (${fl}% = ½): decoupled!`,
-          cvRennerFix: 'Fibers taper onto wood · Glue + rivet',
-          cvFlowOpen: (pct) => `✓ Force Flow → Flank (${pct}%)`,
-          cvFlowBlock: '✕ Flank Locked · τc ↑',
-          phRest: 'At Rest · Pre-tensioned spring arch',
-          phApproach: '① Approach: Hammer impulse ↑ toward string',
-          phCompressC: '② Compression: Ovalization ↔ & ring tension σ',
-          phCompressR: '② Compression: Crown → ½ Flank flexes ↔ down to rivet',
-          phCompressBlock: '② Compression: ⚠ Stiff felt locks flank & prolongs τc!',
-          phPushoff: '③ Peak Load: Impulse ↑ to string · Rebound ↓ starts',
-          phRebound: '④ Elastic Rebound: F_Bounce ↓ away from string',
-          cvFiberTitle: 'Zone & Fiber Zoom',
-          cvFiberCristofori: 'Leather + tensioned parchment',
-          cvLoupeCrown: (ap) => `Crown (${ap}%): peak density`,
-          cvLoupeFlank: (fl) => `Flank (${fl}% = ½): elastic`,
-          cvLoupeFooterOpen: 'Elastic · full pp to ff open',
-          cvLoupeFooterNoPp: '⚠ Too hard: no pp possible!',
-          cvLoupeFooterNoFf: '⚠ Inelastic: τc ↑ · no ff!',
-          cvLoupeFooterBlock: '⚠ Too stiff: no pp / no ff!',
-          cvLeftPlot: 'Spring Curve F(x) & Hysteresis',
-          cvRightPlot: 'Force Impulse F(t) & Contact Time τc',
-          cvCurveNoPp: '⚠ Hard onset → no pp',
-          cvCurveKink: '⚠ Flank locked → hysteresis ↑',
-          cvPulseLongTau: '⚠ τc prolonged → no ff!',
-          cvAxisX: 'Deflection x (mm)',
-          cvAxisT: 'Contact time t (ms)',
+          cvCallCrown: (ap) => `Crown (${ap}%)`,
+          cvCallContourOpen: 'Transition: flow open',
+          cvCallContourBlock: '⚠ Transition locked!',
+          cvCallFlankOpen: (fl) => `Flank ½ (${fl}%) · flexes`,
+          cvCallFlankBlock: (fl) => `Flank ½ (${fl}%): inactive`,
+          cvRennerFix: 'Glue + T-rivet',
+          cvFlowOpen: (pct) => `✓ Force Flow (${pct}%)`,
+          cvFlowBlock: '✕ Flank Locked',
+          phRest: 'At Rest',
+          phApproach: '① Approach ↑',
+          phCompressC: '② Ring Tension σ',
+          phCompressR: '② Flank Flexing',
+          phCompressBlock: '② ⚠ Flank Locked · τc ↑',
+          phPushoff: '③ Peak Load',
+          phRebound: '④ Rebound ↓',
+          cvFiberTitle: 'Zone Zoom',
+          cvFiberCristofori: 'Leather + parchment',
+          cvLoupeCrown: (ap) => `Crown (${ap}%)`,
+          cvLoupeFlank: (fl) => `Flank ½ (${fl}%)`,
           roPrinC: 'Hollow parchment ring + leather',
           roPrinR: (ap, fl) => `Crown ${ap}% → Flank ${fl}% (½)`,
           roPrinNoPp: (ap) => `⚠ Crown ${ap}% hard → no pp`,
@@ -253,36 +233,36 @@
           roPrinBlock: '⚠ Transition locked → τc ↑',
           roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
-          expBadgeC: '✦ CRISTOFORI’S ORIGINAL PRINCIPLE (1700)',
-          expTitleC: 'The Leathered Roll: Surface-Tension Elasticity for “col piano e forte”',
+          expBadgeC: '✦ CRISTOFORI (1700)',
+          expTitleC: 'Leathered Roll: Tension Creates Elasticity',
           expBodyC: (reb, tau) =>
-            `Cristofori’s <strong>leathered hollow parchment roll</strong> harnesses circumferential <strong>surface tension</strong>: supple deer leather shapes <em>piano</em>, while <strong>${reb}% restoring force</strong> keeps contact time short (<strong>τc ≈ ${tau} ms</strong>) for crisp release.`,
+            `Deer leather shapes gentle <em>piano</em>; ring tension (<strong>${reb}% bounce</strong>, <strong>τc ≈ ${tau} ms</strong>) releases the string crisply.`,
           expBulletC:
-            `<strong>Core Insight:</strong> True <strong>tensioned elasticity</strong> keeps contact time short — dead stiffness without elastic rebound lingers on the string and smothers tone.`,
-          expBadgeR: '✦ ZONE BALANCE FOR FULL DYNAMIC RANGE (pp ↔ ff)',
-          expTitleR: 'Supple Crown Transition for pp — Elastic ½-Flank Rebound for ff',
+            `<strong>Core Insight:</strong> Tension keeps τc short — dead stiffness lingers and damps the string.`,
+          expBadgeR: '✦ ZONE BALANCE (pp ↔ ff)',
+          expTitleR: 'Supple Transition for pp — Elastic ½-Flank for ff',
           expBodyR: (reb, tau, hardDb, ap, fl) =>
-            `A smooth handoff from the <strong>Crown (${ap}%)</strong> into the half-compacted <strong>Flank (${fl}% = ½)</strong> enables delicate <em>pianissimo</em>, while high felt elasticity (<strong>${reb}% bounce</strong>) keeps <strong>τc ≈ ${tau} ms</strong> short for powerful <em>fortissimo</em> (<strong>${hardDb}</strong>).`,
+            `Force flows smoothly from <strong>Crown (${ap}%)</strong> into the <strong>½-Flank (${fl}%)</strong>: delicate <em>pp</em> and short <strong>τc ≈ ${tau} ms</strong> for full <em>ff</em> (<strong>${hardDb}</strong>).`,
           expBulletR:
-            `<strong>Why Dynamics Are an Outcome:</strong> Playable <em>pp</em> to <em>ff</em> is never an arbitrary setting — it emerges only when gentle crown compliance and fast flank elasticity work together.`,
-          expBadgeNoPp: '⚠️ LOSS OF PIANISSIMO (NO pp)',
-          expTitleNoPp: 'Overly Hard Crown & Transition Prevent Delicate Pianissimo!',
+            `<strong>Key Rule:</strong> Full dynamics emerge only when gentle onset and fast flank rebound work together.`,
+          expBadgeNoPp: '⚠ NO PIANISSIMO (pp)',
+          expTitleNoPp: 'Overly Hard Crown or Transition Blocks pp',
           expBodyNoPp: (ap, tau, hardDb) =>
-            `When the <strong>Crown (${ap}%)</strong> and transition to the flank are too hard, gentle initial compliance vanishes: even the lightest touch hits an unyielding shell (<strong>${hardDb}</strong>, <strong>τc ≈ ${tau} ms</strong>) — <strong>no pianissimo can form</strong>.`,
+            `Without initial cushion at the <strong>Crown (${ap}%)</strong>, even light touch hits a hard shell (<strong>${hardDb}</strong>, <strong>τc ≈ ${tau} ms</strong>) — no <em>pp</em>.`,
           expBulletNoPp:
-            `<strong>Voicing Remedy:</strong> Carefully relieving the stiffened transition behind the crown restores supple initial cushioning for <em>pp</em> without sacrificing core support.`,
-          expBadgeNoFf: '⚠️ PROLONGED CONTACT TIME (NO ff)',
-          expTitleNoFf: 'Insufficient Elasticity from Stiff/Sluggish Felt Prolongs τc!',
+            `<strong>Remedy:</strong> Gently relieve the stiff transition behind the crown with 90° stitches.`,
+          expBadgeNoFf: '⚠ NO FORTISSIMO (ff)',
+          expTitleNoFf: 'Low Elasticity Prolongs Contact Time τc',
           expBodyNoFf: (reb, tau) =>
-            `With insufficient felt elasticity (only <strong>${reb}% bounce</strong>), the hammer fails to snap off the string: <strong>contact time lengthens to τc ≈ ${tau} ms</strong>, damping the vibrating string so <strong>no fortissimo can develop</strong>.`,
+            `Sluggish, inelastic felt (only <strong>${reb}% bounce</strong>) lingers at <strong>τc ≈ ${tau} ms</strong> and damps out <em>ff</em>.`,
           expBulletNoFf:
-            `<strong>Acoustic Law:</strong> True carrying <em>ff</em> requires rapid elastic energy return — an overly stiff, inelastic hammer lingers on the string and chokes its own output.`,
-          expBadgeBlock: '⚠️ DOUBLE DYNAMIC COLLAPSE: NEITHER pp NOR ff',
-          expTitleBlock: 'Hard Transition Kills pp — Stiff Felt Prolongs τc and Chokes ff!',
+            `<strong>Physics:</strong> Carrying <em>ff</em> requires rapid elastic rebound, not rigid hardness.`,
+          expBadgeBlock: '⚠ DOUBLE LOCK (NO pp & ff)',
+          expTitleBlock: 'Hard Transition Kills pp and Decouples the Flank',
           expBodyBlock: (flankPct, tau) =>
-            `An overly hard crown-to-flank transition blocks delicate <strong>pianissimo</strong>, while locking out the ½-flank (only <strong>${flankPct}% active</strong>) robs the head of elasticity: <strong>τc lengthens to ${tau} ms</strong>, smothering the string and preventing <strong>fortissimo</strong>.`,
+            `Hard onset blocks <em>pp</em>; locking out the ½-flank (<strong>${flankPct}% active</strong>) prolongs <strong>τc to ${tau} ms</strong> and chokes <em>ff</em>.`,
           expBulletBlock:
-            `<strong>Voicing Diagnosis:</strong> Opening the stiff outer-contour bridge between crown and flank restores both gentle <em>pp</em> touch and fast elastic flank rebound for <em>ff</em>.`
+            `<strong>Diagnosis:</strong> Open the stiff outer contour to restore both <em>pp</em> cushion and flank rebound.`
         },
         ja: {
           prvSub: 'インタラクティブ試写 • 複合スプリングとしてのハンマーヘッド',
@@ -309,79 +289,69 @@
           specRoles: ['基音', '8度', '5度', '2Oct', '長3度', '5度', '7倍音', '3Oct', '長2度', '長3度', '11倍音', '12度'],
           c1: '1. フェルト弾性と表面張力',
           steps1: ['1 · 低弾性', '2 · 中程度', '3 · 高弾性'],
-          c2: '2. ハンマー形状（クラウン曲率半径）',
+          c2: '2. ハンマー形状（曲率半径）',
           steps2: ['1 · 広角', '2 · 標準', '3 · 鋭角'],
           c3: '3. クラウン圧縮密度（フランク＝½）',
           steps3: ['1 · 柔軟', '2 · 最適', '3 · 過硬'],
           c3ValR: (ap, fl) => `クラウン ${ap}% · フランク ${fl}%`,
-          c3ValC: (d) => `ロール巻密度 ${d}%`,
-          c4: '4. クラウン→フランク移行帯（外周輪郭）',
+          c3ValC: (d) => `巻密度 ${d}%`,
+          c4: '4. クラウン→フランク移行帯',
           steps4: ['1 · 開放', '2 · やや硬', '3 · 遮断 ✕'],
-          c4Open: (pct) => `伝達良好 (フランク ${pct}%)`,
-          c4Mid: (pct) => `一部遮断 (フランク ${pct}%)`,
-          c4Block: (pct) => `伝達遮断! (フランク ${pct}%)`,
+          c4Open: (pct) => `開放 (${pct}%)`,
+          c4Mid: (pct) => `一部遮断 (${pct}%)`,
+          c4Block: (pct) => `遮断! (${pct}%)`,
           dynLbl: '演奏可能なダイナミクス（結果）',
-          dynFull: '✓ 全ダイナミクス開放 (pp – ff)',
-          dynNoPp: '⚠ pp 不可（先端・移行帯が過硬）',
-          dynNoFf: '⚠ ff 不可（τc 延長・弦減衰）',
-          dynNone: '✕ pp も ff も成立不可！',
-          dynNotePpOk: '✓ pp 可能（柔軟な初期応答）',
-          dynNotePpWarn: '△ pp 困難（クラウン過硬）',
-          dynNotePpNo: '✕ pp 不可：クラウン／移行帯が硬すぎる',
-          dynNoteFfOk: '✓ ff 可能（短い τc・高弾性）',
-          dynNoteFfWarn: '△ ff 頭打ち（τc 増加）',
-          dynNoteFfNo: '✕ ff 不可：過硬で弾性不足 → τc 延長',
+          dynFull: '✓ 全域開放 (pp – ff)',
+          dynNoPp: '⚠ pp 不可（過硬）',
+          dynNoFf: '⚠ ff 不可（τc ↑）',
+          dynNone: '✕ pp・ff ともに不可！',
+          dynNotePpOk: '✓ pp 可能',
+          dynNotePpWarn: '△ pp 困難',
+          dynNotePpNo: '✕ pp 不可（先端過硬）',
+          dynNoteFfOk: '✓ ff 可能（短い τc）',
+          dynNoteFfWarn: '△ ff 頭打ち（τc ↑）',
+          dynNoteFfNo: '✕ ff 不可（τc 延長）',
           kpi1: '弾性復元力',
           kpi2: '接触時間 τc',
           kpi3: '音色と応答',
           hystSub: (loss) => `ヒステリシス損失 ${loss}%`,
-          tauFast: '素早い中空リング離弦',
-          tauIdeal: '短い τc・豊かな ff 開放',
-          tauWarn: '△ τc やや増加・ff 頭打ち',
-          tauSlow: '⚠ 接触延長 → ff 減衰！',
-          toneSoft: 'ビロードの響き (pp)',
+          tauFast: '素早い中空離弦',
+          tauIdeal: '短い τc・ff 開放',
+          tauWarn: '△ τc 増加・ff 制限',
+          tauSlow: '⚠ 延長 → ff 減衰！',
+          toneSoft: 'ビロード (pp)',
           toneIdeal: '歌う響き (pp〜ff)',
           toneCrisp: '銀色の透明感 (p〜f)',
           toneHardNoPp: '初期過硬 (pp不可)',
           toneStiffNoFf: '詰まる音 (ff不可)',
-          toneBlocked: '硬く詰まる音 (pp/ff不可)',
-          cvForceVec: 'F_弾性',
-          cvString: '3本同音スチール弦（打弦点）',
-          cvCristoforiTop: '鹿革パッド（接触ゾーン）',
-          cvCristoforiRing: '羊皮紙ロール（外周の表面張力 σ）',
-          cvCristoforiHollow: '中空スプリング核（死荷重ゼロ）',
+          toneBlocked: '硬く詰まる (pp/ff不可)',
+          cvForceVec: '弾性',
+          cvReboundVec: '反発',
+          cvString: '3本スチール弦',
+          cvCristoforiTop: '鹿革パッド',
+          cvCristoforiRing: '羊皮紙リング (σ)',
+          cvCristoforiHollow: '中空コア',
           cvZoneCrown: 'クラウン',
           cvZoneFlank: 'フランク',
-          cvCallCrown: (ap) => `クラウン：最高圧縮密度 (${ap}%)`,
-          cvCallContourOpen: '移行帯（クラウン→フランク）：力の伝達良好',
-          cvCallContourBlock: '⚠ 過硬な移行帯：フランク遮断・pp 喪失！',
-          cvCallFlankOpen: (fl) => `最広部フランク：½密度 (${fl}%)・弾性変形`,
-          cvCallFlankBlock: (fl) => `フランク下部 (${fl}% = ½)：力から孤立！`,
-          cvRennerFix: '木芯への繊維終端・接着剤＋リベット固定',
-          cvFlowOpen: (pct) => `✓ フランク伝達 (${pct}%)`,
-          cvFlowBlock: '✕ フランク遮断・τc 延長↑',
-          phRest: '静止状態・予張力スプリング構造',
-          phApproach: '① 打弦接近：弦へ向かう上向き運動量 ↑',
-          phCompressC: '② 圧縮変形：楕円化 ↔ と外周表面張力 σ',
-          phCompressR: '② 圧縮変形：クラウン → ½フランクが弾性膨張 ↔',
-          phCompressBlock: '② 圧縮変形：⚠ 硬直フェルトが弾性を奪い τc を延長！',
-          phPushoff: '③ 最大圧縮：弦への推進力 ↑・離弦反発 ↓ 開始',
-          phRebound: '④ 弾性リバウンド：下向き復元力 F_Bounce ↓',
-          cvFiberTitle: 'ゾーン＆繊維拡大図',
-          cvFiberCristofori: '鹿革＋張力巻き羊皮紙',
-          cvLoupeCrown: (ap) => `クラウン (${ap}%)：高密度`,
-          cvLoupeFlank: (fl) => `フランク (${fl}% = ½)：柔軟弾性`,
-          cvLoupeFooterOpen: '高弾性・pp〜ff 全域開放',
-          cvLoupeFooterNoPp: '⚠ 先端過硬：pp 成立不可！',
-          cvLoupeFooterNoFf: '⚠ 弾性不足：τc 延長・ff 不可！',
-          cvLoupeFooterBlock: '⚠ 過硬・低弾性：pp/ff 喪失！',
-          cvLeftPlot: 'ばね特性曲線 F(x) とヒステリシス',
-          cvRightPlot: '打撃パルス F(t) と接触時間 τc',
-          cvCurveNoPp: '⚠ 初期過硬 → pp 不可',
-          cvCurveKink: '⚠ フランク遮断 → 損失増大',
-          cvPulseLongTau: '⚠ τc 延長 → ff 不可！',
-          cvAxisX: '圧縮変位 x (mm)',
-          cvAxisT: '接触時間 t (ms)',
+          cvCallCrown: (ap) => `クラウン (${ap}%)`,
+          cvCallContourOpen: '移行帯：伝達良好',
+          cvCallContourBlock: '⚠ 移行帯：遮断！',
+          cvCallFlankOpen: (fl) => `フランク½ (${fl}%)・弾性`,
+          cvCallFlankBlock: (fl) => `フランク½ (${fl}%)：停止`,
+          cvRennerFix: '接着＋リベット',
+          cvFlowOpen: (pct) => `✓ 伝達 (${pct}%)`,
+          cvFlowBlock: '✕ フランク遮断',
+          phRest: '静止状態',
+          phApproach: '① 接近 ↑',
+          phCompressC: '② リング張力 σ',
+          phCompressR: '② フランク弾性変形',
+          phCompressBlock: '② ⚠ フランク遮断・τc↑',
+          phPushoff: '③ 最大圧縮',
+          phRebound: '④ 離弦反発 ↓',
+          cvFiberTitle: 'ゾーン拡大',
+          cvFiberCristofori: '鹿革＋羊皮紙',
+          cvLoupeCrown: (ap) => `クラウン (${ap}%)`,
+          cvLoupeFlank: (fl) => `フランク½ (${fl}%)`,
           roPrinC: '中空羊皮紙リング＋鹿革 (1700)',
           roPrinR: (ap, fl) => `クラウン ${ap}% → フランク ${fl}% (½)`,
           roPrinNoPp: (ap) => `⚠ クラウン ${ap}% 過硬 → pp不可`,
@@ -389,36 +359,36 @@
           roPrinBlock: '⚠ 移行帯遮断 → τc 延長↑',
           roDef: (dz, fmax) => `Δz ${dz} mm · F ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
-          expBadgeC: '✦ クリストフォリの原点原理 (1700)',
-          expTitleC: '革巻きロール：「ピアノとフォルテ」を生んだ表面張力弾性',
+          expBadgeC: '✦ クリストフォリ (1700)',
+          expTitleC: '革巻きロール：表面張力が生む高い弾性',
           expBodyC: (reb, tau) =>
-            `クリストフォリの<strong>革巻き中空ロール</strong>は外周全体の<strong>表面張力</strong>を活用。柔らかい鹿革が <em>piano</em> を支え、<strong>復元力 ${reb}%</strong>（<strong>τc ≈ ${tau} ms</strong>）の素早い離弦が響きを解放します。`,
+            `鹿革が繊細な <em>piano</em> を支え、リング張力（<strong>復元 ${reb}%</strong>・<strong>τc ≈ ${tau} ms</strong>）が素早い離弦を生みます。`,
           expBulletC:
-            `<strong>本質的洞察：</strong> 接触時間を短く保つのは単なる硬さではなく<strong>張力による真の弾性</strong>です。弾性を欠く硬直したフェルトは弦を止めてしまいます。`,
-          expBadgeR: '✦ 全ダイナミクス (pp ↔ ff) を開くゾーン均衡',
-          expTitleR: 'しなやかな移行帯が pp を生み、½フランク弾性が ff を解き放つ',
+            `<strong>核心：</strong> 短い接触時間は硬直ではなく<strong>張力弾性</strong>から生まれます。`,
+          expBadgeR: '✦ ゾーン均衡 (pp ↔ ff)',
+          expTitleR: '柔軟な移行帯で pp、½フランクの弾性で ff を開放',
           expBodyR: (reb, tau, hardDb, ap, fl) =>
-            `<strong>クラウン (${ap}%)</strong> から半分の密度の<strong>フランク (${fl}% = ½)</strong> への滑らかな移行が繊細な <em>pp</em> を可能にし、高いフェルト弾性（<strong>復元 ${reb}%</strong>）が短い <strong>τc ≈ ${tau} ms</strong> で力強い <em>ff</em> を実現します（<strong>${hardDb}</strong>）。`,
+            `<strong>クラウン (${ap}%)</strong> から <strong>½フランク (${fl}%)</strong> へ力が滑らかに伝わり、繊細な <em>pp</em> と短い <strong>τc ≈ ${tau} ms</strong> による <em>ff</em>（<strong>${hardDb}</strong>）を両立。`,
           expBulletR:
-            `<strong>なぜダイナミクスは結果なのか：</strong> 優しい初期クッション（<em>pp</em>）と素早いフランク復元（<em>ff</em>）の両立によってはじめて全表現幅が生まれます。`,
-          expBadgeNoPp: '⚠️ ピアニッシモの喪失（pp 不可）',
-          expTitleNoPp: '硬すぎるクラウンと移行帯では繊細な pp は生まれない！',
+            `<strong>要点：</strong> 初期の柔軟さとフランク復元力が揃って初めて全ダイナミクスが開きます。`,
+          expBadgeNoPp: '⚠ ピアニッシモ不可 (pp)',
+          expTitleNoPp: 'クラウンや移行帯の過硬が pp を阻む',
           expBodyNoPp: (ap, tau, hardDb) =>
-            `<strong>クラウン (${ap}%)</strong> やフランクへの移行帯が硬すぎると初期の柔軟なクッションが失われ、最弱打でも硬い殻に衝突します（<strong>${hardDb}</strong>、<strong>τc ≈ ${tau} ms</strong>）— <strong>ピアニッシモは成立しません</strong>。`,
+            `<strong>クラウン (${ap}%)</strong> の初期クッションが無く、最弱打でも硬い殻に当たり（<strong>${hardDb}</strong>・<strong>τc ≈ ${tau} ms</strong>）<em>pp</em> が出ません。`,
           expBulletNoPp:
-            `<strong>整音による改善：</strong> クラウン直後の移行帯を丁寧にほぐすことで、芯を保ったまま <em>pp</em> の繊細な立ち上がりを回復できます。`,
-          expBadgeNoFf: '⚠️ 接触時間 τc の延長（ff 不可）',
-          expTitleNoFf: '硬直したフェルトによる弾性不足が接触時間を延ばし ff を阻む！',
+            `<strong>対策：</strong> 移行帯を 90° 刺針で丁寧にほぐし初期の柔軟さを戻します。`,
+          expBadgeNoFf: '⚠ フォルティッシモ不可 (ff)',
+          expTitleNoFf: '弾性不足が接触時間 τc を延ばし ff を抑え込む',
           expBodyNoFf: (reb, tau) =>
-            `硬すぎるフェルト等で十分な弾性が失われると（<strong>復元 ${reb}%</strong>）、ハンマーが素早く跳ね返らず<strong>接触時間が τc ≈ ${tau} ms へ延長</strong>し、弦振動自らを抑え込んで <strong>ff が出なくなります</strong>。`,
+            `弾性を欠くフェルト（<strong>復元 ${reb}%</strong>）は <strong>τc ≈ ${tau} ms</strong> と弦に長く残り、振動を止めて <em>ff</em> を潰します。`,
           expBulletNoFf:
-            `<strong>音響物理の核心：</strong> 伸びやかな <em>ff</em> には硬直ではなく高い弾性復元力による迅速な離弦が不可欠です。`,
-          expBadgeBlock: '⚠️ 二重のダイナミクス崩壊：pp も ff も出ない状態',
-          expTitleBlock: '硬すぎる移行帯が pp を奪い、フランク遮断による τc 延長が ff を潰す！',
+            `<strong>物理原則：</strong> 伸びる <em>ff</em> には硬さではなく素早い弾性復元が不可欠です。`,
+          expBadgeBlock: '⚠ 二重遮断（pp・ff 喪失）',
+          expTitleBlock: '過硬な移行帯が pp を奪い、フランクを孤立させる',
           expBodyBlock: (flankPct, tau) =>
-            `クラウンからフランクへの過硬な移行帯が <strong>pp</strong> を阻み、同時に½フランクの弾性を遮断（稼働 <strong>${flankPct}%</strong>）。弾性不足により<strong>接触時間 τc が ${tau} ms に延び</strong>、弦を減衰させて <strong>ff も成立しません</strong>。`,
+            `硬い先端が <em>pp</em> を阻み、フランク遮断（稼働 <strong>${flankPct}%</strong>）で <strong>τc が ${tau} ms</strong> に延びて <em>ff</em> も失われます。`,
           expBulletBlock:
-            `<strong>整音診断の要点：</strong> 外周移行ゾーンの硬化を解くことで、柔らかな <em>pp</em> と素早い弾性離弦による <em>ff</em> が同時に蘇ります。`
+            `<strong>整音診断：</strong> 外周移行帯を開放し、<em>pp</em> の柔軟さとフランク弾性を同時に回復します。`
         },
         zh: {
           prvSub: '交互式预览 • 复杂弹簧系统：钢琴弦槌',
@@ -443,118 +413,108 @@
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → 高频衰减`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 生硬 · τc = ${tau} ms ↑`,
           specRoles: ['基音', '八度', '五度', '双八度', '大三度', '五度', '七泛音', '三八度', '大二度', '大三度', '十一音', '十二度'],
-          c1: '1. 毛毡弹性与外层表面张力',
+          c1: '1. 毛毡弹性与表面张力',
           steps1: ['1 · 迟滞', '2 · 中等', '3 · 高弹'],
-          c2: '2. 弦槌几何形状（槌冠曲率半径）',
+          c2: '2. 弦槌形状（槌冠半径）',
           steps2: ['1 · 宽圆', '2 · 音乐会', '3 · 尖窄'],
-          c3: '3. 槌冠压实度（侧翼最宽处 ＝ ½）',
+          c3: '3. 槌冠压实度（侧翼 ＝ ½）',
           steps3: ['1 · 偏软', '2 · 理想', '3 · 过硬'],
           c3ValR: (ap, fl) => `槌冠 ${ap}% · 侧翼 ${fl}%`,
-          c3ValC: (d) => `纸卷紧密度 ${d}%`,
-          c4: '4. 槌冠→侧翼过渡区（外轮廓刚度）',
+          c3ValC: (d) => `紧密度 ${d}%`,
+          c4: '4. 槌冠→侧翼过渡区',
           steps4: ['1 · 贯通', '2 · 偏紧', '3 · 锁死 ✕'],
-          c4Open: (pct) => `力流贯通 (侧翼 ${pct}%)`,
-          c4Mid: (pct) => `部分受阻 (侧翼 ${pct}%)`,
-          c4Block: (pct) => `力流中断! (侧翼 ${pct}%)`,
-          dynLbl: '可奏出的动态范围（物理结果）',
-          dynFull: '✓ 完整音乐会动态 (pp – ff)',
-          dynNoPp: '⚠ 无法奏出 pp（槌冠/过渡过硬）',
-          dynNoFf: '⚠ 无法奏出 ff（τc 延长闷弦）',
+          c4Open: (pct) => `贯通 (${pct}%)`,
+          c4Mid: (pct) => `受阻 (${pct}%)`,
+          c4Block: (pct) => `锁死! (${pct}%)`,
+          dynLbl: '可奏出的动态范围（结果）',
+          dynFull: '✓ 完整动态 (pp – ff)',
+          dynNoPp: '⚠ 无 pp（过硬）',
+          dynNoFf: '⚠ 无 ff（τc ↑）',
           dynNone: '✕ 既无 pp 也无 ff！',
-          dynNotePpOk: '✓ pp 自如（表层柔顺缓冲）',
-          dynNotePpWarn: '△ pp 受限（槌冠偏硬）',
-          dynNotePpNo: '✕ 无 pp：槌冠与过渡带过硬',
-          dynNoteFfOk: '✓ ff 充沛（短 τc · 高弹性）',
-          dynNoteFfWarn: '△ ff 受抑（τc 变长）',
-          dynNoteFfNo: '✕ 无 ff：毛毡过硬失弹 → τc 延长',
+          dynNotePpOk: '✓ pp 自如',
+          dynNotePpWarn: '△ pp 受限',
+          dynNotePpNo: '✕ 无 pp（起音过硬）',
+          dynNoteFfOk: '✓ ff 充沛（短 τc）',
+          dynNoteFfWarn: '△ ff 受抑（τc ↑）',
+          dynNoteFfNo: '✕ 无 ff（τc 延长）',
           kpi1: '弹性回弹力',
           kpi2: '接触时间 τc',
           kpi3: '音色与动态',
-          hystSub: (loss) => `迟滞能量损耗 ${loss}%`,
-          tauFast: '空心环瞬时弹离',
-          tauIdeal: '短促 τc · ff 自由绽放',
-          tauWarn: '△ τc 略增 · ff 受抑',
-          tauSlow: '⚠ 接触延长 → 闷死 ff！',
-          toneSoft: '丝绒柔和（细腻 pp）',
-          toneIdeal: '如歌穿透（pp 至 ff）',
-          toneCrisp: '银亮清澈（弱音与强音）',
-          toneHardNoPp: '音头生硬（失去 pp！）',
-          toneStiffNoFf: '沉闷憋塞（失去 ff！）',
-          toneBlocked: '生硬且闷滞（无 pp/ff）',
-          cvForceVec: 'F_弹力',
-          cvString: '三弦组钢丝琴弦（击弦点）',
-          cvCristoforiTop: '鹿皮缓冲垫（接触区）',
-          cvCristoforiRing: '羊皮纸圆筒（圆周表面张力 σ）',
-          cvCristoforiHollow: '中空弹簧芯（零死重）',
+          hystSub: (loss) => `迟滞损耗 ${loss}%`,
+          tauFast: '空心环快速脱弦',
+          tauIdeal: '短促 τc · ff 绽放',
+          tauWarn: '△ τc 变长 · ff 受抑',
+          tauSlow: '⚠ 延长 → 闷死 ff！',
+          toneSoft: '丝绒柔和 (pp)',
+          toneIdeal: '如歌穿透 (pp–ff)',
+          toneCrisp: '银亮清澈 (p–f)',
+          toneHardNoPp: '音头生硬 (无 pp)',
+          toneStiffNoFf: '沉闷 (无 ff)',
+          toneBlocked: '生硬且闷 (无 pp/ff)',
+          cvForceVec: '弹力',
+          cvReboundVec: '回弹',
+          cvString: '三弦组钢弦',
+          cvCristoforiTop: '鹿皮缓冲垫',
+          cvCristoforiRing: '羊皮纸环 (σ)',
+          cvCristoforiHollow: '中空弹簧芯',
           cvZoneCrown: '槌冠',
           cvZoneFlank: '侧翼',
-          cvCallCrown: (ap) => `槌冠：最高压实密度 (${ap}%)`,
-          cvCallContourOpen: '过渡区（槌冠→侧翼）：力流顺畅贯通',
-          cvCallContourBlock: '⚠ 过渡区过硬：锁死侧翼并扼杀 pp！',
-          cvCallFlankOpen: (fl) => `最宽侧翼：½压实度 (${fl}%) · 弹性鼓张`,
-          cvCallFlankBlock: (fl) => `下部侧翼 (${fl}% = ½)：力流断绝失活！`,
-          cvRennerFix: '纤维渐窄收尾于木芯 · 胶合 + 铆钉锁紧',
-          cvFlowOpen: (pct) => `✓ 力流直达侧翼 (${pct}%)`,
-          cvFlowBlock: '✕ 侧翼锁死 · τc 延长↑',
-          phRest: '静止状态 · 预张力复合弹簧弓',
-          phApproach: '① 击弦上升：槌头向上冲量 ↑',
-          phCompressC: '② 触弦压缩：横向椭圆化 ↔ 与圆周张力 σ',
-          phCompressR: '② 触弦压缩：槌冠 → ½侧翼弹性外扩 ↔ 直达铆钉',
-          phCompressBlock: '② 触弦压缩：⚠ 毛毡过硬失弹，锁死侧翼并延长 τc！',
-          phPushoff: '③ 压缩峰值：琴弦获能 ↑ · 回弹推力 ↓ 启动',
-          phRebound: '④ 弹性回弹：向下回弹合力 F_Bounce ↓',
-          cvFiberTitle: '分区与纤维显微镜',
-          cvFiberCristofori: '鹿皮 + 紧绷羊皮纸卷',
-          cvLoupeCrown: (ap) => `槌冠 (${ap}%)：高密压实`,
-          cvLoupeFlank: (fl) => `侧翼 (${fl}% = ½)：柔韧弹性`,
-          cvLoupeFooterOpen: '高弹性 · pp 至 ff 全贯通',
-          cvLoupeFooterNoPp: '⚠ 起音过硬：无法奏出 pp！',
-          cvLoupeFooterNoFf: '⚠ 弹性不足：τc 延长 · 无 ff！',
-          cvLoupeFooterBlock: '⚠ 过硬失弹：失去 pp 与 ff！',
-          cvLeftPlot: '弹簧特性曲线 F(x) 与迟滞损耗',
-          cvRightPlot: '冲击脉冲 F(t) 与接触时间 τc',
-          cvCurveNoPp: '⚠ 起音过硬 → 无 pp',
-          cvCurveKink: '⚠ 侧翼锁死 → 迟滞剧增',
-          cvPulseLongTau: '⚠ τc 延长 → 无法产生 ff！',
-          cvAxisX: '压缩变形量 x (mm)',
-          cvAxisT: '接触时间 t (ms)',
-          roPrinC: '中空羊皮纸圆筒弹簧 + 鹿皮垫 (1700)',
-          roPrinR: (ap, fl) => `槌冠 ${ap}% → 侧翼 ${fl}% (½) · pp–ff 全开`,
-          roPrinNoPp: (ap) => `⚠ 槌冠 (${ap}%) / 过渡过硬 → 无法产生 pp`,
-          roPrinNoFf: (tau) => `⚠ 毛毡弹性不足 → τc = ${tau} ms (无 ff)`,
-          roPrinBlock: '⚠ 毛毡/过渡过硬失弹 → 接触时间 τc 被延长',
-          roDef: (dz, fmax) => `Δz: ${dz} mm · F_max: ${fmax} N`,
+          cvCallCrown: (ap) => `槌冠 (${ap}%)`,
+          cvCallContourOpen: '过渡区：力流贯通',
+          cvCallContourBlock: '⚠ 过渡区锁死！',
+          cvCallFlankOpen: (fl) => `侧翼½ (${fl}%) · 弹性`,
+          cvCallFlankBlock: (fl) => `侧翼½ (${fl}%)：失活`,
+          cvRennerFix: '胶合 + 铆钉',
+          cvFlowOpen: (pct) => `✓ 力流 (${pct}%)`,
+          cvFlowBlock: '✕ 侧翼锁死',
+          phRest: '静止状态',
+          phApproach: '① 接近 ↑',
+          phCompressC: '② 圆周张力 σ',
+          phCompressR: '② 侧翼协同弹性',
+          phCompressBlock: '② ⚠ 侧翼锁死 · τc↑',
+          phPushoff: '③ 压缩峰值',
+          phRebound: '④ 弹性回弹 ↓',
+          cvFiberTitle: '分区显微',
+          cvFiberCristofori: '鹿皮 + 羊皮纸',
+          cvLoupeCrown: (ap) => `槌冠 (${ap}%)`,
+          cvLoupeFlank: (fl) => `侧翼½ (${fl}%)`,
+          roPrinC: '中空羊皮纸环 + 鹿皮垫 (1700)',
+          roPrinR: (ap, fl) => `槌冠 ${ap}% → 侧翼 ${fl}% (½)`,
+          roPrinNoPp: (ap) => `⚠ 槌冠 ${ap}% 过硬 → 无 pp`,
+          roPrinNoFf: (tau) => `⚠ 失弹 → τc = ${tau} ms (无 ff)`,
+          roPrinBlock: '⚠ 过渡锁死 → τc ↑',
+          roDef: (dz, fmax) => `Δz: ${dz} mm · F: ${fmax} N`,
           roTone: (lbl, db) => `${lbl} (${db})`,
-          expBadgeC: '✦ 克里斯托弗里的原始智慧 (1700)',
-          expTitleC: '皮包纸卷弦槌：造就“弱音与强音”的表面张力弹性',
+          expBadgeC: '✦ 克里斯托弗里 (1700)',
+          expTitleC: '皮包纸卷：表面张力造就高弹性',
           expBodyC: (reb, tau) =>
-            `克里斯托弗里的<strong>鹿皮包裹空心纸卷</strong>利用圆周<strong>表面张力</strong>：表层柔顺鹿皮塑造轻柔 <em>piano</em>，而 <strong>${reb}% 回弹力</strong>使接触时间保持极短（<strong>τc ≈ ${tau} ms</strong>），迅速脱弦。`,
+            `柔顺鹿皮塑造轻柔 <em>piano</em>；圆周张力（<strong>${reb}% 回弹</strong>，<strong>τc ≈ ${tau} ms</strong>）令弦槌迅速脱弦。`,
           expBulletC:
-            `<strong>核心物理启示：</strong> 保持短接触时间靠的是<strong>高张力弹性</strong>而非死硬；缺乏弹性的僵硬毛毡反而会滞留弦上闷死琴音。`,
-          expBadgeR: '✦ 解锁完整动态跨度 (pp ↔ ff) 的分区平衡',
-          expTitleR: '柔顺槌冠过渡成就 pp —— ½压实弹性侧翼释放澎湃 ff',
+            `<strong>核心启示：</strong> 短接触时间源自<strong>张力弹性</strong>，死硬毛毡只会滞留闷弦。`,
+          expBadgeR: '✦ 分区平衡 (pp ↔ ff)',
+          expTitleR: '柔顺过渡成就 pp —— ½弹性侧翼释放 ff',
           expBodyR: (reb, tau, hardDb, ap, fl) =>
-            `从<strong>槌冠 (${ap}%)</strong> 到减半压实<strong>侧翼 (${fl}% = ½)</strong> 的柔顺过渡赋予细腻的 <em>pp</em>；同时充沛的毛毡弹性（<strong>${reb}% 回弹</strong>）保持短促 <strong>τc ≈ ${tau} ms</strong>，支撑辉煌 <em>ff</em>（<strong>${hardDb}</strong>）。`,
+            `力流自<strong>槌冠 (${ap}%)</strong> 顺畅导入<strong>½侧翼 (${fl}%)</strong>：兼顾细腻 <em>pp</em> 与短促 <strong>τc ≈ ${tau} ms</strong> 的辉煌 <em>ff</em>（<strong>${hardDb}</strong>）。`,
           expBulletR:
-            `<strong>为何动态不是独立旋钮：</strong> 唯有槌冠初始柔顺度（决定 <em>pp</em>）与侧翼快速回弹力（决定 <em>ff</em>）协同平衡，才能奏出完整动态。`,
-          expBadgeNoPp: '⚠️ 弱音丧失：无法产生极弱音 (pp)',
-          expTitleNoPp: '槌冠及向侧翼过渡区过硬，彻底扼杀细腻 pp！',
+            `<strong>要诀：</strong> 唯有初始柔顺度与侧翼快速回弹协同，才能解锁完整动态。`,
+          expBadgeNoPp: '⚠ 丧失极弱音 (pp)',
+          expTitleNoPp: '槌冠或过渡带过硬扼杀细腻 pp',
           expBodyNoPp: (ap, tau, hardDb) =>
-            `当<strong>槌冠 (${ap}%)</strong> 与侧翼过渡带过硬时，表层初始缓冲消失：即便极轻触键也会直接撞击硬壳（<strong>${hardDb}</strong>，<strong>τc ≈ ${tau} ms</strong>）——<strong>根本无法产生柔美的 pp</strong>。`,
+            `<strong>槌冠 (${ap}%)</strong> 缺乏表层缓冲，轻触亦直撞硬壳（<strong>${hardDb}</strong>，<strong>τc ≈ ${tau} ms</strong>），无法奏出 <em>pp</em>。`,
           expBulletNoPp:
-            `<strong>整音对策：</strong> 轻柔释放槌冠后方过渡区的僵硬张力，即可在不伤内核的前提下恢复细腻 <em>pp</em> 触感。`,
-          expBadgeNoFf: '⚠️ 接触时间延长：无法产生极强音 (ff)',
-          expTitleNoFf: '毛毡过硬导致弹性不足，延长接触时间 τc 并闷死 ff！',
+            `<strong>对策：</strong> 以 90° 针法轻柔疏通槌冠后方过渡区。`,
+          expBadgeNoFf: '⚠ 丧失极强音 (ff)',
+          expTitleNoFf: '毛毡失弹延长接触时间 τc 并闷死 ff',
           expBodyNoFf: (reb, tau) =>
-            `当过硬或松弛毛毡缺乏弹性（仅 <strong>${reb}% 回弹</strong>）时，弦槌无法迅速弹离琴弦：<strong>接触时间被延长至 τc ≈ ${tau} ms</strong>，反过来扼制琴弦振动——<strong>无法产生真正的 ff</strong>。`,
+            `缺乏弹性的僵硬毛毡（仅 <strong>${reb}% 回弹</strong>）使 <strong>τc ≈ ${tau} ms</strong> 过长，抑制琴弦振动而失去 <em>ff</em>。`,
           expBulletNoFf:
-            `<strong>声学铁律：</strong> 饱满的 <em>ff</em> 依赖充沛弹性带来的快速脱弦，绝非靠僵硬毛毡死顶琴弦。`,
-          expBadgeBlock: '⚠️ 双重动态崩塌：既无 pp 也无 ff',
-          expTitleBlock: '过硬过渡带扼杀 pp —— 侧翼断流失弹延长 τc 并闷死 ff！',
+            `<strong>声学铁律：</strong> 饱满 <em>ff</em> 靠充沛弹性快速脱弦，而非靠死硬顶弦。`,
+          expBadgeBlock: '⚠ 双重锁死（无 pp 与 ff）',
+          expTitleBlock: '过硬过渡带扼杀 pp 并切断侧翼弹性',
           expBodyBlock: (flankPct, tau) =>
-            `槌冠后方过硬的过渡带阻断了轻柔 <strong>pp</strong>，同时切断 ½ 密度弹性侧翼（仅 <strong>${flankPct}% 参与</strong>）。由于弹性不足，<strong>接触时间 τc 延长至 ${tau} ms</strong> 闷住琴弦，<strong>同样无法产生 ff</strong>。`,
+            `生硬表层阻断 <em>pp</em>；侧翼断流（仅 <strong>${flankPct}% 激活</strong>）令 <strong>τc 增至 ${tau} ms</strong> 并闷死 <em>ff</em>。`,
           expBulletBlock:
-            `<strong>整音诊断关键：</strong> 精准疏通槌冠至侧翼的外轮廓硬桥，才能同时找回细腻 <em>pp</em> 与澎湃的侧翼弹性 <em>ff</em>。`
+            `<strong>整音诊断：</strong> 疏通外轮廓硬桥，同时找回 <em>pp</em> 缓冲与侧翼 <em>ff</em> 回弹。`
         }
       };
 
@@ -1030,9 +990,9 @@
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 15.7px Roboto, sans-serif';
+          ctx.font = '700 14.3px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText(dict.cvString, 28, 24);
+          ctx.fillText(dict.cvString, 24, 23);
 
           // Live Force-Direction Phase Pill at Top-Right of Canvas
           let phLabel = dict.phRest;
@@ -1065,19 +1025,19 @@
             phColor = '#4ade80';
             phBorder = 'rgba(74, 222, 128, 0.65)';
           }
-          ctx.font = '700 14.7px Roboto, sans-serif';
-          const pillW = ctx.measureText(phLabel).width + 22;
-          const pillX = W - pillW - 18;
+          ctx.font = '700 13.4px Roboto, sans-serif';
+          const pillW = ctx.measureText(phLabel).width + 20;
+          const pillX = W - pillW - 16;
           ctx.fillStyle = 'rgba(8, 12, 22, 0.88)';
           ctx.strokeStyle = phBorder;
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(pillX, 5, pillW, 26, 13);
+          ctx.roundRect(pillX, 5, pillW, 24, 12);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = phColor;
           ctx.textAlign = 'right';
-          ctx.fillText(phLabel, W - 29, 23);
+          ctx.fillText(phLabel, W - 26, 22);
           ctx.restore();
 
           if (this.mode === 'cristofori') {
@@ -1188,82 +1148,66 @@
           ctx.stroke();
           ctx.restore();
 
-          // --- Clear Phase-Synchronized Force Directions (Kraftrichtungen) ---
-          const arrowCol = phys.T > 0.65 ? '#2ecc71' : '#f59e0b';
-          // Circumferential Surface Tension Arrows around the hollow tube
-          this.drawArrow(ctx, cx - rx - 12, cy - 22, cx - rx - 12, cy + 22, arrowCol, 2.4, 1.05);
-          this.drawArrow(ctx, cx - rx - 12, cy + 22, cx - rx - 12, cy - 22, arrowCol, 2.4, 1.05);
-          this.drawArrow(ctx, cx + rx + 12, cy - 22, cx + rx + 12, cy + 22, arrowCol, 2.4, 1.05);
-          this.drawArrow(ctx, cx + rx + 12, cy + 22, cx + rx + 12, cy - 22, arrowCol, 2.4, 1.05);
-
+          // --- Minimal, Clean Phase-Synchronized Force Directions ---
           if (dyn.forcePhase === 'compress') {
-            // 1) String counter-force pressing down onto crown + lateral ovalization arrows (<- ->)
-            this.drawArrow(ctx, cx, Math.max(8, stringContactY - 22), cx, stringContactY - 1, '#fb923c', 3.0, 1.1);
-            this.drawArrow(ctx, cx - 14, cy, cx - rx + wallThick + 4, cy, '#fb923c', 2.7, 1.05);
-            this.drawArrow(ctx, cx + 14, cy, cx + rx - wallThick - 4, cy, '#fb923c', 2.7, 1.05);
-            // 2) Upward elastic restoring force building inside the ring
-            this.drawArrow(ctx, cx, cy + ry * 0.45, cx, cy - ry + wallThick + 6, '#fbbf24', 3.8, 1.2);
+            // Lateral ovalization pair (<- ->) + upward elastic restoring vector
+            this.drawArrow(ctx, cx - 16, cy, cx - rx + wallThick + 5, cy, '#fb923c', 2.4, 1.0);
+            this.drawArrow(ctx, cx + 16, cy, cx + rx - wallThick - 5, cy, '#fb923c', 2.4, 1.0);
+            this.drawArrow(ctx, cx, cy + ry * 0.42, cx, cy - ry + wallThick + 6, '#fbbf24', 3.4, 1.15);
           } else if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
-            // 1) Stretched ring squeezing back inward (-> <-) via surface tension!
-            this.drawArrow(ctx, cx - rx - 28, cy, cx - rx - 4, cy, '#4ade80', 2.9, 1.1);
-            this.drawArrow(ctx, cx + rx + 28, cy, cx + rx + 4, cy, '#4ade80', 2.9, 1.1);
-            if (dyn.forcePhase === 'pushoff') {
-              // Upward energy transfer into steel string
-              this.drawArrow(ctx, cx, stringContactY - 2, cx, Math.max(6, stringContactY - 25), '#38bdf8', 3.0, 1.1);
-            }
-            // 2) Bold unmistakable DOWNWARD Bounce Force Vector!
-            this.drawArrow(ctx, cx, cy - ry * 0.42, cx, cy + ry * 0.48, '#2ecc71', 4.2, 1.28);
+            // Stretched ring recovering inward (-> <-) + bold downward rebound vector
+            this.drawArrow(ctx, cx - rx - 22, cy, cx - rx - 4, cy, '#4ade80', 2.4, 1.02);
+            this.drawArrow(ctx, cx + rx + 22, cy, cx + rx + 4, cy, '#4ade80', 2.4, 1.02);
+            this.drawArrow(ctx, cx, cy - ry * 0.40, cx, cy + ry * 0.46, '#2ecc71', 3.6, 1.18);
           } else {
-            // Approach or Rest: clear upward primary force vector
-            this.drawArrow(ctx, cx - 22, cy + ry + 11, cx + 22, cy + ry + 11, arrowCol, 2.1, 1.0);
-            this.drawArrow(ctx, cx + 22, cy + ry + 11, cx - 22, cy + ry + 11, arrowCol, 2.1, 1.0);
-            this.drawArrow(ctx, cx, cy + ry * 0.44, cx, cy - ry + 10, '#fbbf24', 3.6, 1.18);
+            // Approach or Rest: single clean upward primary vector
+            this.drawArrow(ctx, cx, cy + ry * 0.42, cx, cy - ry + 10, '#fbbf24', 3.2, 1.12);
           }
 
-          // High-contrast floating force badge to the right of the Cristofori roll (zero inner-wall overlap!)
+          // Compact floating force pill on right
           ctx.save();
           const isDownBounce = (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound');
-          ctx.font = '700 14.2px JetBrains Mono, monospace';
+          ctx.font = '700 12.9px JetBrains Mono, monospace';
           const vecTag = isDownBounce
-            ? `F_Bounce ↓ (${phys.reboundPct}%)`
-            : `${dict.cvForceVec} ↑ (${phys.reboundPct}%)`;
-          const bw = ctx.measureText(vecTag).width + 16;
-          const bx = cx + rx + 20;
+            ? `↓ ${dict.cvReboundVec || 'Bounce'} (${phys.reboundPct}%)`
+            : `↑ ${dict.cvForceVec} (${phys.reboundPct}%)`;
+          const bw = ctx.measureText(vecTag).width + 14;
+          const bx = cx + rx + 18;
           const by = cy - ry * 0.42;
           ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
           ctx.strokeStyle = isDownBounce ? 'rgba(46, 204, 113, 0.72)' : 'rgba(251, 191, 36, 0.65)';
           ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(bx, by - 14, bw, 23, 6);
+          ctx.roundRect(bx, by - 13, bw, 21, 6);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isDownBounce ? '#4ade80' : '#fef08a';
           ctx.textAlign = 'left';
-          ctx.fillText(vecTag, bx + 8, by + 2);
+          ctx.fillText(vecTag, bx + 7, by + 2);
 
-          // Callout lines & labels anchored cleanly on left (pointing to reference geometry)
+          // Short, clean callout labels on left
           const refTopY = stringBaseY + 28;
           const refMidY = restCy;
           const refLowY = restCy + baseR * 0.62;
 
           ctx.textAlign = 'left';
-          ctx.font = '700 15.7px Roboto, sans-serif';
+          ctx.font = '600 13.8px Roboto, sans-serif';
           ctx.fillStyle = '#f8fafc';
-          ctx.fillText(dict.cvCristoforiTop, 26, refTopY);
-          const xTopStart = Math.min(cx - rx * 0.65, 26 + ctx.measureText(dict.cvCristoforiTop).width + 8);
-          ctx.strokeStyle = 'rgba(248,250,252,0.34)';
+          ctx.fillText(dict.cvCristoforiTop, 22, refTopY);
+          const xTopStart = Math.min(cx - rx * 0.65, 22 + ctx.measureText(dict.cvCristoforiTop).width + 8);
+          ctx.strokeStyle = 'rgba(248,250,252,0.30)';
           ctx.beginPath(); ctx.moveTo(xTopStart, refTopY - 3); ctx.lineTo(cx - rx * 0.56, cy - ry - 2); ctx.stroke();
 
           ctx.fillStyle = '#4ade80';
-          ctx.fillText(dict.cvCristoforiRing, 26, refMidY);
-          const xRingStart = Math.min(cx - rx - 18, 26 + ctx.measureText(dict.cvCristoforiRing).width + 8);
-          ctx.strokeStyle = 'rgba(74,222,128,0.32)';
-          ctx.beginPath(); ctx.moveTo(xRingStart, refMidY - 3); ctx.lineTo(cx - rx - 14, cy); ctx.stroke();
+          ctx.fillText(dict.cvCristoforiRing, 22, refMidY);
+          const xRingStart = Math.min(cx - rx - 16, 22 + ctx.measureText(dict.cvCristoforiRing).width + 8);
+          ctx.strokeStyle = 'rgba(74,222,128,0.28)';
+          ctx.beginPath(); ctx.moveTo(xRingStart, refMidY - 3); ctx.lineTo(cx - rx - 8, cy); ctx.stroke();
 
           ctx.fillStyle = '#93c5fd';
-          ctx.fillText(dict.cvCristoforiHollow, 26, refLowY);
-          const xHolStart = Math.min(cx - rx * 0.42, 26 + ctx.measureText(dict.cvCristoforiHollow).width + 8);
-          ctx.strokeStyle = 'rgba(147,197,253,0.30)';
+          ctx.fillText(dict.cvCristoforiHollow, 22, refLowY);
+          const xHolStart = Math.min(cx - rx * 0.42, 22 + ctx.measureText(dict.cvCristoforiHollow).width + 8);
+          ctx.strokeStyle = 'rgba(147,197,253,0.28)';
           ctx.beginPath(); ctx.moveTo(xHolStart, refLowY - 3); ctx.lineTo(cx - rx * 0.35, cy + ry * 0.25); ctx.stroke();
           ctx.restore();
         }
@@ -1832,166 +1776,130 @@
           }
           ctx.restore();
 
-          // --- 7. Force Directions (Kraftrichtungen) & Force-Interruption Markers (✕) ---
+          // --- 7. Streamlined Force Vectors (1 Central + 1 Symmetric Contour Pair) ---
           const axUp0 = evalUpperX(0.24) + 10;
-          const ayUp0 = evalUpperY(0.24) - 3;
+          const ayUp0 = evalUpperY(0.24) - 2;
           const axUpStop = evalUpperX(0.76) + 10;
           const ayUpStop = evalUpperY(0.76) - 2;
           const xStopMark = evalUpperX(0.88) + 2;
           const yStopMark = evalUpperY(0.88);
 
-          const axStart = evalCubic(lowX0, lowX1, lowX2, lowX3, 0.16) + 12;
-          const ayStart = evalCubic(lowY0, lowY1, lowY2, lowY3, 0.16);
-          const axEnd = rivetOuterHW + 11;
+          const axFlank = shoulderHW + 10;
+          const ayFlank = shoulderY + 6;
+          const axEnd = rivetOuterHW + 10;
           const ayEnd = rivetY - 1;
 
           if (isBlocked) {
-            // Draw faded dashed decoupled paths along the lower flank down to the rivet!
+            // Faded dashed decoupled path along lower flank
             ctx.save();
             ctx.setLineDash([4, 4]);
-            ctx.strokeStyle = 'rgba(148, 163, 184, 0.45)';
-            ctx.lineWidth = 2.0;
+            ctx.strokeStyle = 'rgba(148, 163, 184, 0.40)';
+            ctx.lineWidth = 1.8;
             for (const dir of [-1, 1]) {
               ctx.beginPath();
-              ctx.moveTo(cx + dir * axStart, ayStart + 2);
+              ctx.moveTo(cx + dir * axFlank, ayFlank + 2);
               ctx.lineTo(cx + dir * axEnd, ayEnd);
               ctx.stroke();
             }
             ctx.restore();
 
-            // Upper contour force vectors slam into the stiffened outer contour & halt at ✕!
-            this.drawArrow(ctx, cx - axUp0, ayUp0, cx - axUpStop, ayUpStop, '#f87171', 2.7, 1.06);
-            this.drawArrow(ctx, cx + axUp0, ayUp0, cx + axUpStop, ayUpStop, '#f87171', 2.7, 1.06);
+            // 1 symmetric contour vector pair halting at ✕
+            this.drawArrow(ctx, cx - axUp0, ayUp0, cx - axUpStop, ayUpStop, '#f87171', 2.5, 1.02);
+            this.drawArrow(ctx, cx + axUp0, ayUp0, cx + axUpStop, ayUpStop, '#f87171', 2.5, 1.02);
 
-            // Crisp red Stop/Blockade Markers (✕) right between stiff outer contour and widest Flanke!
+            // Red blockade markers (✕)
             ctx.save();
             for (const dir of [-1, 1]) {
               const mx = cx + dir * (xStopMark + 6);
               const my = yStopMark;
               ctx.fillStyle = '#991b1b';
               ctx.strokeStyle = '#fca5a5';
-              ctx.lineWidth = 1.4;
+              ctx.lineWidth = 1.3;
               ctx.beginPath();
-              ctx.arc(mx, my, 7.2, 0, Math.PI * 2);
+              ctx.arc(mx, my, 6.6, 0, Math.PI * 2);
               ctx.fill();
               ctx.stroke();
 
               ctx.strokeStyle = '#ffffff';
-              ctx.lineWidth = 1.8;
+              ctx.lineWidth = 1.7;
               ctx.beginPath();
-              ctx.moveTo(mx - 3.0, my - 3.0); ctx.lineTo(mx + 3.0, my + 3.0);
-              ctx.moveTo(mx + 3.0, my - 3.0); ctx.lineTo(mx - 3.0, my + 3.0);
+              ctx.moveTo(mx - 2.8, my - 2.8); ctx.lineTo(mx + 2.8, my + 2.8);
+              ctx.moveTo(mx + 2.8, my - 2.8); ctx.lineTo(mx - 2.8, my + 2.8);
               ctx.stroke();
             }
             ctx.restore();
 
-            if (dyn.forcePhase === 'compress') {
-              this.drawArrow(ctx, cx, Math.max(8, stringContactY - 22), cx, crownTopY - 2, '#fb923c', 3.0, 1.1);
-              this.drawArrow(ctx, cx, ufTipY + 8, cx, crownTopY + 7, '#f87171', 3.6, 1.16);
-            } else if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
-              if (dyn.forcePhase === 'pushoff') {
-                this.drawArrow(ctx, cx, stringContactY - 2, cx, Math.max(6, stringContactY - 25), '#fb923c', 3.0, 1.1);
-              }
-              this.drawArrow(ctx, cx, crownTopY + 26, cx, ufEndY + 2, '#fb923c', 3.8, 1.22);
+            // Single central vector
+            if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
+              this.drawArrow(ctx, cx, crownTopY + 26, cx, ufEndY + 2, '#fb923c', 3.4, 1.15);
             } else {
-              const upStartY = dyn.forcePhase === 'approach' ? coreDomeY + 14 : ufTipY + 4;
-              this.drawArrow(ctx, cx, upStartY, cx, crownTopY + 8, '#fbbf24', 3.3, 1.12);
+              const upStartY = dyn.forcePhase === 'approach' ? coreDomeY + 12 : ufTipY + 6;
+              this.drawArrow(ctx, cx, upStartY, cx, crownTopY + 8, '#f87171', 3.3, 1.10);
             }
           } else {
-            // OPEN FORCE FLOW: Uninterrupted transmission from Scheitel -> Außenkontur -> 1/2-Flanke -> Klebstoff + Niete!
-            if (dyn.forcePhase === 'compress') {
-              this.drawArrow(ctx, cx, Math.max(8, stringContactY - 22), cx, crownTopY - 2, '#fb923c', 3.0, 1.1);
-              // Smooth continuous force arrows passing through outer contour into widest Flanke & rivet
-              this.drawArrow(ctx, cx - axUp0, ayUp0, cx - axStart + 1, ayStart - 4, '#fbbf24', 2.6, 1.08);
-              this.drawArrow(ctx, cx + axUp0, ayUp0, cx + axStart - 1, ayStart - 4, '#fbbf24', 2.6, 1.08);
-              this.drawArrow(ctx, cx - axStart, ayStart, cx - axEnd, ayEnd, skinCol, 2.9, 1.15);
-              this.drawArrow(ctx, cx + axStart, ayStart, cx + axEnd, ayEnd, skinCol, 2.9, 1.15);
-              // Elastic outward flank-belly flex vectors at widest cross-section (1/2 density!)
-              this.drawArrow(ctx, cx - shoulderHW + 15, shoulderY, cx - shoulderHW - 6, shoulderY, '#38bdf8', 2.3, 0.98);
-              this.drawArrow(ctx, cx + shoulderHW - 15, shoulderY, cx + shoulderHW + 6, shoulderY, '#38bdf8', 2.3, 0.98);
-              // Deep compound restoring spring vector
-              this.drawArrow(ctx, cx, coreDomeY + 10, cx, crownTopY + 7, '#fbbf24', 3.9, 1.20);
-            } else if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
-              if (dyn.forcePhase === 'pushoff') {
-                this.drawArrow(ctx, cx, stringContactY - 2, cx, Math.max(6, stringContactY - 25), '#38bdf8', 3.0, 1.1);
-              }
-              this.drawArrow(ctx, cx - axEnd, ayEnd, cx - axStart, ayStart, '#4ade80', 2.8, 1.12);
-              this.drawArrow(ctx, cx + axEnd, ayEnd, cx + axStart, ayStart, '#4ade80', 2.8, 1.12);
-              this.drawArrow(ctx, cx, crownTopY + 26, cx, ufEndY + 4, '#2ecc71', 4.2, 1.30);
+            // OPEN FORCE FLOW: 1 central spring vector + 1 clean contour-to-flank vector per side
+            if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
+              this.drawArrow(ctx, cx - axFlank, ayFlank, cx - axUp0, ayUp0, '#4ade80', 2.5, 1.05);
+              this.drawArrow(ctx, cx + axFlank, ayFlank, cx + axUp0, ayUp0, '#4ade80', 2.5, 1.05);
+              this.drawArrow(ctx, cx, crownTopY + 26, cx, ufEndY + 4, '#2ecc71', 3.7, 1.20);
             } else {
-              this.drawArrow(ctx, cx - axUp0, ayUp0, cx - axStart + 1, ayStart - 4, 'rgba(74, 222, 128, 0.78)', 2.1, 1.0);
-              this.drawArrow(ctx, cx + axUp0, ayUp0, cx + axStart - 1, ayStart - 4, 'rgba(74, 222, 128, 0.78)', 2.1, 1.0);
-              this.drawArrow(ctx, cx - axStart, ayStart, cx - axEnd, ayEnd, skinCol, 2.3, 1.05);
-              this.drawArrow(ctx, cx + axStart, ayStart, cx + axEnd, ayEnd, skinCol, 2.3, 1.05);
-              const upStartY = dyn.forcePhase === 'approach' ? coreDomeY + 16 : ufTipY + 2;
-              this.drawArrow(ctx, cx, upStartY, cx, crownTopY + 8, '#fbbf24', 3.5, 1.16);
+              const sideCol = dyn.forcePhase === 'compress' ? '#38bdf8' : 'rgba(74, 222, 128, 0.80)';
+              const sideW = dyn.forcePhase === 'compress' ? 2.6 : 2.1;
+              this.drawArrow(ctx, cx - axUp0, ayUp0, cx - axFlank, ayFlank, sideCol, sideW, 1.04);
+              this.drawArrow(ctx, cx + axUp0, ayUp0, cx + axFlank, ayFlank, sideCol, sideW, 1.04);
+              const upStartY = dyn.forcePhase === 'compress' ? coreDomeY + 10 : (dyn.forcePhase === 'approach' ? coreDomeY + 14 : ufTipY + 4);
+              this.drawArrow(ctx, cx, upStartY, cx, crownTopY + 8, '#fbbf24', 3.4, 1.12);
             }
           }
 
-          // Right-Side Diagnostic Badges (Force Flow Status + Rebound Force)
+          // Single Compact Right-Side Force-Flow Pill
           ctx.save();
-          ctx.font = '700 14.2px JetBrains Mono, monospace';
+          ctx.font = '700 12.8px JetBrains Mono, monospace';
           const flowTxt = isBlocked ? dict.cvFlowBlock : dict.cvFlowOpen(phys.flankActivePct);
-          const flowW = ctx.measureText(flowTxt).width + 16;
+          const flowW = ctx.measureText(flowTxt).width + 14;
           const flowX = cx + shoulderHW + 16;
-          const flowY = Math.max(54, shoulderY - 15);
-          ctx.fillStyle = isBlocked ? 'rgba(42, 10, 16, 0.92)' : 'rgba(8, 18, 26, 0.88)';
-          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.82)' : 'rgba(56, 189, 248, 0.62)';
-          ctx.lineWidth = 1.2;
+          const flowY = Math.max(52, shoulderY - 12);
+          ctx.fillStyle = isBlocked ? 'rgba(42, 10, 16, 0.90)' : 'rgba(8, 18, 26, 0.86)';
+          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.80)' : 'rgba(56, 189, 248, 0.60)';
+          ctx.lineWidth = 1.15;
           ctx.beginPath();
-          ctx.roundRect(flowX, flowY - 14, flowW, 23, 6);
+          ctx.roundRect(flowX, flowY - 13, flowW, 21, 5.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
           ctx.textAlign = 'left';
-          ctx.fillText(flowTxt, flowX + 8, flowY + 2);
-
-          if (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound') {
-            const bTxt = `F_Bounce ↓ (${phys.reboundPct}%)`;
-            const bw = ctx.measureText(bTxt).width + 16;
-            const by = flowY + 28;
-            ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
-            ctx.strokeStyle = isBlocked ? 'rgba(251, 146, 60, 0.72)' : 'rgba(46, 204, 113, 0.72)';
-            ctx.beginPath();
-            ctx.roundRect(flowX, by - 14, bw, 23, 6);
-            ctx.fill();
-            ctx.stroke();
-            ctx.fillStyle = isBlocked ? '#fdba74' : '#4ade80';
-            ctx.fillText(bTxt, flowX + 8, by + 2);
-          }
+          ctx.fillText(flowTxt, flowX + 7, flowY + 1.5);
           ctx.restore();
 
-          // --- 8. Crisp On-Head Compaction Zone Pills (SCHEITEL 100%rel vs. FLANKE = 1/2) ---
+          // --- 8. On-Head Compaction Zone Pills (SCHEITEL vs. ½ FLANKE) ---
           ctx.save();
           ctx.textAlign = 'center';
-          // Crown Pill (Scheitel = Peak Compaction)
           const crownTag = `${dict.cvZoneCrown} ${phys.rhoApexPct}%`;
-          ctx.font = '700 13.7px JetBrains Mono, monospace';
-          const cwTag = ctx.measureText(crownTag).width + 12;
-          const cyTag = crownTopY + 19;
+          ctx.font = '700 12.4px JetBrains Mono, monospace';
+          const cwTag = ctx.measureText(crownTag).width + 11;
+          const cyTag = crownTopY + 18;
           ctx.fillStyle = 'rgba(10, 14, 24, 0.84)';
-          ctx.strokeStyle = 'rgba(251, 191, 36, 0.62)';
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.60)';
           ctx.lineWidth = 1.0;
           ctx.beginPath();
-          ctx.roundRect(cx - cwTag / 2, cyTag - 12, cwTag, 17, 4.5);
+          ctx.roundRect(cx - cwTag / 2, cyTag - 11, cwTag, 16, 4);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = '#fef08a';
           ctx.fillText(crownTag, cx, cyTag);
 
-          // Left & Right Widest Flank Pills (Flanke = exact 1/2 Compaction of Crown!)
           const flankTag = `½ (${phys.rhoFlankPct}%)`;
-          ctx.font = '700 13.2px JetBrains Mono, monospace';
-          const fwTag = ctx.measureText(flankTag).width + 10;
+          ctx.font = '700 12.0px JetBrains Mono, monospace';
+          const fwTag = ctx.measureText(flankTag).width + 9;
           const flankCenterOff = ufOuterHW + (shoulderHW - ufOuterHW) * 0.54;
           if (shoulderHW - ufOuterHW > fwTag * 0.62) {
             for (const dir of [-1, 1]) {
               const fx = cx + dir * flankCenterOff;
               const fy = shoulderY + 4;
               ctx.fillStyle = 'rgba(8, 13, 24, 0.84)';
-              ctx.strokeStyle = isBlocked ? 'rgba(148, 163, 184, 0.45)' : 'rgba(56, 189, 248, 0.65)';
+              ctx.strokeStyle = isBlocked ? 'rgba(148, 163, 184, 0.45)' : 'rgba(56, 189, 248, 0.62)';
               ctx.beginPath();
-              ctx.roundRect(fx - fwTag / 2, fy - 11.5, fwTag, 16.5, 4.5);
+              ctx.roundRect(fx - fwTag / 2, fy - 10.5, fwTag, 15.5, 4);
               ctx.fill();
               ctx.stroke();
               ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
@@ -1999,159 +1907,133 @@
             }
           }
 
-          // --- 9. Clean Left Zone Callouts With Measured Leader Lines (Zero Overlap!) ---
-          const yLbl1 = stringBaseY + 28;
-          const yLbl2 = restY0 + feltH * 0.35;
-          const yLbl3 = restY0 + feltH * 0.63;
-          const yLbl4 = restY0 + feltH * 0.90;
+          // --- 9. Concise Left Structural Callouts (3 Non-Redundant Zones) ---
+          const yLbl2 = restY0 + feltH * 0.28;
+          const yLbl3 = restY0 + feltH * 0.58;
+          const yLbl4 = restY0 + feltH * 0.89;
 
           ctx.textAlign = 'left';
-          ctx.font = '600 15.2px Roboto, sans-serif';
+          ctx.font = '600 13.6px Roboto, sans-serif';
+          ctx.lineWidth = 1.1;
 
-          // Callout 1: Scheitel (Peak Compaction)
-          const txt1 = dict.cvCallCrown(phys.rhoApexPct);
-          ctx.fillStyle = '#fde047';
-          ctx.fillText(txt1, 20, yLbl1);
-          const x1 = Math.min(cx - shoulderHW * 0.55, 20 + ctx.measureText(txt1).width + 8);
-          ctx.strokeStyle = 'rgba(253, 224, 71, 0.40)';
-          ctx.lineWidth = 1.15;
-          ctx.beginPath(); ctx.moveTo(x1, yLbl1 - 3); ctx.lineTo(cx - flatHW - 12, crownTopY + 12); ctx.stroke();
-
-          // Callout 2: Outer-Contour Transition Zone (Scheitel -> Flanke)
+          // Callout 1: Outer-Contour Transition (Scheitel -> Flanke)
           const txt2 = isBlocked ? dict.cvCallContourBlock : dict.cvCallContourOpen;
           ctx.fillStyle = isBlocked ? '#f87171' : '#4ade80';
-          ctx.fillText(txt2, 20, yLbl2);
+          ctx.fillText(txt2, 18, yLbl2);
           const xContourTarget = cx - evalUpperX(0.56);
           const yContourTarget = evalUpperY(0.56);
-          const x2 = Math.min(xContourTarget - 14, 20 + ctx.measureText(txt2).width + 8);
-          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.55)' : 'rgba(74, 222, 128, 0.38)';
+          const x2 = Math.min(xContourTarget - 14, 18 + ctx.measureText(txt2).width + 8);
+          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.52)' : 'rgba(74, 222, 128, 0.36)';
           ctx.beginPath(); ctx.moveTo(x2, yLbl2 - 3); ctx.lineTo(xContourTarget - 3, yContourTarget); ctx.stroke();
 
-          // Callout 3: Widest Flank (1/2 Compaction) & Lower Flank Spring Belly
+          // Callout 2: Widest Flank (½ Compaction)
           const txt3 = isBlocked ? dict.cvCallFlankBlock(phys.rhoFlankPct) : dict.cvCallFlankOpen(phys.rhoFlankPct);
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#38bdf8';
-          ctx.fillText(txt3, 20, yLbl3);
-          const x3 = Math.min(cx - shoulderHW - 12, 20 + ctx.measureText(txt3).width + 8);
-          ctx.strokeStyle = isBlocked ? 'rgba(252, 165, 165, 0.45)' : 'rgba(56, 189, 248, 0.42)';
+          ctx.fillText(txt3, 18, yLbl3);
+          const x3 = Math.min(cx - shoulderHW - 12, 18 + ctx.measureText(txt3).width + 8);
+          ctx.strokeStyle = isBlocked ? 'rgba(252, 165, 165, 0.42)' : 'rgba(56, 189, 248, 0.40)';
           ctx.beginPath(); ctx.moveTo(x3, yLbl3 - 3); ctx.lineTo(cx - shoulderHW + 4, shoulderY + 4); ctx.stroke();
 
-          // Callout 4: Fiber Run-Out on Wood + Glue + Brass Rivet
+          // Callout 3: Glue + Brass Rivet
           ctx.fillStyle = '#fbbf24';
-          ctx.fillText(dict.cvRennerFix, 20, yLbl4);
-          const x4 = Math.min(cx - rivetOuterHW - 14, 20 + ctx.measureText(dict.cvRennerFix).width + 8);
-          ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
+          ctx.fillText(dict.cvRennerFix, 18, yLbl4);
+          const x4 = Math.min(cx - rivetOuterHW - 14, 18 + ctx.measureText(dict.cvRennerFix).width + 8);
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.42)';
           ctx.beginPath(); ctx.moveTo(x4, yLbl4 - 3); ctx.lineTo(cx - rivetOuterHW - 4, rivetY); ctx.stroke();
           ctx.restore();
         }
 
         drawFiberLoupe(ctx, W, H, phys, dict) {
-          const boxW = Math.min(286, W * 0.315);
-          const boxH = Math.min(170, H * 0.59);
+          const boxW = Math.min(232, W * 0.265);
+          const boxH = Math.min(126, H * 0.46);
           const bx = W - boxW - 14;
           const by = H - boxH - 12;
           const isBlocked = this.mode === 'renner' && phys.blockFactor >= 0.35;
 
           ctx.save();
-          ctx.fillStyle = 'rgba(8, 12, 22, 0.92)';
-          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.55)' : 'rgba(200, 163, 86, 0.44)';
-          ctx.lineWidth = 1.3;
+          ctx.fillStyle = 'rgba(8, 12, 22, 0.90)';
+          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.52)' : 'rgba(200, 163, 86, 0.42)';
+          ctx.lineWidth = 1.2;
           ctx.beginPath();
-          ctx.roundRect(bx, by, boxW, boxH, 10);
+          ctx.roundRect(bx, by, boxW, boxH, 9);
           ctx.fill();
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 14.2px Roboto, sans-serif';
+          ctx.font = '700 12.8px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 19);
+          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 17);
 
           if (this.mode === 'cristofori') {
-            const midY = by + boxH * 0.55;
+            const midY = by + boxH * 0.56;
             ctx.strokeStyle = '#f8fafc';
-            ctx.lineWidth = 4;
+            ctx.lineWidth = 3.6;
             ctx.beginPath();
-            ctx.moveTo(bx + 14, midY - 16);
-            ctx.quadraticCurveTo(bx + boxW / 2, midY - 26, bx + boxW - 14, midY - 16);
+            ctx.moveTo(bx + 14, midY - 12);
+            ctx.quadraticCurveTo(bx + boxW / 2, midY - 21, bx + boxW - 14, midY - 12);
             ctx.stroke();
 
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = r === 0 ? '#2ecc71' : '#d4af37';
-              ctx.lineWidth = r === 0 ? 2.2 : 1.5;
+              ctx.lineWidth = r === 0 ? 2.0 : 1.4;
               ctx.beginPath();
-              ctx.moveTo(bx + 14, midY - 6 + r * 9);
-              ctx.quadraticCurveTo(bx + boxW / 2, midY - 16 + r * 9, bx + boxW - 14, midY - 6 + r * 9);
+              ctx.moveTo(bx + 14, midY - 3 + r * 8);
+              ctx.quadraticCurveTo(bx + boxW / 2, midY - 12 + r * 8, bx + boxW - 14, midY - 3 + r * 8);
               ctx.stroke();
             }
             ctx.fillStyle = '#cbd5e1';
-            ctx.font = '500 14.2px Roboto, sans-serif';
+            ctx.font = '500 12.4px Roboto, sans-serif';
             ctx.fillText(dict.cvFiberCristofori, bx + 10, by + boxH - 9);
           } else {
-            // Split 2-Zone Micro-Comparison: Top = Dense Scheitel (100%rel) vs. Bottom = 1/2-Dense Flanke!
-            const crimpAmp = 2.7 - phys.T * 0.9;
+            const crimpAmp = 2.5 - phys.T * 0.85;
 
-            // 1) Top Half: High-Compaction Scheitel (tightly packed fibers)
+            // 1) Top Half: Dense Scheitel
             ctx.fillStyle = '#fde047';
-            ctx.font = '600 13.7px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 37);
+            ctx.font = '600 12.2px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 34);
 
-            const crownSpacing = 5.4 - phys.D * 1.4; // Tighter spacing as Crown density rises!
+            const crownSpacing = 4.8 - phys.D * 1.2;
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = r === 0 ? '#fb923c' : '#fbbf24';
-              ctx.lineWidth = r === 0 ? 1.8 : 1.35;
+              ctx.lineWidth = r === 0 ? 1.7 : 1.3;
               ctx.beginPath();
-              const y0 = by + 46 + r * crownSpacing;
+              const y0 = by + 42 + r * crownSpacing;
               for (let x = 0; x <= boxW - 24; x += 4) {
-                const py = y0 + Math.sin(x * 0.34 + r) * (crimpAmp * 0.72);
+                const py = y0 + Math.sin(x * 0.34 + r) * (crimpAmp * 0.7);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
               }
               ctx.stroke();
             }
 
-            // Divider line between Scheitel & Flanke micro-zones
-            ctx.strokeStyle = isBlocked ? 'rgba(239, 68, 68, 0.75)' : 'rgba(255, 255, 255, 0.14)';
+            // Divider
+            ctx.strokeStyle = isBlocked ? 'rgba(239, 68, 68, 0.72)' : 'rgba(255, 255, 255, 0.14)';
             ctx.setLineDash(isBlocked ? [4, 3] : []);
-            ctx.lineWidth = isBlocked ? 1.4 : 1.0;
+            ctx.lineWidth = isBlocked ? 1.3 : 1.0;
             ctx.beginPath();
-            ctx.moveTo(bx + 10, by + 70);
-            ctx.lineTo(bx + boxW - 10, by + 70);
+            ctx.moveTo(bx + 10, by + 63);
+            ctx.lineTo(bx + boxW - 10, by + 63);
             ctx.stroke();
             ctx.setLineDash([]);
 
-            // 2) Bottom Half: Half-Compaction Flanke (2x wider elastic spacing!)
+            // 2) Bottom Half: ½-Dense Flanke
             ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
-            ctx.font = '600 13.7px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 88);
+            ctx.font = '600 12.2px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 79);
 
-            const flankSpacing = crownSpacing * 2.0; // Visually 2x wider spacing = 1/2 density!
+            const flankSpacing = crownSpacing * 1.95;
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = isBlocked
                 ? 'rgba(148, 163, 184, 0.38)'
                 : (r === 0 ? '#2ecc71' : '#38bdf8');
-              ctx.lineWidth = r === 0 ? 1.7 : 1.3;
+              ctx.lineWidth = r === 0 ? 1.65 : 1.25;
               ctx.beginPath();
-              const y0 = by + 98 + r * Math.min(10.5, flankSpacing);
+              const y0 = by + 89 + r * Math.min(9.5, flankSpacing);
               for (let x = 0; x <= boxW - 24; x += 4) {
-                const py = y0 + Math.sin(x * 0.24 + r * 1.4) * (crimpAmp * 1.15);
+                const py = y0 + Math.sin(x * 0.24 + r * 1.4) * (crimpAmp * 1.1);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
               }
               ctx.stroke();
             }
-
-            let loupeFootTxt = dict.cvLoupeFooterOpen;
-            let loupeFootCol = '#86efac';
-            if (isBlocked || (phys.noPp && phys.noFf)) {
-              loupeFootTxt = dict.cvLoupeFooterBlock;
-              loupeFootCol = '#fca5a5';
-            } else if (phys.noPp) {
-              loupeFootTxt = dict.cvLoupeFooterNoPp;
-              loupeFootCol = '#fdba74';
-            } else if (phys.noFf) {
-              loupeFootTxt = dict.cvLoupeFooterNoFf;
-              loupeFootCol = '#fca5a5';
-            }
-            ctx.fillStyle = loupeFootCol;
-            ctx.font = '600 13.7px Roboto, sans-serif';
-            ctx.fillText(loupeFootTxt, bx + 10, by + boxH - 9);
           }
           ctx.restore();
         }
@@ -2198,7 +2080,7 @@
           ctx.restore();
 
           // Top Register Zone Labels + Live tau_c Spectral Status Pill
-          ctx.font = '700 14.2px Roboto, sans-serif';
+          ctx.font = '700 12.9px Roboto, sans-serif';
           ctx.textAlign = 'left';
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
           ctx.fillText(dict.specZone1, xZ1 + 4, 18);
@@ -2224,20 +2106,20 @@
             stCol = '#fdba74';
             stBrd = 'rgba(251, 146, 60, 0.65)';
           }
-          ctx.font = '700 13.7px JetBrains Mono, monospace';
-          const stW = ctx.measureText(stTxt).width + 16;
+          ctx.font = '700 12.4px JetBrains Mono, monospace';
+          const stW = ctx.measureText(stTxt).width + 14;
           if (W - padR - stW > z3End + 10) {
             const sx = W - padR - stW;
             ctx.fillStyle = 'rgba(8, 12, 22, 0.90)';
             ctx.strokeStyle = stBrd;
             ctx.lineWidth = 1.1;
             ctx.beginPath();
-            ctx.roundRect(sx, 3.5, stW, 21, 6);
+            ctx.roundRect(sx, 4, stW, 19.5, 5.5);
             ctx.fill();
             ctx.stroke();
             ctx.fillStyle = stCol;
             ctx.textAlign = 'right';
-            ctx.fillText(stTxt, W - padR - 8, 18);
+            ctx.fillText(stTxt, W - padR - 7, 17.5);
           }
 
           // Helper for bar coloring by acoustic condition
@@ -2261,7 +2143,7 @@
             const y0 = mapY(0);
 
             // Horizontal dB Gridlines (+8, +4, 0, -4, -8 dB)
-            ctx.font = '600 13.7px JetBrains Mono, monospace';
+            ctx.font = '600 12.4px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [8, 4, 0, -4, -8]) {
               const yg = mapY(g);
@@ -2282,7 +2164,7 @@
 
               ctx.fillStyle = g === 0 ? '#fef08a' : '#94a3b8';
               const gLbl = g > 0 ? `+${g} dB` : (g < 0 ? `−${Math.abs(g)} dB` : '0 dB');
-              ctx.fillText(gLbl, padL - 7, yg + 4.5);
+              ctx.fillText(gLbl, padL - 7, yg + 4);
             }
 
             // Draw Bipolar ΔdB Bars + Labels
@@ -2320,7 +2202,7 @@
               ctx.restore();
 
               // Signed ΔdB label above/below bar
-              ctx.font = '700 13.7px JetBrains Mono, monospace';
+              ctx.font = '700 12.4px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
@@ -2329,15 +2211,15 @@
                 ? ((phys.noPp && p.n >= 4 && p.deltaDb > 1.0) ? '#fdba74' : '#fef08a')
                 : (((isBlocked && p.n <= 3) || (phys.noFf && p.n >= 4)) ? '#fca5a5' : '#7dd3fc');
               const lblY = p.deltaDb >= 0
-                ? Math.max(padT + 5, barTop - 5.5)
-                : Math.min(yb - 2, barTop + barH + 13.5);
+                ? Math.max(padT + 5, barTop - 5)
+                : Math.min(yb - 2, barTop + barH + 12.5);
               ctx.fillText(valTxt, cx, lblY);
             });
 
             // Smooth Spectral Envelope Curve connecting H1..H12 ΔdB tips
             ctx.save();
             ctx.strokeStyle = (isBlocked || phys.noFf) ? 'rgba(248, 113, 113, 0.82)' : (phys.noPp ? 'rgba(251, 146, 60, 0.85)' : 'rgba(254, 240, 138, 0.78)');
-            ctx.lineWidth = 2.0;
+            ctx.lineWidth = 1.9;
             ctx.beginPath();
             curvePts.forEach((pt, idx) => {
               if (idx === 0) ctx.moveTo(pt.x, pt.y);
@@ -2351,7 +2233,7 @@
             curvePts.forEach(pt => {
               ctx.fillStyle = '#ffffff';
               ctx.beginPath();
-              ctx.arc(pt.x, pt.y, 2.5, 0, Math.PI * 2);
+              ctx.arc(pt.x, pt.y, 2.3, 0, Math.PI * 2);
               ctx.fill();
             });
             ctx.restore();
@@ -2360,7 +2242,7 @@
             const maxD = 8, minD = -38;
             const mapY = (d) => padT + ((maxD - Math.max(minD, Math.min(maxD, d))) / (maxD - minD)) * ph;
 
-            ctx.font = '600 13.7px JetBrains Mono, monospace';
+            ctx.font = '600 12.4px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [0, -10, -20, -30]) {
               const yg = mapY(g);
@@ -2372,7 +2254,7 @@
               ctx.stroke();
               ctx.setLineDash([]);
               ctx.fillStyle = '#94a3b8';
-              ctx.fillText(g === 0 ? '0 dB' : `−${Math.abs(g)} dB`, padL - 7, yg + 4.5);
+              ctx.fillText(g === 0 ? '0 dB' : `−${Math.abs(g)} dB`, padL - 7, yg + 4);
             }
 
             phys.partials.forEach((p, i) => {
@@ -2382,7 +2264,6 @@
               const yr = mapY(p.refDb);
               const col = getBarColor(p);
 
-              // Shaded loss zone when current level drops below concert reference
               if (p.deltaDb < -0.2) {
                 ctx.fillStyle = 'rgba(248, 113, 113, 0.18)';
                 ctx.fillRect(bx, yr, barW, Math.max(1, yc - yr));
@@ -2399,10 +2280,9 @@
               ctx.fill();
               ctx.stroke();
 
-              // White dashed Concert Reference line per partial (identical visual language to Slide 33!)
               ctx.save();
               ctx.strokeStyle = '#ffffff';
-              ctx.lineWidth = 1.8;
+              ctx.lineWidth = 1.7;
               ctx.setLineDash([4, 3]);
               ctx.beginPath();
               ctx.moveTo(bx - 3, yr);
@@ -2410,12 +2290,12 @@
               ctx.stroke();
               ctx.restore();
 
-              ctx.font = '700 13.7px JetBrains Mono, monospace';
+              ctx.font = '700 12.4px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
               ctx.fillStyle = p.deltaDb >= 0 ? '#fef08a' : '#7dd3fc';
-              ctx.fillText(`${signStr}${this.fmt(absV, 1)}`, cx, Math.max(padT + 6, Math.min(yc, yr) - 6));
+              ctx.fillText(`${signStr}${this.fmt(absV, 1)}`, cx, Math.max(padT + 6, Math.min(yc, yr) - 5.5));
             });
           }
 
@@ -2431,13 +2311,13 @@
           phys.partials.forEach((p, i) => {
             const cx = padL + slotW * (i + 0.5);
             ctx.textAlign = 'center';
-            ctx.font = '700 14.2px JetBrains Mono, monospace';
+            ctx.font = '700 12.9px JetBrains Mono, monospace';
             ctx.fillStyle = p.dissonant ? '#fcd34d' : '#f8fafc';
-            ctx.fillText(`H${p.n}`, cx, yb + 17);
+            ctx.fillText(`H${p.n}`, cx, yb + 16);
 
-            ctx.font = '500 13.2px Roboto, sans-serif';
+            ctx.font = '500 12.0px Roboto, sans-serif';
             ctx.fillStyle = '#94a3b8';
-            ctx.fillText(roles[i] || '', cx, yb + 34);
+            ctx.fillText(roles[i] || '', cx, yb + 31);
           });
 
           ctx.restore();

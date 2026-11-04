@@ -3966,14 +3966,14 @@ def get_all_slides_html():
                 <!-- Dynamische Meister-Erklärung -->
                 <div class="pta-explain-box">
                   <div>
-                    <span class="bento-badge gold" id="pta-exp-badge" style="margin-bottom:6px;" data-i18n="s33_exp_badge">✦ AKUSTISCHE WIRKUNG IM KLAVIERTON</span>
-                    <h4 class="pta-explain-title" id="pta-exp-title">Konzert-Balance: Tragfähiger Kern mit kontrollierter Obertonkrone</h4>
+                    <span class="bento-badge gold" id="pta-exp-badge" style="margin-bottom:6px;" data-i18n="s33_exp_badge">✦ KLANGWIRKUNG</span>
+                    <h4 class="pta-explain-title" id="pta-exp-title">Konzert-Balance: Tragender Kern mit feiner Obertonkrone</h4>
                   </div>
                   <p class="pta-explain-text" id="pta-exp-body">
-                    Ausgewogene Hammerelastizität (<strong>τc ≈ 2,4 ms</strong>): Volles Bassfundament (H₁–H₄) verbindet sich mit der singenden großen Terz H₅ (275 Hz) und Quinte H₆ (330 Hz) ohne metallische Härte.
+                    Ausgewogene Elastizität (<strong>τc ≈ 2,4 ms</strong>): Volles Fundament (H₁–H₄) verbindet sich mit Terz H₅ und Quinte H₆ ohne Schärfe.
                   </p>
                   <div class="pta-explain-bullet" id="pta-exp-strike">
-                    <strong>Klassischer Anschlagspunkt 1/8 L (195 mm):</strong> Legt einen Knoten auf <strong>H₈ (−15,7 dB)</strong> und dämpft zugleich die reibenden Nachbarn <strong>H₇ (Septime)</strong> und <strong>H₉ (Sekunde)</strong> harmonisch ab.
+                    <strong>Anschlag 1/8 L (195 mm):</strong> Knoten auf <strong>H₈ (−15,7 dB)</strong>, dämpft zugleich <strong>H₇</strong> und <strong>H₉</strong> ab.
                   </div>
                 </div>
               </div>
@@ -4047,10 +4047,10 @@ def get_all_slides_html():
             <div class="hsp-col-right">
               <div class="hsp-card" style="height: 100%; justify-content: space-between;">
                 <div class="hsp-ctrl-grid">
-                  <!-- Parameter 1: Filz-Elastizität & Oberflächenspannung (3-Stufen-Toggle) -->
+                  <!-- Parameter 1: Filz-Elastizität & Spannung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
-                      <span class="hsp-ctrl-label" id="hsp-lbl-c1" data-i18n="s34_c1_lbl">1. Filz-Elastizität &amp; Oberflächenspannung</span>
+                      <span class="hsp-ctrl-label" id="hsp-lbl-c1" data-i18n="s34_c1_lbl">1. Filz-Elastizität &amp; Spannung</span>
                       <span class="hsp-ctrl-val" id="hsp-val-c1">95 %</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-tension" role="group" aria-labelledby="hsp-lbl-c1">
@@ -4063,7 +4063,7 @@ def get_all_slides_html():
                   <!-- Parameter 2: Form & Scheitelkrümmung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
-                      <span class="hsp-ctrl-label" id="hsp-lbl-c2" data-i18n="s34_c2_lbl">2. Hammerkopf-Form (Scheitelradius)</span>
+                      <span class="hsp-ctrl-label" id="hsp-lbl-c2" data-i18n="s34_c2_lbl">2. Hammerkopf-Form (Radius)</span>
                       <span class="hsp-ctrl-val" id="hsp-val-c2">R ≈ 12,6 mm</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-shape" role="group" aria-labelledby="hsp-lbl-c2">
@@ -4089,8 +4089,8 @@ def get_all_slides_html():
                   <!-- Parameter 4: Kritische Übergangszone Scheitel -> Flanke (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block" id="hsp-block-contour">
                     <div class="hsp-ctrl-top">
-                      <span class="hsp-ctrl-label" id="hsp-lbl-c4" data-i18n="s34_c4_lbl">4. Übergang Scheitel → Flanke (Außenkontur)</span>
-                      <span class="hsp-ctrl-val" id="hsp-val-c4" style="color:#4ade80;">Kraftfluss frei (100 % Flanke)</span>
+                      <span class="hsp-ctrl-label" id="hsp-lbl-c4" data-i18n="s34_c4_lbl">4. Übergang Scheitel → Flanke</span>
+                      <span class="hsp-ctrl-val" id="hsp-val-c4" style="color:#4ade80;">Frei (100 % Flanke)</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-contour" role="group" aria-labelledby="hsp-lbl-c4">
                       <button type="button" class="hsp-step-btn active" data-val="12" data-tone="good" aria-pressed="true" data-i18n="s34_c4_s1">1 · Frei</button>
@@ -4113,8 +4113,8 @@ def get_all_slides_html():
                       <span class="hsp-dyn-seg" id="hsp-seg-ff">ff</span>
                     </div>
                     <div class="hsp-scale-labels">
-                      <span style="color:#4ade80;" id="hsp-dyn-note-l">✓ pp frei (weicher Ansatz)</span>
-                      <span style="color:#4ade80;" id="hsp-dyn-note-r">✓ ff frei (kurze τc · elastisch)</span>
+                      <span style="color:#4ade80;" id="hsp-dyn-note-l">✓ pp frei</span>
+                      <span style="color:#4ade80;" id="hsp-dyn-note-r">✓ ff frei (kurze τc)</span>
                     </div>
                   </div>
                 </div>
@@ -4134,21 +4134,21 @@ def get_all_slides_html():
                   <div class="hsp-kpi amber">
                     <span class="hsp-kpi-lbl" id="hsp-kpi3-lbl" data-i18n="s34_kpi3_lbl">Toncharakter</span>
                     <span class="hsp-kpi-num" id="hsp-kpi-hardness" style="color:#e6c882;">+2,4 dB</span>
-                    <span class="hsp-kpi-sub" id="hsp-kpi-hardness-sub">Silbrig-klar (piano &amp; forte)</span>
+                    <span class="hsp-kpi-sub" id="hsp-kpi-hardness-sub">Silbrig-klar (p–f)</span>
                   </div>
                 </div>
 
                 <!-- Dynamische Fach-Erklärung -->
                 <div class="hsp-explain-box" id="hsp-exp-box">
                   <div>
-                    <span class="bento-badge gold" id="hsp-exp-badge" style="margin-bottom:4px;" data-i18n="s34_exp_badge">✦ CRISTOFORIS UR-PRINZIP (1700)</span>
-                    <h4 class="hsp-explain-title" id="hsp-exp-title">Das belederte Röllchen: Maximale Elastizität für „col piano e forte“</h4>
+                    <span class="bento-badge gold" id="hsp-exp-badge" style="margin-bottom:4px;" data-i18n="s34_exp_badge">✦ CRISTOFORI (1700)</span>
+                    <h4 class="hsp-explain-title" id="hsp-exp-title">Beledertes Röllchen: Spannung erzeugt Elastizität</h4>
                   </div>
                   <p class="hsp-explain-text" id="hsp-exp-body">
-                    Bartolomeo Cristoforis <strong>beledertes Pergament-Röllchen</strong> nutzt die <strong>Oberflächenspannung</strong> des hohlen Rings: Sanftes Hirschleder formt das <em>piano</em>, während <strong>93 % Rückstellkraft</strong> (<strong>τc ≈ 1,55 ms</strong>) das Röhrchen blitzschnell von der Saite löst.
+                    Hirschleder formt zartes <em>piano</em>; die Ring-Spannung (<strong>93 % Bounce</strong>, <strong>τc ≈ 1,55 ms</strong>) löst den Hammer schnell von der Saite.
                   </p>
                   <div class="hsp-explain-bullet" id="hsp-exp-bullet">
-                    <strong>Schlüssel-Erkenntnis:</strong> Nur echte <strong>Elastizität durch Spannung</strong> hält die Kontaktzeit kurz — bloße starre Steifigkeit ohne Federweg würde die Saite abdämpfen.
+                    <strong>Kernprinzip:</strong> Spannung hält τc kurz — starre Masse ohne Federweg dämpft die Saite ab.
                   </div>
                 </div>
               </div>
@@ -4243,7 +4243,7 @@ def get_all_slides_html():
                       <span class="vzn-zone-name" data-i18n="s35_z1_name">🔵 Blauer ff-Keil (9–10 &amp; 2–3 Uhr)</span>
                       <span class="vzn-zone-depth" data-i18n="s35_z1_depth">Tief · vor Unterfilz</span>
                     </div>
-                    <div class="vzn-zone-desc" data-i18n="s35_z1_desc">Löst starre Werkshärte, leitet Energie ↑ in f-Keil → volles, freies ff</div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z1_desc">Löst Werkshärte, leitet Spannung ↑ in f-Keil → freies ff</div>
                   </div>
 
                   <div class="vzn-zone-item" data-zone="green" role="option" tabindex="0" aria-selected="false">
@@ -4251,31 +4251,31 @@ def get_all_slides_html():
                       <span class="vzn-zone-name" data-i18n="s35_z2_name">🟢 Grüner f-Keil (10–11 &amp; 1–2 Uhr)</span>
                       <span class="vzn-zone-depth" data-i18n="s35_z2_depth">Mittel · 4–6 mm (90°)</span>
                     </div>
-                    <div class="vzn-zone-desc" data-i18n="s35_z2_desc">Öffnet steife Übergangskontur → singender Cantabile-Kern (mf–f)</div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z2_desc">Öffnet den Übergang → tragender Cantabile-Kern (mf–f)</div>
                   </div>
 
                   <div class="vzn-zone-item" data-zone="orange" role="option" tabindex="0" aria-selected="false">
                     <div class="vzn-zone-top">
-                      <span class="vzn-zone-name" data-i18n="s35_z3_name">🟠 Oranger p-Keil (11–11:45 &amp; 12:15–1 Uhr)</span>
+                      <span class="vzn-zone-name" data-i18n="s35_z3_name">🟠 Oranger p-Keil (11–12 &amp; 12–1 Uhr)</span>
                       <span class="vzn-zone-depth" data-i18n="s35_z3_depth">Fein · 2,5–4 mm (90°)</span>
                     </div>
-                    <div class="vzn-zone-desc" data-i18n="s35_z3_desc">Dämpft glasige Obertöne (H8–H12) → runder, warmer Piano-Ton</div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z3_desc">Dämpft hohe Obertöne (H8–H12) → runder, warmer p-Ton</div>
                   </div>
 
                   <div class="vzn-zone-item" data-zone="purple" role="option" tabindex="0" aria-selected="false">
                     <div class="vzn-zone-top">
-                      <span class="vzn-zone-name" data-i18n="s35_z4_name">🟣 Violetter pp-Keil (11:45–12:15 Krone)</span>
+                      <span class="vzn-zone-name" data-i18n="s35_z4_name">🟣 Violetter pp-Keil (Krone)</span>
                       <span class="vzn-zone-depth" data-i18n="s35_z4_depth">Oberfläche · ≤ 2 mm</span>
                     </div>
-                    <div class="vzn-zone-desc" data-i18n="s35_z4_desc">Nur zwischen Saitenrillen! Samtpolster für müheloses Pianissimo</div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z4_desc">Nur zw. Saitenrillen! Samtpolster für feinstes pp</div>
                   </div>
 
                   <div class="vzn-zone-item" data-zone="red" role="option" tabindex="0" aria-selected="false">
                     <div class="vzn-zone-top">
-                      <span class="vzn-zone-name" data-i18n="s35_z5_name">🔴 Rote Sperrzone (12:00 Scheitelkern)</span>
+                      <span class="vzn-zone-name" data-i18n="s35_z5_name">🔴 Rote Sperrzone (12:00 Kern)</span>
                       <span class="vzn-zone-depth" data-i18n="s35_z5_depth">✕ TABU (&gt; 2 mm)</span>
                     </div>
-                    <div class="vzn-zone-desc" data-i18n="s35_z5_desc">Zerstört Oberflächenspannung σ → τc ↑, Ton wird hohl, matt &amp; tot!</div>
+                    <div class="vzn-zone-desc" data-i18n="s35_z5_desc">Zerstört Spannung σ → τc ↑, Ton wird hohl &amp; tot!</div>
                   </div>
                 </div>
 
@@ -4294,21 +4294,21 @@ def get_all_slides_html():
                   <div class="hsp-kpi amber">
                     <span class="hsp-kpi-lbl" id="vzn-kpi3-lbl" data-i18n="s35_kpi3_lbl">Klangeffekt</span>
                     <span class="hsp-kpi-num" id="vzn-kpi3-num" style="color:#38bdf8;">+3,2 dB</span>
-                    <span class="hsp-kpi-sub" id="vzn-kpi3-sub">Fülle H1–H4 ↑ · ff frei</span>
+                    <span class="hsp-kpi-sub" id="vzn-kpi3-sub">H1–H4 ↑ · ff frei</span>
                   </div>
                 </div>
 
                 <!-- Dynamische Meister-Erklärung (Kruse / Olbrich) -->
                 <div class="hsp-explain-box" id="vzn-exp-box">
                   <div>
-                    <span class="bento-badge gold" id="vzn-exp-badge" data-i18n="s35_exp_badge">✦ VORINTONATION • BLAUER FORTISSIMO-KEIL (9–10 &amp; 2–3 UHR)</span>
-                    <h4 class="hsp-explain-title" id="vzn-exp-title">Tiefe 90°-Stiche lösen starre Werkshärte und speisen den Forte-Keil</h4>
+                    <span class="bento-badge gold" id="vzn-exp-badge" data-i18n="s35_exp_badge">✦ VORINTONATION • BLAUER FF-KEIL (9–10 / 2–3H)</span>
+                    <h4 class="hsp-explain-title" id="vzn-exp-title">Tiefe 90°-Stiche lösen Werkshärte und speisen den f-Keil</h4>
                   </div>
                   <p class="hsp-explain-text" id="vzn-exp-body">
-                    Kräftiges, ruhiges Eindrücken bis <strong>kurz vor den Unterfilz</strong> (nie in Unterfilz/Holz!) baut die starre Unterflanken-Spannung ab: Elastische Energie <strong>wandert aufwärts in den grünen Forte-Keil</strong> und öffnet volles, rundes <em>Fortissimo</em>.
+                    Ruhiges Eindrücken bis <strong>kurz vor den Unterfilz</strong> leitet Elastizität <strong>aufwärts in den grünen Keil</strong> und öffnet das <em>Fortissimo</em>.
                   </p>
                   <div class="hsp-explain-bullet" id="vzn-exp-bullet">
-                    <strong>Praxis-Effekt:</strong> Stärkt Grundtonfülle &amp; Sustain (<strong>H1–H4 +3,2 dB</strong>), ohne die Scheitelkrone für <em>p/pp</em> zu schwächen.
+                    <strong>Effekt:</strong> Mehr Grundtonfülle (<strong>H1–H4 +3,2 dB</strong>), Krone bleibt stabil.
                   </div>
                 </div>
               </div>

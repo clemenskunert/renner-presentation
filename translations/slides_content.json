@@ -5179,10 +5179,10 @@
           "zh": "波节抑制"
         },
         "s33_exp_badge": {
-          "de": "✦ AKUSTISCHE WIRKUNG IM KLAVIERTON",
-          "en": "✦ ACOUSTIC EFFECT ON PIANO TONE",
-          "ja": "✦ ピアノ音における音響作用",
-          "zh": "✦ 钢琴乐音声学作用机制"
+          "de": "✦ KLANGWIRKUNG",
+          "en": "✦ TONAL EFFECT",
+          "ja": "✦ 音響作用",
+          "zh": "✦ 声学效应"
         }
       },
       "notes": {
@@ -5275,10 +5275,10 @@
           "zh": "电平 + ΔdB"
         },
         "s34_c1_lbl": {
-          "de": "1. Filz-Elastizität & Oberflächenspannung",
-          "en": "1. Felt Elasticity & Surface Tension",
+          "de": "1. Filz-Elastizität & Spannung",
+          "en": "1. Felt Elasticity & Tension",
           "ja": "1. フェルト弾性と表面張力",
-          "zh": "1. 毛毡弹性与外层表面张力"
+          "zh": "1. 毛毡弹性与表面张力"
         },
         "s34_c1_s1": {
           "de": "1 · Träge",
@@ -5299,10 +5299,10 @@
           "zh": "3 · 高弹"
         },
         "s34_c2_lbl": {
-          "de": "2. Hammerkopf-Form (Scheitelradius)",
-          "en": "2. Hammerhead Shape (Crown Radius)",
-          "ja": "2. ハンマー形状（クラウン曲率半径）",
-          "zh": "2. 弦槌几何形状（槌冠曲率半径）"
+          "de": "2. Hammerkopf-Form (Radius)",
+          "en": "2. Hammerhead Shape (Radius)",
+          "ja": "2. ハンマー形状（曲率半径）",
+          "zh": "2. 弦槌形状（槌冠半径）"
         },
         "s34_c2_s1": {
           "de": "1 · Breit",
@@ -5326,7 +5326,7 @@
           "de": "3. Scheitel-Verdichtung (Flanke = ½)",
           "en": "3. Crown Compaction (Flank = ½)",
           "ja": "3. クラウン圧縮密度（フランク＝½）",
-          "zh": "3. 槌冠压实度（侧翼最宽处 ＝ ½）"
+          "zh": "3. 槌冠压实度（侧翼 ＝ ½）"
         },
         "s34_c3_s1": {
           "de": "1 · Weich",
@@ -5347,10 +5347,10 @@
           "zh": "3 · 过硬"
         },
         "s34_c4_lbl": {
-          "de": "4. Übergang Scheitel → Flanke (Außenkontur)",
-          "en": "4. Crown → Flank Transition (Outer Contour)",
-          "ja": "4. クラウン→フランク移行帯（外周輪郭）",
-          "zh": "4. 槌冠→侧翼过渡区（外轮廓刚度）"
+          "de": "4. Übergang Scheitel → Flanke",
+          "en": "4. Crown → Flank Transition",
+          "ja": "4. クラウン→フランク移行帯",
+          "zh": "4. 槌冠→侧翼过渡区"
         },
         "s34_c4_s1": {
           "de": "1 · Frei",
@@ -5395,10 +5395,10 @@
           "zh": "音色与动态"
         },
         "s34_exp_badge": {
-          "de": "✦ CRISTOFORIS UR-PRINZIP (1700)",
-          "en": "✦ CRISTOFORI’S ORIGINAL PRINCIPLE (1700)",
-          "ja": "✦ クリストフォリの原点原理 (1700)",
-          "zh": "✦ 克里斯托弗里的原始智慧 (1700)"
+          "de": "✦ CRISTOFORI (1700)",
+          "en": "✦ CRISTOFORI (1700)",
+          "ja": "✦ クリストフォリ (1700)",
+          "zh": "✦ 克里斯托弗里 (1700)"
         }
       },
       "notes": {
@@ -5528,27 +5528,27 @@
         },
         "s35_z1_name": {
           "de": "🔵 Blauer ff-Keil (9–10 & 2–3 Uhr)",
-          "en": "🔵 Blue ff-Wedge (9–10 & 2–3 o’clock)",
-          "ja": "🔵 青のffウェッジ (9–10時＆2–3時)",
-          "zh": "🔵 蓝色ff楔区 (9–10点与2–3点)"
+          "en": "🔵 Blue ff-Wedge (9–10 & 2–3h)",
+          "ja": "🔵 青のffウェッジ (9–10 / 2–3時)",
+          "zh": "🔵 蓝色ff楔区 (9–10 / 2–3点)"
         },
         "s35_z1_depth": {
           "de": "Tief · vor Unterfilz",
           "en": "Deep · pre-underfelt",
-          "ja": "深刺 · UF手前まで",
-          "zh": "深扎 · 底毡前止"
+          "ja": "深刺 · UF手前",
+          "zh": "深扎 · 底毡前"
         },
         "s35_z1_desc": {
-          "de": "Löst starre Werkshärte, leitet Energie ↑ in f-Keil → volles, freies ff",
-          "en": "Releases rigid factory tension, feeds f-wedge ↑ → open, resonant ff",
-          "ja": "出荷時の硬さを解放し緑のf領域へ弾性を送る → 豊かなff解放",
-          "zh": "化解出厂僵硬张力，将弹性导入绿色f区 ↑ → 释放恢弘通透ff"
+          "de": "Löst Werkshärte, leitet Spannung ↑ in f-Keil → freies ff",
+          "en": "Releases factory rigidity, feeds f-wedge ↑ → open ff",
+          "ja": "初期硬さを解放し緑のf領域へ弾性移動 ↑ → 豊かなff",
+          "zh": "化解出厂僵硬，将弹性导入绿区 ↑ → 释放浑厚ff"
         },
         "s35_z2_name": {
           "de": "🟢 Grüner f-Keil (10–11 & 1–2 Uhr)",
-          "en": "🟢 Green f-Wedge (10–11 & 1–2 o’clock)",
-          "ja": "🟢 緑のfウェッジ (10–11時＆1–2時)",
-          "zh": "🟢 绿色f楔区 (10–11点与1–2点)"
+          "en": "🟢 Green f-Wedge (10–11 & 1–2h)",
+          "ja": "🟢 緑のfウェッジ (10–11 / 1–2時)",
+          "zh": "🟢 绿色f楔区 (10–11 / 1–2点)"
         },
         "s35_z2_depth": {
           "de": "Mittel · 4–6 mm (90°)",
@@ -5557,16 +5557,16 @@
           "zh": "中深 · 4–6 mm (90°)"
         },
         "s35_z2_desc": {
-          "de": "Öffnet steife Übergangskontur → singender Cantabile-Kern (mf–f)",
-          "en": "Opens stiff transition contour → singing cantabile core (mf–f)",
-          "ja": "移行部の硬さを解放しフランクと連動 → 歌うカンタービレ核 (mf–f)",
-          "zh": "打通僵硬外轮廓过渡带 → 塑造饱满如歌的中频核心 (mf–f)"
+          "de": "Öffnet den Übergang → tragender Cantabile-Kern (mf–f)",
+          "en": "Opens transition bridge → singing cantabile core (mf–f)",
+          "ja": "移行部の硬さを解放 → 歌うカンタービレ核 (mf–f)",
+          "zh": "打通外轮廓过渡带 → 塑造如歌中频核心 (mf–f)"
         },
         "s35_z3_name": {
-          "de": "🟠 Oranger p-Keil (11–11:45 & 12:15–1 Uhr)",
-          "en": "🟠 Orange p-Wedge (11–11:45 & 12:15–1)",
-          "ja": "🟠 橙のpウェッジ (11–11:45＆12:15–1時)",
-          "zh": "🟠 橙色p楔区 (11–11:45与12:15–1点)"
+          "de": "🟠 Oranger p-Keil (11–12 & 12–1 Uhr)",
+          "en": "🟠 Orange p-Wedge (11–12 & 12–1h)",
+          "ja": "🟠 橙のpウェッジ (11–12 / 12–1時)",
+          "zh": "🟠 橙色p楔区 (11–12 / 12–1点)"
         },
         "s35_z3_depth": {
           "de": "Fein · 2,5–4 mm (90°)",
@@ -5575,34 +5575,34 @@
           "zh": "浅扎 · 2.5–4 mm"
         },
         "s35_z3_desc": {
-          "de": "Dämpft glasige Obertöne (H8–H12) → runder, warmer Piano-Ton",
-          "en": "Cushions glassy upper partials (H8–H12) → warm, lyrical piano tone",
-          "ja": "ガラス質の高次倍音 (H8–H12) を緩和 → 温かく丸みのある弱音",
-          "zh": "柔化尖锐玻璃声泛音 (H8–H12) → 雕琢温暖圆润的弱音音色"
+          "de": "Dämpft hohe Obertöne (H8–H12) → runder, warmer p-Ton",
+          "en": "Cushions bright partials (H8–H12) → warm piano tone",
+          "ja": "高次倍音 (H8–H12) を緩和 → 温かく丸い弱音",
+          "zh": "柔化高频泛音 (H8–H12) → 雕琢温暖圆润弱音"
         },
         "s35_z4_name": {
-          "de": "🟣 Violetter pp-Keil (11:45–12:15 Krone)",
-          "en": "🟣 Purple pp-Wedge (11:45–12:15 Crown)",
-          "ja": "🟣 紫のppウェッジ (11:45–12:15 頂点表層)",
-          "zh": "🟣 紫色pp楔区 (11:45–12:15 槌顶表层)"
+          "de": "🟣 Violetter pp-Keil (Krone)",
+          "en": "🟣 Purple pp-Wedge (Crown)",
+          "ja": "🟣 紫のppウェッジ (頂点表層)",
+          "zh": "🟣 紫色pp楔区 (槌顶表层)"
         },
         "s35_z4_depth": {
           "de": "Oberfläche · ≤ 2 mm",
           "en": "Surface · ≤ 2 mm",
           "ja": "最表層 · ≤ 2 mm",
-          "zh": "表层微刺 · ≤ 2 mm"
+          "zh": "表层 · ≤ 2 mm"
         },
         "s35_z4_desc": {
-          "de": "Nur zwischen Saitenrillen! Samtpolster für müheloses Pianissimo",
-          "en": "Strictly between string grooves! Velvet cushion for whisper pp",
-          "ja": "弦溝の間のみ！最表層を整え絹のように繊細なピアニッシモを実現",
-          "zh": "严格限于弦沟之间！铺就丝绒般微缓冲垫，成就纯净极弱音pp"
+          "de": "Nur zw. Saitenrillen! Samtpolster für feinstes pp",
+          "en": "Between string grooves only! Velvet cushion for pp",
+          "ja": "弦溝の間のみ！最表層を整え繊細なppを実現",
+          "zh": "仅限弦沟之间！铺就丝绒缓冲垫，成就纯净pp"
         },
         "s35_z5_name": {
-          "de": "🔴 Rote Sperrzone (12:00 Scheitelkern)",
-          "en": "🔴 Red Taboo Zone (12:00 Deep Crown)",
-          "ja": "🔴 赤の禁止ゾーン (12:00 クラウン深部)",
-          "zh": "🔴 红色绝对禁区 (12:00 深层槌心)"
+          "de": "🔴 Rote Sperrzone (12:00 Kern)",
+          "en": "🔴 Red Taboo Zone (12:00 Core)",
+          "ja": "🔴 赤の禁止ゾーン (12時深部)",
+          "zh": "🔴 红色禁区 (12点槌心)"
         },
         "s35_z5_depth": {
           "de": "✕ TABU (> 2 mm)",
@@ -5611,10 +5611,10 @@
           "zh": "✕ 严禁深扎 (>2mm)"
         },
         "s35_z5_desc": {
-          "de": "Zerstört Oberflächenspannung σ → τc ↑, Ton wird hohl, matt & tot!",
-          "en": "Severs surface tension arch σ → τc ↑, tone turns hollow & dead!",
-          "ja": "表面張力σを断裂 → 接触時間τc増大、空疎で芯のない死んだ音に！",
-          "zh": "切断表面张力拱σ → 接触时间τc暴增，声音空洞、绵软且报废！"
+          "de": "Zerstört Spannung σ → τc ↑, Ton wird hohl & tot!",
+          "en": "Severs tension arch σ → τc ↑, tone turns hollow & dead!",
+          "ja": "表面張力σを断裂 → τc増大、空疎で死んだ音に！",
+          "zh": "切断张力拱σ → τc暴增，声音空洞枯死！"
         },
         "s35_kpi1_lbl": {
           "de": "Stichtiefe & Nadel",
@@ -5635,10 +5635,10 @@
           "zh": "核心声学效应"
         },
         "s35_exp_badge": {
-          "de": "✦ VORINTONATION • BLAUER FORTISSIMO-KEIL (9–10 & 2–3 UHR)",
-          "en": "✦ PRE-NEEDLING • BLUE FORTISSIMO WEDGE (9–10 & 2–3 O’CLOCK)",
-          "ja": "✦ 予備整音 (PRE-NEEDLING) • 青のffウェッジ (9–10時＆2–3時)",
-          "zh": "✦ 预整音 (PRE-NEEDLING) • 蓝色极强音楔区 (9–10点与2–3点)"
+          "de": "✦ VORINTONATION • BLAUER FF-KEIL (9–10 / 2–3H)",
+          "en": "✦ PRE-NEEDLING • BLUE FF-WEDGE (9–10 / 2–3H)",
+          "ja": "✦ 予備整音 • 青のFFウェッジ (9–10 / 2–3時)",
+          "zh": "✦ 预整音 • 蓝色FF楔区 (9–10 / 2–3点)"
         }
       },
       "notes": {
