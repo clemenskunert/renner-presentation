@@ -8555,6 +8555,545 @@ body::before {
 }
 
 /* ==========================================================================
-   YAMAHA KIT ENHANCEMENTS
+   SLIDE 3 REFERENZ-TYPOGRAFIE & GLEICHMÄSSIGE TEXTVERTEILUNG (FOLIEN 1–41)
+   Einheitlicher Textaufbau nach Vorbild von Folie 3 (.hero-meta-wrapper):
+   1. Obere Meta-Zeile (KPI-Kennzahl links + Kategorie-Badge rechts)
+   2. Prägnante Karten-Überschrift (Roboto Slab, analog .hero-title)
+   3. Klarer Einleitungssatz (analog .hero-sentence)
+   4. Gleichmäßig verteilte Aufzählungspunkte (space-evenly, analog .hero-bullet-list)
+   5. Untere Kernaussage / Fact-Leiste (analog .hero-meta-bottom / .hero-fact-tag)
    ========================================================================== */
-@import url("yamaha-kit.css");
+
+/* --- A. Einheitliche Kopfzeilen-Größen & Flex-Höhenzuteilung (wie Folie 3) --- */
+.slide .slide-body {
+  flex: 1 1 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+}
+
+/* Folie 3: Vertikaler Puffer für alle 10 Meilenstein-Karten (inkl. #tree-milestone-8 42%-Spalte) */
+.slide[data-slide="3"] .hero-meta-wrapper {
+  padding: 20px 32px !important;
+}
+
+.slide[data-slide="3"] .hero-bullet-list {
+  margin: 8px 0 !important;
+  gap: 10px !important;
+  min-height: 0 !important;
+}
+
+#tree-milestone-8 .hero-bullet-item {
+  font-size: clamp(1.16rem, 1.38vw, 1.34rem) !important;
+  line-height: 1.38 !important;
+}
+
+.slide[data-slide="27"] .slide-header {
+  padding: 14px 36px 10px 36px !important;
+}
+
+.slide[data-slide="27"] .slide-title {
+  font-size: clamp(2.15rem, 2.5vw, 2.85rem) !important;
+  line-height: 1.16 !important;
+  margin-bottom: 4px !important;
+}
+
+.slide[data-slide="27"] .slide-subtitle {
+  font-size: clamp(1.15rem, 1.28vw, 1.42rem) !important;
+  line-height: 1.38 !important;
+}
+
+.slide[data-slide="5"] .slide-body,
+.slide.ffw-felt-slide .slide-body,
+.slide[data-slide="27"] .slide-body {
+  flex: 1 1 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 10px 36px 20px 36px !important;
+  overflow: hidden !important;
+}
+
+.slide.yka-slide .slide-title {
+  font-size: clamp(2.05rem, 2.38vw, 2.7rem) !important;
+  line-height: 1.16 !important;
+}
+
+.slide.yka-slide .slide-subtitle {
+  font-size: clamp(1.12rem, 1.24vw, 1.38rem) !important;
+  line-height: 1.34 !important;
+}
+
+/* --- C. Folie-3 Meta-Zeile & Fazit-Leiste für alle Hero-Bento-Karten --- */
+.hero-card-meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 2px;
+}
+
+.hero-card-meta-top .bento-badge {
+  margin-bottom: 0 !important;
+}
+
+.hero-kpi-pill {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 1.95vw, 2.15rem);
+  font-weight: 800;
+  color: var(--gold-accent);
+  text-shadow: 0 0 12px rgba(200, 163, 86, 0.55);
+  letter-spacing: 0.4px;
+  line-height: 1.1;
+}
+
+.hero-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: clamp(10px, 1.3vh, 14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.hero-fact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(200, 163, 86, 0.14);
+  border: 1px solid rgba(200, 163, 86, 0.42);
+  color: var(--gold-light);
+  font-size: clamp(0.92rem, 1.02vw, 1.08rem);
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: 0.2px;
+}
+
+/* --- D. Hero-Karten mit Aufzählungsliste (Folien 12–17, 21–25, 28–29, 35–38, 40) --- */
+.bento-grid-mosaic > .bento-card:not(.media-framed),
+.bento-grid-video-stage > .bento-card:not(.media-framed) {
+  padding: clamp(20px, 2.4vh, 26px) clamp(24px, 2.2vw, 34px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: clamp(6px, 0.85vh, 10px) !important;
+}
+
+.bento-grid-mosaic > .bento-card:has(.bento-card-list) .bento-card-title,
+.bento-grid-video-stage > .bento-card:has(.bento-card-list) .bento-card-title {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.62rem, 1.92vw, 2.18rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.22 !important;
+  margin: 2px 0 2px 0 !important;
+  flex-shrink: 0;
+}
+
+.bento-grid-mosaic > .bento-card:has(.bento-card-list) .bento-card-desc,
+.bento-grid-video-stage > .bento-card:has(.bento-card-list) .bento-card-desc {
+  font-size: clamp(1.16rem, 1.32vw, 1.42rem) !important;
+  line-height: 1.48 !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-card-list,
+.bento-card:has(.bento-card-list) .bento-card-list {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  gap: clamp(8px, 1.15vh, 14px) !important;
+  margin: clamp(4px, 0.8vh, 10px) 0 !important;
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-card-list-item,
+.bento-card:has(.bento-card-list) .bento-card-list-item {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 15px !important;
+  font-size: clamp(1.15rem, 1.38vw, 1.40rem) !important;
+  line-height: 1.42 !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  padding: clamp(9px, 1.2vh, 14px) clamp(14px, 1.35vw, 20px) !important;
+  background: rgba(255, 255, 255, 0.038);
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 12px;
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-card-list-item strong,
+.bento-card:has(.bento-card-list) .bento-card-list-item strong {
+  font-size: clamp(1.18rem, 1.42vw, 1.44rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.slide .bento-card:has(.bento-card-list) .bento-card-list-item .bento-dot,
+.bento-card:has(.bento-card-list) .bento-card-list-item .bento-dot {
+  margin-top: 8px !important;
+  align-self: flex-start !important;
+}
+
+/* --- E. FFW- & Yamaha-Stage-Folien (Folien 5–11 & 27) analog Folie 3 --- */
+.slide[data-slide="5"] .ffw-panel-info,
+.slide.ffw-felt-slide .ffw-panel-info,
+.slide[data-slide="27"] .ffw-panel-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  gap: clamp(6px, 0.85vh, 10px) !important;
+}
+
+.slide[data-slide="5"] .ffw-panel-title,
+.slide.ffw-felt-slide .ffw-panel-title,
+.slide[data-slide="27"] .ffw-panel-title {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.52rem, 1.80vw, 2.05rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.22 !important;
+  color: #ffffff !important;
+  margin: 2px 0 !important;
+}
+
+.slide[data-slide="5"] .ffw-panel-subtitle,
+.slide.ffw-felt-slide .ffw-panel-subtitle,
+.slide[data-slide="27"] .ffw-panel-subtitle {
+  font-size: clamp(1.12rem, 1.28vw, 1.38rem) !important;
+  line-height: 1.44 !important;
+  color: rgba(255, 255, 255, 0.93) !important;
+  margin: 0 !important;
+}
+
+.slide[data-slide="5"] .ffw-panel-bullets,
+.slide.ffw-felt-slide .ffw-panel-bullets,
+.slide[data-slide="27"] .ffw-panel-bullets {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  gap: clamp(8px, 1.1vh, 14px) !important;
+  margin: clamp(4px, 0.8vh, 10px) 0 !important;
+}
+
+.slide[data-slide="5"] .ffw-bullet-item,
+.slide.ffw-felt-slide .ffw-bullet-item,
+.slide[data-slide="27"] .ffw-bullet-item {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  padding: clamp(9px, 1.25vh, 14px) 16px !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.085) !important;
+  font-size: clamp(1.10rem, 1.28vw, 1.35rem) !important;
+  line-height: 1.42 !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.slide[data-slide="27"] .ffw-bullet-item {
+  border-left: 3px solid var(--gold-accent) !important;
+}
+
+.slide[data-slide="5"] .ffw-bullet-item strong,
+.slide.ffw-felt-slide .ffw-bullet-item strong,
+.slide[data-slide="27"] .ffw-bullet-item strong {
+  font-size: clamp(1.14rem, 1.32vw, 1.40rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.slide[data-slide="5"] .ffw-bullet-item .bento-dot,
+.slide.ffw-felt-slide .ffw-bullet-item .bento-dot,
+.slide[data-slide="27"] .ffw-bullet-item .bento-dot {
+  width: 9px !important;
+  height: 9px !important;
+  margin-top: 7px !important;
+  align-self: flex-start !important;
+  flex-shrink: 0 !important;
+}
+
+.slide[data-slide="5"] .ffw-fact-badge,
+.slide.ffw-felt-slide .ffw-fact-badge,
+.slide[data-slide="27"] .ffw-fact-badge {
+  font-size: clamp(0.88rem, 0.98vw, 1.04rem) !important;
+  padding: 6px 14px !important;
+  line-height: 1.32 !important;
+}
+
+/* Rechte Spotlight-Karte auf Folien 5–10 & 27 */
+.slide[data-slide="5"] .ffw-felt-card,
+.slide.ffw-felt-slide:not([data-slide="11"]) .ffw-felt-card,
+.slide[data-slide="27"] .ffw-felt-card {
+  padding: 14px 18px !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.slide[data-slide="5"] .ffw-texture-viewer,
+.slide[data-slide="27"] .ffw-texture-viewer {
+  height: 124px !important;
+  min-height: 112px !important;
+  max-height: 128px !important;
+  flex-shrink: 0 !important;
+}
+
+.slide[data-slide="5"] .ffw-felt-card-header .bento-card-title,
+.slide.ffw-felt-slide:not([data-slide="11"]) .ffw-felt-card-header .bento-card-title,
+.slide[data-slide="27"] .ffw-felt-card-header .bento-card-title {
+  font-size: clamp(1.34rem, 1.54vw, 1.72rem) !important;
+  line-height: 1.20 !important;
+  margin: 2px 0 3px 0 !important;
+}
+
+.slide[data-slide="5"] .ffw-felt-card-header .bento-card-desc,
+.slide.ffw-felt-slide:not([data-slide="11"]) .ffw-felt-card-header .bento-card-desc,
+.slide[data-slide="27"] .ffw-felt-card-header .bento-card-desc {
+  font-size: clamp(1.02rem, 1.14vw, 1.22rem) !important;
+  line-height: 1.38 !important;
+}
+
+.slide[data-slide="5"] .ffw-felt-highlights,
+.slide.ffw-felt-slide:not([data-slide="11"]) .ffw-felt-highlights,
+.slide[data-slide="27"] .ffw-felt-highlights {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  gap: 6px !important;
+}
+
+.slide[data-slide="5"] .ffw-highlight-item,
+.slide.ffw-felt-slide:not([data-slide="11"]) .ffw-highlight-item,
+.slide[data-slide="27"] .ffw-highlight-item {
+  flex: 0 0 auto !important;
+  align-items: flex-start !important;
+  font-size: clamp(0.98rem, 1.08vw, 1.16rem) !important;
+  line-height: 1.35 !important;
+  padding: 7px 11px !important;
+}
+
+.slide[data-slide="5"] .ffw-highlight-item strong,
+.slide.ffw-felt-slide:not([data-slide="11"]) .ffw-highlight-item strong,
+.slide[data-slide="27"] .ffw-highlight-item strong {
+  font-size: clamp(1.02rem, 1.12vw, 1.20rem) !important;
+  display: inline !important;
+  margin-right: 4px !important;
+}
+
+/* Folie 11: Linke Info-Spalte & rechte Animations-Karte harmonisch ausbalancieren */
+.slide[data-slide="11"] .ffw-static-panel {
+  grid-template-columns: 1.08fr 0.92fr !important;
+  padding: 16px 20px !important;
+  gap: 16px !important;
+}
+
+.slide[data-slide="11"] .ffw-panel-title {
+  font-size: clamp(1.38rem, 1.58vw, 1.78rem) !important;
+  line-height: 1.20 !important;
+}
+
+.slide[data-slide="11"] .ffw-panel-subtitle {
+  font-size: clamp(1.04rem, 1.16vw, 1.24rem) !important;
+  line-height: 1.38 !important;
+}
+
+.slide[data-slide="11"] .ffw-bullet-item {
+  font-size: clamp(1.02rem, 1.14vw, 1.22rem) !important;
+  line-height: 1.38 !important;
+  padding: 8px 13px !important;
+}
+
+.slide[data-slide="11"] .ffw-bullet-item strong {
+  font-size: clamp(1.06rem, 1.18vw, 1.26rem) !important;
+}
+
+.slide[data-slide="11"] .ffw-felt-card-header .bento-card-title {
+  font-size: clamp(1.30rem, 1.50vw, 1.72rem) !important;
+  line-height: 1.22 !important;
+  margin: 2px 0 3px 0 !important;
+}
+
+.slide[data-slide="11"] .ffw-felt-card-header .bento-card-desc {
+  font-size: clamp(0.98rem, 1.10vw, 1.20rem) !important;
+  line-height: 1.36 !important;
+}
+
+.slide[data-slide="11"] .ffw-highlight-item {
+  font-size: clamp(0.88rem, 0.98vw, 1.08rem) !important;
+  line-height: 1.34 !important;
+  padding: 7px 10px !important;
+}
+
+.slide[data-slide="11"] .ffw-highlight-item strong {
+  font-size: clamp(0.92rem, 1.04vw, 1.14rem) !important;
+  white-space: normal !important;
+}
+
+/* Folien 28 & 29: Exakte 42% / 58% Spaltenproportion wie Folie 3 (.hero-meta-wrapper) */
+.bento-grid.bento-grid-video-stage {
+  grid-template-columns: 0.84fr 1.16fr !important;
+  align-items: stretch !important;
+}
+
+.bento-grid-video-stage > .bento-card:not(.media-framed) {
+  padding: 20px 26px !important;
+  gap: 6px !important;
+}
+
+.bento-grid-video-stage .hero-kpi-pill {
+  font-size: clamp(1.45rem, 1.68vw, 1.85rem) !important;
+  white-space: nowrap;
+}
+
+.bento-grid-video-stage > .bento-card:has(.bento-card-list) .bento-card-title {
+  font-size: clamp(1.48rem, 1.70vw, 1.88rem) !important;
+  line-height: 1.20 !important;
+}
+
+.bento-grid-video-stage > .bento-card:has(.bento-card-list) .bento-card-desc {
+  font-size: clamp(1.08rem, 1.20vw, 1.30rem) !important;
+  line-height: 1.42 !important;
+}
+
+.bento-grid-video-stage > .bento-card:has(.bento-card-list) .bento-card-list-item {
+  font-size: clamp(1.06rem, 1.18vw, 1.26rem) !important;
+  line-height: 1.38 !important;
+  padding: 8px 14px !important;
+}
+
+.bento-grid-video-stage > .bento-card:has(.bento-card-list) .bento-card-list-item strong {
+  font-size: clamp(1.10rem, 1.22vw, 1.30rem) !important;
+}
+
+/* --- F. Mehrkarten-Grids ohne Liste (Folien 2, 18, 19, 20, 26, 34, 39, 41) --- */
+.bento-grid-stack-2 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 16px !important;
+  height: 100%;
+  min-height: 0;
+}
+
+.bento-grid-stack-3 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: repeat(3, 1fr) !important;
+  gap: 14px !important;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Gleichmäßige vertikale Raumaufteilung in Karten ohne Bullet-Liste */
+.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card),
+.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: clamp(8px, 1.1vh, 14px) !important;
+}
+
+.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) .bento-card-title,
+.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) .bento-card-title {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.38rem, 1.62vw, 1.88rem) !important;
+  line-height: 1.22 !important;
+  margin: 0 !important;
+}
+
+.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) .bento-card-desc,
+.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) .bento-card-desc {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  font-size: clamp(1.12rem, 1.28vw, 1.38rem) !important;
+  line-height: 1.52 !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+/* Folie 2 Agenda-Karten: feste Kanvas-Höhe im 1892x964 Deck & ausgewogene Innenabstände */
+.agenda-cards-grid {
+  height: 468px !important;
+  max-height: 468px !important;
+}
+
+.agenda-card {
+  padding: 22px 20px !important;
+}
+
+.agenda-card-main {
+  margin: 10px 0 !important;
+  gap: 10px !important;
+}
+
+.agenda-card .bento-card-title {
+  font-size: 1.48rem !important;
+  line-height: 1.22 !important;
+}
+
+.agenda-card .bento-card-desc {
+  font-size: 1.15rem !important;
+  line-height: 1.50 !important;
+  color: rgba(255, 255, 255, 0.93) !important;
+}
+
+/* Folie 41: Symmetrische gestapelte Karten links */
+.slide[data-slide="41"] .bento-grid-stack-2 .bento-card .bento-card-title {
+  font-size: clamp(1.44rem, 1.68vw, 1.92rem) !important;
+  line-height: 1.22 !important;
+  margin: 2px 0 !important;
+}
+
+.slide[data-slide="41"] .bento-grid-stack-2 .bento-card .bento-card-desc {
+  font-size: clamp(1.10rem, 1.24vw, 1.35rem) !important;
+  line-height: 1.46 !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+.slide[data-slide="41"] .bento-grid-stack-2 .bento-card .bento-card-list-item {
+  font-size: clamp(1.08rem, 1.22vw, 1.32rem) !important;
+  line-height: 1.40 !important;
+  padding: 9px 14px !important;
+}
+
+/* Folien 30–33: Akustik-Analyse Karten & Diagnosetexte an Folie 3 annähern */
+.slide.yka-slide .yka-card-title {
+  font-size: clamp(1.24rem, 1.42vw, 1.60rem) !important;
+}
+
+.slide.yka-slide .yka-diag-text {
+  font-size: clamp(1.08rem, 1.22vw, 1.34rem) !important;
+  line-height: 1.48 !important;
+}
+
+.slide.yka-slide .yka-adv-title {
+  font-size: clamp(1.18rem, 1.34vw, 1.50rem) !important;
+  line-height: 1.24 !important;
+}
+
+.slide.yka-slide .yka-adv-desc {
+  font-size: clamp(1.05rem, 1.18vw, 1.28rem) !important;
+  line-height: 1.44 !important;
+}
+

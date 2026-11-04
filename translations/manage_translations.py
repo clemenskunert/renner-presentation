@@ -229,9 +229,10 @@ if (typeof translations !== 'undefined') {
             body = re.sub(r'<div class="slide-subtitle"(?:\s+data-i18n="[^"]*")?>',
                           f'<div class="slide-subtitle" data-i18n="s{num}_subtitle">', body, count=1)
             # Hero Main Subtitle (Slide 1)
+            slide_entry = data.get("slides", {}).get(f"slide_{num}") or data.get("slides", {}).get(f"slide_{num:02d}", {})
             body = re.sub(r'<p class="hero-main-subtitle"[^>]*>.*?</p>(\s*<p class="hero-main-subtitle"[^>]*>.*?</p>)*',
                           f'<p class="hero-main-subtitle" data-i18n="s{num}_subtitle">' +
-                          data.get("slides", {}).get(f"slide_{num:02d}", {}).get("subtitle", {}).get("de", "") +
+                          slide_entry.get("subtitle", {}).get("de", "") +
                           '</p>', body, flags=re.DOTALL)
                           
             # Badges
@@ -239,16 +240,23 @@ if (typeof translations !== 'undefined') {
             def b_repl(bm):
                 b_cnt[0] += 1
                 cls = bm.group(1).strip()
-                return f'<span class="bento-badge {cls}" data-i18n="s{num}_b{b_cnt[0]}_badge">' if cls else f'<span class="bento-badge" data-i18n="s{num}_b{b_cnt[0]}_badge">'
-            body = re.sub(r'<span class="bento-badge\s*([^">]*)"[^>]*>', b_repl, body)
+                rest = bm.group(2)
+                m_existing = re.search(r'data-i18n="([^"]+)"', rest)
+                key = m_existing.group(1) if (m_existing and m_existing.group(1) in flat["de"]) else f"s{num}_b{b_cnt[0]}_badge"
+                extra = re.sub(r'\s*data-i18n="[^"]*"', '', rest)
+                return f'<span class="bento-badge {cls}"{extra} data-i18n="{key}">' if cls else f'<span class="bento-badge"{extra} data-i18n="{key}">'
+            body = re.sub(r'<span class="bento-badge\s*([^">]*)"([^>]*)>', b_repl, body)
 
             # Card titles
             ct_cnt = [0]
             def ct_repl(cm):
                 ct_cnt[0] += 1
                 cls = cm.group(1)
-                extra = re.sub(r'\s*data-i18n="[^"]*"', '', cm.group(2))
-                return f'<div class="{cls}"{extra} data-i18n="s{num}_c{ct_cnt[0]}_title">'
+                rest = cm.group(2)
+                m_existing = re.search(r'data-i18n="([^"]+)"', rest)
+                key = m_existing.group(1) if (m_existing and m_existing.group(1) in flat["de"]) else f"s{num}_c{ct_cnt[0]}_title"
+                extra = re.sub(r'\s*data-i18n="[^"]*"', '', rest)
+                return f'<div class="{cls}"{extra} data-i18n="{key}">'
             body = re.sub(r'<div class="(card-title|bento-card-title)"([^>]*)>', ct_repl, body)
 
             # Card descs
@@ -256,8 +264,11 @@ if (typeof translations !== 'undefined') {
             def cd_repl(cm):
                 cd_cnt[0] += 1
                 cls = cm.group(1)
-                extra = re.sub(r'\s*data-i18n="[^"]*"', '', cm.group(2))
-                return f'<div class="{cls}"{extra} data-i18n="s{num}_c{cd_cnt[0]}_desc">'
+                rest = cm.group(2)
+                m_existing = re.search(r'data-i18n="([^"]+)"', rest)
+                key = m_existing.group(1) if (m_existing and m_existing.group(1) in flat["de"]) else f"s{num}_c{cd_cnt[0]}_desc"
+                extra = re.sub(r'\s*data-i18n="[^"]*"', '', rest)
+                return f'<div class="{cls}"{extra} data-i18n="{key}">'
             body = re.sub(r'<div class="(card-desc|bento-card-desc)"([^>]*)>', cd_repl, body)
 
             # Bullets
@@ -265,15 +276,20 @@ if (typeof translations !== 'undefined') {
             def bu_repl(bm):
                 bu_cnt[0] += 1
                 prefix = bm.group(1)
-                return f'{prefix}<span data-i18n="s{num}_bullet_{bu_cnt[0]}">'
-            body = re.sub(r'((?:<li class="bullet-item"[^>]*>|<div class="bento-card-list-item"[^>]*>)\s*<span class="(?:bullet-dot|bento-dot)[^"]*"></span>\s*)<span(?:\s+data-i18n="[^"]*")?>', bu_repl, body)
+                existing_key = bm.group(2)
+                key = existing_key if (existing_key and existing_key in flat["de"]) else f"s{num}_bullet_{bu_cnt[0]}"
+                return f'{prefix}<span data-i18n="{key}">'
+            body = re.sub(r'((?:<li class="bullet-item"[^>]*>|<div class="bento-card-list-item"[^>]*>)\s*<span class="(?:bullet-dot|bento-dot)[^"]*"></span>\s*)<span(?:\s+data-i18n="([^"]*)")?>', bu_repl, body)
 
             # Captions
             cap_cnt = [0]
             def cap_repl(cm):
                 cap_cnt[0] += 1
-                extra = re.sub(r'\s*data-i18n="[^"]*"', '', cm.group(2))
-                return f'<div class="{cm.group(1)}"{extra} data-i18n="s{num}_caption_{cap_cnt[0]}">'
+                rest = cm.group(2)
+                m_existing = re.search(r'data-i18n="([^"]+)"', rest)
+                key = m_existing.group(1) if (m_existing and m_existing.group(1) in flat["de"]) else f"s{num}_caption_{cap_cnt[0]}"
+                extra = re.sub(r'\s*data-i18n="[^"]*"', '', rest)
+                return f'<div class="{cm.group(1)}"{extra} data-i18n="{key}">'
             body = re.sub(r'<div class="(media-caption|bento-media-caption|bento-media-subcaption)"([^>]*)>', cap_repl, body)
 
             return f"{start_tag}{body}{end_tag}"

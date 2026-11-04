@@ -224,10 +224,10 @@
           "zh": "极致声音整音艺术"
         },
         "s2_c1_desc": {
-          "de": "140+ Jahre Geschichte, Zusammenlegung der Standorte & der neue Hauptsitz in Meuselwitz.",
-          "en": "140+ years of history, consolidation of production sites & the new headquarters in Meuselwitz.",
-          "ja": "140年以上の歩み、拠点統合、そしてモイゼルヴィッツ新本社の誕生。",
-          "zh": "140余年厚重历史、生产基地全面整合及莫伊瑟尔维茨全新总部。"
+          "de": "Über 140 Jahre Stuttgarter Mechaniktradition, die Bündelung der Standorte und der Neubau des modernen Werks in Meuselwitz.",
+          "en": "Over 140 years of Stuttgart action heritage, site consolidation, and the construction of the modern Meuselwitz headquarters.",
+          "ja": "140年以上のシュトゥットガルトの伝統、拠点の統合、そしてモイゼルヴィッツ新本社工場の建設。",
+          "zh": "逾140年斯图加特击弦机传统、生产基地整合以及现代化莫伊塞尔维茨新总部工厂的落成。"
         },
         "s2_c2_desc": {
           "de": "FFW- & Weickert-Tradition seit 1783, reine Merinowolle, natürliches Walken (0.56 Shore) & der exklusive Weickert-Special-Filz.",
@@ -343,10 +343,10 @@
           "zh": "下一画面 ▶"
         },
         "s4_drone_badge": {
-          "de": ">DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)",
-          "en": ">INTERIOR DRONE FLIGHT • MEUSELWITZ PLANT (2026)",
-          "ja": ">工場内部ドローン映像 • モイゼルヴィッツ（2026）",
-          "zh": ">莫伊瑟尔维茨新工厂内部无人机航拍 (2026)"
+          "de": "DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)",
+          "en": "INTERIOR DRONE FLIGHT • MEUSELWITZ PLANT (2026)",
+          "ja": "工場内部ドローン映像 • モイゼルヴィッツ（2026）",
+          "zh": "莫伊瑟尔维茨新工厂内部无人机航拍 (2026)"
         },
         "s4_drone_title": {
           "de": "Das fertiggestellte Werk Meuselwitz im Drohnenflug",
@@ -643,10 +643,10 @@
           "zh": "1871年乌尔岑钢琴毛毡工厂与水运河渠原始历史版画"
         },
         "s5_m5_badge": {
-          "de": ">WELTMARKTFÜHRER 1906",
-          "en": ">WORLD LEADER 1906",
-          "ja": ">世界首位 1906",
-          "zh": ">全球霸主 1906"
+          "de": "WELTMARKTFÜHRER 1906",
+          "en": "WORLD LEADER 1906",
+          "ja": "世界首位 1906",
+          "zh": "全球霸主 1906"
         },
         "s5_m5_title": {
           "de": "Weltmarktführer für 200.000 Klaviere jährlich",
@@ -685,10 +685,10 @@
           "zh": "🌎 确立施坦威纽约总厂及全球名琴统一参考标准"
         },
         "s5_m5_badge_media": {
-          "de": ">MEISTER & HERR PATZSCHKE (1906)",
-          "en": ">FELT MASTERS & MR. PATZSCHKE (1906)",
-          "ja": ">マイスターとパチュケ氏 (1906)",
-          "zh": ">制毡大师与帕茨克厂长 (1906)"
+          "de": "MEISTER & HERR PATZSCHKE (1906)",
+          "en": "FELT MASTERS & MR. PATZSCHKE (1906)",
+          "ja": "マイスターとパチュケ氏 (1906)",
+          "zh": "制毡大师与帕茨克厂长 (1906)"
         },
         "s5_m5_caption": {
           "de": "Historische Originalaufnahme (Sept. 1906): Meister der Filzfabrik Wurzen mit Direktor Patzschke am Filzzuschnitt-Tisch",
@@ -781,10 +781,10 @@
           "zh": "独家精选三洲原毛拼配："
         },
         "s5_hl1_desc": {
-          "de": "Exklusive Filzmischung aus erlesener Wolle aus Argentinien, Südafrika und Neuseeland: Erst das präzise Zusammenspiel aus langen feinen Fasern und stark verzahnenden Wollen ergibt diesen extrem zugfesten Hammerkopffilz.",
-          "en": "Exclusive felt blend from select wools sourced from Argentina, South Africa, and New Zealand: Only the precise combination of long fine fibers and strongly interlocking wools yields this extremely tensile, resilient hammer felt.",
-          "ja": "アルゼンチン、南アフリカ、ニュージーランド産原毛を厳選ブレンド：長く繊細な高級羊毛と強固に絡み合う捲縮羊毛の絶妙な組み合わせが、極めて高い引張強度と弾性を持つハンマーフェルトを生み出します。",
-          "zh": "精选阿根廷、南非与新西兰顶级原毛的独家拼配配方：唯有将细长柔韧的长纤维羊毛与具备极强机械互锁特性的羊毛精准融合，方能成就抗拉强度极高、弹性充沛的顶级弦槌纯毛毡。"
+          "de": "Erlesene Lang- und Kräuselwollen aus Argentinien, Südafrika und Neuseeland bilden ein extrem zugfestes Gefüge.",
+          "en": "Selected long and crimped wools from Argentina, South Africa, and New Zealand form an ultra-tensile fiber matrix.",
+          "ja": "アルゼンチン・南アフリカ・ニュージーランド産の厳選羊毛が極めて高い引張強度を生みます。",
+          "zh": "精选自阿根廷、南非与新西兰的长纤维与卷曲羊毛，构筑极高抗拉强度的毛毡基体。"
         },
         "s5_hl2_title": {
           "de": "Reine Walkung ohne Harze:",
@@ -823,82 +823,82 @@
           "zh": "仅相距约65公里，保障制毡与弦槌顶级大师无缝当面调校，并实现零延时敏捷供应。"
         },
         "s5_b1_badge": {
-          "de": ">URSPRUNG WURZEN 1783",
-          "en": ">ORIGIN WURZEN 1783",
-          "ja": ">ヴルツェン創業 1783",
-          "zh": ">乌尔岑起源 1783"
+          "de": "URSPRUNG WURZEN 1783",
+          "en": "ORIGIN WURZEN 1783",
+          "ja": "ヴルツェン創業 1783",
+          "zh": "乌尔岑起源 1783"
         },
         "s5_b2_badge": {
-          "de": ">FASER-URSPRUNG",
-          "en": ">FIBER ORIGIN",
-          "ja": ">繊維の起源",
-          "zh": ">原毛溯源"
+          "de": "FASER-URSPRUNG",
+          "en": "FIBER ORIGIN",
+          "ja": "繊維の起源",
+          "zh": "原毛溯源"
         },
         "s5_b3_badge": {
-          "de": ">ERFINDUNG 1847",
-          "en": ">INVENTION 1847",
-          "ja": ">発明 1847",
-          "zh": ">发明 1847"
+          "de": "ERFINDUNG 1847",
+          "en": "INVENTION 1847",
+          "ja": "発明 1847",
+          "zh": "发明 1847"
         },
         "s5_b4_badge": {
-          "de": ">GOLZERNMÜHLE 1850",
-          "en": ">GOLZERN MILL 1850",
-          "ja": ">ゴルツェルン水車工場 1850",
-          "zh": ">戈尔岑水磨厂 1850"
+          "de": "GOLZERNMÜHLE 1850",
+          "en": "GOLZERN MILL 1850",
+          "ja": "ゴルツェルン水車工場 1850",
+          "zh": "戈尔岑水磨厂 1850"
         },
         "s5_b5_badge": {
-          "de": ">WELTRUHM 1851",
-          "en": ">GLOBAL ACCLAIM 1851",
-          "ja": ">世界的名声 1851",
-          "zh": ">享誉全球 1851"
+          "de": "WELTRUHM 1851",
+          "en": "GLOBAL ACCLAIM 1851",
+          "ja": "世界的名声 1851",
+          "zh": "享誉全球 1851"
         },
         "s5_b6_badge": {
-          "de": ">AUSZEICHNUNGEN",
-          "en": ">AWARDS & MEDALS",
-          "ja": ">受賞歴",
-          "zh": ">荣誉勋章"
+          "de": "AUSZEICHNUNGEN",
+          "en": "AWARDS & MEDALS",
+          "ja": "受賞歴",
+          "zh": "荣誉勋章"
         },
         "s5_b7_badge": {
-          "de": ">EXPANSION 1861",
-          "en": ">EXPANSION 1861",
-          "ja": ">拠点拡張 1861",
-          "zh": ">厂区扩建 1861"
+          "de": "EXPANSION 1861",
+          "en": "EXPANSION 1861",
+          "ja": "拠点拡張 1861",
+          "zh": "厂区扩建 1861"
         },
         "s5_b8_badge": {
-          "de": ">WURZEN 1871",
-          "en": ">WURZEN 1871",
-          "ja": ">ヴルツェン 1871",
-          "zh": ">乌尔岑 1871"
+          "de": "WURZEN 1871",
+          "en": "WURZEN 1871",
+          "ja": "ヴルツェン 1871",
+          "zh": "乌尔岑 1871"
         },
         "s5_b9_badge": {
-          "de": ">WELTMARKTFÜHRER 1906",
-          "en": ">WORLD LEADER 1906",
-          "ja": ">世界シェア首位 1906",
-          "zh": ">全球领袖 1906"
+          "de": "WELTMARKTFÜHRER 1906",
+          "en": "WORLD LEADER 1906",
+          "ja": "世界シェア首位 1906",
+          "zh": "全球领袖 1906"
         },
         "s5_b10_badge": {
-          "de": ">MEISTER & HERR PATZSCHKE (1906)",
-          "en": ">MASTERS & MR. PATZSCHKE (1906)",
-          "ja": ">職人衆とパチュケ取締役（1906年）",
-          "zh": ">大师团队与帕茨克厂长（1906）"
+          "de": "MEISTER & HERR PATZSCHKE (1906)",
+          "en": "MASTERS & MR. PATZSCHKE (1906)",
+          "ja": "職人衆とパチュケ取締役（1906年）",
+          "zh": "大师团队与帕茨克厂长（1906）"
         },
         "s5_b11_badge": {
-          "de": ">HEUTE • RENNER PARTNER",
-          "en": ">TODAY • RENNER PARTNER",
-          "ja": ">現在 • レンナー独占パートナー",
-          "zh": ">今日 · 雷诺专属战略伙伴"
+          "de": "HEUTE • RENNER PARTNER",
+          "en": "TODAY • RENNER PARTNER",
+          "ja": "現在 • レンナー独占パートナー",
+          "zh": "今日 · 雷诺专属战略伙伴"
         },
         "s5_b12_badge": {
-          "de": ">WEICKERT SPEZIAL",
-          "en": ">WEICKERT SPECIAL",
-          "ja": ">ヴァイケルト特級フェルト",
-          "zh": ">魏克特特级定制毛毡"
+          "de": "WEICKERT SPEZIAL",
+          "en": "WEICKERT SPECIAL",
+          "ja": "ヴァイケルト特級フェルト",
+          "zh": "魏克特特级定制毛毡"
         },
         "s5_b13_badge": {
-          "de": ">100% REINE MERINO-SCHURWOLLE",
-          "en": ">100% PURE VIRGIN MERINO WOOL",
-          "ja": ">100% 純粋メリノ新毛",
-          "zh": ">100% 纯天然美利奴初剪羊毛"
+          "de": "100% REINE MERINO-SCHURWOLLE",
+          "en": "100% PURE VIRGIN MERINO WOOL",
+          "ja": "100% 純粋メリノ新毛",
+          "zh": "100% 纯天然美利奴初剪羊毛"
         },
         "s5_c1_title": {
           "de": "Das Geheimnis des Weickert-Filzes",
@@ -949,10 +949,10 @@
       },
       "elements": {
         "s6_bullet_1": {
-          "de": "<strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen.",
-          "en": "<strong>Bale Delivery Without Over-Compression:</strong> Raw wool is transported in loosely packed bales. Excessive compression would irreversibly damage the delicate scales and crimp of the wool fibers.",
-          "ja": "<strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen.",
-          "zh": "<strong>Ballenlieferung ohne Überpressung:</strong> Die Rohwolle wird in locker gepackten Ballen transportiert. Zu starkes Verpressen würde die empfindlichen Schuppen und Biegungen der Wollfasern irreversibel schädigen."
+          "de": "<strong>Ballenlieferung ohne Überpressung:</strong> Locker gepackte Rohwollballen bewahren die empfindlichen Schuppen und Biegungen der Fasern unversehrt.",
+          "en": "<strong>Uncompressed Bale Delivery:</strong> Loosely packed raw wool bales preserve the delicate scales and natural crimp of the fibers intact.",
+          "ja": "<strong>非圧縮ベール輸送：</strong> 緩やかに梱包された原毛ベールが、繊細なスケールと自然な縮れを無傷で保ちます。",
+          "zh": "<strong>非过压原毛包运输：</strong> 松散打包运输原毛，完整保留羊毛纤维细腻的鳞片层与天然卷曲弹性。"
         },
         "s6_bullet_2": {
           "de": "<strong>Höhere Logistikkosten für Spitzenqualität:</strong> Dieser schonende Transport erhöht das Transportvolumen, sichert jedoch die unversehrte Faserelastizität.",
@@ -973,10 +973,10 @@
           "zh": "<strong>Schonende Carbonisierung:</strong> Chemisch sanftes Reinigungsverfahren entfernt Pflanzenteilchen, ohne die Proteinstruktur des Keratins anzugreifen."
         },
         "s6_caption_1": {
-          "de": "Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW",
-          "en": "Raw wool delivery: Gently stored wool bales at FFW",
-          "ja": "Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW",
-          "zh": "Anlieferung der Rohwolle: Schonend gelagerte Wollballen bei FFW"
+          "de": "Rohwolle-Anlieferung: Unverpresste Ballen bewahren die natürliche Faserkräuselung",
+          "en": "Raw wool delivery: Uncompressed bales preserve the natural fiber crimp at FFW",
+          "ja": "原毛の搬入：自然な繊維の縮れを守るFFWの非圧縮ウールベール",
+          "zh": "原毛入厂：FFW采用非压缩毛包储存以保护天然纤维卷曲"
         },
         "s6_b1_badge": {
           "de": "ROHSTOFF-SELEKTION",
@@ -1069,10 +1069,10 @@
           "zh": "保持纤维柔韧度，抵御环境温湿度变化导致的脆化。"
         },
         "s6_b3_badge": {
-          "de": ">FASERINTEGRITÄT",
-          "en": ">FIBER INTEGRITY",
-          "ja": ">繊維の健全性",
-          "zh": ">纤维完整性"
+          "de": "FASERINTEGRITÄT",
+          "en": "FIBER INTEGRITY",
+          "ja": "繊維の健全性",
+          "zh": "纤维完整性"
         },
         "s6_c1_title": {
           "de": "Die Naturkraft des Keratins",
@@ -1195,10 +1195,10 @@
           "zh": "长拉力纤维与细腻填充短绒的黄金配比"
         },
         "s7_texture_tag": {
-          "de": "Rezeptur: Chargen-Zusammenführung",
-          "en": "Recipe: Batch Synthesis",
-          "ja": "配合レシピ：ロット調合",
-          "zh": "工艺配方：批次精密混合"
+          "de": "Vergleich: Langfaser & feine Füllwolle",
+          "en": "Comparison: Long Fiber & Fine Fill Wool",
+          "ja": "比較：長繊維と極細充填ウール",
+          "zh": "对比：长拉力纤维与细腻填充羊毛"
         },
         "s7_hl1_title": {
           "de": "Lange Zugfasern:",
@@ -1237,10 +1237,10 @@
           "zh": "消除全键88个琴槌的密度波动与硬点杂音。"
         },
         "s7_b3_badge": {
-          "de": ">REZEPTUR-BALANCE",
-          "en": ">RECIPE BALANCE",
-          "ja": ">混紡比率の黄金比",
-          "zh": ">拼配黄金配比"
+          "de": "REZEPTUR-BALANCE",
+          "en": "RECIPE BALANCE",
+          "ja": "混紡比率の黄金比",
+          "zh": "拼配黄金配比"
         },
         "s7_c1_title": {
           "de": "Federsteifigkeit nach Maß",
@@ -1411,10 +1411,10 @@
           "zh": "极其轻柔的顺梳工艺杜绝纤维断裂，赋予羊毛絮片极高的结构抗拉强度。"
         },
         "s8_b3_badge": {
-          "de": ">VLIES-STRUKTUR",
-          "en": ">FLEECE STRUCTURE",
-          "ja": ">フリース配向構造",
-          "zh": ">定向纤网结构"
+          "de": "VLIES-STRUKTUR",
+          "en": "FLEECE STRUCTURE",
+          "ja": "フリース配向構造",
+          "zh": "定向纤网结构"
         },
         "s8_c1_title": {
           "de": "Voraussetzung für die Intonation",
@@ -1819,10 +1819,10 @@
           "zh": "<strong>绝无合成树脂：</strong>零化学增硬剂与胶水，彻底杜绝刺耳死硬杂音，保障声学生命力。"
         },
         "s10_b3_badge": {
-          "de": ">AKUSTISCHE PERFEKTION",
-          "en": ">ACOUSTIC PERFECTION",
-          "ja": ">究極の音響性能",
-          "zh": ">声学极致追求"
+          "de": "AKUSTISCHE PERFEKTION",
+          "en": "ACOUSTIC PERFECTION",
+          "ja": "究極の音響性能",
+          "zh": "声学极致追求"
         }
       },
       "notes": {
@@ -1856,33 +1856,33 @@
       "subtitle": {
         "de": "Formgebung auf Endmaß ohne Schleifen – Bewahrung der seidigen Faserhaut",
         "en": "Final dimensional calibration without sanding – preserving the silky fiber cuticle",
-        "ja": "Formgebung auf Endmaß ohne Schleifen – Bewahrung der seidigen Faserhaut",
-        "zh": "Formgebung auf Endmaß ohne Schleifen – Bewahrung der seidigen Faserhaut"
+        "ja": "研磨を行わない最終寸法成形 — 絹のような表層繊維スキンを完全に保護",
+        "zh": "零打磨终尺寸定型工艺——完整保留丝滑致密的表层天然毛鳞结构"
       },
       "elements": {
         "s11_bullet_1": {
-          "de": "<strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße.",
-          "en": "<strong>Mechanical Hammering:</strong> Specialized felt hammers and polished natural stones consolidate sheets to exact target dimensions.",
-          "ja": "<strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße.",
-          "zh": "<strong>Mechanisches Nachschlagen:</strong> Spezielle Filzhämmer und polierte Natursteine verdichten die Platten auf die exakten Sollmaße."
+          "de": "<strong>Mechanisches Nachschlagen:</strong> Filzhämmer und polierte Natursteine verdichten die Platten exakt auf Sollmaß.",
+          "en": "<strong>Mechanical Hammering:</strong> Felt hammers and polished natural stones consolidate sheets to exact dimensions.",
+          "ja": "<strong>機械・手作業の叩き締め：</strong> 専用フェルトハンマーと天然石が規定寸法まで均一に締め上げます。",
+          "zh": "<strong>物理敲击致密化：</strong> 特制毛槌与抛光天然冷石将毛毡板精准锻打至目标厚度规格。"
         },
         "s11_bullet_2": {
-          "de": "<strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen.",
-          "en": "<strong>Zero Sanding:</strong> Sanding felt shears off millions of natural fibers. The Weickert process completely eliminates surface grinding or sanding.",
-          "ja": "<strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen.",
-          "zh": "<strong>Verzicht auf Schleifen:</strong> Wird Filz geschliffen, werden Abermillionen Fasern gekappt. Das Weickert-Verfahren verzichtet vollständig auf Schleifen."
+          "de": "<strong>Null Schleifabtrag:</strong> Das Weickert-Verfahren verzichtet komplett auf Schleifen – keine einzige Faser wird gekappt.",
+          "en": "<strong>Zero Sanding Removal:</strong> The Weickert process eliminates sanding completely—not a single tension fiber is cut.",
+          "ja": "<strong>完全無研磨プロセス：</strong> ヴァイカート製法は表面研磨を一切行わず、張力繊維を1本も断ち切りません。",
+          "zh": "<strong>零砂磨表面工艺：</strong> Weickert工艺彻底摒弃砂带打磨——绝不切断任何一根连续张力纤维。"
         },
         "s11_bullet_3": {
-          "de": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen.",
-          "en": "<strong>Smooth Bending Radius:</strong> When wrapped around the hammer moulding, the felt surface remains completely intact and smooth – without tearing or slipping apart.",
-          "ja": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen.",
-          "zh": "<strong>Glatter Biegeradius:</strong> Beim Biegen um den Holzkern bleibt die Oberfläche vollkommen geschlossen und glatt – ohne Reißen oder Auseinanderrutschen."
+          "de": "<strong>Geschlossener Biegeradius:</strong> Beim Pressen um den Holzkern bleibt die Außenhaut glatt und absolut rissfrei.",
+          "en": "<strong>Unbroken Bending Radius:</strong> When pressed around the wood core, the outer skin stays smooth and tear-free.",
+          "ja": "<strong>滑らかな曲げ半径：</strong> ウッドコア周囲へ強く曲げても表層は滑らかで割れやズレが生じません。",
+          "zh": "<strong>致密无裂弯曲弧面：</strong> 高压包覆实木槌芯时，外表面始终保持丝滑闭合，绝不撕裂滑移。"
         },
         "s11_caption_1": {
-          "de": "Gewalkte Filzplatten mit einer natürlichen Eindringfestigkeit im Bereich von 56 bis 68 Shore-A.",
-          "en": "Post-processing: Densifying felt sheets using specialized hammers and stone polishers",
-          "ja": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen",
-          "zh": "Nachbearbeitung: Verdichten der Filzplatten mit Hämmern und Steinen"
+          "de": "Gewalkte Filzplatten mit natürlicher Eindringfestigkeit von 56 bis 68 Shore-A",
+          "en": "Fulled felt sheets with natural indentation firmness of 56 to 68 Shore-A",
+          "ja": "自然な硬度56〜68 Shore-Aを備えた縮絨仕上げフェルトプレート",
+          "zh": "具备56至68 Shore-A天然压入硬度的缩绒定型毛毡板"
         },
         "s11_b1_badge": {
           "de": "FORMGEBUNG OHNE SCHLEIFEN",
@@ -1903,10 +1903,10 @@
           "zh": "手工敲击均质化精细定型"
         },
         "s11_panel_subtitle": {
-          "de": "Gezielte Hammerschläge bringen die Filzplatten auf das exakte Maß und entspannen das Fasergefüge",
-          "en": "Targeted hammer blows bring felt boards to precise dimensions while relaxing fiber lattice",
-          "ja": "熟練の木槌技で寸法を精密調整しつつ内部応力を解放",
-          "zh": "熟练匠人以毛槌与石打精准抚平微隙，释放内部应力"
+          "de": "Gezielte Hammerschläge bringen die Filzplatten auf Sollmaß und entspannen das Fasergefüge.",
+          "en": "Targeted hammer blows bring felt sheets to exact size while relaxing the fiber lattice.",
+          "ja": "熟練のフェルトハンマー打ちが正確な寸法へ整えつつ内部応力を解放します。",
+          "zh": "精准毛槌敲击使毛毡板达到目标尺寸，同时柔和释放纤维网内部应力。"
         },
         "s11_fact_badge": {
           "de": "🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit",
@@ -1939,16 +1939,16 @@
           "zh": "拉伸张力与形状稳定性：连续纤网核心骨架"
         },
         "s11_spotlight_desc": {
-          "de": "Ungeschliffen halten die 2×6 Vliesbahnen die volle Zugspannung. Geschliffen bricht das Rückgrat: Der Hammerkopf verliert über 40 % seiner Spannung und verformt sich.",
-          "en": "Unground, the 2×6 fleece webs hold full tension. Sanded, the backbone fails: the hammerhead loses over 40% of its tension and deforms.",
-          "ja": "未研磨では表裏各6層の繊維帯が全引張力を保持。研磨すると骨格が崩壊し、ハンマーヘッドは40%以上の張力を失い座屈変形します。",
-          "zh": "未打磨状态下2×6连续纤网承受全部拉力；砂光打磨瓦解骨架，导致弦槌损失超过40%的核心张力并严重塌陷变形。"
+          "de": "Ungeschliffen tragen 2×6 Vliesbahnen die volle Zugspannung; geschliffen verliert der Kopf über 40 % Spannung.",
+          "en": "Unsanded, 2×6 fleece webs carry full tensile load; sanded, the hammerhead loses over 40% of its tension.",
+          "ja": "無研磨では2×6層のフリースが張力を保持し、研磨すると張力の40%以上が失われます。",
+          "zh": "不打磨时2×6层毛网完整承载张力；打磨切断纤维会导致弦槌丧失逾40%的张力。"
         },
         "s11_c1_desc": {
-          "de": "Ungeschliffen halten 2×6 Vliesbahnen die volle Zugspannung. Geschliffen verschieben und lockern sich die Fasern: Der Hammerkopf verliert über 40 % seiner Spannung.",
-          "en": "Unground, 2×6 fleece webs hold full tension. Sanded, fibers shift and loosen: the hammerhead loses over 40% of its tension.",
-          "ja": "未研磨の2×6層繊維帯が全引張力を保持。研磨すると繊維がズレて弛緩し、ハンマーヘッドは40%以上の張力を喪失します。",
-          "zh": "未打磨时2×6连续纤网承受全部拉力；打磨导致纤维滑脱错位，弦槌核心张力急剧损失超过40%。"
+          "de": "Ungeschliffen tragen 2×6 Vliesbahnen die volle Zugspannung; geschliffen verliert der Kopf über 40 % Spannung.",
+          "en": "Unsanded, 2×6 fleece webs carry full tensile load; sanded, the hammerhead loses over 40% of its tension.",
+          "ja": "無研磨では2×6層のフリースが張力を保持し、研磨すると張力の40%以上が失われます。",
+          "zh": "不打磨时2×6层毛网完整承载张力；打磨切断纤维会导致弦槌丧失逾40%的张力。"
         },
         "s11_anim_mode_intact": {
           "de": "✦ Ungeschliffen (Spannung hält)",
@@ -2125,28 +2125,28 @@
       },
       "elements": {
         "s12_bullet_1": {
-          "de": "<strong>Konische Plattenform:</strong> Die Filzplatten sind werkseitig keilförmig aufgebaut – dicker und schwerer im Bass, stetig dünner und dichter werdend zum Diskant hin.",
-          "en": "<strong>Tapered Sheet Geometry:</strong> Felt sheets are engineered in wedge-shaped cross sections – thicker and heavier in the bass, progressively thinner and denser toward the treble.",
-          "ja": "<strong>Konische Plattenform:</strong> Die Filzplatten sind werkseitig keilförmig aufgebaut – dicker und schwerer im Bass, stetig dünner und dichter werdend zum Diskant hin.",
-          "zh": "<strong>Konische Plattenform:</strong> Die Filzplatten sind werkseitig keilförmig aufgebaut – dicker und schwerer im Bass, stetig dünner und dichter werdend zum Diskant hin."
+          "de": "<strong>Konische Geometrie:</strong> Werkseitig keilförmig gewalkt – kräftig im Bass, zum Diskant stetig schlanker und dichter.",
+          "en": "<strong>Conical Geometry:</strong> Tapered from the mill—thicker in the bass, progressively slimmer and denser toward the treble.",
+          "ja": "<strong>コニカル形状：</strong> 低音部は厚く重く、高音部へ向かうにつれて薄く高密度になる楔形構造です。",
+          "zh": "<strong>锥形板材几何：</strong> 出厂即呈楔形过渡——低音区厚重饱满，向高音区逐渐变薄且密度递增。"
         },
         "s12_bullet_2": {
-          "de": "<strong>Über 30 Rezepturen auf Lager:</strong> Renner hält permanent weit über 30 verschiedene Filzplattensorten von FFW Wurzen vorrätig – mehr als jeder andere Hersteller weltweit.",
-          "en": "<strong>Over 30 Formulations in Stock:</strong> Renner permanently stocks over 30 distinct FFW felt sheet specifications – more than any other manufacturer worldwide.",
-          "ja": "<strong>Über 30 Rezepturen auf Lager:</strong> Renner hält permanent weit über 30 verschiedene Filzplattensorten von FFW Wurzen vorrätig – mehr als jeder andere Hersteller weltweit.",
-          "zh": "<strong>Über 30 Rezepturen auf Lager:</strong> Renner hält permanent weit über 30 verschiedene Filzplattensorten von FFW Wurzen vorrätig – mehr als jeder andere Hersteller weltweit."
+          "de": "<strong>Über 30 Rezepturen:</strong> Renner führt permanent mehr FFW-Filzplattensorten auf Lager als jeder andere Hersteller.",
+          "en": "<strong>Over 30 Formulas:</strong> Renner permanently stocks more FFW Wurzen felt grades than any other maker worldwide.",
+          "ja": "<strong>30種以上の配合：</strong> 世界のどのメーカーよりも多い30種類以上のFFWヴルツェン製フェルトを常時在庫。",
+          "zh": "<strong>逾30种专属配方：</strong> 常备超过30种FFW武尔岑毛毡板规格，库存深度居全球制造商之首。"
         },
         "s12_bullet_3": {
-          "de": "<strong>Klimakontrolle & Mottenschutz:</strong> Kontrollierte Luftfeuchte und Pheromonfallen schützen das Naturmaterial dauerhaft.",
-          "en": "<strong>Climate Control & Moth Protection:</strong> Monitored relative humidity and pheromone traps protect natural wool fibers permanently.",
-          "ja": "<strong>Klimakontrolle & Mottenschutz:</strong> Kontrollierte Luftfeuchte und Pheromonfallen schützen das Naturmaterial dauerhaft.",
-          "zh": "<strong>Klimakontrolle & Mottenschutz:</strong> Kontrollierte Luftfeuchte und Pheromonfallen schützen das Naturmaterial dauerhaft."
+          "de": "<strong>Klima- &amp; Mottenschutz:</strong> Konstante Luftfeuchte und biologisches Monitoring schützen die reine Schurwolle dauerhaft.",
+          "en": "<strong>Climate &amp; Moth Protection:</strong> Controlled humidity and pheromone monitoring safeguard the pure virgin wool.",
+          "ja": "<strong>空調・防虫管理：</strong> 厳密な湿度制御とフェロモントラップが純粋な天然羊毛を長期保護します。",
+          "zh": "<strong>恒湿与防蛀保护：</strong> 精准湿度控制配合信息素监测，持久守护纯天然美利奴羊毛品质。"
         },
         "s12_bullet_4": {
-          "de": "<strong>Spannungsfreies Reifen:</strong> Mindestlagerdauer vor dem Zuschnitt baut innere Restspannungen vollständig ab.",
-          "en": "<strong>Tension-Free Seasoning:</strong> Prescribed resting periods prior to strip cutting completely dissipate internal residual stresses.",
-          "ja": "<strong>Spannungsfreies Reifen:</strong> Mindestlagerdauer vor dem Zuschnitt baut innere Restspannungen vollständig ab.",
-          "zh": "<strong>Spannungsfreies Reifen:</strong> Mindestlagerdauer vor dem Zuschnitt baut innere Restspannungen vollständig ab."
+          "de": "<strong>Spannungsfreies Reifen:</strong> Definierte Ruhezeiten vor dem Schnitt bauen letzte innere Restspannungen vollständig ab.",
+          "en": "<strong>Stress-Free Maturing:</strong> Mandatory resting periods before cutting eliminate any remaining internal tension.",
+          "ja": "<strong>無応力熟成：</strong> 裁断前の規定熟成期間により、内部の残留応力を完全に解消します。",
+          "zh": "<strong>无应力静置熟成：</strong> 裁切前执行严格的最短静置期，使毛毡内部残余应力完全消解。"
         },
         "s12_caption_1": {
           "de": "Filzplattenlager im Werk Meuselwitz: Über 30 Plattensorten permanent verfügbar",
@@ -2237,6 +2237,30 @@
           "en": "Ready delivery for historic and modern instruments without delay.",
           "ja": "歴史的銘器から最新モデルまで待機時間ゼロで迅速供給。",
           "zh": "不论经典历史名琴还是现代定制型号均可即时调配。"
+        },
+        "s12_kpi": {
+          "de": "30+ Sorten",
+          "en": "30+ Grades",
+          "ja": "30種以上",
+          "zh": "30+ 种规格"
+        },
+        "s12_c1_title": {
+          "de": "Größtes Spezial-Sortiment weltweit",
+          "en": "World's Largest Specialty Felt Inventory",
+          "ja": "世界最大規模の専用フェルト在庫",
+          "zh": "全球规模最大的专用弦槌毛毡库"
+        },
+        "s12_c1_desc": {
+          "de": "Keilförmige Filzplatten reifen im Werk Meuselwitz unter konstantem Klima spannungsfrei bis zum Zuschnitt.",
+          "en": "Tapered felt sheets mature stress-free under strict climate control in Meuselwitz prior to cutting.",
+          "ja": "テーパー状のフェルト板はモイゼルヴィッツ工場で厳格な空調管理のもと応力を抜いて熟成されます。",
+          "zh": "楔形毛毡板在莫伊塞尔维茨恒温恒湿库中自然熟成，裁切前彻底释放内部残余应力。"
+        },
+        "s12_fact": {
+          "de": "🏛 Sofortige Lieferfähigkeit für historische wie moderne Konzertflügel",
+          "en": "🏛 Immediate availability for both historical and modern concert grands",
+          "ja": "🏛 歴史的名器から現代のコンサートグランドまで即座に対応可能",
+          "zh": "🏛 随时满足历史古钢琴修复与现代音乐会三角钢琴的定制需求"
         }
       },
       "notes": {
@@ -2275,22 +2299,22 @@
       },
       "elements": {
         "s13_bullet_1": {
-          "de": "<strong>Was ist die „Seele“?</strong> Eine dünne, andersfarbige Filzschicht, die bei der Plattenherstellung am Bassanfang eingearbeitet wird.",
-          "en": "<strong>What is the 'Soul'?</strong> A thin, distinctly colored felt layer integrated at the bass edge during sheet fabrication.",
-          "ja": "<strong>Was ist die „Seele“?</strong> Eine dünne, andersfarbige Filzschicht, die bei der Plattenherstellung am Bassanfang eingearbeitet wird.",
-          "zh": "<strong>Was ist die „Seele“?</strong> Eine dünne, andersfarbige Filzschicht, die bei der Plattenherstellung am Bassanfang eingearbeitet wird."
+          "de": "<strong>Farbige Einlage („Seele“):</strong> Hauchdünne, farbige Wollvlies-Schicht, die beim Plattenaufbau am Bassanfang eingelegt wird.",
+          "en": "<strong>Colored Core (“Seele”):</strong> Thin colored wool layer integrated into the bass edge during initial sheet layering.",
+          "ja": "<strong>色付き中間層「ゼーレ」：</strong> フェルト板の積層時に低音端へ織り込まれる薄い色付きの羊毛層です。",
+          "zh": "<strong>彩色夹层（“灵魂线”）：</strong> 铺叠毛网时在低音起始端嵌入的纤薄异色纯羊毛标记层。"
         },
         "s13_bullet_2": {
-          "de": "<strong>Traditioneller Herkunftsnachweis:</strong> Ein historisches Echtheitsmerkmal der Filzfabrik Wurzen für Klavierbauer weltweit.",
-          "en": "<strong>Traditional Proof of Origin:</strong> A historic hallmark of Wurzen felt authenticity, recognized by piano builders worldwide.",
-          "ja": "<strong>Traditioneller Herkunftsnachweis:</strong> Ein historisches Echtheitsmerkmal der Filzfabrik Wurzen für Klavierbauer weltweit.",
-          "zh": "<strong>Traditioneller Herkunftsnachweis:</strong> Ein historisches Echtheitsmerkmal der Filzfabrik Wurzen für Klavierbauer weltweit."
+          "de": "<strong>Historisches Echtheitssiegel:</strong> Seit Generationen das sichtbare Erkennungszeichen echter FFW-Manufakturfilze weltweit.",
+          "en": "<strong>Historic Seal of Authenticity:</strong> For generations, the unmistakable hallmark of genuine FFW Wurzen piano felt.",
+          "ja": "<strong>歴史的な真正証明：</strong> 世代を超えて世界中の技術者に信頼されるFFWヴルツェン製の証です。",
+          "zh": "<strong>历史真品印记：</strong> 历经数代传承，已成为全球钢琴技师辨识正宗FFW毛毡的标志。"
         },
         "s13_bullet_3": {
-          "de": "<strong>Kein Qualitätsunterschied:</strong> Platten mit 1 oder 2 Seelen besitzen identische Fasereigenschaften – sie dienen der Chargenkennzeichnung und optischen Authentizität.",
-          "en": "<strong>No Difference in Quality:</strong> Sheets with 1 or 2 indicator layers share identical fiber specs – they serve batch tracking and visual authenticity.",
-          "ja": "<strong>Kein Qualitätsunterschied:</strong> Platten mit 1 oder 2 Seelen besitzen identische Fasereigenschaften – sie dienen der Chargenkennzeichnung und optischen Authentizität.",
-          "zh": "<strong>Kein Qualitätsunterschied:</strong> Platten mit 1 oder 2 Seelen besitzen identische Fasereigenschaften – sie dienen der Chargenkennzeichnung und optischen Authentizität."
+          "de": "<strong>Klanglich identisch:</strong> Ob 1 oder 2 Seelen – Dichte und Faserqualität sind gleich; sie kennzeichnen die jeweilige Charge.",
+          "en": "<strong>Identical Acoustics:</strong> Whether 1 or 2 cores, fiber density and tone are identical—serving purely for batch ID.",
+          "ja": "<strong>音響特性は完全に同一：</strong> 1本でも2本でも密度や音質に差はなく、ロット識別の役割を果たします。",
+          "zh": "<strong>声学性能完全一致：</strong> 无论单层或双层芯线，毛毡密度与音色毫无差异，仅用于批次追溯。"
         },
         "s13_caption_1": {
           "de": "Filzstreifen mit sichtbarer „Seele“ (farbige Kennzeichnungsschicht am Bassanfang)",
@@ -2383,10 +2407,28 @@
           "zh": "逾百年来全球公认的纯正乌尔岑高级毛毡独家印章。"
         },
         "s13_c1_desc": {
-          "de": "Beim Blick auf originale Renner-Hammerköpfe im Bass fällt oft ein feiner farbiger Streifen im Inneren des Filzes auf.",
-          "en": "When examining original Renner bass hammerheads, a distinct colored layer is visible beneath the outer felt.",
-          "ja": "レンナー製オリジナル低音ハンマーを観察すると、外層フェルトの内側に色鮮やかなアンダーフェルトが確認できます。",
-          "zh": "观察雷诺原装低音区弦槌，常能一眼辨识出外层白毡包裹下的精致内层彩色底毡。"
+          "de": "An originalen Renner-Basshämmern zeigt ein feiner farbiger Streifen im Filzinneren die echte Wurzener Herkunft.",
+          "en": "On genuine Renner bass hammers, a fine colored stripe inside the felt marks authentic Wurzen origin.",
+          "ja": "純正レンナーの低音ハンマー内部に見える細い色層は、ヴルツェン製フェルトの証です。",
+          "zh": "在原装雷纳低音弦槌毛毡内部，一条纤细的彩色夹层昭示着正宗武尔岑血统。"
+        },
+        "s13_kpi": {
+          "de": "1–2 Seelen",
+          "en": "1–2 Cores",
+          "ja": "1〜2層の芯線",
+          "zh": "1–2 层芯线"
+        },
+        "s13_c1_title": {
+          "de": "Traditioneller Herkunftsnachweis am Bassanfang",
+          "en": "Traditional Proof of Origin at the Bass Edge",
+          "ja": "低音端に織り込まれた伝統の産地証明",
+          "zh": "低音端传承百年的武尔岑原产防伪印记"
+        },
+        "s13_fact": {
+          "de": "🏷 Eindeutige Chargen-Rückverfolgbarkeit und Echtheitssiegel weltweit",
+          "en": "🏷 Unmistakable batch traceability and seal of authenticity worldwide",
+          "ja": "🏷 世界中で信頼される明確なロット追跡と真正性の証",
+          "zh": "🏷 清晰可靠的批次溯源体系与享誉全球的原厂品质认证"
         }
       },
       "notes": {
@@ -2426,39 +2468,33 @@
       "elements": {
         "s14_c1_title": {
           "de": "Was macht „Weickert Special“ so einzigartig?",
-          "en": "What makes 'Weickert Special' so unique?",
-          "ja": "Was macht „Weickert Special“ so einzigartig?",
-          "zh": "Was macht „Weickert Special“ so einzigartig?"
+          "en": "What Makes “Weickert Special” Unique?",
+          "ja": "「ヴァイカート・スペシャル」が唯一無二である理由",
+          "zh": "“Weickert Special”为何独树一帜？"
         },
         "s14_bullet_1": {
-          "de": "<strong>Exklusivrezeptur:</strong> Wird von der Filzfabrik Wurzen ausschließlich für Renner gefertigt.",
-          "en": "<strong>Exclusive Formulation:</strong> Manufactured by Filzfabrik Wurzen exclusively for Louis Renner.",
-          "ja": "<strong>Exklusivrezeptur:</strong> Wird von der Filzfabrik Wurzen ausschließlich für Renner gefertigt.",
-          "zh": "<strong>Exklusivrezeptur:</strong> Wird von der Filzfabrik Wurzen ausschließlich für Renner gefertigt."
+          "de": "<strong>Höherer Lanolingehalt:</strong> Ein besonders schonender Waschprozess bewahrt spürbar mehr natürliches Wollfett in der Faser.",
+          "en": "<strong>Higher Lanolin Content:</strong> A gentle washing process retains significantly more natural wool wax inside each fiber.",
+          "ja": "<strong>高いラノリン含有量：</strong> 穏やかな洗浄工程により、繊維内に天然の羊毛脂（ラノリン）を豊富に残します。",
+          "zh": "<strong>更高天然羊毛脂含量：</strong> 温和洗毛工艺在纤维内部保留了更丰富的天然羊毛脂（Lanolin）。"
         },
         "s14_bullet_2": {
-          "de": "<strong>Höherer Wollfettgehalt (Lanolin):</strong> Spezieller Waschprozess belässt mehr natürliches Lanolin in der Faser.",
-          "en": "<strong>Higher Wool Grease (Lanolin) Retention:</strong> A gentle proprietary wash preserves more natural lanolin inside the fibers.",
-          "ja": "<strong>Höherer Wollfettgehalt (Lanolin):</strong> Spezieller Waschprozess belässt mehr natürliches Lanolin in der Faser.",
-          "zh": "<strong>Höherer Wollfettgehalt (Lanolin):</strong> Spezieller Waschprozess belässt mehr natürliches Lanolin in der Faser."
+          "de": "<strong>Geringes Quellverhalten:</strong> Deutlich unempfindlicher gegenüber saisonalen Schwankungen der Raumluftfeuchte.",
+          "en": "<strong>Reduced Swelling:</strong> Markedly less sensitive to seasonal fluctuations in concert hall and room humidity.",
+          "ja": "<strong>膨潤の抑制：</strong> 季節による室内湿度の変化に対して極めて高い寸法・音響安定性を発揮します。",
+          "zh": "<strong>极低吸湿膨胀率：</strong> 对季节性室内湿度波动具备更强的抵抗力，性能始终稳定如一。"
         },
         "s14_bullet_3": {
-          "de": "<strong>Reduziertes Quellverhalten:</strong> Deutlich unempfindlicher gegenüber jahreszeitlichen Luftfeuchteschwankungen.",
-          "en": "<strong>Reduced Hygroscopic Swelling:</strong> Substantially less sensitive to seasonal swings in atmospheric humidity.",
-          "ja": "<strong>Reduziertes Quellverhalten:</strong> Deutlich unempfindlicher gegenüber jahreszeitlichen Luftfeuchteschwankungen.",
-          "zh": "<strong>Reduziertes Quellverhalten:</strong> Deutlich unempfindlicher gegenüber jahreszeitlichen Luftfeuchteschwankungen."
+          "de": "<strong>Stärkere Traktionskräfte:</strong> Überlegene innere Faserhaftung und kraftvolle Eigenspannung rund um den Holzkern.",
+          "en": "<strong>Superior Traction Forces:</strong> Exceptional internal fiber cohesion and elastic pre-tension around the wood moulding.",
+          "ja": "<strong>優れた牽引力・密着力：</strong> 繊維間の高い凝集力により、ウッドコア周囲に理想的な内部張力を形成します。",
+          "zh": "<strong>更强纤维牵引力：</strong> 卓越的纤维内聚力与包覆张力，紧密咬合实木槌芯而不松弛。"
         },
         "s14_bullet_4": {
-          "de": "<strong>Verbesserte Traktionskräfte:</strong> Außergewöhnliche Adhäsion und Eigenspannung am Holzkern.",
-          "en": "<strong>Enhanced Clamping Tension:</strong> Exceptional adhesion and dynamic self-tension around the wooden hammer moulding.",
-          "ja": "<strong>Verbesserte Traktionskräfte:</strong> Außergewöhnliche Adhäsion und Eigenspannung am Holzkern.",
-          "zh": "<strong>Verbesserte Traktionskräfte:</strong> Außergewöhnliche Adhäsion und Eigenspannung am Holzkern."
-        },
-        "s14_bullet_5": {
-          "de": "<strong>Dauerhafte Intonationshaltung:</strong> Der einmal intonierte Klangcharakter bleibt über Jahre stabil.",
-          "en": "<strong>Enduring Voicing Stability:</strong> The voiced tonal profile remains exceptionally stable over years of concert play.",
-          "ja": "<strong>Dauerhafte Intonationshaltung:</strong> Der einmal intonierte Klangcharakter bleibt über Jahre stabil.",
-          "zh": "<strong>Dauerhafte Intonationshaltung:</strong> Der einmal intonierte Klangcharakter bleibt über Jahre stabil."
+          "de": "<strong>Dauerhafte Intonationshaltung:</strong> Der ausgearbeitete Konzertklang bleibt über viele Jahre hinweg bemerkenswert stabil.",
+          "en": "<strong>Lasting Voicing Stability:</strong> Once voiced, the tonal character remains remarkably stable over years of playing.",
+          "ja": "<strong>持続する整音安定性：</strong> 一度仕上げたコンサートトーンが長年の演奏でも揺るぎなく維持されます。",
+          "zh": "<strong>持久整音稳定性：</strong> 一经整音定型，温暖通透的音乐会音色可经年累月保持稳定。"
         },
         "s14_caption_1": {
           "de": "Weickert Special: Feinste Wollfaserqualität mit maximaler Standzeit",
@@ -2537,6 +2573,24 @@
           "en": "Pinpoint impulse transfer to strings without loss of elastic energy.",
           "ja": "弾性エネルギーの損失なく打弦エネルギーを弦へダイレクトに伝達。",
           "zh": "敲击动能直贯琴弦，零耗散传递丰沛音乐表现力。"
+        },
+        "s14_kpi": {
+          "de": "100 % Exklusiv",
+          "en": "100% Exclusive",
+          "ja": "100% 独占製造",
+          "zh": "100% 雷纳专供"
+        },
+        "s14_c1_desc": {
+          "de": "Von der Filzfabrik Wurzen exklusiv für Louis Renner gefertigte Spitzenrezeptur nach dem Originalvorbild von 1903.",
+          "en": "Crafted by FFW Wurzen exclusively for Louis Renner following the legendary 1903 master formula.",
+          "ja": "1903年の伝説的処方を基に、FFWヴルツェンがルイ・レンナーのためだけに製造する最高峰フェルト。",
+          "zh": "由武尔岑毛毡厂传承1903年传奇配方，专为路易·雷纳独家精制的顶级弦槌毛毡。"
+        },
+        "s14_fact": {
+          "de": "⭐ Renner Exklusiv: Maximale Standzeit und tragfähige Klangfarbentiefe",
+          "en": "⭐ Renner Exclusive: Maximum service life and rich tonal depth",
+          "ja": "⭐ レンナー独占仕様：最高の耐久性と豊かな音色の深み",
+          "zh": "⭐ 雷纳独家专享：超长使用寿命与深邃丰富的音色层次"
         }
       },
       "notes": {
@@ -2575,28 +2629,28 @@
       },
       "elements": {
         "s15_bullet_1": {
-          "de": "<strong>Präzisions-Robotik:</strong> 6-Achs-Roboter führt das Spezial-Schneidmesser mit gleichbleibender Geschwindigkeit und Schnittdruck.",
-          "en": "<strong>Tapered Strip Cutting:</strong> Micro-stepper motors guide the blade along the exact wedge profile (thick bass to thin treble).",
-          "ja": "<strong>Präzisions-Robotik:</strong> 6-Achs-Roboter führt das Spezial-Schneidmesser mit gleichbleibender Geschwindigkeit und Schnittdruck.",
-          "zh": "<strong>Präzisions-Robotik:</strong> 6-Achs-Roboter führt das Spezial-Schneidmesser mit gleichbleibender Geschwindigkeit und Schnittdruck."
+          "de": "<strong>Konstanter Schnittdruck:</strong> Der 6-Achs-Roboter führt das Spezialmesser mit exakt definierter Geschwindigkeit durch den Filz.",
+          "en": "<strong>Constant Blade Pressure:</strong> The 6-axis robot guides the specialty blade at a strictly controlled speed and force.",
+          "ja": "<strong>一定の切断圧力：</strong> 6軸ロボットが特殊ブレードを均一な速度と圧力で正確に導きます。",
+          "zh": "<strong>恒定切割压力：</strong> 六轴机器人以精准恒定的速度与刀压引导特种刀片平稳切入。"
         },
         "s15_bullet_2": {
-          "de": "<strong>Gleichmäßige Streifen:</strong> Exakt parallele Kanten ohne Quetschungen oder thermische Faserverglasung.",
-          "en": "<strong>Laser Line Guidance:</strong> Real-time laser projection monitors cutting paths with tolerance under 0.05 mm.",
-          "ja": "<strong>Gleichmäßige Streifen:</strong> Exakt parallele Kanten ohne Quetschungen oder thermische Faserverglasung.",
-          "zh": "<strong>Gleichmäßige Streifen:</strong> Exakt parallele Kanten ohne Quetschungen oder thermische Faserverglasung."
+          "de": "<strong>Parallele Schnittkanten:</strong> Absolut maßhaltige Streifen ohne Faserquetschung oder thermische Verglasung.",
+          "en": "<strong>Parallel Cut Edges:</strong> Perfectly true strips free from fiber crushing or thermal edge glazing.",
+          "ja": "<strong>平行な切断面：</strong> 繊維の潰れや熱変質のない、完全に平行で滑らかなエッジを実現します。",
+          "zh": "<strong>平行顺滑切口：</strong> 切面平整笔直，绝无纤维挤压变形或高温摩擦导致的表面硬化。"
         },
         "s15_bullet_3": {
-          "de": "<strong>Automatische Signierung:</strong> Jeder geschnittene Streifen wird sofort mit internen Fertigungs- und Chargendaten codiert.",
-          "en": "<strong>Individual Customer Tapers:</strong> Continuous wedge angles can be configured for every manufacturer and scale design.",
-          "ja": "<strong>Automatische Signierung:</strong> Jeder geschnittene Streifen wird sofort mit internen Fertigungs- und Chargendaten codiert.",
-          "zh": "<strong>Automatische Signierung:</strong> Jeder geschnittene Streifen wird sofort mit internen Fertigungs- und Chargendaten codiert."
+          "de": "<strong>Automatische Codierung:</strong> Jeder Streifen wird unmittelbar beim Zuschnitt mit Chargen- und Auftragsdaten signiert.",
+          "en": "<strong>Automated Coding:</strong> Every strip is immediately marked with internal batch and production identifiers.",
+          "ja": "<strong>自動マーキング：</strong> 裁断と同時にすべてのストリップへ製造ロットおよび仕様コードが印字されます。",
+          "zh": "<strong>自动批次赋码：</strong> 每根毛毡条在裁切瞬间自动标记内部生产参数与批次编码。"
         },
         "s15_bullet_4": {
-          "de": "<strong>Industrie 4.0 im Klavierbau:</strong> Digitale Rückverfolgbarkeit vom Wollballen bis zum fertigen Konzertflügel.",
-          "en": "<strong>Industry 4.0 in Piano Making:</strong> Digital traceability from raw wool bale to finished hammerhead.",
-          "ja": "<strong>Industrie 4.0 im Klavierbau:</strong> Digitale Rückverfolgbarkeit vom Wollballen bis zum fertigen Konzertflügel.",
-          "zh": "<strong>Industrie 4.0 im Klavierbau:</strong> Digitale Rückverfolgbarkeit vom Wollballen bis zum fertigen Konzertflügel."
+          "de": "<strong>Digitale Rückverfolgbarkeit:</strong> Lückenlose Qualitätsdokumentation vom Wurzener Wollballen bis zum Flügelsatz.",
+          "en": "<strong>Digital Traceability:</strong> Seamless quality tracking from the Wurzen wool bale to the finished concert set.",
+          "ja": "<strong>デジタル履歴管理：</strong> 原毛ベールから完成ハンマーセットまで一貫した品質追跡を保証します。",
+          "zh": "<strong>全流程数字溯源：</strong> 实现从武尔岑原毛包到成品音乐会弦槌套组的全链路质量追踪。"
         },
         "s15_caption_1": {
           "de": "Werk Meuselwitz: Robotischer Filzzuschnitt der Deckfilzstreifen",
@@ -2615,6 +2669,30 @@
           "en": "FACTORY VIDEO MEUSELWITZ",
           "ja": "工場動画 モイゼルヴィッツ",
           "zh": "梅瑟尔维茨车间视频"
+        },
+        "s15_kpi": {
+          "de": "± 0,01 mm",
+          "en": "± 0.01 mm",
+          "ja": "精度 ±0.01 mm",
+          "zh": "± 0.01 mm 精度"
+        },
+        "s15_c1_title": {
+          "de": "6-Achs-Präzision beim Deckfilz-Zuschnitt",
+          "en": "6-Axis Precision in Top-Felt Strip Cutting",
+          "ja": "6軸ロボットによるトップフェルト精密裁断",
+          "zh": "六轴机器人高精度面毡条裁切"
+        },
+        "s15_c1_desc": {
+          "de": "Im Werk Meuselwitz trennt ein Schneidroboter die gereiften Filztafeln spannungsfrei in präzise Deckfilzstreifen.",
+          "en": "At Meuselwitz, a 6-axis cutting robot slices matured felt sheets stress-free into exact top-felt strips.",
+          "ja": "モイゼルヴィッツ工場では6軸ロボットが熟成フェルト板を無応力で正確なストリップへと裁断します。",
+          "zh": "在莫伊塞尔维茨工厂，六轴切割机器人将熟成毛毡板无应力分切为尺寸精准的面毡条。"
+        },
+        "s15_fact": {
+          "de": "🤖 Industrie 4.0 trifft Manufaktur: Reproduzierbare Geometrie auf Hundertstelmillimeter",
+          "en": "🤖 Industry 4.0 meets craft: Repeatable geometry down to hundredths of a millimeter",
+          "ja": "🤖 インダストリー4.0と職人技の融合：100分の1ミリ単位の再現性",
+          "zh": "🤖 工业4.0赋能手工匠艺：达百分之一毫米级的几何一致性"
         }
       },
       "notes": {
@@ -2653,22 +2731,22 @@
       },
       "elements": {
         "s16_bullet_1": {
-          "de": "<strong>Konische Geometrie:</strong> Gleichmäßige Keilform von Note 1 bis Note 88 ohne Maßabweichungen.",
-          "en": "<strong>100% Vertical Cut Edge:</strong> Prevents distortion and uneven fiber elongation during subsequent high-pressure pressing.",
-          "ja": "<strong>Konische Geometrie:</strong> Gleichmäßige Keilform von Note 1 bis Note 88 ohne Maßabweichungen.",
-          "zh": "<strong>Konische Geometrie:</strong> Gleichmäßige Keilform von Note 1 bis Note 88 ohne Maßabweichungen."
+          "de": "<strong>Stetiger Keilvelauf:</strong> Nahtlose Dicken- und Dichteprogression von Note 1 im Bass bis Note 88 im Diskant.",
+          "en": "<strong>Continuous Taper:</strong> Seamless thickness and density progression from Note 1 in the bass to Note 88 in the treble.",
+          "ja": "<strong>均一なテーパー形状：</strong> 最低音の第1鍵から最高音の第88鍵まで滑らかに連続する厚みと密度勾配。",
+          "zh": "<strong>连续锥度过渡：</strong> 从第1键低音至第88键高音呈现平滑无断层的厚度与密度梯度。"
         },
         "s16_bullet_2": {
-          "de": "<strong>Saubere Schnittkanten:</strong> Keine abstehenden Faserbündel, keine Fransen – glatte Seitenwände für den Leimauftrag.",
-          "en": "<strong>No Crushed Fibers:</strong> Clean cutting preserves internal fiber voids, ensuring unconstrained compression dynamics.",
-          "ja": "<strong>Saubere Schnittkanten:</strong> Keine abstehenden Faserbündel, keine Fransen – glatte Seitenwände für den Leimauftrag.",
-          "zh": "<strong>Saubere Schnittkanten:</strong> Keine abstehenden Faserbündel, keine Fransen – glatte Seitenwände für den Leimauftrag."
+          "de": "<strong>Glatte Leimflächen:</strong> Fransenfreie, geschlossene Seitenwände sichern eine vollflächige und saubere Verleimung.",
+          "en": "<strong>Clean Bonding Surfaces:</strong> Fringe-free, smooth side walls ensure uniform adhesive wetting and clean joints.",
+          "ja": "<strong>滑らかな接着面：</strong> 毛羽立ちのない均一な側面が、ムラのない確実な接着を保証します。",
+          "zh": "<strong>平整胶合侧面：</strong> 无毛刺、无散丝的光滑切面，确保涂胶均匀且粘接严丝合缝。"
         },
         "s16_bullet_3": {
-          "de": "<strong>Vermeidung von Schiefzug:</strong> Nur exakt rechtwinklig geschnittene Streifen legen sich beim Pressen absolut symmetrisch um das Kernholz.",
-          "en": "<strong>Prevention of Skewing:</strong> Only strictly rectangular cut strips wrap around the wooden moulding with absolute lateral symmetry.",
-          "ja": "<strong>Vermeidung von Schiefzug:</strong> Nur exakt rechtwinklig geschnittene Streifen legen sich beim Pressen absolut symmetrisch um das Kernholz.",
-          "zh": "<strong>Vermeidung von Schiefzug:</strong> Nur exakt rechtwinklig geschnittene Streifen legen sich beim Pressen absolut symmetrisch um das Kernholz."
+          "de": "<strong>Schutz vor Schiefzug:</strong> Exakt rechtwinklige Streifen legen sich beim Pressen absolut symmetrisch um den Kern.",
+          "en": "<strong>Zero Asymmetry:</strong> Strictly perpendicular cuts wrap around the wood moulding with complete symmetry.",
+          "ja": "<strong>偏りの完全防止：</strong> 正確に直角裁断されたストリップが、プレス時にコアを左右対称に包み込みます。",
+          "zh": "<strong>杜绝偏斜扭曲：</strong> 严格垂直裁切的毡条在压合时能够完全对称地包覆实木槌芯。"
         },
         "s16_caption_1": {
           "de": "Geprüfter Deckfilzstreifen: Konischer Verlauf und homogene Faserstruktur",
@@ -2689,10 +2767,28 @@
           "zh": "外层毛毡条"
         },
         "s16_c1_desc": {
-          "de": "Nach dem Roboterschnitt wird jeder Streifen einer optischen Prüfung unterzogen.",
-          "en": "Following high-precision robotic cutting, every felt strip undergoes strict optical inspection.",
-          "ja": "ロボット切断工程の後、すべてのフェルトストリップは厳格な光学検査を受けます。",
-          "zh": "完成微米级数控机械切削后，每根成型毛毡条均须通过严密的显微光学质检。"
+          "de": "Nach dem Roboterschnitt wird jeder einzelne Deckfilzstreifen vor der Freigabe sorgfältig auf Maß und Faserbild geprüft.",
+          "en": "Following robotic cutting, every top-felt strip undergoes strict visual and dimensional inspection before pressing.",
+          "ja": "ロボット裁断後、すべてのトップフェルトはプレス工程前に寸法と繊維状態の厳密な検査を受けます。",
+          "zh": "机器人裁切完成后，每条面毡在进入压制工序前均须通过严格的视觉与尺寸检验。"
+        },
+        "s16_kpi": {
+          "de": "Note 1–88",
+          "en": "Notes 1–88",
+          "ja": "全88鍵連続",
+          "zh": "1–88 键全音域"
+        },
+        "s16_c1_title": {
+          "de": "Optische Prüfung & makellose Schnittflächen",
+          "en": "Optical Inspection & Flawless Cut Surfaces",
+          "ja": "光学・目視検査と完璧な切断面品質",
+          "zh": "严苛光学检验与无瑕切面品质"
+        },
+        "s16_fact": {
+          "de": "🔍 100 % Einzelstreifen-Kontrolle für bruchlose Registerübergänge",
+          "en": "🔍 100% strip-by-strip inspection for seamless register transitions",
+          "ja": "🔍 全ストリップ検品によりレジスター間の音色段差を解消",
+          "zh": "🔍 100% 逐条严检，确保全音域各声部音色平滑衔接"
         }
       },
       "notes": {
@@ -2731,22 +2827,22 @@
       },
       "elements": {
         "s17_bullet_1": {
-          "de": "<strong>Funktion des Unterfilzes:</strong> Der Unterfilz dient als elastischer Puffer zwischen dem harten Holzkern und dem weicheren Deckfilz.",
-          "en": "<strong>Function of Underfelt:</strong> Acts as an elastic buffer between the rigid wood moulding and resilient top felt.",
-          "ja": "<strong>Funktion des Unterfilzes:</strong> Der Unterfilz dient als elastischer Puffer zwischen dem harten Holzkern und dem weicheren Deckfilz.",
-          "zh": "<strong>Funktion des Unterfilzes:</strong> Der Unterfilz dient als elastischer Puffer zwischen dem harten Holzkern und dem weicheren Deckfilz."
+          "de": "<strong>Akustischer Puffer:</strong> Der Unterfilz koppelt den harten Holzkern elastisch an den schwingenden weißen Deckfilz.",
+          "en": "<strong>Acoustic Buffer:</strong> The underfelt elastically couples the rigid wood core to the responsive outer top felt.",
+          "ja": "<strong>音響バッファー機能：</strong> 硬質なウッドコアと柔軟なトップフェルトの間で理想的な弾性伝達を担います。",
+          "zh": "<strong>声学缓冲层：</strong> 底毡在坚硬木芯与柔韧面毡之间构建理想的弹性耦合与能量传递区。"
         },
         "s17_bullet_2": {
-          "de": "<strong>Präzisions-Profilierung:</strong> In Meuselwitz wird der Unterfilzstreifen vor dem Verleimen auf Spezial-Fräsmaschinen exakt profiliert.",
-          "en": "<strong>Precision Profiling:</strong> In Meuselwitz, underfelt strips are shaped on dedicated multi-axis milling machines prior to gluing.",
-          "ja": "<strong>Präzisions-Profilierung:</strong> In Meuselwitz wird der Unterfilzstreifen vor dem Verleimen auf Spezial-Fräsmaschinen exakt profiliert.",
-          "zh": "<strong>Präzisions-Profilierung:</strong> In Meuselwitz wird der Unterfilzstreifen vor dem Verleimen auf Spezial-Fräsmaschinen exakt profiliert."
+          "de": "<strong>Spezial-Profilfräsung:</strong> Maßgenaues Ausfräsen der Übergangszonen für harmonische Formgebung bis in den Diskant.",
+          "en": "<strong>Precision Profile Milling:</strong> Exact contouring of transition zones ensures harmonious hammer shapes up to the treble.",
+          "ja": "<strong>専用プロファイル加工：</strong> 高音域に至るまで美しいハンマー形状を生む精密な移行部フライス加工。",
+          "zh": "<strong>专用轮廓铣削：</strong> 精准铣削过渡区域，确保从低音直至高音区均呈现饱满匀称的槌体线条。"
         },
         "s17_bullet_3": {
-          "de": "<strong>Gleichmäßiger Druckverlauf:</strong> Die profilierte Kontur garantiert, dass der Pressdruck beim Schließen der Pressbacken gleichmäßig in die Flanken geleitet wird.",
-          "en": "<strong>Even Pressure Distribution:</strong> The profiled contour ensures press clamping force flows smoothly into the hammer flanks.",
-          "ja": "<strong>Gleichmäßiger Druckverlauf:</strong> Die profilierte Kontur garantiert, dass der Pressdruck beim Schließen der Pressbacken gleichmäßig in die Flanken geleitet wird.",
-          "zh": "<strong>Gleichmäßiger Druckverlauf:</strong> Die profilierte Kontur garantiert, dass der Pressdruck beim Schließen der Pressbacken gleichmäßig in die Flanken geleitet wird."
+          "de": "<strong>Homogener Pressdruck:</strong> Die Kontur lenkt die Schließkraft der Pressbacken gleichmäßig in beide Hammerflanken.",
+          "en": "<strong>Uniform Press Force:</strong> The milled contour directs jaw closing pressure evenly into both hammer flanks.",
+          "ja": "<strong>均一なプレス圧力分布：</strong> 成形された輪郭がプレス型の圧力を両サイドのフランクへ均等に導きます。",
+          "zh": "<strong>均匀导引压合力：</strong> 预制轮廓在模具闭合时将高压均匀导向弦槌两侧肩部与侧翼。"
         },
         "s17_caption_1": {
           "de": "Profilieren des Unterfilzstreifens auf der Renner Spezialfräse",
@@ -2765,6 +2861,30 @@
           "en": "FACTORY VIDEO",
           "ja": "工場動画",
           "zh": "车间视频"
+        },
+        "s17_kpi": {
+          "de": "Formprofil",
+          "en": "Contoured",
+          "ja": "精密成形",
+          "zh": "精密轮廓铣削"
+        },
+        "s17_c1_title": {
+          "de": "Elastische Kraftbrücke zwischen Kern und Deckfilz",
+          "en": "Elastic Force Bridge Between Core and Top Felt",
+          "ja": "ウッドコアとトップフェルトを結ぶ弾性ブリッジ",
+          "zh": "连接实木槌芯与面毡的弹性力学桥梁"
+        },
+        "s17_c1_desc": {
+          "de": "Vor dem Verpressen erhält jeder Unterfilzstreifen auf Renner-Spezialfräsen seine berechnete Keilkontur.",
+          "en": "Before pressing, every underfelt strip is contour-milled on custom Renner machines to its calculated profile.",
+          "ja": "プレス工程の前に、アンダーフェルトはレンナー専用フライス盤で計算された輪郭へと精密加工されます。",
+          "zh": "在进入压合工序前，每条底毡均在雷纳专用铣床上加工出精准计算的几何轮廓。"
+        },
+        "s17_fact": {
+          "de": "⚙️ Definierte Dämpfungs- und Rückprallzone im Herzen jedes Hammerkopfs",
+          "en": "⚙️ Defined damping and rebound zone at the heart of every hammerhead",
+          "ja": "⚙️ すべてのハンマー内部に精密な反発・緩衝ゾーンを形成",
+          "zh": "⚙️ 在每颗弦槌核心构建精准可控的阻尼与回弹能量区"
         }
       },
       "notes": {
@@ -2869,22 +2989,22 @@
           "zh": "14种定制色彩"
         },
         "s18_b3_badge": {
-          "de": ">TRADITION",
-          "en": ">TRADITION",
-          "ja": ">伝統と格式",
-          "zh": ">百年传统"
+          "de": "TRADITION",
+          "en": "TRADITION",
+          "ja": "伝統と格式",
+          "zh": "百年传统"
         },
         "s18_b4_badge": {
-          "de": ">DESIGN",
-          "en": ">DESIGN",
-          "ja": ">デザイン意匠",
-          "zh": ">经典设计"
+          "de": "DESIGN",
+          "en": "DESIGN",
+          "ja": "デザイン意匠",
+          "zh": "经典设计"
         },
         "s18_b5_badge": {
-          "de": ">14 FARBTÖNE",
-          "en": ">14 SHADES",
-          "ja": ">14の特注色彩",
-          "zh": ">14种定制色调"
+          "de": "14 FARBTÖNE",
+          "en": "14 SHADES",
+          "ja": "14の特注色彩",
+          "zh": "14种定制色调"
         }
       },
       "notes": {
@@ -2977,28 +3097,28 @@
           "zh": "Mahagoni (Kotibé)"
         },
         "s19_c1_desc": {
-          "de": "Maximaler Punch, kraftvoller Attack, extrem formstabil",
-          "en": "Maximum punch, powerful attack, extreme dimensional stability",
-          "ja": "Maximaler Punch, kraftvoller Attack, extrem formstabil",
-          "zh": "Maximaler Punch, kraftvoller Attack, extrem formstabil"
+          "de": "Höchste Dichte (~750–860 kg/m³) für maximalen Attack, tragfähige Projektion und extreme Formstabilität.",
+          "en": "Highest density (~750–860 kg/m³) for maximum attack, concert hall projection, and extreme dimensional stability.",
+          "ja": "最高密度（約750〜860 kg/m³）により、力強いアタックと遠達性、抜群の寸法安定性を実現。",
+          "zh": "最高木材密度（约750–860 kg/m³），赋予强劲起音爆发力、音乐厅穿透力与极致稳定性。"
         },
         "s19_c2_desc": {
-          "de": "Brillant, transparent, differenzierter obertonreicher Ton",
-          "en": "Brilliant, transparent tone with rich, differentiated overtones",
-          "ja": "Brillant, transparent, differenzierter obertonreicher Ton",
-          "zh": "Brillant, transparent, differenzierter obertonreicher Ton"
+          "de": "Klassisches Resonanzholz für brillante Transparenz, klare Zeichnung und ein obertonreiches Klangbild.",
+          "en": "Classic tonewood delivering brilliant transparency, crisp articulation, and rich harmonic overtones.",
+          "ja": "輝かしい透明感、明瞭な発音、そして豊かな倍音成分を引き出す伝統的なトーンウッド。",
+          "zh": "经典共鸣木材，带来晶莹剔透的清晰度、敏锐颗粒感与丰富的泛音光泽。"
         },
         "s19_c3_desc": {
-          "de": "Warmer, samtiger Grundton, volles Bassfundament",
-          "en": "Warm, velvety fundamental tone, resonant bass foundation",
-          "ja": "Warmer, samtiger Grundton, volles Bassfundament",
-          "zh": "Warmer, samtiger Grundton, volles Bassfundament"
+          "de": "Ausgewogene Masse und innere Dämpfung für einen warmen, samtigen Grundton und souveränes Bassfundament.",
+          "en": "Balanced mass and internal damping for a warm, velvety fundamental tone and authoritative bass depth.",
+          "ja": "絶妙な質量と内部減衰により、温かくビロードのような基音と重厚な低音域を生み出します。",
+          "zh": "均衡质量与天然内阻尼兼具，塑造温暖丝绒般的基音与深沉浑厚的低音根基。"
         },
         "s19_c4_desc": {
-          "de": "Geringe Trägheit, singender Diskant, leichte Ansprache",
-          "en": "Low inertia, singing treble sustain, effortless response",
-          "ja": "Geringe Trägheit, singender Diskant, leichte Ansprache",
-          "zh": "Geringe Trägheit, singender Diskant, leichte Ansprache"
+          "de": "Geringes Trägheitsmoment (~490–560 kg/m³) für federleichte Repetition und einen singenden Diskant.",
+          "en": "Low moment of inertia (~490–560 kg/m³) for effortless repetition and a singing treble response.",
+          "ja": "低い慣性モーメント（約490〜560 kg/m³）が軽快な連打性能と歌うような高音域をもたらします。",
+          "zh": "极低转动惯量（约490–560 kg/m³），实现轻盈敏捷的连奏触感与歌唱般的高音延展。"
         },
         "s19_caption_1": {
           "de": "Original Kernhölzer",
@@ -3061,16 +3181,16 @@
           "zh": "Asymmetrische Sonderformen"
         },
         "s20_c1_desc": {
-          "de": "Für Steinway & Sons (historisch und modern), Bösendorfer, Schimmel, C. Bechstein, Yamaha, Kawai, Grotrian-Steinweg, Petrof, August Förster, Sauter, Blüthner und Renner USA.",
-          "en": "For Steinway & Sons (historic and modern), Bösendorfer, Schimmel, C. Bechstein, Yamaha, Kawai, Grotrian-Steinweg, Petrof, August Förster, Sauter, Blüthner, and Renner USA.",
-          "ja": "Für Steinway & Sons (historisch und modern), Bösendorfer, Schimmel, C. Bechstein, Yamaha, Kawai, Grotrian-Steinweg, Petrof, August Förster, Sauter, Blüthner und Renner USA.",
-          "zh": "Für Steinway & Sons (historisch und modern), Bösendorfer, Schimmel, C. Bechstein, Yamaha, Kawai, Grotrian-Steinweg, Petrof, August Förster, Sauter, Blüthner und Renner USA."
+          "de": "Klassisch symmetrische Profile für Steinway &amp; Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Förster und Sauter.",
+          "en": "Classically symmetrical profiles for Steinway &amp; Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Förster, and Sauter.",
+          "ja": "スタインウェイ、ベーゼンドルファー、ベヒシュタイン、ヤマハ、カワイ、シンメル等に対応する対称標準プロファイル。",
+          "zh": "适用于施坦威、贝森朵夫、贝希斯坦、雅马哈、卡瓦依、舒密尔等主流名琴的对称标准槌芯轮廓。"
         },
         "s20_c2_desc": {
-          "de": "Alt-Bechstein Konstruktionen, Flügel mit extrem schlankem Diskantverlauf sowie Spezialprofile zur Anpassung des Trägheitsmoments an steile Saitenwinkel.",
-          "en": "Historic Bechstein designs, grands with ultra-slender treble progressions, and custom mouldings balancing moment of inertia against steep string angles.",
-          "ja": "Alt-Bechstein Konstruktionen, Flügel mit extrem schlankem Diskantverlauf sowie Spezialprofile zur Anpassung des Trägheitsmoments an steile Saitenwinkel.",
-          "zh": "Alt-Bechstein Konstruktionen, Flügel mit extrem schlankem Diskantverlauf sowie Spezialprofile zur Anpassung des Trägheitsmoments an steile Saitenwinkel."
+          "de": "Maßgefertigte asymmetrische Profile für historische Bechstein- und Blüthner-Flügel sowie steile Saitenkreuzungswinkel im Diskant.",
+          "en": "Bespoke asymmetrical profiles for vintage Bechstein and Blüthner grands and steep treble string-crossing angles.",
+          "ja": "歴史的なベヒシュタインやブリュートナー、急角度の交差弦設計に最適化された非対称カスタムプロファイル。",
+          "zh": "专为历史古董贝希斯坦、博兰斯勒三角琴及高音区大角度交叉弦结构定制的非对称特殊槌芯轮廓。"
         },
         "s20_caption_1": {
           "de": "Moulding Types: Vielfalt der Kernholz-Profile im Renner Sortiment",
@@ -3091,10 +3211,10 @@
           "zh": "非对称截面"
         },
         "s20_b3_badge": {
-          "de": ">KERN-GEOMETRIE",
-          "en": ">CORE GEOMETRY",
-          "ja": ">ウッドコア幾何形状",
-          "zh": ">芯木三维几何"
+          "de": "KERN-GEOMETRIE",
+          "en": "CORE GEOMETRY",
+          "ja": "ウッドコア幾何形状",
+          "zh": "芯木三维几何"
         }
       },
       "notes": {
@@ -3133,22 +3253,22 @@
       },
       "elements": {
         "s21_bullet_1": {
-          "de": "<strong>Elastische Vorbiegung:</strong> Das dicke Bass-Ende des Filzstreifens wird vor dem Einbringen in die Pressform vorkonditioniert.",
-          "en": "<strong>Elastic Pre-Bending:</strong> The heavy bass end of the felt strip is pre-conditioned before loading into the press fixture.",
-          "ja": "<strong>Elastische Vorbiegung:</strong> Das dicke Bass-Ende des Filzstreifens wird vor dem Einbringen in die Pressform vorkonditioniert.",
-          "zh": "<strong>Elastische Vorbiegung:</strong> Das dicke Bass-Ende des Filzstreifens wird vor dem Einbringen in die Pressform vorkonditioniert."
+          "de": "<strong>Elastische Vorkonditionierung:</strong> Sanftes Einleiten der Biegebewegung im dicken Bassbereich ohne Faserknick.",
+          "en": "<strong>Elastic Pre-Conditioning:</strong> Gently initiates the bending radius in the heavy bass section without kinking fibers.",
+          "ja": "<strong>弾性プレコンディショニング：</strong> 厚い低音部で繊維を折ることなく滑らかな曲げ半径を導きます。",
+          "zh": "<strong>弹性预处理：</strong> 在厚重的低音区柔和引导弯曲弧度，避免纤维发生折损。"
         },
         "s21_bullet_2": {
-          "de": "<strong>Charakteristische Kurven:</strong> Entlang des Streifens bilden sich harmonische Wellen, die den späteren Druckfluss abbilden.",
-          "en": "<strong>Characteristic Contours:</strong> Harmonious wave profiles form along the strip, mirroring subsequent pressure vectors.",
-          "ja": "<strong>Charakteristische Kurven:</strong> Entlang des Streifens bilden sich harmonische Wellen, die den späteren Druckfluss abbilden.",
-          "zh": "<strong>Charakteristische Kurven:</strong> Entlang des Streifens bilden sich harmonische Wellen, die den späteren Druckfluss abbilden."
+          "de": "<strong>Harmonische Wellenlinie:</strong> Die charakteristische Biegekurve bildet bereits den späteren Kraftfluss im Kopf ab.",
+          "en": "<strong>Harmonic Wave Profile:</strong> Characteristic tension waves mirror the internal force distribution of the finished head.",
+          "ja": "<strong>調和のとれた波形カーブ：</strong> 特徴的なうねりが完成後のハンマー内部の理想的な応力分布を形作ります。",
+          "zh": "<strong>和谐波浪曲线：</strong> 独特的预弯波形提前映射出成品弦槌内部的理想应力流向。"
         },
         "s21_bullet_3": {
-          "de": "<strong>Gleichmäßige Dehnung:</strong> Verhindert das Reißen äußerer Faserlagen beim engen Umschließen der Kernholzspitze.",
-          "en": "<strong>Uniform Elongation:</strong> Prevents outer fiber tearing when tightly encircling the apex of the wooden moulding.",
-          "ja": "<strong>Gleichmäßige Dehnung:</strong> Verhindert das Reißen äußerer Faserlagen beim engen Umschließen der Kernholzspitze.",
-          "zh": "<strong>Gleichmäßige Dehnung:</strong> Verhindert das Reißen äußerer Faserlagen beim engen Umschließen der Kernholzspitze."
+          "de": "<strong>Schonung der Außenfasern:</strong> Gleichmäßige Dehnung schützt die Kronenspitze zuverlässig vor Spannungsrissen.",
+          "en": "<strong>Outer Fiber Protection:</strong> Even elongation prevents surface tearing when wrapping tightly around the crown tip.",
+          "ja": "<strong>外層繊維の保護：</strong> 均一な伸びにより、コア先端を強く包み込む際の表面割れを確実に防ぎます。",
+          "zh": "<strong>保护外层纤维：</strong> 均匀拉伸延展，防止包覆尖锐木芯顶部时外层毛毡撕裂。"
         },
         "s21_caption_1": {
           "de": "Bass-Ende des Filzstreifens mit charakteristischen Biegekurven vor dem Pressen",
@@ -3167,6 +3287,30 @@
           "en": "BENDING FORCE",
           "ja": "曲げ応力",
           "zh": "弯曲成弧"
+        },
+        "s21_kpi": {
+          "de": "Vorbiegung",
+          "en": "Pre-Forming",
+          "ja": "予備曲げ成形",
+          "zh": "弹性预弯成型"
+        },
+        "s21_c1_title": {
+          "de": "Kontrollierte Spannungsbögen vor dem Pressen",
+          "en": "Controlled Tension Curves Prior to Pressing",
+          "ja": "プレス前に形成される理想的な張力カーブ",
+          "zh": "入模压合前构建受控的弹性张力弧线"
+        },
+        "s21_c1_desc": {
+          "de": "Das kräftige Bass-Ende des Filzstreifens wird vor dem Einlegen in die Pressform gezielt elastisch vorgeformt.",
+          "en": "The thick bass end of the felt strip is elastically pre-conditioned before entering the heated press.",
+          "ja": "厚みのある低音側フェルトは、プレス型へセットする前に弾性的な予備成形が施されます。",
+          "zh": "厚实的低音端毛毡条在置入加热压模前，先经过精准受控的弹性预弯调理。"
+        },
+        "s21_fact": {
+          "de": "〰️ Geschlossene, seidige Scheiteloberfläche selbst bei stärksten Bassfilzen",
+          "en": "〰️ Silky, unbroken crown surface even on the heaviest bass felts",
+          "ja": "〰️ 極厚の低音フェルトでも滑らかで継ぎ目のないクラウン表面を実現",
+          "zh": "〰️ 即便最厚重的低音毛毡亦能呈现丝滑致密的槌冠表面"
         }
       },
       "notes": {
@@ -3205,28 +3349,28 @@
       },
       "elements": {
         "s22_bullet_1": {
-          "de": "<strong>Schließen der Seitenbacken:</strong> Die temperierten Pressbacken umschließen den Filz seitlich und führen ihn um das beleimte Kernholz.",
-          "en": "<strong>Closing Side Jaws:</strong> Temperature-controlled press jaws flank the felt and wrap it around the glued wooden moulding.",
-          "ja": "<strong>Schließen der Seitenbacken:</strong> Die temperierten Pressbacken umschließen den Filz seitlich und führen ihn um das beleimte Kernholz.",
-          "zh": "<strong>Schließen der Seitenbacken:</strong> Die temperierten Pressbacken umschließen den Filz seitlich und führen ihn um das beleimte Kernholz."
+          "de": "<strong>Schließen der Seitenbacken:</strong> Temperierte Formbacken umschließen den Filzstreifen und führen ihn eng um den Kern.",
+          "en": "<strong>Closing the Side Jaws:</strong> Heated form jaws embrace the felt strip and guide it snugly around the glued core.",
+          "ja": "<strong>サイド型の閉鎖：</strong> 温調されたプレス型がフェルトを側面から包み込み、接着コアへ密着させます。",
+          "zh": "<strong>温控侧模闭合：</strong> 恒温加热模具从两侧包拢毛毡条，使其紧密贴合涂胶木芯。"
         },
         "s22_bullet_2": {
-          "de": "<strong>Kernholz nachspannen:</strong> Nachdem die Seitenbacken geschlossen sind, wird das Kernholz nochmals mit Hochdruck nachgespannt.",
-          "en": "<strong>Re-tensioning the Moulding:</strong> Once side jaws are closed, high hydraulic pressure re-tensions the core moulding downwards.",
-          "ja": "<strong>Kernholz nachspannen:</strong> Nachdem die Seitenbacken geschlossen sind, wird das Kernholz nochmals mit Hochdruck nachgespannt.",
-          "zh": "<strong>Kernholz nachspannen:</strong> Nachdem die Seitenbacken geschlossen sind, wird das Kernholz nochmals mit Hochdruck nachgespannt."
+          "de": "<strong>Hochdruck-Nachspannen:</strong> Bei geschlossener Form wird die Kernholzleiste nochmals kraftvoll in den Scheitel gedrückt.",
+          "en": "<strong>High-Pressure Re-Tensioning:</strong> With jaws closed, the wood moulding is driven deeper into the crown under high force.",
+          "ja": "<strong>高圧の追い締め：</strong> 型が閉じた状態でウッドコアをさらに高圧でクラウン方向へ押し込みます。",
+          "zh": "<strong>高压二次顶紧：</strong> 在侧模锁死状态下，以强大推力将实木槌芯向槌冠方向再次顶紧。"
         },
         "s22_bullet_3": {
-          "de": "<strong>Zugspannung in den Außenlagen:</strong> Durch diesen Renner-spezifischen Schritt erhalten die äußeren Filzlagen eine unerreichte Vorspannung.",
-          "en": "<strong>Tensile Pre-Stress in Outer Layers:</strong> This proprietary Renner technique imparts unmatched dynamic pre-tension to outer felt layers.",
-          "ja": "<strong>Zugspannung in den Außenlagen:</strong> Durch diesen Renner-spezifischen Schritt erhalten die äußeren Filzlagen eine unerreichte Vorspannung.",
-          "zh": "<strong>Zugspannung in den Außenlagen:</strong> Durch diesen Renner-spezifischen Schritt erhalten die äußeren Filzlagen eine unerreichte Vorspannung."
+          "de": "<strong>Zugspannung außen, Druck innen:</strong> Außenlagen stehen unter höchster Zugkraft, während das Innere elastisch stützt.",
+          "en": "<strong>Outer Tension, Inner Cushion:</strong> Outer layers achieve peak tensile tautness over a resiliently compressed core zone.",
+          "ja": "<strong>外層の引張・内層の圧縮：</strong> 外層に強い張力を与えつつ、内層にしなやかな弾性クッションを形成します。",
+          "zh": "<strong>外紧内韧结构：</strong> 外层纤维获得极高拉伸预应力，内层则保持充沛的压缩回弹支撑。"
         },
         "s22_bullet_4": {
-          "de": "<strong>Basis für die spätere Intonation:</strong> Diese elastische Eigenspannung erlaubt späteres Intonieren mit unvergleichlicher Dynamikspreizung.",
-          "en": "<strong>Foundation for Voicing:</strong> This elastic stored energy enables subsequent voicing with extraordinary dynamic range.",
-          "ja": "<strong>Basis für die spätere Intonation:</strong> Diese elastische Eigenspannung erlaubt späteres Intonieren mit unvergleichlicher Dynamikspreizung.",
-          "zh": "<strong>Basis für die spätere Intonation:</strong> Diese elastische Eigenspannung erlaubt späteres Intonieren mit unvergleichlicher Dynamikspreizung."
+          "de": "<strong>Fundament der Intonation:</strong> Dieses gezielte Spannungsreservoir ermöglicht weiteste Dynamik vom pp bis zum ff.",
+          "en": "<strong>Foundation for Voicing:</strong> This built-in tension reservoir unlocks maximum dynamic range from pp to ff.",
+          "ja": "<strong>整音ポテンシャルの源泉：</strong> 蓄えられた内部張力がppからffまで圧倒的なダイナミックレンジを叶えます。",
+          "zh": "<strong>整音潜能基石：</strong> 充沛的弹性预应力储备赋予从极弱音（pp）到极强音（ff）的宽广动态。"
         },
         "s22_caption_1": {
           "de": "Press- und Verleimvorgang des Hammerkopfs unter Hochdruck",
@@ -3245,6 +3389,30 @@
           "en": "FACTORY VIDEO",
           "ja": "工場動画",
           "zh": "车间视频"
+        },
+        "s22_kpi": {
+          "de": "16 Tonnen",
+          "en": "16 Tons",
+          "ja": "最大 16 トン",
+          "zh": "16 吨高压"
+        },
+        "s22_c1_title": {
+          "de": "Maximale Außenspannung durch Kern-Nachspannen",
+          "en": "Maximum Outer Tension via Moulding Re-Tensioning",
+          "ja": "コア追い締めが生む極限の外層テンション",
+          "zh": "二次顶紧木芯工艺缔造极致外层张力"
+        },
+        "s22_c1_desc": {
+          "de": "Temperierte Seitenbacken und das Renner-Nachspannverfahren erzeugen das charakteristische Spannungsgefälle im Filz.",
+          "en": "Heated side jaws and Renner's re-tensioning step build the signature tension gradient inside the felt.",
+          "ja": "温度管理されたサイド型とレンナー独自の追い締め工程が理想的な張力勾配を生み出します。",
+          "zh": "温控侧模配合雷纳独有的木芯二次加压工艺，在毛毡内部构建标志性的张力梯度。"
+        },
+        "s22_fact": {
+          "de": "⚡ Herzstück der Renner-Fertigung für tragfähigen Konzertsaal-Klang",
+          "en": "⚡ Core Renner pressing secret for commanding concert hall projection",
+          "ja": "⚡ コンサートホールを満たす遠達性を生むレンナー製造の中核工程",
+          "zh": "⚡ 成就音乐厅级宏大穿透力的雷纳核心压制秘诀"
         }
       },
       "notes": {
@@ -3283,22 +3451,22 @@
       },
       "elements": {
         "s23_bullet_1": {
-          "de": "<strong>Perfekte Leimfuge:</strong> Vollflächige Verbindung zwischen Holz, Unterfilz und Deckfilz ohne Lufteinschlüsse.",
-          "en": "<strong>Flawless Glue Line:</strong> Continuous bonding between wood, underfelt, and top felt with zero air pockets.",
-          "ja": "<strong>Perfekte Leimfuge:</strong> Vollflächige Verbindung zwischen Holz, Unterfilz und Deckfilz ohne Lufteinschlüsse.",
-          "zh": "<strong>Perfekte Leimfuge:</strong> Vollflächige Verbindung zwischen Holz, Unterfilz und Deckfilz ohne Lufteinschlüsse."
+          "de": "<strong>Lückenlose Leimfuge:</strong> Vollflächige, porenfreie Kraftverbindung zwischen Kernholz, Unterfilz und Deckfilz.",
+          "en": "<strong>Void-Free Glue Line:</strong> Complete surface-to-surface structural bond uniting wood core, underfelt, and top felt.",
+          "ja": "<strong>完全な接着層：</strong> ウッドコア・アンダーフェルト・トップフェルトが気泡なく全面で一体化します。",
+          "zh": "<strong>无隙致密胶缝：</strong> 实木槌芯、底毡与面毡实现全表面无气泡的牢固力学结合。"
         },
         "s23_bullet_2": {
-          "de": "<strong>Harmonischer Übergang:</strong> Die Kernform zeichnet sich präzise unter dem komprimierten Filz ab.",
-          "en": "<strong>Harmonious Transition:</strong> The moulding contour imprints crisply beneath the compacted felt envelope.",
-          "ja": "<strong>Harmonischer Übergang:</strong> Die Kernform zeichnet sich präzise unter dem komprimierten Filz ab.",
-          "zh": "<strong>Harmonischer Übergang:</strong> Die Kernform zeichnet sich präzise unter dem komprimierten Filz ab."
+          "de": "<strong>Präzise Konturzeichnung:</strong> Der fließende Übergang von Bass zu Diskant ist im Riegel bereits exakt angelegt.",
+          "en": "<strong>Precise Contour Flow:</strong> The smooth progression from bass to treble is already locked into the cured bar.",
+          "ja": "<strong>美しい輪郭の連続性：</strong> 低音から高音へ流れるようなプロファイルがバー全体に正確に刻まれます。",
+          "zh": "<strong>精准轮廓流线：</strong> 从低音到高音的平滑几何过渡已在整排坯条中精准定型。"
         },
         "s23_bullet_3": {
-          "de": "<strong>Betriebsgeheimnis der Formgebung:</strong> Bestimmte nachgelagerte Warmformschritte unterliegen dem strengen Renner-Verfahrensschutz.",
-          "en": "<strong>Proprietary Thermo-Forming:</strong> Dedicated post-cure thermal stabilization remains a strictly guarded Renner trade secret.",
-          "ja": "<strong>Betriebsgeheimnis der Formgebung:</strong> Bestimmte nachgelagerte Warmformschritte unterliegen dem strengen Renner-Verfahrensschutz.",
-          "zh": "<strong>Betriebsgeheimnis der Formgebung:</strong> Bestimmte nachgelagerte Warmformschritte unterliegen dem strengen Renner-Verfahrensschutz."
+          "de": "<strong>Geschützte Ruhephase:</strong> Nachgelagerte Warmform- und Reifeschritte sichern dauerhafte Maß- und Spannungsstabilität.",
+          "en": "<strong>Protected Conditioning:</strong> Proprietary post-curing steps lock in permanent dimensional and tonal stability.",
+          "ja": "<strong>独自の安定化処理：</strong> レンナー門外不出の後処理・熟成工程が長期にわたる形状安定性を保証します。",
+          "zh": "<strong>专有定型熟化：</strong> 严密保护的后续温控定型工序，确保几何尺寸与内部张力持久稳定。"
         },
         "s23_caption_1": {
           "de": "Der verleimte Hammerkopf-Riegel direkt nach dem Entformen",
@@ -3319,10 +3487,28 @@
           "zh": "连排音槌木"
         },
         "s23_c1_desc": {
-          "de": "Nach dem kontrollierten Abkühlen und Abbinden des Leims wird der Hammerkopf als zusammenhängender Riegel entnommen.",
-          "en": "After controlled cooling and curing of the glue, the hammerheads are removed as a continuous molded block.",
-          "ja": "温度管理された冷却と接着剤の硬化後、ハンマーヘッドは一体成型された長尺ブロックとして取り出されます。",
-          "zh": "经过恒温受控冷却与胶液高强度固化，整套弦槌作为一体成型木毡排条完整出模。"
+          "de": "Nach definiertem Abkühlen und Aushärten wird der komplette Satz als geschlossener Hammerkopf-Riegel entnommen.",
+          "en": "After controlled cooling and adhesive curing, the full set emerges as one monolithic hammerhead bar.",
+          "ja": "規定の冷却・硬化時間を経て、1台分のセットが一体となったハンマーバーとして取り出されます。",
+          "zh": "经过严格控温冷却与胶层固化后，整套弦槌以连体整排坯条形态完整脱模。"
+        },
+        "s23_kpi": {
+          "de": "88er-Riegel",
+          "en": "88-Note Bar",
+          "ja": "88鍵一体バー",
+          "zh": "88 键整排槌条"
+        },
+        "s23_c1_title": {
+          "de": "Monolithischer Verbund nach kontrollierter Reife",
+          "en": "Monolithic Hammer Bar After Controlled Curing",
+          "ja": "管理熟成を経て脱型される一体成形ハンマーバー",
+          "zh": "受控固化后脱模的一体化整排弦槌坯条"
+        },
+        "s23_fact": {
+          "de": "🔒 Aus einem durchgehenden Streifen verpresst – null Registerbrüche",
+          "en": "🔒 Pressed from one continuous strip—zero tonal breaks across registers",
+          "ja": "🔒 連続した1枚のフェルトから一体成形 — 音域間の断絶ゼロ",
+          "zh": "🔒 由整条连续毛毡一体压制成型——全音域零音色断层"
         }
       },
       "notes": {
@@ -3361,22 +3547,22 @@
       },
       "elements": {
         "s24_bullet_1": {
-          "de": "<strong>CNC-Abrichten der Leisten:</strong> Beseitigung von Leimaustritten und exaktes Ausfräsen der Außenradien.",
-          "en": "<strong>CNC Truing of Blocks:</strong> Removal of glue beads and high-precision milling of outer moulding contours.",
-          "ja": "<strong>CNC-Abrichten der Leisten:</strong> Beseitigung von Leimaustritten und exaktes Ausfräsen der Außenradien.",
-          "zh": "<strong>CNC-Abrichten der Leisten:</strong> Beseitigung von Leimaustritten und exaktes Ausfräsen der Außenradien."
+          "de": "<strong>CNC-Leistenabrichten:</strong> Sauberes Entfernen von Leimüberständen sowie exaktes Ausformen der Holz- und Filzradien.",
+          "en": "<strong>CNC Moulding Trim:</strong> Cleanly removes excess adhesive and shapes exact wood tail and felt flank radii.",
+          "ja": "<strong>CNC外周トリミング：</strong> 余分な接着剤を除去し、テールやフランクの曲面を設計通りに削り出します。",
+          "zh": "<strong>CNC基准修整：</strong> 干净去除溢胶，并精准铣削出木芯尾部与毛毡侧翼的设计弧度。"
         },
         "s24_bullet_2": {
-          "de": "<strong>Hochgeschwindigkeits-Fräsen:</strong> Spezialwerkzeuge schneiden den dichten Wollfilz mit rasiermesserscharfen Kanten ohne Faserausriss.",
-          "en": "<strong>High-Speed Milling:</strong> Specialized tooling cuts dense wool felt with razor-sharp edges without fiber pullout.",
-          "ja": "<strong>Hochgeschwindigkeits-Fräsen:</strong> Spezialwerkzeuge schneiden den dichten Wollfilz mit rasiermesserscharfen Kanten ohne Faserausriss.",
-          "zh": "<strong>Hochgeschwindigkeits-Fräsen:</strong> Spezialwerkzeuge schneiden den dichten Wollfilz mit rasiermesserscharfen Kanten ohne Faserausriss."
+          "de": "<strong>Rasiermesserscharfer Schnitt:</strong> Hochgeschwindigkeits-Messer trennen den dichten Filz spiegelglatt ohne Faserausriss.",
+          "en": "<strong>Razor-Sharp Slicing:</strong> High-speed specialty cutters part the dense wool felt mirror-smooth without tearing.",
+          "ja": "<strong>カミソリのような切断面：</strong> 特殊高速カッターが高密度フェルトを毛羽立ちなく鏡面状に切り離します。",
+          "zh": "<strong>剃刀级平滑分切：</strong> 特种高速刀具将高密度羊毛毡切出镜面般整齐的侧面，绝无拉毛。"
         },
         "s24_bullet_3": {
-          "de": "<strong>Präzises Auftrennen:</strong> Trennen des Riegels in exakt abgestimmte Breiten (Bass ca. 11,5 mm bis Diskant ca. 9,5–10 mm).",
-          "en": "<strong>Precision Slicing:</strong> Slicing the block into exact progressive widths (approx. 11.5 mm bass to 9.5–10 mm treble).",
-          "ja": "<strong>Präzises Auftrennen:</strong> Trennen des Riegels in exakt abgestimmte Breiten (Bass ca. 11,5 mm bis Diskant ca. 9,5–10 mm).",
-          "zh": "<strong>Präzises Auftrennen:</strong> Trennen des Riegels in exakt abgestimmte Breiten (Bass ca. 11,5 mm bis Diskant ca. 9,5–10 mm)."
+          "de": "<strong>Abgestufte Kopfbreiten:</strong> Präzise Teilung passend zur Mensur (Bass ca. 11,5 mm bis Diskant ca. 9,5–10,0 mm).",
+          "en": "<strong>Graduated Head Widths:</strong> Exact spacing matched to the scale design (bass ~11.5 mm to treble ~9.5–10.0 mm).",
+          "ja": "<strong>段階的なハンマー幅：</strong> 設計スケールに合わせ低音約11.5 mmから高音約9.5〜10.0 mmへ精密分割。",
+          "zh": "<strong>渐进式弦槌宽度：</strong> 严格匹配弦列设计，从低音约11.5 mm平滑递减至高音约9.5–10.0 mm。"
         },
         "s24_caption_1": {
           "de": "CNC-Präzisionsfräszentrum in Meuselwitz bei der Leistenbearbeitung",
@@ -3395,6 +3581,30 @@
           "en": "CNC MILLING",
           "ja": "CNCフライス加工",
           "zh": "数控分切"
+        },
+        "s24_kpi": {
+          "de": "5-Achs CNC",
+          "en": "5-Axis CNC",
+          "ja": "5軸 CNC加工",
+          "zh": "五轴 CNC 精加工"
+        },
+        "s24_c1_title": {
+          "de": "Mehrachsiges Abrichten & Trennen in 88 Einzelköpfe",
+          "en": "Multi-Axis Trimming & Slicing into 88 Individual Heads",
+          "ja": "多軸CNCによる外周仕上げと88個への精密分割",
+          "zh": "多轴CNC精密修整与88颗独立弦槌分切"
+        },
+        "s24_c1_desc": {
+          "de": "Hochgeschwindigkeits-Bearbeitungszentren fräsen die Außenkontur des Riegels und trennen ihn mikrometergenau auf.",
+          "en": "High-speed CNC centers mill the outer contours of the bar and slice it with micrometer precision.",
+          "ja": "高速CNCマシニングセンタがバーの外周を仕上げ、ミクロン単位の精度で88個へ切り分けます。",
+          "zh": "高速CNC加工中心精准铣削坯条外轮廓，并以微米级精度将其分切为88颗独立弦槌。"
+        },
+        "s24_fact": {
+          "de": "📐 Exakte Symmetrie und identische Masseprogression von Ton zu Ton",
+          "en": "📐 Exact symmetry and uniform mass progression from note to note",
+          "ja": "📐 隣り合うすべての音で完全な対称性と滑らかな質量変化を実現",
+          "zh": "📐 确保相邻每一音之间完美的几何对称与均匀质量递进"
         }
       },
       "notes": {
@@ -3433,22 +3643,22 @@
       },
       "elements": {
         "s25_bullet_1": {
-          "de": "<strong>Automatisierte Stielbohrung:</strong> Bohren im exakten Raumwinkel (Bohrungslänge, Durchmesser ø 5,4 mm, Neigungswinkel in Gon).",
-          "en": "<strong>Automated Shank Boring:</strong> Boring at exact spatial angles (bore depth, diameter ø 5.4 mm, inclination in gon).",
-          "ja": "<strong>Automatisierte Stielbohrung:</strong> Bohren im exakten Raumwinkel (Bohrungslänge, Durchmesser ø 5,4 mm, Neigungswinkel in Gon).",
-          "zh": "<strong>Automatisierte Stielbohrung:</strong> Bohren im exakten Raumwinkel (Bohrungslänge, Durchmesser ø 5,4 mm, Neigungswinkel in Gon)."
+          "de": "<strong>Präzisions-Stielbohrung:</strong> Automatisiertes Bohren in exakter Tiefe, Durchmesser (z. B. ø 5,4 mm) und Raumwinkel.",
+          "en": "<strong>Precision Shank Boring:</strong> Automated drilling to exact depth, bore diameter (e.g., ø 5.4 mm), and rake/hang angle.",
+          "ja": "<strong>高精度シャンク穴加工：</strong> 深さ・穴径（例：ø5.4 mm）・立体角度を自動制御で正確に穿孔します。",
+          "zh": "<strong>精密槌柄钻孔：</strong> 自动控制钻孔深度、孔径（如 ø 5.4 mm）及三维空间倾角。"
         },
         "s25_bullet_2": {
-          "de": "<strong>T-Vernietung (Riveting):</strong> Hochfeste Messing-T-Nieten sichern die Filzschenkel dauerhaft gegen Aufplatzen bei stärksten Konzertanschlägen.",
-          "en": "<strong>T-Riveting:</strong> High-tensile brass T-rivets permanently secure felt flanks against bursting under fortissimo concert attacks.",
-          "ja": "<strong>T-Vernietung (Riveting):</strong> Hochfeste Messing-T-Nieten sichern die Filzschenkel dauerhaft gegen Aufplatzen bei stärksten Konzertanschlägen.",
-          "zh": "<strong>T-Vernietung (Riveting):</strong> Hochfeste Messing-T-Nieten sichern die Filzschenkel dauerhaft gegen Aufplatzen bei stärksten Konzertanschlägen."
+          "de": "<strong>Formschlüssige T-Vernietung:</strong> Messing-T-Nieten sichern die Filzschenkel dauerhaft selbst bei härtester Konzertbeanspruchung.",
+          "en": "<strong>Positive-Lock T-Wiring:</strong> Solid brass T-pins permanently secure the felt tails under peak concert fortissimo loads.",
+          "ja": "<strong>高強度Tピンリベット：</strong> 真鍮製Tピンが激しいコンサート演奏下でもフェルト脚部の開きを永久に防ぎます。",
+          "zh": "<strong>高强黄铜T型铆钉：</strong> 实心黄铜T型钉牢固锁紧毛毡侧翼，承受高强度音乐会演奏亦绝不崩裂。"
         },
         "s25_bullet_3": {
-          "de": "<strong>Verrundung der Hammerschwänze:</strong> Speziell geformte Radien am Schwanz erleichtern später das Einpassen in den Fänger.",
-          "en": "<strong>Tail Radiusing:</strong> Specially shaped tail profiles facilitate smooth engagement with the backcheck.",
-          "ja": "<strong>Verrundung der Hammerschwänze:</strong> Speziell geformte Radien am Schwanz erleichtern später das Einpassen in den Fänger.",
-          "zh": "<strong>Verrundung der Hammerschwänze:</strong> Speziell geformte Radien am Schwanz erleichtern später das Einpassen in den Fänger."
+          "de": "<strong>Verrundete Hammerschwänze:</strong> Fein profilierte Schwanzradien sorgen für zuverlässiges, gleichmäßiges Greifen im Fänger.",
+          "en": "<strong>Contoured Hammer Tails:</strong> Finely radiused tails ensure smooth, reliable checking against the backcheck.",
+          "ja": "<strong>滑らかなテールR加工：</strong> 精密に丸められたハンマーテールがバックチェックでの確実な受け止めを実現。",
+          "zh": "<strong>顺滑槌尾圆角：</strong> 精细打磨的槌尾弧度，确保与档托（Backcheck）实现稳定利落的止音配合。"
         },
         "s25_caption_1": {
           "de": "Bohren und Einbringen der T-Nieten in Meuselwitz",
@@ -3467,6 +3677,30 @@
           "en": "FACTORY VIDEO",
           "ja": "工場動画",
           "zh": "车间视频"
+        },
+        "s25_kpi": {
+          "de": "ø 5,4 mm · T-Niet",
+          "en": "ø 5.4 mm · T-Pin",
+          "ja": "ø5.4 mm・Tピン",
+          "zh": "ø 5.4 mm · T型铆钉"
+        },
+        "s25_c1_title": {
+          "de": "Raumwinkel-Bohrung, T-Vernietung & Endveredelung",
+          "en": "Compound-Angle Boring, T-Wiring & Tail Finishing",
+          "ja": "複合角度ボーリング・真鍮Tピン固定・テール仕上げ",
+          "zh": "空间复合角钻孔、黄铜T型铆固与槌尾精修"
+        },
+        "s25_c1_desc": {
+          "de": "Im abschließenden Veredelungsschritt wird jeder Hammerkopf individuell auf die Mechanikgeometrie vorbereitet.",
+          "en": "In the final finishing stage, each hammerhead is individually prepared for exact piano action geometry.",
+          "ja": "最終仕上げ工程では、各ハンマーヘッドがアクション設計に合わせた正確な取付形状へと加工されます。",
+          "zh": "在最终精加工阶段，每颗弦槌均按目标击弦机几何参数完成精密装配预备。"
+        },
+        "s25_fact": {
+          "de": "🔩 Einbaufertige Meisterqualität – maßhaltig bis ins kleinste Detail",
+          "en": "🔩 Ready-to-install master quality—dimensionally true in every detail",
+          "ja": "🔩 細部まで寸法精度を極めた、即取付可能なマイスター品質",
+          "zh": "🔩 细节尺寸精准无误的大师级成品，随时就绪装琴"
         }
       },
       "notes": {
@@ -3636,10 +3870,10 @@
         "zh": "第四部分：雅马哈套件 • 产品专场"
       },
       "title": {
-        "de": "Louis Renner Yamaha Kit (C1–C3)<br>Nahtloser Einbau & Maximale Klangveredelung",
-        "en": "Louis Renner Yamaha Kit (C1–C3)<br>Seamless Drop-In & Acoustic Excellence",
-        "ja": "ルイス・レンナー YAMAHA キット（C1〜C3）<br>完全互換の装着と最高峰の音響昇華",
-        "zh": "德国雷诺雅马哈升级套件（C1-C3）<br>极速无缝换装与巅峰音乐会音质"
+        "de": "Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau",
+        "en": "Louis Renner Yamaha Kit (C1–C3) – Seamless Drop-In",
+        "ja": "Louis Renner Yamaha Kit (C1–C3) — シームレス導入",
+        "zh": "Louis Renner 雅马哈套件 (C1–C3) — 无缝换装升级"
       },
       "subtitle": {
         "de": "Maßgeschneidert für Yamaha C1–C3: Dynamische Ausdruckskraft, brillante Obertöne & tiefer Fundamentalbass.",
@@ -3685,10 +3919,10 @@
           "zh": "工时大幅缩减"
         },
         "s27_b1_badge": {
-          "de": ">MESSBASIERTE FERTIGUNG · 5 JAHRE ENTWICKLUNG",
-          "en": ">MEASUREMENT-BASED PRODUCTION · 5 YEARS R&D",
-          "ja": ">測定基準製造・5年間の研究開発",
-          "zh": ">科学测量制造体系 · 五年研发攻坚"
+          "de": "MESSBASIERTE FERTIGUNG · 5 JAHRE ENTWICKLUNG",
+          "en": "MEASUREMENT-BASED PRODUCTION · 5 YEARS R&D",
+          "ja": "測定基準製造・5年間の研究開発",
+          "zh": "科学测量制造体系 · 五年研发攻坚"
         },
         "s27_p1_title": {
           "de": "Proprietäres Mess- & Fertigungssystem",
@@ -3727,10 +3961,10 @@
           "zh": "✦ 可靠音乐会品质：出厂即达大师级终极音质"
         },
         "s27_b2_badge": {
-          "de": ">RENNER MESS-SYSTEM",
-          "en": ">RENNER MEASUREMENT SYSTEM",
-          "ja": ">レンナー計測システム",
-          "zh": ">雷诺高精度测量系统"
+          "de": "RENNER MESS-SYSTEM",
+          "en": "RENNER MEASUREMENT SYSTEM",
+          "ja": "レンナー計測システム",
+          "zh": "雷诺高精度测量系统"
         },
         "s27_p1_caption": {
           "de": "Vorkalibrierter Hammerkopfsatz: Vollendetes Klangspektrum ohne manuelle Nadelung",
@@ -3739,10 +3973,10 @@
           "zh": "出厂科学标定高级槌头总成：无需手工扎针即享饱满音色"
         },
         "s27_b3_badge": {
-          "de": ">OPTIMIERTES TRÄGHEITSMOMENT",
-          "en": ">OPTIMIZED INERTIA",
-          "ja": ">慣性モーメント最適化",
-          "zh": ">优化转动惯量"
+          "de": "OPTIMIERTES TRÄGHEITSMOMENT",
+          "en": "OPTIMIZED INERTIA",
+          "ja": "慣性モーメント最適化",
+          "zh": "优化转动惯量"
         },
         "s27_p2_title": {
           "de": "Ausbalanciertes Gewicht & Schnelle Repetition",
@@ -3781,10 +4015,10 @@
           "zh": "✦ 极致高效：仅需4–5小时即可在客户现场完成整套换装与精密调校"
         },
         "s27_b4_badge": {
-          "de": ">GEWICHT & GEOMETRIE",
-          "en": ">WEIGHT & GEOMETRY",
-          "ja": ">重量とジオメトリ",
-          "zh": ">配重与几何力学"
+          "de": "GEWICHT & GEOMETRIE",
+          "en": "WEIGHT & GEOMETRY",
+          "ja": "重量とジオメトリ",
+          "zh": "配重与几何力学"
         },
         "s27_p2_caption": {
           "de": "Auf Yamaha C1–C3 kalibrierte Hammerstiele mit Kapseln für feinfühliges Spielgefühl",
@@ -3793,10 +4027,10 @@
           "zh": "专为雅马哈C1-C3精准标定的槌柄与轴架总成，带来敏捷细腻的触键反馈"
         },
         "s27_b5_badge": {
-          "de": ">EINSCHRAUBEN · AUSRICHTEN · FERTIG",
-          "en": ">SCREW IN · ALIGN · DONE",
-          "ja": ">ネジ留め・整列・完了",
-          "zh": ">拧入固定 · 校正对齐 · 交付完成"
+          "de": "EINSCHRAUBEN · AUSRICHTEN · FERTIG",
+          "en": "SCREW IN · ALIGN · DONE",
+          "ja": "ネジ留め・整列・完了",
+          "zh": "拧入固定 · 校正对齐 · 交付完成"
         },
         "s27_p3_title": {
           "de": "Einfach einschrauben, richten fertig.",
@@ -3835,10 +4069,10 @@
           "zh": "✦ 极致工艺可靠度：消除钻孔偏斜与脱胶一切风险"
         },
         "s27_b6_badge": {
-          "de": ">PLUG & PLAY",
-          "en": ">PLUG & PLAY",
-          "ja": ">プラグ＆プレイ",
-          "zh": ">即插即用"
+          "de": "PLUG & PLAY",
+          "en": "PLUG & PLAY",
+          "ja": "プラグ＆プレイ",
+          "zh": "即插即用"
         },
         "s27_p3_caption": {
           "de": "Im 91°-Winkel verleimter Satz auf Kapseln – direkt auf die originale Yamaha-Schiene montierbar",
@@ -3847,10 +4081,10 @@
           "zh": "以91°黄金角度出厂预装胶合的总成，直接锁紧于雅马哈原装铝轨"
         },
         "s27_b7_badge": {
-          "de": ">OBERTONREICHER KONZERTKLANG",
-          "en": ">HARMONIC-RICH CONCERT TONE",
-          "ja": ">倍音豊かなコンサートトーン",
-          "zh": ">泛音饱满的音乐会级声学境界"
+          "de": "OBERTONREICHER KONZERTKLANG",
+          "en": "HARMONIC-RICH CONCERT TONE",
+          "ja": "倍音豊かなコンサートトーン",
+          "zh": "泛音饱满的音乐会级声学境界"
         },
         "s27_p4_title": {
           "de": "Reiches Klangspektrum & Farbigkeit",
@@ -3889,10 +4123,10 @@
           "zh": "✦ 钢琴声学升华：将生硬敲击声彻底转化为温暖、醇厚且穿透力极强的音乐会音色"
         },
         "s27_b8_badge": {
-          "de": ">DYNAMIK & KLANGFARBEN",
-          "en": ">DYNAMICS & TIMBRE",
-          "ja": ">音色とダイナミクス",
-          "zh": ">丰富动态与音色"
+          "de": "DYNAMIK & KLANGFARBEN",
+          "en": "DYNAMICS & TIMBRE",
+          "ja": "音色とダイナミクス",
+          "zh": "丰富动态与音色"
         },
         "s27_p4_caption": {
           "de": "Aus einem homogenen Filzstreifen gefertigt: Nahtlose Klangübergänge ohne Registerbrüche",
@@ -3901,10 +4135,10 @@
           "zh": "由单根完整羊毛毡条一体加工而成：全音区平滑过渡，绝无音色断层"
         },
         "s27_b9_badge": {
-          "de": ">STUNDEN STATT TAGE",
-          "en": ">HOURS INSTEAD OF DAYS",
-          "ja": ">数日を数時間に短縮",
-          "zh": ">工时大幅缩减"
+          "de": "STUNDEN STATT TAGE",
+          "en": "HOURS INSTEAD OF DAYS",
+          "ja": "数日を数時間に短縮",
+          "zh": "工时大幅缩减"
         },
         "s27_p5_title": {
           "de": "4–5 Stunden vor Ort statt 3–7 Tage Werkstatt",
@@ -3943,10 +4177,10 @@
           "zh": "✦ 颠覆性商业经济性：将耗时数天的车间工时压缩至现场数小时极速交付"
         },
         "s27_b10_badge": {
-          "de": ">EFFIZIENZ-VERGLEICH",
-          "en": ">EFFICIENCY COMPARISON",
-          "ja": ">効率比較",
-          "zh": ">工时效率对比"
+          "de": "EFFIZIENZ-VERGLEICH",
+          "en": "EFFICIENCY COMPARISON",
+          "ja": "効率比較",
+          "zh": "工时效率对比"
         },
         "s27_p5_caption": {
           "de": "Ausgespielter Althammer nach 25 Jahren vs. Neuer Renner Konzert-Hammerkopf auf Stiel",
@@ -3955,16 +4189,16 @@
           "zh": "使用25年严重凹陷发硬的原装旧槌（右） vs. 乌尔岑特级羊毛毡全新雷诺音乐会槌头（左）"
         },
         "s27_b11_badge": {
-          "de": ">RENNER YAMAHA KIT",
-          "en": ">RENNER YAMAHA KIT",
-          "ja": ">レンナー YAMAHA キット",
-          "zh": ">德国雷诺雅马哈定制套件"
+          "de": "RENNER YAMAHA KIT",
+          "en": "RENNER YAMAHA KIT",
+          "ja": "レンナー YAMAHA キット",
+          "zh": "德国雷诺雅马哈定制套件"
         },
         "s27_spotlight_badge": {
-          "de": ">RENNER YAMAHA KIT",
-          "en": ">RENNER YAMAHA KIT",
-          "ja": ">レンナー YAMAHA キット",
-          "zh": ">德国雷诺雅马哈定制套件"
+          "de": "RENNER YAMAHA KIT",
+          "en": "RENNER YAMAHA KIT",
+          "ja": "レンナー YAMAHA キット",
+          "zh": "德国雷诺雅马哈定制套件"
         },
         "s27_c1_title": {
           "de": "Köpfe & Stiele im Detail",
@@ -4093,10 +4327,10 @@
       },
       "elements": {
         "s28_b1_badge": {
-          "de": ">ZEITRAFFER · 10:00 – 18:00 UHR",
-          "en": ">TIME-LAPSE · 10:00 AM – 6:00 PM",
-          "ja": ">タイムラプス · 10:00 – 18:00",
-          "zh": ">延时摄影 · 10:00 – 18:00"
+          "de": "ZEITRAFFER · 10–18 UHR",
+          "en": "TIMELAPSE · 10–18 H",
+          "ja": "タイムラプス・10〜18時",
+          "zh": "延时纪实 · 10–18 时"
         },
         "s28_m1_unit": {
           "de": "Arbeitstag vor Ort",
@@ -4105,28 +4339,52 @@
           "zh": "现场工作日"
         },
         "s28_bullet_1": {
-          "de": "<strong>Taggleicher Komplettumbau:</strong> Vollständiger Wechsel auf das vorkonfektionierte Renner Yamaha Kit von 10:00 bis 18:00 Uhr vor Ort.",
-          "en": "<strong>Same-Day Complete Conversion:</strong> Full replacement with the pre-assembled Renner Yamaha Kit from 10:00 AM to 6:00 PM on site.",
-          "ja": "<strong>即日フル交換：</strong>10:00から18:00までの現地作業で、プレアセンブリ済みのレンナー・ヤマハキットへ完全交換。",
-          "zh": "<strong>当日全套改造：</strong>10:00至18:00在现场完成预组装雷纳雅马哈套件的整体更换。"
+          "de": "<strong>Taggleicher Wechsel:</strong> Komplette Umrüstung auf das vorkonfektionierte Kit von 10:00 bis 18:00 Uhr.",
+          "en": "<strong>Same-Day Conversion:</strong> Complete upgrade to the pre-assembled Renner Kit from 10:00 to 18:00 on site.",
+          "ja": "<strong>即日フル交換：</strong> 10:00〜18:00の現地作業でプレアセンブリ済みキットへ完全換装。",
+          "zh": "<strong>当日全套换装：</strong> 10:00至18:00于现场完成预组装雷纳套件的整体升级。"
         },
         "s28_bullet_2": {
-          "de": "<strong>Plug &amp; Play Montage:</strong> Direktes Einschrauben der kalibrierten Kapseln und Stiele in das originale Yamaha-Aluminiumprofil.",
-          "en": "<strong>Plug &amp; Play Mounting:</strong> Directly screwing the calibrated flanges and shanks into the original Yamaha aluminum rail.",
-          "ja": "<strong>プラグ＆プレイ取付：</strong>較正済みのフレンジとシャンクを純正ヤマハ・アルミレールへ直接ネジ止め。",
-          "zh": "<strong>即装即用安装：</strong>将校准好的轴架与槌柄直接拧入原厂雅马哈铝合金导轨。"
+          "de": "<strong>Plug &amp; Play Montage:</strong> Direktes Einschrauben der kalibrierten Kapseln ins originale Alu-Profil.",
+          "en": "<strong>Plug &amp; Play Fit:</strong> Direct mounting of pre-calibrated flanges and shanks onto the original rail.",
+          "ja": "<strong>プラグ＆プレイ装着：</strong> 較正済みフレンジとシャンクを純正アルミレールへそのままネジ固定。",
+          "zh": "<strong>即插即用安装：</strong> 将预校准轴架与槌柄直接旋入雅马哈原厂铝合金总档。"
         },
         "s28_bullet_3": {
-          "de": "<strong>Ausrichten &amp; Feinregulation:</strong> Exaktes Einstellen auf die Saitenebene, Steighöhe, Auslösung und Fang direkt am Flügel.",
-          "en": "<strong>Alignment &amp; Fine Regulation:</strong> Precise string alignment, blow distance, let-off, and backcheck regulation directly at the grand.",
-          "ja": "<strong>弦合わせ＆微整調：</strong>弦への整列、打弦距離、レットオフ、バックチェック調整をグランドピアノで直接実施。",
-          "zh": "<strong>对弦与精密整调：</strong>直接在三角钢琴上精准完成弦列对准、击弦距离、脱进及档托整调。"
+          "de": "<strong>Feinregulation vor Ort:</strong> Exaktes Einstellen von Steighöhe, Auslösung und Fang direkt am Flügel.",
+          "en": "<strong>On-Site Regulation:</strong> Precise alignment, blow distance, let-off, and checking set right at the grand.",
+          "ja": "<strong>現地での精密整調：</strong> 弦合わせ・打弦距離・レットオフ・バックチェックをその場で最適化。",
+          "zh": "<strong>现场精密整调：</strong> 直接在琴上完成对弦、击弦距离、脱进与档托的精准调校。"
         },
         "s28_bullet_4": {
-          "de": "<strong>Kein Werkstatt-Transport:</strong> Das Instrument verbleibt im Raum – null Transportrisiko und direkte Abstimmung auf die Raumakustik.",
-          "en": "<strong>No Workshop Transport:</strong> The instrument stays in the room — zero transport risk and direct tuning to the room acoustics.",
-          "ja": "<strong>工房搬送不要：</strong>楽器を移動させず輸送リスクゼロ、部屋の音響に合わせた直接仕上げが可能。",
-          "zh": "<strong>无需运回工坊：</strong>乐器留在现场，零运输风险，并可直接根据房间声学进行匹配。"
+          "de": "<strong>Null Transportrisiko:</strong> Der Flügel bleibt im Raum und wird unmittelbar auf die Akustik abgestimmt.",
+          "en": "<strong>Zero Transport Risk:</strong> The grand stays in place and is voiced directly to the room's acoustics.",
+          "ja": "<strong>搬出リスクゼロ：</strong> 楽器を移動させず、設置空間の音響特性に合わせて直接仕上げます。",
+          "zh": "<strong>零搬运风险：</strong> 三角琴无需运回工坊，直接结合现场空间声学完成最终匹配。"
+        },
+        "s28_kpi": {
+          "de": "1 Arbeitstag",
+          "en": "1 Workday",
+          "ja": "現地 1 日完結",
+          "zh": "1 个工作日"
+        },
+        "s28_c1_title": {
+          "de": "Kompletter Umbau direkt am Aufstellort",
+          "en": "Complete Action Upgrade Directly On Site",
+          "ja": "設置現場で1日のうちに完了するフル交換",
+          "zh": "在钢琴安放现场一天内完成全套换装"
+        },
+        "s28_c1_desc": {
+          "de": "Zeitraffer aus Indien: Taggleicher Einbau des Renner Yamaha Kits samt Feinregulation von 10 bis 18 Uhr.",
+          "en": "Timelapse from India: Same-day installation of the Renner Yamaha Kit and fine regulation from 10 to 18 h.",
+          "ja": "インド現地記録：10時〜18時の同日中にレンナー・ヤマハキット取付と精密整調を完結。",
+          "zh": "印度现场纪实：10:00至18:00当日完成雷纳雅马哈套件换装与全套精密整调。"
+        },
+        "s28_fact": {
+          "de": "⏱ 10:00–18:00 Uhr: Vom Ausbau bis zum konzertfertigen Flügel vor Ort",
+          "en": "⏱ 10:00–18:00: From removal to a concert-ready grand on site",
+          "ja": "⏱ 10:00〜18:00：旧ハンマー撤去からコンサート完成まで現地完結",
+          "zh": "⏱ 10:00–18:00：从拆卸旧槌到音乐会级交付，当日现场一步到位"
         }
       }
     },
@@ -4165,10 +4423,10 @@
       },
       "elements": {
         "s29_b1_badge": {
-          "de": ">PIANISTEN-FEEDBACK · KLANGBEWEIS",
-          "en": ">PIANIST FEEDBACK · ACOUSTIC PROOF",
-          "ja": ">ピアニスト評価 · 音響実証",
-          "zh": ">钢琴家反馈 · 音色实证"
+          "de": "KLANGBEWEIS VOR ORT",
+          "en": "ARTIST SOUND PROOF",
+          "ja": "ピアニスト実演評価",
+          "zh": "钢琴家现场实证"
         },
         "s29_m1_unit": {
           "de": "Konzertklang ab Werk",
@@ -4177,28 +4435,52 @@
           "zh": "出厂即享音乐会音色"
         },
         "s29_bullet_1": {
-          "de": "<strong>Wärmerer, singender Konzertton:</strong> Sofort hörbare Verwandlung vom harten Attack zu einem warmen, tragfähigen Klangbild.",
-          "en": "<strong>Warmer, Singing Concert Tone:</strong> Immediately audible transformation from a hard attack to a warm, projecting tonal profile.",
-          "ja": "<strong>温かく歌うコンサートトーン：</strong>硬いアタックから温かく豊かな響きへの劇的な変化を即座に実感。",
-          "zh": "<strong>温暖如歌的音乐会音色：</strong>从生硬击弦感立即蜕变为温暖醇厚、富有穿透力的声音。"
+          "de": "<strong>Singender Konzertton:</strong> Hörbarer Wandel vom harten Attack zu einem warmen, tragfähigen Klangbild.",
+          "en": "<strong>Singing Concert Tone:</strong> Audible shift from a hard attack to a warm, rich, projecting sound.",
+          "ja": "<strong>歌うコンサートトーン：</strong> 硬質なアタックから温かく豊かな響きへの劇的な変化を即実感。",
+          "zh": "<strong>如歌音乐会音色：</strong> 从生硬敲击感立即蜕变为温暖醇厚、富有穿透力的共鸣。"
         },
         "s29_bullet_2": {
-          "de": "<strong>Blühender Diskant &amp; klarer Bass:</strong> Glockenreine Projektion in der Melodielage und saubere Akkordtrennung im Bassregister.",
-          "en": "<strong>Blooming Treble &amp; Clear Bass:</strong> Bell-like projection in the melody register and clean chord separation in the bass.",
-          "ja": "<strong>華やかな高音＆明瞭な低音：</strong>メロディ音域での澄んだ遠達性と低音域でのクリアな和音分離。",
-          "zh": "<strong>饱满高音与清晰低音：</strong>旋律音区如钟鸣般通透延展，低音区和弦层次分明。"
+          "de": "<strong>Blühender Diskant:</strong> Glockenreine Melodieprojektion und saubere Akkordtrennung im Bassregister.",
+          "en": "<strong>Blooming Treble:</strong> Bell-like melody projection paired with clean chord clarity in the bass.",
+          "ja": "<strong>華やかな高音と明瞭な低音：</strong> 澄んだ旋律の伸びと低音域でのクリアな和音分離を両立。",
+          "zh": "<strong>通透高音与清晰低音：</strong> 旋律音区如钟鸣般延展，低音和弦层次清晰分明。"
         },
         "s29_bullet_3": {
-          "de": "<strong>Feinfühlige Dynamikkontrolle:</strong> Mühelose Differenzierung vom zartesten Pianissimo bis zum vollen Fortissimo.",
-          "en": "<strong>Responsive Dynamic Control:</strong> Effortless gradation from the softest pianissimo to full fortissimo.",
-          "ja": "<strong>繊細なダイナミクス制御：</strong>最弱音のピアニッシモから力強いフォルティッシモまで自在な表現力。",
-          "zh": "<strong>细腻的动态控制：</strong>从极弱音（pp）到极强音（ff）皆可轻松实现细腻层次。"
+          "de": "<strong>Feinste Dynamikstufen:</strong> Mühelose Kontrolle und Farbschattierung vom zarten pp bis zum vollen ff.",
+          "en": "<strong>Nuanced Dynamics:</strong> Effortless shading and tonal control from whisper-soft pp to full ff.",
+          "ja": "<strong>繊細なダイナミクス制御：</strong> 囁くようなppから力強いffまで自在な音色表現が可能に。",
+          "zh": "<strong>细腻动态层次：</strong> 从极弱音（pp）到极强音（ff）皆可自如塑造丰富音色变化。"
         },
         "s29_bullet_4": {
-          "de": "<strong>Präzise Repetition:</strong> Spürbar leichtere Tastenansprache und schnelle Rückstellkraft durch kalibriertes Gewicht.",
-          "en": "<strong>Precise Repetition:</strong> Noticeably lighter key response and rapid return thanks to calibrated hammer weight.",
-          "ja": "<strong>精密な連打性：</strong>較正されたハンマー重量により、軽快な鍵盤反応と素早い復原力を実現。",
-          "zh": "<strong>精准复振性能：</strong>得益于校准的弦槌重量，触键响应更加轻盈灵敏。"
+          "de": "<strong>Leichte Repetition:</strong> Spürbar präzisere Tastenansprache und schnelle Rückkehr durch Idealgewicht.",
+          "en": "<strong>Effortless Repetition:</strong> Crisper key response and rapid return thanks to calibrated hammer mass.",
+          "ja": "<strong>軽快な連打性能：</strong> 最適化されたハンマー質量が素早い復原力と鋭敏な反応を実現。",
+          "zh": "<strong>轻盈敏捷复奏：</strong> 得益于精准标定的弦槌质量，触键回弹与连奏更加灵敏。"
+        },
+        "s29_kpi": {
+          "de": "100 % Konzertton",
+          "en": "100% Concert",
+          "ja": "コンサート音色",
+          "zh": "音乐会级音色"
+        },
+        "s29_c1_title": {
+          "de": "Künstlerisches Urteil direkt nach dem Einbau",
+          "en": "Immediate Artist Verdict After Installation",
+          "ja": "交換直後のピアニストによる実演評価",
+          "zh": "换装完成后钢琴家的现场即刻品鉴"
+        },
+        "s29_c1_desc": {
+          "de": "Pianistin Raaga prüft den umgerüsteten Yamaha-Flügel unmittelbar auf Klangwärme, Tragkraft und Spielart.",
+          "en": "Pianist Raaga tests the upgraded Yamaha grand first-hand for tonal warmth, projection, and touch.",
+          "ja": "ピアニストのラーガ氏が改修直後のヤマハで音色の温かみ・遠達性・タッチを検証します。",
+          "zh": "钢琴家 Raaga 现场试奏升级后的雅马哈三角琴，检验其温暖度、穿透力与触键感。"
+        },
+        "s29_fact": {
+          "de": "🎹 Sofort hörbarer Wandel zu europäischer Klangwärme und Kontrolle",
+          "en": "🎹 Immediately audible shift to European warmth and touch control",
+          "ja": "🎹 ヨーロッパ的な温かい響きと繊細なタッチへの変化を実証",
+          "zh": "🎹 立竿见影蜕变为温暖醇厚的欧洲音色与细腻触键控制"
         }
       }
     },
@@ -4314,10 +4596,10 @@
           "zh": "P95峰值"
         },
         "s30_r_badge": {
-          "de": ">2-OKTAVEN-MESSWERTE",
-          "en": ">2-OCTAVE METRICS",
-          "ja": ">2オクターブ測定値",
-          "zh": ">2八度实测值"
+          "de": "2-OKTAVEN-MESSWERTE",
+          "en": "2-OCTAVE METRICS",
+          "ja": "2オクターブ測定値",
+          "zh": "2八度实测值"
         },
         "s30_r_title": {
           "de": "Kennzahlen im 2-Oktaven-Fenster",
@@ -4493,10 +4775,10 @@
           "zh": "绝对值 (dB)"
         },
         "s31_l_badge": {
-          "de": ">TEILTÖNE ≤ 6 KHZ",
-          "en": ">PARTIALS ≤ 6 KHZ",
-          "ja": ">倍音 ≤ 6 KHZ",
-          "zh": ">泛音 ≤ 6 KHZ"
+          "de": "TEILTÖNE ≤ 6 KHZ",
+          "en": "PARTIALS ≤ 6 KHZ",
+          "ja": "倍音 ≤ 6 KHZ",
+          "zh": "泛音 ≤ 6 KHZ"
         },
         "s31_l_title": {
           "de": "Harmonische Teiltonverteilung (≤ 6.000 Hz)",
@@ -4535,10 +4817,10 @@
           "zh": "辉煌与穿透"
         },
         "s31_r_badge": {
-          "de": ">24 HALBTÖNE ≤ 6 KHZ",
-          "en": ">24 SEMITONES ≤ 6 KHZ",
-          "ja": ">24半音 ≤ 6 KHZ",
-          "zh": ">24 半音 ≤ 6 KHZ"
+          "de": "24 HALBTÖNE ≤ 6 KHZ",
+          "en": "24 SEMITONES ≤ 6 KHZ",
+          "ja": "24半音 ≤ 6 KHZ",
+          "zh": "24 半音 ≤ 6 KHZ"
         },
         "s31_r_title": {
           "de": "Oberton-Energie pro Note (≤ 6.000 Hz)",
@@ -4606,10 +4888,10 @@
           "zh": "动态与斜率"
         },
         "s32_l_badge": {
-          "de": ">DIFFERENZ ΔL(f)",
-          "en": ">DIFFERENCE ΔL(f)",
-          "ja": ">差分 ΔL(f)",
-          "zh": ">差值 ΔL(f)"
+          "de": "DIFFERENZ ΔL(f)",
+          "en": "DIFFERENCE ΔL(f)",
+          "ja": "差分 ΔL(f)",
+          "zh": "差值 ΔL(f)"
         },
         "s32_l_title": {
           "de": "Pegelgewinn durch das Yamaha Kit",
@@ -4648,10 +4930,10 @@
           "zh": "5. 空气感"
         },
         "s32_adv1_badge": {
-          "de": ">01 • CANTABILE",
-          "en": ">01 • CANTABILE",
-          "ja": ">01 • カンタービレ",
-          "zh": ">01 • 如歌音色"
+          "de": "01 • CANTABILE",
+          "en": "01 • CANTABILE",
+          "ja": "01 • カンタービレ",
+          "zh": "01 • 如歌音色"
         },
         "s32_adv1_title": {
           "de": "Gesangsregister (0,8–2,5 kHz)",
@@ -4666,10 +4948,10 @@
           "zh": "1.45 kHz 处峰值达 +3.4 dB，塑造温暖如歌的音乐会音色。"
         },
         "s32_adv2_badge": {
-          "de": ">02 • PROJEKTION",
-          "en": ">02 • PROJECTION",
-          "ja": ">02 • 遠達性",
-          "zh": ">02 • 穿透力"
+          "de": "02 • PROJEKTION",
+          "en": "02 • PROJECTION",
+          "ja": "02 • 遠達性",
+          "zh": "02 • 穿透力"
         },
         "s32_adv2_title": {
           "de": "Diskant-Brillanz (2,5–6,0 kHz)",
@@ -4684,10 +4966,10 @@
           "zh": "凭借 FFW 美利奴毛毡，展现清澈不刺耳的钟鸣般泛音投射。"
         },
         "s32_adv3_badge": {
-          "de": ">03 • TRANSPARENZ",
-          "en": ">03 • CLARITY",
-          "ja": ">03 • 透明感",
-          "zh": ">03 • 清晰度"
+          "de": "03 • TRANSPARENZ",
+          "en": "03 • CLARITY",
+          "ja": "03 • 透明感",
+          "zh": "03 • 清晰度"
         },
         "s32_adv3_title": {
           "de": "Bass-Präzision (20–250 Hz)",
@@ -4702,10 +4984,10 @@
           "zh": "精准消除低频浑浊，令和弦层次分明、清澈通透。"
         },
         "s32_adv4_badge": {
-          "de": ">04 • SPECTRAL SLOPE",
-          "en": ">04 • SPECTRAL SLOPE",
-          "ja": ">04 • スロープ改善",
-          "zh": ">04 • 斜率优化"
+          "de": "04 • SPECTRAL SLOPE",
+          "en": "04 • SPECTRAL SLOPE",
+          "ja": "04 • スロープ改善",
+          "zh": "04 • 斜率优化"
         },
         "s32_adv4_title": {
           "de": "12,6 % flacherer Abfall & +0,42 dB Crest",
@@ -4718,6 +5000,12 @@
           "en": "Richer overtones (−6.45 vs. −7.38 dB/kHz) and faster attack response.",
           "ja": "倍音保持率が向上（−6.45 dB/kHz）し、打鍵応答性が高速化。",
           "zh": "泛音更丰富（−6.45 dB/kHz），触键瞬态响应更敏捷。"
+        },
+        "s32_r_badge": {
+          "de": "Δ +2,53 dB (+79 % ENERGIE)",
+          "en": "Δ +2.53 dB (+79% ENERGY)",
+          "ja": "Δ +2.53 dB（+79% エネルギー）",
+          "zh": "Δ +2.53 dB（+79% 声能提升）"
         }
       },
       "notes": {
@@ -4773,10 +5061,10 @@
           "zh": "动态与斜率"
         },
         "s33_l_badge": {
-          "de": ">ZEITVERLAUF",
-          "en": ">TIME DOMAIN",
-          "ja": ">時間領域",
-          "zh": ">时域包络"
+          "de": "ZEITVERLAUF",
+          "en": "TIME DOMAIN",
+          "ja": "時間領域",
+          "zh": "时域包络"
         },
         "s33_l_title": {
           "de": "Amplituden-Hüllkurve (0:00–11:42)",
@@ -4821,10 +5109,10 @@
           "zh": "更细腻的 pp–ff 层次"
         },
         "s33_r_badge": {
-          "de": ">SPECTRAL SLOPE (MAX. C8 = 4.300 HZ)",
-          "en": ">SPECTRAL SLOPE (MAX C8 = 4,300 HZ)",
-          "ja": ">スペクトルスロープ (最大 C8 = 4,300 HZ)",
-          "zh": ">频谱斜率 (上限 C8 = 4,300 HZ)"
+          "de": "SPECTRAL SLOPE (MAX. C8 = 4.300 HZ)",
+          "en": "SPECTRAL SLOPE (MAX C8 = 4,300 HZ)",
+          "ja": "スペクトルスロープ (最大 C8 = 4,300 HZ)",
+          "zh": "频谱斜率 (上限 C8 = 4,300 HZ)"
         },
         "s33_r_title": {
           "de": "Steigung über Dynamik & Live-Rechner",
@@ -4965,28 +5253,28 @@
           "zh": "DO NOT TOUCH! – Niemals tief einstechen!"
         },
         "s34_c1_desc": {
-          "de": "Tiefe Nadelstiche zur Entspannung",
-          "en": "Deep needle stitches for tension release",
-          "ja": "Tiefe Nadelstiche zur Entspannung",
-          "zh": "Tiefe Nadelstiche zur Entspannung"
+          "de": "Tiefe 90°-Stiche bauen die harte Werksspannung ab und speisen den Forte-Keil.",
+          "en": "Deep 90° stitches release rigid factory tension and feed elasticity into the forte wedge.",
+          "ja": "深い90°の針刺しで工場出荷時の硬い張力を解き、フォルテ領域へ弾性を送ります。",
+          "zh": "深层90°垂直刺针释放出厂僵硬应力，并将弹性势能导向强音扇区。"
         },
         "s34_c2_desc": {
-          "de": "Raumklang, Glanz und dynamische Entfaltung",
-          "en": "Projection, brilliance, and dynamic blossoming",
-          "ja": "Raumklang, Glanz und dynamische Entfaltung",
-          "zh": "Raumklang, Glanz und dynamische Entfaltung"
+          "de": "Steuert tragende Klangfülle, Obertonreichtum und Projektion im großen Saal.",
+          "en": "Shapes carrying tonal fullness, harmonic bloom, and concert hall projection.",
+          "ja": "豊かな響きの厚み、倍音の輝き、ホール全体へ届く遠達性をコントロールします。",
+          "zh": "塑造饱满宏大的共鸣厚度、泛音光泽与音乐厅远距离投射力。"
         },
         "s34_c3_desc": {
-          "de": "Lyrischer Gesangston, feine Abstimmung",
-          "en": "Lyrical singing tone, nuanced balance",
-          "ja": "Lyrischer Gesangston, feine Abstimmung",
-          "zh": "Lyrischer Gesangston, feine Abstimmung"
+          "de": "Formt den warmen, lyrischen Gesangston im kontrollierten Mezzopiano-Anschlag.",
+          "en": "Sculpts a warm, lyrical singing tone across moderate piano and mezzopiano touch.",
+          "ja": "ピアノ〜メゾピアノの繊細なタッチで温かく歌うようなカンタービレを作ります。",
+          "zh": "雕琢弱音至中弱音触键下温暖柔和、如歌般的抒情音色线条。"
         },
         "s34_c4_desc": {
-          "de": "Flüsterleise Ansprache",
-          "en": "Whisper-soft pianissimo response",
-          "ja": "Flüsterleise Ansprache",
-          "zh": "Flüsterleise Ansprache"
+          "de": "Feinste Kurznadelung für seidige, flüsterleise Ansprache im zartesten Pianissimo.",
+          "en": "Delicate shallow needling for a silky, whisper-soft response in extreme pianissimo.",
+          "ja": "極浅の微細な針入れにより、囁くようなピアニッシモでの絹のように滑らかな発音を実現。",
+          "zh": "极浅微针精修，赋予极弱音（pp）下如耳语般丝滑敏锐的起音响应。"
         },
         "s34_caption_1": {
           "de": "Original Renner Uhrenmodell",
@@ -4999,6 +5287,12 @@
           "en": "with the 4 dynamic wedges (ff, f, p, pp)",
           "ja": "mit den 4 dynamischen Keilen (ff, f, p, pp)",
           "zh": "mit den 4 dynamischen Keilen (ff, f, p, pp)"
+        },
+        "s34_c5_desc": {
+          "de": "Scheitelzone niemals tief nadeln – höchstens 1–2 mm zwischen den Saitenrillen bei Glasigkeit!",
+          "en": "Never needle deeply into the crown—at most 1–2 mm between string grooves if glassy!",
+          "ja": "打弦点への深い針刺しは厳禁 — 硬質な場合のみ弦溝の間へ最大1〜2 mmで微調整！",
+          "zh": "严禁在槌冠击弦点深刺——仅在音色过亮发脆时于弦痕间隙浅刺最多1–2 mm！"
         }
       },
       "notes": {
@@ -5037,34 +5331,34 @@
       },
       "elements": {
         "s35_bullet_1": {
-          "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
-          "en": "<strong>Work Zone:</strong> Exclusively in the blue fortissimo wedge (clock zones 9:00–10:00 and 2:00–3:00).",
-          "ja": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr).",
-          "zh": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (Bereiche 9:00–10:00 Uhr und 2:00–3:00 Uhr)."
+          "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (9:00–10:00 Uhr bzw. 2:00–3:00 Uhr) arbeiten.",
+          "en": "<strong>Working Zone:</strong> Work strictly inside the blue fortissimo wedge (9:00–10:00 and 2:00–3:00 o'clock).",
+          "ja": "<strong>作業ゾーン：</strong> 青色のフォルティッシモ領域（9〜10時および2〜3時方向）のみに針を入れます。",
+          "zh": "<strong>施针区域：</strong> 严格限定在蓝色极强音扇区（9:00–10:00 及 2:00–3:00 钟点方向）作业。"
         },
         "s35_bullet_2": {
-          "de": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).",
-          "en": "<strong>Deep Needling:</strong> Insert needles deeply to just short of the underfelt (never pierce underfelt or core wood!).",
-          "ja": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!).",
-          "zh": "<strong>Tiefe Einstiche:</strong> Nadeln tief bis kurz vor den Unterfilz einstechen (niemals in Unterfilz oder Holzkern stechen!)."
+          "de": "<strong>Tiefe Einstiche:</strong> Ruhig bis kurz vor den Unterfilz führen – niemals in Unterfilz oder Holzkern stechen!",
+          "en": "<strong>Deep Stitches:</strong> Press smoothly to just above the underfelt—never pierce into underfelt or wood core!",
+          "ja": "<strong>深い運針：</strong> アンダーフェルト直前まで静かに押し込み、下巻きやウッドコアへは絶対に刺しません！",
+          "zh": "<strong>深层进针：</strong> 平稳推针至底毡上方即止——严禁刺穿底毡或伤及实木槌芯！"
         },
         "s35_bullet_3": {
-          "de": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.",
-          "en": "<strong>Tension Transfer:</strong> The head sheds rigid factory stiffness; stored tension flows into the green forte wedge.",
-          "ja": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab.",
-          "zh": "<strong>Spannungstransfer:</strong> Der Kopf verliert die harte Werkssteife; elastische Spannungsenergie fließt in den grünen Forte-Keil ab."
+          "de": "<strong>Spannungstransfer:</strong> Die starre Werkshärte weicht; elastische Energie fließt in den grünen Forte-Keil.",
+          "en": "<strong>Tension Transfer:</strong> Rigid factory stiffness softens as elastic energy flows into the green forte wedge.",
+          "ja": "<strong>張力トランスファー：</strong> 出荷時の硬さがほぐれ、緑色のフォルテ領域へと豊かな弾性エネルギーが移ります。",
+          "zh": "<strong>张力传递：</strong> 化解出厂时的僵硬紧绷感，使充沛的弹性势能顺畅导入绿色强音扇区。"
         },
         "s35_bullet_4": {
-          "de": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.",
-          "en": "<strong>Recommendation:</strong> This step is recommended almost without exception prior to first playing-in in the instrument.",
-          "ja": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten.",
-          "zh": "<strong>Empfehlung:</strong> Dieser Schritt ist vor dem ersten Anspielen im Instrument fast ausnahmslos anzuraten."
+          "de": "<strong>Praxis-Empfehlung:</strong> Vor dem ersten Anspielen im Flügel fast ausnahmslos als Fundament anzuraten.",
+          "en": "<strong>Best Practice:</strong> Recommended almost without exception before first playing-in inside the piano.",
+          "ja": "<strong>実践推奨ステップ：</strong> 楽器へ組み込んで弾き込む前に、ほぼ例外なく推奨される基礎工程です。",
+          "zh": "<strong>实战标准流程：</strong> 在装入钢琴首次试奏前，几乎毫无例外建议先行完成此步基础整音。"
         },
         "s35_caption_1": {
           "de": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "en": "Pre-needling: Deep stitches in the fortissimo wedge (9:00 to 10:00 o'clock)",
-          "ja": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
-          "zh": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)"
+          "ja": "プレニードリング：フォルティッシモ領域（9〜10時）への深い針入れ",
+          "zh": "预整音：在极强音扇区（9:00至10:00方向）进行深层刺针"
         },
         "s35_b1_badge": {
           "de": "PRE-NEEDLING",
@@ -5079,10 +5373,28 @@
           "zh": "建立核心弹性"
         },
         "s35_c1_desc": {
-          "de": "Die Vorintonation ist der wichtigste Basisschritt bei fabrikneuen oder neu befilzten Hämmern:",
-          "en": "Pre-voicing is the single most critical foundation for brand-new or refelted hammerheads:",
-          "ja": "下整音（プリ・ヴォイシング）は、新品および再フェルト交換ハンマーにおける最重要工程です：",
-          "zh": "预整音是全新出厂或重新包毡弦槌建立健康弹性基座的最核心声学工序："
+          "de": "Die Vorintonation ist der entscheidende Basisschritt bei fabrikneuen oder neu befilzten Hammerköpfen.",
+          "en": "Pre-needling is the essential foundational step on factory-new or newly refelted hammerheads.",
+          "ja": "プレニードリング（下整音）は新品またはフェルト張替ハンマーに不可欠な基礎工程です。",
+          "zh": "预整音（Pre-Needling）是全新弦槌或新包毛毡弦槌装琴前至关重要的基础工序。"
+        },
+        "s35_kpi": {
+          "de": "pp – ff",
+          "en": "pp – ff",
+          "ja": "pp 〜 ff",
+          "zh": "pp – ff 全动态"
+        },
+        "s35_c1_title": {
+          "de": "Gezielter Spannungsabbau im blauen Fortissimo-Keil",
+          "en": "Targeted Tension Release in the Blue Fortissimo Wedge",
+          "ja": "青のフォルティッシモ領域における計画的な張力解放",
+          "zh": "蓝色极强音扇区的定向预应力释放"
+        },
+        "s35_fact": {
+          "de": "🎯 Öffnet das elastische Klangvolumen, ohne die Scheitelkrone zu schwächen",
+          "en": "🎯 Unlocks elastic tonal volume without weakening the strike crown",
+          "ja": "🎯 打弦点の強度を損なうことなく弾力ある豊かな響きを解放します",
+          "zh": "🎯 在丝毫不削弱槌冠强度的前提下，充分释放毛毡的弹性共鸣潜能"
         }
       },
       "notes": {
@@ -5121,22 +5433,22 @@
       },
       "elements": {
         "s36_bullet_1": {
-          "de": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
-          "en": "<strong>Stitch Counts for Pre-Needling:</strong> <br>• Bass: 7–10 stitches horizontally <br>• Mid-Range: 5–10 stitches horizontally <br>• Treble: 0–7 stitches vertically",
-          "ja": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal",
-          "zh": "<strong>Stichanzahlen Pre-Needling:</strong> <br>• Bass: 7–10 Stiche horizontal <br>• Mittellage: 5–10 Stiche horizontal <br>• Diskant: 0–7 Stiche vertikal"
+          "de": "<strong>Bass &amp; Mittellage:</strong> Horizontaler Einstich im ff-Keil mit 7–10 Stichen im Bass und 5–10 Stichen in der Mitte.",
+          "en": "<strong>Bass &amp; Midrange:</strong> Horizontal stitches in the ff wedge—7–10 stitches in the bass and 5–10 in the midrange.",
+          "ja": "<strong>低音〜中音域の基準：</strong> ff領域へ水平方向に、低音で7〜10回、中音で5〜10回刺し入れます。",
+          "zh": "<strong>低音与中音区规范：</strong> 于ff扇区水平进针——低音区7–10针，中音区5–10针。"
         },
         "s36_bullet_2": {
-          "de": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!",
-          "en": "<strong>Press, never chop!</strong> Press needles steadily using body weight. Chopping tears wool fibers uncontrollably!",
-          "ja": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!",
-          "zh": "<strong>Drücken, niemals hacken!</strong> Nadeln ruhig und mit Körpergewicht eindrücken. Hacken zerreißt die Wollfasern unkontrolliert!"
+          "de": "<strong>Diskant-Dosierung:</strong> Vertikal geführte Einstiche mit 0–7 Stichen je nach gewünschter Brillanz und Tragkraft.",
+          "en": "<strong>Treble Dosage:</strong> Vertically guided stitches of 0–7 insertions depending on desired brilliance and projection.",
+          "ja": "<strong>高音域の微調整：</strong> 求める輝きと遠達性に応じ、垂直方向へ0〜7回慎重に針を入れます。",
+          "zh": "<strong>高音区精细定量：</strong> 视所需明亮度与穿透力，沿垂直方向精准施针0–7次。"
         },
         "s36_bullet_3": {
-          "de": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).",
-          "en": "<strong>Original Renner Tools:</strong> <br>• Adjustable Voicing Tool (item 43-0005642) <br>• 3-Needle Voicing Tool Professional (item 43-0003270) <br>• Nickel-plated needles no. 7 ø 0.60 mm, 9 mm long (item 43-0003426).",
-          "ja": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426).",
-          "zh": "<strong>Original Renner Werkzeuge:</strong> <br>• Intonierapparat verstellbar (Art. 43-0005642) <br>• 3er-Intonierer Profi-Typ (Art. 43-0003270) <br>• Nadeln Nr. 7 vernickelt ø 0,60 mm, 9 mm lang (Art. 43-0003426)."
+          "de": "<strong>Drücken, niemals hacken:</strong> Nadeln ruhig mit Körpergewicht führen – Hacken zerreißt das Fasergefüge irreversibel!",
+          "en": "<strong>Press, Never Chop:</strong> Push needles smoothly using body weight—chopping tears wool fibers irreversibly!",
+          "ja": "<strong>「押す」のであり「叩き刺さない」：</strong> 体重を乗せて静かに押し込みます。叩き刺しは繊維を破壊します！",
+          "zh": "<strong>稳压而非劈刺：</strong> 借助身体重心平稳推针入毡——猛烈劈刺会不可逆地撕裂羊毛纤维！"
         },
         "s36_caption_1": {
           "de": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
@@ -5155,6 +5467,36 @@
           "en": "PRECISION NEEDLES",
           "ja": "精密針",
           "zh": "进口精密排针"
+        },
+        "s36_kpi": {
+          "de": "Nr. 7 · ø 0,60 mm",
+          "en": "No. 7 · ø 0.60 mm",
+          "ja": "7番針・ø0.60 mm",
+          "zh": "7号针 · ø 0.60 mm"
+        },
+        "s36_c1_title": {
+          "de": "Richtwerte pro Register & schonende Nadelführung",
+          "en": "Register Stitch Guidelines & Gentle Needle Technique",
+          "ja": "音域別の基準針数と繊維を守る正しい運針技術",
+          "zh": "各音区标准刺针数与不伤纤维的稳压针法"
+        },
+        "s36_c1_desc": {
+          "de": "Ruhiges Eindrücken mit Original-Werkzeugen verdrängt die Wollfasern kontrolliert, statt sie zu zerreißen.",
+          "en": "Steady pressing with genuine Renner tools parts the wool fibers cleanly instead of tearing them.",
+          "ja": "純正ツールで静かに押し込むことで、羊毛繊維を断ち切らずに整然と緩めます。",
+          "zh": "使用原厂工具平稳压入，能够柔和拨开羊毛纤维而不将其暴力扯断。"
+        },
+        "s36_bullet_4": {
+          "de": "<strong>Original Renner Werkzeuge:</strong> Intonierapparat (43-0005642), 3er-Profi-Halter (43-0003270) und Nadeln Nr. 7 (43-0003426).",
+          "en": "<strong>Genuine Renner Tools:</strong> Adjustable voicer (43-0005642), 3-needle pro holder (43-0003270), and No. 7 needles (43-0003426).",
+          "ja": "<strong>純正レンナー工具：</strong> 可変整音器（43-0005642）、3本針プロホルダー（43-0003270）、7番針（43-0003426）。",
+          "zh": "<strong>雷纳原厂工具组：</strong> 可调整音器（43-0005642）、三针专业针柄（43-0003270）及7号镀镍针（43-0003426）。"
+        },
+        "s36_fact": {
+          "de": "🛠 Glatte vernickelte Nadeln (ø 0,60 mm, 9 mm) gleiten faserschonend ins Vlies",
+          "en": "🛠 Nickel-plated needles (ø 0.60 mm, 9 mm) glide smoothly between wool fibers",
+          "ja": "🛠 ニッケルメッキ針（ø0.60 mm・長さ9 mm）が繊維を傷めず滑らかに進入",
+          "zh": "🛠 镀镍精密整音针（ø 0.60 mm，长 9 mm）顺滑穿行于纤维间隙而不伤毛网"
         }
       },
       "notes": {
@@ -5211,22 +5553,46 @@
           "zh": "三弦同音纯净"
         },
         "s37_bullet_1": {
-          "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn am Anhangstift mit Messingdurchschlag und leichtem Hammer vorsichtig niederschlagen.",
-          "en": "<strong>Setting Hitch Pins:</strong> Carefully seat strings from back to front at hitch pins using a brass drift punch and light hammer.",
-          "ja": "<strong>ヒッチピンの弦合わせ：</strong> 真鍮ポンチと軽量ハンマーで弦をヒッチピンに慎重に密着。",
-          "zh": "<strong>挂弦钉沉降：</strong> 用黄铜冲头和轻手锤将琴弦自后向前轻敲至挂弦钉根部沉实。"
+          "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn mit Messingdurchschlag und leichtem Hammer sanft anlegen.",
+          "en": "<strong>Seat at Hitch Pins:</strong> Gently tap strings down from back to front at the hitch pins using a brass punch.",
+          "ja": "<strong>ヒッチピンの密着：</strong> 真鍮ポンチと軽量ハンマーで奥から手前へ弦を優しく叩き落ち着かせます。",
+          "zh": "<strong>挂弦钉落座贴合：</strong> 用黄铜冲子配合轻锤由后向前轻敲，使琴弦在挂弦钉处稳固服帖。"
         },
         "s37_bullet_2": {
-          "de": "<strong>Saiten an Stegstiften anpassen:</strong> Mit speziellem Renner-Setzer die Saiten auf den Steg drücken, um falsche Schwingungen auszuschließen.",
-          "en": "<strong>Bridge Pin Alignment:</strong> Seat strings on the bridge with Renner bridge punch to eliminate false beats.",
-          "ja": "<strong>駒ピンの弦合わせ：</strong> 専用セッターで弦を駒に押し込み、不要なノイズや偽うなりを排除。",
-          "zh": "<strong>弦码钉就位：</strong> 使用专用敲合器使琴弦紧贴弦码，消除假杂音与拍音。"
+          "de": "<strong>Stegstifte anpassen:</strong> Mit dem Renner-Setzer die Saiten sauber auf den Steg drücken, um Nebentöne zu eliminieren.",
+          "en": "<strong>Seat at Bridge Pins:</strong> Press strings cleanly onto the bridge with the Renner setter to eliminate false beats.",
+          "ja": "<strong>駒ピンへの密着：</strong> レンナー専用セッターで弦を駒へ確実に密着させ、唸りや雑振動を排除します。",
+          "zh": "<strong>码钉压实贴合：</strong> 使用雷纳专用压弦器将琴弦稳压于音板弦码，彻底消除假拍与杂音。"
         },
         "s37_bullet_3": {
-          "de": "<strong>Chorreinheit abstimmen:</strong> Vor der ersten Intonationsnadelung muss der Saitenchor absolut rein und nebengeräuschfrei klingen.",
-          "en": "<strong>Unison Purity:</strong> Before the first voicing needle, the unison must ring absolutely pure and free of unwanted friction.",
-          "ja": "<strong>同音の純度調整：</strong> 最初の針刺し前に、ユニゾンが完全に澄み切りノイズのない状態に調弦。",
-          "zh": "<strong>同音同轴纯净度：</strong> 首次刺针整音前，三根同音弦必须调校至完全纯净、绝无杂音。"
+          "de": "<strong>Reine Chorstimmung:</strong> Vor jeder Nadelarbeit muss jeder 3er-Chor absolut schwebungs- und nebengeräuschfrei stehen.",
+          "en": "<strong>Pure Unison Tuning:</strong> Every 3-string unison must ring completely pure and noise-free before voicing begins.",
+          "ja": "<strong>純粋なユニゾン調律：</strong> 整音前にすべての同音弦を雑音やうなりのない完全なユニゾンに整えます。",
+          "zh": "<strong>纯净同度调律：</strong> 在下针整音前，每一组三弦同度必须调至零拍音、零杂音的纯净状态。"
+        },
+        "s37_kpi": {
+          "de": "100 % Chorrein",
+          "en": "100% Unison",
+          "ja": "完全なユニゾン",
+          "zh": "100% 同度纯净"
+        },
+        "s37_c1_title": {
+          "de": "Exakte Saitenauflage vor dem ersten Nadelstich",
+          "en": "Exact String Seating Prior to the First Needle Stitch",
+          "ja": "最初の針を入れる前に不可欠な弦の密着と純粋な調律",
+          "zh": "动针整音前必须确保琴弦贴合与同度纯净"
+        },
+        "s37_c1_desc": {
+          "de": "Nur sauber aufliegende und rein gestimmte Saitenchöre erlauben eine ehrliche klangliche Diagnose am Hammerkopf.",
+          "en": "Only cleanly seated and purely tuned string unisons permit an honest acoustic diagnosis of the hammerhead.",
+          "ja": "弦が確実に密着しユニゾンが澄み切って初めて、ハンマー本来の音色を正しく診断できます。",
+          "zh": "唯有琴弦稳固贴合且同度弦组绝对纯净，方能真实判断弦槌本身的声学状态。"
+        },
+        "s37_fact": {
+          "de": "🎵 Goldene Regel: Keine Nadel korrigiert einen unsauber gelagerten Saitenchor!",
+          "en": "🎵 Golden Rule: No needle can fix a poorly seated or impure string unison!",
+          "ja": "🎵 鉄則：弦の密着不良やユニゾンの乱れは針入れでは決して解決できません！",
+          "zh": "🎵 黄金准则：任何刺针整音都无法弥补琴弦虚浮或同度不纯的缺陷！"
         }
       },
       "notes": {
@@ -5265,22 +5631,22 @@
       },
       "elements": {
         "s38_bullet_1": {
-          "de": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
-          "en": "<strong>Test Strike Point on Note 88:</strong> Shift keyframe slightly forward and back to locate the brightest, most singing treble sweet spot.",
-          "ja": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden.",
-          "zh": "<strong>Anschlagspunkt Note 88 prüfen:</strong> Klaviaturrahmen minimal vor- und zurückschieben, um die hellste, tragfähigste Klangstelle im Diskant zu finden."
+          "de": "<strong>Referenzton Note 88:</strong> Klaviaturrahmen minimal vor- und zurückschieben, bis der hellste, vollste Ton einrastet.",
+          "en": "<strong>Note 88 Reference:</strong> Shift the keyframe slightly fore and aft until the brightest, fullest tone locks in.",
+          "ja": "<strong>第88鍵での基準探索：</strong> 筬をわずかに前後させ、最も明るく豊かな響きが得られる打弦点を見つけます。",
+          "zh": "<strong>第88键基准寻优：</strong> 前后微移键盘架，直至找到高音最明亮饱满、共鸣最通透的最佳击弦位置。"
         },
         "s38_bullet_2": {
-          "de": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!",
-          "en": "<strong>Optimize Notes 69 to 88:</strong> The high treble on many grands improves dramatically once the strike line is precisely repositioned!",
-          "ja": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!",
-          "zh": "<strong>Noten 69 bis 88 anpassen:</strong> Der Diskant vieler Flügel lässt sich durch eine Neujustierung des Anschlagspunkts dramatisch verbessern!"
+          "de": "<strong>Diskantfenster 69–88:</strong> Eine exakte Justierung des Anschlagspunkts hebt das Klangvolumen vieler Flügel dramatisch.",
+          "en": "<strong>Treble Window 69–88:</strong> Fine-tuning the strike point dramatically elevates treble singing power on most grands.",
+          "ja": "<strong>第69〜88鍵の劇的改善：</strong> 打弦点の最適化だけで多くのグランドピアノの高音域が見違えるほど歌い始めます。",
+          "zh": "<strong>69–88键显著蜕变：</strong> 精准校准高音区击弦点，往往能让三角钢琴的高音歌唱性获得质的飞跃。"
         },
         "s38_bullet_3": {
-          "de": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.",
-          "en": "<strong>Squareness of All Hammers:</strong> Test by plucking strings or lifting jacks with finger; mark corrections with chalk on key tops.",
-          "ja": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste.",
-          "zh": "<strong>Geradheit aller Köpfe:</strong> Prüfung durch leichtes Anzupfen mit Haken oder Heben der Klinke mit dem Finger; Markierung mit Kreide auf der Taste."
+          "de": "<strong>Geradheit &amp; Flucht:</strong> Kontrolle durch sanftes Anheben an der Klinke oder Zupfhaken; Korrekturbedarf auf der Taste markieren.",
+          "en": "<strong>Straight Travel &amp; Spacing:</strong> Check travel via jack lift or plucking hook; mark any deviations with chalk on the keys.",
+          "ja": "<strong>直進性と間隔の確認：</strong> ジャック持ち上げやフックで動きを確認し、修正箇所を鍵盤上にチョークで記録します。",
+          "zh": "<strong>运行轨迹与对正检验：</strong> 轻抬顶杆或用拨钩检查槌头起落垂直度，并用粉笔在琴键上标记偏差音。"
         },
         "s38_caption_1": {
           "de": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
@@ -5299,6 +5665,30 @@
           "en": "TREBLE BRILLIANCE",
           "ja": "高音域の輝き",
           "zh": "高音晶莹通透"
+        },
+        "s38_kpi": {
+          "de": "Note 69–88",
+          "en": "Notes 69–88",
+          "ja": "第69〜88鍵",
+          "zh": "第 69–88 键"
+        },
+        "s38_c1_title": {
+          "de": "Optimaler Anschlagspunkt & präzise Hammerflucht",
+          "en": "Optimal Treble Strike Point & Hammer Alignment",
+          "ja": "高音域の最適打弦点と正確なハンマー整列",
+          "zh": "高音区最佳击弦点寻优与弦槌精准对正"
+        },
+        "s38_c1_desc": {
+          "de": "Bereits Millimeterbruchteile der Klaviaturposition entscheiden im hohen Diskant über Tragkraft und Obertonglanz.",
+          "en": "Fractions of a millimeter in keyframe position determine projection and bloom in the upper treble.",
+          "ja": "高音域では筬（キーフレーム）のわずか数コンマ数ミリの前後位置が遠達性と輝きを左右します。",
+          "zh": "在高音区，键盘架前后哪怕零点几毫米的微调，都直接决定音色的穿透力与泛音光泽。"
+        },
+        "s38_fact": {
+          "de": "✨ Perfekte Mechanikgeometrie vor der Feinintonation spart unnötige Nadelarbeit",
+          "en": "✨ Perfect strike geometry before fine voicing prevents unnecessary needling",
+          "ja": "✨ 仕上げ整音前の完璧な打弦ジオメトリーが無駄な針入れを防ぎます",
+          "zh": "✨ 精整音前先校准击弦几何位置，可避免大量不必要的盲目刺针"
         }
       },
       "notes": {
@@ -5337,40 +5727,40 @@
       },
       "elements": {
         "s39_c1_title": {
-          "de": "Hohlkehle (Hollow Crown)",
-          "en": "Hollow Crown",
-          "ja": "Hohlkehle (Hollow Crown)",
-          "zh": "Hohlkehle (Hollow Crown)"
+          "de": "1. Hohlkehle (Hollow Crown)",
+          "en": "1. Hollow Crown",
+          "ja": "1. 中央凹み（ホロウ・クラウン）",
+          "zh": "1. 槌冠中凹（Hollow Crown）"
         },
         "s39_c2_title": {
-          "de": "Schiefe Krone (Crooked Crown)",
-          "en": "Crooked Crown",
-          "ja": "Schiefe Krone (Crooked Crown)",
-          "zh": "Schiefe Krone (Crooked Crown)"
+          "de": "2. Schiefe Krone (Crooked Crown)",
+          "en": "2. Crooked Crown",
+          "ja": "2. 傾斜クラウン（片当たり）",
+          "zh": "2. 槌冠偏斜（Crooked Crown）"
         },
         "s39_c3_title": {
-          "de": "Plan & Symmetrisch (Crown OK)",
-          "en": "Level & Symmetrical (Crown OK)",
-          "ja": "Plan & Symmetrisch (Crown OK)",
-          "zh": "Plan & Symmetrisch (Crown OK)"
+          "de": "3. Plan &amp; Symmetrisch (Crown OK)",
+          "en": "3. Level &amp; Symmetrical (Crown OK)",
+          "ja": "3. 平面かつ左右対称（理想状態）",
+          "zh": "3. 平正对称（理想槌冠状态）"
         },
         "s39_c1_desc": {
-          "de": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.",
-          "en": "Crown contacts only outer strings -> incomplete attack tone, must be filed level.",
-          "ja": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden.",
-          "zh": "Scheitel trifft nur die Randsaiten -> unvollständiger Ton, muss plan nachgefeilt werden."
+          "de": "Scheitel trifft nur die äußeren Randsaiten – dünner, unvollständiger Ton; von den Schultern her plan abziehen.",
+          "en": "Crown contacts only the outer strings—thin, incomplete tone; file level working from the shoulders.",
+          "ja": "外側の弦しか打たず音が痩せる状態 — ショルダー側から丁寧に平らへ整えます。",
+          "zh": "槌冠仅擦碰两侧外弦导致音色单薄残缺——须从槌肩向中心精细打磨找平。"
         },
         "s39_c2_desc": {
-          "de": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.",
-          "en": "Asymmetrical contact creates double attack and string buzz -> file true to string plane.",
-          "ja": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen.",
-          "zh": "Einseitiges Treffen führt zu doppelter Attacke und Saitenbrummen -> fluchtend beiziehen."
+          "de": "Einseitiger Saitenkontakt erzeugt Doppelattacke und Brummen – Scheitel exakt parallel zur Saitenebene beiziehen.",
+          "en": "One-sided contact causes double attack and buzz—true the crown strictly parallel to the 3-string plane.",
+          "ja": "片当たりは二重発音や雑音の原因 — 3本弦の平面と完全に平行になるよう成形します。",
+          "zh": "单侧先触弦会引发双重起音与嗡鸣杂音——须将槌冠修整至与三弦平面严格平行。"
         },
         "s39_c3_desc": {
-          "de": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.",
-          "en": "Simultaneous solid contact on all 3 unison strings for a full fundamental tone.",
-          "ja": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton.",
-          "zh": "Gleichzeitiger, satter Anschlag auf alle 3 Saiten des Chors für vollen Grundton."
+          "de": "Gleichzeitiger, satter Anschlag auf alle drei Chorsaiten mit feinster Körnung (320–400) für vollen Grundton.",
+          "en": "Simultaneous, solid contact across all three unison strings finished with 320–400 grit for full tone.",
+          "ja": "320〜400番の極細研磨布で仕上げ、3本すべての弦を同時に捉える豊かな基音を実現。",
+          "zh": "以320–400目极细砂布精修收光，确保三根同度弦同时饱满受击，基音浑厚纯粹。"
         },
         "s39_caption_1": {
           "de": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
@@ -5379,22 +5769,28 @@
           "zh": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor"
         },
         "s39_b1_badge": {
-          "de": "HOHL VOR RUND",
-          "en": "HOLLOW BEFORE ROUND",
-          "ja": "削り技法",
-          "zh": "修磨技法"
+          "de": "FEHLERBILD 1 • HOHL",
+          "en": "DEFECT 1 • HOLLOW",
+          "ja": "症状 1・中央凹み",
+          "zh": "缺陷 1 · 槌冠中凹"
         },
         "s39_b2_badge": {
-          "de": "KRONENSCHEITEL",
-          "en": "CROWN APEX",
-          "ja": "クラウン頂点",
-          "zh": "槌顶圆弧"
+          "de": "FEHLERBILD 2 • SCHIEF",
+          "en": "DEFECT 2 • CROOKED",
+          "ja": "症状 2・片当たり",
+          "zh": "缺陷 2 · 槌冠偏斜"
         },
         "s39_b3_badge": {
-          "de": ">SCHLEIFFEILE",
-          "en": ">SANDING PADDLE",
-          "ja": ">整形サンドファイル",
-          "zh": ">弧度打磨修整板"
+          "de": "SOLL-ZUSTAND • PLAN",
+          "en": "TARGET • LEVEL CROWN",
+          "ja": "理想状態・3弦同時",
+          "zh": "理想状态 · 平正对称"
+        },
+        "s39_b4_badge": {
+          "de": "SCHLEIFFEILE",
+          "en": "SANDING FILE",
+          "ja": "ハンマーヤスリ",
+          "zh": "专用打磨砂板"
         }
       },
       "notes": {
@@ -5433,28 +5829,28 @@
       },
       "elements": {
         "s40_bullet_1": {
-          "de": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
-          "en": "<strong>Chromatic Play-Through:</strong> Play chromatically up and down the keyboard; flag notes with harsh attack or uneven volume.",
-          "ja": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren.",
-          "zh": "<strong>Chromatisches Durchspielen:</strong> Tastatur auf- und abwärts chromatisch anschlagen; Noten mit abweichender Härte oder Lautstärke lokalisieren."
+          "de": "<strong>Chromatisches Abhören:</strong> Auf- und abwärts durchspielen, um kleinste Ausreißer in Klangfarbe oder Härte zu orten.",
+          "en": "<strong>Chromatic Listening:</strong> Play ascending and descending scales to pinpoint subtle outliers in brightness or hardness.",
+          "ja": "<strong>半音階での聴き比べ：</strong> 上行・下行で弾き比べ、音色や硬さのわずかな不揃いを特定します。",
+          "zh": "<strong>半音阶上下行审听：</strong> 逐键连贯弹奏上下行半音阶，精准定位亮度或硬度突兀的单音。"
         },
         "s40_bullet_2": {
-          "de": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!",
-          "en": "<strong>Mid-Voicing:</strong> Gentle needle pricks in green forte and orange piano wedges. Overly soft notes are firmed by light surface sanding!",
-          "ja": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!",
-          "zh": "<strong>Zwischenintonation (Mid-Voicing):</strong> Sanftes Nadeln im grünen Forte- und orangenen Piano-Keil. Zu weiche Töne werden durch feines Nachschleifen gehärtet!"
+          "de": "<strong>Zwischenintonation:</strong> Dosiertes Nadeln im Forte- und Piano-Keil; zu weiche Köpfe durch feines Abziehen straffen.",
+          "en": "<strong>Mid-Voicing:</strong> Measured needling in the forte and piano wedges; firm up overly soft heads by light filing.",
+          "ja": "<strong>中間整音：</strong> フォルテ・ピアノ領域を適度に整え、柔らかすぎる音は微細な整形研磨で引き締めます。",
+          "zh": "<strong>中度过渡整音：</strong> 在强音与弱音扇区适度施针；偏软无力的弦槌则通过精细打磨恢复张力。"
         },
         "s40_bullet_3": {
-          "de": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).",
-          "en": "<strong>Final Voicing:</strong> Short single needle (BDK handle item 43-0003269 or Chop Stick item 43-0003271).",
-          "ja": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271).",
-          "zh": "<strong>Feinintonation (Final Balance):</strong> Kurze Einzelnadel (BDK-Halter Art. 43-0003269 oder Chop Stick Art. 43-0003271)."
+          "de": "<strong>Feinintonations-Halter:</strong> Kurze Einzelnadel im BDK-Halter (43-0003269) oder Chop-Stick-Halter (43-0003271).",
+          "en": "<strong>Fine-Voicing Holders:</strong> Short single needle in the BDK holder (43-0003269) or Chop-Stick holder (43-0003271).",
+          "ja": "<strong>仕上げ用シングル針：</strong> BDKホルダー（43-0003269）またはチョップスティック（43-0003271）の短針を使用。",
+          "zh": "<strong>精整音单针工具：</strong> 选用装夹短单针的BDK针柄（43-0003269）或Chop-Stick针柄（43-0003271）。"
         },
         "s40_bullet_4": {
-          "de": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!",
-          "en": "<strong>Max. 2 mm Depth at Crown:</strong> Insert only between string grooves, never directly into the string depressions!",
-          "ja": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!",
-          "zh": "<strong>Stichtiefe max. 2 mm an der Krone:</strong> Ausschließlich zwischen den Saitenabdrücken einstechen, niemals direkt in den Rillen!"
+          "de": "<strong>2-mm-Kronenregel:</strong> Am Scheitel höchstens 2 mm tief und ausschließlich zwischen den Saitenrillen einstechen!",
+          "en": "<strong>2 mm Crown Rule:</strong> At the crown, pierce at most 2 mm deep and strictly between the string grooves—never inside!",
+          "ja": "<strong>クラウン2 mmルール：</strong> 頂点付近は深さ最大2 mmまでとし、必ず弦溝と弦溝の間だけを狙います！",
+          "zh": "<strong>槌冠2毫米铁律：</strong> 槌冠处进针深度绝不超过2 mm，且只准刺在弦痕间隙，严禁刺入弦槽！"
         },
         "s40_caption_1": {
           "de": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
@@ -5473,6 +5869,30 @@
           "en": "COLOR PALETTE",
           "ja": "色彩パレット",
           "zh": "全音域色彩平衡"
+        },
+        "s40_kpi": {
+          "de": "Max. 2 mm",
+          "en": "Max. 2 mm",
+          "ja": "深さ最大 2 mm",
+          "zh": "最大深度 2 mm"
+        },
+        "s40_c1_title": {
+          "de": "Chromatisches Egalisieren bis zur Konzertreife",
+          "en": "Chromatic Equalization to Concert Perfection",
+          "ja": "半音階チェックによるコンサートレベルの均一化",
+          "zh": "半音阶逐音均衡精修直至音乐会完美状态"
+        },
+        "s40_c1_desc": {
+          "de": "In der Zwischen- und Feinintonation verschmelzen alle 88 Töne zu einem bruchlosen Perlenketten-Verlauf.",
+          "en": "Mid- and fine-voicing blend all 88 notes into one seamless, pearl-like tonal progression.",
+          "ja": "中間整音と仕上げ整音により、全88音を真珠の首飾りのように滑らかな音色へと揃えます。",
+          "zh": "通过中度与精细整音，令全琴88个音符融汇如珍珠项链般均匀连贯的音色过渡。"
+        },
+        "s40_fact": {
+          "de": "🪡 Feinste Dosierung entscheidet über den seidigen Schimmer im Pianissimo",
+          "en": "🪡 Micro-dosage at the crown defines the silky shimmer in pianissimo",
+          "ja": "🪡 ミリ単位の繊細な針加減がピアニッシモの絹のような輝きを決めます",
+          "zh": "🪡 毫厘之间的精妙针感，决定了极弱音（pp）如丝绸般细腻的泛音光泽"
         }
       },
       "notes": {
@@ -5565,10 +5985,16 @@
           "zh": "Ihr Partner für meisterlichen Klang weltweit"
         },
         "s41_bullet_1": {
-          "de": "Experten-Tipp:",
-          "en": "Expert Master Tip:",
-          "ja": "マイスターのアドバイス：",
-          "zh": "大师级专家心得："
+          "de": "<strong>Praxis-Tipp Una Corda:</strong> Linke Kronenkante hauchfein brechen, um Reibgeräusche an Nachbarsaiten sicher auszuschließen.",
+          "en": "<strong>Una Corda Pro Tip:</strong> Lightly chamfer the left crown edge to prevent rubbing noise against adjacent strings.",
+          "ja": "<strong>ウナ・コルダの実践知：</strong> クラウン左端をわずかに面取りし、隣接弦との擦れ音を確実に防ぎます。",
+          "zh": "<strong>弱音踏板实战技巧：</strong> 轻柔倒角打磨槌冠左侧边缘，彻底消除横移时擦碰相邻琴弦的杂音。"
+        },
+        "s41_bullet_2": {
+          "de": "<strong>Direkter Meister-Dialog:</strong> Schulungen in der Renner Academy, Werksbesuche in Meuselwitz &amp; persönliche Fachberatung.",
+          "en": "<strong>Direct Master Dialogue:</strong> Hands-on Renner Academy courses, Meuselwitz factory tours, and personal technical support.",
+          "ja": "<strong>マイスターとの直接対話：</strong> レンナー・アカデミー講習会、モイゼルヴィッツ工場見学、個別技術サポートを提供。",
+          "zh": "<strong>大师面对面交流：</strong> 提供雷纳学院大师班、莫伊塞尔维茨工厂参访及全球技师专属技术支持。"
         }
       },
       "notes": {
