@@ -54,8 +54,8 @@
       hHard: (p) => `Tonlich hart (+${p} %)`,
       hSlightlyHard: (p) => `Leicht brillant (+${p} %)`,
       roRefCur: (r, c) => `Ref.: ${r} → Akt.: ${c}`,
-      roDelta: (tot, felt, str) => `Δ Gesamt: ${tot} (Härte: ${felt} | Anschlag: ${str})`,
-      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'}) · Klick wechselt`,
+      roDelta: (tot, felt, str) => `Δ: ${tot} (Filz ${felt} | Punkt ${str})`,
+      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) gedämpft`,
       expTitleSoft: 'Tonlich weicher Klang: Lange Kontaktzeit dämpft hohe Teiltöne',
       expBodySoft: (tau, mb) =>
@@ -104,8 +104,8 @@
       hHard: (p) => `Tonally Hard (+${p}%)`,
       hSlightlyHard: (p) => `Slightly Bright (+${p}%)`,
       roRefCur: (r, c) => `Ref: ${r} → Now: ${c}`,
-      roDelta: (tot, felt, str) => `Δ Total: ${tot} (Felt: ${felt} | Strike: ${str})`,
-      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'}) · Click switches`,
+      roDelta: (tot, felt, str) => `Δ: ${tot} (Felt ${felt} | Strike ${str})`,
+      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'})`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) suppressed`,
       expTitleSoft: 'Tonally Soft Sound: Longer Contact Time Attenuates Upper Partials',
       expBodySoft: (tau, mb) =>
@@ -154,8 +154,8 @@
       hHard: (p) => `硬い音色 (+${p}%)`,
       hSlightlyHard: (p) => `やや華やか (+${p}%)`,
       roRefCur: (r, c) => `基準: ${r} → 現在: ${c}`,
-      roDelta: (tot, felt, str) => `Δ 合計: ${tot} (硬度: ${felt} | 打弦点: ${str})`,
-      waveLbl: (n) => `H${n}（腹 ${n} 個）· クリックで切替`,
+      roDelta: (tot, felt, str) => `Δ: ${tot} (硬度 ${felt} | 打弦 ${str})`,
+      waveLbl: (n) => `H${n}（腹 ${n} 個）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) を抑制`,
       expTitleSoft: '柔らかい音色：長い接触時間が高次倍音を穏やかに減衰',
       expBodySoft: (tau, mb) =>
@@ -204,8 +204,8 @@
       hHard: (p) => `音色偏硬 (+${p}%)`,
       hSlightlyHard: (p) => `略微明亮 (+${p}%)`,
       roRefCur: (r, c) => `基准: ${r} → 当前: ${c}`,
-      roDelta: (tot, felt, str) => `Δ 总变化: ${tot} (毛毡硬度: ${felt} | 击弦点: ${str})`,
-      waveLbl: (n) => `H${n}（${n} 个波腹）· 点击切换`,
+      roDelta: (tot, felt, str) => `Δ: ${tot} (硬度 ${felt} | 击弦 ${str})`,
+      waveLbl: (n) => `H${n}（${n} 个波腹）`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) 波节抑制`,
       expTitleSoft: '音色偏柔：较长弦槌接触时间显著衰减高次泛音',
       expBodySoft: (tau, mb) =>
@@ -350,7 +350,7 @@
       const spec = this.computeSpectrum();
       const dict = this.t();
 
-      const padL = 62, padR = 18, padT = 30, padB = 48;
+      const padL = 64, padR = 18, padT = 32, padB = 52;
       const pw = W - padL - padR;
       const ph = H - padT - padB;
       this.barHitRegions = [];
@@ -359,7 +359,7 @@
         const dbMax = 6, dbMin = -46;
         const mapY = db => padT + ((dbMax - Math.max(dbMin, Math.min(dbMax, db))) / (dbMax - dbMin)) * ph;
 
-        ctx.font = '600 11px JetBrains Mono, monospace';
+        ctx.font = '600 12px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [0, -10, -20, -30, -40].forEach(db => {
           const y = mapY(db);
@@ -431,7 +431,7 @@
 
           const dAbs = Math.abs(p.deltaDb);
           const labelY = Math.max(padT - 8, Math.min(yCur, yRef) - 7);
-          ctx.font = '700 11px JetBrains Mono, monospace';
+          ctx.font = '700 12px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           if (dAbs < 0.15) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.78)';
@@ -442,25 +442,25 @@
             ctx.fillText(sgn + this.fmtNum(dAbs, 1) + ' dB', cx, labelY);
           }
 
-          ctx.font = p.n === this.selectedN ? '800 12px Roboto, sans-serif' : '700 11.5px Roboto, sans-serif';
+          ctx.font = p.n === this.selectedN ? '800 13px Roboto, sans-serif' : '700 12.5px Roboto, sans-serif';
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 17);
+          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 19);
 
-          ctx.font = '500 10.5px JetBrains Mono, monospace';
+          ctx.font = '600 11.5px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 33);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 36);
         });
 
-        ctx.font = '600 11px Roboto, sans-serif';
+        ctx.font = '600 12px Roboto, sans-serif';
         ctx.textAlign = 'right';
-        ctx.fillStyle = 'rgba(255,255,255,0.82)';
-        ctx.fillText(dict.legendAbs, padL + pw, 15);
+        ctx.fillStyle = 'rgba(255,255,255,0.86)';
+        ctx.fillText(dict.legendAbs, padL + pw, 16);
       } else {
         const dMax = 20, dMin = -20;
         const mapY = d => padT + ((dMax - Math.max(dMin, Math.min(dMax, d))) / (dMax - dMin)) * ph;
         const yZero = mapY(0);
 
-        ctx.font = '600 11px JetBrains Mono, monospace';
+        ctx.font = '600 12px JetBrains Mono, monospace';
         ctx.textAlign = 'right';
         [15, 10, 5, 0, -5, -10, -15].forEach(d => {
           const y = mapY(d);
@@ -498,25 +498,25 @@
           ctx.roundRect(x, top, barW, h, 5);
           ctx.fill();
 
-          ctx.font = '700 11px JetBrains Mono, monospace';
+          ctx.font = '700 12px JetBrains Mono, monospace';
           ctx.textAlign = 'center';
           ctx.fillStyle = p.deltaDb >= 0 ? '#fdba74' : '#7dd3fc';
-          const ty = p.deltaDb >= 0 ? top - 6 : top + h + 13;
+          const ty = p.deltaDb >= 0 ? top - 6 : top + h + 14;
           ctx.fillText(this.fmtSignedDb(p.deltaDb), cx, ty);
 
           const yBot = padT + ph;
-          ctx.font = p.n === this.selectedN ? '800 12px Roboto, sans-serif' : '700 11.5px Roboto, sans-serif';
+          ctx.font = p.n === this.selectedN ? '800 13px Roboto, sans-serif' : '700 12.5px Roboto, sans-serif';
           ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
-          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 17);
-          ctx.font = '500 10.5px JetBrains Mono, monospace';
+          ctx.fillText('H' + p.n + ' · ' + p.note, cx, yBot + 19);
+          ctx.font = '600 11.5px JetBrains Mono, monospace';
           ctx.fillStyle = '#94a3b8';
-          ctx.fillText(p.freq + ' Hz', cx, yBot + 33);
+          ctx.fillText(p.freq + ' Hz', cx, yBot + 36);
         });
 
-        ctx.font = '600 11px Roboto, sans-serif';
+        ctx.font = '600 12px Roboto, sans-serif';
         ctx.textAlign = 'right';
-        ctx.fillStyle = 'rgba(255,255,255,0.82)';
-        ctx.fillText(dict.legendDelta, padL + pw, 15);
+        ctx.fillStyle = 'rgba(255,255,255,0.86)';
+        ctx.fillText(dict.legendDelta, padL + pw, 16);
       }
 
       ctx.restore();
@@ -589,10 +589,10 @@
       ctx.lineTo(padL, strY - 2);
       ctx.closePath();
       ctx.fill();
-      ctx.font = '700 11px Roboto, sans-serif';
+      ctx.font = '700 12.5px Roboto, sans-serif';
       ctx.textAlign = 'left';
       ctx.fillStyle = '#e6c882';
-      ctx.fillText(dict.agraffe, Math.max(8, padL - 26), 14);
+      ctx.fillText(dict.agraffe, Math.max(8, padL - 26), 16);
 
       ctx.fillStyle = '#cbd5e1';
       ctx.beginPath();
@@ -603,7 +603,7 @@
       ctx.fill();
       ctx.textAlign = 'right';
       ctx.fillStyle = '#cbd5e1';
-      ctx.fillText(dict.bridge, padL + strW + 30, 14);
+      ctx.fillText(dict.bridge, padL + strW + 30, 16);
 
       const hx = padL + this.alpha * strW;
       const crownHalfPx = Math.round(13 - 4.5 * this.hardness);
@@ -641,13 +641,13 @@
         ? dict.hitNode(n, this.fmtDb(sel.nodeLossDb))
         : (hitPhase > 0.82 ? dict.hitAntinode(n) : dict.hitPartial(n, this.fmtDb(sel.nodeLossDb)));
 
-      ctx.font = '700 11.5px JetBrains Mono, monospace';
+      ctx.font = '700 13px JetBrains Mono, monospace';
       ctx.textAlign = 'left';
-      const infoX = Math.min(W - 340, hx + 24);
+      const infoX = Math.min(W - 365, hx + 26);
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 22);
+      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 23);
       ctx.fillStyle = hitPhase < 0.22 ? '#7dd3fc' : '#86efac';
-      ctx.fillText(hitStatus, infoX, strY + 39);
+      ctx.fillText(hitStatus, infoX, strY + 42);
 
       ctx.restore();
     }

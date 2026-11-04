@@ -1,5 +1,5 @@
 // Service Worker for Louis Renner Masterclass Presentation (Offline PWA)
-const CACHE_NAME = 'renner-presentation-v6';
+const CACHE_NAME = 'renner-presentation-v7';
 
 const STATIC_ASSETS = [
   './',
@@ -16,6 +16,7 @@ const STATIC_ASSETS = [
   './js/yamaha-kit.js',
   './js/yamaha-kit-acoustic.js',
   './js/piano-tone-a1.js',
+  './js/hammer-spring.js',
   './js/presentation.js',
   './manifest.json',
   './Visuell/web_assets/renner_logo_weiss_schatten.png'

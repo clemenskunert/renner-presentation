@@ -8,7 +8,7 @@
       "ja": "日本語 (Japanese)",
       "zh": "中文 (Chinese)"
     },
-    "total_slides": 40,
+    "total_slides": 41,
     "description": "Zentrale Struktur zur Pflege aller Folientexte und mehrsprachigen Übersetzungen (DE, EN, JA, ZH)."
   },
   "ui": {
@@ -248,10 +248,10 @@
           "zh": "雅马哈三角琴即插即用升级：单螺丝极速固定，节省约10小时台架工时，免去打孔上胶，开箱即享音乐会级共鸣。"
         },
         "s2_c5_desc": {
-          "de": "Teiltonaufbau auf A₁ (55 Hz) & Anschlagspunkt, Pre-Needling, Saitennivellierung, Kronenabzug und Una-Corda-Feinabstimmung.",
-          "en": "Partial structure on A₁ (55 Hz) & strike point, pre-needling, string leveling, crown shaping, and una corda fine voicing.",
-          "ja": "A₁ (55 Hz) の倍音構造と打弦点、予備針入れ、弦レベル合わせ、クラウン整形、ウナ・コルダ微調整。",
-          "zh": "A₁ (55 Hz) 泛音结构与击弦点声学、预刺针、三弦找平、槌冠修整与左踏板精细整音。"
+          "de": "Teiltonaufbau auf A₁ (55 Hz), die komplexe Feder Hammerkopf (Cristofori bis Zonen-Balance), Pre-Needling, Kronenabzug & Una Corda.",
+          "en": "Partial structure on A₁ (55 Hz), the hammerhead as a complex spring (Cristofori to zone balance), pre-needling, crown filing & una corda.",
+          "ja": "A₁ (55 Hz) の倍音構造、複合スプリングとしてのハンマーヘッド（クリストフォリからゾーン均衡へ）、予備針入れ、クラウン整形、ウナ・コルダ。",
+          "zh": "A₁ (55 Hz) 泛音结构、复杂弹簧系统弦槌（从克里斯托弗里到分区平衡）、预刺针、槌冠修整与左踏板整音。"
         }
       },
       "notes": {
@@ -5202,6 +5202,270 @@
         "zh": "第五部分：极致整音艺术"
       },
       "category": {
+        "de": "Teil 5: Intonation • Federphysik, Verdichtungszonen & Dynamikgrenzen",
+        "en": "Part 5: Voicing • Spring Physics, Compaction Zones & Dynamic Limits",
+        "ja": "第5部：整音技術 • ばね物理・圧縮ゾーンとダイナミクス限界",
+        "zh": "第五部分：整音艺术 • 弹簧物理、压实分区与动态范围边界"
+      },
+      "title": {
+        "de": "Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance",
+        "en": "The Hammerhead as a Complex Spring: From Cristofori to Zone Balance",
+        "ja": "複合スプリングとしてのハンマーヘッド：クリストフォリからゾーン均衡へ",
+        "zh": "复杂弹簧系统——弦槌：从克里斯托弗里到分区张力平衡"
+      },
+      "subtitle": {
+        "de": "Wie Elastizität, 2:1-Verdichtung (Scheitel → ½ Flanke) und der Übergang den Dynamikumfang (pp bis ff) bestimmen",
+        "en": "How elasticity, 2:1 crown-to-flank compaction, and transition stiffness govern playable dynamics (pp to ff)",
+        "ja": "弾性・2:1密度分布（クラウン→½フランク）・移行帯の硬さが演奏可能な pp〜ff 幅を決定する",
+        "zh": "毛毡弹性、2:1压实梯度（槌冠→½侧翼）与过渡带刚度如何决定可奏出的 pp 至 ff 动态跨度"
+      },
+      "elements": {
+        "s34_m1": {
+          "de": "📜 1. Cristofori-Röllchen (1700)",
+          "en": "📜 1. Cristofori Roll (1700)",
+          "ja": "📜 1. クリストフォリの革巻きロール (1700)",
+          "zh": "📜 1. 克里斯托弗里皮包纸卷 (1700)"
+        },
+        "s34_m2": {
+          "de": "🎹 2. Renner-Spannungsfeder",
+          "en": "🎹 2. Renner Tension Spring",
+          "ja": "🎹 2. レンナー張力スプリング",
+          "zh": "🎹 2. 雷诺复合张力弹簧弦槌"
+        },
+        "s34_btn_loop": {
+          "de": "⏸ Bounce aktiv",
+          "en": "⏸ Bounce Active",
+          "ja": "⏸ バウンス中",
+          "zh": "⏸ 回弹演示中"
+        },
+        "s34_btn_reset": {
+          "de": "↺ Ideal",
+          "en": "↺ Ideal",
+          "ja": "↺ 基準値",
+          "zh": "↺ 理想基准"
+        },
+        "s34_btn_strike": {
+          "de": "Anschlag & Ton",
+          "en": "Strike & Tone",
+          "ja": "打弦と音色",
+          "zh": "击弦与音色"
+        },
+        "s34_curve_badge": {
+          "de": "TEILTONSTRUKTUR",
+          "en": "PARTIAL STRUCTURE",
+          "ja": "倍音構造の変化",
+          "zh": "泛音结构变化"
+        },
+        "s34_curve_title": {
+          "de": "Änderung der Teiltonstruktur (H1–H12 in dB)",
+          "en": "Change in Partial Structure (H1–H12 in dB)",
+          "ja": "倍音構造の増減変化 (H1–H12 · dB)",
+          "zh": "泛音结构增减变化 (H1–H12 · dB)"
+        },
+        "s34_spec_delta": {
+          "de": "ΔdB-Änderung",
+          "en": "ΔdB Shift",
+          "ja": "ΔdB 増減",
+          "zh": "ΔdB 增减"
+        },
+        "s34_spec_abs": {
+          "de": "Pegel + ΔdB",
+          "en": "Level + ΔdB",
+          "ja": "レベル + ΔdB",
+          "zh": "电平 + ΔdB"
+        },
+        "s34_c1_lbl": {
+          "de": "1. Filz-Elastizität & Oberflächenspannung",
+          "en": "1. Felt Elasticity & Surface Tension",
+          "ja": "1. フェルト弾性と表面張力",
+          "zh": "1. 毛毡弹性与外层表面张力"
+        },
+        "s34_c1_s1": {
+          "de": "1 · Träge",
+          "en": "1 · Dead",
+          "ja": "1 · 鈍重",
+          "zh": "1 · 迟滞"
+        },
+        "s34_c1_s2": {
+          "de": "2 · Schwach",
+          "en": "2 · Weak",
+          "ja": "2 · 低弾性",
+          "zh": "2 · 偏弱"
+        },
+        "s34_c1_s3": {
+          "de": "3 · Mittel",
+          "en": "3 · Medium",
+          "ja": "3 · 中程度",
+          "zh": "3 · 中等"
+        },
+        "s34_c1_s4": {
+          "de": "4 · Elastisch",
+          "en": "4 · Elastic",
+          "ja": "4 · 高弾性",
+          "zh": "4 · 高弹"
+        },
+        "s34_c1_s5": {
+          "de": "5 · Max.",
+          "en": "5 · Max",
+          "ja": "5 · 最大",
+          "zh": "5 · 最大"
+        },
+        "s34_c2_lbl": {
+          "de": "2. Hammerkopf-Form (Scheitelradius)",
+          "en": "2. Hammerhead Shape (Crown Radius)",
+          "ja": "2. ハンマー形状（クラウン曲率半径）",
+          "zh": "2. 弦槌几何形状（槌冠曲率半径）"
+        },
+        "s34_c2_s1": {
+          "de": "1 · Breit",
+          "en": "1 · Wide",
+          "ja": "1 · 広角",
+          "zh": "1 · 宽平"
+        },
+        "s34_c2_s2": {
+          "de": "2 · Rund",
+          "en": "2 · Round",
+          "ja": "2 · 丸型",
+          "zh": "2 · 圆润"
+        },
+        "s34_c2_s3": {
+          "de": "3 · Konzert",
+          "en": "3 · Concert",
+          "ja": "3 · 標準",
+          "zh": "3 · 音乐会"
+        },
+        "s34_c2_s4": {
+          "de": "4 · Schlank",
+          "en": "4 · Slender",
+          "ja": "4 · 細身",
+          "zh": "4 · 修长"
+        },
+        "s34_c2_s5": {
+          "de": "5 · Spitz",
+          "en": "5 · Pointed",
+          "ja": "5 · 鋭角",
+          "zh": "5 · 尖窄"
+        },
+        "s34_c3_lbl": {
+          "de": "3. Scheitel-Verdichtung (Flanke = ½)",
+          "en": "3. Crown Compaction (Flank = ½)",
+          "ja": "3. クラウン圧縮密度（フランク＝½）",
+          "zh": "3. 槌冠压实度（侧翼最宽处 ＝ ½）"
+        },
+        "s34_c3_s1": {
+          "de": "1 · Weich",
+          "en": "1 · Soft",
+          "ja": "1 · 柔軟",
+          "zh": "1 · 偏软"
+        },
+        "s34_c3_s2": {
+          "de": "2 · Sanft",
+          "en": "2 · Gentle",
+          "ja": "2 · 穏やか",
+          "zh": "2 · 柔和"
+        },
+        "s34_c3_s3": {
+          "de": "3 · Ideal",
+          "en": "3 · Ideal",
+          "ja": "3 · 最適",
+          "zh": "3 · 理想"
+        },
+        "s34_c3_s4": {
+          "de": "4 · Fest",
+          "en": "4 · Firm",
+          "ja": "4 · 硬め",
+          "zh": "4 · 偏硬"
+        },
+        "s34_c3_s5": {
+          "de": "5 · Zu hart",
+          "en": "5 · Too Hard",
+          "ja": "5 · 過硬",
+          "zh": "5 · 过硬"
+        },
+        "s34_c4_lbl": {
+          "de": "4. Übergang Scheitel → Flanke (Außenkontur)",
+          "en": "4. Crown → Flank Transition (Outer Contour)",
+          "ja": "4. クラウン→フランク移行帯（外周輪郭）",
+          "zh": "4. 槌冠→侧翼过渡区（外轮廓刚度）"
+        },
+        "s34_c4_s1": {
+          "de": "1 · Frei",
+          "en": "1 · Open",
+          "ja": "1 · 開放",
+          "zh": "1 · 贯通"
+        },
+        "s34_c4_s2": {
+          "de": "2 · Offen",
+          "en": "2 · Supple",
+          "ja": "2 · 柔軟",
+          "zh": "2 · 柔顺"
+        },
+        "s34_c4_s3": {
+          "de": "3 · Fest",
+          "en": "3 · Firm",
+          "ja": "3 · やや硬",
+          "zh": "3 · 偏紧"
+        },
+        "s34_c4_s4": {
+          "de": "4 · Steif",
+          "en": "4 · Stiff",
+          "ja": "4 · 硬直",
+          "zh": "4 · 僵硬"
+        },
+        "s34_c4_s5": {
+          "de": "5 · Sperrt ✕",
+          "en": "5 · Locked ✕",
+          "ja": "5 · 遮断 ✕",
+          "zh": "5 · 锁死 ✕"
+        },
+        "s34_dyn_lbl": {
+          "de": "Spielbare Dynamik (Ergebnis)",
+          "en": "Playable Dynamics (Outcome)",
+          "ja": "演奏可能なダイナミクス（結果）",
+          "zh": "可奏出的动态范围（物理结果）"
+        },
+        "s34_kpi1_lbl": {
+          "de": "Rückstellkraft",
+          "en": "Restoring Force",
+          "ja": "弾性復元力",
+          "zh": "弹性回弹力"
+        },
+        "s34_kpi2_lbl": {
+          "de": "Kontaktzeit τc",
+          "en": "Contact Time τc",
+          "ja": "接触時間 τc",
+          "zh": "接触时间 τc"
+        },
+        "s34_kpi3_lbl": {
+          "de": "Toncharakter",
+          "en": "Tonal Character",
+          "ja": "音色と応答",
+          "zh": "音色与动态"
+        },
+        "s34_exp_badge": {
+          "de": "✦ CRISTOFORIS UR-PRINZIP (1700)",
+          "en": "✦ CRISTOFORI’S ORIGINAL PRINCIPLE (1700)",
+          "ja": "✦ クリストフォリの原点原理 (1700)",
+          "zh": "✦ 克里斯托弗里的原始智慧 (1700)"
+        }
+      },
+      "notes": {
+        "de": "Beginnen Sie mit 1. Cristofori-Röllchen (1700): Das hohle, belederte Pergamentröhrchen nutzt die Oberflächenspannung des Rings ohne tote Innenmasse für maximale Rückstellkraft und kurze Kontaktzeit τc. Wechseln Sie dann auf 2. Renner-Spannungsfeder: Am Scheitel herrscht die höchste Verdichtung, an der breitesten Flanke exakt die Hälfte (½), während die ungeschliffenen Fasern auf dem Holzkern auslaufen und mit Klebstoff und Niete fixiert sind. Demonstrieren Sie mit den 5-stufigen Toggles: Ist der Scheitel oder Übergang zu hart, kann kein Pianissimo entstehen; fehlt die Elastizität (oder sperrt eine steife Außenkontur zwischen Scheitel und Flanke den Kraftfluss), verlängert sich τc, es entsteht kein Fortissimo, und die Teiltonstruktur H1–H12 kippt.",
+        "en": "Start with 1. Cristofori Roll (1700): His leathered hollow parchment cylinder uses circumferential surface tension with zero dead core mass to generate high restoring force and short contact time τc. Then switch to 2. Renner Tension Spring: Peak compaction sits at the crown, dropping to half (½) at the widest flank, while uncut wool fibers taper onto the wood moulding fixed by glue and rivet. Use the 5-stage toggles to show why dynamics are an outcome: an overly hard crown/transition prevents pianissimo, while insufficient elasticity or a stiff outer-contour bridge locks out the flank, prolongs τc, prevents fortissimo, and reshapes partials H1–H12.",
+        "ja": "まず「1. クリストフォリの革巻きロール (1700)」から開始：中空の羊皮紙ロールは外周の表面張力を活かし、内部の死荷重ゼロで高い弾性復元力と短い接触時間 τc を生み出します。次に「2. レンナー張力スプリング」へ切り替え：クラウンが最高密度、最広部フランクがその半分（½）の圧縮密度を持ち、繊維は木芯上で接着剤とリベットにより固定されます。5段階ボタンで実演：クラウンや移行帯が硬すぎると pp が成立せず、フェルトの弾性不足や外周移行帯の硬化はフランクへの力伝達を遮断して接触時間 τc を延ばし、ff の喪失と倍音構造（H1〜H12）の変化を招きます。",
+        "zh": "首先展示“1. 克里斯托弗里皮包纸卷 (1700)”：鹿皮包裹的中空羊皮纸圆筒利用圆周表面张力，零内部死重即可产生高回弹力与极短接触时间 τc。随后切换至“2. 雷诺复合张力弹簧弦槌”：槌冠处压实度最高，向最宽侧翼递减为一半（½），毛毡纤维在木芯尾部渐窄收尾并由胶水与铆钉锁紧。用5档切换按钮现场演示：槌冠或过渡带过硬会导致无法奏出 pp；若毛毡缺乏弹性或外轮廓过渡区过硬锁死侧翼，接触时间 τc 将被延长从而闷死琴弦、无法奏出 ff，并在下方实时看到 H1–H12 泛音结构的增减变化。"
+      }
+    },
+    "slide_35": {
+      "slide_number": 35,
+      "chapter": 5,
+      "chapter_name": {
+        "de": "Teil 5: Die Hohe Schule der Intonation",
+        "en": "Part 5: Master Voicing & Intonation",
+        "ja": "第5部：至高の整音技術",
+        "zh": "第五部分：极致整音艺术"
+      },
+      "category": {
         "de": "Teil 5: Intonation • Vorintonation",
         "en": "Part 5: Voicing • Vorintonation",
         "ja": "第7部：ヴォイシング（整音）の極意",
@@ -5220,67 +5484,67 @@
         "zh": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil"
       },
       "elements": {
-        "s34_bullet_1": {
+        "s35_bullet_1": {
           "de": "<strong>Arbeitszone:</strong> Ausschließlich im blauen Fortissimo-Keil (9:00–10:00 Uhr bzw. 2:00–3:00 Uhr) arbeiten.",
           "en": "<strong>Working Zone:</strong> Work strictly inside the blue fortissimo wedge (9:00–10:00 and 2:00–3:00 o'clock).",
           "ja": "<strong>作業ゾーン：</strong> 青色のフォルティッシモ領域（9〜10時および2〜3時方向）のみに針を入れます。",
           "zh": "<strong>施针区域：</strong> 严格限定在蓝色极强音扇区（9:00–10:00 及 2:00–3:00 钟点方向）作业。"
         },
-        "s34_bullet_2": {
+        "s35_bullet_2": {
           "de": "<strong>Tiefe Einstiche:</strong> Ruhig bis kurz vor den Unterfilz führen – niemals in Unterfilz oder Holzkern stechen!",
           "en": "<strong>Deep Stitches:</strong> Press smoothly to just above the underfelt—never pierce into underfelt or wood core!",
           "ja": "<strong>深い運針：</strong> アンダーフェルト直前まで静かに押し込み、下巻きやウッドコアへは絶対に刺しません！",
           "zh": "<strong>深层进针：</strong> 平稳推针至底毡上方即止——严禁刺穿底毡或伤及实木槌芯！"
         },
-        "s34_bullet_3": {
+        "s35_bullet_3": {
           "de": "<strong>Spannungstransfer:</strong> Die starre Werkshärte weicht; elastische Energie fließt in den grünen Forte-Keil.",
           "en": "<strong>Tension Transfer:</strong> Rigid factory stiffness softens as elastic energy flows into the green forte wedge.",
           "ja": "<strong>張力トランスファー：</strong> 出荷時の硬さがほぐれ、緑色のフォルテ領域へと豊かな弾性エネルギーが移ります。",
           "zh": "<strong>张力传递：</strong> 化解出厂时的僵硬紧绷感，使充沛的弹性势能顺畅导入绿色强音扇区。"
         },
-        "s34_bullet_4": {
+        "s35_bullet_4": {
           "de": "<strong>Praxis-Empfehlung:</strong> Vor dem ersten Anspielen im Flügel fast ausnahmslos als Fundament anzuraten.",
           "en": "<strong>Best Practice:</strong> Recommended almost without exception before first playing-in inside the piano.",
           "ja": "<strong>実践推奨ステップ：</strong> 楽器へ組み込んで弾き込む前に、ほぼ例外なく推奨される基礎工程です。",
           "zh": "<strong>实战标准流程：</strong> 在装入钢琴首次试奏前，几乎毫无例外建议先行完成此步基础整音。"
         },
-        "s34_caption_1": {
+        "s35_caption_1": {
           "de": "Pre-Needling: Tiefe Stiche im Fortissimo-Keil (9:00 bis 10:00 Uhr)",
           "en": "Pre-needling: Deep stitches in the fortissimo wedge (9:00 to 10:00 o'clock)",
           "ja": "プレニードリング：フォルティッシモ領域（9〜10時）への深い針入れ",
           "zh": "预整音：在极强音扇区（9:00至10:00方向）进行深层刺针"
         },
-        "s34_b1_badge": {
+        "s35_b1_badge": {
           "de": "PRE-NEEDLING",
           "en": "PRE-NEEDLING",
           "ja": "下整音（針刺し）",
           "zh": "基础刺针整音"
         },
-        "s34_b2_badge": {
+        "s35_b2_badge": {
           "de": "GRUNDELASTIZITÄT",
           "en": "BASIC ELASTICITY",
           "ja": "基本弾力性",
           "zh": "建立核心弹性"
         },
-        "s34_c1_desc": {
+        "s35_c1_desc": {
           "de": "Die Vorintonation ist der entscheidende Basisschritt bei fabrikneuen oder neu befilzten Hammerköpfen.",
           "en": "Pre-needling is the essential foundational step on factory-new or newly refelted hammerheads.",
           "ja": "プレニードリング（下整音）は新品またはフェルト張替ハンマーに不可欠な基礎工程です。",
           "zh": "预整音（Pre-Needling）是全新弦槌或新包毛毡弦槌装琴前至关重要的基础工序。"
         },
-        "s34_kpi": {
+        "s35_kpi": {
           "de": "pp – ff",
           "en": "pp – ff",
           "ja": "pp 〜 ff",
           "zh": "pp – ff 全动态"
         },
-        "s34_c1_title": {
+        "s35_c1_title": {
           "de": "Gezielter Spannungsabbau im blauen Fortissimo-Keil",
           "en": "Targeted Tension Release in the Blue Fortissimo Wedge",
           "ja": "青のフォルティッシモ領域における計画的な張力解放",
           "zh": "蓝色极强音扇区的定向预应力释放"
         },
-        "s34_fact": {
+        "s35_fact": {
           "de": "🎯 Öffnet das elastische Klangvolumen, ohne die Scheitelkrone zu schwächen",
           "en": "🎯 Unlocks elastic tonal volume without weakening the strike crown",
           "ja": "🎯 打弦点の強度を損なうことなく弾力ある豊かな響きを解放します",
@@ -5294,8 +5558,8 @@
         "zh": "第 59 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_35": {
-      "slide_number": 35,
+    "slide_36": {
+      "slide_number": 36,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5322,67 +5586,67 @@
         "zh": "Drücken statt Hacken – Exakte Stichanzahlen für Bass, Mittellage und Diskant"
       },
       "elements": {
-        "s35_bullet_1": {
+        "s36_bullet_1": {
           "de": "<strong>Bass &amp; Mittellage:</strong> Horizontaler Einstich im ff-Keil mit 7–10 Stichen im Bass und 5–10 Stichen in der Mitte.",
           "en": "<strong>Bass &amp; Midrange:</strong> Horizontal stitches in the ff wedge—7–10 stitches in the bass and 5–10 in the midrange.",
           "ja": "<strong>低音〜中音域の基準：</strong> ff領域へ水平方向に、低音で7〜10回、中音で5〜10回刺し入れます。",
           "zh": "<strong>低音与中音区规范：</strong> 于ff扇区水平进针——低音区7–10针，中音区5–10针。"
         },
-        "s35_bullet_2": {
+        "s36_bullet_2": {
           "de": "<strong>Diskant-Dosierung:</strong> Vertikal geführte Einstiche mit 0–7 Stichen je nach gewünschter Brillanz und Tragkraft.",
           "en": "<strong>Treble Dosage:</strong> Vertically guided stitches of 0–7 insertions depending on desired brilliance and projection.",
           "ja": "<strong>高音域の微調整：</strong> 求める輝きと遠達性に応じ、垂直方向へ0〜7回慎重に針を入れます。",
           "zh": "<strong>高音区精细定量：</strong> 视所需明亮度与穿透力，沿垂直方向精准施针0–7次。"
         },
-        "s35_bullet_3": {
+        "s36_bullet_3": {
           "de": "<strong>Drücken, niemals hacken:</strong> Nadeln ruhig mit Körpergewicht führen – Hacken zerreißt das Fasergefüge irreversibel!",
           "en": "<strong>Press, Never Chop:</strong> Push needles smoothly using body weight—chopping tears wool fibers irreversibly!",
           "ja": "<strong>「押す」のであり「叩き刺さない」：</strong> 体重を乗せて静かに押し込みます。叩き刺しは繊維を破壊します！",
           "zh": "<strong>稳压而非劈刺：</strong> 借助身体重心平稳推针入毡——猛烈劈刺会不可逆地撕裂羊毛纤维！"
         },
-        "s35_caption_1": {
+        "s36_caption_1": {
           "de": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "en": "Renner voicing tools, needle handles, and adjustable voicing instrument",
           "ja": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat",
           "zh": "Renner Intonierwerkzeuge, Nadelhalter und Intonierapparat"
         },
-        "s35_b1_badge": {
+        "s36_b1_badge": {
           "de": "WERKZEUGKUNDE",
           "en": "TOOL SET",
           "ja": "専門工具",
           "zh": "专业整音工具"
         },
-        "s35_b2_badge": {
+        "s36_b2_badge": {
           "de": "PRÄZISIONSNADELN",
           "en": "PRECISION NEEDLES",
           "ja": "精密針",
           "zh": "进口精密排针"
         },
-        "s35_kpi": {
+        "s36_kpi": {
           "de": "Nr. 7 · ø 0,60 mm",
           "en": "No. 7 · ø 0.60 mm",
           "ja": "7番針・ø0.60 mm",
           "zh": "7号针 · ø 0.60 mm"
         },
-        "s35_c1_title": {
+        "s36_c1_title": {
           "de": "Richtwerte pro Register & schonende Nadelführung",
           "en": "Register Stitch Guidelines & Gentle Needle Technique",
           "ja": "音域別の基準針数と繊維を守る正しい運針技術",
           "zh": "各音区标准刺针数与不伤纤维的稳压针法"
         },
-        "s35_c1_desc": {
+        "s36_c1_desc": {
           "de": "Ruhiges Eindrücken mit Original-Werkzeugen verdrängt die Wollfasern kontrolliert, statt sie zu zerreißen.",
           "en": "Steady pressing with genuine Renner tools parts the wool fibers cleanly instead of tearing them.",
           "ja": "純正ツールで静かに押し込むことで、羊毛繊維を断ち切らずに整然と緩めます。",
           "zh": "使用原厂工具平稳压入，能够柔和拨开羊毛纤维而不将其暴力扯断。"
         },
-        "s35_bullet_4": {
+        "s36_bullet_4": {
           "de": "<strong>Original Renner Werkzeuge:</strong> Intonierapparat (43-0005642), 3er-Profi-Halter (43-0003270) und Nadeln Nr. 7 (43-0003426).",
           "en": "<strong>Genuine Renner Tools:</strong> Adjustable voicer (43-0005642), 3-needle pro holder (43-0003270), and No. 7 needles (43-0003426).",
           "ja": "<strong>純正レンナー工具：</strong> 可変整音器（43-0005642）、3本針プロホルダー（43-0003270）、7番針（43-0003426）。",
           "zh": "<strong>雷纳原厂工具组：</strong> 可调整音器（43-0005642）、三针专业针柄（43-0003270）及7号镀镍针（43-0003426）。"
         },
-        "s35_fact": {
+        "s36_fact": {
           "de": "🛠 Glatte vernickelte Nadeln (ø 0,60 mm, 9 mm) gleiten faserschonend ins Vlies",
           "en": "🛠 Nickel-plated needles (ø 0.60 mm, 9 mm) glide smoothly between wool fibers",
           "ja": "🛠 ニッケルメッキ針（ø0.60 mm・長さ9 mm）が繊維を傷めず滑らかに進入",
@@ -5396,8 +5660,8 @@
         "zh": "第 60 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_36": {
-      "slide_number": 36,
+    "slide_37": {
+      "slide_number": 37,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5424,61 +5688,61 @@
         "zh": "„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument programmiert ist!“"
       },
       "elements": {
-        "s36_caption_1": {
+        "s37_caption_1": {
           "de": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "en": "Bedding strings firmly at the hitch pin using brass drift punch",
           "ja": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag",
           "zh": "Saiten niederschlagen am Anhangstift mit Messingdurchschlag"
         },
-        "s36_b1_badge": {
+        "s37_b1_badge": {
           "de": "SAITEN-BETTUNG",
           "en": "STRING BEDDING",
           "ja": "弦合わせ工程",
           "zh": "琴弦沉实就位"
         },
-        "s36_b2_badge": {
+        "s37_b2_badge": {
           "de": "CHORREINHEIT",
           "en": "UNISON PURITY",
           "ja": "同音同調の純度",
           "zh": "三弦同音纯净"
         },
-        "s36_bullet_1": {
+        "s37_bullet_1": {
           "de": "<strong>Anhangstifte setzen:</strong> Saiten von hinten nach vorn mit Messingdurchschlag und leichtem Hammer sanft anlegen.",
           "en": "<strong>Seat at Hitch Pins:</strong> Gently tap strings down from back to front at the hitch pins using a brass punch.",
           "ja": "<strong>ヒッチピンの密着：</strong> 真鍮ポンチと軽量ハンマーで奥から手前へ弦を優しく叩き落ち着かせます。",
           "zh": "<strong>挂弦钉落座贴合：</strong> 用黄铜冲子配合轻锤由后向前轻敲，使琴弦在挂弦钉处稳固服帖。"
         },
-        "s36_bullet_2": {
+        "s37_bullet_2": {
           "de": "<strong>Stegstifte anpassen:</strong> Mit dem Renner-Setzer die Saiten sauber auf den Steg drücken, um Nebentöne zu eliminieren.",
           "en": "<strong>Seat at Bridge Pins:</strong> Press strings cleanly onto the bridge with the Renner setter to eliminate false beats.",
           "ja": "<strong>駒ピンへの密着：</strong> レンナー専用セッターで弦を駒へ確実に密着させ、唸りや雑振動を排除します。",
           "zh": "<strong>码钉压实贴合：</strong> 使用雷纳专用压弦器将琴弦稳压于音板弦码，彻底消除假拍与杂音。"
         },
-        "s36_bullet_3": {
+        "s37_bullet_3": {
           "de": "<strong>Reine Chorstimmung:</strong> Vor jeder Nadelarbeit muss jeder 3er-Chor absolut schwebungs- und nebengeräuschfrei stehen.",
           "en": "<strong>Pure Unison Tuning:</strong> Every 3-string unison must ring completely pure and noise-free before voicing begins.",
           "ja": "<strong>純粋なユニゾン調律：</strong> 整音前にすべての同音弦を雑音やうなりのない完全なユニゾンに整えます。",
           "zh": "<strong>纯净同度调律：</strong> 在下针整音前，每一组三弦同度必须调至零拍音、零杂音的纯净状态。"
         },
-        "s36_kpi": {
+        "s37_kpi": {
           "de": "100 % Chorrein",
           "en": "100% Unison",
           "ja": "完全なユニゾン",
           "zh": "100% 同度纯净"
         },
-        "s36_c1_title": {
+        "s37_c1_title": {
           "de": "Exakte Saitenauflage vor dem ersten Nadelstich",
           "en": "Exact String Seating Prior to the First Needle Stitch",
           "ja": "最初の針を入れる前に不可欠な弦の密着と純粋な調律",
           "zh": "动针整音前必须确保琴弦贴合与同度纯净"
         },
-        "s36_c1_desc": {
+        "s37_c1_desc": {
           "de": "Nur sauber aufliegende und rein gestimmte Saitenchöre erlauben eine ehrliche klangliche Diagnose am Hammerkopf.",
           "en": "Only cleanly seated and purely tuned string unisons permit an honest acoustic diagnosis of the hammerhead.",
           "ja": "弦が確実に密着しユニゾンが澄み切って初めて、ハンマー本来の音色を正しく診断できます。",
           "zh": "唯有琴弦稳固贴合且同度弦组绝对纯净，方能真实判断弦槌本身的声学状态。"
         },
-        "s36_fact": {
+        "s37_fact": {
           "de": "🎵 Goldene Regel: Keine Nadel korrigiert einen unsauber gelagerten Saitenchor!",
           "en": "🎵 Golden Rule: No needle can fix a poorly seated or impure string unison!",
           "ja": "🎵 鉄則：弦の密着不良やユニゾンの乱れは針入れでは決して解決できません！",
@@ -5492,8 +5756,8 @@
         "zh": "第 61 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_37": {
-      "slide_number": 37,
+    "slide_38": {
+      "slide_number": 38,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5520,61 +5784,61 @@
         "zh": "Optimierung der Noten 69–88 durch Verschieben des Klaviaturrahmens"
       },
       "elements": {
-        "s37_bullet_1": {
+        "s38_bullet_1": {
           "de": "<strong>Referenzton Note 88:</strong> Klaviaturrahmen minimal vor- und zurückschieben, bis der hellste, vollste Ton einrastet.",
           "en": "<strong>Note 88 Reference:</strong> Shift the keyframe slightly fore and aft until the brightest, fullest tone locks in.",
           "ja": "<strong>第88鍵での基準探索：</strong> 筬をわずかに前後させ、最も明るく豊かな響きが得られる打弦点を見つけます。",
           "zh": "<strong>第88键基准寻优：</strong> 前后微移键盘架，直至找到高音最明亮饱满、共鸣最通透的最佳击弦位置。"
         },
-        "s37_bullet_2": {
+        "s38_bullet_2": {
           "de": "<strong>Diskantfenster 69–88:</strong> Eine exakte Justierung des Anschlagspunkts hebt das Klangvolumen vieler Flügel dramatisch.",
           "en": "<strong>Treble Window 69–88:</strong> Fine-tuning the strike point dramatically elevates treble singing power on most grands.",
           "ja": "<strong>第69〜88鍵の劇的改善：</strong> 打弦点の最適化だけで多くのグランドピアノの高音域が見違えるほど歌い始めます。",
           "zh": "<strong>69–88键显著蜕变：</strong> 精准校准高音区击弦点，往往能让三角钢琴的高音歌唱性获得质的飞跃。"
         },
-        "s37_bullet_3": {
+        "s38_bullet_3": {
           "de": "<strong>Geradheit &amp; Flucht:</strong> Kontrolle durch sanftes Anheben an der Klinke oder Zupfhaken; Korrekturbedarf auf der Taste markieren.",
           "en": "<strong>Straight Travel &amp; Spacing:</strong> Check travel via jack lift or plucking hook; mark any deviations with chalk on the keys.",
           "ja": "<strong>直進性と間隔の確認：</strong> ジャック持ち上げやフックで動きを確認し、修正箇所を鍵盤上にチョークで記録します。",
           "zh": "<strong>运行轨迹与对正检验：</strong> 轻抬顶杆或用拨钩检查槌头起落垂直度，并用粉笔在琴键上标记偏差音。"
         },
-        "s37_caption_1": {
+        "s38_caption_1": {
           "de": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "en": "Verifying treble strike point and square alignment of hammerheads",
           "ja": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer",
           "zh": "Prüfung des Diskant-Anschlagspunkts und Ausrichtung der Hämmer"
         },
-        "s37_b1_badge": {
+        "s38_b1_badge": {
           "de": "STRIKE POINT",
           "en": "STRIKE POINT",
           "ja": "打弦点探索",
           "zh": "最佳击弦点"
         },
-        "s37_b2_badge": {
+        "s38_b2_badge": {
           "de": "DISKANTGLANZ",
           "en": "TREBLE BRILLIANCE",
           "ja": "高音域の輝き",
           "zh": "高音晶莹通透"
         },
-        "s37_kpi": {
+        "s38_kpi": {
           "de": "Note 69–88",
           "en": "Notes 69–88",
           "ja": "第69〜88鍵",
           "zh": "第 69–88 键"
         },
-        "s37_c1_title": {
+        "s38_c1_title": {
           "de": "Optimaler Anschlagspunkt & präzise Hammerflucht",
           "en": "Optimal Treble Strike Point & Hammer Alignment",
           "ja": "高音域の最適打弦点と正確なハンマー整列",
           "zh": "高音区最佳击弦点寻优与弦槌精准对正"
         },
-        "s37_c1_desc": {
+        "s38_c1_desc": {
           "de": "Bereits Millimeterbruchteile der Klaviaturposition entscheiden im hohen Diskant über Tragkraft und Obertonglanz.",
           "en": "Fractions of a millimeter in keyframe position determine projection and bloom in the upper treble.",
           "ja": "高音域では筬（キーフレーム）のわずか数コンマ数ミリの前後位置が遠達性と輝きを左右します。",
           "zh": "在高音区，键盘架前后哪怕零点几毫米的微调，都直接决定音色的穿透力与泛音光泽。"
         },
-        "s37_fact": {
+        "s38_fact": {
           "de": "✨ Perfekte Mechanikgeometrie vor der Feinintonation spart unnötige Nadelarbeit",
           "en": "✨ Perfect strike geometry before fine voicing prevents unnecessary needling",
           "ja": "✨ 仕上げ整音前の完璧な打弦ジオメトリーが無駄な針入れを防ぎます",
@@ -5588,8 +5852,8 @@
         "zh": "第 62 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_38": {
-      "slide_number": 38,
+    "slide_39": {
+      "slide_number": 39,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5616,67 +5880,67 @@
         "zh": "Anpassung der Scheitelfläche an den 3-chörigen Saitenverlauf mit feiner Hammerfeile"
       },
       "elements": {
-        "s38_c1_title": {
+        "s39_c1_title": {
           "de": "1. Hohlkehle (Hollow Crown)",
           "en": "1. Hollow Crown",
           "ja": "1. 中央凹み（ホロウ・クラウン）",
           "zh": "1. 槌冠中凹（Hollow Crown）"
         },
-        "s38_c2_title": {
+        "s39_c2_title": {
           "de": "2. Schiefe Krone (Crooked Crown)",
           "en": "2. Crooked Crown",
           "ja": "2. 傾斜クラウン（片当たり）",
           "zh": "2. 槌冠偏斜（Crooked Crown）"
         },
-        "s38_c3_title": {
+        "s39_c3_title": {
           "de": "3. Plan &amp; Symmetrisch (Crown OK)",
           "en": "3. Level &amp; Symmetrical (Crown OK)",
           "ja": "3. 平面かつ左右対称（理想状態）",
           "zh": "3. 平正对称（理想槌冠状态）"
         },
-        "s38_c1_desc": {
+        "s39_c1_desc": {
           "de": "Scheitel trifft nur die äußeren Randsaiten – dünner, unvollständiger Ton; von den Schultern her plan abziehen.",
           "en": "Crown contacts only the outer strings—thin, incomplete tone; file level working from the shoulders.",
           "ja": "外側の弦しか打たず音が痩せる状態 — ショルダー側から丁寧に平らへ整えます。",
           "zh": "槌冠仅擦碰两侧外弦导致音色单薄残缺——须从槌肩向中心精细打磨找平。"
         },
-        "s38_c2_desc": {
+        "s39_c2_desc": {
           "de": "Einseitiger Saitenkontakt erzeugt Doppelattacke und Brummen – Scheitel exakt parallel zur Saitenebene beiziehen.",
           "en": "One-sided contact causes double attack and buzz—true the crown strictly parallel to the 3-string plane.",
           "ja": "片当たりは二重発音や雑音の原因 — 3本弦の平面と完全に平行になるよう成形します。",
           "zh": "单侧先触弦会引发双重起音与嗡鸣杂音——须将槌冠修整至与三弦平面严格平行。"
         },
-        "s38_c3_desc": {
+        "s39_c3_desc": {
           "de": "Gleichzeitiger, satter Anschlag auf alle drei Chorsaiten mit feinster Körnung (320–400) für vollen Grundton.",
           "en": "Simultaneous, solid contact across all three unison strings finished with 320–400 grit for full tone.",
           "ja": "320〜400番の極細研磨布で仕上げ、3本すべての弦を同時に捉える豊かな基音を実現。",
           "zh": "以320–400目极细砂布精修收光，确保三根同度弦同时饱满受击，基音浑厚纯粹。"
         },
-        "s38_caption_1": {
+        "s39_caption_1": {
           "de": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "en": "Filing hammer crowns for perfect flush alignment to 3-string unisons",
           "ja": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor",
           "zh": "Feilen der Hammerkrone zur perfekten Ausrichtung auf den 3-Saiten-Chor"
         },
-        "s38_b1_badge": {
+        "s39_b1_badge": {
           "de": "FEHLERBILD 1 • HOHL",
           "en": "DEFECT 1 • HOLLOW",
           "ja": "症状 1・中央凹み",
           "zh": "缺陷 1 · 槌冠中凹"
         },
-        "s38_b2_badge": {
+        "s39_b2_badge": {
           "de": "FEHLERBILD 2 • SCHIEF",
           "en": "DEFECT 2 • CROOKED",
           "ja": "症状 2・片当たり",
           "zh": "缺陷 2 · 槌冠偏斜"
         },
-        "s38_b3_badge": {
+        "s39_b3_badge": {
           "de": "SOLL-ZUSTAND • PLAN",
           "en": "TARGET • LEVEL CROWN",
           "ja": "理想状態・3弦同時",
           "zh": "理想状态 · 平正对称"
         },
-        "s38_b4_badge": {
+        "s39_b4_badge": {
           "de": "SCHLEIFFEILE",
           "en": "SANDING FILE",
           "ja": "ハンマーヤスリ",
@@ -5690,8 +5954,8 @@
         "zh": "第 63 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_39": {
-      "slide_number": 39,
+    "slide_40": {
+      "slide_number": 40,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5718,67 +5982,67 @@
         "zh": "Chromatisches Durchhören und vorsichtiges Egalisieren von Einzeltönen"
       },
       "elements": {
-        "s39_bullet_1": {
+        "s40_bullet_1": {
           "de": "<strong>Chromatisches Abhören:</strong> Auf- und abwärts durchspielen, um kleinste Ausreißer in Klangfarbe oder Härte zu orten.",
           "en": "<strong>Chromatic Listening:</strong> Play ascending and descending scales to pinpoint subtle outliers in brightness or hardness.",
           "ja": "<strong>半音階での聴き比べ：</strong> 上行・下行で弾き比べ、音色や硬さのわずかな不揃いを特定します。",
           "zh": "<strong>半音阶上下行审听：</strong> 逐键连贯弹奏上下行半音阶，精准定位亮度或硬度突兀的单音。"
         },
-        "s39_bullet_2": {
+        "s40_bullet_2": {
           "de": "<strong>Zwischenintonation:</strong> Dosiertes Nadeln im Forte- und Piano-Keil; zu weiche Köpfe durch feines Abziehen straffen.",
           "en": "<strong>Mid-Voicing:</strong> Measured needling in the forte and piano wedges; firm up overly soft heads by light filing.",
           "ja": "<strong>中間整音：</strong> フォルテ・ピアノ領域を適度に整え、柔らかすぎる音は微細な整形研磨で引き締めます。",
           "zh": "<strong>中度过渡整音：</strong> 在强音与弱音扇区适度施针；偏软无力的弦槌则通过精细打磨恢复张力。"
         },
-        "s39_bullet_3": {
+        "s40_bullet_3": {
           "de": "<strong>Feinintonations-Halter:</strong> Kurze Einzelnadel im BDK-Halter (43-0003269) oder Chop-Stick-Halter (43-0003271).",
           "en": "<strong>Fine-Voicing Holders:</strong> Short single needle in the BDK holder (43-0003269) or Chop-Stick holder (43-0003271).",
           "ja": "<strong>仕上げ用シングル針：</strong> BDKホルダー（43-0003269）またはチョップスティック（43-0003271）の短針を使用。",
           "zh": "<strong>精整音单针工具：</strong> 选用装夹短单针的BDK针柄（43-0003269）或Chop-Stick针柄（43-0003271）。"
         },
-        "s39_bullet_4": {
+        "s40_bullet_4": {
           "de": "<strong>2-mm-Kronenregel:</strong> Am Scheitel höchstens 2 mm tief und ausschließlich zwischen den Saitenrillen einstechen!",
           "en": "<strong>2 mm Crown Rule:</strong> At the crown, pierce at most 2 mm deep and strictly between the string grooves—never inside!",
           "ja": "<strong>クラウン2 mmルール：</strong> 頂点付近は深さ最大2 mmまでとし、必ず弦溝と弦溝の間だけを狙います！",
           "zh": "<strong>槌冠2毫米铁律：</strong> 槌冠处进针深度绝不超过2 mm，且只准刺在弦痕间隙，严禁刺入弦槽！"
         },
-        "s39_caption_1": {
+        "s40_caption_1": {
           "de": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "en": "Chromatic listening and fine voicing with short single needle",
           "ja": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel",
           "zh": "Chromatisches Abhören und Feinabstimmung mit kurzer Einzelnadel"
         },
-        "s39_b1_badge": {
+        "s40_b1_badge": {
           "de": "FEININTONATION",
           "en": "FINE VOICING",
           "ja": "仕上げ整音",
           "zh": "精细色彩调配"
         },
-        "s39_b2_badge": {
+        "s40_b2_badge": {
           "de": "FARBPALETTE",
           "en": "COLOR PALETTE",
           "ja": "色彩パレット",
           "zh": "全音域色彩平衡"
         },
-        "s39_kpi": {
+        "s40_kpi": {
           "de": "Max. 2 mm",
           "en": "Max. 2 mm",
           "ja": "深さ最大 2 mm",
           "zh": "最大深度 2 mm"
         },
-        "s39_c1_title": {
+        "s40_c1_title": {
           "de": "Chromatisches Egalisieren bis zur Konzertreife",
           "en": "Chromatic Equalization to Concert Perfection",
           "ja": "半音階チェックによるコンサートレベルの均一化",
           "zh": "半音阶逐音均衡精修直至音乐会完美状态"
         },
-        "s39_c1_desc": {
+        "s40_c1_desc": {
           "de": "In der Zwischen- und Feinintonation verschmelzen alle 88 Töne zu einem bruchlosen Perlenketten-Verlauf.",
           "en": "Mid- and fine-voicing blend all 88 notes into one seamless, pearl-like tonal progression.",
           "ja": "中間整音と仕上げ整音により、全88音を真珠の首飾りのように滑らかな音色へと揃えます。",
           "zh": "通过中度与精细整音，令全琴88个音符融汇如珍珠项链般均匀连贯的音色过渡。"
         },
-        "s39_fact": {
+        "s40_fact": {
           "de": "🪡 Feinste Dosierung entscheidet über den seidigen Schimmer im Pianissimo",
           "en": "🪡 Micro-dosage at the crown defines the silky shimmer in pianissimo",
           "ja": "🪡 ミリ単位の繊細な針加減がピアニッシモの絹のような輝きを決めます",
@@ -5792,8 +6056,8 @@
         "zh": "第 64 页：向嘉宾介绍核心要点，重点阐述德国雷诺不可替代的高精机械与音色标准。"
       }
     },
-    "slide_40": {
-      "slide_number": 40,
+    "slide_41": {
+      "slide_number": 41,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5820,67 +6084,67 @@
         "zh": "Linkes Pedal abstimmen, Geräusche vermeiden & Willkommen im Renner-Fachdialog"
       },
       "elements": {
-        "s40_b1_badge": {
+        "s41_b1_badge": {
           "de": "UNA CORDA PRAXIS",
           "en": "UNA CORDA PRACTICE",
           "ja": "UNA CORDA PRAXIS",
           "zh": "UNA CORDA PRAXIS"
         },
-        "s40_b2_badge": {
+        "s41_b2_badge": {
           "de": "RENNER ACADEMY",
           "en": "RENNER ACADEMY",
           "ja": "RENNER ACADEMY",
           "zh": "RENNER ACADEMY"
         },
-        "s40_b3_badge": {
+        "s41_b3_badge": {
           "de": "LOUIS RENNER GMBH",
           "en": "LOUIS RENNER GMBH",
           "ja": "LOUIS RENNER GMBH",
           "zh": "LOUIS RENNER GMBH"
         },
-        "s40_c1_title": {
+        "s41_c1_title": {
           "de": "Verschiebungsintonation",
           "en": "Shift Pedal Voicing (Una Corda)",
           "ja": "Verschiebungsintonation",
           "zh": "Verschiebungsintonation"
         },
-        "s40_c2_title": {
+        "s41_c2_title": {
           "de": "Renner Academy & Technischer Dialog",
           "en": "Renner Academy & Technical Dialogue",
           "ja": "Renner Academy & Technischer Dialog",
           "zh": "Renner Academy & Technischer Dialog"
         },
-        "s40_c1_desc": {
+        "s41_c1_desc": {
           "de": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "en": "Play chromatically with shift pedal depressed; gently voice only the contacted string contact areas.",
           "ja": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln.",
           "zh": "Chromatisches Spiel mit getretenem Pedal; nur die getroffenen Saitenbereiche vorsichtig nachnadeln."
         },
-        "s40_c2_desc": {
+        "s41_c2_desc": {
           "de": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "en": "Renner provides masterclasses, factory tours in Meuselwitz, and tailored technical support for piano technicians worldwide.",
           "ja": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit.",
           "zh": "Renner bietet fundierte Meisterkurse, Werksführungen in Meuselwitz und individuellen Werkstattsupport für Klavierbaumeister weltweit."
         },
-        "s40_caption_1": {
+        "s41_caption_1": {
           "de": "Louis Renner GmbH",
           "en": "Louis Renner GmbH",
           "ja": "Louis Renner GmbH",
           "zh": "Louis Renner GmbH"
         },
-        "s40_caption_2": {
+        "s41_caption_2": {
           "de": "Ihr Partner für meisterlichen Klang weltweit",
           "en": "Your partner for master-grade tone worldwide",
           "ja": "Ihr Partner für meisterlichen Klang weltweit",
           "zh": "Ihr Partner für meisterlichen Klang weltweit"
         },
-        "s40_bullet_1": {
+        "s41_bullet_1": {
           "de": "<strong>Praxis-Tipp Una Corda:</strong> Linke Kronenkante hauchfein brechen, um Reibgeräusche an Nachbarsaiten sicher auszuschließen.",
           "en": "<strong>Una Corda Pro Tip:</strong> Lightly chamfer the left crown edge to prevent rubbing noise against adjacent strings.",
           "ja": "<strong>ウナ・コルダの実践知：</strong> クラウン左端をわずかに面取りし、隣接弦との擦れ音を確実に防ぎます。",
           "zh": "<strong>弱音踏板实战技巧：</strong> 轻柔倒角打磨槌冠左侧边缘，彻底消除横移时擦碰相邻琴弦的杂音。"
         },
-        "s40_bullet_2": {
+        "s41_bullet_2": {
           "de": "<strong>Direkter Meister-Dialog:</strong> Schulungen in der Renner Academy, Werksbesuche in Meuselwitz &amp; persönliche Fachberatung.",
           "en": "<strong>Direct Master Dialogue:</strong> Hands-on Renner Academy courses, Meuselwitz factory tours, and personal technical support.",
           "ja": "<strong>マイスターとの直接対話：</strong> レンナー・アカデミー講習会、モイゼルヴィッツ工場見学、個別技術サポートを提供。",
