@@ -36,15 +36,15 @@
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 hart · τc = ${tau} ms ↑`,
           specRoles: ['Grundton', 'Oktave', 'Quinte', '2. Okt.', 'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.', 'Sekunde', 'Gr. Terz', '11. Teilt.', 'Duodez.'],
           c1: '1. Filz-Elastizität & Oberflächenspannung',
-          steps1: ['1 · Träge', '2 · Schwach', '3 · Mittel', '4 · Elastisch', '5 · Max.'],
+          steps1: ['1 · Träge', '2 · Mittel', '3 · Elastisch'],
           c2: '2. Hammerkopf-Form (Scheitelradius)',
-          steps2: ['1 · Breit', '2 · Rund', '3 · Konzert', '4 · Schlank', '5 · Spitz'],
+          steps2: ['1 · Breit', '2 · Konzert', '3 · Spitz'],
           c3: '3. Scheitel-Verdichtung (Flanke = ½)',
-          steps3: ['1 · Weich', '2 · Sanft', '3 · Ideal', '4 · Fest', '5 · Zu hart'],
+          steps3: ['1 · Weich', '2 · Ideal', '3 · Zu hart'],
           c3ValR: (ap, fl) => `Scheitel ${ap} % · Flanke ${fl} %`,
           c3ValC: (d) => `Wicklung ${d} %`,
           c4: '4. Übergang Scheitel → Flanke (Außenkontur)',
-          steps4: ['1 · Frei', '2 · Offen', '3 · Fest', '4 · Steif', '5 · Sperrt ✕'],
+          steps4: ['1 · Frei', '2 · Fest', '3 · Sperrt ✕'],
           c4Open: (pct) => `Kraftfluss frei (${pct} % Flanke)`,
           c4Mid: (pct) => `Teil-Sperre (${pct} % Flanke)`,
           c4Block: (pct) => `Blockiert! (${pct} % Flanke)`,
@@ -172,15 +172,15 @@
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 harsh · τc = ${tau} ms ↑`,
           specRoles: ['Fundam.', 'Octave', '5th', '2nd Oct', 'Maj 3rd', '5th', '7th', '3rd Oct', 'Maj 2nd', 'Maj 3rd', '11th', '12th'],
           c1: '1. Felt Elasticity & Surface Tension',
-          steps1: ['1 · Dead', '2 · Weak', '3 · Medium', '4 · Elastic', '5 · Max'],
+          steps1: ['1 · Sluggish', '2 · Medium', '3 · Elastic'],
           c2: '2. Hammerhead Shape (Crown Radius)',
-          steps2: ['1 · Wide', '2 · Round', '3 · Concert', '4 · Slender', '5 · Pointed'],
+          steps2: ['1 · Wide', '2 · Concert', '3 · Pointed'],
           c3: '3. Crown Compaction (Flank = ½)',
-          steps3: ['1 · Soft', '2 · Gentle', '3 · Ideal', '4 · Firm', '5 · Too Hard'],
+          steps3: ['1 · Soft', '2 · Ideal', '3 · Too Hard'],
           c3ValR: (ap, fl) => `Crown ${ap}% · Flank ${fl}%`,
           c3ValC: (d) => `Roll Winding ${d}%`,
           c4: '4. Crown → Flank Transition (Outer Contour)',
-          steps4: ['1 · Open', '2 · Supple', '3 · Firm', '4 · Stiff', '5 · Locked ✕'],
+          steps4: ['1 · Open', '2 · Firm', '3 · Locked ✕'],
           c4Open: (pct) => `Open Flow (${pct}% Flank)`,
           c4Mid: (pct) => `Partial Block (${pct}% Flank)`,
           c4Block: (pct) => `Blocked! (${pct}% Flank)`,
@@ -308,15 +308,15 @@
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 過硬 · τc = ${tau} ms ↑`,
           specRoles: ['基音', '8度', '5度', '2Oct', '長3度', '5度', '7倍音', '3Oct', '長2度', '長3度', '11倍音', '12度'],
           c1: '1. フェルト弾性と表面張力',
-          steps1: ['1 · 鈍重', '2 · 低弾性', '3 · 中程度', '4 · 高弾性', '5 · 最大'],
+          steps1: ['1 · 低弾性', '2 · 中程度', '3 · 高弾性'],
           c2: '2. ハンマー形状（クラウン曲率半径）',
-          steps2: ['1 · 広角', '2 · 丸型', '3 · 標準', '4 · 細身', '5 · 鋭角'],
+          steps2: ['1 · 広角', '2 · 標準', '3 · 鋭角'],
           c3: '3. クラウン圧縮密度（フランク＝½）',
-          steps3: ['1 · 柔軟', '2 · 穏やか', '3 · 最適', '4 · 硬め', '5 · 過硬'],
+          steps3: ['1 · 柔軟', '2 · 最適', '3 · 過硬'],
           c3ValR: (ap, fl) => `クラウン ${ap}% · フランク ${fl}%`,
           c3ValC: (d) => `ロール巻密度 ${d}%`,
           c4: '4. クラウン→フランク移行帯（外周輪郭）',
-          steps4: ['1 · 開放', '2 · 柔軟', '3 · やや硬', '4 · 硬直', '5 · 遮断 ✕'],
+          steps4: ['1 · 開放', '2 · やや硬', '3 · 遮断 ✕'],
           c4Open: (pct) => `伝達良好 (フランク ${pct}%)`,
           c4Mid: (pct) => `一部遮断 (フランク ${pct}%)`,
           c4Block: (pct) => `伝達遮断! (フランク ${pct}%)`,
@@ -444,15 +444,15 @@
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 生硬 · τc = ${tau} ms ↑`,
           specRoles: ['基音', '八度', '五度', '双八度', '大三度', '五度', '七泛音', '三八度', '大二度', '大三度', '十一音', '十二度'],
           c1: '1. 毛毡弹性与外层表面张力',
-          steps1: ['1 · 迟滞', '2 · 偏弱', '3 · 中等', '4 · 高弹', '5 · 最大'],
+          steps1: ['1 · 迟滞', '2 · 中等', '3 · 高弹'],
           c2: '2. 弦槌几何形状（槌冠曲率半径）',
-          steps2: ['1 · 宽平', '2 · 圆润', '3 · 音乐会', '4 · 修长', '5 · 尖窄'],
+          steps2: ['1 · 宽圆', '2 · 音乐会', '3 · 尖窄'],
           c3: '3. 槌冠压实度（侧翼最宽处 ＝ ½）',
-          steps3: ['1 · 偏软', '2 · 柔和', '3 · 理想', '4 · 偏硬', '5 · 过硬'],
+          steps3: ['1 · 偏软', '2 · 理想', '3 · 过硬'],
           c3ValR: (ap, fl) => `槌冠 ${ap}% · 侧翼 ${fl}%`,
           c3ValC: (d) => `纸卷紧密度 ${d}%`,
           c4: '4. 槌冠→侧翼过渡区（外轮廓刚度）',
-          steps4: ['1 · 贯通', '2 · 柔顺', '3 · 偏紧', '4 · 僵硬', '5 · 锁死 ✕'],
+          steps4: ['1 · 贯通', '2 · 偏紧', '3 · 锁死 ✕'],
           c4Open: (pct) => `力流贯通 (侧翼 ${pct}%)`,
           c4Mid: (pct) => `部分受阻 (侧翼 ${pct}%)`,
           c4Block: (pct) => `力流中断! (侧翼 ${pct}%)`,
@@ -559,7 +559,7 @@
       };
 
       const MODE_PRESETS = {
-        cristofori: { tension: 95, shape: 72, density: 40, contourStiff: 12 },
+        cristofori: { tension: 95, shape: 52, density: 61, contourStiff: 12 },
         renner:     { tension: 95, shape: 52, density: 61, contourStiff: 12 }
       };
 
@@ -568,10 +568,10 @@
           this.lang = 'de';
           this.mode = 'cristofori'; // Start directly with Cristofori's leathered roll!
           this.specMode = 'delta';  // 'delta' (ΔdB-Änderung) | 'abs' (Pegel + ΔdB)
-          this.tension = 95;        // 5-stage toggle: [28, 46, 62, 82, 95]
-          this.shape = 72;          // 5-stage toggle: [10, 30, 52, 72, 94]
-          this.density = 40;        // 5-stage toggle: [13, 40, 61, 78, 92] (Crown -> 1/2 Flank)
-          this.contourStiff = 12;   // 5-stage toggle: [12, 34, 49, 68, 90] (Crown -> Flank transition)
+          this.tension = 95;        // 3-stage toggle: [32, 62, 95]
+          this.shape = 52;          // 3-stage toggle: [16, 52, 86]
+          this.density = 61;        // 3-stage toggle: [22, 61, 92] (Crown -> 1/2 Flank)
+          this.contourStiff = 12;   // 3-stage toggle: [12, 50, 90] (Crown -> Flank transition)
           this.autoLoop = true;     // Continuous calm slow-motion bounce animation by default
           this.strikeStartMs = performance.now();
           this.isStriking = true;

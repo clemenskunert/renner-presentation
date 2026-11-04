@@ -9506,11 +9506,11 @@ body::before {
   cursor: grab;
 }
 
-/* 5-Stage Toggle Button Bar (Slide 34) */
+/* 3-Stage Toggle Button Bar (Slide 34) */
 .hsp-step-group {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 4px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
   margin-top: 1px;
 }
 
@@ -9519,10 +9519,10 @@ body::before {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 7px;
-  padding: 3px 3px;
+  padding: 3.5px 6px;
   color: rgba(255, 255, 255, 0.88);
   font-family: var(--font-sans);
-  font-size: 17.1px;
+  font-size: 17.4px;
   font-weight: 600;
   line-height: 1.15;
   text-align: center;
@@ -13977,56 +13977,50 @@ body::before {
               </div>
             </div>
 
-            <!-- RECHTE SPALTE: 4 PARAMETER MIT 5-STUFEN-TOGGLE, SPIELBARE DYNAMIK, 3 KPIS & FACH-ERKLÄRUNG -->
+            <!-- RECHTE SPALTE: 4 PARAMETER MIT 3-STUFEN-TOGGLE, SPIELBARE DYNAMIK, 3 KPIS & FACH-ERKLÄRUNG -->
             <div class="hsp-col-right">
               <div class="hsp-card" style="height: 100%; justify-content: space-between;">
                 <div class="hsp-ctrl-grid">
-                  <!-- Parameter 1: Filz-Elastizität & Oberflächenspannung (5-Stufen-Toggle) -->
+                  <!-- Parameter 1: Filz-Elastizität & Oberflächenspannung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c1" data-i18n="s34_c1_lbl">1. Filz-Elastizität &amp; Oberflächenspannung</span>
                       <span class="hsp-ctrl-val" id="hsp-val-c1">95 %</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-tension" role="group" aria-labelledby="hsp-lbl-c1">
-                      <button type="button" class="hsp-step-btn" data-val="28" data-tone="bad" aria-pressed="false" data-i18n="s34_c1_s1">1 · Träge</button>
-                      <button type="button" class="hsp-step-btn" data-val="46" data-tone="bad" aria-pressed="false" data-i18n="s34_c1_s2">2 · Schwach</button>
-                      <button type="button" class="hsp-step-btn" data-val="62" data-tone="warn" aria-pressed="false" data-i18n="s34_c1_s3">3 · Mittel</button>
-                      <button type="button" class="hsp-step-btn" data-val="82" data-tone="good" aria-pressed="false" data-i18n="s34_c1_s4">4 · Elastisch</button>
-                      <button type="button" class="hsp-step-btn active" data-val="95" data-tone="good" aria-pressed="true" data-i18n="s34_c1_s5">5 · Max.</button>
+                      <button type="button" class="hsp-step-btn" data-val="32" data-tone="bad" aria-pressed="false" data-i18n="s34_c1_s1">1 · Träge</button>
+                      <button type="button" class="hsp-step-btn" data-val="62" data-tone="warn" aria-pressed="false" data-i18n="s34_c1_s2">2 · Mittel</button>
+                      <button type="button" class="hsp-step-btn active" data-val="95" data-tone="good" aria-pressed="true" data-i18n="s34_c1_s3">3 · Elastisch</button>
                     </div>
                   </div>
 
-                  <!-- Parameter 2: Form & Scheitelkrümmung (5-Stufen-Toggle) -->
+                  <!-- Parameter 2: Form & Scheitelkrümmung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c2" data-i18n="s34_c2_lbl">2. Hammerkopf-Form (Scheitelradius)</span>
-                      <span class="hsp-ctrl-val" id="hsp-val-c2">R ≈ 11,1 mm</span>
+                      <span class="hsp-ctrl-val" id="hsp-val-c2">R ≈ 12,6 mm</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-shape" role="group" aria-labelledby="hsp-lbl-c2">
-                      <button type="button" class="hsp-step-btn" data-val="10" data-tone="soft" aria-pressed="false" data-i18n="s34_c2_s1">1 · Breit</button>
-                      <button type="button" class="hsp-step-btn" data-val="30" data-tone="soft" aria-pressed="false" data-i18n="s34_c2_s2">2 · Rund</button>
-                      <button type="button" class="hsp-step-btn" data-val="52" data-tone="good" aria-pressed="false" data-i18n="s34_c2_s3">3 · Konzert</button>
-                      <button type="button" class="hsp-step-btn active" data-val="72" data-tone="gold" aria-pressed="true" data-i18n="s34_c2_s4">4 · Schlank</button>
-                      <button type="button" class="hsp-step-btn" data-val="94" data-tone="warn" aria-pressed="false" data-i18n="s34_c2_s5">5 · Spitz</button>
+                      <button type="button" class="hsp-step-btn" data-val="16" data-tone="soft" aria-pressed="false" data-i18n="s34_c2_s1">1 · Breit</button>
+                      <button type="button" class="hsp-step-btn active" data-val="52" data-tone="good" aria-pressed="true" data-i18n="s34_c2_s2">2 · Konzert</button>
+                      <button type="button" class="hsp-step-btn" data-val="86" data-tone="warn" aria-pressed="false" data-i18n="s34_c2_s3">3 · Spitz</button>
                     </div>
                   </div>
 
-                  <!-- Parameter 3: Scheitel-Verdichtung -> 1/2 Flanken-Verdichtung (5-Stufen-Toggle) -->
+                  <!-- Parameter 3: Scheitel-Verdichtung -> 1/2 Flanken-Verdichtung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c3" data-i18n="s34_c3_lbl">3. Scheitel-Verdichtung (Flanke = ½)</span>
-                      <span class="hsp-ctrl-val" id="hsp-val-c3">Wicklung 40 %</span>
+                      <span class="hsp-ctrl-val" id="hsp-val-c3">Wicklung 61 %</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-density" role="group" aria-labelledby="hsp-lbl-c3">
-                      <button type="button" class="hsp-step-btn" data-val="13" data-tone="soft" aria-pressed="false" data-i18n="s34_c3_s1">1 · Weich</button>
-                      <button type="button" class="hsp-step-btn active" data-val="40" data-tone="good" aria-pressed="true" data-i18n="s34_c3_s2">2 · Sanft</button>
-                      <button type="button" class="hsp-step-btn" data-val="61" data-tone="good" aria-pressed="false" data-i18n="s34_c3_s3">3 · Ideal</button>
-                      <button type="button" class="hsp-step-btn" data-val="78" data-tone="warn" aria-pressed="false" data-i18n="s34_c3_s4">4 · Fest</button>
-                      <button type="button" class="hsp-step-btn" data-val="92" data-tone="bad" aria-pressed="false" data-i18n="s34_c3_s5">5 · Zu hart</button>
+                      <button type="button" class="hsp-step-btn" data-val="22" data-tone="soft" aria-pressed="false" data-i18n="s34_c3_s1">1 · Weich</button>
+                      <button type="button" class="hsp-step-btn active" data-val="61" data-tone="good" aria-pressed="true" data-i18n="s34_c3_s2">2 · Ideal</button>
+                      <button type="button" class="hsp-step-btn" data-val="92" data-tone="bad" aria-pressed="false" data-i18n="s34_c3_s3">3 · Zu hart</button>
                     </div>
                   </div>
 
-                  <!-- Parameter 4: Kritische Übergangszone Scheitel -> Flanke (5-Stufen-Toggle) -->
+                  <!-- Parameter 4: Kritische Übergangszone Scheitel -> Flanke (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block" id="hsp-block-contour">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c4" data-i18n="s34_c4_lbl">4. Übergang Scheitel → Flanke (Außenkontur)</span>
@@ -14034,10 +14028,8 @@ body::before {
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-contour" role="group" aria-labelledby="hsp-lbl-c4">
                       <button type="button" class="hsp-step-btn active" data-val="12" data-tone="good" aria-pressed="true" data-i18n="s34_c4_s1">1 · Frei</button>
-                      <button type="button" class="hsp-step-btn" data-val="34" data-tone="good" aria-pressed="false" data-i18n="s34_c4_s2">2 · Offen</button>
-                      <button type="button" class="hsp-step-btn" data-val="49" data-tone="warn" aria-pressed="false" data-i18n="s34_c4_s3">3 · Fest</button>
-                      <button type="button" class="hsp-step-btn" data-val="68" data-tone="bad" aria-pressed="false" data-i18n="s34_c4_s4">4 · Steif</button>
-                      <button type="button" class="hsp-step-btn" data-val="90" data-tone="bad" aria-pressed="false" data-i18n="s34_c4_s5">5 · Sperrt ✕</button>
+                      <button type="button" class="hsp-step-btn" data-val="50" data-tone="warn" aria-pressed="false" data-i18n="s34_c4_s2">2 · Fest</button>
+                      <button type="button" class="hsp-step-btn" data-val="90" data-tone="bad" aria-pressed="false" data-i18n="s34_c4_s3">3 · Sperrt ✕</button>
                     </div>
                   </div>
 
@@ -15704,34 +15696,26 @@ window.slideTranslations = {
     "s34_spec_abs": "Pegel + ΔdB",
     "s34_c1_lbl": "1. Filz-Elastizität & Oberflächenspannung",
     "s34_c1_s1": "1 · Träge",
-    "s34_c1_s2": "2 · Schwach",
-    "s34_c1_s3": "3 · Mittel",
-    "s34_c1_s4": "4 · Elastisch",
-    "s34_c1_s5": "5 · Max.",
+    "s34_c1_s2": "2 · Mittel",
+    "s34_c1_s3": "3 · Elastisch",
     "s34_c2_lbl": "2. Hammerkopf-Form (Scheitelradius)",
     "s34_c2_s1": "1 · Breit",
-    "s34_c2_s2": "2 · Rund",
-    "s34_c2_s3": "3 · Konzert",
-    "s34_c2_s4": "4 · Schlank",
-    "s34_c2_s5": "5 · Spitz",
+    "s34_c2_s2": "2 · Konzert",
+    "s34_c2_s3": "3 · Spitz",
     "s34_c3_lbl": "3. Scheitel-Verdichtung (Flanke = ½)",
     "s34_c3_s1": "1 · Weich",
-    "s34_c3_s2": "2 · Sanft",
-    "s34_c3_s3": "3 · Ideal",
-    "s34_c3_s4": "4 · Fest",
-    "s34_c3_s5": "5 · Zu hart",
+    "s34_c3_s2": "2 · Ideal",
+    "s34_c3_s3": "3 · Zu hart",
     "s34_c4_lbl": "4. Übergang Scheitel → Flanke (Außenkontur)",
     "s34_c4_s1": "1 · Frei",
-    "s34_c4_s2": "2 · Offen",
-    "s34_c4_s3": "3 · Fest",
-    "s34_c4_s4": "4 · Steif",
-    "s34_c4_s5": "5 · Sperrt ✕",
+    "s34_c4_s2": "2 · Fest",
+    "s34_c4_s3": "3 · Sperrt ✕",
     "s34_dyn_lbl": "Spielbare Dynamik (Ergebnis)",
     "s34_kpi1_lbl": "Rückstellkraft",
     "s34_kpi2_lbl": "Kontaktzeit τc",
     "s34_kpi3_lbl": "Toncharakter",
     "s34_exp_badge": "✦ CRISTOFORIS UR-PRINZIP (1700)",
-    "s34_notes": "Beginnen Sie mit 1. Cristofori-Röllchen (1700): Das hohle, belederte Pergamentröhrchen nutzt die Oberflächenspannung des Rings ohne tote Innenmasse für maximale Rückstellkraft und kurze Kontaktzeit τc. Wechseln Sie dann auf 2. Renner-Spannungsfeder: Am Scheitel herrscht die höchste Verdichtung, an der breitesten Flanke exakt die Hälfte (½), während die ungeschliffenen Fasern auf dem Holzkern auslaufen und mit Klebstoff und Niete fixiert sind. Demonstrieren Sie mit den 5-stufigen Toggles: Ist der Scheitel oder Übergang zu hart, kann kein Pianissimo entstehen; fehlt die Elastizität (oder sperrt eine steife Außenkontur zwischen Scheitel und Flanke den Kraftfluss), verlängert sich τc, es entsteht kein Fortissimo, und die Teiltonstruktur H1–H12 kippt.",
+    "s34_notes": "Beginnen Sie mit 1. Cristofori-Röllchen (1700): Das hohle, belederte Pergamentröhrchen nutzt die Oberflächenspannung des Rings ohne tote Innenmasse für maximale Rückstellkraft und kurze Kontaktzeit τc. Wechseln Sie dann auf 2. Renner-Spannungsfeder: Am Scheitel herrscht die höchste Verdichtung, an der breitesten Flanke exakt die Hälfte (½), während die ungeschliffenen Fasern auf dem Holzkern auslaufen und mit Klebstoff und Niete fixiert sind. Demonstrieren Sie mit den 3-stufigen Toggles: Ist der Scheitel oder Übergang zu hart, kann kein Pianissimo entstehen; fehlt die Elastizität (oder sperrt eine steife Außenkontur zwischen Scheitel und Flanke den Kraftfluss), verlängert sich τc, es entsteht kein Fortissimo, und die Teiltonstruktur H1–H12 kippt.",
     "s35_category": "Teil 5: Intonation • Vorintonation",
     "s35_title": "Vorintonation (Pre-Needling): Tiefe Stiche im ff-Keil",
     "s35_subtitle": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil",
@@ -16646,35 +16630,27 @@ window.slideTranslations = {
     "s34_spec_delta": "ΔdB Shift",
     "s34_spec_abs": "Level + ΔdB",
     "s34_c1_lbl": "1. Felt Elasticity & Surface Tension",
-    "s34_c1_s1": "1 · Dead",
-    "s34_c1_s2": "2 · Weak",
-    "s34_c1_s3": "3 · Medium",
-    "s34_c1_s4": "4 · Elastic",
-    "s34_c1_s5": "5 · Max",
+    "s34_c1_s1": "1 · Sluggish",
+    "s34_c1_s2": "2 · Medium",
+    "s34_c1_s3": "3 · Elastic",
     "s34_c2_lbl": "2. Hammerhead Shape (Crown Radius)",
     "s34_c2_s1": "1 · Wide",
-    "s34_c2_s2": "2 · Round",
-    "s34_c2_s3": "3 · Concert",
-    "s34_c2_s4": "4 · Slender",
-    "s34_c2_s5": "5 · Pointed",
+    "s34_c2_s2": "2 · Concert",
+    "s34_c2_s3": "3 · Pointed",
     "s34_c3_lbl": "3. Crown Compaction (Flank = ½)",
     "s34_c3_s1": "1 · Soft",
-    "s34_c3_s2": "2 · Gentle",
-    "s34_c3_s3": "3 · Ideal",
-    "s34_c3_s4": "4 · Firm",
-    "s34_c3_s5": "5 · Too Hard",
+    "s34_c3_s2": "2 · Ideal",
+    "s34_c3_s3": "3 · Too Hard",
     "s34_c4_lbl": "4. Crown → Flank Transition (Outer Contour)",
     "s34_c4_s1": "1 · Open",
-    "s34_c4_s2": "2 · Supple",
-    "s34_c4_s3": "3 · Firm",
-    "s34_c4_s4": "4 · Stiff",
-    "s34_c4_s5": "5 · Locked ✕",
+    "s34_c4_s2": "2 · Firm",
+    "s34_c4_s3": "3 · Locked ✕",
     "s34_dyn_lbl": "Playable Dynamics (Outcome)",
     "s34_kpi1_lbl": "Restoring Force",
     "s34_kpi2_lbl": "Contact Time τc",
     "s34_kpi3_lbl": "Tonal Character",
     "s34_exp_badge": "✦ CRISTOFORI’S ORIGINAL PRINCIPLE (1700)",
-    "s34_notes": "Start with 1. Cristofori Roll (1700): His leathered hollow parchment cylinder uses circumferential surface tension with zero dead core mass to generate high restoring force and short contact time τc. Then switch to 2. Renner Tension Spring: Peak compaction sits at the crown, dropping to half (½) at the widest flank, while uncut wool fibers taper onto the wood moulding fixed by glue and rivet. Use the 5-stage toggles to show why dynamics are an outcome: an overly hard crown/transition prevents pianissimo, while insufficient elasticity or a stiff outer-contour bridge locks out the flank, prolongs τc, prevents fortissimo, and reshapes partials H1–H12.",
+    "s34_notes": "Start with 1. Cristofori Roll (1700): His leathered hollow parchment cylinder uses circumferential surface tension with zero dead core mass to generate high restoring force and short contact time τc. Then switch to 2. Renner Tension Spring: Peak compaction sits at the crown, dropping to half (½) at the widest flank, while uncut wool fibers taper onto the wood moulding fixed by glue and rivet. Use the 3-stage toggles to show why dynamics are an outcome: an overly hard crown/transition prevents pianissimo, while insufficient elasticity or a stiff outer-contour bridge locks out the flank, prolongs τc, prevents fortissimo, and reshapes partials H1–H12.",
     "s35_category": "Part 5: Voicing • Vorintonation",
     "s35_title": "Pre-Voicing (Pre-Needling): Deep 90° Stitches in Blue Wedge",
     "s35_subtitle": "Relieving factory pre-tension and channeling elastic energy into the forte wedge",
@@ -17589,35 +17565,27 @@ window.slideTranslations = {
     "s34_spec_delta": "ΔdB 増減",
     "s34_spec_abs": "レベル + ΔdB",
     "s34_c1_lbl": "1. フェルト弾性と表面張力",
-    "s34_c1_s1": "1 · 鈍重",
-    "s34_c1_s2": "2 · 低弾性",
-    "s34_c1_s3": "3 · 中程度",
-    "s34_c1_s4": "4 · 高弾性",
-    "s34_c1_s5": "5 · 最大",
+    "s34_c1_s1": "1 · 低弾性",
+    "s34_c1_s2": "2 · 中程度",
+    "s34_c1_s3": "3 · 高弾性",
     "s34_c2_lbl": "2. ハンマー形状（クラウン曲率半径）",
     "s34_c2_s1": "1 · 広角",
-    "s34_c2_s2": "2 · 丸型",
-    "s34_c2_s3": "3 · 標準",
-    "s34_c2_s4": "4 · 細身",
-    "s34_c2_s5": "5 · 鋭角",
+    "s34_c2_s2": "2 · 標準",
+    "s34_c2_s3": "3 · 鋭角",
     "s34_c3_lbl": "3. クラウン圧縮密度（フランク＝½）",
     "s34_c3_s1": "1 · 柔軟",
-    "s34_c3_s2": "2 · 穏やか",
-    "s34_c3_s3": "3 · 最適",
-    "s34_c3_s4": "4 · 硬め",
-    "s34_c3_s5": "5 · 過硬",
+    "s34_c3_s2": "2 · 最適",
+    "s34_c3_s3": "3 · 過硬",
     "s34_c4_lbl": "4. クラウン→フランク移行帯（外周輪郭）",
     "s34_c4_s1": "1 · 開放",
-    "s34_c4_s2": "2 · 柔軟",
-    "s34_c4_s3": "3 · やや硬",
-    "s34_c4_s4": "4 · 硬直",
-    "s34_c4_s5": "5 · 遮断 ✕",
+    "s34_c4_s2": "2 · やや硬",
+    "s34_c4_s3": "3 · 遮断 ✕",
     "s34_dyn_lbl": "演奏可能なダイナミクス（結果）",
     "s34_kpi1_lbl": "弾性復元力",
     "s34_kpi2_lbl": "接触時間 τc",
     "s34_kpi3_lbl": "音色と応答",
     "s34_exp_badge": "✦ クリストフォリの原点原理 (1700)",
-    "s34_notes": "まず「1. クリストフォリの革巻きロール (1700)」から開始：中空の羊皮紙ロールは外周の表面張力を活かし、内部の死荷重ゼロで高い弾性復元力と短い接触時間 τc を生み出します。次に「2. レンナー張力スプリング」へ切り替え：クラウンが最高密度、最広部フランクがその半分（½）の圧縮密度を持ち、繊維は木芯上で接着剤とリベットにより固定されます。5段階ボタンで実演：クラウンや移行帯が硬すぎると pp が成立せず、フェルトの弾性不足や外周移行帯の硬化はフランクへの力伝達を遮断して接触時間 τc を延ばし、ff の喪失と倍音構造（H1〜H12）の変化を招きます。",
+    "s34_notes": "まず「1. クリストフォリの革巻きロール (1700)」から開始：中空の羊皮紙ロールは外周の表面張力を活かし、内部の死荷重ゼロで高い弾性復元力と短い接触時間 τc を生み出します。次に「2. レンナー張力スプリング」へ切り替え：クラウンが最高密度、最広部フランクがその半分（½）の圧縮密度を持ち、繊維は木芯上で接着剤とリベットにより固定されます。3段階ボタンで実演：クラウンや移行帯が硬すぎると pp が成立せず、フェルトの弾性不足や外周移行帯の硬化はフランクへの力伝達を遮断して接触時間 τc を延ばし、ff の喪失と倍音構造（H1〜H12）の変化を招きます。",
     "s35_category": "第7部：ヴォイシング（整音）の極意",
     "s35_title": "予備整音（初期針入れ）：ブルーウェッジへの深層90度針入れ",
     "s35_subtitle": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil",
@@ -18533,34 +18501,26 @@ window.slideTranslations = {
     "s34_spec_abs": "电平 + ΔdB",
     "s34_c1_lbl": "1. 毛毡弹性与外层表面张力",
     "s34_c1_s1": "1 · 迟滞",
-    "s34_c1_s2": "2 · 偏弱",
-    "s34_c1_s3": "3 · 中等",
-    "s34_c1_s4": "4 · 高弹",
-    "s34_c1_s5": "5 · 最大",
+    "s34_c1_s2": "2 · 中等",
+    "s34_c1_s3": "3 · 高弹",
     "s34_c2_lbl": "2. 弦槌几何形状（槌冠曲率半径）",
-    "s34_c2_s1": "1 · 宽平",
-    "s34_c2_s2": "2 · 圆润",
-    "s34_c2_s3": "3 · 音乐会",
-    "s34_c2_s4": "4 · 修长",
-    "s34_c2_s5": "5 · 尖窄",
+    "s34_c2_s1": "1 · 宽圆",
+    "s34_c2_s2": "2 · 音乐会",
+    "s34_c2_s3": "3 · 尖窄",
     "s34_c3_lbl": "3. 槌冠压实度（侧翼最宽处 ＝ ½）",
     "s34_c3_s1": "1 · 偏软",
-    "s34_c3_s2": "2 · 柔和",
-    "s34_c3_s3": "3 · 理想",
-    "s34_c3_s4": "4 · 偏硬",
-    "s34_c3_s5": "5 · 过硬",
+    "s34_c3_s2": "2 · 理想",
+    "s34_c3_s3": "3 · 过硬",
     "s34_c4_lbl": "4. 槌冠→侧翼过渡区（外轮廓刚度）",
     "s34_c4_s1": "1 · 贯通",
-    "s34_c4_s2": "2 · 柔顺",
-    "s34_c4_s3": "3 · 偏紧",
-    "s34_c4_s4": "4 · 僵硬",
-    "s34_c4_s5": "5 · 锁死 ✕",
+    "s34_c4_s2": "2 · 偏紧",
+    "s34_c4_s3": "3 · 锁死 ✕",
     "s34_dyn_lbl": "可奏出的动态范围（物理结果）",
     "s34_kpi1_lbl": "弹性回弹力",
     "s34_kpi2_lbl": "接触时间 τc",
     "s34_kpi3_lbl": "音色与动态",
     "s34_exp_badge": "✦ 克里斯托弗里的原始智慧 (1700)",
-    "s34_notes": "首先展示“1. 克里斯托弗里皮包纸卷 (1700)”：鹿皮包裹的中空羊皮纸圆筒利用圆周表面张力，零内部死重即可产生高回弹力与极短接触时间 τc。随后切换至“2. 雷诺复合张力弹簧弦槌”：槌冠处压实度最高，向最宽侧翼递减为一半（½），毛毡纤维在木芯尾部渐窄收尾并由胶水与铆钉锁紧。用5档切换按钮现场演示：槌冠或过渡带过硬会导致无法奏出 pp；若毛毡缺乏弹性或外轮廓过渡区过硬锁死侧翼，接触时间 τc 将被延长从而闷死琴弦、无法奏出 ff，并在下方实时看到 H1–H12 泛音结构的增减变化。",
+    "s34_notes": "首先展示“1. 克里斯托弗里皮包纸卷 (1700)”：鹿皮包裹的中空羊皮纸圆筒利用圆周表面张力，零内部死重即可产生高回弹力与极短接触时间 τc。随后切换至“2. 雷诺复合张力弹簧弦槌”：槌冠处压实度最高，向最宽侧翼递减为一半（½），毛毡纤维在木芯尾部渐窄收尾并由胶水与铆钉锁紧。用3档切换按钮现场演示：槌冠或过渡带过硬会导致无法奏出 pp；若毛毡缺乏弹性或外轮廓过渡区过硬锁死侧翼，接触时间 τc 将被延长从而闷死琴弦、无法奏出 ff，并在下方实时看到 H1–H12 泛音结构的增减变化。",
     "s35_category": "第七部分：钢琴整音大师秘籍",
     "s35_title": "初期预整音（Pre-Needling）：蓝色极强音楔区深度垂直扎针释放死应力",
     "s35_subtitle": "Abbau werkseitiger Vorspannung und Energieübertragung in den Forte-Keil",
@@ -26053,15 +26013,15 @@ window.YamahaKitController = new YamahaKitStage();
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 hart · τc = ${tau} ms ↑`,
           specRoles: ['Grundton', 'Oktave', 'Quinte', '2. Okt.', 'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.', 'Sekunde', 'Gr. Terz', '11. Teilt.', 'Duodez.'],
           c1: '1. Filz-Elastizität & Oberflächenspannung',
-          steps1: ['1 · Träge', '2 · Schwach', '3 · Mittel', '4 · Elastisch', '5 · Max.'],
+          steps1: ['1 · Träge', '2 · Mittel', '3 · Elastisch'],
           c2: '2. Hammerkopf-Form (Scheitelradius)',
-          steps2: ['1 · Breit', '2 · Rund', '3 · Konzert', '4 · Schlank', '5 · Spitz'],
+          steps2: ['1 · Breit', '2 · Konzert', '3 · Spitz'],
           c3: '3. Scheitel-Verdichtung (Flanke = ½)',
-          steps3: ['1 · Weich', '2 · Sanft', '3 · Ideal', '4 · Fest', '5 · Zu hart'],
+          steps3: ['1 · Weich', '2 · Ideal', '3 · Zu hart'],
           c3ValR: (ap, fl) => `Scheitel ${ap} % · Flanke ${fl} %`,
           c3ValC: (d) => `Wicklung ${d} %`,
           c4: '4. Übergang Scheitel → Flanke (Außenkontur)',
-          steps4: ['1 · Frei', '2 · Offen', '3 · Fest', '4 · Steif', '5 · Sperrt ✕'],
+          steps4: ['1 · Frei', '2 · Fest', '3 · Sperrt ✕'],
           c4Open: (pct) => `Kraftfluss frei (${pct} % Flanke)`,
           c4Mid: (pct) => `Teil-Sperre (${pct} % Flanke)`,
           c4Block: (pct) => `Blockiert! (${pct} % Flanke)`,
@@ -26189,15 +26149,15 @@ window.YamahaKitController = new YamahaKitStage();
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 harsh · τc = ${tau} ms ↑`,
           specRoles: ['Fundam.', 'Octave', '5th', '2nd Oct', 'Maj 3rd', '5th', '7th', '3rd Oct', 'Maj 2nd', 'Maj 3rd', '11th', '12th'],
           c1: '1. Felt Elasticity & Surface Tension',
-          steps1: ['1 · Dead', '2 · Weak', '3 · Medium', '4 · Elastic', '5 · Max'],
+          steps1: ['1 · Sluggish', '2 · Medium', '3 · Elastic'],
           c2: '2. Hammerhead Shape (Crown Radius)',
-          steps2: ['1 · Wide', '2 · Round', '3 · Concert', '4 · Slender', '5 · Pointed'],
+          steps2: ['1 · Wide', '2 · Concert', '3 · Pointed'],
           c3: '3. Crown Compaction (Flank = ½)',
-          steps3: ['1 · Soft', '2 · Gentle', '3 · Ideal', '4 · Firm', '5 · Too Hard'],
+          steps3: ['1 · Soft', '2 · Ideal', '3 · Too Hard'],
           c3ValR: (ap, fl) => `Crown ${ap}% · Flank ${fl}%`,
           c3ValC: (d) => `Roll Winding ${d}%`,
           c4: '4. Crown → Flank Transition (Outer Contour)',
-          steps4: ['1 · Open', '2 · Supple', '3 · Firm', '4 · Stiff', '5 · Locked ✕'],
+          steps4: ['1 · Open', '2 · Firm', '3 · Locked ✕'],
           c4Open: (pct) => `Open Flow (${pct}% Flank)`,
           c4Mid: (pct) => `Partial Block (${pct}% Flank)`,
           c4Block: (pct) => `Blocked! (${pct}% Flank)`,
@@ -26325,15 +26285,15 @@ window.YamahaKitController = new YamahaKitStage();
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 過硬 · τc = ${tau} ms ↑`,
           specRoles: ['基音', '8度', '5度', '2Oct', '長3度', '5度', '7倍音', '3Oct', '長2度', '長3度', '11倍音', '12度'],
           c1: '1. フェルト弾性と表面張力',
-          steps1: ['1 · 鈍重', '2 · 低弾性', '3 · 中程度', '4 · 高弾性', '5 · 最大'],
+          steps1: ['1 · 低弾性', '2 · 中程度', '3 · 高弾性'],
           c2: '2. ハンマー形状（クラウン曲率半径）',
-          steps2: ['1 · 広角', '2 · 丸型', '3 · 標準', '4 · 細身', '5 · 鋭角'],
+          steps2: ['1 · 広角', '2 · 標準', '3 · 鋭角'],
           c3: '3. クラウン圧縮密度（フランク＝½）',
-          steps3: ['1 · 柔軟', '2 · 穏やか', '3 · 最適', '4 · 硬め', '5 · 過硬'],
+          steps3: ['1 · 柔軟', '2 · 最適', '3 · 過硬'],
           c3ValR: (ap, fl) => `クラウン ${ap}% · フランク ${fl}%`,
           c3ValC: (d) => `ロール巻密度 ${d}%`,
           c4: '4. クラウン→フランク移行帯（外周輪郭）',
-          steps4: ['1 · 開放', '2 · 柔軟', '3 · やや硬', '4 · 硬直', '5 · 遮断 ✕'],
+          steps4: ['1 · 開放', '2 · やや硬', '3 · 遮断 ✕'],
           c4Open: (pct) => `伝達良好 (フランク ${pct}%)`,
           c4Mid: (pct) => `一部遮断 (フランク ${pct}%)`,
           c4Block: (pct) => `伝達遮断! (フランク ${pct}%)`,
@@ -26461,15 +26421,15 @@ window.YamahaKitController = new YamahaKitStage();
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 生硬 · τc = ${tau} ms ↑`,
           specRoles: ['基音', '八度', '五度', '双八度', '大三度', '五度', '七泛音', '三八度', '大二度', '大三度', '十一音', '十二度'],
           c1: '1. 毛毡弹性与外层表面张力',
-          steps1: ['1 · 迟滞', '2 · 偏弱', '3 · 中等', '4 · 高弹', '5 · 最大'],
+          steps1: ['1 · 迟滞', '2 · 中等', '3 · 高弹'],
           c2: '2. 弦槌几何形状（槌冠曲率半径）',
-          steps2: ['1 · 宽平', '2 · 圆润', '3 · 音乐会', '4 · 修长', '5 · 尖窄'],
+          steps2: ['1 · 宽圆', '2 · 音乐会', '3 · 尖窄'],
           c3: '3. 槌冠压实度（侧翼最宽处 ＝ ½）',
-          steps3: ['1 · 偏软', '2 · 柔和', '3 · 理想', '4 · 偏硬', '5 · 过硬'],
+          steps3: ['1 · 偏软', '2 · 理想', '3 · 过硬'],
           c3ValR: (ap, fl) => `槌冠 ${ap}% · 侧翼 ${fl}%`,
           c3ValC: (d) => `纸卷紧密度 ${d}%`,
           c4: '4. 槌冠→侧翼过渡区（外轮廓刚度）',
-          steps4: ['1 · 贯通', '2 · 柔顺', '3 · 偏紧', '4 · 僵硬', '5 · 锁死 ✕'],
+          steps4: ['1 · 贯通', '2 · 偏紧', '3 · 锁死 ✕'],
           c4Open: (pct) => `力流贯通 (侧翼 ${pct}%)`,
           c4Mid: (pct) => `部分受阻 (侧翼 ${pct}%)`,
           c4Block: (pct) => `力流中断! (侧翼 ${pct}%)`,
@@ -26576,7 +26536,7 @@ window.YamahaKitController = new YamahaKitStage();
       };
 
       const MODE_PRESETS = {
-        cristofori: { tension: 95, shape: 72, density: 40, contourStiff: 12 },
+        cristofori: { tension: 95, shape: 52, density: 61, contourStiff: 12 },
         renner:     { tension: 95, shape: 52, density: 61, contourStiff: 12 }
       };
 
@@ -26585,10 +26545,10 @@ window.YamahaKitController = new YamahaKitStage();
           this.lang = 'de';
           this.mode = 'cristofori'; // Start directly with Cristofori's leathered roll!
           this.specMode = 'delta';  // 'delta' (ΔdB-Änderung) | 'abs' (Pegel + ΔdB)
-          this.tension = 95;        // 5-stage toggle: [28, 46, 62, 82, 95]
-          this.shape = 72;          // 5-stage toggle: [10, 30, 52, 72, 94]
-          this.density = 40;        // 5-stage toggle: [13, 40, 61, 78, 92] (Crown -> 1/2 Flank)
-          this.contourStiff = 12;   // 5-stage toggle: [12, 34, 49, 68, 90] (Crown -> Flank transition)
+          this.tension = 95;        // 3-stage toggle: [32, 62, 95]
+          this.shape = 52;          // 3-stage toggle: [16, 52, 86]
+          this.density = 61;        // 3-stage toggle: [22, 61, 92] (Crown -> 1/2 Flank)
+          this.contourStiff = 12;   // 3-stage toggle: [12, 50, 90] (Crown -> Flank transition)
           this.autoLoop = true;     // Continuous calm slow-motion bounce animation by default
           this.strikeStartMs = performance.now();
           this.isStriking = true;

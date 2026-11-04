@@ -4043,56 +4043,50 @@ def get_all_slides_html():
               </div>
             </div>
 
-            <!-- RECHTE SPALTE: 4 PARAMETER MIT 5-STUFEN-TOGGLE, SPIELBARE DYNAMIK, 3 KPIS & FACH-ERKLÄRUNG -->
+            <!-- RECHTE SPALTE: 4 PARAMETER MIT 3-STUFEN-TOGGLE, SPIELBARE DYNAMIK, 3 KPIS & FACH-ERKLÄRUNG -->
             <div class="hsp-col-right">
               <div class="hsp-card" style="height: 100%; justify-content: space-between;">
                 <div class="hsp-ctrl-grid">
-                  <!-- Parameter 1: Filz-Elastizität & Oberflächenspannung (5-Stufen-Toggle) -->
+                  <!-- Parameter 1: Filz-Elastizität & Oberflächenspannung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c1" data-i18n="s34_c1_lbl">1. Filz-Elastizität &amp; Oberflächenspannung</span>
                       <span class="hsp-ctrl-val" id="hsp-val-c1">95 %</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-tension" role="group" aria-labelledby="hsp-lbl-c1">
-                      <button type="button" class="hsp-step-btn" data-val="28" data-tone="bad" aria-pressed="false" data-i18n="s34_c1_s1">1 · Träge</button>
-                      <button type="button" class="hsp-step-btn" data-val="46" data-tone="bad" aria-pressed="false" data-i18n="s34_c1_s2">2 · Schwach</button>
-                      <button type="button" class="hsp-step-btn" data-val="62" data-tone="warn" aria-pressed="false" data-i18n="s34_c1_s3">3 · Mittel</button>
-                      <button type="button" class="hsp-step-btn" data-val="82" data-tone="good" aria-pressed="false" data-i18n="s34_c1_s4">4 · Elastisch</button>
-                      <button type="button" class="hsp-step-btn active" data-val="95" data-tone="good" aria-pressed="true" data-i18n="s34_c1_s5">5 · Max.</button>
+                      <button type="button" class="hsp-step-btn" data-val="32" data-tone="bad" aria-pressed="false" data-i18n="s34_c1_s1">1 · Träge</button>
+                      <button type="button" class="hsp-step-btn" data-val="62" data-tone="warn" aria-pressed="false" data-i18n="s34_c1_s2">2 · Mittel</button>
+                      <button type="button" class="hsp-step-btn active" data-val="95" data-tone="good" aria-pressed="true" data-i18n="s34_c1_s3">3 · Elastisch</button>
                     </div>
                   </div>
 
-                  <!-- Parameter 2: Form & Scheitelkrümmung (5-Stufen-Toggle) -->
+                  <!-- Parameter 2: Form & Scheitelkrümmung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c2" data-i18n="s34_c2_lbl">2. Hammerkopf-Form (Scheitelradius)</span>
-                      <span class="hsp-ctrl-val" id="hsp-val-c2">R ≈ 11,1 mm</span>
+                      <span class="hsp-ctrl-val" id="hsp-val-c2">R ≈ 12,6 mm</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-shape" role="group" aria-labelledby="hsp-lbl-c2">
-                      <button type="button" class="hsp-step-btn" data-val="10" data-tone="soft" aria-pressed="false" data-i18n="s34_c2_s1">1 · Breit</button>
-                      <button type="button" class="hsp-step-btn" data-val="30" data-tone="soft" aria-pressed="false" data-i18n="s34_c2_s2">2 · Rund</button>
-                      <button type="button" class="hsp-step-btn" data-val="52" data-tone="good" aria-pressed="false" data-i18n="s34_c2_s3">3 · Konzert</button>
-                      <button type="button" class="hsp-step-btn active" data-val="72" data-tone="gold" aria-pressed="true" data-i18n="s34_c2_s4">4 · Schlank</button>
-                      <button type="button" class="hsp-step-btn" data-val="94" data-tone="warn" aria-pressed="false" data-i18n="s34_c2_s5">5 · Spitz</button>
+                      <button type="button" class="hsp-step-btn" data-val="16" data-tone="soft" aria-pressed="false" data-i18n="s34_c2_s1">1 · Breit</button>
+                      <button type="button" class="hsp-step-btn active" data-val="52" data-tone="good" aria-pressed="true" data-i18n="s34_c2_s2">2 · Konzert</button>
+                      <button type="button" class="hsp-step-btn" data-val="86" data-tone="warn" aria-pressed="false" data-i18n="s34_c2_s3">3 · Spitz</button>
                     </div>
                   </div>
 
-                  <!-- Parameter 3: Scheitel-Verdichtung -> 1/2 Flanken-Verdichtung (5-Stufen-Toggle) -->
+                  <!-- Parameter 3: Scheitel-Verdichtung -> 1/2 Flanken-Verdichtung (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c3" data-i18n="s34_c3_lbl">3. Scheitel-Verdichtung (Flanke = ½)</span>
-                      <span class="hsp-ctrl-val" id="hsp-val-c3">Wicklung 40 %</span>
+                      <span class="hsp-ctrl-val" id="hsp-val-c3">Wicklung 61 %</span>
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-density" role="group" aria-labelledby="hsp-lbl-c3">
-                      <button type="button" class="hsp-step-btn" data-val="13" data-tone="soft" aria-pressed="false" data-i18n="s34_c3_s1">1 · Weich</button>
-                      <button type="button" class="hsp-step-btn active" data-val="40" data-tone="good" aria-pressed="true" data-i18n="s34_c3_s2">2 · Sanft</button>
-                      <button type="button" class="hsp-step-btn" data-val="61" data-tone="good" aria-pressed="false" data-i18n="s34_c3_s3">3 · Ideal</button>
-                      <button type="button" class="hsp-step-btn" data-val="78" data-tone="warn" aria-pressed="false" data-i18n="s34_c3_s4">4 · Fest</button>
-                      <button type="button" class="hsp-step-btn" data-val="92" data-tone="bad" aria-pressed="false" data-i18n="s34_c3_s5">5 · Zu hart</button>
+                      <button type="button" class="hsp-step-btn" data-val="22" data-tone="soft" aria-pressed="false" data-i18n="s34_c3_s1">1 · Weich</button>
+                      <button type="button" class="hsp-step-btn active" data-val="61" data-tone="good" aria-pressed="true" data-i18n="s34_c3_s2">2 · Ideal</button>
+                      <button type="button" class="hsp-step-btn" data-val="92" data-tone="bad" aria-pressed="false" data-i18n="s34_c3_s3">3 · Zu hart</button>
                     </div>
                   </div>
 
-                  <!-- Parameter 4: Kritische Übergangszone Scheitel -> Flanke (5-Stufen-Toggle) -->
+                  <!-- Parameter 4: Kritische Übergangszone Scheitel -> Flanke (3-Stufen-Toggle) -->
                   <div class="hsp-ctrl-block" id="hsp-block-contour">
                     <div class="hsp-ctrl-top">
                       <span class="hsp-ctrl-label" id="hsp-lbl-c4" data-i18n="s34_c4_lbl">4. Übergang Scheitel → Flanke (Außenkontur)</span>
@@ -4100,10 +4094,8 @@ def get_all_slides_html():
                     </div>
                     <div class="hsp-step-group" id="hsp-grp-contour" role="group" aria-labelledby="hsp-lbl-c4">
                       <button type="button" class="hsp-step-btn active" data-val="12" data-tone="good" aria-pressed="true" data-i18n="s34_c4_s1">1 · Frei</button>
-                      <button type="button" class="hsp-step-btn" data-val="34" data-tone="good" aria-pressed="false" data-i18n="s34_c4_s2">2 · Offen</button>
-                      <button type="button" class="hsp-step-btn" data-val="49" data-tone="warn" aria-pressed="false" data-i18n="s34_c4_s3">3 · Fest</button>
-                      <button type="button" class="hsp-step-btn" data-val="68" data-tone="bad" aria-pressed="false" data-i18n="s34_c4_s4">4 · Steif</button>
-                      <button type="button" class="hsp-step-btn" data-val="90" data-tone="bad" aria-pressed="false" data-i18n="s34_c4_s5">5 · Sperrt ✕</button>
+                      <button type="button" class="hsp-step-btn" data-val="50" data-tone="warn" aria-pressed="false" data-i18n="s34_c4_s2">2 · Fest</button>
+                      <button type="button" class="hsp-step-btn" data-val="90" data-tone="bad" aria-pressed="false" data-i18n="s34_c4_s3">3 · Sperrt ✕</button>
                     </div>
                   </div>
 

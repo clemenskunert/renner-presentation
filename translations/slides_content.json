@@ -5282,33 +5282,21 @@
         },
         "s34_c1_s1": {
           "de": "1 · Träge",
-          "en": "1 · Dead",
-          "ja": "1 · 鈍重",
+          "en": "1 · Sluggish",
+          "ja": "1 · 低弾性",
           "zh": "1 · 迟滞"
         },
         "s34_c1_s2": {
-          "de": "2 · Schwach",
-          "en": "2 · Weak",
-          "ja": "2 · 低弾性",
-          "zh": "2 · 偏弱"
+          "de": "2 · Mittel",
+          "en": "2 · Medium",
+          "ja": "2 · 中程度",
+          "zh": "2 · 中等"
         },
         "s34_c1_s3": {
-          "de": "3 · Mittel",
-          "en": "3 · Medium",
-          "ja": "3 · 中程度",
-          "zh": "3 · 中等"
-        },
-        "s34_c1_s4": {
-          "de": "4 · Elastisch",
-          "en": "4 · Elastic",
-          "ja": "4 · 高弾性",
-          "zh": "4 · 高弹"
-        },
-        "s34_c1_s5": {
-          "de": "5 · Max.",
-          "en": "5 · Max",
-          "ja": "5 · 最大",
-          "zh": "5 · 最大"
+          "de": "3 · Elastisch",
+          "en": "3 · Elastic",
+          "ja": "3 · 高弾性",
+          "zh": "3 · 高弹"
         },
         "s34_c2_lbl": {
           "de": "2. Hammerkopf-Form (Scheitelradius)",
@@ -5320,31 +5308,19 @@
           "de": "1 · Breit",
           "en": "1 · Wide",
           "ja": "1 · 広角",
-          "zh": "1 · 宽平"
+          "zh": "1 · 宽圆"
         },
         "s34_c2_s2": {
-          "de": "2 · Rund",
-          "en": "2 · Round",
-          "ja": "2 · 丸型",
-          "zh": "2 · 圆润"
+          "de": "2 · Konzert",
+          "en": "2 · Concert",
+          "ja": "2 · 標準",
+          "zh": "2 · 音乐会"
         },
         "s34_c2_s3": {
-          "de": "3 · Konzert",
-          "en": "3 · Concert",
-          "ja": "3 · 標準",
-          "zh": "3 · 音乐会"
-        },
-        "s34_c2_s4": {
-          "de": "4 · Schlank",
-          "en": "4 · Slender",
-          "ja": "4 · 細身",
-          "zh": "4 · 修长"
-        },
-        "s34_c2_s5": {
-          "de": "5 · Spitz",
-          "en": "5 · Pointed",
-          "ja": "5 · 鋭角",
-          "zh": "5 · 尖窄"
+          "de": "3 · Spitz",
+          "en": "3 · Pointed",
+          "ja": "3 · 鋭角",
+          "zh": "3 · 尖窄"
         },
         "s34_c3_lbl": {
           "de": "3. Scheitel-Verdichtung (Flanke = ½)",
@@ -5359,28 +5335,16 @@
           "zh": "1 · 偏软"
         },
         "s34_c3_s2": {
-          "de": "2 · Sanft",
-          "en": "2 · Gentle",
-          "ja": "2 · 穏やか",
-          "zh": "2 · 柔和"
+          "de": "2 · Ideal",
+          "en": "2 · Ideal",
+          "ja": "2 · 最適",
+          "zh": "2 · 理想"
         },
         "s34_c3_s3": {
-          "de": "3 · Ideal",
-          "en": "3 · Ideal",
-          "ja": "3 · 最適",
-          "zh": "3 · 理想"
-        },
-        "s34_c3_s4": {
-          "de": "4 · Fest",
-          "en": "4 · Firm",
-          "ja": "4 · 硬め",
-          "zh": "4 · 偏硬"
-        },
-        "s34_c3_s5": {
-          "de": "5 · Zu hart",
-          "en": "5 · Too Hard",
-          "ja": "5 · 過硬",
-          "zh": "5 · 过硬"
+          "de": "3 · Zu hart",
+          "en": "3 · Too Hard",
+          "ja": "3 · 過硬",
+          "zh": "3 · 过硬"
         },
         "s34_c4_lbl": {
           "de": "4. Übergang Scheitel → Flanke (Außenkontur)",
@@ -5395,28 +5359,16 @@
           "zh": "1 · 贯通"
         },
         "s34_c4_s2": {
-          "de": "2 · Offen",
-          "en": "2 · Supple",
-          "ja": "2 · 柔軟",
-          "zh": "2 · 柔顺"
+          "de": "2 · Fest",
+          "en": "2 · Firm",
+          "ja": "2 · やや硬",
+          "zh": "2 · 偏紧"
         },
         "s34_c4_s3": {
-          "de": "3 · Fest",
-          "en": "3 · Firm",
-          "ja": "3 · やや硬",
-          "zh": "3 · 偏紧"
-        },
-        "s34_c4_s4": {
-          "de": "4 · Steif",
-          "en": "4 · Stiff",
-          "ja": "4 · 硬直",
-          "zh": "4 · 僵硬"
-        },
-        "s34_c4_s5": {
-          "de": "5 · Sperrt ✕",
-          "en": "5 · Locked ✕",
-          "ja": "5 · 遮断 ✕",
-          "zh": "5 · 锁死 ✕"
+          "de": "3 · Sperrt ✕",
+          "en": "3 · Locked ✕",
+          "ja": "3 · 遮断 ✕",
+          "zh": "3 · 锁死 ✕"
         },
         "s34_dyn_lbl": {
           "de": "Spielbare Dynamik (Ergebnis)",
@@ -5450,10 +5402,10 @@
         }
       },
       "notes": {
-        "de": "Beginnen Sie mit 1. Cristofori-Röllchen (1700): Das hohle, belederte Pergamentröhrchen nutzt die Oberflächenspannung des Rings ohne tote Innenmasse für maximale Rückstellkraft und kurze Kontaktzeit τc. Wechseln Sie dann auf 2. Renner-Spannungsfeder: Am Scheitel herrscht die höchste Verdichtung, an der breitesten Flanke exakt die Hälfte (½), während die ungeschliffenen Fasern auf dem Holzkern auslaufen und mit Klebstoff und Niete fixiert sind. Demonstrieren Sie mit den 5-stufigen Toggles: Ist der Scheitel oder Übergang zu hart, kann kein Pianissimo entstehen; fehlt die Elastizität (oder sperrt eine steife Außenkontur zwischen Scheitel und Flanke den Kraftfluss), verlängert sich τc, es entsteht kein Fortissimo, und die Teiltonstruktur H1–H12 kippt.",
-        "en": "Start with 1. Cristofori Roll (1700): His leathered hollow parchment cylinder uses circumferential surface tension with zero dead core mass to generate high restoring force and short contact time τc. Then switch to 2. Renner Tension Spring: Peak compaction sits at the crown, dropping to half (½) at the widest flank, while uncut wool fibers taper onto the wood moulding fixed by glue and rivet. Use the 5-stage toggles to show why dynamics are an outcome: an overly hard crown/transition prevents pianissimo, while insufficient elasticity or a stiff outer-contour bridge locks out the flank, prolongs τc, prevents fortissimo, and reshapes partials H1–H12.",
-        "ja": "まず「1. クリストフォリの革巻きロール (1700)」から開始：中空の羊皮紙ロールは外周の表面張力を活かし、内部の死荷重ゼロで高い弾性復元力と短い接触時間 τc を生み出します。次に「2. レンナー張力スプリング」へ切り替え：クラウンが最高密度、最広部フランクがその半分（½）の圧縮密度を持ち、繊維は木芯上で接着剤とリベットにより固定されます。5段階ボタンで実演：クラウンや移行帯が硬すぎると pp が成立せず、フェルトの弾性不足や外周移行帯の硬化はフランクへの力伝達を遮断して接触時間 τc を延ばし、ff の喪失と倍音構造（H1〜H12）の変化を招きます。",
-        "zh": "首先展示“1. 克里斯托弗里皮包纸卷 (1700)”：鹿皮包裹的中空羊皮纸圆筒利用圆周表面张力，零内部死重即可产生高回弹力与极短接触时间 τc。随后切换至“2. 雷诺复合张力弹簧弦槌”：槌冠处压实度最高，向最宽侧翼递减为一半（½），毛毡纤维在木芯尾部渐窄收尾并由胶水与铆钉锁紧。用5档切换按钮现场演示：槌冠或过渡带过硬会导致无法奏出 pp；若毛毡缺乏弹性或外轮廓过渡区过硬锁死侧翼，接触时间 τc 将被延长从而闷死琴弦、无法奏出 ff，并在下方实时看到 H1–H12 泛音结构的增减变化。"
+        "de": "Beginnen Sie mit 1. Cristofori-Röllchen (1700): Das hohle, belederte Pergamentröhrchen nutzt die Oberflächenspannung des Rings ohne tote Innenmasse für maximale Rückstellkraft und kurze Kontaktzeit τc. Wechseln Sie dann auf 2. Renner-Spannungsfeder: Am Scheitel herrscht die höchste Verdichtung, an der breitesten Flanke exakt die Hälfte (½), während die ungeschliffenen Fasern auf dem Holzkern auslaufen und mit Klebstoff und Niete fixiert sind. Demonstrieren Sie mit den 3-stufigen Toggles: Ist der Scheitel oder Übergang zu hart, kann kein Pianissimo entstehen; fehlt die Elastizität (oder sperrt eine steife Außenkontur zwischen Scheitel und Flanke den Kraftfluss), verlängert sich τc, es entsteht kein Fortissimo, und die Teiltonstruktur H1–H12 kippt.",
+        "en": "Start with 1. Cristofori Roll (1700): His leathered hollow parchment cylinder uses circumferential surface tension with zero dead core mass to generate high restoring force and short contact time τc. Then switch to 2. Renner Tension Spring: Peak compaction sits at the crown, dropping to half (½) at the widest flank, while uncut wool fibers taper onto the wood moulding fixed by glue and rivet. Use the 3-stage toggles to show why dynamics are an outcome: an overly hard crown/transition prevents pianissimo, while insufficient elasticity or a stiff outer-contour bridge locks out the flank, prolongs τc, prevents fortissimo, and reshapes partials H1–H12.",
+        "ja": "まず「1. クリストフォリの革巻きロール (1700)」から開始：中空の羊皮紙ロールは外周の表面張力を活かし、内部の死荷重ゼロで高い弾性復元力と短い接触時間 τc を生み出します。次に「2. レンナー張力スプリング」へ切り替え：クラウンが最高密度、最広部フランクがその半分（½）の圧縮密度を持ち、繊維は木芯上で接着剤とリベットにより固定されます。3段階ボタンで実演：クラウンや移行帯が硬すぎると pp が成立せず、フェルトの弾性不足や外周移行帯の硬化はフランクへの力伝達を遮断して接触時間 τc を延ばし、ff の喪失と倍音構造（H1〜H12）の変化を招きます。",
+        "zh": "首先展示“1. 克里斯托弗里皮包纸卷 (1700)”：鹿皮包裹的中空羊皮纸圆筒利用圆周表面张力，零内部死重即可产生高回弹力与极短接触时间 τc。随后切换至“2. 雷诺复合张力弹簧弦槌”：槌冠处压实度最高，向最宽侧翼递减为一半（½），毛毡纤维在木芯尾部渐窄收尾并由胶水与铆钉锁紧。用3档切换按钮现场演示：槌冠或过渡带过硬会导致无法奏出 pp；若毛毡缺乏弹性或外轮廓过渡区过硬锁死侧翼，接触时间 τc 将被延长从而闷死琴弦、无法奏出 ff，并在下方实时看到 H1–H12 泛音结构的增减变化。"
       }
     },
     "slide_35": {
