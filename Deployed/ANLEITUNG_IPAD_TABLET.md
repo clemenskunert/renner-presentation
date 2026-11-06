@@ -1,61 +1,37 @@
-# 🎹 Louis Renner Masterclass Präsentation – Standalone Deployment für Tablets & Mobile Endgeräte
+# Louis Renner Masterclass – 100% Offline Standalone Paket (Windows PC, Mac & iPad)
 
-Dieses Verzeichnis (`Deployed/`) enthält die **vollständig vorinstallierte und autarke Version** der Louis Renner Masterclass Konferenz-Präsentation 2025.
-
-> **Wichtig:** Auf dem Tablet ist **keine** Datensynchronisation, kein Python, kein Terminal und kein Server erforderlich! Alle 65 Folien und sämtliche Übersetzungen (Deutsch, Englisch, Japanisch, Chinesisch) sind bereits vollständig vorkompiliert.
-
----
-
-## 📱 1. Nutzung auf dem Apple iPad / Tablet (Offline)
-
-### Methode A: Direkt aus der Apple „Dateien“-App (Files App)
-1. Kopieren Sie den Ordner `Deployed` auf Ihr iPad (über AirDrop, USB-C Stick, iCloud Drive oder OneDrive).
-2. Öffnen Sie die App **„Dateien“** auf dem iPad.
-3. Tippen Sie im Ordner `Deployed` auf:
-   - **`index_offline_tablet.html`** (Empfohlen: Alle Skripte und Stile sind direkt eingebettet – öffnet sofort ohne Einschränkungen der Apple-Sandbox).
-   - Alternativ tippen Sie auf **`index.html`**.
-
-### Methode B: Als echte Vollbild-App auf dem Home-Bildschirm speichern (PWA)
-1. Öffnen Sie `index.html` oder `index_offline_tablet.html` in **Safari**.
-2. Tippen Sie oben rechts (oder in der Navigationsleiste) auf das **Teilen-Symbol** (Viereck mit Pfeil nach oben `↑`).
-3. Scrollen Sie in der Liste nach unten und tippen Sie auf **„Zum Home-Bildschirm“** (Add to Home Screen).
-4. Bestätigen Sie mit **„Hinzufügen“**.
-5. **Fertig:** Auf Ihrem iPad-Bildschirm erscheint das goldene **Louis Renner App-Icon**. Beim Antippen öffnet sich die Präsentation im **randlosen Vollbildmodus** – genau wie eine native iPad-App!
-
-### Wischgesten auf dem iPad:
-- **Nach links wischen:** Nächste Folie
-- **Nach rechts wischen:** Vorherige Folie
-- **Modul-Sprung:** Oben rechts auf `⊞ Module (Folie 2)` tippen
-- **Sprachauswahl:** Oben rechts auf das Zahnrad / Menü tippen (Deutsch, Englisch, Japanisch, Chinesisch)
+Dieser Ordner (`Deployed/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
+Alle **33 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
 
 ---
 
-## ☁️ 2. Nutzung über Microsoft SharePoint & Teams
+## 1. Start auf einem Windows PC (Windows 10 / 11 – Offline)
 
-Wenn Sie die Präsentation im SharePoint-Portal Ihres Unternehmens hinterlegen:
-- Öffnen Sie direkt die Datei **`Start_SharePoint.aspx`** oder **`presentation.aspx`**.
-- SharePoint Online führt diese Datei direkt im Webbrowser aus – ohne Download und auf jedem Endgerät (iPad, Mac, Windows, Android).
-
----
-
-## 💻 3. Nutzung auf Windows PC & Mac
-
-Falls der Ordner auf einen PC oder Mac kopiert wird:
-- **Windows:** Doppelklick auf `Start_Windows.bat` (startet automatisch den lokalen Server & öffnet den Browser).
-- **Mac:** Doppelklick auf `Start_Mac.app` (bequeme App mit Icon) oder `Start_Mac.command`.
-- **Ohne Server:** Doppelklick direkt auf `index.html` oder `index_offline_tablet.html`.
+1. Kopieren Sie den gesamten Ordner **`Deployed`** auf die lokale Festplatte (z. B. Desktop) oder starten Sie ihn vom USB-Stick.
+2. **Empfohlen:** Doppelklick auf **`Start_Windows.bat`**
+   - Startet automatisch den integrierten lokalen Streaming-Server (über Windows-eigenes PowerShell oder Python – **keine Installation, keine Admin-Rechte, keine Firewall-Freigabe nötig**) und öffnet den Standardbrowser (Edge / Chrome).
+3. **Direktstart ohne Skripte (falls Firmen-IT `.bat` blockiert):**
+   - Doppelklick direkt auf **`index_offline_tablet.html`** (alle Stile, Schriften und Skripte sind in einer einzigen Datei eingebettet).
+4. Drücken Sie im Browser **`F11`** (oder Taste **`F`** in der Präsentation) für den randlosen Vollbildmodus.
 
 ---
 
-## 📂 Struktur des Deployed-Ordners
+## 2. Start auf dem Mac (macOS – Offline)
 
-| Datei / Ordner | Zweck |
-| :--- | :--- |
-| **`index_offline_tablet.html`** | **Beste Wahl für iPad & Tablets:** 100% offline, alle Skripte eingebettet, keine Sandbox-Blockaden. |
-| **`index.html`** | Standard-Webversion für Browser und Server. |
-| **`Start_SharePoint.aspx`** | Direkte Ausführung in SharePoint Online / Teams. |
-| **`manifest.json` & `sw.js`** | PWA-Konfiguration für die Installation als Vollbild-App auf iPad & Android. |
-| **`Visuell/`** | Alle Bilder, Meisterklasse-Dokumente und hochauflösenden Medien. |
-| **`css/` & `js/`** | Modulare Stylesheets und vorkompilierte Übersetzungsdaten. |
-| **`Start_Windows.bat`** | 1-Klick-Starter für Windows-Rechner. |
-| **`Start_Mac.app` & `Start_Mac.command`** | 1-Klick-Starter für macOS (mit App-Icon bzw. Shell-Skript). |
+1. **Empfohlen:** Doppelklick auf **`Start_Mac.app`** oder **`Start_Mac.command`**.
+2. **Alternativ komplett ohne Server:** Doppelklick oder Rechtsklick → *Öffnen mit Chrome / Safari* auf **`index_offline_tablet.html`**.
+
+---
+
+## 3. Nutzung auf dem Apple iPad / Tablet (Offline)
+
+1. Ordner `Deployed` per AirDrop oder USB-C-Stick in die Apple **„Dateien“-App** (*Auf meinem iPad*) kopieren.
+2. Tippen Sie auf **`index_offline_tablet.html`**.
+
+---
+
+## 4. Referenten-Spickzettel (Druckfertige A4-PDFs)
+
+Im Unterordner **`Handouts/`** liegen die beiden separaten Spickzettel bereit:
+- `Referenten_Spickzettel_DE.pdf` (Deutsch, 5 Seiten A4)
+- `Speaker_Cheat_Sheet_EN.pdf` (Englisch, 5 Seiten A4)

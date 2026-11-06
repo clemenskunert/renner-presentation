@@ -1,5 +1,5 @@
 /**
- * Louis Renner Presentation - Yamaha Kit Stage Controller (Slide 27)
+ * Louis Renner Presentation - Yamaha Kit Stage Controller (Slide 20)
  * Implements the interactive stage layout matching Folie 5 (FFW History):
  * - Epoch/Topic tabs navigation
  * - Milestone stage panels with fade transition
@@ -38,7 +38,7 @@ class YamahaKitStage {
   }
 
   init() {
-    this.slideEl = document.querySelector('.slide[data-slide="27"]');
+    this.slideEl = (document.querySelector('.slide.yk-kit-slide') || document.querySelector('.slide[data-slide="19"]'));
     if (!this.slideEl) return;
 
     this.tabs = Array.from(this.slideEl.querySelectorAll('#yk-epoch-tabs .ffw-epoch-tab'));
@@ -110,6 +110,12 @@ class YamahaKitStage {
       });
     }
 
+    document.addEventListener('languageChanged', (e) => {
+      this.currentLang = (e && e.detail && e.detail.lang) || 'de';
+      this.updateZoomBtnText();
+      this.updatePlayBtnLabel();
+    });
+
     // Initial state
     this.updateUI();
   }
@@ -177,6 +183,7 @@ class YamahaKitStage {
       const icon = this.playBtn.querySelector('.ffw-play-icon');
       if (icon) icon.textContent = '⏸';
     }
+    this.updatePlayBtnLabel();
     this.runAutoplayStep();
   }
 
@@ -193,6 +200,39 @@ class YamahaKitStage {
       this.playBtn.classList.remove('playing');
       const icon = this.playBtn.querySelector('.ffw-play-icon');
       if (icon) icon.textContent = '▶';
+    }
+    this.updatePlayBtnLabel();
+  }
+
+  setLanguage(lang) {
+    this.currentLang = lang;
+    this.updateZoomBtnText();
+    this.updatePlayBtnLabel();
+  }
+
+  updatePlayBtnLabel() {
+    if (!this.playBtn) return;
+    const lbl = this.playBtn.querySelector('.ffw-play-label');
+    if (!lbl) return;
+    const lang = this.currentLang || (window.presentation && window.presentation.currentLang) || 'de';
+    if (this.isAutoplay) {
+      const pauseLabels = { de: 'Pause', en: 'Pause', ja: '一時停止', zh: '暂停' };
+      lbl.textContent = pauseLabels[lang] || 'Pause';
+    } else {
+      const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
+      lbl.textContent = (dict && dict.s20_play_label) || 'Präsentation abspielen';
+    }
+  }
+
+  updateZoomBtnText() {
+    if (!this.zoomBtn) return;
+    const lang = this.currentLang || (window.presentation && window.presentation.currentLang) || 'de';
+    const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
+    if (this.isZoomed) {
+      const closeFallbacks = { de: '✕ Schließen', en: '✕ Close', ja: '✕ 閉じる', zh: '✕ 关闭' };
+      this.zoomBtn.textContent = (dict && dict.s20_zoom_close) || closeFallbacks[lang] || closeFallbacks.de;
+    } else {
+      this.zoomBtn.textContent = (dict && dict.s20_zoom_btn) || '🔍 Detail-Lupe';
     }
   }
 
@@ -238,7 +278,7 @@ class YamahaKitStage {
       }
     }
     if (this.zoomBtn) {
-      this.zoomBtn.textContent = this.isZoomed ? '✕ Schließen' : '🔍 Detail-Lupe';
+      this.updateZoomBtnText();
     }
   }
 }

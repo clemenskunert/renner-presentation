@@ -19,7 +19,7 @@ class MeuselwitzTimelapse {
         month: "09.2025",
         phase: { de: "Phase 1: Start Bauvorhaben", en: "Phase 1: Project Kickoff", ja: "第1フェーズ：建設開始", zh: "第一阶段：建设工程启动" },
         title: { de: "Start des Bauvorhabens & Bestandsaufnahme", en: "Project Start & Site Assessment", ja: "建設プロジェクト開始と現地調査", zh: "工程启动与现场勘测规划" },
-        desc: { de: "Erste Begehung und Übergabe des Hallenkomplexes in Meuselwitz für die Zusammenlegung.", en: "Initial site handover and survey of the factory hall complex in Meuselwitz for consolidation.", ja: "拠点統合に向けたモイゼルヴィッツ工場棟の初期引き渡しと構造調査。", zh: "莫伊瑟尔维茨厂区交接与前期测绘，拉开双厂合并大幕。" },
+        desc: { de: "Erste Begehung und Übergabe des Hallenkomplexes in Meuselwitz für die Zusammenlegung.", en: "Initial site handover and survey of the factory hall complex in Meuselwitz for consolidation.", ja: "拠点統合に向けたモイゼルヴィッツ工場棟の初期引き渡しと構造調査。", zh: "莫伊塞尔维茨厂区交接与前期测绘，拉开双厂合并大幕。" },
         file: "Visuell/Bilder/02_Meuselwitz_Umbau/00_meuselwitz_bauvorhaben_start_2025.jpg"
       },
       {
@@ -53,7 +53,7 @@ class MeuselwitzTimelapse {
       {
         month: "06.2026",
         phase: { de: "Phase 3: Anlieferung", en: "Phase 3: Arrival", ja: "第3フェーズ：機械搬入", zh: "第三阶段：首批设备到厂" },
-        title: { de: "Ankunft der Schwertransporte in Meuselwitz", en: "Arrival of Machine Convoys in Meuselwitz", ja: "モイゼルヴィッツ工場への重機コンボイ到着", zh: "重载特种车队抵达莫伊瑟尔维茨新厂" },
+        title: { de: "Ankunft der Schwertransporte in Meuselwitz", en: "Arrival of Machine Convoys in Meuselwitz", ja: "モイゼルヴィッツ工場への重機コンボイ到着", zh: "重载特种车队抵达莫伊塞尔维茨新厂" },
         desc: { de: "Die ersten Kernmaschinen und Fertigungsstraßen erreichen das neue Hauptgelände.", en: "The primary manufacturing lines and custom presses arrive at the new facility gates.", ja: "レンナーを支える基幹機械群が新本社工場のゲートに次々と到着。", zh: "雷诺传奇机床与自动化线首批入驻新厂区大门。" },
         file: "Visuell/Bilder/02_Meuselwitz_Umbau/05_meuselwitz_anlieferung_maschinen.jpg"
       },
@@ -96,7 +96,7 @@ class MeuselwitzTimelapse {
         month: "08.2026",
         phase: { de: "Phase 5: Holzverarbeitung", en: "Phase 5: Wood Processing", ja: "第5フェーズ：木工加工", zh: "第五阶段：音响木材精加工" },
         title: { de: "Aufbau der Tonholz-Frässtationen", en: "Tonewood Milling Stations Installation", ja: "トーンウッド（響木）専用フライス加工ライン", zh: "白桦木与胡桃木核心数控铣削站" },
-        desc: { de: "Hochpräzise Fräsmaschinen für Hammerkerne, Kapseln und Mechanikschenkel.", en: "High-precision milling machines dedicated to hammer cores, flanges, and shanks.", ja: "ハンマーウッドコア、フレンジ、シャンクを削り出す高精度切削ステーション。", zh: "针对弦槌芯木、轴架与槌柄的高速微米级铣削站。" },
+        desc: { de: "Hochpräzise Fräsmaschinen für Hammerkerne, Kapseln und Mechanikschenkel.", en: "High-precision milling machines dedicated to hammer mouldings, flanges, and shanks.", ja: "ハンマーウッドコア、フレンジ、シャンクを削り出す高精度切削ステーション。", zh: "针对弦槌芯木、轴架与槌柄的高速微米级铣削站。" },
         file: "Visuell/Bilder/02_Meuselwitz_Umbau/11_meuselwitz_holzverarbeitung_anlagen.jpg"
       },
       {
@@ -158,7 +158,7 @@ class MeuselwitzTimelapse {
       {
         month: "09.2026",
         phase: { de: "Phase 7: Hallenabnahme", en: "Phase 7: Ready for Launch", ja: "第7フェーズ：引き渡し完了", zh: "第七阶段：主工厂验收就绪" },
-        title: { de: "Fertigungshalle in vollem Glanz bereit", en: "State-of-the-Art Factory Floor Complete", ja: "完成した新世代モイゼルヴィッツ工場の全貌", zh: "全新现代化莫伊瑟尔维茨总厂全景落成" },
+        title: { de: "Fertigungshalle in vollem Glanz bereit", en: "State-of-the-Art Factory Floor Complete", ja: "完成した新世代モイゼルヴィッツ工場の全貌", zh: "全新现代化莫伊塞尔维茨总厂全景落成" },
         desc: { de: "Helle, saubere und vollklimatisierte Industriehalle – bereit für den Produktionsstart.", en: "Bright, pristine, climate-stabilized production hall ready for full manufacturing launch.", ja: "明るく清潔で完全空調された、未来を切り拓くレンナー新拠点。", zh: "通透、洁净、恒温恒湿，全球钢琴击弦机新标杆生产基地正式整装待发。" },
         file: "Visuell/Bilder/02_Meuselwitz_Umbau/20_meuselwitz_fertigungshalle_gesamtansicht.jpg"
       },
@@ -186,7 +186,7 @@ class MeuselwitzTimelapse {
       {
         month: "10.2026",
         phase: { de: "Phase 8: Neuer Hauptsitz", en: "Phase 8: Global HQ", ja: "第8フェーズ：グローバル新本社", zh: "第八阶段：全球新旗舰总部" },
-        title: { de: "Der neue globale Hauptsitz Meuselwitz", en: "The New Global Headquarters Meuselwitz", ja: "ルイス・レンナー社 新グローバル本社（モイゼルヴィッツ）", zh: "德国雷诺全球新总部——莫伊瑟尔维茨" },
+        title: { de: "Der neue globale Hauptsitz Meuselwitz", en: "The New Global Headquarters Meuselwitz", ja: "ルイス・レンナー社 新グローバル本社（モイゼルヴィッツ）", zh: "德国雷诺全球新总部——莫伊塞尔维茨" },
         desc: { de: "Moderne Industriearchitektur und über 140 Jahre Tradition unter einem gemeinsamen Dach.", en: "Modern architectural efficiency merged with over 140 years of uncompromised German pedigree.", ja: "140年を超えるドイツ工芸の誇りと現代産業建築が高次元で融合。", zh: "当代精益制造理念与140余年德系弦槌泰斗地位的恢弘交融。" },
         file: "Visuell/Bilder/02_Meuselwitz_Umbau/24_meuselwitz_moderner_hauptsitz_aussen_innen.jpg"
       },

@@ -14,6 +14,8 @@ plus the official louis-renner.de history and Google Photos Meuselwitz transform
 
 import os
 import re
+import shutil
+from datetime import datetime
 
 def main():
     html_path = "index.html"
@@ -32,35 +34,41 @@ def main():
     after_deck = "\n    " + end_tag + content.split(end_tag)[1]
 
     # Now load generated slides
+    import importlib
     import slide_definitions
+    importlib.reload(slide_definitions)
     all_slides_html = slide_definitions.get_all_slides_html()
 
     new_content = before_deck + all_slides_html + after_deck
 
+    # Stamp fresh cache-buster ?v=<timestamp> on fonts.css, presentation.css and all js/*.js scripts
+    cache_ver = datetime.now().strftime("%Y%m%d_%H%M%S")
+    new_content = re.sub(
+        r'(<link\s+rel="stylesheet"\s+href="css/(?:fonts|presentation)\.css)(?:\?[^"]*)?(">)',
+        rf'\1?v={cache_ver}\2',
+        new_content,
+    )
+    new_content = re.sub(
+        r'(<script\s+src="js/[^"?]+\.js)(?:\?[^"]*)?("></script>)',
+        rf'\1?v={cache_ver}\2',
+        new_content,
+    )
+
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(new_content)
 
-    print(f"Successfully updated {html_path} with {slide_definitions.TOTAL_SLIDES} slides!")
+    print(f"Successfully updated {html_path} with {slide_definitions.TOTAL_SLIDES} slides (v={cache_ver})!")
 
-    # Auto-synchronize Deployed folder if it exists
+    # Auto-synchronize Deployed folder if it exists (unless invoked from build_deployed_package.py itself)
     deployed_dir = "Deployed"
-    if os.path.exists(deployed_dir):
+    if os.path.exists(deployed_dir) and os.environ.get("RENNER_SKIP_DEPLOY_SYNC") != "1":
         try:
-            # Standalone SharePoint Support: write directly to Deployed/
-            aspx_content = '<%@ Page Language="C#" AutoEventWireup="true" %>\n' + new_content
-            for aspx_name in ("Start_SharePoint.aspx", "presentation.aspx"):
-                with open(os.path.join(deployed_dir, aspx_name), "w", encoding="utf-8") as f:
-                    f.write(aspx_content)
-
             import importlib.util
             spec = importlib.util.spec_from_file_location("build_deployed", os.path.join("scripts", "build_deployed_package.py"))
             build_mod = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(build_mod)
-            build_mod.build_offline_tablet_html()
-            # Also update index.html in Deployed
-            shutil_copy = __import__('shutil').copy2
-            shutil_copy(html_path, os.path.join(deployed_dir, html_path))
-            print("✓ Deployed/ Ordner (index.html, ASPX & index_offline_tablet.html) automatisch synchronisiert!")
+            build_mod.sync_deployed_bundle(sync_media=False)
+            print("✓ Deployed/ Ordner (CSS+Fonts, JS, index.html, ASPX & index_offline_tablet.html) automatisch synchronisiert!")
         except Exception as e:
             print(f"[HINWEIS] Konnte Deployed/ nicht automatisch synchronisieren: {e}")
 

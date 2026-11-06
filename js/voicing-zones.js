@@ -1,6 +1,6 @@
 /**
  * Louis Renner Masterclass Presentation
- * Slide 35 (Chapter 5): Intonations-Zonen & Stichwirkung — Das Renner-Uhrenmodell
+ * Slide 28 (Chapter 5): Intonations-Zonen & Stichwirkung — Das Renner-Uhrenmodell
  * Based on Jens-Sören Kruse (Renner Academy 2025: "Voicing the Renner Hammerhead")
  * and Burkard Olbrich ("Intonieren — Geheimnis & Rätsel", 2012).
  *
@@ -17,7 +17,7 @@
 (function () {
   'use strict';
 
-  const ZONE_KEYS = ['blue', 'green', 'orange', 'purple', 'red'];
+  const ZONE_KEYS = ['blue', 'green', 'orange', 'purple', 'rivet', 'red'];
 
   const ZONE_META = {
     blue: {
@@ -26,7 +26,7 @@
       activeRgba: 'rgba(56, 189, 248, 0.62)',
       stroke: '#7dd3fc',
       angMinDeg: 61,
-      angMaxDeg: 108,
+      angMaxDeg: 90,
       depthFrac: 0.84, // deep up to just before underfelt
       needles: 3,
       tauIdeal: 1.78,
@@ -84,6 +84,22 @@
       kpiVal: '−5,1 dB',
       kpiCol: '#d8b4fe'
     },
+    rivet: {
+      color: '#facc15',
+      fillRgba: 'rgba(250, 204, 21, 0.27)',
+      activeRgba: 'rgba(250, 204, 21, 0.56)',
+      stroke: '#fef08a',
+      angMinDeg: 90,
+      angMaxDeg: 148,
+      depthFrac: 0.90, // few, deep stitches from above rivet toward flank!
+      needles: 1,      // 1-needle holder: few deep stitches
+      tauIdeal: 1.58,
+      sigmaIdeal: 104,
+      deltaIdeal: [-0.3, -0.1, 0.2, 0.6, 1.1, 1.7, 2.3, 2.7, 3.0, 3.2, 3.1, 2.9],
+      dynIdeal: [72, 80, 89, 96, 99],
+      kpiVal: '+3,1 dB',
+      kpiCol: '#facc15'
+    },
     red: {
       color: '#ef4444',
       fillRgba: 'rgba(239, 68, 68, 0.28)',
@@ -108,6 +124,7 @@
       pillGreen: '🟢 Grün (f)',
       pillOrange: '🟠 Orange (p)',
       pillPurple: '🟣 Violett (pp)',
+      pillRivet: '🟡 Niete→Flanke',
       pillRed: '🔴 12:00 Tabu',
       loopOn: '⏸ Nadel-Impuls',
       loopOff: '▶ Nadel-Impuls',
@@ -115,21 +132,25 @@
       specDelta: 'ΔdB Sticheffekt',
       specDyn: 'Dynamik pp–ff',
       techRawVal: '0 Stiche · Werksspannung',
-      techIdealVal: '✓ 90° radial · σ intakt',
-      techWrongVal: '✕ Faserschnitt · σ zerstört',
+      techIdealVal: '✓ Im Lot zur Faser · σ intakt',
+      techWrongVal: '✕ Schräg zur Faser · σ zerstört',
       techRedVal: '✕ TABU: Scheitelkern zerstört',
       cvString: 'Stahlsaite · Anschlag (12:00)',
       cvAxis12: '12:00 Achse',
       cvAxisCheekL: '9:00 Flanke',
       cvAxisCheekR: 'Flanke 3:00',
       cvAxisUf: 'Oberkante Unterfilz',
+      cvFiberCourse: 'Faserverlauf (⊥ stechen)',
       cvGlueRivet: 'Klebstoff + Niete',
+      cvPerpBadge: '⊥ Faser',
+      cvRivetBadge: 'Tief ↑ Flanke',
       cvTransferUp: 'Spannung ↑ in f-Keil',
+      cvRivetUp: 'Wenige tiefe Stiche → Elastizität & H7–H12 ↑',
       cvBetweenGrooves: 'Nur zw. Saitenrillen (≤ 2 mm)!',
       cvTabooWarn: '✕ TABU: > 2 mm zerstört σ!',
-      cvWrongWarn: '✕ Querstich zerschneidet Fasern!',
+      cvWrongWarn: '✕ Schräg zum Faserverlauf schneidet!',
       cvRawHint: 'Werkszustand (0 Stiche)',
-      cvClickHint: 'Keil anklicken',
+      cvClickHint: 'Zone anklicken',
       specZone1: 'H1–H4 Fundament',
       specZone2: 'H5–H8 Gesangskern',
       specZone3: 'H9–H12 Brillanz',
@@ -140,59 +161,73 @@
       zones: {
         blue: {
           roZone: '🔵 Blauer ff-Keil (9–10 / 2–3h)',
-          roDepth: '7–9 mm (vor UF) · 90°',
+          roDepth: '7–9 mm (vor UF) · ⊥ Faser',
           roEffect: 'H1–H4 +3,2 dB · freies ff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3er-Halter · Nadel Nr. 7',
+          kpi1Sub: '3er-Halter · im Lot zur Faser',
           kpi2Sub: '✓ Fasern geteilt, σ intakt',
           kpi3Num: '+3,2 dB',
           kpi3Sub: 'H1–H4 ↑ · ff frei',
           badge: '✦ VORINTONATION • BLAUER FF-KEIL (9–10 / 2–3H)',
-          title: 'Tiefe 90°-Stiche lösen Werkshärte und speisen den f-Keil',
-          body: 'Ruhiges Eindrücken bis <strong>kurz vor den Unterfilz</strong> leitet Elastizität <strong>aufwärts in den grünen Keil</strong> und öffnet das <em>Fortissimo</em>.',
-          bullet: '<strong>Effekt:</strong> Mehr Grundtonfülle (<strong>H1–H4 +3,2 dB</strong>), Krone bleibt stabil.'
+          title: 'Tiefe Vorintonation löst Werkshärte und öffnet das Fortissimo',
+          body: 'Ruhiges Eindrücken <strong>im Lot zum Faserverlauf</strong> bis vor den Unterfilz leitet Elastizität <strong>aufwärts in den f-Keil</strong>.',
+          bullet: '<strong>Effekt:</strong> Mehr Grundtonfülle (<strong>H1–H4 +3,2 dB</strong>), Scheitel bleibt stabil.'
         },
         green: {
           roZone: '🟢 Grüner f-Keil (10–11 / 1–2h)',
-          roDepth: '4–6 mm · 90° radial',
+          roDepth: '4–6 mm · ⊥ Faserverlauf',
           roEffect: 'Kern +2,4 dB · Schärfe −2,5 dB',
           kpi1Num: '4–6 mm',
-          kpi1Sub: 'Mid-Voicing · 90° radial',
+          kpi1Sub: 'Mid-Voicing · im Lot zur Faser',
           kpi2Sub: '✓ Kraftfluss frei',
           kpi3Num: '+2,4 dB',
           kpi3Sub: 'Singendes mf–f (H3–H6 ↑)',
           badge: '✦ MID-VOICING • GRÜNER F-KEIL (10–11 / 1–2H)',
-          title: 'Öffnet den Übergang zwischen Scheitel und ½-Flanke',
-          body: '<strong>90°-Stiche (4–6 mm)</strong> entspannen die Außenkontur: Die Flanke federt frei mit und formt einen tragenden <strong>Cantabile-Kern</strong>.',
+          title: 'Öffnet die Schulterzone für einen tragenden Cantabile-Kern',
+          body: 'Stiche <strong>im Lot zur Faser (4–6 mm)</strong> entspannen den Übergang: Die Flanke federt frei mit und formt einen <strong>Cantabile-Kern</strong>.',
           bullet: '<strong>Effekt:</strong> Fließendes <em>mf–f</em>, scharfe Obertöne sinken (<strong>−2,5 dB</strong>).'
         },
         orange: {
           roZone: '🟠 Oranger p-Keil (11–12 / 12–1h)',
-          roDepth: '2,5–4 mm · 90° radial',
+          roDepth: '2,5–4 mm · ⊥ Faserverlauf',
           roEffect: 'H8–H12 −3,8 dB · warmer p-Ton',
           kpi1Num: '2,5–4 mm',
-          kpi1Sub: 'Feine Nadel · Kronenflanke',
+          kpi1Sub: 'Feine Nadel · im Lot zur Faser',
           kpi2Sub: '✓ Kerndruck intakt',
           kpi3Num: '−3,8 dB',
           kpi3Sub: 'Warmer p-Ton',
           badge: '✦ AUSGLEICH • ORANGER P-KEIL (11–12 / 12–1H)',
-          title: 'Feine Stiche neben der Krone formen warmen Gesangston',
-          body: '<strong>2,5–4 mm Stiche (90°)</strong> seitlich der Krone dämpfen glasige Obertöne im <em>Piano</em>, ohne die <em>Forte</em>-Spannung zu schwächen.',
+          title: 'Feine Schulterstiche formen einen warmen, runden Piano-Ton',
+          body: '<strong>2,5–4 mm Stiche im Lot zur Faser</strong> neben dem Scheitel dämpfen glasige Obertöne im <em>Piano</em>, ohne <em>Forte</em> zu schwächen.',
           bullet: '<strong>Effekt:</strong> Ausgeglichene Klangfarbe über 88 Tasten (<strong>H8–H12 −3,8 dB</strong>).'
         },
         purple: {
-          roZone: '🟣 Violetter pp-Keil (Krone)',
+          roZone: '🟣 Violetter pp-Keil (Scheitel)',
           roDepth: '≤ 2 mm · zw. Saitenrillen',
           roEffect: 'H9–H12 −5,1 dB · samtiges pp',
           kpi1Num: '≤ 2,0 mm',
-          kpi1Sub: '1er-Nadel · zw. Rillen',
+          kpi1Sub: '1er-Nadel · zw. Rillen (⊥)',
           kpi2Sub: '✓ 96 % Kernspannung intakt',
           kpi3Num: '−5,1 dB',
           kpi3Sub: 'H9–H12 sanft · edles pp',
           badge: '✦ FEININTONATION • VIOLETTER PP-KEIL (≤ 2 MM)',
-          title: 'Minimale Oberflächenstiche schaffen ein Samtpolster für pp',
-          body: 'Kurze Einzelnadel <strong>max. 1–2 mm tief</strong> und <strong>nur zwischen den Saitenrillen</strong>: Der tragende Scheitelkern bleibt unberührt.',
+          title: 'Minimale Scheitelstiche (≤ 2 mm) schaffen ein samtiges pp-Polster',
+          body: 'Kurze Einzelnadel <strong>max. 1–2 mm tief</strong> im Lot zur Faser und <strong>nur zwischen den Saitenrillen</strong>.',
           bullet: '<strong>Regel:</strong> Nie in die Saitenrillen und nie tiefer als <strong>2 mm</strong>!'
+        },
+        rivet: {
+          roZone: '🟡 Oberhalb Niete → Flanke',
+          roDepth: 'Wenige, tiefe Stiche (10–14 mm) ↑',
+          roEffect: 'Elastizität ↑ · H7–H12 +3,1 dB',
+          kpi1Num: '10–14 mm',
+          kpi1Sub: 'Wenige Stiche · Richtung Flanke',
+          kpi2Sub: '✓ Elastizität ↑ · τc kürzer',
+          kpi3Num: '+3,1 dB',
+          kpi3Sub: 'Hohe Teiltöne (H7–H12) ↑',
+          badge: '✦ AUFBAUSTICH • OBERHALB NIETE → FLANKE',
+          title: 'Wenige, tiefe Stiche steigern Elastizität & hohe Teiltöne',
+          body: 'Von <strong>oberhalb der Niete</strong> gezielt <strong>wenige, aber tiefe Stiche</strong> in Richtung Flanke setzen: Die Flankenfeder spannt nach (<strong>τc ≈ 1,58 ms</strong>).',
+          bullet: '<strong>Effekt:</strong> Steigerung der <strong>Elastizität</strong> und der <strong>hohen Teiltöne (H7–H12 +3,1 dB)</strong>.'
         },
         red: {
           roZone: '🔴 Sperrzone (12:00 Kern)',
@@ -210,22 +245,23 @@
         }
       },
       wrongOverride: {
-        roDepth: '✕ FEHLER: Quer-/Hackstich!',
+        roDepth: '✕ FEHLER: Schräg zur Faser!',
         roEffect: '⚠ Fasern zerschnitten · τc ↑',
         kpi2Sub: '✕ Zugfasern durchtrennt!',
-        badge: '⚠️ STICHFEHLER • QUER STECHEN / HACKEN',
-        title: 'Schrägstiche und Hacken zerschneiden tragende Wolllagen!',
-        body: 'Schräges Stechen durchtrennt gespannte Faserbrücken statt sie im <strong>90°-Winkel</strong> zu teilen: Kraftfluss reißt ab, <strong>τc steigt</strong>.',
-        bullet: '<strong>Grundgesetz:</strong> Immer <strong>90° zur Kontur</strong> ruhig <strong>drücken statt hacken</strong>!'
+        kpi3Sub: 'Ton flach & stumpf',
+        badge: '⚠️ STICHFEHLER • GEGEN DEN FASERVERLAUF',
+        title: 'Schrägstiche gegen den Faserverlauf zerschneiden Wolllagen!',
+        body: 'Wer nicht <strong>im Lot zur Faser</strong> arbeitet oder hackt, durchtrennt gespannte Faserbrücken: Der Kraftfluss reißt ab, <strong>τc steigt</strong>.',
+        bullet: '<strong>Grundregel:</strong> Immer am <strong>Faserverlauf orientieren</strong> und <strong>im Lot zur Faser</strong> ruhig drücken!'
       },
       rawOverride: {
         roDepth: '0 Stiche · Werkszustand',
         roEffect: '0,0 dB · Werksspannung',
         kpi2Sub: '100 % Werksspannung',
         badge: '✦ WERKSZUSTAND • VOR DEM NADELN',
-        title: 'Hohe Werksvorspannung benötigt gezielte Zonen-Balance',
-        body: 'Wählen Sie <strong>„2 · ✓ 90° Drücken“</strong>, um zu sehen, wie jede Uhrzeit-Zone Teiltonspektrum und Dynamik formt.',
-        bullet: '<strong>Ablauf:</strong> Mechanik &amp; Saitensitz → <strong>Blau</strong> → <strong>Grün/Orange</strong> → <strong>Violett (≤ 2 mm)</strong>.'
+        title: 'Orientierung am Faserverlauf: Zonen zum Öffnen & Aufbauen',
+        body: 'Wählen Sie <strong>„2 · ✓ Im Lot zur Faser“</strong>, um Abbau-Keile (9–3h) und den <strong>Aufbaustich oberhalb der Niete</strong> zu vergleichen.',
+        bullet: '<strong>Prinzip:</strong> Stets <strong>im Lot zur Faser</strong> arbeiten; <strong>Niete → Flanke</strong> (wenige, tiefe Stiche) steigert Elastizität.'
       }
     },
 
@@ -234,28 +270,33 @@
       pillGreen: '🟢 Green (f)',
       pillOrange: '🟠 Orange (p)',
       pillPurple: '🟣 Purple (pp)',
+      pillRivet: '🟡 Rivet→Flank',
       pillRed: '🔴 12:00 Taboo',
       loopOn: '⏸ Needle Pulse',
       loopOff: '▶ Needle Pulse',
-      strikeBtn: 'Stitch & Tone',
-      specDelta: 'ΔdB Stitch Effect',
+      strikeBtn: 'Needle & Play',
+      specDelta: 'ΔdB Needling Effect',
       specDyn: 'Dynamics pp–ff',
       techRawVal: '0 Stitches · Factory Tension',
-      techIdealVal: '✓ 90° radial · σ intact',
-      techWrongVal: '✕ Fibers cut · σ ruined',
-      techRedVal: '✕ TABOO: Crown core ruined',
+      techIdealVal: '✓ Perp. to fiber · σ intact',
+      techWrongVal: '✕ Across fiber · σ ruined',
+      techRedVal: '✕ TABOO: Crown ruined',
       cvString: 'Steel string · Strike (12:00)',
       cvAxis12: '12:00 Axis',
       cvAxisCheekL: '9:00 Flank',
       cvAxisCheekR: 'Flank 3:00',
       cvAxisUf: 'Top Edge Underfelt',
+      cvFiberCourse: 'Fiber course (work ⊥)',
       cvGlueRivet: 'Glue + T-Rivet',
+      cvPerpBadge: '⊥ Fiber',
+      cvRivetBadge: 'Deep ↑ Flank',
       cvTransferUp: 'Tension ↑ to f-wedge',
+      cvRivetUp: 'Few deep stitches → Elasticity & H7–H12 ↑',
       cvBetweenGrooves: 'Between grooves only (≤ 2 mm)!',
       cvTabooWarn: '✕ TABOO: > 2 mm ruins σ!',
-      cvWrongWarn: '✕ Cross-cut severs outer fibers!',
+      cvWrongWarn: '✕ Cutting across fiber course!',
       cvRawHint: 'Factory state (0 stitches)',
-      cvClickHint: 'Click wedge',
+      cvClickHint: 'Click zone',
       specZone1: 'H1–H4 Foundation',
       specZone2: 'H5–H8 Singing Core',
       specZone3: 'H9–H12 Brilliance',
@@ -266,44 +307,44 @@
       zones: {
         blue: {
           roZone: '🔵 Blue ff-Wedge (9–10 / 2–3h)',
-          roDepth: '7–9 mm (pre-UF) · 90°',
+          roDepth: '7–9 mm (pre-UF) · ⊥ fiber',
           roEffect: 'H1–H4 +3.2 dB · open ff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3-needle · No. 7',
+          kpi1Sub: '3-needle · perp. to fiber',
           kpi2Sub: '✓ Fibers parted, σ intact',
           kpi3Num: '+3.2 dB',
           kpi3Sub: 'H1–H4 ↑ · free ff',
           badge: '✦ PRE-NEEDLING • BLUE FF-WEDGE (9–10 / 2–3H)',
-          title: 'Deep 90° stitches release factory rigidity into the f-wedge',
-          body: 'Pressing smoothly up to <strong>just before the underfelt</strong> channels elasticity <strong>upward into the green wedge</strong> for resonant <em>ff</em>.',
+          title: 'Deep pre-needling releases factory rigidity and opens fortissimo',
+          body: 'Pressing <strong>perpendicular to the fiber course</strong> up to the underfelt channels elasticity <strong>upward into the f-wedge</strong>.',
           bullet: '<strong>Effect:</strong> Boosts bass fullness (<strong>H1–H4 +3.2 dB</strong>) while keeping the crown intact.'
         },
         green: {
           roZone: '🟢 Green f-Wedge (10–11 / 1–2h)',
-          roDepth: '4–6 mm · 90° radial',
+          roDepth: '4–6 mm · ⊥ fiber course',
           roEffect: 'Core +2.4 dB · edge −2.5 dB',
           kpi1Num: '4–6 mm',
-          kpi1Sub: 'Mid-voicing · 90° radial',
+          kpi1Sub: 'Mid-voicing · perp. to fiber',
           kpi2Sub: '✓ Flank flow open',
           kpi3Num: '+2.4 dB',
           kpi3Sub: 'Singing mf–f (H3–H6 ↑)',
           badge: '✦ MID-VOICING • GREEN F-WEDGE (10–11 / 1–2H)',
-          title: 'Opens the transition bridge between crown and ½-flank',
-          body: '<strong>90° stitches (4–6 mm)</strong> relax stiff outer contours so the flank flexes freely, building a rich <strong>cantabile core</strong>.',
+          title: 'Opens the shoulder zone for a singing cantabile core',
+          body: 'Stitches <strong>perpendicular to the fiber (4–6 mm)</strong> relax stiff outer contours so the flank flexes freely for a <strong>cantabile core</strong>.',
           bullet: '<strong>Effect:</strong> Smooth <em>mf → f</em> growth and softer upper glare (<strong>−2.5 dB</strong>).'
         },
         orange: {
           roZone: '🟠 Orange p-Wedge (11–12 / 12–1h)',
-          roDepth: '2.5–4 mm · 90° radial',
+          roDepth: '2.5–4 mm · ⊥ fiber course',
           roEffect: 'H8–H12 −3.8 dB · warm piano',
           kpi1Num: '2.5–4 mm',
-          kpi1Sub: 'Fine needle · crown flank',
+          kpi1Sub: 'Fine needle · perp. to fiber',
           kpi2Sub: '✓ Core arch intact',
           kpi3Num: '−3.8 dB',
           kpi3Sub: 'Warm piano tone',
           badge: '✦ BALANCE • ORANGE P-WEDGE (11–12 / 12–1H)',
-          title: 'Shallow stitches beside the crown shape a warm lyrical tone',
-          body: '<strong>2.5–4 mm stitches (90°)</strong> flanking the crown cushion glassy <em>piano</em> partials while keeping deep <em>forte</em> support.',
+          title: 'Shallow shoulder needling shapes a warm, rounded piano tone',
+          body: '<strong>2.5–4 mm stitches perpendicular to the fiber</strong> beside the crown cushion glassy <em>piano</em> partials while keeping <em>forte</em>.',
           bullet: '<strong>Effect:</strong> Evens tone color across 88 keys (<strong>H8–H12 −3.8 dB</strong>).'
         },
         purple: {
@@ -316,9 +357,23 @@
           kpi3Num: '−5.1 dB',
           kpi3Sub: 'Silky H9–H12 · pure pp',
           badge: '✦ FINE VOICING • PURPLE PP-WEDGE (≤ 2 MM)',
-          title: 'Micro-surface stitches create a velvet cushion for pp',
-          body: 'Short single needle <strong>max. 1–2 mm deep</strong> and <strong>strictly between string grooves</strong> leaves the core arch untouched.',
+          title: 'Micro-crown needling (≤ 2 mm) creates a velvety pp cushion',
+          body: 'Short single needle <strong>max. 1–2 mm deep</strong> perpendicular to the fiber and <strong>strictly between string grooves</strong>.',
           bullet: '<strong>Rule:</strong> Never prick in the grooves and never exceed <strong>2 mm</strong>!'
+        },
+        rivet: {
+          roZone: '🟡 Above Rivet → Flank',
+          roDepth: 'Few, deep stitches (10–14 mm) ↑',
+          roEffect: 'Elasticity ↑ · H7–H12 +3.1 dB',
+          kpi1Num: '10–14 mm',
+          kpi1Sub: 'Few stitches · toward flank',
+          kpi2Sub: '✓ Elasticity ↑ · shorter τc',
+          kpi3Num: '+3.1 dB',
+          kpi3Sub: 'Upper partials (H7–H12) ↑',
+          badge: '✦ TENSION BUILD • ABOVE RIVET → FLANK',
+          title: 'Few, deep stitches boost elasticity and upper partials',
+          body: 'Placing <strong>few, deep stitches from just above the rivet toward the flank</strong> tightens lower flank support (<strong>τc ≈ 1.58 ms</strong>).',
+          bullet: '<strong>Effect:</strong> Increases <strong>elasticity</strong> and boosts <strong>high partials (H7–H12 +3.1 dB)</strong>.'
         },
         red: {
           roZone: '🔴 Red Taboo (12:00 Core)',
@@ -336,22 +391,23 @@
         }
       },
       wrongOverride: {
-        roDepth: '✕ ERROR: Cross-cut / chop!',
+        roDepth: '✕ ERROR: Across fiber course!',
         roEffect: '⚠ Fibers severed · τc ↑',
         kpi2Sub: '✕ Tension webs severed!',
-        badge: '⚠️ NEEDLING ERROR • CROSS-CUT / CHOPPING',
-        title: 'Oblique stitches and chopping slice tensioned wool layers!',
-        body: 'Jabbing obliquely cuts fiber bridges instead of parting them at <strong>90°</strong>, severing flank force flow and <strong>prolonging τc</strong>.',
-        bullet: '<strong>Core Law:</strong> Always align <strong>90° to the contour</strong> and <strong>press smoothly</strong>!'
+        kpi3Sub: 'Flat, lifeless tone',
+        badge: '⚠️ NEEDLING ERROR • AGAINST FIBER COURSE',
+        title: 'Oblique stitches against the fiber course sever wool layers!',
+        body: 'Working obliquely instead of <strong>perpendicular to the fiber</strong> cuts tensioned bridges, breaking force flow and <strong>prolonging τc</strong>.',
+        bullet: '<strong>Core Law:</strong> Always follow the <strong>fiber course</strong> and press <strong>perpendicular to the fiber</strong>!'
       },
       rawOverride: {
         roDepth: '0 Stitches · Factory state',
         roEffect: '0.0 dB · factory tension',
         kpi2Sub: '100% factory tension',
         badge: '✦ FACTORY BASELINE • BEFORE NEEDLING',
-        title: 'High factory pre-tension awaits targeted zone balance',
-        body: 'Select <strong>“2 · ✓ 90° Press”</strong> to compare how each clock-face wedge shapes partial spectrum and dynamics.',
-        bullet: '<strong>Sequence:</strong> Regulate &amp; seat strings → <strong>Blue</strong> → <strong>Green/Orange</strong> → <strong>Purple (≤ 2 mm)</strong>.'
+        title: 'Guided by fiber course: opening wedges vs. elasticity build',
+        body: 'Select <strong>“2 · ✓ Perp. to Fiber”</strong> to compare upper voicing wedges (9–3h) with the <strong>deep stitch above the rivet</strong>.',
+        bullet: '<strong>Principle:</strong> Work <strong>perpendicular to the fiber</strong>; <strong>Rivet → Flank</strong> (few, deep) builds elasticity.'
       }
     },
 
@@ -360,91 +416,110 @@
       pillGreen: '🟢 緑 (f)',
       pillOrange: '🟠 橙 (p)',
       pillPurple: '🟣 紫 (pp)',
+      pillRivet: '🟡 リベット→フランク',
       pillRed: '🔴 12時禁区',
       loopOn: '⏸ 針モーション',
       loopOff: '▶ 針モーション',
-      strikeBtn: '刺針＆試聴',
-      specDelta: 'ΔdB 整音効果',
+      strikeBtn: '針刺し＆試聴',
+      specDelta: 'ΔdB 針刺し効果',
       specDyn: 'ダイナミクス pp–ff',
-      techRawVal: '0刺 · 出荷張力',
-      techIdealVal: '✓ 90°垂直押し · σ維持',
-      techWrongVal: '✕ 繊維切断 · σ崩壊',
+      techRawVal: '0回（未整音） · 出荷張力',
+      techIdealVal: '✓ 繊維に直角 · σ維持',
+      techWrongVal: '✕ 繊維を斜断 · σ崩壊',
       techRedVal: '✕ 厳禁：深部破壊',
       cvString: 'スチール弦 · 打弦点 (12:00)',
       cvAxis12: '12:00 軸',
       cvAxisCheekL: '9:00 フランク',
       cvAxisCheekR: 'フランク 3:00',
       cvAxisUf: 'アンダーフェルト上端',
+      cvFiberCourse: '繊維の流れ (直角に針刺し)',
       cvGlueRivet: '接着＋リベット',
+      cvPerpBadge: '⊥ 繊維',
+      cvRivetBadge: '深刺し ↑ フランク',
       cvTransferUp: '弾性が緑のf領域へ ↑',
+      cvRivetUp: '少数・深刺し → 弾性＆高次倍音 ↑',
       cvBetweenGrooves: '弦溝の間のみ（≤2mm）！',
       cvTabooWarn: '✕ 深刺し厳禁（>2mmでσ崩壊）',
-      cvWrongWarn: '✕ 斜め・叩き刺しは繊維切断！',
-      cvRawHint: '未整音状態（0刺）',
+      cvWrongWarn: '✕ 繊維を横切る斜め刺しは厳禁！',
+      cvRawHint: '未整音状態（0回）',
       cvClickHint: 'ゾーンを選択',
       specZone1: 'H1–H4 基音・土台',
       specZone2: 'H5–H8 歌唱コア',
       specZone3: 'H9–H12 輝き・鋭さ',
       dynTitle: 'ダイナミクス別の発音レスポンス (pp → ff)',
       dynBefore: '整音前',
-      dynAfter: '刺針後',
+      dynAfter: '針刺し後',
       dynLabels: ['pp', 'p', 'mf', 'f', 'ff'],
       zones: {
         blue: {
           roZone: '🔵 青のffウェッジ (9–10 / 2–3時)',
-          roDepth: '7–9 mm (UF手前) · 90°',
+          roDepth: '7–9 mm (UF手前) · 繊維に直角',
           roEffect: '基音 +3.2 dB · 豊かなff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3本針 · 7番針',
+          kpi1Sub: '3本針 · 繊維に直角',
           kpi2Sub: '✓ 繊維を分けσ維持',
           kpi3Num: '+3.2 dB',
           kpi3Sub: 'H1–H4 ↑ · ff解放',
           badge: '✦ 予備整音 • 青のFFウェッジ (9–10 / 2–3時)',
-          title: '深い90°刺針が初期硬さを解きfウェッジへ弾性を送る',
-          body: '<strong>アンダーフェルト手前まで</strong>垂直に押し込み、弾性を<strong>緑のフォルテ領域へ上昇</strong>させて豊かな<em>ff</em>を開放します。',
+          title: '深い予備整音が初期硬さを解き、豊かな ff を解放',
+          body: '<strong>繊維の流れに直角（垂直）</strong>にアンダーフェルト手前まで押し込み、弾性を<strong>緑のf領域へ上昇</strong>させます。',
           bullet: '<strong>効果：</strong>頂点を弱めずに基音の厚みを増強（<strong>H1–H4 +3.2 dB</strong>）。'
         },
         green: {
           roZone: '🟢 緑のfウェッジ (10–11 / 1–2時)',
-          roDepth: '4–6 mm · 90°放射状',
+          roDepth: '4–6 mm · 繊維に直角',
           roEffect: '歌唱核 +2.4 dB · 鋭さ −2.5 dB',
           kpi1Num: '4–6 mm',
-          kpi1Sub: '中整音 · 90°放射状',
+          kpi1Sub: '中整音 · 繊維に直角',
           kpi2Sub: '✓ フランク伝達開放',
           kpi3Num: '+2.4 dB',
           kpi3Sub: '歌うmf–f (H3–H6 ↑)',
           badge: '✦ 中整音 • 緑のFウェッジ (10–11 / 1–2時)',
-          title: 'クラウンと½フランクを結ぶ移行帯をしなやかに解放',
-          body: '<strong>90°刺針（4–6 mm）</strong>が外輪郭の硬さを解き、フランク弾性と伸びやかな<strong>カンタービレ核</strong>を引き出します。',
+          title: 'ショルダー移行帯を解放し、歌うカンタービレ核を形成',
+          body: '<strong>繊維の流れに直角（4–6 mm）</strong>の針刺しが外輪郭の硬さを解き、伸びやかな<strong>カンタービレ核</strong>を引き出します。',
           bullet: '<strong>効果：</strong><em>mf〜f</em>を滑らかに繋ぎ、硬い倍音（<strong>−2.5 dB</strong>）を緩和。'
         },
         orange: {
           roZone: '🟠 橙のpウェッジ (11–12 / 12–1時)',
-          roDepth: '2.5–4 mm · 90°放射状',
+          roDepth: '2.5–4 mm · 繊維に直角',
           roEffect: 'H8–H12 −3.8 dB · 温かいp',
           kpi1Num: '2.5–4 mm',
-          kpi1Sub: '細針 · クラウン脇',
+          kpi1Sub: '細針 · 繊維に直角',
           kpi2Sub: '✓ 深部アーチ保持',
           kpi3Num: '−3.8 dB',
           kpi3Sub: '温かいp音色',
           badge: '✦ バランス整音 • 橙のPウェッジ (11–12 / 12–1時)',
-          title: 'クラウン脇への浅い90°刺針が温かい弱音を形成',
-          body: '打弦点脇への<strong>2.5–4 mm刺針</strong>が<em>p〜mp</em>のガラス質な硬さを和らげ、深部の<em>f</em>支持力は保ちます。',
+          title: 'クラウン脇の浅い針刺しが温かく丸い弱音を形成',
+          body: '打弦点脇へ<strong>繊維に直角（2.5–4 mm）</strong>に針刺しし、深部の<em>f</em>支持力を保ったまま<em>p</em>の硬さを和らげます。',
           bullet: '<strong>効果：</strong>鋭い高次倍音（<strong>H8–H12 −3.8 dB</strong>）を抑え88鍵を均一化。'
         },
         purple: {
-          roZone: '🟣 紫のppウェッジ (頂点表層)',
+          roZone: '🟣 紫のppウェッジ (クラウン表層)',
           roDepth: '≤ 2 mm · 弦溝の間のみ',
           roEffect: 'H9–H12 −5.1 dB · 繊細なpp',
           kpi1Num: '≤ 2.0 mm',
-          kpi1Sub: '短単針 · 弦溝の間',
+          kpi1Sub: '短単針 · 弦溝の間 (⊥)',
           kpi2Sub: '✓ 96%深部張力維持',
           kpi3Num: '−5.1 dB',
           kpi3Sub: 'H9–H12抑制 · 極上pp',
           badge: '✦ 仕上げ整音 • 紫のPP表層 (≤ 2 MM)',
-          title: '弦溝の間への極浅刺針が繊細なppクッションを作る',
-          body: '短い単針で<strong>1〜2 mm以内・弦溝の間のみ</strong>を浅く整え、下層の支持コアは無傷に保ちます。',
-          bullet: '<strong>鉄則：</strong>弦溝内には刺さず、頂点では<strong>深さ2 mm</strong>を絶対厳守！'
+          title: 'クラウン表層の極浅針刺し（≤ 2 mm）が繊細な pp を作る',
+          body: '短い単針で<strong>1〜2 mm以内・弦溝の間のみ</strong>繊維に直角に整え、下層の支持コアは無傷に保ちます。',
+          bullet: '<strong>鉄則：</strong>弦溝内には刺さず、クラウンでは<strong>深さ2 mm</strong>を絶対厳守！'
+        },
+        rivet: {
+          roZone: '🟡 リベット上 → フランク方向',
+          roDepth: '少数・深い針刺し (10–14 mm) ↑',
+          roEffect: '弾性増強 ↑ · H7–H12 +3.1 dB',
+          kpi1Num: '10–14 mm',
+          kpi1Sub: '少数針刺し · フランク方向',
+          kpi2Sub: '✓ 弾性向上 · τc短縮',
+          kpi3Num: '+3.1 dB',
+          kpi3Sub: '高次倍音 (H7–H12) ↑',
+          badge: '✦ 弾性増強 • リベット上 → フランク方向',
+          title: '少数の深い針刺しがフェルト弾性と高次倍音を高める',
+          body: '<strong>リベットすぐ上からフランク方向へ少数かつ深く</strong>針刺しすることで、フランクのバネ支持が締まり<strong>τc ≈ 1.58 ms</strong>へ短縮します。',
+          bullet: '<strong>効果：</strong><strong>弾性</strong>が高まり、輝かしい<strong>高次倍音（H7–H12 +3.1 dB）</strong>が増加。'
         },
         red: {
           roZone: '🔴 赤の禁止ゾーン (12時深部)',
@@ -456,28 +531,29 @@
           kpi3Num: '−6.8 dB',
           kpi3Sub: '空疎で死んだ音',
           badge: '⚠️ 12:00 禁止ゾーン • クラウン深部コア',
-          title: '12時深部への刺針は表面張力を不可逆的に破壊する！',
-          body: '<strong>赤い中央三角ゾーンへ2 mm超</strong>の刺針は張力アーチを切断し、接触時間が<strong>τc ≈ 3.15 ms</strong>へ急増します。',
+          title: '12時深部への針刺しは表面張力を不可逆的に破壊する！',
+          body: '<strong>赤い中央三角ゾーンへ2 mm超</strong>の針刺しは張力アーチを切断し、接触時間が<strong>τc ≈ 3.15 ms</strong>へ急増します。',
           bullet: '<strong>損傷：</strong>音は<strong>空洞で死んだ響き</strong>となり<em>p</em>も<em>ff</em>も失われます！'
         }
       },
       wrongOverride: {
-        roDepth: '✕ エラー: 斜め・叩き刺し！',
+        roDepth: '✕ エラー: 繊維を横切る斜め刺し！',
         roEffect: '⚠ 繊維切断 · τc増大',
         kpi2Sub: '✕ 張力繊維切断！',
-        badge: '⚠️ 刺針エラー • 斜め刺し・叩き刺し',
-        title: '斜め刺しや叩き刺しは張力を担う羊毛層を切断する！',
-        body: '輪郭へ<strong>90°垂直</strong>に押し分けず斜めに突くと羊毛網が切れ、フランク伝達と反発力が失われます。',
-        bullet: '<strong>鉄則：</strong>常に<strong>輪郭へ90°直角</strong>に当て、静かに<strong>押し込む</strong>こと！'
+        kpi3Sub: '芯のない鈍い音',
+        badge: '⚠️ 整音エラー • 繊維の流れに逆らう斜め刺し',
+        title: '繊維の流れを無視した斜め・叩き刺しは羊毛層を切断する！',
+        body: '<strong>繊維に直角</strong>に押し分けず斜めに突くと張力網が切れ、フランク伝達と反発力が失われます。',
+        bullet: '<strong>鉄則：</strong>常に<strong>繊維の流れを見極め、繊維に直角</strong>に静かに押し込むこと！'
       },
       rawOverride: {
-        roDepth: '0刺 · 出荷状態',
+        roDepth: '0回（未整音） · 出荷状態',
         roEffect: '0.0 dB · 初期張力',
         kpi2Sub: '100% 出荷張力',
         badge: '✦ 基準状態 • 針入れ前のハンマー',
-        title: '高い初期張力を時計モデルのゾーン整音で最適化する',
-        body: '<strong>「2 · ✓ 90°垂直押し」</strong>に切り替え、各ゾーンの刺針が倍音とダイナミクスを整える様子を確認してください。',
-        bullet: '<strong>手順：</strong>整調・弦密着 → <strong>青(ff)</strong> → <strong>緑・橙</strong> → <strong>紫(≤2 mm)</strong>。'
+        title: '繊維の流れを基準に：柔軟化ゾーンと弾性増強の針刺し',
+        body: '<strong>「2 · ✓ 繊維に直角」</strong>を選び、上部ウェッジ（9〜3時）と<strong>リベット上からの深刺し</strong>を比較してください。',
+        bullet: '<strong>基本：</strong>常に<strong>繊維に直角</strong>に作業。<strong>リベット→フランク</strong>（少数・深刺し）は弾性を高める。'
       }
     },
 
@@ -486,124 +562,144 @@
       pillGreen: '🟢 绿区 (f)',
       pillOrange: '🟠 橙区 (p)',
       pillPurple: '🟣 紫区 (pp)',
+      pillRivet: '🟡 铆钉→侧翼',
       pillRed: '🔴 12点禁区',
       loopOn: '⏸ 进针演示',
       loopOff: '▶ 进针演示',
-      strikeBtn: '扎针试听',
-      specDelta: 'ΔdB 整音效果',
+      strikeBtn: '针刺试听',
+      specDelta: 'ΔdB 针刺效果',
       specDyn: '动态响应 pp–ff',
       techRawVal: '0针 · 出厂张力',
-      techIdealVal: '✓ 90°静压 · σ完好',
-      techWrongVal: '✕ 割断纤维 · σ崩塌',
-      techRedVal: '✕ 禁区：槌心损毁',
+      techIdealVal: '✓ 垂直于纤维 · σ完好',
+      techWrongVal: '✕ 斜切纤维 · σ崩塌',
+      techRedVal: '✕ 禁区：槌冠核心损毁',
       cvString: '钢弦 · 击弦点 (12:00)',
       cvAxis12: '12:00 轴',
       cvAxisCheekL: '9:00 侧翼',
       cvAxisCheekR: '侧翼 3:00',
       cvAxisUf: '底毡上沿',
+      cvFiberCourse: '纤维走向 (垂直针刺)',
       cvGlueRivet: '胶层 + 铆钉',
+      cvPerpBadge: '⊥ 纤维',
+      cvRivetBadge: '深刺 ↑ 侧翼',
       cvTransferUp: '张力向上导入绿区 ↑',
+      cvRivetUp: '少针深刺 → 弹性与高次泛音 ↑',
       cvBetweenGrooves: '仅限弦沟间 (≤ 2 mm)！',
-      cvTabooWarn: '✕ 严禁深扎 (>2 mm 毁坏σ)！',
-      cvWrongWarn: '✕ 横刺劈扎割断外层纤维！',
+      cvTabooWarn: '✕ 严禁深刺 (>2 mm 毁坏σ)！',
+      cvWrongWarn: '✕ 斜切纤维走向割断毛层！',
       cvRawHint: '出厂原始状态 (0针)',
-      cvClickHint: '点击楔区',
+      cvClickHint: '点击分区',
       specZone1: 'H1–H4 基音厚度',
       specZone2: 'H5–H8 歌唱核心',
       specZone3: 'H9–H12 明亮度',
       dynTitle: '各力度下的触键响应 (pp → ff)',
       dynBefore: '整音前',
-      dynAfter: '扎针后',
+      dynAfter: '针刺后',
       dynLabels: ['pp', 'p', 'mf', 'f', 'ff'],
       zones: {
         blue: {
           roZone: '🔵 蓝色ff楔区 (9–10 / 2–3点)',
-          roDepth: '7–9 mm (底毡前) · 90°',
+          roDepth: '7–9 mm (底毡前) · 垂直纤维',
           roEffect: '基音 +3.2 dB · 通透ff',
           kpi1Num: '7–9 mm',
-          kpi1Sub: '3针柄 · 7号针',
+          kpi1Sub: '3针柄 · 垂直于纤维',
           kpi2Sub: '✓ 拨开纤维，σ完好',
           kpi3Num: '+3.2 dB',
           kpi3Sub: 'H1–H4 ↑ · ff全开',
           badge: '✦ 预整音 • 蓝色FF楔区 (9–10 / 2–3点)',
-          title: '深层90°静压化解出厂死硬，将弹性导入f楔区',
-          body: '平稳深压至<strong>底毡前缘</strong>，使弹性<strong>向上传至绿色强音区</strong>，瞬间打开浑厚<em>ff</em>。',
-          bullet: '<strong>效果：</strong>增强基音延音（<strong>H1–H4 +3.2 dB</strong>），不伤槌顶。'
+          title: '深层预针刺化解出厂死硬，释放浑厚 ff',
+          body: '顺应毛毡结构<strong>垂直于纤维走向</strong>深压至底毡前缘，使弹性<strong>向上导入绿色强音区</strong>。',
+          bullet: '<strong>效果：</strong>增强基音延音（<strong>H1–H4 +3.2 dB</strong>），不伤槌冠。'
         },
         green: {
           roZone: '🟢 绿色f楔区 (10–11 / 1–2点)',
-          roDepth: '4–6 mm · 90°径向',
+          roDepth: '4–6 mm · 垂直于纤维',
           roEffect: '核心 +2.4 dB · 燥感 −2.5 dB',
           kpi1Num: '4–6 mm',
-          kpi1Sub: '中整音 · 90°径向',
+          kpi1Sub: '中整音 · 垂直于纤维',
           kpi2Sub: '✓ 侧翼力流畅通',
           kpi3Num: '+2.4 dB',
           kpi3Sub: '如歌mf–f (H3–H6 ↑)',
           badge: '✦ 中度整音 • 绿色F楔区 (10–11 / 1–2点)',
-          title: '打通槌顶至½侧翼过渡带，塑造歌唱性核心',
-          body: '<strong>90°中深进针（4–6 mm）</strong>柔化外轮廓，恢复侧翼协同弹性与<strong>如歌中频核心</strong>。',
+          title: '打通槌肩过渡区，塑造如歌的 mf–f 中频核心',
+          body: '<strong>垂直于纤维（4–6 mm）</strong>柔化槌肩过渡区，恢复侧翼协同弹性与<strong>如歌中频核心</strong>。',
           bullet: '<strong>效果：</strong><em>mf→f</em>衔接顺滑，柔化刺耳泛音（<strong>−2.5 dB</strong>）。'
         },
         orange: {
           roZone: '🟠 橙色p楔区 (11–12 / 12–1点)',
-          roDepth: '2.5–4 mm · 90°径向',
+          roDepth: '2.5–4 mm · 垂直于纤维',
           roEffect: 'H8–H12 −3.8 dB · 温暖弱音',
           kpi1Num: '2.5–4 mm',
-          kpi1Sub: '细针 · 槌冠两侧',
+          kpi1Sub: '细针 · 垂直于纤维',
           kpi2Sub: '✓ 内部张力拱保留',
           kpi3Num: '−3.8 dB',
           kpi3Sub: '温暖圆润p',
           badge: '✦ 均衡整音 • 橙色P楔区 (11–12 / 12–1点)',
-          title: '槌冠两侧精细浅扎，雕琢温暖柔和弱音',
-          body: '槌冠两侧<strong>90°浅扎2.5–4 mm</strong>，缓冲<em>p–mp</em>尖硬玻璃声，完整保留深层<em>f</em>支撑。',
+          title: '槌冠两侧浅层针刺，雕琢温暖圆润的弱音',
+          body: '槌冠两侧<strong>垂直于纤维浅刺2.5–4 mm</strong>，缓冲<em>p–mp</em>玻璃声并保留深层<em>f</em>支撑。',
           bullet: '<strong>效果：</strong>衰减高频毛刺（<strong>H8–H12 −3.8 dB</strong>），统一88键音色。'
         },
         purple: {
-          roZone: '🟣 紫色pp楔区 (槌顶表层)',
+          roZone: '🟣 紫色pp楔区 (槌冠表层)',
           roDepth: '≤ 2 mm · 弦沟之间',
           roEffect: 'H9–H12 −5.1 dB · 丝绒pp',
           kpi1Num: '≤ 2.0 mm',
-          kpi1Sub: '短单针 · 弦沟之间',
+          kpi1Sub: '短单针 · 弦沟间 (⊥)',
           kpi2Sub: '✓ 96%核心张力完好',
           kpi3Num: '−5.1 dB',
           kpi3Sub: '滤除杂音 · 纯净pp',
           badge: '✦ 精微整音 • 紫色PP表层 (≤ 2 MM)',
-          title: '弦沟间微表层轻刺（≤2 mm），铺就丝绒pp触感',
-          body: '短单针<strong>严控1–2 mm</strong>且<strong>仅扎在弦沟之间</strong>，仅柔化表层而不伤承重槌心。',
-          bullet: '<strong>铁律：</strong>绝不刺入弦沟内，槌顶严禁超过<strong>2 mm</strong>！'
+          title: '槌冠表层微浅针刺（≤ 2 mm），铺就丝绒般的 pp 缓冲',
+          body: '短单针<strong>严控1–2 mm</strong>垂直于纤维且<strong>仅刺在弦沟之间</strong>，不伤承重槌冠深部。',
+          bullet: '<strong>铁律：</strong>绝不刺入弦沟内，槌冠严禁超过<strong>2 mm</strong>！'
+        },
+        rivet: {
+          roZone: '🟡 铆钉上方 → 朝向侧翼',
+          roDepth: '少针深刺 (10–14 mm) ↑',
+          roEffect: '弹性提升 ↑ · H7–H12 +3.1 dB',
+          kpi1Num: '10–14 mm',
+          kpi1Sub: '少针深刺 · 朝向侧翼',
+          kpi2Sub: '✓ 弹性增强 · τc缩短',
+          kpi3Num: '+3.1 dB',
+          kpi3Sub: '高次泛音 (H7–H12) ↑',
+          badge: '✦ 增弹针刺 • 铆钉上方 → 朝向侧翼',
+          title: '少针深刺朝向侧翼，显著提升毛毡弹性与高次泛音',
+          body: '从<strong>铆钉正上方朝侧翼方向</strong>进行<strong>少量但深层的针刺</strong>，可收紧侧翼弹簧支撑并缩短接触时间（<strong>τc ≈ 1.58 ms</strong>）。',
+          bullet: '<strong>效果：</strong>显著增强<strong>回弹弹性</strong>，拉升<strong>高次泛音亮度（H7–H12 +3.1 dB）</strong>。'
         },
         red: {
-          roZone: '🔴 红色禁区 (12点槌心)',
-          roDepth: '✕ 严禁深扎 (> 2 mm)！',
+          roZone: '🔴 红色禁区 (12点槌冠深部)',
+          roDepth: '✕ 严禁深刺 (> 2 mm)！',
           roEffect: '⚠ σ 34% · τc 3.15 ms · 枯死！',
           kpi1Num: '✕ 禁区',
           kpi1Sub: '12点禁超2mm！',
           kpi2Sub: '✕ 张力拱断裂！',
           kpi3Num: '−6.8 dB',
           kpi3Sub: '空洞无力',
-          badge: '⚠️ 12:00 绝对禁区 • 深层击弦核心',
-          title: '深刺槌顶核心将不可逆地摧毁表面张力拱！',
+          badge: '⚠️ 12:00 绝对禁区 • 槌冠深层核心',
+          title: '深刺槌冠核心将不可逆地摧毁表面张力拱！',
           body: '<strong>超过2 mm刺入红色中心区</strong>会切断受拉拱梁，回弹瓦解且<strong>τc暴增至3.15 ms</strong>。',
           bullet: '<strong>后果：</strong>音色<strong>空洞枯死</strong>，彻底丧失<em>p</em>与<em>ff</em>！'
         }
       },
       wrongOverride: {
-        roDepth: '✕ 错误: 横刺 / 劈扎！',
+        roDepth: '✕ 错误: 违背纤维走向斜刺！',
         roEffect: '⚠ 割断纤维 · τc延长',
         kpi2Sub: '✕ 羊毛层被切断！',
-        badge: '⚠️ 整音大忌 • 横刺或猛扎',
-        title: '斜向横刺或猛烈劈扎会割断受拉羊毛纤维桥！',
-        body: '违背<strong>90°垂直</strong>分纤原理，横刺会割断外层高张力毛网，阻断侧翼力流并<strong>延长τc</strong>。',
-        bullet: '<strong>铁律：</strong>永远<strong>90°垂直于外轮廓</strong>，平稳<strong>静压而非猛戳</strong>！'
+        kpi3Sub: '音色干瘪沉闷',
+        badge: '⚠️ 整音大忌 • 违背纤维走向斜刺',
+        title: '违背纤维走向斜刺或猛刺会割断受拉羊毛层！',
+        body: '未按<strong>垂直于纤维</strong>方向分纤而斜向横刺，会割断高张力毛网，阻断力流并<strong>延长τc</strong>。',
+        bullet: '<strong>铁律：</strong>始终<strong>顺应纤维走向</strong>，<strong>垂直于纤维</strong>平稳静压！'
       },
       rawOverride: {
         roDepth: '0针 · 出厂状态',
         roEffect: '0.0 dB · 出厂预张力',
         kpi2Sub: '100% 出厂张力',
-        badge: '✦ 出厂基准 • 施针前弦槌',
-        title: '出厂高预张力需借时钟五区整音释放潜能',
-        body: '切换至<strong>“2 · ✓ 90°静压”</strong>，对比各时钟楔区如何塑造泛音与动态范围。',
-        bullet: '<strong>流程：</strong>整调与压弦 → <strong>蓝区</strong> → <strong>绿/橙区</strong> → <strong>紫区(≤2 mm)</strong>。'
+        badge: '✦ 出厂基准 • 针刺前弦槌',
+        title: '遵循纤维走向：上部柔化楔区与铆钉上方增弹针刺',
+        body: '切换至<strong>“2 · ✓ 垂直于纤维”</strong>，对比上部时钟楔区（9–3点）与<strong>铆钉上方朝向侧翼的深刺</strong>。',
+        bullet: '<strong>原则：</strong>始终<strong>垂直于纤维</strong>针刺；<strong>铆钉→侧翼</strong>（少针深刺）可提升弹性与泛音。'
       }
     }
   };
@@ -814,55 +910,71 @@
       ctx.restore();
 
       const cx = w * 0.50;
-      const stringY = 38;
-      const crownTopY = 55;
-      const feltH = Math.max(146, Math.min(h - 78, h * 0.70));
-      const feltEndY = crownTopY + feltH;
-      const woodBotY = h - 7;
+      const stringY = 46;
+      const crownTopY = 58;
 
-      const shoulderY = crownTopY + feltH * 0.43; // 9:00 - 3:00 clock pivot!
-      const shoulderHW = Math.min(w * 0.195, feltH * 0.53);
+      // Exact 1:1 Louis Renner Hammerhead Proportions from Slide 27 ("Renner", Konzert preset S = 0.52)
+      const S_REF = 0.52;
+      const FELT_TO_TOTAL = 0.785;
+      const SHOULDER_HW_RATIO = 0.495 - 0.105 * S_REF; // 0.4404
+      const SHOULDER_Y_RATIO = 0.385 - 0.045 * S_REF;  // 0.3616
+      const CROWN_CTRL_RATIO = 0.57 - 0.20 * S_REF;    // 0.4660
+
+      // Scale totalH uniformly from both vertical & horizontal bounds so aspect ratio NEVER distorts
+      const maxTotalHVert = Math.max(176, Math.min(232, h - crownTopY - 32));
+      const maxTotalHHoriz = (w * 0.24) / (FELT_TO_TOTAL * SHOULDER_HW_RATIO);
+      const totalH = Math.min(maxTotalHVert, maxTotalHHoriz);
+
+      const feltH = totalH * FELT_TO_TOTAL;
+      const feltEndY = crownTopY + feltH;
+      const woodBotY = crownTopY + totalH;
+
+      const shoulderY = crownTopY + feltH * SHOULDER_Y_RATIO; // 9:00 - 3:00 clock pivot!
+      const shoulderHW = feltH * SHOULDER_HW_RATIO;
       const topSpan = shoulderY - crownTopY;
       const botSpan = feltEndY - shoulderY;
 
-      // Underfelt & Hornbeam Core geometry (matching Slide 34 Renner Hammerhead)
-      const ufTipY = crownTopY + topSpan * 0.66;
-      const coreTipY = ufTipY + Math.max(9, feltH * 0.068);
-      const coreDomeY = shoulderY + botSpan * 0.16;
+      // Hornbeam Wooden Core & Crimson Underfelt geometry (1:1 with Slide 27 drawModernHammer)
+      const coreTipY = crownTopY + feltH * 0.34;
+      const coreNoseHW = feltH * 0.088;
+      const coreDomeY = coreTipY + coreNoseHW * 1.10;
+      const coreWaistHW = feltH * 0.072;
+      const coreFootHW = feltH * 0.098;
+
+      const ufTipY = coreTipY - feltH * 0.062;
+      const ufOuterHW = coreNoseHW + feltH * 0.045;
+      const ufEndY = crownTopY + feltH * 0.675;
       const ufDomeY = coreDomeY - 1;
-      const ufEndY = shoulderY + botSpan * 0.54;
-      const coreNoseHW = shoulderHW * 0.25;
-      const ufOuterHW = coreNoseHW + Math.max(8, shoulderHW * 0.115);
-      const coreWaistHW = shoulderHW * 0.135;
-      const coreFootHW = shoulderHW * 0.235;
-      const rivetY = feltEndY - botSpan * 0.14;
 
       const evalCubic = (p0, p1, p2, p3, t) => {
         const mt = 1 - t;
         return mt * mt * mt * p0 + 3 * mt * mt * t * p1 + 3 * mt * t * t * p2 + t * t * t * p3;
       };
 
-      const crownCtrlX = shoulderHW * 0.52;
+      const crownCtrlX = shoulderHW * CROWN_CTRL_RATIO;
       const lowX0 = shoulderHW, lowY0 = shoulderY;
-      const lowX1 = shoulderHW, lowY1 = shoulderY + botSpan * 0.42;
-      const lowX2 = coreWaistHW + (shoulderHW - coreWaistHW) * 0.36, lowY2 = feltEndY - botSpan * 0.16;
-      const lowX3 = coreWaistHW + 0.8, lowY3 = feltEndY;
+      const lowX1 = shoulderHW, lowY1 = shoulderY + botSpan * 0.41;
+      const lowX2 = coreWaistHW + (shoulderHW - coreWaistHW) * 0.35, lowY2 = feltEndY - botSpan * 0.17;
+      const lowX3 = coreWaistHW + 0.6, lowY3 = feltEndY;
 
-      const evalOuterHalf = (thetaRad) => {
-        // Ray from clock center (cx, shoulderY) at angle thetaRad from 12:00 (0 = up, pi/2 = 3:00)
-        // Find intersection with right outer contour by binary search / lookup
+      // Brass T-Rivet sits at t = 0.76 along the lower tapered felt-on-wood zone (1:1 with Slide 27)
+      const tRivet = 0.76;
+      const rivetY = evalCubic(lowY0, lowY1, lowY2, lowY3, tRivet);
+      const rivetOuterHW = evalCubic(lowX0, lowX1, lowX2, lowX3, tRivet);
+
+      const evalOuterRaw = (thetaRad) => {
         const sinT = Math.sin(thetaRad);
         const cosT = Math.cos(thetaRad);
         let bestR = shoulderHW;
         let bestDiff = 1e9;
-        for (let s = 0; s <= 80; s++) {
+        for (let s = 0; s <= 90; s++) {
           let px, py;
-          if (s <= 45) {
-            const t = s / 45;
+          if (s <= 48) {
+            const t = s / 48;
             px = evalCubic(0, crownCtrlX, shoulderHW, shoulderHW, t);
             py = evalCubic(crownTopY, crownTopY, shoulderY - topSpan * 0.53, shoulderY, t);
           } else {
-            const t = (s - 45) / 35;
+            const t = (s - 48) / 42;
             px = evalCubic(lowX0, lowX1, lowX2, lowX3, t);
             py = evalCubic(lowY0, lowY1, lowY2, lowY3, t);
           }
@@ -882,12 +994,30 @@
         };
       };
 
-      // Cache geometry for interactive canvas click/hover hit-testing
-      this.cachedGeom = {
-        cx, shoulderY, crownTopY, ufTipY, feltEndY, shoulderHW, topSpan, botSpan
+      const evalOuterHalf = (thetaRad) => {
+        const p0 = evalOuterRaw(thetaRad);
+        const eps = 0.035;
+        const pA = evalOuterRaw(Math.max(0, thetaRad - eps));
+        const pB = evalOuterRaw(Math.min(Math.PI * 0.92, thetaRad + eps));
+        const tdx = pB.x - pA.x;
+        const tdy = pB.y - pA.y;
+        const tLen = Math.max(1e-4, Math.hypot(tdx, tdy));
+        // Clockwise unit fiber tangent (tx, ty) and outward perpendicular normal (nx, ny) ("im Lot zur Faser")
+        const tx = tdx / tLen;
+        const ty = tdy / tLen;
+        const nx = ty;
+        const ny = -tx;
+        return { r: p0.r, x: p0.x, y: p0.y, tx, ty, nx, ny };
       };
 
-      // --- 0. Tri-chord Steel String at 12:00 Strike Point ---
+      const surfaceCapPx = Math.max(9.5, (ufTipY - crownTopY) * 0.21);
+
+      // Cache geometry for interactive canvas click/hover hit-testing
+      this.cachedGeom = {
+        cx, shoulderY, crownTopY, ufTipY, feltEndY, rivetY, shoulderHW, topSpan, botSpan, surfaceCapPx
+      };
+
+      // --- 0. Steel String Line at 12:00 Strike Point ---
       ctx.save();
       ctx.strokeStyle = 'rgba(226, 232, 240, 0.45)';
       ctx.lineWidth = 2.0;
@@ -896,44 +1026,72 @@
       ctx.lineTo(cx + shoulderHW * 1.55, stringY);
       ctx.stroke();
 
-      for (const sx of [-11, 0, 11]) {
-        ctx.fillStyle = sx === 0 ? '#f8fafc' : '#cbd5e1';
-        ctx.beginPath();
-        ctx.arc(cx + sx, stringY, 3.1, 0, Math.PI * 2);
-        ctx.fill();
-      }
       ctx.font = '600 12.4px Roboto, sans-serif';
       ctx.fillStyle = 'rgba(226, 232, 240, 0.88)';
       ctx.textAlign = 'left';
       ctx.fillText(d.cvString, 12, 20);
       ctx.restore();
 
-      // --- 1. Hornbeam Wood Core (Weißbuche-Holzkern) ---
+      // --- 1. Hornbeam Wood Core (Weißbuche-Holzkern — 1:1 with Slide 27 Renner Core) ---
       const coreHWAtUfEnd = coreNoseHW - (coreNoseHW - coreWaistHW) * ((ufEndY - coreDomeY) / Math.max(1, feltEndY - coreDomeY));
       const woodPath = new Path2D();
       woodPath.moveTo(cx, coreTipY);
-      woodPath.bezierCurveTo(cx + coreNoseHW * 0.58, coreTipY, cx + coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44, cx + coreNoseHW, coreDomeY);
+      woodPath.bezierCurveTo(
+        cx + coreNoseHW * 0.58, coreTipY,
+        cx + coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44,
+        cx + coreNoseHW, coreDomeY
+      );
       woodPath.lineTo(cx + coreWaistHW, feltEndY);
-      woodPath.lineTo(cx + coreFootHW, woodBotY);
+      woodPath.bezierCurveTo(
+        cx + coreWaistHW * 0.94, feltEndY + (woodBotY - feltEndY) * 0.38,
+        cx + coreFootHW, woodBotY - (woodBotY - feltEndY) * 0.24,
+        cx + coreFootHW, woodBotY
+      );
       woodPath.lineTo(cx - coreFootHW, woodBotY);
-      woodPath.lineTo(cx - coreWaistHW, feltEndY);
+      woodPath.bezierCurveTo(
+        cx - coreFootHW, woodBotY - (woodBotY - feltEndY) * 0.24,
+        cx - coreWaistHW * 0.94, feltEndY + (woodBotY - feltEndY) * 0.38,
+        cx - coreWaistHW, feltEndY
+      );
       woodPath.lineTo(cx - coreNoseHW, coreDomeY);
-      woodPath.bezierCurveTo(cx - coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44, cx - coreNoseHW * 0.58, coreTipY, cx, coreTipY);
+      woodPath.bezierCurveTo(
+        cx - coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44,
+        cx - coreNoseHW * 0.58, coreTipY,
+        cx, coreTipY
+      );
       woodPath.closePath();
 
       ctx.save();
-      const woodGrad = ctx.createLinearGradient(cx - coreNoseHW, coreTipY, cx + coreNoseHW, woodBotY);
-      woodGrad.addColorStop(0, '#e7c697');
-      woodGrad.addColorStop(0.5, '#cfa065');
-      woodGrad.addColorStop(1, '#9a6832');
+      const woodGrad = ctx.createLinearGradient(cx - coreFootHW, coreTipY, cx + coreFootHW, woodBotY);
+      woodGrad.addColorStop(0, '#f3d9b1');
+      woodGrad.addColorStop(0.50, '#d6a86e');
+      woodGrad.addColorStop(1, '#a8743d');
       ctx.fillStyle = woodGrad;
       ctx.fill(woodPath);
-      ctx.strokeStyle = 'rgba(254, 243, 199, 0.55)';
-      ctx.lineWidth = 1.1;
+
+      ctx.clip(woodPath);
+      ctx.fillStyle = 'rgba(115, 64, 22, 0.30)';
+      for (let wy = coreTipY + 6; wy < woodBotY - 4; wy += 8) {
+        const off = ((Math.round(wy) % 16) === 0) ? -4.2 : 3.2;
+        ctx.fillRect(cx + off - 1, wy, 1.8, 4.2);
+        ctx.fillRect(cx - off * 1.25, wy + 3.5, 1.5, 3.6);
+      }
+      ctx.strokeStyle = 'rgba(92, 50, 16, 0.32)';
+      ctx.setLineDash([3, 3]);
+      ctx.lineWidth = 1.0;
+      ctx.beginPath();
+      ctx.moveTo(cx, feltEndY + 4);
+      ctx.lineTo(cx, woodBotY);
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.save();
+      ctx.strokeStyle = 'rgba(243, 217, 177, 0.55)';
+      ctx.lineWidth = 1.05;
       ctx.stroke(woodPath);
       ctx.restore();
 
-      // --- 2. Crimson Underfelt Horseshoe Cap (Unterfilz) ---
+      // --- 2. Crimson Underfelt Horseshoe Cap (Unterfilz — 1:1 with Slide 27) ---
       const ufPath = new Path2D();
       ufPath.moveTo(cx, ufTipY);
       ufPath.bezierCurveTo(cx + ufOuterHW * 0.60, ufTipY, cx + ufOuterHW, ufTipY + (ufDomeY - ufTipY) * 0.46, cx + ufOuterHW, ufDomeY);
@@ -948,7 +1106,7 @@
 
       ctx.save();
       const ufGrad = ctx.createLinearGradient(cx, ufTipY, cx, ufEndY);
-      ufGrad.addColorStop(0, '#ec4899');
+      ufGrad.addColorStop(0, '#db2777');
       ufGrad.addColorStop(0.65, '#be185d');
       ufGrad.addColorStop(1, '#831843');
       ctx.fillStyle = ufGrad;
@@ -973,8 +1131,8 @@
       ctx.save();
       ctx.clip(feltCloak);
 
-      // Base dark Merino felt tone
-      ctx.fillStyle = '#152033';
+      // Base dark Merino felt tone (matching Slide 27)
+      ctx.fillStyle = '#131e2f';
       ctx.fillRect(cx - shoulderHW - 20, crownTopY - 10, shoulderHW * 2 + 40, feltH + 24);
 
       // Helper to fill symmetric angular sector from clock pivot (cx, shoulderY)
@@ -1011,9 +1169,27 @@
         );
       }
 
+      // Draw Lower Elasticity-Build Zone ("Oberhalb Niete -> Richtung Flanke", clipped between 9:00/3:00 and just above rivetY)
+      {
+        const zmRiv = ZONE_META.rivet;
+        const isSel = this.zone === 'rivet';
+        const isHov = this.hoverZone === 'rivet';
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(cx - shoulderHW - 16, shoulderY + 1, shoulderHW * 2 + 32, Math.max(8, (rivetY - 3) - (shoulderY + 1)));
+        ctx.clip();
+        fillSymmetricSector(
+          90,
+          168,
+          isSel ? zmRiv.activeRgba : (isHov ? 'rgba(254, 240, 138, 0.28)' : zmRiv.fillRgba),
+          isSel ? '#fef08a' : 'rgba(250, 204, 21, 0.30)',
+          isSel ? 1.8 : 1.0
+        );
+        ctx.restore();
+      }
+
       // Draw Central Crown Sector (-13.5° .. +13.5°):
       // Split into RED Taboo Core (below 2 mm surface line) and PURPLE pp Surface Cap (outermost ~2 mm!)
-      const surfaceCapPx = Math.max(9.5, (ufTipY - crownTopY) * 0.21);
       const degCrown = ZONE_META.purple.angMaxDeg * Math.PI / 180;
       const rBig = Math.max(shoulderHW, feltH) * 1.45;
 
@@ -1052,129 +1228,193 @@
       ctx.stroke();
       ctx.restore();
 
-      // Continuous Merino wool fiber trajectories (5 subtle arcs running down to wood flanks)
+      // Continuous Merino wool fiber trajectories (5 Vliesbahnen 1:1 with Slide 27)
       ctx.setLineDash([]);
-      for (let i = 1; i <= 4; i++) {
-        const frac = i / 5;
+      let fiberCalloutTargetX = cx - shoulderHW * 0.72;
+      let fiberCalloutTargetY = (shoulderY + rivetY) * 0.52;
+      for (let i = 1; i <= 5; i++) {
+        const frac = i / 6;
         const topYi = crownTopY + (ufTipY - crownTopY) * frac * 0.88;
-        const shHWi = shoulderHW - (shoulderHW - ufOuterHW * 1.05) * frac * 0.88;
-        const shYi = shoulderY + (ufDomeY - shoulderY) * frac * 0.80;
+        const shHWi = shoulderHW - (shoulderHW - ufOuterHW * 1.04) * frac * 0.90;
+        const shYi = shoulderY + (ufDomeY - shoulderY) * frac * 0.82;
         const topSpani = Math.max(8, shYi - topYi);
-        const endYi = feltEndY - frac * (feltEndY - ufEndY) * 0.85;
-        const botSpani = Math.max(10, endYi - shYi);
+        const endYi = feltEndY - frac * (feltEndY - ufEndY) * 0.86;
+        const botSpani = Math.max(12, endYi - shYi);
         const woodHWAtEnd = coreNoseHW - (coreNoseHW - coreWaistHW) * ((endYi - coreDomeY) / Math.max(1, feltEndY - coreDomeY));
-        const endXOff = woodHWAtEnd + 0.6;
+        const endXOff = woodHWAtEnd + 0.5;
         const lowCtrlX2 = endXOff + (shHWi - endXOff) * 0.35;
+        const crownCtrlXi = shHWi * (0.56 - 0.18 * S_REF);
 
-        ctx.strokeStyle = 'rgba(255, 250, 235, 0.19)';
-        ctx.lineWidth = 1.05;
+        if (i === 2) {
+          const tMid = 0.44;
+          fiberCalloutTargetX = cx - evalCubic(endXOff, lowCtrlX2, shHWi, shHWi, 1 - tMid);
+          fiberCalloutTargetY = evalCubic(endYi, endYi - botSpani * 0.17, shYi + botSpani * 0.41, shYi, 1 - tMid);
+        }
+
+        const baseAlpha = 0.42 - i * 0.052;
+        ctx.strokeStyle = `rgba(255, 248, 225, ${baseAlpha})`;
+        ctx.lineWidth = i === 1 ? 1.5 : 1.15;
         ctx.beginPath();
         ctx.moveTo(cx - endXOff, endYi);
         ctx.bezierCurveTo(cx - lowCtrlX2, endYi - botSpani * 0.17, cx - shHWi, shYi + botSpani * 0.41, cx - shHWi, shYi);
-        ctx.bezierCurveTo(cx - shHWi, shYi - topSpani * 0.53, cx - shHWi * 0.52, topYi, cx, topYi);
-        ctx.bezierCurveTo(cx + shHWi * 0.52, topYi, cx + shHWi, shYi - topSpani * 0.53, cx + shHWi, shYi);
+        ctx.bezierCurveTo(cx - shHWi, shYi - topSpani * 0.53, cx - crownCtrlXi, topYi, cx, topYi);
+        ctx.bezierCurveTo(cx + crownCtrlXi, topYi, cx + shHWi, shYi - topSpani * 0.53, cx + shHWi, shYi);
         ctx.bezierCurveTo(cx + shHWi, shYi + botSpani * 0.41, cx + lowCtrlX2, endYi - botSpani * 0.17, cx + endXOff, endYi);
         ctx.stroke();
       }
 
+      // Helper for lower "oberhalb Niete -> Richtung Flanke" stitch geometry
+      const getRivetStitchGeom = (dir, offsetIdx = 0) => {
+        const tEntry = offsetIdx === 0 ? 0.67 : 0.59; // right above brass T-rivet!
+        const pxE = evalCubic(lowX0, lowX1, lowX2, lowX3, tEntry);
+        const pyE = evalCubic(lowY0, lowY1, lowY2, lowY3, tEntry);
+        const sx = cx + dir * pxE;
+        const sy = pyE;
+        if (this.tech === 'wrong') {
+          // Wrong horizontal/oblique jab across tail fibers toward glue seam
+          return { sx, sy, inX: -dir * 0.94, inY: -0.34, fullDepth: shoulderHW * 0.42 };
+        }
+        // Ideal: few, deep stitches aimed steeply upward from above rivet toward flank,
+        // rotated 10° inward toward hammerhead center (cx)
+        const targetX = cx + dir * (shoulderHW * (offsetIdx === 0 ? 0.64 : 0.72));
+        const targetY = shoulderY + (offsetIdx === 0 ? 3 : 8);
+        const vx = targetX - sx;
+        const vy = targetY - sy;
+        const len = Math.max(1, Math.hypot(vx, vy));
+        const baseInX = vx / len;
+        const baseInY = vy / len;
+        const rotRad = -dir * (10 * Math.PI / 180);
+        const inX = baseInX * Math.cos(rotRad) - baseInY * Math.sin(rotRad);
+        const inY = baseInX * Math.sin(rotRad) + baseInY * Math.cos(rotRad);
+        return { sx, sy, inX, inY, fullDepth: len * (offsetIdx === 0 ? 0.92 : 0.84) };
+      };
+
       // --- 3c. Draw Needle Stitch Channels inside Active Zone (when tech !== 'raw') ---
       const pulse = this.autoPulse ? (0.5 + 0.5 * Math.sin((nowMs - this.startMs) * 0.0042)) : 0.82;
       if (this.tech !== 'raw') {
-        const zm = ZONE_META[this.zone];
-        const midDeg = (zm.angMinDeg + zm.angMaxDeg) * 0.5;
-        const dirs = (this.zone === 'purple' || this.zone === 'red') ? [1] : [-1, 1];
+        if (this.zone === 'rivet') {
+          // Few (1–2), deep stitches from just above the rivet upward toward the flank!
+          for (const dir of [-1, 1]) {
+            for (const offIdx of [0, 1]) {
+              const rg = getRivetStitchGeom(dir, offIdx);
+              const curDepth = rg.fullDepth * (0.76 + 0.24 * pulse);
+              const ex = rg.sx + rg.inX * curDepth;
+              const ey = rg.sy + rg.inY * curDepth;
 
-        for (const dir of dirs) {
-          const nCount = zm.needles;
-          for (let ni = 0; ni < nCount; ni++) {
-            const spreadDeg = (ni - (nCount - 1) / 2) * (this.zone === 'purple' ? 6.0 : 5.2);
-            const theta = ((this.zone === 'purple' || this.zone === 'red') ? spreadDeg : dir * (midDeg + spreadDeg)) * Math.PI / 180;
-            const pt = evalOuterHalf(Math.abs(theta));
-            const sx = cx + Math.sign(theta || dir) * pt.x;
-            const sy = pt.y;
-
-            // Inward radial unit vector (90° to contour / toward clock center) vs Wrong oblique vector
-            let inX, inY;
-            if (this.zone === 'purple' || this.zone === 'red') {
-              inX = (this.tech === 'wrong') ? 0.82 : 0;
-              inY = (this.tech === 'wrong') ? 0.57 : 1;
-            } else if (this.tech === 'wrong') {
-              // Oblique flat cross-cut across outer contour layers!
-              inX = -dir * 0.34;
-              inY = 0.94;
-            } else {
-              const vx = cx - sx;
-              const vy = (this.zone === 'blue' ? shoulderY - 6 : shoulderY) - sy;
-              const vl = Math.max(1, Math.hypot(vx, vy));
-              inX = vx / vl;
-              inY = vy / vl;
+              ctx.save();
+              ctx.strokeStyle = st.isAlert ? '#fecaca' : (offIdx === 0 ? '#fef08a' : 'rgba(254, 240, 138, 0.72)');
+              ctx.lineWidth = offIdx === 0 ? 2.1 : 1.55;
+              ctx.setLineDash(this.tech === 'wrong' ? [3, 2] : []);
+              ctx.beginPath();
+              ctx.moveTo(rg.sx, rg.sy);
+              ctx.lineTo(ex, ey);
+              ctx.stroke();
+              ctx.restore();
             }
 
-            // Compute stitch depth in px stopping safely before underfelt
-            const maxLocalThickness = Math.max(14, pt.r - ufOuterHW * 0.95);
-            const depthPx = this.zone === 'purple'
-              ? surfaceCapPx * 0.82
-              : (this.zone === 'red' ? (ufTipY - crownTopY) * 0.84 : maxLocalThickness * zm.depthFrac);
-
-            const curDepth = depthPx * (0.72 + 0.28 * pulse);
-            const ex = sx + inX * curDepth;
-            const ey = sy + inY * curDepth;
-
-            ctx.save();
-            ctx.strokeStyle = st.isAlert ? '#fecaca' : '#ffffff';
-            ctx.lineWidth = st.isAlert ? 2.1 : 1.75;
-            ctx.setLineDash(this.tech === 'wrong' ? [3, 2] : []);
-            ctx.beginPath();
-            ctx.moveTo(sx, sy);
-            ctx.lineTo(ex, ey);
-            ctx.stroke();
-            ctx.restore();
+            // Show upward elasticity boost into upper flank/crown when ideal
+            if (this.tech === 'ideal') {
+              const pFlank = { x: cx + dir * (shoulderHW * 0.54), y: shoulderY + 1 };
+              const pUp = evalOuterHalf(49 * Math.PI / 180);
+              this.drawArrow(
+                ctx,
+                pFlank.x,
+                pFlank.y,
+                cx + dir * (pUp.x * 0.69),
+                shoulderY - (shoulderY - pUp.y) * 0.69,
+                '#fde047',
+                2.3,
+                1.0
+              );
+            }
           }
-        }
+        } else {
+          const zm = ZONE_META[this.zone];
+          const midDeg = (zm.angMinDeg + zm.angMaxDeg) * 0.5;
+          const dirs = (this.zone === 'purple' || this.zone === 'red') ? [1] : [-1, 1];
 
-        // Special tension transfer arrows for Blue ff-Wedge -> Green f-Wedge (Kruse Page 13!)
-        if (this.zone === 'blue' && this.tech === 'ideal') {
-          for (const dir of [-1, 1]) {
-            const pFrom = evalOuterHalf(76 * Math.PI / 180);
-            const pTo = evalOuterHalf(46 * Math.PI / 180);
-            this.drawArrow(
-              ctx,
-              cx + dir * (pFrom.x * 0.76),
-              shoulderY - (shoulderY - pFrom.y) * 0.76,
-              cx + dir * (pTo.x * 0.76),
-              shoulderY - (shoulderY - pTo.y) * 0.76,
-              '#fde047',
-              2.5,
-              1.05
-            );
+          for (const dir of dirs) {
+            const nCount = zm.needles;
+            for (let ni = 0; ni < nCount; ni++) {
+              const spreadDeg = (ni - (nCount - 1) / 2) * (this.zone === 'purple' ? 6.0 : 4.8);
+              const theta = ((this.zone === 'purple' || this.zone === 'red') ? spreadDeg : dir * (midDeg + spreadDeg)) * Math.PI / 180;
+              const pt = evalOuterHalf(Math.abs(theta));
+              const sgn = Math.sign(theta || dir) || 1;
+              const sx = cx + sgn * pt.x;
+              const sy = pt.y;
+
+              // Inward perpendicular unit vector ("im Lot zum Faserverlauf") vs Wrong oblique vector
+              let inX, inY;
+              if (this.zone === 'purple' || this.zone === 'red') {
+                inX = (this.tech === 'wrong') ? 0.82 : 0;
+                inY = (this.tech === 'wrong') ? 0.57 : 1;
+              } else if (this.tech === 'wrong') {
+                // Oblique cross-cut slicing across fiber course!
+                inX = -dir * 0.34;
+                inY = 0.94;
+              } else {
+                // Strictly perpendicular ("im Lot") to local Merino fiber course!
+                inX = -sgn * pt.nx;
+                inY = -pt.ny;
+              }
+
+              // Compute stitch depth in px stopping safely before underfelt
+              const maxLocalThickness = Math.max(14, pt.r - ufOuterHW * 0.96);
+              const depthPx = this.zone === 'purple'
+                ? surfaceCapPx * 0.82
+                : (this.zone === 'red' ? (ufTipY - crownTopY) * 0.84 : maxLocalThickness * zm.depthFrac);
+
+              const curDepth = depthPx * (0.72 + 0.28 * pulse);
+              const ex = sx + inX * curDepth;
+              const ey = sy + inY * curDepth;
+
+              ctx.save();
+              ctx.strokeStyle = st.isAlert ? '#fecaca' : '#ffffff';
+              ctx.lineWidth = st.isAlert ? 2.1 : 1.75;
+              ctx.setLineDash(this.tech === 'wrong' ? [3, 2] : []);
+              ctx.beginPath();
+              ctx.moveTo(sx, sy);
+              ctx.lineTo(ex, ey);
+              ctx.stroke();
+              ctx.restore();
+            }
+          }
+
+          // Special tension transfer arrows for Blue ff-Wedge -> Green f-Wedge (Kruse Page 13!)
+          if (this.zone === 'blue' && this.tech === 'ideal') {
+            for (const dir of [-1, 1]) {
+              const pFrom = evalOuterHalf(76 * Math.PI / 180);
+              const pTo = evalOuterHalf(46 * Math.PI / 180);
+              this.drawArrow(
+                ctx,
+                cx + dir * (pFrom.x * 0.76),
+                shoulderY - (shoulderY - pFrom.y) * 0.76,
+                cx + dir * (pTo.x * 0.76),
+                shoulderY - (shoulderY - pTo.y) * 0.76,
+                '#fde047',
+                2.5,
+                1.05
+              );
+            }
           }
         }
       }
 
       ctx.restore(); // end feltCloak clip
 
-      // --- 4. Glue Seam + Brass T-Rivet + Outer Surface-Tension Arch (σ) ---
+      // --- 4. Glue Seam + 3D Brass T-Rivet + Outer Surface-Tension Arch (σ) ---
       ctx.save();
       ctx.strokeStyle = '#fbbf24';
-      ctx.lineWidth = 2.4;
+      ctx.lineWidth = 2.6;
+      ctx.lineCap = 'round';
+      ctx.shadowColor = 'rgba(251, 191, 36, 0.72)';
+      ctx.shadowBlur = 7;
       for (const dir of [-1, 1]) {
         ctx.beginPath();
         ctx.moveTo(cx + dir * (coreHWAtUfEnd + 0.5), ufEndY + 1);
         ctx.lineTo(cx + dir * (coreWaistHW + 0.5), feltEndY - 0.5);
         ctx.stroke();
       }
-      ctx.restore();
-
-      // Brass T-rivet
-      const rivetOuterHW = coreWaistHW + (shoulderHW - coreWaistHW) * 0.24;
-      ctx.save();
-      ctx.fillStyle = '#eab308';
-      ctx.strokeStyle = '#422006';
-      ctx.lineWidth = 0.8;
-      ctx.beginPath();
-      ctx.roundRect(cx - rivetOuterHW, rivetY - 1.7, rivetOuterHW * 2, 3.4, 1.2);
-      ctx.fill();
-      ctx.stroke();
       ctx.restore();
 
       // Outer Surface-Tension Membrane Arc (σ)
@@ -1188,11 +1428,36 @@
       ctx.save();
       const archBroken = st.isAlert;
       ctx.strokeStyle = archBroken ? '#ef4444' : '#2ecc71';
-      ctx.lineWidth = archBroken ? 2.6 : 3.1;
+      ctx.lineWidth = archBroken ? 2.6 : 3.0;
       if (archBroken) ctx.setLineDash([6, 4]);
       ctx.shadowColor = archBroken ? 'rgba(239,68,68,0.65)' : 'rgba(46,204,113,0.55)';
-      ctx.shadowBlur = 9;
+      ctx.shadowBlur = 8;
       ctx.stroke(outerArc);
+      ctx.restore();
+
+      // 3D Horizontal Brass T-Rivet (Messing-Niete — 1:1 with Slide 27)
+      ctx.save();
+      const brassGrad = ctx.createLinearGradient(cx, rivetY - 2.5, cx, rivetY + 2.5);
+      brassGrad.addColorStop(0, '#fef08a');
+      brassGrad.addColorStop(0.5, '#eab308');
+      brassGrad.addColorStop(1, '#854d0e');
+
+      ctx.fillStyle = brassGrad;
+      ctx.strokeStyle = '#422006';
+      ctx.lineWidth = 0.85;
+      ctx.beginPath();
+      ctx.roundRect(cx - rivetOuterHW - 1.2, rivetY - 1.8, (rivetOuterHW + 1.2) * 2, 3.6, 1.2);
+      ctx.fill();
+      ctx.stroke();
+
+      for (const dir of [-1, 1]) {
+        const hx = cx + dir * (rivetOuterHW + 0.6);
+        ctx.fillStyle = '#fde047';
+        ctx.beginPath();
+        ctx.roundRect(hx - 1.4, rivetY - 4.2, 2.8, 8.4, 1.2);
+        ctx.fill();
+        ctx.stroke();
+      }
       ctx.restore();
 
       // --- 5. Kruse's 3 Clock-Face Reference Lines & Hour Labels ---
@@ -1230,33 +1495,43 @@
 
       // Precompute External Needle Holder Segment so right-side clock labels stay 100% clear
       const zm = ZONE_META[this.zone];
-      const needleDeg = this.zone === 'blue' ? 74 : (zm.angMinDeg + zm.angMaxDeg) * 0.5;
-      const midRad = needleDeg * Math.PI / 180;
       const isTop = (this.zone === 'purple' || this.zone === 'red');
-      const nPt = isTop ? { x: 0, y: crownTopY, r: shoulderY - crownTopY } : evalOuterHalf(midRad);
-      const contactX = isTop ? cx : cx + nPt.x;
-      const contactY = isTop ? crownTopY : nPt.y;
+      const isRivet = (this.zone === 'rivet');
+      let contactX, contactY, outX, outY, tangX = 1, tangY = 0;
 
-      let outX, outY;
-      if (isTop) {
-        outX = this.tech === 'wrong' ? -0.78 : 0.0;
-        outY = this.tech === 'wrong' ? -0.62 : -1.0;
-      } else if (this.tech === 'wrong') {
-        outX = 0.38;
-        outY = -0.92;
+      if (isRivet) {
+        const rg = getRivetStitchGeom(1, 0);
+        contactX = rg.sx;
+        contactY = rg.sy;
+        outX = -rg.inX;
+        outY = -rg.inY;
       } else {
-        const vx = contactX - cx;
-        const vy = contactY - (this.zone === 'blue' ? shoulderY - 6 : shoulderY);
-        const vl = Math.max(1, Math.hypot(vx, vy));
-        outX = vx / vl;
-        outY = vy / vl;
+        const needleDeg = this.zone === 'blue' ? 75 : (zm.angMinDeg + zm.angMaxDeg) * 0.5;
+        const midRad = needleDeg * Math.PI / 180;
+        const nPt = isTop ? { x: 0, y: crownTopY, r: shoulderY - crownTopY, nx: 0, ny: -1, tx: 1, ty: 0 } : evalOuterHalf(midRad);
+        contactX = isTop ? cx : cx + nPt.x;
+        contactY = isTop ? crownTopY : nPt.y;
+        tangX = nPt.tx;
+        tangY = nPt.ty;
+
+        if (isTop) {
+          outX = this.tech === 'wrong' ? -0.78 : 0.0;
+          outY = this.tech === 'wrong' ? -0.62 : -1.0;
+        } else if (this.tech === 'wrong') {
+          outX = 0.38;
+          outY = -0.92;
+        } else {
+          // Exact outward normal perpendicular ("im Lot") to local Merino fiber course!
+          outX = nPt.nx;
+          outY = nPt.ny;
+        }
       }
 
       const retractPx = this.tech === 'raw' ? 11 : (1.5 + (1 - pulse) * 6.5);
       const tipBaseX = contactX + outX * retractPx;
       const tipBaseY = contactY + outY * retractPx;
-      const needleLen = isTop ? 16 : 20;
-      const handleLen = isTop ? 22 : 32;
+      const needleLen = isTop ? 16 : (isRivet ? 22 : 20);
+      const handleLen = isTop ? 22 : (isRivet ? 28 : 32);
       const hx0 = tipBaseX + outX * needleLen;
       const hy0 = tipBaseY + outY * needleLen;
       const hx1 = hx0 + outX * handleLen;
@@ -1277,7 +1552,7 @@
         const pt = evalOuterHalf(rad);
         const sgn = Math.sign(tk.deg);
         const ox = cx + sgn * (pt.x + (Math.abs(tk.deg) === 90 ? 18 : 15));
-        const oy = pt.y + (tk.deg === 90 ? 15 : (tk.deg === -90 ? -8 : -4));
+        const oy = pt.y + (Math.abs(tk.deg) === 90 ? 15 : -4);
 
         // Skip drawing right-side label if needle handle or chuck passes right over it
         if (sgn > 0) {
@@ -1291,12 +1566,24 @@
       }
       ctx.restore();
 
-      // --- 6. Animated External Voicing Needle Holder (Right Side or Top Crown) ---
+      // --- 6. Animated External Voicing Needle Holder (Right Side, Top Crown, or Above Rivet) ---
       {
         const perpX = -outY;
         const perpY = outX;
 
         ctx.save();
+        // Right-angle square ("∟" im Lot zur Faser) right at the contour entry point when ideal on upper zones!
+        if (this.tech === 'ideal' && !st.isAlert && !isRivet) {
+          const sq = 7.0;
+          ctx.strokeStyle = '#4ade80';
+          ctx.lineWidth = 1.6;
+          ctx.beginPath();
+          ctx.moveTo(contactX + outX * sq, contactY + outY * sq);
+          ctx.lineTo(contactX + outX * sq + tangX * sq, contactY + outY * sq + tangY * sq);
+          ctx.lineTo(contactX + tangX * sq, contactY + tangY * sq);
+          ctx.stroke();
+        }
+
         // Steel needles
         ctx.strokeStyle = '#f8fafc';
         ctx.lineWidth = 1.65;
@@ -1324,21 +1611,22 @@
         ctx.lineTo(hx1, hy1);
         ctx.stroke();
 
-        // 90° Right-Angle Badge next to needle entry when ideal!
+        // Compact Badge next to needle entry ("⊥ Faser" or "Tief ↑ Flanke") when ideal!
         if (this.tech === 'ideal' && !st.isAlert) {
-          const bx = isTop ? (cx + 22) : (hx1 + 12);
-          const by = isTop ? Math.max(18, crownTopY - 26) : Math.max(24, Math.min(h - 32, hy1));
-          ctx.font = '700 12.2px JetBrains Mono, monospace';
-          const bTxt = '90° ✓';
+          const bTxt = isRivet ? `${d.cvRivetBadge} ✓` : `${d.cvPerpBadge} ✓`;
+          ctx.font = '700 11.8px JetBrains Mono, monospace';
           const bw = ctx.measureText(bTxt).width + 13;
-          ctx.fillStyle = 'rgba(16, 46, 34, 0.94)';
-          ctx.strokeStyle = '#4ade80';
+          let bx = isTop ? (cx + 20) : (isRivet ? (hx1 + 8) : (hx1 + 10));
+          let by = isTop ? Math.max(18, crownTopY - 26) : Math.max(24, Math.min(h - 38, hy1));
+          bx = Math.min(w - bw - 8, bx);
+          ctx.fillStyle = isRivet ? 'rgba(46, 36, 10, 0.94)' : 'rgba(16, 46, 34, 0.94)';
+          ctx.strokeStyle = isRivet ? '#facc15' : '#4ade80';
           ctx.lineWidth = 1.25;
           ctx.beginPath();
           ctx.roundRect(bx, by - 11, bw, 20, 5.5);
           ctx.fill();
           ctx.stroke();
-          ctx.fillStyle = '#bbf7d0';
+          ctx.fillStyle = isRivet ? '#fef08a' : '#bbf7d0';
           ctx.textAlign = 'left';
           ctx.fillText(bTxt, bx + 6.5, by + 3.5);
         }
@@ -1350,7 +1638,7 @@
       const padX = 12;
 
       // Top-Left: Underfelt reference label
-      ctx.font = '600 12.5px Roboto, sans-serif';
+      ctx.font = '600 12.3px Roboto, sans-serif';
       ctx.fillStyle = '#f9a8d4';
       ctx.textAlign = 'left';
       ctx.fillText(d.cvAxisUf, padX, ufTipY - 5);
@@ -1363,14 +1651,24 @@
 
       // Mid-Left: 9:00 Widest Cheek label
       ctx.fillStyle = '#7dd3fc';
-      ctx.fillText(d.cvAxisCheekL, padX, shoulderY + 17);
+      ctx.fillText(d.cvAxisCheekL, padX, shoulderY + 16);
+
+      // Lower-Mid Left: Merino Fiber Course ("Faserverlauf (⊥ stechen)") callout
+      const fiberLblY = Math.round((shoulderY + 18 + rivetY - 6) * 0.52);
+      ctx.fillStyle = '#e6c882';
+      ctx.fillText(d.cvFiberCourse, padX, fiberLblY);
+      ctx.strokeStyle = 'rgba(230, 200, 130, 0.44)';
+      ctx.beginPath();
+      ctx.moveTo(padX + ctx.measureText(d.cvFiberCourse).width + 6, fiberLblY - 4);
+      ctx.lineTo(fiberCalloutTargetX, fiberCalloutTargetY);
+      ctx.stroke();
 
       // Bottom-Left: Glue + T-Rivet label
       ctx.fillStyle = '#fde68a';
-      ctx.fillText(d.cvGlueRivet, padX, rivetY + 4);
+      ctx.fillText(d.cvGlueRivet, padX, rivetY + 5);
       ctx.strokeStyle = 'rgba(251, 191, 36, 0.40)';
       ctx.beginPath();
-      ctx.moveTo(padX + ctx.measureText(d.cvGlueRivet).width + 6, rivetY);
+      ctx.moveTo(padX + ctx.measureText(d.cvGlueRivet).width + 6, rivetY + 1);
       ctx.lineTo(cx - rivetOuterHW - 4, rivetY);
       ctx.stroke();
 
@@ -1415,6 +1713,11 @@
         bannerBg = 'rgba(12, 34, 54, 0.92)';
         bannerBorder = '#38bdf8';
         bannerTextCol = '#bae6fd';
+      } else if (this.zone === 'rivet') {
+        statusBanner = d.cvRivetUp;
+        bannerBg = 'rgba(48, 36, 8, 0.94)';
+        bannerBorder = '#facc15';
+        bannerTextCol = '#fef08a';
       } else if (this.zone === 'purple') {
         statusBanner = d.cvBetweenGrooves;
         bannerBg = 'rgba(46, 16, 101, 0.92)';
@@ -1423,8 +1726,8 @@
       }
 
       if (statusBanner) {
-        ctx.font = '700 12.6px Roboto, sans-serif';
-        const sw = Math.min(w * 0.46, ctx.measureText(statusBanner).width + 16);
+        ctx.font = '700 12.4px Roboto, sans-serif';
+        const sw = Math.min(w * 0.56, ctx.measureText(statusBanner).width + 16);
         const sx = 10;
         const sy = h - 29;
         ctx.fillStyle = bannerBg;
@@ -1587,7 +1890,7 @@
         } else if (st.isAlert) {
           fillCol = '#ef4444';
         } else if (val > 0) {
-          fillCol = i < 4 ? '#38bdf8' : '#2ecc71';
+          fillCol = i < 4 ? '#38bdf8' : (i < 6 ? '#2ecc71' : '#facc15');
         } else {
           fillCol = this.zone === 'purple' ? '#c084fc' : '#fb923c';
         }
@@ -1622,7 +1925,7 @@
       const rect = canvas.getBoundingClientRect();
       const x = clientX - rect.left;
       const y = clientY - rect.top;
-      const { cx, shoulderY, crownTopY, ufTipY, feltEndY, shoulderHW } = this.cachedGeom;
+      const { cx, shoulderY, crownTopY, ufTipY, feltEndY, rivetY, shoulderHW, surfaceCapPx } = this.cachedGeom;
 
       if (y < crownTopY - 12 || y > feltEndY + 8 || Math.abs(x - cx) > shoulderHW + 22) {
         return null;
@@ -1632,13 +1935,16 @@
       const dy = shoulderY - y; // positive above 9:00-3:00 line
       const deg = Math.atan2(dx, dy) * 180 / Math.PI;
 
+      if (y > shoulderY + 3 && y <= rivetY + 6 && dx >= 6) {
+        return 'rivet';
+      }
       if (deg <= ZONE_META.purple.angMaxDeg) {
-        const surfaceSplitY = crownTopY + Math.max(12, (ufTipY - crownTopY) * 0.26);
+        const surfaceSplitY = crownTopY + (surfaceCapPx || Math.max(9.5, (ufTipY - crownTopY) * 0.21)) + 2;
         return y <= surfaceSplitY ? 'purple' : 'red';
       }
       if (deg <= ZONE_META.orange.angMaxDeg) return 'orange';
       if (deg <= ZONE_META.green.angMaxDeg) return 'green';
-      if (deg <= 118) return 'blue';
+      if (deg <= 95) return 'blue';
       return null;
     }
 
@@ -1759,7 +2065,7 @@
       if (kpi3Sub) {
         kpi3Sub.textContent = this.tech === 'raw'
           ? d.rawOverride.roEffect.split('·')[1]?.trim() || zd.kpi3Sub
-          : (this.tech === 'wrong' && this.zone !== 'red' ? d.wrongOverride.kpi2Sub : zd.kpi3Sub);
+          : (this.tech === 'wrong' && this.zone !== 'red' ? (d.wrongOverride.kpi3Sub || d.wrongOverride.kpi2Sub) : zd.kpi3Sub);
       }
 
       // Explanation Box

@@ -305,7 +305,9 @@
 
     freqToNoteName(freq) {
       if (freq <= 20) return "";
-      const noteNames = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+      const noteNames = this.lang === 'de'
+        ? ["C", "Cis", "D", "Dis", "E", "F", "Fis", "G", "Gis", "A", "B", "H"]
+        : ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
       const midi = Math.round(69 + 12 * Math.log2(freq / 440.0));
       const octave = Math.floor(midi / 12) - 1;
       const name = noteNames[((midi % 12) + 12) % 12];
@@ -902,7 +904,13 @@
       ctx.setLineDash([]);
 
       const zeroY = mapY(0);
-      const intvNames = ["1f₀", "Okt", "Quin", "2Okt", "Terz", "Quin", "Sept", "3Okt", "Non", "Dez", "11f₀", "12f₀"];
+      const INTV_I18N = {
+        de: ["1f₀", "Okt", "Duod", "2Okt", "Terz", "Quin", "Sept", "3Okt", "Non", "Dez", "11f₀", "12f₀"],
+        en: ["1f₀", "Oct", "12th", "2Oct", "M3", "5th", "m7", "3Oct", "M9", "M10", "11f₀", "12f₀"],
+        ja: ["基音", "8度", "12度", "15度", "長3", "完5", "短7", "3Oct", "長9", "長10", "11倍", "12倍"],
+        zh: ["基音", "八度", "十二度", "双八度", "大三", "纯五", "小七", "三八度", "大九", "大十", "11f₀", "12f₀"]
+      };
+      const intvNames = INTV_I18N[this.lang] || INTV_I18N.de;
 
       // If upper partials exceed 6000 Hz, shade the excluded > 6000 Hz zone
       if (stats.maxValidH < nH - 1) {
@@ -922,13 +930,21 @@
         // Label inside excluded > 6000 Hz region
         const cxExcl = xExclStart + wExcl / 2;
         const cyExcl = padT + ph / 2;
+        const exclMain = this.lang === 'en' ? '> 6 kHz excluded'
+                       : this.lang === 'ja' ? '6 kHz超は除外'
+                       : this.lang === 'zh' ? '已排除 > 6 kHz 频段'
+                       : '> 6 kHz ausgeblendet';
+        const exclSub = this.lang === 'en' ? '(Polyphonic recording)'
+                      : this.lang === 'ja' ? '（楽曲演奏録音のため）'
+                      : this.lang === 'zh' ? '（多声部乐曲录音）'
+                      : '(Mehrklang-Aufnahme)';
         ctx.fillStyle = '#fbbf24';
         ctx.font = '700 12px Roboto, sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('> 6.000 Hz ausgeklammert', cxExcl, cyExcl - 6);
+        ctx.fillText(exclMain, cxExcl, cyExcl - 6);
         ctx.fillStyle = '#94a3b8';
         ctx.font = '500 11px Roboto, sans-serif';
-        ctx.fillText('(Klavierstück / Mehrklang)', cxExcl, cyExcl + 12);
+        ctx.fillText(exclSub, cxExcl, cyExcl + 12);
       }
 
       for (let h = 0; h < nH; h++) {
@@ -1045,13 +1061,14 @@
       const elOdd = document.getElementById('yka-kpi-p-odd');
 
       const dSlope = stats.slopeOctKit - stats.slopeOctOrig;
+      const octUnit = this.lang === 'de' ? 'dB/Okt.' : 'dB/oct';
       if (elDecay) {
         const sgnS = dSlope >= 0 ? '+' : '';
-        elDecay.textContent = `${sgnS}${dSlope.toFixed(2)} dB/Okt.`;
+        elDecay.textContent = `${sgnS}${dSlope.toFixed(2)} ${octUnit}`;
         elDecay.style.color = dSlope >= 0 ? '#2ecc71' : '#38bdf8';
       }
       if (elDecaySub) {
-        elDecaySub.textContent = `${stats.slopeOctOrig.toFixed(1)} → ${stats.slopeOctKit.toFixed(1)} dB/Okt.`;
+        elDecaySub.textContent = `${stats.slopeOctOrig.toFixed(1)} → ${stats.slopeOctKit.toFixed(1)} ${octUnit}`;
       }
       if (elEven) {
         const sEven = stats.evenGainRel >= 0 ? '+' : '';
@@ -1166,8 +1183,9 @@
         ctx.fillStyle = '#fbbf24';
         ctx.font = '700 12.5px JetBrains Mono, monospace';
         ctx.textAlign = 'left';
+        const noteWord = this.lang === 'en' ? 'Note' : this.lang === 'ja' ? '音' : this.lang === 'zh' ? '音符' : 'Ton';
         ctx.fillText(
-          `Ton ${selSemi.note} (f₀ = ${selSemi.f0.toFixed(1)} Hz) · Orig: ${v1.toFixed(1)} → Kit: ${v2.toFixed(1)} dB · Δ ${maxHLabel[activeSemiIdx]}: ${sgn}${dSemi.toFixed(2)} dB (${sgn}${Math.round(pctS)} %)`,
+          `${noteWord} ${selSemi.note} (f₀ = ${selSemi.f0.toFixed(1)} Hz) · Orig: ${v1.toFixed(1)} → Kit: ${v2.toFixed(1)} dB · Δ ${maxHLabel[activeSemiIdx]}: ${sgn}${dSemi.toFixed(2)} dB (${sgn}${Math.round(pctS)} %)`,
           padL + 4,
           padT - 7
         );
@@ -1461,7 +1479,8 @@
         el.textContent = `${stats.noteLo} – ${stats.noteHi}`;
       });
       document.querySelectorAll('.yka-kpi-win-sub').forEach(el => {
-        el.textContent = `${stats.semitones.length} Halbtöne · f₀ = ${Math.round(stats.fLo)}–${Math.round(stats.fHi)} Hz`;
+        const semiWord = this.lang === 'en' ? 'semitones' : this.lang === 'ja' ? '半音' : this.lang === 'zh' ? '个半音' : 'Halbtöne';
+        el.textContent = `${stats.semitones.length} ${semiWord} · f₀ = ${Math.round(stats.fLo)}–${Math.round(stats.fHi)} Hz`;
       });
 
       const mGain = stats.meanOvertoneGain;
@@ -1473,7 +1492,11 @@
       });
       document.querySelectorAll('.yka-kpi-ot-sub').forEach(el => {
         const sgnMax = stats.maxGainVal >= 0 ? '+' : '';
-        el.textContent = `Spitze bei H${stats.maxGainH} (${sgnMax}${stats.maxGainVal.toFixed(2)} dB)`;
+        const peakLbl = this.lang === 'en' ? `Peak at H${stats.maxGainH}`
+                      : this.lang === 'ja' ? `最大 H${stats.maxGainH}`
+                      : this.lang === 'zh' ? `峰值 H${stats.maxGainH}`
+                      : `Spitze bei H${stats.maxGainH}`;
+        el.textContent = `${peakLbl} (${sgnMax}${stats.maxGainVal.toFixed(2)} dB)`;
       });
 
       const h1Orig = stats.origAbsDb[0];
@@ -1497,54 +1520,66 @@
       });
 
       const maxHNum = stats.maxValidH + 1;
+      const fmtDelta = (idx) => {
+        const v = stats.deltaRelH1[idx] || 0;
+        return `${v >= 0 ? '+' : ''}${v.toFixed(1)} dB`;
+      };
       let txt = "";
       if (this.lang === 'en') {
         if (stats.fLo < 45) {
-          txt = `Bass (${stats.noteLo}–${stats.noteHi}): Solid H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB), boomy partials H2–H4 cleaned up (−1.7 to −2.9 dB) for clear chord definition.`;
+          txt = `Deep Bass (${stats.noteLo}–${stats.noteHi}): Solid H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB); low-end boominess on H2–H4 reduced (${fmtDelta(1)} to ${fmtDelta(3)}) for clean chord clarity.`;
         } else if (stats.fLo < 90) {
-          txt = `Baritone (${stats.noteLo}–${stats.noteHi}): Less low-mid mud, while overtones H5–H9 gain +2.4 to +3.0 dB for focused resonance.`;
+          txt = `Tenor (${stats.noteLo}–${stats.noteHi}): Clearer low-mid fundamentals while overtones H5–H8 gain up to +${stats.maxGainVal.toFixed(1)} dB for focused projection.`;
         } else if (stats.fLo < 180) {
-          txt = `Middle register (${stats.noteLo}–${stats.noteHi}): H2 (+1.6 dB), H3 (+3.2 dB), H4 (+3.5 dB) & H8 (+4.7 dB) surge for orchestral warmth.`;
+          txt = `Middle Register (${stats.noteLo}–${stats.noteHi}): H2 (${fmtDelta(1)}), H3 (${fmtDelta(2)}), H4 (${fmtDelta(3)}) & H8 (${fmtDelta(7)}) gain rich tonal fullness.`;
         } else if (stats.fLo < 350) {
-          txt = `Treble 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (at H${stats.maxGainH}) — notes bloom after the attack.`;
+          txt = `Treble 1 (${stats.noteLo}–${stats.noteHi}): Partials H2–H${maxHNum} (≤ 6 kHz) rise up to +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) — singing sustain.`;
         } else if (stats.fLo < 700) {
-          txt = `Treble 2 (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection (> 6 kHz excluded).`;
+          txt = `Treble 2 (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & H2–H${maxHNum} (≤ 6 kHz, peak +${stats.maxGainVal.toFixed(1)} dB) deliver bell-like projection.`;
         } else {
-          txt = `Brilliance (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & partials ≤ 6 kHz (H2–H${maxHNum}) deliver crystal-clear projection (> 6 kHz excluded).`;
+          txt = `Top Brilliance (${stats.noteLo}–${stats.noteHi}): H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & partials ≤ 6 kHz (H2–H${maxHNum}) project clearly without harshness.`;
         }
       } else if (this.lang === 'ja') {
         if (stats.fLo < 45) {
-          txt = `低音域（${stats.noteLo}–${stats.noteHi}）：基音H1を維持し、H2–H4の濁りを−1.7〜−2.9 dB整理して明瞭な分離を実現。`;
+          txt = `重低音域（${stats.noteLo}–${stats.noteHi}）：基音H1（${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB）を保ちつつ、H2–H4のこもりを低減（${fmtDelta(1)}〜${fmtDelta(3)}）し和音を明瞭化。`;
+        } else if (stats.fLo < 90) {
+          txt = `テノール域（${stats.noteLo}–${stats.noteHi}）：低中域の濁りを抑え、H5〜H8倍音が最大+${stats.maxGainVal.toFixed(1)} dB向上して芯のある響きに。`;
         } else if (stats.fLo < 180) {
-          txt = `中音域（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）・H3（+3.2 dB）・H4（+3.5 dB）が向上し豊かな響きに。`;
+          txt = `中音域（${stats.noteLo}–${stats.noteHi}）：H2（${fmtDelta(1)}）・H3（${fmtDelta(2)}）・H4（${fmtDelta(3)}）・H8（${fmtDelta(7)}）が大きく向上し豊かな響きを実現。`;
         } else if (stats.fLo < 350) {
-          txt = `高音域1（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、華やかな伸びを実現。`;
+          txt = `高音域1（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の倍音（H2〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB（H${stats.maxGainH}）向上し伸びやかな歌心を実現。`;
+        } else if (stats.fLo < 700) {
+          txt = `高音域2（${stats.noteLo}–${stats.noteHi}）：基音H1と6 kHz以下の倍音（H2〜H${maxHNum}、最大+${stats.maxGainVal.toFixed(1)} dB）が鐘のような遠達性を発揮。`;
         } else {
-          txt = `高音域2（${stats.noteLo}–${stats.noteHi}）：6 kHz以下の有効倍音（H1〜H${maxHNum}）が最大+${stats.maxGainVal.toFixed(1)} dB向上し、輝かしい遠達性を実現。`;
+          txt = `最高音域（${stats.noteLo}–${stats.noteHi}）：基音H1（${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB）と6 kHz以下の倍音が硬さのない透明な輝きを実現。`;
         }
       } else if (this.lang === 'zh') {
         if (stats.fLo < 45) {
-          txt = `低音区（${stats.noteLo}–${stats.noteHi}）：稳固基音H1，消除H2–H4浑浊（−1.7至−2.9 dB），低音干净通透。`;
+          txt = `深低音区（${stats.noteLo}–${stats.noteHi}）：稳固基音H1（${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB），收敛H2–H4浑浊轰鸣（${fmtDelta(1)}至${fmtDelta(3)}），和弦层次清晰。`;
+        } else if (stats.fLo < 90) {
+          txt = `次中音区（${stats.noteLo}–${stats.noteHi}）：减少中低频浑浊，同时H5–H8泛音最高提升+${stats.maxGainVal.toFixed(1)} dB，穿透力更集中。`;
         } else if (stats.fLo < 180) {
-          txt = `核心音区（${stats.noteLo}–${stats.noteHi}）：H2（+1.6 dB）、H3（+3.2 dB）、H4（+3.5 dB）显著跃升，共鸣醇厚。`;
+          txt = `核心中音区（${stats.noteLo}–${stats.noteHi}）：H2（${fmtDelta(1)}）、H3（${fmtDelta(2)}）、H4（${fmtDelta(3)}）与H8（${fmtDelta(7)}）显著增强，音色饱满醇厚。`;
         } else if (stats.fLo < 350) {
-          txt = `高音区1（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，音色饱满绽放。`;
+          txt = `高音区1（${stats.noteLo}–${stats.noteHi}）：6 kHz以内泛音（H2–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB（H${stats.maxGainH}），如歌延展。`;
+        } else if (stats.fLo < 700) {
+          txt = `高音区2（${stats.noteLo}–${stats.noteHi}）：基音H1与6 kHz以内泛音（H2–H${maxHNum}，峰值+${stats.maxGainVal.toFixed(1)} dB）呈现钟鸣般穿透力。`;
         } else {
-          txt = `高音区2（${stats.noteLo}–${stats.noteHi}）：6 kHz以内有效泛音（H1–H${maxHNum}）最高提升+${stats.maxGainVal.toFixed(1)} dB，展现钟鸣穿透力。`;
+          txt = `最高音区（${stats.noteLo}–${stats.noteHi}）：基音H1（${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB）与6 kHz以内泛音通透璀璨而不刺耳。`;
         }
       } else {
         if (stats.fLo < 45) {
-          txt = `Tiefer Bass (${stats.noteLo}–${stats.noteHi}): Stabiles Fundament H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB), Mulm-Teiltöne H2–H4 um −1,7 bis −2,9 dB entschlackt – trocken & präzise.`;
+          txt = `Tiefer Bass (${stats.noteLo}–${stats.noteHi}): Stabiles Fundament H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB), tieffrequentes Dröhnen bei H2–H4 reduziert (${fmtDelta(1)} bis ${fmtDelta(3)}) – klare Akkordtrennung.`;
         } else if (stats.fLo < 90) {
-          txt = `Bariton (${stats.noteLo}–${stats.noteHi}): Entmulmte Grundtöne, während Obertöne H5–H9 um +2,4 bis +3,0 dB für kernige Tragfähigkeit zulegen.`;
+          txt = `Tenor (${stats.noteLo}–${stats.noteHi}): Klarere Grundtöne, während die Obertöne H5–H8 um bis zu +${stats.maxGainVal.toFixed(1)} dB für kernige Tragfähigkeit zulegen.`;
         } else if (stats.fLo < 180) {
-          txt = `Klangzentrum (${stats.noteLo}–${stats.noteHi}): H2 (+${stats.deltaRelH1[1].toFixed(1)} dB), H3 (+${stats.deltaRelH1[2].toFixed(1)} dB), H4 (+${stats.deltaRelH1[3].toFixed(1)} dB) & H8 (+${stats.deltaRelH1[7].toFixed(1)} dB) gewinnen massiv an Fülle.`;
+          txt = `Mittellage (${stats.noteLo}–${stats.noteHi}): H2 (${fmtDelta(1)}), H3 (${fmtDelta(2)}), H4 (${fmtDelta(3)}) & H8 (${fmtDelta(7)}) gewinnen deutlich an Klangfülle.`;
         } else if (stats.fLo < 350) {
-          txt = `Diskant 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen im Präsenzband um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – der Ton „blüht“ hörbar auf.`;
+          txt = `Diskant 1 (${stats.noteLo}–${stats.noteHi}): H2–H${maxHNum} (≤ 6 kHz) steigen um bis zu +${stats.maxGainVal.toFixed(1)} dB (H${stats.maxGainH}) – singender, tragender Ton.`;
         } else if (stats.fLo < 700) {
-          txt = `Diskant 2 (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft (> 6 kHz ausgeklammert).`;
+          txt = `Diskant 2 (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne H2–H${maxHNum} ≤ 6 kHz (Spitze +${stats.maxGainVal.toFixed(1)} dB) liefern glockige Strahlkraft.`;
         } else {
-          txt = `Brillanz (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne ≤ 6 kHz (H2–H${maxHNum}) liefern kristallklare Brillanz (> 6 kHz ausgeklammert).`;
+          txt = `Brillanzlage (${stats.noteLo}–${stats.noteHi}): Grundton H1 (${dH1 >= 0 ? '+' : ''}${dH1.toFixed(1)} dB) & Teiltöne ≤ 6 kHz (H2–H${maxHNum}) klingen klar und tragfähig ohne Schärfe.`;
         }
       }
       document.querySelectorAll('.yka-diag-text').forEach(el => {

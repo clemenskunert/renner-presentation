@@ -1,45 +1,56 @@
 #!/bin/bash
 # ==============================================================================
-# Louis Renner Präsentation - macOS App Launcher
+# Louis Renner Presentation - macOS App Bundle Offline Launcher
+# Cleanly stops any previously running server instance before starting fresh.
 # ==============================================================================
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../.." && pwd )"
-cd "$DIR"
+cd "$DIR" || exit 1
 
-PORT=8080
-URL="http://localhost:$PORT"
+xattr -dr com.apple.quarantine "$DIR" >/dev/null 2>&1 || true
 
-# Check if port 8080 is already active
-if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null ; then
-    open "$URL"
-    exit 0
+# Cleanly stop any prior server instance before starting fresh
+if [ -f ".active_port" ]; then
+    OLD_PORT="$(tr -d '[:space:]' < .active_port)"
+    if [ -n "$OLD_PORT" ]; then
+        curl -s --max-time 1 "http://127.0.0.1:$OLD_PORT/__renner_shutdown__" >/dev/null 2>&1 || true
+    fi
+    rm -f ".active_port"
 fi
 
-# Find Python 3
+# Locate a real Python 3 without triggering macOS Xcode Command Line Tools install popup offline!
 PYTHON_BIN=""
-if command -v python3 >/dev/null 2>&1; then
-    PYTHON_BIN="python3"
-elif [ -x "/usr/bin/python3" ]; then
+for cand in "/opt/homebrew/bin/python3" "/usr/local/bin/python3" "/Library/Frameworks/Python.framework/Versions/Current/bin/python3"; do
+    if [ -x "$cand" ]; then
+        PYTHON_BIN="$cand"
+        break
+    fi
+done
+if [ -z "$PYTHON_BIN" ] && xcode-select -p >/dev/null 2>&1 && [ -x "/usr/bin/python3" ]; then
     PYTHON_BIN="/usr/bin/python3"
-elif [ -x "/usr/local/bin/python3" ]; then
-    PYTHON_BIN="/usr/local/bin/python3"
-elif [ -x "/opt/homebrew/bin/python3" ]; then
-    PYTHON_BIN="/opt/homebrew/bin/python3"
 fi
 
 if [ -n "$PYTHON_BIN" ] && [ -f "server.py" ]; then
-    "$PYTHON_BIN" server.py &
-    SERVER_PID=$!
-    
-    # Wait for server to respond
-    for i in {1..20}; do
-        if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null 2>&1; then
-            break
+    nohup "$PYTHON_BIN" server.py >/dev/null 2>&1 &
+
+    ACT_PORT=""
+    for _ in {1..30}; do
+        if [ -f ".active_port" ]; then
+            ACT_PORT="$(tr -d '[:space:]' < .active_port)"
+            if [ -n "$ACT_PORT" ] && lsof -Pi :"$ACT_PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
+                break
+            fi
         fi
         sleep 0.2
     done
-    
-    open "$URL"
+
+    if [ -n "$ACT_PORT" ]; then
+        open "http://localhost:$ACT_PORT"
+        exit 0
+    fi
+fi
+
+if [ -f "index_offline_tablet.html" ]; then
+    open "index_offline_tablet.html"
 else
-    # Fallback to direct file execution
     open "index.html"
 fi

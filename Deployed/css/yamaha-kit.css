@@ -34,17 +34,14 @@
 }
 
 /* 2. Slide Theme Atmosphere */
-.slide[data-slide="27"],
-.slide[data-slide="28"],
-.slide[data-slide="29"],
-.slide[data-slide="30"],
-.slide[data-slide="31"],
-.slide[data-slide="32"],
-.slide[data-slide="33"],
-.slide[data-slide="34"],
-.slide[data-slide="35"],
-.slide[data-slide="36"],
-.slide[data-slide="37"] {
+.slide.yk-kit-slide,
+.slide.yka-slide,
+.slide[data-slide="20"],
+.slide[data-slide="21"],
+.slide[data-slide="22"],
+.slide[data-slide="23"],
+.slide[data-slide="24"],
+.slide[data-slide="25"] {
   background: radial-gradient(circle at 75% 25%, #0d2244 0%, #07152b 45%, #040c1a 100%) !important;
 }
 

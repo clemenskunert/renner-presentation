@@ -190,6 +190,7 @@ class FFWFirmengeschichte {
       const icon = this.playBtn.querySelector('.ffw-play-icon');
       if (icon) icon.textContent = '⏸';
     }
+    this.updatePlayBtnLabel();
     this.autoplayStartTime = performance.now();
     this.runAutoplayLoop();
   }
@@ -205,8 +206,23 @@ class FFWFirmengeschichte {
       const icon = this.playBtn.querySelector('.ffw-play-icon');
       if (icon) icon.textContent = '▶';
     }
+    this.updatePlayBtnLabel();
     if (this.playProgressBar) {
       this.playProgressBar.style.width = '0%';
+    }
+  }
+
+  updatePlayBtnLabel() {
+    if (!this.playBtn) return;
+    const lbl = this.playBtn.querySelector('.ffw-play-label');
+    if (!lbl) return;
+    const lang = this.currentLang || (window.presentation && window.presentation.currentLang) || 'de';
+    if (this.isAutoplay) {
+      const pauseLabels = { de: 'Pause', en: 'Pause', ja: '一時停止', zh: '暂停' };
+      lbl.textContent = pauseLabels[lang] || 'Pause';
+    } else {
+      const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
+      lbl.textContent = (dict && dict.s5_play_label) || 'Zeitreise abspielen';
     }
   }
 
@@ -236,6 +252,7 @@ class FFWFirmengeschichte {
   setLanguage(lang) {
     this.currentLang = lang;
     this.updateZoomBtnText();
+    this.updatePlayBtnLabel();
   }
 
   updateZoomBtnText() {

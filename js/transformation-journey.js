@@ -49,7 +49,7 @@ class RennerTransformationJourney {
       {
         phase: { de: 'Phase 6: Fundamente Absauganlage', en: 'Phase 6: Filtration System Foundation', ja: '第6フェーズ：大型集塵設備専用基礎工事', zh: '第六阶段：除尘过滤机组基坑工程' },
         title: { de: 'Spezialfundament für die Filteranlage', en: 'Reinforced Foundation for Filter System', ja: '大型集塵プラント専用の高強度耐荷重基礎', zh: '超大型除尘净化机组专属承重基础' },
-        caption: { de: 'Statische Hochpräzision: Fundamentierung für die 40 Tonnen schwere und 12 Meter hohe zentrale Absauganlage.', en: 'Structural heavy-duty engineering: foundation concrete for the 40-ton, 12-meter-tall central filtration plant.', ja: '静的精密設計：総重量40トン・高さ12メートルの超大型中央集塵プラントを支える専用高剛性基礎。', zh: '结构高承重基础工程：为重达40吨、高12米的室外大型工业除尘过滤系统打造抗震隔振基坑。' }
+        caption: { de: 'Bewehrung und Betonguss des Schwerlastfundaments für die 40 Tonnen schwere, 12 Meter hohe zentrale Absauganlage.', en: 'Reinforcement and concrete pour for the heavy-duty foundation of the 40-ton, 12-meter-tall central filtration plant.', ja: '総重量40トン・高さ12メートルの中央集塵プラントを支える重荷重基礎の配筋およびコンクリート打設。', zh: '为重达40吨、高12米的中央除尘过滤系统实施重型基础钢筋绑扎与混凝土浇筑。' }
       },
       {
         phase: { de: 'Phase 7: Kranhub der Filtermodule', en: 'Phase 7: Crane Lift of Filter Modules', ja: '第7フェーズ：集塵モジュールのクレーン吊り上げ', zh: '第七阶段：除尘过滤模块起重机精准吊装' },
@@ -59,37 +59,37 @@ class RennerTransformationJourney {
       {
         phase: { de: 'Phase 8: Kranmontage des Filterturms', en: 'Phase 8: Crane Assembly of Filter Tower', ja: '第8フェーズ：集塵タワーのクレーン据付組立', zh: '第八阶段：除尘塔上部箱体高空精准拼装' },
         title: { de: 'Kranmontage des 12 m Filterturms', en: 'Crane Assembly of 12 m Filter Tower', ja: '集塵タワー上部ユニットのクレーン組立て', zh: '除尘过滤塔箱体结构高空合拢' },
-        caption: { de: 'Präzisionsmontage in luftiger Höhe: Das 12 Meter hohe Filterturm-Oberteil wird auf die Stahlkonstruktion gesetzt.', en: 'Precision assembly at height: The 12-meter-tall upper filter section is positioned onto the steel frame.', ja: '高所精密組立：防振鋼構造フレーム上に高さ12メートルの集塵タワー上部ユニットをドッキング。', zh: '高空精准拼装：高达12米的室外除尘塔上部箱体结构精准吊装至减振钢结构底座之上。' }
+        caption: { de: 'Montage des 12 Meter hohen Filterturm-Oberteils auf dem schwingungsentkoppelten Stahlrahmen.', en: 'Assembly of the 12-meter-tall upper filter tower section onto the vibration-isolated steel frame.', ja: '防振鋼構造フレーム上に高さ12メートルの集塵タワー上部ユニットを据付。', zh: '将12米高室外除尘塔上部箱体精准吊装至减振钢结构底座。' }
       },
       {
         phase: { de: 'Phase 9: Umzug Hammerkopffertigung', en: 'Phase 9: Hammerhead Relocation', ja: '第9フェーズ：ハンマーヘッド製造部門の移転', zh: '第九阶段：弦槌制造核心工序搬迁' },
-        title: { de: 'Umzug der Hammerkopf-Manufaktur', en: 'Relocation of Hammerhead Workshop', ja: 'ハンマーヘッド専門マニュファクチュールの移転', zh: '核心弦槌制造工坊正式迁入' },
-        caption: { de: 'Das akustische Herzstück von Renner bezieht seinen neuen, klimastabilen Fertigungsbereich in Meuselwitz.', en: 'The acoustic soul of Louis Renner settles into its new, climate-controlled manufacturing area in Meuselwitz.', ja: 'ルイス・レンナーの音響の魂であるハンマーヘッド製造が、モイゼルヴィッツの恒温恒湿新フロアへと移転。', zh: '雷诺钢琴声学的传奇灵魂——弦槌制造车间正式进驻莫伊瑟尔维茨全新恒温恒湿专属生产区。' }
+        title: { de: 'Einzug der Hammerkopffertigung', en: 'Relocation of Hammerhead Production', ja: 'ハンマーヘッド製造ラインの移設', zh: '弦槌制造产线迁入新厂区' },
+        caption: { de: 'Einzug der Hammerkopffertigung in den neu ausgebauten, klimatisierten Hallenbereich in Meuselwitz.', en: 'Relocation of hammerhead production into the newly built, climate-controlled hall section in Meuselwitz.', ja: 'モイゼルヴィッツの空調完備の新フロアへハンマーヘッド製造ラインを移設。', zh: '雷诺弦槌制造产线正式迁入莫伊塞尔维茨全新恒温恒湿生产区。' }
       },
       {
         phase: { de: 'Phase 10: Montage der Großfilteranlage', en: 'Phase 10: Industrial Filter Assembly', ja: '第10フェーズ：大型集塵設備の据付組立', zh: '第十阶段：大型集尘过滤总成安装' },
         title: { de: 'Montage der Großfilter- & Absauganlage', en: 'Assembly of 120,000 m³/h Filter Plant', ja: '120,000 m³/h 大型集塵プラントの組み立て', zh: '每小时12万立方米大型集尘净化塔吊装' },
-        caption: { de: 'Mit 120.000 m³/h Luftleistung garantiert die neu errichtete Filteranlage staubfreie, hochpräzise Fertigungsprozesse.', en: 'With a 120,000 m³/h air capacity, the newly erected plant guarantees dust-free, micrometer-precise production.', ja: '毎時12万m³の給排気循環能力を誇る新設大型フィルタープラントが最高精度の製造を実現。', zh: '高达120,000 m³/h超强换气集尘能力，全天候保障车间无微尘干扰的微米级加工质量。' }
+        caption: { de: 'Mit 120.000 m³/h Luftleistung sichert die neue Filteranlage staubfreie, maßhaltige Fertigungsprozesse.', en: 'With a 120,000 m³/h airflow capacity, the new filter plant ensures dust-free, dimensionally stable production.', ja: '毎時12万m³の給排気循環能力を誇る新設大型フィルタープラントがクリーンな製造環境を実現。', zh: '高达120,000 m³/h换气集尘能力，全天候保障洁净稳定的精密加工环境。' }
       },
       {
         phase: { de: 'Phase 11: Hallenverrohrung & Trassenbau', en: 'Phase 11: Ductwork & Overhead Trusses', ja: '第11フェーズ：大口径配管ダクトと天井トラス', zh: '第十一阶段：车间集尘管道与管廊架设' },
         title: { de: 'Absaugtrassen & Hallenverrohrung', en: 'Extraction Trusses & Hall Ductwork', ja: '天井集塵ダクト配管網とパイプライン敷設', zh: '负压集尘管网全线贯通与管桥布设' },
-        caption: { de: 'Installation der großdimensionierten Rohrtrassen zur lückenlosen Absaugung aller Holzbearbeitungsmaschinen.', en: 'Installation of large-diameter overhead ductwork for continuous dust extraction across all woodworking machines.', ja: 'すべての木工加工機に直結する大口径スチールパイプラインの天井敷設により確実な集塵経路を確立。', zh: '安装全厂大口径集尘镀锌管道与高空管廊，实现全系列高精木材加工机床的闭环负压吸尘。' }
+        caption: { de: 'Installation der großdimensionierten Rohrtrassen zur lückenlosen Absaugung aller Holzbearbeitungsmaschinen.', en: 'Installation of large-diameter overhead ductwork for continuous dust extraction across all woodworking machines.', ja: 'すべての木工加工機に直結する大口径スチールパイプラインの天井敷設により確実な集塵経路を確立。', zh: '安装全厂大口径集尘镀锌管道与高空管廊，实现全系列木材加工机床的闭环负压吸尘。' }
       },
       {
         phase: { de: 'Phase 12: Dachzentrale & Klimatechnik', en: 'Phase 12: Rooftop HVAC & Climate Plant', ja: '第12フェーズ：屋上空調プラント完成', zh: '第十二阶段：屋顶大型工艺气调机房' },
         title: { de: 'Dachzentrale: Prozessluft & Klimatechnik', en: 'Rooftop Plant: Process Air & HVAC', ja: '屋上プロセス空調・温湿度管理センター', zh: '屋顶中央工艺送风与恒温恒湿机房' },
-        caption: { de: 'Perfekte Klimastabilität: Garantierte 45–50 % relative Luftfeuchte und konstante Temperaturen – sommers wie winters.', en: 'Flawless climate stability: guaranteed 45–50% relative humidity and steady temperatures year-round.', ja: '完璧な気候安定性：通年で湿度45〜50%・一定温度を完全保証する精密プロセス空調。', zh: '极致环境控制：全天候恒定确保45-50%相对湿度与微差恒温。' }
+        caption: { de: 'Ganzjährig konstante Temperatur und 45–50 % relative Luftfeuchte für maßhaltige Holz- und Filzverarbeitung.', en: 'Year-round constant temperature and 45–50% relative humidity for dimensionally stable wood and felt processing.', ja: '年間を通じて湿度45〜50%・一定温度を維持し、木材とフェルトの寸法安定性を確保。', zh: '全年恒定保持温度与 45–50% 相对湿度，确保实木与毛毡加工尺寸稳定。' }
       },
       {
-        phase: { de: 'Phase 13: Prozessluft- & Klimaanlage', en: 'Phase 13: Process Air & Air Conditioning', ja: '第13フェーズ：プロセス空調・大型空調設備', zh: '第十三阶段：工艺气调与恒温恒湿空调机组' },
-        title: { de: 'Prozessluft- und Klimaanlage', en: 'Process Air & Air Conditioning System', ja: 'プロセス給気・精密空調システム', zh: '工艺送风与恒温恒湿空调系统' },
-        caption: { de: 'Hocheffiziente Prozessluft- und Klimatechnik auf dem Werksdach für anspruchsvollste Holz- und Filzverarbeitung.', en: 'High-efficiency rooftop process air and climate control systems for demanding wood and felt fabrication.', ja: '屋上に設置された高効率プロセス空調システム：音響木材と精密フェルト加工に不可欠な環境を実現。', zh: '屋顶高能效中央工艺送风与恒温恒湿空调系统：为精细木料与羊毛毡加工提供稳定保障。' }
+        phase: { de: 'Phase 13: Luftbefeuchtung & Konditionierung', en: 'Phase 13: Humidity Control & Conditioning', ja: '第13フェーズ：精密加湿・空調制御', zh: '第十三阶段：精准加湿与气调控制' },
+        title: { de: 'Präzise Luftbefeuchtung für Holz & Filz', en: 'Precision Humidity Control for Wood & Felt', ja: '木材とフェルトを守る精密加湿システム', zh: '面向实木与毛毡的精准加湿系统' },
+        caption: { de: 'Kontrollierte Luftbefeuchtung verhindert Spannungsrisse im Tonholz und Maßänderungen im Hammerfilz.', en: 'Controlled humidification prevents checking in tonewoods and dimensional drift in hammer felt.', ja: '精密加湿により音響木材の割れやハンマーフェルトの寸法変化を防止。', zh: '受控加湿有效防止实木开裂与弦槌毛毡尺寸漂移。' }
       },
       {
         phase: { de: 'Phase 14: Kehlerei & Vollbetrieb Meuselwitz', en: 'Phase 14: Molding Shop & Full Operation', ja: '第14フェーズ：木型成形部門の統合と全面稼働', zh: '第十四阶段：开槽成型车间搬迁与全面达产' },
-        title: { de: 'Montage der Kehlerei & Vollendung', en: 'Molding Line Setup & Full Commissioning', ja: '伝統の溝彫り・木型成形部門の据付と統合完了', zh: '精细开槽车间安装就位与新总部全面达产' },
-        caption: { de: 'Letzte Abteilung erfolgreich verlagert: Die gesamte Holz- und Mechanikfertigung produziert nun vereint in Meuselwitz.', en: 'Final department successfully relocated: the entire wood and action fabrication now operates united in Meuselwitz.', ja: '最終部門が移転完了：木工・アクション全工程がモイゼルヴィッツ新本社で一体稼働。', zh: '最后一支核心技术部门顺利迁入：全套木工与击弦机制造产线在莫伊瑟尔维茨全面投产运营。' }
+        title: { de: 'Montage der Kehlerei & Vollbetrieb', en: 'Molding Line Setup & Full Operation', ja: '木型成形部門の据付と全面稼働', zh: '开槽成型车间就位与新总部全面投产' },
+        caption: { de: 'Letzte Abteilung erfolgreich verlagert: Die gesamte Holz-, Mechanik- und Hammerkopffertigung arbeitet vereint in Meuselwitz.', en: 'Final department relocated: all wood, action, and hammerhead manufacturing now operates under one roof in Meuselwitz.', ja: '最終部門が移転完了：木工・アクション・ハンマーヘッド全工程がモイゼルヴィッツ本社工場で一体稼働。', zh: '最后一个核心部门顺利迁入：全部木工、击弦机与弦槌产线在莫伊塞尔维茨总部协同投产。' }
       }
     ];
 
@@ -154,19 +154,123 @@ class RennerTransformationJourney {
     this.totalFrames = this.frames.length;
     this.totalMilestones = this.totalFrames; // compatibility with presentation.js
     this.currentMilestone = 0;
-    this.activeBuffer = 'main'; // 'main' (#diorama-main-img) or 'flip' (#diorama-flip-img)
-    this.stageNextTimer = null;
-    this.droneDecoderPrimed = false;
+
+    // Triple-buffer ring state for center photo + double-buffer state for 3D side wings
+    this.centerRingIdx = 0;
+    this.leftWingIdx = 0;
+    this.rightWingIdx = 0;
+    this.leftWingSrc = '';
+    this.rightWingSrc = '';
+
+    // Frame-locked rAF playback & organic motion state
+    this.rafId = null;
+    this.lastRafTime = 0;
+    this.frameStartTime = 0;
+    this.currentFrameDuration = 680;
+    this.scrubberTrackWidth = 800;
+    this.isScrubbing = false;
+
+    // Smooth 3D parallax & ambient breathing state
+    this.pointerNormX = 0;
+    this.pointerNormY = 0;
+    this.smoothRx = 0;
+    this.smoothRy = 0;
+    this.stackImpulse = 0;
+    this.prefersReducedMotion = false;
+
+    // Smart sliding-window bitmap cache & drone warm-up state
+    this.pinnedBitmaps = new Map();
+    this.httpPrefetchTimer = null;
+    this.dronePreloadPromoted = false;
     this.dronePreStarted = false;
-    this.decodedImages = [];
+    this.bloomTimers = [];
+    this.captionGlideTimer = null;
+    this.watermarkGlideTimer = null;
+    this.displayedPhaseIdx = -1;
+    this.displayedMonthYear = '';
+  }
+
+  cacheDom() {
+    this.slide4El = document.querySelector('.slide[data-slide="4"]');
+    this.containerEl = document.getElementById('build-timeline-container');
+    this.arenaEl = this.containerEl ? this.containerEl.querySelector('.diorama-3d-arena') : null;
+    this.centerStackEl = document.getElementById('diorama-center-stack');
+    this.photoFrameEl = document.getElementById('diorama-photo-frame');
+
+    this.centerBuffers = [
+      document.getElementById('diorama-main-img'),
+      document.getElementById('diorama-flip-img'),
+      document.getElementById('diorama-prep-img')
+    ].filter(Boolean);
+
+    this.leftWingCard = document.getElementById('diorama-wing-left-btn') ||
+      (this.containerEl && this.containerEl.querySelector('.diorama-wing.left .diorama-wing-card'));
+    this.leftWingBuffers = [
+      document.getElementById('diorama-wing-left-img'),
+      document.getElementById('diorama-wing-left-img-b')
+    ].filter(Boolean);
+
+    this.rightWingCard = document.getElementById('diorama-wing-right-btn') ||
+      (this.containerEl && this.containerEl.querySelector('.diorama-wing.right .diorama-wing-card'));
+    this.rightWingLabelEl = this.rightWingCard ? this.rightWingCard.querySelector('.diorama-wing-label') : null;
+    this.rightWingBuffers = [
+      document.getElementById('diorama-wing-right-img'),
+      document.getElementById('diorama-wing-right-img-b')
+    ].filter(Boolean);
+
+    this.watermarkEl = document.getElementById('diorama-watermark');
+    this.dateBadgeEl = document.getElementById('diorama-date-badge');
+    this.frameBadgeEl = document.getElementById('diorama-frame-badge');
+    this.phaseBadgeEl = document.getElementById('diorama-phase-badge');
+    this.captionBarEl = document.getElementById('diorama-caption-bar');
+    this.titleEl = document.getElementById('diorama-phase-title');
+    this.capEl = document.getElementById('diorama-phase-caption');
+    this.brightFlashEl = document.getElementById('diorama-bright-flash');
+
+    this.droneStageEl = document.getElementById('diorama-drone-stage');
+    this.droneVidEl = document.getElementById('diorama-drone-video');
+    this.droneBadgeEl = document.getElementById('diorama-drone-badge');
+    this.replayBtnEl = document.getElementById('diorama-replay-flipbook-btn');
+
+    this.scrubberTrackEl = document.getElementById('diorama-scrubber-track') ||
+      (this.containerEl && this.containerEl.querySelector('.diorama-scrubber-track-wrap'));
+    this.progFillEl = document.getElementById('diorama-progress-fill');
+    this.scrubberOrbEl = document.getElementById('diorama-scrubber-orb');
+    this.dronePillEl = document.getElementById('diorama-scrubber-drone');
+
+    this.playBtnEl = document.getElementById('build-play-btn');
+    this.playIconEl = document.getElementById('build-play-icon');
+    this.playLabelEl = document.getElementById('build-play-label');
+    this.playProgEl = document.getElementById('build-play-progress');
+    this.counterBadgeEl = document.getElementById('build-step-counter');
+    this.prevBtnEl = document.getElementById('build-prev-btn');
+    this.nextBtnEl = document.getElementById('build-next-btn');
+    this.nextLabelEl = document.getElementById('build-next-label');
+    this.droneBtnEl = document.getElementById('build-drone-btn');
+
+    this.tickEls = Array.from(document.querySelectorAll('.diorama-tick[data-frame]'));
   }
 
   init() {
-    this.preloadImages();
+    this.prefersReducedMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.cacheDom();
+    this.measureScrubber();
+    this.warmImageCache();
+    this.ensureWindowDecoded(0);
 
-    const playBtn = document.getElementById('build-play-btn');
-    if (playBtn) {
-      playBtn.addEventListener('click', () => {
+    if (window.ResizeObserver && this.scrubberTrackEl) {
+      this.resizeObs = new ResizeObserver(() => {
+        this.measureScrubber();
+        if (!this.isPlayingFlipbook) {
+          const p = this.inDroneMode ? 1 : (this.currentFrame + 1) / this.totalFrames;
+          this.applyScrubberTransform(p);
+        }
+      });
+      this.resizeObs.observe(this.scrubberTrackEl);
+    }
+
+    if (this.playBtnEl) {
+      this.playBtnEl.addEventListener('click', () => {
         if (this.inDroneMode) {
           this.startFlipbook(0);
         } else if (this.isPlayingFlipbook) {
@@ -178,45 +282,42 @@ class RennerTransformationJourney {
       });
     }
 
-    const droneBtn = document.getElementById('build-drone-btn');
-    if (droneBtn) {
-      droneBtn.addEventListener('click', () => {
+    if (this.droneBtnEl) {
+      this.droneBtnEl.addEventListener('click', () => {
         if (this.inDroneMode) {
           this.startFlipbook(0);
         } else {
-          this.startDroneVideo();
+          this.startDroneVideo(false);
         }
       });
     }
 
-    const replayBtn = document.getElementById('diorama-replay-flipbook-btn');
-    if (replayBtn) {
-      replayBtn.addEventListener('click', () => {
+    if (this.replayBtnEl) {
+      this.replayBtnEl.addEventListener('click', () => {
         this.startFlipbook(0);
       });
     }
 
-    const prevBtn = document.getElementById('build-prev-btn');
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
+    if (this.prevBtnEl) {
+      this.prevBtnEl.addEventListener('click', () => {
         if (this.inDroneMode) {
           this.exitDroneVideo(this.totalFrames - 1);
           return;
         }
         this.pauseFlipbook();
         if (this.currentFrame > 0) {
-          this.renderFrame(this.currentFrame - 1, true);
+          this.renderFrame(this.currentFrame - 1, true, 340);
+          this.applyScrubberTransform((this.currentFrame + 0.5) / this.totalFrames);
         } else if (window.presentation && typeof window.presentation.prevSlide === 'function') {
           window.presentation.prevSlide();
         }
       });
     }
 
-    const nextBtn = document.getElementById('build-next-btn');
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+    if (this.nextBtnEl) {
+      this.nextBtnEl.addEventListener('click', () => {
         if (!this.inDroneMode) {
-          this.startDroneVideo();
+          this.startDroneVideo(false);
         } else if (window.presentation && typeof window.presentation.goToSlide === 'function') {
           this.pause();
           window.presentation.goToSlide(window.presentation.currentSlideIndex + 1);
@@ -224,9 +325,83 @@ class RennerTransformationJourney {
       });
     }
 
-    // Scrubber ticks & month markers
-    document.querySelectorAll('.diorama-tick[data-frame]').forEach(tick => {
-      tick.addEventListener('click', () => {
+    // Interactive 3D Side Wings (step back / step forward organically)
+    if (this.leftWingCard) {
+      this.leftWingCard.addEventListener('click', () => {
+        if (this.inDroneMode) return;
+        this.pauseFlipbook();
+        if (this.currentFrame > 0) {
+          this.renderFrame(this.currentFrame - 1, true, 360);
+          this.applyScrubberTransform((this.currentFrame + 0.5) / this.totalFrames);
+        }
+      });
+    }
+
+    if (this.rightWingCard) {
+      this.rightWingCard.addEventListener('click', () => {
+        if (this.inDroneMode) return;
+        this.pauseFlipbook();
+        if (this.currentFrame < this.totalFrames - 1) {
+          this.renderFrame(this.currentFrame + 1, true, 360);
+          this.applyScrubberTransform((this.currentFrame + 0.5) / this.totalFrames);
+        } else {
+          this.startDroneVideo(false);
+        }
+      });
+    }
+
+    // Subtle 3D pointer parallax on the diorama stage
+    if (this.containerEl) {
+      this.containerEl.addEventListener('pointermove', (e) => {
+        if (this.inDroneMode || this.prefersReducedMotion) return;
+        const rect = this.containerEl.getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0) {
+          this.pointerNormX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+          this.pointerNormY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+        }
+      }, { passive: true });
+
+      this.containerEl.addEventListener('pointerleave', () => {
+        this.pointerNormX = 0;
+        this.pointerNormY = 0;
+      }, { passive: true });
+    }
+
+    // Interactive Scrubber Track (click & smooth drag scrubbing across all 46 frames)
+    if (this.scrubberTrackEl) {
+      const scrubFromEvent = (e) => {
+        const rect = this.scrubberTrackEl.getBoundingClientRect();
+        if (rect.width <= 0) return;
+        const rel = Math.max(0, Math.min(0.9999, (e.clientX - rect.left) / rect.width));
+        const fIdx = Math.floor(rel * this.totalFrames);
+        this.pauseFlipbook();
+        if (this.inDroneMode) {
+          this.exitDroneVideo(fIdx);
+        } else if (fIdx !== this.currentFrame) {
+          this.renderFrame(fIdx, true, 240);
+        }
+        this.applyScrubberTransform(rel);
+      };
+
+      this.scrubberTrackEl.addEventListener('pointerdown', (e) => {
+        this.isScrubbing = true;
+        try { this.scrubberTrackEl.setPointerCapture(e.pointerId); } catch (_) {}
+        scrubFromEvent(e);
+      });
+
+      this.scrubberTrackEl.addEventListener('pointermove', (e) => {
+        if (!this.isScrubbing) return;
+        scrubFromEvent(e);
+      });
+
+      const endScrub = () => { this.isScrubbing = false; };
+      this.scrubberTrackEl.addEventListener('pointerup', endScrub);
+      this.scrubberTrackEl.addEventListener('pointercancel', endScrub);
+    }
+
+    this.tickEls.forEach(tick => {
+      tick.addEventListener('click', (e) => {
+        e.stopPropagation();
         const fIdx = parseInt(tick.getAttribute('data-frame'), 10);
         if (!isNaN(fIdx)) {
           this.pauseFlipbook();
@@ -235,451 +410,657 @@ class RennerTransformationJourney {
       });
     });
 
-    const dronePill = document.getElementById('diorama-scrubber-drone');
-    if (dronePill) {
-      dronePill.addEventListener('click', () => {
-        this.startDroneVideo();
+    if (this.dronePillEl) {
+      this.dronePillEl.addEventListener('click', () => {
+        this.startDroneVideo(false);
       });
     }
 
-    // Also pause drone video if Slide 4 loses .active class
-    const slide4 = document.querySelector('.slide[data-slide="4"]');
-    if (slide4) {
+    // Observe Slide 4 active state to start/stop GPU ambient loop & pause video cleanly
+    if (this.slide4El) {
       const obs = new MutationObserver(() => {
-        if (!slide4.classList.contains('active')) {
+        if (this.slide4El.classList.contains('active')) {
+          this.measureScrubber();
+          this.ensureWindowDecoded(this.currentFrame);
+          this.startRafLoop();
+        } else {
           this.pause();
+          this.stopRafLoop();
         }
       });
-      obs.observe(slide4, { attributes: true, attributeFilter: ['class'] });
+      obs.observe(this.slide4El, { attributes: true, attributeFilter: ['class'] });
     }
 
     this.renderFrame(0, false);
   }
 
-  preloadImages() {
-    // Preload and GPU-decode all 46 Full-HD photos sequentially & concurrently for zero decode stutter
-    this.decodedImages = this.frames.map(f => {
-      const img = new Image();
-      img.decoding = 'async';
-      img.src = f.src;
-      if (typeof img.decode === 'function') {
-        img.decode().catch(() => {});
-      }
-      return img;
-    });
+  measureScrubber() {
+    if (this.scrubberTrackEl) {
+      const w = this.scrubberTrackEl.clientWidth;
+      if (w > 40) this.scrubberTrackWidth = w;
+    }
   }
 
-  warmUpDroneVideo() {
-    const droneVid = document.getElementById('diorama-drone-video');
-    if (!droneVid) return;
-
-    droneVid.preload = 'auto';
-    if (droneVid.readyState === 0) {
-      try { droneVid.load(); } catch (e) {}
-    }
-
-    // Prime the hardware HEVC decoder while the 46 images are running so play() has 0ms latency
-    const primeDecoder = () => {
-      if (this.droneDecoderPrimed || this.inDroneMode) return;
-      this.droneDecoderPrimed = true;
-      const prevMuted = droneVid.muted;
-      droneVid.muted = true;
-      const p = droneVid.play();
-      if (p && typeof p.then === 'function') {
-        p.then(() => {
-          setTimeout(() => {
-            if (!this.inDroneMode && !this.dronePreStarted) {
-              try {
-                droneVid.pause();
-                droneVid.currentTime = 0.001;
-                droneVid.muted = prevMuted;
-              } catch (e) {}
-            }
-          }, 45);
-        }).catch(() => {
-          droneVid.muted = prevMuted;
-        });
+  warmImageCache() {
+    // Trickle-prefetch compressed JPEGs into browser HTTP cache in small non-blocking batches
+    // without decoding all 46 bitmaps at once (prevents GPU bitmap cache eviction)
+    let cursor = 0;
+    const stepBatch = () => {
+      const end = Math.min(this.totalFrames, cursor + 3);
+      for (let i = cursor; i < end; i++) {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = this.frames[i].src;
+      }
+      cursor = end;
+      if (cursor < this.totalFrames) {
+        this.httpPrefetchTimer = setTimeout(stepBatch, 95);
       }
     };
+    this.httpPrefetchTimer = setTimeout(stepBatch, 300);
+  }
 
-    if (droneVid.readyState >= 3) {
-      primeDecoder();
-    } else {
-      droneVid.addEventListener('canplay', primeDecoder, { once: true });
+  ensureWindowDecoded(centerIdx) {
+    // Keep a compact rolling window [centerIdx - 2 .. centerIdx + 7] GPU-decoded in memory (~60 MB max)
+    const winStart = Math.max(0, centerIdx - 2);
+    const winEnd = Math.min(this.totalFrames - 1, centerIdx + 7);
+
+    for (const key of this.pinnedBitmaps.keys()) {
+      if (key < winStart - 2 || key > winEnd + 2) {
+        this.pinnedBitmaps.delete(key);
+      }
     }
+
+    for (let i = winStart; i <= winEnd; i++) {
+      if (!this.pinnedBitmaps.has(i)) {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = this.frames[i].src;
+        if (typeof img.decode === 'function') {
+          img.decode().catch(() => {});
+        }
+        this.pinnedBitmaps.set(i, img);
+      }
+    }
+  }
+
+  promoteDroneVideoPreload() {
+    if (this.dronePreloadPromoted || !this.droneVidEl) return;
+    this.dronePreloadPromoted = true;
+    try {
+      this.droneVidEl.preload = 'auto';
+      if (this.droneVidEl.readyState === 0) {
+        this.droneVidEl.load();
+      }
+    } catch (_) {}
   }
 
   preStartDronePlayback() {
-    if (this.dronePreStarted || this.inDroneMode) return;
+    if (this.dronePreStarted || this.inDroneMode || !this.droneVidEl) return;
     this.dronePreStarted = true;
-    const droneVid = document.getElementById('diorama-drone-video');
-    if (droneVid) {
-      try {
-        droneVid.muted = false;
-        if (droneVid.currentTime > 0.2) {
-          droneVid.currentTime = 0;
-        }
-        const p = droneVid.play();
-        if (p && typeof p.catch === 'function') {
-          p.catch(() => {
-            droneVid.muted = true;
-            droneVid.play().catch(() => {});
-          });
-        }
-      } catch (e) {}
+    try {
+      this.droneVidEl.muted = false;
+      if (this.droneVidEl.currentTime > 0.25) {
+        this.droneVidEl.currentTime = 0;
+      }
+      const p = this.droneVidEl.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          this.droneVidEl.muted = true;
+          this.droneVidEl.play().catch(() => {});
+        });
+      }
+    } catch (_) {}
+  }
+
+  getFrameDuration(idx) {
+    // Smooth, organic kinematic pacing curve:
+    // 1. Calm opening settle (frames 0..2) so the 3D diorama rises gracefully
+    // 2. Flowing narrative rhythm (frames 3..38) with a subtle breath on new construction phases
+    // 3. Continuous exponential crescendo on the final 7 frames (39..45) into the Drone Finale
+    if (idx === 0) return 680;
+    if (idx === 1) return 575;
+    if (idx === 2) return 520;
+
+    const crescendoStart = this.totalFrames - 7; // index 39
+    if (idx >= crescendoStart) {
+      const crescendoSchedule = [420, 345, 275, 215, 168, 132, 112];
+      return crescendoSchedule[Math.min(crescendoSchedule.length - 1, idx - crescendoStart)];
+    }
+
+    const isNewPhase = idx > 0 && this.frames[idx].phaseIdx !== this.frames[idx - 1].phaseIdx;
+    return isNewPhase ? 545 : 475;
+  }
+
+  crossfadeWing(buffers, currentIdxProp, currentSrcProp, cardEl, targetSrc, durMs, instant) {
+    if (!buffers || buffers.length === 0) return;
+    if (buffers.length === 1) {
+      if (this[currentSrcProp] !== targetSrc) {
+        buffers[0].src = targetSrc;
+        buffers[0].classList.add('is-visible');
+        this[currentSrcProp] = targetSrc;
+      }
+      return;
+    }
+
+    if (!instant && this[currentSrcProp] === targetSrc) return;
+
+    if (cardEl) {
+      cardEl.style.setProperty('--wing-dur', instant ? '0ms' : `${durMs}ms`);
+    }
+
+    if (instant) {
+      this[currentIdxProp] = 0;
+      this[currentSrcProp] = targetSrc;
+      buffers[0].src = targetSrc;
+      buffers[0].classList.remove('is-under');
+      buffers[0].classList.add('is-visible');
+      buffers[1].classList.remove('is-visible', 'is-under');
+      return;
+    }
+
+    const nextSlot = (this[currentIdxProp] + 1) % 2;
+    const incoming = buffers[nextSlot];
+    const outgoing = buffers[this[currentIdxProp]];
+    this[currentIdxProp] = nextSlot;
+    this[currentSrcProp] = targetSrc;
+
+    if (!incoming.getAttribute('src') || !incoming.getAttribute('src').endsWith(targetSrc)) {
+      incoming.src = targetSrc;
+    }
+    outgoing.classList.remove('is-visible');
+    outgoing.classList.add('is-under');
+    incoming.classList.remove('is-under', 'is-visible');
+    // Trigger clean CSS keyframe dissolve on incoming buffer without layout reflow
+    requestAnimationFrame(() => {
+      incoming.classList.add('is-visible');
+    });
+  }
+
+  applyScrubberTransform(progress01) {
+    const p = Math.max(0.015, Math.min(1, progress01));
+    if (this.progFillEl) {
+      this.progFillEl.style.transform = `scaleX(${p.toFixed(4)})`;
+    }
+    if (this.playProgEl) {
+      this.playProgEl.style.transform = `scaleX(${p.toFixed(4)})`;
+    }
+    if (this.scrubberOrbEl) {
+      const usableW = Math.max(0, this.scrubberTrackWidth - 16);
+      const xPx = 8 + p * usableW;
+      this.scrubberOrbEl.style.transform = `translate3d(${xPx.toFixed(2)}px, -50%, 0)`;
     }
   }
 
-  renderFrame(index, animateFlip = true) {
+  renderFrame(index, animateFlip = true, customDurMs = null) {
     const clamped = Math.max(0, Math.min(this.totalFrames - 1, index));
     const prevIdx = this.currentFrame;
     this.currentFrame = clamped;
     this.currentMilestone = clamped;
 
+    this.ensureWindowDecoded(clamped);
+
+    // Promote drone video buffering smoothly once the initial reveal has settled
+    if (clamped >= 6) {
+      this.promoteDroneVideoPreload();
+    }
+
     const cur = this.frames[clamped];
     const prev = this.frames[Math.max(0, clamped - 1)];
     const next1 = this.frames[Math.min(this.totalFrames - 1, clamped + 1)];
-    const next2 = this.frames[Math.min(this.totalFrames - 1, clamped + 2)];
     const phaseObj = this.phases[cur.phaseIdx] || this.phases[0];
     const lang = this.currentLang;
 
-    // Check if we are in the final 4 accelerating images (indices 42, 43, 44, 45)
-    const isFinalFour = clamped >= this.totalFrames - 4;
-    const finalFourStep = isFinalFour ? (clamped - (this.totalFrames - 4) + 1) : 0; // 1, 2, 3, 4
+    const frameDur = customDurMs || this.getFrameDuration(clamped);
+    this.currentFrameDuration = frameDur;
+    const flipCssDur = Math.max(82, Math.min(365, Math.round(frameDur * 0.74)));
 
-    // Pre-start the already warmed-up Drone Video on step 3 of the final 4 (~240ms before transition)
-    if (finalFourStep >= 3 && this.isPlayingFlipbook) {
-      this.preStartDronePlayback();
+    if (this.photoFrameEl) {
+      this.photoFrameEl.style.setProperty('--flip-dur', animateFlip ? `${flipCssDur}ms` : '0ms');
     }
 
-    const photoFrame = document.getElementById('diorama-photo-frame');
-    if (photoFrame) {
-      if (isFinalFour && this.isPlayingFlipbook) {
-        photoFrame.setAttribute('data-bloom', String(finalFourStep));
-      } else {
-        photoFrame.removeAttribute('data-bloom');
-      }
+    // Subtle stack wave impulse on each card turn
+    if (animateFlip && prevIdx !== clamped) {
+      this.stackImpulse = Math.min(1, this.stackImpulse + 0.85);
     }
 
-    const brightFlash = document.getElementById('diorama-bright-flash');
-    if (brightFlash) {
-      if (isFinalFour && this.isPlayingFlipbook) {
-        brightFlash.setAttribute('data-bloom', String(finalFourStep));
-      } else if (!this.inDroneMode) {
-        brightFlash.removeAttribute('data-bloom');
-      }
-    }
-
-    // 1. True Double-Buffered GPU Crossfade between #diorama-main-img and #diorama-flip-img
-    const mainImg = document.getElementById('diorama-main-img');
-    const flipImg = document.getElementById('diorama-flip-img');
-
-    if (this.stageNextTimer) {
-      clearTimeout(this.stageNextTimer);
-      this.stageNextTimer = null;
-    }
-
-    if (mainImg && flipImg) {
+    // 1. Triple-Buffered GPU Ring Crossfade (never mutates an outgoing image mid-fade)
+    const bufs = this.centerBuffers;
+    if (bufs.length >= 3) {
       if (!animateFlip || prevIdx === clamped) {
-        this.activeBuffer = 'main';
-        mainImg.src = cur.src;
-        mainImg.classList.add('is-visible');
-        flipImg.classList.remove('is-visible');
-        // Stage next frame into hidden buffer B immediately so it is pre-decoded before next tick
-        flipImg.src = next1.src;
-        if (typeof flipImg.decode === 'function') flipImg.decode().catch(() => {});
+        this.centerRingIdx = 0;
+        bufs[0].src = cur.src;
+        bufs[0].classList.remove('is-exiting');
+        bufs[0].classList.add('is-visible');
+
+        bufs[1].classList.remove('is-visible', 'is-exiting');
+        bufs[1].src = next1.src;
+        if (typeof bufs[1].decode === 'function') bufs[1].decode().catch(() => {});
+
+        bufs[2].classList.remove('is-visible', 'is-exiting');
       } else {
-        const incoming = this.activeBuffer === 'main' ? flipImg : mainImg;
-        const outgoing = this.activeBuffer === 'main' ? mainImg : flipImg;
-        this.activeBuffer = this.activeBuffer === 'main' ? 'flip' : 'main';
+        const idleSlot = (this.centerRingIdx + 2) % 3;
+        const outgoingSlot = this.centerRingIdx;
+        const incomingSlot = (this.centerRingIdx + 1) % 3;
+        this.centerRingIdx = incomingSlot;
 
-        // Only update incoming.src if it wasn't already pre-staged to cur.src
-        if (!incoming.getAttribute('src') || !incoming.getAttribute('src').endsWith(cur.src)) {
-          incoming.src = cur.src;
+        const idleBuf = bufs[idleSlot];
+        const outgoingBuf = bufs[outgoingSlot];
+        const incomingBuf = bufs[incomingSlot];
+
+        // Clear previous exiting state on the oldest slot (drops immediately to opacity:0; transition:none)
+        idleBuf.classList.remove('is-visible', 'is-exiting');
+
+        // Ensure incoming slot holds cur.src (pre-staged on the prior tick during normal playback)
+        if (!incomingBuf.getAttribute('src') || !incomingBuf.getAttribute('src').endsWith(cur.src)) {
+          incomingBuf.src = cur.src;
         }
-        incoming.classList.add('is-visible');
-        outgoing.classList.remove('is-visible');
+        incomingBuf.classList.remove('is-exiting');
+        incomingBuf.classList.add('is-visible');
 
-        // After the crossfade settles, stage next1.src onto the now-hidden outgoing buffer
-        const stageDelay = isFinalFour ? 95 : 260;
-        this.stageNextTimer = setTimeout(() => {
-          if (outgoing && !outgoing.classList.contains('is-visible')) {
-            outgoing.src = next1.src;
-            if (typeof outgoing.decode === 'function') outgoing.decode().catch(() => {});
-          }
-        }, stageDelay);
+        outgoingBuf.classList.remove('is-visible');
+        outgoingBuf.classList.add('is-exiting');
+
+        // Pre-stage next1.src onto the completely hidden idle slot for the upcoming tick
+        if (!idleBuf.getAttribute('src') || !idleBuf.getAttribute('src').endsWith(next1.src)) {
+          idleBuf.src = next1.src;
+          if (typeof idleBuf.decode === 'function') idleBuf.decode().catch(() => {});
+        }
+      }
+    } else if (bufs.length === 2) {
+      const incoming = bufs[clamped % 2];
+      const outgoing = bufs[(clamped + 1) % 2];
+      incoming.src = cur.src;
+      incoming.classList.add('is-visible');
+      outgoing.classList.remove('is-visible');
+    }
+
+    // 2. Smooth GPU Double-Buffered 3D Side Wings + Clean Boundary Handling
+    const wingDur = Math.max(120, Math.min(440, flipCssDur + 30));
+    const isAtFirst = clamped === 0;
+    const isAtLast = clamped === this.totalFrames - 1;
+    const rightPreviewSrc = isAtLast
+      ? 'Visuell/Bilder/02_Umbau_und_Umzug/web_hd/poster_drone_meuselwitz.jpg'
+      : next1.src;
+
+    if (this.leftWingCard) {
+      this.leftWingCard.classList.toggle('is-boundary', isAtFirst);
+      this.leftWingCard.setAttribute('aria-disabled', isAtFirst ? 'true' : 'false');
+    }
+    if (this.rightWingLabelEl) {
+      if (isAtLast) {
+        this.rightWingLabelEl.textContent = lang === 'de' ? '🎬 Drohnenflug ▶' :
+                                            lang === 'en' ? '🎬 Drone Flight ▶' :
+                                            lang === 'ja' ? '🎬 ドローン映像 ▶' :
+                                            '🎬 无人机航拍 ▶';
+      } else {
+        const dict = (window.slideTranslations && window.slideTranslations[lang]) || {};
+        this.rightWingLabelEl.textContent = dict.s4_wing_next ||
+          (lang === 'de' ? 'Nächstes Bild ▶' :
+           lang === 'en' ? 'Next Frame ▶' :
+           lang === 'ja' ? '次の写真 ▶' : '下一张 ▶');
       }
     }
 
-    // 2. Update 3D Diorama Stack / Wings
-    const back1Img = document.getElementById('diorama-back1-img');
-    const back2Img = document.getElementById('diorama-back2-img');
-    const wingLeftImg = document.getElementById('diorama-wing-left-img');
-    const wingRightImg = document.getElementById('diorama-wing-right-img');
+    this.crossfadeWing(this.leftWingBuffers, 'leftWingIdx', 'leftWingSrc', this.leftWingCard, prev.src, wingDur, !animateFlip);
+    this.crossfadeWing(this.rightWingBuffers, 'rightWingIdx', 'rightWingSrc', this.rightWingCard, rightPreviewSrc, wingDur, !animateFlip);
 
-    if (back1Img) back1Img.src = next1.src;
-    if (back2Img) back2Img.src = next2.src;
-    if (wingLeftImg) wingLeftImg.src = prev.src;
-    if (wingRightImg) wingRightImg.src = next1.src;
+    // 3. Smooth Watermark & Phase Caption Cross-Glide (only animate when month or phase changes)
+    if (this.watermarkEl && this.displayedMonthYear !== cur.monthYear) {
+      this.displayedMonthYear = cur.monthYear;
+      if (animateFlip && frameDur >= 260) {
+        this.watermarkEl.classList.add('is-gliding');
+        clearTimeout(this.watermarkGlideTimer);
+        this.watermarkGlideTimer = setTimeout(() => {
+          if (this.watermarkEl) {
+            this.watermarkEl.textContent = cur.monthYear;
+            this.watermarkEl.classList.remove('is-gliding');
+          }
+        }, 120);
+      } else {
+        this.watermarkEl.textContent = cur.monthYear;
+        this.watermarkEl.classList.remove('is-gliding');
+      }
+    }
 
-    // 3. Update Watermark, Badges & Caption Bar
-    const wm = document.getElementById('diorama-watermark');
-    if (wm) wm.textContent = cur.monthYear;
+    if (this.dateBadgeEl) this.dateBadgeEl.textContent = `📅 ${cur.dateStr}`;
 
-    const dateBadge = document.getElementById('diorama-date-badge');
-    if (dateBadge) dateBadge.textContent = `📅 ${cur.dateStr}`;
-
-    const frameBadge = document.getElementById('diorama-frame-badge');
-    if (frameBadge) {
+    if (this.frameBadgeEl) {
       const lbl = lang === 'de' ? 'Bild' : lang === 'en' ? 'Frame' : lang === 'ja' ? '写真' : '画面';
-      frameBadge.textContent = `${lbl} ${String(clamped + 1).padStart(2, '0')} / ${this.totalFrames}`;
+      this.frameBadgeEl.textContent = `${lbl} ${String(clamped + 1).padStart(2, '0')} / ${this.totalFrames}`;
     }
 
-    const phaseBadge = document.getElementById('diorama-phase-badge');
-    if (phaseBadge) phaseBadge.textContent = phaseObj.phase[lang] || phaseObj.phase.de;
+    const phaseChanged = this.displayedPhaseIdx !== cur.phaseIdx;
+    if (phaseChanged || !animateFlip) {
+      this.displayedPhaseIdx = cur.phaseIdx;
+      const nextPhaseTxt = phaseObj.phase[lang] || phaseObj.phase.de;
+      const nextTitleTxt = phaseObj.title[lang] || phaseObj.title.de;
+      const nextCapTxt = phaseObj.caption[lang] || phaseObj.caption.de;
 
-    const titleEl = document.getElementById('diorama-phase-title');
-    if (titleEl) titleEl.textContent = phaseObj.title[lang] || phaseObj.title.de;
-
-    const capEl = document.getElementById('diorama-phase-caption');
-    if (capEl) capEl.textContent = phaseObj.caption[lang] || phaseObj.caption.de;
-
-    // 4. Update Header Counter & Scrubber Progress
-    const counterBadge = document.getElementById('build-step-counter');
-    if (counterBadge) {
-      counterBadge.textContent = `${cur.monthYear} • ${String(clamped + 1).padStart(2, '0')} / ${this.totalFrames}`;
+      if (animateFlip && phaseChanged && frameDur >= 280) {
+        if (this.phaseBadgeEl) this.phaseBadgeEl.classList.add('is-gliding');
+        if (this.captionBarEl) this.captionBarEl.classList.add('is-gliding');
+        clearTimeout(this.captionGlideTimer);
+        this.captionGlideTimer = setTimeout(() => {
+          if (this.phaseBadgeEl) {
+            this.phaseBadgeEl.textContent = nextPhaseTxt;
+            this.phaseBadgeEl.classList.remove('is-gliding');
+          }
+          if (this.titleEl) this.titleEl.textContent = nextTitleTxt;
+          if (this.capEl) this.capEl.textContent = nextCapTxt;
+          if (this.captionBarEl) this.captionBarEl.classList.remove('is-gliding');
+        }, 115);
+      } else {
+        if (this.phaseBadgeEl) {
+          this.phaseBadgeEl.textContent = nextPhaseTxt;
+          this.phaseBadgeEl.classList.remove('is-gliding');
+        }
+        if (this.titleEl) this.titleEl.textContent = nextTitleTxt;
+        if (this.capEl) this.capEl.textContent = nextCapTxt;
+        if (this.captionBarEl) this.captionBarEl.classList.remove('is-gliding');
+      }
     }
 
-    const pct = ((clamped + 1) / this.totalFrames) * 100;
-    const progFill = document.getElementById('diorama-progress-fill');
-    if (progFill) progFill.style.width = `${pct.toFixed(1)}%`;
+    // 4. Header Counter & Cached Scrubber Ticks
+    if (this.counterBadgeEl) {
+      this.counterBadgeEl.textContent = `${cur.monthYear} • ${String(clamped + 1).padStart(2, '0')} / ${this.totalFrames}`;
+    }
 
-    const playProg = document.getElementById('build-play-progress');
-    if (playProg) playProg.style.width = `${pct.toFixed(1)}%`;
+    for (let i = 0; i < this.tickEls.length; i++) {
+      const tick = this.tickEls[i];
+      tick.classList.toggle('is-passed', i <= clamped);
+      tick.classList.toggle('is-current', i === clamped);
+    }
 
-    document.querySelectorAll('.diorama-tick[data-frame]').forEach(tick => {
-      const fIdx = parseInt(tick.getAttribute('data-frame'), 10);
-      tick.classList.toggle('is-passed', fIdx <= clamped);
-      tick.classList.toggle('is-current', fIdx === clamped);
-    });
+    if (!this.isPlayingFlipbook && !this.isScrubbing) {
+      this.applyScrubberTransform((clamped + 1) / this.totalFrames);
+    }
 
     this.updateHeaderButtons();
   }
 
+  startRafLoop() {
+    if (this.rafId) return;
+    this.lastRafTime = performance.now();
+    const step = (now) => {
+      this.rafId = null;
+      if (this.slide4El && !this.slide4El.classList.contains('active')) return;
+      this.onAnimationFrame(now);
+      this.rafId = requestAnimationFrame(step);
+    };
+    this.rafId = requestAnimationFrame(step);
+  }
+
+  stopRafLoop() {
+    if (this.rafId) {
+      cancelAnimationFrame(this.rafId);
+      this.rafId = null;
+    }
+  }
+
+  onAnimationFrame(now) {
+    const dt = Math.min(0.064, Math.max(0.001, (now - this.lastRafTime) / 1000));
+    this.lastRafTime = now;
+
+    // 1. Advance frame-locked Flipbook timeline & continuous 60/120fps Scrubber + Finale Bloom
+    let crescendoT = 0;
+    if (this.isPlayingFlipbook && !this.inDroneMode) {
+      let elapsed = now - this.frameStartTime;
+
+      if (elapsed >= this.currentFrameDuration) {
+        const carry = Math.min(24, elapsed - this.currentFrameDuration);
+        if (this.currentFrame < this.totalFrames - 1) {
+          this.frameStartTime = now - carry;
+          this.renderFrame(this.currentFrame + 1, true);
+          elapsed = carry;
+        } else {
+          // Completed final frame -> emerge seamlessly out of warm golden-white light into the Drone Flight!
+          this.isPlayingFlipbook = false;
+          this.startDroneVideo(true);
+          return;
+        }
+      }
+
+      const frameProgress = Math.max(0, Math.min(1, elapsed / Math.max(1, this.currentFrameDuration)));
+      const continuousProgress = (this.currentFrame + frameProgress) / this.totalFrames;
+      this.applyScrubberTransform(continuousProgress);
+
+      // Smooth continuous crescendo over the final 7 frames (indices 39..45)
+      const crescendoStart = this.totalFrames - 7;
+      if (this.currentFrame >= crescendoStart) {
+        crescendoT = Math.max(0, Math.min(1, ((this.currentFrame - crescendoStart) + frameProgress) / 7));
+        if (crescendoT >= 0.68) {
+          this.preStartDronePlayback();
+        }
+      }
+
+      if (this.brightFlashEl && !this.brightFlashEl.classList.contains('is-peaking') && !this.brightFlashEl.classList.contains('is-dissolving')) {
+        const bloomAlpha = crescendoT > 0 ? Math.pow(crescendoT, 1.85) * 0.92 : 0;
+        this.brightFlashEl.style.opacity = bloomAlpha > 0.004 ? bloomAlpha.toFixed(3) : '0';
+      }
+    }
+
+    // 2. Organic 3D Diorama Breathing, Pointer Parallax & Stack Ripple (pure GPU custom properties)
+    if (!this.inDroneMode && this.arenaEl && !this.prefersReducedMotion) {
+      const tSec = now * 0.001;
+      const ambientPlayFactor = this.isPlayingFlipbook ? 1 : 0.45;
+      const breathRy = Math.sin(tSec * 0.95) * 0.65 * ambientPlayFactor;
+      const breathRx = Math.cos(tSec * 0.78) * 0.42 * ambientPlayFactor;
+      const breathTy = Math.sin(tSec * 1.15) * 2.2 * ambientPlayFactor;
+
+      const targetRy = breathRy + this.pointerNormX * 1.65;
+      const targetRx = breathRx - this.pointerNormY * 1.15;
+
+      const damp = 1 - Math.exp(-dt * 6.5);
+      this.smoothRx += (targetRx - this.smoothRx) * damp;
+      this.smoothRy += (targetRy - this.smoothRy) * damp;
+      this.stackImpulse *= Math.exp(-dt * 7.5);
+
+      const forwardScale = 1 + (crescendoT * crescendoT * 0.044);
+
+      if (!this.containerEl || !this.containerEl.classList.contains('is-dark-start')) {
+        this.arenaEl.style.setProperty('--arena-rx', `${this.smoothRx.toFixed(3)}deg`);
+        this.arenaEl.style.setProperty('--arena-ry', `${this.smoothRy.toFixed(3)}deg`);
+        this.arenaEl.style.setProperty('--arena-ty', `${breathTy.toFixed(2)}px`);
+        this.arenaEl.style.setProperty('--arena-scale', forwardScale.toFixed(4));
+      }
+
+      if (this.centerStackEl) {
+        const w1 = (this.stackImpulse * 3.2) + Math.sin(tSec * 1.6) * 0.8 * ambientPlayFactor;
+        const w2 = (this.stackImpulse * 5.4) + Math.cos(tSec * 1.4) * 1.2 * ambientPlayFactor;
+        this.centerStackEl.style.setProperty('--stack-wave-1', `${w1.toFixed(2)}px`);
+        this.centerStackEl.style.setProperty('--stack-wave-2', `${w2.toFixed(2)}px`);
+      }
+
+      if (this.leftWingCard) {
+        const wl = Math.sin(tSec * 1.1 + 0.7) * 2.4 * ambientPlayFactor;
+        this.leftWingCard.style.setProperty('--wing-float-l', `${wl.toFixed(2)}px`);
+      }
+      if (this.rightWingCard) {
+        const wr = Math.sin(tSec * 1.1 + 2.3) * 2.4 * ambientPlayFactor;
+        this.rightWingCard.style.setProperty('--wing-float-r', `${wr.toFixed(2)}px`);
+      }
+    }
+  }
+
+  clearBloomTimers() {
+    while (this.bloomTimers.length) {
+      clearTimeout(this.bloomTimers.pop());
+    }
+    if (this.brightFlashEl) {
+      this.brightFlashEl.classList.remove('is-peaking', 'is-dissolving');
+      this.brightFlashEl.style.opacity = '0';
+    }
+  }
+
   startFlipbook(startIndex = 0) {
-    this.clearFlipTimer();
+    this.clearBloomTimers();
     this.isStarted = true;
     this.inDroneMode = false;
     this.isPlayingFlipbook = true;
     this.dronePreStarted = false;
 
-    const container = document.getElementById('build-timeline-container');
-    if (container) {
-      container.classList.remove('is-dark-start', 'is-drone-mode');
+    if (this.containerEl) {
+      this.containerEl.classList.remove('is-dark-start', 'is-drone-mode');
     }
-
-    const brightFlash = document.getElementById('diorama-bright-flash');
-    if (brightFlash) brightFlash.removeAttribute('data-bloom');
-
-    const droneStage = document.getElementById('diorama-drone-stage');
-    if (droneStage) droneStage.classList.remove('is-active');
-
-    const droneVid = document.getElementById('diorama-drone-video');
-    if (droneVid) {
+    if (this.droneStageEl) {
+      this.droneStageEl.classList.remove('is-active');
+    }
+    if (this.droneVidEl) {
       try {
-        droneVid.pause();
-        droneVid.currentTime = 0.001;
-      } catch (e) {}
+        this.droneVidEl.pause();
+        if (this.droneVidEl.readyState >= 1) {
+          this.droneVidEl.currentTime = 0.001;
+        }
+      } catch (_) {}
+    }
+    if (this.dronePillEl) {
+      this.dronePillEl.classList.remove('active');
     }
 
-    const dronePill = document.getElementById('diorama-scrubber-drone');
-    if (dronePill) dronePill.classList.remove('active');
-
-    // Utilize the 21-second flipbook playback window to buffer and warm up the Drone Video decoder
-    this.warmUpDroneVideo();
-
+    this.measureScrubber();
     this.renderFrame(startIndex, false);
-    this.scheduleNextFlip();
+    this.frameStartTime = performance.now();
+    this.applyScrubberTransform((startIndex + 0.02) / this.totalFrames);
+    this.startRafLoop();
     this.updateHeaderButtons();
-  }
-
-  scheduleNextFlip() {
-    if (!this.isPlayingFlipbook) return;
-
-    // 0.5 seconds (500ms) per image for images 1..42, then accelerating on the last 4 images (indices 42, 43, 44, 45)
-    let delay = 500;
-    const remainingFromStartOfFinalFour = this.currentFrame - (this.totalFrames - 4);
-    if (remainingFromStartOfFinalFour === 0) {
-      delay = 310; // 4th from last (#43)
-    } else if (remainingFromStartOfFinalFour === 1) {
-      delay = 210; // 3rd from last (#44)
-    } else if (remainingFromStartOfFinalFour === 2) {
-      delay = 140; // 2nd from last (#45)
-    } else if (remainingFromStartOfFinalFour >= 3) {
-      delay = 100; // Final image (#46) -> immediate luminous flash into Drone Flight!
-    }
-
-    this.flipTimer = setTimeout(() => {
-      if (!this.isPlayingFlipbook) return;
-      if (this.currentFrame < this.totalFrames - 1) {
-        this.renderFrame(this.currentFrame + 1, true);
-        this.scheduleNextFlip();
-      } else {
-        // Reached the 4th final image (#46) -> emerge directly from the bright flash into the Drone Flight!
-        this.isPlayingFlipbook = false;
-        this.startDroneVideo(true);
-      }
-    }, delay);
   }
 
   pauseFlipbook() {
     this.isPlayingFlipbook = false;
-    this.clearFlipTimer();
+    if (this.brightFlashEl && !this.inDroneMode) {
+      this.brightFlashEl.classList.remove('is-peaking', 'is-dissolving');
+      this.brightFlashEl.style.opacity = '0';
+    }
+    if (this.arenaEl) {
+      this.arenaEl.style.setProperty('--arena-scale', '1');
+    }
     this.updateHeaderButtons();
   }
 
-  clearFlipTimer() {
-    if (this.flipTimer) {
-      clearTimeout(this.flipTimer);
-      this.flipTimer = null;
-    }
-    if (this.stageNextTimer) {
-      clearTimeout(this.stageNextTimer);
-      this.stageNextTimer = null;
-    }
-  }
-
   startDroneVideo(fromBrightFlash = false) {
-    this.pauseFlipbook();
+    this.isPlayingFlipbook = false;
     this.isStarted = true;
     this.inDroneMode = true;
+    this.promoteDroneVideoPreload();
 
-    const brightFlash = document.getElementById('diorama-bright-flash');
-    if (brightFlash) {
+    while (this.bloomTimers.length) {
+      clearTimeout(this.bloomTimers.pop());
+    }
+
+    if (this.brightFlashEl) {
       if (fromBrightFlash) {
-        brightFlash.setAttribute('data-bloom', 'peak');
-        setTimeout(() => {
-          if (brightFlash.getAttribute('data-bloom') === 'peak') {
-            brightFlash.setAttribute('data-bloom', 'dissolve');
+        this.brightFlashEl.classList.remove('is-dissolving');
+        this.brightFlashEl.classList.add('is-peaking');
+        this.bloomTimers.push(setTimeout(() => {
+          if (this.brightFlashEl) {
+            this.brightFlashEl.classList.remove('is-peaking');
+            this.brightFlashEl.classList.add('is-dissolving');
           }
-        }, 70);
-        setTimeout(() => {
-          if (brightFlash.getAttribute('data-bloom') === 'dissolve') {
-            brightFlash.removeAttribute('data-bloom');
+        }, 90));
+        this.bloomTimers.push(setTimeout(() => {
+          if (this.brightFlashEl) {
+            this.brightFlashEl.classList.remove('is-dissolving');
+            this.brightFlashEl.style.opacity = '0';
           }
-        }, 900);
+        }, 1250));
       } else {
-        brightFlash.removeAttribute('data-bloom');
+        this.brightFlashEl.classList.remove('is-peaking', 'is-dissolving');
+        this.brightFlashEl.style.opacity = '0';
       }
     }
 
-    const container = document.getElementById('build-timeline-container');
-    if (container) {
-      container.classList.remove('is-dark-start');
-      container.classList.add('is-drone-mode');
+    if (this.containerEl) {
+      this.containerEl.classList.remove('is-dark-start');
+      this.containerEl.classList.add('is-drone-mode');
     }
 
-    const wm = document.getElementById('diorama-watermark');
-    if (wm) wm.textContent = '2026';
-
-    const droneStage = document.getElementById('diorama-drone-stage');
-    if (droneStage) droneStage.classList.add('is-active');
-
-    const dronePill = document.getElementById('diorama-scrubber-drone');
-    if (dronePill) dronePill.classList.add('active');
-
-    const progFill = document.getElementById('diorama-progress-fill');
-    if (progFill) progFill.style.width = '100%';
-
-    const counterBadge = document.getElementById('build-step-counter');
-    if (counterBadge) {
-      counterBadge.textContent = this.currentLang === 'de' ? '🎬 Drohnenflug Meuselwitz' :
-                                 this.currentLang === 'en' ? '🎬 Drone Flight Meuselwitz' :
-                                 this.currentLang === 'ja' ? '🎬 ドローン映像' : '🎬 莫伊瑟尔维茨无人机航拍';
+    if (this.watermarkEl) {
+      this.watermarkEl.textContent = '2026';
+      this.displayedMonthYear = '2026';
     }
 
-    const droneVid = document.getElementById('diorama-drone-video');
-    if (droneVid) {
+    if (this.droneStageEl) this.droneStageEl.classList.add('is-active');
+    if (this.dronePillEl) this.dronePillEl.classList.add('active');
+
+    this.measureScrubber();
+    this.applyScrubberTransform(1);
+
+    if (this.counterBadgeEl) {
+      this.counterBadgeEl.textContent = this.currentLang === 'de' ? '🎬 Drohnenflug Meuselwitz' :
+                                         this.currentLang === 'en' ? '🎬 Drone Flight Meuselwitz' :
+                                         this.currentLang === 'ja' ? '🎬 ドローン映像' : '🎬 莫伊塞尔维茨无人机航拍';
+    }
+
+    if (this.droneVidEl) {
       try {
-        // If preStartDronePlayback() already started the video during the last 2 frames, keep it rolling seamlessly!
-        if (droneVid.paused) {
-          if (!fromBrightFlash) droneVid.currentTime = 0;
-          const p = droneVid.play();
+        if (this.droneVidEl.paused) {
+          if (!fromBrightFlash && this.droneVidEl.readyState >= 1) {
+            this.droneVidEl.currentTime = 0;
+          }
+          const p = this.droneVidEl.play();
           if (p && typeof p.catch === 'function') {
             p.catch(() => {
-              droneVid.muted = true;
-              droneVid.play().catch(() => {});
+              this.droneVidEl.muted = true;
+              this.droneVidEl.play().catch(() => {});
             });
           }
         }
-      } catch (e) {}
+      } catch (_) {}
     }
 
     this.updateHeaderButtons();
   }
 
   exitDroneVideo(targetFrame = 0) {
+    this.pauseFlipbook();
     this.inDroneMode = false;
-    const container = document.getElementById('build-timeline-container');
-    if (container) container.classList.remove('is-drone-mode');
+    this.clearBloomTimers();
 
-    const brightFlash = document.getElementById('diorama-bright-flash');
-    if (brightFlash) brightFlash.removeAttribute('data-bloom');
+    if (this.containerEl) this.containerEl.classList.remove('is-drone-mode');
+    if (this.droneStageEl) this.droneStageEl.classList.remove('is-active');
+    if (this.dronePillEl) this.dronePillEl.classList.remove('active');
 
-    const photoFrame = document.getElementById('diorama-photo-frame');
-    if (photoFrame) photoFrame.removeAttribute('data-bloom');
-
-    const droneStage = document.getElementById('diorama-drone-stage');
-    if (droneStage) droneStage.classList.remove('is-active');
-
-    const dronePill = document.getElementById('diorama-scrubber-drone');
-    if (dronePill) dronePill.classList.remove('active');
-
-    const droneVid = document.getElementById('diorama-drone-video');
-    if (droneVid) {
-      try { droneVid.pause(); } catch (e) {}
+    if (this.droneVidEl) {
+      try { this.droneVidEl.pause(); } catch (_) {}
     }
 
     this.renderFrame(targetFrame, false);
+    this.startRafLoop();
   }
 
   updateHeaderButtons() {
     const lang = this.currentLang;
-    const playBtn = document.getElementById('build-play-btn');
-    const playIcon = document.getElementById('build-play-icon');
-    const playLabel = document.getElementById('build-play-label');
-    const nextLabel = document.getElementById('build-next-label');
-    const prevBtn = document.getElementById('build-prev-btn');
-
-    if (prevBtn) {
-      prevBtn.disabled = false;
+    if (this.prevBtnEl) {
+      this.prevBtnEl.disabled = false;
     }
 
-    if (playBtn) {
-      playBtn.classList.toggle('playing', this.isPlayingFlipbook);
+    if (this.playBtnEl) {
+      this.playBtnEl.classList.toggle('playing', this.isPlayingFlipbook);
+      this.playBtnEl.classList.toggle('is-playing', this.isPlayingFlipbook);
     }
-    if (playIcon) {
-      playIcon.textContent = this.isPlayingFlipbook ? '❚❚' : '▶';
+    if (this.playIconEl) {
+      this.playIconEl.textContent = this.isPlayingFlipbook ? '❚❚' : '▶';
     }
-    if (playLabel) {
+    if (this.playLabelEl) {
       if (this.isPlayingFlipbook) {
-        playLabel.textContent = lang === 'de' ? 'Pause' : lang === 'en' ? 'Pause' : lang === 'ja' ? '一時停止' : '暂停';
+        this.playLabelEl.textContent = lang === 'de' ? 'Pause' : lang === 'en' ? 'Pause' : lang === 'ja' ? '一時停止' : '暂停';
       } else {
-        playLabel.textContent = lang === 'de' ? 'Daumenkino starten' :
-                                lang === 'en' ? 'Play Flipbook' :
-                                lang === 'ja' ? 'パラパラ映像再生' : '播放翻页动画';
+        this.playLabelEl.textContent = lang === 'de' ? 'Daumenkino starten' :
+                                        lang === 'en' ? 'Play Flipbook' :
+                                        lang === 'ja' ? 'パラパラ映像再生' : '播放翻页动画';
       }
     }
 
-    if (nextLabel) {
+    if (this.nextLabelEl) {
       if (this.inDroneMode) {
-        nextLabel.textContent = lang === 'de' ? 'Nächste Folie' :
-                                lang === 'en' ? 'Next Slide' :
-                                lang === 'ja' ? '次のスライド' : '下一页';
+        this.nextLabelEl.textContent = lang === 'de' ? 'Nächste Folie' :
+                                        lang === 'en' ? 'Next Slide' :
+                                        lang === 'ja' ? '次のスライド' : '下一页';
       } else {
-        nextLabel.textContent = lang === 'de' ? 'Drohnenflug' :
-                                lang === 'en' ? 'Drone Flight' :
-                                lang === 'ja' ? 'ドローン映像へ' : '无人机航拍';
+        this.nextLabelEl.textContent = lang === 'de' ? 'Drohnenflug' :
+                                        lang === 'en' ? 'Drone Flight' :
+                                        lang === 'ja' ? 'ドローン映像へ' : '无人机航拍';
       }
     }
   }
@@ -687,9 +1068,21 @@ class RennerTransformationJourney {
   // Compatibility hooks called by js/presentation.js
   resetToDarkState() {
     this.pause();
+    this.clearBloomTimers();
     this.isStarted = false;
     this.inDroneMode = false;
+    if (this.containerEl) {
+      this.containerEl.classList.remove('is-drone-mode');
+      this.containerEl.classList.add('is-dark-start');
+    }
+    if (this.droneStageEl) {
+      this.droneStageEl.classList.remove('is-active');
+    }
+    if (this.dronePillEl) {
+      this.dronePillEl.classList.remove('active');
+    }
     this.renderFrame(0, false);
+    this.applyScrubberTransform(0.015);
   }
 
   startJourney() {
@@ -698,19 +1091,17 @@ class RennerTransformationJourney {
 
   goToMilestone(index) {
     if (index >= this.totalFrames - 1) {
-      this.startDroneVideo();
+      this.startDroneVideo(false);
     } else {
       this.exitDroneVideo(index);
     }
   }
 
   nextEra() {
-    // If flipbook is still running or showing photos, Right Arrow jumps to the Drone Flight video first
     if (!this.inDroneMode) {
-      this.startDroneVideo();
+      this.startDroneVideo(false);
       return true;
     }
-    // If already in Drone Flight mode, Right Arrow advances to Slide 5
     this.pause();
     return false;
   }
@@ -726,29 +1117,32 @@ class RennerTransformationJourney {
 
   pause() {
     this.pauseFlipbook();
-    const droneVid = document.getElementById('diorama-drone-video');
-    if (droneVid && !droneVid.paused) {
-      try { droneVid.pause(); } catch (e) {}
+    if (this.droneVidEl && !this.droneVidEl.paused) {
+      try { this.droneVidEl.pause(); } catch (_) {}
     }
   }
 
   setLanguage(lang) {
     this.currentLang = lang;
-    const droneBadge = document.getElementById('diorama-drone-badge');
-    if (droneBadge) {
-      droneBadge.textContent = lang === 'de' ? '>DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)' :
-                               lang === 'en' ? '>INTERIOR DRONE FLIGHT • MEUSELWITZ PLANT (2026)' :
-                               lang === 'ja' ? '>工場内部ドローン映像 • モイゼルヴィッツ（2026）' :
-                               '>莫伊瑟尔维茨新工厂内部无人机航拍 (2026)';
+    this.displayedPhaseIdx = -1; // Force clean refresh of localized phase texts
+    if (this.droneBadgeEl) {
+      this.droneBadgeEl.textContent = lang === 'de' ? 'DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)' :
+                                       lang === 'en' ? 'INTERIOR DRONE FLIGHT • MEUSELWITZ PLANT (2026)' :
+                                       lang === 'ja' ? '工場内部ドローン映像 • モイゼルヴィッツ（2026）' :
+                                       '莫伊塞尔维茨新工厂内部无人机航拍 (2026)';
     }
-    const replayBtn = document.getElementById('diorama-replay-flipbook-btn');
-    if (replayBtn) {
-      replayBtn.textContent = lang === 'de' ? '↺ Daumenkino wiederholen' :
-                              lang === 'en' ? '↺ Replay Flipbook' :
-                              lang === 'ja' ? '↺ パラパラ映像を再生' :
-                              '↺ 重播翻页纪实';
+    if (this.replayBtnEl) {
+      this.replayBtnEl.textContent = lang === 'de' ? '↺ Daumenkino wiederholen' :
+                                      lang === 'en' ? '↺ Replay Flipbook' :
+                                      lang === 'ja' ? '↺ パラパラ映像を再生' :
+                                      '↺ 重播翻页纪实';
     }
     if (this.inDroneMode) {
+      if (this.counterBadgeEl) {
+        this.counterBadgeEl.textContent = lang === 'de' ? '🎬 Drohnenflug Meuselwitz' :
+                                           lang === 'en' ? '🎬 Drone Flight Meuselwitz' :
+                                           lang === 'ja' ? '🎬 ドローン映像' : '🎬 莫伊塞尔维茨无人机航拍';
+      }
       this.updateHeaderButtons();
     } else {
       this.renderFrame(this.currentFrame, false);

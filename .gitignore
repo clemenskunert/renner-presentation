@@ -5,11 +5,15 @@ Thumbs.db
 # Large presentation binaries (raw 700MB archive - keep local only)
 *.pptx
 *.key
+*.zip
 
 # Temporary files & logs
 scratch*/
 *.tmp
 *.log
+*.sb-*
+.active_port
+.server_pid
 __pycache__/
 *.pyc
 
@@ -30,6 +34,7 @@ Visuell/Video/MeuselwitzInnenRaw.mp4
 Visuell/Video/MeuselwitzInnen_Geglaettet*.mp4
 Visuell/Video/APTA2026-MeuselwitzInnen.mp4
 Visuell/Video/05_Yamaha_Kit/**/*.mp4
+Visuell/Video_Standalone_H264/
 
 
 

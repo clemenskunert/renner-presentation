@@ -23,6 +23,9 @@ class PresentationController {
 
     // Country color theme ('de', 'ja', 'zh', 'en')
     this.currentTheme = 'de';
+
+    // One-time fade-from-black state for Slide 12 (Kapitel 3 opener)
+    this.s12FirstOpenDone = false;
   }
 
   getSlideIndexFromURL() {
@@ -158,11 +161,19 @@ class PresentationController {
       this.updateLanguage(this.currentLang);
     };
 
-    // Live fetcher (only active in local development over HTTP/HTTPS to prevent CORS/file errors)
-    const isDevHost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    // Hide authoring-only Image Manager link in standalone / file:// environments
+    if (window.__RENNER_STANDALONE__ || window.location.protocol === 'file:') {
+      const imgMgrBtn = document.getElementById('open-image-manager-btn');
+      if (imgMgrBtn) imgMgrBtn.style.display = 'none';
+    }
+
+    // Live fetcher (only active in local authoring server over HTTP/HTTPS; disabled in standalone/file://)
+    const isDevHost = !window.__RENNER_STANDALONE__ &&
+      window.location.protocol.startsWith('http') &&
+      ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
     this.refreshTranslationsLive = async () => {
-      if (!isDevHost || !window.location.protocol.startsWith('http')) return;
+      if (!isDevHost) return;
       try {
         const res = await fetch(`translations/slides_content.json?t=${Date.now()}`, { cache: 'no-store' });
         if (res.ok) {
@@ -174,32 +185,38 @@ class PresentationController {
       }
     };
 
-    // 1. Initial live fetch only in dev
+    // 1. Initial live fetch only in dev authoring server (auto-disables if /api/translation-version is absent, e.g. Windows PS server)
     if (isDevHost) {
-      this.refreshTranslationsLive();
-
-      // 2. Window focus trigger: whenever user switches back to browser tab from editor
-      window.addEventListener('focus', () => {
-        this.refreshTranslationsLive();
-      });
-
-      // 3. Heartbeat check every 1.5 seconds for instant hot-reload (dev server only)
-      if (window.location.protocol.startsWith('http')) {
-        setInterval(async () => {
-          try {
-            const res = await fetch(`api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
-            if (res.ok) {
-              const json = await res.json();
-              if (json.version && json.version !== this.lastTranslationVersion) {
-                this.lastTranslationVersion = json.version;
-                await this.refreshTranslationsLive();
-              }
-            }
-          } catch (e) {
-            // quiet fallback
+      this.lastBundleVersion = 0;
+      const focusHandler = () => this.refreshTranslationsLive();
+      const devPollTimer = setInterval(async () => {
+        try {
+          const res = await fetch(`api/translation-version?t=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) {
+            clearInterval(devPollTimer);
+            window.removeEventListener('focus', focusHandler);
+            const imgMgrBtn = document.getElementById('open-image-manager-btn');
+            if (imgMgrBtn) imgMgrBtn.style.display = 'none';
+            return;
           }
-        }, 1500);
-      }
+          const json = await res.json();
+          if (json.bundle_version) {
+            if (this.lastBundleVersion && json.bundle_version !== this.lastBundleVersion) {
+              window.location.reload();
+              return;
+            }
+            this.lastBundleVersion = json.bundle_version;
+          }
+          if (json.version && json.version !== this.lastTranslationVersion) {
+            this.lastTranslationVersion = json.version;
+            await this.refreshTranslationsLive();
+          }
+        } catch (e) {
+          clearInterval(devPollTimer);
+          window.removeEventListener('focus', focusHandler);
+        }
+      }, 1500);
+      window.addEventListener('focus', focusHandler);
     }
   }
 
@@ -220,6 +237,21 @@ class PresentationController {
     if (hudJumpSlide2Btn) {
       hudJumpSlide2Btn.addEventListener('click', () => this.goToSlide(1));
     }
+
+// Delegated click handler for Hammer Core media switcher (Profilformen / Rohholzlager)
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-core-media-target]');
+      if (!btn) return;
+      const card = btn.closest('.hk-core-media-card');
+      if (!card) return;
+      const target = btn.getAttribute('data-core-media-target');
+      card.querySelectorAll('[data-core-media-target]').forEach(b => {
+        b.classList.toggle('is-active', b === btn);
+      });
+      card.querySelectorAll('[data-core-pane]').forEach(p => {
+        p.classList.toggle('is-active', p.getAttribute('data-core-pane') === target);
+      });
+    });
 
     // Delegated click handler for any element with data-target-slide="X"
     document.addEventListener('click', (e) => {
@@ -625,9 +657,21 @@ class PresentationController {
 
     const previousSlide = this.slides[this.currentSlideIndex];
     if (previousSlide) {
+      // Stop any sequential multi-video loop cards on the previous slide
+      previousSlide.querySelectorAll('.hk-seq-video-card').forEach(card => {
+        this.stopSeqVideoCard(card);
+      });
+
       // Pause any running videos in the previous slide
       const videos = previousSlide.querySelectorAll('video');
-      videos.forEach(v => v.pause());
+      videos.forEach(v => {
+        if (v._edgeRetryTimer) {
+          clearTimeout(v._edgeRetryTimer);
+          v._edgeRetryTimer = null;
+        }
+        v.pause();
+        this.removeUnmutePill(v);
+      });
       previousSlide.classList.remove('active');
 
       // Pause timelapse if leaving slide 5
@@ -668,7 +712,7 @@ class PresentationController {
       }
 
       // Synchronize Meuselwitz transformation journey if entering Umbau slide
-      if (currentSlide.querySelector('#build-slide-body') && window.meuselwitzJourney) {
+      if (currentSlide.querySelector('#build-slide-body, #build-timeline-container') && window.meuselwitzJourney) {
         if (fromIndex > index) {
           // Navigating backwards into transformation slide: position at final milestone
           window.meuselwitzJourney.isStarted = true;
@@ -699,9 +743,74 @@ class PresentationController {
         const milestonePanel = v.closest('.tree-milestone-panel');
         if (milestonePanel && !milestonePanel.classList.contains('active')) return;
         if (v.classList.contains('hero-slideshow-video') && !v.classList.contains('active')) return;
-        v.currentTime = 0;
-        v.play().catch(() => {}); // Allow autoplay or user gesture
+        if (v.classList.contains('hk-seq-video')) return;
+        const droneStage = v.closest('.diorama-drone-stage');
+        if (droneStage && !droneStage.classList.contains('is-active')) return;
+        this.activateSlideVideo(v, index);
       });
+
+      // Gently pre-warm metadata of videos on the immediate next slide (1 slide ahead only)
+      const upcomingSlide = this.slides[index + 1];
+      if (upcomingSlide) {
+        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video#s12-drone-video').forEach(nv => {
+          if (nv.preload === 'none') {
+            nv.preload = 'metadata';
+          }
+        });
+      }
+
+      // Start any sequential multi-video loop cards on the active slide (e.g. Slide 23)
+      currentSlide.querySelectorAll('.hk-seq-video-card').forEach(card => {
+        this.startSeqVideoCard(card);
+      });
+
+      // Slide 12 (Kapitel 3 Opener): First-open fade-in from black to bright ("Schwarz nach Hell")
+      if (currentSlide.querySelector('#s12-drone-video')) {
+        const slideCurtain = currentSlide.querySelector('#s12-slide-fade-curtain');
+        const videoCurtain = currentSlide.querySelector('#s12-video-fade-curtain');
+        const s12Video = currentSlide.querySelector('#s12-drone-video');
+
+        if (!this.s12FirstOpenDone) {
+          this.s12FirstOpenDone = true;
+
+          if (slideCurtain) {
+            slideCurtain.classList.remove('is-fading', 'is-done');
+            slideCurtain.classList.add('is-armed');
+            void slideCurtain.offsetWidth;
+            requestAnimationFrame(() => {
+              slideCurtain.classList.remove('is-armed');
+              slideCurtain.classList.add('is-fading');
+            });
+            setTimeout(() => slideCurtain.classList.add('is-done'), 1650);
+          }
+
+          let videoRevealStarted = false;
+          const revealVideo = () => {
+            if (videoRevealStarted) return;
+            videoRevealStarted = true;
+            if (videoCurtain) {
+              void videoCurtain.offsetWidth;
+              requestAnimationFrame(() => {
+                videoCurtain.classList.remove('is-armed');
+                videoCurtain.classList.add('is-fading');
+              });
+              setTimeout(() => videoCurtain.classList.add('is-done'), 2250);
+            }
+            if (s12Video) {
+              requestAnimationFrame(() => {
+                s12Video.classList.remove('is-armed');
+                s12Video.classList.add('is-fading');
+              });
+            }
+          };
+
+          if (s12Video) {
+            s12Video.addEventListener('playing', revealVideo, { once: true });
+            s12Video.addEventListener('loadeddata', revealVideo, { once: true });
+          }
+          setTimeout(revealVideo, 180);
+        }
+      }
     }
 
     this.updateHUD();
@@ -716,6 +825,324 @@ class PresentationController {
     }
   }
 
+  getUnmuteLabel(lang = this.currentLang) {
+    if (lang === 'en') return '🔇 Enable Sound';
+    if (lang === 'ja') return '🔇 音声をオンにする';
+    if (lang === 'zh') return '🔇 开启声音';
+    return '🔇 Ton aktivieren';
+  }
+
+  removeUnmutePill(videoEl) {
+    if (!videoEl || !videoEl.parentElement) return;
+    videoEl.parentElement.querySelectorAll('.edge-unmute-pill').forEach(btn => btn.remove());
+  }
+
+  showUnmutePill(videoEl) {
+    if (!videoEl || !videoEl.parentElement) return;
+    this.removeUnmutePill(videoEl);
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'edge-unmute-pill';
+    btn.textContent = this.getUnmuteLabel(this.currentLang);
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      videoEl.muted = false;
+      videoEl.volume = 1.0;
+      this.removeUnmutePill(videoEl);
+      if (videoEl.paused) {
+        videoEl.play().catch(() => {});
+      }
+    });
+    videoEl.parentElement.appendChild(btn);
+
+    if (!videoEl._edgeVolumeBound) {
+      videoEl._edgeVolumeBound = true;
+      videoEl.addEventListener('volumechange', () => {
+        if (!videoEl.muted && videoEl.volume > 0) {
+          this.removeUnmutePill(videoEl);
+        }
+      });
+    }
+  }
+
+  activateSlideVideo(v, slideIndex) {
+    if (!v) return;
+    if (v._edgeRetryTimer) {
+      clearTimeout(v._edgeRetryTimer);
+      v._edgeRetryTimer = null;
+    }
+
+    v.preload = 'auto';
+    if (v.error) {
+      try { v.load(); } catch (_) {}
+    }
+
+    // Only seek to 0 when metadata is already loaded; seeking at HAVE_NOTHING (readyState 0)
+    // causes Chromium / Microsoft Edge to race or abort the initial stream start.
+    if (v.readyState >= 1 && v.currentTime > 0.05) {
+      try { v.currentTime = 0; } catch (_) {}
+    }
+
+    const wantsSound = v.classList.contains('yka-india-video') || (!v.defaultMuted && !v.hasAttribute('muted'));
+
+    if (!v._edgeErrorBound) {
+      v._edgeErrorBound = true;
+      v.addEventListener('error', () => {
+        const activeSlide = this.slides[this.currentSlideIndex];
+        if (!activeSlide || !activeSlide.contains(v)) return;
+        const now = Date.now();
+        if (v._lastEdgeErrorRecovery && (now - v._lastEdgeErrorRecovery) < 4000) return;
+        v._lastEdgeErrorRecovery = now;
+        const resumeAt = v.currentTime || 0;
+        v._edgeRetryTimer = setTimeout(() => {
+          try {
+            v.load();
+            v.addEventListener('loadedmetadata', () => {
+              if (resumeAt > 0.2) {
+                try { v.currentTime = resumeAt; } catch (_) {}
+              }
+              v.play().catch(() => {
+                v.muted = true;
+                if (wantsSound) this.showUnmutePill(v);
+                v.play().catch(() => {});
+              });
+            }, { once: true });
+          } catch (_) {}
+        }, 250);
+      });
+    }
+
+    if (wantsSound) {
+      this.removeUnmutePill(v);
+      v.muted = false;
+      v.volume = 1.0;
+      try {
+        const p = v.play();
+        if (p && typeof p.then === 'function') {
+          p.then(() => {
+            this.removeUnmutePill(v);
+          }).catch((err) => {
+            if (this.currentSlideIndex !== slideIndex) return;
+            if (err && err.name === 'AbortError') return;
+            // Microsoft Edge Autoplay Policy blocked unmuted playback -> play muted immediately + show unmute pill
+            v.muted = true;
+            this.showUnmutePill(v);
+            const mp = v.play();
+            if (mp && typeof mp.catch === 'function') {
+              mp.catch(() => {});
+            }
+          });
+        }
+      } catch (_) {
+        v.muted = true;
+        this.showUnmutePill(v);
+        try { v.play().catch(() => {}); } catch (_e) {}
+      }
+    } else {
+      v.defaultMuted = true;
+      v.muted = true;
+      v.setAttribute('muted', '');
+      if (v.readyState === 0 && v.networkState !== 2) {
+        try { v.load(); } catch (_) {}
+      }
+
+      const tryMutedPlay = () => {
+        if (this.currentSlideIndex !== slideIndex) return;
+        v.muted = true;
+        try {
+          const p = v.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(() => {
+              // Retry once buffered or on next user interaction if Edge Efficiency/Block policy intervened
+              if (this.currentSlideIndex !== slideIndex) return;
+              v.addEventListener('canplay', () => {
+                if (this.currentSlideIndex === slideIndex && v.paused) {
+                  v.muted = true;
+                  v.play().catch(() => {});
+                }
+              }, { once: true });
+            });
+          }
+        } catch (_) {}
+      };
+
+      // Allow clicking the parent video card to resume/start if Edge strict Block mode is enabled
+      const parentCard = v.closest('.hk-video-card, .s12-drone-card');
+      if (parentCard && !parentCard._edgeCardClickBound) {
+        parentCard._edgeCardClickBound = true;
+        parentCard.style.cursor = 'pointer';
+        parentCard.addEventListener('click', () => {
+          parentCard.querySelectorAll('video').forEach(cv => {
+            if (!cv.classList.contains('hk-seq-video') || cv.classList.contains('is-active')) {
+              if (cv.paused) {
+                cv.muted = true;
+                cv.play().catch(() => {});
+              }
+            }
+          });
+        });
+      }
+
+      tryMutedPlay();
+    }
+  }
+
+  startSeqVideoCard(card) {
+    if (!card) return;
+    const videos = Array.from(card.querySelectorAll('video.hk-seq-video'));
+    if (videos.length < 2) return;
+
+    this.stopSeqVideoCard(card);
+    card._isRunning = true;
+    card._seqIndex = 0;
+    card._isTransitioning = false;
+
+    if (!card._edgeCardClickBound) {
+      card._edgeCardClickBound = true;
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        const activeVid = videos[card._seqIndex || 0];
+        if (activeVid && activeVid.paused) {
+          activeVid.muted = true;
+          activeVid.play().catch(() => {});
+        }
+      });
+    }
+
+    const crossfadeTo = (nextIdx) => {
+      if (!card._isRunning || card._isTransitioning) return;
+      const prevIdx = card._seqIndex;
+      if (nextIdx === prevIdx) return;
+
+      card._isTransitioning = true;
+      card._seqIndex = nextIdx;
+
+      const prevVid = videos[prevIdx];
+      const nextVid = videos[nextIdx];
+
+      nextVid.defaultMuted = true;
+      nextVid.muted = true;
+      nextVid.preload = 'auto';
+      if (nextVid.readyState === 0 && nextVid.networkState !== 2) {
+        try { nextVid.load(); } catch (_) {}
+      }
+      if (nextVid.readyState >= 1) {
+        try { nextVid.currentTime = 0; } catch (e) {}
+      }
+      nextVid.classList.add('is-active');
+      prevVid.classList.remove('is-active');
+      const np = nextVid.play();
+      if (np && typeof np.catch === 'function') {
+        np.catch(() => {
+          nextVid.addEventListener('canplay', () => {
+            if (card._isRunning && card._seqIndex === nextIdx && nextVid.paused) {
+              nextVid.muted = true;
+              nextVid.play().catch(() => {});
+            }
+          }, { once: true });
+        });
+      }
+
+      if (card._cleanupTimer) clearTimeout(card._cleanupTimer);
+      card._cleanupTimer = setTimeout(() => {
+        if (!card._isRunning) return;
+        if (card._seqIndex !== prevIdx) {
+          prevVid.pause();
+          if (prevVid.readyState >= 1) {
+            try { prevVid.currentTime = 0; } catch (e) {}
+          }
+        }
+        card._isTransitioning = false;
+      }, 920);
+    };
+
+    if (!card._seqBound) {
+      card._seqBound = true;
+      videos.forEach((vid, idx) => {
+        vid.loop = false;
+        vid.addEventListener('ended', () => {
+          if (card._isRunning && card._seqIndex === idx && !card._isTransitioning) {
+            crossfadeTo((idx + 1) % videos.length);
+          }
+        });
+      });
+    }
+
+    videos.forEach((vid, idx) => {
+      vid.loop = false;
+      vid.defaultMuted = true;
+      vid.muted = true;
+      vid.setAttribute('muted', '');
+      if (idx === 0) {
+        vid.preload = 'auto';
+        if (vid.readyState === 0 && vid.networkState !== 2) {
+          try { vid.load(); } catch (_) {}
+        }
+        if (vid.readyState >= 1) {
+          try { vid.currentTime = 0; } catch (e) {}
+        }
+        vid.classList.add('is-active');
+        const p0 = vid.play();
+        if (p0 && typeof p0.catch === 'function') {
+          p0.catch(() => {
+            vid.addEventListener('canplay', () => {
+              if (card._isRunning && card._seqIndex === 0 && vid.paused) {
+                vid.muted = true;
+                vid.play().catch(() => {});
+              }
+            }, { once: true });
+          });
+        }
+      } else {
+        vid.pause();
+        vid.classList.remove('is-active');
+        if (vid.readyState >= 1) {
+          try { vid.currentTime = 0; } catch (e) {}
+        }
+      }
+    });
+
+    if (card._warmTimer) clearTimeout(card._warmTimer);
+    card._warmTimer = setTimeout(() => {
+      if (!card._isRunning || !videos[1]) return;
+      videos[1].preload = 'auto';
+      if (videos[1].readyState === 0) {
+        try { videos[1].load(); } catch (_) {}
+      }
+    }, 500);
+
+    card._pollTimer = setInterval(() => {
+      if (!card._isRunning || card._isTransitioning) return;
+      const curIdx = card._seqIndex;
+      const curVid = videos[curIdx];
+      if (!curVid) return;
+      const dur = curVid.duration;
+      if (Number.isFinite(dur) && dur > 1.5 && (dur - curVid.currentTime) <= 0.78) {
+        crossfadeTo((curIdx + 1) % videos.length);
+      }
+    }, 120);
+  }
+
+  stopSeqVideoCard(card) {
+    if (!card) return;
+    card._isRunning = false;
+    card._isTransitioning = false;
+    if (card._pollTimer) {
+      clearInterval(card._pollTimer);
+      card._pollTimer = null;
+    }
+    if (card._cleanupTimer) {
+      clearTimeout(card._cleanupTimer);
+      card._cleanupTimer = null;
+    }
+    if (card._warmTimer) {
+      clearTimeout(card._warmTimer);
+      card._warmTimer = null;
+    }
+    card.querySelectorAll('video.hk-seq-video').forEach(v => v.pause());
+  }
+
   nextSlide() {
     const activeSlide = this.slides[this.currentSlideIndex];
     if (activeSlide && activeSlide.querySelector('#history-slide-body') && window.rennerHistory) {
@@ -727,7 +1154,7 @@ class PresentationController {
         return;
       }
     }
-    if (activeSlide && activeSlide.querySelector('#build-slide-body') && window.meuselwitzJourney) {
+    if (activeSlide && activeSlide.querySelector('#build-slide-body, #build-timeline-container') && window.meuselwitzJourney) {
       if (!window.meuselwitzJourney.isStarted) {
         window.meuselwitzJourney.startJourney();
         return;
@@ -757,7 +1184,7 @@ class PresentationController {
         return;
       }
     }
-    if (activeSlide && activeSlide.querySelector('#build-slide-body') && window.meuselwitzJourney) {
+    if (activeSlide && activeSlide.querySelector('#build-slide-body, #build-timeline-container') && window.meuselwitzJourney) {
       if (window.meuselwitzJourney.isStarted && window.meuselwitzJourney.currentMilestone === 0) {
         window.meuselwitzJourney.resetToDarkState();
         return;
@@ -859,6 +1286,10 @@ class PresentationController {
       el.style.display = elLang === lang ? '' : 'none';
     });
 
+    document.querySelectorAll('.edge-unmute-pill').forEach(btn => {
+      btn.textContent = this.getUnmuteLabel(lang);
+    });
+
     if (window.meuselwitzTimelapse) {
       window.meuselwitzTimelapse.setLanguage(lang);
     }
@@ -895,17 +1326,21 @@ class PresentationController {
     const gridContainer = document.getElementById('slides-grid-view');
     if (!gridContainer) return;
 
+    const lang = this.currentLang || 'de';
+    const titleFallback = lang === 'en' ? 'Title Slide' : lang === 'ja' ? 'タイトル' : lang === 'zh' ? '封面' : 'Titelfolie';
+    const slideWord = (n) => lang === 'en' ? `Slide ${n}` : lang === 'ja' ? `スライド ${n}` : lang === 'zh' ? `第 ${n} 页` : `Folie ${n}`;
+
     gridContainer.innerHTML = '';
     this.slides.forEach((slide, idx) => {
       const titleEl = slide.querySelector('.slide-title') || slide.querySelector('.hero-main-title');
       const categoryEl = slide.querySelector('.slide-category');
-      const title = titleEl ? titleEl.textContent : `Slide ${idx + 1}`;
-      const category = categoryEl ? categoryEl.textContent : (idx === 0 ? 'Titelfolie' : '');
+      const title = titleEl ? titleEl.textContent : slideWord(idx + 1);
+      const category = categoryEl ? categoryEl.textContent : (idx === 0 ? titleFallback : '');
 
       const thumb = document.createElement('div');
       thumb.className = `slide-grid-thumb ${idx === this.currentSlideIndex ? 'active' : ''}`;
       thumb.innerHTML = `
-        <div class="grid-thumb-number">Folie ${idx + 1} • ${category}</div>
+        <div class="grid-thumb-number">${slideWord(idx + 1)}${category ? ' • ' + category : ''}</div>
         <div class="grid-thumb-title">${title}</div>
       `;
       thumb.addEventListener('click', () => {
@@ -973,31 +1408,31 @@ class PresentationController {
         de: "Begrüßung des Publikums in Beijing / Toyohashi. Vorstellung von Clemens Kunert und der Louis Renner GmbH. Betonen Sie: 2025/2026 ist ein historischer Meilenstein durch die Konsolidierung aller Fertigungsschritte am hochmodernen Hauptsitz in Meuselwitz.",
         en: "Welcome the audience in Beijing / Toyohashi. Introduction of Clemens Kunert and Louis Renner GmbH. Emphasize that 2025/2026 marks a historic milestone with the consolidated modern headquarters in Meuselwitz.",
         ja: "北京・豊橋カンファレンスの皆様にご挨拶。クレメンス・クーネルトとルイス・レンナー社の紹介。モイゼルヴィッツ新本社への全工程統合という歴史的変革を強調。",
-        zh: "欢迎各位北京与丰桥钢琴业界的贵宾。主讲人克莱门斯·库内特介绍德国雷诺公司。强调2025/2026年雷诺新总部在莫伊瑟尔维茨全面整合的划时代意义。"
+        zh: "欢迎各位北京与丰桥钢琴业界的贵宾。主讲人克莱门斯·库内特介绍德国雷诺公司。强调2025/2026年雷诺新总部在莫伊塞尔维茨全面整合的划时代意义。"
       },
       1: {
         de: "Überblick über die 6 Kernmodule der Renner Masterclass 2025 geben: 1. Historie & Hauptsitz Meuselwitz, 2. Filzherstellung (FFW Wurzen seit 1783), 3. Hammerkopf-Fertigung & Roboterzuschnitt, 4. Musterteilekoffer & Stiele, 5. Maßblätter & Geometrie (Bohrwinkel in Gon), 6. Hohe Schule der Intonation (Uhrenmodell & 4 Keile).",
         en: "Provide an overview of the 6 core modules of the Renner Masterclass 2025: 1. History & Meuselwitz Headquarters, 2. Felt Manufacturing (FFW Wurzen since 1783), 3. Hammerhead Manufacturing & Robot Cutting, 4. Sample Parts Case & Shanks, 5. Measurement Sheets & Geometry (Drill Angles in Gon), 6. High Art of Voicing (Clock Model & 4 Wedges).",
         ja: "レンナー・マスタークラス2025の6つの主要モジュールの概要を説明：1. 歴史とモイゼルヴィッツ本社、2. フェルト製造（1783年創業FFWヴルツェン）、3. ハンマーヘッド製造とロボット切断、4. サンプルパーツケースとシャンク、5. 寸法図面と幾何学（グラード/Gon角度）、6. 整音の極意（時計文字盤モデルと4つのウェッジ）。",
-        zh: "简要介绍2025年雷诺大师课的6大核心培训模块：1. 历史与莫伊瑟尔维茨新总部、2. 羊毛毡制造（源自1783年FFW乌尔岑）、3. 弦槌生产与机器人裁切、4. 样件箱与弦槌柄、5. 测量图纸与几何尺寸（Gon角度分度法）、6. 整音高等艺术（时钟模型与4大楔形区域）。"
+        zh: "简要介绍2025年雷诺大师课的6大核心培训模块：1. 历史与莫伊塞尔维茨新总部、2. 羊毛毡制造（源自1783年FFW乌尔岑）、3. 弦槌生产与机器人裁切、4. 样件箱与弦槌柄、5. 测量图纸与几何尺寸（Gon角度分度法）、6. 整音高等艺术（时钟模型与4大楔形区域）。"
       },
       2: {
         de: "140+ Jahre Historie (louis-renner.de): Heusteigstraße 1882 (schlaflose Nächte Louis Renners), Oscar Renner & Wilhelm Megenhardt 1902, 1906 Beginn der Hammerkopffertigung, 1911 Pioniertat mit Hunderten Einzel-Elektromotoren. Brandnacht 24./25. Juli 1944 und heroischer Wiederaufbau, Zweigwerk Östringen 1960, Rudolf Genger und der weltberühmte Renner-Katalog 1977, Gärtringen 2001, Meuselwitz 2011 und 2019 Steinway & Sons. Sie können mit den Epochentasten oder weiterklicken, um die 4 Epochen nacheinander vorzustellen.",
         en: "140+ Years of History (louis-renner.de): Heusteigstrasse 1882, Oscar Renner & Wilhelm Megenhardt 1902, in-house hammerhead production 1906, pioneer electrification with individual motors 1911. Bombing night July 1944 and heroic reconstruction, Östringen 1960, Rudolf Genger and the acclaimed Renner Catalog 1977, Gärtringen 2001, Meuselwitz 2011, and Steinway & Sons in 2019. Advance through the 4 epochs seamlessly via clicker or tabs.",
         ja: "創業140余年の歴史（louis-renner.de公式記録）：1882年ホイシュタイグ通りでの創業、1902年オスカー・レンナーへの継承、1906年ハンマーヘッド自社生産開始、1911年個別モーターによる電化革命。1944年7月の戦災全焼と不屈の復興、1960年エストリンゲン工場、1977年ルドルフ・ゲンガーによる世界標準パーツカタログ発刊、ゲルトリンゲン移転、2011年モイゼルヴィッツ、そして2019年スタインウェイ参入。4つの時代を順に解説。",
-        zh: "雷诺140余年辉煌征程（官网权威档案）：1882年霍伊施泰希街创业，1902年奥斯卡·雷诺与威廉·梅根哈特接棒，1906年开启弦槌自主制造，1911年引入数百台独立电机单驱开创工业先河。1944年7月斯图加特大火浩劫与艰苦重建，1960年厄斯特林根分厂，1977年鲁道夫·根格尔创立全球配件中心与雷诺图册，2001年盖特林根，2011年莫伊瑟尔维茨核心基地，2019年加入施坦威。通过4个历史纪元娓娓道来。"
+        zh: "雷诺140余年辉煌征程（官网权威档案）：1882年霍伊施泰希街创业，1902年奥斯卡·雷诺与威廉·梅根哈特接棒，1906年开启弦槌自主制造，1911年引入数百台独立电机单驱开创工业先河。1944年7月斯图加特大火浩劫与艰苦重建，1960年厄斯特林根分厂，1977年鲁道夫·根格尔创立全球配件中心与雷诺图册，2001年盖特林根，2011年莫伊塞尔维茨核心基地，2019年加入施坦威。通过4个历史纪元娓娓道来。"
       },
       3: {
         de: "Zusammenlegung Gärtringen & Meuselwitz: Bisher Holzbearbeitung in Gärtringen und Montage in Meuselwitz. Nun ist alles unter einem voll klimatisierten Dach vereint. Bessere Qualitätskontrolle, schnellere Durchlaufzeiten und Ausbau der weltweiten Kapazitäten.",
         en: "Consolidation Gärtringen & Meuselwitz: Previously woodworking in Gärtringen and assembly in Meuselwitz. Now unified under one state-of-the-art climate-controlled roof. Optimized quality control and enhanced global capacity.",
         ja: "ゲルトリンゲンとモイゼルヴィッツの拠点統合：木工加工と組み立てを完全気候制御された新拠点に統合。品質管理とリードタイムの大幅な向上、世界供給能力の拡大。",
-        zh: "盖特林根与莫伊瑟尔维茨两厂合并：以往木工粗加工与总装分离，现统一在全恒温恒湿新总部，实现最高质控标准、极速交付周期与全球产能扩充。"
+        zh: "盖特林根与莫伊塞尔维茨两厂合并：以往木工粗加工与总装分离，现统一在全恒温恒湿新总部，实现最高质控标准、极速交付周期与全球产能扩充。"
       },
       5: {
         de: "Weickert-Filz & FFW Wurzen (Slide 6): 1783 von J.D. Weickert in Leipzig gegründet, 1847 erster Hammerkopffilz in Wurzen. Ausschließlich 100% Merinowolle ohne Säurekarbonisierung. Im Werk Meuselwitz ruhen alle Filzplatten im klimatisierten Feuchtelager.",
         en: "Weickert Felt & FFW Wurzen (Slide 6): Founded in 1783 by J.D. Weickert in Leipzig, 1847 first hammerhead felt in Wurzen. 100% Merino wool without acid carbonization. All felt boards stored in Meuselwitz humidity-controlled buffer.",
         ja: "ヴァイケルト・フェルトとFFWヴルツェン（スライド6）：1783年ライプツィヒで創業、1847年に世界基準のハンマーフェルトを開発。酸処理を行わない100%純メリノウール。モイゼルヴィッツ新工場の調湿保管庫で管理。",
-        zh: "魏克特羊毛毡与FFW乌尔岑（第6页）：1783年创立于莱比锡，1847年制成首款现代标准钢琴羊毛毡。坚持纯物理梳理无强酸碳化。莫伊瑟尔维茨恒温恒湿缓冲库严格控制平衡含水率。"
+        zh: "魏克特羊毛毡与FFW乌尔岑（第6页）：1783年创立于莱比锡，1847年制成首款现代标准钢琴羊毛毡。坚持纯物理梳理无强酸碳化。莫伊塞尔维茨恒温恒湿缓冲库严格控制平衡含水率。"
       },
       8: {
         de: "Roboter-Zuschnitt (Slide 9 / Video 1): Weisen Sie auf den scherspannungsfreien Schnitt hin! Das Spezialmesser gleitet durch den dicken Filz, ohne die Faserrichtung zu stauchen. Perfekter Trapezwinkel für gleichmäßige Dehnung beim Pressen.",
@@ -1006,9 +1441,9 @@ class PresentationController {
         zh: "机器人羊毛毡裁切（第9页 / 视频1）：强调无剪切应力的高精度裁切！刀刃平滑切过厚毡，绝不破坏毛鳞片排列与纤维取向，为后续压弯提供完美的梯形侧边。"
       },
       10: {
-        de: "Holzkern Tonholzarten (Slide 11 / Video 3): Erläutern Sie die Dichtetabelle: Weißbuche (800-860 kg/m³, harter Anschlag, dynamische Obertöne) vs. Walnuss (590-680 kg/m³, warme Grundtönigkeit, geringe Trägheit für schnelle Repetition) und Mahagoni (490-750 kg/m³).",
-        en: "Tonewood Selection (Slide 11 / Video 3): Explain specific weights: Hornbeam (800-860 kg/m³, brilliant overtones, concert grand standard) vs. Walnut (590-680 kg/m³, warm tone, low inertia for agile repetition) and Mahogany (490-750 kg/m³).",
-        ja: "木芯材のトーンウッド分類（スライド11 / 動画3）：比重の違いを解説。白ブナ（800-860 kg/m³、明瞭な倍音、コンサート標準）対ウォルナット（590-680 kg/m³、温かい基音、低慣性による高速連打性能）、マホガニー（490-750 kg/m³）。",
+        de: "Hammerkern-Holzarten (Folie 14): Weißbuche und Ahorn sind schwere Harthölzer (Weißbuche sehr aufwendig zu trocknen, korrekt getrocknet ideal; Ahorn elastischer, aber Risiko durch Zuckereinlagerungen). Ölhaltiges Kotibé ist ebenfalls schwer und für Spezialanwendungen. Amerikanischer Nussbaum (feinjährig, langfaserig, sehr leicht) ist das hochwertigste Holz und ideal für einen brillanten Diskant.",
+        en: "Hammer Moulding Tonewoods (Slide 14): Hornbeam and Maple are heavy hardwoods (Hornbeam is demanding to season, ideal once properly dried; Maple is more elastic, though sugar deposits add variance risk). Oil-rich Kotibé is heavy and reserved for specialty uses. Fine-grained, long-fibered American Walnut is the highest-grade, ultra-light wood—ideal for a brilliant treble.",
+        ja: "木芯材のトーンウッド分類（スライド14）：比重の違いを解説。シデ材（800-860 kg/m³、明瞭な倍音、コンサート標準）対ウォルナット（590-680 kg/m³、温かい基音、低慣性による高速連打性能）、マホガニー（490-750 kg/m³）。",
         zh: "弦槌木芯选材（第11页 / 视频3）：详解密度参数：白山毛榉（800-860 kg/m³，坚硬透亮，大型音乐厅标配）对比胡桃木（590-680 kg/m³，基音浑厚，超低转动惯量赋予极速灵敏复奏），以及桃花心木（490-750 kg/m³）。"
       },
       16: {
@@ -1021,7 +1456,7 @@ class PresentationController {
         de: "Musterteilekoffer MTK & 5 Tage Reifelagerung (Slide 18): 15 Hebeglieder, 12 Reiter, 16 Stiele, 15 Kapseln passend für alle Klaviere weltweit. Highlight: Im Werk Meuselwitz werden alle Stiele 5 Tage im Klimapuffer gelagert, um Eigenspannungen und Kapselreibung dauerhaft einzufrieren!",
         en: "Sample Part Case MTK & 5-Day Setting Storage (Slide 18): 15 whippens, 12 saddles, 16 shanks, 15 flanges for all pianos worldwide. Crucial quality step: Every shank assembly rests 5 days in Meuselwitz climate storage to eliminate stress and stabilize friction!",
         ja: "MTKサンプルケースと5日間調湿保管（スライド18）：世界中の全メーカーに対応する15種ウィッペン、12種サドル、16種シャンク。モイゼルヴィッツ工場では組み立て後、全品を5日間気候制御室で熟成保管し、内部応力を完全に除去！",
-        zh: "MTK原厂样本箱与5天应力释放（第18页）：适配全球几乎所有品牌的15种联动杆、12种鞍座、16种槌柄。核心质控：在莫伊瑟尔维茨总装后，所有槌柄必须在恒温房静置5天，彻底释放木材与粘合应力，永久锁定微米级摩擦系数！"
+        zh: "MTK原厂样本箱与5天应力释放（第18页）：适配全球几乎所有品牌的15种联动杆、12种鞍座、16种槌柄。核心质控：在莫伊塞尔维茨总装后，所有槌柄必须在恒温房静置5天，彻底释放木材与粘合应力，永久锁定微米级摩擦系数！"
       },
       18: {
         de: "Das RENNER YAMAHA-KIT (HIGHLIGHT! Slide 19): Fertig eingeleimt, 91°-Winkel kalibriert, Schweifung vollendet, FFW-Filz vorkonditioniert. Vorintonation entfällt komplett! Alte Schrauben lösen, Renner-Kit festschrauben – sofort spielbereit in Konzertqualität.",

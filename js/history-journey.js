@@ -1,13 +1,11 @@
 /**
  * Louis Renner Presentation - Interactive Zeitstrahl (Timeline) Controller
- * Based strictly on https://www.louis-renner.de/ueber-renner/die-geschichte-renners/
+ * Based on https://www.louis-renner.de/ueber-renner/die-geschichte-renners/
  * Features:
- * - Central Horizontal Spine (Trunk) running across the screen center
- * - Vertical Tree Branches sprouting UP/DOWN to open each epoch
- * - Large authentic historical picture in primary focus (museum-grade gold frame)
- * - Ultra-compact, punchy narrative (1 sentence + key fact tag)
- * - Draggable central scrubber, autoplay documentary mode, and remote clicker
- * - 4-Language Localization: DE, EN, JA, ZH
+ * - GPU-accelerated continuous S-arc light sphere & world-space C1 B-spline comet ribbon
+ * - Frame-locked horizontal camera tracking with interrupt-safe transitions
+ * - Vertical branching light ray opening each milestone card
+ * - 4-Language Localization: DE, EN, JA, ZH (including localized epoch labels)
  */
 
 class RennerHistoryJourney {
@@ -16,11 +14,20 @@ class RennerHistoryJourney {
     this.currentLang = 'de';
     this.totalMilestones = 9;
     this.isAutoplay = false;
-    this.autoplayDuration = 6000; // 6 seconds per epoch in documentary mode
+    this.autoplayDuration = 6000;
     this.autoplayStartTime = null;
     this.autoplayRaf = null;
     this.animationTimeouts = [];
     this.isStarted = false;
+
+    // World-space & screen-space motion state for seamless, interrupt-safe flight
+    this.currentCamWorldX = 0;
+    this.cometWorldX = 0;
+    this.cometScreenX = 0;
+    this.cometY = 0;
+    this.isFlying = false;
+    this.lastFlightSampleTime = 0;
+    this.lastRenderTime = 0;
 
     this.milestonesData = {
       0: {
@@ -31,55 +38,51 @@ class RennerHistoryJourney {
         tag: { de: 'Gründung', en: 'Founding', ja: '創業', zh: '工坊创立' },
         heading: {
           de: '1882: Gründung in Stuttgart – Beginn mit der Klaviermechanik',
-          en: '1882: Founded in Stuttgart – The Journey Begins with Piano Actions',
-          ja: '1882年：シュトゥットガルト創業 — ピアノアクションから始まった旅',
-          zh: '1882年：斯图加特匠心工坊创立 — 击弦机开启百年传奇'
+          en: '1882: Founded in Stuttgart – Starting with Piano Actions',
+          ja: '1882年：シュトゥットガルト創業 — ピアノアクション製造の開始',
+          zh: '1882年：斯图加特创立 — 从钢琴击弦机起步'
         },
         sentence: {
-          de: 'Im Oktober 1882 gründete Louis Renner seine Werkstatt in der Stuttgarter Heusteigstraße – mit dem Ziel, hochpräzise Klaviermechaniken als Herzstück des Instruments zu fertigen.',
-          en: 'In October 1882, Louis Renner established his workshop on Heusteigstrasse in Stuttgart to handcraft high-precision piano actions as the heart of the instrument.',
-          ja: '1882年10月、ルイス・レンナーはシュトゥットガルトに工房を開設し、ピアノの心臓部である高精度アクションの手作業製造を開始しました。',
-          zh: '1882年10月，路易·雷诺在斯图加特设立手工工坊，专注打造作为钢琴传动心脏的高精度击弦机。'
+          de: 'Im Oktober 1882 gründete Louis Renner seine Werkstatt in der Stuttgarter Heusteigstraße, um präzise Klaviermechaniken als spezialisierter Zulieferer zu fertigen.',
+          en: 'In October 1882, Louis Renner founded his workshop on Heusteigstrasse in Stuttgart as a dedicated supplier of precision piano actions.',
+          ja: '1882年10月、ルイス・レンナーはシュトゥットガルトのホイシュタイグ通りに工房を開き、高精度なピアノアクションの専門製造を開始しました。',
+          zh: '1882年10月，路易·雷诺在斯图加特霍伊施泰希街创立工坊，专注于精密钢琴击弦机的专业化制造。'
         },
         bullets: {
           de: [
-            '<strong>Feinmechanik im Fokus:</strong> Beginn der Fertigung höchstpräziser Klaviermechaniken.',
-            '<strong>Historische Parallele:</strong> Zeitgleich zu Rönischs Panzerplatte setzt Renner den Präzisionsmaßstab.',
-            '<strong>Wurzel von Meuselwitz:</strong> Grundstein der Tradition, die 1990 in Thüringen zusammenfloss.'
+            '<strong>Spezialisierte Feinmechanik:</strong> Fokus auf passgenaue Mechaniken für Klaviere.',
+            '<strong>Historische Wurzel:</strong> Grundstein der Tradition, die seit 1990 in Thüringen fortgeführt wird.'
           ],
           en: [
-            '<strong>Focus on Actions:</strong> Launch of high-precision upright piano actions.',
-            '<strong>Historical Parallel:</strong> Alongside Rönisch\'s iron plate, Renner sets the precision benchmark.',
-            '<strong>Root of Meuselwitz:</strong> Laying the foundation that united in Thuringia in 1990.'
+            '<strong>Specialized Precision:</strong> Focus on precisely fitted piano actions.',
+            '<strong>Historic Root:</strong> Foundation of the manufacturing heritage united in Thuringia since 1990.'
           ],
           ja: [
-            '<strong>精密アクションに特化：</strong> 最高精度のアップライト機構の製造を開始。',
-            '<strong>歴史的革新との呼応：</strong> レーニッシュの総鉄骨と並び、究極の精度基準を確立。',
-            '<strong>モイゼルヴィッツの起源：</strong> 1990年に統合される偉大な伝統の礎を構築。'
+            '<strong>精密機構への特化：</strong> ピアノ用高精度アクションの専門製造に注力。',
+            '<strong>モイゼルヴィッツの原点：</strong> 1990年以降チューリンゲンへと受け継がれる伝統の出発点。'
           ],
           zh: [
-            '<strong>专注精工击弦机：</strong> 开启立式钢琴超精密击弦核心制造。',
-            '<strong>百年历史呼应：</strong> 与罗尼施全铁板齐名，确立机械传动巅峰标准。',
-            '<strong>莫伊瑟尔维茨之源：</strong> 奠定1990年汇聚图林根的百年工艺基石。'
+            '<strong>专注精密机械：</strong> 专注于高精度钢琴击弦机的定制匹配与制造。',
+            '<strong>历史传承起点：</strong> 铸就自1990年起汇聚于图林根州的制琴工艺根基。'
           ]
         },
         fact: {
-          de: '✦ Beginn mit Klaviermechaniken 1882 • Historische Wurzel von Meuselwitz',
-          en: '✦ Journey Began with Piano Actions 1882 • Historic Roots of Meuselwitz',
-          ja: '✦ 1882年アクション製造から始動 • モイゼルヴィッツ本社の歴史的ルーツ',
-          zh: '✦ 1882年以击弦机启航 • 莫伊瑟尔维茨总部的历史之源'
+          de: '✦ Oktober 1882 • Gründung der Stuttgarter Mechanik-Werkstatt',
+          en: '✦ October 1882 • Founding of the Stuttgart Action Workshop',
+          ja: '✦ 1882年10月 • シュトゥットガルトにてアクション工房を創業',
+          zh: '✦ 1882年10月 • 斯图加特击弦机工坊正式创立'
         },
         quote: {
-          de: '„Von der Stuttgarter Werkstatt 1882 bis zur Übernahme der Mechanik-Fertigung der Piano Union 1990: Unsere Meuselwitzer Wurzeln vereinen die großen Meilensteine deutscher Klavierbautradition.“',
-          en: '“From the 1882 Stuttgart workshop to the 1990 acquisition of Piano Union\'s action facility: Our Meuselwitz roots unite the greatest milestones of German piano building heritage.”',
-          ja: '「1882年のシュトゥットガルト創業から1990年のピアノ・ユニオン継承へ。モイゼルヴィッツの礎には、ドイツピアノ製造史の最高峰の結晶が息づいています。」',
-          zh: '“从1882年斯图加特工坊到1990年收购钢琴联盟击弦机制造厂：我们莫伊瑟尔维茨的根基，凝聚着德国钢琴制造史两大传奇的最璀璨篇章。”'
+          de: '„Von der Stuttgarter Werkstatt 1882 bis zur Übernahme der Mechanikfertigung 1990 vereint Meuselwitz die großen Linien des deutschen Mechanikbaus.“',
+          en: '“From the 1882 Stuttgart workshop to the 1990 acquisition of action manufacturing, Meuselwitz unites the major lines of German action making.”',
+          ja: '「1882年のシュトゥットガルト工房から1990年のアクション工場継承まで、モイゼルヴィッツにはドイツ機構製造の伝統が結集しています。」',
+          zh: '“从1882年斯图加特工坊到1990年接管击弦机厂，莫伊塞尔维茨汇聚了德国击弦机制造的核心传承。”'
         },
         quoteAuthor: {
-          de: 'Louis Renner Chronik & Ursprung Meuselwitz',
-          en: 'Louis Renner Chronicle & Origin of Meuselwitz',
-          ja: 'ルイス・レンナー年代記 ＆ モイゼルヴィッツの起源',
-          zh: '路易·雷诺原厂档案 · 莫伊瑟尔维茨起源纪事'
+          de: 'Louis Renner Chronik',
+          en: 'Louis Renner Chronicle',
+          ja: 'ルイス・レンナー社史',
+          zh: '路易·雷诺厂史档案'
         },
         images: [
           'Visuell/Bilder/01_Geschichte/01_1882_gruendung_stuttgart_renner_werkstatt.jpg',
@@ -87,33 +90,33 @@ class RennerHistoryJourney {
           'Visuell/Bilder/01_Geschichte/01_1882_werkstatt_stuttgart_illustration.png'
         ],
         image: 'Visuell/Bilder/01_Geschichte/01_1882_gruendung_stuttgart_renner_werkstatt.jpg',
-        imageTag: { de: '1882 Gründung', en: '1882 Founding', ja: '1882年創業', zh: '1882年创立' },
+        imageTag: { de: '1882 Gründung', en: '1882 Founding', ja: '1882年 創業', zh: '1882年 创立' },
         imageCaption: {
-          de: 'Gründer: Louis Renner 1882',
-          en: 'Founder: Louis Renner 1882',
+          de: 'Gründer: Louis Renner (1882)',
+          en: 'Founder: Louis Renner (1882)',
           ja: '創業者：ルイス・レンナー（1882年）',
           zh: '创始人：路易·雷诺（1882年）'
         },
         imageCaptions: {
           de: [
-            'Gründer: Louis Renner 1882',
-            'Historische Klaviermechanik – Beginn der Reise',
-            'Erste Werkstatt in der Heusteigstraße Stuttgart 1882'
+            'Gründer: Louis Renner (1882)',
+            'Historische Klaviermechanik aus der Gründerzeit',
+            'Erste Werkstatt in der Heusteigstraße in Stuttgart (1882)'
           ],
           en: [
-            'Founder: Louis Renner 1882',
-            'Historical Piano Action – The Journey Begins',
-            'First Workshop on Heusteigstrasse Stuttgart 1882'
+            'Founder: Louis Renner (1882)',
+            'Historical upright piano action from the founding era',
+            'First workshop on Heusteigstrasse in Stuttgart (1882)'
           ],
           ja: [
             '創業者：ルイス・レンナー（1882年）',
-            '歴史的アップライト・アクション — 旅の始まり',
+            '創業期の歴史的なアップライト・ピアノアクション',
             'シュトゥットガルト・ホイシュタイグ通りの初代工房（1882年）'
           ],
           zh: [
             '创始人：路易·雷诺（1882年）',
-            '历史经典立式钢琴击弦机 — 传奇之旅的起点',
-            '斯图加特霍伊施泰希街的第一代手工工坊（1882年）'
+            '创立时期的历史立式钢琴击弦机',
+            '斯图加特霍伊施泰希街的初代工坊（1882年）'
           ]
         },
         slide_interval: 3500
@@ -124,58 +127,58 @@ class RennerHistoryJourney {
         year: '1906',
         branch: 'down',
         arrow: '▼',
-        tag: { de: 'Hammer', en: 'Hammerheads', ja: '自社ハンマー', zh: '弦槌制造' },
+        tag: { de: 'Hammerköpfe', en: 'Hammerheads', ja: '自社ハンマー', zh: '弦槌制造' },
         heading: {
-          de: '1906: Aufnahme der anspruchsvollen Hammerkopffertigung',
-          en: '1906: Launch of Dedicated Hammerhead Manufacturing',
-          ja: '1906年：音色の魂「ハンマーヘッド」の自社製造開始',
-          zh: '1906年：开启声学核心部件“弦槌”自主制造'
+          de: '1906: Beginn der eigenen Hammerkopffertigung',
+          en: '1906: Launch of In-House Hammerhead Manufacturing',
+          ja: '1906年：ハンマーヘッドの自社製造を開始',
+          zh: '1906年：启动弦槌自主制造'
         },
         sentence: {
-          de: 'Von Cristoforis erstem Hammerkopf (1700) zu Renners eigener Fertigung ab 1906: Der entscheidende Schritt, der später den unverwechselbaren Klang jedes Steinway-Flügels definierte.',
-          en: 'From Cristofori’s first hammer in 1700 to Renner’s in-house production in 1906: The milestone that came to define the sound of every Steinway grand.',
-          ja: '1700年のクリストフォリによる打弦機構から1906年のレンナー自社製造へ。後にすべてのスタインウェイの響きを決定づける歴史的一歩となりました。',
-          zh: '从1700年克里斯托弗里首创弦槌到1906年雷诺自产：这一决定性一步，日后定义了每一架施坦威三角钢琴的传奇音色。'
+          de: 'Ab 1906 fertigte Renner eigene Hammerköpfe – exakt abgestimmt auf die Geometrie und Masse der eigenen Klavier- und Flügelmechaniken.',
+          en: 'Starting in 1906, Renner produced its own hammerheads — precisely matched to the geometry and mass of its piano actions.',
+          ja: '1906年よりレンナーは自社アクションの設計と質量に厳密に適合させたハンマーヘッドの自社製造を開始しました。',
+          zh: '自1906年起，雷诺开始自主生产弦槌，使其与自家击弦机的几何结构及质量配比精准匹配。'
         },
         bullets: {
           de: [
-            '<strong>Cristoforis Impuls:</strong> Vom Ur-Hammerkopf (1700) zur ersten industriellen Perfektion.',
-            '<strong>Eigene Spezialpressen:</strong> Entwicklung eigener Hochdruckpressen für maximale Dynamik.',
-            '<strong>Globaler Klangstandard:</strong> Maßstab für Steinway und führende Flügelbauer weltweit.'
+            '<strong>Systemabstimmung:</strong> Hammerkopf und Mechanik entstehen erstmals perfekt aufeinander abgestimmt im selben Haus.',
+            '<strong>Eigene Spezialpressen:</strong> Selbst entwickelte Verleimpressen sichern gleichmäßige Filzspannung.',
+            '<strong>Internationaler Referenzklang:</strong> Späterer Standard für Steinway & Sons und führende Konzertflügelbauer.'
           ],
           en: [
-            '<strong>Cristofori’s Legacy:</strong> From the early 1700 hammer to industrial perfection.',
-            '<strong>Proprietary Presses:</strong> Custom high-pressure presses for unmatched acoustic dynamics.',
-            '<strong>Global Tone Standard:</strong> Defining the sound of Steinway and premier pianos worldwide.'
+            '<strong>Matched System:</strong> Hammerheads and actions engineered together under one roof for the first time.',
+            '<strong>Custom Presses:</strong> In-house gluing presses ensure consistent felt hoop tension across every set.',
+            '<strong>Concert Benchmark:</strong> Later adopted by Steinway & Sons and leading grand piano makers worldwide.'
           ],
           ja: [
-            '<strong>クリストフォリの継承：</strong> 1700年の初頭ハンマーから工業的完成形へ。',
-            '<strong>自社開発の高圧プレス：</strong> 圧倒的な打弦レスポンスを生む専用プレス機を開発。',
-            '<strong>世界的トーン基準：</strong> スタインウェイをはじめ世界の銘器の響きを決定づける。'
+            '<strong>一貫した音響設計：</strong> アクションとハンマーヘッドを自社内で最適に調和させて設計・製造。',
+            '<strong>独自開発プレス機：</strong> 均一なフェルト張力を実現する専用接着プレスを自社開発。',
+            '<strong>国際的コンサート基準：</strong> スタインウェイをはじめ世界の主要ピアノメーカーに採用。'
           ],
           zh: [
-            '<strong>传承克里斯托弗里：</strong> 从1700年原始弦槌跃升至工业级完美巅峰。',
-            '<strong>自研高压成型机：</strong> 自主研发专用高压模具，赋予无与伦比的动态声学。',
-            '<strong>全球顶级音色标准：</strong> 定义施坦威及全球名琴的标志性音色基准。'
+            '<strong>系统级协同匹配：</strong> 首次在同一工厂内实现弦槌与击弦机的协同设计与匹配。',
+            '<strong>自研专用压机：</strong> 自主研发胶合压力机，确保每套弦槌拥有均匀一致的毛毡张力。',
+            '<strong>国际音乐会标准：</strong> 日后成为施坦威及全球知名三角钢琴制造商的标准配置。'
           ]
         },
         fact: {
-          de: '✦ Von Cristoforis Papierröllchen 1700 • Zum weltweiten Renner-Klangstandard ab 1906',
-          en: '✦ From Cristofori’s Paper Roll in 1700 • To Renner’s Global Tone Standard from 1906',
-          ja: '✦ 1700年クリストフォリの紙ロールから • 1906年以降の世界基準レンナートーンへ',
-          zh: '✦ 从1700年克里斯托弗里的纸卷弦槌 • 到1906年雷诺开启的全球声学标准'
+          de: '✦ Seit 1906 • Eigene Hammerkopffertigung mit Spezialpressen',
+          en: '✦ Since 1906 • In-House Hammerhead Production with Custom Presses',
+          ja: '✦ 1906年以降 • 独自プレス機による自社ハンマーヘッド製造',
+          zh: '✦ 始于1906年 • 采用自研专用压机的弦槌自主制造'
         },
         quote: {
-          de: '„Vom lederbezogenen Papierröllchen Cristoforis zur perfekten Spannungsbalance: Der Hammerkopf ist die Seele des Klavierklangs.“',
-          en: '“From Cristofori’s leather-covered paper roll to the perfect balance of tension: the hammerhead is the soul of the piano’s sound.”',
-          ja: '「クリストフォリの革巻き紙ロールから完璧な張力バランスへ：ハンマーヘッドこそがピアノの魂である。」',
-          zh: '“从克里斯托弗里皮革包裹的纸卷，到张力平衡的极致化境：弦槌正是钢琴音色的灵魂所在。”'
+          de: '„Vom lederbezogenen Röllchen Cristoforis (1700) zum präzise gespannten Filzhammer: Der Hammerkopf formt unmittelbar den Klavierklang.“',
+          en: '“From Cristofori’s leather-capped roll (1700) to the tensioned felt hammer: the hammerhead directly shapes the piano’s tone.”',
+          ja: '「1700年のクリストフォリによる革巻きロールから精密張力フェルトハンマーへ。ハンマーヘッドは音色を直接形づくります。」',
+          zh: '“从1700年克里斯托弗里的皮革纸卷到精密张力毛毡弦槌，弦槌直接塑造着钢琴的音色。”'
         },
         quoteAuthor: {
-          de: 'Louis Renner Manufaktur • Klangtradition seit 1906',
-          en: 'Louis Renner Manufacture • Acoustic Heritage since 1906',
-          ja: 'ルイス・レンナー製造所 • 1906年以来の音響の伝統',
-          zh: '路易·雷诺制造工坊 • 自1906年传承至今的声学传奇'
+          de: 'Louis Renner • Hammerkopffertigung seit 1906',
+          en: 'Louis Renner • Hammerhead Production since 1906',
+          ja: 'ルイス・レンナー • 1906年からのハンマー製造',
+          zh: '路易·雷诺 • 自1906年起的弦槌制造'
         },
         images: [
           'Visuell/Bilder/01_Geschichte/01_1700_bartolomeo_cristofori_portrait.jpg',
@@ -184,37 +187,37 @@ class RennerHistoryJourney {
           'Visuell/Bilder/01_Geschichte/01_1906_hammerkopf_pressen_fertigung.png'
         ],
         image: 'Visuell/Bilder/01_Geschichte/01_1700_bartolomeo_cristofori_portrait.jpg',
-        imageTag: { de: '1906 Hammer', en: '1906 Hammer', ja: '1906年ハンマー', zh: '1906年弦槌制造' },
+        imageTag: { de: '1906 Hammerköpfe', en: '1906 Hammerheads', ja: '1906年 ハンマー製造', zh: '1906年 弦槌制造' },
         imageCaption: {
-          de: 'Bartolomeo Cristofori (1655–1731) – Erfinder der Klaviermechanik (1700)',
-          en: 'Bartolomeo Cristofori (1655–1731) – Inventor of the Piano Action (1700)',
-          ja: 'バルトロメオ・クリストフォリ（1655–1731）— ピアノアクションの発明者（1700年）',
-          zh: '巴尔托洛梅奥·克里斯托弗里（1655–1731）— 钢琴击弦机发明先驱（1700年）'
+          de: 'Bartolomeo Cristofori (1655–1731) – Erfinder der Hammermechanik (um 1700)',
+          en: 'Bartolomeo Cristofori (1655–1731) – Inventor of the hammer action (c. 1700)',
+          ja: 'バルトロメオ・クリストフォリ（1655–1731）— 打弦アクションの発明者（1700年頃）',
+          zh: '巴尔托洛梅奥·克里斯托弗里（1655–1731）— 钢琴击弦机发明者（约1700年）'
         },
         imageCaptions: {
           de: [
-            'Bartolomeo Cristofori (1655–1731) – Erfinder der Klaviermechanik (1700)',
-            '1700: Erste Hammer-Mechanik von Bartolomeo Cristofori – Der Ursprung des Hammerkopfs',
-            '1906: Beginn der eigenen Hammerkopffertigung mit eigens entwickelten Pressen',
-            'Hammerkopfnieten im Halbautomaten'
+            'Bartolomeo Cristofori (1655–1731) – Erfinder der Hammermechanik (um 1700)',
+            'Um 1700: Erste Hammermechanik von Bartolomeo Cristofori',
+            'Historische Mechanikfertigung bei Louis Renner um die Jahrhundertwende',
+            '1906: Eigene Hammerkopffertigung mit Spezialpressen und Nietautomaten'
           ],
           en: [
-            'Bartolomeo Cristofori (1655–1731) – Inventor of the Piano Action (1700)',
-            '1700: First Hammer Action by Bartolomeo Cristofori – Origin of the Hammerhead',
-            'Historical Action Manufacturing: Handcrafted Precision at Louis Renner',
-            '1906: Launch of Dedicated Hammerhead Manufacturing with Custom Presses'
+            'Bartolomeo Cristofori (1655–1731) – Inventor of the hammer action (c. 1700)',
+            'c. 1700: First hammer action designed by Bartolomeo Cristofori',
+            'Historical piano action manufacturing at Louis Renner around 1900',
+            '1906: In-house hammerhead manufacturing with custom presses and riveting machines'
           ],
           ja: [
-            'バルトロメオ・クリストフォリ（1655–1731）— ピアノアクションの発明者（1700年）',
-            '1700年：クリストフォリによる初のアクション機構 — ハンマーヘッドの起源',
-            '歴史的アクション製造工程：ルイス・レンナーの手工業的精密工学',
-            '1906年：独自開発の専用プレスによる自社ハンマーヘッド製造の開始'
+            'バルトロメオ・クリストフォリ（1655–1731）— 打弦アクションの発明者（1700年頃）',
+            '1700年頃：クリストフォリによる最初のハンマーアクション機構',
+            '1900年頃のルイス・レンナーにおける歴史的アクション製造現場',
+            '1906年：独自開発の専用プレスとリベット機による自社ハンマー製造'
           ],
           zh: [
-            '巴尔托洛梅奥·克里斯托弗里（1655–1731）— 钢琴击弦机发明先驱（1700年）',
-            '1700年：克里斯托弗里首创击弦机结构 — 现代弦槌与击弦机械之源',
-            '雷诺早期手工击弦机精密制造车间：德国工艺精神的薪火相传',
-            '1906年：自主研发专用冷压成型机开启自产弦槌新纪元'
+            '巴尔托洛梅奥·克里斯托弗里（1655–1731）— 钢琴击弦机发明者（约1700年）',
+            '约1700年：克里斯托弗里设计的首款击弦机结构',
+            '20世纪初路易·雷诺的历史击弦机制造车间',
+            '1906年：采用自研专用压机与铆接设备的弦槌制造车间'
           ]
         },
         slide_interval: 3500
@@ -225,58 +228,58 @@ class RennerHistoryJourney {
         year: '1911',
         branch: 'up',
         arrow: '▲',
-        tag: { de: 'Antriebe', en: 'Electrification', ja: '電化革命', zh: '单驱电化' },
+        tag: { de: 'Flügel & Antriebe', en: 'Grand Actions', ja: '電化とグランド機構', zh: '电化与三角击弦机' },
         heading: {
-          de: '1911: Oscar Renners Pioniertat – Einzelantriebe & Flügelprogramm',
-          en: '1911: Oscar Renner’s Milestone – Individual Drives & Grand Actions',
-          ja: '1911年：個別モーターによる電化革命とグランド機構',
-          zh: '1911年：工业单驱电化革命与首批三角击弦机'
+          de: '1911: Elektrische Einzelantriebe & Beginn des Flügelprogramms',
+          en: '1911: Individual Electric Drives & Grand Piano Actions',
+          ja: '1911年：個別電動モーター導入とグランド用アクション開始',
+          zh: '1911年：独立电机驱动升级与投产三角琴击弦机'
         },
         sentence: {
-          de: '1911 erweiterte Oscar Renner das Programm um vollständige Konzert-Flügelmechaniken und trieb die Modernisierung mit hunderten elektrischen Einzelantrieben voran.',
-          en: 'In 1911, Oscar Renner expanded production to complete concert grand actions and modernized the factory with hundreds of electric individual drives.',
-          ja: '1911年、オスカー・レンナーはコンサート・グランド用アクションの自社製造を開始し、工場全体に数百基の独立電動モーターを導入しました。',
-          zh: '1911年，奥斯卡·雷诺全面投产音乐会三角钢琴击弦机，并以数百台独立电动机实现工坊电气化升级。'
+          de: '1911 nahm Oscar Renner die Fertigung kompletter Flügelmechaniken auf und rüstete die Maschinen von Transmissionsriemen auf hunderte elektrische Einzelantriebe um.',
+          en: 'In 1911, Oscar Renner launched complete grand piano action manufacturing and converted machinery from belt shafts to hundreds of individual electric motors.',
+          ja: '1911年、オスカー・レンナーはグランドピアノ用アクションの製造を開始し、工場の動力をベルト駆動から数百基の個別電動モーターへと転換しました。',
+          zh: '1911年，奥斯卡·雷诺正式投产三角钢琴击弦机，并将车间设备由天轴皮带传动升级为数百台独立电机驱动。'
         },
         bullets: {
           de: [
-            '<strong>Érard-Repetition:</strong> Doppelte Auslösung als Fundament moderner Flügelmechaniken.',
-            '<strong>Konzertprogramm komplett:</strong> Flügel- und Klaviermechaniken aus einer Meisterhand.',
-            '<strong>Hunderte Einzelmotoren:</strong> Wegweisende Umstellung von Transmissionen auf Elektro-Einzelantrieb.'
+            '<strong>Érard-Repetitionsprinzip:</strong> Doppelte Auslösung als konstruktive Basis moderner Flügelmechaniken.',
+            '<strong>Volles Sortiment:</strong> Flügel- und Klaviermechaniken sowie Hammerköpfe aus einer Hand.',
+            '<strong>Präzision durch Einzelantrieb:</strong> Vibrationsärmerer Maschinenlauf durch direkte Elektromotoren.'
           ],
           en: [
-            '<strong>Érard Repetition:</strong> Double repetition action as the foundation of modern grand pianos.',
-            '<strong>Complete Concert Line:</strong> Grand and upright actions united under one master roof.',
-            '<strong>Hundreds of Electric Motors:</strong> Pioneering switch from central belts to individual drive units.'
+            '<strong>Érard Repetition Principle:</strong> Double escapement as the engineering basis of modern grand actions.',
+            '<strong>Complete Portfolio:</strong> Grand actions, upright actions, and hammerheads from a single source.',
+            '<strong>Direct Electric Drives:</strong> Reduced machine vibration and higher repeatability via individual motors.'
           ],
           ja: [
-            '<strong>エラール機構の継承：</strong> 近代グランド演奏を支えるダブル・レペティションの完成。',
-            '<strong>コンサートライン完備：</strong> アップライトとグランドの最高峰機構を自社完結。',
-            '<strong>数百基の独立モーター：</strong> 駆動ベルトから振動のない個別電動モーターへ全館転換。'
+            '<strong>エラールのレペティション原理：</strong> 近代グランド機構の基礎となるダブル・エスケープメントを採用。',
+            '<strong>一貫生産体制の確立：</strong> グランド用・アップライト用アクションとハンマーを自社で一貫供給。',
+            '<strong>個別モーター駆動の精度：</strong> 振動を抑えた直接駆動により木工・穴あけ精度を大幅に向上。'
           ],
           zh: [
-            '<strong>埃拉尔复奏结构：</strong> 以双重脱落结构奠定现代三角琴演奏基石。',
-            '<strong>音乐会全谱系齐备：</strong> 三角与立式击弦机完全实现自主研制闭环。',
-            '<strong>数百台独立电机驱动：</strong> 彻底淘汰传统总轴，实现现代独立电驱革命。'
+            '<strong>埃拉尔复奏原理：</strong> 以双重复奏结构作为现代三角钢琴击弦机的工程基础。',
+            '<strong>完整产品体系：</strong> 实现三角琴击弦机、立式琴击弦机与弦槌的一站式自主生产。',
+            '<strong>独立电驱提升精度：</strong> 直接电机驱动大幅降低机床振动，提高钻孔与木工一致性。'
           ]
         },
         fact: {
-          de: '✦ Érards Repetition als Fundament • 1911: Erste Renner-Flügelmechaniken & Hunderte Einzelmotoren',
-          en: '✦ Érard’s Repetition as Foundation • 1911: First Renner Grand Actions & Electric Modernization',
-          ja: '✦ エラールの機構を礎に • 1911年：初のレンナー・グランドアクションと電化革命',
-          zh: '✦ 传承埃拉尔复奏基石 • 1911年：首批雷诺三角击弦机与工业电化革新'
+          de: '✦ 1911 • Erste Renner-Flügelmechaniken & Umstellung auf Einzelmotoren',
+          en: '✦ 1911 • First Renner Grand Actions & Individual Electric Drives',
+          ja: '✦ 1911年 • グランド用アクション製造開始＆個別モーター化',
+          zh: '✦ 1911年 • 首批雷诺三角琴击弦机投产并普及独立电机驱动'
         },
         quote: {
-          de: '„Um alle Zweige der Herstellung von Klaviermechaniken in einer Hand zu vereinigen und dem Fabrikationsprogramm eine gewisse Abrundung zu geben, wurde jetzt auch die Fertigung von Flügelmechaniken aufgenommen.“',
-          en: '“To unite all branches of piano action manufacturing under one roof and bring comprehensive rounded perfection to the manufacturing program, the production of grand piano actions was inaugurated.”',
-          ja: '「ピアノアクション製造の全工程を自らの手で統合し、製造プログラムを完結させるため、グランドピアノ用アクションの製造に着手した。」',
-          zh: '“为将钢琴机械制造的所有细分工艺凝聚于自主工序之中，并赋予产品谱系圆融的完整性，我们正式开启了三角钢琴击弦机的制造。”'
+          de: '„Um alle Zweige der Herstellung von Klaviermechaniken in einer Hand zu vereinigen, wurde 1911 auch die Fertigung von Flügelmechaniken aufgenommen.“',
+          en: '“To unite all branches of piano action manufacturing in one hand, the production of grand piano actions was launched in 1911.”',
+          ja: '「ピアノアクション製造のすべての分野を一社に統合するため、1911年にグランドピアノ用アクションの製造を開始した。」',
+          zh: '“为将钢琴击弦机制造的各个分支汇聚于同一体系，工厂于1911年正式启动三角钢琴击弦机生产。”'
         },
         quoteAuthor: {
           de: 'Oscar Renner • Firmenchronik 1911',
           en: 'Oscar Renner • Company Chronicle 1911',
           ja: 'オスカー・レンナー • 社史（1911年）',
-          zh: '奥斯卡·雷诺 • 企业历史档案（1911年）'
+          zh: '奥斯卡·雷诺 • 企业档案（1911年）'
         },
         images: [
           'Visuell/Bilder/01_Geschichte/01_1808_sebastien_erard_portrait.jpg',
@@ -284,33 +287,33 @@ class RennerHistoryJourney {
           'Visuell/Bilder/01_Geschichte/01_1911_renner_elektrifizierte_arbeitsumgebung.webp'
         ],
         image: 'Visuell/Bilder/01_Geschichte/01_1808_sebastien_erard_portrait.jpg',
-        imageTag: { de: '1911 Antriebe', en: '1911 Drives', ja: '1911年電化', zh: '1911年单驱电化' },
+        imageTag: { de: '1911 Flügel & Antriebe', en: '1911 Grand Actions', ja: '1911年 電化と機構', zh: '1911年 电化升级' },
         imageCaption: {
-          de: 'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik für Flügel',
-          en: 'Sébastien Érard (1752–1831) – Inventor of the double escapement grand piano action',
-          ja: 'セバスチャン・エラール（1752–1831）— グランドピアノ用ダブル・エスケープメント機構の発明者',
-          zh: '塞巴斯蒂安·埃拉尔（1752–1831）— 三角钢琴双击弦机复奏机构发明先驱'
+          de: 'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik',
+          en: 'Sébastien Érard (1752–1831) – Inventor of the double escapement action',
+          ja: 'セバスチャン・エラール（1752–1831）— ダブル・エスケープメント機構の発明者',
+          zh: '塞巴斯蒂安·埃拉尔（1752–1831）— 双重复奏击弦机发明者'
         },
         imageCaptions: {
           de: [
-            'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik für Flügel',
-            '1808 / 1821: Érard-Repetitionsmechanik – Das Fundament des modernen Flügelprogramms',
-            'Hunderte elektrische Einzelantriebe: Technisierung unter Oscar Renner (1911)'
+            'Sébastien Érard (1752–1831) – Erfinder der doppelten Repetitionsmechanik',
+            '1808 / 1821: Érard-Repetitionsmechanik als Basis moderner Flügelmechaniken',
+            'Elektrifizierte Fertigung mit Einzelantrieben unter Oscar Renner (1911)'
           ],
           en: [
-            'Sébastien Érard (1752–1831) – Inventor of the double escapement grand piano action',
-            '1808 / 1821: Érard repetition action – The foundation of modern grand piano actions',
-            'Hundreds of electric individual drives: Modernization under Oscar Renner (1911)'
+            'Sébastien Érard (1752–1831) – Inventor of the double escapement action',
+            '1808 / 1821: Érard repetition action — foundation of modern grand piano actions',
+            'Electrified workshop with individual machine drives under Oscar Renner (1911)'
           ],
           ja: [
-            'セバスチャン・エラール（1752–1831）— グランドピアノ用ダブル・エスケープメント機構の発明者',
-            '1808年/1821年：エラールによるダブル・レペティション機構 — 現代グランドピアノの礎',
-            '個別モーターによる振動なき高精度加工体制（1911年）'
+            'セバスチャン・エラール（1752–1831）— ダブル・エスケープメント機構の発明者',
+            '1808 / 1821年：近代グランドピアノ機構の礎となったエラールのレペティション機構',
+            'オスカー・レンナーのもとで個別電動モーターを導入した製造現場（1911年）'
           ],
           zh: [
-            '塞巴斯蒂安·埃拉尔（1752–1831）— 三角钢琴双击弦机复奏机构发明先驱',
-            '1808 / 1821年：埃拉尔复奏击弦机结构 — 现代三角钢琴全系制造的技术基石',
-            '奥斯卡·雷诺时期的数百台独立电机高精加工车间（1911）'
+            '塞巴斯蒂安·埃拉尔（1752–1831）— 双重复奏击弦机发明者',
+            '1808 / 1821年：奠定现代三角钢琴击弦机基础的埃拉尔复奏结构',
+            '1911年奥斯卡·雷诺时期配备独立电机的电气化生产车间'
           ]
         },
         slide_interval: 3500
@@ -321,66 +324,66 @@ class RennerHistoryJourney {
         year: '1944',
         branch: 'down',
         arrow: '▼',
-        tag: { de: 'Brandnacht', en: 'Destruction', ja: '戦禍の炎', zh: '浴火重生' },
+        tag: { de: 'Zerstörung', en: 'Destruction', ja: '戦災と再建', zh: '战损与重建' },
         heading: {
-          de: '1944: Zerstörung der Fabrikanlagen & Unbändiger Wille zum Wiederaufbau',
-          en: '1944: Factory Destruction & Indomitable Resolve to Rebuild',
-          ja: '1944年：工場の全焼と不屈の再建意志',
-          zh: '1944年：厂区遭遇空袭火灾与坚韧重建誓言'
+          de: '1944: Kriegszerstörung in Stuttgart & Beginn des Wiederaufbaus',
+          en: '1944: Wartime Destruction in Stuttgart & Start of Reconstruction',
+          ja: '1944年：シュトゥットガルト工場の焼失と再建の開始',
+          zh: '1944年：斯图加特厂房战火损毁与启动重建'
         },
         sentence: {
-          de: 'In der Stuttgarter Bombennacht vom 24./25. Juli 1944 brannten alle Renner-Gebäude nieder – doch der Wille zum sofortigen Wiederaufbau war ungebrochen.',
-          en: 'During the devastating Stuttgart air raid on July 24/25, 1944, all Renner buildings burned down – yet the resolve to rebuild remained unshaken.',
-          ja: '1944年7月24/25日のシュトゥットガルト空襲により全工場が全焼。しかし瓦礫の中から即座に再建への誓いが立ち上がりました。',
-          zh: '1944年7月24/25日斯图加特大空袭中，雷诺全部厂房化为火海灰烬——但在废墟瓦砾之中，重建誓言坚不可摧。'
+          de: 'Bei den Luftangriffen vom 24./25. Juli 1944 brannten die Stuttgarter Werksgebäude vollständig nieder; unmittelbar danach begann die Belegschaft mit dem Wiederaufbau.',
+          en: 'During the air raids of July 24/25, 1944, the Stuttgart factory buildings burned down completely; right afterward, the workforce began rebuilding.',
+          ja: '1944年7月24〜25日の空襲によりシュトゥットガルトの全工場が焼失しましたが、直後に社員一丸となって再建へと踏み出しました。',
+          zh: '在1944年7月24日至25日的空袭中，斯图加特全部厂房被烧毁；此后全体员工立即着手原址重建。'
         },
         bullets: {
           de: [
-            '<strong>Totalverlust im Feuersturm:</strong> Zerstörung der Stuttgarter Werke am 24./25. Juli 1944.',
-            '<strong>Mut zur Zukunft:</strong> Sofortiger Entschluss zum Wiederaufbau noch in den Trümmern.',
-            '<strong>Geschlossene Belegschaft:</strong> Gemeinsamer Wiederbeginn unter schwersten Bedingungen.'
+            '<strong>Juli 1944:</strong> Vollständige Zerstörung des Stuttgarter Stammwerks und des Maschinenparks.',
+            '<strong>Sofortiger Neubeginn:</strong> Sicherung nutzbarer Werkzeuge und schrittweiser Neuaufbau der Werkstätten.',
+            '<strong>Erfahrene Belegschaft:</strong> Das Fachwissen der Mitarbeiter sichert das Überleben der Manufaktur.'
           ],
           en: [
-            '<strong>Total Loss in Firestorm:</strong> Complete destruction of Stuttgart plants on July 24/25, 1944.',
-            '<strong>Courage to Rebuild:</strong> Immediate resolve to reconstruct directly amid the ruins.',
-            '<strong>United Workforce:</strong> Together laying the foundation for rebirth against all odds.'
+            '<strong>July 1944:</strong> Complete loss of the Stuttgart main plant and production machinery.',
+            '<strong>Immediate Restart:</strong> Salvaging usable tooling and rebuilding workshops step by step.',
+            '<strong>Skilled Workforce:</strong> Retained craftsmanship ensured the survival of precision production.'
           ],
           ja: [
-            '<strong>戦火による全焼：</strong> 1944年7月24/25日の空襲によりシュトゥットガルト工場が全焼。',
-            '<strong>不屈の再建決意：</strong> 瓦礫の中で直ちに完全再建への不屈の決断を下す。',
-            '<strong>結束した社員力：</strong> 最も過酷な状況下で全員が立ち上がり新たな未来を拓く。'
+            '<strong>1944年7月：</strong> シュトゥットガルト本社工場および機械設備が全焼。',
+            '<strong>迅速な復旧着手：</strong> 残された治具や機械を修復し、段階的に製造現場を再建。',
+            '<strong>熟練職人の結束：</strong> 社員に受け継がれた技術力が精密製造の再出発を支える。'
           ],
           zh: [
-            '<strong>战火烈焰浩劫：</strong> 1944年7月24/25日斯图加特工厂毁于轰炸。',
-            '<strong>废墟中浴火重生：</strong> 瓦砾未凉之际便毅然立下立即重建的坚定誓愿。',
-            '<strong>全员同心聚力：</strong> 克服重重天堑，携手奠定重铸辉煌的基石。'
+            '<strong>1944年7月：</strong> 斯图加特总厂厂房与生产设备在空袭中尽数损毁。',
+            '<strong>即刻着手恢复：</strong> 抢修可用工装模具，分阶段重建生产车间。',
+            '<strong>技师团队坚守：</strong> 员工传承的核心技艺保障了精密制造的延续。'
           ]
         },
         fact: {
-          de: '✦ Bombennacht 24./25.07.1944 & Wiederaufbau',
-          en: '✦ July 24/25, 1944 & Indomitable Rebuilding',
-          ja: '✦ 1944年7月空襲と不屈の再興',
-          zh: '✦ 1944年7月空袭浩劫与浴火重生'
+          de: '✦ 24./25. Juli 1944 • Zerstörung des Stammwerks & Wiederaufbau',
+          en: '✦ July 24/25, 1944 • Destruction of Main Plant & Rebuilding',
+          ja: '✦ 1944年7月24/25日 • 本社工場の焼失と再建への歩み',
+          zh: '✦ 1944年7月24/25日 • 总厂损毁与战后重建起步'
         },
         quote: {
-          de: '„Trotz Zerstörung, trotz unendlicher Hindernisse: Renner wird wieder aufgebaut!“',
-          en: '“Despite destruction and immense obstacles: Renner will be rebuilt!”',
-          ja: '「いかなる破壊や計り知れぬ困難があろうとも、レンナーは必ずや再興する！」',
-          zh: '“纵使千难万险、满目疮痍，雷诺必将在废墟上重获新生！”'
+          de: '„Trotz Zerstörung und großer Hindernisse: Renner wird wieder aufgebaut.“',
+          en: '“Despite destruction and great obstacles: Renner will be rebuilt.”',
+          ja: '「破壊と多くの困難を乗り越え、レンナーは再び立ち上がる。」',
+          zh: '“尽管遭受损毁与重重困难，雷诺必将完成重建。”'
         },
         quoteAuthor: {
           de: 'Wilhelm Megenhardt • Chronik 1944',
           en: 'Wilhelm Megenhardt • Chronicle 1944',
           ja: 'ヴィルヘルム・メーゲンハルト（1944年社史）',
-          zh: '威廉·梅根哈特 • 1944年厂史文献'
+          zh: '威廉·梅根哈特 • 1944年厂史记录'
         },
         image: 'Visuell/Bilder/01_Geschichte/01_1944_stuttgart_brandnacht_zerstoerung_1.jpg',
-        imageTag: { de: '1944 Brandnacht', en: '1944 Rebuild', ja: '1944年再建', zh: '1944年重建' },
+        imageTag: { de: '1944 Stuttgart', en: '1944 Stuttgart', ja: '1944年 戦災記録', zh: '1944年 历史档案' },
         imageCaption: {
-          de: 'Historische Dokumente: Stuttgarter Bombennacht & Zerstörung 1944 vor dem Wiederaufbau',
-          en: 'Historical archive: Stuttgart destruction & bombing raids 1944 before reconstruction',
-          ja: '歴史的記録：1944年シュトゥットガルト空襲による戦災と不屈の再興',
-          zh: '珍贵历史档案：1944年斯图加特空袭浩劫与废墟中的浴火重生'
+          de: 'Historische Aufnahme: Zerstörtes Stuttgarter Werk im Juli 1944 vor dem Wiederaufbau',
+          en: 'Historical photo: Destroyed Stuttgart plant in July 1944 prior to reconstruction',
+          ja: '歴史記録：再建前の焼失したシュトゥットガルト工場（1944年7月）',
+          zh: '历史照片：1944年7月重建前受损的斯图加特厂房'
         }
       },
 
@@ -389,66 +392,66 @@ class RennerHistoryJourney {
         year: '1951/1952',
         branch: 'up',
         arrow: '▲',
-        tag: { de: 'Manfred Renner', en: 'Manfred Renner', ja: 'マンフレート・レンナー', zh: '曼弗雷德·雷诺' },
+        tag: { de: '3. Generation', en: '3rd Generation', ja: '第3世代と復興', zh: '第三代与重建竣工' },
         heading: {
-          de: '1951/1952: Dr. Manfred Renner & Vollendung des Wiederaufbaus',
-          en: '1951/1952: Dr. Manfred Renner & Rebuilding Completed',
-          ja: '1951/1952年：マンフレート・レンナー博士と本社の完全復興',
-          zh: '1951/1952年：曼弗雷德·雷诺博士掌舵与全面重建完成'
+          de: '1951–1955: Dr. Manfred Renner & Abschluss des Wiederaufbaus',
+          en: '1951–1955: Dr. Manfred Renner & Reconstruction Completed',
+          ja: '1951〜1955年：マンフレート・レンナー博士と本社再建の完了',
+          zh: '1951–1955年：曼弗雷德·雷诺博士接任与重建竣工'
         },
         sentence: {
-          de: 'Mit Dr. Manfred Renner trat 1951 die 3. Generation an die Unternehmensspitze, vollendete den Wiederaufbau und führte Renner zu neuer internationaler Größe.',
-          en: 'In 1951, Dr. Manfred Renner took leadership as the 3rd generation, completed the reconstruction, and ushered in a golden era of global growth.',
-          ja: '1951年、創業家第3世代のマンフレート・レンナー博士が就任し、完全復興を成し遂げて世界基準の飛躍を牽引しました。',
-          zh: '1951年，第三代传承人曼弗雷德·雷诺博士执掌帅印，圆满完成全面重建并带领企业迈向全球辉煌。'
+          de: '1951 übernahm Dr. Manfred Renner in dritter Generation die Unternehmensleitung, schloss bis 1955 den Wiederaufbau ab und baute das internationale Exportgeschäft aus.',
+          en: 'In 1951, Dr. Manfred Renner assumed 3rd-generation leadership, completed rebuilding by 1955, and expanded international exports.',
+          ja: '1951年に第3世代のマンフレート・レンナー博士が経営を引き継ぎ、1955年に本社再建を完了して国際輸出を大きく拡大しました。',
+          zh: '1951年，第三代传承人曼弗雷德·雷诺博士接任管理，于1955年完成厂房重建并大力拓展国际出口业务。'
         },
         bullets: {
           de: [
-            '<strong>3. Generation am Ruder:</strong> Dr. Manfred Renner übernimmt die Unternehmensführung (1951).',
-            '<strong>Neues Stammwerk (1955):</strong> Feierlicher Wiedereinzug in das Stuttgarter Hauptgebäude.',
-            '<strong>Weltmarktführerschaft:</strong> Konsequente Qualitätsstandards festigen die Weltspitze.'
+            '<strong>3. Generation (1951):</strong> Dr. Manfred Renner übernimmt die Führung des Familienunternehmens.',
+            '<strong>Wiedereinzug (1955):</strong> Vollständige Inbetriebnahme des neu errichteten Stuttgarter Stammwerks.',
+            '<strong>Internationaler Ausbau:</strong> Belieferung führender Klavier- und Flügelhersteller weltweit.'
           ],
           en: [
-            '<strong>3rd Generation Leadership:</strong> Dr. Manfred Renner takes the helm in 1951.',
-            '<strong>New Headquarters (1955):</strong> Ceremonial return to the rebuilt Stuttgart main facility.',
-            '<strong>Global Leadership:</strong> Rigorous quality standards cement worldwide market leadership.'
+            '<strong>3rd Generation (1951):</strong> Dr. Manfred Renner takes over management of the family company.',
+            '<strong>Return to HQ (1955):</strong> Full commissioning of the newly rebuilt Stuttgart main factory.',
+            '<strong>International Growth:</strong> Supplying premier upright and grand piano makers worldwide.'
           ],
           ja: [
-            '<strong>第3世代の就任：</strong> 1951年、マンフレート・レンナー博士が新経営トップへ。',
-            '<strong>新社屋への復帰（1955年）：</strong> 完全再建されたシュトゥットガルト本拠地へ誇り高き帰還。',
-            '<strong>世界市場の頂点へ：</strong> 徹底した品質管理で世界のピアノ界を席巻。'
+            '<strong>第3世代の承継（1951年）：</strong> マンフレート・レンナー博士が同族経営を継承。',
+            '<strong>新社屋稼働（1955年）：</strong> 再建されたシュトゥットガルト本社工場へ全面復帰。',
+            '<strong>国際展開の拡大：</strong> 世界各国の主要ピアノメーカーへ精密機構・ハンマーを供給。'
           ],
           zh: [
-            '<strong>第三代领航人：</strong> 1951年曼弗雷德·雷诺博士掌舵企业全面现代化。',
-            '<strong>重返主厂区（1955年）：</strong> 隆重庆祝全新建成的斯图加特总部大楼启用。',
-            '<strong>巩固全球领袖地位：</strong> 严苛至极的品控标准确立全球不可动摇的霸主地位。'
+            '<strong>第三代接棒（1951年）：</strong> 曼弗雷德·雷诺博士接掌家族企业经营管理。',
+            '<strong>迁回主厂区（1955年）：</strong> 重建落成的斯图加特总部工厂全面投产。',
+            '<strong>拓展全球供应：</strong> 为世界各地知名立式与三角钢琴制造商供应核心部件。'
           ]
         },
         fact: {
-          de: '✦ 1951/1952 • Manfred Renner & Wiederbezug 1955',
-          en: '✦ 1951/1952 • Dr. Manfred Renner & 1955 Return',
-          ja: '✦ 1951/1952年 マンフレート博士参画＆1955年本館復興',
-          zh: '✦ 1951/1952 曼弗雷德博士掌舵与1955新总部落成'
+          de: '✦ 1951–1955 • Dr. Manfred Renner & Wiedereinzug in Stuttgart',
+          en: '✦ 1951–1955 • Dr. Manfred Renner & Rebuilt Stuttgart HQ',
+          ja: '✦ 1951〜1955年 • マンフレート・レンナー博士と本社完全復興',
+          zh: '✦ 1951–1955年 • 曼弗雷德·雷诺博士与斯图加特新厂启用'
         },
         quote: {
-          de: '„Mit jugendlichem Eifer nahm er die Zügel in die Hand und ließ den Wiederaufbau bis zur ursprünglichen Ausdehnung durchführen.“',
-          en: '“With youthful vigor he took the reins, guiding the full reconstruction back to its historic greatness.”',
-          ja: '「若き情熱をもって舵を取り、工場の規模をかつての雄姿へと完全に復興させた。」',
-          zh: '“他以年轻坚韧的进取魄力执掌大局，主导企业全面恢复至往昔的宏大规模。”'
+          de: '„Bis 1955 wurde der Wiederaufbau des Stuttgarter Werks auf die volle ursprüngliche Ausdehnung vollendet.“',
+          en: '“By 1955, reconstruction of the Stuttgart plant was completed to its full historic scale.”',
+          ja: '「1955年までに、シュトゥットガルト工場はかつての規模へと完全に再建された。」',
+          zh: '“至1955年，斯图加特工厂全面恢复至原有规模并正式投产。”'
         },
         quoteAuthor: {
-          de: 'Renner Chronik • 1951/1952',
-          en: 'Renner Chronicle • 1951/1952',
-          ja: 'ルイス・レンナー社史（1951/1952年）',
-          zh: '雷诺原厂档案（1951/1952年）'
+          de: 'Louis Renner Chronik • 1955',
+          en: 'Louis Renner Chronicle • 1955',
+          ja: 'ルイス・レンナー社史（1955年）',
+          zh: '路易·雷诺厂史档案（1955年）'
         },
         image: 'Visuell/web_assets/herstellung-renermechanik.png',
-        imageTag: { de: '1951/1952 Wiederaufbau', en: '1951/1952 Rebuild', ja: '1951/1952年 復興', zh: '1951/1952 重建乔迁' },
+        imageTag: { de: '1951–1955 Aufbau', en: '1951–1955 Rebuild', ja: '1951–1955年 復興', zh: '1951–1955年 重建' },
         imageCaption: {
-          de: 'Vollendung des Wiederaufbaus und Wiedereinzug in das Stuttgarter Hauptgebäude (1955)',
-          en: 'Completion of the reconstruction and return to the Stuttgart headquarters (1955)',
-          ja: '工場の完全復興とシュトゥットガルト本社本館への帰還（1955年秋）',
-          zh: '战后全面重建圆满竣工与重返斯图加特总部大楼（1955年秋）'
+          de: 'Präzisionsfertigung nach dem Wiedereinzug in das Stuttgarter Hauptgebäude (1955)',
+          en: 'Precision manufacturing after returning to the rebuilt Stuttgart headquarters (1955)',
+          ja: '再建されたシュトゥットガルト本社工場での精密製造（1955年）',
+          zh: '1955年迁回重建后的斯图加特总部大楼开展精密生产'
         }
       },
 
@@ -457,87 +460,87 @@ class RennerHistoryJourney {
         year: '1990',
         branch: 'down',
         arrow: '▼',
-        tag: { de: 'Zeitenwende', en: 'Turning Point', ja: '時代の転換点', zh: '时代转折' },
+        tag: { de: 'Wiedervereinigung', en: 'Reunification', ja: '東西統一とツァイツ', zh: '两德统一与蔡茨厂' },
         heading: {
-          de: '1990: Mauerfall, Zeitenwende & Sicherung des Fortbestands',
-          en: '1990: Fall of the Wall & Securing Renner’s Future',
-          ja: '1990年：ベルリンの壁崩壊と存亡を賭けたツァイツ工場継承',
-          zh: '1990年：柏林墙倒塌、时代转折与雷诺存续之战'
+          de: '1990: Wiedervereinigung & Übernahme der Mechanikfertigung Zeitz',
+          en: '1990: German Reunification & Acquisition of the Zeitz Action Plant',
+          ja: '1990年：ドイツ再統一とツァイツ・アクション工場の取得',
+          zh: '1990年：两德统一与收购蔡茨击弦机厂'
         },
         sentence: {
-          de: '1990 nutzte Renner die historische Chance der Wiedervereinigung: Die Übernahme der Mechanikfertigung in Zeitz sicherte die Existenz des Unternehmens und legte die Basis für Meuselwitz.',
-          en: 'In 1990, Renner seized the historic opportunity of reunification: Acquiring action manufacturing in Zeitz saved the company and laid the foundation for Meuselwitz.',
-          ja: '1990年、ドイツ再統一の歴史的転換点において、ツァイツのアクション製造部門を継承。倒産危機を回避し、モイゼルヴィッツ拠点の礎を築きました。',
-          zh: '1990年，雷诺抓住两德统一历史契机：收购蔡茨击弦机制造基地，化解生死危机并为莫伊瑟尔维茨奠定根基。'
+          de: '1990 übernahm Renner die Mechanikfertigung der Piano Union in Zeitz – sicherte damit Fachkräfte sowie Produktionskapazitäten und legte den Grundstein für Meuselwitz.',
+          en: 'In 1990, Renner acquired Piano Union’s action plant in Zeitz — securing skilled specialists and production capacity while laying the foundation for Meuselwitz.',
+          ja: '1990年、レンナーはツァイツのピアノ・ユニオン機構製造工場を取得し、熟練技術者と生産能力を確保して現在のモイゼルヴィッツ拠点の礎を築きました。',
+          zh: '1990年，雷诺收购蔡茨钢琴联盟（Piano Union）旗下的击弦机厂，稳固了专业技师与产能，并为莫伊塞尔维茨基地奠定根基。'
         },
         bullets: {
           de: [
-            '<strong>Chance der Einheit:</strong> Übernahme der Mechanik-Fertigung der Piano Union in Zeitz.',
-            '<strong>Großkunde Schimmel gerettet:</strong> Sicherung der Kapazitäten für über 40 Klaviere pro Tag.',
-            '<strong>Tor nach Meuselwitz:</strong> Entscheidende Weichenstellung für den heutigen Thüringer Hauptsitz.'
+            '<strong>Übernahme in Zeitz (1990):</strong> Integration der erfahrenen Mechanikfertigung der ehemaligen Piano Union.',
+            '<strong>Kapazität für Großkunden:</strong> Zuverlässige Versorgung u. a. der Firma Schimmel (über 40 Klaviere täglich).',
+            '<strong>Weg nach Mitteldeutschland:</strong> Direkter Vorläufer des späteren Werks in Meuselwitz.'
           ],
           en: [
-            '<strong>Historic Opportunity:</strong> Acquiring the Piano Union action facility in Zeitz in 1990.',
-            '<strong>Securing Customer Schimmel:</strong> Guaranteeing daily output for over 40 pianos.',
-            '<strong>Gateway to Meuselwitz:</strong> Strategic turning point leading directly to our current HQ.'
+            '<strong>Zeitz Acquisition (1990):</strong> Integration of the experienced Piano Union action workforce.',
+            '<strong>Major OEM Capacity:</strong> Reliable supply for key customers including Schimmel (>40 pianos/day).',
+            '<strong>Central German Base:</strong> Direct predecessor to today’s Meuselwitz headquarters.'
           ],
           ja: [
-            '<strong>東西統一の好機：</strong> 1990年、ツァイツのピアノ・ユニオン機構製造部門を買収。',
-            '<strong>大口顧客シンメルを死守：</strong> 1日40台以上の生産キャパシティを確保し存亡の危機を打開。',
-            '<strong>モイゼルヴィッツへの道：</strong> 現在のチューリンゲン世界本社へと直結する歴史的転換点。'
+            '<strong>ツァイツ工場の統合（1990年）：</strong> 旧ピアノ・ユニオンの熟練アクション製造部門を継承。',
+            '<strong>主要顧客への安定供給：</strong> 日産40台超のシンメル社など大口顧客の供給体制を維持。',
+            '<strong>中部ドイツ拠点の確立：</strong> 後のモイゼルヴィッツ本社工場へとつながる重要な布石。'
           ],
           zh: [
-            '<strong>两德统一历史机遇：</strong> 1990年闪电收购蔡茨击弦机制造核心基地。',
-            '<strong>力挽核心巨客户舒密尔：</strong> 确保日产逾40架钢琴的产能，打破生存困局。',
-            '<strong>通往莫伊瑟尔维茨之路：</strong> 奠定当今图林根全球总部的关键转折点。'
+            '<strong>整合蔡茨工厂（1990年）：</strong> 吸纳原钢琴联盟经验丰富的击弦机制造团队。',
+            '<strong>保障大客户产能：</strong> 稳定供应日产逾40架钢琴的舒密尔（Schimmel）等核心客户。',
+            '<strong>扎根德国中部：</strong> 成为日后迁建莫伊塞尔维茨现代化工厂的直接前身。'
           ]
         },
         fact: {
-          de: '✦ 1990 • Wende, Schimmel-Partnerschaft & Zeitz',
-          en: '✦ 1990 • German Unity, Schimmel Partnership & Zeitz',
-          ja: '✦ 1990年 • ドイツ統一・シンメル社との絆・ツァイツ',
-          zh: '✦ 1990 • 两德统一 · 舒密尔核心伙伴 · 蔡茨基地'
+          de: '✦ 1990 • Übernahme in Zeitz & Sicherung der Wettbewerbsfähigkeit',
+          en: '✦ 1990 • Zeitz Acquisition & Long-Term Competitiveness',
+          ja: '✦ 1990年 • ツァイツ工場継承と生産競争力の確保',
+          zh: '✦ 1990年 • 收购蔡茨工厂并稳固长期制造竞争力'
         },
         quote: {
-          de: '„Die Übernahme der Mechanik-Fertigung in Zeitz war für Renner eine Frage des nackten Fortbestands – sie sicherte unseren größten Kunden Schimmel und schuf das Fundament unserer Zukunft.“',
-          en: '“Acquiring the action manufacturing in Zeitz was a matter of sheer survival for Renner – it preserved our largest customer Schimmel and forged the foundation of our future.”',
-          ja: '「ツァイツのアクション製造部門継承は、レンナーにとって生き残りを賭けた決断であった。それは最大顧客シンメルを守り、未来への礎を築いた。」',
-          zh: '“接管蔡茨击弦机制造基地，是雷诺关乎生死存亡的关键之役——它保住了我们最大的客户舒密尔，铸就了通向未来的坚实基石。”'
+          de: '„Die Entscheidung für den Standort Zeitz im Jahr 1990 sicherte unsere wichtigsten Abnehmer und eröffnete die Zukunft in Mitteldeutschland.“',
+          en: '“Choosing the Zeitz site in 1990 secured our key piano-making partners and opened our future in Central Germany.”',
+          ja: '「1990年のツァイツ拠点継承は主要顧客を守り抜き、中部ドイツにおける未来を切り拓いた。」',
+          zh: '“1990年接管蔡茨基地保障了核心钢琴厂合作伙伴，并开启了我们在德国中部的发展篇章。”'
         },
         quoteAuthor: {
-          de: 'Louis Renner Chronik • Das Wendejahr 1990',
-          en: 'Louis Renner Chronicle • The Turning Point of 1990',
-          ja: 'ルイス・レンナー年代記 • 1990年激動の記録',
-          zh: '路易·雷诺原厂档案 · 1990转折之年'
+          de: 'Louis Renner Chronik • 1990',
+          en: 'Louis Renner Chronicle • 1990',
+          ja: 'ルイス・レンナー社史（1990年）',
+          zh: '路易·雷诺厂史档案（1990年）'
         },
         images: [
           'Visuell/Bilder/01_Geschichte/01_1989_mauerfall_zeitenwende.jpg',
           'Visuell/Bilder/01_Geschichte/01_1990_piano_union_zeitz_mechanikfertigung.webp'
         ],
         image: 'Visuell/Bilder/01_Geschichte/01_1989_mauerfall_zeitenwende.jpg',
-        imageTag: { de: '1990 Wende & Zeitz', en: '1990 Unity & Zeitz', ja: '1990年 再統一とツァイツ', zh: '1990 蔡茨与两德统一' },
+        imageTag: { de: '1990 Wiedervereinigung', en: '1990 Reunification', ja: '1990年 再統一とツァイツ', zh: '1990年 蔡茨与统一' },
         imageCaption: {
-          de: 'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
-          en: 'Fall of the Berlin Wall 1989 – The dawn of a new era for Germany and Louis Renner',
-          ja: '1989年ベルリンの壁崩壊 — ドイツとルイス・レンナーの新時代への夜明け',
-          zh: '1989年柏林墙倒塌 — 德国与路易·雷诺历史新纪元的拂晓'
+          de: 'Historische Wende 1989/1990 – Neue Perspektiven für den deutschen Klavierbau',
+          en: '1989/1990 Reunification – New perspectives for German piano manufacturing',
+          ja: '1989/1990年の歴史的転換 — ドイツピアノ製造業の新たな展望',
+          zh: '1989/1990年历史转折——德国钢琴制造业迎来整合契机'
         },
         imageCaptions: {
           de: [
-            'Fall der Berliner Mauer 1989 – Beginn einer neuen Ära für Deutschland und Renner',
-            'Historische Mechanik-Fertigung in Zeitz (Piano Union / Rönisch) – Die Rettung von Renners Zukunft'
+            'Historische Wende 1989/1990 – Neue Perspektiven für den deutschen Klavierbau',
+            'Mechanikfertigung in Zeitz (1990) – Basis des heutigen Standorts Meuselwitz'
           ],
           en: [
-            'Fall of the Berlin Wall 1989 – The dawn of a new era for Germany and Louis Renner',
-            'Historical action production in Zeitz (Piano Union / Rönisch) – Securing Renner\'s future'
+            '1989/1990 Reunification – New perspectives for German piano manufacturing',
+            'Action manufacturing in Zeitz (1990) – Foundation for today’s Meuselwitz plant'
           ],
           ja: [
-            '1989年ベルリンの壁崩壊 — ドイツとルイス・レンナーの新時代への夜明け',
-            'ツァイツの歴史的ピアノアクション製造拠点（ピアノ・ユニオン／レーニッシュの伝統）'
+            '1989/1990年の歴史的転換 — ドイツピアノ製造業の新たな展望',
+            'ツァイツでのアクション製造（1990年）— 現在のモイゼルヴィッツ工場の基盤'
           ],
           zh: [
-            '1989年柏林墙倒塌 — 德国与路易·雷诺历史新纪元的拂晓',
-            '蔡茨历史悠久的钢琴击弦机生产厂区（罗尼施与钢琴联盟传承）— 拯救雷诺未来的关键之战'
+            '1989/1990年历史转折——德国钢琴制造业迎来整合契机',
+            '1990年蔡茨击弦机生产车间——当今莫伊塞尔维茨工厂的前身基础'
           ]
         },
         slide_interval: 4000
@@ -548,87 +551,87 @@ class RennerHistoryJourney {
         year: '2011',
         branch: 'up',
         arrow: '▲',
-        tag: { de: 'Zwei Standorte', en: 'Two Sites', ja: '2拠点体制', zh: '双基地格局' },
+        tag: { de: 'Zwei Standorte', en: 'Two Core Sites', ja: '2拠点集約', zh: '双基地整合' },
         heading: {
-          de: '2011: Zwei feste Standorte – Neubau Gärtringen & Kernfertigung Meuselwitz',
-          en: '2011: Two Core Sites – Gärtringen & Meuselwitz',
-          ja: '2011年：2大拠点体制 — ゲルトリンゲン新社屋とモイゼルヴィッツ中核工場',
-          zh: '2011年：双核心基地格局 — 盖特林根新厂与莫伊瑟尔维茨核心工厂'
+          de: '2011: Bündelung an zwei Standorten – Gärtringen & Meuselwitz',
+          en: '2011: Consolidation into Two Core Sites – Gärtringen & Meuselwitz',
+          ja: '2011年：ゲルトリンゲンとモイゼルヴィッツの2拠点へ集約',
+          zh: '2011年：整合为盖特林根与莫伊塞尔维茨两大基地'
         },
         sentence: {
-          de: 'Im Jahr 2011 bündelte Renner seine dezentralen Werke an zwei modernen Standorten: Gärtringen und Meuselwitz.',
-          en: 'In 2011, Renner consolidated its dispersed production sites into two core centers of excellence: Gärtringen and Meuselwitz.',
-          ja: '2011年、それまで分散していた拠点をゲルトリンゲンとモイゼルヴィッツの2大近代拠点へと集約統合しました。',
-          zh: '2011年，雷诺将分散生产厂区正式合并归拢为两大现代化核心基地：盖特林根与莫伊瑟尔维茨。'
+          de: '2011 führte Renner seine zuvor verteilten Betriebsstätten an zwei modernen Standorten zusammen: dem Neubau in Gärtringen und dem Werk in Meuselwitz.',
+          en: 'In 2011, Renner consolidated its previously dispersed workshops into two modern facilities: Gärtringen and Meuselwitz.',
+          ja: '2011年、分散していた製造拠点をゲルトリンゲン新社屋とモイゼルヴィッツ工場の近代的な2拠点へと集約しました。',
+          zh: '2011年，雷诺将原先分散的多个厂区整合为两座现代化基地：盖特林根新厂与莫伊塞尔维茨工厂。'
         },
         bullets: {
           de: [
-            '<strong>Zwei feste Standorte:</strong> Umzug von Zeitz nach Meuselwitz und Neubau Gärtringen.',
-            '<strong>Kernwerk Meuselwitz:</strong> 6.800 m² Großfertigung für Mechaniken, Hammerköpfe und Bauteile.',
-            '<strong>Hauptsitz Gärtringen:</strong> Präzise Holzverarbeitung, Bohrwerkstätten und Verwaltung.'
+            '<strong>Umzug nach Meuselwitz:</strong> Verlagerung von Zeitz in eine moderne 6.800-m²-Fertigungshalle.',
+            '<strong>Werk Meuselwitz:</strong> Serien- und Manufakturfertigung für Mechaniken, Hammerköpfe und Einzelteile.',
+            '<strong>Neubau Gärtringen:</strong> Spezialisierte Holzbearbeitung und Verwaltung.'
           ],
           en: [
-            '<strong>Two Dedicated Sites:</strong> Relocating from Zeitz to Meuselwitz alongside new Gärtringen site.',
-            '<strong>Meuselwitz Core Facility:</strong> 6,800 m² for grand/upright actions, hammerheads, and parts.',
-            '<strong>Gärtringen Headquarters:</strong> Precision woodworking, drilling workshops, and management.'
+            '<strong>Move to Meuselwitz:</strong> Relocation from Zeitz into a modern 6,800 m² production hall.',
+            '<strong>Meuselwitz Plant:</strong> Manufacturing of grand/upright actions, hammerheads, and components.',
+            '<strong>Gärtringen Facility:</strong> Specialized woodworking and administration.'
           ],
           ja: [
-            '<strong>2拠点体制の確立：</strong> ツァイツからモイゼルヴィッツへの移転とゲルトリンゲン新社屋。',
-            '<strong>モイゼルヴィッツ中核工場：</strong> 6,800㎡の最新施設で機構・ハンマー・精密パーツを生産。',
-            '<strong>ゲルトリンゲン本社：</strong> 高度木工加工・CNC穴あけ・総合管理を統括。'
+            '<strong>モイゼルヴィッツ移転：</strong> ツァイツから6,800㎡の近代的な製造ホールへ拡張移転。',
+            '<strong>モイゼルヴィッツ工場：</strong> アクション、ハンマーヘッド、精密部品の主力製造を担当。',
+            '<strong>ゲルトリンゲン新社屋：</strong> 専門木工加工および本社管理部門を集約。'
           ],
           zh: [
-            '<strong>确立双基地格局：</strong> 蔡茨基地迁入莫伊瑟尔维茨，盖特灵根新厂拔地而起。',
-            '<strong>莫伊瑟尔维茨核心工场：</strong> 6,800平米现代化超级车间专注击弦机、弦槌与核心部件。',
-            '<strong>盖特灵根管理总部：</strong> 统辖超精密木工、数控钻孔及全球运营体系。'
+            '<strong>迁入莫伊塞尔维茨：</strong> 由蔡茨迁入占地 6,800 平方米的现代化生产厂房。',
+            '<strong>莫伊塞尔维茨工厂：</strong> 承担击弦机、弦槌及精密零部件的主力生产。',
+            '<strong>盖特林根新厂：</strong> 集中专业木工加工与行政管理部门。'
           ]
         },
         fact: {
-          de: '✦ 2011 • Zwei feste Standorte: Gärtringen & Meuselwitz (6.800 m²)',
-          en: '✦ 2011 • Two Core Sites: Gärtringen & Meuselwitz (6,800 m²)',
-          ja: '✦ 2011年 • 2大拠点体制：ゲルトリンゲン＆モイゼルヴィッツ（6,800㎡）',
-          zh: '✦ 2011年 • 双核心基地：盖特林根与莫伊瑟尔维茨（6,800平方米）'
+          de: '✦ 2011 • Zwei moderne Werke: Gärtringen & Meuselwitz (6.800 m²)',
+          en: '✦ 2011 • Two Modern Plants: Gärtringen & Meuselwitz (6,800 m²)',
+          ja: '✦ 2011年 • ゲルトリンゲン＆モイゼルヴィッツ（6,800㎡）の2拠点体制',
+          zh: '✦ 2011年 • 盖特林根与莫伊塞尔维茨（6,800 m²）双基地运行'
         },
         quote: {
-          de: '„Im Jahr 2011 wurden die zuvor verstreuten Werke an zwei Standorten zusammengelegt: Meuselwitz und Gärtringen.“',
-          en: '“In 2011, previously dispersed production facilities were consolidated into two core locations: Meuselwitz and Gärtringen.”',
-          ja: '「2011年、分散していた製造体制はモイゼルヴィッツとゲルトリンゲンの2大拠点へと統合された。」',
-          zh: '“2011年，此前分散的各个工厂正式整合为两大稳固基地：莫伊瑟尔维茨与盖特林根。”'
+          de: '„Im Jahr 2011 wurden die zuvor verstreuten Werke an zwei leistungsfähigen Standorten zusammengelegt: Meuselwitz und Gärtringen.“',
+          en: '“In 2011, previously dispersed facilities were consolidated into two efficient locations: Meuselwitz and Gärtringen.”',
+          ja: '「2011年、それまで分散していた工場はモイゼルヴィッツとゲルトリンゲンの2拠点へと統合された。」',
+          zh: '“2011年，原先分散的各个厂区正式整合为莫伊塞尔维茨与盖特林根两大高效基地。”'
         },
         quoteAuthor: {
-          de: 'Louis Renner Chronik • Zwei Standorte 2011',
-          en: 'Louis Renner Chronicle • Two Sites 2011',
-          ja: 'ルイス・レンナー社史 • 2011年の2拠点体制',
-          zh: '路易·雷诺官方厂史 • 2011双基地纪元'
+          de: 'Louis Renner Chronik • 2011',
+          en: 'Louis Renner Chronicle • 2011',
+          ja: 'ルイス・レンナー社史（2011年）',
+          zh: '路易·雷诺厂史档案（2011年）'
         },
         images: [
           'Visuell/Bilder/01_Geschichte/01_2011_standort_gaertringen_neubau.webp',
           'Visuell/Bilder/01_Geschichte/01_2011_standort_meuselwitz_vogelperspektive.jpg'
         ],
         image: 'Visuell/Bilder/01_Geschichte/01_2011_standort_gaertringen_neubau.webp',
-        imageTag: { de: '2011 Standorte', en: '2011 Two Sites', ja: '2011年 2拠点体制', zh: '2011年 双基地' },
+        imageTag: { de: '2011 Zwei Standorte', en: '2011 Two Sites', ja: '2011年 2拠点体制', zh: '2011年 双基地' },
         imageCaption: {
-          de: 'Standort Gärtringen: Neubau für Holzbearbeitung, Bohrwerkstätten und Verwaltung',
-          en: 'Gärtringen site: New building for woodworking, drilling workshops, and administration',
-          ja: 'ゲルトリンゲン事業所：木工加工・穴あけ加工および総務管理の新社屋',
-          zh: '盖特林根厂区：承担高精木工、数控钻孔及全球综合管理的新总部大楼'
+          de: 'Neubau Gärtringen (2011): Spezialisierte Holzbearbeitung und Verwaltung',
+          en: 'Gärtringen new building (2011): Specialized woodworking and administration',
+          ja: 'ゲルトリンゲン新社屋（2011年）：専門木工加工および管理部門',
+          zh: '盖特林根新厂房（2011年）：专业木工加工与行政管理中心'
         },
         imageCaptions: {
           de: [
-            'Standort Gärtringen: Neubau für Holzbearbeitung, Bohrwerkstätten und Verwaltung',
-            'Standort Meuselwitz aus der Vogelperspektive: Moderne Kernfertigung (6.800 m²) nach Umzug von Zeitz'
+            'Neubau Gärtringen (2011): Spezialisierte Holzbearbeitung und Verwaltung',
+            'Luftaufnahme Werk Meuselwitz: 6.800 m² Fertigungsfläche nach dem Umzug aus Zeitz'
           ],
           en: [
-            'Gärtringen site: New building for woodworking, drilling workshops, and administration',
-            'Meuselwitz facility from above: Modern core manufacturing (6,800 m²) following relocation from Zeitz'
+            'Gärtringen new building (2011): Specialized woodworking and administration',
+            'Aerial view of Meuselwitz plant: 6,800 m² production hall following relocation from Zeitz'
           ],
           ja: [
-            'ゲルトリンゲン事業所：木工加工・穴あけ加工および総務管理の新社屋',
-            '上空から見たモイゼルヴィッツ拠点：ツァイツ移転後の近代的コア製造工場（6,800㎡）'
+            'ゲルトリンゲン新社屋（2011年）：専門木工加工および管理部門',
+            '上空から見たモイゼルヴィッツ工場：ツァイツ移転後の6,800㎡製造拠点'
           ],
           zh: [
-            '盖特林根厂区：承担高精木工、数控钻孔及全球综合管理的新总部大楼',
-            '鸟瞰莫伊瑟尔维茨生产基地：从蔡茨搬迁后的现代化核心制造基地（6,800平方米）'
+            '盖特林根新厂房（2011年）：专业木工加工与行政管理中心',
+            '莫伊塞尔维茨工厂航拍：自蔡茨迁入后的 6,800 平方米核心生产基地'
           ]
         },
         slide_interval: 3500
@@ -639,87 +642,87 @@ class RennerHistoryJourney {
         year: '2019',
         branch: 'down',
         arrow: '▼',
-        tag: { de: 'Steinway & Sons', en: 'Steinway & Sons', ja: 'スタインウェイ', zh: '施坦威大家庭' },
+        tag: { de: 'Steinway & Sons', en: 'Steinway & Sons', ja: 'スタインウェイ', zh: '加入施坦威集团' },
         heading: {
-          de: '2019: Steinway & Sons übernimmt Renner – 100% Eigenständigkeit',
-          en: '2019: Steinway & Sons Acquires Renner – 100% Independence',
-          ja: '2019年：スタインウェイ傘下へ — 完全な独立性の堅持',
-          zh: '2019年：施坦威钢琴收购雷诺 — 恪守100%独立运营'
+          de: '2019: Übernahme durch Steinway & Sons bei voller Eigenständigkeit',
+          en: '2019: Acquisition by Steinway & Sons with Full Operational Autonomy',
+          ja: '2019年：スタインウェイ傘下への参画と独立経営の維持',
+          zh: '2019年：并入施坦威集团并保持独立运营'
         },
         sentence: {
-          de: '2019 entschied sich Inhaber Clemens von Arnim mit großer Weitsicht für Steinway & Sons – zum Schutz der Belegschaft und für die volle Unabhängigkeit von Renner.',
-          en: 'In 2019, owner Clemens von Arnim chose Steinway & Sons with foresight – prioritizing the workforce and securing Renner’s full operational independence.',
-          ja: '2019年、オーナーのクレメンス・フォン・アルニム氏は社員の雇用と事業の完全な独立を守るため、スタインウェイ傘下への参入を決断しました。',
-          zh: '2019年，原控股股东克莱门斯·冯·阿尔尼姆以远见卓识选择施坦威——只为全方位保障员工权益与雷诺独立经营。'
+          de: '2019 übergab Inhaber Clemens von Arnim das Unternehmen an Steinway & Sons – um Arbeitsplätze, Qualitätsmaßstäbe und die Belieferung aller Klavierbauer langfristig zu sichern.',
+          en: 'In 2019, owner Clemens von Arnim entrusted Renner to Steinway & Sons — safeguarding jobs, quality standards, and open supply to piano makers worldwide.',
+          ja: '2019年、オーナーのクレメンス・フォン・アルニム氏は雇用と品質基準、そして世界中のピアノメーカーへの供給を守るため、スタインウェイへの継承を決断しました。',
+          zh: '2019年，企业主克莱门斯·冯·阿尔尼姆将雷诺托付予施坦威集团，以长远保障员工岗位、品质标准及对全球各品牌钢琴厂的独立供应。'
         },
         bullets: {
           de: [
-            '<strong>100% Eigenständigkeit:</strong> Steinway & Sons garantiert volle operative Unabhängigkeit.',
-            '<strong>Verantwortung vor Profit:</strong> Clemens von Arnim lehnte höhere Gebote zum Schutz der Belegschaft ab.',
-            '<strong>Ehrendes Gedenken († 2024):</strong> Tiefer Dank an Clemens von Arnim für seine visionäre Führung.'
+            '<strong>Operative Unabhängigkeit:</strong> Renner beliefert weiterhin alle Klavier- und Flügelhersteller weltweit.',
+            '<strong>Standort- & Beschäftigungsschutz:</strong> Langfristige Perspektive statt kurzfristigem Finanzverkauf.',
+            '<strong>Ehrendes Gedenken († 2024):</strong> Dank an Clemens von Arnim für seine verantwortungsvolle Weichenstellung.'
           ],
           en: [
-            '<strong>100% Autonomy:</strong> Steinway & Sons guarantees complete operational independence.',
-            '<strong>People over Profit:</strong> Clemens von Arnim rejected higher bids to safeguard all jobs.',
-            '<strong>In Memory († 2024):</strong> Profound gratitude to Clemens von Arnim for his visionary leadership.'
+            '<strong>Operational Autonomy:</strong> Renner continues to supply all upright and grand piano makers worldwide.',
+            '<strong>Safeguarding Staff:</strong> Long-term industrial stewardship chosen over higher financial bids.',
+            '<strong>In Grateful Memory († 2024):</strong> Honoring Clemens von Arnim for his responsible leadership.'
           ],
           ja: [
-            '<strong>完全な事業独立性：</strong> スタインウェイが経営・製造の100%独立性を完全保証。',
-            '<strong>社員を最優先：</strong> 故アルニム氏は従業員の雇用を守るため高額な買収提示を拒絶。',
-            '<strong>心からの追悼（† 2024）：</strong> 崇高な先見性で未来を託した故人に深謝を捧ぐ。'
+            '<strong>事業独立性の維持：</strong> 世界のあらゆるピアノメーカーへのオープンな供給体制を継続。',
+            '<strong>雇用と技術の保護：</strong> 短期的な売却益よりも従業員と製造拠点の長期的安定を優先。',
+            '<strong>故アルニム氏への追悼（† 2024）：</strong> 誠実な決断で未来を託した功績に深い感謝を捧ぐ。'
           ],
           zh: [
-            '<strong>恪守100%自主运营：</strong> 施坦威郑重承诺雷诺享有完全独立的经营与制造主权。',
-            '<strong>责任重于利润：</strong> 冯·阿尔尼姆先生拒绝更高出价，只为全力守护全体员工生计。',
-            '<strong>深切缅怀（† 2024）：</strong> 由衷铭记冯·阿尔尼姆先生非凡的战略远见与奉献。'
+            '<strong>保持独立供应：</strong> 雷诺继续面向全球所有立式与三角钢琴制造商开放供货。',
+            '<strong>守护员工与工艺：</strong> 拒绝短期高价财务收购，优先保障工厂与团队的长期稳定。',
+            '<strong>深切缅怀（† 2024）：</strong> 铭记克莱门斯·冯·阿尔尼姆先生富有远见的责任担当。'
           ]
         },
         fact: {
-          de: '✦ 2019 • Steinway & In ehrendem Gedenken an Clemens von Arnim († 2024)',
-          en: '✦ 2019 • Steinway & In Grateful Memory of Clemens von Arnim († 2024)',
-          ja: '✦ 2019年 • スタインウェイ傘下＆故クレメンス・フォン・アルニム氏追悼',
-          zh: '✦ 2019 • 施坦威集团加入与深切缅怀克莱门斯·冯·阿尔尼姆先生'
+          de: '✦ 2019 • Steinway & Sons & Gedenken an Clemens von Arnim († 2024)',
+          en: '✦ 2019 • Steinway & Sons & In Memory of Clemens von Arnim († 2024)',
+          ja: '✦ 2019年 • スタインウェイ参画＆故クレメンス・フォン・アルニム氏追悼',
+          zh: '✦ 2019年 • 加入施坦威集团并缅怀克莱门斯·冯·阿尔尼姆（† 2024）'
         },
         quote: {
-          de: '„Ebenso wie wir verfügt Renner über eine sehr lange Tradition, ist führend in seinem Segment und beliefert Kunden weltweit mit hervorragender Qualität. Uns verbinden gleiche Werte – und es ist wichtig, dass Renner weiterhin unabhängig arbeiten wird.“',
-          en: '“Renner boasts a rich heritage, leads its segment, and delivers superb quality worldwide. We share the same values – and Renner will continue to operate independently.”',
-          ja: '「レンナー社は長い伝統と圧倒的品質を誇り、私たちと同じ価値観を共有しています。レンナーが引き続き独立して運営されることが不可欠です。」',
-          zh: '“雷诺拥有极深厚的技术底蕴，在细分领域独占鳌头并向全球客户提供卓越品质。我们拥有相同的价值观，雷诺必将继续保持独立运营。”'
+          de: '„Uns verbinden gleiche Qualitätswerte – und es ist entscheidend, dass Renner weiterhin eigenständig für Kunden in aller Welt arbeitet.“',
+          en: '“We share the same commitment to quality — and it is essential that Renner continues to operate independently for customers worldwide.”',
+          ja: '「私たちは同じ品質理念を共有しており、レンナーが今後も世界中の顧客のために独立して事業を続けることが重要です。」',
+          zh: '“我们秉持相同的品质价值观，雷诺继续面向全球客户保持独立运营至关重要。”'
         },
         quoteAuthor: {
-          de: 'Guido Zimmermann • President Steinway & Sons Hamburg',
-          en: 'Guido Zimmermann • President Steinway & Sons Hamburg',
-          ja: 'ギド・ツィンマーマン（スタインウェイ＆サンズ ハンブルク社長）',
-          zh: '吉多·齐默尔曼 • 施坦威（Steinway & Sons）汉堡工厂总裁'
+          de: 'Guido Zimmermann • Steinway & Sons Europe',
+          en: 'Guido Zimmermann • Steinway & Sons Europe',
+          ja: 'ギド・ツィンマーマン（スタインウェイ・ヨーロッパ社長）',
+          zh: '吉多·齐默尔曼 • 施坦威欧洲总裁'
         },
         images: [
           'Visuell/Video/steinwayshort.mp4',
           'Visuell/Bilder/01_Geschichte/01_2019_clemens_von_arnim_produktion.jpg'
         ],
         image: 'Visuell/Bilder/01_Geschichte/01_2019_clemens_von_arnim_produktion.jpg',
-        imageTag: { de: '2019 Steinway', en: '2019 Steinway', ja: '2019年スタインウェイ', zh: '2019年施坦威' },
+        imageTag: { de: '2019 Steinway', en: '2019 Steinway', ja: '2019年 スタインウェイ', zh: '2019年 施坦威' },
         imageCaption: {
-          de: 'Historische Partnerschaft mit Steinway & Sons',
-          en: 'Historic Partnership with Steinway & Sons and owner Clemens von Arnim in production († April 23, 2024)',
-          ja: 'スタインウェイ＆サンズとの歴史的協業と製造現場の故クレメンス・フォン・アルニム氏（2024年4月23日逝去）',
-          zh: '施坦威历史性携手与深入生产一线的原控股股东克莱门斯·冯·阿尔尼姆先生（2024年4月23日逝世）'
+          de: 'Partnerschaft mit Steinway & Sons – Inhaber Clemens von Arnim in der Fertigung († 23.04.2024)',
+          en: 'Partnership with Steinway & Sons – Owner Clemens von Arnim in production († April 23, 2024)',
+          ja: 'スタインウェイとの協業 — 製造現場の故クレメンス・フォン・アルニム氏（2024年4月23日逝去）',
+          zh: '携手施坦威集团——深入生产一线的克莱门斯·冯·阿尔尼姆先生（2024年4月23日逝世）'
         },
         imageCaptions: {
           de: [
-            'Historische Partnerschaft mit Steinway & Sons: 100% operative Eigenständigkeit',
-            'Clemens von Arnim in der Fertigung: Schutz der Belegschaft & Zukunftssicherung'
+            'Partnerschaft mit Steinway & Sons bei voller operativer Eigenständigkeit',
+            'Clemens von Arnim in der Fertigung († 23.04.2024): Verantwortung für Belegschaft & Qualität'
           ],
           en: [
-            'Historic Partnership with Steinway & Sons: 100% operational independence',
-            'Clemens von Arnim on the factory floor: Protecting staff & securing the future'
+            'Partnership with Steinway & Sons with full operational independence',
+            'Clemens von Arnim in production († April 23, 2024): Stewardship for staff & quality'
           ],
           ja: [
-            'スタインウェイ＆サンズとの歴史的協業：ルイス・レンナーの100%事業独立性を維持',
-            '製造現場の故クレメンス・フォン・アルニム氏：従業員の保護と伝統の未来継承'
+            '完全な事業独立性を維持したスタインウェイ＆サンズとのパートナーシップ',
+            '製造現場の故クレメンス・フォン・アルニム氏（2024年4月23日逝去）：社員と品質への責任'
           ],
           zh: [
-            '施坦威（Steinway & Sons）历史性携手：保障雷诺100%独立运营',
-            '克莱门斯·冯·阿尔尼姆在生产一线：守护全体员工与百年品牌未来'
+            '携手施坦威集团并保持100%独立业务运营',
+            '克莱门斯·冯·阿尔尼姆在生产车间（† 2024.04.23）：守护员工与品质传承'
           ]
         },
         slide_interval: 4500
@@ -728,79 +731,86 @@ class RennerHistoryJourney {
       8: {
         id: 'heute',
         year: 'Heute',
+        yearLabel: { de: 'Heute', en: 'Today', ja: '現在', zh: '今日' },
         branch: 'up',
         arrow: '▲',
-        tag: { de: 'Meuselwitz', en: 'Global HQ', ja: '統合世界本社', zh: '全球新总部' },
+        tag: { de: 'Stammwerk Meuselwitz', en: 'Meuselwitz HQ', ja: 'モイゼルヴィッツ本社', zh: '莫伊塞尔维茨总部' },
         heading: {
-          de: 'Heute: Tradition bewahren. Zukunft gestalten.',
-          en: 'Today: Preserving Tradition. Shaping the Future.',
-          ja: '現在：伝統を守り、未来を創る',
-          zh: '今日：恪守传统 · 塑造未来'
+          de: 'Heute: Alle Fertigungsprozesse vereint im Stammwerk Meuselwitz',
+          en: 'Today: All Manufacturing United at the Meuselwitz Headquarters',
+          ja: '現在：モイゼルヴィッツ本社工場への全製造工程の集約',
+          zh: '今日：全部制造工序汇聚于莫伊塞尔维茨总部工厂'
         },
         sentence: {
-          de: 'Aus der kleinen Werkstatt von 1882 ist der globale Qualitätsmaßstab geworden. Heute bündelt Renner alle Kräfte am Welt-Hauptsitz Meuselwitz.',
-          en: 'From a modest 1882 workshop to the global quality benchmark. Today, Renner unites all operations at its world headquarters in Meuselwitz.',
-          ja: '1882年の小さな工房から世界的リーダーへ。今日、レンナーは全製造プロセスを統合世界本社モイゼルヴィッツへと集約しています。',
-          zh: '从1882年工坊到全球第一品质标杆。今天，雷诺将全部力量汇聚于全球新总部莫伊瑟尔维茨。'
+          de: 'Nach dem Projektstart im Oktober 2025 sind heute Mechanik-, Holz- und Hammerkopffertigung vollständig unter einem vollklimatisierten Dach in Meuselwitz gebündelt.',
+          en: 'Following project launch in October 2025, action, woodworking, and hammerhead production are now fully united under one climate-controlled roof in Meuselwitz.',
+          ja: '2025年10月の統合プロジェクト始動を経て、アクション・木工・ハンマーヘッドの全製造工程が空調完備のモイゼルヴィッツ本社工場に集約されました。',
+          zh: '自2025年10月启动整合项目以来，击弦机、精密木工与弦槌制造现已全面汇集于莫伊塞尔维茨恒温恒湿总部厂房。'
         },
         bullets: {
           de: [
-            '<strong>Standortbündelung vollendet:</strong> Alle Fertigungsbereiche erfolgreich in Meuselwitz vereint.',
-            '<strong>Dank an Team Gärtringen:</strong> Tiefste Anerkennung für jahrzehntelangen herausragenden Einsatz.',
-            '<strong>Zukunft der Spitzenklasse:</strong> Konzentriertes Wissen sichert höchste Präzision für Generationen.'
+            '<strong>Kurze Wege, ein Dach:</strong> Vom Holzzuschnitt bis zum fertigen Hammerkopf und zur kompletten Mechanik.',
+            '<strong>Moderne Infrastruktur:</strong> Neue zentrale Filter- und Absauganlage sowie ganzjährige Hallenklimatisierung.',
+            '<strong>Dank an Gärtringen:</strong> Große Anerkennung an das Gärtringer Team für den Wissenstransfer und jahrzehntelange Präzisionsarbeit.'
           ],
           en: [
-            '<strong>Consolidation Completed:</strong> All production branches successfully united in Meuselwitz.',
-            '<strong>Gratitude to Team Gärtringen:</strong> Profound appreciation for decades of excellence.',
-            '<strong>World-Class Future:</strong> Concentrated expertise securing highest precision for generations.'
+            '<strong>Short Paths Under One Roof:</strong> From timber cutting to finished hammerheads and complete piano actions.',
+            '<strong>Modern Infrastructure:</strong> New central dust filtration plant and year-round hall climate control.',
+            '<strong>Gratitude to Gärtringen:</strong> Deep appreciation to the Gärtringen team for decades of precision work and knowledge transfer.'
           ],
           ja: [
-            '<strong>統合の完全達成：</strong> 全製造部門をモイゼルヴィッツ世界本社へ完全に集約。',
-            '<strong>ゲルトリンゲン社員へ感謝：</strong> 伝統を支え続けてくれた仲間たちに心からの敬意を。',
-            '<strong>最高峰の未来へ：</strong> 結集した知見と最新設備で、次世代の完璧な品質を約束。'
+            '<strong>一拠点での一貫生産：</strong> 木材加工から完成ハンマーヘッド・アクション組立までを最短動線で直結。',
+            '<strong>最新インフラ完備：</strong> 新設の集中集塵フィルター設備と通年安定した全館空調システム。',
+            '<strong>ゲルトリンゲンへの感謝：</strong> 長年の精密技術と円滑な技術継承を支えたチームに深く敬意を表します。'
           ],
           zh: [
-            '<strong>全面整合圆满达成：</strong> 全部制造板块完整集聚于莫伊瑟尔维茨全球总部。',
-            '<strong>致敬盖特灵根团队：</strong> 由衷铭记全体同仁数十年如一日的匠心奉献与付出。',
-            '<strong>铸就传世顶级未来：</strong> 汇聚尖端工艺与最强产能，为未来世代锻造传世精密之作。'
+            '<strong>同一屋檐下全流程贯通：</strong> 从实木开料直至成品弦槌与整套击弦机总成无缝衔接。',
+            '<strong>现代化基础设施：</strong> 配备全新中央除尘过滤系统与全年恒温恒湿车间控制。',
+            '<strong>致敬盖特林根团队：</strong> 衷心感谢盖特林根同仁数十年的精密制造贡献与技术传承。'
           ]
         },
         fact: {
-          de: '✦ Tradition bewahren • Zukunft gestalten',
-          en: '✦ Preserving Tradition • Shaping the Future',
-          ja: '✦ 伝統を守り • 未来を創る',
-          zh: '✦ 恪守传统 • 塑造未来'
+          de: '✦ Stammwerk Meuselwitz • Mechanik & Hammerkopf unter einem Dach',
+          en: '✦ Meuselwitz Headquarters • Actions & Hammerheads Under One Roof',
+          ja: '✦ モイゼルヴィッツ本社工場 • アクションとハンマーの一貫製造',
+          zh: '✦ 莫伊塞尔维茨总部工厂 • 击弦机与弦槌一体化制造基地'
         },
         quote: {
-          de: '„Erfahrung ist die Basis – Perfektion das Ziel.“',
-          en: '“Experience is our foundation – perfection is our eternal goal.”',
-          ja: '「経験が礎であり、完璧さこそが永遠の目標である。」',
-          zh: '“深厚经验为立足之基，传世完美为至高之求。”'
+          de: '„Erfahrung ist unsere Basis – reproduzierbare Präzision unser Anspruch für jedes Instrument.“',
+          en: '“Experience is our foundation — reproducible precision is our commitment to every instrument.”',
+          ja: '「経験が私たちの礎であり、再現性の高い精密さこそが一台一台への約束です。」',
+          zh: '“深厚经验是我们的根基，稳定可重复的精密品质是我们对每一台钢琴的承诺。”'
         },
         quoteAuthor: {
           de: 'Clemens Kunert • Louis Renner Meuselwitz',
           en: 'Clemens Kunert • Louis Renner Meuselwitz',
           ja: 'クレメンス・クーナート（ルイス・レンナー モイゼルヴィッツ）',
-          zh: '克莱门斯·库纳特 • 雷诺莫伊瑟尔维茨总部'
+          zh: '克莱门斯·库纳特 • 路易·雷诺莫伊塞尔维茨总部'
         },
         image: 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
         video: 'Visuell/Video/LouisRennerMeuselwitzAußen.mp4',
-        imageTag: { de: 'Meuselwitz 2026', en: 'Meuselwitz 2026', ja: 'モイゼルヴィッツ 2026', zh: '莫伊瑟尔维茨 2026' },
+        imageTag: { de: 'Meuselwitz 2026', en: 'Meuselwitz 2026', ja: 'モイゼルヴィッツ 2026', zh: '莫伊塞尔维茨 2026' },
         imageCaption: {
-          de: 'Welt-Hauptsitz Meuselwitz: Drohnenflug über das modernisierte Werksgelände mit neuer zentraler Filter- & Absauganlage (2026)',
-          en: 'World Headquarters Meuselwitz: Drone aerial footage of modernized production site with central filtration & extraction system (2026)',
-          ja: 'モイゼルヴィッツ世界統合本社：最新の集中集塵・排気フィルター設備を備えた製造工場（空撮ドローン映像・2026年）',
-          zh: '莫伊瑟尔维茨全球总部：配备现代化中央过滤与环保吸附系统的核心生产基地（无人机航拍实景·2026年）'
+          de: 'Stammwerk Meuselwitz (2026): Drohnenaufnahme des modernisierten Werks mit neuer zentraler Filteranlage',
+          en: 'Meuselwitz Headquarters (2026): Drone footage of the modernized plant with new central filtration unit',
+          ja: 'モイゼルヴィッツ本社工場（2026年）：新設の集中集塵設備を備えた工場空撮映像',
+          zh: '莫伊塞尔维茨总部工厂（2026年）：配备全新中央过滤除尘系统的现代化厂区航拍'
         }
       }
     };
+  }
+
+  getYearDisplay(data, lang = this.currentLang) {
+    if (!data) return '';
+    if (data.yearLabel) return data.yearLabel[lang] || data.yearLabel.de || data.year;
+    return data.year;
   }
 
   init() {
     // 1. Central Timeline Spine Nodes
     const spineNodes = document.querySelectorAll('.tree-spine-node');
     spineNodes.forEach(node => {
-      node.addEventListener('click', (e) => {
+      node.addEventListener('click', () => {
         this.stopAutoplay();
         const milestoneIdx = parseInt(node.getAttribute('data-milestone'), 10);
         const dir = milestoneIdx > this.currentMilestone ? 'future' : (milestoneIdx < this.currentMilestone ? 'past' : null);
@@ -841,7 +851,7 @@ class RennerHistoryJourney {
 
     // 4. In-Card Quick Stepping Buttons
     document.querySelectorAll('.hero-nav-arrow').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         this.stopAutoplay();
         const dir = btn.getAttribute('data-dir');
         if (dir === 'prev') {
@@ -863,7 +873,7 @@ class RennerHistoryJourney {
       vid.addEventListener('click', (e) => {
         e.stopPropagation();
         if (vid.paused) {
-          vid.play().catch(() => {});
+          vid.play().catch(() => { });
         } else {
           vid.pause();
         }
@@ -882,19 +892,19 @@ class RennerHistoryJourney {
       });
     });
 
-    // 4c. Pre-prime milestone 8 video
-    this.primeMilestone8Video();
+    // 4c. Milestone 8 video preloads on demand (when reaching milestone >= 6 on Slide 3)
 
     // 5. Setup Viewport Gestures
     this.setupViewportGestures();
 
-    // 6. Initialize Real Curved Comet Trail Canvas
+    // 6. Initialize GPU Comet Canvas & Glow Sprite
     this.initCometCanvas();
 
-    // 7. Set initial milestone state: always start dark!
+    // 7. Apply initial German texts cleanly & reset to dark start
+    this.setLanguage(this.currentLang);
     this.resetToDarkState();
 
-    // 8. Initialize hero image slideshows (e.g. 1944 archive series)
+    // 8. Initialize hero image slideshows
     this.initHeroSlideshows();
   }
 
@@ -906,7 +916,7 @@ class RennerHistoryJourney {
       if (m8Video.readyState < 2) {
         m8Video.load();
       }
-    } catch(e) {}
+    } catch (e) { }
   }
 
   initHeroSlideshows() {
@@ -932,12 +942,10 @@ class RennerHistoryJourney {
         stopTimer();
         const currentMedia = mediaList[currentIdx];
         if (currentMedia && currentMedia.tagName === 'VIDEO') {
-          // Videos must play uninterrupted to the end; do not set a timeout
           return;
         }
         const panel = slideshow.closest('.tree-milestone-panel');
         const slide = slideshow.closest('.slide');
-        // Only cycle when slide 3, milestone panel, and revealed card are all active
         if (slide && !slide.classList.contains('active')) return;
         if (panel && (!panel.classList.contains('active') || !panel.querySelector('.tree-hero-card.is-revealed'))) return;
 
@@ -968,7 +976,7 @@ class RennerHistoryJourney {
             if (isActive && autoStart) {
               el.currentTime = 0;
               const playPromise = el.play();
-              if (playPromise) playPromise.catch(() => {});
+              if (playPromise) playPromise.catch(() => { });
             } else {
               el.pause();
               if (isActive && !autoStart) {
@@ -998,7 +1006,7 @@ class RennerHistoryJourney {
               setTimeout(() => {
                 captionEl.textContent = cap;
                 captionEl.style.opacity = '1';
-              }, 250);
+              }, 220);
             }
           }
         }
@@ -1038,7 +1046,6 @@ class RennerHistoryJourney {
           const playPromise = currentMedia.play();
           if (playPromise) {
             playPromise.catch(() => {
-              // Fallback if browser blocks video autoplay
               startTimer();
             });
           }
@@ -1051,12 +1058,11 @@ class RennerHistoryJourney {
         stopTimer();
         mediaList.forEach(el => {
           if (el.tagName === 'VIDEO') {
-            try { el.pause(); } catch(e) {}
+            try { el.pause(); } catch (e) { }
           }
         });
       };
 
-      // Initial state: reset to index 0 instantly, keep timer stopped until card is revealed
       slideshow._slideshowReset(true, false);
       stopTimer();
     });
@@ -1084,13 +1090,12 @@ class RennerHistoryJourney {
     };
 
     const onPointerDown = (e) => {
-      // Don't trigger if clicked directly on an interactive node button
       if (e.target.closest('.tree-spine-node')) return;
       this.stopAutoplay();
       isDragging = true;
       spine.classList.add('is-dragging');
       if (spine.setPointerCapture) {
-        try { spine.setPointerCapture(e.pointerId); } catch (_) {}
+        try { spine.setPointerCapture(e.pointerId); } catch (_) { }
       }
       handleScrub(e.clientX);
       e.preventDefault();
@@ -1101,12 +1106,10 @@ class RennerHistoryJourney {
       handleScrub(e.clientX);
     };
 
-    const onPointerUp = (e) => {
+    const onPointerUp = () => {
       if (!isDragging) return;
       isDragging = false;
       spine.classList.remove('is-dragging');
-      const pct = (this.currentMilestone / (this.totalMilestones - 1)) * 100;
-      this.updateSpinePositions(pct);
     };
 
     spine.addEventListener('pointerdown', onPointerDown);
@@ -1119,7 +1122,6 @@ class RennerHistoryJourney {
     const viewport = document.getElementById('tree-viewport');
     if (!viewport) return;
 
-    // Trackpad horizontal scroll over timeline: right = future, left = past
     let wheelCooldown = false;
     viewport.addEventListener('wheel', (e) => {
       if (Math.abs(e.deltaX) > 18) {
@@ -1128,16 +1130,15 @@ class RennerHistoryJourney {
         if (!wheelCooldown) {
           wheelCooldown = true;
           if (e.deltaX > 0) {
-            this.nextMilestone(); // Scrolling right into future
+            this.nextMilestone();
           } else {
-            this.prevMilestone(); // Scrolling left into past
+            this.prevMilestone();
           }
           setTimeout(() => { wheelCooldown = false; }, 260);
         }
       }
     }, { passive: false });
 
-    // Touch swipe gestures
     let touchStartX = null;
     let touchStartTime = null;
 
@@ -1157,7 +1158,7 @@ class RennerHistoryJourney {
       if (Math.abs(diffX) > 35 && elapsed < 600) {
         this.stopAutoplay();
         if (diffX < 0) {
-          this.nextMilestone(); // Swiping left advances right into future
+          this.nextMilestone();
         } else {
           this.prevMilestone();
         }
@@ -1165,7 +1166,6 @@ class RennerHistoryJourney {
       touchStartX = null;
     }, { passive: true });
 
-    // Mouse / Pointer drag across timeline to travel through time
     let isPointerDragging = false;
     let pointerStartX = 0;
     let pointerStartTime = 0;
@@ -1175,7 +1175,7 @@ class RennerHistoryJourney {
       isPointerDragging = true;
       pointerStartX = e.clientX;
       pointerStartTime = Date.now();
-      try { viewport.setPointerCapture(e.pointerId); } catch (_) {}
+      try { viewport.setPointerCapture(e.pointerId); } catch (_) { }
     });
 
     viewport.addEventListener('pointerup', (e) => {
@@ -1186,9 +1186,9 @@ class RennerHistoryJourney {
       if (Math.abs(diffX) > 40 && elapsed < 800) {
         this.stopAutoplay();
         if (diffX < 0) {
-          this.nextMilestone(); // Dragging left advances into future
+          this.nextMilestone();
         } else {
-          this.prevMilestone(); // Dragging right returns into past
+          this.prevMilestone();
         }
       }
     });
@@ -1198,7 +1198,6 @@ class RennerHistoryJourney {
     });
   }
 
-  /* Autoplay Video Documentary Mode */
   startAutoplay() {
     if (this.isAutoplay) return;
     this.isAutoplay = true;
@@ -1211,8 +1210,12 @@ class RennerHistoryJourney {
     if (playIcon) playIcon.textContent = '⏸';
     if (playLabel) {
       playLabel.textContent = this.currentLang === 'de' ? 'Pause' :
-                              this.currentLang === 'en' ? 'Pause' :
-                              this.currentLang === 'ja' ? '一時停止' : '暂停';
+        this.currentLang === 'en' ? 'Pause' :
+          this.currentLang === 'ja' ? '一時停止' : '暂停';
+    }
+
+    if (!this.isStarted) {
+      this.startJourney();
     }
 
     this.autoplayStartTime = performance.now();
@@ -1237,8 +1240,8 @@ class RennerHistoryJourney {
     if (playIcon) playIcon.textContent = '▶';
     if (playLabel) {
       playLabel.textContent = this.currentLang === 'de' ? 'Zeitreise abspielen' :
-                              this.currentLang === 'en' ? 'Play Journey' :
-                              this.currentLang === 'ja' ? 'タイムライン再生' : '播放时间轴';
+        this.currentLang === 'en' ? 'Play Journey' :
+          this.currentLang === 'ja' ? 'タイムライン再生' : '播放时间轴';
     }
     if (playProgress) playProgress.style.width = '0%';
   }
@@ -1267,7 +1270,7 @@ class RennerHistoryJourney {
       if (this.currentMilestone < this.totalMilestones - 1) {
         this.nextMilestone();
       } else {
-        this.playSlideStartAnimation();
+        this.goToMilestone(0, 'past');
       }
       this.autoplayStartTime = performance.now();
     }
@@ -1275,7 +1278,6 @@ class RennerHistoryJourney {
     this.autoplayRaf = requestAnimationFrame(() => this.runAutoplayLoop());
   }
 
-  /* Clear any running animation timeouts to prevent race conditions */
   clearAnimationTimeouts() {
     if (this.animationTimeouts && this.animationTimeouts.length > 0) {
       this.animationTimeouts.forEach(t => clearTimeout(t));
@@ -1283,34 +1285,70 @@ class RennerHistoryJourney {
     }
   }
 
-  /* Initialize the real celestial comet trail canvas */
+  /* Pre-render radial glow sprite once on offscreen canvas (eliminates per-particle shadowBlur) */
+  buildSparkSprite() {
+    const size = 32;
+    const off = document.createElement('canvas');
+    off.width = size;
+    off.height = size;
+    const octx = off.getContext('2d');
+    const half = size / 2;
+    const grad = octx.createRadialGradient(half, half, 0, half, half, half);
+    grad.addColorStop(0.0, 'rgba(255, 255, 255, 1.0)');
+    grad.addColorStop(0.22, 'rgba(255, 242, 190, 0.92)');
+    grad.addColorStop(0.52, 'rgba(235, 185, 78, 0.42)');
+    grad.addColorStop(1.0, 'rgba(200, 140, 40, 0.0)');
+    octx.fillStyle = grad;
+    octx.fillRect(0, 0, size, size);
+    return off;
+  }
+
   initCometCanvas() {
     this.canvas = document.getElementById('comet-trail-canvas');
-    this.ctx = this.canvas ? this.canvas.getContext('2d') : null;
+    this.ctx = this.canvas ? this.canvas.getContext('2d', { alpha: true }) : null;
     this.canvasWidth = 0;
     this.canvasHeight = 0;
     this.trailPoints = [];
     this.stardustParticles = [];
     this.cometJourneyRaf = null;
+    this.sparkSprite = this.buildSparkSprite();
+
+    // Continuous prefix B-spline layers from outer diffused amber coma to incandescent white core
+    this.tailLayers = [
+      { maxAge: 1.00, width: 20.0, r: 205, g: 135, b: 42, alpha: 0.032 },
+      { maxAge: 0.86, width: 16.0, r: 218, g: 152, b: 52, alpha: 0.045 },
+      { maxAge: 0.72, width: 12.5, r: 232, g: 172, b: 68, alpha: 0.062 },
+      { maxAge: 0.58, width: 9.5, r: 245, g: 194, b: 88, alpha: 0.085 },
+      { maxAge: 0.45, width: 7.0, r: 255, g: 214, b: 112, alpha: 0.120 },
+      { maxAge: 0.33, width: 5.0, r: 255, g: 230, b: 148, alpha: 0.165 },
+      { maxAge: 0.22, width: 3.4, r: 255, g: 244, b: 195, alpha: 0.240 },
+      { maxAge: 0.13, width: 2.1, r: 255, g: 252, b: 238, alpha: 0.380 },
+      { maxAge: 0.06, width: 1.3, r: 255, g: 255, b: 255, alpha: 0.520 }
+    ];
 
     this.resizeCanvas();
     window.addEventListener('resize', () => this.resizeCanvas());
   }
 
+  /* Pure GPU transform positioning — zero DOM layout thrashing */
+  setCometScreenPos(cometEl, screenX, y) {
+    this.cometScreenX = screenX;
+    this.cometY = y;
+    if (cometEl) {
+      cometEl.style.transform = `translate3d(${screenX.toFixed(2)}px, ${y.toFixed(2)}px, 0)`;
+    }
+  }
+
   getMilestoneY(index) {
     if (!this.canvasHeight) {
       const container = document.getElementById('tree-timeline-container');
-      this.canvasHeight = container ? container.clientHeight : 700;
+      this.canvasHeight = container ? container.clientHeight : 760;
     }
     const data = this.milestonesData[index >= 0 ? index : 0];
     if (!data) return this.canvasHeight * 0.9125;
-    // Effektbereich um 30% reduziert (17.5% der Gesamthöhe, Inhalt 82.5%):
-    // Inhalt oben (branch: up, oberes 82.5%) -> Punkt im unteren 17.5% (Zentrum: y ≈ 91.25% der Höhe)
-    // Inhalt unten (branch: down, unteres 82.5%) -> Punkt im oberen 17.5% (Zentrum: y ≈ 8.75% der Höhe)
     return data.branch === 'up' ? (this.canvasHeight * 0.9125) : (this.canvasHeight * 0.0875);
   }
 
-  /* Dynamisches horizontales Zentrum der Heldenkarte (orientiert an der Mitte vom Inhalt) */
   getMilestoneCenterX() {
     const container = document.getElementById('tree-timeline-container');
     const width = container ? container.clientWidth : (this.canvasWidth || 1200);
@@ -1334,19 +1372,29 @@ class RennerHistoryJourney {
   resizeCanvas() {
     if (!this.canvas) return;
     const container = document.getElementById('tree-timeline-container');
-    this.canvasWidth = container.clientWidth || 1892;
-    this.canvasHeight = container.clientHeight || 800;
+    if (!container) return;
+    const w = container.clientWidth || 1892;
+    const h = container.clientHeight || 800;
+    this.canvasWidth = w;
+    this.canvasHeight = h;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    this.canvas.width = Math.round(this.canvasWidth * dpr);
-    this.canvas.height = Math.round(this.canvasHeight * dpr);
-    if (this.ctx) {
-      this.ctx.setTransform(1, 0, 0, 1, 0, 0);
-      this.ctx.scale(dpr, dpr);
+    const targetW = Math.round(w * dpr);
+    const targetH = Math.round(h * dpr);
+    if (this.canvas.width !== targetW || this.canvas.height !== targetH) {
+      this.canvas.width = targetW;
+      this.canvas.height = targetH;
+      if (this.ctx) {
+        this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
     }
+
     const cometEl = document.getElementById('flying-comet-traveler');
-    if (cometEl && this.isStarted && cometEl.classList.contains('is-docked')) {
-      cometEl.style.left = `${this.getMilestoneCenterX()}px`;
-      cometEl.style.top = `${this.getMilestoneY(this.currentMilestone)}px`;
+    if (cometEl && this.isStarted && !this.isFlying) {
+      const cx = this.getMilestoneCenterX();
+      const cy = this.getMilestoneY(this.currentMilestone);
+      this.currentCamWorldX = this.currentMilestone * w;
+      this.cometWorldX = this.currentCamWorldX + cx;
+      this.setCometScreenPos(cometEl, cx, cy);
     }
   }
 
@@ -1355,6 +1403,7 @@ class RennerHistoryJourney {
       cancelAnimationFrame(this.cometJourneyRaf);
       this.cometJourneyRaf = null;
     }
+    this.isFlying = false;
     this.trailPoints = [];
     this.stardustParticles = [];
     if (this.ctx && this.canvasWidth && this.canvasHeight) {
@@ -1362,121 +1411,175 @@ class RennerHistoryJourney {
     }
   }
 
-  /* Render the organic, curved celestial comet tail along the exact flight trajectory */
+  /* Smooth asymmetric C1 degree-4 Bernstein ease: zero start jerk, responsive surge, soft landing */
+  easeOrganic(u, k = 0.82) {
+    const inv = 1 - u;
+    return 6 * k * (u * u) * (inv * inv) + 4 * (u * u * u) * inv + (u * u * u * u);
+  }
+
+  spawnWakeParticles(wx, y, vwx, vy, count) {
+    if (this.stardustParticles.length > 110) return;
+    const speed = Math.hypot(vwx, vy);
+    if (speed < 35) return;
+    const dirX = -vwx / speed;
+    const dirY = -vy / speed;
+    const perpX = -dirY;
+    const perpY = dirX;
+
+    for (let s = 0; s < count; s++) {
+      const spread = (Math.random() - 0.5) * 10;
+      const drift = 12 + Math.random() * 42;
+      const sideVel = (Math.random() - 0.5) * 34;
+      this.stardustParticles.push({
+        wx: wx + perpX * spread * 0.45,
+        y: y + perpY * spread * 0.45,
+        vwx: dirX * drift + perpX * sideVel,
+        vy: dirY * drift + perpY * sideVel,
+        radius: 3.2 + Math.random() * 5.2,
+        age: 0,
+        maxLife: 0.42 + Math.random() * 0.36,
+        peakAlpha: 0.50 + Math.random() * 0.38
+      });
+    }
+  }
+
+  /* Build interpolated screen-space polyline up to targetAge for C1 midpoint quadratic B-spline */
+  tracePrefixSpline(ctx, pts, maxAge) {
+    const sub = [pts[0]];
+    for (let i = 1; i < pts.length; i++) {
+      const prev = pts[i - 1];
+      const curr = pts[i];
+      if (curr.age <= maxAge) {
+        sub.push(curr);
+      } else {
+        const span = curr.age - prev.age;
+        if (span > 1e-4 && maxAge > prev.age) {
+          const t = (maxAge - prev.age) / span;
+          sub.push({
+            x: prev.x + (curr.x - prev.x) * t,
+            y: prev.y + (curr.y - prev.y) * t,
+            age: maxAge
+          });
+        }
+        break;
+      }
+    }
+
+    if (sub.length < 2) return false;
+
+    ctx.beginPath();
+    ctx.moveTo(sub[0].x, sub[0].y);
+    if (sub.length === 2) {
+      ctx.lineTo(sub[1].x, sub[1].y);
+      return true;
+    }
+
+    const m0x = (sub[0].x + sub[1].x) * 0.5;
+    const m0y = (sub[0].y + sub[1].y) * 0.5;
+    ctx.lineTo(m0x, m0y);
+
+    for (let i = 1; i < sub.length - 1; i++) {
+      const p = sub[i];
+      const next = sub[i + 1];
+      const mx = (p.x + next.x) * 0.5;
+      const my = (p.y + next.y) * 0.5;
+      ctx.quadraticCurveTo(p.x, p.y, mx, my);
+    }
+
+    const last = sub[sub.length - 1];
+    ctx.lineTo(last.x, last.y);
+    return true;
+  }
+
+  /* Render continuous gap-free, bead-free C1 comet ribbon + sprite stardust in world space */
   renderCometCanvas(now) {
     if (!this.ctx || !this.canvasWidth) return;
     const ctx = this.ctx;
+    const dt = this.lastRenderTime ? Math.min(0.05, Math.max(0.001, (now - this.lastRenderTime) * 0.001)) : 0.016;
+    this.lastRenderTime = now;
+
     ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 
-    // Max lifetime of tail points (fade away gracefully over ~850ms)
-    const maxTrailDuration = 850;
+    const maxTrailDuration = 680;
     this.trailPoints = this.trailPoints.filter(pt => (now - pt.time) < maxTrailDuration);
 
+    const camX = this.currentCamWorldX;
+
     if (this.trailPoints.length >= 2) {
-      ctx.save();
-      ctx.globalCompositeOperation = 'lighter';
-
-      // Pass 1: Broad Gaseous Plasma Coma (Fein diffuses, geglättetes Gold-Glimmen)
-      for (let i = 0; i < this.trailPoints.length - 1; i++) {
-        const p0 = this.trailPoints[i];
-        const p1 = this.trailPoints[i + 1];
-        // Guard against any gap / teleportation / wrap-around between phases
-        const dx = p1.x - p0.x;
-        const dy = p1.y - p0.y;
-        if (dx * dx + dy * dy > 3600) continue;
-
-        const age = (now - p0.time) / maxTrailDuration;
-        const life = Math.max(0, 1 - age);
-        const midX = (p0.x + p1.x) / 2;
-        const midY = (p0.y + p1.y) / 2;
-
-        ctx.beginPath();
-        ctx.moveTo(p0.x, p0.y);
-        ctx.quadraticCurveTo(p0.x, p0.y, midX, midY);
-        ctx.lineWidth = Math.max(0.8, 16 * Math.pow(life, 1.2));
-        ctx.strokeStyle = `rgba(215, 140, 45, ${(0.16 * life).toFixed(3)})`;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-        ctx.stroke();
+      // Convert world-space trail to screen space & decimate sub-pixel micro-clusters near rest
+      const screenPts = [];
+      for (let i = 0; i < this.trailPoints.length; i++) {
+        const pt = this.trailPoints[i];
+        const sx = pt.wx - camX;
+        const sy = pt.y;
+        const age = Math.max(0, (now - pt.time) / maxTrailDuration);
+        if (screenPts.length > 0 && i < this.trailPoints.length - 1) {
+          const prev = screenPts[screenPts.length - 1];
+          const dx = sx - prev.x;
+          const dy = sy - prev.y;
+          if (dx * dx + dy * dy < 2.2) continue;
+        }
+        screenPts.push({ x: sx, y: sy, age });
       }
 
-      // Pass 2: Warm Saturated Golden Dust Streamer (Geglätteter mittlerer Schweif)
-      for (let i = 0; i < this.trailPoints.length - 1; i++) {
-        const p0 = this.trailPoints[i];
-        const p1 = this.trailPoints[i + 1];
-        const dx = p1.x - p0.x;
-        const dy = p1.y - p0.y;
-        if (dx * dx + dy * dy > 3600) continue;
+      if (screenPts.length >= 2) {
+        // Global dissolve envelope when comet has docked and stopped emitting new points
+        const headAge = screenPts[0].age;
+        const globalFade = Math.max(0, 1 - headAge * 1.15);
 
-        const age = (now - p0.time) / maxTrailDuration;
-        const life = Math.max(0, 1 - age);
-        const midX = (p0.x + p1.x) / 2;
-        const midY = (p0.y + p1.y) / 2;
+        if (globalFade > 0.01) {
+          ctx.save();
+          ctx.globalCompositeOperation = 'lighter';
+          ctx.lineCap = 'round';
+          ctx.lineJoin = 'round';
 
-        ctx.beginPath();
-        ctx.moveTo(p0.x, p0.y);
-        ctx.quadraticCurveTo(p0.x, p0.y, midX, midY);
-        ctx.lineWidth = Math.max(0.6, 7.5 * Math.pow(life, 1.35));
-        ctx.strokeStyle = `rgba(255, 218, 110, ${(0.55 * life).toFixed(3)})`;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-        ctx.stroke();
+          for (let l = 0; l < this.tailLayers.length; l++) {
+            const layer = this.tailLayers[l];
+            if (headAge >= layer.maxAge) continue;
+            if (this.tracePrefixSpline(ctx, screenPts, layer.maxAge)) {
+              ctx.lineWidth = layer.width;
+              ctx.strokeStyle = `rgba(${layer.r}, ${layer.g}, ${layer.b}, ${(layer.alpha * globalFade).toFixed(4)})`;
+              ctx.stroke();
+            }
+          }
+
+          ctx.restore();
+        }
       }
-
-      // Pass 3: Pure Incandescent White-Hot Core Ion Filament (Hauchfeine Glühader)
-      for (let i = 0; i < this.trailPoints.length - 1; i++) {
-        const p0 = this.trailPoints[i];
-        const p1 = this.trailPoints[i + 1];
-        const dx = p1.x - p0.x;
-        const dy = p1.y - p0.y;
-        if (dx * dx + dy * dy > 3600) continue;
-
-        const age = (now - p0.time) / maxTrailDuration;
-        const life = Math.max(0, 1 - age);
-        const midX = (p0.x + p1.x) / 2;
-        const midY = (p0.y + p1.y) / 2;
-
-        ctx.beginPath();
-        ctx.moveTo(p0.x, p0.y);
-        ctx.quadraticCurveTo(p0.x, p0.y, midX, midY);
-        ctx.lineWidth = Math.max(0.4, 2.0 * Math.pow(life, 1.6));
-        ctx.strokeStyle = `rgba(255, 255, 255, ${(0.92 * life).toFixed(3)})`;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-        ctx.stroke();
-      }
-
-      ctx.restore();
     }
 
-    // Pass 4: Feinkörniger Sternenstaub / Micro-Ember Particles im Kielwasser
-    if (this.stardustParticles.length > 0) {
+    // Stardust bokeh wake using pre-rendered radial glow sprite (zero shadowBlur)
+    if (this.stardustParticles.length > 0 && this.sparkSprite) {
       ctx.save();
       ctx.globalCompositeOperation = 'lighter';
       for (let i = this.stardustParticles.length - 1; i >= 0; i--) {
-        const spark = this.stardustParticles[i];
-        spark.x += spark.vx;
-        spark.y += spark.vy;
-        spark.alpha -= spark.decay;
-
-        if (spark.alpha <= 0) {
+        const sp = this.stardustParticles[i];
+        sp.age += dt;
+        if (sp.age >= sp.maxLife) {
           this.stardustParticles.splice(i, 1);
           continue;
         }
+        sp.wx += sp.vwx * dt;
+        sp.y += sp.vy * dt;
+        sp.vwx *= 0.96;
+        sp.vy *= 0.96;
 
-        ctx.beginPath();
-        ctx.arc(spark.x, spark.y, Math.max(0.3, spark.size * spark.alpha), 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 235, 170, ${spark.alpha.toFixed(3)})`;
-        ctx.shadowBlur = 3;
-        ctx.shadowColor = 'rgba(255, 220, 120, 0.8)';
-        ctx.fill();
+        const lifeRatio = 1 - (sp.age / sp.maxLife);
+        const alpha = sp.peakAlpha * lifeRatio * lifeRatio;
+        const sx = sp.wx - camX;
+        if (sx < -30 || sx > this.canvasWidth + 30) continue;
+
+        const r = sp.radius * (0.55 + 0.45 * lifeRatio);
+        ctx.globalAlpha = alpha;
+        ctx.drawImage(this.sparkSprite, sx - r, sp.y - r, r * 2, r * 2);
       }
+      ctx.globalAlpha = 1;
       ctx.restore();
     }
   }
 
-  /* Smoothly fade out remaining trail and particles when docked */
   dissolveCometTrail() {
+    this.isFlying = false;
     const fadeLoop = (now) => {
       this.renderCometCanvas(now);
       if (this.trailPoints.length > 0 || this.stardustParticles.length > 0) {
@@ -1491,21 +1594,22 @@ class RennerHistoryJourney {
     this.cometJourneyRaf = requestAnimationFrame(fadeLoop);
   }
 
-  /* Reset Slide 3 to the pristine suspenseful dark state */
   resetToDarkState() {
     this.clearAnimationTimeouts();
     this.clearCometTrail();
     this.isStarted = false;
     this.currentMilestone = -1;
+    this.currentCamWorldX = 0;
 
     const container = document.getElementById('tree-timeline-container');
     if (container) container.classList.add('is-dark-start');
 
+    const y0 = this.getMilestoneY(0);
+    this.cometWorldX = -28;
     const cometEl = document.getElementById('flying-comet-traveler');
     if (cometEl) {
       cometEl.style.transition = 'none';
-      cometEl.style.left = '0px';
-      cometEl.style.top = `${this.getMilestoneY(0)}px`;
+      this.setCometScreenPos(cometEl, -28, y0);
       cometEl.classList.remove('is-docked', 'is-igniting');
     }
 
@@ -1517,9 +1621,7 @@ class RennerHistoryJourney {
     const panTrack = document.getElementById('tree-pan-track');
     if (panTrack) {
       panTrack.style.transition = 'none';
-      panTrack.style.transform = 'translateX(0%)';
-      void panTrack.offsetWidth;
-      panTrack.style.transition = 'transform 1.8s cubic-bezier(0.25, 0.9, 0.3, 1)';
+      panTrack.style.transform = 'translate3d(0%, 0, 0)';
     }
 
     document.querySelectorAll('.tree-milestone-panel').forEach(panel => {
@@ -1532,7 +1634,6 @@ class RennerHistoryJourney {
       if (year) year.classList.remove('is-revealed');
     });
 
-    // Reset and stop all hero slideshows instantly
     document.querySelectorAll('.hero-image-slideshow').forEach(ss => {
       if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
       if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
@@ -1549,7 +1650,6 @@ class RennerHistoryJourney {
     const cometHeadDark = document.getElementById('comet-head-point');
     if (cometHeadDark) cometHeadDark.classList.remove('frequency-pulse-active');
 
-    // Update Header Controls for Dark Start
     const counterBadge = document.getElementById('vox-step-counter');
     const prevBtn = document.getElementById('vox-prev-btn');
     const nextBtn = document.getElementById('vox-next-btn');
@@ -1557,9 +1657,9 @@ class RennerHistoryJourney {
 
     const startLabels = {
       de: '✦ Zeitreise starten',
-      en: '✦ Start Time Travel',
-      ja: '✦ タイムトラベルを開始',
-      zh: '✦ 开启时光之旅'
+      en: '✦ Start Timeline',
+      ja: '✦ 年表を開始',
+      zh: '✦ 开启时间轴'
     };
     if (counterBadge) counterBadge.textContent = startLabels[this.currentLang] || startLabels.de;
     if (prevBtn) prevBtn.disabled = true;
@@ -1569,15 +1669,12 @@ class RennerHistoryJourney {
     }
     if (nextLabel) {
       nextLabel.textContent = this.currentLang === 'de' ? 'Reise starten' :
-                              this.currentLang === 'en' ? 'Start Journey' :
-                              this.currentLang === 'ja' ? '開始' : '开始';
+        this.currentLang === 'en' ? 'Start Journey' :
+          this.currentLang === 'ja' ? '開始' : '开始';
     }
   }
 
-  /* Triggered on the FIRST press to the right:
-     Light sphere with authentic curved comet tail glides majestically on a calm harmonic wave!
-     Duration: ~3400ms (Faktor 3 ruhiger & Amplitude um die Hälfte reduziert)
-  */
+  /* Calm, graceful single-arc entrance into 1882 (~1,650 ms, zero robotic sine wobble) */
   startJourney() {
     this.clearAnimationTimeouts();
     this.clearCometTrail();
@@ -1586,7 +1683,6 @@ class RennerHistoryJourney {
     const data = this.milestonesData[0];
     if (!data) return;
 
-    // Reset and stop all hero slideshows instantly before start flight
     document.querySelectorAll('.hero-image-slideshow').forEach(ss => {
       if (typeof ss._slideshowStop === 'function') ss._slideshowStop();
       if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
@@ -1600,136 +1696,211 @@ class RennerHistoryJourney {
       const shimmer = m8Start.querySelector('.video-buffer-shimmer');
       if (shimmer) shimmer.classList.remove('shimmer-hidden');
     }
-    const cometHeadStart = document.getElementById('comet-head-point');
-    if (cometHeadStart) cometHeadStart.classList.remove('frequency-pulse-active');
 
     const container = document.getElementById('tree-timeline-container');
     if (container) container.classList.remove('is-dark-start');
+
+    const panTrack = document.getElementById('tree-pan-track');
+    if (panTrack) {
+      panTrack.style.transition = 'none';
+      panTrack.style.transform = 'translate3d(0px, 0, 0)';
+    }
+
+    document.querySelectorAll('.tree-milestone-panel').forEach((panel, idx) => {
+      panel.classList.toggle('active', idx === 0);
+    });
 
     const cometEl = document.getElementById('flying-comet-traveler');
     const branchRay = document.getElementById('comet-branch-ray');
     const cometHead = document.getElementById('comet-head-point');
 
-    if (cometHead) cometHead.setAttribute('data-luminosity', '0');
+    if (cometHead) {
+      cometHead.classList.remove('frequency-pulse-active');
+      cometHead.setAttribute('data-luminosity', '0');
+    }
+    if (branchRay) {
+      branchRay.classList.remove('is-active', 'branch-up', 'branch-down');
+    }
 
     this.resizeCanvas();
-    const startX = 0;
+    this.currentCamWorldX = 0;
+    const startX = -28;
     const endX = this.getMilestoneCenterX();
     const targetY = this.getMilestoneY(0);
+    const h = this.canvasHeight || 800;
+
+    // Gentle tangential cubic Bezier landing (dy/dp = 0 at p = 1)
+    const y0 = targetY - h * 0.13;
+    const y1 = targetY - h * 0.18;
+    const y2 = targetY;
+    const y3 = targetY;
 
     if (cometEl) {
-      cometEl.style.transition = 'none';
-      cometEl.style.left = `${startX}px`;
-      cometEl.style.top = `${targetY}px`;
+      this.isFlying = true;
+      this.lastRenderTime = 0;
+      this.setCometScreenPos(cometEl, startX, y0);
+      this.cometWorldX = startX;
       cometEl.classList.remove('is-docked');
       cometEl.classList.add('is-igniting');
 
-      // Faktor 3 ruhiger: 3400ms majestätischer Gleitflug
-      const duration = 3400;
+      const duration = 1620;
       let startTime = null;
+      let prevWX = startX;
+      let prevY = y0;
+      let prevTime = 0;
 
-      const animateWaveJourney = (now) => {
-        if (!startTime) startTime = now;
+      const animateEntrance = (now) => {
+        if (!startTime) {
+          startTime = now;
+          prevTime = now;
+        }
         const elapsed = now - startTime;
-        const linearProgress = Math.min(1, elapsed / duration);
+        const u = Math.min(1, elapsed / duration);
+        const p = 1 - Math.pow(1 - u, 2.75);
+        const inv = 1 - p;
 
-        // Seidenweiche Easing-Kurve
-        const p = 1 - Math.pow(1 - linearProgress, 2.7);
-
-        // Horizontale Flugposition
         const currentX = startX + (endX - startX) * p;
+        const currentY = (inv * inv * inv) * y0 +
+          3 * (inv * inv) * p * y1 +
+          3 * inv * (p * p) * y2 +
+          (p * p * p) * y3;
 
-        // Sanft gedämpfte Welle für den reduzierten 17.5% Effektbereich
-        const theta = 2 * Math.PI * (1.30 * p + 0.60 * p * p);
-        const envelope = 10 * Math.sin(Math.PI * Math.pow(p, 0.5)) * Math.pow(1 - p, 0.75);
-        const waveOffsetY = -envelope * Math.sin(theta);
-        const currentY = targetY + waveOffsetY;
+        const dtSec = Math.max(0.004, (now - prevTime) * 0.001);
+        const vwx = (currentX - prevWX) / dtSec;
+        const vy = (currentY - prevY) / dtSec;
+        prevWX = currentX;
+        prevY = currentY;
+        prevTime = now;
 
-        // Positionierung des Kometenkopfes
-        cometEl.style.left = `${currentX.toFixed(1)}px`;
-        cometEl.style.top = `${currentY.toFixed(1)}px`;
+        this.cometWorldX = currentX;
+        this.setCometScreenPos(cometEl, currentX, currentY);
 
-        // Aufzeichnung der exakten gekrümmten Trajektorie
-        this.trailPoints.unshift({
-          x: currentX,
-          y: currentY,
-          time: now
-        });
-
-        // Feinkörniger Sternenstaub im Kielwasser (Partikelzahl um das Doppelte erhöht)
-        if (linearProgress < 0.96) {
-          const sparkCount = (1 + (Math.random() < 0.4 ? 1 : 0)) * 2;
-          for (let s = 0; s < sparkCount; s++) {
-            this.stardustParticles.push({
-              x: currentX + (Math.random() - 0.5) * 4,
-              y: currentY + (Math.random() - 0.5) * 4,
-              vx: -0.22 - Math.random() * 0.45,
-              vy: (Math.random() - 0.5) * 0.45,
-              size: 0.5 + Math.random() * 1.3,
-              alpha: 0.85 + Math.random() * 0.15,
-              decay: 0.009 + Math.random() * 0.012
-            });
-          }
+        this.trailPoints.unshift({ wx: currentX, y: currentY, time: now });
+        if (u < 0.94) {
+          this.spawnWakeParticles(currentX, currentY, vwx, vy, Math.random() < 0.65 ? 2 : 1);
         }
 
-        // Render auf Canvas
         this.renderCometCanvas(now);
 
-        if (linearProgress < 1) {
-          this.cometJourneyRaf = requestAnimationFrame(animateWaveJourney);
+        if (u < 1) {
+          this.cometJourneyRaf = requestAnimationFrame(animateEntrance);
         } else {
-          // Erhabenes Andocken an der Epoche (orientiert an der Mitte vom Inhalt)
-          cometEl.style.left = `${endX}px`;
-          cometEl.style.top = `${targetY}px`;
+          this.cometWorldX = endX;
+          this.setCometScreenPos(cometEl, endX, targetY);
           cometEl.classList.remove('is-igniting');
           cometEl.classList.add('is-docked');
 
-          // Strahl verzweigt sich vertikal nach oben zur 1882-Karte
           if (branchRay) {
             branchRay.classList.remove('branch-down');
             branchRay.classList.add('branch-up', 'is-active');
           }
 
-          // Gründer-Karte erscheint ruhig an der Spitze des Strahls
-          this.animationTimeouts.push(setTimeout(() => {
-            const firstPanel = document.getElementById('tree-milestone-0');
-            if (firstPanel) {
-              firstPanel.classList.add('active');
-              const card = firstPanel.querySelector('.tree-hero-card');
-              if (card) card.classList.add('is-revealed');
-              const pill = firstPanel.querySelector('.tree-counter-pill');
-              if (pill) pill.classList.add('is-revealed');
-              const year = firstPanel.querySelector('.tree-watermark-year');
-              if (year) year.classList.add('is-revealed');
-
-              const ss = firstPanel.querySelector('.hero-image-slideshow');
-              if (ss) {
-                if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
-                if (typeof ss._slideshowStart === 'function') ss._slideshowStart();
-              }
-            }
-          }, 380));
-
+          this.revealMilestonePanel(0, 170);
           this.dissolveCometTrail();
         }
       };
 
-      this.cometJourneyRaf = requestAnimationFrame(animateWaveJourney);
+      this.cometJourneyRaf = requestAnimationFrame(animateEntrance);
     }
 
     this.updateControls(0);
   }
 
-  // Alias for compatibility
   playSlideStartAnimation() {
     this.startJourney();
   }
 
-  /* Traveling between epochs:
-     Echtes Weiterfliegen & Reisen durch die Zeit!
-     Phase 1: Komet fliegt vorwärts in den Zeitstrom (über den Rand).
-     Phase 2: Komet fliegt aus der Weite auf der Welle in die neue Epoche ein und dockt sanft an.
-  */
+  revealMilestonePanel(index, delayMs = 170) {
+    if (index === 8) {
+      const currentPanel = document.getElementById('tree-milestone-8');
+      const cometHead = document.getElementById('comet-head-point');
+      const m8Video = currentPanel ? currentPanel.querySelector('video') : null;
+
+      if (currentPanel) currentPanel.classList.add('loading-frequency-active');
+      if (cometHead) cometHead.classList.add('frequency-pulse-active');
+
+      this.animationTimeouts.push(setTimeout(() => {
+        if (this.currentMilestone === 8 && currentPanel && currentPanel.classList.contains('active')) {
+          currentPanel.classList.add('sheen-ignited');
+        }
+      }, 80));
+
+      this.animationTimeouts.push(setTimeout(() => {
+        if (this.currentMilestone === 8 && m8Video) {
+          try {
+            m8Video.currentTime = 0;
+            const p = m8Video.play();
+            if (p) p.catch(() => { });
+          } catch (e) { }
+        }
+      }, 140));
+
+      this.animationTimeouts.push(setTimeout(() => {
+        if (this.currentMilestone === 8 && currentPanel && currentPanel.classList.contains('active')) {
+          currentPanel.classList.remove('loading-frequency-active');
+          currentPanel.classList.add('loading-frequency-complete');
+          if (cometHead) cometHead.classList.remove('frequency-pulse-active');
+
+          const card = currentPanel.querySelector('.tree-hero-card');
+          if (card) card.classList.add('is-revealed');
+          const pill = currentPanel.querySelector('.tree-counter-pill');
+          if (pill) pill.classList.add('is-revealed');
+          const year = currentPanel.querySelector('.tree-watermark-year');
+          if (year) year.classList.add('is-revealed');
+
+          if (m8Video && m8Video.paused) {
+            try {
+              const p = m8Video.play();
+              if (p) p.catch(() => { });
+            } catch (e) { }
+          }
+
+          const shimmer = currentPanel.querySelector('.video-buffer-shimmer');
+          if (shimmer) shimmer.classList.add('shimmer-hidden');
+        }
+      }, 720));
+      return;
+    }
+
+    this.animationTimeouts.push(setTimeout(() => {
+      if (this.currentMilestone !== index) return;
+      const currentPanel = document.getElementById(`tree-milestone-${index}`);
+      if (!currentPanel) return;
+
+      const card = currentPanel.querySelector('.tree-hero-card');
+      if (card) card.classList.add('is-revealed');
+      const pill = currentPanel.querySelector('.tree-counter-pill');
+      if (pill) pill.classList.add('is-revealed');
+      const year = currentPanel.querySelector('.tree-watermark-year');
+      if (year) year.classList.add('is-revealed');
+
+      const ss = currentPanel.querySelector('.hero-image-slideshow');
+      if (ss) {
+        if (typeof ss._slideshowReset === 'function') ss._slideshowReset(true, false);
+        if (typeof ss._slideshowStart === 'function') ss._slideshowStart();
+      }
+
+      const standaloneVideos = currentPanel.querySelectorAll('video.hero-video-media, video.hero-image');
+      standaloneVideos.forEach(v => {
+        try {
+          v.currentTime = 0;
+          const p = v.play();
+          if (p) p.catch(() => { });
+        } catch (e) { }
+      });
+
+      // Milestone 1944 (index 3): ignite fire backdrop 1 second after card reveal
+      if (index === 3) {
+        this.animationTimeouts.push(setTimeout(() => {
+          if (this.currentMilestone === 3 && currentPanel.classList.contains('active')) {
+            currentPanel.classList.add('fire-ignited');
+          }
+        }, 1250));
+      }
+    }, delayMs));
+  }
+
+  /* Continuous, natural S-curve glide synchronized frame-for-frame with camera pan (~1,220 ms) */
   goToMilestone(index, direction = null) {
     if (index < 0 || index >= this.totalMilestones) return;
 
@@ -1743,13 +1914,22 @@ class RennerHistoryJourney {
       if (container) container.classList.remove('is-dark-start');
     }
 
-    if (!direction && index !== this.currentMilestone) {
-      direction = index > this.currentMilestone ? 'future' : 'past';
+    const prevIndex = this.currentMilestone;
+    if (index === prevIndex && !this.isFlying) {
+      this.updateControls(index);
+      return;
+    }
+
+    if (!direction) {
+      direction = index >= prevIndex ? 'future' : 'past';
     }
 
     this.clearAnimationTimeouts();
-    this.clearCometTrail();
-    const prevIndex = this.currentMilestone;
+    if (this.cometJourneyRaf) {
+      cancelAnimationFrame(this.cometJourneyRaf);
+      this.cometJourneyRaf = null;
+    }
+
     this.currentMilestone = index;
     const data = this.milestonesData[index];
     if (!data) return;
@@ -1760,31 +1940,27 @@ class RennerHistoryJourney {
     const panTrack = document.getElementById('tree-pan-track');
     const viewport = document.getElementById('tree-viewport');
 
-    // 1. Vorherigen Strahl einziehen & alte Karte ausblenden
+    // Retract branching ray smoothly via CSS opacity/scale (no abrupt display:none snap)
     if (branchRay) {
-      branchRay.classList.remove('is-active', 'branch-up', 'branch-down');
-      branchRay.style.display = 'none';
+      branchRay.classList.remove('is-active');
     }
 
-    const prevPanel = document.getElementById(`tree-milestone-${prevIndex}`);
-    if (prevPanel) {
-      const prevCard = prevPanel.querySelector('.tree-hero-card');
-      if (prevCard) prevCard.classList.remove('is-revealed');
-      const prevPill = prevPanel.querySelector('.tree-counter-pill');
-      if (prevPill) prevPill.classList.remove('is-revealed');
-      const prevYear = prevPanel.querySelector('.tree-watermark-year');
-      if (prevYear) prevYear.classList.remove('is-revealed');
-      const prevVideos = prevPanel.querySelectorAll('video');
-      prevVideos.forEach(v => { try { v.pause(); } catch(e){} });
-
-      const prevSs = prevPanel.querySelector('.hero-image-slideshow');
-      if (prevSs) {
-        if (typeof prevSs._slideshowStop === 'function') prevSs._slideshowStop();
-        if (typeof prevSs._slideshowReset === 'function') prevSs._slideshowReset(true, false);
+    // Hide revealed cards on non-target panels & pause media cleanly
+    document.querySelectorAll('.tree-milestone-panel').forEach((panel, idx) => {
+      if (idx !== index) {
+        const card = panel.querySelector('.tree-hero-card');
+        if (card) card.classList.remove('is-revealed');
+        const pill = panel.querySelector('.tree-counter-pill');
+        if (pill) pill.classList.remove('is-revealed');
+        const year = panel.querySelector('.tree-watermark-year');
+        if (year) year.classList.remove('is-revealed');
+        panel.querySelectorAll('video').forEach(v => { try { v.pause(); } catch (e) { } });
+        const ss = panel.querySelector('.hero-image-slideshow');
+        if (ss && typeof ss._slideshowStop === 'function') ss._slideshowStop();
       }
-    }
+      panel.classList.toggle('active', idx === index);
+    });
 
-    // Instantly stop and reset target panel slideshow to index 0 before flight begins
     const targetPanel = document.getElementById(`tree-milestone-${index}`);
     if (targetPanel) {
       const targetSs = targetPanel.querySelector('.hero-image-slideshow');
@@ -1795,301 +1971,137 @@ class RennerHistoryJourney {
     }
 
     const m3Travel = document.getElementById('tree-milestone-3');
-    if (m3Travel) m3Travel.classList.remove('fire-ignited');
+    if (m3Travel && index !== 3) m3Travel.classList.remove('fire-ignited');
     const m8Travel = document.getElementById('tree-milestone-8');
     if (m8Travel) {
       m8Travel.classList.remove('sheen-ignited', 'loading-frequency-active', 'loading-frequency-complete');
       const shimmer = m8Travel.querySelector('.video-buffer-shimmer');
       if (shimmer) shimmer.classList.remove('shimmer-hidden');
     }
-    const cometHeadTravel = document.getElementById('comet-head-point');
-    if (cometHeadTravel) cometHeadTravel.classList.remove('frequency-pulse-active');
+    if (cometHead) {
+      cometHead.classList.remove('frequency-pulse-active');
+      cometHead.setAttribute('data-luminosity', String(index));
+    }
 
-    // Preload Milestone 8 video ahead of time if approaching or at Milestone 7/8
     if (index >= 6) {
       this.primeMilestone8Video();
     }
 
-    // 2. Aktive Epochen-Klasse setzen
-    document.querySelectorAll('.tree-milestone-panel').forEach((panel, idx) => {
-      panel.classList.toggle('active', idx === index);
-    });
-
-    if (cometHead) {
-      cometHead.setAttribute('data-luminosity', index);
-    }
-
     this.resizeCanvas();
+    const w = this.canvasWidth || 1892;
     const centerX = this.getMilestoneCenterX();
-    const startY = this.getMilestoneY(prevIndex);
-    const targetY = this.getMilestoneY(index);
 
-    // 3. Panorama-Spur sanft mitbewegen
+    // Start seamlessly from live world/screen coordinates (interrupt-safe!)
+    const startCamWX = this.isFlying ? this.currentCamWorldX : (Math.max(0, prevIndex) * w);
+    const targetCamWX = index * w;
+
+    const startCometWX = this.isFlying ? this.cometWorldX : (startCamWX + centerX);
+    const targetCometWX = targetCamWX + centerX;
+
+    const startY = this.isFlying ? this.cometY : this.getMilestoneY(Math.max(0, prevIndex));
+    const targetY = this.getMilestoneY(index);
+    const sameCorridor = Math.abs(targetY - startY) < 20;
+    const archDir = data.branch === 'up' ? -1 : 1;
+
+    const stepSpan = Math.max(1, Math.abs(targetCamWX - startCamWX) / w);
+    const duration = Math.min(1650, Math.round(1180 + (stepSpan - 1) * 140));
+    const travelSign = targetCometWX >= startCometWX ? 1 : -1;
+
     if (viewport) {
       viewport.classList.add('is-time-traveling');
-      this.animationTimeouts.push(setTimeout(() => {
-        viewport.classList.remove('is-time-traveling');
-      }, 3400));
     }
-
     if (panTrack) {
-      panTrack.style.transition = 'transform 2.4s cubic-bezier(0.25, 0.9, 0.3, 1)';
-      panTrack.style.transform = `translateX(-${index * 100}%)`;
+      panTrack.style.transition = 'none';
     }
 
     if (!cometEl) {
+      if (panTrack) panTrack.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
       this.updateControls(index);
       return;
     }
 
-    cometEl.classList.remove('is-docked');
-    const isFuture = direction === 'future';
+    this.isFlying = true;
+    this.lastRenderTime = 0;
+    cometEl.classList.remove('is-docked', 'is-igniting');
 
-    // =========================================================================
-    // PHASE 1: Beschleunigter Vorwärtsflug in den Zeitstrom (~1200ms)
-    // =========================================================================
-    const exitDuration = 1200;
-    const exitTargetX = isFuture ? (this.canvasWidth + 50) : -50;
-    let exitStartTime = null;
+    let startTime = null;
+    let prevWX = startCometWX;
+    let prevY = startY;
+    let prevTime = 0;
 
-    const animateExitFlight = (now) => {
-      if (!exitStartTime) exitStartTime = now;
-      const elapsed = now - exitStartTime;
-      const linearProgress = Math.min(1, elapsed / exitDuration);
-      // Sanft ansteigende Beschleunigung in die Zukunft/Vergangenheit
-      const p = Math.pow(linearProgress, 2.1);
+    const animateGlide = (now) => {
+      if (!startTime) {
+        startTime = now;
+        prevTime = now;
+      }
+      const elapsed = now - startTime;
+      const u = Math.min(1, elapsed / duration);
 
-      const currentX = centerX + (exitTargetX - centerX) * p;
-      // Sanfter Kurswechsel vom vorherigen Bereich zum Ziel-Bereich (17.5% Effektkorridor)
-      const currentBaseY = startY + (targetY - startY) * 0.40 * p;
-      const waveY = -6 * Math.sin(Math.PI * linearProgress) * (isFuture ? 1 : -1);
-      const currentY = currentBaseY + waveY;
+      // Camera glides on smooth organic S-curve; sphere leads gracefully and settles into centerX
+      const pCam = this.easeOrganic(u, 0.74);
+      const camWX = startCamWX + (targetCamWX - startCamWX) * pCam;
+      this.currentCamWorldX = camWX;
 
-      cometEl.style.left = `${currentX.toFixed(1)}px`;
-      cometEl.style.top = `${currentY.toFixed(1)}px`;
+      if (panTrack) {
+        panTrack.style.transform = `translate3d(${(-camWX).toFixed(2)}px, 0, 0)`;
+      }
 
-      this.trailPoints.unshift({
-        x: currentX,
-        y: currentY,
-        time: now
-      });
+      // Organic horizontal lead wave in screen space (peaks ~115px ahead at u≈0.35, lands softly at 0)
+      const leadEnvelope = Math.sin(Math.PI * Math.pow(u, 0.78)) * (1 - u * 0.35);
+      const screenLeadX = travelSign * 118 * leadEnvelope;
+      const screenX = centerX + screenLeadX;
+      const cometWX = camWX + screenX;
 
-      if (linearProgress < 0.92) {
-        const sparkCount = 2; // Partikelzahl um das Doppelte erhöht
-        for (let s = 0; s < sparkCount; s++) {
-          this.stardustParticles.push({
-            x: currentX + (Math.random() - 0.5) * 4,
-            y: currentY + (Math.random() - 0.5) * 4,
-            vx: (isFuture ? -0.25 : 0.25) - Math.random() * 0.3,
-            vy: (Math.random() - 0.5) * 0.35,
-            size: 0.5 + Math.random() * 1.3,
-            alpha: 0.8 + Math.random() * 0.2,
-            decay: 0.010 + Math.random() * 0.012
-          });
-        }
+      // Single pure S-curve across vertical corridor (zero multi-sine oscillation)
+      const pY = this.easeOrganic(u, 0.80);
+      let currentY = startY + (targetY - startY) * pY;
+      if (sameCorridor) {
+        currentY += archDir * 34 * Math.sin(Math.PI * pY);
+      }
+
+      const dtSec = Math.max(0.004, (now - prevTime) * 0.001);
+      const vwx = (cometWX - prevWX) / dtSec;
+      const vy = (currentY - prevY) / dtSec;
+      prevWX = cometWX;
+      prevY = currentY;
+      prevTime = now;
+
+      this.cometWorldX = cometWX;
+      this.setCometScreenPos(cometEl, screenX, currentY);
+
+      this.trailPoints.unshift({ wx: cometWX, y: currentY, time: now });
+      if (u < 0.94) {
+        this.spawnWakeParticles(cometWX, currentY, vwx, vy, Math.random() < 0.6 ? 2 : 1);
       }
 
       this.renderCometCanvas(now);
 
-      if (linearProgress < 1) {
-        this.cometJourneyRaf = requestAnimationFrame(animateExitFlight);
+      if (u < 1) {
+        this.cometJourneyRaf = requestAnimationFrame(animateGlide);
       } else {
-        // =======================================================================
-        // PHASE 2: Einflug in die neue Epoche mit echtem Kometenschweif (~2200ms)
-        // =======================================================================
-        startArrivalFlight();
+        this.currentCamWorldX = targetCamWX;
+        this.cometWorldX = targetCometWX;
+        if (panTrack) {
+          panTrack.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
+        }
+        if (viewport) {
+          viewport.classList.remove('is-time-traveling');
+        }
+
+        this.setCometScreenPos(cometEl, centerX, targetY);
+        cometEl.classList.add('is-docked');
+
+        if (branchRay) {
+          branchRay.classList.remove('branch-up', 'branch-down');
+          branchRay.classList.add('branch-' + data.branch, 'is-active');
+        }
+
+        this.revealMilestonePanel(index, 150);
+        this.dissolveCometTrail();
       }
     };
 
-    const startArrivalFlight = () => {
-      // Clear previous exit points so no connecting chord line crosses the screen
-      this.trailPoints = [];
-      const enterStartX = isFuture ? -40 : (this.canvasWidth + 40);
-      const arrivalDuration = 2200;
-      let arrivalStartTime = null;
-
-      // Positionieren am Eintrittsrand auf fließendem Kurs ins Ziel-Drittel
-      const enterStartY = targetY - (targetY - startY) * 0.22;
-      cometEl.style.left = `${enterStartX}px`;
-      cometEl.style.top = `${enterStartY.toFixed(1)}px`;
-
-      const animateArrivalFlight = (now) => {
-        if (!arrivalStartTime) arrivalStartTime = now;
-        const elapsed = now - arrivalStartTime;
-        const linearProgress = Math.min(1, elapsed / arrivalDuration);
-
-        // Seidenweiches Auslaufen ins Zentrum
-        const p = 1 - Math.pow(1 - linearProgress, 2.6);
-
-        const currentX = enterStartX + (centerX - enterStartX) * p;
-        // Diagonale Wellentrajektorie ins Ziel-Drittel (entgegengesetzt zum Inhalt)
-        const baseTrajectoryY = targetY - (targetY - startY) * 0.22 * Math.pow(1 - p, 1.6);
-        const theta = 2 * Math.PI * (1.30 * p + 0.60 * p * p);
-        const envelope = 10 * Math.sin(Math.PI * Math.pow(p, 0.5)) * Math.pow(1 - p, 0.75);
-        const waveOffsetY = -envelope * Math.sin(theta) * (isFuture ? 1 : -1);
-        const currentY = baseTrajectoryY + waveOffsetY;
-
-        cometEl.style.left = `${currentX.toFixed(1)}px`;
-        cometEl.style.top = `${currentY.toFixed(1)}px`;
-
-        this.trailPoints.unshift({
-          x: currentX,
-          y: currentY,
-          time: now
-        });
-
-        if (linearProgress < 0.94) {
-          const sparkCount = (1 + (Math.random() < 0.35 ? 1 : 0)) * 2; // Partikelzahl um das Doppelte erhöht
-          for (let s = 0; s < sparkCount; s++) {
-            this.stardustParticles.push({
-              x: currentX + (Math.random() - 0.5) * 4,
-              y: currentY + (Math.random() - 0.5) * 4,
-              vx: (isFuture ? -0.22 : 0.22) - Math.random() * 0.4,
-              vy: (Math.random() - 0.5) * 0.4,
-              size: 0.5 + Math.random() * 1.3,
-              alpha: 0.85 + Math.random() * 0.15,
-              decay: 0.009 + Math.random() * 0.012
-            });
-          }
-        }
-
-        this.renderCometCanvas(now);
-
-        if (linearProgress < 1) {
-          this.cometJourneyRaf = requestAnimationFrame(animateArrivalFlight);
-        } else {
-          // Erhabenes Andocken an der neuen Epoche (orientiert an der Mitte vom Inhalt)
-          cometEl.style.left = `${centerX}px`;
-          cometEl.style.top = `${targetY}px`;
-          cometEl.classList.add('is-docked');
-
-          if (branchRay) {
-            branchRay.style.display = '';
-            void branchRay.offsetWidth;
-            branchRay.classList.remove('branch-up', 'branch-down');
-            branchRay.classList.add('branch-' + data.branch, 'is-active');
-          }
-
-          // Folie 3 Meilenstein 9 (Blatt 9: Heute / Meuselwitz 2026):
-          // Harmonische Ladefrequenz vor dem Video-Start für einen 100% flüssigen, ruckelfreien Beginn
-          if (index === 8) {
-            const currentPanel = document.getElementById('tree-milestone-8');
-            const cometHead = document.getElementById('comet-head-point');
-            const m8Video = currentPanel ? currentPanel.querySelector('video') : null;
-
-            // 1. Ladefrequenz sofort bei Kometen-Andocken aktivieren (pulsierende Resonanz)
-            if (currentPanel) {
-              currentPanel.classList.add('loading-frequency-active');
-            }
-            if (cometHead) {
-              cometHead.classList.add('frequency-pulse-active');
-            }
-
-            // 2. Goldener Umgebungs-Sheen flutet den Raum (+120ms)
-            this.animationTimeouts.push(setTimeout(() => {
-              if (this.currentMilestone === 8 && currentPanel && currentPanel.classList.contains('active')) {
-                currentPanel.classList.add('sheen-ignited');
-              }
-            }, 120));
-
-            // 3. Video im Hintergrund lautlos anstarten (+220ms)
-            // Durch das Vorstarten hinter dem Ladeschleier puffert der Hardware-Decoder ohne Stottern!
-            this.animationTimeouts.push(setTimeout(() => {
-              if (this.currentMilestone === 8 && m8Video) {
-                try {
-                  m8Video.currentTime = 0;
-                  const p = m8Video.play();
-                  if (p) p.catch(() => {});
-                } catch(e) {}
-              }
-            }, 220));
-
-            // 4. Ladefrequenz vollenden & Karte mit bereits flüssig laufendem Video öffnen (+1150ms)
-            this.animationTimeouts.push(setTimeout(() => {
-              if (this.currentMilestone === 8 && currentPanel && currentPanel.classList.contains('active')) {
-                currentPanel.classList.remove('loading-frequency-active');
-                currentPanel.classList.add('loading-frequency-complete');
-                if (cometHead) cometHead.classList.remove('frequency-pulse-active');
-
-                const card = currentPanel.querySelector('.tree-hero-card');
-                if (card) card.classList.add('is-revealed');
-                const pill = currentPanel.querySelector('.tree-counter-pill');
-                if (pill) pill.classList.add('is-revealed');
-                const year = currentPanel.querySelector('.tree-watermark-year');
-                if (year) year.classList.add('is-revealed');
-
-                // Sicherstellen, dass das Video aktiv läuft
-                if (m8Video && m8Video.paused) {
-                  try {
-                    const p = m8Video.play();
-                    if (p) p.catch(() => {});
-                  } catch(e) {}
-                }
-
-                // Shimmer sanft ausblenden
-                const shimmer = currentPanel.querySelector('.video-buffer-shimmer');
-                if (shimmer) {
-                  shimmer.classList.add('shimmer-hidden');
-                }
-              }
-            }, 1150));
-
-            this.dissolveCometTrail();
-            return;
-          }
-
-          // Karte der neuen Epoche öffnet sich (Meilensteine 0 bis 7)
-          this.animationTimeouts.push(setTimeout(() => {
-            const currentPanel = document.getElementById(`tree-milestone-${index}`);
-            if (currentPanel) {
-              const card = currentPanel.querySelector('.tree-hero-card');
-              if (card) card.classList.add('is-revealed');
-              const pill = currentPanel.querySelector('.tree-counter-pill');
-              if (pill) pill.classList.add('is-revealed');
-              const year = currentPanel.querySelector('.tree-watermark-year');
-              if (year) year.classList.add('is-revealed');
-
-              const ss = currentPanel.querySelector('.hero-image-slideshow');
-              if (ss) {
-                if (typeof ss._slideshowReset === 'function') {
-                  ss._slideshowReset(true, false);
-                }
-                if (typeof ss._slideshowStart === 'function') {
-                  ss._slideshowStart();
-                }
-              }
-
-              // Play standalone hero videos (e.g. Milestone 8 Meuselwitz drone video)
-              const standaloneVideos = currentPanel.querySelectorAll('video.hero-video-media, video.hero-image');
-              standaloneVideos.forEach(v => {
-                try {
-                  v.currentTime = 0;
-                  const p = v.play();
-                  if (p) p.catch(() => {});
-                } catch(e) {}
-              });
-
-              // Folie 3 Blatt 4 (Meilenstein 1944 Brandnacht):
-              // Flammen-Effekt erst mit 1 Sekunde Zeitversatz NACH Aufbau des Inhalts (550ms Reveal + 1000ms Versatz)
-              if (index === 3) {
-                this.animationTimeouts.push(setTimeout(() => {
-                  if (this.currentMilestone === 3 && currentPanel.classList.contains('active')) {
-                    currentPanel.classList.add('fire-ignited');
-                  }
-                }, 1550));
-              }
-            }
-          }, 360));
-
-          this.dissolveCometTrail();
-        }
-      };
-
-      this.cometJourneyRaf = requestAnimationFrame(animateArrivalFlight);
-    };
-
-    // Phase 1 starten
-    this.cometJourneyRaf = requestAnimationFrame(animateExitFlight);
+    this.cometJourneyRaf = requestAnimationFrame(animateGlide);
     this.updateControls(index);
   }
 
@@ -2098,7 +2110,6 @@ class RennerHistoryJourney {
     if (!data) return;
     const lang = this.currentLang;
 
-    // Header buttons
     const prevBtn = document.getElementById('vox-prev-btn');
     const nextBtn = document.getElementById('vox-next-btn');
     const nextLabel = document.getElementById('vox-next-label');
@@ -2111,16 +2122,16 @@ class RennerHistoryJourney {
       if (counterBadge) {
         const startLabels = {
           de: '✦ Zeitreise starten',
-          en: '✦ Start Time Travel',
-          ja: '✦ タイムトラベルを開始',
-          zh: '✦ 开启时光之旅'
+          en: '✦ Start Timeline',
+          ja: '✦ 年表を開始',
+          zh: '✦ 开启时间轴'
         };
         counterBadge.textContent = startLabels[lang] || startLabels.de;
       }
       if (nextLabel) {
         nextLabel.textContent = lang === 'de' ? 'Reise starten' :
-                                lang === 'en' ? 'Start Journey' :
-                                lang === 'ja' ? '開始' : '开始';
+          lang === 'en' ? 'Start Journey' :
+            lang === 'ja' ? '開始' : '开始';
       }
       return;
     }
@@ -2131,20 +2142,20 @@ class RennerHistoryJourney {
     if (nextLabel) {
       if (index === this.totalMilestones - 1) {
         nextLabel.textContent = lang === 'de' ? 'Zur Baudokumentation' :
-                                lang === 'en' ? 'To Construction' :
-                                lang === 'ja' ? '建設記録へ' : '前往施工记录';
+          lang === 'en' ? 'To Construction' :
+            lang === 'ja' ? '建設記録へ' : '前往建设纪实';
       } else {
         nextLabel.textContent = lang === 'de' ? 'In die Zukunft' :
-                                lang === 'en' ? 'Future' :
-                                lang === 'ja' ? '未来へ' : '未来';
+          lang === 'en' ? 'Next Era' :
+            lang === 'ja' ? '次の時代へ' : '下一阶段';
       }
     }
     if (counterBadge) {
-      const word = lang === 'de' ? 'von' : lang === 'en' ? 'of' : lang === 'ja' ? '/' : '/';
-      counterBadge.textContent = `${data.year} • ${index + 1} ${word} ${this.totalMilestones}`;
+      const word = lang === 'de' ? 'von' : lang === 'en' ? 'of' : '/';
+      const yr = this.getYearDisplay(data, lang);
+      counterBadge.textContent = `${yr} • ${index + 1} ${word} ${this.totalMilestones}`;
     }
 
-    // In-Card Vorwärts-Pfeile immer aktiv halten
     document.querySelectorAll('.hero-nav-arrow.next').forEach(btn => {
       btn.disabled = false;
     });
@@ -2159,7 +2170,6 @@ class RennerHistoryJourney {
       this.goToMilestone(this.currentMilestone + 1, 'future');
       return true;
     }
-    // Letzter Meilenstein ("Heute"): false signalisiert dem Aufrufer, dass das Ende erreicht ist
     return false;
   }
 
@@ -2173,23 +2183,27 @@ class RennerHistoryJourney {
       this.resetToDarkState();
       return true;
     }
-    return false; // Reached beginning of timeline
+    return false;
   }
 
-  // Aliases for presentation navigation hooks
   nextEra() { return this.nextMilestone(); }
   prevEra() { return this.prevMilestone(); }
 
   setLanguage(lang) {
     this.currentLang = lang;
 
-    // Update all 10 pre-rendered panels dynamically
     for (let i = 0; i < this.totalMilestones; i++) {
       const data = this.milestonesData[i];
       if (!data) continue;
 
       const panel = document.getElementById(`tree-milestone-${i}`);
       if (!panel) continue;
+
+      const yrDisplay = this.getYearDisplay(data, lang);
+      const yearPill = panel.querySelector('.hero-year-pill');
+      if (yearPill) yearPill.textContent = yrDisplay;
+      const watermarkYear = panel.querySelector('.tree-watermark-year');
+      if (watermarkYear) watermarkYear.textContent = yrDisplay;
 
       const heading = panel.querySelector('.hero-title');
       if (heading) heading.textContent = data.heading[lang] || data.heading.de;
@@ -2201,7 +2215,7 @@ class RennerHistoryJourney {
         const bulletList = panel.querySelector('.hero-bullet-list');
         const bData = data.bullets[lang] || data.bullets.de || data.bullets;
         if (bulletList && Array.isArray(bData)) {
-          bulletList.innerHTML = bData.map(b => `<li class="hero-bullet-item"><span class="hero-bullet-dot"></span><span>{b}</span></li>`.replace('{b}', b)).join('');
+          bulletList.innerHTML = bData.map(b => `<li class="hero-bullet-item"><span class="hero-bullet-dot"></span><span>${b}</span></li>`).join('');
         }
       }
 
@@ -2224,8 +2238,8 @@ class RennerHistoryJourney {
         if (imageCaption && data.imageCaptions[lang][activeIdx]) {
           imageCaption.textContent = data.imageCaptions[lang][activeIdx];
         }
-      } else {
-        if (imageCaption) imageCaption.textContent = data.imageCaption[lang] || data.imageCaption.de;
+      } else if (imageCaption && data.imageCaption) {
+        imageCaption.textContent = data.imageCaption[lang] || data.imageCaption.de;
       }
 
       const counterText = panel.querySelector('.tree-counter-text');
@@ -2237,12 +2251,11 @@ class RennerHistoryJourney {
       const cardStep = panel.querySelector('.hero-step-tag');
       if (cardStep) {
         const word = lang === 'de' ? 'Meilenstein' : lang === 'en' ? 'Milestone' : lang === 'ja' ? '節目' : '里程碑';
-        const ofWord = lang === 'de' ? 'von' : lang === 'en' ? 'of' : lang === 'ja' ? '/' : '/';
+        const ofWord = lang === 'de' ? 'von' : lang === 'en' ? 'of' : '/';
         cardStep.textContent = `${word} ${i + 1} ${ofWord} ${this.totalMilestones}`;
       }
     }
 
-    // Update Spine Node Tags
     document.querySelectorAll('.tree-spine-node').forEach((node, idx) => {
       const tagEl = node.querySelector('.node-tag');
       if (tagEl && this.milestonesData[idx]) {
@@ -2250,7 +2263,6 @@ class RennerHistoryJourney {
       }
     });
 
-    // Update Header Counter and Autoplay Button Label
     const playLabel = document.getElementById('vox-play-label');
     if (playLabel) {
       if (this.isAutoplay) {
@@ -2260,12 +2272,8 @@ class RennerHistoryJourney {
       }
     }
 
-    // Refresh active milestone display
-    if (this.isStarted) {
-      this.goToMilestone(this.currentMilestone);
-    } else {
-      this.updateControls(0);
-    }
+    // Update controls in-place without re-flying the comet!
+    this.updateControls(this.isStarted ? this.currentMilestone : 0);
   }
 }
 

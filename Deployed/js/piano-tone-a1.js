@@ -1,6 +1,6 @@
 /**
  * Louis Renner Masterclass Presentation
- * Slide 33 (Chapter 5 Opening): Interactive Piano Tone Partial Structure on A1 (55 Hz)
+ * Slide 26 (Chapter 5 Opening): Interactive Piano Tone Partial Structure on A1 (55 Hz)
  * - Partials H1..H12 (55 Hz - 660 Hz) in dB and signed ΔdB
  * - Tonal Hardness (Felt Elasticity & Contact Time τc)
  * - Hammer Strike Point x0 / L (Young-Helmholtz Standing Wave & Node Suppression)
@@ -41,7 +41,7 @@
         'Cantabile & edle Klangfarbe', 'Brillanz & Projektion', 'Reibungston (rau / unrein)', 'Strahlkraft & Präsenz',
         'Metallische Schärfe', 'Heller Obertonglanz', 'Scharfer Zwischen-Teilton', 'Feine Attack-Spitze'
       ],
-      legendAbs: '--- Konzert-Ideal  |  Grün: H₁–H₄  |  Gold: Konsonant  |  Bernstein: H₇, H₉, H₁₁',
+      legendAbs: '--- Konzert-Ideal  |  Grün: H₁–H₄  |  Gold: Konsonant  |  Bernstein: Reibung (H₇·H₉·H₁₁)',
       legendDelta: 'Orange (+dB): Zunahme  |  Hellblau (−dB): Abnahme / Knoten',
       agraffe: 'Agraffe (0)',
       bridge: 'Basssteg (L = 1.560 mm)',
@@ -55,7 +55,7 @@
       hSlightlyHard: (p) => `Leicht brillant (+${p} %)`,
       roRefCur: (r, c) => `Ref ${r} → ${c}`,
       roDelta: (tot, felt, str) => `Δ ${tot} (Filz ${felt} | x₀ ${str})`,
-      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'})`,
+      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'Bauch' : 'Bäuche'}) · Klick wählt H₁–H₁₂`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) gedämpft`,
       expTitleSoft: 'Weicher Filz: Lange τc dämpft hohe Teiltöne',
       expBodySoft: (tau, mb) =>
@@ -63,7 +63,7 @@
       expTitleHard: 'Harter Filz: Kurze τc hebt hohe Teiltöne an',
       expBodyHard: (tau, mb, h12) =>
         `Kurzer Abprall (<strong>τc ≈ ${tau} ms</strong>) hebt H₆–H₁₂ um <strong>${mb}</strong> (H₁₂: <strong>${h12}</strong>) — brillant, aber kürzer.`,
-      expTitleConcert: 'Konzert-Balance: Tragender Kern & klare Krone',
+      expTitleConcert: 'Konzert-Balance: Tragender Kern & klarer Scheitel',
       expBodyConcert: (tau) =>
         `Ausgewogene Elastizität (<strong>τc ≈ ${tau} ms</strong>) verbindet volles Fundament (H₁–H₄) mit singender Terz H₅ und Quinte H₆.`,
       strikeNear: (mm, ratio, d1) =>
@@ -88,10 +88,10 @@
       ],
       roles: [
         'Foundation & Projection', 'Warmth, Body & Volume', 'Sonorous Core & Richness', 'Clear Octave Sheen',
-        'Cantabile & Singing Color', 'Brilliance & Carry', 'Roughness Partial (unpure)', 'Presence & Radiance',
+        'Cantabile & Singing Color', 'Brilliance & Carry', 'Dissonant 7th (rough)', 'Presence & Radiance',
         'Metallic Edge', 'Bright Overtone Shimmer', 'Sharp Inter-Harmonic', 'Crisp Attack Tip'
       ],
-      legendAbs: '--- Concert Ideal  |  Green: H₁–H₄  |  Gold: Consonant  |  Amber: H₇, H₉, H₁₁',
+      legendAbs: '--- Concert Ideal  |  Green: H₁–H₄  |  Gold: Consonant  |  Amber: Dissonant (H₇·H₉·H₁₁)',
       legendDelta: 'Orange (+dB): Gain  |  Sky Blue (−dB): Loss / Node',
       agraffe: 'Agraffe (0)',
       bridge: 'Bass Bridge (L = 1,560 mm)',
@@ -105,7 +105,7 @@
       hSlightlyHard: (p) => `Slightly Bright (+${p}%)`,
       roRefCur: (r, c) => `Ref ${r} → ${c}`,
       roDelta: (tot, felt, str) => `Δ ${tot} (Felt ${felt} | x₀ ${str})`,
-      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'})`,
+      waveLbl: (n) => `H${n} (${n} ${n === 1 ? 'antinode' : 'antinodes'}) · Click bar H₁–H₁₂`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) suppressed`,
       expTitleSoft: 'Soft Felt: Longer τc Tames Upper Partials',
       expBodySoft: (tau, mb) =>
@@ -141,7 +141,7 @@
         'カンタービレと色彩感', 'ブリリアンスと投射力', 'うなり・粗さ成分', '存在感と輝き',
         '金属的な鋭さ', '明るい高次倍音', '鋭い中間倍音', '繊細なアタック成分'
       ],
-      legendAbs: '--- 基準  |  緑: H₁–H₄  |  金: 協和倍音  |  琥珀: H₇, H₉, H₁₁',
+      legendAbs: '--- 基準  |  緑: H₁–H₄  |  金: 協和倍音  |  琥珀: 不協和倍音 (H₇·H₉·H₁₁)',
       legendDelta: '橙 (+dB): 増加  |  水色 (−dB): 減少・節減衰',
       agraffe: 'アグラフ (0)',
       bridge: '低音駒 (L = 1,560 mm)',
@@ -155,7 +155,7 @@
       hSlightlyHard: (p) => `やや華やか (+${p}%)`,
       roRefCur: (r, c) => `基準 ${r} → ${c}`,
       roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
-      waveLbl: (n) => `H${n}（腹 ${n} 個）`,
+      waveLbl: (n) => `H${n}（腹 ${n} 個）· 倍音バーをクリック`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) を抑制`,
       expTitleSoft: '柔らかい音色：長い τc が高次倍音を抑制',
       expBodySoft: (tau, mb) =>
@@ -191,10 +191,10 @@
         '如歌旋律色彩', '辉煌感与大厅投射', '粗糙摩擦泛音（不协和）', '临场感与光辉度',
         '金属锐利感', '明亮高次泛音', '尖锐中高频泛音', '瞬态起音锋芒'
       ],
-      legendAbs: '--- 基准  |  绿: H₁–H₄  |  金: 协和泛音  |  琥珀: H₇, H₉, H₁₁',
+      legendAbs: '--- 基准  |  绿: H₁–H₄  |  金: 协和泛音  |  琥珀: 不协和泛音 (H₇·H₉·H₁₁)',
       legendDelta: '橙 (+dB): 增强  |  天蓝 (−dB): 衰减 / 波节',
-      agraffe: '压弦纽 Agraffe (0)',
-      bridge: '低音码桥 (L = 1,560 mm)',
+      agraffe: '弦枕栓 (0)',
+      bridge: '低音弦码 (L = 1,560 mm)',
       hitNode: (n, db) => `● 波节 H${n} (${db})`,
       hitAntinode: (n) => `▲ 波腹 H${n} (最大)`,
       hitPartial: (n, db) => `◐ 部分激发 H${n} (${db})`,
@@ -205,7 +205,7 @@
       hSlightlyHard: (p) => `略微明亮 (+${p}%)`,
       roRefCur: (r, c) => `基准 ${r} → ${c}`,
       roDelta: (tot, felt, str) => `Δ ${tot} (硬度 ${felt} | x₀ ${str})`,
-      waveLbl: (n) => `H${n}（${n} 个波腹）`,
+      waveLbl: (n) => `H${n}（${n} 个波腹）· 点击柱条切换`,
       dampedSub: (note, freq) => `${note} (${freq} Hz) 波节抑制`,
       expTitleSoft: '音色偏柔：较长 τc 衰减高次泛音',
       expBodySoft: (tau, mb) =>
@@ -612,33 +612,140 @@
       ctx.fillText(dict.bridge, padL + strW + 32, 18);
 
       const hx = padL + this.alpha * strW;
-      const crownHalfPx = Math.round(13 - 4.5 * this.hardness);
-      const headTopY = strY + 5;
-      const headH = Math.min(44, H - headTopY - 18);
+      const S_HARD = Math.max(0.18, Math.min(0.88, 0.52 + this.hardness * 0.24));
+      const totalH = Math.min(96, Math.max(52, H - strY - 18));
+      const feltH = totalH * 0.785;
+      const baseY0 = strY + 4;
+      const crownTopY = baseY0;
+      const feltEndY = baseY0 + feltH;
+      const woodBotY = baseY0 + totalH;
+      const shoulderHW = feltH * (0.495 - 0.105 * S_HARD);
+      const shoulderY = crownTopY + feltH * (0.385 - 0.045 * S_HARD);
+      const topSpan = Math.max(8, shoulderY - crownTopY);
+      const botSpan = Math.max(12, feltEndY - shoulderY);
+      const crownCtrlX = shoulderHW * (0.57 - 0.20 * S_HARD);
 
-      ctx.fillStyle = this.hardness > 0.25
-        ? 'rgba(249, 115, 22, 0.35)'
-        : (this.hardness < -0.25 ? 'rgba(56, 189, 248, 0.35)' : 'rgba(46, 204, 113, 0.35)');
-      ctx.fillRect(hx - crownHalfPx - 3, strY - 8, (crownHalfPx + 3) * 2, 16);
+      const coreTipY = baseY0 + feltH * 0.34;
+      const coreNoseHW = feltH * 0.088;
+      const coreDomeY = coreTipY + coreNoseHW * 1.10;
+      const coreWaistHW = feltH * 0.072;
+      const coreFootHW = feltH * 0.098;
+      const ufTipY = coreTipY - feltH * 0.062;
+      const ufOuterHW = coreNoseHW + feltH * 0.045;
+      const ufEndY = baseY0 + feltH * 0.675;
+      const ufDomeY = coreDomeY - 0.8;
+      const coreHWAtUfEnd = coreNoseHW - (coreNoseHW - coreWaistHW) * ((ufEndY - coreDomeY) / Math.max(1, feltEndY - coreDomeY));
 
-      ctx.fillStyle = this.hardness > 0.3 ? '#fef3c7' : (this.hardness < -0.3 ? '#e0f2fe' : '#f8fafc');
-      ctx.strokeStyle = '#c5a059';
-      ctx.lineWidth = 1.8;
+      const lowX1 = shoulderHW;
+      const lowX2 = coreWaistHW + (shoulderHW - coreWaistHW) * 0.35;
+      const lowX3 = coreWaistHW + 0.5;
+      const lowY1 = shoulderY + botSpan * 0.41;
+      const lowY2 = feltEndY - botSpan * 0.17;
+      const lowY3 = feltEndY;
+
+      const memCol = this.hardness > 0.25 ? '#fb923c' : (this.hardness < -0.25 ? '#38bdf8' : '#2ecc71');
+
+      // Contact-zone glow on the A1 string
+      const hitGlow = ctx.createRadialGradient(hx, strY, 2, hx, strY, Math.max(16, shoulderHW * 0.72));
+      hitGlow.addColorStop(0, this.hardness > 0.25
+        ? 'rgba(249, 115, 22, 0.42)'
+        : (this.hardness < -0.25 ? 'rgba(56, 189, 248, 0.42)' : 'rgba(46, 204, 113, 0.42)'));
+      hitGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      ctx.fillStyle = hitGlow;
       ctx.beginPath();
-      ctx.moveTo(hx - crownHalfPx, headTopY + 8);
-      ctx.quadraticCurveTo(hx, headTopY - 3, hx + crownHalfPx, headTopY + 8);
-      ctx.lineTo(hx + 16, headTopY + headH);
-      ctx.lineTo(hx - 16, headTopY + headH);
-      ctx.closePath();
+      ctx.arc(hx, strY, Math.max(16, shoulderHW * 0.72), 0, Math.PI * 2);
       ctx.fill();
+
+      // 1. Hornbeam Wood Core with flared Renner foot
+      const woodPath = new Path2D();
+      woodPath.moveTo(hx, coreTipY);
+      woodPath.bezierCurveTo(hx + coreNoseHW * 0.58, coreTipY, hx + coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44, hx + coreNoseHW, coreDomeY);
+      woodPath.lineTo(hx + coreWaistHW, feltEndY);
+      woodPath.bezierCurveTo(hx + coreWaistHW * 0.94, feltEndY + (woodBotY - feltEndY) * 0.38, hx + coreFootHW, woodBotY - (woodBotY - feltEndY) * 0.24, hx + coreFootHW, woodBotY);
+      woodPath.lineTo(hx - coreFootHW, woodBotY);
+      woodPath.bezierCurveTo(hx - coreFootHW, woodBotY - (woodBotY - feltEndY) * 0.24, hx - coreWaistHW * 0.94, feltEndY + (woodBotY - feltEndY) * 0.38, hx - coreWaistHW, feltEndY);
+      woodPath.lineTo(hx - coreNoseHW, coreDomeY);
+      woodPath.bezierCurveTo(hx - coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44, hx - coreNoseHW * 0.58, coreTipY, hx, coreTipY);
+      woodPath.closePath();
+
+      ctx.save();
+      const woodGrad = ctx.createLinearGradient(hx - coreFootHW, coreTipY, hx + coreFootHW, woodBotY);
+      woodGrad.addColorStop(0, '#f3d9b1');
+      woodGrad.addColorStop(0.5, '#d6a86e');
+      woodGrad.addColorStop(1, '#a8743d');
+      ctx.fillStyle = woodGrad;
+      ctx.fill(woodPath);
+      ctx.strokeStyle = 'rgba(243, 217, 177, 0.45)';
+      ctx.lineWidth = 0.8;
+      ctx.stroke(woodPath);
+      ctx.restore();
+
+      // 2. Crimson Underfelt Horseshoe Cap
+      const ufPath = new Path2D();
+      ufPath.moveTo(hx, ufTipY);
+      ufPath.bezierCurveTo(hx + ufOuterHW * 0.60, ufTipY, hx + ufOuterHW, ufTipY + (ufDomeY - ufTipY) * 0.46, hx + ufOuterHW, ufDomeY);
+      ufPath.bezierCurveTo(hx + ufOuterHW, ufDomeY + (ufEndY - ufDomeY) * 0.45, hx + coreHWAtUfEnd + 1.4, ufEndY - (ufEndY - ufDomeY) * 0.22, hx + coreHWAtUfEnd + 0.2, ufEndY);
+      ufPath.lineTo(hx + coreNoseHW, coreDomeY);
+      ufPath.bezierCurveTo(hx + coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44, hx + coreNoseHW * 0.58, coreTipY, hx, coreTipY);
+      ufPath.bezierCurveTo(hx - coreNoseHW * 0.58, coreTipY, hx - coreNoseHW, coreTipY + (coreDomeY - coreTipY) * 0.44, hx - coreNoseHW, coreDomeY);
+      ufPath.lineTo(hx - coreHWAtUfEnd - 0.2, ufEndY);
+      ufPath.bezierCurveTo(hx - coreHWAtUfEnd - 1.4, ufEndY - (ufEndY - ufDomeY) * 0.22, hx - ufOuterHW, ufDomeY + (ufEndY - ufDomeY) * 0.45, hx - ufOuterHW, ufDomeY);
+      ufPath.bezierCurveTo(hx - ufOuterHW, ufTipY + (ufDomeY - ufTipY) * 0.46, hx - ufOuterHW * 0.60, ufTipY, hx, ufTipY);
+      ufPath.closePath();
+      ctx.fillStyle = '#db2777';
+      ctx.fill(ufPath);
+
+      // 3. Merino Oberfilz Cloak
+      const feltCloak = new Path2D();
+      feltCloak.moveTo(hx, crownTopY);
+      feltCloak.bezierCurveTo(hx + crownCtrlX, crownTopY, hx + shoulderHW, shoulderY - topSpan * 0.53, hx + shoulderHW, shoulderY);
+      feltCloak.bezierCurveTo(hx + lowX1, lowY1, hx + lowX2, lowY2, hx + lowX3, lowY3);
+      feltCloak.lineTo(hx + coreHWAtUfEnd + 0.2, ufEndY);
+      feltCloak.bezierCurveTo(hx + coreHWAtUfEnd + 1.4, ufEndY - (ufEndY - ufDomeY) * 0.22, hx + ufOuterHW, ufDomeY + (ufEndY - ufDomeY) * 0.45, hx + ufOuterHW, ufDomeY);
+      feltCloak.bezierCurveTo(hx + ufOuterHW, ufTipY + (ufDomeY - ufTipY) * 0.46, hx + ufOuterHW * 0.60, ufTipY, hx, ufTipY);
+      feltCloak.bezierCurveTo(hx - ufOuterHW * 0.60, ufTipY, hx - ufOuterHW, ufTipY + (ufDomeY - ufTipY) * 0.46, hx - ufOuterHW, ufDomeY);
+      feltCloak.bezierCurveTo(hx - ufOuterHW, ufDomeY + (ufEndY - ufDomeY) * 0.45, hx - coreHWAtUfEnd - 1.4, ufEndY - (ufEndY - ufDomeY) * 0.22, hx - coreHWAtUfEnd - 0.2, ufEndY);
+      feltCloak.lineTo(hx - lowX3, lowY3);
+      feltCloak.bezierCurveTo(hx - lowX2, lowY2, hx - lowX1, lowY1, hx - shoulderHW, shoulderY);
+      feltCloak.bezierCurveTo(hx - shoulderHW, shoulderY - topSpan * 0.53, hx - crownCtrlX, crownTopY, hx, crownTopY);
+      feltCloak.closePath();
+
+      ctx.save();
+      ctx.clip(feltCloak);
+      ctx.fillStyle = '#131e2f';
+      ctx.fillRect(hx - shoulderHW - 8, crownTopY - 4, shoulderHW * 2 + 16, feltH + 10);
+      const axGrad = ctx.createLinearGradient(hx, crownTopY, hx, feltEndY);
+      axGrad.addColorStop(0, this.hardness > 0.25 ? 'rgba(249, 115, 22, 0.72)' : (this.hardness < -0.25 ? 'rgba(56, 189, 248, 0.55)' : 'rgba(249, 115, 22, 0.54)'));
+      axGrad.addColorStop(0.38, 'rgba(20, 184, 166, 0.36)');
+      axGrad.addColorStop(1, 'rgba(251, 191, 36, 0.26)');
+      ctx.fillStyle = axGrad;
+      ctx.fillRect(hx - shoulderHW - 8, crownTopY - 4, shoulderHW * 2 + 16, feltH + 10);
+      ctx.restore();
+
+      // 4. Brass T-Rivet & Glowing Outer Tension Membrane
+      const tRiv = 0.76, mt = 1 - tRiv;
+      const rivY = mt * mt * mt * shoulderY + 3 * mt * mt * tRiv * lowY1 + 3 * mt * tRiv * tRiv * lowY2 + tRiv * tRiv * tRiv * lowY3;
+      const rivHW = mt * mt * mt * shoulderHW + 3 * mt * mt * tRiv * lowX1 + 3 * mt * tRiv * tRiv * lowX2 + tRiv * tRiv * tRiv * lowX3;
+      ctx.strokeStyle = '#fde047';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(hx - rivHW + 0.5, rivY);
+      ctx.lineTo(hx + rivHW - 0.5, rivY);
       ctx.stroke();
 
-      ctx.fillStyle = '#b91c1c';
+      ctx.save();
+      ctx.strokeStyle = memCol;
+      ctx.lineWidth = 1.9;
+      ctx.shadowColor = memCol;
+      ctx.shadowBlur = 5;
       ctx.beginPath();
-      ctx.moveTo(hx - 8, headTopY + headH);
-      ctx.quadraticCurveTo(hx, headTopY + headH * 0.48, hx + 8, headTopY + headH);
-      ctx.closePath();
-      ctx.fill();
+      ctx.moveTo(hx - lowX3, lowY3);
+      ctx.bezierCurveTo(hx - lowX2, lowY2, hx - lowX1, lowY1, hx - shoulderHW, shoulderY);
+      ctx.bezierCurveTo(hx - shoulderHW, shoulderY - topSpan * 0.53, hx - crownCtrlX, crownTopY, hx, crownTopY);
+      ctx.bezierCurveTo(hx + crownCtrlX, crownTopY, hx + shoulderHW, shoulderY - topSpan * 0.53, hx + shoulderHW, shoulderY);
+      ctx.bezierCurveTo(hx + lowX1, lowY1, hx + lowX2, lowY2, hx + lowX3, lowY3);
+      ctx.stroke();
+      ctx.restore();
 
       const mm = Math.round(this.alpha * STRING_LENGTH_MM);
       const ratioDen = this.fmtNum(1 / this.alpha, 1);
@@ -647,13 +754,28 @@
         ? dict.hitNode(n, this.fmtDb(sel.nodeLossDb))
         : (hitPhase > 0.82 ? dict.hitAntinode(n) : dict.hitPartial(n, this.fmtDb(sel.nodeLossDb)));
 
-      ctx.font = '700 14.3px JetBrains Mono, monospace';
+      ctx.font = '700 13.8px JetBrains Mono, monospace';
       ctx.textAlign = 'left';
-      const infoX = Math.min(W - 395, hx + 26);
+      const line1 = `x₀ = ${mm} mm (1/${ratioDen} L)`;
+      const maxTextW = Math.max(ctx.measureText(line1).width, ctx.measureText(hitStatus).width);
+      const rightCand = hx + shoulderHW + 14;
+      const infoX = (rightCand + maxTextW + 18 <= W)
+        ? rightCand
+        : Math.max(12, hx - shoulderHW - maxTextW - 22);
+      const pillTopY = Math.round(shoulderY - 4);
+      ctx.save();
+      ctx.fillStyle = 'rgba(7, 11, 20, 0.88)';
+      ctx.strokeStyle = 'rgba(200, 163, 86, 0.32)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(infoX - 9, pillTopY, maxTextW + 18, 44, 8);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(`x₀ = ${mm} mm (1/${ratioDen} L)`, infoX, strY + 24);
+      ctx.fillText(line1, infoX, pillTopY + 16.5);
       ctx.fillStyle = hitPhase < 0.22 ? '#7dd3fc' : '#86efac';
-      ctx.fillText(hitStatus, infoX, strY + 45);
+      ctx.fillText(hitStatus, infoX, pillTopY + 35.5);
 
       ctx.restore();
     }
@@ -1000,7 +1122,7 @@
         btnPlay.addEventListener('click', () => this.playA1Tone());
       }
 
-      // Redraw cleanly whenever Slide 33 becomes active
+      // Redraw cleanly whenever Slide 26 becomes active
       const obs = new MutationObserver(() => {
         if (slideEl.classList.contains('active')) {
           requestAnimationFrame(() => this.updateUI());

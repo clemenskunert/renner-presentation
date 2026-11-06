@@ -1,6 +1,6 @@
 /**
  * Louis Renner Masterclass Presentation
- * Slide 34 (Chapter 5): Die komplexe Feder Hammerkopf — Von Cristofori zur Zonen-Balance
+ * Slide 27 (Chapter 5): Die komplexe Feder Hammerkopf — Von Cristofori zur Zonen-Balance
  * - 1. Cristofori-Röllchen (1700) vs. 2. Renner-Spannungsfeder
  * - 2:1 Compaction Gradient (Scheitel -> 1/2 Flanke) & Outer-Contour Force Transfer
  * - 5-Stage Parameter Toggle Bars + Resulting Playable Dynamics (pp - ff)
@@ -19,8 +19,8 @@
           subtitle: 'Wie Elastizität, 2:1-Verdichtung (Scheitel → ½ Flanke) und der Übergang den Dynamikumfang (pp bis ff) bestimmen',
           m1: '📜 1. Cristofori-Röllchen (1700)',
           m2: '🎹 2. Renner-Spannungsfeder',
-          loopOn: '⏸ Bounce aktiv',
-          loopOff: '▶ Auto-Bounce',
+          loopOn: '⏸ Rückprall aktiv',
+          loopOff: '▶ Auto-Rückprall',
           reset: '↺ Ideal',
           strikeBtn: 'Anschlag & Ton',
           curveBadge: 'TEILTONSTRUKTUR',
@@ -34,7 +34,7 @@
           specStatusNoPp: '⚠ H5–H12 zu stark → kein pp!',
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → Obertöne gedämpft`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 hart · τc = ${tau} ms ↑`,
-          specRoles: ['Grundton', 'Oktave', 'Quinte', '2. Okt.', 'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.', 'Sekunde', 'Gr. Terz', '11. Teilt.', 'Duodez.'],
+          specRoles: ['Grundton', 'Oktave', 'Duodez.', '2. Okt.', 'Gr. Terz', 'Quinte', '7. Sept.', '3. Okt.', 'Sekunde', 'Gr. Terz', '11. Teilt.', 'Quinte'],
           c1: '1. Filz-Elastizität & Spannung',
           steps1: ['1 · Träge', '2 · Mittel', '3 · Elastisch'],
           c2: '2. Hammerkopf-Form (Radius)',
@@ -42,7 +42,7 @@
           c3: '3. Scheitel-Verdichtung (Flanke = ½)',
           steps3: ['1 · Weich', '2 · Ideal', '3 · Zu hart'],
           c3ValR: (ap, fl) => `Scheitel ${ap} % · Flanke ${fl} %`,
-          c3ValC: (d) => `Wicklung ${d} %`,
+          c3ValC: (d) => `Verdichtung ${d} %`,
           c4: '4. Übergang Scheitel → Flanke',
           steps4: ['1 · Frei', '2 · Fest', '3 · Sperrt ✕'],
           c4Open: (pct) => `Frei (${pct} % Flanke)`,
@@ -110,7 +110,7 @@
           expBadgeC: '✦ CRISTOFORI (1700)',
           expTitleC: 'Beledertes Röllchen: Spannung erzeugt Elastizität',
           expBodyC: (reb, tau) =>
-            `Hirschleder formt zartes <em>piano</em>; die Ring-Spannung (<strong>${reb} % Bounce</strong>, <strong>τc ≈ ${tau} ms</strong>) löst den Hammer schnell von der Saite.`,
+            `Hirschleder formt zartes <em>piano</em>; die Ring-Spannung (<strong>${reb} % Rückprall</strong>, <strong>τc ≈ ${tau} ms</strong>) löst den Hammer schnell von der Saite.`,
           expBulletC:
             `<strong>Kernprinzip:</strong> Spannung hält τc kurz — starre Masse ohne Federweg dämpft die Saite ab.`,
           expBadgeR: '✦ ZONEN-BALANCE (pp ↔ ff)',
@@ -118,17 +118,17 @@
           expBodyR: (reb, tau, hardDb, ap, fl) =>
             `Vom <strong>Scheitel (${ap} %)</strong> fließt die Kraft frei in die <strong>½-Flanke (${fl} %)</strong>: feines <em>pp</em> und kurze <strong>τc ≈ ${tau} ms</strong> für volles <em>ff</em> (<strong>${hardDb}</strong>).`,
           expBulletR:
-            `<strong>Merke:</strong> Volle Dynamik entsteht nur aus nachgiebigem Ansatz und schnellem Flanken-Bounce.`,
+            `<strong>Merke:</strong> Volle Dynamik entsteht nur aus nachgiebigem Ansatz und schneller Flanken-Federung.`,
           expBadgeNoPp: '⚠ KEIN PIANISSIMO (pp)',
           expTitleNoPp: 'Zu harter Scheitel oder Übergang verhindert das pp',
           expBodyNoPp: (ap, tau, hardDb) =>
             `Ohne Anfangspolster am <strong>Scheitel (${ap} %)</strong> prallt selbst zarter Anschlag hart ab (<strong>${hardDb}</strong>, <strong>τc ≈ ${tau} ms</strong>) — kein <em>pp</em> möglich.`,
           expBulletNoPp:
-            `<strong>Abhilfe:</strong> Übergang nach dem Scheitel behutsam mit 90°-Stichen lockern.`,
+            `<strong>Abhilfe:</strong> Übergang nach dem Scheitel behutsam im Lot zur Faser lockern.`,
           expBadgeNoFf: '⚠ KEIN FORTISSIMO (ff)',
           expTitleNoFf: 'Fehlende Elastizität verlängert die Kontaktzeit τc',
           expBodyNoFf: (reb, tau) =>
-            `Träger, steifer Filz (nur <strong>${reb} % Bounce</strong>) bleibt mit <strong>τc ≈ ${tau} ms</strong> zu lange an der Saite und dämpft das <em>ff</em> ab.`,
+            `Träger, steifer Filz (nur <strong>${reb} % Rückprall</strong>) bleibt mit <strong>τc ≈ ${tau} ms</strong> zu lange an der Saite und dämpft das <em>ff</em> ab.`,
           expBulletNoFf:
             `<strong>Physik:</strong> Tragendes <em>ff</em> braucht schnelle Rückstellkraft statt starrer Härte.`,
           expBadgeBlock: '⚠ DOPPEL-SPERRE (KEIN pp & ff)',
@@ -160,7 +160,7 @@
           specStatusNoPp: '⚠ H5–H12 excessive → no pp!',
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → overtones damped`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 harsh · τc = ${tau} ms ↑`,
-          specRoles: ['Fundam.', 'Octave', '5th', '2nd Oct', 'Maj 3rd', '5th', '7th', '3rd Oct', 'Maj 2nd', 'Maj 3rd', '11th', '12th'],
+          specRoles: ['Fundam.', 'Octave', '12th', '2nd Oct', 'Maj 3rd', '5th', '7th', '3rd Oct', 'Maj 2nd', 'Maj 3rd', '11th', '5th'],
           c1: '1. Felt Elasticity & Tension',
           steps1: ['1 · Sluggish', '2 · Medium', '3 · Elastic'],
           c2: '2. Hammerhead Shape (Radius)',
@@ -168,7 +168,7 @@
           c3: '3. Crown Compaction (Flank = ½)',
           steps3: ['1 · Soft', '2 · Ideal', '3 · Too Hard'],
           c3ValR: (ap, fl) => `Crown ${ap}% · Flank ${fl}%`,
-          c3ValC: (d) => `Winding ${d}%`,
+          c3ValC: (d) => `Compaction ${d}%`,
           c4: '4. Crown → Flank Transition',
           steps4: ['1 · Open', '2 · Firm', '3 · Locked ✕'],
           c4Open: (pct) => `Open (${pct}% Flank)`,
@@ -286,7 +286,7 @@
           specStatusNoPp: '⚠ H5–H12 過多 → pp 不可!',
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → 高次倍音減衰`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 過硬 · τc = ${tau} ms ↑`,
-          specRoles: ['基音', '8度', '5度', '2Oct', '長3度', '5度', '7倍音', '3Oct', '長2度', '長3度', '11倍音', '12度'],
+          specRoles: ['基音', '8度', '12度', '2Oct', '長3度', '5度', '7倍音', '3Oct', '長2度', '長3度', '11倍音', '5度'],
           c1: '1. フェルト弾性と表面張力',
           steps1: ['1 · 低弾性', '2 · 中程度', '3 · 高弾性'],
           c2: '2. ハンマー形状（曲率半径）',
@@ -294,7 +294,7 @@
           c3: '3. クラウン圧縮密度（フランク＝½）',
           steps3: ['1 · 柔軟', '2 · 最適', '3 · 過硬'],
           c3ValR: (ap, fl) => `クラウン ${ap}% · フランク ${fl}%`,
-          c3ValC: (d) => `巻密度 ${d}%`,
+          c3ValC: (d) => `圧縮密度 ${d}%`,
           c4: '4. クラウン→フランク移行帯',
           steps4: ['1 · 開放', '2 · やや硬', '3 · 遮断 ✕'],
           c4Open: (pct) => `開放 (${pct}%)`,
@@ -376,7 +376,7 @@
           expBodyNoPp: (ap, tau, hardDb) =>
             `<strong>クラウン (${ap}%)</strong> の初期クッションが無く、最弱打でも硬い殻に当たり（<strong>${hardDb}</strong>・<strong>τc ≈ ${tau} ms</strong>）<em>pp</em> が出ません。`,
           expBulletNoPp:
-            `<strong>対策：</strong> 移行帯を 90° 刺針で丁寧にほぐし初期の柔軟さを戻します。`,
+            `<strong>対策：</strong> 移行帯を 90° の針刺しで丁寧にほぐし初期の柔軟さを戻します。`,
           expBadgeNoFf: '⚠ フォルティッシモ不可 (ff)',
           expTitleNoFf: '弾性不足が接触時間 τc を延ばし ff を抑え込む',
           expBodyNoFf: (reb, tau) =>
@@ -412,7 +412,7 @@
           specStatusNoPp: '⚠ H5–H12 过强 → 无 pp！',
           specStatusNoFf: (tau) => `⚠ τc = ${tau} ms ↑ → 高频衰减`,
           specStatusBlock: (tau) => `⚠ H1–H3 ↓ · H4–H6 生硬 · τc = ${tau} ms ↑`,
-          specRoles: ['基音', '八度', '五度', '双八度', '大三度', '五度', '七泛音', '三八度', '大二度', '大三度', '十一音', '十二度'],
+          specRoles: ['基音', '八度', '十二度', '双八度', '大三度', '纯五度', '七泛音', '三八度', '大二度', '大三度', '十一音', '纯五度'],
           c1: '1. 毛毡弹性与表面张力',
           steps1: ['1 · 迟滞', '2 · 中等', '3 · 高弹'],
           c2: '2. 弦槌形状（槌冠半径）',
@@ -420,13 +420,13 @@
           c3: '3. 槌冠压实度（侧翼 ＝ ½）',
           steps3: ['1 · 偏软', '2 · 理想', '3 · 过硬'],
           c3ValR: (ap, fl) => `槌冠 ${ap}% · 侧翼 ${fl}%`,
-          c3ValC: (d) => `紧密度 ${d}%`,
-          c4: '4. 槌冠→侧翼过渡区',
+          c3ValC: (d) => `压实度 ${d}%`,
+          c4: '4. 槌冠→侧翼过渡区（槌肩）',
           steps4: ['1 · 贯通', '2 · 偏紧', '3 · 锁死 ✕'],
           c4Open: (pct) => `贯通 (${pct}%)`,
           c4Mid: (pct) => `受阻 (${pct}%)`,
           c4Block: (pct) => `锁死! (${pct}%)`,
-          dynLbl: '可奏出的动态范围（结果）',
+          dynLbl: '可奏出的动态范围（物理结果）',
           dynFull: '✓ 完整动态 (pp – ff)',
           dynNoPp: '⚠ 无 pp（过硬）',
           dynNoFf: '⚠ 无 ff（τc ↑）',
@@ -519,7 +519,7 @@
       };
 
       const MODE_PRESETS = {
-        cristofori: { tension: 95, shape: 52, density: 61, contourStiff: 12 },
+        cristofori: { tension: 95, shape: 52, density: 50, contourStiff: 12 },
         renner:     { tension: 95, shape: 52, density: 61, contourStiff: 12 }
       };
 
@@ -530,9 +530,9 @@
           this.specMode = 'delta';  // 'delta' (ΔdB-Änderung) | 'abs' (Pegel + ΔdB)
           this.tension = 95;        // 3-stage toggle: [32, 62, 95]
           this.shape = 52;          // 3-stage toggle: [16, 52, 86]
-          this.density = 61;        // 3-stage toggle: [22, 61, 92] (Crown -> 1/2 Flank)
+          this.density = 50;        // 3-stage toggle: Cristofori Ideal = 50 %, Renner Ideal = 61 % (80% -> 40%)
           this.contourStiff = 12;   // 3-stage toggle: [12, 50, 90] (Crown -> Flank transition)
-          this.autoLoop = true;     // Continuous calm slow-motion bounce animation by default
+          this.autoLoop = true;     // Permanently active bounce simulation
           this.strikeStartMs = performance.now();
           this.isStriking = true;
           this.animId = null;
@@ -988,11 +988,6 @@
           ctx.moveTo(26, stringBaseY);
           ctx.quadraticCurveTo(cx, stringBaseY - dyn.stringLiftPx * 1.65, W - 26, stringBaseY);
           ctx.stroke();
-
-          ctx.fillStyle = '#e6c882';
-          ctx.font = '700 14.3px Roboto, sans-serif';
-          ctx.textAlign = 'left';
-          ctx.fillText(dict.cvString, 24, 23);
 
           // Live Force-Direction Phase Pill at Top-Right of Canvas
           let phLabel = dict.phRest;
@@ -2645,8 +2640,10 @@
             elRoPrin.textContent = d.roPrinR(phys.rhoApexPct, phys.rhoFlankPct);
             elRoPrin.style.color = 'var(--gold-light)';
           }
-          document.getElementById('hsp-ro-deform').textContent =
-            d.roDef(this.fmt(phys.xMaxMm, 2), this.fmt(phys.fMaxN, 1));
+          const elRoDef = document.getElementById('hsp-ro-deform');
+          if (elRoDef) {
+            elRoDef.textContent = d.roDef(this.fmt(phys.xMaxMm, 2), this.fmt(phys.fMaxN, 1));
+          }
           const roTone = document.getElementById('hsp-ro-tone');
           roTone.textContent = d.roTone(toneDesc, this.fmtSignedDb(phys.hardnessDb));
           roTone.style.color = toneCol;
@@ -2701,8 +2698,9 @@
           this.drawCurvesCanvas(phys);
         }
 
-        setMode(mode, play = true) {
+        setMode(mode, play = false) {
           this.mode = mode;
+          this.autoLoop = true;
           const p = MODE_PRESETS[mode];
           this.tension = p.tension;
           this.shape = p.shape;
@@ -2716,14 +2714,13 @@
         init() {
           const slideEl = document.querySelector('.slide.hsp-slide');
           if (!slideEl) return;
-          document.getElementById('hsp-mode-cristofori').addEventListener('click', () => this.setMode('cristofori', true));
-          document.getElementById('hsp-mode-renner').addEventListener('click', () => this.setMode('renner', true));
+          document.getElementById('hsp-mode-cristofori').addEventListener('click', () => this.setMode('cristofori', false));
+          document.getElementById('hsp-mode-renner').addEventListener('click', () => this.setMode('renner', false));
 
-          const loopBtn = document.getElementById('hsp-btn-loop');
-          if (loopBtn) loopBtn.addEventListener('click', () => this.toggleAutoLoop());
-
-          document.getElementById('hsp-btn-reset').addEventListener('click', () => this.setMode(this.mode, false));
-          document.getElementById('hsp-btn-strike').addEventListener('click', () => this.triggerStrike(true));
+          const resetBtn = document.getElementById('hsp-btn-reset');
+          if (resetBtn) resetBtn.addEventListener('click', () => this.setMode(this.mode, false));
+          const strikeBtn = document.getElementById('hsp-btn-strike');
+          if (strikeBtn) strikeBtn.addEventListener('click', () => this.triggerStrike(true));
           document.getElementById('hsp-canvas-head').addEventListener('click', () => this.triggerStrike(true));
           document.getElementById('hsp-canvas-curves').addEventListener('click', () => this.triggerStrike(true));
 
@@ -2735,13 +2732,17 @@
           const bindStepGroup = (grpId, prop) => {
             const grp = document.getElementById(grpId);
             if (!grp) return;
-            grp.querySelectorAll('.hsp-step-btn').forEach(btn => {
+            grp.querySelectorAll('.hsp-step-btn').forEach((btn, idx) => {
               btn.addEventListener('click', () => {
-                const v = parseInt(btn.getAttribute('data-val'), 10);
+                let v = parseInt(btn.getAttribute('data-val'), 10);
+                if (prop === 'density' && idx === 1 && this.mode === 'cristofori') {
+                  v = 50;
+                }
                 if (!Number.isNaN(v)) {
                   this[prop] = v;
+                  this.autoLoop = true;
                   this.updateUI();
-                  if (!this.autoLoop) this.triggerStrike(false);
+                  this.startAnimLoop();
                 }
               });
             });
@@ -2751,7 +2752,7 @@
           bindStepGroup('hsp-grp-density', 'density');
           bindStepGroup('hsp-grp-contour', 'contourStiff');
 
-          // Presentation Deck Lifecycle: Pause rAF when Slide 34 is inactive, resume cleanly when active
+          // Presentation Deck Lifecycle: Pause rAF when Slide 27 is inactive, resume cleanly when active
           const obs = new MutationObserver(() => {
             if (this.isSlideActive()) {
               this.lang = document.documentElement.lang || this.lang || 'de';
