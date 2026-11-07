@@ -171,7 +171,7 @@ def get_all_slides_html():
                   </div>
                   <h3 class="contact-person-name" data-i18n="s2_p2_name">Clemens Kunert</h3>
                   <div class="contact-person-role" data-i18n="s2_p2_role">Werkleiter / Plant Manager</div>
-                  <p class="contact-person-focus" data-i18n="s2_p2_focus">Gesamtfertigung Holz, Mechanik &amp; Hammerkopf sowie technische Leitung der Renner Academy</p>
+                  <p class="contact-person-focus" data-i18n="s2_p2_focus">Verantwortlich für das Stammwerk in Meuselwitz</p>
                 </div>
               </div>
 
