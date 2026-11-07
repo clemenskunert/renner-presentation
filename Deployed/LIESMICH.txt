@@ -1,6 +1,6 @@
 ======================================================================
   LOUIS RENNER MASTERCLASS - 100% OFFLINE STANDALONE EDITION
-  (Windows 10/11 PC, macOS & iPad - China / Offline Ready - 33 Slides)
+  (Windows 10/11 PC, macOS & iPad - China / Offline Ready - 34 Slides)
 ======================================================================
 
 WINDOWS PC (100% OFFLINE):
@@ -13,11 +13,11 @@ MAC (100% OFFLINE):
   -> Option B (Ohne Server): "index_offline_tablet.html" in Safari/Chrome oeffnen.
 
 IPAD / TABLET (100% OFFLINE):
-  -> Ordner "Deployed" in die Dateien-App ("Auf meinem iPad") kopieren
+  -> Ordner in die Dateien-App ("Auf meinem iPad") kopieren / entpacken
   -> Auf "index_offline_tablet.html" tippen.
 
-REFERENTEN-HANDOUTS (DE & EN):
-  -> Siehe Ordner "Handouts/" (Referenten_Spickzettel_DE.pdf & Speaker_Cheat_Sheet_EN.pdf)
+REFERENTEN-HANDOUTS & BACKUPS (DE & EN):
+  -> Siehe Ordner "Handouts/" (Kurz-Spickzettel, Ausfuehrliche Handouts & 4K-PDF-Backups)
 
 SPRACHEN (Oben rechts ueber Menue waehlbar):
   Deutsch | English | 日本語 | 中文

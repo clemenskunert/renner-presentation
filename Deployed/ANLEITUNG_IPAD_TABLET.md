@@ -1,13 +1,13 @@
 # Louis Renner Masterclass – 100% Offline Standalone Paket (Windows PC, Mac & iPad)
 
-Dieser Ordner (`Deployed/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
-Alle **33 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
+Dieser Ordner (`Deployed/` bzw. `Louis_Renner_Masterclass_Standalone/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
+Alle **34 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Ansprechpartner-vCards, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
 
 ---
 
 ## 1. Start auf einem Windows PC (Windows 10 / 11 – Offline)
 
-1. Kopieren Sie den gesamten Ordner **`Deployed`** auf die lokale Festplatte (z. B. Desktop) oder starten Sie ihn vom USB-Stick.
+1. Entpacken bzw. kopieren Sie den gesamten Ordner auf die lokale Festplatte (z. B. Desktop) oder starten Sie ihn vom USB-Stick.
 2. **Empfohlen:** Doppelklick auf **`Start_Windows.bat`**
    - Startet automatisch den integrierten lokalen Streaming-Server (über Windows-eigenes PowerShell oder Python – **keine Installation, keine Admin-Rechte, keine Firewall-Freigabe nötig**) und öffnet den Standardbrowser (Edge / Chrome).
 3. **Direktstart ohne Skripte (falls Firmen-IT `.bat` blockiert):**
@@ -25,13 +25,15 @@ Alle **33 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Schriften, Klang
 
 ## 3. Nutzung auf dem Apple iPad / Tablet (Offline)
 
-1. Ordner `Deployed` per AirDrop oder USB-C-Stick in die Apple **„Dateien“-App** (*Auf meinem iPad*) kopieren.
+1. Ordner per AirDrop oder USB-C-Stick in die Apple **„Dateien“-App** (*Auf meinem iPad*) kopieren bzw. die ZIP-Datei dort antippen zum Entpacken.
 2. Tippen Sie auf **`index_offline_tablet.html`**.
 
 ---
 
-## 4. Referenten-Spickzettel (Druckfertige A4-PDFs)
+## 4. Referenten-Handouts & 4K-Backups (`Handouts/`)
 
-Im Unterordner **`Handouts/`** liegen die beiden separaten Spickzettel bereit:
-- `Referenten_Spickzettel_DE.pdf` (Deutsch, 5 Seiten A4)
-- `Speaker_Cheat_Sheet_EN.pdf` (Englisch, 5 Seiten A4)
+Im Unterordner **`Handouts/`** liegen druckfertige A4-Unterlagen und Backups bereit:
+- `Referenten_Spickzettel_DE.pdf` & `Speaker_Cheat_Sheet_EN.pdf` (Kompakter Spickzettel DE / EN)
+- `Referenten_Handout_Ausfuehrlich_DE.pdf` & `Speaker_Handout_Detailed_EN.pdf` (Ausführliches Referenten-Handout DE / EN)
+- `Louis_Renner_Praesentation_Backup_4K_DE.pdf` & `Louis_Renner_Praesentation_Backup_4K_EN.pdf` (Statisches 4K-PDF-Backup)
+- `Praesentationsfolien_Texte_EN.pdf`, `Praesentationsfolien_Texte_ZH.pdf`, `Praesentationsfolien_Texte_JA.pdf` & `Louis_Renner_Uebersetzungen_Review_DE_EN_ZH_JA.xlsx`

@@ -20,11 +20,17 @@ import shutil
 import struct
 import subprocess
 import sys
+import time
+import zipfile
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DEPLOY_DIR = BASE_DIR / "Deployed"
+STANDALONE_ZIP_PATH = BASE_DIR / "Louis_Renner_Masterclass_Standalone.zip"
+STANDALONE_ZIP_ROOT = "Louis_Renner_Masterclass_Standalone"
 H264_CACHE_DIR = BASE_DIR / "Visuell" / "Video_Standalone_H264"
+
+STORED_BINARY_EXTS = {".mp4", ".jpg", ".jpeg", ".png", ".webp", ".woff2"}
 
 JS_FILES = [
     "translations.js",
@@ -323,14 +329,14 @@ def create_instructions():
     """Write up-to-date German/English offline instructions for Windows PC, Mac & iPad."""
     md_content = """# Louis Renner Masterclass – 100% Offline Standalone Paket (Windows PC, Mac & iPad)
 
-Dieser Ordner (`Deployed/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
-Alle **33 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
+Dieser Ordner (`Deployed/` bzw. `Louis_Renner_Masterclass_Standalone/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
+Alle **34 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Ansprechpartner-vCards, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
 
 ---
 
 ## 1. Start auf einem Windows PC (Windows 10 / 11 – Offline)
 
-1. Kopieren Sie den gesamten Ordner **`Deployed`** auf die lokale Festplatte (z. B. Desktop) oder starten Sie ihn vom USB-Stick.
+1. Entpacken bzw. kopieren Sie den gesamten Ordner auf die lokale Festplatte (z. B. Desktop) oder starten Sie ihn vom USB-Stick.
 2. **Empfohlen:** Doppelklick auf **`Start_Windows.bat`**
    - Startet automatisch den integrierten lokalen Streaming-Server (über Windows-eigenes PowerShell oder Python – **keine Installation, keine Admin-Rechte, keine Firewall-Freigabe nötig**) und öffnet den Standardbrowser (Edge / Chrome).
 3. **Direktstart ohne Skripte (falls Firmen-IT `.bat` blockiert):**
@@ -348,21 +354,23 @@ Alle **33 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Schriften, Klang
 
 ## 3. Nutzung auf dem Apple iPad / Tablet (Offline)
 
-1. Ordner `Deployed` per AirDrop oder USB-C-Stick in die Apple **„Dateien“-App** (*Auf meinem iPad*) kopieren.
+1. Ordner per AirDrop oder USB-C-Stick in die Apple **„Dateien“-App** (*Auf meinem iPad*) kopieren bzw. die ZIP-Datei dort antippen zum Entpacken.
 2. Tippen Sie auf **`index_offline_tablet.html`**.
 
 ---
 
-## 4. Referenten-Spickzettel (Druckfertige A4-PDFs)
+## 4. Referenten-Handouts & 4K-Backups (`Handouts/`)
 
-Im Unterordner **`Handouts/`** liegen die beiden separaten Spickzettel bereit:
-- `Referenten_Spickzettel_DE.pdf` (Deutsch, 5 Seiten A4)
-- `Speaker_Cheat_Sheet_EN.pdf` (Englisch, 5 Seiten A4)
+Im Unterordner **`Handouts/`** liegen druckfertige A4-Unterlagen und Backups bereit:
+- `Referenten_Spickzettel_DE.pdf` & `Speaker_Cheat_Sheet_EN.pdf` (Kompakter Spickzettel DE / EN)
+- `Referenten_Handout_Ausfuehrlich_DE.pdf` & `Speaker_Handout_Detailed_EN.pdf` (Ausführliches Referenten-Handout DE / EN)
+- `Louis_Renner_Praesentation_Backup_4K_DE.pdf` & `Louis_Renner_Praesentation_Backup_4K_EN.pdf` (Statisches 4K-PDF-Backup)
+- `Praesentationsfolien_Texte_EN.pdf`, `Praesentationsfolien_Texte_ZH.pdf`, `Praesentationsfolien_Texte_JA.pdf` & `Louis_Renner_Uebersetzungen_Review_DE_EN_ZH_JA.xlsx`
 """
 
     txt_content = """======================================================================
   LOUIS RENNER MASTERCLASS - 100% OFFLINE STANDALONE EDITION
-  (Windows 10/11 PC, macOS & iPad - China / Offline Ready - 33 Slides)
+  (Windows 10/11 PC, macOS & iPad - China / Offline Ready - 34 Slides)
 ======================================================================
 
 WINDOWS PC (100% OFFLINE):
@@ -375,11 +383,11 @@ MAC (100% OFFLINE):
   -> Option B (Ohne Server): "index_offline_tablet.html" in Safari/Chrome oeffnen.
 
 IPAD / TABLET (100% OFFLINE):
-  -> Ordner "Deployed" in die Dateien-App ("Auf meinem iPad") kopieren
+  -> Ordner in die Dateien-App ("Auf meinem iPad") kopieren / entpacken
   -> Auf "index_offline_tablet.html" tippen.
 
-REFERENTEN-HANDOUTS (DE & EN):
-  -> Siehe Ordner "Handouts/" (Referenten_Spickzettel_DE.pdf & Speaker_Cheat_Sheet_EN.pdf)
+REFERENTEN-HANDOUTS & BACKUPS (DE & EN):
+  -> Siehe Ordner "Handouts/" (Kurz-Spickzettel, Ausfuehrliche Handouts & 4K-PDF-Backups)
 
 SPRACHEN (Oben rechts ueber Menue waehlbar):
   Deutsch | English | 日本語 | 中文
@@ -490,7 +498,55 @@ def ensure_prerequisites():
         log("✓ Uebersetzungen (DE, EN, JA, ZH) kompiliert.")
 
 
+def build_standalone_zip() -> Path:
+    """Create cross-platform Louis_Renner_Masterclass_Standalone.zip from Deployed/ with pure ASCII paths and Unix exec permissions."""
+    tmp_zip = STANDALONE_ZIP_PATH.with_suffix(".zip.tmp")
+    if tmp_zip.exists():
+        tmp_zip.unlink()
+
+    exec_rel_paths = {
+        "Start_Mac.command",
+        "Start_Mac.app/Contents/MacOS/launcher",
+    }
+    skip_names = {".DS_Store", "Thumbs.db", ".active_port", ".server_pid"}
+
+    files_written = 0
+    with zipfile.ZipFile(tmp_zip, mode="w", allowZip64=True) as zf:
+        for file_path in sorted(DEPLOY_DIR.rglob("*")):
+            if not file_path.is_file() or file_path.name in skip_names:
+                continue
+            rel_posix = file_path.relative_to(DEPLOY_DIR).as_posix()
+            arcname = f"{STANDALONE_ZIP_ROOT}/{rel_posix}"
+
+            st = file_path.stat()
+            dt = time.localtime(st.st_mtime)[:6]
+            zi = zipfile.ZipInfo(filename=arcname, date_time=dt)
+            zi.create_system = 3  # Unix permissions compatible with macOS/iPadOS & Windows Explorer
+            if rel_posix in exec_rel_paths:
+                zi.external_attr = (0o100755 & 0xFFFF) << 16
+            else:
+                zi.external_attr = (0o100644 & 0xFFFF) << 16
+
+            ext = file_path.suffix.lower()
+            compress_type = zipfile.ZIP_STORED if ext in STORED_BINARY_EXTS else zipfile.ZIP_DEFLATED
+            zi.compress_type = compress_type
+
+            with open(file_path, "rb") as src_fp:
+                data = src_fp.read()
+            if compress_type == zipfile.ZIP_DEFLATED:
+                zf.writestr(zi, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=6)
+            else:
+                zf.writestr(zi, data, compress_type=zipfile.ZIP_STORED)
+            files_written += 1
+
+    tmp_zip.replace(STANDALONE_ZIP_PATH)
+    zip_mb = STANDALONE_ZIP_PATH.stat().st_size / (1024 * 1024)
+    log(f"✓ Standalone-ZIP aktualisiert: {STANDALONE_ZIP_PATH.name} ({files_written} Dateien, {zip_mb:.1f} MB)")
+    return STANDALONE_ZIP_PATH
+
+
 def main():
+    build_zip = "--no-zip" not in sys.argv
     log("Starte Erstellung des 100% Offline Standalone-Pakets (Deployed/)...")
     ensure_prerequisites()
     sync_deployed_bundle(sync_media=True)
@@ -498,9 +554,13 @@ def main():
     ok = verify_deployed_package()
     if not ok:
         sys.exit(1)
+    if build_zip:
+        build_standalone_zip()
     log("======================================================================")
     log("STANDALONE DEPLOYMENT FUER WINDOWS PC, MAC & IPAD EINSATZBEREIT!")
     log(f"Zielordner: {DEPLOY_DIR}")
+    if build_zip:
+        log(f"ZIP-Archiv: {STANDALONE_ZIP_PATH}")
     log("======================================================================")
 
 
