@@ -34,7 +34,7 @@ class FFWFirmengeschichte {
   }
 
   init() {
-    this.slideEl = document.querySelector('.slide[data-slide="5"]');
+    this.slideEl = document.querySelector('.slide[data-slide="6"]');
     if (!this.slideEl) return;
 
     this.tabs = Array.from(this.slideEl.querySelectorAll('.ffw-epoch-tab'));
@@ -222,7 +222,7 @@ class FFWFirmengeschichte {
       lbl.textContent = pauseLabels[lang] || 'Pause';
     } else {
       const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
-      lbl.textContent = (dict && dict.s5_play_label) || 'Zeitreise abspielen';
+      lbl.textContent = (dict && dict.s6_play_label) || 'Zeitreise abspielen';
     }
   }
 
@@ -268,7 +268,7 @@ class FFWFirmengeschichte {
       this.zoomBtn.textContent = zoomCloseTexts[lang] || zoomCloseTexts.de;
     } else {
       const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
-      this.zoomBtn.textContent = (dict && dict.s5_zoom_btn) || '🔍 Faser-Lupe';
+      this.zoomBtn.textContent = (dict && dict.s6_zoom_btn) || '🔍 Faser-Lupe';
     }
   }
 

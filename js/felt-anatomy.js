@@ -74,7 +74,7 @@ class FeltAnatomySimulation {
   }
 
   initSlideObserver() {
-    const slide11 = (this.container && this.container.closest('.slide')) || document.querySelector('.slide[data-slide="10"]');
+    const slide11 = (this.container && this.container.closest('.slide')) || document.querySelector('.slide[data-slide="11"]');
     if (!slide11) return;
 
     const observer = new MutationObserver(() => {

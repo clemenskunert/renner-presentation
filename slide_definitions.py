@@ -11,7 +11,7 @@ Strictly based on the 5 technical masterclass documents in "Praesentation_Basis"
 plus the official louis-renner.de history and Google Photos Meuselwitz transformation album.
 """
 
-TOTAL_SLIDES = 33
+TOTAL_SLIDES = 34
 import re
 
 def get_watermark():
@@ -49,14 +49,228 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 2: Agenda & Course Topics (Animated Masterclass Journey)
-    slides.append(f'''      <!-- SLIDE 2: Agenda & Course Topics (Animated Masterclass Journey) -->
-      <section class="slide" data-slide="2">
+    # SLIDE 2: Ihre Ansprechpartner bei Louis Renner (Executive Introduction & vCard)
+    slides.append(f'''      <!-- SLIDE 2: Executive Introduction & Direct Contacts (Erik Stieler & Clemens Kunert) -->
+      <section class="slide contact-intro-slide" data-slide="2">
+        <div class="slide-header contact-slide-header">
+          <div>
+            <div class="slide-category" data-i18n="s2_category">Vorstellung • Unternehmensleitung &amp; Stammwerk</div>
+            <h2 class="slide-title" data-i18n="s2_title">Ihre Ansprechpartner bei Louis Renner</h2>
+            <div class="slide-subtitle" data-i18n="s2_subtitle">Persönlicher Dialog von Meistern für Meister – direkt aus unserem vereinten Stammwerk in Meuselwitz</div>
+          </div>
+          <div class="contact-mode-toggle" role="tablist" aria-label="Kontaktansicht">
+            <button type="button" class="contact-mode-btn is-active" data-contact-mode="cards">
+              <svg class="mode-svg-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <rect x="2.5" y="4" width="15" height="12" rx="2.2"/>
+                <circle cx="7.2" cy="9.2" r="2"/>
+                <path d="M4.6 13.6c.6-1.4 1.6-2 2.6-2s2 .6 2.6 2M11.8 8.2h3.5M11.8 11.2h2.6" stroke-linecap="round"/>
+              </svg>
+              <span data-i18n="s2_mode_cards">Profil &amp; Direktkontakt</span>
+            </button>
+            <button type="button" class="contact-mode-btn" data-contact-mode="qr">
+              <svg class="mode-svg-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <rect x="3" y="3" width="5.5" height="5.5" rx="1"/>
+                <rect x="11.5" y="3" width="5.5" height="5.5" rx="1"/>
+                <rect x="3" y="11.5" width="5.5" height="5.5" rx="1"/>
+                <path d="M11.5 11.5h2.5v2.5h-2.5zM15 14h2v3h-3v-1.5M15.5 11.5H17v1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span data-i18n="s2_mode_qr">Stay in Touch • QR-Scan</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="slide-body contact-slide-body" data-active-contact-mode="cards">
+          <div class="contact-cards-grid">
+            <!-- CARD 1: ERIK STIELER -->
+            <article class="bento-card contact-exec-card" style="--card-idx: 0;">
+              <div class="agenda-card-glow-edge gold"></div>
+              <div class="agenda-card-sheen"></div>
+              <div class="contact-card-watermark">01</div>
+
+              <div class="contact-profile-top">
+                <div class="contact-avatar-shell gold">
+                  <img src="Visuell/web_assets/contact_erik_stieler_portrait.png" alt="Erik Stieler – CEO / Managing Director" class="contact-avatar-img">
+                </div>
+                <div class="contact-identity">
+                  <div class="contact-badge-row">
+                    <span class="bento-badge gold" data-i18n="s2_p1_badge">GESCHÄFTSFÜHRUNG</span>
+                    <span class="contact-origin-pill" data-i18n="s2_since_pill">LOUIS RENNER · SEIT 1882</span>
+                  </div>
+                  <h3 class="contact-person-name" data-i18n="s2_p1_name">Erik Stieler</h3>
+                  <div class="contact-person-role" data-i18n="s2_p1_role">CEO / Geschäftsführer</div>
+                  <p class="contact-person-focus" data-i18n="s2_p1_focus">Gesamtverantwortung, Unternehmensstrategie &amp; internationale Herstellerpartnerschaften</p>
+                </div>
+              </div>
+
+              <div class="contact-topic-chips">
+                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip1">✦ Unternehmensstrategie</span>
+                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip2">✦ OEM- &amp; Herstellerpartner</span>
+                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip3">✦ Internationale Märkte</span>
+              </div>
+
+              <div class="contact-divider" aria-hidden="true"></div>
+
+              <div class="contact-details-qr-row">
+                <div class="contact-info-list">
+                  <div class="contact-info-item">
+                    <span class="contact-icon-box gold" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75">
+                        <path d="M3.6 4.5h3l1.4 3.4-1.8 1.3a10.5 10.5 0 004.6 4.6l1.3-1.8 3.4 1.4v3a1.5 1.5 0 01-1.6 1.5A13.9 13.9 0 012.1 6.1 1.5 1.5 0 013.6 4.5z" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="contact-lbl" data-i18n="s2_lbl_phone">Telefon</span>
+                    <a href="tel:+49344875107111" class="contact-val">+49 3448 75107 111</a>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <span class="contact-icon-box gold" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75">
+                        <rect x="5.5" y="2.3" width="9" height="15.4" rx="2"/>
+                        <circle cx="10" cy="14.9" r="0.8" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="contact-lbl" data-i18n="s2_lbl_mobile">Mobil</span>
+                    <a href="tel:+491732587996" class="contact-val">+49 173 2587996</a>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <span class="contact-icon-box gold" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75">
+                        <rect x="2.5" y="4.5" width="15" height="11" rx="1.8"/>
+                        <path d="M3.2 5.3L10 10.6l6.8-5.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="contact-lbl" data-i18n="s2_lbl_email">E-Mail</span>
+                    <a href="mailto:erik.stieler@louis-renner.de" class="contact-val email">erik.stieler@louis-renner.de</a>
+                  </div>
+
+                  <div class="contact-card-seal">
+                    <span class="seal-dot gold"></span>
+                    <span data-i18n="s2_seal">LOUIS RENNER · MADE IN GERMANY</span>
+                  </div>
+                </div>
+
+                <div class="contact-qr-pedestal" role="button" tabindex="0" title="QR-Ansicht umschalten (vCard speichern)">
+                  <div class="contact-qr-frame">
+                    <img src="Visuell/web_assets/contact_erik_stieler_qr.png" alt="vCard QR-Code Erik Stieler" class="contact-qr-img">
+                  </div>
+                  <span class="contact-qr-caption" data-i18n="s2_scan_cta">KONTAKT SPEICHERN</span>
+                  <span class="contact-qr-direct-mail">erik.stieler@louis-renner.de · +49 173 2587996</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 2: CLEMENS KUNERT -->
+            <article class="bento-card contact-exec-card" style="--card-idx: 1;">
+              <div class="agenda-card-glow-edge green"></div>
+              <div class="agenda-card-sheen"></div>
+              <div class="contact-card-watermark">02</div>
+
+              <div class="contact-profile-top">
+                <div class="contact-avatar-shell green">
+                  <img src="Visuell/web_assets/contact_clemens_kunert_portrait.png" alt="Clemens Kunert – Werkleiter / Plant Manager" class="contact-avatar-img">
+                </div>
+                <div class="contact-identity">
+                  <div class="contact-badge-row">
+                    <span class="bento-badge green" data-i18n="s2_p2_badge">WERKLEITUNG • REFERENT</span>
+                    <span class="contact-origin-pill" data-i18n="s2_hq_pill">STAMMWERK MEUSELWITZ</span>
+                  </div>
+                  <h3 class="contact-person-name" data-i18n="s2_p2_name">Clemens Kunert</h3>
+                  <div class="contact-person-role" data-i18n="s2_p2_role">Werkleiter / Plant Manager</div>
+                  <p class="contact-person-focus" data-i18n="s2_p2_focus">Gesamtfertigung Holz, Mechanik &amp; Hammerkopf sowie technische Leitung der Renner Academy</p>
+                </div>
+              </div>
+
+              <div class="contact-topic-chips">
+                <span class="contact-topic-chip green" data-i18n="s2_p2_chip1">✦ Holz, Mechanik &amp; Hammerkopf</span>
+                <span class="contact-topic-chip green" data-i18n="s2_p2_chip2">✦ Yamaha Kit &amp; Maßfertigung</span>
+                <span class="contact-topic-chip green" data-i18n="s2_p2_chip3">✦ Renner Academy &amp; Technik</span>
+              </div>
+
+              <div class="contact-divider" aria-hidden="true"></div>
+
+              <div class="contact-details-qr-row">
+                <div class="contact-info-list">
+                  <div class="contact-info-item">
+                    <span class="contact-icon-box green" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75">
+                        <path d="M3.6 4.5h3l1.4 3.4-1.8 1.3a10.5 10.5 0 004.6 4.6l1.3-1.8 3.4 1.4v3a1.5 1.5 0 01-1.6 1.5A13.9 13.9 0 012.1 6.1 1.5 1.5 0 013.6 4.5z" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="contact-lbl" data-i18n="s2_lbl_phone">Telefon</span>
+                    <a href="tel:+49344875107115" class="contact-val">+49 3448 75107 115</a>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <span class="contact-icon-box green" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75">
+                        <rect x="5.5" y="2.3" width="9" height="15.4" rx="2"/>
+                        <circle cx="10" cy="14.9" r="0.8" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="contact-lbl" data-i18n="s2_lbl_mobile">Mobil</span>
+                    <a href="tel:+491627355847" class="contact-val">+49 162 7355847</a>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <span class="contact-icon-box green" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75">
+                        <rect x="2.5" y="4.5" width="15" height="11" rx="1.8"/>
+                        <path d="M3.2 5.3L10 10.6l6.8-5.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="contact-lbl" data-i18n="s2_lbl_email">E-Mail</span>
+                    <a href="mailto:clemens.kunert@louis-renner.de" class="contact-val email">clemens.kunert@louis-renner.de</a>
+                  </div>
+
+                  <div class="contact-card-seal">
+                    <span class="seal-dot green"></span>
+                    <span data-i18n="s2_seal">LOUIS RENNER · MADE IN GERMANY</span>
+                  </div>
+                </div>
+
+                <div class="contact-qr-pedestal" role="button" tabindex="0" title="QR-Ansicht umschalten (vCard speichern)">
+                  <div class="contact-qr-frame">
+                    <img src="Visuell/web_assets/contact_clemens_kunert_qr.png" alt="vCard QR-Code Clemens Kunert" class="contact-qr-img">
+                  </div>
+                  <span class="contact-qr-caption" data-i18n="s2_scan_cta">KONTAKT SPEICHERN</span>
+                  <span class="contact-qr-direct-mail green">clemens.kunert@louis-renner.de · +49 162 7355847</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Unified Company & Headquarters Bar -->
+          <div class="contact-hq-footer">
+            <div class="contact-hq-brand">
+              <span class="hq-brand-reg">RENNER®</span>
+              <span class="hq-brand-sep">·</span>
+              <span class="hq-brand-sub" data-i18n="s2_hq_tradition">DAS HERZSTÜCK DES KLAVIERS SEIT 1882</span>
+            </div>
+            <div class="contact-hq-address">
+              <svg class="hq-pin-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path d="M10 17.5s5.5-5.1 5.5-9.2a5.5 5.5 0 10-11 0c0 4.1 5.5 9.2 5.5 9.2z"/>
+                <circle cx="10" cy="8.3" r="2"/>
+              </svg>
+              <span data-i18n="s2_hq_address">Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Deutschland</span>
+            </div>
+            <a href="https://www.louis-renner.de" target="_blank" rel="noopener" class="contact-hq-web">
+              <span>www.louis-renner.de</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+{get_watermark()}
+      </section>''')
+
+    # SLIDE 3: Agenda & Course Topics (Animated Masterclass Journey)
+    slides.append(f'''      <!-- SLIDE 3: Agenda & Course Topics (Animated Masterclass Journey) -->
+      <section class="slide" data-slide="3">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s2_category">Übersicht • Gliederung</div>
-            <h2 class="slide-title" data-i18n="s2_title">Struktur und Kapitel im Überblick</h2>
-            <div class="slide-subtitle" data-i18n="s2_subtitle">Vom Stammwerk Meuselwitz und der Wurzener Filzfertigung über die Hammerkopf-Produktion und das Yamaha Kit bis zur Intonation</div>
+            <div class="slide-category" data-i18n="s3_category">Übersicht • Gliederung</div>
+            <h2 class="slide-title" data-i18n="s3_title">Struktur und Kapitel im Überblick</h2>
+            <div class="slide-subtitle" data-i18n="s3_subtitle">Vom Stammwerk Meuselwitz und der Wurzener Filzfertigung über die Hammerkopf-Produktion und das Yamaha Kit bis zur Intonation</div>
           </div>
         </div>
         <div class="slide-body agenda-slide-body">
@@ -66,27 +280,27 @@ def get_all_slides_html():
               <div class="agenda-journey-laser"></div>
             </div>
             <div class="agenda-journey-nodes">
-              <div class="agenda-journey-node" data-target-slide="3" style="--node-idx: 0;">
+              <div class="agenda-journey-node" data-target-slide="4" style="--node-idx: 0;">
                 <span class="node-pin-dot"></span>
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">01</span>
               </div>
-              <div class="agenda-journey-node" data-target-slide="5" style="--node-idx: 1;">
+              <div class="agenda-journey-node" data-target-slide="6" style="--node-idx: 1;">
                 <span class="node-pin-dot"></span>
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">02</span>
               </div>
-              <div class="agenda-journey-node" data-target-slide="11" style="--node-idx: 2;">
+              <div class="agenda-journey-node" data-target-slide="12" style="--node-idx: 2;">
                 <span class="node-pin-dot"></span>
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">03</span>
               </div>
-              <div class="agenda-journey-node" data-target-slide="19" style="--node-idx: 3;">
+              <div class="agenda-journey-node" data-target-slide="20" style="--node-idx: 3;">
                 <span class="node-pin-dot"></span>
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">04</span>
               </div>
-              <div class="agenda-journey-node" data-target-slide="25" style="--node-idx: 4;">
+              <div class="agenda-journey-node" data-target-slide="26" style="--node-idx: 4;">
                 <span class="node-pin-dot"></span>
                 <span class="node-pin-pulse"></span>
                 <span class="node-pin-num">05</span>
@@ -97,96 +311,96 @@ def get_all_slides_html():
           <!-- 5 Modern Interactive Bento Cards -->
           <div class="agenda-cards-grid">
             <!-- KAPITEL 1 -->
-            <div class="bento-card agenda-card" data-target-slide="3" role="button" tabindex="0" style="--card-idx: 0;">
+            <div class="bento-card agenda-card" data-target-slide="4" role="button" tabindex="0" style="--card-idx: 0;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">01</div>
               <div class="agenda-card-header">
-                <span class="bento-badge gold" data-i18n="s2_b1_badge">KAPITEL 1</span>
-                <span class="agenda-slide-pill"><span class="pill-dot gold"></span><span data-i18n="s2_c1_pill">Folie 3–4</span></span>
+                <span class="bento-badge gold" data-i18n="s3_b1_badge">KAPITEL 1</span>
+                <span class="agenda-slide-pill"><span class="pill-dot gold"></span><span data-i18n="s3_c1_pill">Folie 4–5</span></span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c1_title">Historie & Meuselwitz</div>
-                <div class="bento-card-desc" data-i18n="s2_c1_desc">Über 140 Jahre Mechanik- und Hammerkopftradition seit 1882 sowie Baudokumentation und Drohnenflug durch das vereinte Werk Meuselwitz.</div>
+                <div class="bento-card-title" data-i18n="s3_c1_title">Historie & Meuselwitz</div>
+                <div class="bento-card-desc" data-i18n="s3_c1_desc">Über 140 Jahre Mechanik- und Hammerkopftradition seit 1882 sowie Baudokumentation und Drohnenflug durch das vereinte Werk Meuselwitz.</div>
               </div>
               <div class="agenda-card-footer">
-                <span class="agenda-action-text" data-i18n="s2_open_chapter">Kapitel öffnen</span>
+                <span class="agenda-action-text" data-i18n="s3_open_chapter">Kapitel öffnen</span>
                 <span class="agenda-nav-arrow">↗</span>
               </div>
             </div>
 
             <!-- KAPITEL 2 -->
-            <div class="bento-card agenda-card" data-target-slide="5" role="button" tabindex="0" style="--card-idx: 1;">
+            <div class="bento-card agenda-card" data-target-slide="6" role="button" tabindex="0" style="--card-idx: 1;">
               <div class="agenda-card-glow-edge green"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">02</div>
               <div class="agenda-card-header">
-                <span class="bento-badge green" data-i18n="s2_b2_badge">KAPITEL 2</span>
-                <span class="agenda-slide-pill"><span class="pill-dot green"></span><span data-i18n="s2_c2_pill">Folie 5–10</span></span>
+                <span class="bento-badge green" data-i18n="s3_b2_badge">KAPITEL 2</span>
+                <span class="agenda-slide-pill"><span class="pill-dot green"></span><span data-i18n="s3_c2_pill">Folie 6–11</span></span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c2_title">Filzfertigung in Wurzen</div>
-                <div class="bento-card-desc" data-i18n="s2_c2_desc">Filzfabrik Wurzen seit 1783, hochwertige Wollmischung, Krempeln, definierte Walkdichte und der Einfluss des Verzichts auf das Schleifen der Tafeln.</div>
+                <div class="bento-card-title" data-i18n="s3_c2_title">Filzfertigung in Wurzen</div>
+                <div class="bento-card-desc" data-i18n="s3_c2_desc">Filzfabrik Wurzen seit 1783, hochwertige Wollmischung, Krempeln, definierte Walkdichte und der Einfluss des Verzichts auf das Schleifen der Tafeln.</div>
               </div>
               <div class="agenda-card-footer">
-                <span class="agenda-action-text" data-i18n="s2_open_chapter">Kapitel öffnen</span>
+                <span class="agenda-action-text" data-i18n="s3_open_chapter">Kapitel öffnen</span>
                 <span class="agenda-nav-arrow">↗</span>
               </div>
             </div>
 
             <!-- KAPITEL 3 -->
-            <div class="bento-card agenda-card" data-target-slide="11" role="button" tabindex="0" style="--card-idx: 2;">
+            <div class="bento-card agenda-card" data-target-slide="12" role="button" tabindex="0" style="--card-idx: 2;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">03</div>
               <div class="agenda-card-header">
-                <span class="bento-badge gold" data-i18n="s2_b3_badge">KAPITEL 3</span>
-                <span class="agenda-slide-pill"><span class="pill-dot gold"></span><span data-i18n="s2_c3_pill">Folie 11–18</span></span>
+                <span class="bento-badge gold" data-i18n="s3_b3_badge">KAPITEL 3</span>
+                <span class="agenda-slide-pill"><span class="pill-dot gold"></span><span data-i18n="s3_c3_pill">Folie 12–19</span></span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c3_title">Hammerkopf-Produktion</div>
-                <div class="bento-card-desc" data-i18n="s2_c3_desc">Filzlager, Weickert Special im REM, Zuschnitt, Kernhölzer & Hammerkopfgewicht, Pressen und Verleimen, CNC-Fräsen der Kontur und präzises Kalibrieren der Oberfläche sowie Nieten und Bohren.</div>
+                <div class="bento-card-title" data-i18n="s3_c3_title">Hammerkopf-Produktion</div>
+                <div class="bento-card-desc" data-i18n="s3_c3_desc">Filzlager, Weickert Special im REM, Zuschnitt, Kernhölzer & Hammerkopfgewicht, Pressen und Verleimen, CNC-Fräsen der Kontur und präzises Kalibrieren der Oberfläche sowie Nieten und Bohren.</div>
               </div>
               <div class="agenda-card-footer">
-                <span class="agenda-action-text" data-i18n="s2_open_chapter">Kapitel öffnen</span>
+                <span class="agenda-action-text" data-i18n="s3_open_chapter">Kapitel öffnen</span>
                 <span class="agenda-nav-arrow">↗</span>
               </div>
             </div>
 
             <!-- KAPITEL 4 -->
-            <div class="bento-card agenda-card" data-target-slide="19" role="button" tabindex="0" style="--card-idx: 3;">
+            <div class="bento-card agenda-card" data-target-slide="20" role="button" tabindex="0" style="--card-idx: 3;">
               <div class="agenda-card-glow-edge green"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">04</div>
               <div class="agenda-card-header">
-                <span class="bento-badge green" data-i18n="s2_b4_badge">KAPITEL 4</span>
-                <span class="agenda-slide-pill"><span class="pill-dot green"></span><span data-i18n="s2_c4_pill">Folie 19–24</span></span>
+                <span class="bento-badge green" data-i18n="s3_b4_badge">KAPITEL 4</span>
+                <span class="agenda-slide-pill"><span class="pill-dot green"></span><span data-i18n="s3_c4_pill">Folie 20–25</span></span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c4_title">Yamaha Kit (C1–C3)</div>
-                <div class="bento-card-desc" data-i18n="s2_c4_desc">Einbaufertiger Satz für C1–C3 in 4–5 Std. vor Ort, Zeitraffer-Einbau, Pianisten-Feedback & Akustik-Vergleich (H₁–H₁₂ bis C₈).</div>
+                <div class="bento-card-title" data-i18n="s3_c4_title">Yamaha Kit (C1–C3)</div>
+                <div class="bento-card-desc" data-i18n="s3_c4_desc">Einbaufertiger Satz für C1–C3 in 4–5 Std. vor Ort, Zeitraffer-Einbau, Pianisten-Feedback & Akustik-Vergleich (H₁–H₁₂ bis C₈).</div>
               </div>
               <div class="agenda-card-footer">
-                <span class="agenda-action-text" data-i18n="s2_open_chapter">Kapitel öffnen</span>
+                <span class="agenda-action-text" data-i18n="s3_open_chapter">Kapitel öffnen</span>
                 <span class="agenda-nav-arrow">↗</span>
               </div>
             </div>
 
             <!-- KAPITEL 5 -->
-            <div class="bento-card agenda-card hero-highlight" data-target-slide="25" role="button" tabindex="0" style="--card-idx: 4;">
+            <div class="bento-card agenda-card hero-highlight" data-target-slide="26" role="button" tabindex="0" style="--card-idx: 4;">
               <div class="agenda-card-glow-edge gold"></div>
               <div class="agenda-card-sheen"></div>
               <div class="bento-step-watermark">05</div>
               <div class="agenda-card-header">
-                <span class="bento-badge gold" data-i18n="s2_b5_badge">KAPITEL 5</span>
-                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span><span data-i18n="s2_c5_pill">Folie 25–33</span></span>
+                <span class="bento-badge gold" data-i18n="s3_b5_badge">KAPITEL 5</span>
+                <span class="agenda-slide-pill highlight"><span class="pill-dot gold"></span><span data-i18n="s3_c5_pill">Folie 26–34</span></span>
               </div>
               <div class="agenda-card-main">
-                <div class="bento-card-title" data-i18n="s2_c5_title">Intonation & Fachdialog</div>
-                <div class="bento-card-desc" data-i18n="s2_c5_desc">Teiltonaufbau A₁, komplexe Feder, Intoniermodell, Scheitel und Saitenebene, Feinintonation, Tränken & Bügeln sowie Academy & Fragerunde.</div>
+                <div class="bento-card-title" data-i18n="s3_c5_title">Intonation & Fachdialog</div>
+                <div class="bento-card-desc" data-i18n="s3_c5_desc">Teiltonaufbau A₁, komplexe Feder, Intoniermodell, Scheitel und Saitenebene, Feinintonation, Tränken & Bügeln sowie Academy & Fragerunde.</div>
               </div>
               <div class="agenda-card-footer">
-                <span class="agenda-action-text" data-i18n="s2_open_chapter">Kapitel öffnen</span>
+                <span class="agenda-action-text" data-i18n="s3_open_chapter">Kapitel öffnen</span>
                 <span class="agenda-nav-arrow">↗</span>
               </div>
             </div>
@@ -296,7 +510,7 @@ def get_all_slides_html():
               </div>
             </div>'''
 
-    # SLIDE 3: 140+ Jahre Tradition & Meilensteine (Central Timeline with Vertical Tree Branches)
+    # SLIDE 4: 140+ Jahre Tradition & Meilensteine (Central Timeline with Vertical Tree Branches)
     history_milestones_data = [
       {
         'id': '1882',
@@ -662,7 +876,7 @@ def get_all_slides_html():
                   <span class="f-bar"></span>
                   <span class="f-bar"></span>
                 </div>
-                <span class="frequency-text" data-i18n="s3_frequency_load">✦ Meuselwitz 2026 • Ladefrequenz synchronisiert...</span>
+                <span class="frequency-text" data-i18n="s4_frequency_load">✦ Meuselwitz 2026 • Ladefrequenz synchronisiert...</span>
               </div>
             </div>\n'''
 
@@ -693,13 +907,13 @@ def get_all_slides_html():
 
     panels_str = chr(10).join(panels_html)
 
-    slides.append(f'''      <!-- SLIDE 3: 140+ Jahre Tradition & Meilensteine (Flying Light Point & Branching Ray) -->
-      <section class="slide" data-slide="3">
+    slides.append(f'''      <!-- SLIDE 4: 140+ Jahre Tradition & Meilensteine (Flying Light Point & Branching Ray) -->
+      <section class="slide" data-slide="4">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s3_category">Teil 1: Einführung & Historie • Unternehmenschronik</div>
-            <h2 class="slide-title" id="history-main-title" data-i18n="s3_title">140+ Jahre Tradition & Perfektion (1882 – Heute)</h2>
-            <div class="slide-subtitle" id="history-main-subtitle" data-i18n="s3_subtitle">Vom Stuttgarter Handwerksbetrieb zum weltweiten Maßstab für Klaviermechaniken & Hammerköpfe</div>
+            <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung & Historie • Unternehmenschronik</div>
+            <h2 class="slide-title" id="history-main-title" data-i18n="s4_title">140+ Jahre Tradition & Perfektion (1882 – Heute)</h2>
+            <div class="slide-subtitle" id="history-main-subtitle" data-i18n="s4_subtitle">Vom Stuttgarter Handwerksbetrieb zum weltweiten Maßstab für Klaviermechaniken & Hammerköpfe</div>
           </div>
 
           <!-- Timeline Controls -->
@@ -761,7 +975,7 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 4: Chronologisches 3D-Diorama / Daumenkino (46 Bilder, 0.5s/Bild + helle Überblendung der letzten 4 Bilder) & Drohnenflug Finale
+    # SLIDE 5: Chronologisches 3D-Diorama / Daumenkino (46 Bilder, 0.5s/Bild + helle Überblendung der letzten 4 Bilder) & Drohnenflug Finale
     diorama_month_starts = {
         0: '11.25',
         11: '12.25',
@@ -786,13 +1000,13 @@ def get_all_slides_html():
         )
     diorama_ticks_str = ''.join(diorama_ticks_html)
 
-    slides.append(f'''      <!-- SLIDE 4: Chronologisches 3D-Diorama / Daumenkino & Drohnenflug Finale -->
-      <section class="slide" data-slide="4">
+    slides.append(f'''      <!-- SLIDE 5: Chronologisches 3D-Diorama / Daumenkino & Drohnenflug Finale -->
+      <section class="slide" data-slide="5">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s4_category">Teil 1: Einführung & Historie • Werkumbau Meuselwitz</div>
-            <h2 class="slide-title" id="build-main-title" data-i18n="s4_title">Baudokumentation: Die Entstehung des neuen Werks Meuselwitz</h2>
-            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s4_subtitle">Chronologische Fotoreise (11.2025 – 09.2026) mit anschließendem Drohnenflug durch die Fertigung</div>
+            <div class="slide-category" data-i18n="s5_category">Teil 1: Einführung & Historie • Werkumbau Meuselwitz</div>
+            <h2 class="slide-title" id="build-main-title" data-i18n="s5_title">Baudokumentation: Die Entstehung des neuen Werks Meuselwitz</h2>
+            <div class="slide-subtitle" id="build-main-subtitle" data-i18n="s5_subtitle">Chronologische Fotoreise (11.2025 – 09.2026) mit anschließendem Drohnenflug durch die Fertigung</div>
           </div>
 
           <!-- Timeline & Flipbook Controls -->
@@ -804,16 +1018,16 @@ def get_all_slides_html():
             </button>
 
             <button class="vox-step-btn diorama-drone-quick-btn" id="build-drone-btn" title="Direkt zum Drohnenflug-Video springen">
-              🎬 <span data-i18n="s4_drone_btn">Drohnenflug</span>
+              🎬 <span data-i18n="s5_drone_btn">Drohnenflug</span>
             </button>
 
             <div class="vox-nav-group">
               <button class="vox-step-btn" id="build-prev-btn" title="Ein Bild zurück">
-                ← <span data-i18n="s4_prev_btn">Zurück</span>
+                ← <span data-i18n="s5_prev_btn">Zurück</span>
               </button>
               <span class="vox-step-counter" id="build-step-counter" data-i18n="build_start_journey">✦ Fotoreise starten</span>
               <button class="vox-step-btn highlight" id="build-next-btn" title="Zum Drohnenflug / Nächste Folie">
-                <span id="build-next-label" data-i18n="s4_drone_btn">Drohnenflug</span> →
+                <span id="build-next-label" data-i18n="s5_drone_btn">Drohnenflug</span> →
               </button>
             </div>
           </div>
@@ -831,7 +1045,7 @@ def get_all_slides_html():
             <!-- Left Diorama Wing (Previous Frame - GPU Double Buffered & Clickable) -->
             <div class="diorama-wing left">
               <div class="diorama-wing-card" id="diorama-wing-left-btn" role="button" tabindex="0">
-                <div class="diorama-wing-label" data-i18n="s4_wing_prev">◀ Vorheriges Bild</div>
+                <div class="diorama-wing-label" data-i18n="s5_wing_prev">◀ Vorheriges Bild</div>
                 <img class="diorama-wing-img is-visible" id="diorama-wing-left-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/01_20251103_152224.jpg" alt="Vorheriges Bild" decoding="async">
                 <img class="diorama-wing-img" id="diorama-wing-left-img-b" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/01_20251103_152224.jpg" alt="" decoding="async">
               </div>
@@ -873,7 +1087,7 @@ def get_all_slides_html():
             <!-- Right Diorama Wing (Next Frame - GPU Double Buffered & Clickable) -->
             <div class="diorama-wing right">
               <div class="diorama-wing-card" id="diorama-wing-right-btn" role="button" tabindex="0">
-                <div class="diorama-wing-label" data-i18n="s4_wing_next">Nächstes Bild ▶</div>
+                <div class="diorama-wing-label" data-i18n="s5_wing_next">Nächstes Bild ▶</div>
                 <img class="diorama-wing-img is-visible" id="diorama-wing-right-img" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/02_20251104_152516.jpg" alt="Nächstes Bild" decoding="async">
                 <img class="diorama-wing-img" id="diorama-wing-right-img-b" src="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/03_20251104_152550.jpg" alt="" decoding="async">
               </div>
@@ -885,10 +1099,10 @@ def get_all_slides_html():
             <div class="diorama-drone-card">
               <div class="diorama-drone-topbar">
                 <div class="diorama-drone-topbar-left">
-                  <span class="bento-badge" id="diorama-drone-badge" data-i18n="s4_drone_badge">DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)</span>
-                  <span class="diorama-drone-title" data-i18n="s4_drone_title">Das fertiggestellte Werk Meuselwitz im Drohnenflug</span>
+                  <span class="bento-badge" id="diorama-drone-badge" data-i18n="s5_drone_badge">DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)</span>
+                  <span class="diorama-drone-title" data-i18n="s5_drone_title">Das fertiggestellte Werk Meuselwitz im Drohnenflug</span>
                 </div>
-                <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s4_replay_btn">↺ Daumenkino wiederholen</button>
+                <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s5_replay_btn">↺ Daumenkino wiederholen</button>
               </div>
               <div class="diorama-drone-video-wrap">
                 <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/poster_drone_meuselwitz.jpg" controls playsinline preload="none"></video>
@@ -906,7 +1120,7 @@ def get_all_slides_html():
               </div>
             </div>
             <button class="diorama-drone-finale-pill" id="diorama-scrubber-drone" title="Drohnenflug durch das Werk Meuselwitz starten">
-              🎬 <span data-i18n="s4_drone_finale">Drohnenflug Finale</span>
+              🎬 <span data-i18n="s5_drone_finale">Drohnenflug Finale</span>
             </button>
           </div>
         </div>
@@ -921,24 +1135,24 @@ def get_all_slides_html():
     # KAPITEL 2: DIE FILZHERSTELLUNG BEI FFW WURZEN (FFW & WEICKERT) (5 - 11)
     # =========================================================================
 
-    # SLIDE 5: FFW Wurzen Firmengeschichte & Der Hochwertige Weickert-Filz
-    slides.append(f'''<!-- SLIDE 5 (Animierte FFW Firmengeschichte & Weickert-Filz) -->
-      <section class="slide" data-slide="5">
+    # SLIDE 6: FFW Wurzen Firmengeschichte & Der Hochwertige Weickert-Filz
+    slides.append(f'''<!-- SLIDE 6 (Animierte FFW Firmengeschichte & Weickert-Filz) -->
+      <section class="slide" data-slide="6">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s5_category">Teil 2: Filzherstellung • Historie & Tradition</div>
-            <h2 class="slide-title" data-i18n="s5_title">Filzfabrik Wurzen (FFW) – Die Wiege des Hammerkopffilzes</h2>
-            <div class="slide-subtitle" data-i18n="s5_subtitle">Wurzen 1783 • Vom ersten Pianofortefilz 1847 zur Weickert-Spezial-Partnerschaft mit Renner</div>
+            <div class="slide-category" data-i18n="s6_category">Teil 2: Filzherstellung • Historie & Tradition</div>
+            <h2 class="slide-title" data-i18n="s6_title">Filzfabrik Wurzen (FFW) – Die Wiege des Hammerkopffilzes</h2>
+            <div class="slide-subtitle" data-i18n="s6_subtitle">Wurzen 1783 • Vom ersten Pianofortefilz 1847 zur Weickert-Spezial-Partnerschaft mit Renner</div>
           </div>
 
           <!-- Timeline Stepper & Autoplay Controls -->
           <div class="ffw-timeline-controls">
             <button class="ffw-play-btn" id="ffw-play-btn" title="Zeitreise abspielen">
               <span class="ffw-play-icon" id="ffw-play-icon">▶</span>
-              <span class="ffw-play-label" data-i18n="s5_play_label">Zeitreise abspielen</span>
+              <span class="ffw-play-label" data-i18n="s6_play_label">Zeitreise abspielen</span>
               <div class="ffw-play-progress" id="ffw-play-progress"></div>
             </button>
             <div class="ffw-step-buttons">
@@ -957,27 +1171,27 @@ def get_all_slides_html():
               <div class="ffw-epoch-tabs" id="ffw-epoch-tabs" role="tablist">
                 <button class="ffw-epoch-tab active" data-epoch="0" role="tab" aria-selected="true">
                   <span class="ffw-tab-year">1783</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab1_tag">Wurzen 1783</span>
+                  <span class="ffw-tab-tag" data-i18n="s6_tab1_tag">Wurzen 1783</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="1" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">1847</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab2_tag">1. Pianofortefilz</span>
+                  <span class="ffw-tab-tag" data-i18n="s6_tab2_tag">1. Pianofortefilz</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="2" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">1850–67</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab3_tag">Weltausstellung</span>
+                  <span class="ffw-tab-tag" data-i18n="s6_tab3_tag">Weltausstellung</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="3" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">1861</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab4_tag">Werk Wurzen</span>
+                  <span class="ffw-tab-tag" data-i18n="s6_tab4_tag">Werk Wurzen</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="4" role="tab" aria-selected="false">
                   <span class="ffw-tab-year">1906</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab5_tag">Weltmarktführer</span>
+                  <span class="ffw-tab-tag" data-i18n="s6_tab5_tag">Weltmarktführer</span>
                 </button>
                 <button class="ffw-epoch-tab" data-epoch="5" role="tab" aria-selected="false">
-                  <span class="ffw-tab-year" data-i18n="s5_tab6_year">Heute</span>
-                  <span class="ffw-tab-tag" data-i18n="s5_tab6_tag">Weickert Spezial</span>
+                  <span class="ffw-tab-year" data-i18n="s6_tab6_year">Heute</span>
+                  <span class="ffw-tab-tag" data-i18n="s6_tab6_tag">Weickert Spezial</span>
                 </button>
               </div>
 
@@ -987,27 +1201,27 @@ def get_all_slides_html():
                 <div class="ffw-milestone-panel active" data-panel="0">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b1_badge">URSPRUNG WURZEN 1783</span>
+                      <span class="bento-badge gold" data-i18n="s6_b1_badge">URSPRUNG WURZEN 1783</span>
                       <span class="ffw-panel-year">1783</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m1_title">Gründung der Filzmanufaktur in Wurzen</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m1_subtitle">Die älteste industrielle Filzmanufaktur der Welt – verwurzelt im sächsischen Muldental</div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_m1_title">Gründung der Filzmanufaktur in Wurzen</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_m1_subtitle">Die älteste industrielle Filzmanufaktur der Welt – verwurzelt im sächsischen Muldental</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m1_bullet_1"><strong>Gründung 1783:</strong> Johann Dankegott Weickert begründet in Wurzen die sächsische Woll- und Filztradition.</span>
+                        <span data-i18n="s6_m1_bullet_1"><strong>Gründung 1783:</strong> Johann Dankegott Weickert begründet in Wurzen die sächsische Woll- und Filztradition.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m1_bullet_2"><strong>Pionier der Feinfilze:</strong> Aus der Handwerksmanufaktur wächst ein führendes Zentrum für edle technische Wollfilze.</span>
+                        <span data-i18n="s6_m1_bullet_2"><strong>Pionier der Feinfilze:</strong> Aus der Handwerksmanufaktur wächst ein führendes Zentrum für edle technische Wollfilze.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m1_bullet_3"><strong>Fokus Klavierbau:</strong> Frühe Spezialisierung auf hochelastische Filze für den aufstrebenden Hammerflügelbau.</span>
+                        <span data-i18n="s6_m1_bullet_3"><strong>Fokus Klavierbau:</strong> Frühe Spezialisierung auf hochelastische Filze für den aufstrebenden Hammerflügelbau.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m1_fact">🏛 Älteste industrielle Filzmanufaktur der Welt in Wurzen</span>
+                      <span class="ffw-fact-badge" data-i18n="s6_m1_fact">🏛 Älteste industrielle Filzmanufaktur der Welt in Wurzen</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1017,8 +1231,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s5_b2_badge">FASER-URSPRUNG</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m1_caption">Vom handkardierten Rohwollvlies zur hochverdichteten Deckfilz-Tafel</span>
+                      <span class="bento-badge green" data-i18n="s6_b2_badge">FASER-URSPRUNG</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_m1_caption">Vom handkardierten Rohwollvlies zur hochverdichteten Deckfilz-Tafel</span>
                     </div>
                   </div>
                 </div>
@@ -1027,27 +1241,27 @@ def get_all_slides_html():
                 <div class="ffw-milestone-panel" data-panel="1">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b3_badge">ERFINDUNG 1847</span>
+                      <span class="bento-badge gold" data-i18n="s6_b3_badge">ERFINDUNG 1847</span>
                       <span class="ffw-panel-year">1847</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m2_title">Erster brauchbarer Pianofortefilz Deutschlands</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m2_subtitle">Patzschke & Weickert revolutionieren 1847 den europäischen Klavierbau</div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_m2_title">Erster brauchbarer Pianofortefilz Deutschlands</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_m2_subtitle">Patzschke & Weickert revolutionieren 1847 den europäischen Klavierbau</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m2_bullet_1"><strong>Filz ersetzt Leder:</strong> 1847 gelingt es erstmals, harte Lederbezüge durch homogenen Hammerkopffilz abzulösen.</span>
+                        <span data-i18n="s6_m2_bullet_1"><strong>Filz ersetzt Leder:</strong> 1847 gelingt es erstmals, harte Lederbezüge durch homogenen Hammerkopffilz abzulösen.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m2_bullet_2"><strong>Starke Partnerschaft:</strong> Weickerts Unternehmergeist und Patzschkes Filz-Expertise begründen den internationalen Ruf.</span>
+                        <span data-i18n="s6_m2_bullet_2"><strong>Starke Partnerschaft:</strong> Weickerts Unternehmergeist und Patzschkes Filz-Expertise begründen den internationalen Ruf.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m2_bullet_3"><strong>Standortfaktor Mulde:</strong> Das kalkarme, weiche Wasser der Mulde sichert reinstes, elastisches Wollgewebe.</span>
+                        <span data-i18n="s6_m2_bullet_3"><strong>Standortfaktor Mulde:</strong> Das kalkarme, weiche Wasser der Mulde sichert reinstes, elastisches Wollgewebe.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m2_fact">🎹 Meilenstein: Wurzener Filz löst Lederbezüge im Klavierbau ab</span>
+                      <span class="ffw-fact-badge" data-i18n="s6_m2_fact">🎹 Meilenstein: Wurzener Filz löst Lederbezüge im Klavierbau ab</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1057,8 +1271,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s5_b4_badge">GOLZERNMÜHLE 1850</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m2_caption">Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde</span>
+                      <span class="bento-badge green" data-i18n="s6_b4_badge">GOLZERNMÜHLE 1850</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_m2_caption">Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde</span>
                     </div>
                   </div>
                 </div>
@@ -1067,27 +1281,27 @@ def get_all_slides_html():
                 <div class="ffw-milestone-panel" data-panel="2">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b5_badge">LONDON & PARIS 1851</span>
+                      <span class="bento-badge gold" data-i18n="s6_b5_badge">LONDON & PARIS 1851</span>
                       <span class="ffw-panel-year">1851</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m3_title">Weltausstellungen & Goldmedaillen London & Paris</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m3_subtitle">Internationale Auszeichnungen auf den Weltausstellungen in Leipzig, London und Paris</div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_m3_title">Weltausstellungen & Goldmedaillen London & Paris</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_m3_subtitle">Internationale Auszeichnungen auf den Weltausstellungen in Leipzig, London und Paris</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m3_bullet_1"><strong>Weltausstellungs-Gold:</strong> Höchste Prämierungen in Leipzig (1850), London (1851) und Paris (1867) begründen den Weltruhm.</span>
+                        <span data-i18n="s6_m3_bullet_1"><strong>Weltausstellungs-Gold:</strong> Höchste Prämierungen in Leipzig (1850), London (1851) und Paris (1867) begründen den Weltruhm.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m3_bullet_2"><strong>Königliche Besuche:</strong> Sächsische Monarchen würdigen persönlich die überragende Qualität der Wurzener Manufaktur.</span>
+                        <span data-i18n="s6_m3_bullet_2"><strong>Königliche Besuche:</strong> Sächsische Monarchen würdigen persönlich die überragende Qualität der Wurzener Manufaktur.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m3_bullet_3"><strong>Europas erste Wahl:</strong> Führende Klavierbauer in Wien, Paris und London stellen geschlossen auf Weickert-Filz um.</span>
+                        <span data-i18n="s6_m3_bullet_3"><strong>Europas erste Wahl:</strong> Führende Klavierbauer in Wien, Paris und London stellen geschlossen auf Weickert-Filz um.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m3_fact">🏅 Goldmedaillen London 1851, Paris 1867 & Leipzig 1850</span>
+                      <span class="ffw-fact-badge" data-i18n="s6_m3_fact">🏅 Goldmedaillen London 1851, Paris 1867 & Leipzig 1850</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media medal-spotlight">
@@ -1097,8 +1311,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s5_b6_badge">AUSZEICHNUNGEN</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m3_caption">Historische Medaillen der Weltausstellungen für vollendete Filzgüte</span>
+                      <span class="bento-badge green" data-i18n="s6_b6_badge">AUSZEICHNUNGEN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_m3_caption">Historische Medaillen der Weltausstellungen für vollendete Filzgüte</span>
                     </div>
                   </div>
                 </div>
@@ -1107,27 +1321,27 @@ def get_all_slides_html():
                 <div class="ffw-milestone-panel" data-panel="3">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b7_badge">EXPANSION 1861</span>
+                      <span class="bento-badge gold" data-i18n="s6_b7_badge">EXPANSION 1861</span>
                       <span class="ffw-panel-year">1861</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m4_title">Großfertigung am Mühlgraben in Wurzen</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m4_subtitle">Dampfkraft, modernste Walkwerke und die Kraft der Vereinigten Mulde</div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_m4_title">Großfertigung am Mühlgraben in Wurzen</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_m4_subtitle">Dampfkraft, modernste Walkwerke und die Kraft der Vereinigten Mulde</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m4_bullet_1"><strong>Industrielle Großfertigung:</strong> 1861 entstehen moderne Hallen am Wurzener Mühlgraben mit eigener Dampfkraft.</span>
+                        <span data-i18n="s6_m4_bullet_1"><strong>Industrielle Großfertigung:</strong> 1861 entstehen moderne Hallen am Wurzener Mühlgraben mit eigener Dampfkraft.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m4_bullet_2"><strong>Präzisions-Walkmaschinen:</strong> Dampfgetriebene Spezialmaschinen garantieren unerreichte Dichte und Chargenkonstanz.</span>
+                        <span data-i18n="s6_m4_bullet_2"><strong>Präzisions-Walkmaschinen:</strong> Dampfgetriebene Spezialmaschinen garantieren unerreichte Dichte und Chargenkonstanz.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m4_bullet_3"><strong>Schonende Wollwäsche:</strong> Das mineralarme Mulde-Wasser schützt die natürliche Schuppenstruktur der Merinowolle.</span>
+                        <span data-i18n="s6_m4_bullet_3"><strong>Schonende Wollwäsche:</strong> Das mineralarme Mulde-Wasser schützt die natürliche Schuppenstruktur der Merinowolle.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m4_fact">⚙️ Dampf-Walkerei & Flusswasser am Wurzener Mühlgraben</span>
+                      <span class="ffw-fact-badge" data-i18n="s6_m4_fact">⚙️ Dampf-Walkerei & Flusswasser am Wurzener Mühlgraben</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1137,8 +1351,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s5_b8_badge">WURZEN 1871</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m4_caption">Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben</span>
+                      <span class="bento-badge green" data-i18n="s6_b8_badge">WURZEN 1871</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_m4_caption">Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben</span>
                     </div>
                   </div>
                 </div>
@@ -1147,27 +1361,27 @@ def get_all_slides_html():
                 <div class="ffw-milestone-panel" data-panel="4">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b9_badge">WELTMARKTFÜHRER 1906</span>
+                      <span class="bento-badge gold" data-i18n="s6_b9_badge">WELTMARKTFÜHRER 1906</span>
                       <span class="ffw-panel-year">1906</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m5_title">Weltmarktführer für 200.000 Klaviere jährlich</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m5_subtitle">Direktor Patzschke, seine Meister & 350 Fachkräfte im Wurzener Werk (1906)</div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_m5_title">Weltmarktführer für 200.000 Klaviere jährlich</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_m5_subtitle">Direktor Patzschke, seine Meister & 350 Fachkräfte im Wurzener Werk (1906)</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m5_bullet_1"><strong>Marktführer vor 1914:</strong> Wurzen stattet jährlich bis zu 200.000 Klaviere und Flügel weltweit mit Hammerkopffilz aus.</span>
+                        <span data-i18n="s6_m5_bullet_1"><strong>Marktführer vor 1914:</strong> Wurzen stattet jährlich bis zu 200.000 Klaviere und Flügel weltweit mit Hammerkopffilz aus.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m5_bullet_2"><strong>Weltweiter Standard:</strong> Steinway & Sons New York und Europas Spitzenmanufakturen setzen auf Wurzener Filz.</span>
+                        <span data-i18n="s6_m5_bullet_2"><strong>Weltweiter Standard:</strong> Steinway & Sons New York und Europas Spitzenmanufakturen setzen auf Wurzener Filz.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m5_bullet_3"><strong>Meister & Direktor Patzschke:</strong> Historisches Originalfoto (1906) am monumentalen, keilförmig gewalkten Filzblock.</span>
+                        <span data-i18n="s6_m5_bullet_3"><strong>Meister & Direktor Patzschke:</strong> Historisches Originalfoto (1906) am monumentalen, keilförmig gewalkten Filzblock.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m5_fact">🌎 Weltweiter Referenzstandard für Steinway & Sons New York</span>
+                      <span class="ffw-fact-badge" data-i18n="s6_m5_fact">🌎 Weltweiter Referenzstandard für Steinway & Sons New York</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1177,8 +1391,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s5_b10_badge">MEISTER & HERR PATZSCHKE (1906)</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m5_caption">Historische Originalaufnahme (Sept. 1906): Meister der Filzfabrik Wurzen mit Direktor Patzschke am Filzzuschnitt-Tisch</span>
+                      <span class="bento-badge green" data-i18n="s6_b10_badge">MEISTER & HERR PATZSCHKE (1906)</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_m5_caption">Historische Originalaufnahme (Sept. 1906): Meister der Filzfabrik Wurzen mit Direktor Patzschke am Filzzuschnitt-Tisch</span>
                     </div>
                   </div>
                 </div>
@@ -1187,27 +1401,27 @@ def get_all_slides_html():
                 <div class="ffw-milestone-panel" data-panel="5">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s5_b11_badge">HEUTE • RENNER PARTNER</span>
-                      <span class="ffw-panel-year" data-i18n="s5_m6_year">Heute</span>
+                      <span class="bento-badge gold" data-i18n="s6_b11_badge">HEUTE • RENNER PARTNER</span>
+                      <span class="ffw-panel-year" data-i18n="s6_m6_year">Heute</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s5_m6_title">Renaissance von „Weickert Spezial“ & Partnerschaft mit Renner</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s5_m6_subtitle">Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik in Meuselwitz</div>
+                    <h3 class="ffw-panel-title" data-i18n="s6_m6_title">Renaissance von „Weickert Spezial“ & Partnerschaft mit Renner</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s6_m6_subtitle">Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik in Meuselwitz</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m6_bullet_1"><strong>Neuauflage 2010:</strong> Familie Brand reaktiviert die historische Originalrezeptur von 1903 exklusiv für höchste Klangansprüche.</span>
+                        <span data-i18n="s6_m6_bullet_1"><strong>Neuauflage 2010:</strong> Familie Brand reaktiviert die historische Originalrezeptur von 1903 exklusiv für höchste Klangansprüche.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m6_bullet_2"><strong>Räumliche Nähe (nur 65 km):</strong> Wurzen und das Renner-Werk Meuselwitz liegen im gemeinsamen mitteldeutschen Klavierbau-Cluster.</span>
+                        <span data-i18n="s6_m6_bullet_2"><strong>Räumliche Nähe (nur 65 km):</strong> Wurzen und das Renner-Werk Meuselwitz liegen im gemeinsamen mitteldeutschen Klavierbau-Cluster.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s5_m6_bullet_3"><strong>Direkter Meister-Austausch:</strong> Kurze Wege ermöglichen die persönliche Abstimmung von Dichte und Elastizität vor Ort.</span>
+                        <span data-i18n="s6_m6_bullet_3"><strong>Direkter Meister-Austausch:</strong> Kurze Wege ermöglichen die persönliche Abstimmung von Dichte und Elastizität vor Ort.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s5_m6_fact">📍 Nur 65 km: Direkte Partnerschaft Wurzen ↔ Renner Meuselwitz</span>
+                      <span class="ffw-fact-badge" data-i18n="s6_m6_fact">📍 Nur 65 km: Direkte Partnerschaft Wurzen ↔ Renner Meuselwitz</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1217,8 +1431,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s5_b12_badge">WEICKERT SPEZIAL</span>
-                      <span class="ffw-media-caption-text" data-i18n="s5_m6_caption">Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe</span>
+                      <span class="bento-badge green" data-i18n="s6_b12_badge">WEICKERT SPEZIAL</span>
+                      <span class="ffw-media-caption-text" data-i18n="s6_m6_caption">Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe</span>
                     </div>
                   </div>
                 </div>
@@ -1229,9 +1443,9 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s5_b13_badge">100% REINE MERINO-SCHURWOLLE</span>
-                  <div class="bento-card-title" data-i18n="s5_c1_title">Das Geheimnis des Weickert-Filzes</div>
-                  <div class="bento-card-desc" data-i18n="s5_c1_desc">Rein mechanische Verfilzung ohne chemische Zusätze – für hohe Rückstellkraft und klaren Konzertklang</div>
+                  <span class="bento-badge gold" data-i18n="s6_b13_badge">100% REINE MERINO-SCHURWOLLE</span>
+                  <div class="bento-card-title" data-i18n="s6_c1_title">Das Geheimnis des Weickert-Filzes</div>
+                  <div class="bento-card-desc" data-i18n="s6_c1_desc">Rein mechanische Verfilzung ohne chemische Zusätze – für hohe Rückstellkraft und klaren Konzertklang</div>
                 </div>
 
                 <!-- Felt Texture Viewer Box with Zoom -->
@@ -1242,8 +1456,8 @@ def get_all_slides_html():
                   <div class="hero-corner-bracket bottom-left"></div>
                   <div class="hero-corner-bracket bottom-right"></div>
                   <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s5_texture_tag">Mikro-Textur: Walk-Kompression</span>
-                    <button class="ffw-zoom-toggle-btn" id="ffw-zoom-toggle-btn" data-i18n="s5_zoom_btn">🔍 Faser-Lupe</button>
+                    <span class="ffw-texture-tag" data-i18n="s6_texture_tag">Mikro-Textur: Walk-Kompression</span>
+                    <button class="ffw-zoom-toggle-btn" id="ffw-zoom-toggle-btn" data-i18n="s6_zoom_btn">🔍 Faser-Lupe</button>
                   </div>
                 </div>
 
@@ -1252,29 +1466,29 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s5_hl1_title">Exklusive Wollmischung:</strong>
-                      <span data-i18n="s5_hl1_desc">Erlesene Lang- und Kräuselwollen aus Argentinien, Südafrika und Neuseeland bilden ein extrem zugfestes Gefüge.</span>
+                      <strong data-i18n="s6_hl1_title">Exklusive Wollmischung:</strong>
+                      <span data-i18n="s6_hl1_desc">Erlesene Lang- und Kräuselwollen aus Argentinien, Südafrika und Neuseeland bilden ein extrem zugfestes Gefüge.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s5_hl2_title">Reine Walkung ohne Harze:</strong>
-                      <span data-i18n="s5_hl2_desc">Verdichtung nur durch Mulde-Wasser, Hitze und Druck – frei von dämpfenden Kunstharzen oder Klebern.</span>
+                      <strong data-i18n="s6_hl2_title">Reine Walkung ohne Harze:</strong>
+                      <span data-i18n="s6_hl2_desc">Verdichtung nur durch Mulde-Wasser, Hitze und Druck – frei von dämpfenden Kunstharzen oder Klebern.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s5_hl3_title">Dauerelastisches Rückfedern:</strong>
-                      <span data-i18n="s5_hl3_desc">Natürliche Keratinfedern federn in Millisekunden ab – für freie Entfaltung des vollen Obertonspektrums.</span>
+                      <strong data-i18n="s6_hl3_title">Dauerelastisches Rückfedern:</strong>
+                      <span data-i18n="s6_hl3_desc">Natürliche Keratinfedern federn in Millisekunden ab – für freie Entfaltung des vollen Obertonspektrums.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s5_hl4_title">Räumliche Nähe Meuselwitz (65 km):</strong>
-                      <span data-i18n="s5_hl4_desc">Nur ca. 65 km Distanz sichern direkten Austausch der Filz- und Hammerkopfmeister sowie sofortige Verfügbarkeit.</span>
+                      <strong data-i18n="s6_hl4_title">Räumliche Nähe Meuselwitz (65 km):</strong>
+                      <span data-i18n="s6_hl4_desc">Nur ca. 65 km Distanz sichern direkten Austausch der Filz- und Hammerkopfmeister sowie sofortige Verfügbarkeit.</span>
                     </div>
                   </div>
                 </div>
@@ -1285,14 +1499,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 6: Reine Merinowolle & das Geheimnis der Fasermischung (Variante A Twin Grid)
-    slides.append(f'''<!-- SLIDE 6: Rohwolle, Faserselektion & geheime Wollmischung (Variante A) -->
-      <section class="slide slide-hero-theme ffw-s6-combined-slide" data-slide="6">
+    # SLIDE 7: Reine Merinowolle & das Geheimnis der Fasermischung (Variante A Twin Grid)
+    slides.append(f'''<!-- SLIDE 7: Rohwolle, Faserselektion & geheime Wollmischung (Variante A) -->
+      <section class="slide slide-hero-theme ffw-s6-combined-slide" data-slide="7">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s6_category">Teil 2: Filzherstellung • Rohstoff & Rezeptur</div>
-            <h2 class="slide-title" data-i18n="s6_title">Reine Merinowolle & das Geheimnis der Fasermischung</h2>
-            <div class="slide-subtitle" data-i18n="s6_subtitle">Unverpresste Übersee-Rohwolle und maßgeschneiderte Faser-Rezepturen als Fundament des Hammerkopffilzes</div>
+            <div class="slide-category" data-i18n="s7_category">Teil 2: Filzherstellung • Rohstoff & Rezeptur</div>
+            <h2 class="slide-title" data-i18n="s7_title">Reine Merinowolle & das Geheimnis der Fasermischung</h2>
+            <div class="slide-subtitle" data-i18n="s7_subtitle">Unverpresste Übersee-Rohwolle und maßgeschneiderte Faser-Rezepturen als Fundament des Hammerkopffilzes</div>
           </div>
         </div>
 
@@ -1302,22 +1516,22 @@ def get_all_slides_html():
             <div class="bento-card hero-card ffw-s6-step-card">
               <div class="bento-step-watermark">01</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s6_r1_step">Stufe 01</span>
-                <span class="bento-badge gold" data-i18n="s6_b1_badge">ROHSTOFF-SELEKTION</span>
+                <span class="hero-kpi-pill" data-i18n="s7_r1_step">Stufe 01</span>
+                <span class="bento-badge gold" data-i18n="s7_b1_badge">ROHSTOFF-SELEKTION</span>
               </div>
-              <div class="bento-card-title" data-i18n="s6_c1_title">Unverpresste Übersee-Merinowolle & intakte Faserstruktur</div>
+              <div class="bento-card-title" data-i18n="s7_c1_title">Unverpresste Übersee-Merinowolle & intakte Faserstruktur</div>
               <div class="bento-card-list ffw-s6-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_1"><strong>Unverpresste Ballenlieferung:</strong> Locker gepackter Transport bewahrt die mikroskopische Keratin-Schuppenstruktur unversehrt.</span>
+                  <span data-i18n="s7_bullet_1"><strong>Unverpresste Ballenlieferung:</strong> Locker gepackter Transport bewahrt die mikroskopische Keratin-Schuppenstruktur unversehrt.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_2"><strong>Starke Faserkräuselung:</strong> Millionen natürlicher Spiralfedern sichern optimale Verhakung beim Walken und schnelle Rückstellkraft.</span>
+                  <span data-i18n="s7_bullet_2"><strong>Starke Faserkräuselung:</strong> Millionen natürlicher Spiralfedern sichern optimale Verhakung beim Walken und schnelle Rückstellkraft.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_bullet_3"><strong>Natürliches Lanolin:</strong> Reines Wollfett und schonende Reinigung halten das Keratin dauerhaft geschmeidig.</span>
+                  <span data-i18n="s7_bullet_3"><strong>Natürliches Lanolin:</strong> Reines Wollfett und schonende Reinigung halten das Keratin dauerhaft geschmeidig.</span>
                 </div>
               </div>
             </div>
@@ -1327,15 +1541,15 @@ def get_all_slides_html():
               <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p5_2.jpg" alt="Unverpresste Merinorohwolle" class="ffw-s6-main-img ffw-s6-img-wool">
               <div class="ffw-s6-macro-inset">
                 <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p5_3.jpg" alt="Faser-Makro Kräuselung &amp; Schuppenstruktur" class="ffw-s6-macro-img">
-                <span class="ffw-s6-macro-tag" data-i18n="s6_macro_tag">FASER-MAKRO</span>
+                <span class="ffw-s6-macro-tag" data-i18n="s7_macro_tag">FASER-MAKRO</span>
               </div>
               <div class="hero-corner-bracket top-left"></div>
               <div class="hero-corner-bracket top-right"></div>
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay ffw-s6-compact-overlay">
-                <span class="bento-badge green" data-i18n="s6_b2_badge">UNVERPRESSTE ROHWOLLE</span>
-                <div class="bento-media-caption" data-i18n="s6_caption_1">Locker angelieferte Merinowolle mit starker natürlicher Faserkräuselung</div>
+                <span class="bento-badge green" data-i18n="s7_b2_badge">UNVERPRESSTE ROHWOLLE</span>
+                <div class="bento-media-caption" data-i18n="s7_caption_1">Locker angelieferte Merinowolle mit starker natürlicher Faserkräuselung</div>
               </div>
             </div>
 
@@ -1346,22 +1560,22 @@ def get_all_slides_html():
             <div class="bento-card hero-card ffw-s6-step-card">
               <div class="bento-step-watermark">02</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s6_r2_step">Stufe 02</span>
-                <span class="bento-badge gold" data-i18n="s6_b3_badge">FASER-REZEPTUR</span>
+                <span class="hero-kpi-pill" data-i18n="s7_r2_step">Stufe 02</span>
+                <span class="bento-badge gold" data-i18n="s7_b3_badge">FASER-REZEPTUR</span>
               </div>
-              <div class="bento-card-title" data-i18n="s6_c2_title">Schonende Auflockerung & abgestimmte Faser-Rezeptur</div>
+              <div class="bento-card-title" data-i18n="s7_c2_title">Schonende Auflockerung & abgestimmte Faser-Rezeptur</div>
               <div class="bento-card-list ffw-s6-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_m_bullet_1"><strong>Abgestimmte Faser-Rezeptur:</strong> Präzise Balance aus langen Zugfasern (für den Scheitel) und feinen Füllfasern (für die Dichte).</span>
+                  <span data-i18n="s7_m_bullet_1"><strong>Abgestimmte Faser-Rezeptur:</strong> Präzise Balance aus langen Zugfasern (für den Scheitel) und feinen Füllfasern (für die Dichte).</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_m_bullet_2"><strong>Mehrstufige Auflockerung:</strong> Sanftes Zupfen und pneumatisches Belüften trennt Faserknäuel schonend in Einzelfasern.</span>
+                  <span data-i18n="s7_m_bullet_2"><strong>Mehrstufige Auflockerung:</strong> Sanftes Zupfen und pneumatisches Belüften trennt Faserknäuel schonend in Einzelfasern.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s6_m_bullet_3"><strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme verhindert elektrostatische Aufladung, Faserbruch und harte Nester.</span>
+                  <span data-i18n="s7_m_bullet_3"><strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme verhindert elektrostatische Aufladung, Faserbruch und harte Nester.</span>
                 </div>
               </div>
             </div>
@@ -1374,8 +1588,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay ffw-s6-compact-overlay">
-                <span class="bento-badge green" data-i18n="s6_b4_badge">FFW-MISCHKAMMER</span>
-                <div class="bento-media-caption" data-i18n="s6_caption_2">Pneumatische Auflockerung und Mischung der Faserchargen in Wurzen</div>
+                <span class="bento-badge green" data-i18n="s7_b4_badge">FFW-MISCHKAMMER</span>
+                <div class="bento-media-caption" data-i18n="s7_caption_2">Pneumatische Auflockerung und Mischung der Faserchargen in Wurzen</div>
               </div>
             </div>
           </div>
@@ -1383,17 +1597,17 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 7: Krempeln & Vliesbildung (Carding) (FFW Felt Stage)
-    slides.append(f'''<!-- SLIDE 8 (FFW Felt Stage: Krempeln & Vliesbildung) -->
-      <section class="slide ffw-felt-slide" data-slide="7">
+    # SLIDE 8: Krempeln & Vliesbildung (Carding) (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 9 (FFW Felt Stage: Krempeln & Vliesbildung) -->
+      <section class="slide ffw-felt-slide" data-slide="8">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s7_category">Teil 2: Filzherstellung • Krempeln & Faserrichtung</div>
-            <h2 class="slide-title" data-i18n="s7_title">Krempeln: Parallele Ausrichtung zu feinen Vliesen</h2>
-            <div class="slide-subtitle" data-i18n="s7_subtitle">Definierte Faserorientierung als Grundlage für gleichmäßige Elastizität und präzise Intonation</div>
+            <div class="slide-category" data-i18n="s8_category">Teil 2: Filzherstellung • Krempeln & Faserrichtung</div>
+            <h2 class="slide-title" data-i18n="s8_title">Krempeln: Parallele Ausrichtung zu feinen Vliesen</h2>
+            <div class="slide-subtitle" data-i18n="s8_subtitle">Definierte Faserorientierung als Grundlage für gleichmäßige Elastizität und präzise Intonation</div>
           </div>
         </div>
 
@@ -1405,27 +1619,27 @@ def get_all_slides_html():
                 <div class="ffw-static-panel">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s7_b1_badge">FASERORIENTIERUNG</span>
+                      <span class="bento-badge gold" data-i18n="s8_b1_badge">FASERORIENTIERUNG</span>
                       <span class="ffw-panel-year">03</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s7_panel_title">Trommelkarden kämmen die Fasern parallel</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s7_panel_subtitle">Gezielte Längs- und Querausrichtung für vorhersehbare Elastizität beim Anschlag</div>
+                    <h3 class="ffw-panel-title" data-i18n="s8_panel_title">Trommelkarden kämmen die Fasern parallel</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s8_panel_subtitle">Gezielte Längs- und Querausrichtung für vorhersehbare Elastizität beim Anschlag</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s7_bullet_1"><strong>Kardieren (Krempeln):</strong> Feine Walzen kämmen die aufgelockerte Wolle schonend aus und richten die Fasern parallel aus.</span>
+                        <span data-i18n="s8_bullet_1"><strong>Kardieren (Krempeln):</strong> Feine Walzen kämmen die aufgelockerte Wolle schonend aus und richten die Fasern parallel aus.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s7_bullet_2"><strong>Definierte Faserrichtung:</strong> Das hauchdünne Vlies erhält eine exakt vorgegebene Vorzugsrichtung der Wollfasern.</span>
+                        <span data-i18n="s8_bullet_2"><strong>Definierte Faserrichtung:</strong> Das hauchdünne Vlies erhält eine exakt vorgegebene Vorzugsrichtung der Wollfasern.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s7_bullet_3"><strong>Gezielte Schichtung:</strong> Mehrere Vlieslagen bauen Plattendicke, Zugfestigkeit und späteren Keilverlauf definiert auf.</span>
+                        <span data-i18n="s8_bullet_3"><strong>Gezielte Schichtung:</strong> Mehrere Vlieslagen bauen Plattendicke, Zugfestigkeit und späteren Keilverlauf definiert auf.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s7_fact_badge">🧵 Parallele Faserführung ist die Grundvoraussetzung präziser Intonation</span>
+                      <span class="ffw-fact-badge" data-i18n="s8_fact_badge">🧵 Parallele Faserführung ist die Grundvoraussetzung präziser Intonation</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1435,8 +1649,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s7_b2_badge">KARDIEREN & VLIES</span>
-                      <span class="ffw-media-caption-text" data-i18n="s7_caption_1">Auskämmen der Merinowolle zu gleichmäßigen Vliesbahnen mit definierter Faserrichtung</span>
+                      <span class="bento-badge green" data-i18n="s8_b2_badge">KARDIEREN & VLIES</span>
+                      <span class="ffw-media-caption-text" data-i18n="s8_caption_1">Auskämmen der Merinowolle zu gleichmäßigen Vliesbahnen mit definierter Faserrichtung</span>
                     </div>
                   </div>
                 </div>
@@ -1447,9 +1661,9 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s7_b3_badge">VLIES-STRUKTUR</span>
-                  <div class="bento-card-title" data-i18n="s7_c1_title">Voraussetzung für die Intonation</div>
-                  <div class="bento-card-desc" data-i18n="s7_c1_desc">Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche</div>
+                  <span class="bento-badge gold" data-i18n="s8_b3_badge">VLIES-STRUKTUR</span>
+                  <div class="bento-card-title" data-i18n="s8_c1_title">Voraussetzung für die Intonation</div>
+                  <div class="bento-card-desc" data-i18n="s8_c1_desc">Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche</div>
                 </div>
 
                 <div class="ffw-texture-viewer" id="s8-texture-viewer" title="Detailansicht">
@@ -1459,7 +1673,7 @@ def get_all_slides_html():
                   <div class="hero-corner-bracket bottom-left"></div>
                   <div class="hero-corner-bracket bottom-right"></div>
                   <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s7_texture_tag">Vlies-Flor: ausgerichtete Fasern</span>
+                    <span class="ffw-texture-tag" data-i18n="s8_texture_tag">Vlies-Flor: ausgerichtete Fasern</span>
                   </div>
                 </div>
 
@@ -1467,22 +1681,22 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s7_hl1_title">Gleitende Nadelung:</strong>
-                      <span data-i18n="s7_hl1_desc">Intoniernadeln verdrängen parallele Fasern, anstatt sie zu zerschneiden.</span>
+                      <strong data-i18n="s8_hl1_title">Gleitende Nadelung:</strong>
+                      <span data-i18n="s8_hl1_desc">Intoniernadeln verdrängen parallele Fasern, anstatt sie zu zerschneiden.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s7_hl2_title">Fließende Dichteverläufe:</strong>
-                      <span data-i18n="s7_hl2_desc">Schichtung im Kreuzverbund verhindert Delamination bei extremem Tastendruck.</span>
+                      <strong data-i18n="s8_hl2_title">Fließende Dichteverläufe:</strong>
+                      <span data-i18n="s8_hl2_desc">Schichtung im Kreuzverbund verhindert Delamination bei extremem Tastendruck.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s7_hl3_title">Maximale Faserlänge:</strong>
-                      <span data-i18n="s7_hl3_desc">Schonendes Kardieren verhindert Faserbruch und sichert maximale Zugfestigkeit des Vlieses.</span>
+                      <strong data-i18n="s8_hl3_title">Maximale Faserlänge:</strong>
+                      <span data-i18n="s8_hl3_desc">Schonendes Kardieren verhindert Faserbruch und sichert maximale Zugfestigkeit des Vlieses.</span>
                     </div>
                   </div>
                 </div>
@@ -1493,17 +1707,17 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 8: Der Walkprozess (Felting) (FFW Felt Stage)
-    slides.append(f'''<!-- SLIDE 9 (FFW Felt Stage: Der Walkprozess) -->
-      <section class="slide ffw-felt-slide" data-slide="8">
+    # SLIDE 9: Der Walkprozess (Felting) (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 10 (FFW Felt Stage: Der Walkprozess) -->
+      <section class="slide ffw-felt-slide" data-slide="9">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s8_category">Teil 2: Filzherstellung • Der Walkprozess</div>
-            <h2 class="slide-title" data-i18n="s8_title">Die 4 Säulen des Walkens: Dampf, Druck, Bewegung & Erfahrung</h2>
-            <div class="slide-subtitle" data-i18n="s8_subtitle">Rein mechanisch-thermische Faserverschlingung mit weichem Mulde-Wasser – 100 % frei von Klebern und Harzen</div>
+            <div class="slide-category" data-i18n="s9_category">Teil 2: Filzherstellung • Der Walkprozess</div>
+            <h2 class="slide-title" data-i18n="s9_title">Die 4 Säulen des Walkens: Dampf, Druck, Bewegung & Erfahrung</h2>
+            <div class="slide-subtitle" data-i18n="s9_subtitle">Rein mechanisch-thermische Faserverschlingung mit weichem Mulde-Wasser – 100 % frei von Klebern und Harzen</div>
           </div>
         </div>
 
@@ -1515,31 +1729,31 @@ def get_all_slides_html():
                 <div class="ffw-static-panel">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s8_b5_badge">HAMMERWALKE</span>
+                      <span class="bento-badge gold" data-i18n="s9_b5_badge">HAMMERWALKE</span>
                       <span class="ffw-panel-year">04</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s8_panel_title">Reine mechanische Verfilzung ohne Fremdstoffe</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s8_panel_subtitle">Wasser, Wärme, Druck und Rhythmus verschlingen die Fasern dauerhaft</div>
+                    <h3 class="ffw-panel-title" data-i18n="s9_panel_title">Reine mechanische Verfilzung ohne Fremdstoffe</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s9_panel_subtitle">Wasser, Wärme, Druck und Rhythmus verschlingen die Fasern dauerhaft</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s8_bullet_1"><strong>1. Heißdampf:</strong> Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.</span>
+                        <span data-i18n="s9_bullet_1"><strong>1. Heißdampf:</strong> Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s8_bullet_2"><strong>2. Mechanischer Druck:</strong> Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.</span>
+                        <span data-i18n="s9_bullet_2"><strong>2. Mechanischer Druck:</strong> Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s8_bullet_3"><strong>3. Oszillierende Bewegung:</strong> Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.</span>
+                        <span data-i18n="s9_bullet_3"><strong>3. Oszillierende Bewegung:</strong> Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s8_bullet_4"><strong>4. Handwerkliches Know-how:</strong> Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.</span>
+                        <span data-i18n="s9_bullet_4"><strong>4. Handwerkliches Know-how:</strong> Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s8_fact_badge">🌊 Ausschließlich weiches Muldental-Wasser und Hitze – 100% chemiefrei</span>
+                      <span class="ffw-fact-badge" data-i18n="s9_fact_badge">🌊 Ausschließlich weiches Muldental-Wasser und Hitze – 100% chemiefrei</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1549,8 +1763,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s8_b6_badge">HANDWERKSKUNST</span>
-                      <span class="ffw-media-caption-text" data-i18n="s8_caption_1">Walken der geschichteten Vlieslagen unter Dampf, Druck und Bewegung zur homogenen Filztafel</span>
+                      <span class="bento-badge green" data-i18n="s9_b6_badge">HANDWERKSKUNST</span>
+                      <span class="ffw-media-caption-text" data-i18n="s9_caption_1">Walken der geschichteten Vlieslagen unter Dampf, Druck und Bewegung zur homogenen Filztafel</span>
                     </div>
                   </div>
                 </div>
@@ -1561,9 +1775,9 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s8_spotlight_badge">WALK-KOMPRESSION</span>
-                  <div class="bento-card-title" data-i18n="s8_spotlight_title">Physikalische Verdichtung</div>
-                  <div class="bento-card-desc" data-i18n="s8_spotlight_desc">Die Schuppen der Wollhaare verhaken sich mikromechanisch wie Kletten</div>
+                  <span class="bento-badge gold" data-i18n="s9_spotlight_badge">WALK-KOMPRESSION</span>
+                  <div class="bento-card-title" data-i18n="s9_spotlight_title">Physikalische Verdichtung</div>
+                  <div class="bento-card-desc" data-i18n="s9_spotlight_desc">Die Schuppen der Wollhaare verhaken sich mikromechanisch wie Kletten</div>
                 </div>
 
                 <div class="ffw-texture-viewer" id="s9-texture-viewer" title="Detailansicht">
@@ -1573,7 +1787,7 @@ def get_all_slides_html():
                   <div class="hero-corner-bracket bottom-left"></div>
                   <div class="hero-corner-bracket bottom-right"></div>
                   <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s8_texture_tag">Mikro-Textur: Walk-Kompression</span>
+                    <span class="ffw-texture-tag" data-i18n="s9_texture_tag">Mikro-Textur: Walk-Kompression</span>
                   </div>
                 </div>
 
@@ -1581,22 +1795,22 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s8_hl1_title">Keine Dämpfung durch Kleber:</strong>
-                      <span data-i18n="s8_hl1_desc">Rein mechanische Verfilzung erhält die freie Schwingung der Wollhaare.</span>
+                      <strong data-i18n="s9_hl1_title">Keine Dämpfung durch Kleber:</strong>
+                      <span data-i18n="s9_hl1_desc">Rein mechanische Verfilzung erhält die freie Schwingung der Wollhaare.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s8_hl2_title">Dauerelastizität:</strong>
-                      <span data-i18n="s8_hl2_desc">Natürliche Keratinfedern federn in Millisekunden ab und ermüden nicht.</span>
+                      <strong data-i18n="s9_hl2_title">Dauerelastizität:</strong>
+                      <span data-i18n="s9_hl2_desc">Natürliche Keratinfedern federn in Millisekunden ab und ermüden nicht.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s8_hl3_title">Maximale Obertonreinheit:</strong>
-                      <span data-i18n="s8_hl3_desc">Das weiche Muldental-Wasser verhindert Mineralablagerungen in den Poren.</span>
+                      <strong data-i18n="s9_hl3_title">Maximale Obertonreinheit:</strong>
+                      <span data-i18n="s9_hl3_desc">Das weiche Muldental-Wasser verhindert Mineralablagerungen in den Poren.</span>
                     </div>
                   </div>
                 </div>
@@ -1607,17 +1821,17 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 9: Natürliche Verwalkdichte: 56 % (0,56 g/cm³) (FFW Felt Stage)
-    slides.append(f'''<!-- SLIDE 9 (FFW Felt Stage: Natürliche Verwalkdichte 56 %) -->
-      <section class="slide ffw-felt-slide" data-slide="9">
+    # SLIDE 10: Natürliche Verwalkdichte: 56 % (0,56 g/cm³) (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 10 (FFW Felt Stage: Natürliche Verwalkdichte 56 %) -->
+      <section class="slide ffw-felt-slide" data-slide="10">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s9_category">Teil 2: Filzherstellung • Maximale Verwalkdichte</div>
-            <h2 class="slide-title" data-i18n="s9_title">56 % Verwalkdichte (0,56 g/cm³): Die natürliche Grenze des Walkens</h2>
-            <div class="slide-subtitle" data-i18n="s9_subtitle">Maximale natürliche Rückstellkraft ohne Faserbruch und ohne chemische Überhärtung</div>
+            <div class="slide-category" data-i18n="s10_category">Teil 2: Filzherstellung • Maximale Verwalkdichte</div>
+            <h2 class="slide-title" data-i18n="s10_title">56 % Verwalkdichte (0,56 g/cm³): Die natürliche Grenze des Walkens</h2>
+            <div class="slide-subtitle" data-i18n="s10_subtitle">Maximale natürliche Rückstellkraft ohne Faserbruch und ohne chemische Überhärtung</div>
           </div>
         </div>
 
@@ -1629,27 +1843,27 @@ def get_all_slides_html():
                 <div class="ffw-static-panel">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s9_b1_badge">PHYSIKALISCHE GRENZE</span>
+                      <span class="bento-badge gold" data-i18n="s10_b1_badge">PHYSIKALISCHE GRENZE</span>
                       <span class="ffw-panel-year">56 %</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s9_panel_title">Vollendete Verdichtung an der physikalischen Grenze</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s9_panel_subtitle">Filzplatten werden exakt bis zum Punkt verdichtet, an dem sich die Fasern optimal berühren</div>
+                    <h3 class="ffw-panel-title" data-i18n="s10_panel_title">Vollendete Verdichtung an der physikalischen Grenze</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s10_panel_subtitle">Filzplatten werden exakt bis zum Punkt verdichtet, an dem sich die Fasern optimal berühren</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s9_bullet_1"><strong>Maximale Faserkompression:</strong> Die Fasern lassen sich auf rein mechanischem Wege nicht weiter zusammenschieben, ohne beschädigt zu werden.</span>
+                        <span data-i18n="s10_bullet_1"><strong>Maximale Faserkompression:</strong> Die Fasern lassen sich auf rein mechanischem Wege nicht weiter zusammenschieben, ohne beschädigt zu werden.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s9_bullet_2"><strong>Höchste natürliche Rückstellkraft:</strong> Entspricht dem physikalischen Optimum an Eigenelastizität für den Konzertflügelanschlag.</span>
+                        <span data-i18n="s10_bullet_2"><strong>Höchste natürliche Rückstellkraft:</strong> Entspricht dem physikalischen Optimum an Eigenelastizität für den Konzertflügelanschlag.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s9_bullet_3"><strong>Frei von Kunstharzen:</strong> Verzicht auf synthetische Versteifer oder chemische Überhärtung sichert dauerhafte Resonanz.</span>
+                        <span data-i18n="s10_bullet_3"><strong>Frei von Kunstharzen:</strong> Verzicht auf synthetische Versteifer oder chemische Überhärtung sichert dauerhafte Resonanz.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s9_fact_badge">🎯 Max. 56 % Verwalkdichte (0,56 g/cm³): Höchste Eigenelastizität ohne Härter</span>
+                      <span class="ffw-fact-badge" data-i18n="s10_fact_badge">🎯 Max. 56 % Verwalkdichte (0,56 g/cm³): Höchste Eigenelastizität ohne Härter</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1659,8 +1873,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s9_b2_badge">FFW WURZEN</span>
-                      <span class="ffw-media-caption-text" data-i18n="s9_caption_2">Nachbearbeitung der rein mechanisch gewalkten Filztafel in Wurzen</span>
+                      <span class="bento-badge green" data-i18n="s10_b2_badge">FFW WURZEN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s10_caption_2">Nachbearbeitung der rein mechanisch gewalkten Filztafel in Wurzen</span>
                     </div>
                   </div>
                 </div>
@@ -1671,9 +1885,9 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s9_b3_badge">AKUSTISCHE PERFEKTION</span>
-                  <div class="bento-card-title" data-i18n="s9_spotlight_title">Spannkraft statt spröder Härte</div>
-                  <div class="bento-card-desc" data-i18n="s9_spotlight_desc">56 % natürliche Verwalkdichte liefert kurze Kontaktzeiten und feinste Dynamikkontrolle am Flügel.</div>
+                  <span class="bento-badge gold" data-i18n="s10_b3_badge">AKUSTISCHE PERFEKTION</span>
+                  <div class="bento-card-title" data-i18n="s10_spotlight_title">Spannkraft statt spröder Härte</div>
+                  <div class="bento-card-desc" data-i18n="s10_spotlight_desc">56 % natürliche Verwalkdichte liefert kurze Kontaktzeiten und feinste Dynamikkontrolle am Flügel.</div>
                 </div>
 
                 <div class="ffw-texture-viewer" id="s10-texture-viewer" title="Detailansicht">
@@ -1683,7 +1897,7 @@ def get_all_slides_html():
                   <div class="hero-corner-bracket bottom-left"></div>
                   <div class="hero-corner-bracket bottom-right"></div>
                   <div class="ffw-texture-overlay">
-                    <span class="ffw-texture-tag" data-i18n="s9_texture_tag">Natürliche Obergrenze: 56 % Verwalkdichte (0,56 g/cm³)</span>
+                    <span class="ffw-texture-tag" data-i18n="s10_texture_tag">Natürliche Obergrenze: 56 % Verwalkdichte (0,56 g/cm³)</span>
                   </div>
                 </div>
 
@@ -1691,22 +1905,22 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s9_hl1_title">Kurze Kontaktzeit:</strong>
-                      <span data-i18n="s9_hl1_desc">Der Hammer löst sich verzögerungsfrei von der Saite – kein Abdämpfen des Tons.</span>
+                      <strong data-i18n="s10_hl1_title">Kurze Kontaktzeit:</strong>
+                      <span data-i18n="s10_hl1_desc">Der Hammer löst sich verzögerungsfrei von der Saite – kein Abdämpfen des Tons.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s9_hl2_title">Farbenreicher Klang:</strong>
-                      <span data-i18n="s9_hl2_desc">Volle Ausbildung der Grund- und Teiltöne ohne Schrillheit im Diskant.</span>
+                      <strong data-i18n="s10_hl2_title">Farbenreicher Klang:</strong>
+                      <span data-i18n="s10_hl2_desc">Volle Ausbildung der Grund- und Teiltöne ohne Schrillheit im Diskant.</span>
                     </div>
                   </div>
                   <div class="ffw-highlight-item">
                     <span class="ffw-hl-dot"></span>
                     <div>
-                      <strong data-i18n="s9_hl3_title">Stabiler Anschlag:</strong>
-                      <span data-i18n="s9_hl3_desc">Konstante Dichte über zehntausende Anschläge hinweg.</span>
+                      <strong data-i18n="s10_hl3_title">Stabiler Anschlag:</strong>
+                      <span data-i18n="s10_hl3_desc">Konstante Dichte über zehntausende Anschläge hinweg.</span>
                     </div>
                   </div>
                 </div>
@@ -1717,17 +1931,17 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 10: Nachpressen mit Filzhämmern & Steinen (FFW Felt Stage)
-    slides.append(f'''<!-- SLIDE 11 (FFW Felt Stage: Nachpressen mit Filzhämmern & Steinen) -->
-      <section class="slide ffw-felt-slide" data-slide="10">
+    # SLIDE 11: Nachpressen mit Filzhämmern & Steinen (FFW Felt Stage)
+    slides.append(f'''<!-- SLIDE 12 (FFW Felt Stage: Nachpressen mit Filzhämmern & Steinen) -->
+      <section class="slide ffw-felt-slide" data-slide="11">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s10_category">Teil 2: Filzherstellung • Nachverdichtung & Lagenaufbau</div>
-            <h2 class="slide-title" data-i18n="s10_title">Nachverdichten & konische 36-Lagen-Anatomie</h2>
-            <div class="slide-subtitle" data-i18n="s10_subtitle">Formgebung auf Sollmaß ohne Schleifen – 2×6 durchgehende Deckbahnen bewahren die volle Zugspannung</div>
+            <div class="slide-category" data-i18n="s11_category">Teil 2: Filzherstellung • Nachverdichtung & Lagenaufbau</div>
+            <h2 class="slide-title" data-i18n="s11_title">Nachverdichten & konische 36-Lagen-Anatomie</h2>
+            <div class="slide-subtitle" data-i18n="s11_subtitle">Formgebung auf Sollmaß ohne Schleifen – 2×6 durchgehende Deckbahnen bewahren die volle Zugspannung</div>
           </div>
         </div>
 
@@ -1739,27 +1953,27 @@ def get_all_slides_html():
                 <div class="ffw-static-panel">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s10_b1_badge">FORMGEBUNG OHNE SCHLEIFEN</span>
+                      <span class="bento-badge gold" data-i18n="s11_b1_badge">FORMGEBUNG OHNE SCHLEIFEN</span>
                       <span class="ffw-panel-year">05</span>
                     </div>
-                    <h3 class="ffw-panel-title" data-i18n="s10_panel_title">Manuelle Verdichtung und Egalisierung</h3>
-                    <div class="ffw-panel-subtitle" data-i18n="s10_panel_subtitle">Gezielte Hammerschläge bringen die Filzplatten auf Sollmaß und entspannen das Fasergefüge.</div>
+                    <h3 class="ffw-panel-title" data-i18n="s11_panel_title">Manuelle Verdichtung und Egalisierung</h3>
+                    <div class="ffw-panel-subtitle" data-i18n="s11_panel_subtitle">Gezielte Hammerschläge bringen die Filzplatten auf Sollmaß und entspannen das Fasergefüge.</div>
                     <div class="ffw-panel-bullets">
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s10_bullet_1"><strong>Mechanisches Nachschlagen:</strong> Filzhämmer und polierte Natursteine verdichten die Platten exakt auf Sollmaß.</span>
+                        <span data-i18n="s11_bullet_1"><strong>Mechanisches Nachschlagen:</strong> Filzhämmer und polierte Natursteine verdichten die Platten exakt auf Sollmaß.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s10_bullet_2"><strong>Null Schleifabtrag:</strong> Das Weickert-Verfahren verzichtet komplett auf Schleifen – keine einzige Faser wird gekappt.</span>
+                        <span data-i18n="s11_bullet_2"><strong>Null Schleifabtrag:</strong> Das Weickert-Verfahren verzichtet komplett auf Schleifen – keine einzige Faser wird gekappt.</span>
                       </div>
                       <div class="ffw-bullet-item">
                         <span class="bento-dot gold"></span>
-                        <span data-i18n="s10_bullet_3"><strong>Geschlossener Biegeradius:</strong> Beim Pressen um den Holzkern bleibt die Außenhaut glatt und absolut rissfrei.</span>
+                        <span data-i18n="s11_bullet_3"><strong>Geschlossener Biegeradius:</strong> Beim Pressen um den Holzkern bleibt die Außenhaut glatt und absolut rissfrei.</span>
                       </div>
                     </div>
                     <div class="ffw-panel-footer">
-                      <span class="ffw-fact-badge" data-i18n="s10_fact_badge">🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit</span>
+                      <span class="ffw-fact-badge" data-i18n="s11_fact_badge">🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit</span>
                     </div>
                   </div>
                   <div class="ffw-panel-media">
@@ -1769,8 +1983,8 @@ def get_all_slides_html():
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s10_b2_badge">HAMMER & STEIN</span>
-                      <span class="ffw-media-caption-text" data-i18n="s10_caption_1">Gewalkte Filzplatten mit natürlicher Eindringfestigkeit von 56 bis 68 Shore-A</span>
+                      <span class="bento-badge green" data-i18n="s11_b2_badge">HAMMER & STEIN</span>
+                      <span class="ffw-media-caption-text" data-i18n="s11_caption_1">Gewalkte Filzplatten mit natürlicher Eindringfestigkeit von 56 bis 68 Shore-A</span>
                     </div>
                   </div>
                 </div>
@@ -1781,9 +1995,9 @@ def get_all_slides_html():
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s10_b3_badge">KONISCHER VLIESAUFBAU & RÜCKGRAT</span>
-                  <div class="bento-card-title" data-i18n="s10_c1_title">Konischer Verlauf & Zugspannung: Das Vliesbahnen-Rückgrat</div>
-                  <div class="bento-card-desc" data-i18n="s10_c1_desc">Vom dünnen Diskant links zum starken Bass rechts formen gekürzte Kernbahnen den Keil – umschlossen von 2×6 Deckbahnen.</div>
+                  <span class="bento-badge gold" data-i18n="s11_b3_badge">KONISCHER VLIESAUFBAU & RÜCKGRAT</span>
+                  <div class="bento-card-title" data-i18n="s11_c1_title">Konischer Verlauf & Zugspannung: Das Vliesbahnen-Rückgrat</div>
+                  <div class="bento-card-desc" data-i18n="s11_c1_desc">Vom dünnen Diskant links zum starken Bass rechts formen gekürzte Kernbahnen den Keil – umschlossen von 2×6 Deckbahnen.</div>
                 </div>
 
                 <!-- ANIMATION: Konischer Vliesaufbau (Diskant links dünn -> Bass rechts dick) -->
@@ -1793,17 +2007,17 @@ def get_all_slides_html():
                     <div class="felt-mode-group">
                       <button class="felt-mode-btn active" id="felt-btn-intact" data-mode="intact" title="Ungeschliffen: Konischer Keil (Diskant links → Bass rechts) mit durchgehenden 2×6 Deckbahnen">
                         <span class="mode-dot green"></span>
-                        <span data-i18n="s10_anim_mode_intact">Ungeschliffen • Formstabil</span>
+                        <span data-i18n="s11_anim_mode_intact">Ungeschliffen • Formstabil</span>
                       </button>
                       <button class="felt-mode-btn" id="felt-btn-sanded" data-mode="sanded" title="Geschliffen: Äußere Vliesbahnen durchtrennt – Fasern gleiten auseinander">
                         <span class="mode-dot red"></span>
-                        <span data-i18n="s10_anim_mode_sanded">Geschliffen • Verformung</span>
+                        <span data-i18n="s11_anim_mode_sanded">Geschliffen • Verformung</span>
                       </button>
                     </div>
                     <div class="felt-tension-kpi" id="felt-tension-kpi" title="Zustand der äußeren Vliesbahnen">
                       <div class="kpi-label-row">
-                        <span class="kpi-title" data-i18n="s10_anim_gauge_label">Faserhaut & Zugverbund</span>
-                        <span class="kpi-value" id="felt-tension-val" data-i18n="s10_anim_state_intact">Geschlossen</span>
+                        <span class="kpi-title" data-i18n="s11_anim_gauge_label">Faserhaut & Zugverbund</span>
+                        <span class="kpi-value" id="felt-tension-val" data-i18n="s11_anim_state_intact">Geschlossen</span>
                       </div>
                       <div class="kpi-meter-bar">
                         <div class="kpi-meter-fill" id="felt-tension-meter"></div>
@@ -1896,8 +2110,8 @@ def get_all_slides_html():
                         <rect x="26" y="149.5" width="48" height="34.5" rx="5" fill="url(#s11ClampMetal)" stroke="rgba(200, 163, 86, 0.48)" stroke-width="1.2"/>
                         <circle cx="50" cy="157.5" r="2.4" fill="#c8a356"/>
                         <circle cx="50" cy="176.0" r="2.4" fill="#c8a356"/>
-                        <text x="50" y="206" text-anchor="middle" class="svg-clamp-role-gold" data-i18n="s10_svg_clamp_left">DISKANT • DÜNN</text>
-                        <text x="50" y="218" text-anchor="middle" class="svg-clamp-label" data-i18n="s10_svg_clamp">EINSPANNUNG</text>
+                        <text x="50" y="206" text-anchor="middle" class="svg-clamp-role-gold" data-i18n="s11_svg_clamp_left">DISKANT • DÜNN</text>
+                        <text x="50" y="218" text-anchor="middle" class="svg-clamp-label" data-i18n="s11_svg_clamp">EINSPANNUNG</text>
                       </g>
 
                       <!-- Right Clamp: BASS (Thick Conical Felt End) -->
@@ -1905,8 +2119,8 @@ def get_all_slides_html():
                         <rect x="546" y="118.5" width="48" height="76.5" rx="5" fill="url(#s11ClampMetal)" stroke="rgba(200, 163, 86, 0.62)" stroke-width="1.3"/>
                         <circle cx="570" cy="128.5" r="2.6" fill="#c8a356"/>
                         <circle cx="570" cy="185.0" r="2.6" fill="#c8a356"/>
-                        <text x="570" y="209" text-anchor="middle" class="svg-clamp-role-gold" data-i18n="s10_svg_clamp_right">BASS • DICK</text>
-                        <text x="570" y="221" text-anchor="middle" class="svg-clamp-label" data-i18n="s10_svg_clamp">EINSPANNUNG</text>
+                        <text x="570" y="209" text-anchor="middle" class="svg-clamp-role-gold" data-i18n="s11_svg_clamp_right">BASS • DICK</text>
+                        <text x="570" y="221" text-anchor="middle" class="svg-clamp-label" data-i18n="s11_svg_clamp">EINSPANNUNG</text>
                       </g>
 
                       <!-- Subtle Conical Direction Axis (Bottom) -->
@@ -1914,7 +2128,7 @@ def get_all_slides_html():
                         <line x1="106" y1="234" x2="514" y2="234" stroke="rgba(212, 175, 55, 0.36)" stroke-width="1" stroke-dasharray="3,3"/>
                         <polygon points="518,234 511,231 511,237" fill="rgba(212, 175, 55, 0.72)"/>
                         <rect x="195" y="225" width="230" height="17" rx="8.5" fill="rgba(9, 13, 24, 0.92)"/>
-                        <text x="310" y="236.5" text-anchor="middle" class="svg-taper-note" data-i18n="s10_svg_taper_edge">Konischer Stärkenverlauf: Diskant → Bass</text>
+                        <text x="310" y="236.5" text-anchor="middle" class="svg-taper-note" data-i18n="s11_svg_taper_edge">Konischer Stärkenverlauf: Diskant → Bass</text>
                       </g>
 
                       <!-- ================================================================== -->
@@ -1923,7 +2137,7 @@ def get_all_slides_html():
                       <g class="felt-geometry-group group-intact" id="svg-felt-intact">
                         <!-- Top Status Pill -->
                         <rect x="135" y="8" width="350" height="22" rx="11" fill="rgba(11, 24, 24, 0.88)" stroke="rgba(110, 231, 183, 0.55)" stroke-width="1"/>
-                        <text x="310" y="22.5" text-anchor="middle" class="svg-crown-badge-green" data-i18n="s10_svg_crown_intact">UNGESCHLIFFENE FASERHAUT • DAUERHAFT FORMSTABIL</text>
+                        <text x="310" y="22.5" text-anchor="middle" class="svg-crown-badge-green" data-i18n="s11_svg_crown_intact">UNGESCHLIFFENE FASERHAUT • DAUERHAFT FORMSTABIL</text>
 
                         <!-- Conical Felt Cross-Section Body (Thin Left -> Thick Right) -->
                         <path d="M 74.0,159.5 L 80.6,155.7 L 87.1,151.9 L 93.7,148.3 L 100.2,144.7 L 106.8,141.1 L 113.3,137.5 L 119.9,134.0 L 126.4,130.5 L 133.0,127.1 L 139.6,123.8 L 146.1,120.5 L 152.7,117.4 L 159.2,114.3 L 165.8,111.4 L 172.3,108.5 L 178.9,105.8 L 185.4,103.2 L 192.0,100.6 L 198.6,98.2 L 205.1,95.9 L 211.7,93.7 L 218.2,91.6 L 224.8,89.7 L 231.3,87.8 L 237.9,86.0 L 244.4,84.4 L 251.0,82.8 L 257.6,81.4 L 264.1,80.1 L 270.7,78.9 L 277.2,77.8 L 283.8,76.8 L 290.3,75.9 L 296.9,75.1 L 303.4,74.5 L 310.0,73.9 L 316.6,73.5 L 323.1,73.1 L 329.7,72.9 L 336.2,72.8 L 342.8,72.8 L 349.3,72.9 L 355.9,73.1 L 362.4,73.4 L 369.0,73.9 L 375.6,74.4 L 382.1,75.1 L 388.7,75.9 L 395.2,76.7 L 401.8,77.7 L 408.3,78.8 L 414.9,80.0 L 421.4,81.4 L 428.0,82.8 L 434.6,84.3 L 441.1,86.0 L 447.7,87.8 L 454.2,89.6 L 460.8,91.6 L 467.3,93.7 L 473.9,95.9 L 480.4,98.2 L 487.0,100.7 L 493.6,103.2 L 500.1,105.9 L 506.7,108.6 L 513.2,111.5 L 519.8,114.5 L 526.3,117.6 L 532.9,120.8 L 539.4,124.1 L 546.0,127.5 L 546.0,186.0 L 539.4,181.9 L 532.9,177.9 L 526.3,174.0 L 519.8,170.2 L 513.2,166.6 L 506.7,163.0 L 500.1,159.6 L 493.6,156.2 L 487.0,153.0 L 480.4,149.9 L 473.9,146.9 L 467.3,144.0 L 460.8,141.2 L 454.2,138.6 L 447.7,136.0 L 441.1,133.6 L 434.6,131.2 L 428.0,129.0 L 421.4,126.9 L 414.9,124.9 L 408.3,123.0 L 401.8,121.2 L 395.2,119.6 L 388.7,118.0 L 382.1,116.6 L 375.6,115.2 L 369.0,114.0 L 362.4,112.9 L 355.9,111.9 L 349.3,111.0 L 342.8,110.2 L 336.2,109.6 L 329.7,109.0 L 323.1,108.6 L 316.6,108.2 L 310.0,108.0 L 303.4,107.9 L 296.9,107.9 L 290.3,108.0 L 283.8,108.2 L 277.2,108.6 L 270.7,109.0 L 264.1,109.6 L 257.6,110.2 L 251.0,111.0 L 244.4,111.9 L 237.9,112.9 L 231.3,114.0 L 224.8,115.2 L 218.2,116.6 L 211.7,118.0 L 205.1,119.6 L 198.6,121.2 L 192.0,123.0 L 185.4,124.9 L 178.9,126.9 L 172.3,129.0 L 165.8,131.2 L 159.2,133.6 L 152.7,136.0 L 146.1,138.6 L 139.6,141.2 L 133.0,144.0 L 126.4,146.9 L 119.9,149.9 L 113.3,153.0 L 106.8,156.2 L 100.2,159.6 L 93.7,163.0 L 87.1,166.6 L 80.6,170.2 L 74.0,174.0 Z" fill="url(#s11FeltBodyIntact)"/>
@@ -1974,14 +2188,14 @@ def get_all_slides_html():
                           <polygon points="144,111 153,109 149,103" fill="#a7f3d0" opacity="0.9"/>
                           <path d="M 488,90 Q 444,66 398,59" fill="none" stroke="#a7f3d0" stroke-width="1.3" opacity="0.85"/>
                           <polygon points="492,93 483,91 487,85" fill="#a7f3d0" opacity="0.9"/>
-                          <text x="310" y="44" text-anchor="middle" class="svg-badge-text-green" data-i18n="s10_svg_vlies_intact">2×6 durchgehende Deckbahnen tragen die volle Biege- & Zugspannung</text>
+                          <text x="310" y="44" text-anchor="middle" class="svg-badge-text-green" data-i18n="s11_svg_vlies_intact">2×6 durchgehende Deckbahnen tragen die volle Biege- & Zugspannung</text>
 
                           <!-- Leader Line to Shortened Webs in the Core + Under-Arch Callout -->
                           <line x1="333.6" y1="91.1" x2="333.6" y2="160" stroke="#e5c878" stroke-width="1.2" stroke-dasharray="3,2"/>
                           <circle cx="333.6" cy="91.1" r="3.0" fill="#fff3c4" stroke="#c8a356" stroke-width="1.2"/>
                           <rect x="134" y="160" width="352" height="42" rx="8" fill="rgba(12, 18, 31, 0.93)" stroke="rgba(212, 175, 55, 0.52)" stroke-width="1.1"/>
-                          <text x="310" y="177.5" text-anchor="middle" class="svg-core-callout-title" data-i18n="s10_svg_core_title">Gekürzte Vliesbahnen im Platten-Zentrum</text>
-                          <text x="310" y="193" text-anchor="middle" class="svg-core-sub" data-i18n="s10_svg_core_sub">Nach rechts zum Bass gestaffelte Kernlagen formen die Keilform</text>
+                          <text x="310" y="177.5" text-anchor="middle" class="svg-core-callout-title" data-i18n="s11_svg_core_title">Gekürzte Vliesbahnen im Platten-Zentrum</text>
+                          <text x="310" y="193" text-anchor="middle" class="svg-core-sub" data-i18n="s11_svg_core_sub">Nach rechts zum Bass gestaffelte Kernlagen formen die Keilform</text>
                         </g>
                       </g>
 
@@ -1991,11 +2205,11 @@ def get_all_slides_html():
                       <g class="felt-geometry-group group-deformed" id="svg-felt-deformed">
                         <!-- Top Alert Pill -->
                         <rect x="130" y="8" width="360" height="22" rx="11" fill="rgba(42, 14, 20, 0.90)" stroke="rgba(248, 113, 113, 0.62)" stroke-width="1"/>
-                        <text x="310" y="22.5" text-anchor="middle" class="svg-crown-badge-red" data-i18n="s10_svg_crown_sanded">GESCHLIFFENE AUSSENHAUT • DECKBAHNEN DURCHTRENNT</text>
+                        <text x="310" y="22.5" text-anchor="middle" class="svg-crown-badge-red" data-i18n="s11_svg_crown_sanded">GESCHLIFFENE AUSSENHAUT • DECKBAHNEN DURCHTRENNT</text>
 
                         <!-- Ghost Nominal Reference Contour -->
                         <path d="M 74.0,159.5 L 81.4,155.2 L 88.8,151.0 L 96.1,146.9 L 103.5,142.9 L 110.9,138.9 L 118.2,134.9 L 125.6,130.9 L 133.0,127.1 L 140.4,123.4 L 147.8,119.7 L 155.1,116.2 L 162.5,112.8 L 169.9,109.6 L 177.2,106.5 L 184.6,103.5 L 192.0,100.6 L 199.4,97.9 L 206.8,95.4 L 214.1,92.9 L 221.5,90.6 L 228.9,88.5 L 236.2,86.5 L 243.6,84.6 L 251.0,82.8 L 258.4,81.2 L 265.8,79.8 L 273.1,78.4 L 280.5,77.3 L 287.9,76.2 L 295.2,75.3 L 302.6,74.5 L 310.0,73.9 L 317.4,73.4 L 324.8,73.1 L 332.1,72.8 L 339.5,72.8 L 346.9,72.8 L 354.2,73.0 L 361.6,73.4 L 369.0,73.9 L 376.4,74.5 L 383.8,75.3 L 391.1,76.2 L 398.5,77.2 L 405.9,78.4 L 413.2,79.7 L 420.6,81.2 L 428.0,82.8 L 435.4,84.5 L 442.8,86.4 L 450.1,88.5 L 457.5,90.6 L 464.9,92.9 L 472.2,95.4 L 479.6,97.9 L 487.0,100.7 L 494.4,103.5 L 501.8,106.5 L 509.1,109.7 L 516.5,113.0 L 523.9,116.4 L 531.2,120.0 L 538.6,123.7 L 546.0,127.5" fill="none" stroke="rgba(212, 175, 55, 0.42)" stroke-width="1.4" stroke-dasharray="5,4"/>
-                        <text x="310" y="45" text-anchor="middle" class="svg-ghost-label" data-i18n="s10_svg_ghost_label">Ursprüngliche ungeschliffene Soll-Kontur</text>
+                        <text x="310" y="45" text-anchor="middle" class="svg-ghost-label" data-i18n="s11_svg_ghost_label">Ursprüngliche ungeschliffene Soll-Kontur</text>
 
                         <!-- Sagged / Deformed Conical Body -->
                         <path d="M 74.0,159.5 L 80.9,156.5 L 87.8,153.8 L 94.7,151.2 L 101.7,148.7 L 108.6,146.2 L 115.5,143.8 L 122.4,141.4 L 129.3,139.0 L 136.2,136.7 L 143.1,134.5 L 150.0,132.4 L 157.0,130.3 L 163.9,128.3 L 170.8,126.4 L 177.7,124.6 L 184.6,122.8 L 191.5,121.2 L 198.4,119.6 L 205.4,118.1 L 212.3,116.7 L 219.2,115.5 L 226.1,114.3 L 233.0,113.3 L 239.9,112.3 L 246.8,111.5 L 253.7,110.8 L 260.7,110.3 L 267.6,109.8 L 274.5,109.4 L 281.4,109.0 L 288.3,108.7 L 295.2,108.4 L 302.1,108.2 L 309.1,107.9 L 319.4,123.9 L 329.8,106.8 L 336.2,106.4 L 342.5,106.0 L 348.9,105.7 L 355.3,105.3 L 361.6,104.9 L 368.0,104.6 L 374.3,104.4 L 380.7,104.3 L 387.0,104.2 L 393.4,104.2 L 399.8,104.3 L 406.1,104.6 L 412.5,104.9 L 418.8,105.3 L 425.2,105.9 L 431.6,106.5 L 437.9,107.2 L 444.3,108.0 L 450.6,108.9 L 457.0,109.8 L 463.3,110.9 L 469.7,112.0 L 476.1,113.2 L 482.4,114.4 L 488.8,115.8 L 495.1,117.2 L 501.5,118.8 L 507.9,120.4 L 514.2,122.1 L 520.6,123.9 L 526.9,125.8 L 533.3,127.8 L 539.6,130.0 L 546.0,132.5 L 546.0,186.0 L 538.6,182.5 L 531.2,179.3 L 523.9,176.3 L 516.5,173.5 L 509.1,170.8 L 501.8,168.2 L 494.4,165.8 L 487.0,163.4 L 479.6,161.2 L 472.2,159.1 L 464.9,157.1 L 457.5,155.1 L 450.1,153.3 L 442.8,151.6 L 435.4,149.9 L 428.0,148.4 L 420.6,146.9 L 413.2,145.6 L 405.9,144.3 L 398.5,143.1 L 391.1,141.9 L 383.8,140.9 L 376.4,139.9 L 369.0,139.1 L 361.6,138.3 L 354.2,137.6 L 346.9,136.9 L 339.5,136.4 L 332.1,135.9 L 324.8,135.5 L 317.4,135.2 L 310.0,135.0 L 302.6,134.9 L 295.2,134.8 L 287.9,134.8 L 280.5,134.9 L 273.1,135.1 L 265.8,135.3 L 258.4,135.7 L 251.0,136.1 L 243.6,136.6 L 236.2,137.1 L 228.9,137.8 L 221.5,138.6 L 214.1,139.4 L 206.8,140.3 L 199.4,141.3 L 192.0,142.4 L 184.6,143.6 L 177.2,144.8 L 169.9,146.2 L 162.5,147.6 L 155.1,149.2 L 147.8,150.8 L 140.4,152.6 L 133.0,154.4 L 125.6,156.4 L 118.2,158.5 L 110.9,160.6 L 103.5,163.0 L 96.1,165.4 L 88.8,168.0 L 81.4,170.9 L 74.0,174.0 Z" fill="url(#s11FeltBodySanded)" stroke="rgba(248, 113, 113, 0.45)" stroke-width="1"/>
@@ -2058,8 +2272,8 @@ def get_all_slides_html():
                           <line x1="319.4" y1="125.9" x2="319.4" y2="160" stroke="#f87171" stroke-width="1.2" stroke-dasharray="3,2"/>
                           <circle cx="319.4" cy="123.9" r="2.8" fill="#fca5a5" stroke="#ef4444" stroke-width="1"/>
                           <rect x="132" y="160" width="356" height="42" rx="8" fill="rgba(28, 13, 19, 0.93)" stroke="rgba(248, 113, 113, 0.55)" stroke-width="1.1"/>
-                          <text x="310" y="177.5" text-anchor="middle" class="svg-deform-callout" data-i18n="s10_svg_deform_callout">Scheitel-Aufweitung & Faserverschiebung unter Zug</text>
-                          <text x="310" y="193" text-anchor="middle" class="svg-crack-label" data-i18n="s10_svg_crack_label">Durchtrennte Deckbahnen gleiten auseinander – Kurzbahnen halten keinen Zug</text>
+                          <text x="310" y="177.5" text-anchor="middle" class="svg-deform-callout" data-i18n="s11_svg_deform_callout">Scheitel-Aufweitung & Faserverschiebung unter Zug</text>
+                          <text x="310" y="193" text-anchor="middle" class="svg-crack-label" data-i18n="s11_svg_crack_label">Durchtrennte Deckbahnen gleiten auseinander – Kurzbahnen halten keinen Zug</text>
                         </g>
                       </g>
                     </svg>
@@ -2067,10 +2281,10 @@ def get_all_slides_html():
                     <!-- Bottom Status Caption Bar -->
                     <div class="felt-stage-status-bar" id="felt-stage-status-bar">
                       <span class="status-indicator-dot green" id="felt-status-dot"></span>
-                      <span class="status-caption-text" id="felt-status-text" data-i18n="s10_anim_status_intact">Ungeschliffen: 2×6 Deckbahnen umschließen die gekürzten Kernbahnen • Voller Spannungserhalt</span>
+                      <span class="status-caption-text" id="felt-status-text" data-i18n="s11_anim_status_intact">Ungeschliffen: 2×6 Deckbahnen umschließen die gekürzten Kernbahnen • Voller Spannungserhalt</span>
                       <button class="felt-auto-toggle-btn active" id="felt-auto-toggle-btn" title="Automatischen Vergleich starten/pausieren">
                         <span class="auto-toggle-icon">⏸</span>
-                        <span class="auto-toggle-text" data-i18n="s10_anim_auto_toggle">Auto-Vergleich</span>
+                        <span class="auto-toggle-text" data-i18n="s11_anim_auto_toggle">Auto-Vergleich</span>
                       </button>
                     </div>
                   </div>
@@ -2080,23 +2294,23 @@ def get_all_slides_html():
                   <div class="ffw-highlight-item">
                     <div class="ffw-hl-header">
                       <span class="ffw-hl-dot"></span>
-                      <strong data-i18n="s10_hl1_title">Diskant → Bass:</strong>
+                      <strong data-i18n="s11_hl1_title">Diskant → Bass:</strong>
                     </div>
-                    <span data-i18n="s10_hl1_desc">Gekürzte Kernbahnen formen rechts den starken Bass, links bleibt der Diskant schlank.</span>
+                    <span data-i18n="s11_hl1_desc">Gekürzte Kernbahnen formen rechts den starken Bass, links bleibt der Diskant schlank.</span>
                   </div>
                   <div class="ffw-highlight-item">
                     <div class="ffw-hl-header">
                       <span class="ffw-hl-dot"></span>
-                      <strong data-i18n="s10_hl2_title">2×6 Deckbahnen:</strong>
+                      <strong data-i18n="s11_hl2_title">2×6 Deckbahnen:</strong>
                     </div>
-                    <span data-i18n="s10_hl2_desc">Durchgehend ungeschliffen – nimmt alle Biege- und Zugkräfte auf.</span>
+                    <span data-i18n="s11_hl2_desc">Durchgehend ungeschliffen – nimmt alle Biege- und Zugkräfte auf.</span>
                   </div>
                   <div class="ffw-highlight-item">
                     <div class="ffw-hl-header">
                       <span class="ffw-hl-dot"></span>
-                      <strong data-i18n="s10_hl3_title">Schleif-Folge:</strong>
+                      <strong data-i18n="s11_hl3_title">Schleif-Folge:</strong>
                     </div>
-                    <span data-i18n="s10_hl3_desc">Gekappte Außenbahnen gleiten auseinander – Verlust der Vorspannung.</span>
+                    <span data-i18n="s11_hl3_desc">Gekappte Außenbahnen gleiten auseinander – Verlust der Vorspannung.</span>
                   </div>
                 </div>
               </div>
@@ -2110,15 +2324,15 @@ def get_all_slides_html():
     # =========================================================================
     # KAPITEL 3: DIE NEUE HAMMERKOPF-PRODUKTION IN MEUSELWITZ (11 - 19)
     # =========================================================================
-    # SLIDE 11: Klimatisiertes Filzlager & Sortimentsvielfalt in Meuselwitz (Variante A)
-    slides.append(f'''<!-- SLIDE 12: Filzlager & Sortimentsvielfalt (Deckfilz + Unterfilz) -->
-      <section class="slide slide-hero-theme hk-s12-assortment-slide" data-slide="11">
+    # SLIDE 12: Klimatisiertes Filzlager & Sortimentsvielfalt in Meuselwitz (Variante A)
+    slides.append(f'''<!-- SLIDE 13: Filzlager & Sortimentsvielfalt (Deckfilz + Unterfilz) -->
+      <section class="slide slide-hero-theme hk-s12-assortment-slide" data-slide="12">
         <div class="s12-slide-fade-curtain is-armed" id="s12-slide-fade-curtain" aria-hidden="true"></div>
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s11_category">Teil 3: Hammerkopf-Produktion • Filzlager & Sortimentsvielfalt</div>
-            <h2 class="slide-title" data-i18n="s11_title">Klimatisiertes Filzlager & Sortimentsvielfalt</h2>
-            <div class="slide-subtitle" data-i18n="s11_subtitle">Über 30 konische Deckfilz-Rezepturen sowie 6 Unterfilz-Standardfarben und Sonderfärbungen ab Lager</div>
+            <div class="slide-category" data-i18n="s12_category">Teil 3: Hammerkopf-Produktion • Filzlager & Sortimentsvielfalt</div>
+            <h2 class="slide-title" data-i18n="s12_title">Klimatisiertes Filzlager & Sortimentsvielfalt</h2>
+            <div class="slide-subtitle" data-i18n="s12_subtitle">Über 30 konische Deckfilz-Rezepturen sowie 6 Unterfilz-Standardfarben und Sonderfärbungen ab Lager</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2127,22 +2341,22 @@ def get_all_slides_html():
             <div class="bento-card hero-card hk-s12-deckfilz-card">
               <div class="bento-step-watermark">01</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s11_kpi">30+ Sorten</span>
-                <span class="bento-badge gold" data-i18n="s11_b1_badge">DECKFILZ-PLATTENLAGER</span>
+                <span class="hero-kpi-pill" data-i18n="s12_kpi">30+ Sorten</span>
+                <span class="bento-badge gold" data-i18n="s12_b1_badge">DECKFILZ-PLATTENLAGER</span>
               </div>
-              <div class="bento-card-title" data-i18n="s11_c1_title">Konische FFW- & Weickert-Platten in kontrollierter Reife</div>
+              <div class="bento-card-title" data-i18n="s12_c1_title">Konische FFW- & Weickert-Platten in kontrollierter Reife</div>
               <div class="bento-card-list hk-s12-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s11_bullet_1"><strong>Keilgeometrie ab Werk:</strong> Kräftig im Bass, zum Diskant stetig schlanker und dichter gewalkt.</span>
+                  <span data-i18n="s12_bullet_1"><strong>Keilgeometrie ab Werk:</strong> Kräftig im Bass, zum Diskant stetig schlanker und dichter gewalkt.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s11_bullet_2"><strong>Breites Sortiment:</strong> Über 30 abgestimmte FFW- und Weickert-Rezepturen für Konzert-, Marken- und historische Instrumente.</span>
+                  <span data-i18n="s12_bullet_2"><strong>Breites Sortiment:</strong> Über 30 abgestimmte FFW- und Weickert-Rezepturen für Konzert-, Marken- und historische Instrumente.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s11_bullet_3"><strong>Raumklima &amp; Ruhezeit:</strong> Gesteuerte Luftfeuchte, Pheromon-Monitoring und Reifezeit bauen Walkspannungen ab.</span>
+                  <span data-i18n="s12_bullet_3"><strong>Raumklima &amp; Ruhezeit:</strong> Gesteuerte Luftfeuchte, Pheromon-Monitoring und Reifezeit bauen Walkspannungen ab.</span>
                 </div>
               </div>
             </div>
@@ -2156,8 +2370,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s12-compact-overlay">
-                <span class="bento-badge green" data-i18n="s11_b2_badge">DECKFILZ-LAGER</span>
-                <div class="bento-media-caption" data-i18n="s11_caption_1">Drohnenflug durch das klimatisierte Plattenlager in Meuselwitz</div>
+                <span class="bento-badge green" data-i18n="s12_b2_badge">DECKFILZ-LAGER</span>
+                <div class="bento-media-caption" data-i18n="s12_caption_1">Drohnenflug durch das klimatisierte Plattenlager in Meuselwitz</div>
               </div>
             </div>
 
@@ -2168,31 +2382,31 @@ def get_all_slides_html():
             <div class="hk-s12-color-grid">
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #cc2222;">
                 <div class="bento-card-header">
-                  <span class="bento-badge red" data-i18n="s11_uf_b1">KLASSIKER</span>
+                  <span class="bento-badge red" data-i18n="s12_uf_b1">KLASSIKER</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s11_uf_t1">Rot & Weinrot</div>
-                <div class="bento-card-desc" data-i18n="s11_uf_d1">Traditionelle Renner-Kennfarben für europäische Konzert- und Markenflügel.</div>
+                <div class="bento-card-title" data-i18n="s12_uf_t1">Rot & Weinrot</div>
+                <div class="bento-card-desc" data-i18n="s12_uf_d1">Traditionelle Renner-Kennfarben für europäische Konzert- und Markenflügel.</div>
               </div>
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #ff9900;">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s11_uf_b2">HISTORIE & KONZERT</span>
+                  <span class="bento-badge gold" data-i18n="s12_uf_b2">HISTORIE & KONZERT</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s11_uf_t2">Orange</div>
-                <div class="bento-card-desc" data-i18n="s11_uf_d2">Klassische Ausstattung für Konzertinstrumente und originalgetreue Überholungen.</div>
+                <div class="bento-card-title" data-i18n="s12_uf_t2">Orange</div>
+                <div class="bento-card-desc" data-i18n="s12_uf_d2">Klassische Ausstattung für Konzertinstrumente und originalgetreue Überholungen.</div>
               </div>
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #ddbb00;">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s11_uf_b3">MANUFAKTUREN</span>
+                  <span class="bento-badge gold" data-i18n="s12_uf_b3">MANUFAKTUREN</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s11_uf_t3">Gelb</div>
-                <div class="bento-card-desc" data-i18n="s11_uf_d3">Traditionsfarbe zahlreicher sächsischer und Wiener Klavierbauer.</div>
+                <div class="bento-card-title" data-i18n="s12_uf_t3">Gelb</div>
+                <div class="bento-card-desc" data-i18n="s12_uf_d3">Traditionsfarbe zahlreicher sächsischer und Wiener Klavierbauer.</div>
               </div>
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #2255cc;">
                 <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s11_uf_b4">MARKEN & SONDERFARBEN</span>
+                  <span class="bento-badge green" data-i18n="s12_uf_b4">MARKEN & SONDERFARBEN</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s11_uf_t4">Blau, Schwarz & Wunsch</div>
-                <div class="bento-card-desc" data-i18n="s11_uf_d4">Klassisches Blau (z. B. C. Bechstein), Schwarz sowie kundenspezifische Färbungen.</div>
+                <div class="bento-card-title" data-i18n="s12_uf_t4">Blau, Schwarz & Wunsch</div>
+                <div class="bento-card-desc" data-i18n="s12_uf_d4">Klassisches Blau (z. B. C. Bechstein), Schwarz sowie kundenspezifische Färbungen.</div>
               </div>
             </div>
 
@@ -2204,8 +2418,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s12-compact-overlay">
-                <span class="bento-badge green" data-i18n="s11_uf_b5">6 STANDARDFARBEN + WUNSCH</span>
-                <div class="bento-media-caption" data-i18n="s11_caption_2">Unterfilz-Lagerbestand in Meuselwitz – Sonderfarben auf Kundenwunsch</div>
+                <span class="bento-badge green" data-i18n="s12_uf_b5">6 STANDARDFARBEN + WUNSCH</span>
+                <div class="bento-media-caption" data-i18n="s12_caption_2">Unterfilz-Lagerbestand in Meuselwitz – Sonderfarben auf Kundenwunsch</div>
               </div>
             </div>
           </div>
@@ -2213,14 +2427,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 12: „Weickert Special“ – Exklusiv bei Renner (STFI-Analyse & Interaktiver REM-Zoom)
-    slides.append(f'''<!-- SLIDE 12: Weickert Special – STFI-Analyse & Interaktiver REM-Zoom -->
-      <section class="slide slide-hero-theme s12-rem-slide" data-slide="12">
+    # SLIDE 13: „Weickert Special“ – Exklusiv bei Renner (STFI-Analyse & Interaktiver REM-Zoom)
+    slides.append(f'''<!-- SLIDE 13: Weickert Special – STFI-Analyse & Interaktiver REM-Zoom -->
+      <section class="slide slide-hero-theme s12-rem-slide" data-slide="13">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s12_category">Teil 3: Hammerkopf-Produktion • Weickert Special & REM-Strukturanalyse</div>
-            <h2 class="slide-title" data-i18n="s12_title">„Weickert Special“ – Exklusiv bei Renner</h2>
-            <div class="slide-subtitle" data-i18n="s12_subtitle">56 % maximale Verwalkdichte und erhöhter Restfettanteil nach Wurzener Rezeptur von 1903</div>
+            <div class="slide-category" data-i18n="s13_category">Teil 3: Hammerkopf-Produktion • Weickert Special & REM-Strukturanalyse</div>
+            <h2 class="slide-title" data-i18n="s13_title">„Weickert Special“ – Exklusiv bei Renner</h2>
+            <div class="slide-subtitle" data-i18n="s13_subtitle">56 % maximale Verwalkdichte und erhöhter Restfettanteil nach Wurzener Rezeptur von 1903</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2229,52 +2443,52 @@ def get_all_slides_html():
             <div class="bento-card hero-card s12-hero-card">
               <div class="bento-step-watermark">02</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s12_kpi">56 % Verwalkdichte</span>
-                <span class="bento-badge gold" data-i18n="s12_b1_badge">FFW WURZEN × STFI-ANALYSE</span>
+                <span class="hero-kpi-pill" data-i18n="s13_kpi">56 % Verwalkdichte</span>
+                <span class="bento-badge gold" data-i18n="s13_b1_badge">FFW WURZEN × STFI-ANALYSE</span>
               </div>
-              <div class="bento-card-title" data-i18n="s12_c1_title">Höchste Verwalkdichte & geschütztes Keratin</div>
-              <div class="bento-card-desc" data-i18n="s12_c1_desc">Schonende Rohwollwäsche und intensives Walken verbinden 56 % Maximaldichte mit erhöhtem Wollfettgehalt (STFI-Prüfbericht P2024 0903).</div>
+              <div class="bento-card-title" data-i18n="s13_c1_title">Höchste Verwalkdichte & geschütztes Keratin</div>
+              <div class="bento-card-desc" data-i18n="s13_c1_desc">Schonende Rohwollwäsche und intensives Walken verbinden 56 % Maximaldichte mit erhöhtem Wollfettgehalt (STFI-Prüfbericht P2024 0903).</div>
 
               <!-- 3-Spalten STFI Labor-Kennwerte -->
               <div class="s12-lab-kpis">
                 <div class="s12-lab-kpi" data-s12-focus="1">
-                  <div class="s12-lab-kpi-val" data-i18n="s12_m1_val">56 %</div>
-                  <div class="s12-lab-kpi-lbl" data-i18n="s12_m1_lbl">Max. Verwalkdichte</div>
-                  <div class="s12-lab-kpi-sub" data-i18n="s12_m1_sub">0,56 g/cm³ ohne Härter</div>
+                  <div class="s12-lab-kpi-val" data-i18n="s13_m1_val">56 %</div>
+                  <div class="s12-lab-kpi-lbl" data-i18n="s13_m1_lbl">Max. Verwalkdichte</div>
+                  <div class="s12-lab-kpi-sub" data-i18n="s13_m1_sub">0,56 g/cm³ ohne Härter</div>
                 </div>
                 <div class="s12-lab-kpi" data-s12-focus="10">
-                  <div class="s12-lab-kpi-val" data-i18n="s12_m2_val">0,36 %</div>
-                  <div class="s12-lab-kpi-lbl" data-i18n="s12_m2_lbl">Restfettanteil (ISO 3074)</div>
-                  <div class="s12-lab-kpi-sub" data-i18n="s12_m2_sub">+38 % ggü. 0,26 % Probe</div>
+                  <div class="s12-lab-kpi-val" data-i18n="s13_m2_val">0,36 %</div>
+                  <div class="s12-lab-kpi-lbl" data-i18n="s13_m2_lbl">Restfettanteil (ISO 3074)</div>
+                  <div class="s12-lab-kpi-sub" data-i18n="s13_m2_sub">+38 % ggü. 0,26 % Probe</div>
                 </div>
                 <div class="s12-lab-kpi emerald" data-s12-focus="22">
-                  <div class="s12-lab-kpi-val" data-i18n="s12_m3_val">−65 %</div>
-                  <div class="s12-lab-kpi-lbl" data-i18n="s12_m3_lbl">Quellung im Klimatest</div>
-                  <div class="s12-lab-kpi-sub" data-i18n="s12_m3_sub">4,81 % statt 13,69 %</div>
+                  <div class="s12-lab-kpi-val" data-i18n="s13_m3_val">−65 %</div>
+                  <div class="s12-lab-kpi-lbl" data-i18n="s13_m3_lbl">Quellung im Klimatest</div>
+                  <div class="s12-lab-kpi-sub" data-i18n="s13_m3_sub">4,81 % statt 13,69 %</div>
                 </div>
               </div>
 
               <div class="bento-card-list s12-bullet-list">
                 <div class="bento-card-list-item" data-s12-focus="1">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s12_bullet_1"><strong>56 % Verwalkdichte:</strong> Höchste rein mechanisch erzielte Dichte (0,56 g/cm³) für starke Eigenspannung ohne chemische Härter.</span>
+                  <span data-i18n="s13_bullet_1"><strong>56 % Verwalkdichte:</strong> Höchste rein mechanisch erzielte Dichte (0,56 g/cm³) für starke Eigenspannung ohne chemische Härter.</span>
                 </div>
                 <div class="bento-card-list-item" data-s12-focus="10">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s12_bullet_2"><strong>0,36 % Restfettanteil (ISO 3074):</strong> Schonende Wäsche erhält +38 % mehr natürliches Wollfett (ggü. 0,26 %) als Feuchteschutz.</span>
+                  <span data-i18n="s13_bullet_2"><strong>0,36 % Restfettanteil (ISO 3074):</strong> Schonende Wäsche erhält +38 % mehr natürliches Wollfett (ggü. 0,26 %) als Feuchteschutz.</span>
                 </div>
                 <div class="bento-card-list-item" data-s12-focus="22">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s12_bullet_3"><strong>Geprüfte Klimastabilität:</strong> Im 48h-STFI-Wechselklimatest quillt der Filz um 65 % weniger (nur 4,81 % statt 13,69 % Dickenänderung).</span>
+                  <span data-i18n="s13_bullet_3"><strong>Geprüfte Klimastabilität:</strong> Im 48h-STFI-Wechselklimatest quillt der Filz um 65 % weniger (nur 4,81 % statt 13,69 % Dickenänderung).</span>
                 </div>
                 <div class="bento-card-list-item" data-s12-focus="10">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s12_bullet_4"><strong>Intakte Schuppenschicht &amp; Intonation:</strong> Im REM sichtbare Epicuticula-Schuppen sichern hohe Fasertraktion und jahrelang konstante Klangfarbe.</span>
+                  <span data-i18n="s13_bullet_4"><strong>Intakte Schuppenschicht &amp; Intonation:</strong> Im REM sichtbare Epicuticula-Schuppen sichern hohe Fasertraktion und jahrelang konstante Klangfarbe.</span>
                 </div>
               </div>
 
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s12_fact">🔬 Nachweis: Akkreditierter STFI-Prüfbericht P2024 0903 (M. Kermer, ISO 3074 & Klimatest)</span>
+                <span class="hero-fact-pill" data-i18n="s13_fact">🔬 Nachweis: Akkreditierter STFI-Prüfbericht P2024 0903 (M. Kermer, ISO 3074 & Klimatest)</span>
               </div>
             </div>
 
@@ -2282,11 +2496,11 @@ def get_all_slides_html():
             <div class="bento-card s12-rem-card interactive-el">
               <div class="s12-rem-toolbar">
                 <div class="s12-rem-presets">
-                  <button type="button" class="s12-rem-btn is-active" data-s12-preset="1" data-i18n="s12_rem_btn_1x">1× Übersicht (1 mm)</button>
-                  <button type="button" class="s12-rem-btn" data-s12-preset="10" data-i18n="s12_rem_btn_10x">10× Faser-Detail (100 µm)</button>
-                  <button type="button" class="s12-rem-btn" data-s12-preset="22" data-i18n="s12_rem_btn_22x">22× Schuppen-Zoom</button>
-                  <button type="button" class="s12-rem-btn loupe-toggle is-active" data-s12-loupe-toggle data-i18n="s12_rem_btn_loupe">🔍 Live-Lupe</button>
-                  <button type="button" class="s12-rem-btn" data-s12-preset="macro" data-i18n="s12_rem_btn_macro">Deckfilz W 1512 K</button>
+                  <button type="button" class="s12-rem-btn is-active" data-s12-preset="1" data-i18n="s13_rem_btn_1x">1× Übersicht (1 mm)</button>
+                  <button type="button" class="s12-rem-btn" data-s12-preset="10" data-i18n="s13_rem_btn_10x">10× Faser-Detail (100 µm)</button>
+                  <button type="button" class="s12-rem-btn" data-s12-preset="22" data-i18n="s13_rem_btn_22x">22× Schuppen-Zoom</button>
+                  <button type="button" class="s12-rem-btn loupe-toggle is-active" data-s12-loupe-toggle data-i18n="s13_rem_btn_loupe">🔍 Live-Lupe</button>
+                  <button type="button" class="s12-rem-btn" data-s12-preset="macro" data-i18n="s13_rem_btn_macro">Deckfilz W 1512 K</button>
                 </div>
                 <div class="s12-rem-zoom-ctrl">
                   <button type="button" class="s12-rem-icon-btn" data-s12-step="-1" aria-label="Zoom out">−</button>
@@ -2314,7 +2528,7 @@ def get_all_slides_html():
                 </div>
 
                 <div class="s12-rem-reticle" data-s12-reticle>
-                  <span class="s12-rem-reticle-tag" data-i18n="s12_rem_reticle">10× Detailfenster (414 µm)</span>
+                  <span class="s12-rem-reticle-tag" data-i18n="s13_rem_reticle">10× Detailfenster (414 µm)</span>
                 </div>
 
                 <div class="s12-rem-loupe" data-s12-loupe>
@@ -2330,9 +2544,9 @@ def get_all_slides_html():
               </div>
 
               <div class="s12-rem-statusbar">
-                <span class="bento-badge green" data-i18n="s12_b2_badge">STFI • REM</span>
+                <span class="bento-badge green" data-i18n="s13_b2_badge">STFI • REM</span>
                 <div class="s12-rem-caption-wrap">
-                  <div class="s12-rem-caption-text" data-s12-caption data-i18n="s12_caption_1">REM-Übersicht (STFI Mik59_24 • 1 mm): Hochverdichteter 3D-Faserverbund mit 56 % maximaler Verwalkdichte.</div>
+                  <div class="s12-rem-caption-text" data-s12-caption data-i18n="s13_caption_1">REM-Übersicht (STFI Mik59_24 • 1 mm): Hochverdichteter 3D-Faserverbund mit 56 % maximaler Verwalkdichte.</div>
                   <div class="s12-rem-hint" data-s12-hint>Maus bewegen für 10× Live-Lupe • Klicken oder Mausrad für Zoom</div>
                 </div>
               </div>
@@ -2342,14 +2556,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 13: Filzvorbereitung – Robotischer Deckfilz-Zuschnitt & Profilfräsen des Unterfilzes (Twin Grid)
-    slides.append(f'''<!-- SLIDE 13: Filzvorbereitung (Deckfilz-Zuschnitt + Unterfilz-Profilfräsen) -->
-      <section class="slide slide-hero-theme hk-s13-prep-slide" data-slide="13">
+    # SLIDE 14: Filzvorbereitung – Robotischer Deckfilz-Zuschnitt & Profilfräsen des Unterfilzes (Twin Grid)
+    slides.append(f'''<!-- SLIDE 14: Filzvorbereitung (Deckfilz-Zuschnitt + Unterfilz-Profilfräsen) -->
+      <section class="slide slide-hero-theme hk-s13-prep-slide" data-slide="14">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s13_category">Teil 3: Hammerkopf-Produktion • Filzvorbereitung</div>
-            <h2 class="slide-title" data-i18n="s13_title">Filzvorbereitung: Deckfilz-Zuschnitt & Unterfilz-Profilierung</h2>
-            <div class="slide-subtitle" data-i18n="s13_subtitle">Robotischer Streifenschnitt auf 1 mm und passgenaues Profilfräsen vor dem Verpressen</div>
+            <div class="slide-category" data-i18n="s14_category">Teil 3: Hammerkopf-Produktion • Filzvorbereitung</div>
+            <h2 class="slide-title" data-i18n="s14_title">Filzvorbereitung: Deckfilz-Zuschnitt & Unterfilz-Profilierung</h2>
+            <div class="slide-subtitle" data-i18n="s14_subtitle">Robotischer Streifenschnitt auf 1 mm und passgenaues Profilfräsen vor dem Verpressen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2358,22 +2572,22 @@ def get_all_slides_html():
             <div class="bento-card hero-card hk-s13-step-card">
               <div class="bento-step-watermark">03</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s13_kpi_1">≤ 1 mm Toleranz</span>
-                <span class="bento-badge gold" data-i18n="s13_b1_badge">01 • 6-ACHS-ROBOTIK</span>
+                <span class="hero-kpi-pill" data-i18n="s14_kpi_1">≤ 1 mm Toleranz</span>
+                <span class="bento-badge gold" data-i18n="s14_b1_badge">01 • 6-ACHS-ROBOTIK</span>
               </div>
-              <div class="bento-card-title" data-i18n="s13_c1_title">Robotischer Deckfilz-Zuschnitt</div>
+              <div class="bento-card-title" data-i18n="s14_c1_title">Robotischer Deckfilz-Zuschnitt</div>
               <div class="bento-card-list hk-s13-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s13_bullet_1"><strong>Streifenschnitt auf 1 mm:</strong> 6-Achs-Roboter teilt die gereiften konischen Filzplatten verzugsfrei über die gesamte Breite.</span>
+                  <span data-i18n="s14_bullet_1"><strong>Streifenschnitt auf 1 mm:</strong> 6-Achs-Roboter teilt die gereiften konischen Filzplatten verzugsfrei über die gesamte Breite.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s13_bullet_2"><strong>Kaltschnitt ohne Quetschung:</strong> Scharfe Klingen trennen die Merinofasern glatt und ohne thermische Einwirkung.</span>
+                  <span data-i18n="s14_bullet_2"><strong>Kaltschnitt ohne Quetschung:</strong> Scharfe Klingen trennen die Merinofasern glatt und ohne thermische Einwirkung.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s13_bullet_3"><strong>Inline-Chargencodierung:</strong> Eindeutige Platten- und Auftragsnummer auf jedem Streifen für lückenlose Rückverfolgbarkeit.</span>
+                  <span data-i18n="s14_bullet_3"><strong>Inline-Chargencodierung:</strong> Eindeutige Platten- und Auftragsnummer auf jedem Streifen für lückenlose Rückverfolgbarkeit.</span>
                 </div>
               </div>
             </div>
@@ -2386,8 +2600,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s13-compact-overlay">
-                <span class="bento-badge green" data-i18n="s13_b2_badge">DECKFILZ • 6-ACHS-SCHNITT</span>
-                <div class="bento-media-caption" data-i18n="s13_caption_1">6-Achs-Roboter beim verzugsfreien Schneiden der Deckfilzstreifen</div>
+                <span class="bento-badge green" data-i18n="s14_b2_badge">DECKFILZ • 6-ACHS-SCHNITT</span>
+                <div class="bento-media-caption" data-i18n="s14_caption_1">6-Achs-Roboter beim verzugsfreien Schneiden der Deckfilzstreifen</div>
               </div>
             </div>
 
@@ -2398,22 +2612,22 @@ def get_all_slides_html():
             <div class="bento-card hero-card hk-s13-step-card">
               <div class="bento-step-watermark">04</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s13_kpi_2">± 0,1 mm Toleranz</span>
-                <span class="bento-badge gold" data-i18n="s13_b3_badge">02 • PROFILFRÄSUNG</span>
+                <span class="hero-kpi-pill" data-i18n="s14_kpi_2">± 0,1 mm Toleranz</span>
+                <span class="bento-badge gold" data-i18n="s14_b3_badge">02 • PROFILFRÄSUNG</span>
               </div>
-              <div class="bento-card-title" data-i18n="s13_c2_title">Profilfräsen des Unterfilzes</div>
+              <div class="bento-card-title" data-i18n="s14_c2_title">Profilfräsen des Unterfilzes</div>
               <div class="bento-card-list hk-s13-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s13_bullet_4"><strong>Elastisches Bindeglied:</strong> Formgefräster Unterfilz überträgt den Anschlagimpuls vom harten Holzkern kontrolliert in den Deckfilz.</span>
+                  <span data-i18n="s14_bullet_4"><strong>Elastisches Bindeglied:</strong> Formgefräster Unterfilz überträgt den Anschlagimpuls vom harten Holzkern kontrolliert in den Deckfilz.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s13_bullet_5"><strong>Ausgefräste Schenkel (± 0,1 mm):</strong> Auf ± 0,1 mm genau gefräste Enden ermöglichen eine nahtlos geschlossene Hammerkontur bis in den Diskant.</span>
+                  <span data-i18n="s14_bullet_5"><strong>Ausgefräste Schenkel (± 0,1 mm):</strong> Auf ± 0,1 mm genau gefräste Enden ermöglichen eine nahtlos geschlossene Hammerkontur bis in den Diskant.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s13_bullet_6"><strong>Symmetrischer Schließdruck:</strong> Das abgestimmte Keilprofil verteilt die Presskraft gleichmäßig in beide Hammerflanken.</span>
+                  <span data-i18n="s14_bullet_6"><strong>Symmetrischer Schließdruck:</strong> Das abgestimmte Keilprofil verteilt die Presskraft gleichmäßig in beide Hammerflanken.</span>
                 </div>
               </div>
             </div>
@@ -2426,22 +2640,22 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s13-compact-overlay">
-                <span class="bento-badge green" data-i18n="s13_b4_badge">UNTERFILZ • PROFILFRÄSUNG</span>
-                <div class="bento-media-caption" data-i18n="s13_caption_2">Ausfräsen des Unterfilzstreifens vor dem Einlegen in die Leimpresse</div>
+                <span class="bento-badge green" data-i18n="s14_b4_badge">UNTERFILZ • PROFILFRÄSUNG</span>
+                <div class="bento-media-caption" data-i18n="s14_caption_2">Ausfräsen des Unterfilzstreifens vor dem Einlegen in die Leimpresse</div>
               </div>
             </div>
           </div>
         </div>
 {get_watermark()}
       </section>''')
-    # SLIDE 15: Der Hammerkern: Holzarten, Rohdichten & Profilformen (Variante A)
-    slides.append(f'''<!-- SLIDE 17: Der Hammerkern (Holzarten & Profilformen) -->
-      <section class="slide slide-hero-theme hk-core-combined-slide" data-slide="14">
+    # SLIDE 16: Der Hammerkern: Holzarten, Rohdichten & Profilformen (Variante A)
+    slides.append(f'''<!-- SLIDE 18: Der Hammerkern (Holzarten & Profilformen) -->
+      <section class="slide slide-hero-theme hk-core-combined-slide" data-slide="15">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s14_category">Teil 3: Hammerkopf-Produktion • Der Hammerkern</div>
-            <h2 class="slide-title" data-i18n="s14_title">Der Hammerkern: Holzarten, Eigenschaften & Profilformen</h2>
-            <div class="slide-subtitle" data-i18n="s14_subtitle">Vom schweren Hartholz (Weißbuche, Ahorn) und ölhaltigem Kotibé bis zum leichten amerikanischen Nussbaum</div>
+            <div class="slide-category" data-i18n="s15_category">Teil 3: Hammerkopf-Produktion • Der Hammerkern</div>
+            <h2 class="slide-title" data-i18n="s15_title">Der Hammerkern: Holzarten, Eigenschaften & Profilformen</h2>
+            <div class="slide-subtitle" data-i18n="s15_subtitle">Vom schweren Hartholz (Weißbuche, Ahorn) und ölhaltigem Kotibé bis zum leichten amerikanischen Nussbaum</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2451,35 +2665,35 @@ def get_all_slides_html():
               <div class="hk-core-wood-grid">
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge green" data-i18n="s14_b1_badge">HARTHOLZ • IDEAL</span>
-                    <span class="mono-val hk-density-val" data-i18n="s14_d1">Schwer • Formstabil</span>
+                    <span class="bento-badge green" data-i18n="s15_b1_badge">HARTHOLZ • IDEAL</span>
+                    <span class="mono-val hk-density-val" data-i18n="s15_d1">Schwer • Formstabil</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s14_c1_title">Weißbuche (Hornbeam)</div>
-                  <div class="bento-card-desc" data-i18n="s14_c1_desc">Sehr aufwendig in der Trocknung – korrekt getrocknet jedoch ein ideales, homogenes Kernholz.</div>
+                  <div class="bento-card-title" data-i18n="s15_c1_title">Weißbuche (Hornbeam)</div>
+                  <div class="bento-card-desc" data-i18n="s15_c1_desc">Sehr aufwendig in der Trocknung – korrekt getrocknet jedoch ein ideales, homogenes Kernholz.</div>
                 </div>
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge green" data-i18n="s14_b2_badge">HARTHOLZ • ELASTISCH</span>
-                    <span class="mono-val hk-density-val" data-i18n="s14_d2">Schwer • Selektiert</span>
+                    <span class="bento-badge green" data-i18n="s15_b2_badge">HARTHOLZ • ELASTISCH</span>
+                    <span class="mono-val hk-density-val" data-i18n="s15_d2">Schwer • Selektiert</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s14_c2_title">Ahorn (Maple)</div>
-                  <div class="bento-card-desc" data-i18n="s14_c2_desc">Schweres, teils elastischeres Hartholz – unregelmäßige Zuckereinlagerungen erhöhen jedoch das Streuungsrisiko.</div>
+                  <div class="bento-card-title" data-i18n="s15_c2_title">Ahorn (Maple)</div>
+                  <div class="bento-card-desc" data-i18n="s15_c2_desc">Schweres, teils elastischeres Hartholz – unregelmäßige Zuckereinlagerungen erhöhen jedoch das Streuungsrisiko.</div>
                 </div>
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge gold" data-i18n="s14_b3_badge">PREMIUM • DISKANT</span>
-                    <span class="mono-val hk-density-val" data-i18n="s14_d3">Sehr leicht • Feinjährig</span>
+                    <span class="bento-badge gold" data-i18n="s15_b3_badge">PREMIUM • DISKANT</span>
+                    <span class="mono-val hk-density-val" data-i18n="s15_d3">Sehr leicht • Feinjährig</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s14_c3_title">Amerikanischer Nussbaum</div>
-                  <div class="bento-card-desc" data-i18n="s14_c3_desc">Hochwertigstes Holz: sehr feine Jahresringe, langfaserig und sehr leicht – ideal für einen brillanten Diskant.</div>
+                  <div class="bento-card-title" data-i18n="s15_c3_title">Amerikanischer Nussbaum</div>
+                  <div class="bento-card-desc" data-i18n="s15_c3_desc">Hochwertigstes Holz: sehr feine Jahresringe, langfaserig und sehr leicht – ideal für einen brillanten Diskant.</div>
                 </div>
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge gold" data-i18n="s14_b4_badge">SPEZIALHOLZ • ÖLHALTIG</span>
-                    <span class="mono-val hk-density-val" data-i18n="s14_d4">Schwer • Spezial</span>
+                    <span class="bento-badge gold" data-i18n="s15_b4_badge">SPEZIALHOLZ • ÖLHALTIG</span>
+                    <span class="mono-val hk-density-val" data-i18n="s15_d4">Schwer • Spezial</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s14_c4_title">Kotibé (Mahagoni)</div>
-                  <div class="bento-card-desc" data-i18n="s14_c4_desc">Durch hohen Ölanteil vergleichsweise schwer – gezielt nur für bestimmte Anwendungen eingesetzt.</div>
+                  <div class="bento-card-title" data-i18n="s15_c4_title">Kotibé (Mahagoni)</div>
+                  <div class="bento-card-desc" data-i18n="s15_c4_desc">Durch hohen Ölanteil vergleichsweise schwer – gezielt nur für bestimmte Anwendungen eingesetzt.</div>
                 </div>
               </div>
 
@@ -2489,17 +2703,17 @@ def get_all_slides_html():
               <div class="hk-core-profile-grid">
                 <div class="bento-card hero-card hk-profile-card hk-profile-sym">
                   <div class="bento-card-header">
-                    <span class="bento-badge gold" data-i18n="s14_b5_badge">FORM B · US · CSB</span>
+                    <span class="bento-badge gold" data-i18n="s15_b5_badge">FORM B · US · CSB</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s14_c5_title">Symmetrische Profile</div>
-                  <div class="bento-card-desc" data-i18n="s14_c5_desc">Steinway & Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster und Sauter.</div>
+                  <div class="bento-card-title" data-i18n="s15_c5_title">Symmetrische Profile</div>
+                  <div class="bento-card-desc" data-i18n="s15_c5_desc">Steinway & Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster und Sauter.</div>
                 </div>
                 <div class="bento-card hk-profile-card hk-profile-asym">
                   <div class="bento-card-header">
-                    <span class="bento-badge green" data-i18n="s14_b6_badge">FORM A</span>
+                    <span class="bento-badge green" data-i18n="s15_b6_badge">FORM A</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s14_c6_title">Asymmetrische Profile</div>
-                  <div class="bento-card-desc" data-i18n="s14_c6_desc">Form A mit versetzter Kernschulter für historische Bechstein-Flügel sowie schlanken Diskant.</div>
+                  <div class="bento-card-title" data-i18n="s15_c6_title">Asymmetrische Profile</div>
+                  <div class="bento-card-desc" data-i18n="s15_c6_desc">Form A mit versetzter Kernschulter für historische Bechstein-Flügel sowie schlanken Diskant.</div>
                 </div>
               </div>
             </div>
@@ -2507,23 +2721,23 @@ def get_all_slides_html():
             <!-- Rechts: CAD-Profilübersicht (mit optionalem Direktwechsel zum Rohholzlager) -->
             <div class="bento-card media-framed hk-core-media-card">
               <div class="hk-core-media-switch" role="tablist" aria-label="Hammerkern Ansicht">
-                <button type="button" class="hk-core-media-btn is-active" data-core-media-target="profiles" data-i18n="s14_tab_profiles">Profilformen</button>
-                <button type="button" class="hk-core-media-btn" data-core-media-target="wood" data-i18n="s14_tab_wood">Rohholzlager</button>
+                <button type="button" class="hk-core-media-btn is-active" data-core-media-target="profiles" data-i18n="s15_tab_profiles">Profilformen</button>
+                <button type="button" class="hk-core-media-btn" data-core-media-target="wood" data-i18n="s15_tab_wood">Rohholzlager</button>
               </div>
 
               <div class="hk-core-media-pane is-active" data-core-pane="profiles">
                 <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.2_Hammerkern/renner_kernholz_formen_uebersicht.png" alt="Kernholz Profilformen Form A B US CSB" class="hk-core-cad-img">
                 <div class="bento-media-overlay">
-                  <span class="bento-badge green" data-i18n="s14_b7_badge">PROFILZEICHNUNGEN</span>
-                  <div class="bento-media-caption" data-i18n="s14_caption_1">Renner Kernholz-Querschnitte: Form A, Form B, Form US und Form CSB</div>
+                  <span class="bento-badge green" data-i18n="s15_b7_badge">PROFILZEICHNUNGEN</span>
+                  <div class="bento-media-caption" data-i18n="s15_caption_1">Renner Kernholz-Querschnitte: Form A, Form B, Form US und Form CSB</div>
                 </div>
               </div>
 
               <div class="hk-core-media-pane" data-core-pane="wood">
                 <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p12_2.jpg" alt="Kernholz-Lager Meuselwitz" class="hk-core-wood-img">
                 <div class="bento-media-overlay">
-                  <span class="bento-badge gold" data-i18n="s14_b8_badge">ROHHOLZLAGER</span>
-                  <div class="bento-media-caption" data-i18n="s14_caption_2">Selektierte Kernholzleisten – astfrei, geradfaserig & schonend getrocknet</div>
+                  <span class="bento-badge gold" data-i18n="s15_b8_badge">ROHHOLZLAGER</span>
+                  <div class="bento-media-caption" data-i18n="s15_caption_2">Selektierte Kernholzleisten – astfrei, geradfaserig & schonend getrocknet</div>
                 </div>
               </div>
 
@@ -2537,14 +2751,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 15: Optimales Hammerkopfgewicht im Verhältnis zum Saitengewicht (Interaktive Physik- & Register-Analyse)
-    slides.append(f'''      <!-- SLIDE 15: Optimales Hammerkopfgewicht & Saitengewicht -->
-      <section class="slide slide-hero-theme hwb-slide" data-slide="15">
+    # SLIDE 16: Optimales Hammerkopfgewicht im Verhältnis zum Saitengewicht (Interaktive Physik- & Register-Analyse)
+    slides.append(f'''      <!-- SLIDE 16: Optimales Hammerkopfgewicht & Saitengewicht -->
+      <section class="slide slide-hero-theme hwb-slide" data-slide="16">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s15_category">Teil 3: Hammerkopf-Produktion • Akustische Masse-Abstimmung</div>
-            <h2 class="slide-title" data-i18n="s15_title">Optimales Hammerkopfgewicht im Verhältnis zum Saitengewicht</h2>
-            <div class="slide-subtitle" data-i18n="s15_subtitle">Von ca. 15 g im Bass über den −1-g-Übergang bis 5 g im Diskant: Gleichgewicht aus Kontaktzeit und Saitenauslenkung</div>
+            <div class="slide-category" data-i18n="s16_category">Teil 3: Hammerkopf-Produktion • Akustische Masse-Abstimmung</div>
+            <h2 class="slide-title" data-i18n="s16_title">Optimales Hammerkopfgewicht im Verhältnis zum Saitengewicht</h2>
+            <div class="slide-subtitle" data-i18n="s16_subtitle">Von ca. 15 g im Bass über den −1-g-Übergang bis 5 g im Diskant: Gleichgewicht aus Kontaktzeit und Saitenauslenkung</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2555,13 +2769,13 @@ def get_all_slides_html():
               <div class="pta-card gold-edge curve-stage-card">
                 <div class="pta-toolbar">
                   <div class="pta-btn-group">
-                    <button class="pta-chip-btn active" type="button" data-hwb-zone="overview" data-i18n="s15_tab_all">🎹 Alle Register</button>
-                    <button class="pta-chip-btn" type="button" data-hwb-zone="bass" data-i18n="s15_tab_bass">① Bass (~15 g)</button>
-                    <button class="pta-chip-btn" type="button" data-hwb-zone="break" data-i18n="s15_tab_break">② Übergang (−1 g)</button>
-                    <button class="pta-chip-btn" type="button" data-hwb-zone="treble" data-i18n="s15_tab_treble">③ Diskant (bis 5 g)</button>
+                    <button class="pta-chip-btn active" type="button" data-hwb-zone="overview" data-i18n="s16_tab_all">🎹 Alle Register</button>
+                    <button class="pta-chip-btn" type="button" data-hwb-zone="bass" data-i18n="s16_tab_bass">① Bass (~15 g)</button>
+                    <button class="pta-chip-btn" type="button" data-hwb-zone="break" data-i18n="s16_tab_break">② Übergang (−1 g)</button>
+                    <button class="pta-chip-btn" type="button" data-hwb-zone="treble" data-i18n="s16_tab_treble">③ Diskant (bis 5 g)</button>
                   </div>
                   <button class="pta-play-btn" id="hwb-btn-strike" type="button">
-                    <span>⚡</span> <span data-i18n="s15_btn_strike">Anschlag testen</span>
+                    <span>⚡</span> <span data-i18n="s16_btn_strike">Anschlag testen</span>
                   </button>
                 </div>
 
@@ -2579,10 +2793,10 @@ def get_all_slides_html():
               <div class="pta-card phys-stage-card">
                 <div class="pta-card-head">
                   <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                    <span class="bento-badge green" data-i18n="s15_b1_badge">ANSCHLAGSPHYSIK</span>
-                    <h3 class="pta-card-title" data-i18n="s15_phys_title">Gleichgewicht am Scheitel: Kontaktzeit τc ↔ Saitenauslenkung</h3>
+                    <span class="bento-badge green" data-i18n="s16_b1_badge">ANSCHLAGSPHYSIK</span>
+                    <h3 class="pta-card-title" data-i18n="s16_phys_title">Gleichgewicht am Scheitel: Kontaktzeit τc ↔ Saitenauslenkung</h3>
                   </div>
-                  <span class="hsp-sub-hint" data-i18n="s15_phys_hint">Taste A₀–C₈ wählbar</span>
+                  <span class="hsp-sub-hint" data-i18n="s16_phys_hint">Taste A₀–C₈ wählbar</span>
                 </div>
 
                 <div class="hwb-canvas-wrap">
@@ -2597,40 +2811,40 @@ def get_all_slides_html():
                 <!-- Grundprinzip -->
                 <div class="hwb-principle-box">
                   <div class="hwb-principle-head">
-                    <span class="bento-badge gold" data-i18n="s15_b2_badge">GRUNDGLEICHGEWICHT</span>
-                    <span style="font-family: var(--font-mono); font-size: 14.5px; color: var(--gold-light); font-weight: 700;" data-i18n="s15_ratio_tag">Saitengewicht ↔ Hammermasse</span>
+                    <span class="bento-badge gold" data-i18n="s16_b2_badge">GRUNDGLEICHGEWICHT</span>
+                    <span style="font-family: var(--font-mono); font-size: 14.5px; color: var(--gold-light); font-weight: 700;" data-i18n="s16_ratio_tag">Saitengewicht ↔ Hammermasse</span>
                   </div>
-                  <p class="hwb-principle-text" data-i18n="s15_principle_txt">Passen <strong>Saitengewicht</strong> und <strong>Hammerkopfgewicht</strong> zusammen, stehen <strong>Kontaktzeit τc</strong> und <strong>Saitenauslenkung</strong> im idealen Gleichgewicht.</p>
+                  <p class="hwb-principle-text" data-i18n="s16_principle_txt">Passen <strong>Saitengewicht</strong> und <strong>Hammerkopfgewicht</strong> zusammen, stehen <strong>Kontaktzeit τc</strong> und <strong>Saitenauslenkung</strong> im idealen Gleichgewicht.</p>
                 </div>
 
                 <!-- Interaktiver Simulator: Hammerkopf zu leicht <-> Gleichgewicht <-> zu schwer -->
                 <div class="pta-ctrl-block">
                   <div class="pta-ctrl-top">
-                    <span class="pta-ctrl-label" data-i18n="s15_ctrl2_lbl">Hammerkopfgewicht simulieren</span>
+                    <span class="pta-ctrl-label" data-i18n="s16_ctrl2_lbl">Hammerkopfgewicht simulieren</span>
                     <span class="pta-ctrl-val" id="hwb-lbl-weight">0 % · Optimales Gleichgewicht</span>
                   </div>
                   <input type="range" class="pta-range" id="hwb-slider-weight" min="-100" max="100" step="1" value="0">
                   <div class="hwb-weight-presets">
-                    <button class="hsp-step-btn" type="button" data-tone="soft" data-hwb-weight="-75" data-i18n="s15_wbtn_light">🪶 Zu leicht</button>
-                    <button class="hsp-step-btn active" type="button" data-tone="good" data-hwb-weight="0" data-i18n="s15_wbtn_opt">⚖️ Gleichgewicht</button>
-                    <button class="hsp-step-btn" type="button" data-tone="bad" data-hwb-weight="75" data-i18n="s15_wbtn_heavy">⚓ Zu schwer</button>
+                    <button class="hsp-step-btn" type="button" data-tone="soft" data-hwb-weight="-75" data-i18n="s16_wbtn_light">🪶 Zu leicht</button>
+                    <button class="hsp-step-btn active" type="button" data-tone="good" data-hwb-weight="0" data-i18n="s16_wbtn_opt">⚖️ Gleichgewicht</button>
+                    <button class="hsp-step-btn" type="button" data-tone="bad" data-hwb-weight="75" data-i18n="s16_wbtn_heavy">⚓ Zu schwer</button>
                   </div>
                 </div>
 
                 <!-- 3 Live-Kennzahlen -->
                 <div class="pta-kpi-row">
                   <div class="pta-kpi blue">
-                    <span class="pta-kpi-lbl" data-i18n="s15_kpi1_lbl">Kontaktzeit τc</span>
+                    <span class="pta-kpi-lbl" data-i18n="s16_kpi1_lbl">Kontaktzeit τc</span>
                     <span class="pta-kpi-num" id="hwb-kpi-tau">τc ≈ 1,5 ms</span>
                     <span class="pta-kpi-sub" id="hwb-kpi-tau-sub">Saiten-Halbperiode ½T = 1,9 ms</span>
                   </div>
                   <div class="pta-kpi">
-                    <span class="pta-kpi-lbl" data-i18n="s15_kpi2_lbl">Saitenauslenkung</span>
+                    <span class="pta-kpi-lbl" data-i18n="s16_kpi2_lbl">Saitenauslenkung</span>
                     <span class="pta-kpi-num" id="hwb-kpi-amp">100 % Ideal-Hub</span>
                     <span class="pta-kpi-sub" id="hwb-kpi-amp-sub">Tragfähige Auslenkung</span>
                   </div>
                   <div class="pta-kpi green">
-                    <span class="pta-kpi-lbl" data-i18n="s15_kpi3_lbl">Abstimmung</span>
+                    <span class="pta-kpi-lbl" data-i18n="s16_kpi3_lbl">Abstimmung</span>
                     <span class="pta-kpi-num" id="hwb-kpi-bal">Gleichgewicht</span>
                     <span class="pta-kpi-sub" id="hwb-kpi-bal-sub">Kontaktzeit ↔ Auslenkung ideal</span>
                   </div>
@@ -2639,7 +2853,7 @@ def get_all_slides_html():
                 <!-- Dynamische Konstruktions-Erklärung -->
                 <div class="pta-explain-box">
                   <div>
-                    <span class="bento-badge gold" id="hwb-exp-badge" data-i18n="s15_b3_badge">✦ GEWICHTSABSTIMMUNG ÜBER ALLE 88 TASTEN</span>
+                    <span class="bento-badge gold" id="hwb-exp-badge" data-i18n="s16_b3_badge">✦ GEWICHTSABSTIMMUNG ÜBER ALLE 88 TASTEN</span>
                     <h4 class="pta-explain-title" id="hwb-exp-title">Von ca. 15 g im Bass über den 1-g-Sprung bis 5 g im Diskant</h4>
                   </div>
                   <p class="pta-explain-text" id="hwb-exp-body">
@@ -2656,14 +2870,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 16: Pressen & Verleimen in Leimpressen (Toleranz 0,1 mm)
-    slides.append(f'''<!-- SLIDE 21 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="16">
+    # SLIDE 17: Pressen & Verleimen in Leimpressen (Toleranz 0,1 mm)
+    slides.append(f'''<!-- SLIDE 22 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="17">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s16_category">Teil 3: Hammerkopf-Produktion • Leimpresse</div>
-            <h2 class="slide-title" data-i18n="s16_title">Pressen & Verleimen auf 0,1 mm</h2>
-            <div class="slide-subtitle" data-i18n="s16_subtitle">Aufbau von äußerer Zugspannung und innerer Stützkraft in der Leimpresse</div>
+            <div class="slide-category" data-i18n="s17_category">Teil 3: Hammerkopf-Produktion • Leimpresse</div>
+            <h2 class="slide-title" data-i18n="s17_title">Pressen & Verleimen auf 0,1 mm</h2>
+            <div class="slide-subtitle" data-i18n="s17_subtitle">Aufbau von äußerer Zugspannung und innerer Stützkraft in der Leimpresse</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2671,27 +2885,27 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s16_kpi">Toleranz 0,1 mm</span>
-                <span class="bento-badge gold" data-i18n="s16_b1_badge">LEIMPRESSEN</span>
+                <span class="hero-kpi-pill" data-i18n="s17_kpi">Toleranz 0,1 mm</span>
+                <span class="bento-badge gold" data-i18n="s17_b1_badge">LEIMPRESSEN</span>
               </div>
-              <div class="bento-card-title" data-i18n="s16_c1_title">Verpressen in Pressgesenk und temperierten Gegenlagen</div>
-              <div class="bento-card-desc" data-i18n="s16_c1_desc">Präzisions-Leimpressen fügen Deckfilz, Unterfilz und Kernholz exakt reproduzierbar zusammen.</div>
+              <div class="bento-card-title" data-i18n="s17_c1_title">Verpressen in Pressgesenk und temperierten Gegenlagen</div>
+              <div class="bento-card-desc" data-i18n="s17_c1_desc">Präzisions-Leimpressen fügen Deckfilz, Unterfilz und Kernholz exakt reproduzierbar zusammen.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s16_bullet_1"><strong>Fertigungstoleranz 0,1 mm:</strong> Präzise geführte Gegenlagen sichern exakte Maßhaltigkeit über den gesamten Satz.</span>
+                  <span data-i18n="s17_bullet_1"><strong>Fertigungstoleranz 0,1 mm:</strong> Präzise geführte Gegenlagen sichern exakte Maßhaltigkeit über den gesamten Satz.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s16_bullet_2"><strong>Pressgesenk &amp; Gegenlagen:</strong> Der Filz wird nach unten in das Pressgesenk gedrückt; seitlich fahren dann die Gegenlagen zu und pressen den Filz an die Klebefläche.</span>
+                  <span data-i18n="s17_bullet_2"><strong>Pressgesenk &amp; Gegenlagen:</strong> Der Filz wird nach unten in das Pressgesenk gedrückt; seitlich fahren dann die Gegenlagen zu und pressen den Filz an die Klebefläche.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s16_bullet_3"><strong>Definierte Spannungszonen:</strong> Hohe Zugkraft in der Außenhaut trifft auf einen komprimierten, elastischen Innenkern.</span>
+                  <span data-i18n="s17_bullet_3"><strong>Definierte Spannungszonen:</strong> Hohe Zugkraft in der Außenhaut trifft auf einen komprimierten, elastischen Innenkern.</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s16_fact">⚡ Dieses Spannungsgefälle bildet die Grundlage für Dynamik von pp bis ff</span>
+                <span class="hero-fact-pill" data-i18n="s17_fact">⚡ Dieses Spannungsgefälle bildet die Grundlage für Dynamik von pp bis ff</span>
               </div>
             </div>
             <div class="bento-card media-framed hk-video-card">
@@ -2701,8 +2915,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s16_b2_badge">WERKSVIDEO</span>
-                <div class="bento-media-caption" data-i18n="s16_caption_1">Einpressen in das Pressgesenk und Schließen der Gegenlagen in Meuselwitz</div>
+                <span class="bento-badge green" data-i18n="s17_b2_badge">WERKSVIDEO</span>
+                <div class="bento-media-caption" data-i18n="s17_caption_1">Einpressen in das Pressgesenk und Schließen der Gegenlagen in Meuselwitz</div>
               </div>
             </div>
           </div>
@@ -2710,14 +2924,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 17: CNC-Abrichten, Abziehen auf 0,3 mm & Trennen (Sander Bento)
-    slides.append(f'''<!-- SLIDE 23 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="17">
+    # SLIDE 18: CNC-Abrichten, Abziehen auf 0,3 mm & Trennen (Sander Bento)
+    slides.append(f'''<!-- SLIDE 24 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="18">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s17_category">Teil 3: Hammerkopf-Produktion • CNC-Fräsen & Kalibrieren</div>
-            <h2 class="slide-title" data-i18n="s17_title">CNC-Fräsen & robotergestütztes Kalibrieren</h2>
-            <div class="slide-subtitle" data-i18n="s17_subtitle">Kernfräsung auf 0,1 mm, Nachfräsen nach dem Leimen und Kalibrieren jedes einzelnen Hammerkopfs auf der Roboteranlage</div>
+            <div class="slide-category" data-i18n="s18_category">Teil 3: Hammerkopf-Produktion • CNC-Fräsen & Kalibrieren</div>
+            <h2 class="slide-title" data-i18n="s18_title">CNC-Fräsen & robotergestütztes Kalibrieren</h2>
+            <div class="slide-subtitle" data-i18n="s18_subtitle">Kernfräsung auf 0,1 mm, Nachfräsen nach dem Leimen und Kalibrieren jedes einzelnen Hammerkopfs auf der Roboteranlage</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2725,27 +2939,27 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">06</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s17_kpi">Toleranz 0,1 mm</span>
-                <span class="bento-badge gold" data-i18n="s17_b1_badge">CNC-FRÄSEN & ROBOTER</span>
+                <span class="hero-kpi-pill" data-i18n="s18_kpi">Toleranz 0,1 mm</span>
+                <span class="bento-badge gold" data-i18n="s18_b1_badge">CNC-FRÄSEN & ROBOTER</span>
               </div>
-              <div class="bento-card-title" data-i18n="s17_c1_title">Zweistufiges CNC-Fräsen & Einzelkopf-Kalibrierung</div>
-              <div class="bento-card-desc" data-i18n="s17_c1_desc">CNC-Fräsen bearbeiten erst die Hammerkerne und nach dem Leimen den Filzüberstand – danach kalibriert eine Roboteranlage jeden einzelnen Kopf.</div>
+              <div class="bento-card-title" data-i18n="s18_c1_title">Zweistufiges CNC-Fräsen & Einzelkopf-Kalibrierung</div>
+              <div class="bento-card-desc" data-i18n="s18_c1_desc">CNC-Fräsen bearbeiten erst die Hammerkerne und nach dem Leimen den Filzüberstand – danach kalibriert eine Roboteranlage jeden einzelnen Kopf.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s17_bullet_1"><strong>1. Hammerkerne fräsen (0,1 mm):</strong> Auf den CNC-Fräsen werden zunächst die Hammerkerne mit einer Toleranz von 0,1 mm präzise gefräst.</span>
+                  <span data-i18n="s18_bullet_1"><strong>1. Hammerkerne fräsen (0,1 mm):</strong> Auf den CNC-Fräsen werden zunächst die Hammerkerne mit einer Toleranz von 0,1 mm präzise gefräst.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s17_bullet_2"><strong>2. Nachfräsen nach Pressen &amp; Leimen:</strong> Nach dem Verpressen und Verleimen wird der Filzüberstand abgetragen und sauber nachgefräst.</span>
+                  <span data-i18n="s18_bullet_2"><strong>2. Nachfräsen nach Pressen &amp; Leimen:</strong> Nach dem Verpressen und Verleimen wird der Filzüberstand abgetragen und sauber nachgefräst.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s17_bullet_3"><strong>3. Roboter-Kalibrierung:</strong> Im Anschluss wird auf einer Roboteranlage jeder einzelne Hammerkopf präzise kalibriert.</span>
+                  <span data-i18n="s18_bullet_3"><strong>3. Roboter-Kalibrierung:</strong> Im Anschluss wird auf einer Roboteranlage jeder einzelne Hammerkopf präzise kalibriert.</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s17_fact">📐 0,1 mm Fräsgenauigkeit kombiniert mit reproduzierbarer Roboter-Kalibrierung am Einzelkopf</span>
+                <span class="hero-fact-pill" data-i18n="s18_fact">📐 0,1 mm Fräsgenauigkeit kombiniert mit reproduzierbarer Roboter-Kalibrierung am Einzelkopf</span>
               </div>
             </div>
             <div class="bento-card media-framed hk-video-card hk-seq-video-card" id="s18-video-card">
@@ -2756,8 +2970,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s17_b2_badge">WERKSVIDEOS</span>
-                <div class="bento-media-caption" data-i18n="s17_caption_1">CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage</div>
+                <span class="bento-badge green" data-i18n="s18_b2_badge">WERKSVIDEOS</span>
+                <div class="bento-media-caption" data-i18n="s18_caption_1">CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage</div>
               </div>
             </div>
           </div>
@@ -2765,14 +2979,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 18: Stielbohrung, T-Vernietung & Endform (Sander Bento)
-    slides.append(f'''<!-- SLIDE 24 (Sander Bento Mosaic) -->
-      <section class="slide slide-hero-theme" data-slide="18">
+    # SLIDE 19: Stielbohrung, T-Vernietung & Endform (Sander Bento)
+    slides.append(f'''<!-- SLIDE 25 (Sander Bento Mosaic) -->
+      <section class="slide slide-hero-theme" data-slide="19">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s18_category">Teil 3: Hammerkopf-Produktion • Nieten & Bohren</div>
-            <h2 class="slide-title" data-i18n="s18_title">Automatisches Nieten & Bohren</h2>
-            <div class="slide-subtitle" data-i18n="s18_subtitle">Mechanikgerechte Anschlussmaße und dauerhafte Schenkelsicherung</div>
+            <div class="slide-category" data-i18n="s19_category">Teil 3: Hammerkopf-Produktion • Nieten & Bohren</div>
+            <h2 class="slide-title" data-i18n="s19_title">Automatisches Nieten & Bohren</h2>
+            <div class="slide-subtitle" data-i18n="s19_subtitle">Mechanikgerechte Anschlussmaße und dauerhafte Schenkelsicherung</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2780,27 +2994,27 @@ def get_all_slides_html():
             <div class="bento-card hero-card">
               <div class="bento-step-watermark">07</div>
               <div class="hero-card-meta-top">
-                <span class="hero-kpi-pill" data-i18n="s18_kpi">ø 5,4 mm · Vernietung</span>
-                <span class="bento-badge gold" data-i18n="s18_b1_badge">ENDBEARBEITUNG</span>
+                <span class="hero-kpi-pill" data-i18n="s19_kpi">ø 5,4 mm · Vernietung</span>
+                <span class="bento-badge gold" data-i18n="s19_b1_badge">ENDBEARBEITUNG</span>
               </div>
-              <div class="bento-card-title" data-i18n="s18_c1_title">Anschlussgeometrie für den Hammerstiel</div>
-              <div class="bento-card-desc" data-i18n="s18_c1_desc">Jeder Einzelkopf erhält seine modellspezifische Bohrung und mechanische Sicherung.</div>
+              <div class="bento-card-title" data-i18n="s19_c1_title">Anschlussgeometrie für den Hammerstiel</div>
+              <div class="bento-card-desc" data-i18n="s19_c1_desc">Jeder Einzelkopf erhält seine modellspezifische Bohrung und mechanische Sicherung.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s18_bullet_1"><strong>Bohrwinkel-Präzision:</strong> Exakte Tiefe, Durchmesser (z. B. ø 5,4 mm) und individueller Bohrwinkel pro Note.</span>
+                  <span data-i18n="s19_bullet_1"><strong>Bohrwinkel-Präzision:</strong> Exakte Tiefe, Durchmesser (z. B. ø 5,4 mm) und individueller Bohrwinkel pro Note.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s18_bullet_2"><strong>Vernietung aus Messing:</strong> Sichert die verleimten Filzschenkel dauerhaft gegen Aufgehen unter höchster Konzertlast.</span>
+                  <span data-i18n="s19_bullet_2"><strong>Vernietung aus Messing:</strong> Sichert die verleimten Filzschenkel dauerhaft gegen Aufgehen unter höchster Konzertlast.</span>
                 </div>
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
-                  <span data-i18n="s18_bullet_3"><strong>Profilierter Hammerschwanz:</strong> Sauber verrundete Radien sorgen für definiertes Greifen am Fängerfilz.</span>
+                  <span data-i18n="s19_bullet_3"><strong>Profilierter Hammerschwanz:</strong> Sauber verrundete Radien sorgen für definiertes Greifen am Fängerfilz.</span>
                 </div>
               </div>
               <div class="hero-card-footer">
-                <span class="hero-fact-pill" data-i18n="s18_fact">🔩 Passgenau vorbereitet zum Aufleimen auf die Hammerstiele</span>
+                <span class="hero-fact-pill" data-i18n="s19_fact">🔩 Passgenau vorbereitet zum Aufleimen auf die Hammerstiele</span>
               </div>
             </div>
             <div class="bento-card media-framed hk-video-card">
@@ -2810,8 +3024,8 @@ def get_all_slides_html():
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s18_b2_badge">WERKSVIDEO</span>
-                <div class="bento-media-caption" data-i18n="s18_caption_1">Automatisches Bohren und Setzen der Messingnieten</div>
+                <span class="bento-badge green" data-i18n="s19_b2_badge">WERKSVIDEO</span>
+                <div class="bento-media-caption" data-i18n="s19_caption_1">Automatisches Bohren und Setzen der Messingnieten</div>
               </div>
             </div>
           </div>
@@ -2819,24 +3033,24 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 20: Ergebnis der Fertigung in Meuselwitz (Sander Bento)
+    # SLIDE 21: Ergebnis der Fertigung in Meuselwitz (Sander Bento)
 
 
     # =========================================================================
     # KAPITEL 4: DAS LOUIS RENNER YAMAHA KIT C1–C3 (FOLIE 20)
     # =========================================================================
 
-    # SLIDE 21: Das Louis Renner Yamaha Kit (Folie 5 Layout Struktur)
-    slides.append(f'''<!-- SLIDE 27: Original Louis Renner Yamaha Kit (Folie 5 Layout Struktur) -->
-      <section class="slide yk-kit-slide" data-slide="19">
+    # SLIDE 22: Das Louis Renner Yamaha Kit (Folie 5 Layout Struktur)
+    slides.append(f'''<!-- SLIDE 28: Original Louis Renner Yamaha Kit (Folie 5 Layout Struktur) -->
+      <section class="slide yk-kit-slide" data-slide="20">
         <!-- Ambient Felt Texture Background Layer -->
         <div class="ffw-ambient-felt-backdrop" aria-hidden="true"></div>
 
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s19_category">Teil 4: Yamaha Kit • Produktvorstellung</div>
-            <h2 class="slide-title" data-i18n="s19_title">Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau</h2>
-            <div class="slide-subtitle" data-i18n="s19_subtitle">Maßgeschneidert für Yamaha C1–C3: Dynamische Ausdruckskraft, brillante Obertöne & tiefer Fundamentalbass.</div>
+            <div class="slide-category" data-i18n="s20_category">Teil 4: Yamaha Kit • Produktvorstellung</div>
+            <h2 class="slide-title" data-i18n="s20_title">Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau</h2>
+            <div class="slide-subtitle" data-i18n="s20_subtitle">Maßgeschneidert für Yamaha C1–C3: Dynamische Ausdruckskraft, brillante Obertöne & tiefer Fundamentalbass.</div>
           </div>
 
           <!-- Timeline Stepper & Autoplay Controls -->
@@ -3147,14 +3361,14 @@ def get_all_slides_html():
       </section>''')
 
 
-    # SLIDE 22: Praxisbeweis Indien (1/2) – Einbau im Zeitraffer (10:00 – 18:00 Uhr)
-    slides.append(f'''      <!-- SLIDE 28: Yamaha Kit Praxisbeweis Indien (1/2) - Renner Timelapse - Timestamp.mp4 -->
-      <section class="slide slide-hero-theme" data-slide="20">
+    # SLIDE 23: Praxisbeweis Indien (1/2) – Einbau im Zeitraffer (10:00 – 18:00 Uhr)
+    slides.append(f'''      <!-- SLIDE 29: Yamaha Kit Praxisbeweis Indien (1/2) - Renner Timelapse - Timestamp.mp4 -->
+      <section class="slide slide-hero-theme" data-slide="21">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s20_category">Teil 4: Yamaha Kit • Praxisbeweis Indien (1/2)</div>
-            <h2 class="slide-title" data-i18n="s20_title">Einbau im Zeitraffer: Komplettumbau an einem Tag</h2>
-            <div class="slide-subtitle" data-i18n="s20_subtitle">Dokumentation des taggleichen Einbaus (10:00 – 18:00 Uhr) direkt am Aufstellort in Indien (10/2026)</div>
+            <div class="slide-category" data-i18n="s21_category">Teil 4: Yamaha Kit • Praxisbeweis Indien (1/2)</div>
+            <h2 class="slide-title" data-i18n="s21_title">Einbau im Zeitraffer: Komplettumbau an einem Tag</h2>
+            <div class="slide-subtitle" data-i18n="s21_subtitle">Dokumentation des taggleichen Einbaus (10:00 – 18:00 Uhr) direkt am Aufstellort in Indien (10/2026)</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3201,14 +3415,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 23: Praxisbeweis Indien (2/2) – Pianistin Raaga im Praxistest
-    slides.append(f'''      <!-- SLIDE 29: Yamaha Kit Praxisbeweis Indien (2/2) - Raaga Speech.mp4 -->
-      <section class="slide slide-hero-theme" data-slide="21">
+    # SLIDE 24: Praxisbeweis Indien (2/2) – Pianistin Raaga im Praxistest
+    slides.append(f'''      <!-- SLIDE 30: Yamaha Kit Praxisbeweis Indien (2/2) - Raaga Speech.mp4 -->
+      <section class="slide slide-hero-theme" data-slide="22">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s21_category">Teil 4: Yamaha Kit • Praxisbeweis Indien (2/2)</div>
-            <h2 class="slide-title" data-i18n="s21_title">Pianisten-Feedback: Pianistin Raaga im Praxistest</h2>
-            <div class="slide-subtitle" data-i18n="s21_subtitle">Unmittelbares Künstler-Urteil zu Klangfarbe, Dynamik und Repetition am umgerüsteten Yamaha-Flügel</div>
+            <div class="slide-category" data-i18n="s22_category">Teil 4: Yamaha Kit • Praxisbeweis Indien (2/2)</div>
+            <h2 class="slide-title" data-i18n="s22_title">Pianisten-Feedback: Pianistin Raaga im Praxistest</h2>
+            <div class="slide-subtitle" data-i18n="s22_subtitle">Unmittelbares Künstler-Urteil zu Klangfarbe, Dynamik und Repetition am umgerüsteten Yamaha-Flügel</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3259,37 +3473,37 @@ def get_all_slides_html():
     # KAPITEL 4B: INTERAKTIVE AKUSTIK- & SPEKTRALANALYSE YAMAHA KIT (23 - 25)
     # =========================================================================
 
-    # SLIDE 24: Interaktive Spektralanalyse (1/3) – Leistungsdichtespektrum & 2-Oktaven-Eingrenzung
-    slides.append(f'''      <!-- SLIDE 30: Yamaha Kit Akustik-Analyse (1/3) - Spektrum & 2-Oktaven-Filter -->
-      <section class="slide slide-hero-theme yka-slide" data-slide="22">
+    # SLIDE 25: Interaktive Spektralanalyse (1/3) – Leistungsdichtespektrum & 2-Oktaven-Eingrenzung
+    slides.append(f'''      <!-- SLIDE 31: Yamaha Kit Akustik-Analyse (1/3) - Spektrum & 2-Oktaven-Filter -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="23">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s22_category">Teil 4: Yamaha Kit • Akustik-Analyse (1/3)</div>
-            <h2 class="slide-title" data-i18n="s22_title">Klangspektrum im Vergleich: Original vs. Renner Yamaha Kit</h2>
-            <div class="slide-subtitle" data-i18n="s22_subtitle">Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
+            <div class="slide-category" data-i18n="s23_category">Teil 4: Yamaha Kit • Akustik-Analyse (1/3)</div>
+            <h2 class="slide-title" data-i18n="s23_title">Klangspektrum im Vergleich: Original vs. Renner Yamaha Kit</h2>
+            <div class="slide-subtitle" data-i18n="s23_subtitle">Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
           </div>
         </div>
         <div class="slide-body">
           <!-- Interactive 3-Part Sub-Slide Navigation Bar -->
           <div class="yka-subnav-bar">
             <div class="yka-subnav-tabs">
-              <button class="yka-subnav-tab active" data-target-slide="22" type="button">
+              <button class="yka-subnav-tab active" data-target-slide="23" type="button">
                 <span class="yka-tab-num">01</span>
                 <span class="yka-tab-label" data-i18n="s23_tab1">SPEKTRUM</span>
               </button>
-              <button class="yka-subnav-tab" data-target-slide="23" type="button">
+              <button class="yka-subnav-tab" data-target-slide="24" type="button">
                 <span class="yka-tab-num">02</span>
                 <span class="yka-tab-label" data-i18n="s23_tab2">TEILTÖNE H1–H12</span>
               </button>
-              <button class="yka-subnav-tab" data-target-slide="24" type="button">
+              <button class="yka-subnav-tab" data-target-slide="25" type="button">
                 <span class="yka-tab-num">03</span>
                 <span class="yka-tab-label" data-i18n="s23_tab3">4 KLANGVORTEILE & OBERTÖNE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
-              <button class="yka-step-btn" data-target-slide="21" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <button class="yka-step-btn" data-target-slide="22" title="Vorherige Analyse-Ansicht" type="button">←</button>
               <span class="yka-step-counter">1 / 3</span>
-              <button class="yka-step-btn" data-target-slide="23" title="Nächste Analyse-Ansicht" type="button">→</button>
+              <button class="yka-step-btn" data-target-slide="24" title="Nächste Analyse-Ansicht" type="button">→</button>
             </div>
           </div>
           <div class="yka-main-grid">
@@ -3405,37 +3619,37 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 25: Interaktive Spektralanalyse (2/3) – 2-Oktaven-Teiltonverteilung (H1-H12) & 24-Halbton-Auflösung
-    slides.append(f'''      <!-- SLIDE 31: Yamaha Kit Akustik-Analyse (2/3) - Teiltonverteilung H1-H12 & 24 Halbtöne -->
-      <section class="slide slide-hero-theme yka-slide" data-slide="23">
+    # SLIDE 26: Interaktive Spektralanalyse (2/3) – 2-Oktaven-Teiltonverteilung (H1-H12) & 24-Halbton-Auflösung
+    slides.append(f'''      <!-- SLIDE 32: Yamaha Kit Akustik-Analyse (2/3) - Teiltonverteilung H1-H12 & 24 Halbtöne -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="24">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s23_category">Teil 4: Yamaha Kit • Akustik-Analyse (2/3)</div>
-            <h2 class="slide-title" data-i18n="s23_title">Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Vergleich</h2>
-            <div class="slide-subtitle" data-i18n="s23_subtitle">Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz</div>
+            <div class="slide-category" data-i18n="s24_category">Teil 4: Yamaha Kit • Akustik-Analyse (2/3)</div>
+            <h2 class="slide-title" data-i18n="s24_title">Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Vergleich</h2>
+            <div class="slide-subtitle" data-i18n="s24_subtitle">Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz</div>
           </div>
         </div>
         <div class="slide-body">
           <!-- Interactive 3-Part Sub-Slide Navigation Bar -->
           <div class="yka-subnav-bar">
             <div class="yka-subnav-tabs">
-              <button class="yka-subnav-tab" data-target-slide="22" type="button">
+              <button class="yka-subnav-tab" data-target-slide="23" type="button">
                 <span class="yka-tab-num">01</span>
                 <span class="yka-tab-label" data-i18n="s24_tab1">SPEKTRUM</span>
               </button>
-              <button class="yka-subnav-tab active" data-target-slide="23" type="button">
+              <button class="yka-subnav-tab active" data-target-slide="24" type="button">
                 <span class="yka-tab-num">02</span>
                 <span class="yka-tab-label" data-i18n="s24_tab2">TEILTÖNE H1–H12</span>
               </button>
-              <button class="yka-subnav-tab" data-target-slide="24" type="button">
+              <button class="yka-subnav-tab" data-target-slide="25" type="button">
                 <span class="yka-tab-num">03</span>
                 <span class="yka-tab-label" data-i18n="s24_tab3">4 KLANGVORTEILE & OBERTÖNE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
-              <button class="yka-step-btn" data-target-slide="22" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <button class="yka-step-btn" data-target-slide="23" title="Vorherige Analyse-Ansicht" type="button">←</button>
               <span class="yka-step-counter">2 / 3</span>
-              <button class="yka-step-btn" data-target-slide="24" title="Nächste Analyse-Ansicht" type="button">→</button>
+              <button class="yka-step-btn" data-target-slide="25" title="Nächste Analyse-Ansicht" type="button">→</button>
             </div>
           </div>
           <!-- Synchronized 2-Octave Control Bar -->
@@ -3530,37 +3744,37 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 26: Interaktive Spektralanalyse (3/3) – Die 4 Kernvorteile & Spectral-Slope-Rechner (bis C8 = 4300 Hz)
-    slides.append(f'''      <!-- SLIDE 32: Yamaha Kit Akustik-Analyse (3/3) - Die 4 Kernvorteile & Spectral-Slope-Rechner (C8 = 4300 Hz) -->
-      <section class="slide slide-hero-theme yka-slide" data-slide="24">
+    # SLIDE 27: Interaktive Spektralanalyse (3/3) – Die 4 Kernvorteile & Spectral-Slope-Rechner (bis C8 = 4300 Hz)
+    slides.append(f'''      <!-- SLIDE 33: Yamaha Kit Akustik-Analyse (3/3) - Die 4 Kernvorteile & Spectral-Slope-Rechner (C8 = 4300 Hz) -->
+      <section class="slide slide-hero-theme yka-slide" data-slide="25">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s24_category">Teil 4: Yamaha Kit • Akustik-Analyse (3/3)</div>
-            <h2 class="slide-title" data-i18n="s24_title">4 Klangvorteile & Oberton-Erhalt bis C₈</h2>
-            <div class="slide-subtitle" data-i18n="s24_subtitle">Messbarer Zugewinn im Gesangs- und Brillanzregister sowie flacherer Oberton-Abfall bis 4.300 Hz</div>
+            <div class="slide-category" data-i18n="s25_category">Teil 4: Yamaha Kit • Akustik-Analyse (3/3)</div>
+            <h2 class="slide-title" data-i18n="s25_title">4 Klangvorteile & Oberton-Erhalt bis C₈</h2>
+            <div class="slide-subtitle" data-i18n="s25_subtitle">Messbarer Zugewinn im Gesangs- und Brillanzregister sowie flacherer Oberton-Abfall bis 4.300 Hz</div>
           </div>
         </div>
         <div class="slide-body">
           <!-- Interactive 3-Part Sub-Slide Navigation Bar -->
           <div class="yka-subnav-bar">
             <div class="yka-subnav-tabs">
-              <button class="yka-subnav-tab" data-target-slide="22" type="button">
+              <button class="yka-subnav-tab" data-target-slide="23" type="button">
                 <span class="yka-tab-num">01</span>
                 <span class="yka-tab-label" data-i18n="s25_tab1">SPEKTRUM</span>
               </button>
-              <button class="yka-subnav-tab" data-target-slide="23" type="button">
+              <button class="yka-subnav-tab" data-target-slide="24" type="button">
                 <span class="yka-tab-num">02</span>
                 <span class="yka-tab-label" data-i18n="s25_tab2">TEILTÖNE H1–H12</span>
               </button>
-              <button class="yka-subnav-tab active" data-target-slide="24" type="button">
+              <button class="yka-subnav-tab active" data-target-slide="25" type="button">
                 <span class="yka-tab-num">03</span>
                 <span class="yka-tab-label" data-i18n="s25_tab3">4 KLANGVORTEILE & OBERTÖNE</span>
               </button>
             </div>
             <div class="yka-subnav-stepper">
-              <button class="yka-step-btn" data-target-slide="23" title="Vorherige Analyse-Ansicht" type="button">←</button>
+              <button class="yka-step-btn" data-target-slide="24" title="Vorherige Analyse-Ansicht" type="button">←</button>
               <span class="yka-step-counter">3 / 3</span>
-              <button class="yka-step-btn" data-target-slide="25" title="Nächste Folie" type="button">→</button>
+              <button class="yka-step-btn" data-target-slide="26" title="Nächste Folie" type="button">→</button>
             </div>
           </div>
           <div class="yka-main-grid yka-grid-equal">
@@ -3659,14 +3873,14 @@ def get_all_slides_html():
     # =========================================================================
     # KAPITEL 5: DIE RENNER INTONATION & KLANGGESTALTUNG (26 - 32)
     # =========================================================================
-    # SLIDE 27: Interaktiver Auftakt Intonation – Teiltonaufbau auf A1 (55 Hz): Tonhärte & Anschlagspunkt
-    slides.append(f'''      <!-- SLIDE 33: Teiltonaufbau auf A1 (55 Hz): Tonhärte & Anschlagspunkt -->
-      <section class="slide slide-hero-theme pta-slide" data-slide="25">
+    # SLIDE 28: Interaktiver Auftakt Intonation – Teiltonaufbau auf A1 (55 Hz): Tonhärte & Anschlagspunkt
+    slides.append(f'''      <!-- SLIDE 34: Teiltonaufbau auf A1 (55 Hz): Tonhärte & Anschlagspunkt -->
+      <section class="slide slide-hero-theme pta-slide" data-slide="26">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s25_category">Teil 5: Intonation • Auftakt: Klangphysik & Klavierton</div>
-            <h2 class="slide-title" data-i18n="s25_title">Teiltonaufbau auf A₁ (55 Hz): Tonhärte & Anschlagspunkt</h2>
-            <div class="slide-subtitle" data-i18n="s25_subtitle">Wie Filz-Elastizität und Anschlagsposition (x₀ / L) die Teiltöne H₁–H₁₂ in Dezibel (dB) formen</div>
+            <div class="slide-category" data-i18n="s26_category">Teil 5: Intonation • Auftakt: Klangphysik & Klavierton</div>
+            <h2 class="slide-title" data-i18n="s26_title">Teiltonaufbau auf A₁ (55 Hz): Tonhärte & Anschlagspunkt</h2>
+            <div class="slide-subtitle" data-i18n="s26_subtitle">Wie Filz-Elastizität und Anschlagsposition (x₀ / L) die Teiltöne H₁–H₁₂ in Dezibel (dB) formen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3791,14 +4005,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 28: Interaktive Federphysik – Die komplexe Feder Hammerkopf (Cristofori bis Zonen-Balance)
-    slides.append(f'''      <!-- SLIDE 34: Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance -->
-      <section class="slide slide-hero-theme hsp-slide" data-slide="26">
+    # SLIDE 29: Interaktive Federphysik – Die komplexe Feder Hammerkopf (Cristofori bis Zonen-Balance)
+    slides.append(f'''      <!-- SLIDE 35: Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance -->
+      <section class="slide slide-hero-theme hsp-slide" data-slide="27">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s26_category">Teil 5: Intonation • Federphysik, Verdichtungszonen & Dynamikgrenzen</div>
-            <h2 class="slide-title" data-i18n="s26_title">Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance</h2>
-            <div class="slide-subtitle" data-i18n="s26_subtitle">Wie Elastizität, 2:1-Verdichtung (Scheitel → ½ Flanke) und Schulter-Übergang den Dynamikumfang (pp–ff) steuern</div>
+            <div class="slide-category" data-i18n="s27_category">Teil 5: Intonation • Federphysik, Verdichtungszonen & Dynamikgrenzen</div>
+            <h2 class="slide-title" data-i18n="s27_title">Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance</h2>
+            <div class="slide-subtitle" data-i18n="s27_subtitle">Wie Elastizität, 2:1-Verdichtung (Scheitel → ½ Flanke) und Schulter-Übergang den Dynamikumfang (pp–ff) steuern</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3961,14 +4175,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 28: Intonations-Zonen & Stichwirkung – Das Renner-Uhrenmodell (Interaktiv)
-    slides.append(f'''      <!-- SLIDE 35: Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell -->
-      <section class="slide slide-hero-theme vzn-slide" data-slide="27">
+    # SLIDE 29: Intonations-Zonen & Stichwirkung – Das Renner-Uhrenmodell (Interaktiv)
+    slides.append(f'''      <!-- SLIDE 36: Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell -->
+      <section class="slide slide-hero-theme vzn-slide" data-slide="28">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s27_category">Teil 5: Intonation • Faserverlauf, Nadelzonen & Klangwirkung</div>
-            <h2 class="slide-title" data-i18n="s27_title">Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell</h2>
-            <div class="slide-subtitle" data-i18n="s27_subtitle">Immer im Lot zur Wollfaser (⊥): Von den 9:00–3:00-Keilen bis zum Elastizitätsstich oberhalb der Niete</div>
+            <div class="slide-category" data-i18n="s28_category">Teil 5: Intonation • Faserverlauf, Nadelzonen & Klangwirkung</div>
+            <h2 class="slide-title" data-i18n="s28_title">Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell</h2>
+            <div class="slide-subtitle" data-i18n="s28_subtitle">Immer im Lot zur Wollfaser (⊥): Von den 9:00–3:00-Keilen bis zum Elastizitätsstich oberhalb der Niete</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4131,14 +4345,14 @@ def get_all_slides_html():
       </section>''')
 
 
-    # SLIDE 29: Interaktive Ausrichtung Hammerkopf-Scheitel & 3er-Saitenebene (Phasenverschiebung & Teiltonaufbau)
-    slides.append(f'''      <!-- SLIDE 29: Hammerkopf-Scheitel & Saitenebene im 3-chörigen Bezug -->
-      <section class="slide slide-hero-theme csa-slide" data-slide="28">
+    # SLIDE 30: Interaktive Ausrichtung Hammerkopf-Scheitel & 3er-Saitenebene (Phasenverschiebung & Teiltonaufbau)
+    slides.append(f'''      <!-- SLIDE 30: Hammerkopf-Scheitel & Saitenebene im 3-chörigen Bezug -->
+      <section class="slide slide-hero-theme csa-slide" data-slide="29">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s28_category">Teil 5: Intonation • Geometrie im 3-chörigen Saitenbezug</div>
-            <h2 class="slide-title" data-i18n="s28_title">Scheitel & Saitenebene im 3er-Chor: Phasenlage & Auslöschung</h2>
-            <div class="slide-subtitle" data-i18n="s28_subtitle">Schon 0,2 mm Höhen- oder Winkelversatz erzeugen Phasenauslöschungen in den Obertönen H₁–H₁₂</div>
+            <div class="slide-category" data-i18n="s29_category">Teil 5: Intonation • Geometrie im 3-chörigen Saitenbezug</div>
+            <h2 class="slide-title" data-i18n="s29_title">Scheitel & Saitenebene im 3er-Chor: Phasenlage & Auslöschung</h2>
+            <div class="slide-subtitle" data-i18n="s29_subtitle">Schon 0,2 mm Höhen- oder Winkelversatz erzeugen Phasenauslöschungen in den Obertönen H₁–H₁₂</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4273,14 +4487,14 @@ def get_all_slides_html():
       </section>''')
 
 
-    # SLIDE 30: Saitenvorbereitung im Instrument (4-Step Bento + 2x2 C3 MSW Photo Mosaic)
-    slides.append(f'''<!-- SLIDE 30: Saitenvorbereitung (Anhangstifte, Stegstifte & Agraffen) -->
-      <section class="slide slide-hero-theme s30-prep-slide" data-slide="29">
+    # SLIDE 31: Saitenvorbereitung im Instrument (4-Step Bento + 2x2 C3 MSW Photo Mosaic)
+    slides.append(f'''<!-- SLIDE 31: Saitenvorbereitung (Anhangstifte, Stegstifte & Agraffen) -->
+      <section class="slide slide-hero-theme s30-prep-slide" data-slide="30">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s29_category">Teil 5: Intonation • Saitenlagerung</div>
-            <h2 class="slide-title" data-i18n="s29_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
-            <div class="slide-subtitle" data-i18n="s29_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument angelegt ist!“</div>
+            <div class="slide-category" data-i18n="s30_category">Teil 5: Intonation • Saitenlagerung</div>
+            <h2 class="slide-title" data-i18n="s30_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
+            <div class="slide-subtitle" data-i18n="s30_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument angelegt ist!“</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4368,14 +4582,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 31: Zwischen-, Fein- & Verschiebungsintonation (5-Step Bento + 2x2 C3 MSW Photo Mosaic)
-    slides.append(f'''<!-- SLIDE 31: Zwischen-, Fein- & Verschiebungsintonation -->
-      <section class="slide slide-hero-theme s31-voicing-slide" data-slide="30">
+    # SLIDE 32: Zwischen-, Fein- & Verschiebungsintonation (5-Step Bento + 2x2 C3 MSW Photo Mosaic)
+    slides.append(f'''<!-- SLIDE 32: Zwischen-, Fein- & Verschiebungsintonation -->
+      <section class="slide slide-hero-theme s31-voicing-slide" data-slide="31">
 <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s30_category">Teil 5: Intonation • Fein- & Una-Corda-Abstimmung</div>
-            <h2 class="slide-title" data-i18n="s30_title">Zwischen-, Fein- & Verschiebungsintonation</h2>
-            <div class="slide-subtitle" data-i18n="s30_subtitle">Chromatisches Egalisieren, max. 2-mm-Scheitelstiche & Abstimmung des linken Pedals (Una Corda)</div>
+            <div class="slide-category" data-i18n="s31_category">Teil 5: Intonation • Fein- & Una-Corda-Abstimmung</div>
+            <h2 class="slide-title" data-i18n="s31_title">Zwischen-, Fein- & Verschiebungsintonation</h2>
+            <div class="slide-subtitle" data-i18n="s31_subtitle">Chromatisches Egalisieren, max. 2-mm-Scheitelstiche & Abstimmung des linken Pedals (Una Corda)</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4467,14 +4681,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 32: Interaktives Tränken (Lackbasis), Bügeln (max. 135 °C), Scheitel-Feinfinish & Gewichtssteuerung
-    slides.append(f'''      <!-- SLIDE 32: Interaktives Tränken, Bügeln, Scheitel-Feinfinish & Gewichtssteuerung -->
-      <section class="slide slide-hero-theme s32-hardening-slide" data-slide="31">
+    # SLIDE 33: Interaktives Tränken (Lackbasis), Bügeln (max. 135 °C), Scheitel-Feinfinish & Gewichtssteuerung
+    slides.append(f'''      <!-- SLIDE 33: Interaktives Tränken, Bügeln, Scheitel-Feinfinish & Gewichtssteuerung -->
+      <section class="slide slide-hero-theme s32-hardening-slide" data-slide="32">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s31_category">Teil 5: Intonation • Nachträgliche Härtesteigerung &amp; Gewichtssteuerung</div>
-            <h2 class="slide-title" data-i18n="s31_title">Tränken, Bügeln (max. 135 °C), Scheitel-Finish &amp; Gewichtssteuerung</h2>
-            <div class="slide-subtitle" data-i18n="s31_subtitle">Interaktive Zonenwirkung beim Lack-Tränken, Glätten mit Hitze, Mikro-Schliff (≤ 15 µm) &amp; Masse-Abstimmung nach Lage</div>
+            <div class="slide-category" data-i18n="s32_category">Teil 5: Intonation • Nachträgliche Härtesteigerung &amp; Gewichtssteuerung</div>
+            <h2 class="slide-title" data-i18n="s32_title">Tränken, Bügeln (max. 135 °C), Scheitel-Finish &amp; Gewichtssteuerung</h2>
+            <div class="slide-subtitle" data-i18n="s32_subtitle">Interaktive Zonenwirkung beim Lack-Tränken, Glätten mit Hitze, Mikro-Schliff (≤ 15 µm) &amp; Masse-Abstimmung nach Lage</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4687,14 +4901,14 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 33: Die Renner Academy & Technischer Fachdialog (Sander Bento Finale)
-    slides.append(f'''      <!-- SLIDE 33: Renner Academy & Fazit -->
-      <section class="slide slide-hero-theme" data-slide="32">
+    # SLIDE 34: Die Renner Academy & Technischer Fachdialog (Sander Bento Finale)
+    slides.append(f'''      <!-- SLIDE 34: Renner Academy & Fazit -->
+      <section class="slide slide-hero-theme" data-slide="33">
         <div class="slide-header">
           <div>
-            <div class="slide-category" data-i18n="s32_category">Teil 5: Ausblick • Renner Academy & Fachdialog</div>
-            <h2 class="slide-title" data-i18n="s32_title">Die Renner Academy & Technischer Fachdialog</h2>
-            <div class="slide-subtitle" data-i18n="s32_subtitle">Praxisnahe Meisterkurse, Werksführungen in Meuselwitz & direkter Austausch weltweit</div>
+            <div class="slide-category" data-i18n="s33_category">Teil 5: Ausblick • Renner Academy & Fachdialog</div>
+            <h2 class="slide-title" data-i18n="s33_title">Die Renner Academy & Technischer Fachdialog</h2>
+            <div class="slide-subtitle" data-i18n="s33_subtitle">Praxisnahe Meisterkurse, Werksführungen in Meuselwitz & direkter Austausch weltweit</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4744,9 +4958,9 @@ def get_all_slides_html():
 {get_watermark()}
       </section>''')
 
-    # SLIDE 34: Abschlussfolie & Offene Fragerunde ("Let the Perfect Hammer Sound!")
-    slides.append(f'''      <!-- SLIDE 34: Abschlussfolie & Offene Fragerunde -->
-      <section class="slide s34-finale-slide" data-slide="33">
+    # SLIDE 35: Abschlussfolie & Offene Fragerunde ("Let the Perfect Hammer Sound!")
+    slides.append(f'''      <!-- SLIDE 35: Abschlussfolie & Offene Fragerunde -->
+      <section class="slide s34-finale-slide" data-slide="34">
         <div class="s34-bg-stage" aria-hidden="true">
           <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p36_0.jpg" alt="Konzertflügel in der Meisterwerkstatt – Louis Renner GmbH" class="s34-bg-img">
           <div class="s34-bg-vignette"></div>

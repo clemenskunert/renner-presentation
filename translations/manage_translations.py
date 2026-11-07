@@ -15,7 +15,7 @@ Befehle:
       - Injiziert data-i18n Attribute in slide_definitions.py & index.html
 
   python3 translations/manage_translations.py --export-xlsx [pfad.xlsx]
-      Exportiert ALLE Präsentationstexte (Folien 01–33 inkl. aller interaktiven JS-Module,
+      Exportiert ALLE Präsentationstexte (Folien 01–34 inkl. aller interaktiven JS-Module,
       Referenten-Notizen und UI-Navigation) als formatierte Excel-Arbeitsmappe (.xlsx)
       für das Korrekturlesen in China (ZH) und Japan (JA).
 
@@ -380,8 +380,8 @@ def _classify_element_type(el_key):
 def collect_all_review_rows():
     """
     Sammelt 100 % aller mehrsprachigen Texte der gesamten Präsentation:
-      - slides_entries: Alle sichtbaren Texte der Folien 01–33 (JSON + interaktive JS-Module) in Folienreihenfolge
-      - notes_entries:  Alle Referenten-Notizen der Folien 01–33
+      - slides_entries: Alle sichtbaren Texte der Folien 01–34 (JSON + interaktive JS-Module) in Folienreihenfolge
+      - notes_entries:  Alle Referenten-Notizen der Folien 01–34
       - ui_entries:     Globale UI- & Navigationsbegriffe (slides_content.json["ui"] + js/translations.js)
     Jeder Eintrag besitzt eine eindeutige, deterministische ID für den verlustfreien Re-Import.
     """
@@ -524,7 +524,7 @@ def cmd_export_xlsx(filepath=""):
     instr_rows = [
         [("LOUIS RENNER MASTERCLASS — TRANSLATION REVIEW WORKBOOK (DE • EN • ZH • JA)", 1), ("", 1)],
         [("🇩🇪 Anleitung (Deutsch)", 6), (
-            "1. Alle sichtbaren Folientexte (Folien 01–33 inkl. aller interaktiven Grafiken & Reiter) befinden sich im Tabellenblatt '1_Folientexte_Slides_01-33' exakt in Folienreihenfolge.\n"
+            "1. Alle sichtbaren Folientexte (Folien 01–34 inkl. aller interaktiven Grafiken & Reiter) befinden sich im Tabellenblatt '1_Folientexte_Slides_01-33' exakt in Folienreihenfolge.\n"
             "2. Bitte bearbeiten Sie direkt die Spalten 'ZH (简体中文)' bzw. 'JA (日本語)' (oder 'DE'/'EN'). Rückfragen können in 'Review_Note' eingetragen werden.\n"
             "3. WICHTIG: Bitte die Spalte 'ID' (Spalte A) NICHT verändern! HTML-Tags wie <strong>...</strong> oder <em>...</em> sowie Variablen wie ${tau} bitte beibehalten.\n"
             "4. Re-Import Befehl:\n"

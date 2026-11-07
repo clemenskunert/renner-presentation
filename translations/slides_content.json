@@ -8,7 +8,7 @@
       "ja": "日本語 (Japanese)",
       "zh": "中文 (Chinese)"
     },
-    "total_slides": 33,
+    "total_slides": 34,
     "description": "Zentrale Struktur zur Pflege aller Folientexte und mehrsprachigen Übersetzungen (DE, EN, JA, ZH)."
   },
   "ui": {
@@ -19,16 +19,16 @@
       "zh": "卓越钢琴音色之标杆 • 始于 1882"
     },
     "header_modules_btn": {
-      "de": "Module (Folie 2)",
-      "en": "Modules (Slide 2)",
-      "ja": "モジュール (スライド2)",
-      "zh": "核心模块 (第2页)"
+      "de": "Module (Folie 3)",
+      "en": "Modules (Slide 3)",
+      "ja": "モジュール (スライド 3)",
+      "zh": "核心模块 (第 3 页)"
     },
     "btn_back_to_modules": {
-      "de": "Folie 2 (Module)",
-      "en": "Slide 2 (Modules)",
-      "ja": "スライド2 (モジュール)",
-      "zh": "第2页 (模块)"
+      "de": "Folie 3 (Module)",
+      "en": "Slide 3 (Modules)",
+      "ja": "スライド 3 (モジュール)",
+      "zh": "第 3 页 (模块)"
     },
     "conf_badge": {
       "de": "Konferenz 2025 • Beijing & Toyohashi",
@@ -241,6 +241,192 @@
       "slide_number": 2,
       "chapter": 1,
       "chapter_name": {
+        "de": "Kapitel 1: Einführung & Historie",
+        "en": "Chapter 1: Introduction & Heritage",
+        "ja": "第1章：導入・歴史とモイゼルヴィッツ本社工場",
+        "zh": "第一章：导言、品牌历史与莫伊塞尔维茨总厂"
+      },
+      "category": {
+        "de": "Vorstellung • Unternehmensleitung & Stammwerk",
+        "en": "Introduction • Executive Leadership & Plant Management",
+        "ja": "ご紹介 • 経営陣・モイゼルヴィッツ本社工場",
+        "zh": "团队介绍 • 管理层与莫伊塞尔维茨总厂"
+      },
+      "title": {
+        "de": "Ihre Ansprechpartner bei Louis Renner",
+        "en": "Your Contacts at Louis Renner",
+        "ja": "ルイ・レンナー担当者ご紹介",
+        "zh": "路易·雷诺（Louis Renner）核心联系人"
+      },
+      "subtitle": {
+        "de": "Persönlicher Dialog von Meistern für Meister – direkt aus unserem vereinten Stammwerk in Meuselwitz",
+        "en": "Personal dialogue from masters for masters — directly from our unified headquarters in Meuselwitz",
+        "ja": "マイスターからマイスターへ直接対話 — 統合されたモイゼルヴィッツ本社工場より",
+        "zh": "大师对大师的直接交流 —— 来自莫伊塞尔维茨一体化总厂"
+      },
+      "elements": {
+        "s2_mode_cards": {
+          "de": "Profil & Direktkontakt",
+          "en": "Profile & Direct Contact",
+          "ja": "プロフィール・連絡先",
+          "zh": "个人简介与直接联系"
+        },
+        "s2_mode_qr": {
+          "de": "Stay in Touch • QR-Scan",
+          "en": "Stay in Touch • QR Scan",
+          "ja": "連絡先保存 • QR拡大表示",
+          "zh": "保持联系 • 扫码存名片"
+        },
+        "s2_p1_badge": {
+          "de": "GESCHÄFTSFÜHRUNG",
+          "en": "EXECUTIVE MANAGEMENT",
+          "ja": "経営統括 • 代表取締役",
+          "zh": "企业管理层"
+        },
+        "s2_since_pill": {
+          "de": "LOUIS RENNER · SEIT 1882",
+          "en": "LOUIS RENNER · SINCE 1882",
+          "ja": "LOUIS RENNER · 1882年創業",
+          "zh": "LOUIS RENNER · 始于 1882"
+        },
+        "s2_p1_name": {
+          "de": "Erik Stieler",
+          "en": "Erik Stieler",
+          "ja": "Erik Stieler（エリック・シュティーラー）",
+          "zh": "Erik Stieler（埃里克·施蒂勒）"
+        },
+        "s2_p1_role": {
+          "de": "CEO / Geschäftsführer",
+          "en": "CEO / Managing Director",
+          "ja": "最高経営責任者（CEO / 代表取締役）",
+          "zh": "首席执行官 / 总经理 (CEO)"
+        },
+        "s2_p1_focus": {
+          "de": "Gesamtverantwortung, Unternehmensstrategie & internationale Herstellerpartnerschaften",
+          "en": "Overall corporate leadership, strategy & international piano-maker partnerships",
+          "ja": "経営統括・企業戦略および世界のピアノメーカーとのパートナーシップ",
+          "zh": "全面企业管理、战略规划及全球钢琴制造商合作伙伴关系"
+        },
+        "s2_p2_badge": {
+          "de": "WERKLEITUNG • REFERENT",
+          "en": "PLANT MANAGEMENT • SPEAKER",
+          "ja": "本社工場長 • 本日の講演者",
+          "zh": "工厂厂长 • 本场主讲人"
+        },
+        "s2_hq_pill": {
+          "de": "STAMMWERK MEUSELWITZ",
+          "en": "MEUSELWITZ HEADQUARTERS",
+          "ja": "モイゼルヴィッツ本社工場",
+          "zh": "莫伊塞尔维茨总厂"
+        },
+        "s2_p2_name": {
+          "de": "Clemens Kunert",
+          "en": "Clemens Kunert",
+          "ja": "Clemens Kunert（クレメンス・クナート）",
+          "zh": "Clemens Kunert（克莱门斯·库纳特）"
+        },
+        "s2_p2_role": {
+          "de": "Werkleiter / Plant Manager",
+          "en": "Plant Manager / Werkleiter",
+          "ja": "工場長（Plant Manager）",
+          "zh": "工厂厂长 (Plant Manager)"
+        },
+        "s2_p2_focus": {
+          "de": "Gesamtfertigung Holz, Mechanik & Hammerkopf sowie technische Leitung der Renner Academy",
+          "en": "Unified wood, action & hammerhead production and technical direction of the Renner Academy",
+          "ja": "木工・アクション・ハンマーヘッド一貫製造統括およびレンナー・アカデミー技術責任者",
+          "zh": "木工、击弦机与弦槌一体化生产负责人及雷诺学院（Renner Academy）技术总监"
+        },
+        "s2_lbl_phone": {
+          "de": "Telefon",
+          "en": "Phone",
+          "ja": "固定電話",
+          "zh": "座机"
+        },
+        "s2_lbl_mobile": {
+          "de": "Mobil",
+          "en": "Mobile",
+          "ja": "携帯電話",
+          "zh": "手机"
+        },
+        "s2_lbl_email": {
+          "de": "E-Mail",
+          "en": "E-mail",
+          "ja": "メール",
+          "zh": "电子邮箱"
+        },
+        "s2_seal": {
+          "de": "LOUIS RENNER · MADE IN GERMANY",
+          "en": "LOUIS RENNER · MADE IN GERMANY",
+          "ja": "LOUIS RENNER · ドイツ製純正品質",
+          "zh": "LOUIS RENNER · 德国制造"
+        },
+        "s2_scan_cta": {
+          "de": "KONTAKT SPEICHERN",
+          "en": "SCAN TO SAVE CONTACT",
+          "ja": "スキャンして連絡先を保存",
+          "zh": "扫码保存名片"
+        },
+        "s2_hq_tradition": {
+          "de": "DAS HERZSTÜCK DES KLAVIERS SEIT 1882",
+          "en": "THE HEART OF THE PIANO SINCE 1882",
+          "ja": "1882年創業 ピアノの心臓部",
+          "zh": "始于 1882 · 钢琴的核心灵魂"
+        },
+        "s2_hq_address": {
+          "de": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Deutschland",
+          "en": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany",
+          "ja": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany（ドイツ）",
+          "zh": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany（德国莫伊塞尔维茨）"
+        },
+        "s2_p1_chip1": {
+          "de": "✦ Unternehmensstrategie",
+          "en": "✦ Corporate Strategy",
+          "ja": "✦ 企業戦略・経営統括",
+          "zh": "✦ 企业战略与经营管理"
+        },
+        "s2_p1_chip2": {
+          "de": "✦ OEM- & Herstellerpartner",
+          "en": "✦ OEM & Piano Makers",
+          "ja": "✦ ピアノメーカー提携",
+          "zh": "✦ 钢琴制造商与 OEM 合作"
+        },
+        "s2_p1_chip3": {
+          "de": "✦ Internationale Märkte",
+          "en": "✦ Global Markets",
+          "ja": "✦ グローバル市場展開",
+          "zh": "✦ 国际市场与渠道合作"
+        },
+        "s2_p2_chip1": {
+          "de": "✦ Holz, Mechanik & Hammerkopf",
+          "en": "✦ Wood, Actions & Hammers",
+          "ja": "✦ 木工・アクション・ハンマー製造",
+          "zh": "✦ 木工、击弦机与弦槌生产"
+        },
+        "s2_p2_chip2": {
+          "de": "✦ Yamaha Kit & Maßfertigung",
+          "en": "✦ Yamaha Kit & Custom Sets",
+          "ja": "✦ ヤマハキット・特注仕様",
+          "zh": "✦ 雅马哈套件与定制规格"
+        },
+        "s2_p2_chip3": {
+          "de": "✦ Renner Academy & Technik",
+          "en": "✦ Renner Academy & Tech",
+          "ja": "✦ レンナー・アカデミー",
+          "zh": "✦ 雷诺学院与技术支持"
+        }
+      },
+      "notes": {
+        "de": "Folie 2: Persönliche Vorstellung Ihrer direkten Ansprechpartner bei Louis Renner in Meuselwitz: Geschäftsführer (CEO) Erik Stieler für strategische Partnerschaften und Unternehmensleitung sowie Werkleiter Clemens Kunert für Produktion (Holz, Mechanik, Hammerkopf), technische Beratung und die Renner Academy. Tipp: Per Klick auf ‚Stay in Touch • QR-Scan‘ oben rechts (oder direkt auf einen QR-Code) lassen sich beide vCard-QR-Codes für den gesamten Konferenzsaal groß einblenden.",
+        "en": "Slide 2: Personal introduction of your direct contacts at Louis Renner in Meuselwitz: CEO / Managing Director Erik Stieler for overall corporate leadership and manufacturer partnerships, and Plant Manager Clemens Kunert for unified production (wood, actions, hammerheads), technical support, and the Renner Academy. Tip: Click 'Stay in Touch • QR Scan' at top right (or click either QR code) to enlarge both vCard QR codes for easy scanning from the back of the auditorium.",
+        "ja": "スライド 2：モイゼルヴィッツ本社の担当者紹介です。経営全般およびパートナーシップ統括の最高経営責任者（CEO）エリック・シュティーラーと、木工・アクション・ハンマーヘッド一貫製造およびレンナー・アカデミーを担当する工場長クレメンス・クナートをご紹介します。右上の「QR拡大表示」またはQRコードをクリックすると、会場後方からも読み取りやすい大型QR表示に切り替わります。",
+        "zh": "第 2 页：向现场嘉宾介绍德国路易·雷诺（Louis Renner）莫伊塞尔维茨总厂的两位核心联系人：负责公司整体战略与全球制造商合作的首席执行官 Erik Stieler，以及负责木工、击弦机与弦槌一体化生产及雷诺学院（Renner Academy）的工厂厂长 Clemens Kunert。提示：点击右上角“保持联系 • 扫码存名片”或直接点击二维码，可切换为适合会场后排扫码的大尺寸电子名片视图。"
+      }
+    },
+    "slide_3": {
+      "slide_number": 3,
+      "chapter": 1,
+      "chapter_name": {
         "de": "Teil 1: Einführung & Meuselwitz",
         "en": "Part 1: Introduction & Meuselwitz",
         "ja": "第1部：序論とモイゼルヴィッツ新拠点",
@@ -265,127 +451,127 @@
         "zh": "从莫伊塞尔维茨总部工厂与乌尔岑毛毡制造，到弦槌生产、雅马哈套件与整音技术"
       },
       "elements": {
-        "s2_b1_badge": {
+        "s3_b1_badge": {
           "de": "KAPITEL 1",
           "en": "CHAPTER 1",
           "ja": "第1章",
           "zh": "第1章"
         },
-        "s2_b2_badge": {
+        "s3_b2_badge": {
           "de": "KAPITEL 2",
           "en": "CHAPTER 2",
           "ja": "第2章",
           "zh": "第2章"
         },
-        "s2_b3_badge": {
+        "s3_b3_badge": {
           "de": "KAPITEL 3",
           "en": "CHAPTER 3",
           "ja": "第3章",
           "zh": "第3章"
         },
-        "s2_b4_badge": {
+        "s3_b4_badge": {
           "de": "KAPITEL 4",
           "en": "CHAPTER 4",
           "ja": "第4章",
           "zh": "第4章"
         },
-        "s2_b5_badge": {
+        "s3_b5_badge": {
           "de": "KAPITEL 5",
           "en": "CHAPTER 5",
           "ja": "第5章",
           "zh": "第5章"
         },
-        "s2_c1_pill": {
-          "de": "Folie 3–4",
-          "en": "Slides 3–4",
-          "ja": "スライド 3–4",
-          "zh": "第 3–4 页"
+        "s3_c1_pill": {
+          "de": "Folie 4–5",
+          "en": "Slides 4–5",
+          "ja": "スライド 4–5",
+          "zh": "第 4–5 页"
         },
-        "s2_c2_pill": {
-          "de": "Folie 5–10",
-          "en": "Slides 5–10",
-          "ja": "スライド 5–10",
-          "zh": "第 5–10 页"
+        "s3_c2_pill": {
+          "de": "Folie 6–11",
+          "en": "Slides 6–11",
+          "ja": "スライド 6–11",
+          "zh": "第 6–11 页"
         },
-        "s2_c3_pill": {
-          "de": "Folie 11–18",
-          "en": "Slides 11–18",
-          "ja": "スライド 11–18",
-          "zh": "第 11–18 页"
+        "s3_c3_pill": {
+          "de": "Folie 12–19",
+          "en": "Slides 12–19",
+          "ja": "スライド 12–19",
+          "zh": "第 12–19 页"
         },
-        "s2_c4_pill": {
-          "de": "Folie 19–24",
-          "en": "Slides 19–24",
-          "ja": "スライド 19–24",
-          "zh": "第 19–24 页"
+        "s3_c4_pill": {
+          "de": "Folie 20–25",
+          "en": "Slides 20–25",
+          "ja": "スライド 20–25",
+          "zh": "第 20–25 页"
         },
-        "s2_c5_pill": {
-          "de": "Folie 25–33",
-          "en": "Slides 25–33",
-          "ja": "スライド 25–33",
-          "zh": "第 25–33 页"
+        "s3_c5_pill": {
+          "de": "Folie 26–34",
+          "en": "Slides 26–34",
+          "ja": "スライド 26–34",
+          "zh": "第 26–34 页"
         },
-        "s2_c1_title": {
+        "s3_c1_title": {
           "de": "Historie & Meuselwitz",
           "en": "History & Meuselwitz",
           "ja": "歴史とモイゼルヴィッツ",
           "zh": "历史与莫伊塞尔维茨工厂"
         },
-        "s2_c2_title": {
+        "s3_c2_title": {
           "de": "Filzfertigung in Wurzen",
           "en": "Wurzen Felt Production",
           "ja": "ヴルツェン・フェルト製造",
           "zh": "乌尔岑纯羊毛毡制造"
         },
-        "s2_c3_title": {
+        "s3_c3_title": {
           "de": "Hammerkopf-Produktion",
           "en": "Hammerhead Production",
           "ja": "ハンマーヘッド製造",
           "zh": "弦槌精密制造"
         },
-        "s2_c4_title": {
+        "s3_c4_title": {
           "de": "Yamaha Kit (C1–C3)",
           "en": "Yamaha Kit (C1–C3)",
           "ja": "ヤマハ専用キット（C1–C3）",
           "zh": "雅马哈定制套件（C1–C3）"
         },
-        "s2_c5_title": {
+        "s3_c5_title": {
           "de": "Intonation & Fachdialog",
           "en": "Voicing & Open Q&A",
           "ja": "整音技術と質疑応答",
           "zh": "专业整音与技术交流"
         },
-        "s2_c1_desc": {
+        "s3_c1_desc": {
           "de": "Über 140 Jahre Mechanik- und Hammerkopftradition seit 1882 sowie Baudokumentation und Drohnenflug durch das vereinte Werk Meuselwitz.",
           "en": "Over 140 years of action and hammerhead tradition since 1882, plus construction insights and a drone flight through our unified Meuselwitz plant.",
           "ja": "1882年創業からのアクション＆ハンマーヘッドの伝統、全工程を統合したモイゼルヴィッツ工場の建設記録とドローン映像。",
           "zh": "始于1882年逾140年的击弦机与弦槌传统，以及莫伊塞尔维茨全工序整合工厂的建设纪实与航拍巡礼。"
         },
-        "s2_c2_desc": {
+        "s3_c2_desc": {
           "de": "Filzfabrik Wurzen seit 1783, hochwertige Wollmischung, Krempeln, definierte Walkdichte und der Einfluss des Verzichts auf das Schleifen der Tafeln.",
           "en": "Filzfabrik Wurzen since 1783, premium wool blend, carding, defined fulling density, and the impact of leaving the felt sheets unsanded.",
           "ja": "1783年創業のヴルツェン工場、高品質な羊毛配合、梳毛、緻密な縮絨密度、そしてフェルト原反をあえて研磨しないことの効果。",
           "zh": "始于1783年的乌尔岑毛毡厂、高品质羊毛混纺配方、梳毛铺网、精准缩绒密度，以及不打磨毛毡板对结构与音色的关键影响。"
         },
-        "s2_c3_desc": {
+        "s3_c3_desc": {
           "de": "Filzlager, Weickert Special im REM, Zuschnitt, Kernhölzer & Hammerkopfgewicht, Pressen und Verleimen, CNC-Fräsen der Kontur und präzises Kalibrieren der Oberfläche sowie Nieten und Bohren.",
           "en": "Felt storage, Weickert Special SEM analysis, cutting, hammer mouldings & hammer weight, pressing and gluing, CNC contour milling and precision surface calibration, plus riveting and boring.",
           "ja": "フェルト保管、ヴァイケルト・スペシャルのSEM解析、裁断、コア材と重量設計、プレスと接着、CNC輪郭切削と高精度な表面仕上げ、リベット留めと穴あけ。",
           "zh": "毛毡库、Weickert Special 电镜分析、裁切、槌芯木材与配重、压制与胶合、CNC 轮廓铣削与表面精密校准，以及铆接与钻孔。"
         },
-        "s2_c4_desc": {
+        "s3_c4_desc": {
           "de": "Einbaufertiger Satz für C1–C3 in 4–5 Std. vor Ort, Zeitraffer-Einbau, Pianisten-Feedback & Akustik-Vergleich (H₁–H₁₂ bis C₈).",
           "en": "Ready-to-mount C1–C3 upgrade in 4–5 hours on site, time-lapse installation, pianist feedback & acoustic analysis (H₁–H₁₂ to C₈).",
           "ja": "C1–C3専用の即装着キット（現地4〜5時間）、取付タイムラプス、ピアニスト評価、音響スペクトル比較（H₁–H₁₂〜C₈）。",
           "zh": "C1–C3 即装升级套件（现场 4–5 小时完工）、延时安装实录、钢琴家实测反馈与声学频谱对比（H₁–H₁₂ 至 C₈）。"
         },
-        "s2_c5_desc": {
+        "s3_c5_desc": {
           "de": "Teiltonaufbau A₁, komplexe Feder, Intoniermodell, Scheitel und Saitenebene, Feinintonation, Tränken & Bügeln sowie Academy & Fragerunde.",
           "en": "A₁ overtone buildup, complex spring, voicing model, crown and string plane, fine voicing, lacquer & ironing, plus Academy & open Q&A.",
           "ja": "A₁倍音構造、複合スプリング、整音モデル、クラウンと弦平面、仕上げ整音、硬化・アイロン処理、アカデミー＆質疑応答。",
           "zh": "A₁泛音结构、复合弹簧、整音模型、槌冠与弦平面、精整音、浸漆与熨烫增硬，以及雷诺学院与现场答疑。"
         },
-        "s2_open_chapter": {
+        "s3_open_chapter": {
           "de": "Kapitel öffnen",
           "en": "Open Chapter",
           "ja": "章を開く",
@@ -393,14 +579,14 @@
         }
       },
       "notes": {
-        "de": "Folie 2: Überblick über die 5 Module geben: 1. Geschichte & Werk Meuselwitz (Folien 3–4), 2. Filzfertigung in Wurzen (Folien 5–10), 3. Hammerkopf-Produktion inkl. REM-Analyse, Gewicht sowie Nieten und Bohren (Folien 11–19), 4. Yamaha Kit C1–C3 mit Zeitraffer & Akustik-Analyse (Folien 20–25), 5. Intonation, Nachhärtung & Fragerunde (Folien 26–34).",
-        "en": "Slide 2: Present the 5 modules: 1. History & Meuselwitz Plant (Slides 3–4), 2. Felt Manufacturing in Wurzen (Slides 5–10), 3. Hammerhead Production incl. SEM analysis, weight, and riveting & boring (Slides 11–19), 4. Yamaha Kit C1–C3 with time-lapse & acoustic analysis (Slides 20–25), 5. Voicing, felt hardening & open Q&A (Slides 26–34).",
-        "ja": "スライド 2: 全5章の概要を紹介：1. 歴史とモイゼルヴィッツ工場（3–4）、2. ヴルツェンでのフェルト製造（5–10）、3. ハンマーヘッド製造（SEM解析・重量設計・リベット留めと穴あけ、11–19）、4. ヤマハ専用キット C1–C3（取付映像＆音響解析、20–25）、5. 整音技術・硬度調整・質疑応答（26–34）。",
-        "zh": "第 2 页：介绍五大模块：1. 品牌历史与莫伊塞尔维茨工厂（3–4）、2. 乌尔岑纯羊毛毡制造（5–10）、3. 弦槌精密制造（含电镜分析、配重及铆接与钻孔，11–19）、4. 雅马哈定制套件 C1–C3（延时实录与声学对比，20–25）、5. 专业整音、后期增硬与现场答疑（26–34）。"
+        "de": "Folie 3: Überblick über die 5 Module geben: 1. Geschichte & Werk Meuselwitz (Folien 4–5), 2. Filzfertigung in Wurzen (Folien 6–11), 3. Hammerkopf-Produktion in Meuselwitz (Folien 12–19), 4. Louis Renner Yamaha Kit C1–C3 inkl. Spektralanalyse (Folien 20–25), 5. Die Hohe Schule der Intonation & Fachdialog (Folien 26–34). Jede Karte ist direkt anklickbar.",
+        "en": "Slide 3: Present the 5 modules: 1. History & Meuselwitz Plant (Slides 4–5), 2. Felt Manufacturing in Wurzen (Slides 6–11), 3. Hammerhead Production in Meuselwitz (Slides 12–19), 4. Louis Renner Yamaha Kit C1–C3 & Spectral Analysis (Slides 20–25), 5. Concert Voicing & Open Q&A (Slides 26–34). Every chapter card is clickable.",
+        "ja": "スライド 3：全5章の構成をご案内します。第1章：歴史とモイゼルヴィッツ工場（スライド 4–5）、第2章：ヴルツェンでのフェルト製造（スライド 6–11）、第3章：ハンマーヘッド製造工程（スライド 12–19）、第4章：ルイ・レンナー・ヤマハキット C1–C3 と音響解析（スライド 20–25）、第5章：コンサート整音と質疑応答（スライド 26–34）。各カードをクリックして直接移動できます。",
+        "zh": "第 3 页：介绍全篇五大核心章节：1. 品牌历史与莫伊塞尔维茨总厂（第 4–5 页）；2. 乌尔岑毛毡制造工艺（第 6–11 页）；3. 弦槌精密生产（第 12–19 页）；4. 雷诺雅马哈套件 C1–C3 与频谱分析（第 20–25 页）；5. 音乐会整音艺术与现场问答（第 26–34 页）。每张卡片均可直接点击跳转。"
       }
     },
-    "slide_3": {
-      "slide_number": 3,
+    "slide_4": {
+      "slide_number": 4,
       "chapter": 1,
       "chapter_name": {
         "de": "Teil 1: Einführung & Meuselwitz",
@@ -426,16 +612,23 @@
         "ja": "シュトゥットガルトの手工業工房からピアノアクション＆ハンマーヘッドの世界基準へ",
         "zh": "从斯图加特手工工坊成长为钢琴击弦机与弦槌的全球标杆"
       },
-      "elements": {},
+      "elements": {
+        "s4_frequency_load": {
+          "de": "✦ Meuselwitz 2026 • Ladefrequenz synchronisiert...",
+          "en": "✦ Meuselwitz 2026 • Synchronizing timeline frequency...",
+          "ja": "✦ モイゼルヴィッツ 2026 • タイムライン同期中...",
+          "zh": "✦ 莫伊塞尔维茨 2026 • 正在同步时间轴..."
+        }
+      },
       "notes": {
-        "de": "Folie 3: Zeitleiste 140+ Jahre Tradition (9 Meilensteine). Besonderer Fokus auf Meilenstein 1 (1882: Gründung in Stuttgart – Beginn mit Klaviermechaniken; historische Parallele zu Carl Rönisch / Erfindung Voll-Panzerplatte 1866; Wurzel Meuselwitz), Meilenstein 2 (1906: Aufnahme der anspruchsvollen Hammerkopffertigung – Von Cristoforis lederbezogenem Papierröllchen 1700 zu Renners eigener Hammerkopfproduktion ab 1906, die später den Klang eines jeden Steinway-Flügels definierte und einen weltweiten Qualitätsstandard setzte; Bilderserie mit Cristofori, Hammer-Mechanik 1700, historischer Mechanikfertigung und Hammerkopfpressen 1906), Meilenstein 3 (1911: Technisierung & Flügelprogramm – Érard-Repetitionsmechanik als Basis des modernen Flügelspiels; Überleitung zur Aufnahme eigener Konzert-Flügelmechaniken bei Renner; Technisierung unter Oscar Renner mit neuzeitlichen Maschinen, arbeitssparenden Methoden und Umstellung von Transmissionen auf hunderte elektrische Einzelantriebe; Abrundung des Programms aus einer Hand; Bilderserie mit Sébastien Érard, 1808 Érard-Mechanik und elektrifizierter Arbeitsumgebung), Meilenstein 4 (1944: Brandnacht & Wiederaufbau), Meilenstein 5 (1951/1952: Dr. Manfred Renner; Wiederbezug 1955), Meilenstein 6 (1990: Mauerfall, Zeitenwende & Rettung des Fortbestands – Übernahme der Mechanik-Fertigung der Piano Union Zeitz im Wettbewerb mit tschechischen Herstellern und zur Sicherung des Großkunden Schimmel mit >40 Klavieren/Tag), Meilenstein 7 (2011: Der Neubau in Gärtringen und die neue moderne Fertigung in Meuselwitz nach dem Umzug von Zeitz nach Meuselwitz; Zusammenlegung an zwei festen Standorten: Meuselwitz 6.800 m² und Gärtringen; Bilderserie mit Neubau Gärtringen und Meuselwitz aus der Vogelperspektive), Meilenstein 8 (2019: Steinway & Sons Übernahme; Dank an Inhaber Clemens von Arnim) und Meilenstein 9 (Tradition bewahren. Zukunft gestalten: Vollendung der Bündelung aller Prozesse in Meuselwitz nach Projektstart Oktober 2025 mit neuer zentraler Filter- & Absauganlage; Dank an das Team Gärtringen).",
-        "en": "Slide 3: Timeline of 140+ years of tradition (9 milestones). Key focus on Milestone 1 (1882: Founding in Stuttgart – The journey begins with piano actions; parallel to Carl Rönisch), Milestone 2 (1906: Dedicated hammerhead manufacturing – From Cristofori's leather-covered paper roll in 1700 to Renner's proprietary hammerhead production from 1906, which would later define the tone of every Steinway grand and establish a worldwide benchmark; image series featuring Cristofori, 1700 hammer action, historical action manufacturing and 1906 hammerhead presses), Milestone 3 (1911: Modernization & grand action manufacturing – Érard repetition action as cornerstone of modern grand piano playing; transition to Renner's first grand piano actions; Oscar Renner's industrial modernization with cutting-edge machinery, streamlined methods and transition from shaft drives to hundreds of individual electric motors; uniting all branches under one roof; image series featuring Sébastien Érard, 1808 Érard action and electrified workshop), Milestone 4 (1944: Air raid & rebuilding), Milestone 5 (1951/1952: Dr. Manfred Renner; 1955 return), Milestone 6 (1990: Fall of the Wall, historic turning point & survival – acquisition of Piano Union's action facility in Zeitz amidst pressure from Czech competitors to preserve largest customer Schimmel producing >40 pianos/day), Milestone 7 (2011: New facility in Gärtringen and modern manufacturing in Meuselwitz after relocating from Zeitz; consolidation across two core sites: Meuselwitz 6,800 m² and Gärtringen; image series featuring Gärtringen new facility and Meuselwitz bird's-eye view), Milestone 8 (2019: Steinway & Sons acquisition; tribute to Clemens von Arnim) and Milestone 9 (Preserving tradition, shaping future: Full consolidation of all operations in Meuselwitz following October 2025 launch with modern facility and new central filtration & extraction system; gratitude to Gärtringen workforce).",
-        "ja": "スライド 3: 140余年の歴史年表（全9節目）。注目は節目1（1882年：シュトゥットガルト創業 — ホイシュタイグ通りの工房でアクションから始まった歴史；カール・レーニッシュ総鉄骨フレーム革新との呼応）、節目2（1906年：自社ハンマーヘッド製造開始 — 1700年のクリストフォリによる革巻き紙ロールから1906年のレンナー自社生産へ。後にすべてのスタインウェイの響きを決定づけ世界基準を確立；クリストフォリ、1700年アクション、歴史的機械製造、1906年プレス機画像シリーズ）、節目3（1911年：電化革命とグランドピアノ機構 — エラールのレペティション機構を礎とする近代グランド演奏；レンナー初のグランド用アクション自社製造への飛躍；オスカー・レンナーによる最新工作機械・省力化工法・総軸から数百基の独立電動モーターへの転換；全工程の内製化；エラール、1808年機構、電化工房画像シリーズ）、節目4（1944年空襲と再建）、節目5（1951/1952年：マンフレート・レンナー博士）、節目6（1990年：ベルリンの壁崩壊と存亡を賭けたツァイツ工場買収 — チェコ製メーカー台頭の中で1日40台以上を生産する最大顧客シンメル社を守り抜いた歴史的転換点）、節目7（2011年：ゲルトリンゲン新社屋とツァイツからモイゼルヴィッツへの移転・最新生産拠点展開；2大拠点体制の確立；ゲルトリンゲン新社屋と上空からのモイゼルヴィッツ拠点画像シリーズ）、節目8（2019年：スタインウェイ買収と故アルニム氏追悼）、そして節目9（伝統を守り未来を創る：2025年10月始動の全プロセス・モイゼルヴィッツ統合完了と最新の集中集塵・排気フィルター設備導入、ゲルトリンゲン社員への深謝）。",
-        "zh": "第 3 页：140余年荣耀时光轴（共9个关键里程碑）。重点阐述里程碑 1（1882年：斯图加特匠心工坊创立 — 击弦机开启百年传奇之旅；与卡尔·罗尼施全铸铁铠装音板的历史呼应）、里程碑 2（1906年：开启声学核心部件弦槌自主生产 — 从1700年克里斯托弗里皮革包裹纸卷弦槌到1906年雷诺自产弦槌，日后定义了每一架施坦威三角钢琴的独特音色并确立全球工业标准；克里斯托弗里、1700年早期击弦机、早期手工车间与1906年专用压力模具全景图集）、里程碑 3（1911年：工业电化革命与三角钢琴击弦机 — 传承埃拉尔复奏结构现代演奏之基石；迈向雷诺首批三角击弦机自主生产；奥斯卡·雷诺推进专用精密机床、工序优化并以数百台独立电机单驱彻底替代传统总轴皮带；全谱系制造完美闭环；埃拉尔、1808年结构与工业电化车间全景图集）、里程碑 4（1944年空袭重生）、里程碑 5（1951/1952年：曼弗雷德·雷诺博士）、里程碑 6（1990年：柏林墙倒塌与雷诺生死存亡之战 — 收购蔡茨击弦机基地以抵御捷克厂商冲击，力挽日产逾40架钢琴的第一大客户舒密尔）、里程碑 7（2011年：盖特林根新厂落成与从蔡茨迁至莫伊塞尔维茨后的现代化核心制造基地；莫伊塞尔维茨6,800平米与盖特林根双基地格局；盖特林根新总部与鸟瞰莫伊塞尔维茨生产基地全景图集）、里程碑 8（2019年：施坦威集团收购与深切缅怀阿尔尼姆先生）以及里程碑 9（恪守传统 · 塑造未来：2025年10月启动的莫伊塞尔维茨全流程整合圆满收官，落成全新现代化中央过滤排风吸附系统，并向盖特灵根团队致以深切谢意）。"
+        "de": "Folie 4: Zeitleiste 140+ Jahre Tradition (9 Meilensteine). Besonderer Fokus auf Meilenstein 1 (1882: Gründung in Stuttgart – Beginn mit Klaviermechaniken; historische Parallele zu Carl Rönisch / Erfindung Voll-Panzerplatte 1866; Wurzel Meuselwitz), Meilenstein 2 (1906: Aufnahme der anspruchsvollen Hammerkopffertigung – Von Cristoforis lederbezogenem Papierröllchen 1700 zu Renners eigener Hammerkopfproduktion ab 1906, die später den Klang eines jeden Steinway-Flügels definierte und einen weltweiten Qualitätsstandard setzte; Bilderserie mit Cristofori, Hammer-Mechanik 1700, historischer Mechanikfertigung und Hammerkopfpressen 1906), Meilenstein 3 (1911: Technisierung & Flügelprogramm – Érard-Repetitionsmechanik als Basis des modernen Flügelspiels; Überleitung zur Aufnahme eigener Konzert-Flügelmechaniken bei Renner; Technisierung unter Oscar Renner mit neuzeitlichen Maschinen, arbeitssparenden Methoden und Umstellung von Transmissionen auf hunderte elektrische Einzelantriebe; Abrundung des Programms aus einer Hand; Bilderserie mit Sébastien Érard, 1808 Érard-Mechanik und elektrifizierter Arbeitsumgebung), Meilenstein 4 (1944: Brandnacht & Wiederaufbau), Meilenstein 5 (1951/1952: Dr. Manfred Renner; Wiederbezug 1955), Meilenstein 6 (1990: Mauerfall, Zeitenwende & Rettung des Fortbestands – Übernahme der Mechanik-Fertigung der Piano Union Zeitz im Wettbewerb mit tschechischen Herstellern und zur Sicherung des Großkunden Schimmel mit >40 Klavieren/Tag), Meilenstein 7 (2011: Der Neubau in Gärtringen und die neue moderne Fertigung in Meuselwitz nach dem Umzug von Zeitz nach Meuselwitz; Zusammenlegung an zwei festen Standorten: Meuselwitz 6.800 m² und Gärtringen; Bilderserie mit Neubau Gärtringen und Meuselwitz aus der Vogelperspektive), Meilenstein 8 (2019: Steinway & Sons Übernahme; Dank an Inhaber Clemens von Arnim) und Meilenstein 9 (Tradition bewahren. Zukunft gestalten: Vollendung der Bündelung aller Prozesse in Meuselwitz nach Projektstart Oktober 2025 mit neuer zentraler Filter- & Absauganlage; Dank an das Team Gärtringen).",
+        "en": "Slide 4: Timeline of 140+ years of tradition (9 milestones). Key focus on Milestone 1 (1882: Founding in Stuttgart – The journey begins with piano actions; parallel to Carl Rönisch), Milestone 2 (1906: Dedicated hammerhead manufacturing – From Cristofori's leather-covered paper roll in 1700 to Renner's proprietary hammerhead production from 1906, which would later define the tone of every Steinway grand and establish a worldwide benchmark; image series featuring Cristofori, 1700 hammer action, historical action manufacturing and 1906 hammerhead presses), Milestone 3 (1911: Modernization & grand action manufacturing – Érard repetition action as cornerstone of modern grand piano playing; transition to Renner's first grand piano actions; Oscar Renner's industrial modernization with cutting-edge machinery, streamlined methods and transition from shaft drives to hundreds of individual electric motors; uniting all branches under one roof; image series featuring Sébastien Érard, 1808 Érard action and electrified workshop), Milestone 4 (1944: Air raid & rebuilding), Milestone 5 (1951/1952: Dr. Manfred Renner; 1955 return), Milestone 6 (1990: Fall of the Wall, historic turning point & survival – acquisition of Piano Union's action facility in Zeitz amidst pressure from Czech competitors to preserve largest customer Schimmel producing >40 pianos/day), Milestone 7 (2011: New facility in Gärtringen and modern manufacturing in Meuselwitz after relocating from Zeitz; consolidation across two core sites: Meuselwitz 6,800 m² and Gärtringen; image series featuring Gärtringen new facility and Meuselwitz bird's-eye view), Milestone 8 (2019: Steinway & Sons acquisition; tribute to Clemens von Arnim) and Milestone 9 (Preserving tradition, shaping future: Full consolidation of all operations in Meuselwitz following October 2025 launch with modern facility and new central filtration & extraction system; gratitude to Gärtringen workforce).",
+        "ja": "スライド 4: 140余年の歴史年表（全9節目）。注目は節目1（1882年：シュトゥットガルト創業 — ホイシュタイグ通りの工房でアクションから始まった歴史；カール・レーニッシュ総鉄骨フレーム革新との呼応）、節目2（1906年：自社ハンマーヘッド製造開始 — 1700年のクリストフォリによる革巻き紙ロールから1906年のレンナー自社生産へ。後にすべてのスタインウェイの響きを決定づけ世界基準を確立；クリストフォリ、1700年アクション、歴史的機械製造、1906年プレス機画像シリーズ）、節目3（1911年：電化革命とグランドピアノ機構 — エラールのレペティション機構を礎とする近代グランド演奏；レンナー初のグランド用アクション自社製造への飛躍；オスカー・レンナーによる最新工作機械・省力化工法・総軸から数百基の独立電動モーターへの転換；全工程の内製化；エラール、1808年機構、電化工房画像シリーズ）、節目4（1944年空襲と再建）、節目5（1951/1952年：マンフレート・レンナー博士）、節目6（1990年：ベルリンの壁崩壊と存亡を賭けたツァイツ工場買収 — チェコ製メーカー台頭の中で1日40台以上を生産する最大顧客シンメル社を守り抜いた歴史的転換点）、節目7（2011年：ゲルトリンゲン新社屋とツァイツからモイゼルヴィッツへの移転・最新生産拠点展開；2大拠点体制の確立；ゲルトリンゲン新社屋と上空からのモイゼルヴィッツ拠点画像シリーズ）、節目8（2019年：スタインウェイ買収と故アルニム氏追悼）、そして節目9（伝統を守り未来を創る：2025年10月始動の全プロセス・モイゼルヴィッツ統合完了と最新の集中集塵・排気フィルター設備導入、ゲルトリンゲン社員への深謝）。",
+        "zh": "第 4 页：140余年荣耀时光轴（共9个关键里程碑）。重点阐述里程碑 1（1882年：斯图加特匠心工坊创立 — 击弦机开启百年传奇之旅；与卡尔·罗尼施全铸铁铠装音板的历史呼应）、里程碑 2（1906年：开启声学核心部件弦槌自主生产 — 从1700年克里斯托弗里皮革包裹纸卷弦槌到1906年雷诺自产弦槌，日后定义了每一架施坦威三角钢琴的独特音色并确立全球工业标准；克里斯托弗里、1700年早期击弦机、早期手工车间与1906年专用压力模具全景图集）、里程碑 3（1911年：工业电化革命与三角钢琴击弦机 — 传承埃拉尔复奏结构现代演奏之基石；迈向雷诺首批三角击弦机自主生产；奥斯卡·雷诺推进专用精密机床、工序优化并以数百台独立电机单驱彻底替代传统总轴皮带；全谱系制造完美闭环；埃拉尔、1808年结构与工业电化车间全景图集）、里程碑 4（1944年空袭重生）、里程碑 5（1951/1952年：曼弗雷德·雷诺博士）、里程碑 6（1990年：柏林墙倒塌与雷诺生死存亡之战 — 收购蔡茨击弦机基地以抵御捷克厂商冲击，力挽日产逾40架钢琴的第一大客户舒密尔）、里程碑 7（2011年：盖特林根新厂落成与从蔡茨迁至莫伊塞尔维茨后的现代化核心制造基地；莫伊塞尔维茨6,800平米与盖特林根双基地格局；盖特林根新总部与鸟瞰莫伊塞尔维茨生产基地全景图集）、里程碑 8（2019年：施坦威集团收购与深切缅怀阿尔尼姆先生）以及里程碑 9（恪守传统 · 塑造未来：2025年10月启动的莫伊塞尔维茨全流程整合圆满收官，落成全新现代化中央过滤排风吸附系统，并向盖特灵根团队致以深切谢意）。"
       }
     },
-    "slide_4": {
-      "slide_number": 4,
+    "slide_5": {
+      "slide_number": 5,
       "chapter": 1,
       "chapter_name": {
         "de": "Teil 1: Einführung & Meuselwitz",
@@ -462,49 +655,49 @@
         "zh": "按时间顺序的建设纪实影像（2025年11月 – 2026年9月）及车间内部航拍巡礼"
       },
       "elements": {
-        "s4_drone_btn": {
+        "s5_drone_btn": {
           "de": "Drohnenflug",
           "en": "Drone Flight",
           "ja": "ドローン映像",
           "zh": "无人机航拍"
         },
-        "s4_wing_prev": {
+        "s5_wing_prev": {
           "de": "◀ Vorheriges Bild",
           "en": "◀ Previous Frame",
           "ja": "◀ 前の写真",
           "zh": "◀ 上一画面"
         },
-        "s4_wing_next": {
+        "s5_wing_next": {
           "de": "Nächstes Bild ▶",
           "en": "Next Frame ▶",
           "ja": "次の写真 ▶",
           "zh": "下一画面 ▶"
         },
-        "s4_drone_badge": {
+        "s5_drone_badge": {
           "de": "DROHNENFLUG INNEN • WERK MEUSELWITZ (2026)",
           "en": "INTERIOR DRONE FLIGHT • MEUSELWITZ PLANT (2026)",
           "ja": "工場内部ドローン映像 • モイゼルヴィッツ（2026）",
           "zh": "莫伊塞尔维茨新工厂内部无人机航拍 (2026)"
         },
-        "s4_drone_title": {
+        "s5_drone_title": {
           "de": "Das fertiggestellte Werk Meuselwitz im Drohnenflug",
           "en": "The Completed Meuselwitz Plant – Interior Drone Flight",
           "ja": "完成したモイゼルヴィッツ新工場 — ドローン空撮ツアー",
           "zh": "竣工投产的莫伊塞尔维茨新工厂 — 室内无人机全景航拍"
         },
-        "s4_replay_btn": {
+        "s5_replay_btn": {
           "de": "↺ Daumenkino wiederholen",
           "en": "↺ Replay Flipbook",
           "ja": "↺ パラパラ映像を再生",
           "zh": "↺ 重播翻页纪实"
         },
-        "s4_drone_finale": {
+        "s5_drone_finale": {
           "de": "Drohnenflug Finale",
           "en": "Drone Flight Finale",
           "ja": "ドローン映像フィナーレ",
           "zh": "无人机航拍终章"
         },
-        "s4_prev_btn": {
+        "s5_prev_btn": {
           "de": "Zurück",
           "en": "Back",
           "ja": "前へ",
@@ -512,14 +705,14 @@
         }
       },
       "notes": {
-        "de": "Folie 4: Chronologische Baudokumentation des Werkumbaus in Meuselwitz (11.2025 – 09.2026) in 14 Phasen bei laufender Produktion: Entkernung von Verwaltung und Foyer (Phasen 1–2), Tiefbau und Hebeglied-Fertigung (Phasen 3–4), vertikale Shuttle-Lagerlifte (Phase 5), Schwerlastfundament und 70-t-Kranmontage der 12 m hohen 120.000-m³/h-Filteranlage (Phasen 6–8), Umzug der Hammerkopffertigung (Phase 9), Absaugtrassen, Dach-Klimazentrale für konstante 45–50 % r. F. sowie finale Zusammenlegung aller Mechanik- und Hammerkopfbereiche (Phasen 10–14) – direkt gefolgt vom Drohnenflug durch das fertige Werk.",
-        "en": "Slide 4: Chronological 14-phase construction record of the Meuselwitz plant conversion (11.2025 – 09.2026) during active production: gutting administration and foyer areas (Phases 1–2), underground utilities and wippen assembly line (Phases 3–4), vertical shuttle storage lifts (Phase 5), reinforced foundation and 70-ton crane installation of the 12 m, 120,000 m³/h extraction plant (Phases 6–8), relocation of hammerhead manufacturing (Phase 9), extraction ductwork, rooftop HVAC maintaining 45–50% RH year-round, and full consolidation of action and hammerhead production (Phases 10–14)—transitioning directly into the interior drone flight.",
-        "ja": "スライド 4：稼働を止めずに進められたモイゼルヴィッツ工場改修の全14段階（2025年11月〜2026年9月）：管理棟・ロビー解体（第1〜2段階）、配管工事とウィッペン製造ライン新設（第3〜4段階）、垂直自動倉庫導入（第5段階）、高さ12m・風量120,000 m³/h集塵設備の基礎工事と70tクレーン据付（第6〜8段階）、ハンマーヘッド製造部門の移転（第9段階）、集塵ダクト網・年間湿度45〜50%を維持する屋上空調・全製造部門の統合完了（第10〜14段階）を経て、完成工場内部のドローン映像へ移行します。",
-        "zh": "第 4 页：莫伊塞尔维茨工厂在不停产条件下完成的 14 阶段升级纪实（2025年11月–2026年9月）：行政区与门厅腾退（阶段1–2）、管网施工与联动杆产线建设（阶段3–4）、垂直升降智能立体库（阶段5）、12米高且风量达12万m³/h中央除尘塔的承重地基与70吨起重机吊装（阶段6–8）、弦槌制造车间迁入（阶段9）、全厂集尘管网、全年恒湿45–50%屋顶空调中枢及击弦机与弦槌全线整合竣工（阶段10–14），随后无缝切换至车间内部无人机航拍。"
+        "de": "Folie 5: Chronologische Baudokumentation des Werkumbaus in Meuselwitz (11.2025 – 09.2026) in 14 Phasen bei laufender Produktion: Entkernung von Verwaltung und Foyer (Phasen 1–2), Tiefbau und Hebeglied-Fertigung (Phasen 3–4), vertikale Shuttle-Lagerlifte (Phase 5), Schwerlastfundament und 70-t-Kranmontage der 12 m hohen 120.000-m³/h-Filteranlage (Phasen 6–8), Umzug der Hammerkopffertigung (Phase 9), Absaugtrassen, Dach-Klimazentrale für konstante 45–50 % r. F. sowie finale Zusammenlegung aller Mechanik- und Hammerkopfbereiche (Phasen 10–14) – direkt gefolgt vom Drohnenflug durch das fertige Werk.",
+        "en": "Slide 5: Chronological 14-phase construction record of the Meuselwitz plant conversion (11.2025 – 09.2026) during active production: gutting administration and foyer areas (Phases 1–2), underground utilities and wippen assembly line (Phases 3–4), vertical shuttle storage lifts (Phase 5), reinforced foundation and 70-ton crane installation of the 12 m, 120,000 m³/h extraction plant (Phases 6–8), relocation of hammerhead manufacturing (Phase 9), extraction ductwork, rooftop HVAC maintaining 45–50% RH year-round, and full consolidation of action and hammerhead production (Phases 10–14)—transitioning directly into the interior drone flight.",
+        "ja": "スライド 5：稼働を止めずに進められたモイゼルヴィッツ工場改修の全14段階（2025年11月〜2026年9月）：管理棟・ロビー解体（第1〜2段階）、配管工事とウィッペン製造ライン新設（第3〜4段階）、垂直自動倉庫導入（第5段階）、高さ12m・風量120,000 m³/h集塵設備の基礎工事と70tクレーン据付（第6〜8段階）、ハンマーヘッド製造部門の移転（第9段階）、集塵ダクト網・年間湿度45〜50%を維持する屋上空調・全製造部門の統合完了（第10〜14段階）を経て、完成工場内部のドローン映像へ移行します。",
+        "zh": "第 5 页：莫伊塞尔维茨工厂在不停产条件下完成的 14 阶段升级纪实（2025年11月–2026年9月）：行政区与门厅腾退（阶段1–2）、管网施工与联动杆产线建设（阶段3–4）、垂直升降智能立体库（阶段5）、12米高且风量达12万m³/h中央除尘塔的承重地基与70吨起重机吊装（阶段6–8）、弦槌制造车间迁入（阶段9）、全厂集尘管网、全年恒湿45–50%屋顶空调中枢及击弦机与弦槌全线整合竣工（阶段10–14），随后无缝切换至车间内部无人机航拍。"
       }
     },
-    "slide_5": {
-      "slide_number": 5,
+    "slide_6": {
+      "slide_number": 6,
       "chapter": 2,
       "chapter_name": {
         "de": "Teil 2: Die Kunst der Filzfertigung (FFW Wurzen)",
@@ -546,517 +739,517 @@
         "zh": "乌尔岑 1783 • 从1847年德国首创工业琴毡到雷诺专属“魏克特特级”深度合作"
       },
       "elements": {
-        "s5_play_label": {
+        "s6_play_label": {
           "de": "Zeitreise abspielen",
           "en": "Play Time Journey",
           "ja": "タイムトラベル再生",
           "zh": "播放时光之旅"
         },
-        "s5_tab1_tag": {
+        "s6_tab1_tag": {
           "de": "Wurzen 1783",
           "en": "Wurzen 1783",
           "ja": "ヴルツェン 1783",
           "zh": "乌尔岑 1783"
         },
-        "s5_tab2_tag": {
+        "s6_tab2_tag": {
           "de": "1. Pianofortefilz",
           "en": "1st Piano Felt",
           "ja": "初ピアノフェルト",
           "zh": "首创琴毡"
         },
-        "s5_tab3_tag": {
+        "s6_tab3_tag": {
           "de": "Weltausstellung",
           "en": "World Expo",
           "ja": "万国博覧会",
           "zh": "世博金奖"
         },
-        "s5_tab4_tag": {
+        "s6_tab4_tag": {
           "de": "Werk Wurzen",
           "en": "Wurzen Mill",
           "ja": "ヴルツェン工場",
           "zh": "乌尔岑总厂"
         },
-        "s5_tab5_tag": {
+        "s6_tab5_tag": {
           "de": "Weltmarktführer",
           "en": "World Leader",
           "ja": "世界シェア首位",
           "zh": "全球领军者"
         },
-        "s5_tab6_tag": {
+        "s6_tab6_tag": {
           "de": "Weickert Spezial",
           "en": "Weickert Special",
           "ja": "ヴァイケルト特級",
           "zh": "魏克特特级"
         },
-        "s5_m1_badge": {
+        "s6_m1_badge": {
           "de": "URSPRUNG WURZEN 1783",
           "en": "ORIGIN WURZEN 1783",
           "ja": "ヴルツェン起源 1783",
           "zh": "乌尔岑起源 1783"
         },
-        "s5_m1_title": {
+        "s6_m1_title": {
           "de": "Gründung der Filzmanufaktur in Wurzen",
           "en": "Founding of the Felt Manufactory in Wurzen",
           "ja": "ヴルツェンにおけるフェルト製造所の創業",
           "zh": "乌尔岑毛毡制造厂创立"
         },
-        "s5_m1_subtitle": {
+        "s6_m1_subtitle": {
           "de": "Die älteste industrielle Filzmanufaktur der Welt – verwurzelt im sächsischen Muldental",
           "en": "The world's oldest industrial felt manufactory – rooted in Saxony's Mulde valley",
           "ja": "世界最古の工業フェルト製造所 — ザクセン州ムルデ渓谷に息づく伝統",
           "zh": "全球历史最悠久的工业毛毡制造企业 — 扎根萨克森州穆尔德河谷"
         },
-        "s5_m1_bullet_1": {
+        "s6_m1_bullet_1": {
           "de": "<strong>Gründung 1783:</strong> Johann Dankegott Weickert begründet in Wurzen die sächsische Woll- und Filztradition.",
           "en": "<strong>Founding in 1783:</strong> Johann Dankegott Weickert establishes the Saxon wool and felt tradition in Wurzen.",
           "ja": "<strong>1783年創業：</strong>ヨハン・ダンケゴット・ヴァイケルトがヴルツェンにザクセンの羊毛・フェルト伝統を確立。",
           "zh": "<strong>1783年创立：</strong>约翰·丹克戈特·魏克特在乌尔岑奠定萨克森羊毛与高级制毡工艺传统。"
         },
-        "s5_m1_bullet_2": {
+        "s6_m1_bullet_2": {
           "de": "<strong>Pionier der Feinfilze:</strong> Aus der Handwerksmanufaktur wächst ein führendes Zentrum für edle technische Wollfilze.",
           "en": "<strong>Fine Felt Pioneer:</strong> The artisan shop grows into a leading center for premium technical virgin wool felts.",
           "ja": "<strong>高級フェルトの開拓者：</strong>手工業工房から技術用・音響用高級ウールフェルトの主要拠点へと発展。",
           "zh": "<strong>精细毛毡先驱：</strong>传统手工工坊迅速壮大为欧洲顶尖的高端工业技术与声学纯羊毛毡制造中心。"
         },
-        "s5_m1_bullet_3": {
+        "s6_m1_bullet_3": {
           "de": "<strong>Fokus Klavierbau:</strong> Frühe Spezialisierung auf hochelastische Filze für den aufstrebenden Hammerflügelbau.",
           "en": "<strong>Piano Focus:</strong> Early dedication to highly resilient felt for the emerging pianoforte industry.",
           "ja": "<strong>ピアノ製造への特化：</strong>台頭するフォルテピアノのために高弾性打弦フェルトの開発へいち早く注力。",
           "zh": "<strong>深耕钢琴声学：</strong>极早专注于为方兴未艾的现代钢琴研制高弹性专属击弦介质。"
         },
-        "s5_m1_fact": {
+        "s6_m1_fact": {
           "de": "🏛 Älteste industrielle Filzmanufaktur der Welt in Wurzen",
           "en": "🏛 World's oldest industrial felt manufactory in Wurzen",
           "ja": "🏛 ヴルツェンに息づく世界最古の工業フェルト製造所",
           "zh": "🏛 位于乌尔岑的全球历史最悠久工业羊毛毡制造企业"
         },
-        "s5_m1_caption": {
+        "s6_m1_caption": {
           "de": "Vom handkardierten Rohwollvlies zur hochverdichteten Deckfilz-Tafel",
           "en": "From hand-carded raw wool fleece to high-density top-felt sheets",
           "ja": "手梳きの原毛フリースから高密度トップフェルト原反へ",
           "zh": "从手工梳理原毛纤网到高密度面毡原板"
         },
-        "s5_m2_badge": {
+        "s6_m2_badge": {
           "de": "ERFINDUNG 1847",
           "en": "INVENTION 1847",
           "ja": "発明 1847",
           "zh": "发明 1847"
         },
-        "s5_m2_title": {
+        "s6_m2_title": {
           "de": "Erster brauchbarer Pianofortefilz Deutschlands",
           "en": "Germany's First Viable Piano Hammer Felt",
           "ja": "ドイツ初の実用ピアノハンマーフェルト開発",
           "zh": "德国首创高品质工业钢琴弦槌毛毡"
         },
-        "s5_m2_subtitle": {
+        "s6_m2_subtitle": {
           "de": "Patzschke & Weickert revolutionieren 1847 den europäischen Klavierbau",
           "en": "Patzschke & Weickert revolutionize European piano craftsmanship in 1847",
           "ja": "パチュケとヴァイケルトが1847年に欧州ピアノ製造の常識を刷新",
           "zh": "帕茨克与魏克特于1847年颠覆欧洲传统钢琴击弦工艺"
         },
-        "s5_m2_bullet_1": {
+        "s6_m2_bullet_1": {
           "de": "<strong>Filz ersetzt Leder:</strong> 1847 gelingt es erstmals, harte Lederbezüge durch homogenen Hammerkopffilz abzulösen.",
           "en": "<strong>Felt Replaces Leather:</strong> In 1847, uneven leather hammer coverings are successfully replaced by homogeneous felt.",
           "ja": "<strong>革からフェルトへ：</strong>1847年、従来の硬い革巻きを均質な専用ハンマーフェルトに置き換えることに初成功。",
           "zh": "<strong>毛毡取代皮革：</strong>1847年首次成功以均质高弹性纯羊毛毡彻底替代坚硬不均的传统皮革包裹。"
         },
-        "s5_m2_bullet_2": {
+        "s6_m2_bullet_2": {
           "de": "<strong>Starke Partnerschaft:</strong> Weickerts Unternehmergeist und Patzschkes Filz-Expertise begründen den internationalen Ruf.",
           "en": "<strong>Strong Partnership:</strong> Weickert's enterprise and Patzschke's felt expertise establish international renown.",
           "ja": "<strong>技術と経営の融合：</strong>ヴァイケルトの企業力とパチュケの製フェルト技術が国際的評価を確立。",
           "zh": "<strong>技术与经营协同：</strong>魏克特的企业远见与帕茨克的制毡专长共同奠定国际声誉。"
         },
-        "s5_m2_bullet_3": {
+        "s6_m2_bullet_3": {
           "de": "<strong>Standortfaktor Mulde:</strong> Das kalkarme, weiche Wasser der Mulde sichert reinstes, elastisches Wollgewebe.",
           "en": "<strong>Soft River Water:</strong> The naturally soft, low-mineral Mulde water ensures pristine, resilient wool fibers.",
           "ja": "<strong>ムルデ川の地の利：</strong>ミネラル分の極めて少ない軟水が、極めて高純度で弾力に富むフェルトを育成。",
           "zh": "<strong>穆尔德河天然水质：</strong>穆尔德河矿物质极低的天然纯净软水，确保羊毛纤维得到最温和的纯净处理。"
         },
-        "s5_m2_fact": {
+        "s6_m2_fact": {
           "de": "🎹 Meilenstein: Wurzener Filz löst Lederbezüge im Klavierbau ab",
           "en": "🎹 Milestone: Wurzen felt permanently replaces leather in pianos",
           "ja": "🎹 歴史的節目：ヴルツェン製フェルトがピアノの革巻きを置換",
           "zh": "🎹 行业里程碑：乌尔岑特级琴毡终结钢琴皮革击弦时代"
         },
-        "s5_m2_caption": {
+        "s6_m2_caption": {
           "de": "Golzernmühle bei Grimma (1850): Erste Filzfertigung auf einer Insel in der Mulde",
           "en": "Golzernmühle near Grimma (1850): Early felt making on an island in the Mulde river",
           "ja": "ゴルツェルン水車小屋（1850年）：ムルデ川の中州で始まった初期フェルト製造",
           "zh": "格尔策恩水磨坊旧址（1850年）：在穆尔德河中孤岛建立早期制毡工场"
         },
-        "s5_m3_badge": {
+        "s6_m3_badge": {
           "de": "LONDON & PARIS 1851",
           "en": "LONDON & PARIS 1851",
           "ja": "万博金賞 1851",
           "zh": "世博金奖 1851"
         },
-        "s5_m3_title": {
+        "s6_m3_title": {
           "de": "Weltausstellungen & Goldmedaillen London & Paris",
           "en": "World Expos & Gold Medals in London & Paris",
           "ja": "ロンドン・パリ万国博覧会での金メダル獲得",
           "zh": "伦敦与巴黎世博会揽获世界金奖"
         },
-        "s5_m3_subtitle": {
+        "s6_m3_subtitle": {
           "de": "Internationale Auszeichnungen auf den Weltausstellungen in Leipzig, London und Paris",
           "en": "International gold medals at the World Exhibitions in Leipzig, London, and Paris",
           "ja": "ライプツィヒ・ロンドン・パリ万国博覧会での最高賞受賞",
           "zh": "在莱比锡、伦敦与巴黎世博会上屡获最高金奖"
         },
-        "s5_m3_bullet_1": {
+        "s6_m3_bullet_1": {
           "de": "<strong>Weltausstellungs-Gold:</strong> Höchste Prämierungen in Leipzig (1850), London (1851) und Paris (1867) begründen den Weltruhm.",
           "en": "<strong>World Expo Gold:</strong> Top honors in Leipzig (1850), London (1851), and Paris (1867) establish global acclaim.",
           "ja": "<strong>万博での金賞：</strong>ライプツィヒ（1850）、ロンドン（1851）、パリ（1867）での最高賞が世界的名声を確立。",
           "zh": "<strong>揽获世博金奖：</strong>接连斩获莱比锡（1850）、伦敦（1851）与巴黎（1867）最高世博金奖，名满天下。"
         },
-        "s5_m3_bullet_2": {
+        "s6_m3_bullet_2": {
           "de": "<strong>Königliche Besuche:</strong> Sächsische Monarchen würdigen persönlich die überragende Qualität der Wurzener Manufaktur.",
           "en": "<strong>Royal Visits:</strong> Saxon monarchs personally inspect and praise the superlative craftsmanship of the Wurzen mills.",
           "ja": "<strong>国王親訪：</strong>ザクセン国王自らが工場を訪問し、ヴルツェン製フェルトの卓越した品質を親しく称賛。",
           "zh": "<strong>国王亲临视察：</strong>萨克森王国历代君主亲临视察乌尔岑制造工场，盛赞其卓绝工艺。"
         },
-        "s5_m3_bullet_3": {
+        "s6_m3_bullet_3": {
           "de": "<strong>Europas erste Wahl:</strong> Führende Klavierbauer in Wien, Paris und London stellen geschlossen auf Weickert-Filz um.",
           "en": "<strong>Europe's Top Choice:</strong> Premier piano builders across Vienna, Paris, and London adopt Weickert felt exclusively.",
           "ja": "<strong>欧州の第一選択：</strong>ウィーン、パリ、ロンドンの主要ピアノ工房がこぞってヴァイケルト製を採用。",
           "zh": "<strong>欧洲名厂一致之选：</strong>维也纳、巴黎与伦敦的顶级钢琴制造大师全线指定采用魏克特毛毡。"
         },
-        "s5_m3_fact": {
+        "s6_m3_fact": {
           "de": "🏅 Goldmedaillen London 1851, Paris 1867 & Leipzig 1850",
           "en": "🏅 Gold Medals London 1851, Paris 1867 & Leipzig 1850",
           "ja": "🏅 ロンドン1851、パリ1867、ライプツィヒ1850 金メダル",
           "zh": "🏅 1851伦敦、1867巴黎及1850莱比锡世博金牌"
         },
-        "s5_m3_caption": {
+        "s6_m3_caption": {
           "de": "Historische Medaillen der Weltausstellungen für vollendete Filzgüte",
           "en": "Historical World Expo medals awarded for superlative felt excellence",
           "ja": "極上のフェルト品質に対して授与された万国博覧会メダル",
           "zh": "因极致毛毡工艺与纯净度而荣获的历史世博会珍藏金牌"
         },
-        "s5_m4_badge": {
+        "s6_m4_badge": {
           "de": "EXPANSION 1861",
           "en": "EXPANSION 1861",
           "ja": "拡張 1861",
           "zh": "扩张 1861"
         },
-        "s5_m4_title": {
+        "s6_m4_title": {
           "de": "Großfertigung am Mühlgraben in Wurzen",
           "en": "Industrial Scale at Mühlgraben in Wurzen",
           "ja": "ヴルツェンのミュールグラーベン大工場へ拡張",
           "zh": "乌尔岑水渠沿岸工业化大规模扩产"
         },
-        "s5_m4_subtitle": {
+        "s6_m4_subtitle": {
           "de": "Dampfkraft, modernste Walkwerke und die Kraft der Vereinigten Mulde",
           "en": "Steam power, modern fulling mills, and the clean waters of the Mulde river",
           "ja": "蒸気機関、最新鋭縮絨機、ムルデ川の清流が生む最高水準",
           "zh": "蒸汽动力、现代化高效缩绒机组与穆尔德纯净软水汇聚"
         },
-        "s5_m4_bullet_1": {
+        "s6_m4_bullet_1": {
           "de": "<strong>Industrielle Großfertigung:</strong> 1861 entstehen moderne Hallen am Wurzener Mühlgraben mit eigener Dampfkraft.",
           "en": "<strong>Industrial Scale:</strong> In 1861, modern facilities with proprietary steam power are erected at Wurzen's Mühlgraben.",
           "ja": "<strong>大規模近代工場：</strong>1861年、ヴルツェンのミュールグラーベン水路沿いに自家蒸気動力の近代工場を建設。",
           "zh": "<strong>规模化现代工厂：</strong>1861年在乌尔岑水渠旁落成自备蒸汽动力机房的现代化大跨度厂区。"
         },
-        "s5_m4_bullet_2": {
+        "s6_m4_bullet_2": {
           "de": "<strong>Präzisions-Walkmaschinen:</strong> Dampfgetriebene Spezialmaschinen garantieren unerreichte Dichte und Chargenkonstanz.",
           "en": "<strong>Precision Fulling Mills:</strong> Steam-powered machinery guarantees unprecedented density and batch uniformity.",
           "ja": "<strong>高精度縮絨機：</strong>蒸気駆動の専用機械により、比類のないフェルト密度と均一な品質再現性を達成。",
           "zh": "<strong>高精缩绒机群：</strong>专属蒸汽动力大型缩绒设备确保毛毡具备绝佳的密度梯度与极其严苛的批次稳定性。"
         },
-        "s5_m4_bullet_3": {
+        "s6_m4_bullet_3": {
           "de": "<strong>Schonende Wollwäsche:</strong> Das mineralarme Mulde-Wasser schützt die natürliche Schuppenstruktur der Merinowolle.",
           "en": "<strong>Gentle Wool Scouring:</strong> Mineral-poor river water preserves the natural cuticle scale structure of the Merino wool.",
           "ja": "<strong>繊維を守る水質：</strong>ミネラル分の少ないムルデ川の清流がメリノウールの微細なキューティクルを完全保護。",
           "zh": "<strong>温和洗毛保护：</strong>极软天然活水完美呵护美利奴初剪羊毛表面的天然微观角质鳞片。"
         },
-        "s5_m4_fact": {
+        "s6_m4_fact": {
           "de": "⚙️ Dampf-Walkerei & Flusswasser am Wurzener Mühlgraben",
           "en": "⚙️ Steam fulling & natural river water at Wurzen Mühlgraben",
           "ja": "⚙️ ヴルツェン・ミュールグラーベンでの蒸気縮絨と天然清流",
           "zh": "⚙️ 乌尔岑水渠蒸汽动力缩绒与天然软水工场"
         },
-        "s5_m4_caption": {
+        "s6_m4_caption": {
           "de": "Originalansicht der Pianofortefilzfabrik in Wurzen 1871 am Mühlgraben",
           "en": "Original historical engraving of Pianofortefilzfabrik in Wurzen (1871)",
           "ja": "1871年のヴルツェン・ピアノフェルト工場の歴史的景観",
           "zh": "1871年乌尔岑钢琴毛毡工厂与水运河渠原始历史版画"
         },
-        "s5_m5_badge": {
+        "s6_m5_badge": {
           "de": "WELTMARKTFÜHRER 1906",
           "en": "WORLD LEADER 1906",
           "ja": "世界首位 1906",
           "zh": "全球领军者 1906"
         },
-        "s5_m5_title": {
+        "s6_m5_title": {
           "de": "Weltmarktführer für 200.000 Klaviere jährlich",
           "en": "Global Market Leader for 200,000 Pianos Annually",
           "ja": "年間20万台のピアノ用フェルトを生産する世界的首位",
           "zh": "年供20万架钢琴用毡的世界行业领袖"
         },
-        "s5_m5_subtitle": {
+        "s6_m5_subtitle": {
           "de": "Direktor Patzschke, seine Meister & 350 Fachkräfte im Wurzener Werk (1906)",
           "en": "Director Patzschke, his master craftsmen & 350 specialists at Wurzen (1906)",
           "ja": "パチュケ社長、熟練マイスター陣と350名の工匠（1906年）",
           "zh": "帕茨克厂长、制毡大师团队与350名高级技师（1906年）"
         },
-        "s5_m5_bullet_1": {
+        "s6_m5_bullet_1": {
           "de": "<strong>Marktführer vor 1914:</strong> Wurzen stattet jährlich bis zu 200.000 Klaviere und Flügel weltweit mit Hammerkopffilz aus.",
           "en": "<strong>Market Leader by 1906:</strong> Wurzen equips up to 200,000 pianos and grands worldwide with hammer felt each year.",
           "ja": "<strong>世界シェア首位：</strong>年間20万台におよぶ世界中のアップライト・グランドピアノへハンマーフェルトを供給。",
           "zh": "<strong>领跑全球市场：</strong>乌尔岑每年为全球多达20万架立式与三角钢琴供应高品质弦槌毛毡。"
         },
-        "s5_m5_bullet_2": {
+        "s6_m5_bullet_2": {
           "de": "<strong>Weltweiter Standard:</strong> Steinway & Sons New York und Europas Spitzenmanufakturen setzen auf Wurzener Filz.",
           "en": "<strong>Global Benchmark:</strong> Steinway & Sons New York and Europe's premier manufacturers rely on Wurzen felt.",
           "ja": "<strong>世界基準の確立：</strong>スタインウェイ・ニューヨークをはじめ欧州最高峰の全ピアノ工房が採用。",
           "zh": "<strong>全球统一标杆：</strong>施坦威纽约总厂及欧洲各大顶级音乐会制造大师一致指定乌尔岑琴毡。"
         },
-        "s5_m5_bullet_3": {
+        "s6_m5_bullet_3": {
           "de": "<strong>Meister & Direktor Patzschke:</strong> Historisches Originalfoto (1906) am monumentalen, keilförmig gewalkten Filzblock.",
           "en": "<strong>Masters & Director Patzschke:</strong> Historic 1906 photograph standing before the monumental tapered felt block.",
           "ja": "<strong>熟練技師とパチュケ社長：</strong>1906年の貴重写真：巨大なテーパー形状の縮絨フェルトブロックを囲む記念撮影。",
           "zh": "<strong>大师团队与帕茨克厂长：</strong>1906年历史原始档案照：与巨型梯级阶梯压制毛毡原板合影。"
         },
-        "s5_m5_fact": {
+        "s6_m5_fact": {
           "de": "🌎 Weltweiter Referenzstandard für Steinway & Sons New York",
           "en": "🌎 Global reference standard for Steinway & Sons New York",
           "ja": "🌎 スタインウェイ・ニューヨーク御用達の世界基準",
           "zh": "🌎 确立施坦威纽约总厂及全球名琴统一参考标准"
         },
-        "s5_m5_badge_media": {
+        "s6_m5_badge_media": {
           "de": "MEISTER & HERR PATZSCHKE (1906)",
           "en": "FELT MASTERS & MR. PATZSCHKE (1906)",
           "ja": "マイスターとパチュケ氏 (1906)",
           "zh": "制毡大师与帕茨克厂长 (1906)"
         },
-        "s5_m5_caption": {
+        "s6_m5_caption": {
           "de": "Historische Originalaufnahme (Sept. 1906): Meister der Filzfabrik Wurzen mit Direktor Patzschke am Filzzuschnitt-Tisch",
           "en": "Original historical photograph (Sept. 1906): Master felters of Filzfabrik Wurzen with Director Patzschke at the felt cutting table",
           "ja": "1906年9月の歴史的オリジナル写真：フェルト裁断作業台を囲むヴルツェン工場のマイスターとパチュケ社長",
           "zh": "1906年9月历史原始照片：乌尔岑毛毡厂全体大师与帕茨克厂长在阶梯裁切台前合影"
         },
-        "s5_m6_badge": {
+        "s6_m6_badge": {
           "de": "HEUTE • RENNER PARTNER",
           "en": "TODAY • RENNER PARTNER",
           "ja": "現代 • レンナー提携",
           "zh": "当下 • 雷诺独家合作"
         },
-        "s5_m6_title": {
+        "s6_m6_title": {
           "de": "Renaissance von „Weickert Spezial“ & Partnerschaft mit Renner",
           "en": "Renaissance of “Weickert Spezial” & Partnership with Renner",
           "ja": "「ヴァイケルト・シュペツィアル」復刻とレンナー提携",
           "zh": "“魏克特特级”（Weickert Spezial）重生与雷诺深度战略合作"
         },
-        "s5_m6_subtitle": {
+        "s6_m6_subtitle": {
           "de": "Traditionswerk Wurzen & direkte räumliche Nähe zur Renner-Fabrik in Meuselwitz",
           "en": "Historic Wurzen mill & direct geographical proximity to Renner's factory in Meuselwitz",
           "ja": "ヴルツェン伝統工場とレンナー・モイゼルヴィッツ本工場との緊密な隣接関係",
           "zh": "乌尔岑百年工场与雷诺莫伊塞尔维茨（Meuselwitz）总厂的黄金近邻优势"
         },
-        "s5_m6_bullet_1": {
+        "s6_m6_bullet_1": {
           "de": "<strong>Neuauflage 2010:</strong> Familie Brand reaktiviert die historische Originalrezeptur von 1903 exklusiv für höchste Klangansprüche.",
           "en": "<strong>Revived in 2010:</strong> The Brand family restores the historic 1903 Wurzen formula for concert-grade hammer felt.",
           "ja": "<strong>2010年に伝統処方を復刻：</strong>ブラント家が1903年のオリジナル配合を再現し、最高峰の音響品質を復活。",
           "zh": "<strong>2010年重现经典配方：</strong>布兰德家族完整恢复1903年乌尔岑原厂配方，重现音乐会级声学品质。"
         },
-        "s5_m6_bullet_2": {
+        "s6_m6_bullet_2": {
           "de": "<strong>Räumliche Nähe (nur 65 km):</strong> Wurzen und das Renner-Werk Meuselwitz liegen im gemeinsamen mitteldeutschen Klavierbau-Cluster.",
           "en": "<strong>Geographical Proximity (~65 km):</strong> Wurzen and Renner's Meuselwitz plant share Central Germany's piano craft cluster.",
           "ja": "<strong>至近距離（わずか65km）：</strong>ヴルツェンとレンナー・モイゼルヴィッツ工場は中部ドイツ伝統クラスター内で隣接。",
           "zh": "<strong>近邻优势（仅相距65公里）：</strong>乌尔岑与雷诺莫伊塞尔维茨同处德国中部深厚钢琴制造核心产业腹地。"
         },
-        "s5_m6_bullet_3": {
+        "s6_m6_bullet_3": {
           "de": "<strong>Direkter Meister-Austausch:</strong> Kurze Wege ermöglichen die persönliche Abstimmung von Dichte und Elastizität vor Ort.",
           "en": "<strong>Direct Master Collaboration:</strong> Short travel times enable face-to-face calibration of felt density and elasticity on-site.",
           "ja": "<strong>職人同士の直接対話：</strong>わずか1時間の距離が、フェルト職人とハンマー技師の密接な現地共同調音を実現。",
           "zh": "<strong>面对面大师协同：</strong>极短路程实现制毡大师与弦槌技师现场即时深度调校，精准定制最佳密度与弹性。"
         },
-        "s5_m6_fact": {
+        "s6_m6_fact": {
           "de": "📍 Nur 65 km: Direkte Partnerschaft Wurzen ↔ Renner Meuselwitz",
           "en": "📍 Only 65 km: Direct partnership Wurzen ↔ Renner Meuselwitz",
           "ja": "📍 わずか65km：ヴルツェン ↔ レンナー・モイゼルヴィッツの直接提携",
           "zh": "📍 仅相距65公里：乌尔岑 ↔ 雷诺莫伊塞尔维茨直接深度共创"
         },
-        "s5_m6_caption": {
+        "s6_m6_caption": {
           "de": "Wurzener Weickert Spezial Filz: Vollendete Intonation & klangliche Tiefe",
           "en": "Wurzen Weickert Spezial felt: Flawless voicing response & tonal depth",
           "ja": "ヴルツェン製ヴァイケルト・シュペツィアル：究極の整音性と豊かな響き",
           "zh": "乌尔岑魏克特特级毛毡：赋予弦槌极致整音张力与深邃共鸣"
         },
-        "s5_felt_badge": {
+        "s6_felt_badge": {
           "de": "100% REINE MERINO-SCHURWOLLE",
           "en": "100% PURE MERINO VIRGIN WOOL",
           "ja": "100% 純メリノ新毛ウール",
           "zh": "100% 纯天然美利奴初剪羊毛"
         },
-        "s5_felt_title": {
+        "s6_felt_title": {
           "de": "Das Geheimnis des Weickert-Filzes",
           "en": "The Acoustic Secret of Weickert Felt",
           "ja": "ヴァイケルト・フェルトの音響的秘密",
           "zh": "魏克特顶级纯羊毛毡的声音秘密"
         },
-        "s5_felt_subtitle": {
+        "s6_felt_subtitle": {
           "de": "Rein mechanische Verfilzung ohne chemische Zusätze – für hohe Rückstellkraft und klaren Konzertklang",
           "en": "Purely mechanical fulling without chemical additives – for rapid rebound and clear concert tone",
           "ja": "化学添加物を一切使わない純機械的縮絨 — 俊敏な反発力と澄んだコンサート音色を実現",
           "zh": "不含任何化学添加剂的纯物理机械缩绒——赋予快速回弹与纯净通透的音乐会音色"
         },
-        "s5_texture_tag": {
+        "s6_texture_tag": {
           "de": "Mikro-Textur: Walk-Kompression",
           "en": "Micro-Texture: Fulling Compression",
           "ja": "マイクロ組織：縮絨・繊維圧縮",
           "zh": "微观纹理：天然羊毛缩绒与高弹压缩"
         },
-        "s5_zoom_btn": {
+        "s6_zoom_btn": {
           "de": "🔍 Faser-Lupe",
           "en": "🔍 Fiber Lens",
           "ja": "🔍 繊維ルーペ",
           "zh": "🔍 纤维微距"
         },
-        "s5_hl1_title": {
+        "s6_hl1_title": {
           "de": "Exklusive Wollmischung:",
           "en": "Exclusive Wool Blend:",
           "ja": "厳選された3カ国ウール混紡：",
           "zh": "独家精选三洲原毛拼配："
         },
-        "s5_hl1_desc": {
+        "s6_hl1_desc": {
           "de": "Erlesene Lang- und Kräuselwollen aus Argentinien, Südafrika und Neuseeland bilden ein extrem zugfestes Gefüge.",
           "en": "Selected long and crimped wools from Argentina, South Africa, and New Zealand form an ultra-tensile fiber matrix.",
           "ja": "アルゼンチン・南アフリカ・ニュージーランド産の厳選羊毛が極めて高い引張強度を生みます。",
           "zh": "精选自阿根廷、南非与新西兰的长纤维与卷曲羊毛，构筑极高抗拉强度的毛毡基体。"
         },
-        "s5_hl2_title": {
+        "s6_hl2_title": {
           "de": "Reine Walkung ohne Harze:",
           "en": "Pure Fulling without Resins:",
           "ja": "合成樹脂不使用の純粋縮絨：",
           "zh": "纯物理缩绒，无化学树脂："
         },
-        "s5_hl2_desc": {
+        "s6_hl2_desc": {
           "de": "Verdichtung nur durch Mulde-Wasser, Hitze und Druck – frei von dämpfenden Kunstharzen oder Klebern.",
           "en": "Densification solely through Mulde river water, heat, and pressure – zero dampening resins or glues.",
           "ja": "ムルデ川の水・熱・圧力のみで圧縮。音色を濁らせる接着剤や化学樹脂は一切不使用。",
           "zh": "仅依托穆尔德活水、温热与吨位重压，绝无阻碍振动、死板发硬的化学胶黏剂。"
         },
-        "s5_hl3_title": {
+        "s6_hl3_title": {
           "de": "Dauerelastisches Rückfedern:",
           "en": "Permanent Elastic Springback:",
           "ja": "永続的な超高速リバウンド：",
           "zh": "毫秒级瞬时高弹回弹："
         },
-        "s5_hl3_desc": {
+        "s6_hl3_desc": {
           "de": "Natürliche Keratinfedern federn in Millisekunden ab – für freie Entfaltung des vollen Obertonspektrums.",
           "en": "Natural keratin springs rebound in milliseconds – liberating the entire overtone harmonic spectrum.",
           "ja": "天然ケラチンのスプリング構造がミリ秒で跳ね返り、弦の豊かな倍音振動を自在に解放。",
           "zh": "天然角蛋白分子微弹簧结构击弦后毫秒级闪电反弹离弦，完美释放华丽纯净的泛音列。"
         },
-        "s5_hl4_title": {
+        "s6_hl4_title": {
           "de": "Räumliche Nähe Meuselwitz (65 km):",
           "en": "Proximity to Meuselwitz (65 km):",
           "ja": "モイゼルヴィッツ至近（約65km）：",
           "zh": "近邻莫伊塞尔维茨总厂（约65公里）："
         },
-        "s5_hl4_desc": {
+        "s6_hl4_desc": {
           "de": "Nur ca. 65 km Distanz sichern direkten Austausch der Filz- und Hammerkopfmeister sowie sofortige Verfügbarkeit.",
           "en": "Only ~65 km distance ensures direct exchange between felt and hammer masters and immediate availability.",
           "ja": "わずか約65kmの距離が、フェルトとハンマーの熟練マイスターによる直接対話と即時供給を約束。",
           "zh": "仅相距约65公里，保障制毡与弦槌顶级大师无缝当面调校，并实现零延时敏捷供应。"
         },
-        "s5_b1_badge": {
+        "s6_b1_badge": {
           "de": "URSPRUNG WURZEN 1783",
           "en": "ORIGIN WURZEN 1783",
           "ja": "ヴルツェン創業 1783",
           "zh": "乌尔岑起源 1783"
         },
-        "s5_b2_badge": {
+        "s6_b2_badge": {
           "de": "FASER-URSPRUNG",
           "en": "FIBER ORIGIN",
           "ja": "繊維の起源",
           "zh": "原毛溯源"
         },
-        "s5_b3_badge": {
+        "s6_b3_badge": {
           "de": "ERFINDUNG 1847",
           "en": "INVENTION 1847",
           "ja": "発明 1847",
           "zh": "发明 1847"
         },
-        "s5_b4_badge": {
+        "s6_b4_badge": {
           "de": "GOLZERNMÜHLE 1850",
           "en": "GOLZERN MILL 1850",
           "ja": "ゴルツェルン水車工場 1850",
           "zh": "戈尔岑水磨厂 1850"
         },
-        "s5_b5_badge": {
+        "s6_b5_badge": {
           "de": "LONDON & PARIS 1851",
           "en": "LONDON & PARIS 1851",
           "ja": "万博金賞 1851",
           "zh": "世博金奖 1851"
         },
-        "s5_b6_badge": {
+        "s6_b6_badge": {
           "de": "AUSZEICHNUNGEN",
           "en": "AWARDS & MEDALS",
           "ja": "受賞歴",
           "zh": "荣誉勋章"
         },
-        "s5_b7_badge": {
+        "s6_b7_badge": {
           "de": "EXPANSION 1861",
           "en": "EXPANSION 1861",
           "ja": "拠点拡張 1861",
           "zh": "厂区扩建 1861"
         },
-        "s5_b8_badge": {
+        "s6_b8_badge": {
           "de": "WURZEN 1871",
           "en": "WURZEN 1871",
           "ja": "ヴルツェン 1871",
           "zh": "乌尔岑 1871"
         },
-        "s5_b9_badge": {
+        "s6_b9_badge": {
           "de": "WELTMARKTFÜHRER 1906",
           "en": "WORLD LEADER 1906",
           "ja": "世界シェア首位 1906",
           "zh": "全球领袖 1906"
         },
-        "s5_b10_badge": {
+        "s6_b10_badge": {
           "de": "MEISTER & HERR PATZSCHKE (1906)",
           "en": "MASTERS & MR. PATZSCHKE (1906)",
           "ja": "職人衆とパチュケ取締役（1906年）",
           "zh": "大师团队与帕茨克厂长（1906）"
         },
-        "s5_b11_badge": {
+        "s6_b11_badge": {
           "de": "HEUTE • RENNER PARTNER",
           "en": "TODAY • RENNER PARTNER",
           "ja": "現在 • レンナー独占パートナー",
           "zh": "今日 · 雷诺专属战略伙伴"
         },
-        "s5_b12_badge": {
+        "s6_b12_badge": {
           "de": "WEICKERT SPEZIAL",
           "en": "WEICKERT SPECIAL",
           "ja": "ヴァイケルト特級フェルト",
           "zh": "魏克特特级定制毛毡"
         },
-        "s5_b13_badge": {
+        "s6_b13_badge": {
           "de": "100% REINE MERINO-SCHURWOLLE",
           "en": "100% PURE VIRGIN MERINO WOOL",
           "ja": "100% 純粋メリノ新毛",
           "zh": "100% 纯天然美利奴初剪羊毛"
         },
-        "s5_c1_title": {
+        "s6_c1_title": {
           "de": "Das Geheimnis des Weickert-Filzes",
           "en": "The Secret of Weickert Felt",
           "ja": "ヴァイケルト・フェルトの秘密",
           "zh": "魏克特毛毡的不传之秘"
         },
-        "s5_c1_desc": {
+        "s6_c1_desc": {
           "de": "Rein mechanische Verfilzung ohne chemische Zusätze – für hohe Rückstellkraft und klaren Konzertklang",
           "en": "Purely mechanical fulling without chemical additives – for rapid rebound and clear concert tone",
           "ja": "化学添加物を一切使わない純機械的縮絨 — 俊敏な反発力と澄んだコンサート音色を実現",
           "zh": "不含任何化学添加剂的纯物理机械缩绒——赋予快速回弹与纯净通透的音乐会音色"
         },
-        "s5_tab6_year": {
+        "s6_tab6_year": {
           "de": "Heute",
           "en": "Today",
           "ja": "現在",
           "zh": "今日"
         },
-        "s5_m6_year": {
+        "s6_m6_year": {
           "de": "Heute",
           "en": "Today",
           "ja": "現在",
@@ -1064,14 +1257,14 @@
         }
       },
       "notes": {
-        "de": "Folie 5: Die Firmengeschichte der Filzfabrik Wurzen (FFW) in Wurzen von 1783 bis heute und das Geheimnis des Weickert-Filzes. Stellen Sie die 6 historischen Meilensteine vor: 1783 Gründung in Wurzen durch J.D. Weickert, 1847 Erfindung des ersten deutschen Pianofortefilzes (Ablösung des Lederbezugs), 1850-1867 Weltausstellungen London & Paris mit königlichen Ehrungen, 1861 Großfertigung am Wurzener Mühlgraben mit Dampfmaschinen und dem weichen Mulde-Wasser, 1906 Weltmarktführer für 200.000 Klaviere jährlich (Steinway New York) und heute die Renaissance von 'Weickert Spezial' exklusiv für Louis Renner. Betonen Sie besonders die räumliche Nähe zwischen der Filzfabrik Wurzen und der Renner-Fabrik in Meuselwitz (nur ca. 65 km): Sie ermöglicht direkten Austausch zwischen den Filzmeistern und Hammerkopfmachern, kurze Wege und perfekte Qualitätsabstimmung.",
-        "en": "Slide 5: Company history of Filzfabrik Wurzen (FFW) in Wurzen from 1783 to the present and the acoustic secret of Weickert felt. Introduce the 6 historical milestones: 1783 founding in Wurzen by J.D. Weickert, 1847 invention of Germany's first viable piano felt (replacing leather hammer covers), 1850-1867 London & Paris World Expos with royal honors, 1861 industrial expansion at Wurzen Mühlgraben with steam engines and soft Mulde water, 1906 world leader for 200,000 pianos annually (Steinway New York), and today the renaissance of 'Weickert Spezial' exclusively for Louis Renner. Strongly emphasize the close geographical proximity between Filzfabrik Wurzen and the Renner factory in Meuselwitz (just ~65 km): enabling direct master-to-master dialogue, resilient supply chains, and perfect acoustic tuning.",
-        "ja": "スライド 5: ヴルツェンフェルト工場（FFW）のヴルツェンにおける1783年創業からの歴史と、ヴァイケルト・フェルトの音響的秘密。全6つの歴史的節目を紹介：1783年ヴルツェン創業、1847年ドイツ初のピアノフェルト開発（革巻きからの転換）、1850〜67年万博金メダル、1861年ミュールグラーベン大工場での蒸気機械化と軟水活用、1906年年間20万台分の世界首位供給、そして現代のルイス・レンナー専用「ヴァイケルト・シュペツィアル」復刻。特にヴルツェン工場とレンナー・モイゼルヴィッツ本工場との極近距離（わずか約65km）を強調してください。職人同士の直接対話、最短の輸送経路、完璧な品質調整を可能にしています。",
-        "zh": "第 5 页：乌尔岑毛毡厂（FFW）自1783年创立于乌尔岑以来的传奇厂史与魏克特高级琴毡的声音奥秘。生动呈现六大历史里程碑：1783年在乌尔岑创立、1847年德国首创工业钢琴纯羊毛毡、1850-1867年世博金奖与国王盛赞、1861年水渠沿岸蒸汽机械化大工场与穆尔德纯净软水、1906年年供20万架钢琴的世界霸主地位，以及专为雷诺重生的“魏克特特级”。特别重点强调乌尔岑毛毡厂与雷诺莫伊塞尔维茨总厂极近的地理空间优势（相距仅约65公里）：实现制毡大师与弦槌大师零距离深度实时交流调校、零延时物流与极其严密的音色匹配。"
+        "de": "Folie 6: Die Firmengeschichte der Filzfabrik Wurzen (FFW) in Wurzen von 1783 bis heute und das Geheimnis des Weickert-Filzes. Stellen Sie die 6 historischen Meilensteine vor: 1783 Gründung in Wurzen durch J.D. Weickert, 1847 Erfindung des ersten deutschen Pianofortefilzes (Ablösung des Lederbezugs), 1850-1867 Weltausstellungen London & Paris mit königlichen Ehrungen, 1861 Großfertigung am Wurzener Mühlgraben mit Dampfmaschinen und dem weichen Mulde-Wasser, 1906 Weltmarktführer für 200.000 Klaviere jährlich (Steinway New York) und heute die Renaissance von 'Weickert Spezial' exklusiv für Louis Renner. Betonen Sie besonders die räumliche Nähe zwischen der Filzfabrik Wurzen und der Renner-Fabrik in Meuselwitz (nur ca. 65 km): Sie ermöglicht direkten Austausch zwischen den Filzmeistern und Hammerkopfmachern, kurze Wege und perfekte Qualitätsabstimmung.",
+        "en": "Slide 6: Company history of Filzfabrik Wurzen (FFW) in Wurzen from 1783 to the present and the acoustic secret of Weickert felt. Introduce the 6 historical milestones: 1783 founding in Wurzen by J.D. Weickert, 1847 invention of Germany's first viable piano felt (replacing leather hammer covers), 1850-1867 London & Paris World Expos with royal honors, 1861 industrial expansion at Wurzen Mühlgraben with steam engines and soft Mulde water, 1906 world leader for 200,000 pianos annually (Steinway New York), and today the renaissance of 'Weickert Spezial' exclusively for Louis Renner. Strongly emphasize the close geographical proximity between Filzfabrik Wurzen and the Renner factory in Meuselwitz (just ~65 km): enabling direct master-to-master dialogue, resilient supply chains, and perfect acoustic tuning.",
+        "ja": "スライド 6: ヴルツェンフェルト工場（FFW）のヴルツェンにおける1783年創業からの歴史と、ヴァイケルト・フェルトの音響的秘密。全6つの歴史的節目を紹介：1783年ヴルツェン創業、1847年ドイツ初のピアノフェルト開発（革巻きからの転換）、1850〜67年万博金メダル、1861年ミュールグラーベン大工場での蒸気機械化と軟水活用、1906年年間20万台分の世界首位供給、そして現代のルイス・レンナー専用「ヴァイケルト・シュペツィアル」復刻。特にヴルツェン工場とレンナー・モイゼルヴィッツ本工場との極近距離（わずか約65km）を強調してください。職人同士の直接対話、最短の輸送経路、完璧な品質調整を可能にしています。",
+        "zh": "第 6 页：乌尔岑毛毡厂（FFW）自1783年创立于乌尔岑以来的传奇厂史与魏克特高级琴毡的声音奥秘。生动呈现六大历史里程碑：1783年在乌尔岑创立、1847年德国首创工业钢琴纯羊毛毡、1850-1867年世博金奖与国王盛赞、1861年水渠沿岸蒸汽机械化大工场与穆尔德纯净软水、1906年年供20万架钢琴的世界霸主地位，以及专为雷诺重生的“魏克特特级”。特别重点强调乌尔岑毛毡厂与雷诺莫伊塞尔维茨总厂极近的地理空间优势（相距仅约65公里）：实现制毡大师与弦槌大师零距离深度实时交流调校、零延时物流与极其严密的音色匹配。"
       }
     },
-    "slide_6": {
-      "slide_number": 6,
+    "slide_7": {
+      "slide_number": 7,
       "chapter": 2,
       "chapter_name": {
         "de": "Teil 2: Die Kunst der Filzfertigung (FFW Wurzen)",
@@ -1098,103 +1291,103 @@
         "zh": "未压缩海外原毛与量身定制的纤维配比，奠定顶级弦槌毛毡的声学根基"
       },
       "elements": {
-        "s6_r1_step": {
+        "s7_r1_step": {
           "de": "Stufe 01",
           "en": "Stage 01",
           "ja": "工程 01",
           "zh": "工序 01"
         },
-        "s6_b1_badge": {
+        "s7_b1_badge": {
           "de": "ROHSTOFF-SELEKTION",
           "en": "RAW WOOL SELECTION",
           "ja": "原毛セレクション",
           "zh": "原毛甄选"
         },
-        "s6_c1_title": {
+        "s7_c1_title": {
           "de": "Unverpresste Übersee-Merinowolle & intakte Faserstruktur",
           "en": "Uncompressed Overseas Merino Wool & Intact Fiber Structure",
           "ja": "無圧縮の海外産メリノウールと無傷の繊維スケール構造",
           "zh": "未压缩海外美利奴原毛与完整天然毛鳞结构"
         },
-        "s6_bullet_1": {
+        "s7_bullet_1": {
           "de": "<strong>Unverpresste Ballenlieferung:</strong> Locker gepackter Transport bewahrt die mikroskopische Keratin-Schuppenstruktur unversehrt.",
           "en": "<strong>Uncompressed Bale Delivery:</strong> Loosely packed shipping preserves the microscopic keratin scale structure intact.",
           "ja": "<strong>無圧縮ベール輸送：</strong> 緩やかに梱包して輸送することで、微細なケラチンスケール（鱗片）と繊維弾性を完全に保護。",
           "zh": "<strong>未压缩松包运输：</strong> 松散打包远洋运输虽增加物流体积，但完整保护了微观角蛋白毛鳞结构。"
         },
-        "s6_bullet_2": {
+        "s7_bullet_2": {
           "de": "<strong>Starke Faserkräuselung:</strong> Millionen natürlicher Spiralfedern sichern optimale Verhakung beim Walken und schnelle Rückstellkraft.",
           "en": "<strong>Pronounced Fiber Crimp:</strong> Millions of natural micro-springs ensure optimal interlocking during fulling and rapid rebound.",
           "ja": "<strong>強い天然クリンプ（縮れ）：</strong> 無数の天然スプリング構造が縮絨時の深い絡み合いと俊敏な復元力を生み出す。",
           "zh": "<strong>高卷曲天然弹性：</strong> 数百万微小天然螺旋弹簧在缩绒时紧密咬合，赋予极速回弹力。"
         },
-        "s6_bullet_3": {
+        "s7_bullet_3": {
           "de": "<strong>Natürliches Lanolin:</strong> Reines Wollfett und schonende Reinigung halten das Keratin dauerhaft geschmeidig.",
           "en": "<strong>Natural Lanolin:</strong> Pure wool grease and gentle scouring keep the keratin fibers supple for decades.",
           "ja": "<strong>天然ラノリン保持：</strong> 穏やかな洗浄で天然羊毛脂を残し、繊維のしなやかさと耐経年性を維持。",
           "zh": "<strong>保留天然羊毛脂：</strong> 温和清洁保留适量天然羊毛脂（Lanolin），令纤维持久柔韧不脆化。"
         },
-        "s6_macro_tag": {
+        "s7_macro_tag": {
           "de": "FASER-MAKRO",
           "en": "FIBER MACRO",
           "ja": "繊維マクロ",
           "zh": "纤维微距"
         },
-        "s6_b2_badge": {
+        "s7_b2_badge": {
           "de": "UNVERPRESSTE ROHWOLLE",
           "en": "UNCOMPRESSED RAW WOOL",
           "ja": "無圧縮メリノ原毛",
           "zh": "未压缩原毛"
         },
-        "s6_caption_1": {
+        "s7_caption_1": {
           "de": "Locker angelieferte Merinowolle mit starker natürlicher Faserkräuselung",
           "en": "Loosely delivered Merino wool retaining its strong natural fiber crimp",
           "ja": "強い天然クリンプを保った無圧縮メリノ原毛",
           "zh": "保持天然高卷曲弹性的未压缩美利奴原毛"
         },
-        "s6_r2_step": {
+        "s7_r2_step": {
           "de": "Stufe 02",
           "en": "Stage 02",
           "ja": "工程 02",
           "zh": "工序 02"
         },
-        "s6_b3_badge": {
+        "s7_b3_badge": {
           "de": "FASER-REZEPTUR",
           "en": "FIBER FORMULA",
           "ja": "繊維ブレンド処方",
           "zh": "纤维混配配方"
         },
-        "s6_c2_title": {
+        "s7_c2_title": {
           "de": "Schonende Auflockerung & abgestimmte Faser-Rezeptur",
           "en": "Gentle Fiber Opening & Calibrated Blend Formula",
           "ja": "繊細な開繊工程と緻密な繊維ブレンド処方",
           "zh": "温和开松解团与精密长短纤维混配配方"
         },
-        "s6_m_bullet_1": {
+        "s7_m_bullet_1": {
           "de": "<strong>Abgestimmte Faser-Rezeptur:</strong> Präzise Balance aus langen Zugfasern (für den Scheitel) und feinen Füllfasern (für die Dichte).",
           "en": "<strong>Calibrated Fiber Blend:</strong> Precise balance of long tensile fibers (for the crown) and fine filler wool (for core density).",
           "ja": "<strong>緻密な繊維配合：</strong> クラウンの張力を担う長繊維と、内部密度を高める細繊維を精密に配合。",
           "zh": "<strong>精密混配比例：</strong> 均衡搭配承载槌冠拉力的长纤维与充实内部密度的细绒纤维。"
         },
-        "s6_m_bullet_2": {
+        "s7_m_bullet_2": {
           "de": "<strong>Mehrstufige Auflockerung:</strong> Sanftes Zupfen und pneumatisches Belüften trennt Faserknäuel schonend in Einzelfasern.",
           "en": "<strong>Multi-Stage Opening:</strong> Gentle plucking and pneumatic aeration separate fiber tufts cleanly into individual fibers.",
           "ja": "<strong>多段階の空気開繊：</strong> 優しい開繊と空気流撹拌により、繊維束を傷めず一本ずつ均一にほぐす。",
           "zh": "<strong>多级气动开松：</strong> 柔和拨散与气流悬浮混合，在不损伤毛鳞的前提下解开纤维团。"
         },
-        "s6_m_bullet_3": {
+        "s7_m_bullet_3": {
           "de": "<strong>Klimakonditionierung:</strong> Konstante Feuchteaufnahme verhindert elektrostatische Aufladung, Faserbruch und harte Nester.",
           "en": "<strong>Climate Conditioning:</strong> Controlled moisture uptake prevents static charge, fiber breakage, and density spots.",
           "ja": "<strong>調湿コンディショニング：</strong> カード工程前の均一な調湿が静電気・繊維折れ・密度ムラを防止。",
           "zh": "<strong>恒湿调质处理：</strong> 梳理前均匀吸湿，彻底消除静电吸附、纤维断裂与局部硬结。"
         },
-        "s6_b4_badge": {
+        "s7_b4_badge": {
           "de": "FFW-MISCHKAMMER",
           "en": "FFW BLENDING CHAMBER",
           "ja": "FFW 混合チャンバー",
           "zh": "FFW 气动混毛室"
         },
-        "s6_caption_2": {
+        "s7_caption_2": {
           "de": "Pneumatische Auflockerung und Mischung der Faserchargen in Wurzen",
           "en": "Pneumatic loosening and blending of wool batches at FFW Wurzen",
           "ja": "ヴルツェン工場における羊毛ロットの空気開繊・ブレンド工程",
@@ -1202,14 +1395,14 @@
         }
       },
       "notes": {
-        "de": "Folie 6: Verbindet die beiden ersten Fertigungsstufen bei FFW Wurzen: 1. Unverpresst angelieferte, stark gekräuselte Übersee-Merinowolle mit intakter Keratin-Schuppenstruktur und Lanolin; 2. Die streng gehütete Mischung aus langen Zugfasern und feinen Füllfasern in der pneumatischen Auflockerungskammer.",
-        "en": "Slide 6: Combines the first two stages at FFW Wurzen: 1. Uncompressed, strongly crimped overseas Merino wool preserving keratin scales and lanolin; 2. The closely guarded blend of long tensile fibers and fine filler fibers in the pneumatic opening chamber.",
-        "ja": "スライド 6: FFWヴルツェンにおける最初の2工程を統合解説：1. 無圧縮輸送で天然クリンプとラノリンを保ったメリノ原毛、2. 長繊維と細繊維を空気開繊チャンバーで均一に配合する秘伝のブレンド工程。",
-        "zh": "第 6 页：整合乌尔岑毛毡厂前两道核心工序：1. 未压缩远洋运输保留高卷曲毛鳞与天然羊毛脂的美利奴原毛；2. 在气动开松混毛室中将抗拉长纤维与致密细绒按秘制比例均匀混配。"
+        "de": "Folie 7: Verbindet die beiden ersten Fertigungsstufen bei FFW Wurzen: 1. Unverpresst angelieferte, stark gekräuselte Übersee-Merinowolle mit intakter Keratin-Schuppenstruktur und Lanolin; 2. Die streng gehütete Mischung aus langen Zugfasern und feinen Füllfasern in der pneumatischen Auflockerungskammer.",
+        "en": "Slide 7: Combines the first two stages at FFW Wurzen: 1. Uncompressed, strongly crimped overseas Merino wool preserving keratin scales and lanolin; 2. The closely guarded blend of long tensile fibers and fine filler fibers in the pneumatic opening chamber.",
+        "ja": "スライド 7: FFWヴルツェンにおける最初の2工程を統合解説：1. 無圧縮輸送で天然クリンプとラノリンを保ったメリノ原毛、2. 長繊維と細繊維を空気開繊チャンバーで均一に配合する秘伝のブレンド工程。",
+        "zh": "第 7 页：整合乌尔岑毛毡厂前两道核心工序：1. 未压缩远洋运输保留高卷曲毛鳞与天然羊毛脂的美利奴原毛；2. 在气动开松混毛室中将抗拉长纤维与致密细绒按秘制比例均匀混配。"
       }
     },
-    "slide_7": {
-      "slide_number": 7,
+    "slide_8": {
+      "slide_number": 8,
       "chapter": 2,
       "chapter_name": {
         "de": "Teil 2: Die Kunst der Filzfertigung (FFW Wurzen)",
@@ -1236,139 +1429,139 @@
         "zh": "定向纤维排布：奠定均匀回弹与精准针刺整音的物理基础"
       },
       "elements": {
-        "s7_bullet_1": {
+        "s8_bullet_1": {
           "de": "<strong>Kardieren (Krempeln):</strong> Feine Walzen kämmen die aufgelockerte Wolle schonend aus und richten die Fasern parallel aus.",
           "en": "<strong>Carding:</strong> Fine wire rollers gently comb the opened wool, untangling and aligning the fibers in parallel.",
           "ja": "<strong>カーディング（梳毛）：</strong> 微細な針布ローラーが開繊された羊毛を丁寧に梳き、繊維を平行に整列させます。",
           "zh": "<strong>精细梳理（Carding）：</strong> 精密针布滚筒轻柔梳理开松后的原毛，解开纠结并使纤维平行排列。"
         },
-        "s7_bullet_2": {
+        "s8_bullet_2": {
           "de": "<strong>Definierte Faserrichtung:</strong> Das hauchdünne Vlies erhält eine exakt vorgegebene Vorzugsrichtung der Wollfasern.",
           "en": "<strong>Defined Fiber Course:</strong> The gossamer-thin fleece web receives a precisely controlled primary fiber direction.",
           "ja": "<strong>明確な繊維方向：</strong> 形成された極薄のフリースウェブは、設計通りの正確な主配向を備えます。",
           "zh": "<strong>明确纤维走向：</strong> 梳理出的薄如蝉翼的羊毛纤网具备严格受控的主导纤维方向。"
         },
-        "s7_bullet_3": {
+        "s8_bullet_3": {
           "de": "<strong>Gezielte Schichtung:</strong> Mehrere Vlieslagen bauen Plattendicke, Zugfestigkeit und späteren Keilverlauf definiert auf.",
           "en": "<strong>Controlled Layering:</strong> Superimposed fleece webs build target sheet thickness, tensile strength, and wedge taper.",
           "ja": "<strong>計画的な積層：</strong> 複数のフリース層を重ね合わせ、所定の板厚・引張強度・テーパー構造を形成します。",
           "zh": "<strong>受控铺网叠层：</strong> 多层纤网有序铺叠，精准构建目标板厚、抗拉强度与锥形梯度。"
         },
-        "s7_bullet_4": {
+        "s8_bullet_4": {
           "de": "<strong>Basis der Intonation:</strong> Nur geordnete Fasern lassen sich beim späteren Nadeln gleichmäßig teilen statt zerschneiden.",
           "en": "<strong>Foundation for Voicing:</strong> Only ordered fibers part cleanly and predictably when voiced with needles later on.",
           "ja": "<strong>整音の前提条件：</strong> 平行に整列した繊維のみが、後の針刺し整音で切断されず均一に押し分けられます。",
           "zh": "<strong>针刺整音前提：</strong> 唯有顺向排列的纤维才能在日后针刺整音时被平顺分拨，而非被割断。"
         },
-        "s7_caption_1": {
+        "s8_caption_1": {
           "de": "Auskämmen der Merinowolle zu gleichmäßigen Vliesbahnen mit definierter Faserrichtung",
           "en": "Carding Merino wool into uniform fleece webs with defined fiber alignment",
           "ja": "明確な繊維方向を持つ均一なフリース帯へと梳き上げられるメリノウール",
           "zh": "将美利奴羊毛梳理成纤维走向明确的均匀连续纤网"
         },
-        "s7_b1_badge": {
+        "s8_b1_badge": {
           "de": "FASERORIENTIERUNG",
           "en": "FIBER ORIENTATION",
           "ja": "繊維配向",
           "zh": "纤维走向"
         },
-        "s7_b2_badge": {
+        "s8_b2_badge": {
           "de": "KARDIEREN & VLIES",
           "en": "CARDING & FLEECE",
           "ja": "カーディング＆フリース",
           "zh": "梳理与絮片"
         },
-        "s7_panel_title": {
+        "s8_panel_title": {
           "de": "Trommelkarden kämmen die Fasern parallel",
           "en": "Drum cards comb fibers in parallel alignment",
           "ja": "ドラムカード機による繊維の平行配向",
           "zh": "梳毛机滚筒精准顺梳羊毛纤维"
         },
-        "s7_panel_subtitle": {
+        "s8_panel_subtitle": {
           "de": "Gezielte Längs- und Querausrichtung für vorhersehbare Elastizität beim Anschlag",
           "en": "Deliberate longitudinal and transversal alignment for predictable strike elasticity",
           "ja": "打弦時の反発挙動を完全に制御する縦横配向設計",
           "zh": "精准控制纵向与横向排布，保障触键反弹高度可控"
         },
-        "s7_fact_badge": {
+        "s8_fact_badge": {
           "de": "🧵 Parallele Faserführung ist die Grundvoraussetzung präziser Intonation",
           "en": "🧵 Parallel fiber guidance is the cornerstone of precise voicing",
           "ja": "🧵 繊維の平行配向が精密整音の絶対的土台",
           "zh": "🧵 纤维平行顺向排列是精准整音的根本基石"
         },
-        "s7_spotlight_badge": {
+        "s8_spotlight_badge": {
           "de": "VLIES-STRUKTUR",
           "en": "FLEECE STRUCTURE",
           "ja": "フリース構造",
           "zh": "薄绒网结构"
         },
-        "s7_spotlight_title": {
+        "s8_spotlight_title": {
           "de": "Voraussetzung für die Intonation",
           "en": "Prerequisite for Voicing",
           "ja": "整音のための必須条件",
           "zh": "大师级整音前提"
         },
-        "s7_spotlight_desc": {
+        "s8_spotlight_desc": {
           "de": "Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche",
           "en": "Only parallel fibers respond predictably and uniformly to needle strokes in subsequent voicing",
           "ja": "平行に並んだ繊維のみが整音針の深刺しに予測通り均一に応答",
           "zh": "唯有顺直排列的羊毛纤维，方能让整音针获得恒定可控的触感反馈"
         },
-        "s7_texture_tag": {
+        "s8_texture_tag": {
           "de": "Vlies-Flor: ausgerichtete Fasern",
           "en": "Fleece Web: Ordered Fibers",
           "ja": "フリースウェブ：整列繊維",
           "zh": "绒网结构：平行顺向毛丝"
         },
-        "s7_hl1_title": {
+        "s8_hl1_title": {
           "de": "Gleitende Nadelung:",
           "en": "Gliding Needling:",
           "ja": "スムーズなニードリング：",
           "zh": "顺畅进针表现："
         },
-        "s7_hl1_desc": {
+        "s8_hl1_desc": {
           "de": "Intoniernadeln verdrängen parallele Fasern, anstatt sie zu zerschneiden.",
           "en": "Voicing needles part parallel fibers rather than severing them.",
           "ja": "整音針が繊維を断ち切ることなく滑らかに押し分ける。",
           "zh": "整音针平滑推移纤维之间，避免斩断羊毛结构。"
         },
-        "s7_hl2_title": {
+        "s8_hl2_title": {
           "de": "Fließende Dichteverläufe:",
           "en": "Fluid Density Gradients:",
           "ja": "滑らかな密度勾配：",
           "zh": "平滑渐变密度："
         },
-        "s7_hl2_desc": {
+        "s8_hl2_desc": {
           "de": "Schichtung im Kreuzverbund verhindert Delamination bei extremem Tastendruck.",
           "en": "Cross-layered stacking prevents delamination under extreme touch forces.",
           "ja": "交差積層構造により、強打時でも層間剥離を徹底防止。",
           "zh": "十字复合交错叠网，防范极限力度强奏时的内部层裂。"
         },
-        "s7_hl3_title": {
+        "s8_hl3_title": {
           "de": "Maximale Faserlänge:",
           "en": "Maximum Fiber Length:",
           "ja": "繊維長の最大保持：",
           "zh": "最大化纤维保留："
         },
-        "s7_hl3_desc": {
+        "s8_hl3_desc": {
           "de": "Schonendes Kardieren verhindert Faserbruch und sichert maximale Zugfestigkeit des Vlieses.",
           "en": "Gentle carding prevents fiber breakage and ensures maximum tensile strength of the fleece.",
           "ja": "丁寧なカード処理で繊維の破断を防ぎ、フリースの優れた引裂強度を確保。",
           "zh": "极其轻柔的顺梳工艺杜绝纤维断裂，赋予羊毛絮片极高的结构抗拉强度。"
         },
-        "s7_b3_badge": {
+        "s8_b3_badge": {
           "de": "VLIES-STRUKTUR",
           "en": "FLEECE STRUCTURE",
           "ja": "フリース配向構造",
           "zh": "定向纤网结构"
         },
-        "s7_c1_title": {
+        "s8_c1_title": {
           "de": "Voraussetzung für die Intonation",
           "en": "Prerequisite for Voicing",
           "ja": "整音作業を支える不可欠な前提条件",
           "zh": "高阶整音调音的先决条件"
         },
-        "s7_c1_desc": {
+        "s8_c1_desc": {
           "de": "Nur parallel geordnete Fasern reagieren bei späteren Intonierarbeiten vorhersehbar und gleichmäßig auf Nadelstiche",
           "en": "Only parallel aligned fibers respond predictably and uniformly to needle penetration during voicing",
           "ja": "平行に整流された繊維構造のみが、整音針の刺入に対して予測可能かつ均一に反応します",
@@ -1376,14 +1569,14 @@
         }
       },
       "notes": {
-        "de": "Folie 7: Beim Krempeln (Kardieren) kämmen Trommelkarden die aufgelockerten Merinofasern parallel zu hauchdünnen Vliesen aus. Betonen Sie den direkten Bezug zur Werkstattpraxis: Nur weil die Fasern hier eine klare Vorzugsrichtung erhalten, kann der Klavierbauer später beim Intonieren im Lot zur Faser stechen, ohne das Fasergefüge zu zerstören.",
-        "en": "Slide 7: During carding, drum rollers comb the opened Merino wool into gossamer-thin webs with parallel fiber alignment. Emphasize the direct link to workshop practice: only because fiber orientation is established here can technicians later needle perpendicular to the fiber course with predictable results.",
-        "ja": "スライド 7：カーディング工程ではドラムカード機が開繊羊毛を平行に梳き、極薄のフリースを形成します。ここで明確な繊維方向が作られるからこそ、後の整音で繊維に直交する正確な針刺しが可能になる点を強調してください。",
-        "zh": "第 7 页：梳毛工序通过滚筒梳毛机将美利奴原毛平行顺梳成纤薄均匀的纤网。请重点强调其与整音实操的直接联系：正因为在此确立了清晰的纤维走向，技师日后才能垂直于纤维方向精准针刺而不损伤结构。"
+        "de": "Folie 8: Beim Krempeln (Kardieren) kämmen Trommelkarden die aufgelockerten Merinofasern parallel zu hauchdünnen Vliesen aus. Betonen Sie den direkten Bezug zur Werkstattpraxis: Nur weil die Fasern hier eine klare Vorzugsrichtung erhalten, kann der Klavierbauer später beim Intonieren im Lot zur Faser stechen, ohne das Fasergefüge zu zerstören.",
+        "en": "Slide 8: During carding, drum rollers comb the opened Merino wool into gossamer-thin webs with parallel fiber alignment. Emphasize the direct link to workshop practice: only because fiber orientation is established here can technicians later needle perpendicular to the fiber course with predictable results.",
+        "ja": "スライド 8：カーディング工程ではドラムカード機が開繊羊毛を平行に梳き、極薄のフリースを形成します。ここで明確な繊維方向が作られるからこそ、後の整音で繊維に直交する正確な針刺しが可能になる点を強調してください。",
+        "zh": "第 8 页：梳毛工序通过滚筒梳毛机将美利奴原毛平行顺梳成纤薄均匀的纤网。请重点强调其与整音实操的直接联系：正因为在此确立了清晰的纤维走向，技师日后才能垂直于纤维方向精准针刺而不损伤结构。"
       }
     },
-    "slide_8": {
-      "slide_number": 8,
+    "slide_9": {
+      "slide_number": 9,
       "chapter": 2,
       "chapter_name": {
         "de": "Teil 2: Die Kunst der Filzfertigung (FFW Wurzen)",
@@ -1410,193 +1603,193 @@
         "zh": "采用穆尔德河天然软水的纯物理热机械交织——100%不含胶水与化学树脂"
       },
       "elements": {
-        "s8_bullet_1": {
+        "s9_bullet_1": {
           "de": "<strong>1. Heißdampf:</strong> Öffnet die mikroskopischen Schuppen der Haare und macht das Keratin geschmeidig.",
           "en": "<strong>1. Live Steam:</strong> Opens microscopic cuticle scales of fibers and renders keratin supple.",
           "ja": "<strong>1. 熱蒸気：</strong>キューティクルを開きケラチンを柔軟化。",
           "zh": "<strong>1. 高温蒸汽：</strong>充分打开毛鳞片微孔，软化角蛋白分子链。"
         },
-        "s8_bullet_2": {
+        "s9_bullet_2": {
           "de": "<strong>2. Mechanischer Druck:</strong> Presst die Vlieslagen kontinuierlich zusammen und leitet die Verdichtung ein.",
           "en": "<strong>2. Mechanical Pressure:</strong> Continuously compresses fleece layers, initiating progressive density increase.",
           "ja": "<strong>2. 機械圧力：</strong>フリース層を均一に圧着し高密度化を促進。",
           "zh": "<strong>2. 机械压力：</strong>持续层层匀压，启动渐进致密缩合。"
         },
-        "s8_bullet_3": {
+        "s9_bullet_3": {
           "de": "<strong>3. Oszillierende Bewegung:</strong> Reibung verschlingt die Widerhaken der Fasern unlösbar ineinander.",
           "en": "<strong>3. Oscillating Motion:</strong> Frictional rubbing interlocks natural barbed scales of fibers inextricably.",
           "ja": "<strong>3. 振動摩擦：</strong>繊維の微細なキューティクルを立体的に深層結束。",
           "zh": "<strong>3. 往复振动：</strong>多维微幅摩擦使毛鳞片不可逆地深层咬合交锁。"
         },
-        "s8_bullet_4": {
+        "s9_bullet_4": {
           "de": "<strong>4. Handwerkliches Know-how:</strong> Gefühl für den exakten Abbruchzeitpunkt bestimmt Elastizität und Resonanz.",
           "en": "<strong>4. Artisan Know-How:</strong> Sensory feel for the exact moment of completion governs elasticity and acoustic resonance.",
           "ja": "<strong>4. 熟練の技：</strong>理想の縮絨タイミングを見極め、極上の弾性と音色を実現。",
           "zh": "<strong>4. 匠师掌控：</strong>精准把控终点毫秒时机，铸就绝佳回弹与通透共振。"
         },
-        "s8_c1_title": {
+        "s9_c1_title": {
           "de": "1. Heißdampf",
           "en": "1. Live Steam",
           "ja": "1. 熱蒸気",
           "zh": "1. 高温蒸汽"
         },
-        "s8_c2_title": {
+        "s9_c2_title": {
           "de": "2. Mechanischer Druck",
           "en": "2. Mechanical Pressure",
           "ja": "2. 機械的圧力",
           "zh": "2. 机械压力"
         },
-        "s8_c3_title": {
+        "s9_c3_title": {
           "de": "3. Oszillierende Bewegung",
           "en": "3. Oscillating Motion",
           "ja": "3. 振動摩擦運動",
           "zh": "3. 往复揉搓运动"
         },
-        "s8_c4_title": {
+        "s9_c4_title": {
           "de": "4. Meister-Erfahrung",
           "en": "4. Master Experience",
           "ja": "4. マイスターの経験",
           "zh": "4. 匠师经验掌控"
         },
-        "s8_c1_desc": {
+        "s9_c1_desc": {
           "de": "Öffnet die mikroskopischen Schuppen der Wollfasern und macht das Keratin geschmeidig.",
           "en": "Opens the microscopic cuticle scales of the wool fibers and renders the keratin supple.",
           "ja": "羊毛繊維の微細なキューティクル（鱗片）を開き、ケラチンをしなやかに軟化させます。",
           "zh": "打开羊毛纤维微观毛鳞片，使角蛋白纤维柔顺富于延展性。"
         },
-        "s8_c2_desc": {
+        "s9_c2_desc": {
           "de": "Presst die geschichteten Vlieslagen kontrolliert zusammen und leitet die Verdichtung ein.",
           "en": "Compresses the layered fleece webs uniformly to initiate progressive densification.",
           "ja": "積層されたフリースを均一に加圧し、段階的な高密度化を促します。",
           "zh": "持续均匀压紧叠层纤网，启动由表及里的渐进致密化。"
         },
-        "s8_c3_desc": {
+        "s9_c3_desc": {
           "de": "Rhythmische Reibung verhakt die natürlichen Schuppen der Fasern dauerhaft ineinander.",
           "en": "Rhythmic friction permanently interlocks the natural barbed scales of the fibers.",
           "ja": "リズミカルな振動摩擦により、繊維の鱗片同士を立体的に深く噛み合わせます。",
           "zh": "节律性往复摩擦使天然毛鳞倒钩彼此深层咬合、永久锁固。"
         },
-        "s8_c4_desc": {
+        "s9_c4_desc": {
           "de": "Das Gespür für den exakten Endpunkt entscheidet über Eigenelastizität und Obertonreichtum.",
           "en": "Judging the exact stopping point governs natural springiness and overtone richness.",
           "ja": "縮絨を止める最適瞬間を見極める熟練の感覚が、自己弾性と倍音の豊かさを決定します。",
           "zh": "精准判断缩绒终点时机，直接决定毛毡天然回弹力与泛音丰富度。"
         },
-        "s8_caption_1": {
+        "s9_caption_1": {
           "de": "Walken der geschichteten Vlieslagen unter Dampf, Druck und Bewegung zur homogenen Filztafel",
           "en": "Fulling layered fleece webs under steam, pressure, and motion into a homogeneous felt sheet",
           "ja": "蒸気・圧力・振動のもとで積層フリースを均質なフェルト原反へと鍛え上げる縮絨工程",
           "zh": "在蒸汽、重压与往复运动作用下将叠层纤网缩绒为均质毛毡原板"
         },
-        "s8_b1_badge": {
+        "s9_b1_badge": {
           "de": "HEISSDAMPF",
           "en": "HOT STEAM",
           "ja": "熱蒸気",
           "zh": "高温蒸汽"
         },
-        "s8_b2_badge": {
+        "s9_b2_badge": {
           "de": "MECHANISCHER DRUCK",
           "en": "MECHANICAL PRESSURE",
           "ja": "機械圧力",
           "zh": "机械压力"
         },
-        "s8_b3_badge": {
+        "s9_b3_badge": {
           "de": "OSZILLATION",
           "en": "OSCILLATION",
           "ja": "振動摩擦",
           "zh": "往复振动"
         },
-        "s8_b4_badge": {
+        "s9_b4_badge": {
           "de": "HANDWERKSKUNST",
           "en": "CRAFTSMANSHIP",
           "ja": "熟練の技",
           "zh": "匠人工艺"
         },
-        "s8_b5_badge": {
+        "s9_b5_badge": {
           "de": "HAMMERWALKE",
           "en": "HAMMER MILL",
           "ja": "ハンマー縮絨",
           "zh": "槌击缩绒"
         },
-        "s8_panel_title": {
+        "s9_panel_title": {
           "de": "Reine mechanische Verfilzung ohne Fremdstoffe",
           "en": "Pure mechanical felting without extraneous additives",
           "ja": "化学添加剤なしの純粋機械的フェルト化",
           "zh": "纯物理机械缩绒，杜绝化学添加"
         },
-        "s8_panel_subtitle": {
+        "s9_panel_subtitle": {
           "de": "Wasser, Wärme, Druck und Rhythmus verschlingen die Fasern dauerhaft",
           "en": "Water, heat, pressure, and rhythm permanently interlock fibers",
           "ja": "軟水・熱・加圧・リズミカルな振動で繊維を強固に結束",
           "zh": "软水、温热、机械重压与节奏震动使纤维永久深层锁合"
         },
-        "s8_fact_badge": {
+        "s9_fact_badge": {
           "de": "🌊 Ausschließlich weiches Muldental-Wasser und Hitze – 100% chemiefrei",
           "en": "🌊 Solely soft Muldental water and heat – 100% chemical-free",
           "ja": "🌊 ムルデ川流域の軟水と熱のみ・完全無薬加工",
           "zh": "🌊 仅取穆尔德河天然软水与热气物理加工，纯天然无药剂"
         },
-        "s8_spotlight_badge": {
+        "s9_spotlight_badge": {
           "de": "WALK-KOMPRESSION",
           "en": "FULLING COMPRESSION",
           "ja": "縮絨圧縮",
           "zh": "缩绒压缩"
         },
-        "s8_spotlight_title": {
+        "s9_spotlight_title": {
           "de": "Physikalische Verdichtung",
           "en": "Physical Compaction",
           "ja": "物理的圧縮技術",
           "zh": "物理深层紧缩"
         },
-        "s8_spotlight_desc": {
+        "s9_spotlight_desc": {
           "de": "Die Schuppen der Wollhaare verhaken sich mikromechanisch wie Kletten",
           "en": "Scales of wool hairs interlock micromechanically like burrs",
           "ja": "羊毛キューティクルが微細なマジックテープのように噛み合う",
           "zh": "毛鳞片像天然粘扣带微小倒钩一样深层交织锁定"
         },
-        "s8_texture_tag": {
+        "s9_texture_tag": {
           "de": "Mikro-Textur: Walk-Kompression",
           "en": "Micro-Texture: Fulling Compression",
           "ja": "マイクロテクスチャ：縮絨圧縮",
           "zh": "微观质感：缩绒压缩致密层"
         },
-        "s8_hl1_title": {
+        "s9_hl1_title": {
           "de": "Keine Dämpfung durch Kleber:",
           "en": "No Damping by Glues:",
           "ja": "接着剤不使用による音抜け：",
           "zh": "零胶水音色通透："
         },
-        "s8_hl1_desc": {
+        "s9_hl1_desc": {
           "de": "Rein mechanische Verfilzung erhält die freie Schwingung der Wollhaare.",
           "en": "Pure mechanical felting preserves free oscillation of wool fibers.",
           "ja": "機械的結束により羊毛本来の自由な微小振動を一切損なわない。",
           "zh": "纯物理交联，彻底释放羊毛天然微动传导与振动特性。"
         },
-        "s8_hl2_title": {
+        "s9_hl2_title": {
           "de": "Dauerelastizität:",
           "en": "Permanent Elasticity:",
           "ja": "高耐久弾性：",
           "zh": "恒久强韧弹性："
         },
-        "s8_hl2_desc": {
+        "s9_hl2_desc": {
           "de": "Natürliche Keratinfedern federn in Millisekunden ab und ermüden nicht.",
           "en": "Natural keratin springs rebound within milliseconds without fatigue.",
           "ja": "天然ケラチンスプリングがミリ秒で復元し経年疲労知らず。",
           "zh": "天然角蛋白弹簧毫秒级快速复原，不易疲劳老化。"
         },
-        "s8_hl3_title": {
+        "s9_hl3_title": {
           "de": "Maximale Obertonreinheit:",
           "en": "Maximum Overtone Purity:",
           "ja": "ピュアな倍音響き：",
           "zh": "纯净泛音呈现："
         },
-        "s8_hl3_desc": {
+        "s9_hl3_desc": {
           "de": "Das weiche Muldental-Wasser verhindert Mineralablagerungen in den Poren.",
           "en": "Soft Muldental water prevents mineral deposits inside fiber pores.",
           "ja": "良質な天然軟水が繊維間へのミネラル結晶沈着を防止。",
           "zh": "天然低矿软水杜绝杂质结晶堵塞毛细孔隙。"
         },
-        "s8_b6_badge": {
+        "s9_b6_badge": {
           "de": "HANDWERKSKUNST",
           "en": "CRAFTSMANSHIP",
           "ja": "熟練の技",
@@ -1604,14 +1797,14 @@
         }
       },
       "notes": {
-        "de": "Folie 8: Die vier Säulen des Walkprozesses in Wurzen: Heißdampf, mechanischer Druck, oszillierende Bewegung und die Erfahrung der Filzmeister. Entscheidend ist der Verzicht auf jegliche Kunstharze oder chemische Bindemittel – nur weiches Muldental-Wasser, Wärme und Mechanik verhaken die Keratinschuppen dauerhaft elastisch.",
-        "en": "Slide 8: Present the four pillars of fulling at Wurzen: live steam, mechanical pressure, oscillating motion, and master experience. Highlight that zero synthetic resins or chemical binders are used—only soft Mulde valley water, heat, and mechanical action interlock the keratin scales with lasting elasticity.",
-        "ja": "スライド 8：ヴルツェンにおける縮絨の4要素（熱蒸気・機械圧力・振動運動・熟練の経験）を解説します。合成樹脂や接着剤を一切使わず、ムルデ川の軟水と熱・機械運動のみでケラチン鱗片を強固かつ弾力的に結束させる点が核心です。",
-        "zh": "第 8 页：阐述乌尔岑缩绒工艺的四大支柱：高温蒸汽、机械压力、往复摩擦运动与大师经验。核心在于零合成树脂与化学粘合剂——仅凭穆尔德河天然软水、热能与机械作用即可令角蛋白毛鳞实现持久高弹交锁。"
+        "de": "Folie 9: Die vier Säulen des Walkprozesses in Wurzen: Heißdampf, mechanischer Druck, oszillierende Bewegung und die Erfahrung der Filzmeister. Entscheidend ist der Verzicht auf jegliche Kunstharze oder chemische Bindemittel – nur weiches Muldental-Wasser, Wärme und Mechanik verhaken die Keratinschuppen dauerhaft elastisch.",
+        "en": "Slide 9: Present the four pillars of fulling at Wurzen: live steam, mechanical pressure, oscillating motion, and master experience. Highlight that zero synthetic resins or chemical binders are used—only soft Mulde valley water, heat, and mechanical action interlock the keratin scales with lasting elasticity.",
+        "ja": "スライド 9：ヴルツェンにおける縮絨の4要素（熱蒸気・機械圧力・振動運動・熟練の経験）を解説します。合成樹脂や接着剤を一切使わず、ムルデ川の軟水と熱・機械運動のみでケラチン鱗片を強固かつ弾力的に結束させる点が核心です。",
+        "zh": "第 9 页：阐述乌尔岑缩绒工艺的四大支柱：高温蒸汽、机械压力、往复摩擦运动与大师经验。核心在于零合成树脂与化学粘合剂——仅凭穆尔德河天然软水、热能与机械作用即可令角蛋白毛鳞实现持久高弹交锁。"
       }
     },
-    "slide_9": {
-      "slide_number": 9,
+    "slide_10": {
+      "slide_number": 10,
       "chapter": 2,
       "chapter_name": {
         "de": "Teil 2: Die Kunst der Filzfertigung (FFW Wurzen)",
@@ -1638,139 +1831,139 @@
         "zh": "在不损伤羊毛纤维、零化学增硬的前提下实现最高天然回弹力"
       },
       "elements": {
-        "s9_b1_badge": {
+        "s10_b1_badge": {
           "de": "PHYSIKALISCHE GRENZE",
           "en": "PHYSICAL LIMIT",
           "ja": "物理的限界値",
           "zh": "物理缩绒极限"
         },
-        "s9_b2_badge": {
+        "s10_b2_badge": {
           "de": "FFW WURZEN",
           "en": "FFW WURZEN",
           "ja": "FFW ヴルツェン",
           "zh": "FFW 乌尔岑"
         },
-        "s9_c1_title": {
+        "s10_c1_title": {
           "de": "Maximale natürliche Verwalkdichte von 56 %",
           "en": "Maximum Natural Fulling Density of 56%",
           "ja": "純機械的縮絨の限界密度 56%",
           "zh": "56% 纯物理最高缩绒密度"
         },
-        "s9_c1_desc": {
+        "s10_c1_desc": {
           "de": "Beim Walken werden die Filztafeln verdichtet, bis sich die Wollfasern rein mechanisch nicht weiter zusammenschieben lassen – bei maximal 56 % Verwalkdichte (0,56 g/cm³).",
           "en": "During fulling, felt sheets are compacted until the wool fibers cannot be pushed closer purely mechanically—reaching a maximum fulling density of 56% (0.56 g/cm³).",
           "ja": "縮絨工程では、羊毛繊維を傷めず機械的にこれ以上圧縮できない限界点である最大縮絨密度 56%（0.56 g/cm³）まで緻密化します。",
           "zh": "在缩绒工序中，毛毡原板被纯物理压实至羊毛纤维无法进一步靠拢的天然临界点——最高缩绒密度达 56%（0.56 g/cm³）。"
         },
-        "s9_caption_1": {
+        "s10_caption_1": {
           "de": "Gewalkte konische Hammerfilztafeln in der Filzfabrik Wurzen",
           "en": "Fulled tapered piano hammer felt sheets at Filzfabrik Wurzen",
           "ja": "ヴルツェン工場で縮絨されたテーパー形状のハンマーフェルト原反",
           "zh": "乌尔岑毛毡厂内完成物理缩绒的锥形弦槌毛毡原板"
         },
-        "s9_caption_2": {
+        "s10_caption_2": {
           "de": "Nachbearbeitung der rein mechanisch gewalkten Filztafel in Wurzen",
           "en": "Post-fulling finishing of the mechanically fulled felt sheet in Wurzen",
           "ja": "ヴルツェンにおける純機械縮絨フェルト原反の仕上げ工程",
           "zh": "乌尔岑工坊内对纯机械缩绒毛毡原板进行精细后整"
         },
-        "s9_fact_badge": {
+        "s10_fact_badge": {
           "de": "🎯 Max. 56 % Verwalkdichte (0,56 g/cm³): Höchste Eigenelastizität ohne Härter",
           "en": "🎯 Max. 56% Fulling Density (0.56 g/cm³): Peak elasticity with zero hardeners",
           "ja": "🎯 最大縮絨密度 56%（0.56 g/cm³）：硬化剤ゼロの純粋な自己弾性",
           "zh": "🎯 最高 56% 缩绒密度（0.56 g/cm³）：零硬化剂的纯天然回弹力"
         },
-        "s9_spotlight_badge": {
+        "s10_spotlight_badge": {
           "de": "AKUSTISCHE PERFEKTION",
           "en": "ACOUSTIC PERFECTION",
           "ja": "音響的完成度",
           "zh": "声学巅峰表现"
         },
-        "s9_spotlight_title": {
+        "s10_spotlight_title": {
           "de": "Spannkraft statt spröder Härte",
           "en": "Elastic Springback Instead of Brittle Hardness",
           "ja": "脆い硬さではなく「しなやかな反発力」",
           "zh": "以柔韧弹力取代僵硬脆性"
         },
-        "s9_spotlight_desc": {
+        "s10_spotlight_desc": {
           "de": "56 % natürliche Verwalkdichte liefert kurze Kontaktzeiten und feinste Dynamikkontrolle am Flügel.",
           "en": "56% natural fulling density delivers brief string contact times and nuanced dynamic control.",
           "ja": "56%の天然縮絨密度が、短い接触時間と繊細なダイナミクス制御を両立させます。",
           "zh": "56% 天然缩绒密度兼顾极短触弦时间与细腻宽广的动态控制。"
         },
-        "s9_texture_tag": {
+        "s10_texture_tag": {
           "de": "Natürliche Obergrenze: 56 % Verwalkdichte (0,56 g/cm³)",
           "en": "Natural Upper Limit: 56% Fulling Density (0.56 g/cm³)",
           "ja": "天然縮絨の上限：密度 56%（0.56 g/cm³）",
           "zh": "天然缩绒上限：56% 缩绒密度（0.56 g/cm³）"
         },
-        "s9_hl1_title": {
+        "s10_hl1_title": {
           "de": "Kurze Kontaktzeit:",
           "en": "Rapid String Rebound:",
           "ja": "素早い離弦（リバウンド）：",
           "zh": "极速离弦回弹："
         },
-        "s9_hl1_desc": {
+        "s10_hl1_desc": {
           "de": "Der Hammer löst sich verzögerungsfrei von der Saite – kein Abdämpfen des Tons.",
           "en": "The hammer rebounds instantly off strings without muting tone.",
           "ja": "ハンマーが瞬時に弦から離脱し、響きを一切ミュートしない。",
           "zh": "击弦后瞬间回弹释放琴弦，不吃音、不阻碍发声振动。"
         },
-        "s9_hl2_title": {
+        "s10_hl2_title": {
           "de": "Farbenreicher Klang:",
           "en": "Color-Rich Tone Spectrum:",
           "ja": "色彩豊かな響き：",
           "zh": "色彩丰富饱满音色："
         },
-        "s9_hl2_desc": {
+        "s10_hl2_desc": {
           "de": "Volle Ausbildung der Grund- und Teiltöne ohne Schrillheit im Diskant.",
           "en": "Full blooming of fundamentals and overtones without treble harshness.",
           "ja": "高音域で耳障りにならず、基音と倍音が豊かに立ち上がる。",
           "zh": "高音区亮而不燥，基音饱满且高次泛音层次分明。"
         },
-        "s9_hl3_title": {
+        "s10_hl3_title": {
           "de": "Stabiler Anschlag:",
           "en": "Stable Hammer Action:",
           "ja": "高安定ストローク：",
           "zh": "长效稳定敲击寿命："
         },
-        "s9_hl3_desc": {
+        "s10_hl3_desc": {
           "de": "Konstante Dichte über zehntausende Anschläge hinweg.",
           "en": "Consistent density sustained over tens of thousands of keystrokes.",
           "ja": "何万回もの打鍵に対しても均一な密度を維持。",
           "zh": "历经数万次强奏依然保持一致均质密度。"
         },
-        "s9_panel_title": {
+        "s10_panel_title": {
           "de": "Vollendete Verdichtung an der physikalischen Grenze",
           "en": "Full Densification at the Physical Limit",
           "ja": "物理的限界点における究極の圧縮度",
           "zh": "物理极限下的终极密度平衡"
         },
-        "s9_panel_subtitle": {
+        "s10_panel_subtitle": {
           "de": "Filzplatten werden exakt bis zum Punkt verdichtet, an dem sich die Fasern optimal berühren",
           "en": "Felt sheets are compacted precisely to the point where fibers contact optimally",
           "ja": "繊維が理想的に密着する最適点まで精緻に縮絨圧縮",
           "zh": "毛毡板精准缩绒至羊毛纤维最紧密咬合的最佳临界点"
         },
-        "s9_bullet_1": {
+        "s10_bullet_1": {
           "de": "<strong>Maximale Faserkompression:</strong> Die Fasern lassen sich auf rein mechanischem Wege nicht weiter zusammenschieben, ohne beschädigt zu werden.",
           "en": "<strong>Maximum Fiber Compression:</strong> Fibers cannot be mechanically compacted further without structural damage.",
           "ja": "<strong>最大繊維圧縮：</strong>繊維を損傷することなく純粋な機械的手段で到達できる限界圧縮。",
           "zh": "<strong>最大机械压缩极限：</strong>在绝不损伤羊毛天然纤维结构的前提下，实现最紧密的纯物理咬合。"
         },
-        "s9_bullet_2": {
+        "s10_bullet_2": {
           "de": "<strong>Höchste natürliche Rückstellkraft:</strong> Entspricht dem physikalischen Optimum an Eigenelastizität für den Konzertflügelanschlag.",
           "en": "<strong>Peak Natural Spring Rate:</strong> Corresponds to the physical optimum of inherent elasticity for concert grand touch.",
           "ja": "<strong>最高の天然反発弾性：</strong>コンサートグランドの打弦に求められる自己弾性の物理的最適値。",
           "zh": "<strong>最高天然回弹弹力：</strong>契合音乐会演奏三角琴击弦所需的最理想回弹动力学标准。"
         },
-        "s9_bullet_3": {
+        "s10_bullet_3": {
           "de": "<strong>Frei von Kunstharzen:</strong> Verzicht auf synthetische Versteifer oder chemische Überhärtung sichert dauerhafte Resonanz.",
           "en": "<strong>Free from Synthetic Resins:</strong> Eliminating chemical hardeners ensures permanent organic tone blooming.",
           "ja": "<strong>合成樹脂フリー：</strong>人工硬化剤や化学薬品に頼らないため、恒久的な響きの豊かさを保証。",
           "zh": "<strong>绝无合成树脂：</strong>零化学增硬剂与胶水，彻底杜绝刺耳死硬杂音，保障声学生命力。"
         },
-        "s9_b3_badge": {
+        "s10_b3_badge": {
           "de": "AKUSTISCHE PERFEKTION",
           "en": "ACOUSTIC PERFECTION",
           "ja": "究極の音響性能",
@@ -1778,14 +1971,14 @@
         }
       },
       "notes": {
-        "de": "Folie 9: Erklären Sie die physikalische Grenze des reinen Naturwalkens: Bei maximal 56 % Verwalkdichte (entspricht 0,56 g/cm³ Rohdichte) berühren und verschlingen sich die Merinofasern optimal, ohne gequetscht oder gebrochen zu werden. Höhere Werte wären nur durch chemische Tränkung oder Überpressen erreichbar – auf Kosten der Elastizität und Klangwärme.",
-        "en": "Slide 9: Explain the physical ceiling of pure mechanical fulling: at a maximum fulling density of 56% (0.56 g/cm³), Merino fibers interlock at optimal closeness without crushing or breakage. Pushing beyond this would require chemical stiffeners or over-pressing at the expense of elasticity and tonal warmth.",
-        "ja": "スライド 9：純粋な機械縮絨の物理的限界である「縮絨密度 56%（0.56 g/cm³）」を解説します。これ以上は繊維を潰すか化学硬化剤に頼るしかなく、56%こそが繊維の弾力性と豊かな音色を損なわない最高到達点です。",
-        "zh": "第 9 页：解析纯物理缩绒的天然极限——56% 缩绒密度（即 0.56 g/cm³ 体积密度）。在此临界点上，美利奴羊毛纤维达到最紧密的无损咬合；若强行超越则只能依赖化学浸渍硬化或过度压溃，反而牺牲回弹活力与温暖音色。"
+        "de": "Folie 10: Erklären Sie die physikalische Grenze des reinen Naturwalkens: Bei maximal 56 % Verwalkdichte (entspricht 0,56 g/cm³ Rohdichte) berühren und verschlingen sich die Merinofasern optimal, ohne gequetscht oder gebrochen zu werden. Höhere Werte wären nur durch chemische Tränkung oder Überpressen erreichbar – auf Kosten der Elastizität und Klangwärme.",
+        "en": "Slide 10: Explain the physical ceiling of pure mechanical fulling: at a maximum fulling density of 56% (0.56 g/cm³), Merino fibers interlock at optimal closeness without crushing or breakage. Pushing beyond this would require chemical stiffeners or over-pressing at the expense of elasticity and tonal warmth.",
+        "ja": "スライド 10：純粋な機械縮絨の物理的限界である「縮絨密度 56%（0.56 g/cm³）」を解説します。これ以上は繊維を潰すか化学硬化剤に頼るしかなく、56%こそが繊維の弾力性と豊かな音色を損なわない最高到達点です。",
+        "zh": "第 10 页：解析纯物理缩绒的天然极限——56% 缩绒密度（即 0.56 g/cm³ 体积密度）。在此临界点上，美利奴羊毛纤维达到最紧密的无损咬合；若强行超越则只能依赖化学浸渍硬化或过度压溃，反而牺牲回弹活力与温暖音色。"
       }
     },
-    "slide_10": {
-      "slide_number": 10,
+    "slide_11": {
+      "slide_number": 11,
       "chapter": 2,
       "chapter_name": {
         "de": "Teil 2: Die Kunst der Filzfertigung (FFW Wurzen)",
@@ -1812,265 +2005,265 @@
         "zh": "零砂磨精准定型——上下 2×6 层连续表层纤网完整承载弯曲张力"
       },
       "elements": {
-        "s10_bullet_1": {
+        "s11_bullet_1": {
           "de": "<strong>Mechanisches Nachschlagen:</strong> Filzhämmer und polierte Natursteine verdichten die Platten exakt auf Sollmaß.",
           "en": "<strong>Mechanical Hammering:</strong> Felt hammers and polished natural stones consolidate sheets to exact dimensions.",
           "ja": "<strong>機械・手作業の叩き締め：</strong> 専用フェルトハンマーと天然石が規定寸法まで均一に締め上げます。",
           "zh": "<strong>物理敲击致密化：</strong> 特制毛槌与抛光天然冷石将毛毡板精准锻打至目标厚度规格。"
         },
-        "s10_bullet_2": {
+        "s11_bullet_2": {
           "de": "<strong>Null Schleifabtrag:</strong> Das Weickert-Verfahren verzichtet komplett auf Schleifen – keine einzige Faser wird gekappt.",
           "en": "<strong>Zero Sanding Removal:</strong> The Weickert process eliminates sanding completely—not a single tension fiber is cut.",
           "ja": "<strong>完全無研磨プロセス：</strong> ヴァイケルト製法は表面研磨を一切行わず、張力繊維を1本も断ち切りません。",
           "zh": "<strong>零砂磨表面工艺：</strong> Weickert工艺彻底摒弃砂带打磨——绝不切断任何一根连续张力纤维。"
         },
-        "s10_bullet_3": {
+        "s11_bullet_3": {
           "de": "<strong>Geschlossener Biegeradius:</strong> Beim Pressen um den Holzkern bleibt die Außenhaut glatt und absolut rissfrei.",
           "en": "<strong>Unbroken Bending Radius:</strong> When pressed around the hammer moulding, the outer skin stays smooth and tear-free.",
           "ja": "<strong>滑らかな曲げ半径：</strong> ウッドコア周囲へ強く曲げても表層は滑らかで割れやズレが生じません。",
           "zh": "<strong>致密无裂弯曲弧面：</strong> 高压包覆实木槌芯时，外表面始终保持丝滑闭合，绝不撕裂滑移。"
         },
-        "s10_caption_1": {
+        "s11_caption_1": {
           "de": "Gewalkte Filzplatten mit natürlicher Eindringfestigkeit von 56 bis 68 Shore-A",
           "en": "Fulled felt sheets with natural indentation firmness of 56 to 68 Shore-A",
           "ja": "自然な硬度56〜68 Shore-Aを備えた縮絨仕上げフェルトプレート",
           "zh": "具备56至68 Shore-A天然压入硬度的缩绒定型毛毡板"
         },
-        "s10_b1_badge": {
+        "s11_b1_badge": {
           "de": "FORMGEBUNG OHNE SCHLEIFEN",
           "en": "SHAPING WITHOUT GRINDING",
           "ja": "研磨なし成形",
           "zh": "无磨损成形"
         },
-        "s10_b2_badge": {
+        "s11_b2_badge": {
           "de": "HAMMER & STEIN",
           "en": "HAMMER & STONE",
           "ja": "ハンマー＆ストーン",
           "zh": "毡槌与石滚"
         },
-        "s10_panel_title": {
+        "s11_panel_title": {
           "de": "Manuelle Verdichtung und Egalisierung",
           "en": "Manual compaction and leveling",
           "ja": "職人技による手作業圧縮と均一化",
           "zh": "手工敲击均质化精细定型"
         },
-        "s10_panel_subtitle": {
+        "s11_panel_subtitle": {
           "de": "Gezielte Hammerschläge bringen die Filzplatten auf Sollmaß und entspannen das Fasergefüge.",
           "en": "Targeted hammer blows bring felt sheets to exact size while relaxing the fiber lattice.",
           "ja": "熟練のフェルトハンマー打ちが正確な寸法へ整えつつ内部応力を解放します。",
           "zh": "精准毛槌敲击使毛毡板达到目标尺寸，同时柔和释放纤维网内部应力。"
         },
-        "s10_fact_badge": {
+        "s11_fact_badge": {
           "de": "🔨 Intakte Oberflächenfaserhaut sichert maximale Langlebigkeit",
           "en": "🔨 Intact surface fiber skin ensures maximum longevity",
           "ja": "🔨 削らない表皮繊維が極上の長寿命を約束",
           "zh": "🔨 完整表层皮膜保障最高抗击打使用寿命"
         },
-        "s10_spotlight_badge": {
+        "s11_spotlight_badge": {
           "de": "KONISCHER VLIESAUFBAU & RÜCKGRAT",
           "en": "CONICAL FLEECE STRUCTURE & BACKBONE",
           "ja": "円錐状フリース積層構造と張力骨格",
           "zh": "锥形纤网层理结构与张力骨架"
         },
-        "s10_b3_badge": {
+        "s11_b3_badge": {
           "de": "KONISCHER VLIESAUFBAU & RÜCKGRAT",
           "en": "CONICAL FLEECE STRUCTURE & BACKBONE",
           "ja": "円錐状フリース積層構造と張力骨格",
           "zh": "锥形纤网层理结构与张力骨架"
         },
-        "s10_spotlight_title": {
+        "s11_spotlight_title": {
           "de": "Konischer Verlauf & Zugspannung: Das Vliesbahnen-Rückgrat",
           "en": "Conical Taper & Tensile Stability: The Fleece Web Backbone",
           "ja": "円錐テーパー構造と張力保持：連続フリース繊維帯の骨格",
           "zh": "锥形厚度渐变与抗拉保形：连续纤网核心骨架"
         },
-        "s10_c1_title": {
+        "s11_c1_title": {
           "de": "Konischer Verlauf & Zugspannung: Das Vliesbahnen-Rückgrat",
           "en": "Conical Taper & Tensile Stability: The Fleece Web Backbone",
           "ja": "円錐テーパー構造と張力保持：連続フリース繊維帯の骨格",
           "zh": "锥形厚度渐变与抗拉保形：连续纤网核心骨架"
         },
-        "s10_spotlight_desc": {
+        "s11_spotlight_desc": {
           "de": "Vom dünnen Diskant links zum starken Bass rechts formen gekürzte Kernbahnen den Keil – umschlossen von 2×6 Deckbahnen.",
           "en": "From thin treble on the left to thick bass on the right, shortened core webs form the wedge—enclosed by 2×6 outer webs.",
           "ja": "左側の薄い高音部から右側の厚い低音部へ、内部の短尺フリース層が楔形テーパーを形成し、表裏2×6層の連続帯が包みます。",
           "zh": "从左侧纤薄的高音区到右侧厚实的低音区，中心阶梯短纤网塑造锥形楔度，并由上下2×6层连续纤网完整包覆。"
         },
-        "s10_c1_desc": {
+        "s11_c1_desc": {
           "de": "Vom dünnen Diskant links zum starken Bass rechts formen gekürzte Kernbahnen den Keil – umschlossen von 2×6 Deckbahnen.",
           "en": "From thin treble on the left to thick bass on the right, shortened core webs form the wedge—enclosed by 2×6 outer webs.",
           "ja": "左側の薄い高音部から右側の厚い低音部へ、内部の短尺フリース層が楔形テーパーを形成し、表裏2×6層の連続帯が包みます。",
           "zh": "从左侧纤薄的高音区到右侧厚实的低音区，中心阶梯短纤网塑造锥形楔度，并由上下2×6层连续纤网完整包覆。"
         },
-        "s10_anim_mode_intact": {
+        "s11_anim_mode_intact": {
           "de": "Ungeschliffen • Formstabil",
           "en": "Unsanded • Shape-Stable",
           "ja": "未研磨 • 形状安定",
           "zh": "未打磨 • 保形稳定"
         },
-        "s10_anim_mode_sanded": {
+        "s11_anim_mode_sanded": {
           "de": "Geschliffen • Verformung",
           "en": "Sanded • Deformation",
           "ja": "研磨後 • 張力喪失",
           "zh": "打磨后 • 塌陷变形"
         },
-        "s10_anim_gauge_label": {
+        "s11_anim_gauge_label": {
           "de": "Faserhaut & Zugverbund",
           "en": "Fiber Skin & Tensile Bond",
           "ja": "表層繊維と張力結合",
           "zh": "表层纤网与抗拉结构"
         },
-        "s10_anim_top_layers": {
+        "s11_anim_top_layers": {
           "de": "▲ OBERSEITE: 6 DURCHGEHENDE VLIESBAHNEN (ZUGTRÄGER)",
           "en": "▲ TOP SURFACE: 6 CONTINUOUS FLEECE WEBS (TENSION CORDS)",
           "ja": "▲ 上面：6層の連続フリース繊維帯（引張支持帯）",
           "zh": "▲ 顶层：6层连续定向纤网（受拉主梁）"
         },
-        "s10_anim_core": {
+        "s11_anim_core": {
           "de": "ELASTISCHER FILZKERN (Wollfaser-Matrix)",
           "en": "ELASTIC FELT CORE (Wool Fiber Matrix)",
           "ja": "弾性フェルトコア（高密度ウール母相）",
           "zh": "高弹毛毡芯层（天然羊毛纤维基体）"
         },
-        "s10_anim_bottom_layers": {
+        "s11_anim_bottom_layers": {
           "de": "▼ UNTERSEITE: 6 DURCHGEHENDE VLIESBAHNEN (DRUCKAUFNAHME)",
           "en": "▼ BOTTOM SURFACE: 6 CONTINUOUS FLEECE WEBS (COMPRESSION BASE)",
           "ja": "▼ 下面：6層の連続フリース繊維帯（圧縮支持帯）",
           "zh": "▼ 底层：6层连续定向纤网（受压底层）"
         },
-        "s10_anim_status_intact": {
+        "s11_anim_status_intact": {
           "de": "Ungeschliffen: 2×6 Deckbahnen umschließen die gekürzten Kernbahnen • Voller Spannungserhalt",
           "en": "Unsanded: 2×6 outer webs enclose the shortened core layers • Full tension retention",
           "ja": "未研磨：2×6層の連続帯が内部の短尺積層コアを包囲 • 張力と形状を完全に保持",
           "zh": "未打磨：2×6连续表层包覆中心阶梯短纤网 • 完整保持弯曲张力与几何形状"
         },
-        "s10_anim_status_sanded": {
+        "s11_anim_status_sanded": {
           "de": "Geschliffen: Äußere Vliesbahnen durchtrennt • Fasern gleiten unter Biegezug auseinander",
           "en": "Sanded: Outer fleece webs severed • Fibers slip apart under bending tension",
           "ja": "研磨後：外側の連続繊維帯が切断され、曲げ張力下で繊維が滑脱・分離",
           "zh": "打磨后：外层连续纤网被切断 • 弯曲受拉时表层纤维滑移散开并丧失张力"
         },
-        "s10_anim_auto_toggle": {
+        "s11_anim_auto_toggle": {
           "de": "Auto-Vergleich",
           "en": "Auto Compare",
           "ja": "自動比較",
           "zh": "自动对比"
         },
-        "s10_hl1_title": {
+        "s11_hl1_title": {
           "de": "Diskant → Bass:",
           "en": "Treble → Bass:",
           "ja": "高音部 → 低音部：",
           "zh": "高音 → 低音："
         },
-        "s10_hl1_desc": {
+        "s11_hl1_desc": {
           "de": "Gekürzte Kernbahnen formen rechts den starken Bass, links bleibt der Diskant schlank.",
           "en": "Shortened core webs build the thick bass on the right while keeping the treble thin on the left.",
           "ja": "短尺コア層が右側の厚い低音部を形成し、左側の高音部は薄く繊細に保ちます。",
           "zh": "缩短芯层在右侧叠合形成厚实低音端，左侧高音端则保持纤薄。"
         },
-        "s10_hl2_title": {
+        "s11_hl2_title": {
           "de": "2×6 Deckbahnen:",
           "en": "2×6 Outer Webs:",
           "ja": "表裏各6層の連続帯：",
           "zh": "2×6连续表层："
         },
-        "s10_hl2_desc": {
+        "s11_hl2_desc": {
           "de": "Durchgehend ungeschliffen – nimmt alle Biege- und Zugkräfte auf.",
           "en": "Continuously unsanded—absorbs all bending and tensile forces.",
           "ja": "無研磨の連続層がすべての曲げ・引張応力を保持。",
           "zh": "上下连续不打磨，完整承载全部弯曲与拉伸应力。"
         },
-        "s10_hl3_title": {
+        "s11_hl3_title": {
           "de": "Schleif-Folge:",
           "en": "Sanding Effect:",
           "ja": "研磨による損傷：",
           "zh": "打磨后果："
         },
-        "s10_hl3_desc": {
+        "s11_hl3_desc": {
           "de": "Gekappte Außenbahnen gleiten auseinander – Verlust der Vorspannung.",
           "en": "Severed outer webs slip apart—loss of structural pre-tension.",
           "ja": "切断された表層が滑り開き、内部プレテンションが消失。",
           "zh": "表层纤网被切断后滑移散开，导致内部预张力流失。"
         },
-        "s10_svg_clamp": {
+        "s11_svg_clamp": {
           "de": "EINSPANNUNG",
           "en": "CLAMPING",
           "ja": "固定クランプ",
           "zh": "两端夹持"
         },
-        "s10_svg_vlies_intact": {
+        "s11_svg_vlies_intact": {
           "de": "2×6 durchgehende Deckbahnen tragen die volle Biege- & Zugspannung",
           "en": "2×6 continuous outer webs carry full bending & tensile stress",
           "ja": "表裏2×6層の連続フリース繊維帯が曲げ・引張応力を全面保持",
           "zh": "上下2×6层连续纤网完整承载弯曲与拉伸张力"
         },
-        "s10_svg_core_sub": {
+        "s11_svg_core_sub": {
           "de": "Nach rechts zum Bass gestaffelte Kernlagen formen die Keilform",
           "en": "Core layers staggered toward the bass on the right build the wedge taper",
           "ja": "右側の低音部へ向けて段階的に重ねた内部層が楔形断面を形成",
           "zh": "向右侧低音端阶梯叠加的芯层由内而外塑造自然锥度"
         },
-        "s10_svg_crown_intact": {
+        "s11_svg_crown_intact": {
           "de": "UNGESCHLIFFENE FASERHAUT • DAUERHAFT FORMSTABIL",
           "en": "UNSANDED FIBER SKIN • PERMANENTLY SHAPE-STABLE",
           "ja": "未研磨の表層繊維スキン • 永続的な形状安定性",
           "zh": "未打磨天然纤维表层 • 持久稳固保形"
         },
-        "s10_svg_ghost_label": {
+        "s11_svg_ghost_label": {
           "de": "Ursprüngliche ungeschliffene Soll-Kontur",
           "en": "Original unsanded nominal contour",
           "ja": "未研磨時の本来シルエット（基準形状）",
           "zh": "未打磨原始稳固轮廓基准线"
         },
-        "s10_svg_deform_callout": {
+        "s11_svg_deform_callout": {
           "de": "Scheitel-Aufweitung & Faserverschiebung unter Zug",
           "en": "Crown Separation & Fiber Slip under Tension",
           "ja": "張力下でのクラウン部開裂と繊維の滑脱",
           "zh": "受拉状态下槌冠开裂与纤维滑移错位"
         },
-        "s10_svg_crack_label": {
+        "s11_svg_crack_label": {
           "de": "Durchtrennte Deckbahnen gleiten auseinander – Kurzbahnen halten keinen Zug",
           "en": "Severed outer webs slide apart—shortened inner webs cannot bridge tension",
           "ja": "切断された表層が左右へ滑り、内部の短尺層だけでは張力を維持不能",
           "zh": "切断的表层向两侧滑脱，内部短纤网无法跨越槌冠承受拉力"
         },
-        "s10_svg_crown_sanded": {
+        "s11_svg_crown_sanded": {
           "de": "GESCHLIFFENE AUSSENHAUT • DECKBAHNEN DURCHTRENNT",
           "en": "SANDED OUTER SKIN • CONTINUOUS WEBS SEVERED",
           "ja": "研磨された表層 • 連続フリース繊維帯が切断",
           "zh": "打磨外表面 • 连续表层纤网被切断"
         },
-        "s10_anim_state_intact": {
+        "s11_anim_state_intact": {
           "de": "Geschlossen",
           "en": "Continuous",
           "ja": "連続層維持",
           "zh": "连续完整"
         },
-        "s10_anim_state_sanded": {
+        "s11_anim_state_sanded": {
           "de": "Durchtrennt",
           "en": "Severed",
           "ja": "表層切断",
           "zh": "表层切断"
         },
-        "s10_svg_taper_edge": {
+        "s11_svg_taper_edge": {
           "de": "Konischer Stärkenverlauf: Diskant → Bass",
           "en": "Conical thickness taper: Treble → Bass",
           "ja": "円錐状の厚み勾配：高音部 → 低音部",
           "zh": "锥形厚度渐变：高音区 → 低音区"
         },
-        "s10_svg_core_title": {
+        "s11_svg_core_title": {
           "de": "Gekürzte Vliesbahnen im Platten-Zentrum",
           "en": "Shortened Fleece Webs in the Sheet Core",
           "ja": "フェルト板中央層に配置された短尺フリース帯",
           "zh": "毛毡板中心层嵌入的阶梯式缩短纤网"
         },
-        "s10_svg_clamp_left": {
+        "s11_svg_clamp_left": {
           "de": "DISKANT • DÜNN",
           "en": "TREBLE • THIN",
           "ja": "高音部 • 薄手",
           "zh": "高音区 • 纤薄"
         },
-        "s10_svg_clamp_right": {
+        "s11_svg_clamp_right": {
           "de": "BASS • DICK",
           "en": "BASS • THICK",
           "ja": "低音部 • 厚手",
@@ -2078,14 +2271,14 @@
         }
       },
       "notes": {
-        "de": "Folie 10: Zeigen Sie anhand der interaktiven Grafik, wie der konische Verlauf einer Weickert-/FFW-Filztafel durch gestuft gekürzte Vliesbahnen im Zentrum entsteht, während oben und unten je 6 durchgehende Vliesbahnen ungeschliffen durchlaufen und die gesamte Zugspannung aufnehmen.",
-        "en": "Slide 10: Use the interactive graphic to show how the conical taper of a Weickert/FFW felt sheet is formed from within by stepped shortened fleece webs in the center, while 6 top and 6 bottom continuous webs remain unsanded to carry the full tensile load.",
-        "ja": "スライド 10: インタラクティブ図解を用い、中央に段階的に短いフリース繊維帯を配置することで内側から円錐テーパー形状が作られ、表裏各6層の無研磨連続繊維帯が全引張力を支えていることを解説します。",
-        "zh": "第 10 页：借助交互图示说明毛毡板的锥形厚度渐变是如何通过中心阶梯式嵌入缩短纤网由内而外自然成型的，同时上下各6层未经打磨的连续纤网完整承载全部弯曲张力。"
+        "de": "Folie 11: Zeigen Sie anhand der interaktiven Grafik, wie der konische Verlauf einer Weickert-/FFW-Filztafel durch gestuft gekürzte Vliesbahnen im Zentrum entsteht, während oben und unten je 6 durchgehende Vliesbahnen ungeschliffen durchlaufen und die gesamte Zugspannung aufnehmen.",
+        "en": "Slide 11: Use the interactive graphic to show how the conical taper of a Weickert/FFW felt sheet is formed from within by stepped shortened fleece webs in the center, while 6 top and 6 bottom continuous webs remain unsanded to carry the full tensile load.",
+        "ja": "スライド 11: インタラクティブ図解を用い、中央に段階的に短いフリース繊維帯を配置することで内側から円錐テーパー形状が作られ、表裏各6層の無研磨連続繊維帯が全引張力を支えていることを解説します。",
+        "zh": "第 11 页：借助交互图示说明毛毡板的锥形厚度渐变是如何通过中心阶梯式嵌入缩短纤网由内而外自然成型的，同时上下各6层未经打磨的连续纤网完整承载全部弯曲张力。"
       }
     },
-    "slide_11": {
-      "slide_number": 11,
+    "slide_12": {
+      "slide_number": 12,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -2112,133 +2305,133 @@
         "zh": "常备逾30种锥形面毡配方及6种标准底毡色彩，并支持客户专属定制染色"
       },
       "elements": {
-        "s11_kpi": {
+        "s12_kpi": {
           "de": "30+ Sorten",
           "en": "30+ Grades",
           "ja": "30種以上",
           "zh": "30+ 种规格"
         },
-        "s11_b1_badge": {
+        "s12_b1_badge": {
           "de": "DECKFILZ-PLATTENLAGER",
           "en": "TOP-FELT INVENTORY",
           "ja": "トップフェルト原反庫",
           "zh": "面毡原板仓储"
         },
-        "s11_c1_title": {
+        "s12_c1_title": {
           "de": "Konische FFW- & Weickert-Platten in kontrollierter Reife",
           "en": "Tapered FFW & Weickert Sheets in Controlled Seasoning",
           "ja": "空調熟成されるFFW・ヴァイケルト製テーパー原反",
           "zh": "受控恒湿熟成的FFW与Weickert锥形原毡板"
         },
-        "s11_bullet_1": {
+        "s12_bullet_1": {
           "de": "<strong>Keilgeometrie ab Werk:</strong> Kräftig im Bass, zum Diskant stetig schlanker und dichter gewalkt.",
           "en": "<strong>Mill-Fulled Taper:</strong> Thick in the bass, progressively slimmer and denser toward the treble.",
           "ja": "<strong>楔形プロファイル：</strong> 低音部は厚く、高音部へ向けて徐々に薄く高密度に縮絨。",
           "zh": "<strong>原厂楔形几何：</strong> 低音区厚实，向高音区逐渐减薄且密度递增。"
         },
-        "s11_bullet_2": {
+        "s12_bullet_2": {
           "de": "<strong>Breites Sortiment:</strong> Über 30 abgestimmte FFW- und Weickert-Rezepturen für Konzert-, Marken- und historische Instrumente.",
           "en": "<strong>Broad Assortment:</strong> Over 30 calibrated FFW and Weickert formulas for concert, OEM, and historic instruments.",
           "ja": "<strong>豊富なラインナップ：</strong> コンサート用からブランド別OEM、歴史的楽器の修復用まで30種以上の配合を常備。",
           "zh": "<strong>全系列配方储备：</strong> 常备逾30种 FFW 与 Weickert 配方，全面覆盖音乐会、品牌原厂及古董修复需求。"
         },
-        "s11_bullet_3": {
+        "s12_bullet_3": {
           "de": "<strong>Raumklima &amp; Ruhezeit:</strong> Gesteuerte Luftfeuchte, Pheromon-Monitoring und Reifezeit bauen Walkspannungen ab.",
           "en": "<strong>Climate &amp; Resting Period:</strong> Regulated humidity, pheromone monitoring, and seasoning relieve fulling stresses.",
           "ja": "<strong>空調管理と熟成休止：</strong> 厳密な湿度制御・防虫監視と規定の休止期間により縮絨時の残留応力を解消。",
           "zh": "<strong>恒湿防蛀与静置熟成：</strong> 精准控湿、信息素监测与规定静置期彻底释放缩绒残余内应力。"
         },
-        "s11_b2_badge": {
+        "s12_b2_badge": {
           "de": "DECKFILZ-LAGER",
           "en": "TOP-FELT STORAGE",
           "ja": "フェルト原反保管庫",
           "zh": "面毡恒湿库"
         },
-        "s11_caption_1": {
+        "s12_caption_1": {
           "de": "Drohnenflug durch das klimatisierte Plattenlager in Meuselwitz",
           "en": "Drone flight through the climate-controlled felt sheet storage in Meuselwitz",
           "ja": "モイゼルヴィッツの空調フェルト原反保管庫（ドローン映像）",
           "zh": "无人机飞越莫伊塞尔维茨恒温恒湿原毡库"
         },
-        "s11_uf_b1": {
+        "s12_uf_b1": {
           "de": "KLASSIKER",
           "en": "CLASSIC",
           "ja": "定番色",
           "zh": "经典标志"
         },
-        "s11_uf_t1": {
+        "s12_uf_t1": {
           "de": "Rot & Weinrot",
           "en": "Red & Wine Red",
           "ja": "レッド＆ワインレッド",
           "zh": "正红与酒红"
         },
-        "s11_uf_d1": {
+        "s12_uf_d1": {
           "de": "Traditionelle Renner-Kennfarben für europäische Konzert- und Markenflügel.",
           "en": "Traditional Renner signature colors for European concert and prestige grands.",
           "ja": "欧州のコンサートグランドや名門ブランドで定番のレンナー伝統色。",
           "zh": "欧洲音乐会三角琴及知名钢琴品牌广泛采用的雷诺标志配色。"
         },
-        "s11_uf_b2": {
+        "s12_uf_b2": {
           "de": "HISTORIE & KONZERT",
           "en": "HERITAGE & CONCERT",
           "ja": "伝統・修復用",
           "zh": "历史与音乐会"
         },
-        "s11_uf_t2": {
+        "s12_uf_t2": {
           "de": "Orange",
           "en": "Orange",
           "ja": "オレンジ",
           "zh": "橙色"
         },
-        "s11_uf_d2": {
+        "s12_uf_d2": {
           "de": "Klassische Ausstattung für Konzertinstrumente und originalgetreue Überholungen.",
           "en": "Classic specification for concert instruments and period-authentic restorations.",
           "ja": "クラシックなコンサート楽器や歴史的銘器の忠実な修復に用いられる色調。",
           "zh": "常用于经典音乐会钢琴及原貌级古董钢琴修复。"
         },
-        "s11_uf_b3": {
+        "s12_uf_b3": {
           "de": "MANUFAKTUREN",
           "en": "MANUFACTORIES",
           "ja": "伝統工房色",
           "zh": "名厂传统"
         },
-        "s11_uf_t3": {
+        "s12_uf_t3": {
           "de": "Gelb",
           "en": "Yellow",
           "ja": "イエロー",
           "zh": "黄色"
         },
-        "s11_uf_d3": {
+        "s12_uf_d3": {
           "de": "Traditionsfarbe zahlreicher sächsischer und Wiener Klavierbauer.",
           "en": "Heritage underfelt color of renowned Saxon and Viennese piano makers.",
           "ja": "ザクセンおよびウィーンの名門ピアノ工房で受け継がれる伝統カラー。",
           "zh": "众多萨克森与维也纳传统钢琴制造名厂的经典底毡色。"
         },
-        "s11_uf_b4": {
+        "s12_uf_b4": {
           "de": "MARKEN & SONDERFARBEN",
           "en": "MARQUES & CUSTOM",
           "ja": "ブランド＆特注色",
           "zh": "品牌与定制色彩"
         },
-        "s11_uf_t4": {
+        "s12_uf_t4": {
           "de": "Blau, Schwarz & Wunsch",
           "en": "Blue, Black & Custom",
           "ja": "ブルー・ブラック＆特注",
           "zh": "蓝、黑及专属定制色"
         },
-        "s11_uf_d4": {
+        "s12_uf_d4": {
           "de": "Klassisches Blau (z. B. C. Bechstein), Schwarz sowie kundenspezifische Färbungen.",
           "en": "Classic blue (e.g., C. Bechstein), sleek black, plus bespoke customer dyeings.",
           "ja": "ベヒシュタイン等のクラシックブルー、ブラック、さらに顧客別特注色に対応。",
           "zh": "经典蓝色（如 C. Bechstein）、现代黑色，并支持客户专属定制染色。"
         },
-        "s11_uf_b5": {
+        "s12_uf_b5": {
           "de": "6 STANDARDFARBEN + WUNSCH",
           "en": "6 STANDARD + CUSTOM COLORS",
           "ja": "標準6色＋特注カラー",
           "zh": "6种标准色 + 专属定制"
         },
-        "s11_caption_2": {
+        "s12_caption_2": {
           "de": "Unterfilz-Lagerbestand in Meuselwitz – Sonderfarben auf Kundenwunsch",
           "en": "Underfelt stock in Meuselwitz – custom colors available on request",
           "ja": "モイゼルヴィッツのアンダーフェルト在庫 — 特注色にも対応",
@@ -2246,14 +2439,14 @@
         }
       },
       "notes": {
-        "de": "Folie 11: Auftakt der Fertigung in Meuselwitz mit dem gesamten Filzsortiment: Über 30 klimatisierte konische Deckfilz-Plattensorten (FFW & Weickert) sowie 6 Unterfilz-Standardfarben (Rot, Weinrot, Orange, Gelb, Blau, Schwarz) inklusive kundenspezifischer Sonderfärbungen.",
-        "en": "Slide 11: Opening hammerhead production in Meuselwitz with the full felt assortment: over 30 climate-seasoned tapered top-felt grades (FFW & Weickert) alongside 6 standard underfelt colors plus custom OEM dyeings.",
-        "ja": "スライド 11: モイゼルヴィッツ製造ラインの冒頭として、30種以上の空調熟成トップフェルト原反と、標準6色＋特注対応のアンダーフェルト体系を一望します。",
-        "zh": "第 11 页：莫伊塞尔维茨制造开篇展示完整毛毡储备：逾30种恒湿熟成锥形面毡配方，以及红、酒红、橙、黄、蓝、黑6种标准底毡色彩与定制染色。"
+        "de": "Folie 12: Auftakt der Fertigung in Meuselwitz mit dem gesamten Filzsortiment: Über 30 klimatisierte konische Deckfilz-Plattensorten (FFW & Weickert) sowie 6 Unterfilz-Standardfarben (Rot, Weinrot, Orange, Gelb, Blau, Schwarz) inklusive kundenspezifischer Sonderfärbungen.",
+        "en": "Slide 12: Opening hammerhead production in Meuselwitz with the full felt assortment: over 30 climate-seasoned tapered top-felt grades (FFW & Weickert) alongside 6 standard underfelt colors plus custom OEM dyeings.",
+        "ja": "スライド 12: モイゼルヴィッツ製造ラインの冒頭として、30種以上の空調熟成トップフェルト原反と、標準6色＋特注対応のアンダーフェルト体系を一望します。",
+        "zh": "第 12 页：莫伊塞尔维茨制造开篇展示完整毛毡储备：逾30种恒湿熟成锥形面毡配方，以及红、酒红、橙、黄、蓝、黑6种标准底毡色彩与定制染色。"
       }
     },
-    "slide_12": {
-      "slide_number": 12,
+    "slide_13": {
+      "slide_number": 13,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -2280,157 +2473,157 @@
         "zh": "传承1903年乌尔岑配方：实现56%最高缩绒密度与更高天然残脂率"
       },
       "elements": {
-        "s12_kpi": {
+        "s13_kpi": {
           "de": "56 % Verwalkdichte",
           "en": "56% Fulling Density",
           "ja": "縮絨密度 56%",
           "zh": "56% 缩绒密度"
         },
-        "s12_b1_badge": {
+        "s13_b1_badge": {
           "de": "FFW WURZEN × STFI-ANALYSE",
           "en": "FFW WURZEN × STFI LAB REPORT",
           "ja": "FFW × STFI 試験解析",
           "zh": "FFW × STFI 权威检测"
         },
-        "s12_c1_title": {
+        "s13_c1_title": {
           "de": "Höchste Verwalkdichte & geschütztes Keratin",
           "en": "Highest Fulling Density & Protected Keratin",
           "ja": "最高水準の縮絨密度と保護されたケラチン繊維",
           "zh": "最高缩绒密度与受保护的角蛋白纤维"
         },
-        "s12_c1_desc": {
+        "s13_c1_desc": {
           "de": "Schonende Rohwollwäsche und intensives Walken verbinden 56 % Maximaldichte mit erhöhtem Wollfettgehalt (STFI-Prüfbericht P2024 0903).",
           "en": "Gentle wool scouring and intensive fulling unite 56% peak density with elevated wool grease retention (STFI Report P2024 0903).",
           "ja": "穏やかな原毛洗浄と高密度縮絨により、最大密度56%と高い残留羊毛脂を両立（STFI試験報告書 P2024 0903）。",
           "zh": "温和原毛洗净与高强度缩绒相结合，兼具56%最高密度与更高天然残脂率（STFI检测报告 P2024 0903）。"
         },
-        "s12_m1_val": {
+        "s13_m1_val": {
           "de": "56 %",
           "en": "56%",
           "ja": "56%",
           "zh": "56%"
         },
-        "s12_m1_lbl": {
+        "s13_m1_lbl": {
           "de": "Max. Verwalkdichte",
           "en": "Max. Fulling Density",
           "ja": "最大縮絨密度",
           "zh": "最高缩绒密度"
         },
-        "s12_m1_sub": {
+        "s13_m1_sub": {
           "de": "0,56 g/cm³ ohne Härter",
           "en": "0.56 g/cm³ chemical-free",
           "ja": "硬化剤不使用 0.56 g/cm³",
           "zh": "0.56 g/cm³ 纯物理缩绒"
         },
-        "s12_m2_val": {
+        "s13_m2_val": {
           "de": "0,36 %",
           "en": "0.36%",
           "ja": "0.36%",
           "zh": "0.36%"
         },
-        "s12_m2_lbl": {
+        "s13_m2_lbl": {
           "de": "Restfettanteil (ISO 3074)",
           "en": "Residual Grease (ISO 3074)",
           "ja": "残留油脂率 (ISO 3074)",
           "zh": "残脂率 (ISO 3074)"
         },
-        "s12_m2_sub": {
+        "s13_m2_sub": {
           "de": "+38 % ggü. 0,26 % Probe",
           "en": "+38% vs. 0.26% sample",
           "ja": "比較試料(0.26%)比 +38%",
           "zh": "较0.26%对照样高 +38%"
         },
-        "s12_m3_val": {
+        "s13_m3_val": {
           "de": "−65 %",
           "en": "−65%",
           "ja": "−65%",
           "zh": "−65%"
         },
-        "s12_m3_lbl": {
+        "s13_m3_lbl": {
           "de": "Quellung im Klimatest",
           "en": "Climate-Cycle Swelling",
           "ja": "温湿度サイクル膨潤",
           "zh": "交变湿热膨胀率"
         },
-        "s12_m3_sub": {
+        "s13_m3_sub": {
           "de": "4,81 % statt 13,69 %",
           "en": "4.81% vs. 13.69%",
           "ja": "13.69% → わずか 4.81%",
           "zh": "仅4.81%（对照13.69%）"
         },
-        "s12_bullet_1": {
+        "s13_bullet_1": {
           "de": "<strong>56 % Verwalkdichte:</strong> Höchste rein mechanisch erzielte Dichte (0,56 g/cm³) für starke Eigenspannung ohne chemische Härter.",
           "en": "<strong>56% Fulling Density:</strong> Highest purely mechanical density (0.56 g/cm³) for strong internal tension without chemical hardeners.",
           "ja": "<strong>縮絨密度 56%：</strong> 化学硬化剤を使わず純機械縮絨のみで到達する最高密度（0.56 g/cm³）が強い内部張力を形成。",
           "zh": "<strong>56% 最高缩绒密度：</strong> 纯机械缩绒达成的极限密度（0.56 g/cm³），零化学硬化剂即可建立强劲内张力。"
         },
-        "s12_bullet_2": {
+        "s13_bullet_2": {
           "de": "<strong>0,36 % Restfettanteil (ISO 3074):</strong> Schonende Wäsche erhält +38 % mehr natürliches Wollfett (ggü. 0,26 %) als Feuchteschutz.",
           "en": "<strong>0.36% Residual Grease (ISO 3074):</strong> Gentle scouring retains +38% more natural wool wax (vs. 0.26%) as moisture protection.",
           "ja": "<strong>残留油脂率 0.36%（ISO 3074）：</strong> 穏やかな洗浄により天然羊毛脂を38%多く保持（比較試料0.26%）し湿気を防ぐ。",
           "zh": "<strong>0.36% 天然残脂率（ISO 3074）：</strong> 温和洗毛多保留 38% 天然羊毛脂（对照样 0.26%），形成内部防潮屏障。"
         },
-        "s12_bullet_3": {
+        "s13_bullet_3": {
           "de": "<strong>Geprüfte Klimastabilität:</strong> Im 48h-STFI-Wechselklimatest quillt der Filz um 65 % weniger (nur 4,81 % statt 13,69 % Dickenänderung).",
           "en": "<strong>Verified Climate Stability:</strong> In the 48h STFI climate-cycling test, thickness swelling drops by 65% (only 4.81% vs. 13.69%).",
           "ja": "<strong>実証された耐湿安定性：</strong> STFI 48時間温湿度サイクル試験で厚み膨潤を65%抑制（13.69%に対しわずか4.81%）。",
           "zh": "<strong>权威验证气候稳定性：</strong> 在STFI 48小时交变湿热测试中，厚度膨胀率降低65%（仅4.81%，对照样达13.69%）。"
         },
-        "s12_bullet_4": {
+        "s13_bullet_4": {
           "de": "<strong>Intakte Schuppenschicht &amp; Intonation:</strong> Im REM sichtbare Epicuticula-Schuppen sichern hohe Fasertraktion und jahrelang konstante Klangfarbe.",
           "en": "<strong>Intact Cuticle &amp; Voicing Stability:</strong> Epicuticle scales visible under SEM ensure strong fiber traction and lasting tonal consistency.",
           "ja": "<strong>健全な鱗状表皮と整音保持：</strong> SEMで確認できるエピキューティクルが高い繊維牽引力と長期にわたる音色安定性を保証。",
           "zh": "<strong>完整鳞片层与整音保持：</strong> 电镜下清晰可见的表皮鳞片赋予强劲纤维牵引力，确保音色经年持久稳定。"
         },
-        "s12_fact": {
+        "s13_fact": {
           "de": "🔬 Nachweis: Akkreditierter STFI-Prüfbericht P2024 0903 (M. Kermer, ISO 3074 & Klimatest)",
           "en": "🔬 Verified: Accredited STFI Test Report P2024 0903 (M. Kermer, ISO 3074 & Climate Cycle)",
           "ja": "🔬 根拠：STFI公認試験報告書 P2024 0903（M. Kermer、ISO 3074・耐湿サイクル試験）",
           "zh": "🔬 权威依据：STFI认证检测报告 P2024 0903（M. Kermer，ISO 3074 与交变气候测试）"
         },
-        "s12_rem_btn_1x": {
+        "s13_rem_btn_1x": {
           "de": "1× Übersicht (1 mm)",
           "en": "1× Overview (1 mm)",
           "ja": "1× 全体像 (1 mm)",
           "zh": "1× 全景 (1 mm)"
         },
-        "s12_rem_btn_10x": {
+        "s13_rem_btn_10x": {
           "de": "10× Faser-Detail (100 µm)",
           "en": "10× Fiber Detail (100 µm)",
           "ja": "10× 繊維拡大 (100 µm)",
           "zh": "10× 纤维细节 (100 µm)"
         },
-        "s12_rem_btn_22x": {
+        "s13_rem_btn_22x": {
           "de": "22× Schuppen-Zoom",
           "en": "22× Cuticle Zoom",
           "ja": "22× 鱗片ズーム",
           "zh": "22× 鳞片深层放大"
         },
-        "s12_rem_btn_loupe": {
+        "s13_rem_btn_loupe": {
           "de": "🔍 Live-Lupe",
           "en": "🔍 Live Loupe",
           "ja": "🔍 ライブルーペ",
           "zh": "🔍 实时放大镜"
         },
-        "s12_rem_btn_macro": {
+        "s13_rem_btn_macro": {
           "de": "Deckfilz W 1512 K",
           "en": "Felt Strip W 1512 K",
           "ja": "トップフェルト帯 W 1512 K",
           "zh": "面毡条 W 1512 K"
         },
-        "s12_rem_reticle": {
+        "s13_rem_reticle": {
           "de": "10× Detailfenster (414 µm)",
           "en": "10× Detail Frame (414 µm)",
           "ja": "10× 拡大視野枠 (414 µm)",
           "zh": "10× 细节视野框 (414 µm)"
         },
-        "s12_b2_badge": {
+        "s13_b2_badge": {
           "de": "STFI • REM",
           "en": "STFI • SEM",
           "ja": "STFI • SEM",
           "zh": "STFI • 电镜"
         },
-        "s12_caption_1": {
+        "s13_caption_1": {
           "de": "REM-Übersicht (STFI Mik59_24 • 1 mm): Hochverdichteter 3D-Faserverbund mit 56 % maximaler Verwalkdichte.",
           "en": "SEM Overview (STFI Mik59_24 • 1 mm): Ultra-dense 3D fiber interlock with 56% maximum fulling density.",
           "ja": "SEM全体像 (STFI Mik59_24 • 1 mm)：最大縮絨密度56%を誇る高密度3次元メリノ繊維ネットワーク。",
@@ -2438,14 +2631,14 @@
         }
       },
       "notes": {
-        "de": "Folie 12: Weickert Special erzielt mit 56 % die höchste rein mechanisch erreichbare Verwalkdichte im Hammerkopffilz. Laut akkreditiertem STFI-Untersuchungsbericht P2024 0903 (Hr. Kermer, Juni 2024) bewahrt die schonende Rohwollwäsche einen höheren Restfettanteil von 0,36 % gegenüber 0,26 % (+38 % nach ISO 3074). Dadurch sinkt das Quellverhalten im 48h-Wechselklimatest um 65 % (nur 4,81 % statt 13,69 % Dickenänderung). Nutzen Sie den interaktiven REM-Zoom rechts, um stufenlos vom 1-mm-Faserverbund in die 100-µm-Einzelfasern und bis 25× auf die intakte Schuppenschicht hineinzuzoomen.",
-        "en": "Slide 12: Weickert Special achieves the highest purely mechanical fulling density of 56%. Per accredited STFI test report P2024 0903 (M. Kermer, June 2024), gentle scouring retains a higher residual wool grease content of 0.36% vs. 0.26% (+38%, ISO 3074), cutting humidity-cycle thickness swelling by 65% (only 4.81% vs. 13.69%). Use the interactive SEM zoom on the right to zoom smoothly from the 1 mm fiber network into the 100 µm single fibers and up to 25× onto the intact cuticle scales.",
-        "ja": "スライド 12: ヴァイケルト・スペシャルは純機械縮絨による最高縮絨密度56%を達成します。STFI公認試験報告書 P2024 0903（M. Kermer、2024年6月）により、残留油脂率は0.36%（比較試料0.26%に対し+38%、ISO 3074）と高く、48時間温湿度サイクル試験での厚み膨潤が65%低減（13.69%→4.81%）することが実証されています。右側のインタラクティブSEMビューアで1 mm全体像から100 µm単繊維・鱗状表皮まで拡大できます。",
-        "zh": "第 12 页：Weickert Special 实现了高达 56% 的纯物理最高缩绒密度。根据 STFI 权威检测报告 P2024 0903（M. Kermer，2024年6月），温和洗毛保留了更高的天然残脂率（0.36% 对比 0.26%，提高 38%，ISO 3074），使 48 小时交变湿热测试中的厚度膨胀率大幅降低 65%（仅 4.81%，对照样达 13.69%）。可通过右侧交互式电镜缩放器从 1 mm 纤维网络无级放大至 100 µm 单根纤维及表皮鳞片。"
+        "de": "Folie 13: Weickert Special erzielt mit 56 % die höchste rein mechanisch erreichbare Verwalkdichte im Hammerkopffilz. Laut akkreditiertem STFI-Untersuchungsbericht P2024 0903 (Hr. Kermer, Juni 2024) bewahrt die schonende Rohwollwäsche einen höheren Restfettanteil von 0,36 % gegenüber 0,26 % (+38 % nach ISO 3074). Dadurch sinkt das Quellverhalten im 48h-Wechselklimatest um 65 % (nur 4,81 % statt 13,69 % Dickenänderung). Nutzen Sie den interaktiven REM-Zoom rechts, um stufenlos vom 1-mm-Faserverbund in die 100-µm-Einzelfasern und bis 25× auf die intakte Schuppenschicht hineinzuzoomen.",
+        "en": "Slide 13: Weickert Special achieves the highest purely mechanical fulling density of 56%. Per accredited STFI test report P2024 0903 (M. Kermer, June 2024), gentle scouring retains a higher residual wool grease content of 0.36% vs. 0.26% (+38%, ISO 3074), cutting humidity-cycle thickness swelling by 65% (only 4.81% vs. 13.69%). Use the interactive SEM zoom on the right to zoom smoothly from the 1 mm fiber network into the 100 µm single fibers and up to 25× onto the intact cuticle scales.",
+        "ja": "スライド 13: ヴァイケルト・スペシャルは純機械縮絨による最高縮絨密度56%を達成します。STFI公認試験報告書 P2024 0903（M. Kermer、2024年6月）により、残留油脂率は0.36%（比較試料0.26%に対し+38%、ISO 3074）と高く、48時間温湿度サイクル試験での厚み膨潤が65%低減（13.69%→4.81%）することが実証されています。右側のインタラクティブSEMビューアで1 mm全体像から100 µm単繊維・鱗状表皮まで拡大できます。",
+        "zh": "第 13 页：Weickert Special 实现了高达 56% 的纯物理最高缩绒密度。根据 STFI 权威检测报告 P2024 0903（M. Kermer，2024年6月），温和洗毛保留了更高的天然残脂率（0.36% 对比 0.26%，提高 38%，ISO 3074），使 48 小时交变湿热测试中的厚度膨胀率大幅降低 65%（仅 4.81%，对照样达 13.69%）。可通过右侧交互式电镜缩放器从 1 mm 纤维网络无级放大至 100 µm 单根纤维及表皮鳞片。"
       }
     },
-    "slide_13": {
-      "slide_number": 13,
+    "slide_14": {
+      "slide_number": 14,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -2472,97 +2665,97 @@
         "zh": "1 mm 公差机器人自动分切与入模压制前的精密轮廓铣削"
       },
       "elements": {
-        "s13_kpi_1": {
+        "s14_kpi_1": {
           "de": "≤ 1 mm Toleranz",
           "en": "≤ 1 mm Tolerance",
           "ja": "公差 ≤ 1 mm",
           "zh": "公差 ≤ 1 mm"
         },
-        "s13_b1_badge": {
+        "s14_b1_badge": {
           "de": "01 • 6-ACHS-ROBOTIK",
           "en": "01 • 6-AXIS ROBOTICS",
           "ja": "01 • 6軸ロボット",
           "zh": "01 • 六轴机器人"
         },
-        "s13_c1_title": {
+        "s14_c1_title": {
           "de": "Robotischer Deckfilz-Zuschnitt",
           "en": "Robotic Top-Felt Cutting",
           "ja": "ロボットによるトップフェルト裁断",
           "zh": "机器人面毡条分切"
         },
-        "s13_bullet_1": {
+        "s14_bullet_1": {
           "de": "<strong>Streifenschnitt auf 1 mm:</strong> 6-Achs-Roboter teilt die gereiften konischen Filzplatten verzugsfrei über die gesamte Breite.",
           "en": "<strong>1 mm Strip Cutting:</strong> 6-axis robot divides seasoned tapered felt sheets distortion-free across the full width.",
           "ja": "<strong>公差1 mmの帯裁断：</strong> 6軸ロボットが熟成済みテーパー原反を全幅にわたり歪みなく分割。",
           "zh": "<strong>1 mm 精密分条：</strong> 六轴机器人将熟成锥形毛毡板在全宽范围内无变形等宽分切。"
         },
-        "s13_bullet_2": {
+        "s14_bullet_2": {
           "de": "<strong>Kaltschnitt ohne Quetschung:</strong> Scharfe Klingen trennen die Merinofasern glatt und ohne thermische Einwirkung.",
           "en": "<strong>Crush-Free Cold Cut:</strong> Sharp blades part the Merino fibers cleanly without thermal glazing or edge compression.",
           "ja": "<strong>無圧縮コールドカット：</strong> 鋭利な専用刃が熱変性や繊維潰れを起こさず平滑に切断。",
           "zh": "<strong>无挤压冷切：</strong> 锋利刀片平滑分离美利奴羊毛纤维，绝无热损伤或边缘压溃。"
         },
-        "s13_bullet_3": {
+        "s14_bullet_3": {
           "de": "<strong>Inline-Chargencodierung:</strong> Eindeutige Platten- und Auftragsnummer auf jedem Streifen für lückenlose Rückverfolgbarkeit.",
           "en": "<strong>Inline Batch Coding:</strong> Sheet and order IDs marked directly on every strip for complete traceability.",
           "ja": "<strong>インラインロット印字：</strong> 裁断と同時に原反・製造番号を記録し完全な履歴管理を実現。",
           "zh": "<strong>在线批次赋码：</strong> 每条面毡同步标记原板号与订单号，实现全流程可追溯。"
         },
-        "s13_b2_badge": {
+        "s14_b2_badge": {
           "de": "DECKFILZ • 6-ACHS-SCHNITT",
           "en": "TOP FELT • 6-AXIS CUT",
           "ja": "トップフェルト • 6軸裁断",
           "zh": "面毡 • 六轴裁切"
         },
-        "s13_caption_1": {
+        "s14_caption_1": {
           "de": "6-Achs-Roboter beim verzugsfreien Schneiden der Deckfilzstreifen",
           "en": "6-axis robot performing distortion-free top-felt strip cutting",
           "ja": "歪みなくトップフェルト帯を自動裁断する6軸ロボット",
           "zh": "六轴机器人无变形分切面毡条实拍"
         },
-        "s13_kpi_2": {
+        "s14_kpi_2": {
           "de": "± 0,1 mm Toleranz",
           "en": "± 0.1 mm Tolerance",
           "ja": "公差 ±0.1 mm",
           "zh": "公差 ±0.1 mm"
         },
-        "s13_b3_badge": {
+        "s14_b3_badge": {
           "de": "02 • PROFILFRÄSUNG",
           "en": "02 • PROFILE MILLING",
           "ja": "02 • 専用フライス加工",
           "zh": "02 • 轮廓铣削"
         },
-        "s13_c2_title": {
+        "s14_c2_title": {
           "de": "Profilfräsen des Unterfilzes",
           "en": "Underfelt Profile Milling",
           "ja": "アンダーフェルトのプロファイル切削",
           "zh": "底毡轮廓铣削"
         },
-        "s13_bullet_4": {
+        "s14_bullet_4": {
           "de": "<strong>Elastisches Bindeglied:</strong> Formgefräster Unterfilz überträgt den Anschlagimpuls vom harten Holzkern kontrolliert in den Deckfilz.",
           "en": "<strong>Elastic Coupling Bridge:</strong> Contour-milled underfelt transfers strike energy smoothly from the rigid hammer moulding into the top felt.",
           "ja": "<strong>弾性カップリング層：</strong> 成形加工されたアンダーフェルトが木芯の打弦エネルギーを外層へ的確に伝達。",
           "zh": "<strong>弹性耦合桥梁：</strong> 轮廓铣削底毡将击弦冲量由坚硬实木槌芯平顺传导至外层面毡。"
         },
-        "s13_bullet_5": {
+        "s14_bullet_5": {
           "de": "<strong>Ausgefräste Schenkel (± 0,1 mm):</strong> Auf ± 0,1 mm genau gefräste Enden ermöglichen eine nahtlos geschlossene Hammerkontur bis in den Diskant.",
           "en": "<strong>Feathered Tails (± 0.1 mm):</strong> Ends milled to a ± 0.1 mm tolerance ensure a seamlessly closed hammer contour right into the high treble.",
           "ja": "<strong>薄く削り出した裾部（±0.1 mm）：</strong>±0.1 mmの公差で精密に切削された先端により、高音域まで継ぎ目のないハンマー輪郭を実現します。",
           "zh": "<strong>精密削薄尾部（±0.1 mm）：</strong>以 ±0.1 mm 公差精密铣削收薄的两端确保直至高音区都能形成无缝闭合的榔头轮廓。"
         },
-        "s13_bullet_6": {
+        "s14_bullet_6": {
           "de": "<strong>Symmetrischer Schließdruck:</strong> Das abgestimmte Keilprofil verteilt die Presskraft gleichmäßig in beide Hammerflanken.",
           "en": "<strong>Balanced Press Load:</strong> The calibrated wedge contour distributes jaw pressure evenly across both hammer flanks.",
           "ja": "<strong>均一な型締め圧力：</strong> 計算された楔形断面がプレス圧を左右のフランクへ対称に配分。",
           "zh": "<strong>对称锁模压力：</strong> 精准匹配的楔形截面将压模闭合力均匀分配至两侧槌翼。"
         },
-        "s13_b4_badge": {
+        "s14_b4_badge": {
           "de": "UNTERFILZ • PROFILFRÄSUNG",
           "en": "UNDERFELT • PROFILE MILLING",
           "ja": "アンダーフェルト • 切削工程",
           "zh": "底毡 • 轮廓铣削"
         },
-        "s13_caption_2": {
+        "s14_caption_2": {
           "de": "Ausfräsen des Unterfilzstreifens vor dem Einlegen in die Leimpresse",
           "en": "Contour-milling the underfelt strip before loading into the glue press",
           "ja": "接着プレスへセットする前にアンダーフェルト帯をプロファイル切削",
@@ -2570,14 +2763,14 @@
         }
       },
       "notes": {
-        "de": "Folie 13: Beide Schritte der Filzvorbereitung im Überblick: Oben teilt der 6-Achs-Roboter die gereiften Filzplatten auf 1 mm genau verzugsfrei in chargencodierte Deckfilzstreifen; unten erhält der Unterfilzstreifen sein präzises Keilprofil als elastisches Bindeglied für symmetrischen Pressdruck.",
-        "en": "Slide 13: Overview of both felt preparation stages: above, the 6-axis robot cuts seasoned felt sheets distortion-free to 1 mm with inline batch coding; below, the underfelt strip is profile-milled as an elastic coupling layer for balanced press pressure.",
-        "ja": "スライド 13: フェルト前加工の2工程を統合紹介。上段は6軸ロボットによる公差1 mmの歪みないトップフェルト帯裁断とロット印字、下段は木芯と外層を結び均一なプレス圧を生むアンダーフェルトのプロファイル切削です。",
-        "zh": "第 13 页：集中展示毛毡预处理两大工序：上方六轴机器人以 1 mm 公差无变形分切面毡条并在线赋码；下方对底毡条进行楔形轮廓铣削，构建实木槌芯与面毡间的理想弹性过渡并均衡锁模压力。"
+        "de": "Folie 14: Beide Schritte der Filzvorbereitung im Überblick: Oben teilt der 6-Achs-Roboter die gereiften Filzplatten auf 1 mm genau verzugsfrei in chargencodierte Deckfilzstreifen; unten erhält der Unterfilzstreifen sein präzises Keilprofil als elastisches Bindeglied für symmetrischen Pressdruck.",
+        "en": "Slide 14: Overview of both felt preparation stages: above, the 6-axis robot cuts seasoned felt sheets distortion-free to 1 mm with inline batch coding; below, the underfelt strip is profile-milled as an elastic coupling layer for balanced press pressure.",
+        "ja": "スライド 14: フェルト前加工の2工程を統合紹介。上段は6軸ロボットによる公差1 mmの歪みないトップフェルト帯裁断とロット印字、下段は木芯と外層を結び均一なプレス圧を生むアンダーフェルトのプロファイル切削です。",
+        "zh": "第 14 页：集中展示毛毡预处理两大工序：上方六轴机器人以 1 mm 公差无变形分切面毡条并在线赋码；下方对底毡条进行楔形轮廓铣削，构建实木槌芯与面毡间的理想弹性过渡并均衡锁模压力。"
       }
     },
-    "slide_14": {
-      "slide_number": 14,
+    "slide_15": {
+      "slide_number": 15,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -2604,169 +2797,169 @@
         "zh": "从高密度硬木（鹅耳枥、枫木）与富油科蒂贝木，到年轮细密、极轻量的美国黑胡桃木"
       },
       "elements": {
-        "s14_b1_badge": {
+        "s15_b1_badge": {
           "de": "HARTHOLZ • IDEAL",
           "en": "HARDWOOD • IDEAL",
           "ja": "ハードウッド • 理想材",
           "zh": "硬木 • 理想基准"
         },
-        "s14_c1_title": {
+        "s15_c1_title": {
           "de": "Weißbuche (Hornbeam)",
           "en": "Hornbeam (Weißbuche)",
           "ja": "シデ材 (Hornbeam)",
           "zh": "欧洲鹅耳枥 (Hornbeam)"
         },
-        "s14_c1_desc": {
+        "s15_c1_desc": {
           "de": "Sehr aufwendig in der Trocknung – korrekt getrocknet jedoch ein ideales, homogenes Kernholz.",
           "en": "Very demanding to season—yet once properly dried, an ideal and uniform moulding wood.",
           "ja": "乾燥工程は極めて繊細ですが、適切に乾燥させれば理想的で均質な木芯材となります。",
           "zh": "干燥工艺极为繁复苛刻，但精准干燥后材质均匀致密，是最理想的木芯木材。"
         },
-        "s14_b2_badge": {
+        "s15_b2_badge": {
           "de": "HARTHOLZ • ELASTISCH",
           "en": "HARDWOOD • ELASTIC",
           "ja": "ハードウッド • 高弾性",
           "zh": "硬木 • 富弹性"
         },
-        "s14_c2_title": {
+        "s15_c2_title": {
           "de": "Ahorn (Maple)",
           "en": "Maple (Ahorn)",
           "ja": "メイプル (Maple)",
           "zh": "枫木 (Maple)"
         },
-        "s14_c2_desc": {
+        "s15_c2_desc": {
           "de": "Schweres, teils elastischeres Hartholz – unregelmäßige Zuckereinlagerungen erhöhen jedoch das Streuungsrisiko.",
           "en": "Heavy, often more elastic hardwood—though irregular sugar deposits carry a higher risk of variance.",
           "ja": "重く弾性に富む反面、不規則な糖分沈着により材質のばらつきが生じるリスクがあります。",
           "zh": "同属偏重硬木且更具弹性，但天然不规则糖分沉积会增加材质不均与偏差风险。"
         },
-        "s14_b3_badge": {
+        "s15_b3_badge": {
           "de": "PREMIUM • DISKANT",
           "en": "PREMIUM • TREBLE",
           "ja": "最高級材 • 高音域最適",
           "zh": "顶级木材 • 高音理想"
         },
-        "s14_c3_title": {
+        "s15_c3_title": {
           "de": "Amerikanischer Nussbaum",
           "en": "American Walnut",
           "ja": "アメリカン・ウォルナット",
           "zh": "美国黑胡桃木 (Walnut)"
         },
-        "s14_c3_desc": {
+        "s15_c3_desc": {
           "de": "Hochwertigstes Holz: sehr feine Jahresringe, langfaserig und sehr leicht – ideal für einen brillanten Diskant.",
           "en": "Highest-grade wood: tight growth rings, long-fibered, and very light—ideal for a brilliant treble.",
           "ja": "極めて細かい年輪と長い繊維を持つ超軽量の最高級材。輝かしい高音域に最適です。",
           "zh": "最高等级木材：年轮极细、长纤维且质量极轻，是实现辉煌透亮高音区的最理想之选。"
         },
-        "s14_b4_badge": {
+        "s15_b4_badge": {
           "de": "SPEZIALHOLZ • ÖLHALTIG",
           "en": "SPECIALTY • OIL-RICH",
           "ja": "特殊用途 • 高油分",
           "zh": "特种用材 • 高含油"
         },
-        "s14_c4_title": {
+        "s15_c4_title": {
           "de": "Kotibé (Mahagoni)",
           "en": "Kotibé (Mahogany)",
           "ja": "コティベ (Kotibé)",
           "zh": "科蒂贝木 (Kotibé)"
         },
-        "s14_c4_desc": {
+        "s15_c4_desc": {
           "de": "Durch hohen Ölanteil vergleichsweise schwer – gezielt nur für bestimmte Anwendungen eingesetzt.",
           "en": "Comparatively heavy due to its high natural oil content—suited only for specific applications.",
           "ja": "高い油分含有量により比較的重く、特定の用途に限定して使用されます。",
           "zh": "因天然含油量高而重量偏大，仅针对特定声学与结构需求定向选用。"
         },
-        "s14_b5_badge": {
+        "s15_b5_badge": {
           "de": "FORM B · US · CSB",
           "en": "FORM B · US · CSB",
           "ja": "FORM B・US・CSB",
           "zh": "B · US · CSB 型"
         },
-        "s14_c5_title": {
+        "s15_c5_title": {
           "de": "Symmetrische Profile",
           "en": "Symmetrical Profiles",
           "ja": "対称プロファイル",
           "zh": "对称截面轮廓"
         },
-        "s14_c5_desc": {
+        "s15_c5_desc": {
           "de": "Steinway & Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster und Sauter.",
           "en": "Steinway & Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster, and Sauter.",
           "ja": "スタインウェイ、ベーゼンドルファー、ベヒシュタイン、ヤマハ、カワイ、シンメル、ブリュートナー等に対応。",
           "zh": "适配施坦威、贝森朵夫、贝希斯坦、雅马哈、卡瓦依、舒密尔、博兰斯勒等主流名琴。"
         },
-        "s14_b6_badge": {
+        "s15_b6_badge": {
           "de": "FORM A",
           "en": "FORM A",
           "ja": "FORM A",
           "zh": "A 型非对称"
         },
-        "s14_c6_title": {
+        "s15_c6_title": {
           "de": "Asymmetrische Profile",
           "en": "Asymmetrical Profiles",
           "ja": "非対称プロファイル",
           "zh": "非对称截面轮廓"
         },
-        "s14_c6_desc": {
+        "s15_c6_desc": {
           "de": "Form A mit versetzter Kernschulter für historische Bechstein-Flügel sowie schlanken Diskant.",
           "en": "Form A with offset moulding shoulder for vintage Bechstein grands and slender treble scale designs.",
           "ja": "オフセット肩形状を持つForm A。歴史的なベヒシュタインや高音部が細身の設計に適合。",
           "zh": "采用偏置肩部设计的 A 型轮廓，专为古董贝希斯坦及纤细高音弦列结构打造。"
         },
-        "s14_tab_profiles": {
+        "s15_tab_profiles": {
           "de": "Profilformen",
           "en": "Profiles",
           "ja": "断面図",
           "zh": "截面轮廓"
         },
-        "s14_tab_wood": {
+        "s15_tab_wood": {
           "de": "Rohholzlager",
           "en": "Timber Stock",
           "ja": "コア原材",
           "zh": "木坯库存"
         },
-        "s14_b7_badge": {
+        "s15_b7_badge": {
           "de": "PROFILZEICHNUNGEN",
           "en": "PROFILE DRAWINGS",
           "ja": "断面設計図",
           "zh": "截面工程图"
         },
-        "s14_caption_1": {
+        "s15_caption_1": {
           "de": "Renner Kernholz-Querschnitte: Form A, Form B, Form US und Form CSB",
           "en": "Renner hammer moulding cross-sections: Form A, Form B, Form US, and Form CSB",
           "ja": "レンナー製ウッドコア断面図：Form A・Form B・Form US・Form CSB",
           "zh": "雷诺槌芯标准工程截面：Form A、Form B、Form US 与 Form CSB"
         },
-        "s14_b8_badge": {
+        "s15_b8_badge": {
           "de": "ROHHOLZLAGER",
           "en": "TIMBER STOCK",
           "ja": "厳選コア材在庫",
           "zh": "精选木坯库"
         },
-        "s14_caption_2": {
+        "s15_caption_2": {
           "de": "Selektierte Kernholzleisten – astfrei, geradfaserig & schonend getrocknet",
           "en": "Selected hammer mouldings – knot-free, straight-grained & carefully seasoned",
           "ja": "厳選されたウッドコア材 — 無節・通直木理・精密乾燥済み",
           "zh": "严选榔头木芯条——无节疤、顺直纹理、精密控湿干燥"
         },
-        "s14_d1": {
+        "s15_d1": {
           "de": "Schwer • Formstabil",
           "en": "Heavy • Stable",
           "ja": "高比重 • 高安定",
           "zh": "偏重 • 极稳定"
         },
-        "s14_d2": {
+        "s15_d2": {
           "de": "Schwer • Selektiert",
           "en": "Heavy • Selected",
           "ja": "高比重 • 厳選材",
           "zh": "偏重 • 需严选"
         },
-        "s14_d3": {
+        "s15_d3": {
           "de": "Sehr leicht • Feinjährig",
           "en": "Very Light • Fine-Grained",
           "ja": "超軽量 • 極細年輪",
           "zh": "极轻量 • 细密年轮"
         },
-        "s14_d4": {
+        "s15_d4": {
           "de": "Schwer • Spezial",
           "en": "Heavy • Specialty",
           "ja": "高比重 • 特定用途",
@@ -2774,14 +2967,14 @@
         }
       },
       "notes": {
-        "de": "Folie 14: Die vier Renner-Kernhölzer im Vergleich: Weißbuche und Ahorn bilden die schweren Harthölzer – Weißbuche ist sehr aufwendig in der Trocknung, bei korrekter Trocknung aber ein ideales Kernholz; Ahorn kann elastischer sein, birgt durch unregelmäßige Zuckereinlagerungen jedoch höhere Abweichungsrisiken. Das eingesetzte Kotibé zählt durch seinen hohen Ölanteil ebenfalls zu den schwereren Hölzern und dient gezielten Spezialanwendungen. Das hochwertigste Holz ist feinjähriger, langfaseriger amerikanischer Nussbaum: extrem leicht und ideal für einen brillanten Diskant. Unten die symmetrischen Profile B, US, CSB sowie das asymmetrische Profil Form A.",
-        "en": "Slide 14: Comparison of the four Renner hammer moulding woods: Hornbeam and Maple are heavy hardwoods—Hornbeam is very demanding to season, yet ideal once properly dried; Maple can be more elastic, though irregular sugar deposits increase variance risks. Renner’s oil-rich Kotibé is likewise comparatively heavy and reserved for specific applications. Fine-grained, long-fibered American Walnut is the highest-grade tonewood: very light and ideal for a brilliant treble. Below: symmetrical profiles B, US, CSB and asymmetrical Form A.",
-        "ja": "スライド14：レンナーの4種の木芯材。シデとメイプルは高比重のハードウッド（シデは乾燥が極めて難しいものの適切に乾燥させれば理想的。メイプルは弾性に富む反面、不規則な糖分沈着による個体差リスクがある）。油分を多く含むコティベも重く特定用途向け。最高級材は緻密な年輪と長繊維を持つ超軽量のアメリカンウォルナットで、輝かしい高音域（ディスカント）に最適。下段は対称形状（Form B, US, CSB）と非対称形状（Form A）。",
-        "zh": "第14页：雷诺四种木芯木材对比：鹅耳枥与枫木同属偏重硬木——鹅耳枥干燥工艺极为苛刻，但干燥得当后是最理想的木芯材；枫木弹性更佳，但因不规则糖分沉积更易产生偏差。雷诺选用的科蒂贝木因天然含油量高同样偏重，仅用于特定用途。最高等级的木材是年轮极其细密、长纤维且极轻的美国黑胡桃木，是塑造辉煌高音区的理想之选。下方为对称截面（B、US、CSB）与非对称截面（Form A）。"
+        "de": "Folie 15: Die vier Renner-Kernhölzer im Vergleich: Weißbuche und Ahorn bilden die schweren Harthölzer – Weißbuche ist sehr aufwendig in der Trocknung, bei korrekter Trocknung aber ein ideales Kernholz; Ahorn kann elastischer sein, birgt durch unregelmäßige Zuckereinlagerungen jedoch höhere Abweichungsrisiken. Das eingesetzte Kotibé zählt durch seinen hohen Ölanteil ebenfalls zu den schwereren Hölzern und dient gezielten Spezialanwendungen. Das hochwertigste Holz ist feinjähriger, langfaseriger amerikanischer Nussbaum: extrem leicht und ideal für einen brillanten Diskant. Unten die symmetrischen Profile B, US, CSB sowie das asymmetrische Profil Form A.",
+        "en": "Slide 15: Comparison of the four Renner hammer moulding woods: Hornbeam and Maple are heavy hardwoods—Hornbeam is very demanding to season, yet ideal once properly dried; Maple can be more elastic, though irregular sugar deposits increase variance risks. Renner’s oil-rich Kotibé is likewise comparatively heavy and reserved for specific applications. Fine-grained, long-fibered American Walnut is the highest-grade tonewood: very light and ideal for a brilliant treble. Below: symmetrical profiles B, US, CSB and asymmetrical Form A.",
+        "ja": "スライド 15：レンナーの4種の木芯材。シデとメイプルは高比重のハードウッド（シデは乾燥が極めて難しいものの適切に乾燥させれば理想的。メイプルは弾性に富む反面、不規則な糖分沈着による個体差リスクがある）。油分を多く含むコティベも重く特定用途向け。最高級材は緻密な年輪と長繊維を持つ超軽量のアメリカンウォルナットで、輝かしい高音域（ディスカント）に最適。下段は対称形状（Form B, US, CSB）と非対称形状（Form A）。",
+        "zh": "第 15 页：雷诺四种木芯木材对比：鹅耳枥与枫木同属偏重硬木——鹅耳枥干燥工艺极为苛刻，但干燥得当后是最理想的木芯材；枫木弹性更佳，但因不规则糖分沉积更易产生偏差。雷诺选用的科蒂贝木因天然含油量高同样偏重，仅用于特定用途。最高等级的木材是年轮极其细密、长纤维且极轻的美国黑胡桃木，是塑造辉煌高音区的理想之选。下方为对称截面（B、US、CSB）与非对称截面（Form A）。"
       }
     },
-    "slide_15": {
-      "slide_number": 15,
+    "slide_16": {
+      "slide_number": 16,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -2808,145 +3001,145 @@
         "zh": "从低音约 15 g 经 −1 g 过渡阶跃至高音 5 g：接触时间与琴弦振幅的最佳平衡"
       },
       "elements": {
-        "s15_tab_all": {
+        "s16_tab_all": {
           "de": "🎹 Alle Register",
           "en": "🎹 All Registers",
           "ja": "🎹 全音域 (15→5 g)",
           "zh": "🎹 全部音区"
         },
-        "s15_tab_bass": {
+        "s16_tab_bass": {
           "de": "① Bass (~15 g)",
           "en": "① Bass (~15 g)",
           "ja": "① 低音域 (~15 g)",
           "zh": "① 低音区 (~15 g)"
         },
-        "s15_tab_break": {
+        "s16_tab_break": {
           "de": "② Übergang (−1 g)",
           "en": "② Break (−1 g)",
           "ja": "② 移行部 (−1 g)",
           "zh": "② 过渡区 (−1 g)"
         },
-        "s15_tab_treble": {
+        "s16_tab_treble": {
           "de": "③ Diskant (bis 5 g)",
           "en": "③ Treble (to 5 g)",
           "ja": "③ 高音域 (5 gへ)",
           "zh": "③ 高音区 (至 5 g)"
         },
-        "s15_btn_strike": {
+        "s16_btn_strike": {
           "de": "Anschlag testen",
           "en": "Test Strike",
           "ja": "打弦テスト",
           "zh": "模拟击弦"
         },
-        "s15_b1_badge": {
+        "s16_b1_badge": {
           "de": "ANSCHLAGSPHYSIK",
           "en": "STRIKE PHYSICS",
           "ja": "打弦の物理",
           "zh": "击弦物理学"
         },
-        "s15_phys_title": {
+        "s16_phys_title": {
           "de": "Gleichgewicht am Scheitel: Kontaktzeit τc ↔ Saitenauslenkung",
           "en": "Crown Equilibrium: Contact Time τc ↔ String Deflection",
           "ja": "クラウンでの均衡：接触時間 τc ↔ 弦の振幅",
           "zh": "槌冠动态平衡：接触时间 τc ↔ 琴弦振幅"
         },
-        "s15_phys_hint": {
+        "s16_phys_hint": {
           "de": "Taste A₀–C₈ wählbar",
           "en": "Select key A₀–C₈",
           "ja": "A₀–C₈を選択可能",
           "zh": "点击曲线选键 A₀–C₈"
         },
-        "s15_b2_badge": {
+        "s16_b2_badge": {
           "de": "GRUNDGLEICHGEWICHT",
           "en": "CORE EQUILIBRIUM",
           "ja": "基本バランス原理",
           "zh": "核心平衡原理"
         },
-        "s15_ratio_tag": {
+        "s16_ratio_tag": {
           "de": "Saitengewicht ↔ Hammermasse",
           "en": "String Weight ↔ Hammer Mass",
           "ja": "弦重量 ↔ ハンマー質量",
           "zh": "琴弦重量 ↔ 弦槌质量"
         },
-        "s15_principle_txt": {
+        "s16_principle_txt": {
           "de": "Passen <strong>Saitengewicht</strong> und <strong>Hammerkopfgewicht</strong> zusammen, stehen <strong>Kontaktzeit τc</strong> und <strong>Saitenauslenkung</strong> im idealen Gleichgewicht.",
           "en": "When <strong>string weight</strong> and <strong>hammerhead weight</strong> match, <strong>contact time τc</strong> and <strong>string deflection</strong> reach ideal equilibrium.",
           "ja": "<strong>弦重量</strong>と<strong>ハンマー重量</strong>が適合するとき、<strong>接触時間 τc</strong>と<strong>弦の振幅</strong>が理想的な均衡に達します。",
           "zh": "当<strong>琴弦重量</strong>与<strong>弦槌重量</strong>精准匹配时，<strong>接触时间 τc</strong>与<strong>琴弦振幅</strong>达到理想动态平衡。"
         },
-        "s15_ctrl1_lbl": {
+        "s16_ctrl1_lbl": {
           "de": "1. Register & kritische Übergangszonen",
           "en": "1. Registers & Critical Transition Zones",
           "ja": "1. 音域と3つの難所ゾーンを選択",
           "zh": "1. 音区与三大关键过渡难点"
         },
-        "s15_zbtn_all": {
+        "s16_zbtn_all": {
           "de": "✦ Gesamtregister (15 → 5 g)",
           "en": "✦ Full Scale (15 → 5 g)",
           "ja": "✦ 全音域バランス (15→5 g)",
           "zh": "✦ 全音区总览 (15 → 5 g)"
         },
-        "s15_zbtn_bass": {
+        "s16_zbtn_bass": {
           "de": "① Bass (~15 g lange hoch)",
           "en": "① Bass (~15 g held high)",
           "ja": "① 低音域 (~15 gを高く維持)",
           "zh": "① 低音区 (~15 g长久保持)"
         },
-        "s15_zbtn_break": {
+        "s16_zbtn_break": {
           "de": "② Übergang Cu → Stahl (−1 g)",
           "en": "② Cu → Steel Break (−1 g)",
           "ja": "② 巻線→裸線 (−1 g段差)",
           "zh": "② 铜缠弦→裸钢弦 (−1 g)"
         },
-        "s15_zbtn_treble": {
+        "s16_zbtn_treble": {
           "de": "③ Diskant (2 Okt. bis 5 g)",
           "en": "③ Treble (Last 2 Oct. to 5 g)",
           "ja": "③ 最高音2オクターブ (5 gへ)",
           "zh": "③ 最高音2八度 (至 5 g)"
         },
-        "s15_ctrl2_lbl": {
+        "s16_ctrl2_lbl": {
           "de": "Hammerkopfgewicht simulieren",
           "en": "Simulate Hammerhead Weight",
           "ja": "ハンマー重量バランスを検証",
           "zh": "模拟弦槌配重偏差"
         },
-        "s15_wbtn_light": {
+        "s16_wbtn_light": {
           "de": "🪶 Zu leicht",
           "en": "🪶 Too Light",
           "ja": "🪶 軽すぎる",
           "zh": "🪶 弦槌过轻"
         },
-        "s15_wbtn_opt": {
+        "s16_wbtn_opt": {
           "de": "⚖️ Gleichgewicht",
           "en": "⚖️ Equilibrium",
           "ja": "⚖️ 最適均衡",
           "zh": "⚖️ 最佳平衡"
         },
-        "s15_wbtn_heavy": {
+        "s16_wbtn_heavy": {
           "de": "⚓ Zu schwer",
           "en": "⚓ Too Heavy",
           "ja": "⚓ 重すぎる",
           "zh": "⚓ 弦槌过重"
         },
-        "s15_kpi1_lbl": {
+        "s16_kpi1_lbl": {
           "de": "Kontaktzeit τc",
           "en": "Contact Time τc",
           "ja": "接触時間 τc",
           "zh": "接触时间 τc"
         },
-        "s15_kpi2_lbl": {
+        "s16_kpi2_lbl": {
           "de": "Saitenauslenkung",
           "en": "String Deflection",
           "ja": "弦の振幅",
           "zh": "琴弦振幅"
         },
-        "s15_kpi3_lbl": {
+        "s16_kpi3_lbl": {
           "de": "Abstimmung",
           "en": "Mass Balance",
           "ja": "質量バランス",
           "zh": "配重状态"
         },
-        "s15_b3_badge": {
+        "s16_b3_badge": {
           "de": "✦ GEWICHTSABSTIMMUNG ÜBER ALLE 88 TASTEN",
           "en": "✦ MASS MATCHING ACROSS ALL 88 KEYS",
           "ja": "✦ 全88鍵にわたる弦重量とハンマー重量の均衡",
@@ -2954,14 +3147,14 @@
         }
       },
       "notes": {
-        "de": "Folie 15: Entscheidend für Kontaktzeit τc und Saitenauslenkung ist das Verhältnis von Saitengewicht zu Hammerkopfgewicht. Im Bass startet der Hammerkopf bei ca. 15 g und bleibt über den kupferumsponnenen Bereich möglichst lange hoch (ca. 15–13 g), um die schweren Basssaiten voll auszulenken. Am Übergang auf die blanken Stahlsaiten sinkt das Saitengewicht abrupt – daher folgt hier ein gezielter 1-g-Sprung am Hammerkopf (13 g → 12 g), bevor die Masse in den letzten zwei Oktaven bis C8 auf 5 g ausläuft.",
-        "en": "Slide 15: Equilibrium between string weight and hammerhead weight governs the balance between crown contact time τc and string deflection. The bass hammer starts around 15 g and is held high across the copper-wound section (~15–13 g) to drive heavy bass strings. At the break to plain steel strings, string mass drops sharply, requiring a deliberate 1 g hammer weight step (13 g → 12 g) before tapering down to 5 g at C8.",
-        "ja": "スライド 15：接触時間 τc と弦の振幅のバランスを決めるのは「弦重量」と「ハンマー重量」の比率です。バスハンマーは約15 gから始まり、重い銅巻線を十分に駆動するため低音域全体で高く維持されます（約15〜13 g）。スチール裸線への移行部では弦重量が急減するため意図的に1 gの段差（13 g→12 g）を設け、最高音C8の5 gまで滑らかに軽量化します。",
-        "zh": "第 15 页：决定槌冠接触时间 τc 与琴弦振幅最佳平衡的是“琴弦重量”与“弦槌重量”的配比。低音弦槌从约 15 g 起步，并在整个紫铜缠弦低音区保持高重量（约 15–13 g）以充分驱动重弦；过渡到裸钢弦时琴弦质量骤减，因此弦槌在此精准设置 1 g 减重阶跃（13 g → 12 g），随后平滑递减至最高音 C8 的 5 g。"
+        "de": "Folie 16: Entscheidend für Kontaktzeit τc und Saitenauslenkung ist das Verhältnis von Saitengewicht zu Hammerkopfgewicht. Im Bass startet der Hammerkopf bei ca. 15 g und bleibt über den kupferumsponnenen Bereich möglichst lange hoch (ca. 15–13 g), um die schweren Basssaiten voll auszulenken. Am Übergang auf die blanken Stahlsaiten sinkt das Saitengewicht abrupt – daher folgt hier ein gezielter 1-g-Sprung am Hammerkopf (13 g → 12 g), bevor die Masse in den letzten zwei Oktaven bis C8 auf 5 g ausläuft.",
+        "en": "Slide 16: Equilibrium between string weight and hammerhead weight governs the balance between crown contact time τc and string deflection. The bass hammer starts around 15 g and is held high across the copper-wound section (~15–13 g) to drive heavy bass strings. At the break to plain steel strings, string mass drops sharply, requiring a deliberate 1 g hammer weight step (13 g → 12 g) before tapering down to 5 g at C8.",
+        "ja": "スライド 16：接触時間 τc と弦の振幅のバランスを決めるのは「弦重量」と「ハンマー重量」の比率です。バスハンマーは約15 gから始まり、重い銅巻線を十分に駆動するため低音域全体で高く維持されます（約15〜13 g）。スチール裸線への移行部では弦重量が急減するため意図的に1 gの段差（13 g→12 g）を設け、最高音C8の5 gまで滑らかに軽量化します。",
+        "zh": "第 16 页：决定槌冠接触时间 τc 与琴弦振幅最佳平衡的是“琴弦重量”与“弦槌重量”的配比。低音弦槌从约 15 g 起步，并在整个紫铜缠弦低音区保持高重量（约 15–13 g）以充分驱动重弦；过渡到裸钢弦时琴弦质量骤减，因此弦槌在此精准设置 1 g 减重阶跃（13 g → 12 g），随后平滑递减至最高音 C8 的 5 g。"
       }
     },
-    "slide_16": {
-      "slide_number": 16,
+    "slide_17": {
+      "slide_number": 17,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -2988,61 +3181,61 @@
         "zh": "在胶压机中同步建立外层拉伸张力与内层压缩支撑力"
       },
       "elements": {
-        "s16_kpi": {
+        "s17_kpi": {
           "de": "Toleranz 0,1 mm",
           "en": "0.1 mm Tolerance",
           "ja": "公差 0.1 mm",
           "zh": "公差 0.1 mm"
         },
-        "s16_b1_badge": {
+        "s17_b1_badge": {
           "de": "LEIMPRESSEN",
           "en": "GLUE PRESSING",
           "ja": "高精度接着プレス",
           "zh": "精密胶压机"
         },
-        "s16_c1_title": {
+        "s17_c1_title": {
           "de": "Verpressen in Pressgesenk und temperierten Gegenlagen",
           "en": "Pressing in the Kettle and Heated Side Jaws",
           "ja": "プレス型（ケトル）と加熱ジョーによる精密圧着",
           "zh": "在模腔（Kettle）与温控侧夹板（Jaws）中精密压合"
         },
-        "s16_c1_desc": {
+        "s17_c1_desc": {
           "de": "Präzisions-Leimpressen fügen Deckfilz, Unterfilz und Kernholz exakt reproduzierbar zusammen.",
           "en": "Precision glue presses unite top felt, underfelt, and hammer moulding with repeatable accuracy.",
           "ja": "精密接着プレス機がトップフェルト・アンダーフェルト・木芯を高精度に一体化します。",
           "zh": "精密胶压机将面毡、底毡与实木槌芯高一致性地压合为一体。"
         },
-        "s16_bullet_1": {
+        "s17_bullet_1": {
           "de": "<strong>Fertigungstoleranz 0,1 mm:</strong> Präzise geführte Gegenlagen sichern exakte Maßhaltigkeit über den gesamten Satz.",
           "en": "<strong>0.1 mm Pressing Tolerance:</strong> Precision-guided jaws maintain exact dimensional accuracy across the entire set.",
           "ja": "<strong>加工公差 0.1 mm：</strong>高精度にガイドされたサイドジョーが、全セットにわたり正確な寸法精度を保ちます。",
           "zh": "<strong>0.1 mm 压制公差：</strong>精密导向的侧夹板（Jaws）确保整套榔头尺寸高度一致。"
         },
-        "s16_bullet_2": {
+        "s17_bullet_2": {
           "de": "<strong>Pressgesenk &amp; Gegenlagen:</strong> Der Filz wird nach unten in das Pressgesenk gedrückt; seitlich fahren dann die Gegenlagen zu und pressen den Filz an die Klebefläche.",
           "en": "<strong>Kettle &amp; Side Jaws:</strong> The felt is pressed downward into the kettle; the side jaws then close in and press the felt firmly onto the glue surface.",
           "ja": "<strong>ケトルとサイドジョー：</strong>フェルトを下方のケトル（型）へ押し込んだ後、左右からジョーが閉じてフェルトを接着面へ圧着します。",
           "zh": "<strong>模腔下压与侧夹闭合：</strong>先将毛毡向下压入模腔（Kettle），随后两侧夹板（Jaws）合拢并将毛毡紧压在涂胶面上。"
         },
-        "s16_bullet_3": {
+        "s17_bullet_3": {
           "de": "<strong>Definierte Spannungszonen:</strong> Hohe Zugkraft in der Außenhaut trifft auf einen komprimierten, elastischen Innenkern.",
           "en": "<strong>Defined Stress Zones:</strong> High outer tensile force meets a compressed, resilient inner cushion.",
           "ja": "<strong>明確な応力勾配：</strong> 外層の強い引張応力と内層の弾性圧縮ゾーンを両立。",
           "zh": "<strong>明确应力分区：</strong> 外表皮高拉伸张力与内层高弹压缩区协同作用。"
         },
-        "s16_fact": {
+        "s17_fact": {
           "de": "⚡ Dieses Spannungsgefälle bildet die Grundlage für Dynamik von pp bis ff",
           "en": "⚡ This internal tension gradient underpins dynamic range from pp to ff",
           "ja": "⚡ この内部張力勾配が pp から ff までの広いダイナミクスを生む基盤",
           "zh": "⚡ 这一内部张力梯度奠定了从 pp 到 ff 宽广动态表现的物理基础"
         },
-        "s16_b2_badge": {
+        "s17_b2_badge": {
           "de": "WERKSVIDEO",
           "en": "FACTORY VIDEO",
           "ja": "工場映像",
           "zh": "车间实拍"
         },
-        "s16_caption_1": {
+        "s17_caption_1": {
           "de": "Einpressen in das Pressgesenk und Schließen der Gegenlagen in Meuselwitz",
           "en": "Pressing into the kettle and closing the side jaws in Meuselwitz",
           "ja": "モイゼルヴィッツ工場でのケトル圧入とサイドジョー圧着工程",
@@ -3050,14 +3243,14 @@
         }
       },
       "notes": {
-        "de": "Folie 16: In den Leimpressen fertigt Renner auf 0,1 mm genau. Zunächst wird der Filz nach unten in das Pressgesenk gedrückt; anschließend fahren von der Seite die temperierten Gegenlagen zu und drücken den Filz fest an die Klebefläche des Hammerkerns.",
-        "en": "Slide 16: Renner’s glue presses operate to a 0.1 mm tolerance. First, the felt is pressed downward into the kettle; then the heated side jaws close in from both sides to press the felt firmly onto the glue surface of the hammer moulding.",
-        "ja": "スライド16：レンナーの接着プレスは公差0.1 mmで稼働。まずフェルトを下方のケトル（型）へ押し込み、続いて左右から加熱されたサイドジョーが閉じてウッドコアの接着面へ圧着します。",
-        "zh": "第16页：雷诺胶压机精度达 0.1 mm。首先将毛毡向下压入模腔（Kettle），随后两侧温控夹板（Jaws）合拢并将毛毡牢牢压合在木芯涂胶面上。"
+        "de": "Folie 17: In den Leimpressen fertigt Renner auf 0,1 mm genau. Zunächst wird der Filz nach unten in das Pressgesenk gedrückt; anschließend fahren von der Seite die temperierten Gegenlagen zu und drücken den Filz fest an die Klebefläche des Hammerkerns.",
+        "en": "Slide 17: Renner’s glue presses operate to a 0.1 mm tolerance. First, the felt is pressed downward into the kettle; then the heated side jaws close in from both sides to press the felt firmly onto the glue surface of the hammer moulding.",
+        "ja": "スライド 17：レンナーの接着プレスは公差0.1 mmで稼働。まずフェルトを下方のケトル（型）へ押し込み、続いて左右から加熱されたサイドジョーが閉じてウッドコアの接着面へ圧着します。",
+        "zh": "第 17 页：雷诺胶压机精度达 0.1 mm。首先将毛毡向下压入模腔（Kettle），随后两侧温控夹板（Jaws）合拢并将毛毡牢牢压合在木芯涂胶面上。"
       }
     },
-    "slide_17": {
-      "slide_number": 17,
+    "slide_18": {
+      "slide_number": 18,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -3084,61 +3277,61 @@
         "zh": "0.1 mm 公差木芯铣削、胶压后毛毡余量复铣，以及机器人工作站对每颗榔头的精密校准"
       },
       "elements": {
-        "s17_kpi": {
+        "s18_kpi": {
           "de": "Toleranz 0,1 mm",
           "en": "0.1 mm Tolerance",
           "ja": "公差 0.1 mm",
           "zh": "公差 0.1 mm"
         },
-        "s17_b1_badge": {
+        "s18_b1_badge": {
           "de": "CNC-FRÄSEN & ROBOTER",
           "en": "CNC MILLING & ROBOTICS",
           "ja": "CNC切削 & ロボット校正",
           "zh": "CNC 铣削与机器人校准"
         },
-        "s17_c1_title": {
+        "s18_c1_title": {
           "de": "Zweistufiges CNC-Fräsen & Einzelkopf-Kalibrierung",
           "en": "Two-Stage CNC Milling & Single-Head Calibration",
           "ja": "二段階CNC切削とロボットによる単体キャリブレーション",
           "zh": "两阶段 CNC 铣削与单颗榔头机器人校准"
         },
-        "s17_c1_desc": {
+        "s18_c1_desc": {
           "de": "CNC-Fräsen bearbeiten erst die Hammerkerne und nach dem Leimen den Filzüberstand – danach kalibriert eine Roboteranlage jeden einzelnen Kopf.",
           "en": "CNC mills first shape the hammer mouldings and trim the felt overhang after gluing—before a robotic cell calibrates each individual head.",
           "ja": "CNC機でウッドコア切削と接着後の余剰フェルト追加工を行い、続いてロボットが個々のハンマーヘッドを校正します。",
           "zh": "CNC 机床先加工木芯并在胶压后复铣毛毡余量，随后由机器人系统逐颗校准榔头表面。"
         },
-        "s17_bullet_1": {
+        "s18_bullet_1": {
           "de": "<strong>1. Hammerkerne fräsen (0,1 mm):</strong> Auf den CNC-Fräsen werden zunächst die Hammerkerne mit einer Toleranz von 0,1 mm präzise gefräst.",
           "en": "<strong>1. Moulding Milling (0.1 mm):</strong> CNC milling machines first machine the hammer mouldings to a 0.1 mm tolerance.",
           "ja": "<strong>1. ウッドコア切削（0.1 mm）：</strong>まずCNCフライス盤にて公差0.1 mmの高精度でウッドコアを削り出します。",
           "zh": "<strong>1. 木芯精密铣削（0.1 mm）：</strong>首先在 CNC 铣床上以 0.1 mm 公差精密加工榔头木芯。"
         },
-        "s17_bullet_2": {
+        "s18_bullet_2": {
           "de": "<strong>2. Nachfräsen nach Pressen &amp; Leimen:</strong> Nach dem Verpressen und Verleimen wird der Filzüberstand abgetragen und sauber nachgefräst.",
           "en": "<strong>2. Post-Gluing Trim Milling:</strong> After pressing and gluing, the felt overhang is removed and cleanly finish-milled.",
           "ja": "<strong>2. 接着後の追加工：</strong>プレス・接着後、はみ出したフェルトを除去し輪郭を精密に追加工します。",
           "zh": "<strong>2. 压合涂胶后复铣：</strong>在压制胶合后，切除毛毡多余部分并对轮廓进行干净利落的复铣。"
         },
-        "s17_bullet_3": {
+        "s18_bullet_3": {
           "de": "<strong>3. Roboter-Kalibrierung:</strong> Im Anschluss wird auf einer Roboteranlage jeder einzelne Hammerkopf präzise kalibriert.",
           "en": "<strong>3. Robotic Calibration:</strong> Subsequently, a robotic cell precisely calibrates each individual hammerhead.",
           "ja": "<strong>3. ロボット単体校正：</strong>最後にロボットシステム上で、切り分けられた個々のハンマーヘッドを精密にキャリブレーションします。",
           "zh": "<strong>3. 机器人单颗校准：</strong>随后在自动化机器人工作站上对每一颗独立榔头进行精密表面校准。"
         },
-        "s17_fact": {
+        "s18_fact": {
           "de": "📐 0,1 mm Fräsgenauigkeit kombiniert mit reproduzierbarer Roboter-Kalibrierung am Einzelkopf",
           "en": "📐 0.1 mm CNC accuracy combined with repeatable robotic single-head calibration",
           "ja": "📐 0.1 mmの切削精度とロボットによる均一な単体表面キャリブレーションの融合",
           "zh": "📐 0.1 mm 数控铣削精度与高一致性机器人单颗校准的完美结合"
         },
-        "s17_b2_badge": {
+        "s18_b2_badge": {
           "de": "WERKSVIDEOS",
           "en": "FACTORY VIDEOS",
           "ja": "工場映像",
           "zh": "车间实拍"
         },
-        "s17_caption_1": {
+        "s18_caption_1": {
           "de": "CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage",
           "en": "CNC milling center & subsequent single-head calibration on the robotic system",
           "ja": "CNCマシニングセンタおよびロボット設備による単体キャリブレーション（前後比較）",
@@ -3146,14 +3339,14 @@
         }
       },
       "notes": {
-        "de": "Folie 17: Auf den CNC-Fräsen werden zunächst mit einer Toleranz von 0,1 mm die Hammerkerne gefräst und nach dem Pressen und Leimen der Filzüberstand entfernt sowie die Kontur nachgefräst. Im Anschluss wird jeder einzelne Hammerkopf auf einer Roboteranlage präzise kalibriert.",
-        "en": "Slide 17: On the CNC milling centers, the hammer mouldings are first milled to a 0.1 mm tolerance, and after pressing and gluing, the felt overhang is trimmed and re-milled. Subsequently, each individual hammerhead is precisely calibrated on a robotic cell.",
-        "ja": "スライド17：CNCフライス盤ではまず公差0.1 mmでウッドコアを切削し、プレス・接着後にフェルトのはみ出し除去と輪郭の追加工を行います。その後、ロボットシステムで個々のハンマーヘッドを精密にキャリブレーションします。",
-        "zh": "第17页：在 CNC 铣床上首先以 0.1 mm 公差铣削木芯；压合涂胶后切除毛毡余量并复铣轮廓；随后在机器人自动化设备上对每一颗独立榔头进行精密表面校准。"
+        "de": "Folie 18: Auf den CNC-Fräsen werden zunächst mit einer Toleranz von 0,1 mm die Hammerkerne gefräst und nach dem Pressen und Leimen der Filzüberstand entfernt sowie die Kontur nachgefräst. Im Anschluss wird jeder einzelne Hammerkopf auf einer Roboteranlage präzise kalibriert.",
+        "en": "Slide 18: On the CNC milling centers, the hammer mouldings are first milled to a 0.1 mm tolerance, and after pressing and gluing, the felt overhang is trimmed and re-milled. Subsequently, each individual hammerhead is precisely calibrated on a robotic cell.",
+        "ja": "スライド 18：CNCフライス盤ではまず公差0.1 mmでウッドコアを切削し、プレス・接着後にフェルトのはみ出し除去と輪郭の追加工を行います。その後、ロボットシステムで個々のハンマーヘッドを精密にキャリブレーションします。",
+        "zh": "第 18 页：在 CNC 铣床上首先以 0.1 mm 公差铣削木芯；压合涂胶后切除毛毡余量并复铣轮廓；随后在机器人自动化设备上对每一颗独立榔头进行精密表面校准。"
       }
     },
-    "slide_18": {
-      "slide_number": 18,
+    "slide_19": {
+      "slide_number": 19,
       "chapter": 3,
       "chapter_name": {
         "de": "Teil 3: Hammerkopf-Produktion in Meuselwitz",
@@ -3180,61 +3373,61 @@
         "zh": "精准匹配击弦机几何参数并永久锁定毛毡侧翼"
       },
       "elements": {
-        "s18_kpi": {
+        "s19_kpi": {
           "de": "ø 5,4 mm · Vernietung",
           "en": "ø 5.4 mm · Riveting",
           "ja": "ø 5.4 mm · リベット固定",
           "zh": "ø 5.4 mm · 铆接加固"
         },
-        "s18_b1_badge": {
+        "s19_b1_badge": {
           "de": "ENDBEARBEITUNG",
           "en": "FINAL FINISHING",
           "ja": "最終仕上げ",
           "zh": "终加工工序"
         },
-        "s18_c1_title": {
+        "s19_c1_title": {
           "de": "Anschlussgeometrie für den Hammerstiel",
           "en": "Mounting Geometry for the Hammer Shank",
           "ja": "ハンマーシャンクへの高精度取付加工",
           "zh": "面向槌柄装配的精密接口几何"
         },
-        "s18_c1_desc": {
+        "s19_c1_desc": {
           "de": "Jeder Einzelkopf erhält seine modellspezifische Bohrung und mechanische Sicherung.",
           "en": "Every individual head receives its model-specific bore geometry and mechanical lock.",
           "ja": "各ハンマーヘッドに機種別の穿孔角度と機械的ロックを施します。",
           "zh": "每颗独立弦槌均按琴型规格完成专属角度钻孔与机械锁固。"
         },
-        "s18_bullet_1": {
+        "s19_bullet_1": {
           "de": "<strong>Bohrwinkel-Präzision:</strong> Exakte Tiefe, Durchmesser (z. B. ø 5,4 mm) und individueller Bohrwinkel pro Note.",
           "en": "<strong>Precision Boring Angle:</strong> Exact depth, diameter (e.g., ø 5.4 mm), and individual boring angle per note.",
           "ja": "<strong>精密なボーリング角度：</strong>正確な深さ・穴径（例：ø 5.4 mm）および1音ごとに設定されたボーリング角度。",
           "zh": "<strong>精准钻孔角度：</strong>精确控制孔深、孔径（如 ø 5.4 mm）以及每个音专属的钻孔角度。"
         },
-        "s18_bullet_2": {
+        "s19_bullet_2": {
           "de": "<strong>Vernietung aus Messing:</strong> Sichert die verleimten Filzschenkel dauerhaft gegen Aufgehen unter höchster Konzertlast.",
           "en": "<strong>Brass Riveting:</strong> Permanently locks the bonded felt tails against opening under heavy concert playing.",
           "ja": "<strong>真鍮リベット固定：</strong>過酷なコンサート演奏下でも、接着されたフェルト裾部の開きを永久的に防ぎます。",
           "zh": "<strong>黄铜铆接加固：</strong>在高强度音乐会演奏负荷下，持久锁紧胶合后的毛毡尾部防止张开。"
         },
-        "s18_bullet_3": {
+        "s19_bullet_3": {
           "de": "<strong>Profilierter Hammerschwanz:</strong> Sauber verrundete Radien sorgen für definiertes Greifen am Fängerfilz.",
           "en": "<strong>Radiused Hammer Tail:</strong> Cleanly contoured tail radii ensure reliable checking against the backcheck felt.",
           "ja": "<strong>テールR仕上げ：</strong> 滑らかに丸めたテール形状がバックチェックでの確実な捕捉を実現。",
           "zh": "<strong>槌尾圆角成型：</strong> 顺滑一致的尾部弧度确保档托可靠接槌、防止回弹。"
         },
-        "s18_fact": {
+        "s19_fact": {
           "de": "🔩 Passgenau vorbereitet zum Aufleimen auf die Hammerstiele",
           "en": "🔩 Ready for accurate gluing onto the hammer shanks",
           "ja": "🔩 ハンマーシャンクへの正確な接着取付に即対応",
           "zh": "🔩 尺寸精准匹配，可直接胶合安装于槌柄"
         },
-        "s18_b2_badge": {
+        "s19_b2_badge": {
           "de": "WERKSVIDEO",
           "en": "FACTORY VIDEO",
           "ja": "工場映像",
           "zh": "车间实拍"
         },
-        "s18_caption_1": {
+        "s19_caption_1": {
           "de": "Automatisches Bohren und Setzen der Messingnieten",
           "en": "Automated shank boring and brass rivet insertion",
           "ja": "自動シャンク穴あけ加工と真鍮リベットの打ち込み工程",
@@ -3242,14 +3435,14 @@
         }
       },
       "notes": {
-        "de": "Folie 18: Jeder Hammerkopf erhält seine exakte Stielbohrung mit individuellem Bohrwinkel (z. B. ø 5,4 mm) sowie eine automatische Messing-Vernietung zur dauerhaften Sicherung der Filzschenkel.",
-        "en": "Slide 18: Every hammerhead receives its precision shank bore at its individual boring angle (e.g., ø 5.4 mm) along with automated brass riveting to permanently secure the felt tails.",
-        "ja": "スライド18：すべてのハンマーヘッドに対し、各音固有のボーリング角度（例：ø 5.4 mm）による穴あけと、真鍮リベットによる自動カシメ固定を施します。",
-        "zh": "第18页：每颗榔头均按各音专属钻孔角度（如 ø 5.4 mm）精密钻孔，并通过全自动黄铜铆接永久锁固毛毡尾部。"
+        "de": "Folie 19: Jeder Hammerkopf erhält seine exakte Stielbohrung mit individuellem Bohrwinkel (z. B. ø 5,4 mm) sowie eine automatische Messing-Vernietung zur dauerhaften Sicherung der Filzschenkel.",
+        "en": "Slide 19: Every hammerhead receives its precision shank bore at its individual boring angle (e.g., ø 5.4 mm) along with automated brass riveting to permanently secure the felt tails.",
+        "ja": "スライド 19：すべてのハンマーヘッドに対し、各音固有のボーリング角度（例：ø 5.4 mm）による穴あけと、真鍮リベットによる自動カシメ固定を施します。",
+        "zh": "第 19 页：每颗榔头均按各音专属钻孔角度（如 ø 5.4 mm）精密钻孔，并通过全自动黄铜铆接永久锁固毛毡尾部。"
       }
     },
-    "slide_19": {
-      "slide_number": 19,
+    "slide_20": {
+      "slide_number": 20,
       "chapter": 4,
       "chapter_name": {
         "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
@@ -3716,8 +3909,8 @@
         "zh": "第 20 页：重点阐述核心技术突破：历经五年研发的专有测量与制造系统，使雷诺弦槌出厂即精准标定于目标声学频谱，在全新或现役雅马哈 C1–C3 上无需预整音即可呈现温暖饱满的音乐会音色。配合单螺丝原位安装、天然皮骨胶刚性粘接与高张力皮滚，将原本需 3–7 天的工坊大修缩短为现场 4–5 小时的高可靠交付。"
       }
     },
-    "slide_20": {
-      "slide_number": 20,
+    "slide_21": {
+      "slide_number": 21,
       "chapter": 4,
       "chapter_name": {
         "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
@@ -3812,8 +4005,8 @@
         }
       }
     },
-    "slide_21": {
-      "slide_number": 21,
+    "slide_22": {
+      "slide_number": 22,
       "chapter": 4,
       "chapter_name": {
         "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
@@ -3908,8 +4101,8 @@
         }
       }
     },
-    "slide_22": {
-      "slide_number": 22,
+    "slide_23": {
+      "slide_number": 23,
       "category": {
         "de": "Teil 4: Yamaha Kit • Akustik-Analyse (1/3)",
         "en": "Part 4: Yamaha Kit • Acoustic Analysis (1/3)",
@@ -4076,8 +4269,8 @@
         "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1–C3）"
       }
     },
-    "slide_23": {
-      "slide_number": 23,
+    "slide_24": {
+      "slide_number": 24,
       "category": {
         "de": "Teil 4: Yamaha Kit • Akustik-Analyse (2/3)",
         "en": "Part 4: Yamaha Kit • Acoustic Analysis (2/3)",
@@ -4268,8 +4461,8 @@
         "zh": "第四部分：德国雷诺雅马哈定制升级套件（C1–C3）"
       }
     },
-    "slide_24": {
-      "slide_number": 24,
+    "slide_25": {
+      "slide_number": 25,
       "chapter": 4,
       "chapter_name": {
         "de": "Teil 4: Das Louis Renner Yamaha Kit (C1–C3)",
@@ -4442,8 +4635,8 @@
         "zh": "第 25 页左侧汇总了 Louis Renner 雅马哈套件的四大实测声学优势（歌唱区 +2.53 dB / +79%、高音辉煌感 +1.87 dB / +54%、低音清晰度去浑 −3.28 dB，以及斜率平缓 +0.93 dB/kHz 与波峰提升 +0.42 dB）。右侧展示全动态范围（pp–ff）频谱斜率散点回归图与上限至钢琴最高音 C8（4,186 Hz / 最大 4,300 Hz）的实时计算器。"
       }
     },
-    "slide_25": {
-      "slide_number": 25,
+    "slide_26": {
+      "slide_number": 26,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4622,8 +4815,8 @@
         "zh": "第 26 页（第五部分整音开篇）：以低音 A₁（55 Hz，有效弦长 L = 1,560 mm）为例，交互演示钢琴音色由 H₁–H₁₂ 泛音构成的物理本质。首先演示弦槌软硬度：针刺柔化延长接触时间 τc（约 3.8 ms），以分贝（dB）为单位衰减高次泛音；高密硬槌（τc 约 1.3 ms）则大幅拉升高频泛音。随后演示杨-亥姆霍兹击弦点定律：在 1/8 L 或 1/7 L 处击弦可在波节处精准抑制不协和的 H₇（自然七度）与 H₉（大二度），同时保留决定歌唱色彩的大三度 H₅（1/5 L）。"
       }
     },
-    "slide_26": {
-      "slide_number": 26,
+    "slide_27": {
+      "slide_number": 27,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -4826,8 +5019,8 @@
         "zh": "第 27 页：先从“1. 克里斯托弗里皮包纸卷 (1700)”切入：鹿皮包裹的中空羊皮纸圆筒利用圆周表面张力，零内部死重即可产生高回弹力与极短接触时间 τc。随后切换至“2. 雷诺复合张力弹簧弦槌”：槌冠压实度最高，至最宽侧翼递减为一半（½），并由胶水与铆钉锚固于木芯。通过四组三档开关直观演示：槌冠或槌肩过硬会丧失 pp，而弹性不足或槌肩锁死侧翼则会拉长 τc、导致无法奏出通透的 ff。"
       }
     },
-    "slide_27": {
-      "slide_number": 27,
+    "slide_28": {
+      "slide_number": 28,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5090,8 +5283,8 @@
         "zh": "第 28 页：首先强调核心准则：针刺整音时始终以毛毡纤维走向为基准，在上部扇区（9:00–3:00）保持垂直于纤维（⊥，90°）平稳压入，分拨而非切断纤维。除蓝、绿、橙、紫四区与 12 点槌冠深层红区禁区外，重点演示第 5 区“铆钉上方 → 朝向侧翼”：从铆钉正上方朝向最宽侧翼施以“少而深”的针刺，可激活下部张力储备，显著提升回弹弹性并增强高频泛音（H₇–H₁₂）。"
       }
     },
-    "slide_28": {
-      "slide_number": 28,
+    "slide_29": {
+      "slide_number": 29,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5294,8 +5487,8 @@
         "zh": "弦槌槌冠与三弦平面的精密对准（第29页）：在动用任何整音针之前，必须确保槌冠与三根同音弦在同一瞬间平行接触。哪怕仅有0.2–0.3 mm的偏斜、弦面高低差或槌冠中凹弦沟，都会造成亚毫秒级的击弦时间差 Δt。在中高次泛音上，这一时间差转化为120°–180°的相位偏移：波峰与波谷正面相消，合成声波坍塌，在泛音列中挖出深深的梳状抵消凹陷。"
       }
     },
-    "slide_29": {
-      "slide_number": 29,
+    "slide_30": {
+      "slide_number": 30,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5432,8 +5625,8 @@
         "zh": "第 30 页：结合雅马哈 C3 安装雷诺套件的四张实拍图，讲解动针整音前必不可少的四步弦列预调：1. 挂弦钉与承座清洁检查；2. 黄铜冲子敲实弦码钉贴合；3. 弦枕栓后方校准三弦间距与水平面；4. 复核制音止音与弦槌同步触弦。"
       }
     },
-    "slide_30": {
-      "slide_number": 30,
+    "slide_31": {
+      "slide_number": 31,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5576,8 +5769,8 @@
         "zh": "第 31 页：完整讲解精整音五步收官流程：1. BDK 短单针精控；2. 垫板支撑下的槌肩区均衡；3. Chop-Stick 琴内弦沟间隙最深 2 mm 浅刺；4. 320–400 目细砂板打磨整形；5. 弱音移位整音（Una Corda）并微倒角槌冠左缘。"
       }
     },
-    "slide_31": {
-      "slide_number": 31,
+    "slide_32": {
+      "slide_number": 32,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5858,8 +6051,8 @@
         "zh": "第 32 页：交互演示清漆基浸渍工艺：1) 在铆钉区域涂覆可增强弦槌根基，并视漆液种类提升毛毡张力；2) 在木芯上方从侧面微量涂覆可增强高次泛音，但用量过多会粘死通往侧翼的连接并破坏弹簧功能；3) 切勿直接涂在槌尖顶面，否则会产生玻璃般的鼻音化硬度并永久损坏弦槌；4) 时间因素：所有位于木芯上方的涂覆都会随长期弹奏进一步压实；5) 若要提升基音厚度与穿透力，应在中音至低音增加弦槌重量（+m），向高音区减轻重量（-m）。右侧同步展示最高 135 °C 控温热熨与 15 µm 微米砂膜 / 博朗 Series 1 槌冠超精修。"
       }
     },
-    "slide_32": {
-      "slide_number": 32,
+    "slide_33": {
+      "slide_number": 33,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",
@@ -5960,8 +6153,8 @@
         "zh": "第 33 页：诚挚邀请与会嘉宾参加雷诺学院研修并参访莫伊塞尔维茨工厂。"
       }
     },
-    "slide_33": {
-      "slide_number": 33,
+    "slide_34": {
+      "slide_number": 34,
       "chapter": 5,
       "chapter_name": {
         "de": "Teil 5: Die Hohe Schule der Intonation",

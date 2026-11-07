@@ -191,7 +191,7 @@ class RennerTransformationJourney {
   }
 
   cacheDom() {
-    this.slide4El = document.querySelector('.slide[data-slide="4"]');
+    this.slide4El = document.querySelector('.slide[data-slide="5"]');
     this.containerEl = document.getElementById('build-timeline-container');
     this.arenaEl = this.containerEl ? this.containerEl.querySelector('.diorama-3d-arena') : null;
     this.centerStackEl = document.getElementById('diorama-center-stack');
@@ -695,7 +695,7 @@ class RennerTransformationJourney {
                                             '🎬 无人机航拍 ▶';
       } else {
         const dict = (window.slideTranslations && window.slideTranslations[lang]) || {};
-        this.rightWingLabelEl.textContent = dict.s4_wing_next ||
+        this.rightWingLabelEl.textContent = dict.s5_wing_next ||
           (lang === 'de' ? 'Nächstes Bild ▶' :
            lang === 'en' ? 'Next Frame ▶' :
            lang === 'ja' ? '次の写真 ▶' : '下一张 ▶');

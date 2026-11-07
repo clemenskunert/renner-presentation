@@ -228,15 +228,43 @@ class PresentationController {
     if (prevBtn) prevBtn.addEventListener('click', () => this.prevSlide());
     if (nextBtn) nextBtn.addEventListener('click', () => this.nextSlide());
 
-    // Jump to Slide 2 (Modules / Agenda) buttons
+    // Jump to Agenda / Modules slide (Slide 3) buttons
+    const goToAgendaSlide = () => {
+      const agendaIdx = this.slides.findIndex(s => s.querySelector('.agenda-slide-body'));
+      this.goToSlide(agendaIdx >= 0 ? agendaIdx : 2);
+    };
     const headerJumpSlide2Btn = document.getElementById('header-jump-slide2-btn');
     if (headerJumpSlide2Btn) {
-      headerJumpSlide2Btn.addEventListener('click', () => this.goToSlide(1));
+      headerJumpSlide2Btn.addEventListener('click', goToAgendaSlide);
     }
     const hudJumpSlide2Btn = document.getElementById('hud-jump-slide2-btn');
     if (hudJumpSlide2Btn) {
-      hudJumpSlide2Btn.addEventListener('click', () => this.goToSlide(1));
+      hudJumpSlide2Btn.addEventListener('click', goToAgendaSlide);
     }
+
+    // Delegated click & keyboard handler for Slide 2 Contact / vCard QR view switcher
+    const toggleContactQrMode = (slideEl, explicitMode) => {
+      if (!slideEl) return;
+      const body = slideEl.querySelector('.contact-slide-body');
+      if (!body) return;
+      const current = body.getAttribute('data-active-contact-mode') || 'cards';
+      const next = explicitMode || (current === 'qr' ? 'cards' : 'qr');
+      body.setAttribute('data-active-contact-mode', next);
+      slideEl.querySelectorAll('[data-contact-mode]').forEach(btn => {
+        btn.classList.toggle('is-active', btn.getAttribute('data-contact-mode') === next);
+      });
+    };
+    document.addEventListener('click', (e) => {
+      const modeBtn = e.target.closest('[data-contact-mode]');
+      if (modeBtn) {
+        toggleContactQrMode(modeBtn.closest('.slide'), modeBtn.getAttribute('data-contact-mode'));
+        return;
+      }
+      const qrPedestal = e.target.closest('.contact-qr-pedestal');
+      if (qrPedestal) {
+        toggleContactQrMode(qrPedestal.closest('.slide'));
+      }
+    });
 
 // Delegated click handler for Hammer Core media switcher (Profilformen / Rohholzlager)
     document.addEventListener('click', (e) => {
@@ -426,15 +454,23 @@ class PresentationController {
           break;
 
         case '2':
+          e.preventDefault();
+          this.goToSlide(1); // Jump to Slide 2 (Contacts / Introduction)
+          break;
+
+        case '3':
         case 'a':
         case 'A':
           e.preventDefault();
-          this.goToSlide(1); // Jump to Slide 2 (Agenda / Modules)
+          {
+            const agendaIdx = this.slides.findIndex(s => s.querySelector('.agenda-slide-body'));
+            this.goToSlide(agendaIdx >= 0 ? agendaIdx : 2); // Jump to Slide 3 (Agenda / Modules)
+          }
           break;
 
-        case '5':
+        case '6':
           e.preventDefault();
-          this.goToSlide(4); // Jump to Slide 5 (Filzfabrik Wurzen FFW)
+          this.goToSlide(5); // Jump to Slide 6 (Filzfabrik Wurzen FFW)
           break;
 
         case 'End':
@@ -1232,8 +1268,9 @@ class PresentationController {
       thumb.classList.toggle('active', idx === this.currentSlideIndex);
     });
 
-    // Highlight Slide 2 buttons if on Slide 2
-    const isSlide2 = this.currentSlideIndex === 1;
+    // Highlight Modules (Agenda) buttons when on the Agenda slide
+    const agendaSlideIdx = this.slides.findIndex(s => s.querySelector('.agenda-slide-body'));
+    const isSlide2 = this.currentSlideIndex === (agendaSlideIdx >= 0 ? agendaSlideIdx : 2);
     const headerModulesBtn = document.getElementById('header-jump-slide2-btn');
     if (headerModulesBtn) headerModulesBtn.classList.toggle('is-active-slide', isSlide2);
     const hudModulesBtn = document.getElementById('hud-jump-slide2-btn');

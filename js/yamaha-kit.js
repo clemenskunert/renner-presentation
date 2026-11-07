@@ -38,7 +38,7 @@ class YamahaKitStage {
   }
 
   init() {
-    this.slideEl = (document.querySelector('.slide.yk-kit-slide') || document.querySelector('.slide[data-slide="19"]'));
+    this.slideEl = (document.querySelector('.slide.yk-kit-slide') || document.querySelector('.slide[data-slide="20"]'));
     if (!this.slideEl) return;
 
     this.tabs = Array.from(this.slideEl.querySelectorAll('#yk-epoch-tabs .ffw-epoch-tab'));

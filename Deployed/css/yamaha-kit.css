@@ -36,12 +36,12 @@
 /* 2. Slide Theme Atmosphere */
 .slide.yk-kit-slide,
 .slide.yka-slide,
-.slide[data-slide="20"],
 .slide[data-slide="21"],
 .slide[data-slide="22"],
 .slide[data-slide="23"],
 .slide[data-slide="24"],
-.slide[data-slide="25"] {
+.slide[data-slide="25"],
+.slide[data-slide="26"] {
   background: radial-gradient(circle at 75% 25%, #0d2244 0%, #07152b 45%, #040c1a 100%) !important;
 }
 
