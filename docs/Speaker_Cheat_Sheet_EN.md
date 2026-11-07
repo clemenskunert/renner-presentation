@@ -1,216 +1,211 @@
-# Speaker Cheat Sheet (English) — Louis Renner Masterclass
+# Speaker Cheat Sheet (Short Edition · English) — Louis Renner Masterclass
 
-**Presenter:** Clemens Kunert · Louis Renner GmbH (Meuselwitz Plant, Germany)
-**Scope:** 33 Slides across 5 Chapters · Synchronized with all finalized technical terminology
+**Presenter:** Clemens Kunert · Louis Renner GmbH (Meuselwitz Headquarters, Germany)
+**Scope:** 33 Slides (72 Sub-Sheets) across 5 Chapters · Lectern Quick-Reference with Exact Metrics, Interactions & Video Cues
 
 > [!TIP]
-> **Live Stage Navigation:** `→` / `Space` = advance · `←` = back · Click any chapter card on **Slide 2** to jump directly · `🖱️` marks interactive elements on the slide.
+> **Live Stage Controls:** `→` / `Space` = next step / next slide · `←` = back · Click any chapter card on **Slide 02** to jump directly · `🖱️` = live interaction · `🎬` = video auto-plays.
 
 ---
 
 ## Chapter 1: Introduction, Heritage & Meuselwitz Plant (Slides 01–04)
 
-### Slide 01 — LOUIS RENNER (Title Slide)
-- **Core Message:** *The Heart of the Piano Since 1882* — over 140 years of action and hammerhead precision, now united under one roof in Meuselwitz.
-- **Opening Line:** *“Welcome everyone—today we will walk from raw Merino wool in Wurzen through our unified hammerhead production in Meuselwitz and the drop-in Yamaha Kit all the way to the physics and craft of concert voicing.”*
+### Slide 01 — LOUIS RENNER
+- **Core Message:** *Over 140 Years of Tradition (Since 1882)* — action and hammerhead precision from one source, fully united since 2025/2026 at our modernized **Meuselwitz** headquarters.
+- **Opening Line:** *“Welcome everyone — today we will travel from uncompressed Merino wool in Wurzen through our unified hammerhead manufacturing in Meuselwitz and the drop-in Yamaha Kit all the way to the physics and master craft of concert voicing.”*
 
 ### Slide 02 — Structure and Chapters at a Glance
-- **5 Chapters:**
-  1. **History & Meuselwitz (Slides 3–4):** From 1882 in Stuttgart to our unified Meuselwitz plant.
-  2. **Wurzen Felt Production (Slides 5–10):** Filzfabrik Wurzen since 1783, wool blend, carding, 56% fulling density, unsanded felt sheets.
-  3. **Hammerhead Production (Slides 11–18):** Felt storage, Weickert Special SEM, cutting & underfelt, **hammer mouldings** & hammer weight, kettle & side jaws, CNC & robotic calibration, riveting & boring.
-  4. **Yamaha Kit C1–C3 (Slides 19–24):** Ready-to-mount C1–C3 set in 4–5 hours on site, India field proof & acoustic analysis (`H₁–H₁₂` up to `C₈`).
-  5. **Voicing & Open Q&A (Slides 25–33):** `A₁` partial buildup, complex spring, clock model, crown & string plane, fine voicing, lacquer/ironing & open Q&A.
+- `🖱️ Interaction:` Click any of the **5 chapter cards** to jump straight into that module:
+  1. **History & Meuselwitz (Slides 3–4):** 9 milestones since 1882, 14 construction phases & interior drone flight in Meuselwitz.
+  2. **Wurzen Felt Production (Slides 5–10):** FFW since 1783, wool blend, carding, 4 fulling pillars, `56%` density, unsanded felt sheets.
+  3. **Hammerhead Production (Slides 11–18):** Felt storage, Weickert Special SEM, cutting & underfelt, 4 moulding woods & mass curve, kettle & side jaws, CNC & robotic calibration, riveting & boring.
+  4. **Yamaha Kit C1–C3 (Slides 19–24):** Ready-to-mount set in `4–5 h` on site, India field proof & spectral analysis (`H₁–H₁₂` up to `C₈`).
+  5. **Voicing & Open Q&A (Slides 25–33):** `A₁` partial buildup, complex spring, clock model, 3-string plane, fine & una corda voicing, lacquer/ironing (`max. 135 °C`) & open Q&A.
 
 ### Slide 03 — 140+ Years of Tradition & Perfection (1882 – Today)
-- `🖱️ Interaction:` Step through all **9 milestones** using `→` / `Space`:
-  1. **1882 Stuttgart:** Founded by Louis Renner — specialized precision mechanics focused on accurately fitted piano actions.
-  2. **1906 In-House Hammerheads:** Dedicated hammerhead manufacturing launched (tracing the arc from Cristofori’s 1700 leather-covered parchment roll to Renner).
-  3. **1911 Grand Actions & Electrification:** Building on Érard’s repetition principle; Oscar Renner replaces line shafts with hundreds of individual electric motors.
-  4. **1944 Destruction & Rebuilding:** Complete destruction in the July 1944 Stuttgart air raid; determined reconstruction by workforce and family.
-  5. **1951–1955 Dr. Manfred Renner:** Joins in 1952, returns permanently in 1955 — drives global expansion as benchmark supplier.
-  6. **1990 Fall of the Wall:** Acquisition of Piano Union’s action plant in Zeitz to safeguard major customers (e.g., Schimmel > 40 pianos/day).
-  7. **2011 Two Core Sites:** Modern **Meuselwitz plant (`6,800 m²`)** after relocating from Zeitz + **Gärtringen facility** (specialized woodworking and administration).
-  8. **2019 Steinway & Sons:** Joins the Steinway family to preserve German action and hammerhead craftsmanship long-term (honoring Clemens von Arnim).
-  9. **Today — Unified Meuselwitz Plant:** Full consolidation of all production in Meuselwitz including a state-of-the-art central extraction system; gratitude to the Gärtringen workforce.
+- `🖱️ Interaction:` Step through all **9 milestones** with `→` / `Space` (`🎬` video on Milestones 8 & 9):
+  1. **1882 Founded in Stuttgart:** Louis Renner opens his workshop on Heusteigstrasse — specialized precision piano actions forming the historic root of Meuselwitz.
+  2. **1906 In-House Hammerheads:** Actions and hammerheads engineered together under one roof using proprietary presses (from Cristofori’s 1700 leather-capped roll to the tensioned felt hammer).
+  3. **1911 Grand Actions & Electric Drives:** Building on Érard’s double escapement; Oscar Renner converts belt shafts to hundreds of low-vibration individual electric motors.
+  4. **1944 Wartime Destruction & Rebuilding:** Complete loss of the Stuttgart plant on July 24/25, 1944 — immediate reconstruction led by the skilled workforce (*“Renner will be rebuilt”*).
+  5. **1951–1955 Dr. Manfred Renner (3rd Generation):** Assumes leadership in **1951**, completes Stuttgart rebuilding in **1955**, and expands global exports to premier piano makers.
+  6. **1990 Reunification & Zeitz:** Acquisition of Piano Union’s action plant in Zeitz — retains skilled specialists, safeguards major customers (e.g., Schimmel `> 40 pianos/day`), and establishes our Central German base.
+  7. **2011 Two Core Sites:** Relocation from Zeitz into a modern **`6,800 m²` Meuselwitz hall** (actions & hammerheads) + new **Gärtringen facility** (specialized woodworking & administration).
+  8. **2019 Steinway & Sons (`🎬 Video`):** Entrusted by Clemens von Arnim (`† 2024`, honored in grateful memory) to Steinway & Sons with **full operational autonomy** — continuing open supply to **all** piano makers worldwide.
+  9. **Today — Unified Meuselwitz Headquarters (`🎬 Drone Video`):** Complete consolidation of wood, action, and hammerhead production under one roof with a new central filtration plant; warm gratitude to the Gärtringen workforce.
 
 ### Slide 04 — Construction Documentary: Building the Unified Meuselwitz Plant
-- `🖱️ Interaction:` **14 flipbook construction phases (`11.2025 – 09.2026`)** followed by an **interior drone flight** through live production.
-- **Focus:** Structural gutting, new administration & reception wing, central dust extraction, streamlined machine flow under one roof.
+- `🖱️ Interaction:` **14 flipbook phases (`11.2025 – 09.2026`)** + `🎬` **Interior Drone Flight** finale (`04.15`).
+- **Key Facts to Cite:** Conversion completed **with zero production downtime** · automated vertical **shuttle storage lifts** · **40-ton, 12 m central filter tower (`120,000 m³/h` airflow)** lifted by 70-ton crane · rooftop HVAC maintaining **`45–50% RH`** year-round · relocation of hammerhead production (Phase 9) & molding shop (Phase 14).
 
 ---
 
 ## Chapter 2: The Art of Felt Manufacturing – FFW Wurzen (Slides 05–10)
 
-### Slide 05 — Filzfabrik Wurzen (FFW) – Birthplace of Piano Hammer Felt
-- `🖱️ Interaction:` **6 interactive tabs** + **Fiber Lens** on the right.
-- **Key Facts:** Founded in **1783** · In **1903**, Ernst Weickert developed modern tapered piano hammer felt in Wurzen (`Weickert Special`).
-- **Takeaway:** Unique regional synergy between FFW Wurzen (felt) and Renner Meuselwitz (hammerheads).
+### Slide 05 — Filzfabrik Wurzen (FFW) – The Birthplace of Piano Hammer Felt
+- `🖱️ Interaction:` **6 historical era tabs** on the left + `🔍 Fiber Lens` on the right:
+  1. **1783 Origin Wurzen:** Johann Dankegott Weickert founds the world’s oldest industrial felt manufactory in Saxony’s Mulde valley.
+  2. **1847 1st Piano Hammer Felt:** Patzschke & Weickert replace uneven leather coverings with homogeneous hammer felt (aided by soft, low-mineral Mulde river water).
+  3. **1850/51/67 World Expo Gold:** Gold medals in Leipzig (1850), London (1851) & Paris (1867) — Vienna, Paris, and London makers adopt Weickert felt.
+  4. **1861 Mühlgraben Scale-Up:** Steam-powered precision fulling mills & gentle wool scouring in mineral-poor river water.
+  5. **1906 Global Market Leader:** Up to **`200,000` pianos/year** equipped worldwide (Director Patzschke & 350 specialists; benchmark for Steinway NY).
+  6. **Today — Weickert Spezial & Renner:** **2010** revival of the 1903 original formula by the Brand family; **only `~65 km` proximity** between Wurzen and Meuselwitz enables face-to-face master calibration.
 
 ### Slide 06 — Pure Merino Wool & the Secret of Fiber Blending
-- **Stage 01 (Raw Wool & Scouring):** Fine-crimped pure Merino wool (Australia, New Zealand, South Africa, South America); **gentle scouring** protects epicuticle scales and retains natural wool wax (lanolin).
-- **Stage 02 (Blending):** Proprietary balance of **long tensile fibers** (for outer crown tension) and **fine filler wool** (for resilient inner support).
+- **Stage 01 (Raw Wool Selection):** **Uncompressed overseas bale delivery** (Argentina, South Africa, New Zealand/Australia) keeps microscopic keratin scales intact; strong natural crimp acts like millions of micro-springs; gentle scouring preserves natural **lanolin**.
+- **Stage 02 (Fiber Formula):** Multi-stage pneumatic opening & climate conditioning in the FFW blending chamber; calibrated balance of **long tensile fibers** (crown tension) and **fine filler wool** (core support).
 
 ### Slide 07 — Carding: Parallel Fiber Alignment into Fine Fleece Webs
-- **Process:** Historic roller carding machines comb millions of crimped Merino fibers parallel into gossamer webs (`≤ 2%` basis-weight tolerance).
-- **Impact:** Establishes exact fiber orientation and prepares the **wedge taper** from heavy bass to slender treble.
+- **Process:** Fine **drum cards** gently comb the wool and impart a defined primary fiber course to the gossamer web; **cross-layered stacking** builds thickness, tensile strength, and wedge taper.
+- **Voicing Link:** **Prerequisite for voicing** — only parallel-aligned fibers part cleanly when needled instead of being severed!
 
-### Slide 08 — The 4 Pillars of Fulling
-- **4 Pillars:** **1. Moist Steam · 2. Controlled Warmth (~45 °C) · 3. Mechanical Pressure & Oscillating Motion · 4. Master Experience**.
-- **Physics:** Warmth and moisture open the keratin scales just enough to interlock in 3D — **100% mechanical, zero chemical binders**.
+### Slide 08 — The 4 Pillars of Fulling: Steam, Pressure, Motion & Experience
+- **The 4 Slide Cards:** **1. Live Steam** (opens cuticle scales, softens keratin) · **2. Mechanical Pressure** (compresses fleece layers) · **3. Oscillating Motion** (interlocks barbed scales like burrs) · **4. Master Experience** (exact stopping point for natural springback).
+- **Purity Rule:** Solely soft Muldental water and heat — **100% chemical-free, zero damping resins or glues**.
 
-### Slide 09 — 56% Fulling Density (0.56 g/cm³): The Natural Limit
-- **Key Number:** **`56%` (`0.56 g/cm³`)** is the physical ceiling of purely mechanical fulling.
-- **Why It Matters:** Under-fulled felt lacks internal tension; over-fulling beyond 56% fractures keratin fibers (**felt breakage**, dead rebound).
+### Slide 09 — 56% Fulling Density (0.56 g/cm³): The Natural Limit of Mechanical Fulling
+- **Key Metric:** **`56%` (`0.56 g/cm³`)** is the physical ceiling of purely mechanical fiber compaction without synthetic resins.
+- **Boundary:** Under-fulled felt stays spongy; forcing compaction past `56%` crushes keratin fibers (**felt breakage**, dead rebound).
 
 ### Slide 10 — Final Compaction & Tapered 36-Layer Anatomy
-- `🖱️ Interaction:` Toggle **Unsanded (Renner/FFW)** vs. **Sanded Sheet**.
-- **36-Layer Build:** Staggered **shortened core webs** inside form the wedge (thick bass on the right, thin treble on the left) — enclosed by **`2 × 6` continuous outer webs**.
-- **Key Point:** **Leaving the felt sheets unsanded** keeps all outer tension layers unbroken — preserving 100% tensile strength and preventing tearing when pressed around the **hammer moulding**!
+- `🖱️ Interaction:` Toggle **`Unsanded • Shape-Stable`** ↔ **`Sanded • Deformation`**.
+- **Left (Hammer & Stone):** Mechanical hammering with felt hammers and polished natural stones consolidates sheets to exact size (`56–68 Shore-A`) with **zero sanding removal**.
+- **Right (36-Layer Wedge):** Staggered **shortened core webs** build the thick bass on the right while keeping treble thin on the left — enclosed by **`2 × 6` continuous outer tension webs**. Sanding severs those outer cords so fibers slip apart when pressed around the **hammer moulding**!
 
 ---
 
 ## Chapter 3: Hammerhead Production in Meuselwitz (Slides 11–18)
 
 ### Slide 11 — Climate-Controlled Felt Storage & Assortment Diversity
-- **Top-Felt Inventory:** **Over 30** tapered FFW & Weickert formulas · regulated humidity, pheromone monitoring, and seasoning relieve fulling stresses.
-- **Underfelt Stock:** **6 standard colors** (**Red & Wine Red**, **Orange**, **Yellow**, **Blue**, **Black**) plus custom customer dyeings.
+- `🎬 Video:` Drone flight through the climate-controlled felt sheet inventory in Meuselwitz.
+- **Top-Felt Inventory (`30+ Grades`):** Tapered FFW & Weickert sheets · regulated humidity, pheromone monitoring, and resting period relieve internal fulling stresses.
+- **Underfelt Stock (`6 Standard + Custom Colors`):** **Red & Wine Red** (European concert grands) · **Orange** (concert & heritage restorations) · **Yellow** (Saxon/Viennese makers) · **Blue** (e.g., C. Bechstein), **Black** + bespoke dyeings.
 
 ### Slide 12 — “Weickert Special” – Exclusive to Renner
-- `🖱️ Interaction:` **SEM Zoom Viewer** (`1× Overview`, `10× Fiber Detail`, `22× Cuticle Zoom`, `Live Loupe`, `Felt Strip W 1512 K`).
-- **Accredited STFI Lab Report P2024 0903 (M. Kermer):**
-  - **`56%` max. fulling density** (`0.56 g/cm³`) — purely mechanical, zero chemical hardeners.
-  - **`0.36%` residual wool grease (ISO 3074)** — `+38%` higher natural lanolin retention vs. `0.26%` reference sample.
-  - **`−65%` less swelling** in 48h climate cycling (`4.81%` vs. `13.69%` thickness change) + intact epicuticle scales under SEM.
+- `🖱️ Interaction:` **SEM Zoom Viewer** (`1× Overview 1 mm` · `10× Fiber Detail 100 µm` · `22× Cuticle Zoom` · `🔍 Live Loupe` · `Felt Strip W 1512 K`).
+- **Accredited STFI Test Report P2024 0903 (M. Kermer, ISO 3074 & Climate Cycle):**
+  - **`56%` max. fulling density** (`0.56 g/cm³`) — peak purely mechanical density, zero chemical hardeners.
+  - **`0.36%` residual wool grease (ISO 3074)** — **`+38%`** higher natural lanolin vs. `0.26%` comparison sample.
+  - **`−65%` less swelling** in 48h climate cycling (only **`4.81%`** vs. `13.69%` thickness change) + intact epicuticle scales under SEM.
 
 ### Slide 13 — Felt Preparation: Top-Felt Cutting & Underfelt Profiling
-- **01 · Top-Felt Cutting (`≤ 1 mm Tolerance`):** 6-axis robot cold-cuts seasoned sheets distortion-free without thermal glazing + inline batch coding.
-- **02 · Underfelt Milling (`± 0.1 mm Tolerance`):** Contour-milled coupling bridge; feathered tails milled to **`± 0.1 mm`** ensure a seamlessly closed contour right into the high treble.
+- `🎬 2 Simultaneous Videos:` Top-felt robotic cutting (top) · underfelt profile milling (bottom).
+- **01 · Top-Felt Cutting (`≤ 1 mm Tolerance`):** 6-axis robot performs **crush-free cold cutting** without thermal glazing + **inline batch coding** on every strip.
+- **02 · Underfelt Milling (`± 0.1 mm Tolerance`):** Elastic coupling bridge between rigid **hammer moulding** and top felt; feathered tails milled to **`± 0.1 mm`** guarantee balanced jaw load and a seamlessly closed contour right into the high treble.
 
 ### Slide 14 — The Hammer Moulding: Tonewoods, Properties & Profiles
-- `🖱️ Interaction:` Right media toggle `Profiles` (`Form A, B, US, CSB`) ↔ `Timber Stock`.
-- **The 4 Moulding Woods (key distinctions):**
-  1. **Hornbeam (`Weißbuche`):** Heavy hardwood — **very demanding to season**, yet once properly dried, an **ideal, uniform moulding wood**.
-  2. **Maple (`Ahorn`):** Heavy, often **more elastic** hardwood — though **irregular sugar deposits** increase the risk of variance.
-  3. **American Walnut:** **Highest-grade wood** — very tight growth rings, long-fibered, and **very light**, making it **ideal for a brilliant treble**.
-  4. **Kotibé (`Mahogany`):** Comparatively **heavy due to its high natural oil content** — used selectively for specific applications.
-- **Profiles:** Symmetrical (`Form B · US · CSB` for Steinway, Bösendorfer, Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster, Sauter) vs. asymmetrical (`Form A` with offset moulding shoulder).
+- `🖱️ Interaction:` Right media toggle **`Profiles`** (`Form A, B, US, CSB`) ↔ **`Timber Stock`**.
+- **The 4 Moulding Tonewoods:**
+  1. **Hornbeam (`Heavy • Stable`):** Very demanding to season — yet once properly dried, an **ideal, uniform moulding wood**.
+  2. **Maple (`Heavy • Elastic`):** Often more elastic hardwood — though **irregular sugar deposits** carry a higher risk of variance.
+  3. **American Walnut (`Very Light • Fine-Grained`):** **Highest-grade wood** — tight growth rings, long-fibered, and very light, **ideal for a brilliant treble**.
+  4. **Kotibé / Mahogany (`Heavy • Oil-Rich`):** Comparatively heavy due to high natural oil content — reserved for specific applications.
+- **Profiles:** **Symmetrical (`Form B · US · CSB`)** for Steinway, Bösendorfer, Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster, Sauter · **Asymmetrical (`Form A`)** with offset moulding shoulder for vintage Bechstein grands & slender treble scales.
 
 ### Slide 15 — Optimal Hammerhead Weight Relative to String Weight
-- `🖱️ Interaction:` Register tabs (`① Bass`, `② Break −1 g`, `③ Treble`), click keys `A₀–C₈`, weight simulator (`Too Light` / `Equilibrium` / `Too Heavy`) + `Test Strike`.
-- **Unified Mass Scale (`0.5–220 g`):**
-  1. **Bass (`Keys 1–23`, copper-wound `90–210 g`):** The hammerhead (`~15 → 13 g`) is **always comparatively light relative to the heavy bass string** — so bass hammer weight is **held high as long as possible**.
-  2. **Break (`Key 23 → 24`, plain wire = `3 strings per note`, `~31 g` combined):** Deliberate **`−1.0 g` step** (`13.0 → 12.0 g`) onto the lighter 3-string plain choir.
-  3. **Treble (`to C₈`):** Even across all 3 strings per note, choir mass drops below `3 g` down to `~0.6 g` (`~0.2 g` per wire) with `½ T < 0.5 ms` → smooth taper to **`5.0 g`** (e.g., lightweight American walnut moulding) to prevent self-damping.
+- `🖱️ Interaction:` Zone buttons (`① Bass`, `② Break −1 g`, `③ Treble`), click keys `A₀–C₈`, simulator (`Too Light` / `Equilibrium` / `Too Heavy`) + `Test Strike`.
+- **Mass Equilibrium (`Contact Time τc ↔ String Deflection`):**
+  1. **Bass (`Keys 1–23`, copper-wound `90–210 g`):** The hammerhead (`~15.0 → 13.0 g`) is **always comparatively light relative to the heavy bass string** → bass hammer weight is **held high as long as possible**.
+  2. **Break (`Key 23 → 24`, plain steel `3 strings/note ≈ 31 g`):** Sharp drop in choir mass requires a deliberate **`−1.0 g` step** (`13.0 → 12.0 g`).
+  3. **Treble (`last 2 octaves to C₈`):** Trichord mass drops from `2.7 g` (`C₆`) to `~0.6 g` (`C₈`, `~0.2 g`/wire, `½ T < 0.5 ms`) → smooth taper to **`5.0 g`** (lightweight American walnut moulding) to prevent self-damping!
 
 ### Slide 16 — Pressing & Gluing to 0.1 mm
-- **Pressing Sequence (`0.1 mm` Tolerance):**
-  1. First, the felt is pressed **downward into the kettle** (`Pressgesenk`).
-  2. Next, the heated **side jaws** (`Gegenlagen`) close in from both sides and press the felt firmly onto the glue surface of the **hammer moulding**.
-- **Result:** High outer tensile tautness over a compressed, resilient inner cushion (foundation for `pp` to `ff`).
+- `🎬 Factory Video:` Glue-press loading and closing in Meuselwitz (`0.1 mm` tolerance).
+- **2-Stage Press Sequence:** **1.** Felt is pressed downward into the **kettle** (`Pressgesenk`) · **2.** Heated **side jaws** (`Gegenlagen`) close in from both sides and press the felt onto the glue surface of the **hammer moulding**.
+- **Effect:** High outer tensile tautness over a compressed, resilient inner cushion (foundation for `pp` to `ff`).
 
 ### Slide 17 — CNC Milling & Robotic Calibration
-- **3-Step Precision Workflow:**
-  1. **Moulding Milling (`0.1 mm`):** CNC milling machines first profile the **hammer mouldings** to a `0.1 mm` tolerance.
-  2. **Post-Gluing Trim Milling:** After pressing and gluing, the felt overhang is removed and cleanly finish-milled.
-  3. **Robotic Calibration:** Subsequently, a **robotic cell** precisely calibrates each individual hammerhead.
+- `🎬 2 Sequential Factory Videos:` CNC milling center first (`17.1`), followed by single-head robotic cell (`17.2`).
+- **3 Steps:** **1.** CNC-machine the **hammer mouldings** to **`0.1 mm`** · **2.** Trim and finish-mill felt overhang after pressing & gluing · **3.** Precisely calibrate **each individual hammerhead** on the **robotic cell**.
 
 ### Slide 18 — Automated Riveting & Boring
-- **3 Key Features:**
-  1. **Precision Boring Angle:** Exact depth, diameter (e.g., `ø 5.4 mm`), and individual **boring angle** per note.
-  2. **Brass Riveting:** Permanently locks the bonded felt tails against opening under heavy concert play.
-  3. **Radiused Hammer Tail:** Cleanly contoured tail radii for reliable checking against the backcheck felt.
+- `🎬 Factory Video:` Automated shank boring and brass rivet insertion.
+- **3 Features:** **1. Precision Boring Angle** (exact depth, e.g., `ø 5.4 mm`, individual boring angle per note) · **2. Brass Riveting** (permanently locks bonded felt tails under concert play) · **3. Radiused Hammer Tail** (contoured tail radii for reliable checking on the backcheck felt).
 
 ---
 
 ## Chapter 4: The Louis Renner Yamaha Kit C1–C3 (Slides 19–24)
 
 ### Slide 19 — Louis Renner Yamaha Kit (C1–C3) – Seamless Drop-In
-- `🖱️ Interaction:` **5 Tabs** (`SYSTEM` · `TOUCH` · `DROP-IN` · `TONE` · `TIME SAVED`) + Macro Zoom on the right.
-  1. **System:** 5 years of R&D, proprietary measurement & production system → full concert tone **with zero manual pre-voicing**.
-  2. **Touch:** Calibrated **walnut moulding**, quarter-sawn **hornbeam shanks**, pre-tensioned knuckles → lower inertia, crisp repetition.
-  3. **Drop-In:** Precision-bored hammerheads pre-glued onto shanks with flanges using glass-hard **natural hide glue** → **1-screw mounting** directly onto the original Yamaha rail (`0 h` boring labor).
-  4. **Tone:** **Pressed from a single homogeneous felt strip** → seamless register transitions, articulated bass, bell-clear treble.
-  5. **Time Saved:** **`4–5 hours` on site** instead of `3–7 workshop days` → zero transport risk, direct voicing to room acoustics & artist preference.
+- `🖱️ Interaction:` **5 Topic Tabs** + `🔍 Macro Zoom` on the right:
+  1. **SYSTEM:** 5 years of R&D, proprietary measurement & production system → full concert sound **with zero manual pre-voicing** (complete reliability even without daily concert-voicing routine).
+  2. **TOUCH:** Calibrated **walnut moulding**, quarter-sawn **hornbeam shanks**, pre-tensioned knuckles → reduced inertia, rapid repetition.
+  3. **DROP-IN:** Pre-bored at the exact angle and factory-bonded onto shanks with flanges using rock-hard **natural hide glue** → **1-screw mounting** directly into the original Yamaha rail (`0 h` boring labor, zero drilling risk).
+  4. **TONE:** Pressed from a **single homogeneous felt strip** → seamless transitions across all 88 keys, articulated bass, bell-clear treble.
+  5. **TIME SAVED:** **`4–5 hours` on site** instead of `3–7 workshop days` → zero transport risk, direct tailoring to the venue’s room acoustics and pianist.
 
-### Slide 20 — Field Proof India (1/2): Time-Lapse Installation in One Day
-- **On-Site Proof:** Complete conversion in **one workday (`10:00 – 18:00`)** right at the venue — removal, 1-screw mounting onto the original rail, fine regulation (blow distance, let-off, checking), tuning & concert test.
+### Slide 20 — Time-Lapse Installation: Complete Conversion in One Day
+- `🎬 Video:` On-site time-lapse from India (`10:00 – 18:00`).
+- **Field Proof:** Complete upgrade in **1 workday on site** — old set removal, 1-screw mounting onto the original rail, fine regulation (blow distance, let-off, checking), tuning & concert test.
 
-### Slide 21 — Field Proof India (2/2): Pianist Raaga in Action
-- **Artist Verdict:** Immediate shift from hard attack to warm, carrying European concert tone, blooming treble, effortless `pp–ff` shading, and noticeably faster repetition.
+### Slide 21 — Pianist Feedback: Pianist Raaga in Action
+- `🎬 Video with Audio:` Immediate artist verdict right after installation.
+- **Raaga’s Verdict:** Immediately audible transformation from hard attack to warm, singing European concert tone, blooming treble, effortless `pp–ff` shading, and crisper repetition.
 
-### Slide 22 — Acoustic Analysis (1/3): Sound Spectrum Original vs. Yamaha Kit
-- `🖱️ Interaction:` Click keyboard / slide 2-octave window (`Original 0:00–5:17` vs. `Yamaha Kit 5:18–11:42`).
-- **Finding:** Clear overtone gain (`H₂–H₈`) across the singing and brilliance registers with clean fundamental focus.
+### Slide 22 — Sound Spectrum Comparison: Original vs. Renner Yamaha Kit
+- `🖱️ Interaction:` Click keyboard / 2-octave window (`11:42 min` recording: `0:00–5:17` Original vs. `5:18–11:42` Renner Kit).
+- **5 Spectral Bands:** Bass (`50–250 Hz`: **`−3.28 dB`** less mud) · Body (`250–800 Hz`: `−0.07 dB`, 100% intact warmth) · Singing Presence (`0.8–2.5 kHz`: **`+2.53 dB`**) · Brilliance (`2.5–6 kHz`: **`+1.87 dB`**) · Air (`6–12 kHz`: `+0.31 dB`, zero metallic glare).
 
-### Slide 23 — Acoustic Analysis (2/3): Partial Distribution (`H₁–H₁₂`) & 24 Semitones
-- `🖱️ Interaction:` Register buttons (`Bass` to `Brilliance`) & mode (`Relative H₁` / `Δ Gain`).
-- **Harmonic Architecture:** **Even partials (`H₂, H₄, H₆, H₈`)** build warmth & body; **odd partials (`H₃, H₅, H₇`)** deliver brilliance & singing core — consistent note by note.
+### Slide 23 — Partial Distribution (H₁–H₁₂) & 24-Semitone Comparison
+- `🖱️ Interaction:` Register buttons (`Bass` to `Brilliance`) & mode (`Relative H₁` / `Δ Gain` / `Absolute dB`).
+- **Harmonic Architecture:** **Even partials (`H₂, H₄, H₆, H₈`)** create **warmth & body**; **odd partials (`H₃, H₅, H₇`)** deliver **brilliance & singing core** — uniform across all 24 chromatic semitones on the right.
 
-### Slide 24 — Acoustic Analysis (3/3): 4 Tonal Gains & Overtone Retention up to C₈
-- **4 Headline Metrics:**
-  1. **`+2.53 dB` (`+79%`)** gain in the singing register (`0.8–2.5 kHz`, cantabile).
-  2. **`+1.87 dB` (`+54%`)** treble brilliance boost (`2.5–6 kHz`).
-  3. **`−3.28 dB`** reduction of muddy low-bass boom (`50–250 Hz` → cleaner bass chord separation).
-  4. **`+0.93 dB/kHz`** flatter spectral roll-off across `pp–ff` right up to `C₈` (`4,186 Hz`).
+### Slide 24 — 4 Tonal Gains & Overtone Retention up to C₈
+- `🖱️ Interaction:` Test the live pitch gain calculator on the right up to `C₈` (`4,186 Hz` / slider up to `4,300 Hz`).
+- **4 Headline Metrics to Cite:**
+  1. **Cantabile (`0.8–2.5 kHz`):** **`+2.53 dB` (`+79%` energy)**, peaking at **`+3.4 dB` at `1.45 kHz`**.
+  2. **Treble Brilliance (`2.5–6.0 kHz`):** **`+1.87 dB` (`+54%` energy)** without harshness.
+  3. **Bass Clarity (`20–250 Hz`):** **`−3.28 dB` (`−53%` boom)** → clean bass chord separation.
+  4. **Overtone Retention (`pp–ff`):** **`12.6%` flatter roll-off** (`−6.45` vs. `−7.38 dB/kHz` = net **`+0.93 dB/kHz`**) + **`+0.42 dB`** attack crest.
 
 ---
 
 ## Chapter 5: The Art of Concert Voicing & Finale (Slides 25–33)
 
 ### Slide 25 — Partial Structure on A₁ (55 Hz): Felt Hardness & Strike Point
-- `🖱️ Interaction:` Felt hardness slider + strike-point slider (`x₀ / L` on `L = 1,560 mm`) + audio playback.
-- **2 Acoustic Laws:**
-  1. **Hardness & Contact Time `τc`:** Softer/needled crown (`τc ≈ 3.8 ms`) attenuates upper partials; firmer crown (`τc ≈ 1.3 ms`) boosts high partials in dB.
-  2. **Young-Helmholtz Law (`x₀ / L`):** Striking at **`1/8 L` to `1/7 L`** places dissonant partials (`H₇` natural seventh, `H₉` second) near a node while preserving the singing major third `H₅`.
+- `🖱️ Interaction:` Hardness presets (`Soft` / `Concert Ideal` / `Hard`), strike point (`x₀ / L` on `L = 1,560 mm`) + `Play A₁ (55 Hz)`.
+- **2 Physical Levers:**
+  1. **Felt Hardness & Contact Time `τc`:** Soft/needled (**`τc ≈ 2.85 ms`**) lowers `H₆–H₁₂` by **`−4.6 dB`** · Concert Ideal (**`τc ≈ 1.95 ms`**) blends `H₁–H₄` warmth with singing `H₅/H₆` · Hard (**`τc ≈ 1.25 ms`**) boosts `H₆–H₁₂` by **`+4.8 dB`** (`H₁₂ +6.4 dB`).
+  2. **Young-Helmholtz Law (`x₀ / L`):** **`1/8 L` (`195 mm`, standard)** puts a node on `H₈` (`−22 dB`) and tames rough `H₇` & `H₉`; **`1/7 L` (`223 mm`)** cancels the natural 7th `H₇` (`−22 dB`) while preserving the singing major third `H₅`.
 
-### Slide 26 — The Hammerhead as a Complex Spring: Cristofori to Zone Balance
-- `🖱️ Interaction:` Switch `1. Cristofori (1700)` ↔ `2. Renner Spring` + four 3-step controls.
-- **Physics:** Cristofori’s hollow parchment roll used pure ring tension with zero dead mass. The Renner head acts as a **graded tension spring**: **`100%` compaction at the crown → `½` (`50%`) at the widest flank**, anchored to the **hammer moulding** by glue and rivet.
-- **Diagnostic Rule:** Crown/transition too hard → **no `pp`** · Low elasticity or locked shoulder → `τc` prolonged, **no `ff`**!
+### Slide 26 — The Hammerhead as a Complex Spring: From Cristofori to Zone Balance
+- `🖱️ Interaction:` Switch **`1. Cristofori Roll (1700)`** ↔ **`2. Renner Tension Spring`** + four 3-step controls.
+- **Physics:** Cristofori’s deer-leathered parchment roll used pure circumferential tension (`88%` bounce, `τc ≈ 1.85 ms`) with zero dead core mass. The Renner head works as a **graded tension spring**: **`100%` compaction at the crown → `½` (`50%`) at the widest flank**, anchored to the **hammer moulding** by glue & rivet (`τc ≈ 1.80 ms`).
+- **Diagnostics:** Crown/transition too hard (`125%`) → **no `pp`** · Sluggish felt (`54%` bounce, `τc ≈ 2.95 ms`) → **no `ff`** · Locked shoulder (`18%` flank active) → **double lock (neither `pp` nor `ff`)**!
 
 ### Slide 27 — Voicing Zones & Needling Effect: The Renner Clock Model
-- `🖱️ Interaction:` Click voicing zones directly on the cross-section.
-- **Golden Rule:** Always follow the wrapped wool fiber course and needle **perpendicular to the fiber (`⊥ 90°`)** across `9:00–3:00` so needles part fibers cleanly rather than severing them!
-- **Clock Zones:**
-  - **Blue (`9–10 / 2–3 o’clock`):** `ff` wedge — deep strokes stopping short of the underfelt (opens fortissimo projection).
-  - **Green (`10–11 / 1–2 o’clock`):** `f` wedge — `4–6 mm` deep (opens the cantabile singing core).
-  - **Orange (`11–12 / 12–1 o’clock`):** `p` wedge — `2.5–4 mm` (smooths dynamic transition).
-  - **Purple (crown rim):** `pp` wedge — **max. `2 mm`**, strictly **between** string grooves!
-  - **Specialty Stitch Above Rivet → Steeply Toward Flank:** Few, deep stitches activate lower tension reserve, shorten `τc`, and boost upper partials (`H₇–H₁₂`).
-  - **Red (`12:00` deep crown core):** **Strict Taboo** — severs the tension arch permanently!
+- `🖱️ Interaction:` Click all 6 zones on the cross-section + toggle `✓ ⊥ to Fiber` vs. `✕ Cross / Chop` + `Needle & Play`.
+- **Golden Rule:** Always follow the wrapped wool fiber course and press **perpendicular to the fiber (`⊥ 90°`)** across `9:00–3:00` — parting fibers cleanly, never chopping across them!
+- **All 6 Zones:**
+  - **Blue (`9–10 / 2–3h`, `ff`-wedge):** `7–9 mm` deep stopping short of underfelt → opens `ff`, `H₁–H₄ +3.2 dB`.
+  - **Green (`10–11 / 1–2h`, `f`-wedge):** `4–6 mm` deep → opens shoulder for cantabile core (`+2.4 dB`, glare `−2.5 dB`).
+  - **Orange (`11–12 / 12–1h`, `p`-wedge):** `2.5–4 mm` → cushions `H₈–H₁₂` (`−3.8 dB`) for warm piano.
+  - **Purple (Crown, `pp`-wedge):** **`≤ 2.0 mm`**, short single needle **strictly between string grooves** (`H₉–H₁₂ −5.1 dB`).
+  - **Yellow (Above Rivet → Toward Flank):** **Few, deep stitches (`10–14 mm`)** angled upward → tightens spring (`τc ≈ 1.58 ms`) & boosts upper partials (`H₇–H₁₂ +3.1 dB`).
+  - **Red (`12:00` Deep Core):** **Strict Taboo (`> 2 mm`)** — severs tension arch (`τc → 3.15 ms`, hollow & dead tone)!
 
 ### Slide 28 — Crown & String Plane in 3-String Choirs: Phase & Cancellation
-- `🖱️ Interaction:` Tilt/skew slider on `A₃` (`220 Hz` trichord) + unison audio check.
-- **Workshop Rule:** Even microsecond arrival skews (`Δt`) from a tilted crown or uneven string height create **comb-filter cancellations** and metallic buzz — **mate all 3 strings to 100% simultaneous contact before touching a voicing needle!**
+- `🖱️ Interaction:` Toggle all **4 alignment states** (`✓ Flat & Parallel` · `∠ Tilted Crown` · `↕ Uneven String Plane` · `⌣ Hollow Crown`) + `Play A₃ Choir` (`220 Hz`).
+- **Workshop Rule:** Just `0.2–0.3 mm` string offset or a tilted crown creates arrival delay `Δt` → upper partials shift **`120°–180°` out of phase** (comb-filter cancellation & metallic buzz). **No needle can fix phase cancellation — square and level the trichord first!**
 
 ### Slide 29 — String Preparation: Hitch Pins, Bridge Pins & Agraffes
-- **4 Mandatory Pre-Voicing Steps:**
-  1. Clean and inspect hitch pins.
-  2. Seat strings solidly at the bridge pins using a brass punch.
-  3. Space and level the 3-string plane behind the agraffes.
-  4. Verify damper seating and 100% pure unison hammer contact.
+- **4 Mandatory Steps Before Needling:** **1.** Clean bearing surfaces & check hitch-pin seating · **2.** Tap strings solidly onto bridge pins with a brass drift punch · **3.** Space and level the 3-string plane behind the agraffes · **4.** Verify damper seating, beatless unison tuning & simultaneous hammer contact.
 
 ### Slide 30 — Intermediate, Fine & Una Corda Voicing
-- **5 Finishing Steps:**
-  1. Dedicated fine needle holder (BDK fine holder).
-  2. **Intermediate voicing** of the shoulder zone on a firm support pad (chromatic evening).
-  3. **Fine crown voicing** in the grand: **max. `2 mm`** strictly **between string grooves** (Chop-Stick).
-  4. Light crown dressing with a `320–400 grit` sanding paddle.
-  5. **Una corda voicing:** Depress soft pedal, check shifted groove alignment, and lightly chamfer the left crown edge.
+- **5 Concert-Finish Steps:** **1.** Short single needle in the **BDK Fine Holder (`43-0003269`)** · **2. Mid-voicing** of shoulder wedges on a firm support pad · **3. Fine crown needling** in the grand with **Chop-Stick (`43-0003271`) max. `2 mm`** strictly **between string grooves** · **4.** Smooth crown with `320–400 grit` sanding paddle · **5. Shift-pedal voicing (*Una Corda*):** Depress soft pedal, voice only contacted string zones & lightly chamfer left crown edge.
 
 ### Slide 31 — Lacquer Dosing, Heat Ironing (max. 135 °C), Crown Finish & Weight
-- `🖱️ Interaction:` Click lacquer zones on cross-section + toggle playing-time compaction.
-- **01 · Lacquer Dosing & Mass Tuning:**
-  - **At the Rivet (below hammer moulding):** Reinforces the lower foundation & lifts tension while protecting the elastic impact arch.
-  - **Laterally Above the Hammer Moulding:** Light side dosing boosts high partials (`H₇–H₁₂`), **but compacts further over playing time!** Excess lacquer glues the flank and locks up the spring.
-  - **Directly on the Crown (`12:00`):** **Strictly avoid!** (Glassy, nasal hardness & permanent damage).
-  - **Fullness & Projection via Mass:** Increase hammer weight from middle to bass (`+m`); reduce weight toward treble (`−m`).
-- **02 · Heat Ironing:** Strictly **max. `135 °C`** (prevents keratin scorching & brittleness).
-- **03 · Ultra-Fine Crown Finish:** Micro-abrasive down to **`≤ 15 µm`** or a **Braun Series 1** foil shaver (trims stray fuzz fibers with `0%` felt loss).
+- `🖱️ Interaction:` Click all **4 lacquer zones** + toggle time compaction (`Freshly Applied` ↔ Aged) + mass buttons (`+m` / `−m`).
+- **01 · Lacquer Dosing & Mass Control:**
+  - **Rivet Zone (below moulding):** Stiffens lower foundation (`H₁–H₄ +3.4 dB`) & can lift felt tension — upper elastic arch stays protected.
+  - **Lateral Above Moulding:** Light side dosing boosts high partials (`H₉–H₁₂ +3.8 dB`), **but compacts further over playing time!** Excess lacquer wicks into the flank and locks up the spring (`H₁–H₄ −3.8 dB`).
+  - **Direct on Crown (`12:00`):** **Strictly avoid!** (Glassy, nasal hardness `+6.0 dB`, permanent damage).
+  - **Fundamental Fullness & Projection via Mass (instead of over-hardening):** Middle to bass **increase weight (`+m ↑`)** · Toward treble **reduce weight (`−m ↓`)**.
+- **02 · Heat Ironing:** Thermostat-controlled **strictly max. `135 °C`** (protects keratin & lanolin from scorching/brittleness).
+- **03 · Ultra-Fine Crown Finish:** Micro-abrasive down to **`≤ 15 µm` (`15 my`)** or **Braun Series 1** foil shaver (trims stray fuzz fibers with `0%` felt removal).
 
 ### Slide 32 — The Renner Academy & Technical Master Dialogue
-- **Invitation:** Hands-on masterclasses (*By Masters for Masters* on action geometry, hammerhead fitting, Yamaha Kit & concert voicing), **factory tours at our unified Meuselwitz plant**, and direct technical support.
+- **Invitation:** Hands-on masterclasses (*By Masters for Masters* on action geometry, hammerhead installation, Yamaha Kit & concert voicing), **factory tours at our unified Meuselwitz plant**, and direct technical support.
 
-### Slide 33 — Let the Perfect Hammer Sound! (Finale & Open Q&A)
-- **Closing Line:** *“Meuselwitz precision and finest Wurzen Merino felt — Let the Perfect Hammer Sound! Thank you very much, and let’s open the floor for your questions and workshop experiences.”*
+### Slide 33 — Let the Perfect Hammer Sound!
+- **Closing Line:** *“Meuselwitz precision and finest Wurzen Merino felt — Let the Perfect Hammer Sound! Thank you very much — I now look forward to your questions and your experiences from the workshop.”*

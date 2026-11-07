@@ -268,10 +268,14 @@ def sync_deployed_bundle(sync_media: bool = False):
     for doc_name in (
         "Referenten_Spickzettel_DE.pdf",
         "Speaker_Cheat_Sheet_EN.pdf",
+        "Referenten_Handout_Ausfuehrlich_DE.pdf",
+        "Speaker_Handout_Detailed_EN.pdf",
         "Praesentationsfolien_Texte_EN.pdf",
         "Praesentationsfolien_Texte_ZH.pdf",
         "Praesentationsfolien_Texte_JA.pdf",
         "Louis_Renner_Uebersetzungen_Review_DE_EN_ZH_JA.xlsx",
+        "Louis_Renner_Praesentation_Backup_4K_DE.pdf",
+        "Louis_Renner_Praesentation_Backup_4K_EN.pdf",
     ):
         src_doc = docs_dir / doc_name
         if src_doc.exists():
