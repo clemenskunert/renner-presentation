@@ -9203,8 +9203,8 @@ body::before {
 }
 
 /* Gleichmäßige vertikale Raumaufteilung in Karten ohne Bullet-Liste */
-.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card),
-.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) {
+.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card):not(.contact-exec-card),
+.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card):not(.contact-exec-card) {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -14078,13 +14078,14 @@ html[lang="zh"] .slide.s34-finale-slide h2.slide-title.s34-motto {
   min-height: 0;
 }
 
+.slide.contact-intro-slide .bento-card.contact-exec-card,
 .contact-exec-card {
   position: relative;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between !important;
-  gap: 0 !important;
-  padding: 32px 34px 28px 34px;
+  justify-content: center !important;
+  gap: 34px !important;
+  padding: 34px 38px 32px 38px;
   border-radius: 22px;
   background: linear-gradient(160deg, rgba(19, 29, 39, 0.9) 0%, rgba(11, 18, 26, 0.95) 100%);
   border: 1px solid rgba(212, 175, 55, 0.25);
@@ -14146,8 +14147,8 @@ html[lang="zh"] .slide.s34-finale-slide h2.slide-title.s34-motto {
 
 .contact-avatar-shell {
   position: relative;
-  width: 168px;
-  height: 168px;
+  width: 184px;
+  height: 184px;
   border-radius: 50%;
   padding: 5px;
   flex-shrink: 0;
@@ -14230,38 +14231,10 @@ html[lang="ja"] .contact-person-name {
   color: rgba(220, 228, 238, 0.9);
 }
 
-/* Direct Responsibility Topic Chips */
-.contact-topic-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-topic-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  background: rgba(212, 175, 55, 0.09);
-  border: 1px solid rgba(212, 175, 55, 0.26);
-  color: #f3dfb0;
-}
-
-.contact-topic-chip.green {
-  background: rgba(46, 160, 115, 0.11);
-  border-color: rgba(62, 188, 138, 0.3);
-  color: #b5f5d8;
-}
-
 .contact-divider {
   height: 1px;
   width: 100%;
-  margin: 2px 0;
+  margin: 0;
   background: linear-gradient(90deg, rgba(212, 175, 55, 0.38), rgba(255, 255, 255, 0.09) 65%, transparent);
 }
 
@@ -14281,7 +14254,7 @@ html[lang="ja"] .contact-person-name {
 .contact-info-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 13px;
   min-width: 0;
 }
 
@@ -14290,7 +14263,7 @@ html[lang="ja"] .contact-person-name {
   grid-template-columns: 38px 88px minmax(0, 1fr);
   align-items: center;
   gap: 12px;
-  padding: 11px 15px;
+  padding: 12px 16px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.075);
@@ -14405,8 +14378,8 @@ html[lang="ja"] .contact-person-name {
 }
 
 .contact-qr-frame {
-  width: 178px;
-  height: 178px;
+  width: 186px;
+  height: 186px;
   padding: 9px;
   border-radius: 12px;
   background: #ffffff;
@@ -14445,6 +14418,11 @@ html[lang="ja"] .contact-person-name {
 }
 
 /* Large Auditorium QR-Scan Mode ("Stay in Touch") */
+.slide.contact-intro-slide .contact-slide-body[data-active-contact-mode="qr"] .bento-card.contact-exec-card {
+  justify-content: space-between !important;
+  gap: 14px !important;
+}
+
 .contact-slide-body[data-active-contact-mode="qr"] .contact-profile-top {
   gap: 18px;
 }
@@ -14455,7 +14433,6 @@ html[lang="ja"] .contact-person-name {
 }
 
 .contact-slide-body[data-active-contact-mode="qr"] .contact-person-focus,
-.contact-slide-body[data-active-contact-mode="qr"] .contact-topic-chips,
 .contact-slide-body[data-active-contact-mode="qr"] .contact-info-list {
   display: none;
 }

@@ -9754,8 +9754,8 @@ body::before {
 }
 
 /* Gleichmäßige vertikale Raumaufteilung in Karten ohne Bullet-Liste */
-.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card),
-.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card) {
+.slide .bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card):not(.contact-exec-card),
+.bento-card:not(:has(.bento-card-list)):not(.media-framed):not(.agenda-card):not(.contact-exec-card) {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -14629,13 +14629,14 @@ html[lang="zh"] .slide.s34-finale-slide h2.slide-title.s34-motto {
   min-height: 0;
 }
 
+.slide.contact-intro-slide .bento-card.contact-exec-card,
 .contact-exec-card {
   position: relative;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between !important;
-  gap: 0 !important;
-  padding: 32px 34px 28px 34px;
+  justify-content: center !important;
+  gap: 34px !important;
+  padding: 34px 38px 32px 38px;
   border-radius: 22px;
   background: linear-gradient(160deg, rgba(19, 29, 39, 0.9) 0%, rgba(11, 18, 26, 0.95) 100%);
   border: 1px solid rgba(212, 175, 55, 0.25);
@@ -14697,8 +14698,8 @@ html[lang="zh"] .slide.s34-finale-slide h2.slide-title.s34-motto {
 
 .contact-avatar-shell {
   position: relative;
-  width: 168px;
-  height: 168px;
+  width: 184px;
+  height: 184px;
   border-radius: 50%;
   padding: 5px;
   flex-shrink: 0;
@@ -14781,38 +14782,10 @@ html[lang="ja"] .contact-person-name {
   color: rgba(220, 228, 238, 0.9);
 }
 
-/* Direct Responsibility Topic Chips */
-.contact-topic-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-topic-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  background: rgba(212, 175, 55, 0.09);
-  border: 1px solid rgba(212, 175, 55, 0.26);
-  color: #f3dfb0;
-}
-
-.contact-topic-chip.green {
-  background: rgba(46, 160, 115, 0.11);
-  border-color: rgba(62, 188, 138, 0.3);
-  color: #b5f5d8;
-}
-
 .contact-divider {
   height: 1px;
   width: 100%;
-  margin: 2px 0;
+  margin: 0;
   background: linear-gradient(90deg, rgba(212, 175, 55, 0.38), rgba(255, 255, 255, 0.09) 65%, transparent);
 }
 
@@ -14832,7 +14805,7 @@ html[lang="ja"] .contact-person-name {
 .contact-info-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 13px;
   min-width: 0;
 }
 
@@ -14841,7 +14814,7 @@ html[lang="ja"] .contact-person-name {
   grid-template-columns: 38px 88px minmax(0, 1fr);
   align-items: center;
   gap: 12px;
-  padding: 11px 15px;
+  padding: 12px 16px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.075);
@@ -14956,8 +14929,8 @@ html[lang="ja"] .contact-person-name {
 }
 
 .contact-qr-frame {
-  width: 178px;
-  height: 178px;
+  width: 186px;
+  height: 186px;
   padding: 9px;
   border-radius: 12px;
   background: #ffffff;
@@ -14996,6 +14969,11 @@ html[lang="ja"] .contact-person-name {
 }
 
 /* Large Auditorium QR-Scan Mode ("Stay in Touch") */
+.slide.contact-intro-slide .contact-slide-body[data-active-contact-mode="qr"] .bento-card.contact-exec-card {
+  justify-content: space-between !important;
+  gap: 14px !important;
+}
+
 .contact-slide-body[data-active-contact-mode="qr"] .contact-profile-top {
   gap: 18px;
 }
@@ -15006,7 +14984,6 @@ html[lang="ja"] .contact-person-name {
 }
 
 .contact-slide-body[data-active-contact-mode="qr"] .contact-person-focus,
-.contact-slide-body[data-active-contact-mode="qr"] .contact-topic-chips,
 .contact-slide-body[data-active-contact-mode="qr"] .contact-info-list {
   display: none;
 }
@@ -15317,12 +15294,6 @@ html[lang="ja"] .contact-person-name {
                 </div>
               </div>
 
-              <div class="contact-topic-chips">
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip1">✦ Unternehmensstrategie</span>
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip2">✦ OEM- &amp; Herstellerpartner</span>
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip3">✦ Internationale Märkte</span>
-              </div>
-
               <div class="contact-divider" aria-hidden="true"></div>
 
               <div class="contact-details-qr-row">
@@ -15394,12 +15365,6 @@ html[lang="ja"] .contact-person-name {
                   <div class="contact-person-role" data-i18n="s2_p2_role">Werkleiter / Plant Manager</div>
                   <p class="contact-person-focus" data-i18n="s2_p2_focus">Gesamtfertigung Holz, Mechanik &amp; Hammerkopf sowie technische Leitung der Renner Academy</p>
                 </div>
-              </div>
-
-              <div class="contact-topic-chips">
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip1">✦ Holz, Mechanik &amp; Hammerkopf</span>
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip2">✦ Yamaha Kit &amp; Maßfertigung</span>
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip3">✦ Renner Academy &amp; Technik</span>
               </div>
 
               <div class="contact-divider" aria-hidden="true"></div>
@@ -20750,12 +20715,6 @@ window.slideTranslations = {
     "s2_scan_cta": "KONTAKT SPEICHERN",
     "s2_hq_tradition": "DAS HERZSTÜCK DES KLAVIERS SEIT 1882",
     "s2_hq_address": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Deutschland",
-    "s2_p1_chip1": "✦ Unternehmensstrategie",
-    "s2_p1_chip2": "✦ OEM- & Herstellerpartner",
-    "s2_p1_chip3": "✦ Internationale Märkte",
-    "s2_p2_chip1": "✦ Holz, Mechanik & Hammerkopf",
-    "s2_p2_chip2": "✦ Yamaha Kit & Maßfertigung",
-    "s2_p2_chip3": "✦ Renner Academy & Technik",
     "s2_notes": "Folie 2: Persönliche Vorstellung Ihrer direkten Ansprechpartner bei Louis Renner in Meuselwitz: Geschäftsführer (CEO) Erik Stieler für strategische Partnerschaften und Unternehmensleitung sowie Werkleiter Clemens Kunert für Produktion (Holz, Mechanik, Hammerkopf), technische Beratung und die Renner Academy. Tipp: Per Klick auf ‚Stay in Touch • QR-Scan‘ oben rechts (oder direkt auf einen QR-Code) lassen sich beide vCard-QR-Codes für den gesamten Konferenzsaal groß einblenden.",
     "s3_category": "Übersicht • Gliederung",
     "s3_title": "Struktur und Kapitel im Überblick",
@@ -21721,12 +21680,6 @@ window.slideTranslations = {
     "s2_scan_cta": "SCAN TO SAVE CONTACT",
     "s2_hq_tradition": "THE HEART OF THE PIANO SINCE 1882",
     "s2_hq_address": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany",
-    "s2_p1_chip1": "✦ Corporate Strategy",
-    "s2_p1_chip2": "✦ OEM & Piano Makers",
-    "s2_p1_chip3": "✦ Global Markets",
-    "s2_p2_chip1": "✦ Wood, Actions & Hammers",
-    "s2_p2_chip2": "✦ Yamaha Kit & Custom Sets",
-    "s2_p2_chip3": "✦ Renner Academy & Tech",
     "s2_notes": "Slide 2: Personal introduction of your direct contacts at Louis Renner in Meuselwitz: CEO / Managing Director Erik Stieler for overall corporate leadership and manufacturer partnerships, and Plant Manager Clemens Kunert for unified production (wood, actions, hammerheads), technical support, and the Renner Academy. Tip: Click 'Stay in Touch • QR Scan' at top right (or click either QR code) to enlarge both vCard QR codes for easy scanning from the back of the auditorium.",
     "s3_category": "Overview • Outline",
     "s3_title": "Structure and Chapters at a Glance",
@@ -22692,12 +22645,6 @@ window.slideTranslations = {
     "s2_scan_cta": "スキャンして連絡先を保存",
     "s2_hq_tradition": "1882年創業 ピアノの心臓部",
     "s2_hq_address": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany（ドイツ）",
-    "s2_p1_chip1": "✦ 企業戦略・経営統括",
-    "s2_p1_chip2": "✦ ピアノメーカー提携",
-    "s2_p1_chip3": "✦ グローバル市場展開",
-    "s2_p2_chip1": "✦ 木工・アクション・ハンマー製造",
-    "s2_p2_chip2": "✦ ヤマハキット・特注仕様",
-    "s2_p2_chip3": "✦ レンナー・アカデミー",
     "s2_notes": "スライド 2：モイゼルヴィッツ本社の担当者紹介です。経営全般およびパートナーシップ統括の最高経営責任者（CEO）エリック・シュティーラーと、木工・アクション・ハンマーヘッド一貫製造およびレンナー・アカデミーを担当する工場長クレメンス・クナートをご紹介します。右上の「QR拡大表示」またはQRコードをクリックすると、会場後方からも読み取りやすい大型QR表示に切り替わります。",
     "s3_category": "概要 • 全体構成",
     "s3_title": "構成と全5章の概要",
@@ -23663,12 +23610,6 @@ window.slideTranslations = {
     "s2_scan_cta": "扫码保存名片",
     "s2_hq_tradition": "始于 1882 · 钢琴的核心灵魂",
     "s2_hq_address": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany（德国莫伊塞尔维茨）",
-    "s2_p1_chip1": "✦ 企业战略与经营管理",
-    "s2_p1_chip2": "✦ 钢琴制造商与 OEM 合作",
-    "s2_p1_chip3": "✦ 国际市场与渠道合作",
-    "s2_p2_chip1": "✦ 木工、击弦机与弦槌生产",
-    "s2_p2_chip2": "✦ 雅马哈套件与定制规格",
-    "s2_p2_chip3": "✦ 雷诺学院与技术支持",
     "s2_notes": "第 2 页：向现场嘉宾介绍德国路易·雷诺（Louis Renner）莫伊塞尔维茨总厂的两位核心联系人：负责公司整体战略与全球制造商合作的首席执行官 Erik Stieler，以及负责木工、击弦机与弦槌一体化生产及雷诺学院（Renner Academy）的工厂厂长 Clemens Kunert。提示：点击右上角“保持联系 • 扫码存名片”或直接点击二维码，可切换为适合会场后排扫码的大尺寸电子名片视图。",
     "s3_category": "总览 • 章节架构",
     "s3_title": "整体结构与章节概览",

@@ -16,10 +16,10 @@
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
 
   <!-- Self-Hosted Local Fonts (100% Offline - Zero External Network Calls) -->
-  <link rel="stylesheet" href="css/fonts.css?v=20261107_054917">
+  <link rel="stylesheet" href="css/fonts.css?v=20261107_062859">
 
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261107_054917">
+  <link rel="stylesheet" href="css/presentation.css?v=20261107_062859">
   <script>window.__RENNER_STANDALONE__ = true;</script>
 </head>
 
@@ -218,12 +218,6 @@
                 </div>
               </div>
 
-              <div class="contact-topic-chips">
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip1">✦ Unternehmensstrategie</span>
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip2">✦ OEM- &amp; Herstellerpartner</span>
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip3">✦ Internationale Märkte</span>
-              </div>
-
               <div class="contact-divider" aria-hidden="true"></div>
 
               <div class="contact-details-qr-row">
@@ -295,12 +289,6 @@
                   <div class="contact-person-role" data-i18n="s2_p2_role">Werkleiter / Plant Manager</div>
                   <p class="contact-person-focus" data-i18n="s2_p2_focus">Gesamtfertigung Holz, Mechanik &amp; Hammerkopf sowie technische Leitung der Renner Academy</p>
                 </div>
-              </div>
-
-              <div class="contact-topic-chips">
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip1">✦ Holz, Mechanik &amp; Hammerkopf</span>
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip2">✦ Yamaha Kit &amp; Maßfertigung</span>
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip3">✦ Renner Academy &amp; Technik</span>
               </div>
 
               <div class="contact-divider" aria-hidden="true"></div>
@@ -5273,24 +5261,24 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/translations.js?v=20261107_054917"></script>
-  <script src="js/translations-data.js?v=20261107_054917"></script>
-  <script src="js/audio-synth.js?v=20261107_054917"></script>
-  <script src="js/timelapse.js?v=20261107_054917"></script>
-  <script src="js/history-journey.js?v=20261107_054917"></script>
-  <script src="js/transformation-journey.js?v=20261107_054917"></script>
-  <script src="js/ffw-history.js?v=20261107_054917"></script>
-  <script src="js/felt-anatomy.js?v=20261107_054917"></script>
-  <script src="js/weickert-rem-zoom.js?v=20261107_054917"></script>
-  <script src="js/hammer-weight-balance.js?v=20261107_054917"></script>
-  <script src="js/yamaha-kit.js?v=20261107_054917"></script>
-  <script src="js/yamaha-kit-acoustic.js?v=20261107_054917"></script>
-  <script src="js/piano-tone-a1.js?v=20261107_054917"></script>
-  <script src="js/hammer-spring.js?v=20261107_054917"></script>
-  <script src="js/crown-string-alignment.js?v=20261107_054917"></script>
-  <script src="js/voicing-zones.js?v=20261107_054917"></script>
-  <script src="js/felt-lacquer-hardening.js?v=20261107_054917"></script>
-  <script src="js/presentation.js?v=20261107_054917"></script>
+  <script src="js/translations.js?v=20261107_062859"></script>
+  <script src="js/translations-data.js?v=20261107_062859"></script>
+  <script src="js/audio-synth.js?v=20261107_062859"></script>
+  <script src="js/timelapse.js?v=20261107_062859"></script>
+  <script src="js/history-journey.js?v=20261107_062859"></script>
+  <script src="js/transformation-journey.js?v=20261107_062859"></script>
+  <script src="js/ffw-history.js?v=20261107_062859"></script>
+  <script src="js/felt-anatomy.js?v=20261107_062859"></script>
+  <script src="js/weickert-rem-zoom.js?v=20261107_062859"></script>
+  <script src="js/hammer-weight-balance.js?v=20261107_062859"></script>
+  <script src="js/yamaha-kit.js?v=20261107_062859"></script>
+  <script src="js/yamaha-kit-acoustic.js?v=20261107_062859"></script>
+  <script src="js/piano-tone-a1.js?v=20261107_062859"></script>
+  <script src="js/hammer-spring.js?v=20261107_062859"></script>
+  <script src="js/crown-string-alignment.js?v=20261107_062859"></script>
+  <script src="js/voicing-zones.js?v=20261107_062859"></script>
+  <script src="js/felt-lacquer-hardening.js?v=20261107_062859"></script>
+  <script src="js/presentation.js?v=20261107_062859"></script>
   <script>
     // Offline PWA Service Worker Management
     // In local development (localhost / 127.0.0.1), unregister service workers & purge caches to ensure live code is always seen

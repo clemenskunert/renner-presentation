@@ -378,42 +378,6 @@
           "en": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany",
           "ja": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany（ドイツ）",
           "zh": "Louis Renner GmbH · Hainstraße 1 · 04610 Meuselwitz · Germany（德国莫伊塞尔维茨）"
-        },
-        "s2_p1_chip1": {
-          "de": "✦ Unternehmensstrategie",
-          "en": "✦ Corporate Strategy",
-          "ja": "✦ 企業戦略・経営統括",
-          "zh": "✦ 企业战略与经营管理"
-        },
-        "s2_p1_chip2": {
-          "de": "✦ OEM- & Herstellerpartner",
-          "en": "✦ OEM & Piano Makers",
-          "ja": "✦ ピアノメーカー提携",
-          "zh": "✦ 钢琴制造商与 OEM 合作"
-        },
-        "s2_p1_chip3": {
-          "de": "✦ Internationale Märkte",
-          "en": "✦ Global Markets",
-          "ja": "✦ グローバル市場展開",
-          "zh": "✦ 国际市场与渠道合作"
-        },
-        "s2_p2_chip1": {
-          "de": "✦ Holz, Mechanik & Hammerkopf",
-          "en": "✦ Wood, Actions & Hammers",
-          "ja": "✦ 木工・アクション・ハンマー製造",
-          "zh": "✦ 木工、击弦机与弦槌生产"
-        },
-        "s2_p2_chip2": {
-          "de": "✦ Yamaha Kit & Maßfertigung",
-          "en": "✦ Yamaha Kit & Custom Sets",
-          "ja": "✦ ヤマハキット・特注仕様",
-          "zh": "✦ 雅马哈套件与定制规格"
-        },
-        "s2_p2_chip3": {
-          "de": "✦ Renner Academy & Technik",
-          "en": "✦ Renner Academy & Tech",
-          "ja": "✦ レンナー・アカデミー",
-          "zh": "✦ 雷诺学院与技术支持"
         }
       },
       "notes": {

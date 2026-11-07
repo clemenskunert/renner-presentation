@@ -102,12 +102,6 @@ def get_all_slides_html():
                 </div>
               </div>
 
-              <div class="contact-topic-chips">
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip1">✦ Unternehmensstrategie</span>
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip2">✦ OEM- &amp; Herstellerpartner</span>
-                <span class="contact-topic-chip gold" data-i18n="s2_p1_chip3">✦ Internationale Märkte</span>
-              </div>
-
               <div class="contact-divider" aria-hidden="true"></div>
 
               <div class="contact-details-qr-row">
@@ -179,12 +173,6 @@ def get_all_slides_html():
                   <div class="contact-person-role" data-i18n="s2_p2_role">Werkleiter / Plant Manager</div>
                   <p class="contact-person-focus" data-i18n="s2_p2_focus">Gesamtfertigung Holz, Mechanik &amp; Hammerkopf sowie technische Leitung der Renner Academy</p>
                 </div>
-              </div>
-
-              <div class="contact-topic-chips">
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip1">✦ Holz, Mechanik &amp; Hammerkopf</span>
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip2">✦ Yamaha Kit &amp; Maßfertigung</span>
-                <span class="contact-topic-chip green" data-i18n="s2_p2_chip3">✦ Renner Academy &amp; Technik</span>
               </div>
 
               <div class="contact-divider" aria-hidden="true"></div>
