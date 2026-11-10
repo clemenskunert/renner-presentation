@@ -1,7 +1,7 @@
 # Louis Renner Masterclass – 100% Offline Standalone Paket (Windows PC, Mac & iPad)
 
 Dieser Ordner (`Deployed/` bzw. `Louis_Renner_Masterclass_Standalone/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
-Alle **34 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Ansprechpartner-vCards, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
+Alle **35 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Ansprechpartner-vCards, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
 
 ---
 

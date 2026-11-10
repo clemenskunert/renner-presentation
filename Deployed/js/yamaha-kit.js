@@ -38,7 +38,7 @@ class YamahaKitStage {
   }
 
   init() {
-    this.slideEl = (document.querySelector('.slide.yk-kit-slide') || document.querySelector('.slide[data-slide="20"]'));
+    this.slideEl = (document.querySelector('.slide.yk-kit-slide') || document.querySelector('.slide[data-slide="21"]'));
     if (!this.slideEl) return;
 
     this.tabs = Array.from(this.slideEl.querySelectorAll('#yk-epoch-tabs .ffw-epoch-tab'));
@@ -220,7 +220,7 @@ class YamahaKitStage {
       lbl.textContent = pauseLabels[lang] || 'Pause';
     } else {
       const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
-      lbl.textContent = (dict && dict.s20_play_label) || 'Präsentation abspielen';
+      lbl.textContent = (dict && (dict.s21_play_label || dict.s20_play_label)) || 'Präsentation abspielen';
     }
   }
 
@@ -230,9 +230,9 @@ class YamahaKitStage {
     const dict = (window.translations && window.translations[lang]) || (window.slideTranslations && window.slideTranslations[lang]);
     if (this.isZoomed) {
       const closeFallbacks = { de: '✕ Schließen', en: '✕ Close', ja: '✕ 閉じる', zh: '✕ 关闭' };
-      this.zoomBtn.textContent = (dict && dict.s20_zoom_close) || closeFallbacks[lang] || closeFallbacks.de;
+      this.zoomBtn.textContent = (dict && (dict.s21_zoom_close || dict.s20_zoom_close)) || closeFallbacks[lang] || closeFallbacks.de;
     } else {
-      this.zoomBtn.textContent = (dict && dict.s20_zoom_btn) || '🔍 Detail-Lupe';
+      this.zoomBtn.textContent = (dict && (dict.s21_zoom_btn || dict.s20_zoom_btn)) || '🔍 Detail-Lupe';
     }
   }
 

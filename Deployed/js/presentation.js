@@ -788,7 +788,7 @@ class PresentationController {
       // Gently pre-warm metadata of videos on the immediate next slide (1 slide ahead only)
       const upcomingSlide = this.slides[index + 1];
       if (upcomingSlide) {
-        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video#s12-drone-video').forEach(nv => {
+        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video#s12-drone-video, video#hk-drone-intro-video').forEach(nv => {
           if (nv.preload === 'none') {
             nv.preload = 'metadata';
           }
@@ -800,7 +800,167 @@ class PresentationController {
         this.startSeqVideoCard(card);
       });
 
-      // Slide 12 (Kapitel 3 Opener): First-open fade-in from black to bright ("Schwarz nach Hell")
+      // Slide 12 (Kapitel 3 Eröffnung: Drohnenflug Hammerkopfabteilung):
+      // Organische Einblende am Anfang, sanfte Ausblende am Ende & direkter Sprung auf Folie 13 nach dem Abspielen
+      if (currentSlide.querySelector('#hk-drone-intro-video')) {
+        const introSlideCurtain = currentSlide.querySelector('#hk-drone-slide-curtain');
+        const introVideoCurtain = currentSlide.querySelector('#hk-drone-fade-curtain');
+        const introVideo = currentSlide.querySelector('#hk-drone-intro-video');
+        const progressFill = currentSlide.querySelector('#hk-drone-progress-fill');
+        const cinemaOverlay = currentSlide.querySelector('#hk-drone-cinema-overlay');
+        const replayBtn = currentSlide.querySelector('#hk-drone-replay-btn');
+        const skipBtn = currentSlide.querySelector('#hk-drone-skip-btn');
+
+        const startIntroFlightWithFadeIn = () => {
+          if (!introVideo) return;
+          introVideo._fadeOutStarted = false;
+          introVideo._autoAdvanced = false;
+          if (progressFill) progressFill.style.width = '0%';
+          if (cinemaOverlay) cinemaOverlay.classList.remove('is-receded');
+
+          if (introSlideCurtain) {
+            introSlideCurtain.classList.remove('is-fading-in', 'is-fading-out');
+            introSlideCurtain.classList.add('is-armed');
+            void introSlideCurtain.offsetWidth;
+            requestAnimationFrame(() => {
+              introSlideCurtain.classList.remove('is-armed');
+              introSlideCurtain.classList.add('is-fading-in');
+            });
+          }
+
+          if (introVideoCurtain) {
+            introVideoCurtain.classList.remove('is-fading-in', 'is-fading-out');
+            introVideoCurtain.classList.add('is-armed');
+          }
+          introVideo.classList.remove('is-fading-in', 'is-fading-out');
+          introVideo.classList.add('is-armed');
+
+          let revealDone = false;
+          const revealIntroVideo = () => {
+            if (revealDone) return;
+            revealDone = true;
+            if (introVideoCurtain) {
+              void introVideoCurtain.offsetWidth;
+              requestAnimationFrame(() => {
+                introVideoCurtain.classList.remove('is-armed');
+                introVideoCurtain.classList.add('is-fading-in');
+              });
+            }
+            requestAnimationFrame(() => {
+              introVideo.classList.remove('is-armed');
+              introVideo.classList.add('is-fading-in');
+            });
+          };
+
+          introVideo.addEventListener('playing', revealIntroVideo, { once: true });
+          introVideo.addEventListener('loadeddata', revealIntroVideo, { once: true });
+          setTimeout(revealIntroVideo, 160);
+        };
+
+        startIntroFlightWithFadeIn();
+
+        if (introVideo && !introVideo._hkDroneEventsBound) {
+          introVideo._hkDroneEventsBound = true;
+
+          introVideo.addEventListener('timeupdate', () => {
+            if (!currentSlide.classList.contains('active')) return;
+            const dur = introVideo.duration;
+            const cur = introVideo.currentTime || 0;
+            if (dur && isFinite(dur) && dur > 0) {
+              const pct = Math.min(100, Math.max(0, (cur / dur) * 100));
+              if (progressFill) progressFill.style.width = `${pct.toFixed(1)}%`;
+
+              if (cinemaOverlay) {
+                cinemaOverlay.classList.toggle('is-receded', cur > 4.0 && (dur - cur) > 2.5);
+              }
+
+              // Smooth 2.0s fade-out ("Ausblende") before the end of the drone flight
+              const remaining = dur - cur;
+              if (dur > 3.0 && remaining <= 2.0 && !introVideo._fadeOutStarted) {
+                introVideo._fadeOutStarted = true;
+                if (introVideoCurtain) {
+                  introVideoCurtain.classList.remove('is-armed', 'is-fading-in');
+                  introVideoCurtain.classList.add('is-fading-out');
+                }
+                if (introSlideCurtain) {
+                  introSlideCurtain.classList.remove('is-armed', 'is-fading-in');
+                  introSlideCurtain.classList.add('is-fading-out');
+                }
+                introVideo.classList.remove('is-armed', 'is-fading-in');
+                introVideo.classList.add('is-fading-out');
+              }
+            }
+          });
+
+          introVideo.addEventListener('ended', () => {
+            if (!currentSlide.classList.contains('active')) return;
+            if (introVideo._autoAdvanced) return;
+            introVideo._autoAdvanced = true;
+            if (progressFill) progressFill.style.width = '100%';
+
+            const hadFadeOutLead = Boolean(introVideo._fadeOutStarted);
+            if (!hadFadeOutLead) {
+              if (introVideoCurtain) {
+                introVideoCurtain.classList.remove('is-armed', 'is-fading-in');
+                introVideoCurtain.classList.add('is-fading-out');
+              }
+              if (introSlideCurtain) {
+                introSlideCurtain.classList.remove('is-armed', 'is-fading-in');
+                introSlideCurtain.classList.add('is-fading-out');
+              }
+            }
+
+            // Re-arm Slide 13's fade-in curtain so the transition from black into Slide 13 is 100% organic
+            this.s12FirstOpenDone = false;
+            const slideIdx = this.slides.indexOf(currentSlide);
+            const delayMs = hadFadeOutLead ? 80 : 420;
+            setTimeout(() => {
+              if (this.currentSlideIndex === slideIdx && slideIdx + 1 < this.totalSlides) {
+                this.goToSlide(slideIdx + 1);
+              }
+            }, delayMs);
+          });
+        }
+
+        if (replayBtn && !replayBtn._hkBound) {
+          replayBtn._hkBound = true;
+          replayBtn.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            if (!introVideo) return;
+            try { introVideo.currentTime = 0; } catch (_) {}
+            startIntroFlightWithFadeIn();
+            introVideo.muted = true;
+            introVideo.play().catch(() => {});
+          });
+        }
+
+        if (skipBtn && !skipBtn._hkBound) {
+          skipBtn._hkBound = true;
+          skipBtn.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            if (introVideo) introVideo._autoAdvanced = true;
+            if (introVideoCurtain) {
+              introVideoCurtain.classList.remove('is-armed', 'is-fading-in');
+              introVideoCurtain.classList.add('is-fading-out');
+            }
+            if (introSlideCurtain) {
+              introSlideCurtain.classList.remove('is-armed', 'is-fading-in');
+              introSlideCurtain.classList.add('is-fading-out');
+            }
+            this.s12FirstOpenDone = false;
+            const slideIdx = this.slides.indexOf(currentSlide);
+            setTimeout(() => {
+              if (this.currentSlideIndex === slideIdx && slideIdx + 1 < this.totalSlides) {
+                this.goToSlide(slideIdx + 1);
+              }
+            }, 320);
+          });
+        }
+      }
+
+      // Slide 13 (Klimatisiertes Filzlager): Smooth fade-in from black to bright ("Schwarz nach Hell")
       if (currentSlide.querySelector('#s12-drone-video')) {
         const slideCurtain = currentSlide.querySelector('#s12-slide-fade-curtain');
         const videoCurtain = currentSlide.querySelector('#s12-video-fade-curtain');
@@ -1004,7 +1164,7 @@ class PresentationController {
       };
 
       // Allow clicking the parent video card to resume/start if Edge strict Block mode is enabled
-      const parentCard = v.closest('.hk-video-card, .s12-drone-card');
+      const parentCard = v.closest('.hk-video-card, .s12-drone-card, .hk-drone-intro-stage');
       if (parentCard && !parentCard._edgeCardClickBound) {
         parentCard._edgeCardClickBound = true;
         parentCard.style.cursor = 'pointer';

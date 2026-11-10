@@ -9256,21 +9256,21 @@ body::before {
   color: rgba(255, 255, 255, 0.93) !important;
 }
 
-/* Folie 32 (Una Corda & Renner Academy): Symmetrische gestapelte Karten links */
-.slide[data-slide="33"] .bento-grid-stack-2 .bento-card .bento-card-title {
+/* Folie 34 (Renner Academy): Symmetrische gestapelte Karten links */
+.slide[data-slide="34"] .bento-grid-stack-2 .bento-card .bento-card-title {
   font-size: clamp(1.44rem, 1.68vw, 1.92rem) !important;
   line-height: 1.22 !important;
   margin: 2px 0 !important;
 }
 
-.slide[data-slide="33"] .bento-grid-stack-2 .bento-card .bento-card-desc {
+.slide[data-slide="34"] .bento-grid-stack-2 .bento-card .bento-card-desc {
   font-size: clamp(1.10rem, 1.24vw, 1.35rem) !important;
   line-height: 1.46 !important;
   margin: 0 !important;
   flex: 0 0 auto !important;
 }
 
-.slide[data-slide="33"] .bento-grid-stack-2 .bento-card .bento-card-list-item {
+.slide[data-slide="34"] .bento-grid-stack-2 .bento-card .bento-card-list-item {
   font-size: clamp(1.08rem, 1.22vw, 1.32rem) !important;
   line-height: 1.40 !important;
   padding: 9px 14px !important;
@@ -10230,6 +10230,222 @@ body::before {
 .s12-video-fade-curtain.is-done {
   opacity: 0;
   display: none;
+}
+
+/* ==========================================================================
+   Slide 12 (Kapitel 3 Eröffnung: Drohnenflug durch die Hammerkopfabteilung)
+   Organische Ein- und Ausblende + Direkter Übergang auf Folie 13
+   ========================================================================== */
+.hk-drone-intro-slide .slide-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.hk-drone-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.hk-drone-ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(16, 23, 38, 0.85);
+  border: 1px solid rgba(200, 163, 86, 0.32);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.84rem, 0.9vw, 0.98rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.hk-drone-ctrl-btn:hover {
+  background: rgba(200, 163, 86, 0.18);
+  border-color: rgba(232, 198, 120, 0.72);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.hk-drone-ctrl-btn.highlight {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.26) 0%, rgba(31, 164, 124, 0.18) 100%);
+  border-color: rgba(232, 198, 120, 0.65);
+  color: #fff6dc;
+}
+
+.hk-drone-ctrl-btn.highlight:hover {
+  background: linear-gradient(135deg, rgba(200, 163, 86, 0.38) 0%, rgba(31, 164, 124, 0.28) 100%);
+  border-color: rgba(245, 216, 146, 0.92);
+}
+
+.hk-drone-intro-body {
+  display: flex !important;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.bento-card.media-framed.hk-drone-intro-stage {
+  position: relative !important;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  background: #000000 !important;
+  border: 1px solid rgba(200, 163, 86, 0.42) !important;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 244, 214, 0.14) !important;
+}
+
+.hk-drone-intro-video {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  background: #000000;
+  transform: scale(1) translateZ(0);
+  filter: brightness(1);
+  transition: filter 2.1s cubic-bezier(0.22, 1, 0.36, 1), transform 2.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hk-drone-intro-video.is-armed {
+  filter: brightness(0.14);
+  transform: scale(1.022) translateZ(0);
+  transition: none;
+}
+
+.hk-drone-intro-video.is-fading-in {
+  filter: brightness(1);
+  transform: scale(1) translateZ(0);
+  transition: filter 2.1s cubic-bezier(0.22, 1, 0.36, 1), transform 2.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hk-drone-intro-video.is-fading-out {
+  filter: brightness(0.06);
+  transform: scale(1.012) translateZ(0);
+  transition: filter 1.95s cubic-bezier(0.4, 0, 0.2, 1), transform 1.95s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hk-drone-slide-curtain,
+.hk-drone-fade-curtain {
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.hk-drone-slide-curtain {
+  z-index: 45;
+  border-radius: inherit;
+}
+
+.hk-drone-fade-curtain {
+  z-index: 8;
+  border-radius: inherit;
+}
+
+.hk-drone-slide-curtain.is-armed,
+.hk-drone-fade-curtain.is-armed {
+  opacity: 1;
+  transition: none;
+}
+
+.hk-drone-slide-curtain.is-fading-in {
+  opacity: 0;
+  transition: opacity 1.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hk-drone-fade-curtain.is-fading-in {
+  opacity: 0;
+  transition: opacity 2.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hk-drone-slide-curtain.is-fading-out {
+  opacity: 1;
+  transition: opacity 1.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hk-drone-fade-curtain.is-fading-out {
+  opacity: 1;
+  transition: opacity 1.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hk-drone-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0, 0, 0, 0) 58%, rgba(3, 6, 12, 0.46) 100%),
+    linear-gradient(180deg, rgba(4, 8, 16, 0.24) 0%, rgba(4, 8, 16, 0) 18%, rgba(4, 8, 16, 0) 74%, rgba(4, 8, 16, 0.82) 100%);
+}
+
+.hk-drone-cinema-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 20px 26px 16px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+}
+
+.hk-drone-cinema-overlay.is-receded {
+  opacity: 0.78;
+}
+
+.hk-drone-cinema-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hk-drone-cinema-meta .bento-badge {
+  margin: 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.hk-drone-cinema-meta .bento-media-caption {
+  margin: 0 !important;
+  font-size: clamp(1.06rem, 1.22vw, 1.28rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.hk-drone-progress-track {
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+
+.hk-drone-progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c8a356 0%, #f3d78d 65%, #2bb673 100%);
+  box-shadow: 0 0 12px rgba(232, 198, 120, 0.65);
+  transition: width 0.2s linear;
 }
 
 /* ==========================================================================
@@ -11679,13 +11895,13 @@ body::before {
   padding: 5px 11px !important;
 }
 
-/* Full-bleed media frame on Slide 32 */
-.slide[data-slide="33"] .bento-card.media-framed {
+/* Full-bleed media frame on Slide 34 (Renner Academy) */
+.slide[data-slide="34"] .bento-card.media-framed {
   padding: 0 !important;
   overflow: hidden !important;
 }
 
-.slide[data-slide="33"] .bento-card.media-framed img {
+.slide[data-slide="34"] .bento-card.media-framed img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;

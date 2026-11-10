@@ -330,7 +330,7 @@ def create_instructions():
     md_content = """# Louis Renner Masterclass – 100% Offline Standalone Paket (Windows PC, Mac & iPad)
 
 Dieser Ordner (`Deployed/` bzw. `Louis_Renner_Masterclass_Standalone/`) ist **vollständig unabhängig vom Internet** (null externe Server-, CDN- oder Google-Fonts-Verbindungen – speziell gehärtet für Offline-Konferenzen u. a. in China).
-Alle **34 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Ansprechpartner-vCards, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
+Alle **35 Folien**, sämtliche **4 Sprachen (DE, EN, JA, ZH)**, Ansprechpartner-vCards, Schriften, Klangsimulationen und **1080p H.264-Videos** sind lokal eingebettet.
 
 ---
 
@@ -370,7 +370,7 @@ Im Unterordner **`Handouts/`** liegen druckfertige A4-Unterlagen und Backups ber
 
     txt_content = """======================================================================
   LOUIS RENNER MASTERCLASS - 100% OFFLINE STANDALONE EDITION
-  (Windows 10/11 PC, macOS & iPad - China / Offline Ready - 34 Slides)
+  (Windows 10/11 PC, macOS & iPad - China / Offline Ready - 35 Slides)
 ======================================================================
 
 WINDOWS PC (100% OFFLINE):
