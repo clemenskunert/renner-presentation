@@ -16,10 +16,10 @@
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
 
   <!-- Self-Hosted Local Fonts (100% Offline - Zero External Network Calls) -->
-  <link rel="stylesheet" href="css/fonts.css?v=20261110_152708">
+  <link rel="stylesheet" href="css/fonts.css?v=20261111_062915">
 
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261110_152708">
+  <link rel="stylesheet" href="css/presentation.css?v=20261111_062915">
   <script>window.__RENNER_STANDALONE__ = true;</script>
 </head>
 
@@ -2459,7 +2459,7 @@
         </div>
         <div class="slide-body hk-drone-intro-body">
           <div class="bento-card media-framed hk-drone-intro-stage" id="hk-drone-intro-stage">
-            <video id="hk-drone-intro-video" class="hk-drone-intro-video is-armed" muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/Drone_Hammerkopffertigung.mp4" poster="Visuell/Bilder/03_Hammerkopf_Fertigung/poster_drone_hammerkopffertigung.jpg"></video>
+            <video id="hk-drone-intro-video" class="hk-drone-intro-video is-armed" muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/Drone_Hammerkopffertigung_1.mp4" poster="Visuell/Bilder/03_Hammerkopf_Fertigung/poster_drone_hammerkopffertigung.jpg"></video>
             <div class="hk-drone-fade-curtain is-armed" id="hk-drone-fade-curtain" aria-hidden="true"></div>
             <div class="hk-drone-vignette" aria-hidden="true"></div>
             <div class="hero-corner-bracket top-left"></div>
@@ -5328,24 +5328,24 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/translations.js?v=20261110_152708"></script>
-  <script src="js/translations-data.js?v=20261110_152708"></script>
-  <script src="js/audio-synth.js?v=20261110_152708"></script>
-  <script src="js/timelapse.js?v=20261110_152708"></script>
-  <script src="js/history-journey.js?v=20261110_152708"></script>
-  <script src="js/transformation-journey.js?v=20261110_152708"></script>
-  <script src="js/ffw-history.js?v=20261110_152708"></script>
-  <script src="js/felt-anatomy.js?v=20261110_152708"></script>
-  <script src="js/weickert-rem-zoom.js?v=20261110_152708"></script>
-  <script src="js/hammer-weight-balance.js?v=20261110_152708"></script>
-  <script src="js/yamaha-kit.js?v=20261110_152708"></script>
-  <script src="js/yamaha-kit-acoustic.js?v=20261110_152708"></script>
-  <script src="js/piano-tone-a1.js?v=20261110_152708"></script>
-  <script src="js/hammer-spring.js?v=20261110_152708"></script>
-  <script src="js/crown-string-alignment.js?v=20261110_152708"></script>
-  <script src="js/voicing-zones.js?v=20261110_152708"></script>
-  <script src="js/felt-lacquer-hardening.js?v=20261110_152708"></script>
-  <script src="js/presentation.js?v=20261110_152708"></script>
+  <script src="js/translations.js?v=20261111_062915"></script>
+  <script src="js/translations-data.js?v=20261111_062915"></script>
+  <script src="js/audio-synth.js?v=20261111_062915"></script>
+  <script src="js/timelapse.js?v=20261111_062915"></script>
+  <script src="js/history-journey.js?v=20261111_062915"></script>
+  <script src="js/transformation-journey.js?v=20261111_062915"></script>
+  <script src="js/ffw-history.js?v=20261111_062915"></script>
+  <script src="js/felt-anatomy.js?v=20261111_062915"></script>
+  <script src="js/weickert-rem-zoom.js?v=20261111_062915"></script>
+  <script src="js/hammer-weight-balance.js?v=20261111_062915"></script>
+  <script src="js/yamaha-kit.js?v=20261111_062915"></script>
+  <script src="js/yamaha-kit-acoustic.js?v=20261111_062915"></script>
+  <script src="js/piano-tone-a1.js?v=20261111_062915"></script>
+  <script src="js/hammer-spring.js?v=20261111_062915"></script>
+  <script src="js/crown-string-alignment.js?v=20261111_062915"></script>
+  <script src="js/voicing-zones.js?v=20261111_062915"></script>
+  <script src="js/felt-lacquer-hardening.js?v=20261111_062915"></script>
+  <script src="js/presentation.js?v=20261111_062915"></script>
   <script>
     // Offline PWA Service Worker Management
     // In local development (localhost / 127.0.0.1), unregister service workers & purge caches to ensure live code is always seen

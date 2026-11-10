@@ -21,19 +21,22 @@ __pycache__/
 .idea/
 .vscode/
 
-# Adobe Premiere Pro temp & autosave
+# Adobe Premiere Pro temp, project & autosave
 **/Adobe Premiere Pro Auto-Save/
+*.prproj
 *.prproj~*
+*.prin
 
 # Deployed media duplication (Visuell is already tracked in root Visuell/)
 Deployed/Visuell/
 
 # Raw camera / drone recordings (> 100MB, keep local & SharePoint only)
 Visuell/Video/DJI_*.mp4
+Visuell/Video/Drone_*.mp4
 Visuell/Video/MeuselwitzInnenRaw.mp4
 Visuell/Video/MeuselwitzInnen_Geglaettet*.mp4
 Visuell/Video/APTA2026-MeuselwitzInnen.mp4
-Visuell/Video/Hammerkopf-Fertigung/Drone_Hammerkopffertigung.mp4
+Visuell/Video/Hammerkopf-Fertigung/Drone_*.mp4
 Visuell/Video/05_Yamaha_Kit/**/*.mp4
 Visuell/Video_Standalone_H264/
 
