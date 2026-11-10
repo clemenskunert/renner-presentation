@@ -788,7 +788,7 @@ class PresentationController {
       // Gently pre-warm metadata of videos on the immediate next slide (1 slide ahead only)
       const upcomingSlide = this.slides[index + 1];
       if (upcomingSlide) {
-        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video#s12-drone-video, video#hk-drone-intro-video').forEach(nv => {
+        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video.s12-drone-video, video#s12-drone-video, video#s19-drone-video, video#hk-drone-intro-video').forEach(nv => {
           if (nv.preload === 'none') {
             nv.preload = 'metadata';
           }
@@ -960,24 +960,42 @@ class PresentationController {
         }
       }
 
-      // Slide 13 (Klimatisiertes Filzlager): Smooth fade-in from black to bright ("Schwarz nach Hell")
-      if (currentSlide.querySelector('#s12-drone-video')) {
+      // Slide 13 & Slide 19 (Boomerang Drone Videos): Smooth organic fade-in on slide entry
+      const droneCards = currentSlide.querySelectorAll('.s12-drone-card');
+      if (droneCards.length > 0) {
         const slideCurtain = currentSlide.querySelector('#s12-slide-fade-curtain');
-        const videoCurtain = currentSlide.querySelector('#s12-video-fade-curtain');
-        const s12Video = currentSlide.querySelector('#s12-drone-video');
-
-        if (!this.s12FirstOpenDone) {
+        if (slideCurtain && !this.s12FirstOpenDone) {
           this.s12FirstOpenDone = true;
+          slideCurtain.classList.remove('is-fading', 'is-done');
+          slideCurtain.classList.add('is-armed');
+          void slideCurtain.offsetWidth;
+          requestAnimationFrame(() => {
+            slideCurtain.classList.remove('is-armed');
+            slideCurtain.classList.add('is-fading');
+          });
+          setTimeout(() => slideCurtain.classList.add('is-done'), 1650);
+        }
 
-          if (slideCurtain) {
-            slideCurtain.classList.remove('is-fading', 'is-done');
-            slideCurtain.classList.add('is-armed');
-            void slideCurtain.offsetWidth;
-            requestAnimationFrame(() => {
-              slideCurtain.classList.remove('is-armed');
-              slideCurtain.classList.add('is-fading');
-            });
-            setTimeout(() => slideCurtain.classList.add('is-done'), 1650);
+        droneCards.forEach(card => {
+          const videoCurtain = card.querySelector('.s12-video-fade-curtain');
+          const droneVideo = card.querySelector('video.s12-drone-video');
+
+          if (card._fadeDoneTimer) {
+            clearTimeout(card._fadeDoneTimer);
+            card._fadeDoneTimer = null;
+          }
+          if (card._fadeFallbackTimer) {
+            clearTimeout(card._fadeFallbackTimer);
+            card._fadeFallbackTimer = null;
+          }
+
+          if (videoCurtain) {
+            videoCurtain.classList.remove('is-fading', 'is-done');
+            videoCurtain.classList.add('is-armed');
+          }
+          if (droneVideo) {
+            droneVideo.classList.remove('is-fading');
+            droneVideo.classList.add('is-armed');
           }
 
           let videoRevealStarted = false;
@@ -990,22 +1008,26 @@ class PresentationController {
                 videoCurtain.classList.remove('is-armed');
                 videoCurtain.classList.add('is-fading');
               });
-              setTimeout(() => videoCurtain.classList.add('is-done'), 2250);
+              card._fadeDoneTimer = setTimeout(() => videoCurtain.classList.add('is-done'), 2150);
             }
-            if (s12Video) {
+            if (droneVideo) {
               requestAnimationFrame(() => {
-                s12Video.classList.remove('is-armed');
-                s12Video.classList.add('is-fading');
+                droneVideo.classList.remove('is-armed');
+                droneVideo.classList.add('is-fading');
               });
             }
           };
 
-          if (s12Video) {
-            s12Video.addEventListener('playing', revealVideo, { once: true });
-            s12Video.addEventListener('loadeddata', revealVideo, { once: true });
+          if (droneVideo) {
+            if (droneVideo.readyState >= 2 && !droneVideo.paused) {
+              setTimeout(revealVideo, 60);
+            } else {
+              droneVideo.addEventListener('playing', revealVideo, { once: true });
+              droneVideo.addEventListener('loadeddata', revealVideo, { once: true });
+            }
           }
-          setTimeout(revealVideo, 180);
-        }
+          card._fadeFallbackTimer = setTimeout(revealVideo, 160);
+        });
       }
     }
 

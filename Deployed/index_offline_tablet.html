@@ -10758,12 +10758,18 @@ body::before {
 }
 
 .s12-drone-video.is-armed {
-  filter: brightness(0.18);
+  filter: brightness(0.22);
+  transform: scale(1.018) translateZ(0);
 }
 
 .s12-drone-video.is-fading {
   filter: brightness(1);
-  transition: filter 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1) translateZ(0);
+  transition: filter 1.95s cubic-bezier(0.22, 1, 0.36, 1), transform 2.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide[data-slide="19"] .bento-grid-mosaic {
+  grid-template-columns: 0.88fr 1.12fr !important;
 }
 
 .s12-slide-fade-curtain,
@@ -18600,16 +18606,16 @@ html[lang="zh"] .contact-slide-body[data-active-contact-mode="qr"] .contact-pers
                 <span class="hero-fact-pill" data-i18n="s19_fact">📐 0,1 mm Fräsgenauigkeit kombiniert mit reproduzierbarer Roboter-Kalibrierung am Einzelkopf</span>
               </div>
             </div>
-            <div class="bento-card media-framed hk-video-card hk-seq-video-card" id="s18-video-card">
-              <video class="hk-loop-video hk-seq-video is-active" data-seq-index="0" muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/CNC_Bearbeitung.mp4" poster="Visuell/Bilder/03_Hammerkopf_Fertigung/03.5_Fraesen_Bohren/poster_cnc_bearbeitung.jpg" style="object-position: 36% center;"></video>
-              <video class="hk-loop-video hk-seq-video" data-seq-index="1" muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/GLT_Robot_Sanding_HK_Renner.mp4"></video>
+            <div class="bento-card media-framed s12-drone-card hk-video-card" id="s19-video-card">
+              <video id="s19-drone-video" class="s12-drone-video is-armed" loop muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/Dorne_SCM_CNC.mp4" poster="Visuell/Bilder/03_Hammerkopf_Fertigung/03.5_Fraesen_Bohren/poster_dorne_scm_cnc.jpg"></video>
+              <div class="s12-video-fade-curtain is-armed" id="s19-video-fade-curtain" aria-hidden="true"></div>
               <div class="hero-corner-bracket top-left"></div>
               <div class="hero-corner-bracket top-right"></div>
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s19_b2_badge" data-i18n="s19_b2_badge">WERKSVIDEOS</span>
-                <div class="bento-media-caption" data-i18n="s19_caption_1" data-i18n="s19_caption_1">CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage</div>
+                <span class="bento-badge green" data-i18n="s19_b2_badge">CNC- & ROBOTERZELLEN</span>
+                <div class="bento-media-caption" data-i18n="s19_caption_1">Drohnenflug über die SCM-CNC-Fräszentren und die Roboter-Kalibrieranlage in Meuselwitz</div>
               </div>
             </div>
           </div>
@@ -21608,8 +21614,8 @@ window.slideTranslations = {
     "s19_bullet_2": "<strong>2. Nachfräsen nach Pressen &amp; Leimen:</strong> Nach dem Verpressen und Verleimen wird der Filzüberstand abgetragen und sauber nachgefräst.",
     "s19_bullet_3": "<strong>3. Roboter-Kalibrierung:</strong> Im Anschluss wird auf einer Roboteranlage jeder einzelne Hammerkopf präzise kalibriert.",
     "s19_fact": "📐 0,1 mm Fräsgenauigkeit kombiniert mit reproduzierbarer Roboter-Kalibrierung am Einzelkopf",
-    "s19_b2_badge": "WERKSVIDEOS",
-    "s19_caption_1": "CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage",
+    "s19_b2_badge": "CNC- & ROBOTERZELLEN",
+    "s19_caption_1": "Drohnenflug über die SCM-CNC-Fräszentren und die Roboter-Kalibrieranlage in Meuselwitz",
     "s19_notes": "Folie 19: Auf den CNC-Fräsen werden zunächst mit einer Toleranz von 0,1 mm die Hammerkerne gefräst und nach dem Pressen und Leimen der Filzüberstand entfernt sowie die Kontur nachgefräst. Im Anschluss wird jeder einzelne Hammerkopf auf einer Roboteranlage präzise kalibriert.",
     "s20_category": "Teil 3: Hammerkopf-Produktion • Nieten & Bohren",
     "s20_title": "Automatisches Nieten & Bohren",
@@ -22582,8 +22588,8 @@ window.slideTranslations = {
     "s19_bullet_2": "<strong>2. Post-Gluing Trim Milling:</strong> After pressing and gluing, the felt overhang is removed and cleanly finish-milled.",
     "s19_bullet_3": "<strong>3. Robotic Calibration:</strong> Subsequently, a robotic cell precisely calibrates each individual hammerhead.",
     "s19_fact": "📐 0.1 mm CNC accuracy combined with repeatable robotic single-head calibration",
-    "s19_b2_badge": "FACTORY VIDEOS",
-    "s19_caption_1": "CNC milling center & subsequent single-head calibration on the robotic system",
+    "s19_b2_badge": "CNC & ROBOT CELLS",
+    "s19_caption_1": "Drone flight across the SCM CNC milling centers and robotic calibration cell in Meuselwitz",
     "s19_notes": "Slide 19: On the CNC milling centers, the hammer mouldings are first milled to a 0.1 mm tolerance, and after pressing and gluing, the felt overhang is trimmed and re-milled. Subsequently, each individual hammerhead is precisely calibrated on a robotic cell.",
     "s20_category": "Part 3: Hammerhead Production • Riveting & Boring",
     "s20_title": "Automated Riveting & Boring",
@@ -23556,8 +23562,8 @@ window.slideTranslations = {
     "s19_bullet_2": "<strong>2. 接着後の追加工：</strong>プレス・接着後、はみ出したフェルトを除去し輪郭を精密に追加工します。",
     "s19_bullet_3": "<strong>3. ロボット単体校正：</strong>最後にロボットシステム上で、切り分けられた個々のハンマーヘッドを精密にキャリブレーションします。",
     "s19_fact": "📐 0.1 mmの切削精度とロボットによる均一な単体表面キャリブレーションの融合",
-    "s19_b2_badge": "工場映像",
-    "s19_caption_1": "CNCマシニングセンタおよびロボット設備による単体キャリブレーション（前後比較）",
+    "s19_b2_badge": "CNC・ロボットセル",
+    "s19_caption_1": "モイゼルヴィッツ工場のSCM製CNCマシニングセンタとロボット校正セルを巡るドローン映像",
     "s19_notes": "スライド 19：CNCフライス盤ではまず公差0.1 mmでウッドコアを切削し、プレス・接着後にフェルトのはみ出し除去と輪郭の追加工を行います。その後、ロボットシステムで個々のハンマーヘッドを精密にキャリブレーションします。",
     "s20_category": "第3章：ハンマーヘッド製造 • リベット打ちと穴あけ",
     "s20_title": "自動リベット打ち・ボーリング加工",
@@ -24530,8 +24536,8 @@ window.slideTranslations = {
     "s19_bullet_2": "<strong>2. 压合涂胶后复铣：</strong>在压制胶合后，切除毛毡多余部分并对轮廓进行干净利落的复铣。",
     "s19_bullet_3": "<strong>3. 机器人单颗校准：</strong>随后在自动化机器人工作站上对每一颗独立榔头进行精密表面校准。",
     "s19_fact": "📐 0.1 mm 数控铣削精度与高一致性机器人单颗校准的完美结合",
-    "s19_b2_badge": "车间实拍",
-    "s19_caption_1": "CNC 铣削加工中心及随后的机器人单颗榔头表面校准",
+    "s19_b2_badge": "CNC 与机器人工作站",
+    "s19_caption_1": "莫伊塞尔维茨工厂 SCM 数控铣削中心与机器人校准工作站无人机航拍",
     "s19_notes": "第 19 页：在 CNC 铣床上首先以 0.1 mm 公差铣削木芯；压合涂胶后切除毛毡余量并复铣轮廓；随后在机器人自动化设备上对每一颗独立榔头进行精密表面校准。",
     "s20_category": "第三部分：榔头制造 • 自动铆接与钻孔",
     "s20_title": "全自动铆接与钻孔加工",
@@ -44650,7 +44656,7 @@ class PresentationController {
       // Gently pre-warm metadata of videos on the immediate next slide (1 slide ahead only)
       const upcomingSlide = this.slides[index + 1];
       if (upcomingSlide) {
-        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video#s12-drone-video, video#hk-drone-intro-video').forEach(nv => {
+        upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video.s12-drone-video, video#s12-drone-video, video#s19-drone-video, video#hk-drone-intro-video').forEach(nv => {
           if (nv.preload === 'none') {
             nv.preload = 'metadata';
           }
@@ -44822,24 +44828,42 @@ class PresentationController {
         }
       }
 
-      // Slide 13 (Klimatisiertes Filzlager): Smooth fade-in from black to bright ("Schwarz nach Hell")
-      if (currentSlide.querySelector('#s12-drone-video')) {
+      // Slide 13 & Slide 19 (Boomerang Drone Videos): Smooth organic fade-in on slide entry
+      const droneCards = currentSlide.querySelectorAll('.s12-drone-card');
+      if (droneCards.length > 0) {
         const slideCurtain = currentSlide.querySelector('#s12-slide-fade-curtain');
-        const videoCurtain = currentSlide.querySelector('#s12-video-fade-curtain');
-        const s12Video = currentSlide.querySelector('#s12-drone-video');
-
-        if (!this.s12FirstOpenDone) {
+        if (slideCurtain && !this.s12FirstOpenDone) {
           this.s12FirstOpenDone = true;
+          slideCurtain.classList.remove('is-fading', 'is-done');
+          slideCurtain.classList.add('is-armed');
+          void slideCurtain.offsetWidth;
+          requestAnimationFrame(() => {
+            slideCurtain.classList.remove('is-armed');
+            slideCurtain.classList.add('is-fading');
+          });
+          setTimeout(() => slideCurtain.classList.add('is-done'), 1650);
+        }
 
-          if (slideCurtain) {
-            slideCurtain.classList.remove('is-fading', 'is-done');
-            slideCurtain.classList.add('is-armed');
-            void slideCurtain.offsetWidth;
-            requestAnimationFrame(() => {
-              slideCurtain.classList.remove('is-armed');
-              slideCurtain.classList.add('is-fading');
-            });
-            setTimeout(() => slideCurtain.classList.add('is-done'), 1650);
+        droneCards.forEach(card => {
+          const videoCurtain = card.querySelector('.s12-video-fade-curtain');
+          const droneVideo = card.querySelector('video.s12-drone-video');
+
+          if (card._fadeDoneTimer) {
+            clearTimeout(card._fadeDoneTimer);
+            card._fadeDoneTimer = null;
+          }
+          if (card._fadeFallbackTimer) {
+            clearTimeout(card._fadeFallbackTimer);
+            card._fadeFallbackTimer = null;
+          }
+
+          if (videoCurtain) {
+            videoCurtain.classList.remove('is-fading', 'is-done');
+            videoCurtain.classList.add('is-armed');
+          }
+          if (droneVideo) {
+            droneVideo.classList.remove('is-fading');
+            droneVideo.classList.add('is-armed');
           }
 
           let videoRevealStarted = false;
@@ -44852,22 +44876,26 @@ class PresentationController {
                 videoCurtain.classList.remove('is-armed');
                 videoCurtain.classList.add('is-fading');
               });
-              setTimeout(() => videoCurtain.classList.add('is-done'), 2250);
+              card._fadeDoneTimer = setTimeout(() => videoCurtain.classList.add('is-done'), 2150);
             }
-            if (s12Video) {
+            if (droneVideo) {
               requestAnimationFrame(() => {
-                s12Video.classList.remove('is-armed');
-                s12Video.classList.add('is-fading');
+                droneVideo.classList.remove('is-armed');
+                droneVideo.classList.add('is-fading');
               });
             }
           };
 
-          if (s12Video) {
-            s12Video.addEventListener('playing', revealVideo, { once: true });
-            s12Video.addEventListener('loadeddata', revealVideo, { once: true });
+          if (droneVideo) {
+            if (droneVideo.readyState >= 2 && !droneVideo.paused) {
+              setTimeout(revealVideo, 60);
+            } else {
+              droneVideo.addEventListener('playing', revealVideo, { once: true });
+              droneVideo.addEventListener('loadeddata', revealVideo, { once: true });
+            }
           }
-          setTimeout(revealVideo, 180);
-        }
+          card._fadeFallbackTimer = setTimeout(revealVideo, 160);
+        });
       }
     }
 

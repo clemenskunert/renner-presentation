@@ -3356,16 +3356,16 @@
           "zh": "📐 0.1 mm 数控铣削精度与高一致性机器人单颗校准的完美结合"
         },
         "s19_b2_badge": {
-          "de": "WERKSVIDEOS",
-          "en": "FACTORY VIDEOS",
-          "ja": "工場映像",
-          "zh": "车间实拍"
+          "de": "CNC- & ROBOTERZELLEN",
+          "en": "CNC & ROBOT CELLS",
+          "ja": "CNC・ロボットセル",
+          "zh": "CNC 与机器人工作站"
         },
         "s19_caption_1": {
-          "de": "CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage",
-          "en": "CNC milling center & subsequent single-head calibration on the robotic system",
-          "ja": "CNCマシニングセンタおよびロボット設備による単体キャリブレーション（前後比較）",
-          "zh": "CNC 铣削加工中心及随后的机器人单颗榔头表面校准"
+          "de": "Drohnenflug über die SCM-CNC-Fräszentren und die Roboter-Kalibrieranlage in Meuselwitz",
+          "en": "Drone flight across the SCM CNC milling centers and robotic calibration cell in Meuselwitz",
+          "ja": "モイゼルヴィッツ工場のSCM製CNCマシニングセンタとロボット校正セルを巡るドローン映像",
+          "zh": "莫伊塞尔维茨工厂 SCM 数控铣削中心与机器人校准工作站无人机航拍"
         }
       },
       "notes": {

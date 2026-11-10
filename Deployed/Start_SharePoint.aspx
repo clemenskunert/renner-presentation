@@ -16,10 +16,10 @@
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
 
   <!-- Self-Hosted Local Fonts (100% Offline - Zero External Network Calls) -->
-  <link rel="stylesheet" href="css/fonts.css?v=20261111_062915">
+  <link rel="stylesheet" href="css/fonts.css?v=20261111_071034">
 
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261111_062915">
+  <link rel="stylesheet" href="css/presentation.css?v=20261111_071034">
   <script>window.__RENNER_STANDALONE__ = true;</script>
 </head>
 
@@ -3160,16 +3160,16 @@
                 <span class="hero-fact-pill" data-i18n="s19_fact">📐 0,1 mm Fräsgenauigkeit kombiniert mit reproduzierbarer Roboter-Kalibrierung am Einzelkopf</span>
               </div>
             </div>
-            <div class="bento-card media-framed hk-video-card hk-seq-video-card" id="s18-video-card">
-              <video class="hk-loop-video hk-seq-video is-active" data-seq-index="0" muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/CNC_Bearbeitung.mp4" poster="Visuell/Bilder/03_Hammerkopf_Fertigung/03.5_Fraesen_Bohren/poster_cnc_bearbeitung.jpg" style="object-position: 36% center;"></video>
-              <video class="hk-loop-video hk-seq-video" data-seq-index="1" muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/GLT_Robot_Sanding_HK_Renner.mp4"></video>
+            <div class="bento-card media-framed s12-drone-card hk-video-card" id="s19-video-card">
+              <video id="s19-drone-video" class="s12-drone-video is-armed" loop muted playsinline disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" tabindex="-1" preload="none" src="Visuell/Video/Hammerkopf-Fertigung/Dorne_SCM_CNC.mp4" poster="Visuell/Bilder/03_Hammerkopf_Fertigung/03.5_Fraesen_Bohren/poster_dorne_scm_cnc.jpg"></video>
+              <div class="s12-video-fade-curtain is-armed" id="s19-video-fade-curtain" aria-hidden="true"></div>
               <div class="hero-corner-bracket top-left"></div>
               <div class="hero-corner-bracket top-right"></div>
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s19_b2_badge" data-i18n="s19_b2_badge">WERKSVIDEOS</span>
-                <div class="bento-media-caption" data-i18n="s19_caption_1" data-i18n="s19_caption_1">CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage</div>
+                <span class="bento-badge green" data-i18n="s19_b2_badge">CNC- & ROBOTERZELLEN</span>
+                <div class="bento-media-caption" data-i18n="s19_caption_1">Drohnenflug über die SCM-CNC-Fräszentren und die Roboter-Kalibrieranlage in Meuselwitz</div>
               </div>
             </div>
           </div>
@@ -5328,24 +5328,24 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/translations.js?v=20261111_062915"></script>
-  <script src="js/translations-data.js?v=20261111_062915"></script>
-  <script src="js/audio-synth.js?v=20261111_062915"></script>
-  <script src="js/timelapse.js?v=20261111_062915"></script>
-  <script src="js/history-journey.js?v=20261111_062915"></script>
-  <script src="js/transformation-journey.js?v=20261111_062915"></script>
-  <script src="js/ffw-history.js?v=20261111_062915"></script>
-  <script src="js/felt-anatomy.js?v=20261111_062915"></script>
-  <script src="js/weickert-rem-zoom.js?v=20261111_062915"></script>
-  <script src="js/hammer-weight-balance.js?v=20261111_062915"></script>
-  <script src="js/yamaha-kit.js?v=20261111_062915"></script>
-  <script src="js/yamaha-kit-acoustic.js?v=20261111_062915"></script>
-  <script src="js/piano-tone-a1.js?v=20261111_062915"></script>
-  <script src="js/hammer-spring.js?v=20261111_062915"></script>
-  <script src="js/crown-string-alignment.js?v=20261111_062915"></script>
-  <script src="js/voicing-zones.js?v=20261111_062915"></script>
-  <script src="js/felt-lacquer-hardening.js?v=20261111_062915"></script>
-  <script src="js/presentation.js?v=20261111_062915"></script>
+  <script src="js/translations.js?v=20261111_071034"></script>
+  <script src="js/translations-data.js?v=20261111_071034"></script>
+  <script src="js/audio-synth.js?v=20261111_071034"></script>
+  <script src="js/timelapse.js?v=20261111_071034"></script>
+  <script src="js/history-journey.js?v=20261111_071034"></script>
+  <script src="js/transformation-journey.js?v=20261111_071034"></script>
+  <script src="js/ffw-history.js?v=20261111_071034"></script>
+  <script src="js/felt-anatomy.js?v=20261111_071034"></script>
+  <script src="js/weickert-rem-zoom.js?v=20261111_071034"></script>
+  <script src="js/hammer-weight-balance.js?v=20261111_071034"></script>
+  <script src="js/yamaha-kit.js?v=20261111_071034"></script>
+  <script src="js/yamaha-kit-acoustic.js?v=20261111_071034"></script>
+  <script src="js/piano-tone-a1.js?v=20261111_071034"></script>
+  <script src="js/hammer-spring.js?v=20261111_071034"></script>
+  <script src="js/crown-string-alignment.js?v=20261111_071034"></script>
+  <script src="js/voicing-zones.js?v=20261111_071034"></script>
+  <script src="js/felt-lacquer-hardening.js?v=20261111_071034"></script>
+  <script src="js/presentation.js?v=20261111_071034"></script>
   <script>
     // Offline PWA Service Worker Management
     // In local development (localhost / 127.0.0.1), unregister service workers & purge caches to ensure live code is always seen
