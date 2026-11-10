@@ -2581,6 +2581,12 @@
           "ja": "10× 拡大視野枠 (414 µm)",
           "zh": "10× 细节视野框 (414 µm)"
         },
+        "s13_rem_scale_callout": {
+          "de": "Epicuticula-Schuppen der Wollfaser",
+          "en": "Wool Fiber Cuticle Scales",
+          "ja": "羊毛繊維のキューティクル鱗片",
+          "zh": "羊毛纤维表皮鳞片层"
+        },
         "s13_b2_badge": {
           "de": "STFI • REM",
           "en": "STFI • SEM",

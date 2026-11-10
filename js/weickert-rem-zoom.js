@@ -111,6 +111,15 @@
     const imgDetail = slide.querySelector('[data-s12-img="detail"]');
     const imgMacro = slide.querySelector('[data-s12-img="macro"]');
     const reticle = slide.querySelector('[data-s12-reticle]');
+    const scaleCallout = slide.querySelector('[data-s12-scale-callout]');
+    const scaleSvg = slide.querySelector('[data-s12-scale-svg]');
+    const scaleBadge = slide.querySelector('[data-s12-scale-badge]');
+    const scaleArrow1 = slide.querySelector('[data-s12-arrow-1]');
+    const scaleArrow2 = slide.querySelector('[data-s12-arrow-2]');
+    const scaleRing1 = slide.querySelector('[data-s12-ring-1]');
+    const scaleDot1 = slide.querySelector('[data-s12-dot-1]');
+    const scaleRing2 = slide.querySelector('[data-s12-ring-2]');
+    const scaleDot2 = slide.querySelector('[data-s12-dot-2]');
     const loupe = slide.querySelector('[data-s12-loupe]');
     const loupeImg = slide.querySelector('[data-s12-loupe-img]');
     const loupeTag = slide.querySelector('[data-s12-loupe-tag]');
@@ -263,6 +272,87 @@
       loupeImg.style.transform = `translate3d(${offsetX.toFixed(1)}px, ${offsetY.toFixed(1)}px, 0)`;
     }
 
+    function updateScaleCalloutDOM(stageW, stageH, detailAlpha, detailScale, txDetail, tyDetail) {
+      if (!scaleCallout || !scaleSvg || !scaleBadge) return;
+      const show = state.mode === 'rem' && detailAlpha > 0.25 && state.zoom >= 6.0;
+      scaleCallout.classList.toggle('is-visible', show);
+      if (!show) return;
+
+      scaleSvg.setAttribute('viewBox', `0 0 ${stageW.toFixed(1)} ${stageH.toFixed(1)}`);
+
+      // Unscaled object-fit: contain dimensions of REM_FilzDetail.png (842 x 596) inside stage
+      const aspect = 842 / 596;
+      let imgW = stageW;
+      let imgH = stageW / aspect;
+      if (imgH > stageH) {
+        imgH = stageH;
+        imgW = stageH * aspect;
+      }
+
+      function mapUV(u, v) {
+        return {
+          x: stageW * 0.5 + txDetail + (u - 0.5) * imgW * detailScale,
+          y: stageH * 0.5 + tyDetail + (v - 0.5) * imgH * detailScale
+        };
+      }
+
+      // Target 1: Overlapping roof-tile cuticle scale ring on central diagonal Merino fiber
+      const p1 = mapUV(0.600, 0.338);
+      // Target 2: Raised interlocking cuticle scale edge on the crest of the foreground curved fiber
+      const p2 = mapUV(0.534, 0.443);
+
+      // Position callout pill above-left of the two scale targets, clamped cleanly inside stage HUD bounds
+      const rawBx = Math.min(p1.x, p2.x) - 86;
+      const rawBy = Math.min(p1.y, p2.y) - 56;
+      const bx = Math.max(155, Math.min(stageW - 155, rawBx));
+      const by = Math.max(62, Math.min(stageH - 120, rawBy));
+
+      scaleBadge.style.left = `${bx.toFixed(1)}px`;
+      scaleBadge.style.top = `${by.toFixed(1)}px`;
+
+      const ringR1 = Math.max(11, Math.min(18, 11 * Math.sqrt(detailScale)));
+      const ringR2 = Math.max(10, Math.min(16, 10 * Math.sqrt(detailScale)));
+
+      function buildArrowPath(sx, sy, tx, ty, stopRadius) {
+        const dx = tx - sx;
+        const dy = ty - sy;
+        const dist = Math.hypot(dx, dy);
+        if (dist <= stopRadius + 6) return '';
+        const ux = dx / dist;
+        const uy = dy / dist;
+        const ex = tx - ux * (stopRadius + 3);
+        const ey = ty - uy * (stopRadius + 3);
+        return `M ${sx.toFixed(1)} ${sy.toFixed(1)} L ${ex.toFixed(1)} ${ey.toFixed(1)}`;
+      }
+
+      if (scaleArrow1) {
+        scaleArrow1.setAttribute('d', buildArrowPath(bx + 46, by + 1, p1.x, p1.y, ringR1));
+      }
+      if (scaleArrow2) {
+        scaleArrow2.setAttribute('d', buildArrowPath(bx - 4, by + 2, p2.x, p2.y, ringR2));
+      }
+      if (scaleRing1) {
+        scaleRing1.setAttribute('cx', p1.x.toFixed(1));
+        scaleRing1.setAttribute('cy', p1.y.toFixed(1));
+        scaleRing1.setAttribute('r', ringR1.toFixed(1));
+      }
+      if (scaleDot1) {
+        scaleDot1.setAttribute('cx', p1.x.toFixed(1));
+        scaleDot1.setAttribute('cy', p1.y.toFixed(1));
+        scaleDot1.style.display = 'none';
+      }
+      if (scaleRing2) {
+        scaleRing2.setAttribute('cx', p2.x.toFixed(1));
+        scaleRing2.setAttribute('cy', p2.y.toFixed(1));
+        scaleRing2.setAttribute('r', ringR2.toFixed(1));
+      }
+      if (scaleDot2) {
+        scaleDot2.setAttribute('cx', p2.x.toFixed(1));
+        scaleDot2.setAttribute('cy', p2.y.toFixed(1));
+        scaleDot2.style.display = 'none';
+      }
+    }
+
     function render() {
       const lang = getLang();
       const tDict = DYNAMIC_I18N[lang];
@@ -279,6 +369,7 @@
         imgOverview.style.opacity = '0';
         imgDetail.style.opacity = '0';
         if (reticle) reticle.classList.add('is-hidden');
+        if (scaleCallout) scaleCallout.classList.remove('is-visible');
         if (loupe) loupe.classList.remove('is-visible');
 
         if (zoomBadge) zoomBadge.textContent = tDict.macroBadge;
@@ -353,6 +444,7 @@
 
       updateDynamicScaleBar(tDict, hfwMm, stageW, stageH);
       updateLoupeDOM(tDict);
+      updateScaleCalloutDOM(stageW, stageH, detailAlpha, detailScale, txDetail, tyDetail);
 
       // Active preset highlight
       let activePreset = '';
@@ -445,8 +537,8 @@
         } else if (preset === '10') {
           animateTo(10.0, 0, 0, 480);
         } else if (preset === '22') {
-          // Center slightly on the prominent curved Merino wool fiber showing crisp cuticle scales
-          animateTo(22.0, -0.04, -0.05, 520);
+          // Center directly on the prominent Merino wool fibers showing crisp cuticle scales
+          animateTo(22.0, -0.04, 0.04, 520);
         }
       });
     });
@@ -457,7 +549,7 @@
         const target = item.getAttribute('data-s12-focus');
         if (target === '1') animateTo(1.0, 0, 0, 440);
         else if (target === '10') animateTo(10.0, 0, 0, 480);
-        else if (target === '22') animateTo(22.0, -0.04, -0.05, 520);
+        else if (target === '22') animateTo(22.0, -0.04, 0.04, 520);
       });
     });
 
@@ -581,7 +673,7 @@
         } else if (state.zoom < 3.5) {
           animateTo(10.0, 0, 0, 480);
         } else if (state.zoom < 16.0) {
-          animateTo(22.0, -0.04, -0.05, 480);
+          animateTo(22.0, -0.04, 0.04, 480);
         } else {
           animateTo(1.0, 0, 0, 460);
         }

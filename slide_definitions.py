@@ -2519,6 +2519,26 @@ def get_all_slides_html():
                   <span class="s12-rem-reticle-tag" data-i18n="s13_rem_reticle">10× Detailfenster (414 µm)</span>
                 </div>
 
+                <div class="s12-rem-scale-callout" data-s12-scale-callout aria-hidden="true">
+                  <svg class="s12-rem-scale-svg" data-s12-scale-svg viewBox="0 0 900 620" preserveAspectRatio="none">
+                    <defs>
+                      <marker id="s12-scale-arrow" viewBox="0 0 10 10" refX="8.2" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                        <path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#fbbf24"></path>
+                      </marker>
+                    </defs>
+                    <path class="s12-scale-leader" data-s12-arrow-1 d="" marker-end="url(#s12-scale-arrow)"></path>
+                    <path class="s12-scale-leader secondary" data-s12-arrow-2 d="" marker-end="url(#s12-scale-arrow)"></path>
+                    <circle class="s12-scale-target-ring" data-s12-ring-1 cx="0" cy="0" r="11"></circle>
+                    <circle class="s12-scale-target-dot" data-s12-dot-1 cx="0" cy="0" r="3.2"></circle>
+                    <circle class="s12-scale-target-ring secondary" data-s12-ring-2 cx="0" cy="0" r="10"></circle>
+                    <circle class="s12-scale-target-dot" data-s12-dot-2 cx="0" cy="0" r="3"></circle>
+                  </svg>
+                  <div class="s12-rem-scale-badge" data-s12-scale-badge>
+                    <span class="s12-rem-scale-dot"></span>
+                    <span data-i18n="s13_rem_scale_callout">Epicuticula-Schuppen der Wollfaser</span>
+                  </div>
+                </div>
+
                 <div class="s12-rem-loupe" data-s12-loupe>
                   <img data-s12-loupe-img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.3_Filz_Zuschnitt/REM_FilzDetail.png" alt="" draggable="false">
                   <div class="s12-rem-loupe-crosshair"></div>

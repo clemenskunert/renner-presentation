@@ -12880,6 +12880,95 @@ body::before {
   letter-spacing: 0.04em !important;
 }
 
+/* Zoomed-In Cuticle Scale Callout Arrow Overlay (10x .. 25x) */
+.s12-rem-slide .s12-rem-scale-callout {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 7 !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transition: opacity 0.22s ease !important;
+}
+
+.s12-rem-slide .s12-rem-scale-callout.is-visible {
+  opacity: 1 !important;
+}
+
+.s12-rem-slide .s12-rem-scale-svg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.85)) !important;
+}
+
+.s12-rem-slide .s12-scale-leader {
+  fill: none !important;
+  stroke: #fbbf24 !important;
+  stroke-width: 2.4px !important;
+  stroke-linecap: round !important;
+}
+
+.s12-rem-slide .s12-scale-leader.secondary {
+  stroke-width: 2px !important;
+  stroke-dasharray: 4 3 !important;
+  opacity: 0.92 !important;
+}
+
+.s12-rem-slide .s12-scale-target-ring {
+  fill: rgba(251, 191, 36, 0.14) !important;
+  stroke: #fbbf24 !important;
+  stroke-width: 2px !important;
+  animation: s12ScalePulse 2.2s ease-in-out infinite !important;
+}
+
+.s12-rem-slide .s12-scale-target-dot {
+  fill: #fde68a !important;
+  stroke: #05070c !important;
+  stroke-width: 1.2px !important;
+}
+
+@keyframes s12ScalePulse {
+  0%, 100% {
+    stroke-opacity: 0.95;
+    fill-opacity: 0.14;
+  }
+  50% {
+    stroke-opacity: 0.45;
+    fill-opacity: 0.28;
+  }
+}
+
+.s12-rem-slide .s12-rem-scale-badge {
+  position: absolute !important;
+  transform: translate(-50%, -100%) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  background: rgba(6, 10, 18, 0.9) !important;
+  border: 1.5px solid rgba(251, 191, 36, 0.85) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.78), 0 0 16px rgba(251, 191, 36, 0.28) !important;
+  color: #fef3c7 !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+  white-space: nowrap !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.s12-rem-slide .s12-rem-scale-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #fbbf24 !important;
+  box-shadow: 0 0 8px #fbbf24 !important;
+  flex-shrink: 0 !important;
+}
+
 /* Interactive Circular 10x SEM Magnifier Loupe */
 .s12-rem-slide .s12-rem-loupe {
   position: absolute !important;
@@ -17756,6 +17845,26 @@ html[lang="zh"] .contact-slide-body[data-active-contact-mode="qr"] .contact-pers
                   <span class="s12-rem-reticle-tag" data-i18n="s13_rem_reticle">10× Detailfenster (414 µm)</span>
                 </div>
 
+                <div class="s12-rem-scale-callout" data-s12-scale-callout aria-hidden="true">
+                  <svg class="s12-rem-scale-svg" data-s12-scale-svg viewBox="0 0 900 620" preserveAspectRatio="none">
+                    <defs>
+                      <marker id="s12-scale-arrow" viewBox="0 0 10 10" refX="8.2" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                        <path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#fbbf24"></path>
+                      </marker>
+                    </defs>
+                    <path class="s12-scale-leader" data-s12-arrow-1 d="" marker-end="url(#s12-scale-arrow)"></path>
+                    <path class="s12-scale-leader secondary" data-s12-arrow-2 d="" marker-end="url(#s12-scale-arrow)"></path>
+                    <circle class="s12-scale-target-ring" data-s12-ring-1 cx="0" cy="0" r="11"></circle>
+                    <circle class="s12-scale-target-dot" data-s12-dot-1 cx="0" cy="0" r="3.2"></circle>
+                    <circle class="s12-scale-target-ring secondary" data-s12-ring-2 cx="0" cy="0" r="10"></circle>
+                    <circle class="s12-scale-target-dot" data-s12-dot-2 cx="0" cy="0" r="3"></circle>
+                  </svg>
+                  <div class="s12-rem-scale-badge" data-s12-scale-badge>
+                    <span class="s12-rem-scale-dot"></span>
+                    <span data-i18n="s13_rem_scale_callout">Epicuticula-Schuppen der Wollfaser</span>
+                  </div>
+                </div>
+
                 <div class="s12-rem-loupe" data-s12-loupe>
                   <img data-s12-loupe-img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.3_Filz_Zuschnitt/REM_FilzDetail.png" alt="" draggable="false">
                   <div class="s12-rem-loupe-crosshair"></div>
@@ -21094,6 +21203,7 @@ window.slideTranslations = {
     "s13_rem_btn_loupe": "🔍 Live-Lupe",
     "s13_rem_btn_macro": "Deckfilz W 1512 K",
     "s13_rem_reticle": "10× Detailfenster (414 µm)",
+    "s13_rem_scale_callout": "Epicuticula-Schuppen der Wollfaser",
     "s13_b2_badge": "STFI • REM",
     "s13_caption_1": "REM-Übersicht (STFI Mik59_24 • 1 mm): Hochverdichteter 3D-Faserverbund mit 56 % maximaler Verwalkdichte.",
     "s13_notes": "Folie 13: Weickert Special erzielt mit 56 % die höchste rein mechanisch erreichbare Verwalkdichte im Hammerkopffilz. Laut akkreditiertem STFI-Untersuchungsbericht P2024 0903 (Hr. Kermer, Juni 2024) bewahrt die schonende Rohwollwäsche einen höheren Restfettanteil von 0,36 % gegenüber 0,26 % (+38 % nach ISO 3074). Dadurch sinkt das Quellverhalten im 48h-Wechselklimatest um 65 % (nur 4,81 % statt 13,69 % Dickenänderung). Nutzen Sie den interaktiven REM-Zoom rechts, um stufenlos vom 1-mm-Faserverbund in die 100-µm-Einzelfasern und bis 25× auf die intakte Schuppenschicht hineinzuzoomen.",
@@ -22059,6 +22169,7 @@ window.slideTranslations = {
     "s13_rem_btn_loupe": "🔍 Live Loupe",
     "s13_rem_btn_macro": "Felt Strip W 1512 K",
     "s13_rem_reticle": "10× Detail Frame (414 µm)",
+    "s13_rem_scale_callout": "Wool Fiber Cuticle Scales",
     "s13_b2_badge": "STFI • SEM",
     "s13_caption_1": "SEM Overview (STFI Mik59_24 • 1 mm): Ultra-dense 3D fiber interlock with 56% maximum fulling density.",
     "s13_notes": "Slide 13: Weickert Special achieves the highest purely mechanical fulling density of 56%. Per accredited STFI test report P2024 0903 (M. Kermer, June 2024), gentle scouring retains a higher residual wool grease content of 0.36% vs. 0.26% (+38%, ISO 3074), cutting humidity-cycle thickness swelling by 65% (only 4.81% vs. 13.69%). Use the interactive SEM zoom on the right to zoom smoothly from the 1 mm fiber network into the 100 µm single fibers and up to 25× onto the intact cuticle scales.",
@@ -23024,6 +23135,7 @@ window.slideTranslations = {
     "s13_rem_btn_loupe": "🔍 ライブルーペ",
     "s13_rem_btn_macro": "トップフェルト帯 W 1512 K",
     "s13_rem_reticle": "10× 拡大視野枠 (414 µm)",
+    "s13_rem_scale_callout": "羊毛繊維のキューティクル鱗片",
     "s13_b2_badge": "STFI • SEM",
     "s13_caption_1": "SEM全体像 (STFI Mik59_24 • 1 mm)：最大縮絨密度56%を誇る高密度3次元メリノ繊維ネットワーク。",
     "s13_notes": "スライド 13: ヴァイケルト・スペシャルは純機械縮絨による最高縮絨密度56%を達成します。STFI公認試験報告書 P2024 0903（M. Kermer、2024年6月）により、残留油脂率は0.36%（比較試料0.26%に対し+38%、ISO 3074）と高く、48時間温湿度サイクル試験での厚み膨潤が65%低減（13.69%→4.81%）することが実証されています。右側のインタラクティブSEMビューアで1 mm全体像から100 µm単繊維・鱗状表皮まで拡大できます。",
@@ -23989,6 +24101,7 @@ window.slideTranslations = {
     "s13_rem_btn_loupe": "🔍 实时放大镜",
     "s13_rem_btn_macro": "面毡条 W 1512 K",
     "s13_rem_reticle": "10× 细节视野框 (414 µm)",
+    "s13_rem_scale_callout": "羊毛纤维表皮鳞片层",
     "s13_b2_badge": "STFI • 电镜",
     "s13_caption_1": "电镜全景 (STFI Mik59_24 • 1 mm)：高达 56% 最大缩绒密度的三维紧密交织美利奴羊毛网络。",
     "s13_notes": "第 13 页：Weickert Special 实现了高达 56% 的纯物理最高缩绒密度。根据 STFI 权威检测报告 P2024 0903（M. Kermer，2024年6月），温和洗毛保留了更高的天然残脂率（0.36% 对比 0.26%，提高 38%，ISO 3074），使 48 小时交变湿热测试中的厚度膨胀率大幅降低 65%（仅 4.81%，对照样达 13.69%）。可通过右侧交互式电镜缩放器从 1 mm 纤维网络无级放大至 100 µm 单根纤维及表皮鳞片。",
@@ -29195,6 +29308,15 @@ window.feltAnatomySim = new FeltAnatomySimulation();
     const imgDetail = slide.querySelector('[data-s12-img="detail"]');
     const imgMacro = slide.querySelector('[data-s12-img="macro"]');
     const reticle = slide.querySelector('[data-s12-reticle]');
+    const scaleCallout = slide.querySelector('[data-s12-scale-callout]');
+    const scaleSvg = slide.querySelector('[data-s12-scale-svg]');
+    const scaleBadge = slide.querySelector('[data-s12-scale-badge]');
+    const scaleArrow1 = slide.querySelector('[data-s12-arrow-1]');
+    const scaleArrow2 = slide.querySelector('[data-s12-arrow-2]');
+    const scaleRing1 = slide.querySelector('[data-s12-ring-1]');
+    const scaleDot1 = slide.querySelector('[data-s12-dot-1]');
+    const scaleRing2 = slide.querySelector('[data-s12-ring-2]');
+    const scaleDot2 = slide.querySelector('[data-s12-dot-2]');
     const loupe = slide.querySelector('[data-s12-loupe]');
     const loupeImg = slide.querySelector('[data-s12-loupe-img]');
     const loupeTag = slide.querySelector('[data-s12-loupe-tag]');
@@ -29347,6 +29469,87 @@ window.feltAnatomySim = new FeltAnatomySimulation();
       loupeImg.style.transform = `translate3d(${offsetX.toFixed(1)}px, ${offsetY.toFixed(1)}px, 0)`;
     }
 
+    function updateScaleCalloutDOM(stageW, stageH, detailAlpha, detailScale, txDetail, tyDetail) {
+      if (!scaleCallout || !scaleSvg || !scaleBadge) return;
+      const show = state.mode === 'rem' && detailAlpha > 0.25 && state.zoom >= 6.0;
+      scaleCallout.classList.toggle('is-visible', show);
+      if (!show) return;
+
+      scaleSvg.setAttribute('viewBox', `0 0 ${stageW.toFixed(1)} ${stageH.toFixed(1)}`);
+
+      // Unscaled object-fit: contain dimensions of REM_FilzDetail.png (842 x 596) inside stage
+      const aspect = 842 / 596;
+      let imgW = stageW;
+      let imgH = stageW / aspect;
+      if (imgH > stageH) {
+        imgH = stageH;
+        imgW = stageH * aspect;
+      }
+
+      function mapUV(u, v) {
+        return {
+          x: stageW * 0.5 + txDetail + (u - 0.5) * imgW * detailScale,
+          y: stageH * 0.5 + tyDetail + (v - 0.5) * imgH * detailScale
+        };
+      }
+
+      // Target 1: Overlapping roof-tile cuticle scale ring on central diagonal Merino fiber
+      const p1 = mapUV(0.600, 0.338);
+      // Target 2: Raised interlocking cuticle scale edge on the crest of the foreground curved fiber
+      const p2 = mapUV(0.534, 0.443);
+
+      // Position callout pill above-left of the two scale targets, clamped cleanly inside stage HUD bounds
+      const rawBx = Math.min(p1.x, p2.x) - 86;
+      const rawBy = Math.min(p1.y, p2.y) - 56;
+      const bx = Math.max(155, Math.min(stageW - 155, rawBx));
+      const by = Math.max(62, Math.min(stageH - 120, rawBy));
+
+      scaleBadge.style.left = `${bx.toFixed(1)}px`;
+      scaleBadge.style.top = `${by.toFixed(1)}px`;
+
+      const ringR1 = Math.max(11, Math.min(18, 11 * Math.sqrt(detailScale)));
+      const ringR2 = Math.max(10, Math.min(16, 10 * Math.sqrt(detailScale)));
+
+      function buildArrowPath(sx, sy, tx, ty, stopRadius) {
+        const dx = tx - sx;
+        const dy = ty - sy;
+        const dist = Math.hypot(dx, dy);
+        if (dist <= stopRadius + 6) return '';
+        const ux = dx / dist;
+        const uy = dy / dist;
+        const ex = tx - ux * (stopRadius + 3);
+        const ey = ty - uy * (stopRadius + 3);
+        return `M ${sx.toFixed(1)} ${sy.toFixed(1)} L ${ex.toFixed(1)} ${ey.toFixed(1)}`;
+      }
+
+      if (scaleArrow1) {
+        scaleArrow1.setAttribute('d', buildArrowPath(bx + 46, by + 1, p1.x, p1.y, ringR1));
+      }
+      if (scaleArrow2) {
+        scaleArrow2.setAttribute('d', buildArrowPath(bx - 4, by + 2, p2.x, p2.y, ringR2));
+      }
+      if (scaleRing1) {
+        scaleRing1.setAttribute('cx', p1.x.toFixed(1));
+        scaleRing1.setAttribute('cy', p1.y.toFixed(1));
+        scaleRing1.setAttribute('r', ringR1.toFixed(1));
+      }
+      if (scaleDot1) {
+        scaleDot1.setAttribute('cx', p1.x.toFixed(1));
+        scaleDot1.setAttribute('cy', p1.y.toFixed(1));
+        scaleDot1.style.display = 'none';
+      }
+      if (scaleRing2) {
+        scaleRing2.setAttribute('cx', p2.x.toFixed(1));
+        scaleRing2.setAttribute('cy', p2.y.toFixed(1));
+        scaleRing2.setAttribute('r', ringR2.toFixed(1));
+      }
+      if (scaleDot2) {
+        scaleDot2.setAttribute('cx', p2.x.toFixed(1));
+        scaleDot2.setAttribute('cy', p2.y.toFixed(1));
+        scaleDot2.style.display = 'none';
+      }
+    }
+
     function render() {
       const lang = getLang();
       const tDict = DYNAMIC_I18N[lang];
@@ -29363,6 +29566,7 @@ window.feltAnatomySim = new FeltAnatomySimulation();
         imgOverview.style.opacity = '0';
         imgDetail.style.opacity = '0';
         if (reticle) reticle.classList.add('is-hidden');
+        if (scaleCallout) scaleCallout.classList.remove('is-visible');
         if (loupe) loupe.classList.remove('is-visible');
 
         if (zoomBadge) zoomBadge.textContent = tDict.macroBadge;
@@ -29437,6 +29641,7 @@ window.feltAnatomySim = new FeltAnatomySimulation();
 
       updateDynamicScaleBar(tDict, hfwMm, stageW, stageH);
       updateLoupeDOM(tDict);
+      updateScaleCalloutDOM(stageW, stageH, detailAlpha, detailScale, txDetail, tyDetail);
 
       // Active preset highlight
       let activePreset = '';
@@ -29529,8 +29734,8 @@ window.feltAnatomySim = new FeltAnatomySimulation();
         } else if (preset === '10') {
           animateTo(10.0, 0, 0, 480);
         } else if (preset === '22') {
-          // Center slightly on the prominent curved Merino wool fiber showing crisp cuticle scales
-          animateTo(22.0, -0.04, -0.05, 520);
+          // Center directly on the prominent Merino wool fibers showing crisp cuticle scales
+          animateTo(22.0, -0.04, 0.04, 520);
         }
       });
     });
@@ -29541,7 +29746,7 @@ window.feltAnatomySim = new FeltAnatomySimulation();
         const target = item.getAttribute('data-s12-focus');
         if (target === '1') animateTo(1.0, 0, 0, 440);
         else if (target === '10') animateTo(10.0, 0, 0, 480);
-        else if (target === '22') animateTo(22.0, -0.04, -0.05, 520);
+        else if (target === '22') animateTo(22.0, -0.04, 0.04, 520);
       });
     });
 
@@ -29665,7 +29870,7 @@ window.feltAnatomySim = new FeltAnatomySimulation();
         } else if (state.zoom < 3.5) {
           animateTo(10.0, 0, 0, 480);
         } else if (state.zoom < 16.0) {
-          animateTo(22.0, -0.04, -0.05, 480);
+          animateTo(22.0, -0.04, 0.04, 480);
         } else {
           animateTo(1.0, 0, 0, 460);
         }
