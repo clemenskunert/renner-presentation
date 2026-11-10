@@ -849,7 +849,7 @@
       const rect = canvas.getBoundingClientRect();
       const w = Math.max(240, rect.width || 640);
       const h = Math.max(110, rect.height || 260);
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.max(window.devicePixelRatio || 1, 2.75);
       const tw = Math.round(w * dpr);
       const th = Math.round(h * dpr);
       if (canvas.width !== tw || canvas.height !== th) {
@@ -858,7 +858,56 @@
       }
       const ctx = canvas.getContext('2d');
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
       return { ctx, w, h };
+    }
+
+    drawCalloutPill(ctx, text, x, y, targetX, targetY, textColor, borderColor, dotColor) {
+      ctx.save();
+      ctx.font = '600 13.4px Roboto, sans-serif';
+      const tw = ctx.measureText(text).width;
+      const padH = 9.5;
+      const pillW = tw + padH * 2 + 8;
+      const pillH = 22;
+      const pillTop = y - 15;
+
+      const lineStartX = x + pillW;
+      const lineStartY = pillTop + pillH * 0.5;
+      if (targetX !== null && targetY !== null && targetX > lineStartX + 4) {
+        ctx.strokeStyle = borderColor;
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.moveTo(lineStartX, lineStartY);
+        ctx.lineTo(targetX, targetY);
+        ctx.stroke();
+
+        ctx.fillStyle = dotColor || textColor;
+        ctx.strokeStyle = 'rgba(8, 12, 22, 0.92)';
+        ctx.lineWidth = 1.25;
+        ctx.beginPath();
+        ctx.arc(targetX, targetY, 3.1, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      ctx.fillStyle = 'rgba(8, 13, 24, 0.92)';
+      ctx.strokeStyle = borderColor;
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.roundRect(x, pillTop, pillW, pillH, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = dotColor || textColor;
+      ctx.beginPath();
+      ctx.arc(x + 8.5, pillTop + pillH * 0.5, 2.8, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = textColor;
+      ctx.textAlign = 'left';
+      ctx.fillText(text, x + 16, y);
+      ctx.restore();
     }
 
     drawArrow(ctx, x1, y1, x2, y2, color, width = 2.2, headScale = 1.0) {
@@ -909,11 +958,11 @@
       }
       ctx.restore();
 
-      const cx = w * 0.50;
-      const stringY = 46;
-      const crownTopY = 58;
+      const cx = w * 0.52;
+      const stringY = 36;
+      const crownTopY = 47;
 
-      // Exact 1:1 Louis Renner Hammerhead Proportions from Slide 27 ("Renner", Konzert preset S = 0.52)
+      // Exact 1:1 Louis Renner Hammerhead Proportions from Slide 28 ("Renner", Konzert preset S = 0.52)
       const S_REF = 0.52;
       const FELT_TO_TOTAL = 0.785;
       const SHOULDER_HW_RATIO = 0.495 - 0.105 * S_REF; // 0.4404
@@ -921,8 +970,8 @@
       const CROWN_CTRL_RATIO = 0.57 - 0.20 * S_REF;    // 0.4660
 
       // Scale totalH uniformly from both vertical & horizontal bounds so aspect ratio NEVER distorts
-      const maxTotalHVert = Math.max(176, Math.min(232, h - crownTopY - 32));
-      const maxTotalHHoriz = (w * 0.24) / (FELT_TO_TOTAL * SHOULDER_HW_RATIO);
+      const maxTotalHVert = Math.max(196, Math.min(264, h - crownTopY - 22));
+      const maxTotalHHoriz = (w * 0.268) / (FELT_TO_TOTAL * SHOULDER_HW_RATIO);
       const totalH = Math.min(maxTotalHVert, maxTotalHHoriz);
 
       const feltH = totalH * FELT_TO_TOTAL;
@@ -1019,17 +1068,17 @@
 
       // --- 0. Steel String Line at 12:00 Strike Point ---
       ctx.save();
-      ctx.strokeStyle = 'rgba(226, 232, 240, 0.45)';
-      ctx.lineWidth = 2.0;
+      ctx.strokeStyle = 'rgba(226, 232, 240, 0.55)';
+      ctx.lineWidth = 2.2;
       ctx.beginPath();
       ctx.moveTo(cx - shoulderHW * 1.55, stringY);
       ctx.lineTo(cx + shoulderHW * 1.55, stringY);
       ctx.stroke();
 
-      ctx.font = '600 12.4px Roboto, sans-serif';
-      ctx.fillStyle = 'rgba(226, 232, 240, 0.88)';
+      ctx.font = '700 13.4px Roboto, sans-serif';
+      ctx.fillStyle = 'rgba(241, 245, 249, 0.94)';
       ctx.textAlign = 'left';
-      ctx.fillText(d.cvString, 12, 20);
+      ctx.fillText(d.cvString, 14, 21);
       ctx.restore();
 
       // --- 1. Hornbeam Wood Core (Weißbuche-Holzkern — 1:1 with Slide 27 Renner Core) ---
@@ -1546,23 +1595,33 @@
         { lbl: '2:00', deg: 61 },
         { lbl: '3:00', deg: 90 }
       ];
-      ctx.font = '700 12.1px JetBrains Mono, monospace';
+      ctx.font = '700 13.0px JetBrains Mono, monospace';
       for (const tk of clockTicks) {
         const rad = Math.abs(tk.deg) * Math.PI / 180;
         const pt = evalOuterHalf(rad);
         const sgn = Math.sign(tk.deg);
         const ox = cx + sgn * (pt.x + (Math.abs(tk.deg) === 90 ? 18 : 15));
-        const oy = pt.y + (Math.abs(tk.deg) === 90 ? 15 : -4);
+        const oy = pt.y + (Math.abs(tk.deg) === 90 ? 16 : -4);
 
         // Skip drawing right-side label if needle handle or chuck passes right over it
         if (sgn > 0) {
           const dMid = Math.hypot((ox + 16) - (tipBaseX + hx1) * 0.5, (oy - 4) - (tipBaseY + hy1) * 0.5);
           const dEnd = Math.hypot((ox + 16) - hx1, (oy - 4) - hy1);
-          if (dMid < 26 || dEnd < 26) continue;
+          if (dMid < 28 || dEnd < 28) continue;
         }
-        ctx.fillStyle = 'rgba(248, 250, 252, 0.90)';
+        const tw = ctx.measureText(tk.lbl).width + 10;
+        const bx = sgn < 0 ? ox - tw + 3 : ox - 3;
+        ctx.fillStyle = 'rgba(8, 13, 24, 0.86)';
+        ctx.strokeStyle = 'rgba(203, 213, 225, 0.32)';
+        ctx.lineWidth = 1.0;
+        ctx.beginPath();
+        ctx.roundRect(bx, oy - 13, tw, 17.5, 4);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#ffffff';
         ctx.textAlign = sgn < 0 ? 'right' : 'left';
-        ctx.fillText(tk.lbl, ox, oy);
+        ctx.fillText(tk.lbl, sgn < 0 ? ox - 2 : ox + 2, oy);
       }
       ctx.restore();
 
@@ -1614,132 +1673,152 @@
         // Compact Badge next to needle entry ("⊥ Faser" or "Tief ↑ Flanke") when ideal!
         if (this.tech === 'ideal' && !st.isAlert) {
           const bTxt = isRivet ? `${d.cvRivetBadge} ✓` : `${d.cvPerpBadge} ✓`;
-          ctx.font = '700 11.8px JetBrains Mono, monospace';
-          const bw = ctx.measureText(bTxt).width + 13;
-          let bx = isTop ? (cx + 20) : (isRivet ? (hx1 + 8) : (hx1 + 10));
-          let by = isTop ? Math.max(18, crownTopY - 26) : Math.max(24, Math.min(h - 38, hy1));
+          ctx.font = '700 12.8px JetBrains Mono, monospace';
+          const bw = ctx.measureText(bTxt).width + 16;
+          let bx = isTop ? (cx + 22) : (isRivet ? (hx1 + 8) : (hx1 + 10));
+          let by = isTop ? Math.max(18, crownTopY - 24) : Math.max(24, Math.min(h - 38, hy1));
           bx = Math.min(w - bw - 8, bx);
-          ctx.fillStyle = isRivet ? 'rgba(46, 36, 10, 0.94)' : 'rgba(16, 46, 34, 0.94)';
+          ctx.fillStyle = isRivet ? 'rgba(46, 36, 10, 0.96)' : 'rgba(16, 46, 34, 0.96)';
           ctx.strokeStyle = isRivet ? '#facc15' : '#4ade80';
-          ctx.lineWidth = 1.25;
+          ctx.lineWidth = 1.35;
           ctx.beginPath();
-          ctx.roundRect(bx, by - 11, bw, 20, 5.5);
+          ctx.roundRect(bx, by - 12.5, bw, 22, 6);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isRivet ? '#fef08a' : '#bbf7d0';
           ctx.textAlign = 'left';
-          ctx.fillText(bTxt, bx + 6.5, by + 3.5);
+          ctx.fillText(bTxt, bx + 8, by + 3.5);
         }
         ctx.restore();
       }
 
-      // --- 7. Crisp Left & Right Diagnostic Callouts (No Clipping) ---
+      // --- 7. Framed Left & Right Diagnostic Callout Pills (No Clipping) ---
       ctx.save();
-      const padX = 12;
+      const padX = 14;
 
       // Top-Left: Underfelt reference label
-      ctx.font = '600 12.3px Roboto, sans-serif';
-      ctx.fillStyle = '#f9a8d4';
-      ctx.textAlign = 'left';
-      ctx.fillText(d.cvAxisUf, padX, ufTipY - 5);
-      ctx.strokeStyle = 'rgba(244, 114, 182, 0.42)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(padX + ctx.measureText(d.cvAxisUf).width + 6, ufTipY - 8);
-      ctx.lineTo(cx - shoulderHW * 0.90, ufTipY);
-      ctx.stroke();
+      const ufPillY = Math.min(ufTipY - 4, shoulderY - 21);
+      const cheekPillY = Math.max(shoulderY + 5, ufPillY + 27);
+      this.drawCalloutPill(
+        ctx,
+        d.cvAxisUf,
+        padX,
+        ufPillY,
+        cx - ufOuterHW + 2,
+        ufTipY,
+        '#fbcfe8',
+        'rgba(244, 114, 182, 0.65)',
+        '#f472b6'
+      );
 
       // Mid-Left: 9:00 Widest Cheek label
-      ctx.fillStyle = '#7dd3fc';
-      ctx.fillText(d.cvAxisCheekL, padX, shoulderY + 16);
+      this.drawCalloutPill(
+        ctx,
+        d.cvAxisCheekL,
+        padX,
+        cheekPillY,
+        cx - shoulderHW,
+        shoulderY,
+        '#bae6fd',
+        'rgba(56, 189, 248, 0.65)',
+        '#38bdf8'
+      );
 
       // Lower-Mid Left: Merino Fiber Course ("Faserverlauf (⊥ stechen)") callout
-      const fiberLblY = Math.round((shoulderY + 18 + rivetY - 6) * 0.52);
-      ctx.fillStyle = '#e6c882';
-      ctx.fillText(d.cvFiberCourse, padX, fiberLblY);
-      ctx.strokeStyle = 'rgba(230, 200, 130, 0.44)';
-      ctx.beginPath();
-      ctx.moveTo(padX + ctx.measureText(d.cvFiberCourse).width + 6, fiberLblY - 4);
-      ctx.lineTo(fiberCalloutTargetX, fiberCalloutTargetY);
-      ctx.stroke();
+      const fiberLblY = Math.max(cheekPillY + 27, Math.round((cheekPillY + rivetY) * 0.52));
+      this.drawCalloutPill(
+        ctx,
+        d.cvFiberCourse,
+        padX,
+        fiberLblY,
+        fiberCalloutTargetX,
+        fiberCalloutTargetY,
+        '#fde68a',
+        'rgba(230, 200, 130, 0.65)',
+        '#e6c882'
+      );
 
       // Bottom-Left: Glue + T-Rivet label
-      ctx.fillStyle = '#fde68a';
-      ctx.fillText(d.cvGlueRivet, padX, rivetY + 5);
-      ctx.strokeStyle = 'rgba(251, 191, 36, 0.40)';
-      ctx.beginPath();
-      ctx.moveTo(padX + ctx.measureText(d.cvGlueRivet).width + 6, rivetY + 1);
-      ctx.lineTo(cx - rivetOuterHW - 4, rivetY);
-      ctx.stroke();
+      this.drawCalloutPill(
+        ctx,
+        d.cvGlueRivet,
+        padX,
+        rivetY + 5,
+        cx - rivetOuterHW - 2,
+        rivetY,
+        '#fef08a',
+        'rgba(250, 204, 21, 0.68)',
+        '#facc15'
+      );
 
       // Bottom-Right: Click hint pill
-      ctx.font = '600 12.1px Roboto, sans-serif';
+      ctx.font = '600 13.0px Roboto, sans-serif';
       const hintTxt = `🖱 ${d.cvClickHint}`;
-      const hw = ctx.measureText(hintTxt).width + 14;
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.86)';
-      ctx.strokeStyle = 'rgba(200, 163, 86, 0.42)';
-      ctx.lineWidth = 1;
+      const hw = ctx.measureText(hintTxt).width + 16;
+      ctx.fillStyle = 'rgba(10, 16, 28, 0.92)';
+      ctx.strokeStyle = 'rgba(200, 163, 86, 0.55)';
+      ctx.lineWidth = 1.2;
       ctx.beginPath();
-      ctx.roundRect(w - hw - 10, h - 28, hw, 20.5, 5.5);
+      ctx.roundRect(w - hw - 10, h - 29, hw, 22, 6);
       ctx.fill();
       ctx.stroke();
-      ctx.fillStyle = 'rgba(230, 200, 130, 0.94)';
+      ctx.fillStyle = '#fde68a';
       ctx.textAlign = 'right';
-      ctx.fillText(hintTxt, w - 17, h - 13.5);
+      ctx.fillText(hintTxt, w - 18, h - 13.5);
 
       // Contextual Status Banner at Bottom-Left
       let statusBanner = '';
-      let bannerBg = 'rgba(14, 36, 28, 0.92)';
+      let bannerBg = 'rgba(14, 36, 28, 0.94)';
       let bannerBorder = '#4ade80';
       let bannerTextCol = '#bbf7d0';
 
       if (this.tech === 'raw') {
         statusBanner = d.cvRawHint;
-        bannerBg = 'rgba(15, 23, 42, 0.92)';
+        bannerBg = 'rgba(15, 23, 42, 0.94)';
         bannerBorder = '#94a3b8';
-        bannerTextCol = '#e2e8f0';
+        bannerTextCol = '#f1f5f9';
       } else if (this.zone === 'red') {
         statusBanner = d.cvTabooWarn;
-        bannerBg = 'rgba(69, 10, 10, 0.94)';
+        bannerBg = 'rgba(69, 10, 10, 0.96)';
         bannerBorder = '#f87171';
         bannerTextCol = '#fecaca';
       } else if (this.tech === 'wrong') {
         statusBanner = d.cvWrongWarn;
-        bannerBg = 'rgba(69, 10, 10, 0.94)';
+        bannerBg = 'rgba(69, 10, 10, 0.96)';
         bannerBorder = '#f87171';
         bannerTextCol = '#fecaca';
       } else if (this.zone === 'blue') {
         statusBanner = d.cvTransferUp;
-        bannerBg = 'rgba(12, 34, 54, 0.92)';
+        bannerBg = 'rgba(12, 34, 54, 0.94)';
         bannerBorder = '#38bdf8';
         bannerTextCol = '#bae6fd';
       } else if (this.zone === 'rivet') {
         statusBanner = d.cvRivetUp;
-        bannerBg = 'rgba(48, 36, 8, 0.94)';
+        bannerBg = 'rgba(48, 36, 8, 0.96)';
         bannerBorder = '#facc15';
         bannerTextCol = '#fef08a';
       } else if (this.zone === 'purple') {
         statusBanner = d.cvBetweenGrooves;
-        bannerBg = 'rgba(46, 16, 101, 0.92)';
+        bannerBg = 'rgba(46, 16, 101, 0.94)';
         bannerBorder = '#c084fc';
         bannerTextCol = '#f3e8ff';
       }
 
       if (statusBanner) {
-        ctx.font = '700 12.4px Roboto, sans-serif';
-        const sw = Math.min(w * 0.56, ctx.measureText(statusBanner).width + 16);
-        const sx = 10;
-        const sy = h - 29;
+        ctx.font = '700 13.2px Roboto, sans-serif';
+        const sw = Math.min(w * 0.58, ctx.measureText(statusBanner).width + 18);
+        const sx = 12;
+        const sy = h - 30;
         ctx.fillStyle = bannerBg;
         ctx.strokeStyle = bannerBorder;
-        ctx.lineWidth = 1.25;
+        ctx.lineWidth = 1.35;
         ctx.beginPath();
-        ctx.roundRect(sx, sy, sw, 21.5, 5.5);
+        ctx.roundRect(sx, sy, sw, 23, 6);
         ctx.fill();
         ctx.stroke();
         ctx.fillStyle = bannerTextCol;
         ctx.textAlign = 'left';
-        ctx.fillText(statusBanner, sx + 8, sy + 15, sw - 14);
+        ctx.fillText(statusBanner, sx + 9, sy + 16, sw - 16);
       }
 
       ctx.restore();
@@ -1831,7 +1910,7 @@
       }
 
       // --- MODE 1 (Default): Partial-Tone ΔdB Shift Chart (H1..H12) ---
-      const padL = 52, padR = 14, padT = 27, padB = 27;
+      const padL = 56, padR = 14, padT = 28, padB = 28;
       const pw = w - padL - padR;
       const ph = h - padT - padB;
       const maxDb = 6.0;
@@ -1841,9 +1920,9 @@
 
       // 3 Spectral Zone Bands (H1-H4, H5-H8, H9-H12)
       const bandCols = [
-        { s: 0, e: 4, bg: 'rgba(56, 189, 248, 0.06)', col: '#7dd3fc', lbl: d.specZone1 },
-        { s: 4, e: 8, bg: 'rgba(46, 204, 113, 0.06)', col: '#86efac', lbl: d.specZone2 },
-        { s: 8, e: 12, bg: 'rgba(251, 146, 60, 0.06)', col: '#fdba74', lbl: d.specZone3 }
+        { s: 0, e: 4, bg: 'rgba(56, 189, 248, 0.065)', col: '#7dd3fc', lbl: d.specZone1 },
+        { s: 4, e: 8, bg: 'rgba(46, 204, 113, 0.065)', col: '#86efac', lbl: d.specZone2 },
+        { s: 8, e: 12, bg: 'rgba(251, 146, 60, 0.065)', col: '#fdba74', lbl: d.specZone3 }
       ];
       ctx.save();
       for (const b of bandCols) {
@@ -1851,31 +1930,31 @@
         const bw = ((b.e - b.s) / 12) * pw;
         ctx.fillStyle = b.bg;
         ctx.fillRect(bx, padT, bw, ph);
-        ctx.font = '700 12.0px Roboto, sans-serif';
+        ctx.font = '700 13.4px Roboto, sans-serif';
         ctx.fillStyle = b.col;
         ctx.textAlign = 'center';
-        ctx.fillText(b.lbl, bx + bw / 2, 16, bw - 8);
+        ctx.fillText(b.lbl, bx + bw / 2, 17, bw - 8);
       }
 
       // Horizontal dB gridlines (+4, 0, -4, -8 dB)
-      ctx.font = '600 11.6px JetBrains Mono, monospace';
+      ctx.font = '700 12.8px JetBrains Mono, monospace';
       for (const gv of [4, 0, -4, -8]) {
         const gy = padT + ((maxDb - gv) / rangeDb) * ph;
-        ctx.strokeStyle = gv === 0 ? 'rgba(230, 200, 130, 0.65)' : 'rgba(255,255,255,0.09)';
-        ctx.lineWidth = gv === 0 ? 1.5 : 1.0;
+        ctx.strokeStyle = gv === 0 ? 'rgba(230, 200, 130, 0.72)' : 'rgba(255,255,255,0.10)';
+        ctx.lineWidth = gv === 0 ? 1.55 : 1.0;
         ctx.beginPath();
         ctx.moveTo(padL, gy);
         ctx.lineTo(w - padR, gy);
         ctx.stroke();
 
-        ctx.fillStyle = gv === 0 ? '#fde68a' : 'rgba(255,255,255,0.65)';
+        ctx.fillStyle = gv === 0 ? '#fde68a' : 'rgba(255,255,255,0.75)';
         ctx.textAlign = 'right';
         ctx.fillText(`${gv > 0 ? '+' : ''}${gv} dB`, padL - 7, gy + 4);
       }
 
       // Draw H1..H12 ΔdB Bars
       const slotW = pw / 12;
-      const barW = Math.min(34, slotW * 0.62);
+      const barW = Math.min(38, slotW * 0.64);
 
       for (let i = 0; i < 12; i++) {
         const val = st.deltas[i];
@@ -1897,22 +1976,22 @@
 
         ctx.fillStyle = fillCol;
         ctx.beginPath();
-        ctx.roundRect(cxBar - barW / 2, topY, barW, barH, 4);
+        ctx.roundRect(cxBar - barW / 2, topY, barW, barH, 4.5);
         ctx.fill();
 
         // Numeric ΔdB label above/below bar
         if (Math.abs(val) >= 0.15) {
-          ctx.font = '700 11.4px JetBrains Mono, monospace';
+          ctx.font = '700 13.0px JetBrains Mono, monospace';
           ctx.fillStyle = '#ffffff';
           ctx.textAlign = 'center';
           const lblTxt = `${val > 0 ? '+' : '−'}${this.fmt(Math.abs(val), 1)}`;
-          const ly = val >= 0 ? Math.max(padT + 10, topY - 4) : Math.min(padT + ph - 3, topY + barH + 11);
+          const ly = val >= 0 ? Math.max(padT + 10, topY - 4) : Math.min(padT + ph - 3, topY + barH + 12.5);
           ctx.fillText(lblTxt, cxBar, ly);
         }
 
         // H1..H12 X-axis label
-        ctx.font = '700 12.1px JetBrains Mono, monospace';
-        ctx.fillStyle = 'rgba(255,255,255,0.90)';
+        ctx.font = '700 13.4px JetBrains Mono, monospace';
+        ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.fillText(`H${i + 1}`, cxBar, h - 8);
       }

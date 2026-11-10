@@ -16,10 +16,10 @@
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
 
   <!-- Self-Hosted Local Fonts (100% Offline - Zero External Network Calls) -->
-  <link rel="stylesheet" href="css/fonts.css?v=20261110_150325">
+  <link rel="stylesheet" href="css/fonts.css?v=20261110_152708">
 
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261110_150325">
+  <link rel="stylesheet" href="css/presentation.css?v=20261110_152708">
   <script>window.__RENNER_STANDALONE__ = true;</script>
 </head>
 
@@ -2490,8 +2490,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s13_category">Teil 3: Hammerkopf-Produktion • Filzlager & Sortimentsvielfalt</div>
-            <h2 class="slide-title" data-i18n="s13_title" data-i18n="s12_title">Klimatisiertes Filzlager & Sortimentsvielfalt</h2>
-            <div class="slide-subtitle" data-i18n="s13_subtitle" data-i18n="s12_subtitle">Über 30 konische Deckfilz-Rezepturen sowie 6 Unterfilz-Standardfarben und Sonderfärbungen ab Lager</div>
+            <h2 class="slide-title" data-i18n="s13_title" data-i18n="s13_title">Klimatisiertes Filzlager & Sortimentsvielfalt</h2>
+            <div class="slide-subtitle" data-i18n="s13_subtitle" data-i18n="s13_subtitle">Über 30 konische Deckfilz-Rezepturen sowie 6 Unterfilz-Standardfarben und Sonderfärbungen ab Lager</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2501,9 +2501,9 @@
               <div class="bento-step-watermark">01</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s13_kpi">30+ Sorten</span>
-                <span class="bento-badge gold" data-i18n="s13_b1_badge" data-i18n="s12_b1_badge">DECKFILZ-PLATTENLAGER</span>
+                <span class="bento-badge gold" data-i18n="s13_b1_badge" data-i18n="s13_b1_badge">DECKFILZ-PLATTENLAGER</span>
               </div>
-              <div class="bento-card-title" data-i18n="s13_c1_title" data-i18n="s12_c1_title">Konische FFW- & Weickert-Platten in kontrollierter Reife</div>
+              <div class="bento-card-title" data-i18n="s13_c1_title" data-i18n="s13_c1_title">Konische FFW- & Weickert-Platten in kontrollierter Reife</div>
               <div class="bento-card-list hk-s12-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -2529,8 +2529,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s12-compact-overlay">
-                <span class="bento-badge green" data-i18n="s13_b2_badge" data-i18n="s12_b2_badge">DECKFILZ-LAGER</span>
-                <div class="bento-media-caption" data-i18n="s13_caption_1" data-i18n="s12_caption_1">Drohnenflug durch das klimatisierte Plattenlager in Meuselwitz</div>
+                <span class="bento-badge green" data-i18n="s13_b2_badge" data-i18n="s13_b2_badge">DECKFILZ-LAGER</span>
+                <div class="bento-media-caption" data-i18n="s13_caption_1" data-i18n="s13_caption_1">Drohnenflug durch das klimatisierte Plattenlager in Meuselwitz</div>
               </div>
             </div>
 
@@ -2541,31 +2541,31 @@
             <div class="hk-s12-color-grid">
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #cc2222;">
                 <div class="bento-card-header">
-                  <span class="bento-badge red" data-i18n="s13_uf_b1" data-i18n="s12_b3_badge">KLASSIKER</span>
+                  <span class="bento-badge red" data-i18n="s13_uf_b1" data-i18n="s13_b3_badge">KLASSIKER</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s13_uf_t1" data-i18n="s12_c2_title">Rot & Weinrot</div>
-                <div class="bento-card-desc" data-i18n="s13_uf_d1" data-i18n="s12_c1_desc">Traditionelle Renner-Kennfarben für europäische Konzert- und Markenflügel.</div>
+                <div class="bento-card-title" data-i18n="s13_uf_t1" data-i18n="s13_c2_title">Rot & Weinrot</div>
+                <div class="bento-card-desc" data-i18n="s13_uf_d1" data-i18n="s13_c1_desc">Traditionelle Renner-Kennfarben für europäische Konzert- und Markenflügel.</div>
               </div>
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #ff9900;">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s13_uf_b2" data-i18n="s12_b4_badge">HISTORIE & KONZERT</span>
+                  <span class="bento-badge gold" data-i18n="s13_uf_b2" data-i18n="s13_b4_badge">HISTORIE & KONZERT</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s13_uf_t2" data-i18n="s12_c3_title">Orange</div>
-                <div class="bento-card-desc" data-i18n="s13_uf_d2" data-i18n="s12_c2_desc">Klassische Ausstattung für Konzertinstrumente und originalgetreue Überholungen.</div>
+                <div class="bento-card-title" data-i18n="s13_uf_t2" data-i18n="s13_c3_title">Orange</div>
+                <div class="bento-card-desc" data-i18n="s13_uf_d2" data-i18n="s13_c2_desc">Klassische Ausstattung für Konzertinstrumente und originalgetreue Überholungen.</div>
               </div>
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #ddbb00;">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s13_uf_b3" data-i18n="s12_b5_badge">MANUFAKTUREN</span>
+                  <span class="bento-badge gold" data-i18n="s13_uf_b3" data-i18n="s13_b5_badge">MANUFAKTUREN</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s13_uf_t3" data-i18n="s12_c4_title">Gelb</div>
-                <div class="bento-card-desc" data-i18n="s13_uf_d3" data-i18n="s12_c3_desc">Traditionsfarbe zahlreicher sächsischer und Wiener Klavierbauer.</div>
+                <div class="bento-card-title" data-i18n="s13_uf_t3" data-i18n="s13_c4_title">Gelb</div>
+                <div class="bento-card-desc" data-i18n="s13_uf_d3" data-i18n="s13_c3_desc">Traditionsfarbe zahlreicher sächsischer und Wiener Klavierbauer.</div>
               </div>
               <div class="bento-card hk-s12-color-card" style="border-left: 4px solid #2255cc;">
                 <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s13_uf_b4" data-i18n="s12_b6_badge">MARKEN & SONDERFARBEN</span>
+                  <span class="bento-badge green" data-i18n="s13_uf_b4" data-i18n="s13_b6_badge">MARKEN & SONDERFARBEN</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s13_uf_t4" data-i18n="s12_c5_title">Blau, Schwarz & Wunsch</div>
-                <div class="bento-card-desc" data-i18n="s13_uf_d4" data-i18n="s12_c4_desc">Klassisches Blau (z. B. C. Bechstein), Schwarz sowie kundenspezifische Färbungen.</div>
+                <div class="bento-card-title" data-i18n="s13_uf_t4" data-i18n="s13_c5_title">Blau, Schwarz & Wunsch</div>
+                <div class="bento-card-desc" data-i18n="s13_uf_d4" data-i18n="s13_c4_desc">Klassisches Blau (z. B. C. Bechstein), Schwarz sowie kundenspezifische Färbungen.</div>
               </div>
             </div>
 
@@ -2577,8 +2577,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s12-compact-overlay">
-                <span class="bento-badge green" data-i18n="s13_uf_b5" data-i18n="s12_b7_badge">6 STANDARDFARBEN + WUNSCH</span>
-                <div class="bento-media-caption" data-i18n="s13_caption_2" data-i18n="s12_caption_2">Unterfilz-Lagerbestand in Meuselwitz – Sonderfarben auf Kundenwunsch</div>
+                <span class="bento-badge green" data-i18n="s13_uf_b5" data-i18n="s13_b7_badge">6 STANDARDFARBEN + WUNSCH</span>
+                <div class="bento-media-caption" data-i18n="s13_caption_2" data-i18n="s13_caption_2">Unterfilz-Lagerbestand in Meuselwitz – Sonderfarben auf Kundenwunsch</div>
               </div>
             </div>
           </div>
@@ -2595,8 +2595,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s14_category">Teil 3: Hammerkopf-Produktion • Weickert Special & REM-Strukturanalyse</div>
-            <h2 class="slide-title" data-i18n="s14_title" data-i18n="s13_title">„Weickert Special“ – Exklusiv bei Renner</h2>
-            <div class="slide-subtitle" data-i18n="s14_subtitle" data-i18n="s13_subtitle">56 % maximale Verwalkdichte und erhöhter Restfettanteil nach Wurzener Rezeptur von 1903</div>
+            <h2 class="slide-title" data-i18n="s14_title" data-i18n="s14_title">„Weickert Special“ – Exklusiv bei Renner</h2>
+            <div class="slide-subtitle" data-i18n="s14_subtitle" data-i18n="s14_subtitle">56 % maximale Verwalkdichte und erhöhter Restfettanteil nach Wurzener Rezeptur von 1903</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2606,10 +2606,10 @@
               <div class="bento-step-watermark">02</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s14_kpi">56 % Verwalkdichte</span>
-                <span class="bento-badge gold" data-i18n="s14_b1_badge" data-i18n="s13_b1_badge">FFW WURZEN × STFI-ANALYSE</span>
+                <span class="bento-badge gold" data-i18n="s14_b1_badge" data-i18n="s14_b1_badge">FFW WURZEN × STFI-ANALYSE</span>
               </div>
-              <div class="bento-card-title" data-i18n="s14_c1_title" data-i18n="s13_c1_title">Höchste Verwalkdichte & geschütztes Keratin</div>
-              <div class="bento-card-desc" data-i18n="s14_c1_desc" data-i18n="s13_c1_desc">Schonende Rohwollwäsche und intensives Walken verbinden 56 % Maximaldichte mit erhöhtem Wollfettgehalt (STFI-Prüfbericht P2024 0903).</div>
+              <div class="bento-card-title" data-i18n="s14_c1_title" data-i18n="s14_c1_title">Höchste Verwalkdichte & geschütztes Keratin</div>
+              <div class="bento-card-desc" data-i18n="s14_c1_desc" data-i18n="s14_c1_desc">Schonende Rohwollwäsche und intensives Walken verbinden 56 % Maximaldichte mit erhöhtem Wollfettgehalt (STFI-Prüfbericht P2024 0903).</div>
 
               <!-- 3-Spalten STFI Labor-Kennwerte -->
               <div class="s12-lab-kpis">
@@ -2726,7 +2726,7 @@
               </div>
 
               <div class="s12-rem-statusbar">
-                <span class="bento-badge green" data-i18n="s14_b2_badge" data-i18n="s13_b2_badge">STFI • REM</span>
+                <span class="bento-badge green" data-i18n="s14_b2_badge" data-i18n="s14_b2_badge">STFI • REM</span>
                 <div class="s12-rem-caption-wrap">
                   <div class="s12-rem-caption-text" data-s12-caption data-i18n="s14_caption_1">REM-Übersicht (STFI Mik59_24 • 1 mm): Hochverdichteter 3D-Faserverbund mit 56 % maximaler Verwalkdichte.</div>
                   <div class="s12-rem-hint" data-s12-hint>Maus bewegen für 10× Live-Lupe • Klicken oder Mausrad für Zoom</div>
@@ -2747,8 +2747,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s15_category">Teil 3: Hammerkopf-Produktion • Filzvorbereitung</div>
-            <h2 class="slide-title" data-i18n="s15_title" data-i18n="s14_title">Filzvorbereitung: Deckfilz-Zuschnitt & Unterfilz-Profilierung</h2>
-            <div class="slide-subtitle" data-i18n="s15_subtitle" data-i18n="s14_subtitle">Robotischer Streifenschnitt auf 1 mm und passgenaues Profilfräsen vor dem Verpressen</div>
+            <h2 class="slide-title" data-i18n="s15_title" data-i18n="s15_title">Filzvorbereitung: Deckfilz-Zuschnitt & Unterfilz-Profilierung</h2>
+            <div class="slide-subtitle" data-i18n="s15_subtitle" data-i18n="s15_subtitle">Robotischer Streifenschnitt auf 1 mm und passgenaues Profilfräsen vor dem Verpressen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2758,9 +2758,9 @@
               <div class="bento-step-watermark">03</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s15_kpi_1">≤ 1 mm Toleranz</span>
-                <span class="bento-badge gold" data-i18n="s15_b1_badge" data-i18n="s14_b1_badge">01 • 6-ACHS-ROBOTIK</span>
+                <span class="bento-badge gold" data-i18n="s15_b1_badge" data-i18n="s15_b1_badge">01 • 6-ACHS-ROBOTIK</span>
               </div>
-              <div class="bento-card-title" data-i18n="s15_c1_title" data-i18n="s14_c1_title">Robotischer Deckfilz-Zuschnitt</div>
+              <div class="bento-card-title" data-i18n="s15_c1_title" data-i18n="s15_c1_title">Robotischer Deckfilz-Zuschnitt</div>
               <div class="bento-card-list hk-s13-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -2785,8 +2785,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s13-compact-overlay">
-                <span class="bento-badge green" data-i18n="s15_b2_badge" data-i18n="s14_b2_badge">DECKFILZ • 6-ACHS-SCHNITT</span>
-                <div class="bento-media-caption" data-i18n="s15_caption_1" data-i18n="s14_caption_1">6-Achs-Roboter beim verzugsfreien Schneiden der Deckfilzstreifen</div>
+                <span class="bento-badge green" data-i18n="s15_b2_badge" data-i18n="s15_b2_badge">DECKFILZ • 6-ACHS-SCHNITT</span>
+                <div class="bento-media-caption" data-i18n="s15_caption_1" data-i18n="s15_caption_1">6-Achs-Roboter beim verzugsfreien Schneiden der Deckfilzstreifen</div>
               </div>
             </div>
 
@@ -2798,9 +2798,9 @@
               <div class="bento-step-watermark">04</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s15_kpi_2">± 0,1 mm Toleranz</span>
-                <span class="bento-badge gold" data-i18n="s15_b3_badge" data-i18n="s14_b3_badge">02 • PROFILFRÄSUNG</span>
+                <span class="bento-badge gold" data-i18n="s15_b3_badge" data-i18n="s15_b3_badge">02 • PROFILFRÄSUNG</span>
               </div>
-              <div class="bento-card-title" data-i18n="s15_c2_title" data-i18n="s14_c2_title">Profilfräsen des Unterfilzes</div>
+              <div class="bento-card-title" data-i18n="s15_c2_title" data-i18n="s15_c2_title">Profilfräsen des Unterfilzes</div>
               <div class="bento-card-list hk-s13-compact-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -2825,8 +2825,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay hk-s13-compact-overlay">
-                <span class="bento-badge green" data-i18n="s15_b4_badge" data-i18n="s14_b4_badge">UNTERFILZ • PROFILFRÄSUNG</span>
-                <div class="bento-media-caption" data-i18n="s15_caption_2" data-i18n="s14_caption_2">Ausfräsen des Unterfilzstreifens vor dem Einlegen in die Leimpresse</div>
+                <span class="bento-badge green" data-i18n="s15_b4_badge" data-i18n="s15_b4_badge">UNTERFILZ • PROFILFRÄSUNG</span>
+                <div class="bento-media-caption" data-i18n="s15_caption_2" data-i18n="s15_caption_2">Ausfräsen des Unterfilzstreifens vor dem Einlegen in die Leimpresse</div>
               </div>
             </div>
           </div>
@@ -2843,8 +2843,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s16_category">Teil 3: Hammerkopf-Produktion • Der Hammerkern</div>
-            <h2 class="slide-title" data-i18n="s16_title" data-i18n="s15_title">Der Hammerkern: Holzarten, Eigenschaften & Profilformen</h2>
-            <div class="slide-subtitle" data-i18n="s16_subtitle" data-i18n="s15_subtitle">Vom schweren Hartholz (Weißbuche, Ahorn) und ölhaltigem Kotibé bis zum leichten amerikanischen Nussbaum</div>
+            <h2 class="slide-title" data-i18n="s16_title" data-i18n="s16_title">Der Hammerkern: Holzarten, Eigenschaften & Profilformen</h2>
+            <div class="slide-subtitle" data-i18n="s16_subtitle" data-i18n="s16_subtitle">Vom schweren Hartholz (Weißbuche, Ahorn) und ölhaltigem Kotibé bis zum leichten amerikanischen Nussbaum</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2854,35 +2854,35 @@
               <div class="hk-core-wood-grid">
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge green" data-i18n="s16_b1_badge" data-i18n="s15_b1_badge">HARTHOLZ • IDEAL</span>
+                    <span class="bento-badge green" data-i18n="s16_b1_badge" data-i18n="s16_b1_badge">HARTHOLZ • IDEAL</span>
                     <span class="mono-val hk-density-val" data-i18n="s16_d1">Schwer • Formstabil</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s16_c1_title" data-i18n="s15_c1_title">Weißbuche (Hornbeam)</div>
-                  <div class="bento-card-desc" data-i18n="s16_c1_desc" data-i18n="s15_c1_desc">Sehr aufwendig in der Trocknung – korrekt getrocknet jedoch ein ideales, homogenes Kernholz.</div>
+                  <div class="bento-card-title" data-i18n="s16_c1_title" data-i18n="s16_c1_title">Weißbuche (Hornbeam)</div>
+                  <div class="bento-card-desc" data-i18n="s16_c1_desc" data-i18n="s16_c1_desc">Sehr aufwendig in der Trocknung – korrekt getrocknet jedoch ein ideales, homogenes Kernholz.</div>
                 </div>
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge green" data-i18n="s16_b2_badge" data-i18n="s15_b2_badge">HARTHOLZ • ELASTISCH</span>
+                    <span class="bento-badge green" data-i18n="s16_b2_badge" data-i18n="s16_b2_badge">HARTHOLZ • ELASTISCH</span>
                     <span class="mono-val hk-density-val" data-i18n="s16_d2">Schwer • Selektiert</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s16_c2_title" data-i18n="s15_c2_title">Ahorn (Maple)</div>
-                  <div class="bento-card-desc" data-i18n="s16_c2_desc" data-i18n="s15_c2_desc">Schweres, teils elastischeres Hartholz – unregelmäßige Zuckereinlagerungen erhöhen jedoch das Streuungsrisiko.</div>
+                  <div class="bento-card-title" data-i18n="s16_c2_title" data-i18n="s16_c2_title">Ahorn (Maple)</div>
+                  <div class="bento-card-desc" data-i18n="s16_c2_desc" data-i18n="s16_c2_desc">Schweres, teils elastischeres Hartholz – unregelmäßige Zuckereinlagerungen erhöhen jedoch das Streuungsrisiko.</div>
                 </div>
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge gold" data-i18n="s16_b3_badge" data-i18n="s15_b3_badge">PREMIUM • DISKANT</span>
+                    <span class="bento-badge gold" data-i18n="s16_b3_badge" data-i18n="s16_b3_badge">PREMIUM • DISKANT</span>
                     <span class="mono-val hk-density-val" data-i18n="s16_d3">Sehr leicht • Feinjährig</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s16_c3_title" data-i18n="s15_c3_title">Amerikanischer Nussbaum</div>
-                  <div class="bento-card-desc" data-i18n="s16_c3_desc" data-i18n="s15_c3_desc">Hochwertigstes Holz: sehr feine Jahresringe, langfaserig und sehr leicht – ideal für einen brillanten Diskant.</div>
+                  <div class="bento-card-title" data-i18n="s16_c3_title" data-i18n="s16_c3_title">Amerikanischer Nussbaum</div>
+                  <div class="bento-card-desc" data-i18n="s16_c3_desc" data-i18n="s16_c3_desc">Hochwertigstes Holz: sehr feine Jahresringe, langfaserig und sehr leicht – ideal für einen brillanten Diskant.</div>
                 </div>
                 <div class="bento-card hk-wood-card">
                   <div class="bento-card-header">
-                    <span class="bento-badge gold" data-i18n="s16_b4_badge" data-i18n="s15_b4_badge">SPEZIALHOLZ • ÖLHALTIG</span>
+                    <span class="bento-badge gold" data-i18n="s16_b4_badge" data-i18n="s16_b4_badge">SPEZIALHOLZ • ÖLHALTIG</span>
                     <span class="mono-val hk-density-val" data-i18n="s16_d4">Schwer • Spezial</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s16_c4_title" data-i18n="s15_c4_title">Kotibé (Mahagoni)</div>
-                  <div class="bento-card-desc" data-i18n="s16_c4_desc" data-i18n="s15_c4_desc">Durch hohen Ölanteil vergleichsweise schwer – gezielt nur für bestimmte Anwendungen eingesetzt.</div>
+                  <div class="bento-card-title" data-i18n="s16_c4_title" data-i18n="s16_c4_title">Kotibé (Mahagoni)</div>
+                  <div class="bento-card-desc" data-i18n="s16_c4_desc" data-i18n="s16_c4_desc">Durch hohen Ölanteil vergleichsweise schwer – gezielt nur für bestimmte Anwendungen eingesetzt.</div>
                 </div>
               </div>
 
@@ -2892,17 +2892,17 @@
               <div class="hk-core-profile-grid">
                 <div class="bento-card hero-card hk-profile-card hk-profile-sym">
                   <div class="bento-card-header">
-                    <span class="bento-badge gold" data-i18n="s16_b5_badge" data-i18n="s15_b5_badge">FORM B · US · CSB</span>
+                    <span class="bento-badge gold" data-i18n="s16_b5_badge" data-i18n="s16_b5_badge">FORM B · US · CSB</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s16_c5_title" data-i18n="s15_c5_title">Symmetrische Profile</div>
-                  <div class="bento-card-desc" data-i18n="s16_c5_desc" data-i18n="s15_c5_desc">Steinway & Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster und Sauter.</div>
+                  <div class="bento-card-title" data-i18n="s16_c5_title" data-i18n="s16_c5_title">Symmetrische Profile</div>
+                  <div class="bento-card-desc" data-i18n="s16_c5_desc" data-i18n="s16_c5_desc">Steinway & Sons, Bösendorfer, C. Bechstein, Yamaha, Kawai, Schimmel, Blüthner, Förster und Sauter.</div>
                 </div>
                 <div class="bento-card hk-profile-card hk-profile-asym">
                   <div class="bento-card-header">
-                    <span class="bento-badge green" data-i18n="s16_b6_badge" data-i18n="s15_b6_badge">FORM A</span>
+                    <span class="bento-badge green" data-i18n="s16_b6_badge" data-i18n="s16_b6_badge">FORM A</span>
                   </div>
-                  <div class="bento-card-title" data-i18n="s16_c6_title" data-i18n="s15_c6_title">Asymmetrische Profile</div>
-                  <div class="bento-card-desc" data-i18n="s16_c6_desc" data-i18n="s15_c6_desc">Form A mit versetzter Kernschulter für historische Bechstein-Flügel sowie schlanken Diskant.</div>
+                  <div class="bento-card-title" data-i18n="s16_c6_title" data-i18n="s16_c6_title">Asymmetrische Profile</div>
+                  <div class="bento-card-desc" data-i18n="s16_c6_desc" data-i18n="s16_c6_desc">Form A mit versetzter Kernschulter für historische Bechstein-Flügel sowie schlanken Diskant.</div>
                 </div>
               </div>
             </div>
@@ -2917,16 +2917,16 @@
               <div class="hk-core-media-pane is-active" data-core-pane="profiles">
                 <img src="Visuell/Bilder/03_Hammerkopf_Fertigung/03.2_Hammerkern/renner_kernholz_formen_uebersicht.png" alt="Kernholz Profilformen Form A B US CSB" class="hk-core-cad-img">
                 <div class="bento-media-overlay">
-                  <span class="bento-badge green" data-i18n="s16_b7_badge" data-i18n="s15_b7_badge">PROFILZEICHNUNGEN</span>
-                  <div class="bento-media-caption" data-i18n="s16_caption_1" data-i18n="s15_caption_1">Renner Kernholz-Querschnitte: Form A, Form B, Form US und Form CSB</div>
+                  <span class="bento-badge green" data-i18n="s16_b7_badge" data-i18n="s16_b7_badge">PROFILZEICHNUNGEN</span>
+                  <div class="bento-media-caption" data-i18n="s16_caption_1" data-i18n="s16_caption_1">Renner Kernholz-Querschnitte: Form A, Form B, Form US und Form CSB</div>
                 </div>
               </div>
 
               <div class="hk-core-media-pane" data-core-pane="wood">
                 <img src="Visuell/Bilder/04_Hammerkopf_Spezifikation/hk_prd_auswahl_10_25_p12_2.jpg" alt="Kernholz-Lager Meuselwitz" class="hk-core-wood-img">
                 <div class="bento-media-overlay">
-                  <span class="bento-badge gold" data-i18n="s16_b8_badge" data-i18n="s15_b8_badge">ROHHOLZLAGER</span>
-                  <div class="bento-media-caption" data-i18n="s16_caption_2" data-i18n="s15_caption_2">Selektierte Kernholzleisten – astfrei, geradfaserig & schonend getrocknet</div>
+                  <span class="bento-badge gold" data-i18n="s16_b8_badge" data-i18n="s16_b8_badge">ROHHOLZLAGER</span>
+                  <div class="bento-media-caption" data-i18n="s16_caption_2" data-i18n="s16_caption_2">Selektierte Kernholzleisten – astfrei, geradfaserig & schonend getrocknet</div>
                 </div>
               </div>
 
@@ -2949,8 +2949,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s17_category">Teil 3: Hammerkopf-Produktion • Akustische Masse-Abstimmung</div>
-            <h2 class="slide-title" data-i18n="s17_title" data-i18n="s16_title">Optimales Hammerkopfgewicht im Verhältnis zum Saitengewicht</h2>
-            <div class="slide-subtitle" data-i18n="s17_subtitle" data-i18n="s16_subtitle">Von ca. 15 g im Bass über den −1-g-Übergang bis 5 g im Diskant: Gleichgewicht aus Kontaktzeit und Saitenauslenkung</div>
+            <h2 class="slide-title" data-i18n="s17_title" data-i18n="s17_title">Optimales Hammerkopfgewicht im Verhältnis zum Saitengewicht</h2>
+            <div class="slide-subtitle" data-i18n="s17_subtitle" data-i18n="s17_subtitle">Von ca. 15 g im Bass über den −1-g-Übergang bis 5 g im Diskant: Gleichgewicht aus Kontaktzeit und Saitenauslenkung</div>
           </div>
         </div>
         <div class="slide-body">
@@ -2985,7 +2985,7 @@
               <div class="pta-card phys-stage-card">
                 <div class="pta-card-head">
                   <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                    <span class="bento-badge green" data-i18n="s17_b1_badge" data-i18n="s16_b1_badge">ANSCHLAGSPHYSIK</span>
+                    <span class="bento-badge green" data-i18n="s17_b1_badge" data-i18n="s17_b1_badge">ANSCHLAGSPHYSIK</span>
                     <h3 class="pta-card-title" data-i18n="s17_phys_title">Gleichgewicht am Scheitel: Kontaktzeit τc ↔ Saitenauslenkung</h3>
                   </div>
                   <span class="hsp-sub-hint" data-i18n="s17_phys_hint">Taste A₀–C₈ wählbar</span>
@@ -3003,7 +3003,7 @@
                 <!-- Grundprinzip -->
                 <div class="hwb-principle-box">
                   <div class="hwb-principle-head">
-                    <span class="bento-badge gold" data-i18n="s17_b2_badge" data-i18n="s16_b2_badge">GRUNDGLEICHGEWICHT</span>
+                    <span class="bento-badge gold" data-i18n="s17_b2_badge" data-i18n="s17_b2_badge">GRUNDGLEICHGEWICHT</span>
                     <span style="font-family: var(--font-mono); font-size: 14.5px; color: var(--gold-light); font-weight: 700;" data-i18n="s17_ratio_tag">Saitengewicht ↔ Hammermasse</span>
                   </div>
                   <p class="hwb-principle-text" data-i18n="s17_principle_txt">Passen <strong>Saitengewicht</strong> und <strong>Hammerkopfgewicht</strong> zusammen, stehen <strong>Kontaktzeit τc</strong> und <strong>Saitenauslenkung</strong> im idealen Gleichgewicht.</p>
@@ -3045,7 +3045,7 @@
                 <!-- Dynamische Konstruktions-Erklärung -->
                 <div class="pta-explain-box">
                   <div>
-                    <span class="bento-badge gold" id="hwb-exp-badge" data-i18n="s17_b3_badge" data-i18n="s16_b3_badge">✦ GEWICHTSABSTIMMUNG ÜBER ALLE 88 TASTEN</span>
+                    <span class="bento-badge gold" id="hwb-exp-badge" data-i18n="s17_b3_badge" data-i18n="s17_b3_badge">✦ GEWICHTSABSTIMMUNG ÜBER ALLE 88 TASTEN</span>
                     <h4 class="pta-explain-title" id="hwb-exp-title">Von ca. 15 g im Bass über den 1-g-Sprung bis 5 g im Diskant</h4>
                   </div>
                   <p class="pta-explain-text" id="hwb-exp-body">
@@ -3071,8 +3071,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s18_category">Teil 3: Hammerkopf-Produktion • Leimpresse</div>
-            <h2 class="slide-title" data-i18n="s18_title" data-i18n="s17_title">Pressen & Verleimen auf 0,1 mm</h2>
-            <div class="slide-subtitle" data-i18n="s18_subtitle" data-i18n="s17_subtitle">Aufbau von äußerer Zugspannung und innerer Stützkraft in der Leimpresse</div>
+            <h2 class="slide-title" data-i18n="s18_title" data-i18n="s18_title">Pressen & Verleimen auf 0,1 mm</h2>
+            <div class="slide-subtitle" data-i18n="s18_subtitle" data-i18n="s18_subtitle">Aufbau von äußerer Zugspannung und innerer Stützkraft in der Leimpresse</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3081,10 +3081,10 @@
               <div class="bento-step-watermark">05</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s18_kpi">Toleranz 0,1 mm</span>
-                <span class="bento-badge gold" data-i18n="s18_b1_badge" data-i18n="s17_b1_badge">LEIMPRESSEN</span>
+                <span class="bento-badge gold" data-i18n="s18_b1_badge" data-i18n="s18_b1_badge">LEIMPRESSEN</span>
               </div>
-              <div class="bento-card-title" data-i18n="s18_c1_title" data-i18n="s17_c1_title">Verpressen in Pressgesenk und temperierten Gegenlagen</div>
-              <div class="bento-card-desc" data-i18n="s18_c1_desc" data-i18n="s17_c1_desc">Präzisions-Leimpressen fügen Deckfilz, Unterfilz und Kernholz exakt reproduzierbar zusammen.</div>
+              <div class="bento-card-title" data-i18n="s18_c1_title" data-i18n="s18_c1_title">Verpressen in Pressgesenk und temperierten Gegenlagen</div>
+              <div class="bento-card-desc" data-i18n="s18_c1_desc" data-i18n="s18_c1_desc">Präzisions-Leimpressen fügen Deckfilz, Unterfilz und Kernholz exakt reproduzierbar zusammen.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -3110,8 +3110,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s18_b2_badge" data-i18n="s17_b2_badge">WERKSVIDEO</span>
-                <div class="bento-media-caption" data-i18n="s18_caption_1" data-i18n="s17_caption_1">Einpressen in das Pressgesenk und Schließen der Gegenlagen in Meuselwitz</div>
+                <span class="bento-badge green" data-i18n="s18_b2_badge" data-i18n="s18_b2_badge">WERKSVIDEO</span>
+                <div class="bento-media-caption" data-i18n="s18_caption_1" data-i18n="s18_caption_1">Einpressen in das Pressgesenk und Schließen der Gegenlagen in Meuselwitz</div>
               </div>
             </div>
           </div>
@@ -3128,8 +3128,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s19_category">Teil 3: Hammerkopf-Produktion • CNC-Fräsen & Kalibrieren</div>
-            <h2 class="slide-title" data-i18n="s19_title" data-i18n="s18_title">CNC-Fräsen & robotergestütztes Kalibrieren</h2>
-            <div class="slide-subtitle" data-i18n="s19_subtitle" data-i18n="s18_subtitle">Kernfräsung auf 0,1 mm, Nachfräsen nach dem Leimen und Kalibrieren jedes einzelnen Hammerkopfs auf der Roboteranlage</div>
+            <h2 class="slide-title" data-i18n="s19_title" data-i18n="s19_title">CNC-Fräsen & robotergestütztes Kalibrieren</h2>
+            <div class="slide-subtitle" data-i18n="s19_subtitle" data-i18n="s19_subtitle">Kernfräsung auf 0,1 mm, Nachfräsen nach dem Leimen und Kalibrieren jedes einzelnen Hammerkopfs auf der Roboteranlage</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3138,10 +3138,10 @@
               <div class="bento-step-watermark">06</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s19_kpi">Toleranz 0,1 mm</span>
-                <span class="bento-badge gold" data-i18n="s19_b1_badge" data-i18n="s18_b1_badge">CNC-FRÄSEN & ROBOTER</span>
+                <span class="bento-badge gold" data-i18n="s19_b1_badge" data-i18n="s19_b1_badge">CNC-FRÄSEN & ROBOTER</span>
               </div>
-              <div class="bento-card-title" data-i18n="s19_c1_title" data-i18n="s18_c1_title">Zweistufiges CNC-Fräsen & Einzelkopf-Kalibrierung</div>
-              <div class="bento-card-desc" data-i18n="s19_c1_desc" data-i18n="s18_c1_desc">CNC-Fräsen bearbeiten erst die Hammerkerne und nach dem Leimen den Filzüberstand – danach kalibriert eine Roboteranlage jeden einzelnen Kopf.</div>
+              <div class="bento-card-title" data-i18n="s19_c1_title" data-i18n="s19_c1_title">Zweistufiges CNC-Fräsen & Einzelkopf-Kalibrierung</div>
+              <div class="bento-card-desc" data-i18n="s19_c1_desc" data-i18n="s19_c1_desc">CNC-Fräsen bearbeiten erst die Hammerkerne und nach dem Leimen den Filzüberstand – danach kalibriert eine Roboteranlage jeden einzelnen Kopf.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -3168,8 +3168,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s19_b2_badge" data-i18n="s18_b2_badge">WERKSVIDEOS</span>
-                <div class="bento-media-caption" data-i18n="s19_caption_1" data-i18n="s18_caption_1">CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage</div>
+                <span class="bento-badge green" data-i18n="s19_b2_badge" data-i18n="s19_b2_badge">WERKSVIDEOS</span>
+                <div class="bento-media-caption" data-i18n="s19_caption_1" data-i18n="s19_caption_1">CNC-Fräszentrum & anschließende Einzelkopf-Kalibrierung auf der Roboteranlage</div>
               </div>
             </div>
           </div>
@@ -3186,8 +3186,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s20_category">Teil 3: Hammerkopf-Produktion • Nieten & Bohren</div>
-            <h2 class="slide-title" data-i18n="s20_title" data-i18n="s19_title">Automatisches Nieten & Bohren</h2>
-            <div class="slide-subtitle" data-i18n="s20_subtitle" data-i18n="s19_subtitle">Mechanikgerechte Anschlussmaße und dauerhafte Schenkelsicherung</div>
+            <h2 class="slide-title" data-i18n="s20_title" data-i18n="s20_title">Automatisches Nieten & Bohren</h2>
+            <div class="slide-subtitle" data-i18n="s20_subtitle" data-i18n="s20_subtitle">Mechanikgerechte Anschlussmaße und dauerhafte Schenkelsicherung</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3196,10 +3196,10 @@
               <div class="bento-step-watermark">07</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s20_kpi">ø 5,4 mm · Vernietung</span>
-                <span class="bento-badge gold" data-i18n="s20_b1_badge" data-i18n="s19_b1_badge">ENDBEARBEITUNG</span>
+                <span class="bento-badge gold" data-i18n="s20_b1_badge" data-i18n="s20_b1_badge">ENDBEARBEITUNG</span>
               </div>
-              <div class="bento-card-title" data-i18n="s20_c1_title" data-i18n="s19_c1_title">Anschlussgeometrie für den Hammerstiel</div>
-              <div class="bento-card-desc" data-i18n="s20_c1_desc" data-i18n="s19_c1_desc">Jeder Einzelkopf erhält seine modellspezifische Bohrung und mechanische Sicherung.</div>
+              <div class="bento-card-title" data-i18n="s20_c1_title" data-i18n="s20_c1_title">Anschlussgeometrie für den Hammerstiel</div>
+              <div class="bento-card-desc" data-i18n="s20_c1_desc" data-i18n="s20_c1_desc">Jeder Einzelkopf erhält seine modellspezifische Bohrung und mechanische Sicherung.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -3225,8 +3225,8 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay s12-media-overlay">
-                <span class="bento-badge green" data-i18n="s20_b2_badge" data-i18n="s19_b2_badge">WERKSVIDEO</span>
-                <div class="bento-media-caption" data-i18n="s20_caption_1" data-i18n="s19_caption_1">Automatisches Bohren und Setzen der Messingnieten</div>
+                <span class="bento-badge green" data-i18n="s20_b2_badge" data-i18n="s20_b2_badge">WERKSVIDEO</span>
+                <div class="bento-media-caption" data-i18n="s20_caption_1" data-i18n="s20_caption_1">Automatisches Bohren und Setzen der Messingnieten</div>
               </div>
             </div>
           </div>
@@ -3246,8 +3246,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s21_category">Teil 4: Yamaha Kit • Produktvorstellung</div>
-            <h2 class="slide-title" data-i18n="s21_title" data-i18n="s20_title">Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau</h2>
-            <div class="slide-subtitle" data-i18n="s21_subtitle" data-i18n="s20_subtitle">Maßgeschneidert für Yamaha C1–C3: Dynamische Ausdruckskraft, brillante Obertöne & tiefer Fundamentalbass.</div>
+            <h2 class="slide-title" data-i18n="s21_title" data-i18n="s21_title">Louis Renner Yamaha Kit (C1–C3) – Nahtloser Einbau</h2>
+            <div class="slide-subtitle" data-i18n="s21_subtitle" data-i18n="s21_subtitle">Maßgeschneidert für Yamaha C1–C3: Dynamische Ausdruckskraft, brillante Obertöne & tiefer Fundamentalbass.</div>
           </div>
 
           <!-- Timeline Stepper & Autoplay Controls -->
@@ -3299,7 +3299,7 @@
                 <div class="ffw-milestone-panel active" data-panel="0">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s21_b1_badge" data-i18n="s20_b1_badge">MESSBASIERTE FERTIGUNG · 5 JAHRE ENTWICKLUNG</span>
+                      <span class="bento-badge gold" data-i18n="s21_b1_badge" data-i18n="s21_b1_badge">MESSBASIERTE FERTIGUNG · 5 JAHRE ENTWICKLUNG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;" data-i18n="s21_topic_1">SYSTEM</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s21_p1_title">Proprietäres Mess- & Fertigungssystem</h3>
@@ -3329,7 +3329,7 @@
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s21_b2_badge" data-i18n="s20_b2_badge">RENNER MESS-SYSTEM</span>
+                      <span class="bento-badge green" data-i18n="s21_b2_badge" data-i18n="s21_b2_badge">RENNER MESS-SYSTEM</span>
                       <span class="ffw-media-caption-text" data-i18n="s21_p1_caption">Vorkalibrierter Hammerkopfsatz: Vollendetes Klangspektrum ohne Intonation</span>
                     </div>
                   </div>
@@ -3339,7 +3339,7 @@
                 <div class="ffw-milestone-panel" data-panel="1">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s21_b3_badge" data-i18n="s20_b3_badge">OPTIMIERTES TRÄGHEITSMOMENT</span>
+                      <span class="bento-badge gold" data-i18n="s21_b3_badge" data-i18n="s21_b3_badge">OPTIMIERTES TRÄGHEITSMOMENT</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;" data-i18n="s21_topic_2">SPIELART</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s21_p2_title">Ausbalanciertes Gewicht & Schnelle Repetition</h3>
@@ -3369,7 +3369,7 @@
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s21_b4_badge" data-i18n="s20_b4_badge">GEWICHT & GEOMETRIE</span>
+                      <span class="bento-badge green" data-i18n="s21_b4_badge" data-i18n="s21_b4_badge">GEWICHT & GEOMETRIE</span>
                       <span class="ffw-media-caption-text" data-i18n="s21_p2_caption">Auf Yamaha C1–C3 kalibrierte Hammerstiele mit Kapseln für feinfühliges Spielgefühl</span>
                     </div>
                   </div>
@@ -3379,7 +3379,7 @@
                 <div class="ffw-milestone-panel" data-panel="2">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s21_b5_badge" data-i18n="s20_b5_badge">EINSCHRAUBEN · AUSRICHTEN · FERTIG</span>
+                      <span class="bento-badge gold" data-i18n="s21_b5_badge" data-i18n="s21_b5_badge">EINSCHRAUBEN · AUSRICHTEN · FERTIG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;" data-i18n="s21_topic_3">EINBAU</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s21_p3_title">Einfach einschrauben, ausrichten – fertig.</h3>
@@ -3409,7 +3409,7 @@
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s21_b6_badge" data-i18n="s20_b6_badge">PLUG & PLAY</span>
+                      <span class="bento-badge green" data-i18n="s21_b6_badge" data-i18n="s21_b6_badge">PLUG & PLAY</span>
                       <span class="ffw-media-caption-text" data-i18n="s21_p3_caption">Präzise gebohrte Hammerköpfe mit fertig verleimten Stielen und Kapseln – direkt auf die originale Yamaha-Schiene schraubbar</span>
                     </div>
                   </div>
@@ -3419,7 +3419,7 @@
                 <div class="ffw-milestone-panel" data-panel="3">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s21_b7_badge" data-i18n="s20_b7_badge">OBERTONREICHER KONZERTKLANG</span>
+                      <span class="bento-badge gold" data-i18n="s21_b7_badge" data-i18n="s21_b7_badge">OBERTONREICHER KONZERTKLANG</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;" data-i18n="s21_topic_4">KLANG</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s21_p4_title">Reiches Klangspektrum & Farbigkeit</h3>
@@ -3449,7 +3449,7 @@
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s21_b8_badge" data-i18n="s20_b8_badge">DYNAMIK & KLANGFARBEN</span>
+                      <span class="bento-badge green" data-i18n="s21_b8_badge" data-i18n="s21_b8_badge">DYNAMIK & KLANGFARBEN</span>
                       <span class="ffw-media-caption-text" data-i18n="s21_p4_caption">Aus einem homogenen Filzstreifen gefertigt: Nahtlose Klangübergänge ohne Registerbrüche</span>
                     </div>
                   </div>
@@ -3459,7 +3459,7 @@
                 <div class="ffw-milestone-panel" data-panel="4">
                   <div class="ffw-panel-info">
                     <div class="ffw-panel-header">
-                      <span class="bento-badge gold" data-i18n="s21_b9_badge" data-i18n="s20_b9_badge">STUNDEN STATT TAGE</span>
+                      <span class="bento-badge gold" data-i18n="s21_b9_badge" data-i18n="s21_b9_badge">STUNDEN STATT TAGE</span>
                       <span class="ffw-panel-year" style="font-size: 1.6rem;" data-i18n="s21_topic_5">ZEITGEWINN</span>
                     </div>
                     <h3 class="ffw-panel-title" data-i18n="s21_p5_title">4–5 Stunden vor Ort statt 3–7 Tage Werkstatt</h3>
@@ -3489,7 +3489,7 @@
                     <div class="hero-corner-bracket bottom-left"></div>
                     <div class="hero-corner-bracket bottom-right"></div>
                     <div class="ffw-media-caption-box">
-                      <span class="bento-badge green" data-i18n="s21_b10_badge" data-i18n="s20_b10_badge">EFFIZIENZ-VERGLEICH</span>
+                      <span class="bento-badge green" data-i18n="s21_b10_badge" data-i18n="s21_b10_badge">EFFIZIENZ-VERGLEICH</span>
                       <span class="ffw-media-caption-text" data-i18n="s21_p5_caption">Vor-Ort-Einbau und Feinregulation des vorkonfektionierten Louis Renner Yamaha Kits am Flügel</span>
                     </div>
                   </div>
@@ -3501,9 +3501,9 @@
             <div class="ffw-felt-spotlight">
               <div class="bento-card ffw-felt-card">
                 <div class="ffw-felt-card-header">
-                  <span class="bento-badge gold" data-i18n="s21_b11_badge" data-i18n="s20_b11_badge">RENNER YAMAHA KIT</span>
-                  <div class="bento-card-title" data-i18n="s21_c1_title" data-i18n="s20_c1_title">Köpfe & Stiele im Detail</div>
-                  <div class="bento-card-desc" data-i18n="s21_c1_desc" data-i18n="s20_c1_desc">100% einbaufertig vorkonfektioniert für Yamaha C1, C2 und C3.</div>
+                  <span class="bento-badge gold" data-i18n="s21_b11_badge" data-i18n="s21_b11_badge">RENNER YAMAHA KIT</span>
+                  <div class="bento-card-title" data-i18n="s21_c1_title" data-i18n="s21_c1_title">Köpfe & Stiele im Detail</div>
+                  <div class="bento-card-desc" data-i18n="s21_c1_desc" data-i18n="s21_c1_desc">100% einbaufertig vorkonfektioniert für Yamaha C1, C2 und C3.</div>
                 </div>
 
                 <!-- Product Viewer Box with Zoom -->
@@ -3566,8 +3566,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s22_category">Teil 4: Yamaha Kit • Praxisbeweis Indien (1/2)</div>
-            <h2 class="slide-title" data-i18n="s22_title" data-i18n="s21_title">Einbau im Zeitraffer: Komplettumbau an einem Tag</h2>
-            <div class="slide-subtitle" data-i18n="s22_subtitle" data-i18n="s21_subtitle">Dokumentation des taggleichen Einbaus (10:00 – 18:00 Uhr) direkt am Aufstellort in Indien (10/2026)</div>
+            <h2 class="slide-title" data-i18n="s22_title" data-i18n="s22_title">Einbau im Zeitraffer: Komplettumbau an einem Tag</h2>
+            <div class="slide-subtitle" data-i18n="s22_subtitle" data-i18n="s22_subtitle">Dokumentation des taggleichen Einbaus (10:00 – 18:00 Uhr) direkt am Aufstellort in Indien (10/2026)</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3576,10 +3576,10 @@
               <div class="bento-step-watermark">04</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s22_kpi">1 Arbeitstag</span>
-                <span class="bento-badge gold" data-i18n="s22_b1_badge" data-i18n="s21_b1_badge">ZEITRAFFER · 10–18 UHR</span>
+                <span class="bento-badge gold" data-i18n="s22_b1_badge" data-i18n="s22_b1_badge">ZEITRAFFER · 10–18 UHR</span>
               </div>
-              <div class="bento-card-title" data-i18n="s22_c1_title" data-i18n="s21_c1_title">Kompletter Umbau direkt am Aufstellort</div>
-              <div class="bento-card-desc" data-i18n="s22_c1_desc" data-i18n="s21_c1_desc">Zeitraffer aus Indien (10–18 Uhr): Komplettumbau vor Ort inkl. Ausbau, Einbau, Regulation, Stimmung & Konzertprobe.</div>
+              <div class="bento-card-title" data-i18n="s22_c1_title" data-i18n="s22_c1_title">Kompletter Umbau direkt am Aufstellort</div>
+              <div class="bento-card-desc" data-i18n="s22_c1_desc" data-i18n="s22_c1_desc">Zeitraffer aus Indien (10–18 Uhr): Komplettumbau vor Ort inkl. Ausbau, Einbau, Regulation, Stimmung & Konzertprobe.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -3623,8 +3623,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s23_category">Teil 4: Yamaha Kit • Praxisbeweis Indien (2/2)</div>
-            <h2 class="slide-title" data-i18n="s23_title" data-i18n="s22_title">Pianisten-Feedback: Pianistin Raaga im Praxistest</h2>
-            <div class="slide-subtitle" data-i18n="s23_subtitle" data-i18n="s22_subtitle">Unmittelbares Künstler-Urteil zu Klangfarbe, Dynamik und Repetition am umgerüsteten Yamaha-Flügel</div>
+            <h2 class="slide-title" data-i18n="s23_title" data-i18n="s23_title">Pianisten-Feedback: Pianistin Raaga im Praxistest</h2>
+            <div class="slide-subtitle" data-i18n="s23_subtitle" data-i18n="s23_subtitle">Unmittelbares Künstler-Urteil zu Klangfarbe, Dynamik und Repetition am umgerüsteten Yamaha-Flügel</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3633,10 +3633,10 @@
               <div class="bento-step-watermark">04</div>
               <div class="hero-card-meta-top">
                 <span class="hero-kpi-pill" data-i18n="s23_kpi">100 % Konzertton</span>
-                <span class="bento-badge green" data-i18n="s23_b1_badge" data-i18n="s22_b1_badge">KLANGBEWEIS VOR ORT</span>
+                <span class="bento-badge green" data-i18n="s23_b1_badge" data-i18n="s23_b1_badge">KLANGBEWEIS VOR ORT</span>
               </div>
-              <div class="bento-card-title" data-i18n="s23_c1_title" data-i18n="s22_c1_title">Künstlerisches Urteil direkt nach dem Einbau</div>
-              <div class="bento-card-desc" data-i18n="s23_c1_desc" data-i18n="s22_c1_desc">Pianistin Raaga prüft den umgerüsteten Yamaha-Flügel unmittelbar auf Klangwärme, Tragkraft und Spielart.</div>
+              <div class="bento-card-title" data-i18n="s23_c1_title" data-i18n="s23_c1_title">Künstlerisches Urteil direkt nach dem Einbau</div>
+              <div class="bento-card-desc" data-i18n="s23_c1_desc" data-i18n="s23_c1_desc">Pianistin Raaga prüft den umgerüsteten Yamaha-Flügel unmittelbar auf Klangwärme, Tragkraft und Spielart.</div>
               <div class="bento-card-list">
                 <div class="bento-card-list-item">
                   <span class="bento-dot gold"></span>
@@ -3680,8 +3680,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s24_category">Teil 4: Yamaha Kit • Akustik-Analyse (1/3)</div>
-            <h2 class="slide-title" data-i18n="s24_title" data-i18n="s23_title">Klangspektrum im Vergleich: Original vs. Renner Yamaha Kit</h2>
-            <div class="slide-subtitle" data-i18n="s24_subtitle" data-i18n="s23_subtitle">Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
+            <h2 class="slide-title" data-i18n="s24_title" data-i18n="s24_title">Klangspektrum im Vergleich: Original vs. Renner Yamaha Kit</h2>
+            <div class="slide-subtitle" data-i18n="s24_subtitle" data-i18n="s24_subtitle">Original-Hammerköpfe (0:00–5:17) vs. Louis Renner Yamaha Kit (5:18–11:42)</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3777,7 +3777,7 @@
             <div class="yka-card">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge gold" data-i18n="s24_r_badge" data-i18n="s23_b1_badge">2-OKTAVEN-MESSWERTE</span>
+                  <span class="bento-badge gold" data-i18n="s24_r_badge" data-i18n="s24_b1_badge">2-OKTAVEN-MESSWERTE</span>
                   <h3 class="yka-card-title" data-i18n="s24_r_title">Kennzahlen im 2-Oktaven-Fenster</h3>
                 </div>
               </div>
@@ -3829,8 +3829,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s25_category">Teil 4: Yamaha Kit • Akustik-Analyse (2/3)</div>
-            <h2 class="slide-title" data-i18n="s25_title" data-i18n="s24_title">Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Vergleich</h2>
-            <div class="slide-subtitle" data-i18n="s25_subtitle" data-i18n="s24_subtitle">Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz</div>
+            <h2 class="slide-title" data-i18n="s25_title" data-i18n="s25_title">Teiltonverteilung (H₁–H₁₂) & 24-Halbton-Vergleich</h2>
+            <div class="slide-subtitle" data-i18n="s25_subtitle" data-i18n="s25_subtitle">Oberton-Architektur je 2-Oktaven-Fenster: Mehr Wärme und Brillanz</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3886,7 +3886,7 @@
             <div class="yka-card yka-card-gold">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge gold" data-i18n="s25_l_badge" data-i18n="s24_b1_badge">TEILTONREIHE H₁–H₁₂</span>
+                  <span class="bento-badge gold" data-i18n="s25_l_badge" data-i18n="s25_b1_badge">TEILTONREIHE H₁–H₁₂</span>
                   <h3 class="yka-card-title" data-i18n="s25_l_title">Harmonische Teiltonverteilung (bis 6 kHz)</h3>
                 </div>
               </div>
@@ -3924,7 +3924,7 @@
             <div class="yka-card">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge green" data-i18n="s25_r_badge" data-i18n="s24_b2_badge">24 HALBTÖNE CHROMATISCH</span>
+                  <span class="bento-badge green" data-i18n="s25_r_badge" data-i18n="s25_b2_badge">24 HALBTÖNE CHROMATISCH</span>
                   <h3 class="yka-card-title" data-i18n="s25_r_title">Oberton-Energie Note für Note (H₂–H₈)</h3>
                 </div>
               </div>
@@ -3957,8 +3957,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s26_category">Teil 4: Yamaha Kit • Akustik-Analyse (3/3)</div>
-            <h2 class="slide-title" data-i18n="s26_title" data-i18n="s25_title">4 Klangvorteile & Oberton-Erhalt bis C₈</h2>
-            <div class="slide-subtitle" data-i18n="s26_subtitle" data-i18n="s25_subtitle">Messbarer Zugewinn im Gesangs- und Brillanzregister sowie flacherer Oberton-Abfall bis 4.300 Hz</div>
+            <h2 class="slide-title" data-i18n="s26_title" data-i18n="s26_title">4 Klangvorteile & Oberton-Erhalt bis C₈</h2>
+            <div class="slide-subtitle" data-i18n="s26_subtitle" data-i18n="s26_subtitle">Messbarer Zugewinn im Gesangs- und Brillanzregister sowie flacherer Oberton-Abfall bis 4.300 Hz</div>
           </div>
         </div>
         <div class="slide-body">
@@ -3989,7 +3989,7 @@
             <div class="yka-adv-grid">
               <div class="yka-adv-card emerald active" data-band="2" data-calc-freq="1450">
                 <div>
-                  <span class="bento-badge green" data-i18n="s26_adv1_badge" data-i18n="s25_b1_badge">01 • CANTABILE</span>
+                  <span class="bento-badge green" data-i18n="s26_adv1_badge" data-i18n="s26_b1_badge">01 • CANTABILE</span>
                   <div class="yka-adv-metric">+2,53 dB <small style="font-size:0.55em;">(+79 %)</small></div>
                   <h4 class="yka-adv-title" data-i18n="s26_adv1_title">Gesangsregister (0,8–2,5 kHz)</h4>
                 </div>
@@ -3998,7 +3998,7 @@
 
               <div class="yka-adv-card emerald" data-band="3" data-calc-freq="3520">
                 <div>
-                  <span class="bento-badge green" data-i18n="s26_adv2_badge" data-i18n="s25_b2_badge">02 • PROJEKTION</span>
+                  <span class="bento-badge green" data-i18n="s26_adv2_badge" data-i18n="s26_b2_badge">02 • PROJEKTION</span>
                   <div class="yka-adv-metric">+1,87 dB <small style="font-size:0.55em;">(+54 %)</small></div>
                   <h4 class="yka-adv-title" data-i18n="s26_adv2_title">Diskant-Brillanz (2,5–6,0 kHz)</h4>
                 </div>
@@ -4007,7 +4007,7 @@
 
               <div class="yka-adv-card" data-band="0" data-calc-freq="160">
                 <div>
-                  <span class="bento-badge gold" data-i18n="s26_adv3_badge" data-i18n="s25_b3_badge">03 • TRANSPARENZ</span>
+                  <span class="bento-badge gold" data-i18n="s26_adv3_badge" data-i18n="s26_b3_badge">03 • TRANSPARENZ</span>
                   <div class="yka-adv-metric">−3,28 dB <small style="font-size:0.55em;">(−53 %)</small></div>
                   <h4 class="yka-adv-title" data-i18n="s26_adv3_title">Bass-Präzision (20–250 Hz)</h4>
                 </div>
@@ -4016,7 +4016,7 @@
 
               <div class="yka-adv-card" data-band="3" data-calc-freq="2500">
                 <div>
-                  <span class="bento-badge gold" data-i18n="s26_adv4_badge" data-i18n="s25_b4_badge">04 • OBERTON-ERHALT</span>
+                  <span class="bento-badge gold" data-i18n="s26_adv4_badge" data-i18n="s26_b4_badge">04 • OBERTON-ERHALT</span>
                   <div class="yka-adv-metric">+0,93 dB/kHz <small style="font-size:0.52em;">(+1,52 dB/Okt.)</small></div>
                   <h4 class="yka-adv-title" data-i18n="s26_adv4_title">12,6 % flacherer Abfall & klarerer Impuls</h4>
                 </div>
@@ -4028,7 +4028,7 @@
             <div class="yka-card yka-card-gold">
               <div class="yka-card-head">
                 <div class="yka-card-title-wrap">
-                  <span class="bento-badge green" data-i18n="s26_r_badge" data-i18n="s25_b5_badge">OBERTON-ABFALL (BIS C₈ = 4.300 HZ)</span>
+                  <span class="bento-badge green" data-i18n="s26_r_badge" data-i18n="s26_b5_badge">OBERTON-ABFALL (BIS C₈ = 4.300 HZ)</span>
                   <h3 class="yka-card-title" data-i18n="s26_r_title">Oberton-Abfall nach Dynamik (pp–ff) & Frequenz-Rechner</h3>
                 </div>
               </div>
@@ -4086,8 +4086,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s27_category">Teil 5: Intonation • Auftakt: Klangphysik & Klavierton</div>
-            <h2 class="slide-title" data-i18n="s27_title" data-i18n="s26_title">Teiltonaufbau auf A₁ (55 Hz): Tonhärte & Anschlagspunkt</h2>
-            <div class="slide-subtitle" data-i18n="s27_subtitle" data-i18n="s26_subtitle">Wie Filz-Elastizität und Anschlagsposition (x₀ / L) die Teiltöne H₁–H₁₂ in Dezibel (dB) formen</div>
+            <h2 class="slide-title" data-i18n="s27_title" data-i18n="s27_title">Teiltonaufbau auf A₁ (55 Hz): Tonhärte & Anschlagspunkt</h2>
+            <div class="slide-subtitle" data-i18n="s27_subtitle" data-i18n="s27_subtitle">Wie Filz-Elastizität und Anschlagsposition (x₀ / L) die Teiltöne H₁–H₁₂ in Dezibel (dB) formen</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4126,7 +4126,7 @@
               <div class="pta-card string-card">
                 <div class="pta-card-head">
                   <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                    <span class="bento-badge green" data-i18n="s27_str_badge" data-i18n="s26_b1_badge">ANSCHLAGSPUNKT x₀ / L</span>
+                    <span class="bento-badge green" data-i18n="s27_str_badge" data-i18n="s27_b1_badge">ANSCHLAGSPUNKT x₀ / L</span>
                     <h3 class="pta-card-title" data-i18n="s27_str_title">Stehende Welle A₁ (1.560 mm) & Knoten-Dämpfung</h3>
                   </div>
                   <span id="pta-string-wave-lbl" style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--gold-light); white-space: nowrap;">
@@ -4195,7 +4195,7 @@
                 <!-- Dynamische Meister-Erklärung -->
                 <div class="pta-explain-box">
                   <div>
-                    <span class="bento-badge gold" id="pta-exp-badge" style="margin-bottom:6px;" data-i18n="s27_exp_badge" data-i18n="s26_b2_badge">✦ KLANGWIRKUNG</span>
+                    <span class="bento-badge gold" id="pta-exp-badge" style="margin-bottom:6px;" data-i18n="s27_exp_badge" data-i18n="s27_b2_badge">✦ KLANGWIRKUNG</span>
                     <h4 class="pta-explain-title" id="pta-exp-title">Konzert-Balance: Tragender Kern &amp; klarer Scheitel</h4>
                   </div>
                   <p class="pta-explain-text" id="pta-exp-body">
@@ -4221,8 +4221,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s28_category">Teil 5: Intonation • Federphysik, Verdichtungszonen & Dynamikgrenzen</div>
-            <h2 class="slide-title" data-i18n="s28_title" data-i18n="s27_title">Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance</h2>
-            <div class="slide-subtitle" data-i18n="s28_subtitle" data-i18n="s27_subtitle">Wie Elastizität, 2:1-Verdichtung (Scheitel → ½ Flanke) und Schulter-Übergang den Dynamikumfang (pp–ff) steuern</div>
+            <h2 class="slide-title" data-i18n="s28_title" data-i18n="s28_title">Die komplexe Feder Hammerkopf: Von Cristofori zur Zonen-Balance</h2>
+            <div class="slide-subtitle" data-i18n="s28_subtitle" data-i18n="s28_subtitle">Wie Elastizität, 2:1-Verdichtung (Scheitel → ½ Flanke) und Schulter-Übergang den Dynamikumfang (pp–ff) steuern</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4255,7 +4255,7 @@
               <div class="hsp-card curve-card">
                 <div class="hsp-card-head">
                   <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                    <span class="bento-badge green" id="hsp-curve-badge" data-i18n="s28_curve_badge" data-i18n="s27_b1_badge">TEILTONSTRUKTUR</span>
+                    <span class="bento-badge green" id="hsp-curve-badge" data-i18n="s28_curve_badge" data-i18n="s28_b1_badge">TEILTONSTRUKTUR</span>
                     <h3 class="hsp-card-title" id="hsp-curve-title" data-i18n="s28_curve_title">Änderung der Teiltonstruktur (H1–H12 in dB)</h3>
                   </div>
                   <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
@@ -4368,7 +4368,7 @@
                 <!-- Dynamische Fach-Erklärung -->
                 <div class="hsp-explain-box" id="hsp-exp-box">
                   <div>
-                    <span class="bento-badge gold" id="hsp-exp-badge" style="margin-bottom:4px;" data-i18n="s28_exp_badge" data-i18n="s27_b2_badge">✦ CRISTOFORI (1700)</span>
+                    <span class="bento-badge gold" id="hsp-exp-badge" style="margin-bottom:4px;" data-i18n="s28_exp_badge" data-i18n="s28_b2_badge">✦ CRISTOFORI (1700)</span>
                     <h4 class="hsp-explain-title" id="hsp-exp-title">Beledertes Röllchen: Spannung erzeugt Elastizität</h4>
                   </div>
                   <p class="hsp-explain-text" id="hsp-exp-body">
@@ -4394,8 +4394,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s29_category">Teil 5: Intonation • Faserverlauf, Nadelzonen & Klangwirkung</div>
-            <h2 class="slide-title" data-i18n="s29_title" data-i18n="s28_title">Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell</h2>
-            <div class="slide-subtitle" data-i18n="s29_subtitle" data-i18n="s28_subtitle">Immer im Lot zur Wollfaser (⊥): Von den 9:00–3:00-Keilen bis zum Elastizitätsstich oberhalb der Niete</div>
+            <h2 class="slide-title" data-i18n="s29_title" data-i18n="s29_title">Intonations-Zonen & Stichwirkung: Das Renner-Uhrenmodell</h2>
+            <div class="slide-subtitle" data-i18n="s29_subtitle" data-i18n="s29_subtitle">Immer im Lot zur Wollfaser (⊥): Von den 9:00–3:00-Keilen bis zum Elastizitätsstich oberhalb der Niete</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4436,7 +4436,7 @@
               <div class="hsp-card curve-card">
                 <div class="hsp-card-head">
                   <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                    <span class="bento-badge green" id="vzn-curve-badge" data-i18n="s29_curve_badge" data-i18n="s28_b1_badge">KLANGWIRKUNG</span>
+                    <span class="bento-badge green" id="vzn-curve-badge" data-i18n="s29_curve_badge" data-i18n="s29_b1_badge">KLANGWIRKUNG</span>
                     <h3 class="hsp-card-title" id="vzn-curve-title" data-i18n="s29_curve_title">Akustischer Effekt der gewählten Zone (H₁–H₁₂)</h3>
                   </div>
                   <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
@@ -4540,7 +4540,7 @@
                 <!-- Dynamische Meister-Erklärung (Kruse / Olbrich) -->
                 <div class="hsp-explain-box" id="vzn-exp-box">
                   <div>
-                    <span class="bento-badge gold" id="vzn-exp-badge" data-i18n="s29_exp_badge" data-i18n="s28_b2_badge">✦ VORINTONATION • BLAUER FF-KEIL (9–10 / 2–3H)</span>
+                    <span class="bento-badge gold" id="vzn-exp-badge" data-i18n="s29_exp_badge" data-i18n="s29_b2_badge">✦ VORINTONATION • BLAUER FF-KEIL (9–10 / 2–3H)</span>
                     <h4 class="hsp-explain-title" id="vzn-exp-title">Tiefe Stiche im Lot zur Faser lösen Werkshärte</h4>
                   </div>
                   <p class="hsp-explain-text" id="vzn-exp-body">
@@ -4566,8 +4566,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s30_category">Teil 5: Intonation • Geometrie im 3-chörigen Saitenbezug</div>
-            <h2 class="slide-title" data-i18n="s30_title" data-i18n="s29_title">Scheitel & Saitenebene im 3er-Chor: Phasenlage & Auslöschung</h2>
-            <div class="slide-subtitle" data-i18n="s30_subtitle" data-i18n="s29_subtitle">Schon 0,2 mm Höhen- oder Winkelversatz erzeugen Phasenauslöschungen in den Obertönen H₁–H₁₂</div>
+            <h2 class="slide-title" data-i18n="s30_title" data-i18n="s30_title">Scheitel & Saitenebene im 3er-Chor: Phasenlage & Auslöschung</h2>
+            <div class="slide-subtitle" data-i18n="s30_subtitle" data-i18n="s30_subtitle">Schon 0,2 mm Höhen- oder Winkelversatz erzeugen Phasenauslöschungen in den Obertönen H₁–H₁₂</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4615,7 +4615,7 @@
               <div class="pta-card spec-stage-card">
                 <div class="pta-card-head">
                   <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                    <span class="bento-badge green" data-i18n="s30_b1_badge" data-i18n="s29_b1_badge">TEILTONAUFBAU</span>
+                    <span class="bento-badge green" data-i18n="s30_b1_badge" data-i18n="s30_b1_badge">TEILTONAUFBAU</span>
                     <h3 class="pta-card-title" data-i18n="s30_spec_title">Wirkung auf H₁–H₁₂ (A₃ · 220 Hz): Phasen-Auslöschungen in dB</h3>
                   </div>
                   <span class="hsp-sub-hint" data-i18n="s30_spec_hint">Klick wählt Teilton H₁–H₁₂</span>
@@ -4684,7 +4684,7 @@
                 <!-- Dynamische Meister-Erklärung -->
                 <div class="pta-explain-box">
                   <div>
-                    <span class="bento-badge red-alert" id="csa-exp-badge" data-i18n="s30_b2_badge" data-i18n="s29_b2_badge">✕ FEHLERBILD 1 • SCHIEFER SCHEITEL</span>
+                    <span class="bento-badge red-alert" id="csa-exp-badge" data-i18n="s30_b2_badge" data-i18n="s30_b2_badge">✕ FEHLERBILD 1 • SCHIEFER SCHEITEL</span>
                     <h4 class="pta-explain-title" id="csa-exp-title">Gestaffelter Anschlag (S₁ → S₂ → S₃) löscht Obertöne aus</h4>
                   </div>
                   <p class="pta-explain-text" id="csa-exp-body">
@@ -4710,8 +4710,8 @@
 <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s31_category">Teil 5: Intonation • Saitenlagerung</div>
-            <h2 class="slide-title" data-i18n="s31_title" data-i18n="s30_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
-            <div class="slide-subtitle" data-i18n="s31_subtitle" data-i18n="s30_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument angelegt ist!“</div>
+            <h2 class="slide-title" data-i18n="s31_title" data-i18n="s31_title">Saitenvorbereitung: Anhangstifte, Stegstifte & Agraffen</h2>
+            <div class="slide-subtitle" data-i18n="s31_subtitle" data-i18n="s31_subtitle">„Der beste Hammerkopf kann nur das hervorbringen, was im Instrument angelegt ist!“</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4721,10 +4721,10 @@
               <div>
                 <div class="hero-card-meta-top">
                   <span class="hero-kpi-pill" data-i18n="s31_kpi">4 Prüfschritte</span>
-                  <span class="bento-badge gold" data-i18n="s31_b1_badge" data-i18n="s30_b1_badge">SAITEN-BETTUNG</span>
+                  <span class="bento-badge gold" data-i18n="s31_b1_badge" data-i18n="s31_b1_badge">SAITEN-BETTUNG</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s31_c1_title" data-i18n="s30_c1_title">Exakte Saitenauflage vor dem ersten Nadelstich</div>
-                <div class="bento-card-desc" data-i18n="s31_c1_desc" data-i18n="s30_c1_desc">Nur fest aufliegende, auf eine Ebene gerichtete und chorrein gestimmte Saiten erlauben eine ehrliche Klangdiagnose am Hammerkopf.</div>
+                <div class="bento-card-title" data-i18n="s31_c1_title" data-i18n="s31_c1_title">Exakte Saitenauflage vor dem ersten Nadelstich</div>
+                <div class="bento-card-desc" data-i18n="s31_c1_desc" data-i18n="s31_c1_desc">Nur fest aufliegende, auf eine Ebene gerichtete und chorrein gestimmte Saiten erlauben eine ehrliche Klangdiagnose am Hammerkopf.</div>
               </div>
               <div class="bento-card-list s30-step-list">
                 <div class="bento-card-list-item" data-s30-step="1">
@@ -4751,46 +4751,46 @@
             <div class="s30-photo-mosaic">
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="1">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1030.jpg" alt="Reinigung und Kontrolle der Anhangstifte" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b2_badge" data-i18n="s30_b2_badge">01 • ANHANGSTIFTE</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b2_badge" data-i18n="s31_b2_badge">01 • ANHANGSTIFTE</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s31_caption_1" data-i18n="s30_caption_1">Auflagefläche & Anhangstifte reinigen und auf festen Sitz prüfen</div>
+                  <div class="bento-media-caption" data-i18n="s31_caption_1" data-i18n="s31_caption_1">Auflagefläche & Anhangstifte reinigen und auf festen Sitz prüfen</div>
                 </div>
               </div>
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="2">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1031.jpg" alt="Saiten an den Stegstiften mit Messingdurchschlag setzen" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b3_badge" data-i18n="s30_b3_badge">02 • STEGSTIFTE</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b3_badge" data-i18n="s31_b3_badge">02 • STEGSTIFTE</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s31_caption_2" data-i18n="s30_caption_2">Saiten mit Messingdurchschlag sauber auf den Steg niederschlagen</div>
+                  <div class="bento-media-caption" data-i18n="s31_caption_2" data-i18n="s31_caption_2">Saiten mit Messingdurchschlag sauber auf den Steg niederschlagen</div>
                 </div>
               </div>
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="3">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1039.jpg" alt="Saitenchor hinter den Agraffen nivellieren" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b4_badge" data-i18n="s30_b4_badge">03 • AGRAFFEN</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b4_badge" data-i18n="s31_b4_badge">03 • AGRAFFEN</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s31_caption_3" data-i18n="s30_caption_3">3er-Chor hinter den Agraffen auf Abstand und gleiche Ebene richten</div>
+                  <div class="bento-media-caption" data-i18n="s31_caption_3" data-i18n="s31_caption_3">3er-Chor hinter den Agraffen auf Abstand und gleiche Ebene richten</div>
                 </div>
               </div>
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="4">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1037.jpg" alt="Kontrolle von Dämpfung und Chorreinheit über den Renner-Hammerköpfen" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b5_badge" data-i18n="s30_b5_badge">04 • CHORPRÜFUNG</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s31_b5_badge" data-i18n="s31_b5_badge">04 • CHORPRÜFUNG</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s31_caption_4" data-i18n="s30_caption_4">Dämpferauflage, Chorreinheit & simultane Hammeransprache prüfen</div>
+                  <div class="bento-media-caption" data-i18n="s31_caption_4" data-i18n="s31_caption_4">Dämpferauflage, Chorreinheit & simultane Hammeransprache prüfen</div>
                 </div>
               </div>
             </div>
@@ -4808,8 +4808,8 @@
 <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s32_category">Teil 5: Intonation • Fein- & Una-Corda-Abstimmung</div>
-            <h2 class="slide-title" data-i18n="s32_title" data-i18n="s31_title">Zwischen-, Fein- & Verschiebungsintonation</h2>
-            <div class="slide-subtitle" data-i18n="s32_subtitle" data-i18n="s31_subtitle">Chromatisches Egalisieren, max. 2-mm-Scheitelstiche & Abstimmung des linken Pedals (Una Corda)</div>
+            <h2 class="slide-title" data-i18n="s32_title" data-i18n="s32_title">Zwischen-, Fein- & Verschiebungsintonation</h2>
+            <div class="slide-subtitle" data-i18n="s32_subtitle" data-i18n="s32_subtitle">Chromatisches Egalisieren, max. 2-mm-Scheitelstiche & Abstimmung des linken Pedals (Una Corda)</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4819,10 +4819,10 @@
               <div>
                 <div class="hero-card-meta-top">
                   <span class="hero-kpi-pill" data-i18n="s32_kpi">Max. 2 mm • Una Corda</span>
-                  <span class="bento-badge gold" data-i18n="s32_b1_badge" data-i18n="s31_b1_badge">FEIN- & PEDALINTONATION</span>
+                  <span class="bento-badge gold" data-i18n="s32_b1_badge" data-i18n="s32_b1_badge">FEIN- & PEDALINTONATION</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s32_c1_title" data-i18n="s31_c1_title">Egalisieren bis zur Konzertreife – inklusive linkem Pedal</div>
-                <div class="bento-card-desc" data-i18n="s32_c1_desc" data-i18n="s31_c1_desc">Alle 88 Töne verschmelzen chromatisch und bei getretener Verschiebung zu einem bruchlosen, nebengeräuschfreien Klangverlauf.</div>
+                <div class="bento-card-title" data-i18n="s32_c1_title" data-i18n="s32_c1_title">Egalisieren bis zur Konzertreife – inklusive linkem Pedal</div>
+                <div class="bento-card-desc" data-i18n="s32_c1_desc" data-i18n="s32_c1_desc">Alle 88 Töne verschmelzen chromatisch und bei getretener Verschiebung zu einem bruchlosen, nebengeräuschfreien Klangverlauf.</div>
               </div>
               <div class="bento-card-list s30-step-list">
                 <div class="bento-card-list-item" data-s30-step="1">
@@ -4853,46 +4853,46 @@
             <div class="s30-photo-mosaic">
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="1">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1059.jpg" alt="Feinintonation mit ergonomischem BDK-Einzelnadelhalter" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b2_badge" data-i18n="s31_b2_badge">01 • BDK-FEINHALTER</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b2_badge" data-i18n="s32_b2_badge">01 • BDK-FEINHALTER</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s32_caption_1" data-i18n="s31_caption_1">Kurze Einzelnadel im BDK-Halter für feinste Dosierung am Scheitel</div>
+                  <div class="bento-media-caption" data-i18n="s32_caption_1" data-i18n="s32_caption_1">Kurze Einzelnadel im BDK-Halter für feinste Dosierung am Scheitel</div>
                 </div>
               </div>
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="2">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1064.jpg" alt="Zwischenintonation in der Hammer-Schulterzone" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b3_badge" data-i18n="s31_b3_badge">02 • SCHULTERZONE</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b3_badge" data-i18n="s32_b3_badge">02 • SCHULTERZONE</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s32_caption_2" data-i18n="s31_caption_2">Gezieltes Nadeln im Piano- und Forte-Keil auf fester Unterlage</div>
+                  <div class="bento-media-caption" data-i18n="s32_caption_2" data-i18n="s32_caption_2">Gezieltes Nadeln im Piano- und Forte-Keil auf fester Unterlage</div>
                 </div>
               </div>
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="3">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1067.jpg" alt="2-mm-Scheitelstiche im Instrument mit Chop-Stick-Halter" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b4_badge" data-i18n="s31_b4_badge">03 • MAX. 2 MM SCHEITEL</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b4_badge" data-i18n="s32_b4_badge">03 • MAX. 2 MM SCHEITEL</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s32_caption_3" data-i18n="s31_caption_3">Chop-Stick im Flügel: max. 2 mm tief streng zwischen den Saitenrillen</div>
+                  <div class="bento-media-caption" data-i18n="s32_caption_3" data-i18n="s32_caption_3">Chop-Stick im Flügel: max. 2 mm tief streng zwischen den Saitenrillen</div>
                 </div>
               </div>
               <div class="bento-card media-framed s30-photo-card" data-s30-photo="4">
                 <img src="Visuell/Bilder/05_Yamaha_Kit/Fotos_Yamaha_Kit_Einbau/C3_Einbau_MSW/IMG_1055.jpg" alt="Glätten aufgestellter Wollfasern und Kantenbrechen am Scheitel" loading="lazy">
-                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b5_badge" data-i18n="s31_b5_badge">04 • ABZIEHEN & UNA CORDA</span>
+                <span class="bento-badge gold s30-step-badge" data-i18n="s32_b5_badge" data-i18n="s32_b5_badge">04 • ABZIEHEN & UNA CORDA</span>
                 <div class="hero-corner-bracket top-left"></div>
                 <div class="hero-corner-bracket top-right"></div>
                 <div class="hero-corner-bracket bottom-left"></div>
                 <div class="hero-corner-bracket bottom-right"></div>
                 <div class="bento-media-overlay s30-media-overlay">
-                  <div class="bento-media-caption" data-i18n="s32_caption_4" data-i18n="s31_caption_4">Scheitel fein abziehen (Körnung 320–400) & linke Kante für Una Corda brechen</div>
+                  <div class="bento-media-caption" data-i18n="s32_caption_4" data-i18n="s32_caption_4">Scheitel fein abziehen (Körnung 320–400) & linke Kante für Una Corda brechen</div>
                 </div>
               </div>
             </div>
@@ -4910,8 +4910,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s33_category">Teil 5: Intonation • Nachträgliche Härtesteigerung &amp; Gewichtssteuerung</div>
-            <h2 class="slide-title" data-i18n="s33_title" data-i18n="s32_title">Tränken, Bügeln (max. 135 °C), Scheitel-Finish &amp; Gewichtssteuerung</h2>
-            <div class="slide-subtitle" data-i18n="s33_subtitle" data-i18n="s32_subtitle">Interaktive Zonenwirkung beim Lack-Tränken, Glätten mit Hitze, Mikro-Schliff (≤ 15 µm) &amp; Masse-Abstimmung nach Lage</div>
+            <h2 class="slide-title" data-i18n="s33_title" data-i18n="s33_title">Tränken, Bügeln (max. 135 °C), Scheitel-Finish &amp; Gewichtssteuerung</h2>
+            <div class="slide-subtitle" data-i18n="s33_subtitle" data-i18n="s33_subtitle">Interaktive Zonenwirkung beim Lack-Tränken, Glätten mit Hitze, Mikro-Schliff (≤ 15 µm) &amp; Masse-Abstimmung nach Lage</div>
           </div>
         </div>
         <div class="slide-body">
@@ -4921,7 +4921,7 @@
               <!-- Kopfzeile & Steuerleiste -->
               <div class="flh-topbar">
                 <div class="flh-topbar-left">
-                  <span class="bento-badge s32-badge-amber" data-i18n="s33_b1_badge" data-i18n="s32_b1_badge">01 • LACK-TRÄNKEN</span>
+                  <span class="bento-badge s32-badge-amber" data-i18n="s33_b1_badge" data-i18n="s33_b1_badge">01 • LACK-TRÄNKEN</span>
                   <span class="flh-topbar-hint" data-i18n="s33_c1_title">Tränken auf Lackbasis: Zonen &amp; Nachverdichtung</span>
                 </div>
                 <div class="flh-topbar-actions">
@@ -5029,16 +5029,16 @@
               <div class="bento-card s32-method-card s32-card-thermal">
                 <div class="s32-media-frame s32-compact-media">
                   <img src="Visuell/Bilder/06_Intonation/18_werkzeug_intonier_buegeleisen_thermostat.jpg" alt="Thermostatgeregeltes Intonier-Bügeleisen bis maximal 135 Grad Celsius" class="s32-photo-img" loading="lazy">
-                  <span class="bento-badge gold s32-top-badge" data-i18n="s33_b2_badge" data-i18n="s32_b2_badge">02 • BÜGELN MIT HITZE</span>
+                  <span class="bento-badge gold s32-top-badge" data-i18n="s33_b2_badge" data-i18n="s33_b2_badge">02 • BÜGELN MIT HITZE</span>
                   <span class="s32-kpi-chip s32-chip-gold" data-i18n="s33_kpi_2">Strikt max. 135 °C</span>
                   <div class="bento-media-overlay s32-media-overlay">
-                    <div class="bento-media-caption" data-i18n="s33_caption_2" data-i18n="s32_caption_1">Thermostatgeregeltes Bügeleisen glättet und verdichtet den Außenmantel</div>
+                    <div class="bento-media-caption" data-i18n="s33_caption_2" data-i18n="s33_caption_1">Thermostatgeregeltes Bügeleisen glättet und verdichtet den Außenmantel</div>
                   </div>
                 </div>
                 <div class="s32-card-content s32-compact-content">
                   <div>
-                    <div class="bento-card-title" data-i18n="s33_c2_title" data-i18n="s32_c1_title">Bügeln der Köpfe (Glätten bis max. 135 °C)</div>
-                    <div class="bento-card-desc" data-i18n="s33_c2_desc" data-i18n="s32_c1_desc">Beheiztes Glätten legt abstehende Fasern an, verdichtet die Außenzone und hebt die Mantelspannung.</div>
+                    <div class="bento-card-title" data-i18n="s33_c2_title" data-i18n="s33_c1_title">Bügeln der Köpfe (Glätten bis max. 135 °C)</div>
+                    <div class="bento-card-desc" data-i18n="s33_c2_desc" data-i18n="s33_c1_desc">Beheiztes Glätten legt abstehende Fasern an, verdichtet die Außenzone und hebt die Mantelspannung.</div>
                   </div>
                   <div class="bento-card-list s32-bullet-list">
                     <div class="bento-card-list-item">
@@ -5092,16 +5092,16 @@
                       <text x="221" y="60" text-anchor="middle" fill="#d1fae5" font-size="12.0" font-weight="700" font-family="Inter, sans-serif" data-i18n="s33_svg3_cut">Kappt nur Einzelfasern</text>
                     </svg>
                   </div>
-                  <span class="bento-badge green s32-top-badge" data-i18n="s33_b3_badge" data-i18n="s32_b3_badge">03 • SCHEITEL-FEINFINISH</span>
+                  <span class="bento-badge green s32-top-badge" data-i18n="s33_b3_badge" data-i18n="s33_b3_badge">03 • SCHEITEL-FEINFINISH</span>
                   <span class="s32-kpi-chip s32-chip-green" data-i18n="s33_kpi_3">≤ 15 µm (15 my) • Braun Series 1</span>
                   <div class="bento-media-overlay s32-media-overlay">
-                    <div class="bento-media-caption" data-i18n="s33_caption_3" data-i18n="s32_caption_2">Mikro-Schleifmittel bis 15 µm (links) oder Rasierer Braun Series 1 (rechts)</div>
+                    <div class="bento-media-caption" data-i18n="s33_caption_3" data-i18n="s33_caption_2">Mikro-Schleifmittel bis 15 µm (links) oder Rasierer Braun Series 1 (rechts)</div>
                   </div>
                 </div>
                 <div class="s32-card-content s32-compact-content">
                   <div>
-                    <div class="bento-card-title" data-i18n="s33_c3_title" data-i18n="s32_c2_title">Scheitel-Feinschliff (≤ 15 µm) &amp; Rasur</div>
-                    <div class="bento-card-desc" data-i18n="s33_c3_desc" data-i18n="s32_c2_desc">Ein maximal fein geschliffener Scheitel beseitigt dämpfende Härchen und optimiert die Kontakthärte ohne Chemie.</div>
+                    <div class="bento-card-title" data-i18n="s33_c3_title" data-i18n="s33_c2_title">Scheitel-Feinschliff (≤ 15 µm) &amp; Rasur</div>
+                    <div class="bento-card-desc" data-i18n="s33_c3_desc" data-i18n="s33_c2_desc">Ein maximal fein geschliffener Scheitel beseitigt dämpfende Härchen und optimiert die Kontakthärte ohne Chemie.</div>
                   </div>
                   <div class="bento-card-list s32-bullet-list">
                     <div class="bento-card-list-item">
@@ -5133,8 +5133,8 @@
         <div class="slide-header">
           <div>
             <div class="slide-category" data-i18n="s34_category">Teil 5: Ausblick • Renner Academy & Fachdialog</div>
-            <h2 class="slide-title" data-i18n="s34_title" data-i18n="s33_title">Die Renner Academy & Technischer Fachdialog</h2>
-            <div class="slide-subtitle" data-i18n="s34_subtitle" data-i18n="s33_subtitle">Praxisnahe Meisterkurse, Werksführungen in Meuselwitz & direkter Austausch weltweit</div>
+            <h2 class="slide-title" data-i18n="s34_title" data-i18n="s34_title">Die Renner Academy & Technischer Fachdialog</h2>
+            <div class="slide-subtitle" data-i18n="s34_subtitle" data-i18n="s34_subtitle">Praxisnahe Meisterkurse, Werksführungen in Meuselwitz & direkter Austausch weltweit</div>
           </div>
         </div>
         <div class="slide-body">
@@ -5142,10 +5142,10 @@
             <div class="bento-grid bento-grid-stack-2">
               <div class="bento-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge green" data-i18n="s34_b1_badge" data-i18n="s33_b1_badge">PRAXIS-MEISTERKURSE</span>
+                  <span class="bento-badge green" data-i18n="s34_b1_badge" data-i18n="s34_b1_badge">PRAXIS-MEISTERKURSE</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s34_c1_title" data-i18n="s33_c1_title">Renner Academy Schulungsprogramm</div>
-                <div class="bento-card-desc" data-i18n="s34_c1_desc" data-i18n="s33_c1_desc">Vertiefende Workshops zu Mechanikgeometrie, Hammerkopf-Einbau, Yamaha-Kit-Montage und Konzertintonation.</div>
+                <div class="bento-card-title" data-i18n="s34_c1_title" data-i18n="s34_c1_title">Renner Academy Schulungsprogramm</div>
+                <div class="bento-card-desc" data-i18n="s34_c1_desc" data-i18n="s34_c1_desc">Vertiefende Workshops zu Mechanikgeometrie, Hammerkopf-Einbau, Yamaha-Kit-Montage und Konzertintonation.</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot green"></span>
@@ -5155,10 +5155,10 @@
               </div>
               <div class="bento-card hero-card">
                 <div class="bento-card-header">
-                  <span class="bento-badge gold" data-i18n="s34_b2_badge" data-i18n="s33_b2_badge">STANDORT MEUSELWITZ</span>
+                  <span class="bento-badge gold" data-i18n="s34_b2_badge" data-i18n="s34_b2_badge">STANDORT MEUSELWITZ</span>
                 </div>
-                <div class="bento-card-title" data-i18n="s34_c2_title" data-i18n="s33_c2_title">Werksführungen & Technischer Support</div>
-                <div class="bento-card-desc" data-i18n="s34_c2_desc" data-i18n="s33_c2_desc">Erleben Sie die gebündelte Fertigung in Meuselwitz live und nutzen Sie unseren direkten technischen Werkstattsupport.</div>
+                <div class="bento-card-title" data-i18n="s34_c2_title" data-i18n="s34_c2_title">Werksführungen & Technischer Support</div>
+                <div class="bento-card-desc" data-i18n="s34_c2_desc" data-i18n="s34_c2_desc">Erleben Sie die gebündelte Fertigung in Meuselwitz live und nutzen Sie unseren direkten technischen Werkstattsupport.</div>
                 <div class="bento-card-list">
                   <div class="bento-card-list-item">
                     <span class="bento-dot gold"></span>
@@ -5174,9 +5174,9 @@
               <div class="hero-corner-bracket bottom-left"></div>
               <div class="hero-corner-bracket bottom-right"></div>
               <div class="bento-media-overlay">
-                <span class="bento-badge gold" data-i18n="s34_b3_badge" data-i18n="s33_b3_badge">LOUIS RENNER GMBH</span>
-                <div class="bento-media-caption" data-i18n="s34_caption_1" data-i18n="s33_caption_1">Louis Renner GmbH • Meuselwitz</div>
-                <div class="bento-media-subcaption" data-i18n="s34_caption_2" data-i18n="s33_caption_2">Ihr Partner für meisterlichen Klang seit 1882</div>
+                <span class="bento-badge gold" data-i18n="s34_b3_badge" data-i18n="s34_b3_badge">LOUIS RENNER GMBH</span>
+                <div class="bento-media-caption" data-i18n="s34_caption_1" data-i18n="s34_caption_1">Louis Renner GmbH • Meuselwitz</div>
+                <div class="bento-media-subcaption" data-i18n="s34_caption_2" data-i18n="s34_caption_2">Ihr Partner für meisterlichen Klang seit 1882</div>
               </div>
             </div>
           </div>
@@ -5328,24 +5328,24 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/translations.js?v=20261110_150325"></script>
-  <script src="js/translations-data.js?v=20261110_150325"></script>
-  <script src="js/audio-synth.js?v=20261110_150325"></script>
-  <script src="js/timelapse.js?v=20261110_150325"></script>
-  <script src="js/history-journey.js?v=20261110_150325"></script>
-  <script src="js/transformation-journey.js?v=20261110_150325"></script>
-  <script src="js/ffw-history.js?v=20261110_150325"></script>
-  <script src="js/felt-anatomy.js?v=20261110_150325"></script>
-  <script src="js/weickert-rem-zoom.js?v=20261110_150325"></script>
-  <script src="js/hammer-weight-balance.js?v=20261110_150325"></script>
-  <script src="js/yamaha-kit.js?v=20261110_150325"></script>
-  <script src="js/yamaha-kit-acoustic.js?v=20261110_150325"></script>
-  <script src="js/piano-tone-a1.js?v=20261110_150325"></script>
-  <script src="js/hammer-spring.js?v=20261110_150325"></script>
-  <script src="js/crown-string-alignment.js?v=20261110_150325"></script>
-  <script src="js/voicing-zones.js?v=20261110_150325"></script>
-  <script src="js/felt-lacquer-hardening.js?v=20261110_150325"></script>
-  <script src="js/presentation.js?v=20261110_150325"></script>
+  <script src="js/translations.js?v=20261110_152708"></script>
+  <script src="js/translations-data.js?v=20261110_152708"></script>
+  <script src="js/audio-synth.js?v=20261110_152708"></script>
+  <script src="js/timelapse.js?v=20261110_152708"></script>
+  <script src="js/history-journey.js?v=20261110_152708"></script>
+  <script src="js/transformation-journey.js?v=20261110_152708"></script>
+  <script src="js/ffw-history.js?v=20261110_152708"></script>
+  <script src="js/felt-anatomy.js?v=20261110_152708"></script>
+  <script src="js/weickert-rem-zoom.js?v=20261110_152708"></script>
+  <script src="js/hammer-weight-balance.js?v=20261110_152708"></script>
+  <script src="js/yamaha-kit.js?v=20261110_152708"></script>
+  <script src="js/yamaha-kit-acoustic.js?v=20261110_152708"></script>
+  <script src="js/piano-tone-a1.js?v=20261110_152708"></script>
+  <script src="js/hammer-spring.js?v=20261110_152708"></script>
+  <script src="js/crown-string-alignment.js?v=20261110_152708"></script>
+  <script src="js/voicing-zones.js?v=20261110_152708"></script>
+  <script src="js/felt-lacquer-hardening.js?v=20261110_152708"></script>
+  <script src="js/presentation.js?v=20261110_152708"></script>
   <script>
     // Offline PWA Service Worker Management
     // In local development (localhost / 127.0.0.1), unregister service workers & purge caches to ensure live code is always seen

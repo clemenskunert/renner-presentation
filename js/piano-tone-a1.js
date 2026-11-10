@@ -331,7 +331,7 @@
       if (!cw || !ch || cw < 50 || ch < 50) return null;
       const W = Math.round(cw);
       const H = Math.round(ch);
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.max(window.devicePixelRatio || 1, 2.75);
       if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) {
         canvas.width = Math.round(W * dpr);
         canvas.height = Math.round(H * dpr);
@@ -339,6 +339,8 @@
       const ctx = canvas.getContext('2d');
       ctx.save();
       ctx.scale(dpr, dpr);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
       ctx.clearRect(0, 0, W, H);
       return { ctx, W, H };
     }

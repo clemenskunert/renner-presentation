@@ -722,15 +722,69 @@
           const cw = canvas.clientWidth;
           const ch = canvas.clientHeight;
           if (!cw || !ch) return null;
-          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          const dpr = Math.max(window.devicePixelRatio || 1, 2.75);
           if (canvas.width !== Math.round(cw * dpr) || canvas.height !== Math.round(ch * dpr)) {
             canvas.width = Math.round(cw * dpr);
             canvas.height = Math.round(ch * dpr);
           }
           const ctx = canvas.getContext('2d');
           ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = 'high';
           ctx.clearRect(0, 0, cw, ch);
           return { ctx, W: cw, H: ch };
+        }
+
+        drawCalloutPill(ctx, text, x, y, targetX, targetY, textColor, borderColor, dotColor) {
+          ctx.save();
+          ctx.font = '600 13.8px Roboto, sans-serif';
+          const tw = ctx.measureText(text).width;
+          const padH = 10;
+          const pillW = tw + padH * 2 + 8;
+          const pillH = 23;
+          const pillTop = y - 15.5;
+
+          // Leader line from right edge of pill to target point
+          const lineStartX = x + pillW;
+          const lineStartY = pillTop + pillH * 0.5;
+          if (targetX > lineStartX + 4) {
+            ctx.strokeStyle = borderColor;
+            ctx.lineWidth = 1.45;
+            ctx.beginPath();
+            ctx.moveTo(lineStartX, lineStartY);
+            ctx.lineTo(targetX, targetY);
+            ctx.stroke();
+
+            // Target dot on cross-section
+            ctx.fillStyle = dotColor || textColor;
+            ctx.strokeStyle = 'rgba(8, 12, 22, 0.92)';
+            ctx.lineWidth = 1.3;
+            ctx.beginPath();
+            ctx.arc(targetX, targetY, 3.3, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+          }
+
+          // Sleek dark-glass callout pill
+          ctx.fillStyle = 'rgba(8, 13, 24, 0.92)';
+          ctx.strokeStyle = borderColor;
+          ctx.lineWidth = 1.25;
+          ctx.beginPath();
+          ctx.roundRect(x, pillTop, pillW, pillH, 6.5);
+          ctx.fill();
+          ctx.stroke();
+
+          // Left accent dot inside pill
+          ctx.fillStyle = dotColor || textColor;
+          ctx.beginPath();
+          ctx.arc(x + 9, pillTop + pillH * 0.5, 3.0, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Crisp callout text
+          ctx.fillStyle = textColor;
+          ctx.textAlign = 'left';
+          ctx.fillText(text, x + 17, y);
+          ctx.restore();
         }
 
         drawArrow(ctx, x1, y1, x2, y2, color, lw = 2.4, headScale = 1.0) {
@@ -931,8 +985,8 @@
             ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
           }
 
-          const cx = W * 0.49;
-          const stringBaseY = 44;
+          const cx = W * 0.50;
+          const stringBaseY = 40;
           const stringMidY = stringBaseY - dyn.stringLiftPx;
 
           // 1. Impact Shockwave Halo at String Contact Point
@@ -1020,19 +1074,19 @@
             phColor = '#4ade80';
             phBorder = 'rgba(74, 222, 128, 0.65)';
           }
-          ctx.font = '700 13.4px Roboto, sans-serif';
-          const pillW = ctx.measureText(phLabel).width + 20;
-          const pillX = W - pillW - 16;
-          ctx.fillStyle = 'rgba(8, 12, 22, 0.88)';
+          ctx.font = '700 14.0px Roboto, sans-serif';
+          const pillW = ctx.measureText(phLabel).width + 22;
+          const pillX = W - pillW - 14;
+          ctx.fillStyle = 'rgba(8, 12, 22, 0.92)';
           ctx.strokeStyle = phBorder;
-          ctx.lineWidth = 1.2;
+          ctx.lineWidth = 1.35;
           ctx.beginPath();
-          ctx.roundRect(pillX, 5, pillW, 24, 12);
+          ctx.roundRect(pillX, 5, pillW, 25, 12.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = phColor;
           ctx.textAlign = 'right';
-          ctx.fillText(phLabel, W - 26, 22);
+          ctx.fillText(phLabel, W - 25, 22.5);
           ctx.restore();
 
           if (this.mode === 'cristofori') {
@@ -1047,9 +1101,9 @@
 
         drawCristoforiRoll(ctx, W, H, cx, stringBaseY, dyn, phys, dict) {
           // Pure leathered parchment roll (no shank / no wooden saddle) with calm slow-motion bounce & clear force vectors
-          const baseR = Math.min(H * 0.30, 84) * (1.12 - 0.24 * phys.S);
+          const baseR = Math.min(H * 0.34, 98) * (1.12 - 0.22 * phys.S);
           const rx = baseR + dyn.squashPx * 0.78 - dyn.prolatePx * 0.48;
-          const ry = Math.max(30, baseR - dyn.squashPx * 0.56 + dyn.prolatePx * 0.55);
+          const ry = Math.max(34, baseR - dyn.squashPx * 0.56 + dyn.prolatePx * 0.55);
 
           const stringContactY = stringBaseY - dyn.stringLiftPx + 3;
           const cy = dyn.inContact
@@ -1162,48 +1216,62 @@
           // Compact floating force pill on right
           ctx.save();
           const isDownBounce = (dyn.forcePhase === 'pushoff' || dyn.forcePhase === 'rebound');
-          ctx.font = '700 12.9px JetBrains Mono, monospace';
+          ctx.font = '700 13.8px JetBrains Mono, monospace';
           const vecTag = isDownBounce
             ? `↓ ${dict.cvReboundVec || 'Bounce'} (${phys.reboundPct}%)`
             : `↑ ${dict.cvForceVec} (${phys.reboundPct}%)`;
-          const bw = ctx.measureText(vecTag).width + 14;
+          const bw = ctx.measureText(vecTag).width + 18;
           const bx = cx + rx + 18;
           const by = cy - ry * 0.42;
-          ctx.fillStyle = 'rgba(8, 16, 24, 0.88)';
-          ctx.strokeStyle = isDownBounce ? 'rgba(46, 204, 113, 0.72)' : 'rgba(251, 191, 36, 0.65)';
-          ctx.lineWidth = 1.2;
+          ctx.fillStyle = 'rgba(8, 16, 24, 0.92)';
+          ctx.strokeStyle = isDownBounce ? 'rgba(46, 204, 113, 0.80)' : 'rgba(251, 191, 36, 0.75)';
+          ctx.lineWidth = 1.35;
           ctx.beginPath();
-          ctx.roundRect(bx, by - 13, bw, 21, 6);
+          ctx.roundRect(bx, by - 14.5, bw, 23, 6.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isDownBounce ? '#4ade80' : '#fef08a';
           ctx.textAlign = 'left';
-          ctx.fillText(vecTag, bx + 7, by + 2);
+          ctx.fillText(vecTag, bx + 9, by + 2);
 
-          // Short, clean callout labels on left
-          const refTopY = stringBaseY + 28;
+          // Framed callout pills on left pointing to the 3 Cristofori zones
+          const refTopY = stringBaseY + 34;
           const refMidY = restCy;
-          const refLowY = restCy + baseR * 0.62;
+          const refLowY = restCy + baseR * 0.58;
 
-          ctx.textAlign = 'left';
-          ctx.font = '600 13.8px Roboto, sans-serif';
-          ctx.fillStyle = '#f8fafc';
-          ctx.fillText(dict.cvCristoforiTop, 22, refTopY);
-          const xTopStart = Math.min(cx - rx * 0.65, 22 + ctx.measureText(dict.cvCristoforiTop).width + 8);
-          ctx.strokeStyle = 'rgba(248,250,252,0.30)';
-          ctx.beginPath(); ctx.moveTo(xTopStart, refTopY - 3); ctx.lineTo(cx - rx * 0.56, cy - ry - 2); ctx.stroke();
-
-          ctx.fillStyle = '#4ade80';
-          ctx.fillText(dict.cvCristoforiRing, 22, refMidY);
-          const xRingStart = Math.min(cx - rx - 16, 22 + ctx.measureText(dict.cvCristoforiRing).width + 8);
-          ctx.strokeStyle = 'rgba(74,222,128,0.28)';
-          ctx.beginPath(); ctx.moveTo(xRingStart, refMidY - 3); ctx.lineTo(cx - rx - 8, cy); ctx.stroke();
-
-          ctx.fillStyle = '#93c5fd';
-          ctx.fillText(dict.cvCristoforiHollow, 22, refLowY);
-          const xHolStart = Math.min(cx - rx * 0.42, 22 + ctx.measureText(dict.cvCristoforiHollow).width + 8);
-          ctx.strokeStyle = 'rgba(147,197,253,0.28)';
-          ctx.beginPath(); ctx.moveTo(xHolStart, refLowY - 3); ctx.lineTo(cx - rx * 0.35, cy + ry * 0.25); ctx.stroke();
+          this.drawCalloutPill(
+            ctx,
+            dict.cvCristoforiTop,
+            16,
+            refTopY,
+            cx - rx * 0.56,
+            cy - ry - 4,
+            '#f8fafc',
+            'rgba(226, 232, 240, 0.55)',
+            '#f8fafc'
+          );
+          this.drawCalloutPill(
+            ctx,
+            dict.cvCristoforiRing,
+            16,
+            refMidY,
+            cx - rx - 2,
+            cy,
+            '#86efac',
+            'rgba(74, 222, 128, 0.65)',
+            '#4ade80'
+          );
+          this.drawCalloutPill(
+            ctx,
+            dict.cvCristoforiHollow,
+            16,
+            refLowY,
+            cx - rx * 0.35,
+            cy + ry * 0.24,
+            '#bae6fd',
+            'rgba(56, 189, 248, 0.60)',
+            '#38bdf8'
+          );
           ctx.restore();
         }
 
@@ -1214,7 +1282,7 @@
           // 3) Outer-Contour Transition Zone (between Scheitel & Flanke along outer contour):
           //    - Supple: uninterrupted force flow into lower flank & rivet (full flank flexing)
           //    - Too stiff: interrupts force transfer into lower flank (flank freezes & dims, steep F(x) kink)
-          const totalH = Math.min(H - stringBaseY - 76, 232);
+          const totalH = Math.min(H - stringBaseY - 34, 266);
           const feltH = totalH * 0.785;
           const isBlocked = phys.blockFactor >= 0.35;
 
@@ -1849,52 +1917,52 @@
 
           // Single Compact Right-Side Force-Flow Pill
           ctx.save();
-          ctx.font = '700 12.8px JetBrains Mono, monospace';
+          ctx.font = '700 13.6px JetBrains Mono, monospace';
           const flowTxt = isBlocked ? dict.cvFlowBlock : dict.cvFlowOpen(phys.flankActivePct);
-          const flowW = ctx.measureText(flowTxt).width + 14;
+          const flowW = ctx.measureText(flowTxt).width + 18;
           const flowX = cx + shoulderHW + 16;
           const flowY = Math.max(52, shoulderY - 12);
-          ctx.fillStyle = isBlocked ? 'rgba(42, 10, 16, 0.90)' : 'rgba(8, 18, 26, 0.86)';
-          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.80)' : 'rgba(56, 189, 248, 0.60)';
-          ctx.lineWidth = 1.15;
+          ctx.fillStyle = isBlocked ? 'rgba(42, 10, 16, 0.94)' : 'rgba(8, 18, 26, 0.92)';
+          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.85)' : 'rgba(56, 189, 248, 0.72)';
+          ctx.lineWidth = 1.3;
           ctx.beginPath();
-          ctx.roundRect(flowX, flowY - 13, flowW, 21, 5.5);
+          ctx.roundRect(flowX, flowY - 14.5, flowW, 23, 6.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
           ctx.textAlign = 'left';
-          ctx.fillText(flowTxt, flowX + 7, flowY + 1.5);
+          ctx.fillText(flowTxt, flowX + 9, flowY + 2);
           ctx.restore();
 
           // --- 8. On-Head Compaction Zone Pills (SCHEITEL vs. ½ FLANKE) ---
           ctx.save();
           ctx.textAlign = 'center';
           const crownTag = `${dict.cvZoneCrown} ${phys.rhoApexPct}%`;
-          ctx.font = '700 12.4px JetBrains Mono, monospace';
-          const cwTag = ctx.measureText(crownTag).width + 11;
-          const cyTag = crownTopY + 18;
-          ctx.fillStyle = 'rgba(10, 14, 24, 0.84)';
-          ctx.strokeStyle = 'rgba(251, 191, 36, 0.60)';
-          ctx.lineWidth = 1.0;
+          ctx.font = '700 13.2px JetBrains Mono, monospace';
+          const cwTag = ctx.measureText(crownTag).width + 13;
+          const cyTag = crownTopY + 19;
+          ctx.fillStyle = 'rgba(10, 14, 24, 0.90)';
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.72)';
+          ctx.lineWidth = 1.15;
           ctx.beginPath();
-          ctx.roundRect(cx - cwTag / 2, cyTag - 11, cwTag, 16, 4);
+          ctx.roundRect(cx - cwTag / 2, cyTag - 12.5, cwTag, 18, 4.5);
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = '#fef08a';
           ctx.fillText(crownTag, cx, cyTag);
 
           const flankTag = `½ (${phys.rhoFlankPct}%)`;
-          ctx.font = '700 12.0px JetBrains Mono, monospace';
-          const fwTag = ctx.measureText(flankTag).width + 9;
+          ctx.font = '700 12.6px JetBrains Mono, monospace';
+          const fwTag = ctx.measureText(flankTag).width + 11;
           const flankCenterOff = ufOuterHW + (shoulderHW - ufOuterHW) * 0.54;
-          if (shoulderHW - ufOuterHW > fwTag * 0.62) {
+          if (shoulderHW - ufOuterHW > fwTag * 0.60) {
             for (const dir of [-1, 1]) {
               const fx = cx + dir * flankCenterOff;
               const fy = shoulderY + 4;
-              ctx.fillStyle = 'rgba(8, 13, 24, 0.84)';
-              ctx.strokeStyle = isBlocked ? 'rgba(148, 163, 184, 0.45)' : 'rgba(56, 189, 248, 0.62)';
+              ctx.fillStyle = 'rgba(8, 13, 24, 0.90)';
+              ctx.strokeStyle = isBlocked ? 'rgba(148, 163, 184, 0.55)' : 'rgba(56, 189, 248, 0.75)';
               ctx.beginPath();
-              ctx.roundRect(fx - fwTag / 2, fy - 10.5, fwTag, 15.5, 4);
+              ctx.roundRect(fx - fwTag / 2, fy - 11.5, fwTag, 17, 4.5);
               ctx.fill();
               ctx.stroke();
               ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
@@ -1902,97 +1970,111 @@
             }
           }
 
-          // --- 9. Concise Left Structural Callouts (3 Non-Redundant Zones) ---
-          const yLbl2 = restY0 + feltH * 0.28;
-          const yLbl3 = restY0 + feltH * 0.58;
-          const yLbl4 = restY0 + feltH * 0.89;
-
-          ctx.textAlign = 'left';
-          ctx.font = '600 13.6px Roboto, sans-serif';
-          ctx.lineWidth = 1.1;
+          // --- 9. Framed Left Structural Callout Pills (3 Non-Redundant Zones) ---
+          const yLbl2 = restY0 + feltH * 0.24;
+          const yLbl3 = restY0 + feltH * 0.57;
+          const yLbl4 = restY0 + feltH * 0.88;
 
           // Callout 1: Outer-Contour Transition (Scheitel -> Flanke)
           const txt2 = isBlocked ? dict.cvCallContourBlock : dict.cvCallContourOpen;
-          ctx.fillStyle = isBlocked ? '#f87171' : '#4ade80';
-          ctx.fillText(txt2, 18, yLbl2);
           const xContourTarget = cx - evalUpperX(0.56);
           const yContourTarget = evalUpperY(0.56);
-          const x2 = Math.min(xContourTarget - 14, 18 + ctx.measureText(txt2).width + 8);
-          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.52)' : 'rgba(74, 222, 128, 0.36)';
-          ctx.beginPath(); ctx.moveTo(x2, yLbl2 - 3); ctx.lineTo(xContourTarget - 3, yContourTarget); ctx.stroke();
+          this.drawCalloutPill(
+            ctx,
+            txt2,
+            16,
+            yLbl2,
+            xContourTarget - 2,
+            yContourTarget,
+            isBlocked ? '#fecaca' : '#bbf7d0',
+            isBlocked ? 'rgba(248, 113, 113, 0.78)' : 'rgba(74, 222, 128, 0.65)',
+            isBlocked ? '#ef4444' : '#2ecc71'
+          );
 
           // Callout 2: Widest Flank (½ Compaction)
           const txt3 = isBlocked ? dict.cvCallFlankBlock(phys.rhoFlankPct) : dict.cvCallFlankOpen(phys.rhoFlankPct);
-          ctx.fillStyle = isBlocked ? '#fca5a5' : '#38bdf8';
-          ctx.fillText(txt3, 18, yLbl3);
-          const x3 = Math.min(cx - shoulderHW - 12, 18 + ctx.measureText(txt3).width + 8);
-          ctx.strokeStyle = isBlocked ? 'rgba(252, 165, 165, 0.42)' : 'rgba(56, 189, 248, 0.40)';
-          ctx.beginPath(); ctx.moveTo(x3, yLbl3 - 3); ctx.lineTo(cx - shoulderHW + 4, shoulderY + 4); ctx.stroke();
+          this.drawCalloutPill(
+            ctx,
+            txt3,
+            16,
+            yLbl3,
+            cx - shoulderHW + 2,
+            shoulderY + 3,
+            isBlocked ? '#fca5a5' : '#bae6fd',
+            isBlocked ? 'rgba(252, 165, 165, 0.65)' : 'rgba(56, 189, 248, 0.65)',
+            isBlocked ? '#f87171' : '#38bdf8'
+          );
 
           // Callout 3: Glue + Brass Rivet
-          ctx.fillStyle = '#fbbf24';
-          ctx.fillText(dict.cvRennerFix, 18, yLbl4);
-          const x4 = Math.min(cx - rivetOuterHW - 14, 18 + ctx.measureText(dict.cvRennerFix).width + 8);
-          ctx.strokeStyle = 'rgba(251, 191, 36, 0.42)';
-          ctx.beginPath(); ctx.moveTo(x4, yLbl4 - 3); ctx.lineTo(cx - rivetOuterHW - 4, rivetY); ctx.stroke();
+          this.drawCalloutPill(
+            ctx,
+            dict.cvRennerFix,
+            16,
+            yLbl4,
+            cx - rivetOuterHW - 2,
+            rivetY,
+            '#fde68a',
+            'rgba(251, 191, 36, 0.68)',
+            '#fbbf24'
+          );
           ctx.restore();
         }
 
         drawFiberLoupe(ctx, W, H, phys, dict) {
-          const boxW = Math.min(232, W * 0.265);
-          const boxH = Math.min(126, H * 0.46);
+          const boxW = Math.min(250, W * 0.272);
+          const boxH = Math.min(136, H * 0.48);
           const bx = W - boxW - 14;
           const by = H - boxH - 12;
           const isBlocked = this.mode === 'renner' && phys.blockFactor >= 0.35;
 
           ctx.save();
-          ctx.fillStyle = 'rgba(8, 12, 22, 0.90)';
-          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.52)' : 'rgba(200, 163, 86, 0.42)';
-          ctx.lineWidth = 1.2;
+          ctx.fillStyle = 'rgba(8, 13, 24, 0.94)';
+          ctx.strokeStyle = isBlocked ? 'rgba(248, 113, 113, 0.65)' : 'rgba(200, 163, 86, 0.55)';
+          ctx.lineWidth = 1.35;
           ctx.beginPath();
-          ctx.roundRect(bx, by, boxW, boxH, 9);
+          ctx.roundRect(bx, by, boxW, boxH, 10);
           ctx.fill();
           ctx.stroke();
 
           ctx.fillStyle = '#e6c882';
-          ctx.font = '700 12.8px Roboto, sans-serif';
+          ctx.font = '700 13.4px Roboto, sans-serif';
           ctx.textAlign = 'left';
-          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 10, by + 17);
+          ctx.fillText('🔍 ' + dict.cvFiberTitle.toUpperCase(), bx + 11, by + 18);
 
           if (this.mode === 'cristofori') {
-            const midY = by + boxH * 0.56;
+            const midY = by + boxH * 0.55;
             ctx.strokeStyle = '#f8fafc';
-            ctx.lineWidth = 3.6;
+            ctx.lineWidth = 3.8;
             ctx.beginPath();
             ctx.moveTo(bx + 14, midY - 12);
-            ctx.quadraticCurveTo(bx + boxW / 2, midY - 21, bx + boxW - 14, midY - 12);
+            ctx.quadraticCurveTo(bx + boxW / 2, midY - 22, bx + boxW - 14, midY - 12);
             ctx.stroke();
 
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = r === 0 ? '#2ecc71' : '#d4af37';
-              ctx.lineWidth = r === 0 ? 2.0 : 1.4;
+              ctx.lineWidth = r === 0 ? 2.2 : 1.5;
               ctx.beginPath();
-              ctx.moveTo(bx + 14, midY - 3 + r * 8);
-              ctx.quadraticCurveTo(bx + boxW / 2, midY - 12 + r * 8, bx + boxW - 14, midY - 3 + r * 8);
+              ctx.moveTo(bx + 14, midY - 2 + r * 8.5);
+              ctx.quadraticCurveTo(bx + boxW / 2, midY - 12 + r * 8.5, bx + boxW - 14, midY - 2 + r * 8.5);
               ctx.stroke();
             }
-            ctx.fillStyle = '#cbd5e1';
-            ctx.font = '500 12.4px Roboto, sans-serif';
-            ctx.fillText(dict.cvFiberCristofori, bx + 10, by + boxH - 9);
+            ctx.fillStyle = '#e2e8f0';
+            ctx.font = '600 13.0px Roboto, sans-serif';
+            ctx.fillText(dict.cvFiberCristofori, bx + 11, by + boxH - 9);
           } else {
-            const crimpAmp = 2.5 - phys.T * 0.85;
+            const crimpAmp = 2.6 - phys.T * 0.85;
 
             // 1) Top Half: Dense Scheitel
             ctx.fillStyle = '#fde047';
-            ctx.font = '600 12.2px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 10, by + 34);
+            ctx.font = '600 13.0px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeCrown(phys.rhoApexPct), bx + 11, by + 36);
 
-            const crownSpacing = 4.8 - phys.D * 1.2;
+            const crownSpacing = 5.0 - phys.D * 1.15;
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = r === 0 ? '#fb923c' : '#fbbf24';
-              ctx.lineWidth = r === 0 ? 1.7 : 1.3;
+              ctx.lineWidth = r === 0 ? 1.85 : 1.4;
               ctx.beginPath();
-              const y0 = by + 42 + r * crownSpacing;
+              const y0 = by + 45 + r * crownSpacing;
               for (let x = 0; x <= boxW - 24; x += 4) {
                 const py = y0 + Math.sin(x * 0.34 + r) * (crimpAmp * 0.7);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
@@ -2001,28 +2083,28 @@
             }
 
             // Divider
-            ctx.strokeStyle = isBlocked ? 'rgba(239, 68, 68, 0.72)' : 'rgba(255, 255, 255, 0.14)';
+            ctx.strokeStyle = isBlocked ? 'rgba(239, 68, 68, 0.78)' : 'rgba(255, 255, 255, 0.18)';
             ctx.setLineDash(isBlocked ? [4, 3] : []);
-            ctx.lineWidth = isBlocked ? 1.3 : 1.0;
+            ctx.lineWidth = isBlocked ? 1.4 : 1.1;
             ctx.beginPath();
-            ctx.moveTo(bx + 10, by + 63);
-            ctx.lineTo(bx + boxW - 10, by + 63);
+            ctx.moveTo(bx + 10, by + 68);
+            ctx.lineTo(bx + boxW - 10, by + 68);
             ctx.stroke();
             ctx.setLineDash([]);
 
             // 2) Bottom Half: ½-Dense Flanke
             ctx.fillStyle = isBlocked ? '#94a3b8' : '#7dd3fc';
-            ctx.font = '600 12.2px Roboto, sans-serif';
-            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 10, by + 79);
+            ctx.font = '600 13.0px Roboto, sans-serif';
+            ctx.fillText(dict.cvLoupeFlank(phys.rhoFlankPct), bx + 11, by + 85);
 
             const flankSpacing = crownSpacing * 1.95;
             for (let r = 0; r < 3; r++) {
               ctx.strokeStyle = isBlocked
-                ? 'rgba(148, 163, 184, 0.38)'
+                ? 'rgba(148, 163, 184, 0.42)'
                 : (r === 0 ? '#2ecc71' : '#38bdf8');
-              ctx.lineWidth = r === 0 ? 1.65 : 1.25;
+              ctx.lineWidth = r === 0 ? 1.8 : 1.35;
               ctx.beginPath();
-              const y0 = by + 89 + r * Math.min(9.5, flankSpacing);
+              const y0 = by + 96 + r * Math.min(10.0, flankSpacing);
               for (let x = 0; x <= boxW - 24; x += 4) {
                 const py = y0 + Math.sin(x * 0.24 + r * 1.4) * (crimpAmp * 1.1);
                 if (x === 0) ctx.moveTo(bx + 12 + x, py); else ctx.lineTo(bx + 12 + x, py);
@@ -2042,11 +2124,11 @@
           const dyn = this.computeBounceState(phys);
           const shimmer = dyn.inContact ? 1.0 : Math.min(1, dyn.stringWaveAmp / 8.0);
 
-          const padL = 72, padR = 18, padT = 40, padB = 46;
+          const padL = 72, padR = 18, padT = 38, padB = 46;
           const pw = W - padL - padR;
           const ph = H - padT - padB;
           const slotW = pw / 12;
-          const barW = Math.min(40, slotW * 0.56);
+          const barW = Math.min(44, slotW * 0.62);
           const yb = padT + ph;
 
           ctx.save();
@@ -2055,17 +2137,17 @@
           const xZ1 = padL;
           const xZ2 = padL + slotW * 3;
           const xZ3 = padL + slotW * 7;
-          ctx.fillStyle = isBlocked ? 'rgba(239, 68, 68, 0.045)' : 'rgba(56, 189, 248, 0.035)';
+          ctx.fillStyle = isBlocked ? 'rgba(239, 68, 68, 0.055)' : 'rgba(56, 189, 248, 0.045)';
           ctx.fillRect(xZ1, padT - 8, slotW * 3, ph + 8);
-          ctx.fillStyle = 'rgba(200, 163, 86, 0.035)';
+          ctx.fillStyle = 'rgba(200, 163, 86, 0.045)';
           ctx.fillRect(xZ2, padT - 8, slotW * 4, ph + 8);
-          ctx.fillStyle = phys.noFf ? 'rgba(239, 68, 68, 0.045)' : 'rgba(46, 204, 113, 0.03)';
+          ctx.fillStyle = phys.noFf ? 'rgba(239, 68, 68, 0.055)' : 'rgba(46, 204, 113, 0.04)';
           ctx.fillRect(xZ3, padT - 8, slotW * 5, ph + 8);
 
           ctx.save();
           ctx.setLineDash([3, 3]);
-          ctx.strokeStyle = 'rgba(255, 255, 255, 0.13)';
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.16)';
+          ctx.lineWidth = 1.1;
           for (const xd of [xZ2, xZ3]) {
             ctx.beginPath();
             ctx.moveTo(xd, padT - 8);
@@ -2075,7 +2157,7 @@
           ctx.restore();
 
           // Top Register Zone Labels + Live tau_c Spectral Status Pill
-          ctx.font = '700 12.9px Roboto, sans-serif';
+          ctx.font = '700 13.8px Roboto, sans-serif';
           ctx.textAlign = 'left';
           ctx.fillStyle = isBlocked ? '#fca5a5' : '#7dd3fc';
           ctx.fillText(dict.specZone1, xZ1 + 4, 18);
@@ -2087,34 +2169,34 @@
 
           let stTxt = dict.specStatusOk(this.fmt(phys.tauMs, 2));
           let stCol = '#4ade80';
-          let stBrd = 'rgba(74, 222, 128, 0.45)';
+          let stBrd = 'rgba(74, 222, 128, 0.55)';
           if (isBlocked || (phys.noPp && phys.noFf)) {
             stTxt = dict.specStatusBlock(this.fmt(phys.tauMs, 2));
             stCol = '#fca5a5';
-            stBrd = 'rgba(248, 113, 113, 0.65)';
+            stBrd = 'rgba(248, 113, 113, 0.72)';
           } else if (phys.noFf) {
             stTxt = dict.specStatusNoFf(this.fmt(phys.tauMs, 2));
             stCol = '#fca5a5';
-            stBrd = 'rgba(248, 113, 113, 0.65)';
+            stBrd = 'rgba(248, 113, 113, 0.72)';
           } else if (phys.noPp) {
             stTxt = dict.specStatusNoPp;
             stCol = '#fdba74';
-            stBrd = 'rgba(251, 146, 60, 0.65)';
+            stBrd = 'rgba(251, 146, 60, 0.72)';
           }
-          ctx.font = '700 12.4px JetBrains Mono, monospace';
-          const stW = ctx.measureText(stTxt).width + 14;
+          ctx.font = '700 13.0px JetBrains Mono, monospace';
+          const stW = ctx.measureText(stTxt).width + 16;
           if (W - padR - stW > z3End + 10) {
             const sx = W - padR - stW;
-            ctx.fillStyle = 'rgba(8, 12, 22, 0.90)';
+            ctx.fillStyle = 'rgba(8, 12, 22, 0.92)';
             ctx.strokeStyle = stBrd;
-            ctx.lineWidth = 1.1;
+            ctx.lineWidth = 1.25;
             ctx.beginPath();
-            ctx.roundRect(sx, 4, stW, 19.5, 5.5);
+            ctx.roundRect(sx, 3.5, stW, 21, 6);
             ctx.fill();
             ctx.stroke();
             ctx.fillStyle = stCol;
             ctx.textAlign = 'right';
-            ctx.fillText(stTxt, W - padR - 7, 17.5);
+            ctx.fillText(stTxt, W - padR - 8, 18);
           }
 
           // Helper for bar coloring by acoustic condition
@@ -2138,17 +2220,17 @@
             const y0 = mapY(0);
 
             // Horizontal dB Gridlines (+8, +4, 0, -4, -8 dB)
-            ctx.font = '600 12.4px JetBrains Mono, monospace';
+            ctx.font = '700 13.0px JetBrains Mono, monospace';
             ctx.textAlign = 'right';
             for (const g of [8, 4, 0, -4, -8]) {
               const yg = mapY(g);
               ctx.save();
               if (g === 0) {
-                ctx.strokeStyle = 'rgba(230, 200, 130, 0.72)';
-                ctx.lineWidth = 1.4;
+                ctx.strokeStyle = 'rgba(230, 200, 130, 0.78)';
+                ctx.lineWidth = 1.5;
                 ctx.setLineDash([5, 4]);
               } else {
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.10)';
                 ctx.lineWidth = 1;
               }
               ctx.beginPath();
@@ -2157,7 +2239,7 @@
               ctx.stroke();
               ctx.restore();
 
-              ctx.fillStyle = g === 0 ? '#fef08a' : '#94a3b8';
+              ctx.fillStyle = g === 0 ? '#fef08a' : '#cbd5e1';
               const gLbl = g > 0 ? `+${g} dB` : (g < 0 ? `−${Math.abs(g)} dB` : '0 dB');
               ctx.fillText(gLbl, padL - 7, yg + 4);
             }
@@ -2182,22 +2264,22 @@
               const grad = ctx.createLinearGradient(0, barTop, 0, barTop + barH);
               if (p.deltaDb >= 0) {
                 grad.addColorStop(0, col);
-                grad.addColorStop(1, col + '55');
+                grad.addColorStop(1, col + '66');
               } else {
-                grad.addColorStop(0, col + '55');
+                grad.addColorStop(0, col + '66');
                 grad.addColorStop(1, col);
               }
               ctx.fillStyle = grad;
               ctx.strokeStyle = col;
-              ctx.lineWidth = 1.15;
+              ctx.lineWidth = 1.25;
               ctx.beginPath();
-              ctx.roundRect(bx, barTop, barW, barH, 4);
+              ctx.roundRect(bx, barTop, barW, barH, 4.5);
               ctx.fill();
               ctx.stroke();
               ctx.restore();
 
               // Signed ΔdB label above/below bar
-              ctx.font = '700 12.4px JetBrains Mono, monospace';
+              ctx.font = '700 13.4px JetBrains Mono, monospace';
               ctx.textAlign = 'center';
               const absV = Math.abs(p.deltaDb);
               const signStr = absV < 0.05 ? '±' : (p.deltaDb > 0 ? '+' : '−');
@@ -2207,7 +2289,7 @@
                 : (((isBlocked && p.n <= 3) || (phys.noFf && p.n >= 4)) ? '#fca5a5' : '#7dd3fc');
               const lblY = p.deltaDb >= 0
                 ? Math.max(padT + 5, barTop - 5)
-                : Math.min(yb - 2, barTop + barH + 12.5);
+                : Math.min(yb - 2, barTop + barH + 13.5);
               ctx.fillText(valTxt, cx, lblY);
             });
 
@@ -2306,13 +2388,13 @@
           phys.partials.forEach((p, i) => {
             const cx = padL + slotW * (i + 0.5);
             ctx.textAlign = 'center';
-            ctx.font = '700 12.9px JetBrains Mono, monospace';
-            ctx.fillStyle = p.dissonant ? '#fcd34d' : '#f8fafc';
-            ctx.fillText(`H${p.n}`, cx, yb + 16);
+            ctx.font = '700 13.8px JetBrains Mono, monospace';
+            ctx.fillStyle = p.dissonant ? '#fcd34d' : '#ffffff';
+            ctx.fillText(`H${p.n}`, cx, yb + 17);
 
-            ctx.font = '500 12.0px Roboto, sans-serif';
-            ctx.fillStyle = '#94a3b8';
-            ctx.fillText(roles[i] || '', cx, yb + 31);
+            ctx.font = '600 12.6px Roboto, sans-serif';
+            ctx.fillStyle = '#cbd5e1';
+            ctx.fillText(roles[i] || '', cx, yb + 33);
           });
 
           ctx.restore();
@@ -2796,6 +2878,15 @@
           });
 
           this.lang = document.documentElement.lang || 'de';
+          const urlMode = new URLSearchParams(window.location.search).get('hspMode');
+          if (urlMode === 'renner' || urlMode === 'cristofori') {
+            this.mode = urlMode;
+            const p = MODE_PRESETS[urlMode];
+            this.tension = p.tension;
+            this.shape = p.shape;
+            this.density = p.density;
+            this.contourStiff = p.contourStiff;
+          }
           this.applyLanguageTexts();
           this.updateUI();
           if (this.isSlideActive()) this.startAnimLoop();
