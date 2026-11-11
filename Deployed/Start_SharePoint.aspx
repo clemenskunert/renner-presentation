@@ -16,10 +16,10 @@
   <title>Louis Renner - The Heart of the Piano | Conference 2025</title>
 
   <!-- Self-Hosted Local Fonts (100% Offline - Zero External Network Calls) -->
-  <link rel="stylesheet" href="css/fonts.css?v=20261111_083200">
+  <link rel="stylesheet" href="css/fonts.css?v=20261111_150315">
 
   <!-- Presentation Styles -->
-  <link rel="stylesheet" href="css/presentation.css?v=20261111_083200">
+  <link rel="stylesheet" href="css/presentation.css?v=20261111_150315">
   <script>window.__RENNER_STANDALONE__ = true;</script>
 </head>
 
@@ -40,12 +40,18 @@
       <span class="brand-subtitle" data-i18n="brand_sub">Maßstab des guten Tons • Seit 1882</span>
     </div>
 
-    <!-- Rechte Seite: Module (Folie 2) Schnell-Sprung & Menü-Symbol -->
+    <!-- Rechte Seite: Module (Folie 2) Schnell-Sprung, Folien-Auswahl & Menü-Symbol -->
     <div class="header-right-zone">
       <button class="header-modules-btn" id="header-jump-slide2-btn"
         title="Zurück zur Modul-Übersicht (Folie 3) [Taste: A / 3]">
         <span class="header-modules-icon">⊞</span>
         <span class="header-modules-text" data-i18n="header_modules_btn">Module (Folie 3)</span>
+      </button>
+      <button class="header-modules-btn header-slide-select-btn" id="header-slide-select-btn"
+        title="Folien an- und abwählen / Präsentationsumfang anpassen [Taste: U]">
+        <span class="header-modules-icon">☑️</span>
+        <span class="header-modules-text" data-i18n="header_slide_select_btn">Folien-Auswahl</span>
+        <span class="header-slide-count-pill" id="header-active-slides-badge">35/35</span>
       </button>
       <button class="header-menu-btn" id="header-menu-btn" aria-expanded="false" aria-controls="header-menu-dropdown"
         title="Menü & Einstellungen (M)">
@@ -108,13 +114,17 @@
           <span data-i18n="menu_tools_label">Präsentations-Werkzeuge</span>
         </div>
         <div class="menu-tools-grid">
-          <button class="menu-tool-btn icon-btn" id="toggle-sound-btn" title="Klang-Simulator (S)">
-            <span class="tool-icon">🎵</span>
-            <span class="tool-text" data-i18n="sound_demo">Klang-Simulator (S)</span>
+          <button class="menu-tool-btn icon-btn" id="toggle-slide-selection-btn" title="Folien an- und abwählen / Umfang anpassen (U)">
+            <span class="tool-icon">☑️</span>
+            <span class="tool-text" data-i18n="slide_selection_mode">Folien-Auswahl (U)</span>
           </button>
           <button class="menu-tool-btn icon-btn" id="toggle-grid-btn" title="Folien-Übersicht (G)">
             <span class="tool-icon">☵</span>
             <span class="tool-text" data-i18n="grid_mode">Folien-Übersicht (G)</span>
+          </button>
+          <button class="menu-tool-btn icon-btn" id="toggle-sound-btn" title="Klang-Simulator (S)">
+            <span class="tool-icon">🎵</span>
+            <span class="tool-text" data-i18n="sound_demo">Klang-Simulator (S)</span>
           </button>
           <button class="menu-tool-btn icon-btn" id="toggle-notes-btn" title="Referenten-Notizen (N)">
             <span class="tool-icon">📝</span>
@@ -5282,15 +5292,19 @@
   </footer>
 
   <!-- ==========================================================================
-       Slide Grid Overview Modal
+       Slide Grid Overview & Scope Selection Modal
        ========================================================================== -->
   <div class="modal-overlay" id="slides-grid-modal">
-    <div class="modal-content-card">
-      <div class="modal-header">
-        <h3 class="modal-title" data-i18n="slides_overview">Folien-Übersicht</h3>
+    <div class="modal-content-card slides-selection-modal-card">
+      <div class="modal-header slides-modal-header">
+        <div class="slides-modal-title-group">
+          <h3 class="modal-title" data-i18n="slides_overview">Folien-Übersicht &amp; Umfang-Auswahl</h3>
+          <span class="slides-scope-pill" id="slides-scope-status-pill">35 / 35 Folien aktiv</span>
+        </div>
         <button class="modal-close-btn">&times;</button>
       </div>
-      <div class="modal-body">
+      <div class="slides-selection-toolbar" id="slides-selection-toolbar"></div>
+      <div class="modal-body slides-selection-modal-body">
         <div class="slides-grid-view" id="slides-grid-view"></div>
       </div>
     </div>
@@ -5328,24 +5342,24 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/translations.js?v=20261111_083200"></script>
-  <script src="js/translations-data.js?v=20261111_083200"></script>
-  <script src="js/audio-synth.js?v=20261111_083200"></script>
-  <script src="js/timelapse.js?v=20261111_083200"></script>
-  <script src="js/history-journey.js?v=20261111_083200"></script>
-  <script src="js/transformation-journey.js?v=20261111_083200"></script>
-  <script src="js/ffw-history.js?v=20261111_083200"></script>
-  <script src="js/felt-anatomy.js?v=20261111_083200"></script>
-  <script src="js/weickert-rem-zoom.js?v=20261111_083200"></script>
-  <script src="js/hammer-weight-balance.js?v=20261111_083200"></script>
-  <script src="js/yamaha-kit.js?v=20261111_083200"></script>
-  <script src="js/yamaha-kit-acoustic.js?v=20261111_083200"></script>
-  <script src="js/piano-tone-a1.js?v=20261111_083200"></script>
-  <script src="js/hammer-spring.js?v=20261111_083200"></script>
-  <script src="js/crown-string-alignment.js?v=20261111_083200"></script>
-  <script src="js/voicing-zones.js?v=20261111_083200"></script>
-  <script src="js/felt-lacquer-hardening.js?v=20261111_083200"></script>
-  <script src="js/presentation.js?v=20261111_083200"></script>
+  <script src="js/translations.js?v=20261111_150315"></script>
+  <script src="js/translations-data.js?v=20261111_150315"></script>
+  <script src="js/audio-synth.js?v=20261111_150315"></script>
+  <script src="js/timelapse.js?v=20261111_150315"></script>
+  <script src="js/history-journey.js?v=20261111_150315"></script>
+  <script src="js/transformation-journey.js?v=20261111_150315"></script>
+  <script src="js/ffw-history.js?v=20261111_150315"></script>
+  <script src="js/felt-anatomy.js?v=20261111_150315"></script>
+  <script src="js/weickert-rem-zoom.js?v=20261111_150315"></script>
+  <script src="js/hammer-weight-balance.js?v=20261111_150315"></script>
+  <script src="js/yamaha-kit.js?v=20261111_150315"></script>
+  <script src="js/yamaha-kit-acoustic.js?v=20261111_150315"></script>
+  <script src="js/piano-tone-a1.js?v=20261111_150315"></script>
+  <script src="js/hammer-spring.js?v=20261111_150315"></script>
+  <script src="js/crown-string-alignment.js?v=20261111_150315"></script>
+  <script src="js/voicing-zones.js?v=20261111_150315"></script>
+  <script src="js/felt-lacquer-hardening.js?v=20261111_150315"></script>
+  <script src="js/presentation.js?v=20261111_150315"></script>
   <script>
     // Offline PWA Service Worker Management
     // In local development (localhost / 127.0.0.1), unregister service workers & purge caches to ensure live code is always seen

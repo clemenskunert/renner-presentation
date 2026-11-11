@@ -172,11 +172,67 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(str(e).encode('utf-8'))
             return
+        elif self.path.startswith('/api/slide-selection'):
+            sel_file = os.path.join(DIRECTORY, "translations", "slide_selection.json")
+            disabled = []
+            if os.path.exists(sel_file):
+                try:
+                    with open(sel_file, "r", encoding="utf-8") as sf:
+                        d = json.load(sf)
+                        if isinstance(d, dict) and isinstance(d.get("disabled_slides"), list):
+                            disabled = [int(x) for x in d["disabled_slides"] if isinstance(x, (int, float))]
+                except Exception:
+                    pass
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+            self.end_headers()
+            self.wfile.write(json.dumps({"disabled_slides": disabled}).encode('utf-8'))
+            return
         return super().do_GET()
 
     def do_POST(self):
         global LAST_TRANSLATION_UPDATE
-        if self.path == '/api/save-image':
+        if self.path == '/api/slide-selection':
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_body = self.rfile.read(content_length)
+            try:
+                payload = json.loads(post_body.decode('utf-8'))
+                raw_list = payload.get("disabled_slides", []) if isinstance(payload, dict) else []
+                disabled = sorted({int(x) for x in raw_list if isinstance(x, (int, float)) and 1 <= int(x) <= 200})
+                sel_file = os.path.join(DIRECTORY, "translations", "slide_selection.json")
+                with open(sel_file, "w", encoding="utf-8") as sf:
+                    json.dump({"disabled_slides": disabled, "updated_at": time.strftime("%Y-%m-%dT%H:%M:%S")}, sf, indent=2)
+                for rel_js in (os.path.join("js", "translations-data.js"), os.path.join("Deployed", "js", "translations-data.js")):
+                    js_path = os.path.join(DIRECTORY, rel_js)
+                    if os.path.exists(js_path):
+                        try:
+                            with open(js_path, "r", encoding="utf-8") as jf:
+                                jtxt = jf.read()
+                            import re as _re
+                            repl_line = f"window.__RENNER_DEFAULT_DISABLED_SLIDES__ = {json.dumps(disabled)};"
+                            if "window.__RENNER_DEFAULT_DISABLED_SLIDES__" in jtxt:
+                                jtxt = _re.sub(r"window\.__RENNER_DEFAULT_DISABLED_SLIDES__\s*=\s*\[[^\]]*\];", repl_line, jtxt)
+                            else:
+                                jtxt += f"\n{repl_line}\n"
+                            with open(js_path, "w", encoding="utf-8") as jf:
+                                jf.write(jtxt)
+                        except Exception:
+                            pass
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({"ok": True, "disabled_slides": disabled}).encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(json.dumps({"ok": False, "error": str(e)}).encode('utf-8'))
+            return
+        elif self.path == '/api/save-image':
             content_length = int(self.headers.get('Content-Length', 0))
             post_body = self.rfile.read(content_length)
             try:

@@ -133,10 +133,10 @@
       "zh": "图片管理器"
     },
     "slides_overview": {
-      "de": "Folien-Übersicht",
-      "en": "Slides Overview",
-      "ja": "スライド一覧",
-      "zh": "幻灯片总览"
+      "de": "Folien-Übersicht & Umfang-Auswahl",
+      "en": "Slides Overview & Deck Scope",
+      "ja": "スライド一覧・表示範囲設定",
+      "zh": "幻灯片总览与演示范围设置"
     },
     "laser_mode": {
       "de": "Laserpointer (L)",
@@ -167,6 +167,18 @@
       "en": "Fullscreen (F)",
       "ja": "全画面表示 (F)",
       "zh": "全屏模式 (F)"
+    },
+    "header_slide_select_btn": {
+      "de": "Folien-Auswahl",
+      "en": "Slide Selection",
+      "ja": "スライド選択",
+      "zh": "幻灯片筛选"
+    },
+    "slide_selection_mode": {
+      "de": "Folien-Auswahl (U)",
+      "en": "Select Slides (U)",
+      "ja": "スライド選択 (U)",
+      "zh": "幻灯片筛选 (U)"
     }
   },
   "slides": {

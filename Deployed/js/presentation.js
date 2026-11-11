@@ -26,6 +26,184 @@ class PresentationController {
 
     // One-time fade-from-black state for Slide 12 (Kapitel 3 opener)
     this.s12FirstOpenDone = false;
+
+    // Slide Scope / Selection Management (stores 1-based slide numbers that are deselected)
+    this.disabledSlides = new Set();
+    this.gridClickMode = 'select'; // 'select' (An-/Abwählen) or 'navigate' (Springen)
+  }
+
+  loadSlideSelection() {
+    let rawList = null;
+    try {
+      const saved = localStorage.getItem('renner_disabled_slides_v1');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) rawList = parsed;
+      }
+    } catch (_) {}
+
+    if (!rawList && typeof window !== 'undefined' && Array.isArray(window.__RENNER_DEFAULT_DISABLED_SLIDES__)) {
+      rawList = window.__RENNER_DEFAULT_DISABLED_SLIDES__;
+    }
+
+    this.disabledSlides.clear();
+    if (Array.isArray(rawList)) {
+      rawList.forEach(n => {
+        const num = parseInt(n, 10);
+        if (!isNaN(num) && num >= 1 && num <= this.totalSlides) {
+          this.disabledSlides.add(num);
+        }
+      });
+    }
+
+    // Ensure at least 1 slide remains enabled
+    if (this.disabledSlides.size >= this.totalSlides && this.totalSlides > 0) {
+      this.disabledSlides.delete(1);
+    }
+
+    this.applySlideSelectionToDOM();
+  }
+
+  saveSlideSelection() {
+    if (this.disabledSlides.size >= this.totalSlides && this.totalSlides > 0) {
+      this.disabledSlides.delete(1);
+    }
+    const arr = Array.from(this.disabledSlides).sort((a, b) => a - b);
+    try {
+      localStorage.setItem('renner_disabled_slides_v1', JSON.stringify(arr));
+    } catch (_) {}
+
+    if (typeof window !== 'undefined') {
+      window.__RENNER_DEFAULT_DISABLED_SLIDES__ = arr;
+    }
+
+    const isDevHost = !window.__RENNER_STANDALONE__ &&
+      window.location.protocol.startsWith('http') &&
+      ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+    if (isDevHost) {
+      fetch('api/slide-selection', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ disabled_slides: arr })
+      }).catch(() => {});
+    }
+
+    this.applySlideSelectionToDOM();
+    this.updateHUD();
+    this.setupSlideGrid();
+  }
+
+  applySlideSelectionToDOM() {
+    this.slides.forEach((slide, idx) => {
+      slide.classList.toggle('is-slide-disabled', !this.isSlideEnabled(idx));
+    });
+    this.updateAgendaSlideState();
+  }
+
+  isSlideEnabled(index) {
+    return !this.disabledSlides.has(index + 1);
+  }
+
+  getEnabledSlideIndices() {
+    const indices = [];
+    for (let i = 0; i < this.totalSlides; i++) {
+      if (this.isSlideEnabled(i)) indices.push(i);
+    }
+    return indices.length > 0 ? indices : [0];
+  }
+
+  getFirstEnabledSlideIndex() {
+    const enabled = this.getEnabledSlideIndices();
+    return enabled[0] ?? 0;
+  }
+
+  getLastEnabledSlideIndex() {
+    const enabled = this.getEnabledSlideIndices();
+    return enabled[enabled.length - 1] ?? (this.totalSlides - 1);
+  }
+
+  getNextEnabledSlideIndex(fromIndex) {
+    for (let i = fromIndex + 1; i < this.totalSlides; i++) {
+      if (this.isSlideEnabled(i)) return i;
+    }
+    return -1;
+  }
+
+  getPrevEnabledSlideIndex(fromIndex) {
+    for (let i = fromIndex - 1; i >= 0; i--) {
+      if (this.isSlideEnabled(i)) return i;
+    }
+    return -1;
+  }
+
+  resolveTargetSlideIndex(targetIdx) {
+    if (targetIdx < 0 || targetIdx >= this.totalSlides) return 0;
+    if (this.isSlideEnabled(targetIdx)) return targetIdx;
+    const next = this.getNextEnabledSlideIndex(targetIdx);
+    if (next !== -1) return next;
+    const prev = this.getPrevEnabledSlideIndex(targetIdx);
+    return prev !== -1 ? prev : targetIdx;
+  }
+
+  toggleSlideEnabled(slideNum1Based) {
+    if (slideNum1Based < 1 || slideNum1Based > this.totalSlides) return;
+    if (this.disabledSlides.has(slideNum1Based)) {
+      this.disabledSlides.delete(slideNum1Based);
+    } else {
+      if (this.disabledSlides.size >= this.totalSlides - 1) return; // Keep at least 1 slide active
+      this.disabledSlides.add(slideNum1Based);
+    }
+    this.saveSlideSelection();
+  }
+
+  setChapterSlidesEnabled(slideNums1Based, enable) {
+    slideNums1Based.forEach(num => {
+      if (num >= 1 && num <= this.totalSlides) {
+        if (enable) {
+          this.disabledSlides.delete(num);
+        } else {
+          this.disabledSlides.add(num);
+        }
+      }
+    });
+    if (this.disabledSlides.size >= this.totalSlides && this.totalSlides > 0) {
+      this.disabledSlides.delete(1);
+    }
+    this.saveSlideSelection();
+  }
+
+  enableAllSlides() {
+    this.disabledSlides.clear();
+    this.saveSlideSelection();
+  }
+
+  enableOnlyIntroSlides() {
+    this.disabledSlides.clear();
+    for (let num = 4; num <= this.totalSlides; num++) {
+      this.disabledSlides.add(num);
+    }
+    this.saveSlideSelection();
+  }
+
+  updateAgendaSlideState() {
+    const chapterRanges = [
+      { target: '4', start: 4, end: 5 },
+      { target: '6', start: 6, end: 11 },
+      { target: '12', start: 12, end: 20 },
+      { target: '21', start: 21, end: 26 },
+      { target: '27', start: 27, end: 35 }
+    ];
+    chapterRanges.forEach(ch => {
+      let activeInCh = 0;
+      for (let s = ch.start; s <= ch.end; s++) {
+        if (!this.disabledSlides.has(s)) activeInCh++;
+      }
+      const isChDisabled = activeInCh === 0;
+      document.querySelectorAll(`.agenda-card[data-target-slide="${ch.target}"], .agenda-journey-node[data-target-slide="${ch.target}"]`).forEach(el => {
+        el.classList.toggle('is-chapter-disabled', isChDisabled);
+      });
+    });
   }
 
   getSlideIndexFromURL() {
@@ -60,6 +238,7 @@ class PresentationController {
   init() {
     this.slides = Array.from(document.querySelectorAll('.slide'));
     this.totalSlides = this.slides.length;
+    this.loadSlideSelection();
     
     this.setupNotesData();
     this.setupEventListeners();
@@ -73,7 +252,10 @@ class PresentationController {
     
     // Set initial slide from URL hash (#slide-5 or #5 or ?slide=5) and country theme
     this.setCountryTheme(this.currentTheme);
-    const initialSlideIdx = this.getSlideIndexFromURL();
+    let initialSlideIdx = this.getSlideIndexFromURL();
+    if (!window.location.hash && !window.location.search && !this.isSlideEnabled(initialSlideIdx)) {
+      initialSlideIdx = this.getFirstEnabledSlideIndex();
+    }
     this.goToSlide(initialSlideIdx);
     this.updateLanguage(this.currentLang);
 
@@ -289,12 +471,12 @@ class PresentationController {
         const matchIdx = this.slides.findIndex(s => s.getAttribute('data-slide') === val);
         if (matchIdx !== -1) {
           e.preventDefault();
-          this.goToSlide(matchIdx);
+          this.goToSlide(this.resolveTargetSlideIndex(matchIdx));
         } else {
           const targetSlide = parseInt(val, 10);
           if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
             e.preventDefault();
-            this.goToSlide(targetSlide - 1);
+            this.goToSlide(this.resolveTargetSlideIndex(targetSlide - 1));
           }
         }
       }
@@ -309,12 +491,12 @@ class PresentationController {
           const matchIdx = this.slides.findIndex(s => s.getAttribute('data-slide') === val);
           if (matchIdx !== -1) {
             e.preventDefault();
-            this.goToSlide(matchIdx);
+            this.goToSlide(this.resolveTargetSlideIndex(matchIdx));
           } else {
             const targetSlide = parseInt(val, 10);
             if (!isNaN(targetSlide) && targetSlide >= 1 && targetSlide <= this.totalSlides) {
               e.preventDefault();
-              this.goToSlide(targetSlide - 1);
+              this.goToSlide(this.resolveTargetSlideIndex(targetSlide - 1));
             }
           }
         }
@@ -383,6 +565,18 @@ class PresentationController {
     });
 
     // Header action buttons
+    const headerSlideSelectBtn = document.getElementById('header-slide-select-btn');
+    if (headerSlideSelectBtn) headerSlideSelectBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.openSlideSelectionModal('select');
+    });
+
+    const menuSlideSelectBtn = document.getElementById('toggle-slide-selection-btn');
+    if (menuSlideSelectBtn) menuSlideSelectBtn.addEventListener('click', () => {
+      this.toggleMenu(false);
+      this.openSlideSelectionModal('select');
+    });
+
     const gridBtn = document.getElementById('toggle-grid-btn');
     if (gridBtn) gridBtn.addEventListener('click', () => {
       this.toggleMenu(false);
@@ -450,7 +644,7 @@ class PresentationController {
 
         case 'Home':
           e.preventDefault();
-          this.goToSlide(0);
+          this.goToSlide(this.getFirstEnabledSlideIndex());
           break;
 
         case '2':
@@ -470,12 +664,12 @@ class PresentationController {
 
         case '6':
           e.preventDefault();
-          this.goToSlide(5); // Jump to Slide 6 (Filzfabrik Wurzen FFW)
+          this.goToSlide(this.resolveTargetSlideIndex(5)); // Jump to Slide 6 (Filzfabrik Wurzen FFW)
           break;
 
         case 'End':
           e.preventDefault();
-          this.goToSlide(this.totalSlides - 1);
+          this.goToSlide(this.getLastEnabledSlideIndex());
           break;
 
         case 'f':
@@ -488,6 +682,12 @@ class PresentationController {
         case 'N':
           e.preventDefault();
           this.toggleNotes();
+          break;
+
+        case 'u':
+        case 'U':
+          e.preventDefault();
+          this.openSlideSelectionModal('select');
           break;
 
         case 'g':
@@ -668,9 +868,23 @@ class PresentationController {
     if (notesBtn) notesBtn.classList.toggle('active', this.isNotesOpen);
   }
 
+  openSlideSelectionModal(mode = 'select') {
+    this.gridClickMode = mode;
+    this.setupSlideGrid();
+    const modal = document.getElementById('slides-grid-modal');
+    if (modal) {
+      modal.classList.add('open');
+      this.isGridOpen = true;
+    }
+  }
+
   toggleGridModal() {
     const modal = document.getElementById('slides-grid-modal');
     if (modal) {
+      const willOpen = !modal.classList.contains('open');
+      if (willOpen) {
+        this.setupSlideGrid();
+      }
       modal.classList.toggle('open');
       this.isGridOpen = modal.classList.contains('open');
     }
@@ -785,8 +999,9 @@ class PresentationController {
         this.activateSlideVideo(v, index);
       });
 
-      // Gently pre-warm metadata of videos on the immediate next slide (1 slide ahead only)
-      const upcomingSlide = this.slides[index + 1];
+      // Gently pre-warm metadata of videos on the immediate next enabled slide (1 slide ahead only)
+      const nextEnabledIdx = this.getNextEnabledSlideIndex(index);
+      const upcomingSlide = nextEnabledIdx !== -1 ? this.slides[nextEnabledIdx] : null;
       if (upcomingSlide) {
         upcomingSlide.querySelectorAll('video.yka-india-video, video.hk-loop-video, video.s12-drone-video, video#s12-drone-video, video#s19-drone-video, video#hk-drone-intro-video').forEach(nv => {
           if (nv.preload === 'none') {
@@ -913,10 +1128,11 @@ class PresentationController {
             // Re-arm Slide 13's fade-in curtain so the transition from black into Slide 13 is 100% organic
             this.s12FirstOpenDone = false;
             const slideIdx = this.slides.indexOf(currentSlide);
+            const nextEnabled = this.getNextEnabledSlideIndex(slideIdx);
             const delayMs = hadFadeOutLead ? 80 : 420;
             setTimeout(() => {
-              if (this.currentSlideIndex === slideIdx && slideIdx + 1 < this.totalSlides) {
-                this.goToSlide(slideIdx + 1);
+              if (this.currentSlideIndex === slideIdx && nextEnabled !== -1) {
+                this.goToSlide(nextEnabled);
               }
             }, delayMs);
           });
@@ -951,9 +1167,10 @@ class PresentationController {
             }
             this.s12FirstOpenDone = false;
             const slideIdx = this.slides.indexOf(currentSlide);
+            const nextEnabled = this.getNextEnabledSlideIndex(slideIdx);
             setTimeout(() => {
-              if (this.currentSlideIndex === slideIdx && slideIdx + 1 < this.totalSlides) {
-                this.goToSlide(slideIdx + 1);
+              if (this.currentSlideIndex === slideIdx && nextEnabled !== -1) {
+                this.goToSlide(nextEnabled);
               }
             }, 320);
           });
@@ -1386,8 +1603,9 @@ class PresentationController {
         return;
       }
     }
-    if (this.currentSlideIndex < this.totalSlides - 1) {
-      this.goToSlide(this.currentSlideIndex + 1);
+    const nextEnabledIdx = this.getNextEnabledSlideIndex(this.currentSlideIndex);
+    if (nextEnabledIdx !== -1) {
+      this.goToSlide(nextEnabledIdx);
     }
   }
 
@@ -1416,22 +1634,46 @@ class PresentationController {
         return;
       }
     }
-    if (this.currentSlideIndex > 0) {
-      this.goToSlide(this.currentSlideIndex - 1);
+    const prevEnabledIdx = this.getPrevEnabledSlideIndex(this.currentSlideIndex);
+    if (prevEnabledIdx !== -1) {
+      this.goToSlide(prevEnabledIdx);
     }
   }
 
   updateHUD() {
+    const enabledIndices = this.getEnabledSlideIndices();
+    const activeCount = enabledIndices.length;
+    const activePos = enabledIndices.indexOf(this.currentSlideIndex);
+
     // Update counter
     const counterEl = document.getElementById('slide-counter');
     if (counterEl) {
-      counterEl.textContent = `${this.currentSlideIndex + 1} / ${this.totalSlides}`;
+      if (activePos !== -1) {
+        counterEl.textContent = `${activePos + 1} / ${activeCount}`;
+        counterEl.title = activeCount < this.totalSlides
+          ? `Aktive Folie ${activePos + 1} von ${activeCount} (Original-Folie #${this.currentSlideIndex + 1} von ${this.totalSlides})`
+          : `Folie ${this.currentSlideIndex + 1} von ${this.totalSlides}`;
+      } else {
+        counterEl.textContent = `(${this.currentSlideIndex + 1}) / ${activeCount}`;
+        counterEl.title = `Original-Folie #${this.currentSlideIndex + 1} (aktuell ausgeblendet) • ${activeCount} Folien aktiv`;
+      }
+    }
+
+    // Update header active slides badge
+    const headerBadgeEl = document.getElementById('header-active-slides-badge');
+    if (headerBadgeEl) {
+      headerBadgeEl.textContent = `${activeCount}/${this.totalSlides}`;
+    }
+    const headerSelectBtn = document.getElementById('header-slide-select-btn');
+    if (headerSelectBtn) {
+      headerSelectBtn.classList.toggle('has-custom-scope', activeCount < this.totalSlides);
     }
 
     // Update progress bar
     const progressEl = document.getElementById('progress-bar-fill');
     if (progressEl) {
-      const pct = ((this.currentSlideIndex + 1) / this.totalSlides) * 100;
+      const posForPct = activePos !== -1 ? (activePos + 1) : 1;
+      const pct = (posForPct / Math.max(1, activeCount)) * 100;
       progressEl.style.width = `${pct}%`;
     }
 
@@ -1446,7 +1688,8 @@ class PresentationController {
     }
 
     // Highlight active in grid modal
-    document.querySelectorAll('.slide-grid-thumb').forEach((thumb, idx) => {
+    document.querySelectorAll('.slide-grid-thumb[data-slide-idx]').forEach((thumb) => {
+      const idx = parseInt(thumb.getAttribute('data-slide-idx'), 10);
       thumb.classList.toggle('active', idx === this.currentSlideIndex);
     });
 
@@ -1545,29 +1788,288 @@ class PresentationController {
     const gridContainer = document.getElementById('slides-grid-view');
     if (!gridContainer) return;
 
+    const modalBody = gridContainer.closest('.modal-body');
+    const prevScrollTop = modalBody ? modalBody.scrollTop : 0;
+
     const lang = this.currentLang || 'de';
     const titleFallback = lang === 'en' ? 'Title Slide' : lang === 'ja' ? 'タイトル' : lang === 'zh' ? '封面' : 'Titelfolie';
     const slideWord = (n) => lang === 'en' ? `Slide ${n}` : lang === 'ja' ? `スライド ${n}` : lang === 'zh' ? `第 ${n} 页` : `Folie ${n}`;
 
-    gridContainer.innerHTML = '';
-    this.slides.forEach((slide, idx) => {
-      const titleEl = slide.querySelector('.slide-title') || slide.querySelector('.hero-main-title');
-      const categoryEl = slide.querySelector('.slide-category');
-      const title = titleEl ? titleEl.textContent : slideWord(idx + 1);
-      const category = categoryEl ? categoryEl.textContent : (idx === 0 ? titleFallback : '');
+    const enabledIndices = this.getEnabledSlideIndices();
+    const activeCount = enabledIndices.length;
+    const hiddenCount = this.totalSlides - activeCount;
 
-      const thumb = document.createElement('div');
-      thumb.className = `slide-grid-thumb ${idx === this.currentSlideIndex ? 'active' : ''}`;
-      thumb.innerHTML = `
-        <div class="grid-thumb-number">${slideWord(idx + 1)}${category ? ' • ' + category : ''}</div>
-        <div class="grid-thumb-title">${title}</div>
+    const statusPill = document.getElementById('slides-scope-status-pill');
+    if (statusPill) {
+      if (lang === 'en') {
+        statusPill.textContent = hiddenCount > 0
+          ? `${activeCount} / ${this.totalSlides} Slides active (${hiddenCount} hidden)`
+          : `All ${this.totalSlides} Slides active`;
+      } else if (lang === 'ja') {
+        statusPill.textContent = hiddenCount > 0
+          ? `${activeCount} / ${this.totalSlides} スライド有効 (${hiddenCount} 非表示)`
+          : `全 ${this.totalSlides} スライド有効`;
+      } else if (lang === 'zh') {
+        statusPill.textContent = hiddenCount > 0
+          ? `已启用 ${activeCount} / ${this.totalSlides} 页 (已隐藏 ${hiddenCount} 页)`
+          : `全部 ${this.totalSlides} 页已启用`;
+      } else {
+        statusPill.textContent = hiddenCount > 0
+          ? `${activeCount} von ${this.totalSlides} Folien aktiv (${hiddenCount} ausgeblendet)`
+          : `Alle ${this.totalSlides} Folien aktiv`;
+      }
+      statusPill.classList.toggle('is-reduced', hiddenCount > 0);
+    }
+
+    const toolbar = document.getElementById('slides-selection-toolbar');
+    if (toolbar) {
+      const lblModeSelect = lang === 'en' ? '☑️ Click to Select / Deselect'
+        : lang === 'ja' ? '☑️ クリックで選択／解除'
+        : lang === 'zh' ? '☑️ 点击卡片勾选/取消'
+        : '☑️ Klick wählt Folien an / ab';
+      const lblModeNav = lang === 'en' ? '🧭 Click to Jump to Slide'
+        : lang === 'ja' ? '🧭 クリックでスライドへ移動'
+        : lang === 'zh' ? '🧭 点击卡片跳转页面'
+        : '🧭 Klick springt zur Folie';
+      const lblAllOn = lang === 'en' ? '✓ Enable All 35'
+        : lang === 'ja' ? '✓ 全35枚を有効化'
+        : lang === 'zh' ? '✓ 全部启用 (35)'
+        : '✓ Alle 35 aktivieren';
+      const lblOnlyIntro = lang === 'en' ? '↺ Only Intro (1–3)'
+        : lang === 'ja' ? '↺ 導入のみ (1–3)'
+        : lang === 'zh' ? '↺ 仅保留导言 (1–3)'
+        : '↺ Nur Basis (Folie 1–3)';
+      const lblSaved = lang === 'en' ? '✓ Saved automatically'
+        : lang === 'ja' ? '✓ 自動保存済み'
+        : lang === 'zh' ? '✓ 已自动保存'
+        : '✓ Auswahl automatisch gespeichert';
+
+      toolbar.innerHTML = `
+        <div class="slides-toolbar-left">
+          <div class="slides-mode-segmented" role="tablist">
+            <button type="button" class="slides-mode-btn ${this.gridClickMode === 'select' ? 'is-active' : ''}" data-grid-mode="select">
+              ${lblModeSelect}
+            </button>
+            <button type="button" class="slides-mode-btn ${this.gridClickMode === 'navigate' ? 'is-active' : ''}" data-grid-mode="navigate">
+              ${lblModeNav}
+            </button>
+          </div>
+          <span class="slides-autosave-hint">${lblSaved}</span>
+        </div>
+        <div class="slides-toolbar-right">
+          <button type="button" class="slides-quick-btn gold" id="slides-enable-all-btn" ${hiddenCount === 0 ? 'disabled' : ''}>
+            ${lblAllOn}
+          </button>
+          <button type="button" class="slides-quick-btn subtle" id="slides-only-intro-btn">
+            ${lblOnlyIntro}
+          </button>
+        </div>
       `;
-      thumb.addEventListener('click', () => {
-        this.goToSlide(idx);
-        this.toggleGridModal();
+
+      toolbar.querySelectorAll('[data-grid-mode]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          this.gridClickMode = btn.getAttribute('data-grid-mode') || 'select';
+          this.setupSlideGrid();
+        });
       });
-      gridContainer.appendChild(thumb);
+
+      const enableAllBtn = toolbar.querySelector('#slides-enable-all-btn');
+      if (enableAllBtn) {
+        enableAllBtn.addEventListener('click', () => this.enableAllSlides());
+      }
+      const onlyIntroBtn = toolbar.querySelector('#slides-only-intro-btn');
+      if (onlyIntroBtn) {
+        onlyIntroBtn.addEventListener('click', () => this.enableOnlyIntroSlides());
+      }
+    }
+
+    const chapters = [
+      {
+        id: 'intro',
+        slides: [1, 2, 3],
+        title: {
+          de: 'Basis & Einführung (Folien 1–3)',
+          en: 'Introduction & Overview (Slides 1–3)',
+          ja: '導入・概要 (スライド 1–3)',
+          zh: '导言与总览 (第 1–3 页)'
+        }
+      },
+      {
+        id: 'ch1',
+        slides: [4, 5],
+        title: {
+          de: 'Kapitel 1 • Historie & Werk Meuselwitz (Folien 4–5)',
+          en: 'Chapter 1 • History & Meuselwitz HQ (Slides 4–5)',
+          ja: '第1章 • 歴史とモイゼルヴィッツ新本社 (スライド 4–5)',
+          zh: '第1章 • 历史与莫伊塞尔维茨总部 (第 4–5 页)'
+        }
+      },
+      {
+        id: 'ch2',
+        slides: [6, 7, 8, 9, 10, 11],
+        title: {
+          de: 'Kapitel 2 • Filzfertigung in Wurzen (Folien 6–11)',
+          en: 'Chapter 2 • Felt Manufacturing in Wurzen (Slides 6–11)',
+          ja: '第2章 • ヴルツェンでのフェルト製造 (スライド 6–11)',
+          zh: '第2章 • 乌尔岑毛毡制造 (第 6–11 页)'
+        }
+      },
+      {
+        id: 'ch3',
+        slides: [12, 13, 14, 15, 16, 17, 18, 19, 20],
+        title: {
+          de: 'Kapitel 3 • Hammerkopf-Produktion (Folien 12–20)',
+          en: 'Chapter 3 • Hammerhead Production (Slides 12–20)',
+          ja: '第3章 • ハンマーヘッド製造 (スライド 12–20)',
+          zh: '第3章 • 弦槌生产制造 (第 12–20 页)'
+        }
+      },
+      {
+        id: 'ch4',
+        slides: [21, 22, 23, 24, 25, 26],
+        title: {
+          de: 'Kapitel 4 • Yamaha Kit C1–C3 (Folien 21–26)',
+          en: 'Chapter 4 • Yamaha Kit C1–C3 (Slides 21–26)',
+          ja: '第4章 • ヤマハキット C1–C3 (スライド 21–26)',
+          zh: '第4章 • 雅马哈套件 C1–C3 (第 21–26 页)'
+        }
+      },
+      {
+        id: 'ch5',
+        slides: [27, 28, 29, 30, 31, 32, 33, 34, 35],
+        title: {
+          de: 'Kapitel 5 • Intonation & Abschluss (Folien 27–35)',
+          en: 'Chapter 5 • Voicing & Conclusion (Slides 27–35)',
+          ja: '第5章 • 整音とまとめ (スライド 27–35)',
+          zh: '第5章 • 整音艺术与总结 (第 27–35 页)'
+        }
+      }
+    ];
+
+    gridContainer.innerHTML = '';
+    gridContainer.classList.toggle('is-select-mode', this.gridClickMode === 'select');
+
+    chapters.forEach(ch => {
+      const validSlides = ch.slides.filter(n => n >= 1 && n <= this.totalSlides);
+      if (validSlides.length === 0) return;
+
+      const enabledInChapter = validSlides.filter(n => !this.disabledSlides.has(n)).length;
+      const allChapterEnabled = enabledInChapter === validSlides.length;
+
+      const sectionEl = document.createElement('div');
+      sectionEl.className = `slides-chapter-section ${enabledInChapter === 0 ? 'is-chapter-muted' : ''}`;
+
+      const chHeader = document.createElement('div');
+      chHeader.className = 'slides-chapter-header';
+      const chToggleText = allChapterEnabled
+        ? (lang === 'en' ? 'Deselect Chapter' : lang === 'ja' ? '章をすべて解除' : lang === 'zh' ? '取消本章全部' : 'Kapitel abwählen')
+        : (lang === 'en' ? 'Select Chapter' : lang === 'ja' ? '章をすべて選択' : lang === 'zh' ? '全选本章' : 'Kapitel komplett aktivieren');
+      const chStatusText = lang === 'en' ? `${enabledInChapter} / ${validSlides.length} active`
+        : lang === 'ja' ? `${enabledInChapter} / ${validSlides.length} 有効`
+        : lang === 'zh' ? `${enabledInChapter} / ${validSlides.length} 已启用`
+        : `${enabledInChapter} / ${validSlides.length} aktiv`;
+
+      chHeader.innerHTML = `
+        <div class="slides-chapter-title-wrap">
+          <span class="slides-chapter-title">${ch.title[lang] || ch.title.de}</span>
+          <span class="slides-chapter-count-pill ${enabledInChapter === 0 ? 'none' : allChapterEnabled ? 'full' : 'partial'}">${chStatusText}</span>
+        </div>
+        <button type="button" class="slides-chapter-toggle-btn ${allChapterEnabled ? 'is-all-on' : 'is-some-off'}">
+          ${allChapterEnabled ? '✕ ' : '✓ '}${chToggleText}
+        </button>
+      `;
+
+      const chBtn = chHeader.querySelector('.slides-chapter-toggle-btn');
+      if (chBtn) {
+        chBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.setChapterSlidesEnabled(validSlides, !allChapterEnabled);
+        });
+      }
+      sectionEl.appendChild(chHeader);
+
+      const chGrid = document.createElement('div');
+      chGrid.className = 'slides-chapter-grid';
+
+      validSlides.forEach(slideNum => {
+        const idx = slideNum - 1;
+        const slide = this.slides[idx];
+        if (!slide) return;
+
+        const isEnabled = this.isSlideEnabled(idx);
+        const activeSeqPos = enabledIndices.indexOf(idx);
+        const titleEl = slide.querySelector('.slide-title') || slide.querySelector('.hero-main-title');
+        const categoryEl = slide.querySelector('.slide-category');
+        const title = titleEl ? titleEl.textContent : slideWord(slideNum);
+        const rawCategory = categoryEl ? categoryEl.textContent : (idx === 0 ? titleFallback : '');
+        const shortCat = rawCategory.includes('•') ? rawCategory.split('•').pop().trim() : rawCategory;
+
+        const seqBadgeText = isEnabled
+          ? (lang === 'en' ? `#${activeSeqPos + 1} in talk` : lang === 'ja' ? `発表順 #${activeSeqPos + 1}` : lang === 'zh' ? `演示 #${activeSeqPos + 1}` : `Vortrag #${activeSeqPos + 1}`)
+          : (lang === 'en' ? 'Skipped' : lang === 'ja' ? 'スキップ' : lang === 'zh' ? '已跳过' : 'Ausgeblendet');
+
+        const jumpLabel = lang === 'en' ? 'Open ↗' : lang === 'ja' ? '開く ↗' : lang === 'zh' ? '打开 ↗' : 'Öffnen ↗';
+        const stateText = isEnabled
+          ? (lang === 'en' ? 'Included in presentation' : lang === 'ja' ? 'プレゼンに含める' : lang === 'zh' ? '包含在演示中' : 'Im Vortrag aktiv')
+          : (lang === 'en' ? 'Hidden (skipped)' : lang === 'ja' ? '非表示（スキップ）' : lang === 'zh' ? '已隐藏（自动跳过）' : 'Wird übersprungen');
+
+        const thumb = document.createElement('div');
+        thumb.className = `slide-grid-thumb ${idx === this.currentSlideIndex ? 'active' : ''} ${isEnabled ? 'is-slide-enabled' : 'is-slide-disabled'}`;
+        thumb.setAttribute('data-slide-idx', String(idx));
+        thumb.innerHTML = `
+          <div class="grid-thumb-top-row">
+            <div class="grid-thumb-badges">
+              <span class="grid-thumb-number">${slideWord(slideNum)}</span>
+              <span class="grid-thumb-seq-badge ${isEnabled ? 'enabled' : 'disabled'}">${seqBadgeText}</span>
+            </div>
+            <button type="button" class="slide-select-checkbox ${isEnabled ? 'checked' : ''}" aria-label="${slideWord(slideNum)} an/abwählen" title="${slideWord(slideNum)} an-/abwählen">
+              <span class="checkbox-box">${isEnabled ? '✓' : ''}</span>
+            </button>
+          </div>
+          ${shortCat ? `<div class="grid-thumb-category">${shortCat}</div>` : ''}
+          <div class="grid-thumb-title">${title}</div>
+          <div class="grid-thumb-footer">
+            <span class="grid-thumb-state-label">${stateText}</span>
+            <button type="button" class="grid-thumb-jump-btn" title="${slideWord(slideNum)} direkt anzeigen">${jumpLabel}</button>
+          </div>
+        `;
+
+        const checkBtn = thumb.querySelector('.slide-select-checkbox');
+        if (checkBtn) {
+          checkBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleSlideEnabled(slideNum);
+          });
+        }
+
+        const jumpBtn = thumb.querySelector('.grid-thumb-jump-btn');
+        if (jumpBtn) {
+          jumpBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.goToSlide(idx);
+            this.toggleGridModal();
+          });
+        }
+
+        thumb.addEventListener('click', () => {
+          if (this.gridClickMode === 'select') {
+            this.toggleSlideEnabled(slideNum);
+          } else {
+            this.goToSlide(idx);
+            this.toggleGridModal();
+          }
+        });
+
+        chGrid.appendChild(thumb);
+      });
+
+      sectionEl.appendChild(chGrid);
+      gridContainer.appendChild(sectionEl);
     });
+
+    if (modalBody && prevScrollTop > 0) {
+      modalBody.scrollTop = prevScrollTop;
+    }
   }
 
   setupGallery() {

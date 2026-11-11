@@ -192,6 +192,17 @@ def cmd_apply():
         print(f"✓ Locale gespeichert: {os.path.relpath(loc_file, BASE_DIR)} ({len(flat[lang])} Schlüssel)")
 
     # 2. Generate js/translations-data.js
+    selection_file = os.path.join(BASE_DIR, "translations", "slide_selection.json")
+    default_disabled_slides = []
+    if os.path.exists(selection_file):
+        try:
+            with open(selection_file, "r", encoding="utf-8") as sf:
+                sel_data = json.load(sf)
+                if isinstance(sel_data, dict) and isinstance(sel_data.get("disabled_slides"), list):
+                    default_disabled_slides = [int(x) for x in sel_data["disabled_slides"] if isinstance(x, (int, float))]
+        except Exception:
+            pass
+
     js_content = """/**
  * Louis Renner Presentation 2025 - Complete Slide Deck Translations
  * Automatically compiled by translations/manage_translations.py.
@@ -200,6 +211,7 @@ def cmd_apply():
 
 window.slideTranslations = """ + json.dumps(flat, ensure_ascii=False, indent=2) + """;
 window.TRANSLATIONS_DATA = window.slideTranslations;
+window.__RENNER_DEFAULT_DISABLED_SLIDES__ = """ + json.dumps(default_disabled_slides) + """;
 
 // Automatically merge into global translations dictionary if loaded
 if (typeof translations !== 'undefined') {
