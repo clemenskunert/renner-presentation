@@ -13693,12 +13693,25 @@ body::before {
   margin: 4px 0 2px 0 !important;
   padding-bottom: 4px !important;
   text-shadow: none !important;
-  background: linear-gradient(135deg, #ffffff 0%, #fffaf0 48%, #eccb7c 100%) !important;
+  background-image: linear-gradient(
+    115deg,
+    #ebd089 0%,
+    #fff7e2 22%,
+    #dfba5d 36%,
+    #fffdf8 46%,
+    #ffffff 50%,
+    #fffdf8 54%,
+    #dfba5d 64%,
+    #fff7e2 78%,
+    #ebd089 100%
+  );
+  background-size: 260% 100%;
+  background-position: 180% 50%;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: #ffffff !important;
   -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 6px 22px rgba(0, 0, 0, 0.65)) !important;
+  filter: drop-shadow(0 6px 22px rgba(0, 0, 0, 0.65));
   text-wrap: balance !important;
   max-width: 14.5ch !important;
 }
@@ -13719,7 +13732,7 @@ html[lang="zh"] .slide.s34-finale-slide h2.slide-title.s34-motto {
 }
 
 .s34-finale-slide .s34-gold-rule {
-  width: 84px !important;
+  width: 84px;
   height: 3px !important;
   border-radius: 999px !important;
   background: linear-gradient(90deg, #ebd089 0%, rgba(200, 163, 86, 0.18) 100%) !important;
@@ -13874,7 +13887,7 @@ html[lang="zh"] .slide.s34-finale-slide h2.slide-title.s34-motto {
   height: clamp(46px, 5.4vh, 58px) !important;
   width: auto !important;
   display: block !important;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.65)) !important;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.65));
 }
 
 .s34-finale-slide .s34-sig-divider {
@@ -15358,8 +15371,91 @@ html[lang="zh"] .contact-slide-body[data-active-contact-mode="qr"] .contact-pers
 }
 
 .slide.s34-finale-slide h2.slide-title.s34-motto {
+  position: relative !important;
   font-size: clamp(2.35rem, 3.25vw, 3.65rem) !important;
   margin: 2px 0 0 0 !important;
+  background-image: linear-gradient(
+    115deg,
+    #e5bf62 0%,
+    #f9e6b3 20%,
+    #d8af4f 34%,
+    #fff8e1 44%,
+    #ffffff 50%,
+    #fff8e1 56%,
+    #d8af4f 66%,
+    #f9e6b3 80%,
+    #e5bf62 100%
+  );
+  background-size: 260% 100%;
+  background-position: 180% 50%;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  will-change: background-position, filter;
+  animation: rennerMottoOrganicGlow 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes rennerMottoOrganicGlow {
+  0% {
+    background-position: 180% 50%;
+    filter:
+      drop-shadow(0 6px 20px rgba(0, 0, 0, 0.72))
+      drop-shadow(0 0 8px rgba(212, 175, 55, 0.18))
+      drop-shadow(0 0 0px rgba(255, 248, 220, 0))
+      brightness(1);
+  }
+  14% {
+    filter:
+      drop-shadow(0 6px 22px rgba(0, 0, 0, 0.75))
+      drop-shadow(0 0 18px rgba(235, 204, 120, 0.55))
+      drop-shadow(0 0 34px rgba(212, 175, 55, 0.38))
+      brightness(1.06);
+  }
+  26% {
+    background-position: 45% 50%;
+    filter:
+      drop-shadow(0 6px 24px rgba(0, 0, 0, 0.78))
+      drop-shadow(0 0 24px rgba(255, 248, 224, 0.82))
+      drop-shadow(0 0 48px rgba(212, 175, 55, 0.62))
+      brightness(1.12);
+  }
+  44% {
+    background-position: -80% 50%;
+    filter:
+      drop-shadow(0 6px 22px rgba(0, 0, 0, 0.74))
+      drop-shadow(0 0 16px rgba(230, 198, 115, 0.42))
+      drop-shadow(0 0 28px rgba(212, 175, 55, 0.26))
+      brightness(1.04);
+  }
+  62%, 100% {
+    background-position: -80% 50%;
+    filter:
+      drop-shadow(0 6px 20px rgba(0, 0, 0, 0.72))
+      drop-shadow(0 0 10px rgba(212, 175, 55, 0.22))
+      drop-shadow(0 0 0px rgba(255, 248, 220, 0))
+      brightness(1);
+  }
+}
+
+.s34-finale-slide .s34-gold-rule {
+  animation: rennerMottoRuleGlow 8.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+@keyframes rennerMottoRuleGlow {
+  0%, 62%, 100% {
+    width: 84px;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.22);
+    opacity: 0.88;
+  }
+  26% {
+    width: 118px;
+    box-shadow: 0 0 20px rgba(255, 244, 206, 0.75), 0 0 36px rgba(212, 175, 55, 0.55);
+    opacity: 1;
+  }
+}
+
+.s34-finale-slide .s34-renner-logo {
+  animation: rennerCornerLogoAmbientGlow 9s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
 }
 
 .s34-finale-slide .s35-jp-gratitude-card {
