@@ -5019,11 +5019,18 @@ def get_all_slides_html():
 
         <div class="s34-left-stage">
           <div class="s34-top-group">
-            <div class="slide-category s34-hidden-cat" data-i18n=\"s35_category\">Abschluss • Fragerunde &amp; Fachdialog</div>
-            <span class="s34-kicker" data-i18n=\"s35_kicker\">✦ LOUIS RENNER MASTERCLASS • VIELEN DANK FÜR IHRE AUFMERKSAMKEIT</span>
-            <h2 class="slide-title s34-motto" data-i18n=\"s35_title\">Let the Perfect Hammer Sound!</h2>
+            <div class="slide-category s34-hidden-cat" data-i18n="s35_category">Abschluss • Fragerunde &amp; Fachdialog</div>
+            <span class="s34-kicker" data-i18n="s35_kicker">✦ LOUIS RENNER MASTERCLASS • VIELEN DANK FÜR IHRE AUFMERKSAMKEIT</span>
+            <h2 class="slide-title s34-motto" data-i18n="s35_title">Let the Perfect Hammer Sound!</h2>
             <div class="s34-gold-rule" aria-hidden="true"></div>
-            <p class="s34-lead" data-i18n=\"s35_subtitle\">Präzision aus Meuselwitz und feinster Wurzener Merinofilz – seit 1882 für den vollkommenen Flügel- und Klavierklang.</p>
+            <p class="s34-lead" data-i18n="s35_subtitle">Präzision aus Meuselwitz und feinster Wurzener Merinofilz – seit 1882 für den vollkommenen Flügel- und Klavierklang.</p>
+          </div>
+
+          <!-- Japanische Danksagung für das Interesse -->
+          <div class="s35-jp-gratitude-card" role="region" aria-label="Japanische Danksagung">
+            <div class="s35-jp-kanji" lang="ja" data-i18n="s35_jp_thanks_kanji">ご関心をお寄せいただき、誠にありがとうございました。</div>
+            <div class="s35-jp-romaji" data-i18n="s35_jp_thanks_romaji">Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita.</div>
+            <div class="s35-jp-sub" data-i18n="s35_jp_thanks_sub">Vielen herzlichen Dank für Ihr großes Interesse!</div>
           </div>
 
           <!-- Einladendes Q&A-Übergangsbanner -->

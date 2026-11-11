@@ -6270,13 +6270,31 @@
           "en": "Louis Renner GmbH • Meuselwitz Plant, Germany",
           "ja": "Louis Renner GmbH • ドイツ・モイゼルヴィッツ本社工場",
           "zh": "Louis Renner GmbH • 德国莫伊塞尔维茨总部工厂"
+        },
+        "s35_jp_thanks_kanji": {
+          "de": "ご関心をお寄せいただき、誠にありがとうございました。",
+          "en": "ご関心をお寄せいただき、誠にありがとうございました。",
+          "ja": "ご関心をお寄せいただき、誠にありがとうございました。",
+          "zh": "ご関心をお寄せいただき、誠にありがとうございました。"
+        },
+        "s35_jp_thanks_romaji": {
+          "de": "Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita.",
+          "en": "Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita.",
+          "ja": "本日はご清聴ならびに深いご関心を賜り、心より御礼申し上げます。",
+          "zh": "Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita."
+        },
+        "s35_jp_thanks_sub": {
+          "de": "Vielen herzlichen Dank für Ihr großes Interesse!",
+          "en": "Thank you very much for your kind interest!",
+          "ja": "皆様との技術交流を心より楽しみにしております。",
+          "zh": "衷心感谢各位的浓厚兴趣与关注！"
         }
       },
       "notes": {
-        "de": "Folie 35 (Abschluss & Fragerunde): Bedanken Sie sich herzlich beim Publikum mit dem Leitmotiv „Let the Perfect Hammer Sound!“ und leiten Sie direkt über in die offene Fragerunde und den persönlichen Fachdialog zu Hammerköpfen, Filz, Yamaha Kit und Intonation.",
-        "en": "Slide 35 (Finale & Open Q&A): Warmly thank the audience with the motto 'Let the Perfect Hammer Sound!' and transition directly into the open Q&A session and technical exchange.",
-        "ja": "スライド 35（結び・質疑応答）：「最高のハンマーから、至高の響きを！」のメッセージとともに聴講者へ感謝を伝え、会場からの質疑応答・技術ディスカッションへと移ります。",
-        "zh": "第 35 页（结语与现场答疑）：以“让完美的弦槌，奏响至臻琴音！”向全场嘉宾致以诚挚谢意，并正式邀请现场技师进入开放式提问与技术交流环节。"
+        "de": "Folie 35 (Abschluss & Fragerunde): Bedanken Sie sich herzlich auf Japanisch beim Publikum für das große Interesse: „Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita!“ (ご関心をお寄せいただき、誠にありがとうございました。 – Vielen herzlichen Dank für Ihr großes Interesse!) bzw. kurz „Go-seichō, makoto ni arigatō gozaimashita!“ und leiten Sie direkt über in die offene Fragerunde.",
+        "en": "Slide 35 (Finale & Open Q&A): Warmly thank the audience in Japanese for their great interest: \"Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita!\" (ご関心をお寄せいただき、誠にありがとうございました。 — Thank you very much for your kind interest!) and transition into the open Q&A session.",
+        "ja": "スライド 35（結び・質疑応答）：「ご関心をお寄せいただき、誠にありがとうございました（Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita）」と感謝を伝え、質疑応答・技術ディスカッションへと移ります。",
+        "zh": "第 35 页（结语与现场答疑）：以日语“ご関心をお寄せいただき、誠にありがとうございました（Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita）”向全场嘉宾致以诚挚谢意，并开启现场提问交流。"
       }
     }
   }

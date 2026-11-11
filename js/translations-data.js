@@ -979,7 +979,10 @@ window.slideTranslations = {
     "s35_chip_2": "📐 Einbau & Yamaha Kit",
     "s35_chip_3": "🎵 Intonation & Praxis",
     "s35_sig_loc": "Louis Renner GmbH • Werk Meuselwitz, Deutschland",
-    "s35_notes": "Folie 35 (Abschluss & Fragerunde): Bedanken Sie sich herzlich beim Publikum mit dem Leitmotiv „Let the Perfect Hammer Sound!“ und leiten Sie direkt über in die offene Fragerunde und den persönlichen Fachdialog zu Hammerköpfen, Filz, Yamaha Kit und Intonation."
+    "s35_jp_thanks_kanji": "ご関心をお寄せいただき、誠にありがとうございました。",
+    "s35_jp_thanks_romaji": "Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita.",
+    "s35_jp_thanks_sub": "Vielen herzlichen Dank für Ihr großes Interesse!",
+    "s35_notes": "Folie 35 (Abschluss & Fragerunde): Bedanken Sie sich herzlich auf Japanisch beim Publikum für das große Interesse: „Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita!“ (ご関心をお寄せいただき、誠にありがとうございました。 – Vielen herzlichen Dank für Ihr großes Interesse!) bzw. kurz „Go-seichō, makoto ni arigatō gozaimashita!“ und leiten Sie direkt über in die offene Fragerunde."
   },
   "en": {
     "brand_sub": "Benchmark of Fine Piano Tone • Since 1882",
@@ -1955,7 +1958,10 @@ window.slideTranslations = {
     "s35_chip_2": "📐 Fitting & Yamaha Kit",
     "s35_chip_3": "🎵 Voicing & Practice",
     "s35_sig_loc": "Louis Renner GmbH • Meuselwitz Plant, Germany",
-    "s35_notes": "Slide 35 (Finale & Open Q&A): Warmly thank the audience with the motto 'Let the Perfect Hammer Sound!' and transition directly into the open Q&A session and technical exchange."
+    "s35_jp_thanks_kanji": "ご関心をお寄せいただき、誠にありがとうございました。",
+    "s35_jp_thanks_romaji": "Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita.",
+    "s35_jp_thanks_sub": "Thank you very much for your kind interest!",
+    "s35_notes": "Slide 35 (Finale & Open Q&A): Warmly thank the audience in Japanese for their great interest: \"Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita!\" (ご関心をお寄せいただき、誠にありがとうございました。 — Thank you very much for your kind interest!) and transition into the open Q&A session."
   },
   "ja": {
     "brand_sub": "良きピアノ音の基準 • 1882年創業",
@@ -2931,7 +2937,10 @@ window.slideTranslations = {
     "s35_chip_2": "📐 取付＆ヤマハキット",
     "s35_chip_3": "🎵 整音＆現場実践",
     "s35_sig_loc": "Louis Renner GmbH • ドイツ・モイゼルヴィッツ本社工場",
-    "s35_notes": "スライド 35（結び・質疑応答）：「最高のハンマーから、至高の響きを！」のメッセージとともに聴講者へ感謝を伝え、会場からの質疑応答・技術ディスカッションへと移ります。"
+    "s35_jp_thanks_kanji": "ご関心をお寄せいただき、誠にありがとうございました。",
+    "s35_jp_thanks_romaji": "本日はご清聴ならびに深いご関心を賜り、心より御礼申し上げます。",
+    "s35_jp_thanks_sub": "皆様との技術交流を心より楽しみにしております。",
+    "s35_notes": "スライド 35（結び・質疑応答）：「ご関心をお寄せいただき、誠にありがとうございました（Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita）」と感謝を伝え、質疑応答・技術ディスカッションへと移ります。"
   },
   "zh": {
     "brand_sub": "卓越钢琴音色之标杆 • 始于 1882",
@@ -3907,11 +3916,14 @@ window.slideTranslations = {
     "s35_chip_2": "📐 安装与雅马哈套件",
     "s35_chip_3": "🎵 整音与实操",
     "s35_sig_loc": "Louis Renner GmbH • 德国莫伊塞尔维茨总部工厂",
-    "s35_notes": "第 35 页（结语与现场答疑）：以“让完美的弦槌，奏响至臻琴音！”向全场嘉宾致以诚挚谢意，并正式邀请现场技师进入开放式提问与技术交流环节。"
+    "s35_jp_thanks_kanji": "ご関心をお寄せいただき、誠にありがとうございました。",
+    "s35_jp_thanks_romaji": "Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita.",
+    "s35_jp_thanks_sub": "衷心感谢各位的浓厚兴趣与关注！",
+    "s35_notes": "第 35 页（结语与现场答疑）：以日语“ご関心をお寄せいただき、誠にありがとうございました（Go-kanshin o oyose itadaki, makoto ni arigatō gozaimashita）”向全场嘉宾致以诚挚谢意，并开启现场提问交流。"
   }
 };
 window.TRANSLATIONS_DATA = window.slideTranslations;
-window.__RENNER_DEFAULT_DISABLED_SLIDES__ = [];
+window.__RENNER_DEFAULT_DISABLED_SLIDES__ = [10, 12, 13, 19, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33];
 
 // Automatically merge into global translations dictionary if loaded
 if (typeof translations !== 'undefined') {
