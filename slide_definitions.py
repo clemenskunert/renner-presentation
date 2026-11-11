@@ -1093,7 +1093,7 @@ def get_all_slides_html():
                 <button class="diorama-replay-btn" id="diorama-replay-flipbook-btn" data-i18n="s5_replay_btn">↺ Daumenkino wiederholen</button>
               </div>
               <div class="diorama-drone-video-wrap">
-                <video id="diorama-drone-video" src="Visuell/Video/APTA2026-MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/poster_drone_meuselwitz.jpg" controls playsinline preload="none"></video>
+                <video id="diorama-drone-video" src="Visuell/Video/Drone_MeuselwitzInnen.mp4" poster="Visuell/Bilder/02_Umbau_und_Umzug/web_hd/poster_drone_meuselwitz.jpg" controls playsinline preload="none"></video>
               </div>
             </div>
           </div>

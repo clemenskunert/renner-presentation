@@ -1,12 +1,12 @@
 /**
  * Louis Renner Presentation - Slide 4: Chronological Diorama / Daumenkino (Flipbook)
- * & Automatic Transition to Interior Drone Flight (Visuell/Video/APTA2026-MeuselwitzInnen.mp4)
+ * & Automatic Transition to Interior Drone Flight (Visuell/Video/Drone_MeuselwitzInnen.mp4)
  *
  * Features:
  * - All 47 chronological construction photos (03.11.2025 – 09.10.2026) from Visuell/Bilder/02_Umbau_und_Umzug/
  * - 3D Diorama side-wings + depth-stacked Daumenkino (flipbook) with rapid 3D page-flip animation
  * - Automatic seamless transition into the full-stage interior drone flight video:
- *   Visuell/Video/APTA2026-MeuselwitzInnen.mp4
+ *   Visuell/Video/Drone_MeuselwitzInnen.mp4
  * - Interactive timeline scrubber (47 frames + Drone Finale), Play/Pause, Step Back/Forward, and 4-language i18n
  */
 
@@ -829,14 +829,13 @@ class RennerTransformationJourney {
       const crescendoStart = this.totalFrames - 7;
       if (this.currentFrame >= crescendoStart) {
         crescendoT = Math.max(0, Math.min(1, ((this.currentFrame - crescendoStart) + frameProgress) / 7));
-        if (crescendoT >= 0.68) {
-          this.preStartDronePlayback();
+        if (crescendoT >= 0.45) {
+          this.promoteDroneVideoPreload();
         }
       }
 
-      if (this.brightFlashEl && !this.brightFlashEl.classList.contains('is-peaking') && !this.brightFlashEl.classList.contains('is-dissolving')) {
-        const bloomAlpha = crescendoT > 0 ? Math.pow(crescendoT, 1.85) * 0.92 : 0;
-        this.brightFlashEl.style.opacity = bloomAlpha > 0.004 ? bloomAlpha.toFixed(3) : '0';
+      if (this.brightFlashEl) {
+        this.brightFlashEl.style.opacity = '0';
       }
     }
 
@@ -949,25 +948,8 @@ class RennerTransformationJourney {
     }
 
     if (this.brightFlashEl) {
-      if (fromBrightFlash) {
-        this.brightFlashEl.classList.remove('is-dissolving');
-        this.brightFlashEl.classList.add('is-peaking');
-        this.bloomTimers.push(setTimeout(() => {
-          if (this.brightFlashEl) {
-            this.brightFlashEl.classList.remove('is-peaking');
-            this.brightFlashEl.classList.add('is-dissolving');
-          }
-        }, 90));
-        this.bloomTimers.push(setTimeout(() => {
-          if (this.brightFlashEl) {
-            this.brightFlashEl.classList.remove('is-dissolving');
-            this.brightFlashEl.style.opacity = '0';
-          }
-        }, 1250));
-      } else {
-        this.brightFlashEl.classList.remove('is-peaking', 'is-dissolving');
-        this.brightFlashEl.style.opacity = '0';
-      }
+      this.brightFlashEl.classList.remove('is-peaking', 'is-dissolving');
+      this.brightFlashEl.style.opacity = '0';
     }
 
     if (this.containerEl) {
@@ -994,17 +976,15 @@ class RennerTransformationJourney {
 
     if (this.droneVidEl) {
       try {
-        if (this.droneVidEl.paused) {
-          if (!fromBrightFlash && this.droneVidEl.readyState >= 1) {
-            this.droneVidEl.currentTime = 0;
-          }
-          const p = this.droneVidEl.play();
-          if (p && typeof p.catch === 'function') {
-            p.catch(() => {
-              this.droneVidEl.muted = true;
-              this.droneVidEl.play().catch(() => {});
-            });
-          }
+        if (this.droneVidEl.readyState >= 1) {
+          this.droneVidEl.currentTime = 0;
+        }
+        const p = this.droneVidEl.play();
+        if (p && typeof p.catch === 'function') {
+          p.catch(() => {
+            this.droneVidEl.muted = true;
+            this.droneVidEl.play().catch(() => {});
+          });
         }
       } catch (_) {}
     }
