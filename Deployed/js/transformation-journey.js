@@ -1,12 +1,12 @@
 /**
  * Louis Renner Presentation - Slide 4: Chronological Diorama / Daumenkino (Flipbook)
- * & Automatic Transition to Interior Drone Flight (Visuell/Video/Drone_MeuselwitzInnen.mp4)
+ * & Automatic Transition to Interior Drone Flight (Visuell/Video/DRONE_MSWInnen.mp4)
  *
  * Features:
  * - All 47 chronological construction photos (03.11.2025 – 09.10.2026) from Visuell/Bilder/02_Umbau_und_Umzug/
  * - 3D Diorama side-wings + depth-stacked Daumenkino (flipbook) with rapid 3D page-flip animation
  * - Automatic seamless transition into the full-stage interior drone flight video:
- *   Visuell/Video/Drone_MeuselwitzInnen.mp4
+ *   Visuell/Video/DRONE_MSWInnen.mp4
  * - Interactive timeline scrubber (47 frames + Drone Finale), Play/Pause, Step Back/Forward, and 4-language i18n
  */
 
